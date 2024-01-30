@@ -3,8 +3,8 @@ title: Set up hybrid Microsoft Entra ID
 titleSuffix: Configuration Manager
 description: If your environment currently has domain-joined Windows devices, set up hybrid Microsoft Entra ID before you enable co-management
 ms.date: 11/08/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

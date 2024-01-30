@@ -6,8 +6,8 @@ summary: Microsoft Deployment Toolkit (MDT) provides a unified collection of too
 metadata:
   title: Microsoft Deployment Toolkit documentation
   description: Microsoft Deployment Toolkit (MDT) provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
-  ms.prod: configuration-manager
-  ms.technology: configmgr-mdt
+  ms.subservice: mdt
+  ms.service: configuration-manager
   ms.topic: landing-page
   author: BalaDelli
   ms.author: baladell

@@ -3,8 +3,8 @@ title: How to close your account
 titleSuffix: Configuration Manager
 description: How to remove Desktop Analytics from your Azure account
 ms.date: 10/17/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

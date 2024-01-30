@@ -3,8 +3,8 @@ title: Delete a Security Scope
 description: Learn how to delete a security scope in Configuration Manager by using the SMS_SecuredCategory class.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 87238a9a-7f58-4d27-92a2-569c37387dec
 author: Banreet

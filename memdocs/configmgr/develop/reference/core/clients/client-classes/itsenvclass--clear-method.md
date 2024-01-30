@@ -3,8 +3,8 @@ description: "Learn how to use the ITSEnvClass::Clear to clear an operating syst
 title: "ITSEnvClass::Clear"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d33d36ff-c75f-4d79-9c08-223959cc7524
 author: Banreet

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 01/23/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -119,6 +119,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
   This setting applies to:
 
   - Android 9.0 and newer
+
+- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action that admins use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
 
 ### Fully managed and dedicated devices
 

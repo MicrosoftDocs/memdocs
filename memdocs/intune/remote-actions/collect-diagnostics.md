@@ -58,7 +58,13 @@ The *Collect diagnostics* remote action is supported for:
 - Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
-> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
+> For diagnostics to be able to upload successfully from the client, make sure that the following URLs are not blocked on the network:
+> `lgmsapeweu.blob.core.windows.net`
+> `lgmsapewus2.blob.core.windows.net`
+> `lgmsapesea.blob.core.windows.net`
+> `lgmsapeaus.blob.core.windows.net`
+> `lgmsapeind.blob.core.windows.net`
+
 
 ## Collect diagnostics
 
@@ -79,7 +85,7 @@ To use the *Collect diagnostics* action:
 To view the diagnostics collected after an Autopilot failure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows Devices**.
+2. Navigate to **Devices** > **Windows**.
 3. Select a device.
 4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.

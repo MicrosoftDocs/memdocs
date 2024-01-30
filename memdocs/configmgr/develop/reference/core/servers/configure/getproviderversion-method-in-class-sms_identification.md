@@ -3,8 +3,8 @@ title: GetProviderVersion Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the GetProviderVersion Windows Management Instrumentation class method gets the product version string from the version resources of the SMS Provider DLL.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ceaf0a5e-83fa-4c59-a6fd-c041e73a030b
 author: Banreet

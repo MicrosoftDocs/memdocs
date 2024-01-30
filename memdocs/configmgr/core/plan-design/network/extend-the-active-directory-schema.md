@@ -3,8 +3,8 @@ title: Publishing and the Active Directory schema
 titleSuffix: Configuration Manager
 description: Extend the Active Directory schema for Configuration Manager to simplify the process of deploying and configuring clients.
 ms.date: 01/21/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur

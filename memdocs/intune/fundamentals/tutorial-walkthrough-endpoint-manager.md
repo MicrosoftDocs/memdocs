@@ -86,12 +86,12 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     - **Enrollment status** - Review details about Intune enrolled devices by platform and enrollment failures.
     - **Enrollment alerts** - Find more details about unassigned devices by platform. 
     - **Compliance status** - Review compliance status based on device, policy, setting, threats, and protection. Additionally, this pane provides a list of devices without a compliance policy.
-    - **Configuration status** - Review configuration status of device profiles, as well as profile deployment., and 
+    - **Configuration status** - Review configuration status of device profiles, as well as profile deployment.  
     - **Software update status** - See a visual of the deployment status for all devices and for all users.
 
     ![Screenshot of the Microsoft Intune admin center - Devices](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png)
 
-4. From the **Devices - Overview** pane, select **Compliance policies** to display details about compliance for devices managed by Intune. You will see details similar to the following image.
+4. From the **Devices - Overview** pane, select **Compliance** to display details about compliance for devices managed by Intune. You will see details similar to the following image.  
 
     ![Screenshot of the Microsoft Intune admin center - Compliance policies](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-04.png)
     
@@ -115,7 +115,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../protect/conditional-access.md)
 
-6. From the navigation pane, select **Devices** > **Configuration profiles** to display details about device profiles in Intune.
+6. From the navigation pane, select **Devices** > **Configuration** to display details about device profiles in Intune.
 
     ![Screenshot of the Microsoft Intune admin center - Configuration profiles](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png)
     

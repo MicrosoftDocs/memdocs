@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Create and deploy Antivirus policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 03/28/2023
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: gowdhamankarthikeyan
 ms.author: gokarthi

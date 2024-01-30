@@ -3,8 +3,8 @@ title: Log collector
 titleSuffix: Configuration Manager
 description: Use the logs collector tool to help troubleshoot Desktop Analytics
 ms.date: 07/21/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

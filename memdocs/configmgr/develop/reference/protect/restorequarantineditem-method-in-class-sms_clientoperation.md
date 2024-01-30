@@ -3,8 +3,8 @@ title: RestoreQuarantinedItem Method
 titleSuffix: Configuration Manager
 description: The RestoreQuarantinedItem WMI class method that restores quarantined items to all members in a collection infected by specified threat.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ad263099-312a-47bf-aaab-3debd3949c2f
 author: Banreet
@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # RestoreQuarantinedItem Method in Class SMS_ClientOperation
-The `RestoreQuarantinedItem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that restores quarantined items to all members in a collection infected by specified threat.   
+The `RestoreQuarantinedItem` Windows Management Instrumentation (WMI) class method in Configuration Manager that restores quarantined items to all members in a collection infected by specified threat.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

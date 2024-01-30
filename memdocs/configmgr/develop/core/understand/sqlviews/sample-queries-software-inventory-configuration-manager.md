@@ -3,8 +3,8 @@ title: Sample queries for software inventory
 titleSuffix: Configuration Manager
 description: Sample queries that show how software inventory views can be joined to other views to retrieve specific data.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

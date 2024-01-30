@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 01/09/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -77,7 +77,7 @@ At any time, users can open the Company Portal app, **Devices** > **Check Status
 
 There are different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, and so on. These action times vary between platforms.
 
-Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, when a lock, passcode reset, app, or policy assignment action runs.
+Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, a notification happens when a lock, passcode reset, app, or policy assignment action runs.
 
 Other changes don't cause an immediate notification to devices, including revising the contact information in the Company Portal app or updates to an `.ipa` file.
 

@@ -3,8 +3,8 @@ title: Install Updates Publisher
 titleSuffix: Configuration Manager
 description: Install System Center Updates Publisher in your environment
 ms.date: 10/20/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
