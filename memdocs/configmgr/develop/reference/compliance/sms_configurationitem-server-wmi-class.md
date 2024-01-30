@@ -3,8 +3,8 @@ title: SMS_ConfigurationItem Class
 description: The SMS_ConfigurationItem Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a configuration item.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 527389f5-99e3-4978-a807-4e5e3c5acc04
 author: Banreet

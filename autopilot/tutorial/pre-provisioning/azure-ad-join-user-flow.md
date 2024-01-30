@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 8 of 9 - User flow
-description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 8 of 9 - User flow.
+title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - User flow
+description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - User flow.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,11 +18,11 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provision Azure AD join: User flow
+# Pre-provision Microsoft Entra join: User flow
 
-Windows Autopilot for pre-provisioned deployment Azure AD join steps:
+Windows Autopilot for pre-provisioned deployment Microsoft Entra join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md)
+- Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
 - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
 - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
@@ -32,7 +32,7 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 9: User flow**
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
 
 ## User flow
 
@@ -40,9 +40,9 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+4. Once the Autopilot process begins, the Microsoft Entra sign-in page appears. At the Microsoft Entra sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Microsoft Entra credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
-5. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
+5. After authenticating with Microsoft Entra ID, the Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)

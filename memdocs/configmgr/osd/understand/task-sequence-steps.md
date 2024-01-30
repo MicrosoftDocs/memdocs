@@ -3,8 +3,8 @@ title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
 ms.date: 04/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell
@@ -216,7 +216,7 @@ Select this option to have the destination computer join the specified workgroup
 Select this option to have the destination computer join the specified domain. Specify or browse to the domain, such as `fabricam.com`. Specify or browse to a Lightweight Directory Access Protocol (LDAP) path for an organizational unit. For example: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
 > [!NOTE]
-> When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+> When a Microsoft Entra joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Microsoft Entra ID. Even though it's not Microsoft Entra joined, the client is still managed.
 
 #### Account
 
@@ -1614,7 +1614,7 @@ If one of the updates unexpectedly restarts the computer, retry this step. The s
 Use this step to add the destination computer to a workgroup or domain.  
 
 > [!NOTE]
-> When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+> When a Microsoft Entra joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Microsoft Entra ID. Even though it's not Microsoft Entra joined, the client is still managed.
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
@@ -2508,7 +2508,7 @@ The task sequence continues running the next step.
 >
 > The task sequence transitions from Windows PE to the newly installed Windows OS during the **Setup Windows and ConfigMgr** task. When the newly installed Windows starts for the first time, Windows Setup runs. At the end of Windows Setup, the task sequence is relaunched by the Windows Setup script **SetupComplete.cmd**. This results in the task sequence running entirely within Windows Setup. Windows group policy normally doesn't process until after Windows Setup is complete, so therefore group policy isn't processed until the task sequence is complete. This behavior is consistent across different versions of Windows. For more information on the order of operations, see [Run a script after setup is complete (SetupComplete.cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).<!-- 2841304 -->
 >
-> Although group policy doesn't normally run until Windows Setup and the task sequence completes, Windows or the task sequence doesn't block group policy from running. Certain actions such as scripts or application installs during the task sequence can trigger group policy evaluation. For example, the [Install Software Updates](#BKMK_InstallSoftwareUpdates) task may trigger group policy evaluation when setting the WSUS server.
+> Although group policy doesn't normally run until Windows Setup and the task sequence completes, Windows and the task sequence engine don't block group policy from running. Some actions such as scripts, application installs, or certain task sequence steps run during the task sequence can trigger group policy evaluation. For example, the [Install Software Updates](#BKMK_InstallSoftwareUpdates) task may trigger group policy evaluation when it sets WSUS server. A script that calls gpupdate could also trigger a group policy refresh. 
 
 ### Variables for Setup Windows and ConfigMgr
 
@@ -2543,7 +2543,7 @@ The task sequence step automatically specifies site assignment and the default c
 
 Specify command-line options to use during client installation. For example, enter `/skipprereq: silverlight.exe` to inform CCMSetup.exe to not install the Microsoft Silverlight prerequisite. For more information about available command-line options for CCMSetup.exe, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).  
 
-When you run an OS deployment task sequence on an internet-based client, that's either Azure AD-joined or uses token-based authentication, you need to specify the [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) property in the **Setup Windows and ConfigMgr** step. For example, `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
+When you run an OS deployment task sequence on an internet-based client, that's either Microsoft Entra joined or uses token-based authentication, you need to specify the [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) property in the **Setup Windows and ConfigMgr** step. For example, `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### Options for Setup Windows and ConfigMgr
 

@@ -3,8 +3,8 @@ title: AddDriverContent Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the AddDriverContent Windows Management Instrumentation class method adds a driver to the driver package and replicates the driver content to distribution points.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f30ff615-6e14-41aa-940d-eb3cd8d51b08
 author: Banreet

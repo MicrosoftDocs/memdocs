@@ -4,11 +4,11 @@ titleSuffix: Configuration Manager
 description: Create and deploy Antivirus policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 03/28/2023
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.localizationpriority: high
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
@@ -37,14 +37,11 @@ Create Microsoft Defender antivirus policies in the Microsoft Intune admin cente
 
 ## <a name="bkmk_security"></a> Assign Windows Security experience policy to a collection
 
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
 1. For the **Platform**, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
-1. For the **Profile**, select **Windows Security experience (preview)** then **Create**.
+1. For the **Profile**, select **Windows Security experience** then **Create**.
 1. Assign a **Name** and optionally a **Description** on the **Basics** page.
 1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about the available settings, see [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 1. Assign the policy to a Configuration Manager collection on the **Assignments** page.

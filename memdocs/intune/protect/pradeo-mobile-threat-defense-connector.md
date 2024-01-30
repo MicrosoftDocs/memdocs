@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,18 +43,14 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 ## Supported platforms
 
 - **Android 5.1 and later**
-
 - **iOS 12.1 and later**
 
 ## Prerequisites
 
-- Azure Active Directory Premium
-
+- Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
-
 - Pradeo Security for Mobile Threat Defense subscription
-
-  - For more information, see the [Pradeo website](https://www.pradeo.com/en-US/mobile-threat-protection).
+  - For more information, see the [Pradeo website](https://pradeo.com/en/solutions/mobile-device-security/mobile-threat-defense/).
 
 ## How do Intune and Pradeo help protect your company resources?
 
@@ -71,9 +67,7 @@ Here are some common scenarios.
 When malicious apps such as malware are detected on devices, you can block devices from the following actions until the threat is resolved:
 
 - Connecting to corporate e-mail
-
 - Syncing corporate files with the OneDrive for Work app
-
 - Accessing company apps
 
 *Block when malicious apps are detected:*

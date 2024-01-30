@@ -1,6 +1,71 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/fundamentals/microsoft-intune-admin-center-devices.md",
+      "redirect_url": "/mem/intune/fundamentals/public-preview",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/device-limit-wpj-ios.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/how-to-reconnect-a-compromised-ios-device.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/how-do-i-find-the-serial-number-on-my-device-macos.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/device-limit-wpj-macos.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/frontline-worker-overview.md",
+      "redirect_url": "/mem/solutions/frontline-worker/frontline-worker-overview",
+      "redirect_document_id": true 
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-supervised-device-security-configurations.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-personal-device-security-configurations.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-app-configuration-policies.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-device-compliance-security-configurations.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-configuration-framework.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/apps/protect-edge-mam-windows.md",
       "redirect_url": "/mem/intune/apps/apps/protect-mam-windows",
       "redirect_document_id": false 
@@ -137,7 +202,7 @@
     },
     {
       "source_path": "memdocs/intune/enrollment/ios-ipados-framework-deployment-methodology.md",
-      "redirect_url": "/mem/intune/enrollment/ios-ipados-configuration-framework",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
       "redirect_document_id": false
     },
     {
@@ -183,6 +248,11 @@
     {
       "source_path": "memdocs/intune/developer/app-sdk-android.md",
       "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/developer/app-sdk-ios.md",
+      "redirect_url": "/mem/intune/developer/app-sdk-ios-phase1",
       "redirect_document_id": false
     },
     {
@@ -2178,6 +2248,41 @@
     {
       "source_path": "memdocs/intune/developer/index.yml",
       "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/mcafee-mobile-threat-defense-connector.md",
+      "redirect_url": "/protect/trellix-mobile-threat-defense-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/mcafee-mtd-connector-integration.md",
+      "redirect_url": "/protect/trellix-mtd-connector-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/misc/doc-test.md",
+      "redirect_url": "/mem/configmgr/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/misc/mms2019docathon.md",
+      "redirect_url": "/mem/configmgr/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/pause-config-refresh.md",
+      "redirect_url": "/mem/intune/remote-actions/device-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/microsoft-tunnel-migrate-app.md",
+      "redirect_url": "/mem/intune/protect/microsoft-tunnel-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/software-updates-declarative-ios-macos.md",
+      "redirect_url": "/mem/intune/protect/managed-software-updates-ios-macos",
       "redirect_document_id": false
     }
   ]

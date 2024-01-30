@@ -3,8 +3,8 @@ description: Learn how to use the Close method in Class SMS_EPAlert to postpone 
 title: Close Method in Class SMS_EPAlert
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2637f1c4-037b-4f91-b0d3-ce61e9eeb63b
 author: Banreet
@@ -41,7 +41,7 @@ sint32 Close(
 
  Qualifiers: `[out, optional]`  
 
- Do not start the evaluation until the specified time.  
+ Don't start the evaluation until the specified time.  
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

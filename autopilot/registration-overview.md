@@ -41,13 +41,13 @@ Registration can also be performed within your organization by collecting the ha
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
 
-When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
+When you register an Autopilot device, it automatically creates a Microsoft Entra object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
 
 > [!NOTE]
 >
 > Don't register to Autopilot the following types of devices:
 >
-> - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
+> - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
 > - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune)
 >
 > These options are intended for users to join personally-owned devices to their organization's network.

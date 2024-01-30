@@ -3,8 +3,8 @@ title: SMS_CollectionSettings Class
 description: Learn how the SMS_CollectionSettings class is an SMS Provider server class that represents settings for an SMS_Collection Server WMI Class object.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 332629f9-bbd6-4bb1-860b-baa11bce8744
 author: Banreet

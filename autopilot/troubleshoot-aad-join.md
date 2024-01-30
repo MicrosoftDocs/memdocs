@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Windows Autopilot Azure AD join issues
-description: Troubleshoot issues with Azure AD join issues during the Windows Autopilot deployment process.
+title: Troubleshoot Windows Autopilot Microsoft Entra join issues
+description: Troubleshoot issues with Microsoft Entra join issues during the Windows Autopilot deployment process.
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.localizationpriority: medium
@@ -15,30 +15,32 @@ ms.collection:
 ms.topic: troubleshooting
 ---
 
-# Troubleshoot Azure Active Directory join issues
+# Troubleshoot Microsoft Entra join issues
 
 *Applies to:*
 
 - Windows 11
 - Windows 10
 
-The following are common Azure Active Directory (Azure AD) join issues that can affect Windows Autopilot deployment.
+The following are common Microsoft Entra join issues that can affect Windows Autopilot deployment.
 
-## Azure AD permissions
+<a name='azure-ad-permissions'></a>
 
-The most common issue joining a device to Azure AD is related to Azure AD permissions. Make sure that [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Azure AD.
+## Microsoft Entra permissions
+
+The most common issue joining a device to Microsoft Entra ID is related to Microsoft Entra permissions. Make sure that [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Microsoft Entra ID.
 
 ## Maximum number of devices
 
-Errors can also happen if the user exceeds the [number of devices](/mem/intune/enrollment/device-limit-intune-azure) that they're allowed to join. This limit is configured in Azure AD.
+Errors can also happen if the user exceeds the [number of devices](/mem/intune/enrollment/device-limit-intune-azure) that they're allowed to join. This limit is configured in Microsoft Entra ID.
 
 ## Deleted objects
 
-An Azure AD device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Azure AD for group membership and targeting (including the profile). Deleting it may lead to join errors. If this object is deleted, you can fix the issue by deleting and reimporting this autopilot hash so it can recreate the associated object.
+A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Microsoft Entra ID for group membership and targeting (including the profile). Deleting it may lead to join errors. If this object is deleted, you can fix the issue by deleting and reimporting this autopilot hash so it can recreate the associated object.
 
 ## Error code 801C0003
 
-Error code 801C0003 will typically be reported on an error page titled "Something went wrong". This error means that the Azure AD join failed.
+Error code 801C0003 will typically be reported on an error page titled "Something went wrong". This error means that the Microsoft Entra join failed.
 
 ## Related topics
 

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/14/2022
+ms.date: 10/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -90,6 +90,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, macOS, iOS|
+|Total physical memory|The total physical memory on the device (in gigabytes).|Windows|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
 | PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
 | PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
@@ -100,7 +101,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Manufacturer|The manufacturer of the device.|Windows, macOS, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, macOS, iOS/iPadOS, Android|
 |Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Reporting for phone number isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards won't write the data and therefore the phone number isn't reported in such cases.|
-|Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
+|Subscriber carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android  <br/><br/> NOTE: Reporting for subscriber carrier isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for subscriber carrier is supported; however, certain SIM cards don't write the data and therefore the subscriber carrier isn't reported in such cases.|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, macOS, iOS/iPadOS, Android<br><br>**NOTE**: As of October 2021, Intune doesn't display Wi-Fi MAC addresses for newly enrolled personally owned work profile devices and devices managed with device administrator running Android 9 and later. |
 |Ethernet MAC|The primary Ethernet MAC address for the device. For macOS devices with no ethernet, the device reports the Wi-Fi MAC address.|macOS|
@@ -111,7 +112,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, macOS, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, macOS, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
-|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, macOS, iOS/iPadOS, Android|
+|Microsoft Entra registered|If **Yes**, the device is registered with Azure Directory.|Windows, macOS, iOS/iPadOS, Android|
 |Intune registered|If **Yes**, the device is registered with Intune|Windows, macOS, iOS/iPadOS, Android|
 |Compliance|The device's compliance state.|Windows, macOS, iOS/iPadOS, Android|
 |EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, macOS, iOS/iPadOS, Android|
@@ -122,10 +123,15 @@ Depending on the carrier used by the devices, not all details might be collected
 |Battery level|Shows the battery level of the device, between 0 and 100, or defaults to null if the battery level can't be determined.|iOS/iPadOS|
 |Resident users|Shows the number of users currently on the shared iPad device, or defaults to null if the number of users can't be determined.|iOS/iPadOS|
 
->[!NOTE]
- > - For Windows 10 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
- > - For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases. 
-
+ > [!NOTE]
+ > 
+- For Windows 10 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
+- For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.
+- For multi-SIM iOS/iPadOS devices, Intune has no control over which SIM data is assigned to the Service Subscription slots on the device for the ICCID, IMEI, MEID, and Phone number values. Intune only reports the first available values received from the device in the following order:
+   - CT Subscription Slot One
+      - CT Subscription Slot Two
+         - Top-level ICCID, IMEI, MEID, and Phone number properties (deprecated)
+         
 ## Next steps
 
 See what else you can do to [manage your devices](device-management.md) with Intune.

@@ -3,8 +3,8 @@ title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -35,7 +35,7 @@ Used by clients to connect to a distribution point and access content. If allowe
 
 This account is also used by pull-distribution points to download content from a source distribution point in a remote forest.  
 
-Some scenarios no longer require a network access account. You can enable the site to use Enhanced HTTP with Azure Active Directory authentication.<!--1358228-->
+Some scenarios no longer require a network access account. You can enable the site to use Enhanced HTTP with Microsoft Entra authentication.<!--1358228-->
 
 For more information, see [Network access account](accounts.md#network-access-account).
 

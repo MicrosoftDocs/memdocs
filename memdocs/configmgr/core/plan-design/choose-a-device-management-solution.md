@@ -3,8 +3,8 @@ title: Choose a device management solution
 titleSuffix: Configuration Manager
 description: Learn about the solutions that Microsoft offers for managing PCs, servers, and devices.
 ms.date: 03/30/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

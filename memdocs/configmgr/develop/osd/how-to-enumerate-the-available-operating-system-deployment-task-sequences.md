@@ -3,8 +3,8 @@ title: Enumerate the Available OS Deployment Task Sequences
 description: You enumerate the available operating system deployment task sequences, in Configuration Manager, by querying the available task sequence packages.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 0ea07b95-7474-4294-8c17-37e7a9e6957a
 author: Banreet

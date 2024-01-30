@@ -3,8 +3,8 @@ title: Proxy server support
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager systems use proxy servers.
 ms.date: 04/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
@@ -97,9 +97,9 @@ These settings are on the **Proxy and Account Settings** tab of the software upd
 
 The following features use the proxy of the site system that hosts the [service connection point](#service-connection-point) role: <!--5913817-->
 
-- [Azure Active Directory (Azure AD) user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
-- [Azure AD user group discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_azuregroupdisco)
-- [Synchronizing collection membership results to Azure Active Directory groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)
+- [Microsoft Entra user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
+- [Microsoft Entra user group discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_azuregroupdisco)
+- [Synchronizing collection membership results to Microsoft Entra groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)
 
 ## Configure the proxy for a site system server
 

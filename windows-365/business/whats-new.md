@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2023
+ms.date: 12/06/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -48,6 +48,70 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of December 4, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### New Microsoft Teams app is now generally available for Windows 365<!--47459639-->
+
+The new Microsoft Teams app has moved out of preview and into general availability. It's been optimized for faster performance and more efficient resource use on Cloud PCs. For more information, see [Upgrade to new Teams for Virtualized Desktop Infrastructure]( /microsoftteams/new-teams-vdi-requirements-deploy).
+
+The new Microsoft Teams app is not yet available in the Windows 365 gallery images.
+
+<!-- ########################## -->
+## Week of November 13, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows App now available in public preview<!--46667283-->
+
+Windows App lets users securely connect to Windows devices and apps. Supported remote devices include:
+
+- Azure Virtual Desktop
+- Windows 365 Cloud PC
+- Microsoft Dev Box
+- Remote Desktop Services
+- Remote PC
+
+Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers.
+
+For more information, see [Get started with Windows App](/en-us/windows-app/get-started-connect-devices-desktops-apps).
+
+<!-- ########################## -->
+## Week of October 30, 2023 (Service release 2310)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Two new sizes for Cloud PCs<!--46653331-->
+
+Two new sizes are now available for Windows 365 Cloud PCs:
+
+- 16vCPU/64GB RAM/512GB storage​
+- 16vCPU/64GB RAM/1TB storage
+
+These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Self-help in Windows 365 Business<!--45828334-->
+
+A new self-help button for end users is now available for Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
+
+<!-- ########################## -->
+## Week of October 18, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Set up Intune so admins can deploy apps to Cloud PCs<!--46943510-->
+
+We’ve published a new help documentation article. For more information, see [Set up Intune so admins can deploy apps to Cloud PCs](apps-install-admin.md).
 
 <!-- ########################## -->
 ## Week of December 5, 2022

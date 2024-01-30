@@ -2,9 +2,9 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/06/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 10/31/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: PalikaSingh
 ms.author: palsi
@@ -46,10 +46,11 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2111 | ConfigMgr 2203 | ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303 |
-|--------------------------------------------|----------------|----------------|----------------|----------------|----------------|
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Not supported](media/red-x.png)  | ![Not supported](media/red-x.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| Windows 11 version                         | ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 |
+|--------------------------------------------|----------------|----------------|----------------|----------------|
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
 
@@ -119,7 +120,7 @@ Software Center notifications are currently suppressed during this time. For mor
 
 <!-- 11291031 -->
 
-_Applies to: Azure Active Directory (Azure AD)-joined devices_
+_Applies to: Microsoft Entra joined devices_
 
 If you configure the [authentication level](../hierarchy/plan-for-the-sms-provider.md#authentication) for the site to require **Windows Hello for Business authentication**, the Configuration Manager console on a Windows 11 device can't connect to the site. The adminui.log file on the devices shows the following errors:
 

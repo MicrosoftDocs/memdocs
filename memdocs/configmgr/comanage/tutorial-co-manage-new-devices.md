@@ -7,8 +7,8 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.date: 08/24/2021
 ms.topic: tutorial
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.localizationpriority: medium
 #Customer intent: As a Configuration Manager admin, I want enable co-management so I can manage some client workloads from Intune and others from Configuration Manager.
 ms.collection: tier3
@@ -19,9 +19,9 @@ ms.reviewer: mstewart,aaroncz
 
 When you're investing in the cloud through the use of Intune for security and modern provisioning, you might not want to lose your well-established processes for using Configuration Manager to manage PCs in your organization. With co-management, you can keep that process in place.
 
-In this tutorial, you set up co-management of Windows 10 or later devices in an environment where you use both Azure Active Directory (Azure AD) and on-premises Active Directory but don't have a [hybrid Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) instance. The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 or later devices are already enrolled with Intune.
+In this tutorial, you set up co-management of Windows 10 or later devices in an environment where you use both Microsoft Entra ID and on-premises Active Directory but don't have a [hybrid Microsoft Entra ID](/azure/active-directory/devices/concept-azure-ad-join-hybrid) instance. The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 or later devices are already enrolled with Intune.
 
-If you have a hybrid Azure AD instance that joins on-premises Active Directory with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](tutorial-co-manage-clients.md).
+If you have a hybrid Microsoft Entra instance that joins on-premises Active Directory with Microsoft Entra ID, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](tutorial-co-manage-clients.md).
 
 Use this tutorial when:
   
@@ -43,11 +43,11 @@ In this tutorial, you will:
 ### Azure services and environment
 
 - Azure subscription ([free trial](https://azure.microsoft.com/free)).
-- Azure Active Directory Premium.
+- Microsoft Entra ID P1 or P2.
 - Microsoft Intune subscription, with Intune configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune).
 
   > [!TIP]  
-  > An Enterprise Mobility + Security subscription [free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial) includes both Azure Active Directory Premium and Microsoft Intune.  
+  > An Enterprise Mobility + Security subscription [free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial) includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.  
   >
   > You no longer need to purchase and assign individual Intune or Enterprise Mobility + Security licenses to your users. For more information, see [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
 
@@ -69,7 +69,7 @@ In this tutorial, you will:
 
 Throughout this tutorial, use the following permissions to complete tasks:
 
-- An account that's a *Global Administrator* for Azure AD
+- An account that's a *Global Administrator* for Microsoft Entra ID
 - An account that's a *Domain Administrator* on your on-premises infrastructure  
 - An account that's a *Full Administrator* for *all* scopes in Configuration Manager
 
@@ -186,10 +186,10 @@ After you copy the certificate to the primary site server, you can delete the ce
 
 ## Enable Azure cloud services in Configuration Manager
 
-To configure Azure services from within the Configuration Manager console, you use the Configure Azure Services Wizard and create two Azure AD apps:  
+To configure Azure services from within the Configuration Manager console, you use the Configure Azure Services Wizard and create two Microsoft Entra apps:  
 
-- **Server app**: A web app in Azure AD.  
-- **Client app**: A native client app in Azure AD.  
+- **Server app**: A web app in Microsoft Entra ID.  
+- **Client app**: A native client app in Microsoft Entra ID.  
 
 Run the following procedure from the primary site server:  
 
@@ -206,14 +206,14 @@ Run the following procedure from the primary site server:
 
    - **Application Name**: Specify a friendly name for the app, such as **Cloud Management web app**.  
 
-   - **HomePage URL**: Configuration Manager doesn't use this value, but Azure AD requires it. By default, this value is `https://ConfigMgrService`.  
+   - **HomePage URL**: Configuration Manager doesn't use this value, but Microsoft Entra ID requires it. By default, this value is `https://ConfigMgrService`.  
 
-   - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token that the Configuration Manager client uses to request access to the service. By default, this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+   - **App ID URI**: This value needs to be unique in your Microsoft Entra tenant. It's in the access token that the Configuration Manager client uses to request access to the service. By default, this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
      - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
      - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
-   Next, select **Sign in**, and specify an Azure AD Global Administrator account. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
+   Next, select **Sign in**, and specify a Microsoft Entra Global Administrator account. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
 
    After you sign in, the results appear. Select **OK** to close the **Create Server Application** dialog and return to the **App Properties** page.
 
@@ -223,21 +223,21 @@ Run the following procedure from the primary site server:
 
    - **Application Name**: Specify a friendly name for the app, such as **Cloud Management native client app**.
 
-   - **Reply URL**: Configuration Manager doesn't use this value, but Azure AD requires it. By default, this value is `https://ConfigMgrClient`.
+   - **Reply URL**: Configuration Manager doesn't use this value, but Microsoft Entra ID requires it. By default, this value is `https://ConfigMgrClient`.
    
-   Next, select **Sign in**, and specify an Azure AD Global Administrator account. Like the web app, these credentials aren't saved and don't require permissions in Configuration Manager.
+   Next, select **Sign in**, and specify a Microsoft Entra Global Administrator account. Like the web app, these credentials aren't saved and don't require permissions in Configuration Manager.
 
    After you sign in, the results appear. Select **OK** to close the **Create Client Application** dialog and return to the **App Properties** page. Then, select **Next** to continue.
 
-5. On the **Configure Discovery Settings** page, select the **Enable Azure Active Directory User Discovery** checkbox. Select **Next**, and then complete configuration of the **Discovery** dialogs for your environment.  
+5. On the **Configure Discovery Settings** page, select the **Enable Microsoft Entra user Discovery** checkbox. Select **Next**, and then complete configuration of the **Discovery** dialogs for your environment.  
 
 6. Continue through the **Summary**, **Progress**, and **Completion** pages, and then close the wizard.  
 
-   Azure services for Azure AD user discovery are now enabled in Configuration Manager. Leave the console open for now.  
+   Azure services for Microsoft Entra user discovery are now enabled in Configuration Manager. Leave the console open for now.  
 
 7. Open a browser and sign in to the [Azure portal](https://portal.azure.com/).  
 
-8. Select **All services** > **Azure Active Directory** > **App registrations**, and then:
+8. Select **All services** > **Microsoft Entra ID** > **App registrations**, and then:
 
    1. Select the web app that you created.
 
@@ -247,9 +247,9 @@ Run the following procedure from the primary site server:
 
    4. Go to **API Permissions**, select **Grant admin consent for** your tenant, and then select **Yes**.
 
-9. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and select your Azure service. Then, right-click **Azure Active Directory User Discover** and select **Run Full Discovery Now**. Select **Yes** to confirm the action.  
+9. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Azure Services**, and select your Azure service. Then, right-click **Microsoft Entra user Discover** and select **Run Full Discovery Now**. Select **Yes** to confirm the action.  
 
-10. On the primary site server, open the Configuration Manager *SMS_AZUREAD_DISCOVERY_AGENT.log* file and look for the following entry to confirm that discovery is working: **Successfully published UDX for Azure Active Directory users**.  
+10. On the primary site server, open the Configuration Manager *SMS_AZUREAD_DISCOVERY_AGENT.log* file and look for the following entry to confirm that discovery is working: **Successfully published UDX for Microsoft Entra users**.  
 
     By default, the log file is in *%Program_Files%\Microsoft Configuration Manager\Logs*.  
 
@@ -348,7 +348,7 @@ Use **Client Settings** to configure Configuration Manager clients to communicat
 
 3. On the **Default Settings** page, set the following settings to **Yes**:  
 
-   - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**  
+   - **Automatically register new Windows 10 domain joined devices with Microsoft Entra ID**  
 
    - **Enable clients to use a cloud management gateway**
 
@@ -422,7 +422,7 @@ The following procedure deploys the app for installing the Configuration Manager
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Apps** > **All Apps**, and then select **ConfigMgr Client Setup Bootstrap**. That's the app that you created to deploy the Configuration Manager client.  
 
-2. Select **Properties**, and then select **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Azure AD groups that have users and devices that you want to participate in co-management.  
+2. Select **Properties**, and then select **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Microsoft Entra groups that have users and devices that you want to participate in co-management.  
 
 3. Select **Review + save** > **Save** to save the configuration.
 The app is now required by users and devices that you assigned it to. After the app installs the Configuration Manager client on a device, it's managed by co-management.

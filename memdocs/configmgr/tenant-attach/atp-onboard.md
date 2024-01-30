@@ -4,10 +4,10 @@ titleSuffix: Configuration Manager
 description: Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center.
 ms.date: 03/21/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
-author: Banreet
-ms.author: banreetkaur
+ms.subservice: core-infra
+ms.service: configuration-manager
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.localizationpriority: high
 manager: apoorvseth
 ms.reviewer: mstewart,aaroncz 
@@ -18,12 +18,12 @@ ms.collection: tier3
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
-The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can deploy Microsoft Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can deploy Microsoft Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Microsoft Entra ID or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Microsoft Entra groups.
 
 <!--Adding Include for Prerequisites-->
 
 [!INCLUDE [Prerequisites for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-prerequisties.md)]
-- [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../intune/protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune)
+- [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../intune/protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune)
 - Client which meets the minimum requirements for, and is onboarded to [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement & MAX 6198973-->
 
 ## <a name="bkmk_onboard"></a> Create Microsoft Defender for Endpoint policies

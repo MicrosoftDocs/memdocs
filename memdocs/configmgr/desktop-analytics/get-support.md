@@ -3,8 +3,8 @@ title: Get support for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Get online and telephone support for Desktop Analytics paid and trial subscriptions.
 ms.date: 11/10/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -27,7 +27,7 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 ## Help and support
 
-To request help for Desktop Analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+To request help for Desktop Analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have a Microsoft Entra role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 If the issue is more broadly for Configuration Manager than just analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request. Use the **Desktop Analytics** category.
 
