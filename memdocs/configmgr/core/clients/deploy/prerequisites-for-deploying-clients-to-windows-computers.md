@@ -3,8 +3,8 @@ title: Windows client prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
 ms.date: 04/01/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg
@@ -194,7 +194,7 @@ To download the source files, the client computer needs to communicate with a di
 
 - Depending upon the use case, you may also require one or both of the following technologies:
 
-  - Azure Active Directory
+  - Microsoft Entra ID
 
   - Cloud management gateway
 

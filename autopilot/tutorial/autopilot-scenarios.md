@@ -7,11 +7,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/11/2023
+ms.date: 12/07/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
+  - essentials-get-started
 ms.technology: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -74,19 +75,19 @@ Microsoft Entra join and Microsoft Entra hybrid join aren't Autopilot scenarios,
 - Device identities being used going forward.
 - Possible device identities being used in the future.
 
-If possible, Microsoft recommends using only Microsoft Entra join. Microsoft Entra join provides the best user experience. However, current environment configurations and restrictions may require the continued use of on-premises Active Directory. In scenarios where on-premises Active Directory is still needed, Microsoft Entra hybrid join can be used. However, consider moving new devices to Microsoft Entra join while keeping existing devices on Microsoft Entra hybrid join. Microsoft Entra hybrid join can also be seen as a way to transition from on-premises Active Directory to purely Microsoft Entra ID.
+Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. Microsoft Entra join provides the best user experience. However, current environment configurations and restrictions may require the continued use of on-premises Active Directory. In scenarios where on-premises Active Directory is still needed, Microsoft Entra hybrid join can be used. However, consider moving new devices to Microsoft Entra join while keeping existing devices on Microsoft Entra hybrid join. Microsoft Entra hybrid join can also be seen as a way to transition from on-premises Active Directory to purely Microsoft Entra ID.
 
 Also keep in mind that for the Autopilot deployments that support Microsoft Entra hybrid join, Microsoft Entra hybrid join requires connectivity to a domain controller. If the device undergoing an Autopilot deployment is a remote device and isn't able to connect to a domain controller either on-premises or via a VPN connection, then only Microsoft Entra join is an option.
 
 <!-- Intune 12378279 -->
 
-For more information on Azure AD join versus hybrid Azure AD join, see the following articles:
+For more information on Microsoft Entra join versus Microsoft Entra hybrid join, see the following articles:
 
+- [Microsoft Entra joined vs. Microsoft Entry hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
 - [What is a device identity?](/azure/active-directory/devices/overview).
 - [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
-- [Azure AD joined vs. Hybrid Azure AD joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
 - [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
-- [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/device-join-plan).
+- [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 - [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).
@@ -119,7 +120,7 @@ The following guide makes general suggestions on which Autopilot scenario to use
 - Windows Autopilot self-deploying mode only supports Microsoft Entra join. It doesn't support Microsoft Entra hybrid join.
 - The device is intended to be used as a kiosk device or by multiple users.
 - If the device isn't going to be assigned to a user.
-- The deployment needs to be automated as much as follow with no user interaction during the deployment process. For example, the end-user having to sign into Azure into during the deployment process.
+- The deployment needs to be automated as much as follow with no user interaction during the deployment process. For example, the end-user having to sign into Microsoft Entra ID during the deployment process.
 - Windows Autopilot self-deploying mode uses [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) for authentication during the technician flow so only devices that have a supported TPM are supported. For this reason, virtual machines (VMs) aren't supported even when the VM has a virtual TPM.
 
 ### Existing devices

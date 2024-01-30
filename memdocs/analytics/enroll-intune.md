@@ -3,8 +3,8 @@ title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
 ms.date: 10/23/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: quickstart
 author: smritib17
 ms.author: smbhardwaj
@@ -29,8 +29,8 @@ Before you start this tutorial, make sure you have the following prerequisites:
     - The cumulative update from July 2021 or later installed
     - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
 
-- Windows devices must be Azure AD joined or hybrid Azure AD joined.
-  - Workplace joined or Azure AD registered devices aren't supported.
+- Windows devices must be Microsoft Entra joined or Microsoft Entra hybrid joined.
+  - Workplace joined or Microsoft Entra registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Intune-managed devices

@@ -3,8 +3,8 @@ title: BitLocker administration and monitoring website
 titleSuffix: Configuration Manager
 description: How to use the BitLocker administration and monitoring website (helpdesk portal) in Configuration Manager
 ms.date: 09/21/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

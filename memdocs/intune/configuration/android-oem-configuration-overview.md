@@ -89,11 +89,11 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 ## Create an OEMConfig profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.
-    - **Profile**: Select **OEMConfig**.
+    - **Profile type**: Select **OEMConfig**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -158,7 +158,7 @@ The next time the device checks for configuration updates, the OEM-specific sett
 
 After your profile is deployed, you can check its status:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**. A list of all your profiles is shown.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. A list of all your profiles is shown.
 2. Select your OEMConfig profile. You can get more information on your profile, including successful and failed deployments:
 
     - **Overview**: Shows the profile assignment statuses. For more information on what the statuses mean, go to [Monitor device profiles in Microsoft Intune](device-profile-monitor.md).
@@ -207,7 +207,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Motorola Mobility | com.motorola.oemconfig.rel | [Moto OEMConfig Guide](https://motorola-global-portal.custhelp.com/app/answers/prod_answer_detail/a_id/160503 ) |
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Point Mobile | device.apps.emkitagent | |
-| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
 | Seuic | com.seuic.seuicoemconfig | | 
 | Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |

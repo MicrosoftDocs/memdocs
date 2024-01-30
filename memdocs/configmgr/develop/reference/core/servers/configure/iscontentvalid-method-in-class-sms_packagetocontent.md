@@ -3,8 +3,8 @@ description: Learn how to determine if the package content is valid using IsCont
 title: IsContentValid Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 371c8d22-2384-4c28-8255-50e94e6fdf49
 author: Banreet

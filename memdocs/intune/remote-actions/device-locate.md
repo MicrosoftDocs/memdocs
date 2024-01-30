@@ -36,7 +36,7 @@ For supported device platforms, you can use a remote device action from within t
 In addition to identifying the location a lost or stolen device on a map, some platforms support additional capabilities to help you find them, including:
 
 - Use a *lost device sound alert* on a phone to help a user locate the device should it be behind a chair or otherwise out-of-sight.
-- Report on the time and location of a devices *last known location*, which can help when the device is off-line, or can’t be reached to verify where it is at. *(Android Enterprise dedicated devices only)*
+- Report on the time and location of a devices *last known location*, which can help when the device is off-line, or can't be reached to verify where it is at. *(Android Enterprise dedicated devices only)*
 
 You need to enable Windows location services in Windows Out of Box Experience (OOBE) or by using the [Privacy > LetAppsAccessLocation](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesslocation) policy to be able to locate the device.
 
@@ -44,7 +44,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 **Locate device** - The following platforms support this capability:
 
-- **Android Enterprise** – This is applicable to dedicated devices, fully-managed, and corporate-owned work profile devices. Requires the device to run *Google Play Services* version **20.06.16** or later and have Location services turned on.  
+- **Android Enterprise** – This is applicable to dedicated devices, fully-managed, and corporate-owned work profile devices. Requires the device to run *Google Play Services* version **20.06.16** or later and have Location services turned on. Corporate-owned work profile devices running Android 12 or above require the end user to grant Intune app location permission by going to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
 - **Windows 10**:
   - Version 20H2 (10.0.19042.789) or later
@@ -83,22 +83,25 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
    ![Screenshot of Locate device using Intune in Azure](./media/device-locate/locate-device.png)
 
-Android use of **Locate device** is controlled by **Device Restrictions** in **Device Configuration**. 
-There are two separate toggles, one for dedicated and one for fully managed and corporate owned work profile devices.
+Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
 
-For fully managed and corporate owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to Allow.
+There are two separate toggles, one for dedicated and one for fully managed and corporate-owned work profile devices.
 
-For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature. To turn this feature off, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users will receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
+For fully managed and corporate-owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to Allow. For corporate-owned work profile devices running Android 12 or above, also have the user of the device enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
+
+For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature. To turn this feature off, in your device configuration profile, configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users will receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
+
+For more information on the policy settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ### Last known location
 
 When you use the *Locate device* action for an Android Enterprise dedicated device that is off-line and unable to respond with its current location, Intune attempts to display its last known location. This capability uses data submitted by the device when it checks in with Intune.
 
-Intune collects information about the last known location of a device every eight hours or when the device checks in with Intune. Intune keeps this information for up to seven days. The last known location of a device that hasn’t checked in with Intune for more than seven days can't be displayed.
+Intune collects information about the last known location of a device every eight hours or when the device checks in with Intune. Intune keeps this information for up to seven days. The last known location of a device that hasn't checked in with Intune for more than seven days can't be displayed.
 
 **About initialization of last known location**:
 
-To support the *last know location* capability for Android dedicated devices, each device receives an initial default entry for **Locate device** which shows a status of **Complete**. This status appears under *Device actions status* when you view the devices Overview page. This default status is a result of the capability being initialized by Intune and doesn’t indicate that a locate device action has run.
+To support the *last know location* capability for Android dedicated devices, each device receives an initial default entry for **Locate device** which shows a status of **Complete**. This status appears under *Device actions status* when you view the devices Overview page. This default status is a result of the capability being initialized by Intune and doesn't indicate that a locate device action has run.
 
 The date and time of this default status varies:
 

@@ -87,7 +87,7 @@ To select an ANC, follow these steps:
 
 ### Continue creating a provisioning policy
 
-1. On the **General** page, you can check the box so that your users **Use Microsoft Entra single sign-on (preview)**.
+1. On the **General** page, you can check the box so that your users **Use Microsoft Entra single sign-on**.
 2. Select **Next**.
 3. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
@@ -99,7 +99,7 @@ To select an ANC, follow these steps:
     - Names can contain letters, numbers, and hyphens.
     - Names can't include blank spaces or underscores.
     - Optional. Use the %USERNAME:X% macro to add the first X letters of the username.
-    - Required. Use the %RAND:Y% macro to add a random string of numbers, where Y equals the number of digits to add. Y must be 5 or more. Names must contain a randomized string.
+    - Required. Use the %RAND:Y% macro to add a random string of characters, where Y equals the number of characters to add. Y must be 5 or more. Names must contain a randomized string.
   
     Examples of custom naming templates:
 

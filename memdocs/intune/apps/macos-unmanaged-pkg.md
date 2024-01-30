@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/06/2023
+ms.date: 01/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,10 +33,7 @@ ms.collection:
 - highpri
 ---
 
-# Add an unmanaged macOS PKG app to Microsoft Intune (public preview)
-
-> [!NOTE]
-> This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+# Add an unmanaged macOS PKG app to Microsoft Intune
 
 Use the information in this article to help you add an unmanaged macOS PKG app to Microsoft Intune. To deploy a managed PKG app, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune.](../apps/lob-apps-macos.md) 
 
@@ -45,7 +42,7 @@ Use the information in this article to help you add an unmanaged macOS PKG app t
 The following prerequisites must be met before an unmanaged macOS PKG app is installed on macOS devices.
 
 - Devices are managed by Intune.
-- The PKG file is smaller than 2 GB in size.
+- The PKG file is smaller than 8 GB in size.
 - The [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md) version 2308.006 or greater is installed.
 - The PKG file successfully runs using the `installer` command in Terminal.
 

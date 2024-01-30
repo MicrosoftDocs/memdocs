@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2023
+ms.date: 01/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -41,14 +41,14 @@ You can also read:
 - Information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)
 
 > [!NOTE]
-> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to three days to rollout and will be in the following order:
+> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to rollout and will be in the following order:
 >
 > - Day 1: Asia Pacific (APAC)
 > - Day 2: Europe, Middle East, Africa (EMEA)
 > - Day 3: North America
 > - Day 4+: Intune for Government
 >
-> Some features may roll out over several weeks and might not be available to all customers in the first week.
+> Some features roll out over several weeks and might not be available to all customers in the first week.
 >
 > For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's new](/autopilot/windows-autopilot-whats-new).
 
@@ -68,14 +68,481 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of January 22, 2024 (Service release 2401)
+
+### App management
+
+#### Install DMG and PKG apps up to 8 GB in size on managed Macs<!-- 25766031 -->
+The size-limit of DMG and PKG apps that can be installed using Intune on managed Macs has been increased. The new limit is 8 GB and is applicable to apps (DMG and unmanaged PKG) that are installed using the Microsoft Intune management agent for macOS. For more information about DMG and PKG apps, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md) and [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md).
+
+#### Intune support of store-signed LOB apps for Surface Hub devices<!-- 25865620 -->
+Intune now supports the deployment of store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps enables offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
+
+#### Route SMS/MMS messages to specific app<!-- 24594466 -->
+You can configure an app protection policy to determine which SMS/MMS app must be used when the end user intends to send a SMS/MMS message after getting redirected from a policy managed app. When the end user clicks on a number with the intent of sending an SMS/MMS message, the app protection settings are used to redirect to the configured SMS/MMS app. This capability relates to the **Transfer messaging data to** setting and applies to both iOS/iPadOS and Android platforms. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [Android app protection policy settings](../apps/app-protection-policy-settings-android.md).
+
+#### End user app PIN reset<!-- 24605159 -->
+For managed apps that require a PIN to access, allowed end users can now reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
+
+#### Maximum app package size<!-- 17546826 -->
+The maximum package size for uploading apps to Intune has changed from 8GB to 30GB for paid customers. Trial tenants are still restricted to 8GB. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md#prerequisites).
+
+### Device configuration
+
+#### New setting that disables location on Android Enterprise devices<!-- 21060837 -->
+
+On Android Enterprise devices, there's a new setting that allows admins to control the location (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile > Device Restrictions** for profile type > **General**):
+
+- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+
+For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+
+- Android Enterprise
+
+#### Date and time picker for managed software updates in the settings catalog on iOS/iPadOS and macOS devices<!-- 26015175 -->
+
+Using the settings catalog, you can enforce managed updates on iOS/iPadOS and macOS devices by entering a date and time (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative Device Management > Software Update**). 
+
+Previously, you had to manually type the date and time. Now, there's a date and time picker for the **Target Local Date Time** setting:
+
+**Declarative Device Management (DDM) > Software Update**:
+
+- Target Local Date Time
+
+> [!IMPORTANT]
+> If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`.
+>
+> To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time using the date time picker. Or, you can create a new policy.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about configuring Managed software updates in Intune, go to [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
+
+### Device management
+
+#### New device management experience in Microsoft Intune<!-- 17585897 23692982 -->
+We’re rolling out an update to the device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster. The new experience, previously in public preview, will be gradually rolled out for general availability over the coming weeks. The public preview experience will continue to be available until your tenant receives the update.  
+
+The availability of this new admin center experience will vary tenant by tenant. While a few will see this update immediately, many might not see the new experience for several weeks. For Government clouds, the availability of this experience is estimated around late February 2024.  
+
+Due to the rollout timelines, we are updating our documentation to the new experience as soon as possible to help ease the transition to the new admin center layout. We are unable to provide a side-by-side content experience during this transition and believe providing documentation that aligns to the newer experience brings more value to more customers. If you want to try the new experience and align with doc procedures before your tenant is updated, go to **Devices** > **Overview**, select the notification banner that reads **Preview upcoming changes to Devices and provide feedback**, and select **Try it now**.
+
+#### BlackBerry Protect Mobile now supports app protection policies<!-- 13357196 wnstaged -->  
+You can now use Intune app protection policies with *BlackBerry Protect Mobile* (powered by Cylance AI). With this change Intune supports BlackBerry Protect Mobile for mobile application management (MAM) scenarios for [unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md). This includes the use of risk assessment with Conditional access and configuration of Conditional Launch settings for unenrolled devices.
+ 
+While configuring the CylancePROTECT Mobile connector (formerly BlackBerry Mobile), you now can select options to turn on *App protection policy evaluation* for both Android and iOS/iPadOS devices. 
+
+For more information, see [Set up BlackBerry Protect Mobile](../protect/blackberry-mobile-threat-defense-connector.md), and [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+
+### Device security
+
+#### Support for Intune Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!--25470154 -->  
+You can now use the endpoint security policy for *Defender Update control* (Antivirus policy) from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+ 
+- **Defender Update control** policies are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).    
+  Applies to:  
+
+  - Windows 10/11 - Available for the *Windows 10, Windows 11, and Windows Server* platform.
+
+With this support available, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive the policy will get it.
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 25765585, 26137219 -->
+The following protected apps are now available for Microsoft Intune:
+- PrinterOn Print by PrinterOn, Inc. (iOS/iPadOS)
+- Align for InTune by MFB Technologies, Inc. (iOS/iPadOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+#### Monitoring reports for devices<!-- 17744651 -->
+In Intune, you can view a new list of all device monitoring reports. You can find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane provides reports related to configuration, compliance, enrollment, and software updates. Additionally, there are other reports that you can view, such as **Device actions**. For more information, see [Intune reports](../fundamentals/reports.md).
+
+#### Exported report data maintains search results<!-- 17723620 -->
+Intune can now maintain your report search and filter results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
+
+#### Easy upload of diagnostic logs for Microsoft Tunnel servers<!-- 15728481 -->  
+You can now use a single click within the Intune admin center to have Intune enable, collect, and submit eight hours of verbose logs for a Tunnel Gateway Server to Microsoft. The verbose logs can then be referenced while working with Microsoft to identify or resolve issues with a Tunnel server.
+
+In contrast, the collection of verbose logs has previously required you to sign on to the server, run manual tasks and scripts to enable and collect verbose logs, and then copy them to a location from which you can transfer them to Microsoft.
+
+To find this new capability, in the admin center go to **Tenant administration** > **Microsoft Tunnel Gateway** > select a server > select the **Logs** tab.  On this tab you’ll see a new section named **Send verbose server logs**, with button labeled **Send logs**, and a list view that displays the various log sets that have been collected and submitted to Microsoft.
+
+When you select the **Send logs** button:
+
+- Intune captures and submits the current server logs as a baseline, prior to collecting verbose logs.
+- Verbose logging is automatically enabled at level 4, and runs for eight hours to provide time to reproduce an issue for capture in those logs.
+- After eight hours, Intune submits the verbose logs and then restores the server to it's default verbosity level of zero (0), for normal operations. If you have previously set logs to run at a higher verbosity level, you can restore your custom verbosity level after log collection and upload is complete. 
+- Each time Intune collects and submits logs, it updates the list view below the button. 
+- Below the button is a list of past log submissions, displaying their verbosity level and an Incident ID that you can use when working with Microsoft to reference a specific set of logs.
+
+For more information about this capability, see [Easy upload of diagnostic logs for Tunnel servers](../protect/microsoft-tunnel-monitor.md#easy-upload-of-diagnostic-logs-for-tunnel-servers).
+
+## Week of December 11, 2023 (Service release 2312)
+
+### App management
+
+#### Support to add unmanaged PKG-type applications to managed macOS devices is now generally available<!-- 17296091   -->  
+You can now upload and deploy unmanaged PKG-type applications to managed macOS devices using the Intune MDM agent for macOS devices. This feature enables you to deploy custom PKG installers, such as unsigned apps and component packages. You can add a PKG app in the Intune admin center by selecting **Apps** > **macOS** > **Add** > **macOS app (PKG)** for app type.
+
+For more information, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md). To deploy managed PKG-type app, you can continue to [add macOS line-of-business (LOB) apps to Microsoft Intune](../apps/lob-apps-macos.md). For more information about the Intune MDM agent for macOS devices, see [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md).
+
+Applies to:
+
+- macOS
+
+#### Windows MAM supported in government cloud environments and in 21 Vianet in China<!-- 25273622  -->  
+Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments are now able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md) and [Data protection for Windows MAM](../apps/protect-mam-windows.md).
+
+In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](../fundamentals/china.md).
+
+### Device configuration
+
+#### Updated security baseline for Microsoft Edge v117<!-- 25021903 -->  
+We've released a new version of the Intune security baseline for  **Microsoft Edge**, version [**v117**](../protect/security-baselines.md#available-security-baselines). This update brings support for recent settings so you can continue to maintain best-practice configurations for Edge.
+
+We've also updated our [reference article](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) for this baseline where you can view the default configuration of the settings this baseline version includes.
+
+### Device management
+
+#### Support for variables in noncompliant email notifications<!-- 6111965  -->  
+Use variables to personalize email notifications that are sent when a user's device becomes noncompliant. The variables included in the template, such as `{{username}}` and `{{devicename}}`, are replaced by the actual username or device name in the email that users receive. Variables are supported with all platforms. For more information and a list of supported variables, see [Create a notification message template](../protect/actions-for-noncompliance.md#create-a-notification-message-template).
+
+
+#### Updated report visualization for Microsoft Defender for Endpoint connector<!--  24762035  -->  
+We updated the reporting visualization for the Microsoft Defender for Endpoint connector. This [report visualization](../protect/advanced-threat-protection-configure.md#view-the-count-of-devices-that-are-onboarded-to-microsoft-defender-for-endpoint) displays the count of devices that have onboarded to Defender for Endpoint based on status from the Defender CSP, and visually aligns to other recent report views that use a bar to represent the percentage of devices with different status values.
+
+### Device security
+
+#### New settings for scheduling Antivirus scans added to Antivirus policy for Windows devices<!-- 26013546  -->  
+We've added two settings to the *Microsoft Defender Antivirus* profile for  [endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md#antivirus-profiles) that applies to Windows 10 and Windows 11 devices.  These two settings work together to first enable support for a random start time of a device's antivirus scan, and to then define a range of time during which the randomized scan start can begin. These settings are supported with devices managed by Intune and devices managed through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+
+- [**RandomizeScheduleTaskTimes**](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#admx-microsoftdefenderantivirus-randomizescheduletasktimes) – This setting enables randomization of the scan start time on devices.
+- [**SchedulerRandomizationTime**](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationschedulerrandomizationtime) – This setting, you can set boundaries for the random start time.
+
+In addition to being added to the Microsoft Defender Antivirus profile, both settings are now available from the [settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+
+- Windows 10, 11
+
+#### Microsoft Tunnel support for direct proxy exclusion list in VPN profiles for Android Enterprise<!-- 24139621 -->  
+Intune now supports configuration of a *Proxy exclusion list* when you [configure a VPN profile for Microsoft Tunnel](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) for Android devices. With an exclusion list, you can exclude specific domains from your proxy setup without requiring the use of a Proxy Auto-Configuration (PAC) file. The proxy exclusion list is available with both Microsoft Tunnel and Microsoft Tunnel for MAM
+
+The proxy exclusion list is supported in environments that use a single proxy. The exclusion list isn't suitable or supported when you use multiple proxy servers, for which you should continue to use a .PAC file.
+
+Applies to:
+
+- Android Enterprise
+
+#### Microsoft Tunnel server health metric to report on TLS certificate  revocation<!-- 25853648  -->  
+We've added a new health metric for Microsoft Tunnel named **TLS certificate revocation**. This new health metric reports on the status of the Tunnel Servers TLS certificate by accessing the Online Certificate Status Protocol (OCSP) or CRL address as defined in the TLS certificate. You can view the status of this new check with all the health checks in the Microsoft Intune admin center by navigating to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**, selecting a server, and then selecting that servers **Health check** tab.
+
+This metric runs as part of the existing Tunnel Health checks, and supports the following status:
+
+- *Healthy*: The TLs certificate is not revoked
+- *Warning*: Unable to check if the TLS certificate is revoked
+- *Unhealthy*: The TLS certificate is revoked, and should be updated
+
+For details about the TLS certificate revocation check, see [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md).
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 25636619   -->  
+The following protected app is now available for Microsoft Intune:
+
+- Akumina EXP by Akumina Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+## Week of November 27, 2023
+
+### App management
+
+#### Configure offline caching in Microsoft 365 (Office) for Android devices<!-- 25008682 -->
+When the **Save As to Local Storage** setting is set to **blocked** in an [app protection policy](../apps/app-protection-policies.md), you can use a configuration key in an app configuration policy to enable or disable offline caching. This setting is only applicable to the Microsoft 365 (Office) app on Android. For more information, see [Data protection settings in Microsoft 365 (Office)](../apps/manage-microsoft-office.md#data-protection-settings-in-microsoft-365-office).
+
+#### Win32 app grace period settings on a device<!-- 17644728 -->
+On a device where a Win32 app with grace period settings has been deployed, low-rights users with non-administrative privileges can now interact with the grace period UX. Admins on the device will continue to be able to interact with the grace period UX on the device. For more information about grace period behavior, see [Set Win32 app availability and notifications](../apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+
+#### Managed Home Screen app configuration additions<!-- 25374056 -->
+Now in public preview, Microsoft Managed Home Screen (MHS) has been updated to improve the core workflows and user experience. In addition to some user interface changes, there is a new top bar navigation where admins can configure device identifying attributes to be displayed. Additionally, users can access settings, sign in/out, and view notifications when permissions are requested on the top bar.
+
+You can add additional settings to configure the Managed Home Screen app for Android Enterprise. Intune now supports the following settings in your Android Enterprise app configuration policy:
+- Enable updated user experience
+- Top Bar Primary Element
+- Top Bar Secondary Element
+- Top Bar User Name Style
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+#### Intune APP SDK for .NET MAUI<!-- 17696301 -->
+Using the Intune APP SDK for .NET MAUI, you can develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md). For .NET MAUI support on Android, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android). For .NET MAUI support on iOS, see [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS)
+
+## Week of November 13, 2023 (Service release 2311)
+
+### App management
+
+#### New grace period status added in apps for Android, Android AOSP <!-- 13498172 13498291  -->  
+The Intune Company Portal app for Android and Microsoft Intune app for Android AOSP now show a grace period status for devices that don't meet compliance requirements but are still within their given grace period.  Users can see the date by which devices must be compliant, as well as the instructions for how to become compliant. If users don't update their device by the given date, the device is marked as noncompliant. For more information, see the following docs:
+
+- [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
+- [Check compliance in Intune app for AOSP](../user-help/check-compliance-aosp.md)
+- [Check compliance in Company Portal for Android](../user-help/check-compliance-on-your-device-android.md)
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog<!-- 25189345  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+
+**Managed Settings**:
+
+- Data roaming
+- Personal hotspot
+- Voice roaming (deprecated): This setting is deprecated in iOS 16.0. Data roaming is the replacement setting.
+
+Applies to:
+
+- iOS/iPadOS
+
+**Managed Settings**:
+
+- Diagnostic submission
+
+Applies to:
+
+- Shared iPad
+
+**Microsoft Defender > Antivirus engine**:
+
+- Enable passive mode (deprecated): This setting is deprecated. Enforcement level is the replacement setting.
+- Enable real-time protection (deprecated): This setting is deprecated. Enforcement level is the replacement setting.
+- Enforcement level
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### Settings to manage Windows Subsystem for Linux are now available in the Windows settings catalog<!-- 17757930  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+We've added settings to the Windows settings catalog for *Windows Subsystem for Linux* (WSL). These settings enable Intune integration with WSL so admins can manage deployments of WSL and controls into Linux instances themselves.
+
+To find these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Configuration** > **Create** > **New Policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
+
+**Windows Subsystem for Linux**:
+
+- Allow kernel debugging
+- Allow custom networking configuration
+- Allow custom system distribution configuration
+- Allow kernel command line configuration
+- Allow custom kernel configuration
+- Allow WSL1
+- Allow the Windows Subsystem for Linux
+- Allow the Inbox version of the Windows Subsystem For Linux
+- Allow user setting firewall configuration
+- Allow nested virtualization
+- Allow passthrough disk mount
+- Allow the debug shell
+
+Applies to:
+
+- Windows 10/11
+
+### Device enrollment
+
+#### Enrollment for iOS/iPadOS devices in shared device mode now generally available<!-- 25199565   -->  
+Now generally available to configure in the Microsoft Intune admin center, set up automated device enrollment for iOS/iPadOS devices that are in shared device mode. Shared device mode is a feature of Microsoft Entra that enables your frontline workers to share a single device throughout the day, signing in and out as needed. For more information, see [Set up enrollment for devices in shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).
+
+### Device management
+
+#### Improvements to new device experience in admin center (public preview) <!-- 24155098, 25103808, 17705028   -->  
+We've made the following changes to the new Devices experience in the Microsoft Intune admin center:
+
+- Additional entry points to platform-specific options: Access the platform pages from the **Devices** navigation menu.
+- Quick entry to monitoring reports: Select the titles of the metrics cards to go to the corresponding monitoring report.
+- Improved navigation menu: We added icons back in to provide more color and context as you navigate.
+
+Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback. For more information, see:
+
+- [New Microsoft Intune Devices experience - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-devices-experience/ba-p/3777342)  
+- [Try new Devices experience - Microsoft Learn](microsoft-intune-admin-center-devices.md)
+
+### Device security
+
+#### Additional settings for the Linux Antivirus policy template<!-- 24191424 -->  
+We've expanded support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
+
+- cloudblocklevel
+- scanarhives
+- scanafterdefinitionupdate
+- maximumondemandscanthreads
+- behaviormonitoring
+- enablefilehashcomputation
+- networkprotection
+- enforcementlevel
+- nonexecmountpolicy
+- unmonitoredfilesystems
+
+The Microsoft Defender Antivirus template for Linux is supported for devices [managed by Intune](../protect/endpoint-security-antivirus-policy.md), as well as those managed only by Defender through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+
+#### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 25021846   -->  
+We've released a new version of the Intune security baseline for **Microsoft 365 Apps for Enterprise**, version [**2306**](../protect/security-baselines.md#available-security-baselines).
+
+The Microsoft 365 Office Apps baseline can help you rapidly deploy configurations to your Office Apps that meet the security recommendations of the Office and security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations. You can modify the default baseline to meet the requirements of your organization.
+
+We've also updated our [reference article](../protect/security-baseline-v2-office-settings.md?pivots=v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
+
+#### Deprecation and replacement of two  settings found in the Linux and macOS endpoint security Antivirus policies<!-- 25234740  -->  
+We have deprecated two settings that are found in the *Antivirus engine* category of [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profiles of both macOS and Linux. These profiles are available as part of  Intune's endpoint security Antivirus policies.
+
+For each platform, the two deprecated settings are replaced by a single new setting that aligns to how the device configurations are managed by Microsoft Defender for Endpoint.
+
+The following are the two deprecated settings:
+
+- *Enable real-time protection* now appears as *Enable real-time protection (deprecated)*
+- *Enable passive mode* now appears as *Enable passive mode (deprecated)*
+
+The new setting that replaces the two deprecated settings:
+
+- *Enforcement level* - By default, Enforcement level is set to *Passive* and supports options of *Real time* and *On demand*.
+
+These settings are also available from the Intune [settings catalog](../configuration/settings-catalog.md) for each platform, where the old settings are also marked as deprecated and replaced by the new setting.
+
+With this change, a device that has either of the *deprecated* settings configured will continue to apply that configuration until the device is targeted by the new setting *Enforcement level*. Once targeted by Enforcement Level, the deprecated settings no longer are applied to the device.
+
+The *deprecated* settings will be removed from the Antivirus profiles and the settings catalog in a future update to Intune.
+
+> [!NOTE]
+> The changes for Linux are now available. The macOS settings are marked as deprecated, but the *Enforcement level* setting will not be available until December.
+
+Applies to:
+
+- Linux
+- macOS
+
+#### Microsoft Defender Firewall profiles are renamed to Windows Firewall<!-- 25171457 -->  
+To align to Firewall branding changes in Windows, we are updating the names of Intune profiles for endpoint security Firewall policies. In profiles that have *Microsoft Defender Firewall* in the name we are replacing that with *Windows Firewall*.
+
+The following platforms have profiles that are affected, with only the profile names being affected by this change:
+
+- Windows 10 and later (ConfigMgr)
+- Windows 10, Windows 11, and Windows Server
+
+#### Use the endpoint security Firewall policy for Windows Firewall to manage firewall settings for Windows Hyper-V<!--  25767542  -->  
+We've added new settings to the *Windows Firewall* profile (formerly *Microsoft Defender Firewall*) for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Windows Firewall**.
+
+The following settings have been added to the *Firewall* category:
+
+- **Target** - When *Target* is set to **Windows Subsystem for Linux**, the following child settings are applicable:  
+  - Enable Public Network Firewall
+  - Enable Private Network Firewall
+  - Allow Host Policy Merge
+  - Enable Domain Network Firewall
+  - Enable Loopback
+
+For more information about these settings, see [Windows Firewall with Advanced Security](/windows/security/operating-system-security/network-security/windows-firewall/windows-firewall-with-advanced-security).
+
+Applies to:
+
+- Windows 10/11
+
+#### New Endpoint Security Firewall policy profile for Windows Hyper-V Firewall Rules<!-- 10946486  -->
+
+We've released a new profile named *Windows Hyper-V Firewall Rules* that you can find through the *Windows 10, Windows 11, and Windows Server* platform path for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md#devices-managed-by-intune). Use this profile to manage the firewall settings and rules that apply to specific Hyper-V containers on Windows, including applications like the Windows Subsystem for Linux (WSL) and the Windows Subsystem for Android (WSA).
+
+Applies to:
+
+- Windows 10/11
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 25417889, 25161990, 25174019  -->  
+The following protected apps are now available for Microsoft Intune:
+
+- Hey DAN for Intune by Civicom, Inc.
+- Microsoft Azure by Microsoft Corporation (iOS)
+- KeePassium for Intune by KeePassium Labs (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+## Week of November 6, 2023
+
+### App management
+
+#### Minimum version update for iOS Company Portal<!-- 17964541 -->  
+Users are required to update to v5.2311.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+
+### Device security
+
+#### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->  
+The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
+
+With this change, the default behavior for security settings management includes all the behavior added for the opt-in preview – without having to enable support for preview features in Microsoft Defender for Endpoint. This includes the general availability and support for the following endpoint security profiles for Linux and macOS:
+
+### Device management
+
+### Feature updates and reports support Windows 11 policies<!--17614166 -->
+
+The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins do not need to create or manage groups of eligible and non-eligible devices.
+
+For more information on feature updates, go to [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
+
+**Linux**:
+
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
+
+**MacOS**:
+
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
+
+For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) in the Intune documentation.
+
+## Week of October 30, 2023
+
+### Device security
+
+#### Strict Tunnel Mode in Microsoft Edge available for Microsoft Tunnel for MAM on Android and iOS/iPadOS devices<!--24045412-->  
+In Intune, you can use the Microsoft Tunnel for mobile application management (MAM) on Android and iOS/iPadOS devices. With the MAM tunnel, unmanaged devices (devices not enrolled in Intune) can access on-premises apps and resources.
+
+There's a new **Strict Tunnel Mode** feature you can configure for Microsoft Edge. When users sign into Microsoft Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. When the VPN reconnects, internet browsing is available again.
+
+To configure this feature, create a Microsoft Edge app configuration policy, and add the following setting:
+
+- **Key**: `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`
+- **Value**: `True`
+
+Applies to:
+
+- Android Enterprise version 10 and later
+- iOS/iPadOS version 14 and later
+
+For more information, go to:
+
+- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [Microsoft Tunnel for MAM - Android](../protect/microsoft-tunnel-mam-android.md)
+- [Microsoft Tunnel for MAM - iOS/iPadOS](../protect/microsoft-tunnel-mam-ios.md)
+
 ## Week of October 23, 2023 (Service release 2310)
+
 ### App management
 
 #### Update for users of Android Company Portal app<!-- 25109006   -->  
-If users launch a version of the Android Company Portal app below version 5.0.5333.0 (released November 2021), they will see a prompt encouraging them to update their Android Company Portal app. If a user with an older Android Company Portal version attempts a new device registration using a recent version of the Authenticator app, the process will likely fail. The way to resolve this is to update the Android Company Portal app.
+If users launch a version of the Android Company Portal app below version 5.0.5333.0 (released November 2021), they'll see a prompt encouraging them to update their Android Company Portal app. If a user with an older Android Company Portal version attempts a new device registration using a recent version of the Authenticator app, the process will likely fail. To resolve this behavior, update the Android Company Portal app.
 
 #### Minimum SDK version warning for iOS devices<!-- 9410239  -->  
-The **Min SDK version** for the iOS Conditional Launch setting on iOS devices now includes a **warn** action. This action will warn end users if the min SDK version requirement is not met. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
+The **Min SDK version** for the iOS Conditional Launch setting on iOS devices now includes a **warn** action. This action will warn end users if the min SDK version requirement isn't met. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 
 #### Minimum OS for Apple LOB and store apps<!-- 24623225  -->  
 You can configure the minimum operating system to be the latest Apple OS releases for both Apple line-of-business apps and iOS/iPadOS store apps. You can set the minimum operating system for Apple apps as follows:
@@ -89,7 +556,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-#### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138 wn  -->  
+#### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138   -->  
 You can install and uninstall mandatory LOB apps on AOSP devices by using the **Required** and **Uninstall** group assignments. To learn more about managing LOB apps, see [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md).
 
 Applies to:
@@ -119,7 +586,7 @@ Applies to:
 #### Use delegated scopes in your Managed Google Play apps that configure enhanced permissions on Android Enterprise devices<!-- 14029609  -->  
 In your Managed Google Play apps, you can give apps enhanced permissions using delegated scopes.
 
-When your apps include delegated scopes, you can configure the following settings in a device configuration profile (**Devices** > **Configuration profile** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**):
+When your apps include delegated scopes, you can configure the following settings in a device configuration profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**):
 
 - **Allow other apps to install and manage certificates**: Admins can select multiple apps for this permission. The selected apps are granted access to certificate installation and management.
 - **Allow this app to access Android security logs**: Admins can select one app for this permission. The selected app is granted access to security logs.
@@ -141,7 +608,7 @@ Applies to:
 #### Samsung ended support for kiosk mode on Android device administrator (DA) devices<!-- 24810356  -->  
 Samsung marked the Samsung Knox kiosk APIs used on Android device administrator as deprecated in Knox 3.7 (Android 11).
 
-Though the functionality might continue to work, there's no guarantee that it will continue working. Samsung won't fix bugs that may arise. For more information on Samsung support for deprecated APIs, go to [What kind of support is offered after an API is deprecated?](https://docs.samsungknox.com/dev/knox-sdk/faqs/general/deprecated-api-support-change.htm) (opens Samsung's web site).
+Though the functionality might continue to work, there's no guarantee that it will continue working. Samsung won't fix bugs that might arise. For more information on Samsung support for deprecated APIs, go to [What kind of support is offered after an API is deprecated?](https://docs.samsungknox.com/dev/knox-sdk/faqs/general/deprecated-api-support-change.htm) (opens Samsung's web site).
 
 Instead, you can manage kiosk devices with Intune using [dedicated device management](../enrollment/android-kiosk-enroll.md).
  
@@ -150,7 +617,7 @@ Applies to:
 - Android device administrator (DA)
 
 #### Import and export settings catalog policies<!-- 3470151  -->  
-The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration profiles** > **Create profile** > Select your **platform** > For **Profile**, select **Settings catalog**).
+The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration** > **Create** > **New Policy** > Select your **platform** > For **Profile**, select **Settings catalog**).
 
 The settings catalog policies can be imported and exported:
 
@@ -159,10 +626,13 @@ The settings catalog policies can be imported and exported:
 
 For more information about the settings catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
 
+> [!NOTE]
+> This feature is continuing to roll out. It may be a couple of weeks before it's available in your tenant.
+
 #### New setting to block users from using the same password to unlock the device and access the work profile on Android Enterprise personally owned devices with a work profile<!-- 6167371  -->  
 On Android Enterprise personally owned devices with a work profile, users can use the same password to unlock the device and access the work profile.
 
-There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
+There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
 
 - **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile. When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
 
@@ -179,7 +649,7 @@ Applies to:
 #### New settings available in the macOS settings catalog <!-- 24950434  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.  
 
 **Privacy > Privacy Preferences Policy Control**:
 
@@ -198,12 +668,12 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 ### Device enrollment
 
 #### Web based device enrollment with JIT registration for personal iOS/iPadOS devices <!-- 15412485  -->  
-Intune supports web-based device enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the Company Portal app. Additionally, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. For more information, see [Set up web based device enrollment for iOS](../enrollment/web-based-device-enrollment-ios.md).
+Intune supports web-based device enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the Company Portal app. Also, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. For more information, see [Set up web based device enrollment for iOS](../enrollment/web-based-device-enrollment-ios.md).
 
 ### Device management
 
 #### Updates to the Intune add-ons page<!--17395941 -->
-The Intune add-ons page under **Tenant administration** includes **Your add-ons**, **All add-ons** and **Capabilities**. It provides an enhanced view into your trial or purchased licenses, which add-on capabilities you are allowed to use in your tenant, and support for new billing experiences in Microsoft Admin Center.
+The Intune add-ons page under **Tenant administration** includes **Your add-ons**, **All add-ons** and **Capabilities**. It provides an enhanced view into your trial or purchased licenses, the add-on capabilities you're licensed to use in your tenant, and support for new billing experiences in Microsoft admin center.
 
 For more information, go to [Use Intune Suite add-ons capabilities](../fundamentals/intune-add-ons.md)
 
@@ -222,7 +692,7 @@ For more information, see [Remote Help on Android](../fundamentals/remote-help-a
 
 #### Configure declarative software updates and passcode policies for Apple devices in the Settings Catalog<!-- 24989083  -->  
 
-You can manage software updates and passcode using Apple's declarative device management (DDM) configuration using the settings catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative device management**).
+You can manage software updates and passcode using Apple's declarative device management (DDM) configuration using the settings catalog (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative device management**).
 
 For more information about DDM, go to [Apple's declarative device management (DDM)](https://developer.apple.com/documentation/devicemanagement/leveraging_the_declarative_management_data_model_to_scale_devices) (opens Apple's website).
 
@@ -230,12 +700,12 @@ DDM allows you to install a specific update by an enforced deadline. The autonom
 
 In the settings catalog, the following declarative software update settings are available at **Declarative device management > Software Update**:
 
-- **Details URL**: The web page URL that shows the update details. Typically, this is a web page hosted by your organization that users can select if they need organization-specific help with the update.
-- **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn’t consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
-- **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn’t trigger the software update before this time, then the device force installs it.
+- **Details URL**: The web page URL that shows the update details. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
+- **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+- **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
-For more information on this feature, go to [Manage declarative software updates with the settings catalog](../protect/software-updates-declarative-ios-macos.md).
+For more information on this feature, go to [Manage software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
 
 In the settings catalog, the following declarative passcode settings are available at **Declarative device management > Passcode**:
 
@@ -257,7 +727,7 @@ Applies to:
 - macOS 14.0 and later
 
 #### Mvision Mobile is now Trellix Mobile Security<!-- 16208061 -->  
-The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  has transitioned to **Trellix Mobile Security**. With this change we’ve updated our documentation and the Intune admin center UI.  For example, the *Mvision Mobile connector* is now *Trellix Mobile Security*. Existing installs of the Mvision Mobile connector also update to Trellix Mobile Security.
+The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  has transitioned to **Trellix Mobile Security**. With this change, we've updated our documentation and the Intune admin center UI.  For example, the *Mvision Mobile connector* is now *Trellix Mobile Security*. Existing installs of the Mvision Mobile connector also update to Trellix Mobile Security.
 
 If you have questions about this change, reach out to your Trellix Mobile Security representative.
 
@@ -276,8 +746,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Updated reports for Policy compliance and Setting compliance are now generally available<!-- 24299948, 24299945  -->  
 The following device compliance reports are out of public preview and are now generally available:
 
-- [Policy compliance](../fundamentals/reports.md#policy-compliance)
-- [Setting compliance](../fundamentals/reports.md#settings-compliance)
+- [Policy compliance](../fundamentals/reports.md#policy-compliance-report-organizational)
+- [Setting compliance](../fundamentals/reports.md#settings-compliance--organizational)
 
 With this move to general availability, the older versions of both reports have been retired from the Intune admin center and are no longer available.
 
@@ -286,7 +756,7 @@ For more information about these changes, see the Intune Support Team blog at [h
 ### Tenant administration
 
 #### Intune admin center home page update<!-- 16950040  -->  
-The Intune admin center home page has been redesigned with a fresh new look and more dynamic content. The **Status** section has been simplified. You can explore Intune related capabilities in the **Spotlight** section. The **Get more out of Intune** section provides links to the Intune community and blog, as well as Intune customer success. Also, the **Documentation and training** section provides links to **What's New in Intune**, **Feature in development**, and additional training. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home**.
+The Intune admin center home page has been redesigned with a fresh new look and more dynamic content. The **Status** section has been simplified. You can explore Intune related capabilities in the **Spotlight** section. The **Get more out of Intune** section provides links to the Intune community and blog, and Intune customer success. Also, the **Documentation and training** section provides links to **What's New in Intune**, **Feature in development**, and more training. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home**.
 
 ## Week of October 16, 2023
 
@@ -307,7 +777,7 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
 - Windows Security Center threat defense integrated with Intune APP to detect local health threats on personal Windows devices
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Entra ID (Azure AD).
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID.
 
 Intune Mobile Application Management (MAM) for Windows is available for Windows 11, build 10.0.22621 (22H2) or later.  This feature includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later) and Windows Security Center (v 1.0.2309.xxxxx and later).  App Protection Conditional Access is in Public Preview.
 
@@ -317,13 +787,13 @@ Sovereign cloud support is expected in the future. For more information, see [Ap
 
 #### OEMConfig profiles that don't deploy successfully aren't shown as "pending"<!-- 24284049 -->
 
-For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig** for profile type).
+For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **OEMConfig** for profile type).
 
 Previously, OEMConfig profiles that exceed 350 KB show a "pending" state. This behavior changed. An OEMConfig profile that exceeds 350 KB isn't deployed to the device. Profiles in a pending state or profiles larger that 350 KB aren't shown. Only profiles that successfully deploy are shown.
 
 This change is a UI change only. No changes are made to the corresponding Microsoft Graph APIs.
 
-To monitor the profile pending status in the Intune admin center, go to **Devices** > **Configuration profiles** > Select the profile > **Device status**.
+To monitor the profile pending status in the Intune admin center, go to **Devices** > **Configuration** > Select the profile > **Device status**.
 
 For more information on OEM Configuration, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
@@ -348,7 +818,7 @@ Applies to:
 #### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **Settings catalog** for profile type.
+The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** > **Settings catalog** for profile type.
 
 **Managed Settings > App Analytics**:
 
@@ -400,7 +870,7 @@ For more information on these settings, go to [Apple's developer website](https:
 #### New setting available in the macOS settings catalog<!-- 24809885  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
+There's a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.  
 
 **Microsoft Defender > Cloud delivered protection preferences**:
 
@@ -415,7 +885,7 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 #### Intune integration with the Zebra Lifeguard Over-the-Air service is generally available<!-- 16238201  -->  
 Microsoft Intune supports integration with Zebra Lifeguard Over-the-Air service, which allows you to deliver OS updates and security patches over-the-air to eligible Zebra devices that are enrolled with Intune. You can select the firmware version you want to deploy, set a schedule, and stagger update downloads and installs. You can also set minimum battery, charging status, and network conditions requirements for when the update can happen.
 
-This integration is now generally available for Android Enterprise Dedicated and Fully Managed Zebra devices that are running Android 8 or later, and requires an account with Zebra, as well as Intune Plan 2 or Microsoft Intune Suite.
+This integration is now generally available for Android Enterprise Dedicated and Fully Managed Zebra devices that are running Android 8 or later. It also requires a Zebra account and Intune Plan 2 or Microsoft Intune Suite.
 
 Previously, this feature was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
 
@@ -483,7 +953,7 @@ Support for Application Control policy and managed installers was originally [re
 #### Endpoint Privilege Management support for Windows 365 devices<!-- 17016794  -->  
 You can now use [Endpoint Privilege Management](../protect/epm-overview.md) to manage application elevations on Windows 365 devices (also known as Cloud PCs).
 
-This support does not include Azure Virtual Desktop.
+This support doesn't include Azure Virtual Desktop.
 
 #### Elevation report by Publisher for Endpoint Privilege Management<!--  24593400  -->  
 We've released a new report named **Elevation report by Publisher** for Endpoint Privilege Management (EPM). With [this new report](../protect/epm-reports.md#elevation-report-by-publisher) you can view all managed and unmanaged elevations, which are aggregated by the publisher of the app that is elevated.
@@ -491,7 +961,7 @@ We've released a new report named **Elevation report by Publisher** for Endpoint
 You'll find the report in the Report node for EPM in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Navigate to **Endpoint security** > **Endpoint Privilege Management** and then select the **Reports** tab.
 
 #### macOS support with Intune Endpoint security policies for Endpoint detection and response<!--  17757981 -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support macOS. To enable this support, we've added a new [EDR template profile for macOS](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support macOS. To enable this support, we've added a new [EDR template profile for macOS](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune). Use this profile with macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for macOS includes the following settings for the *Device tags* category from Defender for Endpoint:
 
@@ -501,7 +971,7 @@ The EDR template for macOS includes the following settings for the *Device tags*
 To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
 #### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972  -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we've added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we've added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune). Use this profile with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for Linux includes the following settings for the *Device tags* category from Defender for Endpoint:
 
@@ -515,18 +985,18 @@ You can learn more about Defender for Endpoint settings that are available for L
 #### Updated reports for Update rings for Windows 10 and later<!-- 10159960 -->  
 Reporting for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
 
-With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there is no more left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
+With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there isn't a left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
 
-- **Essentials** – including the policy name, created and modified dates, and additional details.
-- **Device and user check-in status**  – This is the default report view and includes:
+- **Essentials** – including the policy name, created and modified dates, and more details.
+- **Device and user check-in status**  – This view is the default report view and includes:
   - A  high-level overview of device status for this policy, and a *View report* button to open a more comprehensive report view.
   - A streamlined representation and count of the different device status values returned by devices assigned to the policy. The simplified bar and chart replace former doughnut charts seen in the prior reporting representation.
-- Two additional report tiles to open additional reports. These include:
+- Two other report tiles to open more reports. These tiles include:
   - **Device assignment status** – This report combines the same information as the previous Device status and User status reports, which are no longer available. However, with this change, pivots and drill-in through based on the user name is no longer available.
-  - **Per setting status** – This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings may not be successfully deploying to your organization.
+  - **Per setting status** – This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings might not be successfully deploying to your organization.
 - **Properties** – View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
 
-For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article. 
+For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article.
 
 ### Role-based access
 
@@ -545,7 +1015,7 @@ For more information, see [Role-based access control (RBAC) with Microsoft Intun
 
 #### Introducing Remote Launch on Remote Help<!--9843475 -->
 
-With Remote Launch, the helper can launch Remote Help seamlessly on the helper and user's device from Intune by sending a notification to the user's device. This allows both helpdesk and the sharer to be connected to a session quickly without exchanging session codes.
+With Remote Launch, the helper can launch Remote Help seamlessly on the helper and user's device from Intune by sending a notification to the user's device. This feature allows both helpdesk and the sharer to be connected to a session quickly without exchanging session codes.
 
 For more information, go to [Remote Help](../fundamentals/remote-help-windows.md)
 
@@ -577,18 +1047,18 @@ Intune [SCEP certificate profiles](../protect/certificates-profile-scep.md) and 
 
 If you use a third-party Certificate Authority (CA), you might need to contact your vendor for assistance with implementing the 4096-bit key size.
 
-When updating or deploying new certificate profiles to take advantage of this new key size, we recommend use of a staggered deployment approach to help avoid creating excessive demand for new certificates across a large number of devices at the same time.
+When updating or deploying new certificate profiles to take advantage of this new key size, we recommend using a staggered deployment approach. This approach can help avoid creating excessive demand for new certificates across a large number of devices at the same time.
 
 With this update, be aware of the following limitations on Windows devices:
 
-- 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+- 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following don't support storing keys of this size:
   - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
-  - Windows Hello for Business. There is no workaround at this time.
+  - Windows Hello for Business. There isn't a workaround at this time.
 
 ### Tenant administration
 
 #### Access policies for multiple Administrator Approval are now generally available<!-- 24936423   -->
-Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies you can protect a resource, like App deployments, by requiring any change to the deployment to be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
+Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies, you can protect a resource, like App deployments, by requiring any change to the deployment to be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
 
 For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
 
@@ -603,10 +1073,10 @@ Managed Home Screen uses the exact alarm permission to do the following actions:
 - Launch a screen saver after a set period of inactivity
 - Automatically relaunch MHS after a certain period of time when a user exits kiosk mode
 
-For devices running Android 14 and higher, by default, the exact alarm permission will be denied. To make sure critical user functionality is not impacted, end-users will be prompted to grant exact alarm permission upon first launch of Managed Home Screen. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\apps\app-configuration-managed-home-screen-app.md) and [Android's developer documentation]( https://developer.android.com/about/versions/14/changes/schedule-exact-alarms).
+For devices running Android 14 and higher, by default, the exact alarm permission will be denied. To make sure critical user functionality isn't impacted, end-users will be prompted to grant exact alarm permission upon first launch of Managed Home Screen. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\apps\app-configuration-managed-home-screen-app.md) and [Android's developer documentation]( https://developer.android.com/about/versions/14/changes/schedule-exact-alarms).
 
 #### Managed Home Screen notifications<!-- 19805777  -->  
-For Android devices running Android 13 or higher that target API level 33, by default, applications do not have permission to send notifications. In previous versions of Managed Home Screen, when an admin had enabled automatic relaunch of Managed Home Screen, a notification was displayed to alert users of the relaunch. To accommodate change to notification permission, in the scenario when an admin has enabled auto-relaunch of Managed Home Screen, the application will now display a toast message alerting users of the relaunch. Managed Home Screen is able to auto-grant permission for this notification, so no change is required for admins configuring Managed Home Screen to accommodate the change in notification permission with API level 33. For more information about Android 13 (API level 33) notification messages, see the [Android developer documentation](https://developer.android.com/develop/ui/views/notifications/notification-permission). For more information about Managed Home Screen, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+For Android devices running Android 13 or higher that target API level 33, by default, applications don't have permission to send notifications. In previous versions of Managed Home Screen, when an admin had enabled automatic relaunch of Managed Home Screen, a notification was displayed to alert users of the relaunch. To accommodate change to notification permission, in the scenario when an admin has enabled auto-relaunch of Managed Home Screen, the application will now display a toast message alerting users of the relaunch. Managed Home Screen is able to auto-grant permission for this notification, so no change is required for admins configuring Managed Home Screen to accommodate the change in notification permission with API level 33. For more information about Android 13 (API level 33) notification messages, see the [Android developer documentation](https://developer.android.com/develop/ui/views/notifications/notification-permission). For more information about Managed Home Screen, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 #### New macOS web clip app type<!-- 24128407  -->  
 In Intune, end users can pin web apps to the dock on your macOS devices (**Apps** > **macOS** > **Add** > **macOS web clip**). For related information about the settings you can configure, see [Add web apps to Microsoft Intune](../apps/web-app.md).
@@ -619,7 +1089,7 @@ Applies to:
 In Intune, you can set a configurable installation time to deploy Win32 apps. This time is expressed in minutes. If the app takes longer to install than the set installation time, the system will fail the app install. Max timeout value is 1440 minutes (1 day). For more information about Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-add.md#step-2-program).
 
 #### Samsung Knox conditional launch check<!-- 8610063   -->  
-You can add additional detection of device health compromises on Samsung Knox devices. Using a conditional launch check within a new Intune App Protection Policy, you can require that hardware-level device tamper detection and device attestation be performed on compatible Samsung devices. For more information, see the **Samsung Knox device attestation** setting in the **Conditional launch** section of [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md#device-conditions).
+You can add more detection of device health compromises on Samsung Knox devices. Using a conditional launch check within a new Intune App Protection Policy, you can require that hardware-level device tamper detection and device attestation be performed on compatible Samsung devices. For more information, see the **Samsung Knox device attestation** setting in the **Conditional launch** section of [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md#device-conditions).
 
 ### Device configuration
 
@@ -645,7 +1115,7 @@ Applies to:
 #### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
 
 **Authentication > Extensible Single Sign On (SSO)**:
 
@@ -722,14 +1192,15 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 ### Device enrollment
 
 #### Just-in-time registration and compliance remediation for iOS/iPadOS Setup Assistant with modern authentication now generally available<!-- 16276610 -->
-Just in time (JIT) registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just in time registration, the device user doesn't need to use the Company Portal app for Azure Active Directory registration and compliance checking. JIT registration and compliance remediation are embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Additionally, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md).
+
+Just in time (JIT) registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just in time registration, the device user doesn't need to use the Company Portal app for Microsoft Entra registration and compliance checking. JIT registration and compliance remediation are embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Also, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md).
 
 #### Awaiting final configuration for iOS/iPadOS automated device enrollment now generally available<!-- 17473384  -->  
 Now generally available, *awaiting final configuration* enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:
 
 - iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication
 - iOS/iPadOS 13+ devices enrolling without user affinity  
-- iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+- iOS/iPadOS 13+ devices enrolling with Microsoft Entra ID shared mode  
 
 This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device.  Awaiting final configuration is enabled by default for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](..//enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
@@ -771,14 +1242,14 @@ We've released a new report named **Elevation report by applications** for Endpo
 You'll find the report in the Report node for EPM in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Navigate to **Endpoint security** > **Endpoint Privilege Management** and then select the **Reports** tab.
 
 #### New settings available for macOS Antivirus policy<!-- 24191427 -->  
-The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profile for macOS devices has been updated with nine additional settings, and three new settings categories:
+The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profile for macOS devices has been updated with nine more settings, and three new settings categories:
 
 **Antivirus engine** – The following settings are new in this category:
 
-- **Degree of parallelism for on-demand scans** – Specifies the degree of parallelism for on-demand scans. This corresponds to the number of threads used to perform the scan and impacts the CPU usage, as well as the duration of the on-demand scan.
-- **Enable file hash computation** – Enables or disables file hash computation feature. When this feature is enabled Windows defender will compute hashes for files it scans. This will help in improving the accuracy of Custom Indicator matches. However, enabling Enable file hash computation may impact device performance.
-- **Run a scan after definitions are updated** – Specifies whether to start a process scan after new security intelligence updates are downloaded on the device. Enabling this setting will trigger an antivirus scan on the running processes of the device.
-- **Scanning inside archive files** – If true, Defender will unpack archives and scan files inside them. Otherwise archive content will be skipped, that will improve scanning performance.
+- **Degree of parallelism for on-demand scans** – Specifies the degree of parallelism for on-demand scans. This setting corresponds to the number of threads used to perform the scan and impacts the CPU usage, and the duration of the on-demand scan.
+- **Enable file hash computation** – Enables or disables file hash computation feature. When this feature is enabled, Windows Defender computes hashes for files it scans. This setting helps improve the accuracy of Custom Indicator matches. However, enabling Enable file hash computation can impact device performance.
+- **Run a scan after definitions are updated** – Specifies whether to start a process scan after new security intelligence updates are downloaded on the device. Enabling this setting triggers an antivirus scan on the running processes of the device.
+- **Scanning inside archive files** – If true, Defender unpacks archives and scan files inside them. Otherwise archive content is skipped, which improves scanning performance.
 
 **Network protection** – A new category that includes the following setting:
 
@@ -794,7 +1265,7 @@ The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy
 - **Show / hide status menu icon** – Specify whether the status menu icon (shown in the top-right corner of the screen) is hidden or not.
 - **User initiated feedback** – Specify whether users can submit feedback to Microsoft by going to *Help* > *Send Feedback*.
 
-New profiles that you create include the original settings as well as the new settings. Your existing profiles automatically update to include the new settings, with each new setting set to *Not configured* until you choose to edit that profile to change it.
+New profiles that you create include the original settings and the new settings. Your existing profiles automatically update to include the new settings, with each new setting set to *Not configured* until you choose to edit that profile to change it.
 
 For more information about how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide&preserve-view=true).
 
@@ -818,7 +1289,7 @@ Log file:
 #### Anomaly detection device cohorts in Intune Endpoint analytics is generally available <!-- 24577118  -->  
 Anomaly detection device cohorts in Intune Endpoint analytics is now generally available.
 
-Device cohorts are identified in devices associated with a high or medium severity anomaly. Devices are correlated into groups based on one or more factors they have in common like an app version, driver update, OS version, device model. A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You can also view a breakdown of devices currently affected by the anomaly and 'at risk' devices, those that haven't yet shown symptoms of the anomaly.
+Device cohorts are identified in devices associated with a high or medium severity anomaly. Devices are correlated into groups based on one or more factors they have in common like an app version, driver update, OS version, device model. A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You can also view a breakdown of devices currently affected by the anomaly and 'at risk' devices. "At risk" devices haven't yet shown symptoms of the anomaly.
 
 For more information, go to [Anomaly detection in Endpoint analytics](../../analytics/anomaly-detection.md#anomalies-tab).
 
@@ -828,18 +1299,18 @@ The user interface (UI) for device timeline in Endpoint analytics is improved an
 For more information, go to [Enhanced device timeline](../../analytics/enhanced-device-timeline.md).
 
 #### Updates for compliance policies and reports<!--15425771  -->  
-We've made several improvements to the Intune compliance policies and reports. With these changes the reports more closely align to the experience in use for device configuration profiles and reports. We've updated our [compliance report documentation](../protect/compliance-policy-monitor.md) to reflect the available compliance report improvements.
+We've made several improvements to the Intune compliance policies and reports. With these changes, the reports more closely align to the experience in use for device configuration profiles and reports. We've updated our [compliance report documentation](../protect/compliance-policy-monitor.md) to reflect the available compliance report improvements.
 
 Compliance report improvements include:
 
 - Compliance details for Linux devices.
 - Redesigned reports that are up-to-date and simplified, with newer report versions beginning to replace older report versions, which will remain available for some time.
-- When viewing a policy for compliance, there is no more left-pane navigation. Instead, the policy view opens to a single pane that defaults to the Monitor tab and its Device status view.
-  - This view provides a high-level overview of device status for this policy, and supports drilling in to review the full report, as well as a per-setting status view of the same policy.
+- When viewing a policy for compliance, there isn't a left-pane navigation. Instead, the policy view opens to a single pane that defaults to the Monitor tab and its Device status view.
+  - This view provides a high-level overview of device status for this policy, supports drilling in to review the full report, and a per-setting status view of the same policy.
   - The doughnut chart is replaced by a streamlined representation and count of the different device status values returned by devices assigned the policy.
   - You can select the Properties tab to view the policy details, and review and edit its configuration and assignments.
   - The *Essentials* section is removed with those details appearing in the policy's *Properties* tab.
-- The updated status reports support sorting by columns, the use of filters, and search. Combined, these enhancements enable you to pivot the report to display specific subsets of details you want to view at that time. With these enhancements we have removed the *User status* report as it has become redundant. Now, while viewing the default *Device status* report you can focus the report to display the same information that was available from *User status* by sorting on the *User Principal Name* column, or searching for a specific username in the search box.
+- The updated status reports support sorting by columns, the use of filters, and search. Combined, these enhancements enable you to pivot the report to display specific subsets of details you want to view at that time. With these enhancements, we have removed the *User status* report as it has become redundant. Now, while viewing the default *Device status* report you can focus the report to display the same information that was available from *User status* by sorting on the *User Principal Name* column, or searching for a specific username in the search box.
 - When viewing status reports, the count of devices that Intune displays now remains consistent between different report views as you drill in for deeper insights or details.
 
 For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
@@ -882,7 +1353,7 @@ This update is part of the continuing [rollout of new profiles for endpoint secu
 ### App management
 
 #### Uninstall Win32 and Microsoft store apps using the Windows Company Portal<!-- 4664389 -->  
-End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, this feature is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ## Week of July 24, 2023 (Service release 2307)
 
@@ -898,7 +1369,7 @@ Applies to:
 - Android Enterprise
 
 #### App report for Android Enterprise corporate-owned devices<!-- 2055436  -->  
-You can now view a report containing all apps found on a device for Android Enterprise corporate-owned scenarios, including system apps. This report is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor** > **Discovered apps**. You will see **Application Name** and **Version** for all apps detected as installed on the device. It may take up to 24 hours for app information to populate the report. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md).
+You can now view a report containing all apps found on a device for Android Enterprise corporate-owned scenarios, including system apps. This report is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor** > **Discovered apps**. You'll see **Application Name** and **Version** for all apps detected as installed on the device. It can take up to 24 hours for app information to populate the report. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md).
 
 #### Add unmanaged PKG-type applications to managed macOS devices [Public Preview]<!-- 17296091  -->  
 You can now upload and deploy unmanaged PKG-type applications to managed macOS devices using the Intune MDM agent for macOS devices. This feature enables you to deploy custom PKG installers, such as unsigned apps and component packages. You can add a PKG app in the Intune admin center by selecting **Apps** > **macOS** > **Add** > **macOS app (PKG)** for app type.
@@ -912,7 +1383,7 @@ Applies to:
 #### New settings available for the iOS/iPadOS web clip app type<!-- 21084128   -->  
 In Intune, you can pin web apps to your iOS/iPadOS devices (**Apps** > **iOS/iPadOS** > **Add** > **iOS/iPadOS web clip**). When you add web clips, there are new settings available:
 
-- **Full screen**: If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there's no URL or search bar, and no bookmarks.
+- **Full screen**: If configured to **Yes**, launches the web clip as a full-screen web app without a browser. There isn't a URL nor search bar, and no bookmarks.
 - **Ignore manifest scope**: If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip's URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
 - **Precomposed**: If configured to **Yes**, prevents Apple's application launcher (SpringBoard) from adding "shine" to the icon.
 - **Target application bundle identifier**: Enter the application bundle identifier that specifies the application that opens the URL. Available in iOS 14 and later.
@@ -946,7 +1417,7 @@ You can now add scope tags when creating deployments using Zebra LifeGuard Over-
 #### New settings available in the macOS settings catalog <!-- 24167142  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.
 
 **Microsoft AutoUpdate (MAU)**:
 
@@ -958,7 +1429,7 @@ A new setting is available in the Settings Catalog. In the [Microsoft Intune adm
 
 **Microsoft Office > Microsoft Outlook**:
 
-- Disable 'Do not send response'
+- Disable `Do not send response`
 
 **User Experience > Dock**:
 
@@ -973,7 +1444,7 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 #### Compliance Retrieval service support for MAC address endpoints<!--  24332824  -->  
 We've now added MAC address support to the Compliance Retrieval service.
 
-The initial release of the CR service included support for using only the Intune device ID with the intent to eliminate the need to manage internal identifiers like serial numbers and MAC addresses. With this update, organizations that prefer to use MAC addresses over certificate authentication may continue to do so while implementing the CR service.
+The initial release of the CR service included support for using only the Intune device ID with the intent to eliminate the need to manage internal identifiers like serial numbers and MAC addresses. With this update, organizations that prefer to use MAC addresses over certificate authentication can continue to do so while implementing the CR service.
 
 While this update adds MAC address support to the CR service, our recommendation is to use certificate-based authentication with the Intune device ID included in the certificate.
 
@@ -984,7 +1455,7 @@ Announcing the general availability of Settings insight in Microsoft Intune.
 
 The [Settings insight](../fundamentals/settings-insight.md) feature adds insight to settings giving you confidence in configurations that have been successfully adopted by similar organizations. Settings insight is currently available for security baselines.
 
-Navigate to **Endpoint security** > **Security baselines**. While creating and editing a workflow these insights are available for all settings with light bulbs.
+Navigate to **Endpoint security** > **Security baselines**. While creating and editing a workflow, these insights are available for all settings with light bulbs.
 
 ### Device security
 
@@ -992,7 +1463,7 @@ Navigate to **Endpoint security** > **Security baselines**. While creating and e
 Intune now supports use of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md#prerequisites-for-tamper-protection) to manage *Tamper protection* for Windows on Azure Virtual Desktop multi-session devices. Support for Tamper protection requires devices to onboard to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
 
 #### EpmTools PowerShell module for Endpoint Privilege Management<!-- 22800379  -->  
-The EpmTools PowerShell module is now available for use with Intune Endpoint Privilege Management (EPM). EpmTools includes the cmdlets like **Get-FileAttributes** that you can use to retrieve file details to help build accurate elevation rules, and additional cmdlets you can use to troubleshoot or diagnose EPM policy deployments.
+The EpmTools PowerShell module is now available for use with Intune Endpoint Privilege Management (EPM). EpmTools includes the cmdlets like **Get-FileAttributes** that you can use to retrieve file details to help build accurate elevation rules, and other cmdlets you can use to troubleshoot or diagnose EPM policy deployments.
 
 For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
@@ -1029,7 +1500,7 @@ Both reports are new instances of existing reports, and deliver improvements ove
 - Details for Linux settings and devices
 - Support for sorting, searching, filtering, exports, and paging views
 - Drill-down reports for deeper details, which are filtered based on the column you select.
-- Devices are represented a single time, which is in contrast to the original reports which could count a device more than once if multiple users used that device
+- Devices are represented a single time. This behavior is in contrast to the original reports, which could count a device more than once if multiple users used that device.
 
 Eventually, the [older report versions](../protect/compliance-policy-monitor.md#other-compliance-reports) that are still available in the admin center at *Devices > Monitor* will be retired.
 
@@ -1040,8 +1511,8 @@ Eventually, the [older report versions](../protect/compliance-policy-monitor.md#
 #### Updates to app configuration policy reporting<!-- 18098046  -->  
 As part of our continuing efforts to improve the Intune reporting infrastructure, there have been several user interface (UI) changes for app configuration policy reporting. The UI has been updated with the following changes:
 
-- There is no longer a **User status** tile or a **Not applicable device** tile on the **Overview** section of the **App configuration policies** workload.
-- There is no longer a **User install status** report on the **Monitor** section of the **App configuration policies** workload.
+- There isn't a **User status** tile or a **Not applicable device** tile on the **Overview** section of the **App configuration policies** workload.
+- There isn't a **User install status** report on the **Monitor** section of the **App configuration policies** workload.
 - The **Device install status** report under the **Monitor** section of the **App configuration policies** workload no longer shows the **Pending state** in the **Status** column.
 
 You can configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies**.
@@ -1067,7 +1538,7 @@ Zebra will be releasing support for Android 13 on their devices. You can read mo
 
 - **Update devices to Android 13**
 
-  You will soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+  You'll soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
 
   Before you migrate to Android 13, review [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
 
@@ -1086,19 +1557,19 @@ For more general information about Intune Android 13 support, go to the [Day Zer
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
 With [Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use Intune's endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren't enrolled with Intune.
 
-Now, you can opt in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
+Now, you can opt in to a public preview from within the Microsoft Defender portal to gain access to several enhancements for this scenario:
 
-- Intune's endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
+- Intune's endpoint security policies become visible in and can be managed from within the Microsoft Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
 
 - Security settings management supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
 
 - For Windows devices, the Windows Security Experience profile is now supported with security settings management.
 
-- A new onboarding workflow removes the Hybrid Azure AD Join prerequisite. Hybrid Azure AD Join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings management. With this change, those devices can now complete enrollment and start processing policies for security settings management.
+- A new onboarding workflow removes the Microsoft Entra hybrid join prerequisite. Microsoft Entra hybrid join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings management. With this change, those devices can now complete enrollment and start processing policies for security settings management.
 
-- Intune creates a synthetic registration in Azure AD for devices that can't fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed from Azure AD in deference to the full registration.
+- Intune creates a synthetic registration in Microsoft Entra ID for devices that can't fully register with Microsoft Entra ID. Synthetic registrations are device objects created in Microsoft Entra ID that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed from Microsoft Entra ID in deference to the full registration.
 
-If you don't opt in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can't deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile which is currently available for devices enrolled with Intune can't be deployed to devices managed by Defender.
+If you don't opt in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can't deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile that's currently available for devices enrolled with Intune can't be deployed to devices managed by Defender.
 
 Applies to:
 
@@ -1129,9 +1600,9 @@ Applies to:
 - Android
 
 #### On-demand remediation for a Windows device<!-- 14783338 -->  
-A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
+A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You'll also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
 
-The **Run remediation** device action is rolling-out and may take a few weeks to reach all customers.
+The **Run remediation** device action is rolling-out and can take a few weeks to reach all customers.
 
 For more information, go to:
 
@@ -1140,7 +1611,7 @@ For more information, go to:
 ### Device management
 
 #### Windows Driver update management in Intune is generally available<!-- 5584639  -->  
-Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device's driver version. Driver update policies update automatically to add new updates as they are published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
+Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device's driver version. Driver update policies update automatically to add new updates as they're published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
 
 Update policies can be configured for one of two approval methods:
 
@@ -1148,7 +1619,7 @@ Update policies can be configured for one of two approval methods:
 
 - With *manual approval*, all new driver updates are automatically added to the policy, but an admin must explicitly approve each update before Windows Update deploys it to a device. When you manually approve an update, you choose the date when Windows Update will begin to deploy it to your devices.
 
-To help you manage driver updates, you review a policy and decline an update you don't want to install, indefinitely pause any approved update,  and reapprove a paused update to restart its deployment.
+To help you manage driver updates, you review a policy and decline an update you don't want to install. You can also indefinitely pause any approved update, and reapprove a paused update to restart its deployment.
 
 This release also includes [driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
@@ -1169,7 +1640,7 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
 - Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Azure AD
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID
 
 For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
@@ -1180,7 +1651,7 @@ To participate in the public preview, [complete the opt-in form](https://aka.ms/
 #### New settings available in the Apple settings catalog<!-- 19951554  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 **Authentication > Extensible Single Sign On (SSO)**:
 
@@ -1210,7 +1681,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Asus devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
@@ -1317,7 +1788,7 @@ The Intune troubleshooting pane is now generally available.  It provides details
 You can find the troubleshooting pane in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**.
 
 #### Updated troubleshoot + support pane in Intune<!-- 16240430  -->  
-The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Azure Active Directory, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
+The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Microsoft Entra ID, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
 
 #### Download mobile app diagnostics<!-- 22139638  -->  
 Now generally available, access user-submitted mobile app diagnostics in the Intune admin center, including app logs sent through Company Portal apps, which include Windows, iOS, Android, Android AOSP, and macOS. In addition, you can retrieve app protection logs via Microsoft Edge. For more information, see [Company Portal app logs](../apps/company-portal-app.md#app-logs) and [Use Microsoft Edge for iOS and Android to access managed app logs](../apps/manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
@@ -1360,7 +1831,7 @@ For more information, see the following resources:
 
 ### Android Enterprise 11+ devices can use Zebra's latest OEMConfig app version<!-- 8675347 -->  
 
-On Android Enterprise devices, you can use OEMConfig to add, create, and customize OEM-specific settings in Microsoft Intune (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig**).
+On Android Enterprise devices, you can use OEMConfig to add, create, and customize OEM-specific settings in Microsoft Intune (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **OEMConfig**).
 
 There's a new **Zebra OEMConfig Powered by MX** OEMConfig app that aligns more closely to Google's standards. This app supports Android Enterprise 11.0 and newer devices.
 
@@ -1379,17 +1850,17 @@ Applies to:
 ### Device management
 
 #### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836 -->  
-To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune now differentiates Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
+To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune now differentiates Windows devices in Microsoft Entra ID as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
 
 With this change, you can improve policy targeting for MDE security configuration. For example, you can use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
 
-For more information about this change, see the Intune Customer Success blog [Windows Server devices now recognized as a new OS in Microsoft Intune, Azure AD, and Defender for Endpoint
+For more information about this change, see the Intune Customer Success blog [Windows Server devices now recognized as a new OS in Microsoft Intune, Microsoft Entra ID, and Defender for Endpoint
 ](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-server-devices-will-now-be-identified-as-a/ba-p/3767773).
 
 ### Tenant administration
 
 #### Organizational messages for Windows 11 now generally available<!-- 15272978 -->  
-Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups. They're shown just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages continue to appear or reappear based on the frequency you configure in Intune, and until the user has visited the customized URL.
+Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Microsoft Entra user groups. They're shown just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages continue to appear or reappear based on the frequency you configure in Intune, and until the user has visited the customized URL.
 
 Other features and functionality added in this release include:
 
@@ -1536,7 +2007,7 @@ Applies to:
 > [!NOTE]
 > This setting is coming in a future release, possibly the 2308 Intune release.
 
-You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
+You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
 
 In this VPN connection, you can use the **Apps and Traffic rules** settings to create network traffic rules.
 
@@ -1554,7 +2025,7 @@ Applies to:
 #### New settings available in the macOS settings catalog <!-- 18430228  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
 
 **Microsoft Defender > Antivirus engine**:
 
@@ -1568,7 +2039,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Wipe device action and new obliteration behavior setting available for macOS<!-- 16647226 -->  
-You can now use the **Wipe** device action instead of Erase for macOS devices. Additionally, you can configure the **Obliteration Behavior** setting as part of the **Wipe** action.
+You can now use the **Wipe** device action instead of Erase for macOS devices. You can also configure the **Obliteration Behavior** setting as part of the **Wipe** action.
 
 This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
 
@@ -1632,7 +2103,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device configuration
 
 #### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
@@ -1666,7 +2137,7 @@ We have fixed an issue that caused Intune tenants with long-running shell script
 The DMG app installation feature for macOS is now generally available. Intune supports **required** and **uninstall** assignment types for DMG apps. The Intune agent for macOS is used to deploy DMG apps. For related information, see [Deploy DMG-type applications to managed macOS devices](../fundamentals/whats-new-archive.md#deploy-dmg-type-applications-to-managed-macos-devices).
 
 #### Deprecation of Microsoft Store for Business and Education<!-- 19677954 -->  
-The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education won't sync with Intune. Apps that have previously synced continue to be available and deploy to devices and users.
+The Microsoft Store for Business connector is no longer available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education won't sync with Intune. Apps that have previously synced continue to be available and deploy to devices and users.
 
 It's now also possible to delete Microsoft Store for Business apps from the **Apps** pane in the Microsoft Intune admin center so that you can clean up your environment as you move to the new Microsoft Store app type.
 
@@ -1675,7 +2146,7 @@ For related information, see [Plan for Change: Ending support for Microsoft Stor
 ### Device configuration
 
 #### Remote Help now supports conditional access capability<!--16108299 -->  
-Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses.
+Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multifactor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses.
 
 For more information, go to:
 

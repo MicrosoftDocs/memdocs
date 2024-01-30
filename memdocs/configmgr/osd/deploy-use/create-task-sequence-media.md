@@ -2,9 +2,9 @@
 title: Create task sequence media
 titleSuffix: Configuration Manager
 description: Create task sequence media to deploy an OS to a destination computer in your Configuration Manager environment.
-ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.date: 12/14/2023
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -24,6 +24,11 @@ Media is used mostly to deploy an OS on computers that don't have a network conn
 
 Deployment media includes bootable media, standalone media, and prestaged media. The content of the media varies, depending on what type of media that you use. For example, standalone media contains the task sequence that deploys the OS. Other types of media retrieve task sequences from the management point.
 
+> [!IMPORTANT]  
+> As a security best practice, always assign a password to help protect the task sequence media. Assigning a password to the media not only prevents someone without the password from running a task sequence when using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
+>
+> Using a password doesn't encrypt the remaining content of the task sequence media such as packages. Don't include any sensitive information in task sequence packages such as scripts. Store and implement all sensitive information by using task sequence variables.
+
 > [!IMPORTANT]
 > To create task sequence media, you must be an administrator on the computer where you run the Configuration Manager console. If you're not an administrator, you're prompted for administrator credentials when you start the Create Task Sequence Media wizard.
 
@@ -41,9 +46,6 @@ Bootable media contains the following components:
 
 When the destination computer starts, it connects to the network and retrieves the task sequence, the OS image, and any other required content from the network. Because the task sequence isn't on the media, you can change the task sequence or content without having to recreate the media.  
 
-> [!IMPORTANT]  
-> The packages on bootable media aren't encrypted. Take appropriate security measures, such as adding a password to the media, to make sure that the package contents are secured from unauthorized users.  
-
 Starting in version 2006, bootable media can download cloud-based content. The device still needs an intranet connection to the management point. It can get content from a content-enabled cloud management gateway (CMG).<!--6209223--> For more information, see [Bootable media support for cloud-based content](deploy-task-sequence-over-internet.md#bootable-media-support-for-cloud-based-content).
 
 ## <a name="BKMK_PlanPrestagedMedia"></a> Prestaged media
@@ -53,9 +55,6 @@ Prestaged media allows you to apply bootable media and an OS image to a hard dis
 Prestaged media contains the boot image used to start the destination computer and the OS image that's applied to the destination computer. You can also specify applications, packages, and driver packages to include as part of the prestaged media. The task sequence that deploys the OS isn't included in the media. When you deploy a task sequence that uses prestaged media, the client checks the local task sequence cache for valid content first. If the content can't be found or has been revised, the client downloads the content from a distribution point or peer.  
 
 You apply prestaged media to the hard drive of a new computer before you send the computer to the user. When the computer starts for the first time after you've applied the prestaged media, the computer starts in Windows PE. It connects to a management point to locate the task sequence that completes the OS deployment process.  
-
-> [!IMPORTANT]
-> The packages on prestaged media aren't encrypted. Take appropriate security measures, such as adding a password to the media, to make sure that the package contents are secured from unauthorized users.
 
 ## <a name="BKMK_PlanStandaloneMedia"></a> Standalone media
 

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 11/29/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 ms.technology:
 ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: contperf-fy21q1
@@ -40,10 +40,10 @@ To use Win32 app management, be sure the following criteria are met:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
-  - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register)
-  - [Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join)
-  - [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid)
-- Windows application size must not be greater than 8 GB per app.
+  - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register)
+  - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join)
+  - [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid)
+- Windows application size must not be greater than 30 GB per app.
 
   > [!NOTE]
   >
@@ -58,7 +58,7 @@ Before you can add a Win32 app to Microsoft Intune, you must prepare the app by 
 After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.md) by using the Microsoft Win32 Content Prep Tool, you can add the app to Intune. For more information and steps, see [Add, assign, and monitor a Win32 app in Microsoft Intune](apps-win32-add.md).
 
 > [!NOTE]
-> Windows application size is limited to 8 GB per app.
+> Windows application size is limited to 30 GB per app.
 
 ## Delivery optimization
 
@@ -90,6 +90,8 @@ Additionally, the Company Portal app shows more app installation status messages
 You can configure the start time and deadline time for a Win32 app. At the start time, the Intune management extension will start the app content download and cache it for the required intent. The app will be installed at the deadline time.
 
 For available apps, the start time will dictate when the app is visible in the company portal, and content will be downloaded when the user requests the app from the company portal. You can also enable a restart grace period.
+
+On a device where a Win32 app with grace period settings has been deployed, low-rights users with non-administrative privileges can interact with the grace period UX. Admins on the device are also able to interact with the grace period UX on the device.
 
 > [!IMPORTANT]
 > The **Restart grace period** setting in the **Assignment** section is available only when **Device restart behavior** of the **Program** section is set to either of the following options:

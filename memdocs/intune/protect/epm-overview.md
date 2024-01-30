@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 11/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,7 +61,7 @@ Endpoint Privilege Management has the following requirements:
 
 > [!NOTE]
 >
-> - Windows 365 (CloudPC) is supported using a supported operting system version
+> - Windows 365 (CloudPC) is supported using a supported operating system version
 > - Workplace-join devices are not supported by Endpoint Privilege Management
 > - Azure Virtual Desktop is not supported by Endpoint Privilege Management
 
@@ -162,7 +162,7 @@ Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
 Following are the available cmdlets:
 
 - **Get-Policies**: Retrieves a list of all policies received by the Epm Agent for a given PolicyType (ElevationRules, ClientSettings).
-- **DeclaredConfiguration**: Retrieves a list of WinCD documents that identify the policies targeted to the device.
+- **Get-DeclaredConfiguration**: Retrieves a list of WinDC documents that identify the policies targeted to the device.
 - **Get-DeclaredConfigurationAnalysis**: Retrieves a list of WinDC documents of type MSFTPolicies and checks if the policy is already present in Epm Agent (Processed column).
 - **Get-ElevationRules**: Query the EpmAgent lookup functionality and retrieves rules given lookup and target. Lookup is supported for FileName  and CertificatePayload.
 - **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.

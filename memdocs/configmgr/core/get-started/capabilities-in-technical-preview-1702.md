@@ -3,8 +3,8 @@ title: Capabilities in Technical Preview 1702
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1702.
 ms.date: 02/24/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -59,48 +59,50 @@ You can configure these settings using the client agent config class for the pee
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
-## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to manage devices, users, and groups
+## <a name="azurediscovery"></a> Use Microsoft Entra Domain Services to manage devices, users, and groups
 
-With this technical preview version you can manage devices that are joined to an Azure Active Directory (AD) Domain Services managed domain. You can also discover devices, users, and groups in that domain with various Configuration Manager Discovery methods.
+With this technical preview version you can manage devices that are joined to a Microsoft Entra Domain Services managed domain. You can also discover devices, users, and groups in that domain with various Configuration Manager Discovery methods.
 
-The technical preview site infrastructure, clients, and the Azure AD Domain Services domain must all run in Azure.
+The technical preview site infrastructure, clients, and the Microsoft Entra Domain Services domain must all run in Azure.
 
 
-### Set up Configuration Manager to use Azure AD
-To use Azure AD with Configuration Manager, you'll need the following:
+<a name='set-up-configuration-manager-to-use-azure-ad'></a>
+
+### Set up Configuration Manager to use Microsoft Entra ID
+To use Microsoft Entra ID with Configuration Manager, you'll need the following:
 - Azure subscription.
-- Azure AD with Domain Services (DS).
-- A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
-- Configuration Manager clients that run in the same Azure AD environment.
+- Microsoft Entra ID with Domain Services (DS).
+- A Configuration Manager site that runs on an Azure VM that is joined to your Microsoft Entra ID.
+- Configuration Manager clients that run in the same Microsoft Entra environment.
 
-To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](/azure/active-directory-domain-services/tutorial-create-instance).
+To configure Microsoft Entra Domain Service, see [Get started with Microsoft Entra Domain Services](/azure/active-directory-domain-services/tutorial-create-instance).
 
 ### Discover resources
-After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search
-Azure AD for resources:  
+After you set up Configuration Manager to run in Microsoft Entra ID, you can use the following Active Directory discovery methods to search
+Microsoft Entra ID for resources:  
 - Active Directory System Discovery
 - Active Directory User Discovery
 - Active Directory Group Discovery  
 
-For each method you use, edit the LDAP query to search the Azure AD OU structures instead of the containers that are typical to on-premises Active Directory. This requires you to direct the query to search your Active Directory in your Azure subscription.  
+For each method you use, edit the LDAP query to search the Microsoft Entra OU structures instead of the containers that are typical to on-premises Active Directory. This requires you to direct the query to search your Active Directory in your Azure subscription.  
 
-The following examples use an Azure AD of *contoso.onmicrosoft.com*:
+The following examples use a Microsoft Entra ID of *contoso.onmicrosoft.com*:
 - **System Discovery**   
-  Azure AD stores devices under the **AADDC Computers** OU.  Configure the following:  
+  Microsoft Entra ID stores devices under the **AADDC Computers** OU.  Configure the following:  
   - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
 - **User Discovery**
-AAD stores users under the **AADDC Users** OU.  Configure the following:
+Microsoft Entra ID stores users under the **AADDC Users** OU.  Configure the following:
   - *LDAP://OU=AADDC Users,DC= contoso,DC=onmicrosoft,DC=com*
 
 
 - **Group Discovery**  
-Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
+Microsoft Entra ID does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
-See the following for more information about Azure AD:
+See the following for more information about Microsoft Entra ID:
 
-- [Azure Active Directory Domain Services product information](https://azure.microsoft.com/services/active-directory-ds)
+- [Microsoft Entra Domain Services product information](https://azure.microsoft.com/services/active-directory-ds)
 - [Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
 
 ## Conditional access device compliance policy improvements
@@ -309,10 +311,10 @@ The following sections describe Android for Work management.
    - **Manage supported devices for users only in these groups as Android for Work** - (Testing) Lets you target Android for Work management to a limited set of users. Only members of the selected groups who enroll a device that supports Android for Work are enrolled as Android for Work devices. All others are enrolled as Android devices.
   
 > [!NOTE]
-> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To test Android for Work, you must use the **Manage all supported devices as Android for Work**.
+> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Microsoft Entra groups will enroll as Android instead of Android for Work. To test Android for Work, you must use the **Manage all supported devices as Android for Work**.
 
 
-  In order to enable Android for Work enrollment, you must choose one of the bottom two options. The **Manage supported devices for users only in these groups as Android for Work** option requires you have Azure Active Directory security groups set up first.
+  In order to enable Android for Work enrollment, you must choose one of the bottom two options. The **Manage supported devices for users only in these groups as Android for Work** option requires you have Microsoft Entra security groups set up first.
 
 You'll see the account name and organization name in the Intune portal when the binding is complete; at that point, you can close both browsers.
 

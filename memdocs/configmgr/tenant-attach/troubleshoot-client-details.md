@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Troubleshoot client details for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
@@ -35,7 +35,9 @@ When viewing the ConfigMgr client details, you may run across a common error. Us
 - Verify that Configuration Manager's [role based access control](../core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
 - The machine account of [SMS Provider role](../core/plan-design/hierarchy/plan-for-the-sms-provider.md) of the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
 
-### Error message 2: Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager
+<a name='error-message-2-unable-to-get-client-details-or-collection-information-make-sure-azure-ad-and-ad-user-discovery-are-configured-and-the-user-is-discovered-by-both-verify-that-the-user-has-proper-permissions-in-configuration-manager'></a>
+
+### Error message 2: Unable to get client details (or collection) information. Make sure Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager
 
 **Possible causes:**
 

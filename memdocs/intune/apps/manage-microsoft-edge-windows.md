@@ -43,7 +43,7 @@ This feature applies to:
 > [!NOTE]
 > Edge for Windows doesn't consume settings that users set for the native browser on their devices, because Edge for Windows can't access these settings.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Entra ID (AAD) Premium features.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features.
 
 ## Add an app configuration policy for Edge as a managed app on Windows devices
 

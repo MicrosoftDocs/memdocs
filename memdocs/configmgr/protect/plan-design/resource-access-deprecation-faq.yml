@@ -9,8 +9,8 @@ metadata:
   manager: apoorvseth
   ms.date: 04/08/2022
   ms.topic: faq
-  ms.prod: configuration-manager
-  ms.technology: configmgr-protect
+  ms.service: configuration-manager
+  ms.subservice: protect
   ms.localizationpriority: medium
 
 title: Frequently asked questions about resource access deprecation
@@ -39,7 +39,7 @@ sections:
           **Action required by customer:** Delete all Resource Access profiles and associated deployments and move the co-management workload for Resource Access (if co-managed) to Intune. Reevaluate the prerequisite rules, which allows you to proceed with upgrade. 
           
           After the upgrade completion, if the cloud attach wizard is configured, the Resource Access workload (configured to Intune) remains greyed out in console. 
-          If the customer is not previously cloud attached and configures the cloud attach wizard, during or after upgrade, the Resource Access workload is defaulted to Intune and remains greyed out in the console.
+          If the customer isn't previously cloud attached and configures the cloud attach wizard, during or after upgrade, the Resource Access workload is defaulted to Intune and remains greyed out in the console.
           **Company Resource Access** node in Asset Management workspace will be removed.
       
       - question: |
@@ -78,7 +78,7 @@ sections:
       - question: |
           What happens if I've enabled co-management, but haven't switched the resource access workload?
         answer: |
-          Starting in version 2211, the prerequisite checker will display a warning for co-managed clients if the resource access workload is on Configuration Manager. If the resource access slider is towards Configuration Manager, they are not tested or supported in version 2203. Co-management behavior is the same as if you used Configuration Manager 2111 or earlier to switch the resource access workload to Intune. 
+          Starting in version 2211, the prerequisite checker will display a warning for co-managed clients if the resource access workload is on Configuration Manager. If the resource access slider is towards Configuration Manager, they aren't tested or supported in version 2203. Co-management behavior is the same as if you used Configuration Manager 2111 or earlier to switch the resource access workload to Intune. 
           This Workload slider will be disabled, and you can only use Microsoft Intune to deploy resource access profiles in upcoming Configuration Manager versions. 
 
   

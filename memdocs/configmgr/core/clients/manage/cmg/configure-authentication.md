@@ -3,8 +3,8 @@ title: Configure CMG client authentication
 titleSuffix: Configuration Manager
 description: Configure authentication methods for clients to use a cloud management gateway (CMG).
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
@@ -20,24 +20,26 @@ ms.collection: tier3
 
 The next step in the setup of a cloud management gateway (CMG) is to configure how clients authenticate. Because these clients are potentially connecting to the service from the untrusted public internet, they have a higher authentication requirement. There are three options:
 
-- Azure Active Directory (Azure AD)
+- Microsoft Entra ID
 - PKI certificates
 - Configuration Manager site-issued tokens
 
 This article describes how to configure each of these options. For more foundational information, see [Plan for CMG client authentication methods](plan-client-authentication.md).
 
-## Azure AD
+<a name='azure-ad'></a>
 
-If your internet-based devices are running Windows 10 or later, use Azure AD modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios.
+## Microsoft Entra ID
+
+If your internet-based devices are running Windows 10 or later, use Microsoft Entra modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios.
 
 This authentication method requires the following configurations:
 
-- The devices need to be either cloud domain-joined or hybrid Azure AD-joined, and the user also needs an Azure AD identity.
+- The devices need to be either cloud domain-joined or Microsoft Entra hybrid joined, and the user also needs a Microsoft Entra identity.
 
   > [!TIP]
-  > To check if a device is cloud-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+  > To check if a device is cloud-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Microsoft Entra joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
-- One of the primary requirements for using Azure AD authentication for internet-based clients with a CMG is to integrate the site with Azure AD. You already completed that action in the [prior step](configure-azure-ad.md).
+- One of the primary requirements for using Microsoft Entra authentication for internet-based clients with a CMG is to integrate the site with Microsoft Entra ID. You already completed that action in the [prior step](configure-azure-ad.md).
 
 - There are a few other requirements, depending upon your environment:
 
@@ -45,7 +47,7 @@ This authentication method requires the following configurations:
   - Enable ASP.NET 4.5 on the management point
   - Configure client settings
 
-For more information on these prerequisites, see [Install clients using Azure AD](../../deploy/deploy-clients-cmg-azure.md).
+For more information on these prerequisites, see [Install clients using Microsoft Entra ID](../../deploy/deploy-clients-cmg-azure.md).
 
 ## PKI certificate
 
@@ -70,7 +72,7 @@ The CMG has to trust the client authentication certificates to establish the HTT
 Make sure to export all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, export both the intermediate and root CA certificates.
 
 > [!NOTE]
-> Export this certificate when any client uses PKI certificates for authentication. When all clients use either Azure AD or tokens for authentication, this certificate isn't required.
+> Export this certificate when any client uses PKI certificates for authentication. When all clients use either Microsoft Entra ID or tokens for authentication, this certificate isn't required.
 
 After you issue a client authentication certificate to a computer, use this process on that computer to export the trusted root certificate.
 
@@ -109,7 +111,7 @@ To securely forward client requests, the CMG connection point requires a secure 
 > [!NOTE]
 > The CMG connection point doesn't require a client authentication certificate in the following scenarios:
 >
-> - Clients use Azure AD authentication.
+> - Clients use Microsoft Entra authentication.
 > - Clients use Configuration Manager token-based authentication.
 > - The site uses Enhanced HTTP.
 
@@ -117,7 +119,7 @@ For more information, see [Enable management point for HTTPS](#enable-management
 
 ## Site token
 
-If you can't join devices to Azure AD or use PKI client authentication certificates, then use Configuration Manager token-based authentication. For more information, or to create a bulk registration token, see [Token-based authentication for cloud management gateway](../../deploy/deploy-clients-cmg-token.md).
+If you can't join devices to Microsoft Entra ID or use PKI client authentication certificates, then use Configuration Manager token-based authentication. For more information, or to create a bulk registration token, see [Token-based authentication for cloud management gateway](../../deploy/deploy-clients-cmg-token.md).
 
 ## Enable management point for HTTPS
 
@@ -130,7 +132,7 @@ Depending upon how you configure the site, and which client authentication metho
 
 When you use the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, you can configure the management point for HTTP. When you enable Enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**. This certificate is issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS Default Web site bound to port 443.
 
-With this option, internal clients can continue to communicate with the management point using HTTP. Internet-based clients using Azure AD or a client authentication certificate can securely communicate through the CMG with this management point over HTTPS.
+With this option, internal clients can continue to communicate with the management point using HTTP. Internet-based clients using Microsoft Entra ID or a client authentication certificate can securely communicate through the CMG with this management point over HTTPS.
 
 For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 
@@ -154,10 +156,10 @@ If your environment has multiple management points, you don't have to HTTPS-enab
 
 These tables summarize whether the management point requires HTTP or HTTPS, depending upon the type of client. They use the following terms:
 
-- *Workgroup*: The device isn't joined to a domain or Azure AD, but has a [client authentication certificate](#pki-certificate).
+- *Workgroup*: The device isn't joined to a domain or Microsoft Entra ID, but has a [client authentication certificate](#pki-certificate).
 - *AD domain-joined*: You join the device to an on-premises Active Directory domain.
-- *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure AD tenant. For more information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join).
-- *Hybrid-joined*: You join the device to your on-premises Active Directory and register it with your Azure AD. For more information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Microsoft Entra joined*: Also known as cloud domain-joined, you join the device to a Microsoft Entra tenant. For more information, see [Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybrid-joined*: You join the device to your on-premises Active Directory and register it with your Microsoft Entra ID. For more information, see [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**.
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**.
 - *E-HTTP*: On the site properties, **Communication Security** tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, and the HTTP management point is ready for both HTTP and HTTPS communication.
@@ -173,7 +175,7 @@ Configure an on-premises management point to allow connections from the CMG with
 |------------------|------------------|
 | Workgroup <sup>[Note 1](#bkmk_note1)</sup> | E-HTTP, HTTPS |
 | AD domain-joined <sup>[Note 1](#bkmk_note1)</sup> | E-HTTP, HTTPS |
-| Azure AD-joined  | E-HTTP, HTTPS |
+| Microsoft Entra joined  | E-HTTP, HTTPS |
 | Hybrid-joined    | E-HTTP, HTTPS |
 
 <a name="bkmk_note1"></a>
@@ -189,13 +191,13 @@ Configure an on-premises management point with the following client connection m
 |------------------|------------------|
 | Workgroup        | HTTP, HTTPS |
 | AD domain-joined | HTTP, HTTPS |
-| Azure AD-joined  | HTTPS       |
+| Microsoft Entra joined  | HTTPS       |
 | Hybrid-joined    | HTTP, HTTPS |
 
 > [!NOTE]  
 > On-premises AD domain-joined clients support both device- and user-centric scenarios communicating with an HTTP or HTTPS management point.
 >
-> On-premises Azure AD-joined and hybrid-joined clients can communicate via HTTP for device-centric scenarios, but need E-HTTP or HTTPS to enable user-centric scenarios. Otherwise they behave the same as workgroup clients.
+> On-premises Microsoft Entra joined and hybrid-joined clients can communicate via HTTP for device-centric scenarios, but need E-HTTP or HTTPS to enable user-centric scenarios. Otherwise they behave the same as workgroup clients.
 
 ## Next steps
 

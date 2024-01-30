@@ -3,8 +3,8 @@ title: Define boundaries
 titleSuffix: Configuration Manager
 description: Understand how to define network locations on your intranet that can contain devices you want to manage.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
@@ -51,7 +51,7 @@ For the **Active Directory site** boundary type, you specify the site name. You 
 
 When you specify an Active Directory site for a boundary, the boundary includes each IP subnet that's a member of that Active Directory site. If the configuration of the Active Directory site changes in Active Directory, the network locations included in this boundary also change.  
 
-Active Directory site boundaries don't work for pure Azure Active Directory (Azure AD) devices, also called cloud domain-joined devices. If they roam on-premises, and you only create Active Directory site type boundaries, these devices won't be in a boundary.
+Active Directory site boundaries don't work for pure Microsoft Entra devices, also called cloud domain-joined devices. If they roam on-premises, and you only create Active Directory site type boundaries, these devices won't be in a boundary.
 
 > [!TIP]
 > Use the following Windows command to see a device's current Active Directory site: `nltest /dsgetsite`.

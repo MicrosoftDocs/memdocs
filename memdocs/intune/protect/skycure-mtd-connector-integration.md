@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,6 +36,7 @@ ms.collection:
 Complete the following steps to integrate the Symantec Endpoint Protection Mobile (SEP Mobile) solution with Intune. You need to add SEP Mobile apps into Microsoft Entra ID P1 to have single sign-on capabilities.
 
 > [!NOTE]
+>
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
 
 ## Before you begin
@@ -53,24 +54,25 @@ You can make sure your network is properly configured for integration with SEP M
 
 SEP Mobile supports two modes of integration with Intune:
 
-- **Read-only integration (Basic setup):** Only inventories devices from Microsoft Entra and populates them in the Symantec Endpoint Protection Mobile Management console.
-<br>
-  - If the **Report the health and risk of devices to Intune**, and **Also report security incidents to Intune** boxes are not selected in the Symantec Endpoint Protection Mobile Management console, the integration is read-only and therefore will never change a device's state (compliant or noncompliant) in Intune.
-<br></br>
+- **Read-only integration (Basic setup):** Only inventories devices from Microsoft Entra ID and populates them in the Symantec Endpoint Protection Mobile Management console.
+  - If both the **Report the health and risk of devices to Intune** and **Also report security incidents to Intune** boxes aren't selected in the Symantec Endpoint Protection Mobile Management console, the integration is read-only and therefore will never change a device's state (compliant or noncompliant) in Intune.
 - **Full integration:** Allows SEP Mobile to report devices on risk and security incident details to Intune, which creates a bi-directional communication between both cloud services.
 
-### How are the SEP Mobile apps used with Microsoft Entra and Intune?
+<a name='how-are-the-sep-mobile-apps-used-with-microsoft-entra-and-intune'></a>
 
-- **iOS app:** Allows end-users to sign in to Microsoft Entra using an iOS/iPadOS app.
+### How are the SEP Mobile apps used with Microsoft Entra ID and Intune?
 
-- **Android app:** Allows end-users to sign in to Microsoft Entra using an Android app.
+- **iOS app:** Allows end-users to sign in to Microsoft Entra ID using an iOS/iPadOS app.
 
-- **Management app:** This is the SEP Mobile Microsoft Entra multi-tenant app which enables service-to-service communication with Intune.
+- **Android app:** Allows end-users to sign in to Microsoft Entra ID using an Android app.
+
+- **Management app:** This is the SEP Mobile Microsoft Entra multi-tenant app, which enables service-to-service communication with Intune.
 
 ## To set up the read-only integration between Intune and SEP Mobile
 
 > [!IMPORTANT]
-> The SEP Mobile admin credentials must consist of an e-mail account that belongs to a valid user in the Microsoft Entra, otherwise the login will fail. SEP Mobile uses Microsoft Entra to authenticate its admin using single sign-on (SSO).
+>
+> The SEP Mobile admin credentials must consist of an e-mail account that belongs to a valid user in the Microsoft Entra, otherwise the login will fail. SEP Mobile uses Microsoft Entra ID to authenticate its admin using single sign-on (SSO).
 
 1. Go to [Symantec Endpoint Protection Mobile Management Console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html).
 
@@ -80,15 +82,15 @@ SEP Mobile supports two modes of integration with Intune:
 
 4. Next to **iOS App**, choose **Add to Active Directory**.
 
-    ![Image of the Symantec Endpoint Protection Mobile Management Console](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
+   ![Image of the Symantec Endpoint Protection Mobile Management Console](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-5. When the login page opens, enter your Intune credentials, and then choose **Accept**.
+5. When the sign in page opens, enter your Intune credentials, and then choose **Accept**.
 
-    ![Image of the iOS/iPadOS app Intune login prompt](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
+   ![Image of the iOS/iPadOS app Intune login prompt](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 
 6. After the app is added to Microsoft Entra, you'll see an indication that the app was added successfully.
 
-    ![Image of the iOS/iPadOS app completion screen](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
+   ![Image of the iOS/iPadOS app completion screen](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
 
 7. Repeat these steps for the **SEP Mobile Android** and **Management** apps.
 
@@ -98,7 +100,7 @@ You need to add a Microsoft Entra security group that contains all devices runni
 
 - Enter and select all the security groups of devices that are running SEP Mobile, and then save the changes.
 
-    ![Image showing user groups for SEP Mobile apps](./media/skycure-mtd-connector-integration/symantec-portal-basic-groups.png)
+  ![Image showing user groups for SEP Mobile apps](./media/skycure-mtd-connector-integration/symantec-portal-basic-groups.png)
 
 SEP Mobile syncs the devices running its Mobile Threat Defense service with the Microsoft Entra security groups.
 
@@ -114,9 +116,9 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 3. Choose the **Properties** tab.
 
-4. Next to the **Tenant ID**, choose the copy icon, and then paste it to a safe location. You'll need this identifier in a later step.
+4. Next to the **Tenant ID**, choose the copy icon, and then paste it to a safe location. You need this identifier in a later step.
 
-    ![Image showing Tenant ID in the Azure portal](./media/skycure-mtd-connector-integration/symantec-azure-portal-directory-ID.png)
+   ![Image showing Tenant ID in the Azure portal](./media/skycure-mtd-connector-integration/symantec-azure-portal-directory-ID.png)
 
 ### (Optional) Create a dedicated Security Group for devices that need to run the SEP Mobile apps
 
@@ -136,31 +138,32 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 3. Go to the **Settings** > **Integrations** > **Intune** > **EMM Integration Selection** section.
 
-4. In the **Directory ID** box, paste the Tenant ID you copied from Microsoft Entra in the previous section and save the settings.
+4. In the **Directory ID** box, paste the Tenant ID you copied from Microsoft Entra ID in the previous section and save the settings.
 
-    ![Image showing Directory ID in the SEP Mobile portal](./media/skycure-mtd-connector-integration/symantec-portal-directory-ID.png)
+   ![Image showing Directory ID in the SEP Mobile portal](./media/skycure-mtd-connector-integration/symantec-portal-directory-ID.png)
 
 5. Go to the **Settings** > **Integrations** > **Intune** > **Basic Setup** section.
 
 6. Next to **iOS App**, choose the **Add to Microsoft Entra** button.
 
-    ![Image showing adding the iOS/iPadOS app to Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
+   ![Image showing adding the iOS/iPadOS app to Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
 7. Sign in using the Microsoft Entra credentials for the Microsoft 365 account that manages the directory.
 
 8. Choose the **Accept** button to add the SEP Mobile iOS/iPadOS app to Microsoft Entra.
 
-    ![Image showing the accept button](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
+   ![Image showing the accept button](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 
 9. Repeat the same process for the **Android app** and the **Management App**.
 
 10. Select all user groups that need to run the SEP Mobile apps, for example, the security group you created earlier.
 
-    ![Image showing user groups for SEP Mobile apps](./media/skycure-mtd-connector-integration/symantec-portal-basic-groups.png)
+   ![Image showing user groups for SEP Mobile apps](./media/skycure-mtd-connector-integration/symantec-portal-basic-groups.png)
 
 11. SEP Mobile syncs the devices in the selected groups and starts reporting information to Intune. You can view this data in the Full Integration section. Go to the **Settings** > **Integrations** > **Intune** > **Full Integration** section.
 
-     ![Image showing SEP Mobile full integration completed](./media/skycure-mtd-connector-integration/symantec-portal-basic-status.PNG)
+    ![Image showing SEP Mobile full integration completed](./media/skycure-mtd-connector-integration/symantec-portal-basic-status.PNG)
+
 ## Next steps
 
 [Set up SEP Mobile apps](mtd-apps-ios-app-configuration-policy-add-assign.md)

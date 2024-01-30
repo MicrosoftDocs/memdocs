@@ -3,8 +3,8 @@ description: Learn how to retrieve a list of client editions and whether the Dev
 title: ClientEditions Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 030dee48-575c-40fe-b402-920426271329
 author: Banreet

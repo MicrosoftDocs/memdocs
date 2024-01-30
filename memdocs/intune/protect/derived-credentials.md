@@ -49,7 +49,7 @@ Derived credentials are an implementation of the National Institute of Standards
 - The Intune administrator specifies **Derived credential** as the *authentication method* for the following objects:
   
   **For Android Enterprise fully managed devices**:
-  - Common profile types like Wi-Fi and VPN
+  - Common profile types like Wi-Fi
   - App authentication
 
   **For iOS/iPadOS**:
@@ -290,7 +290,6 @@ You can specify **Derived credential** for the following profile types and purpo
   - [Android Enterprise](../configuration/email-settings-android-enterprise.md)
 - VPN:
   - [iOS and iPadOS](../configuration/vpn-settings-ios.md)
-  - [Android Enterprise](../configuration/vpn-settings-android-enterprise.md)
 - [S/MIME signing and encryption](certificates-s-mime-encryption-sign.md)
 - Wi-Fi:
   - [iOS and iPadOS](../configuration/wi-fi-settings-ios.md)
@@ -306,7 +305,7 @@ You can specify **Derived credential** for the following profile types and purpo
 Use derived credentials for certificate-based authentication to web sites and applications. To deliver a derived credential for app authentication:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 3. Use the following settings:
 
    **For iOS and iPadOS**:
@@ -387,4 +386,5 @@ After you delete an issuer and then add a new one, device users must request a n
 
 ## Next steps
 
-[Create device configuration profiles](../configuration/device-profile-create.md)
+[Create device configuration profiles](../configuration/device-profile-create.md).
+

@@ -3,8 +3,8 @@ title: Data flow for CMG
 titleSuffix: Configuration Manager
 description: Understand how data flows between components of the cloud management gateway (CMG), including network ports and internet endpoints.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell
@@ -26,7 +26,7 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
 :::image type="content" source="media/cmg-data-flow.svg" alt-text="Data flow diagram for cloud management gateway (CMG).":::
 
-1. The service connection point connects to Azure over HTTPS port 443. It authenticates using Azure Active Directory (Azure AD). The service connection point deploys the CMG in Azure. The CMG creates the HTTPS service using the server authentication certificate.
+1. The service connection point connects to Azure over HTTPS port 443. It authenticates using Microsoft Entra ID. The service connection point deploys the CMG in Azure. The CMG creates the HTTPS service using the server authentication certificate.
 
 2. The CMG connection point connects to the CMG in Azure. It holds the connection open, and builds the channel for future two-way communication.
 
@@ -36,7 +36,7 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
     For more information, see [Note 2: CMG connection point HTTPS ports for one VM](#bkmk_port-note2).
 
-3. The client connects to the CMG over HTTPS port 443. It authenticates using Azure AD, the client authentication certificate, or a site-issued token.
+3. The client connects to the CMG over HTTPS port 443. It authenticates using Microsoft Entra ID, the client authentication certificate, or a site-issued token.
 
     > [!NOTE]
     > If you enable the CMG to serve content, the client connects directly to Azure blob storage over HTTPS port 443. For more information, see [Content data flow](#content-data-flow).
@@ -45,7 +45,7 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
 5. The CMG connection point forwards the client communication to the on-premises management point and software update point.
 
-For more information when you integrate with Azure AD, see [Configure Azure services: Cloud management data flow](../../../servers/deploy/configure/azure-services-wizard.md#cloud-management-data-flow).
+For more information when you integrate with Microsoft Entra ID, see [Configure Azure services: Cloud management data flow](../../../servers/deploy/configure/azure-services-wizard.md#cloud-management-data-flow).
 
 ### Content data flow
 

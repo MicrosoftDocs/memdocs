@@ -3,8 +3,8 @@ title: Technical Preview 1806
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.
 ms.date: 06/06/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -255,7 +255,7 @@ The following command-line properties are required in all scenarios:
 - CCMHOSTNAME  
 - SMSSITECODE  
 
-The following properties are required when using Azure AD for client authentication instead of PKI-based client authentication certificates:
+The following properties are required when using Microsoft Entra ID for client authentication instead of PKI-based client authentication certificates:
 - AADCLIENTAPPID  
 - AADRESOURCEURI  
 
@@ -271,9 +271,11 @@ For more information, see [Client installation properties](../clients/deploy/abo
 <!--1358651-->
 Previously, you had to deploy a cloud distribution point and CMG as separate roles. Now in this release, a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. To enable this feature, enable the new option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage** on the **Settings** tab of the CMG properties. 
 
-### Trusted root certificate isn't required with Azure AD
+<a name='trusted-root-certificate-isnt-required-with-azure-ad'></a>
+
+### Trusted root certificate isn't required with Microsoft Entra ID
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Microsoft Entra ID for client authentication, but used to be required in the wizard.
 
 > [!Important]  
 > If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
@@ -303,7 +305,7 @@ Application catalog roles are no longer required to display user-available appli
 3. Use Software Center as a targeted user to browse for, request, and install the application.
 
 ### Known issue
-- If you use an Azure Active Directory-joined client with this feature, don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. It currently conflicts with this feature.<!--515846--> For more information on this setting, see [improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications).
+- If you use a Microsoft Entra joined client with this feature, don't configure the site to **Use Configuration Manager-generated certificates for HTTP site systems**. It currently conflicts with this feature.<!--515846--> For more information on this setting, see [improved secure client communications](capabilities-in-technical-preview-1805.md#improved-secure-client-communications).
 
 
 

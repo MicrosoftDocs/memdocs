@@ -4,10 +4,10 @@
 title: Microsoft Intune Government Service Description  
 description: Intune Government Service Description is designed to serve as an overview of the Microsoft Intune offering for GCC High and DoD environments.
 keywords:
-author: dougeby
-ms.author: dougeby
-manager: johmar
-ms.date: 09/10/2023
+author: MandiOhlinger
+ms.author: mandia
+manager: dougeby
+ms.date: 01/03/2024
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -78,8 +78,8 @@ The following features are currently not available and aren't supported in GCC H
 | --- | --- |
 | Expedited updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
 | Feature updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
-| Linux devices | :::image type="icon" source="../media/icons/i-article.png"::: **ETA is late 2023**. For more information on Linux devices management, go to [Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md). |
-| Log Analytics |  :::image type="icon" source="../media/icons/i-article.png"::: **ETA is late 2023**. For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
+| Linux devices | :::image type="icon" source="../media/icons/i-article.png"::: **ETA is Q1 2024**. For more information on Linux devices management, go to [Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md). |
+| Log Analytics |  :::image type="icon" source="../media/icons/i-article.png"::: **ETA is Q1 2024**. For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
 | Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | :::image type="icon" source="../media/icons/i-article.png"::: For more information on these plans, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing). |
 | Organizational Messages | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Organizational messages in Microsoft Intune](../remote-actions/organizational-messages-overview.md). |
 | Windows Autopilot | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Windows Autopilot overview](/autopilot/windows-autopilot). |

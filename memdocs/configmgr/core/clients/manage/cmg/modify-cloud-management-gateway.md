@@ -3,8 +3,8 @@ title: Modify a CMG
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
@@ -78,7 +78,7 @@ When you convert a CMG, you can't change all settings:
 | Serve content | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Azure environment | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Subscription | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
-| Azure AD app | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Microsoft Entra app | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Region | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Resource group | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 
@@ -238,7 +238,7 @@ Only modify the CMG from the Configuration Manager console. Making modifications
 
 ## Renew Azure service secret key
 
-When you first configure Azure Active Directory (Azure AD) for the CMG to create the **Cloud Management** Azure service, you specify a secret key validity period on the web (server) app registration. By default, the secret key is valid for one year, or you can specify two years. Before the secret key expires, make sure to renew it. For more information, see [Renew secret key](../../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).<!-- MEMDocs#916 -->
+When you first configure Microsoft Entra ID for the CMG to create the **Cloud Management** Azure service, you specify a secret key validity period on the web (server) app registration. By default, the secret key is valid for one year, or you can specify two years. Before the secret key expires, make sure to renew it. For more information, see [Renew secret key](../../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).<!-- MEMDocs#916 -->
 
 ## Delete the service
 

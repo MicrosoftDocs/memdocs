@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 01/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,7 +46,7 @@ JIT registration is supported with the following enrollment types:
 * Apple automated device enrollment: For enrollments that use Setup Assistant with modern authentication as the [authentication method](automated-device-enrollment-authentication.md).  
 
 ## Best practices for SSO configuration
-* The user's first sign-in after they reach the home screen has to happen in a work or school app that's configured with the SSO extension. Otherwise, Microsoft Entra registration and compliance checks can't be completed. We recommend pointing employees to the Microsoft Teams app, because it's integrated with the latest identity libraries and will provide the most streamlined experience from the user's home screen.
+* The user's first sign-in after they reach the home screen has to happen in a work or school app that's configured with the SSO extension. Otherwise, Microsoft Entra registration and compliance checks can't be completed. We recommend that you point employees to the Microsoft Teams app. The app is integrated with the latest identity libraries and provides the most streamlined experience from the user's home screen.  
 
 * The SSO extension automatically applies to all Microsoft apps, so to avoid authentication problems, don't add the bundle IDs for your Microsoft apps to your policy. You only need to add non-Microsoft apps.  
 
@@ -56,7 +56,7 @@ JIT registration is supported with the following enrollment types:
 Create a single sign-on app extension policy that uses the Apple SSO extension to enable just-in-time (JIT) registration.  
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
-3. For **SSO app extension type**, select **Azure AD**.  
+3. For **SSO app extension type**, select **Microsoft Entra ID**.  
 4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for any non-Microsoft apps using single sign-on (SSO). The SSO extension automatically applies to all Microsoft apps, so to avoid authentication problems, don't add Microsoft apps to your policy. 
 
    Don't add the Microsoft Authenticator app to the SSO extension either.  That app is added later in an app policy.     
@@ -80,5 +80,3 @@ Create an enrollment profile for enrolling devices. The enrollment profile trigg
 * [Account driven user enrollment](apple-account-driven-user-enrollment.md)
 * [Apple automated device enrollment for Setup Assistant with modern authentication](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) 
 * [Web based device enrollment](web-based-device-enrollment-ios.md)  
-
-
