@@ -164,7 +164,7 @@ We recommend this method for new or factory-reset devices, in scenarios where th
 
 This method is supported on corporate-owned devices running Android 8.0 and later. It isn't supported with device enrollment manager accounts. 
 
-You can use this method in conjuction with the Microsoft Intune DPC identifier to set up fully managed devices. The DPC identifier method isn't supported on corporate-owned, personally enabled (COPE) devices running Android 11 and later.    
+You can use this method in conjunction with the Microsoft Intune DPC identifier to set up fully managed devices. The DPC identifier method isn't supported on corporate-owned, personally enabled (COPE) devices running Android 11 and later.    
 
 1. Turn on the device.  
 2. On the **Welcome** screen, select your language.  
