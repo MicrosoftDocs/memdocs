@@ -54,7 +54,7 @@ Before you start the process to integrate Wandera with Intune, make sure you hav
 
 Enabling Mobile Threat Defense integration between Wandera and Intune entails:
 
-- Enabling Wandera’s UEM Connect service to synchronize information with Azure and Intune. This includes user and device Life Cycle Management (LCM) metadata, along with Mobile Threat Defense (MTD) device threat level.
+- Enabling Wandera's UEM Connect service to synchronize information with Azure and Intune. This includes user and device Life Cycle Management (LCM) metadata, along with Mobile Threat Defense (MTD) device threat level.
 - Create Activation Profiles in Wandera to define device enrollment behavior.
 - Deploy Wandera over-the-air to managed iOS and Android devices.
 - Configure Wandera for end user self-service using MAM on iOS and Android devices.
@@ -92,7 +92,7 @@ Intune and Wandera are now connected.
 
 Intune-based deployments are facilitated using Wandera Activation Profiles defined in RADAR. Each Activation Profile defines specific configuration options like authentication requirements, service capabilities, and initial group membership.
 
-After creating an Activation Profile in Wandera, you “assign” it to users and devices in Intune. While an Activation Profile is universal across device platforms and management strategies, the following steps define how to configure Intune based upon these differences.
+After creating an Activation Profile in Wandera, you "assign" it to users and devices in Intune. While an Activation Profile is universal across device platforms and management strategies, the following steps define how to configure Intune based upon these differences.
 
 The steps from here assume you created an Activation Profile in Wandera that you would like to deploy via Intune to your target devices. See the [Activation Profiles Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links) for more details on creating and using Wandera Activation Profiles.
 
@@ -113,7 +113,7 @@ In this section, you download **required** iOS device configuration files and th
 1. In **RADAR**, navigate to the Activation Profile you want to deploy (Devices > Activations), then select the **Deployment Strategies tab > Managed Devices > Microsoft Endpoint Manager**.
 2. Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
 3. Download the provided configuration profile(s) and prepare to upload them in a following step.
-4. Open **Microsoft Intune admin center** and navigate to **Devices > iOS/iPadOS > Configuration profiles**. Select **Create profile**.
+4. Open **Microsoft Intune admin center** and navigate to **Devices > iOS/iPadOS > Configuration profiles**. Select **Create** > **New policy**.
 5. In the panel that appears, choose **iOS/iPadOS** under **Platform**, then **Custom** under Profile. Then select **Create**.
 6. In the **Name** field, provide a descriptive title for the configuration, ideally matching what you named the Activation Profile in RADAR. This will help ease cross referencing in the future. Alternatively, provide the Activation Profile code if desired. We recommend indicating if the configuration is for Supervised or Unsupervised devices by suffixing the name as such.
 7. Optionally provide a **Description** providing more details for other administrators about the purpose/use of the configuration. Select **Next**.
@@ -138,11 +138,11 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 
 1. In the **Wandera RADAR** portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications use during enrollment in Devices > Activations.
 2. Select the **Deployment Strategies tab then Unmanaged Devices** then scroll to the **Azure Device Provisioning** section.
-3. Enter your **Microsoft Entra tenant ID** into the appropriate text field. If you don’t have your tenant ID on hand, select the **Get my Tenant ID** link to open Microsoft Entra ID in a new tab where you can easily copy this value to your clipboard.
+3. Enter your **Microsoft Entra tenant ID** into the appropriate text field. If you don't have your tenant ID on hand, select the **Get my Tenant ID** link to open Microsoft Entra ID in a new tab where you can easily copy this value to your clipboard.
 4. (Optional) Specify **Group ID(s)** to limit user activations to specific groups.
    - If one or more **Group IDs** are defined, a user activating MAM must be a member of at least one of the specified groups to activate using this Activation Profile.
    - You can set up multiple Activation Profiles configured with the same Azure Tenant ID but with different Group IDs. This allows you to enroll devices into Wandera based upon Azure group membership, enabling differentiated capabilities by group at activation time.
-   - You can configure a single “default” Activation Profile that doesn’t specify any Group IDs. This group serves as a catch-all for all activations in which the authenticated user isn’t a member of a group with an association to another Activation Profile.
+   - You can configure a single "default" Activation Profile that doesn't specify any Group IDs. This group serves as a catch-all for all activations in which the authenticated user isn't a member of a group with an association to another Activation Profile.
 5. Select **Save** in the upper-right corner of the page.
 
 ## Next Steps

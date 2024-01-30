@@ -46,7 +46,9 @@ Device limit restrictions can be configured two ways: by Intune enrollment, or b
 
 ## Intune device limit restrictions
 
-Intune device limit restrictions set the maximum number of devices that a user can enroll. You can allow a user to enroll up to 15 devices. To set a device limit restriction, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
+Intune device limit restrictions set the maximum number of devices that a user can enroll. You can allow a user to enroll up to 15 devices. To create a device limit restriction, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Enrollment**. 
+
+For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
 
 ## Azure device limit restriction
 
@@ -58,7 +60,7 @@ If you enforce both Intune and Azure device limit restrictions, the following ta
 
 |Platform| Device management solution | User affinity | Does Microsoft Entra limitation apply? | Does Intune limitation apply? |  
 | -----| ----- | ----- | ----- | ----- |
-|Android| Android Enterprise personally-owned work profile | Yes | Yes | Yes|  
+|Android| Android Enterprise personally owned work profile | Yes | Yes | Yes|  
 |Android| Android Enterprise dedicated device | No | No | No |  
 |Android| Android Enterprise fully managed | Yes | Yes | Yes |  
 |Android| Android Enterprise corporate-owned work profile | Yes | Yes | Yes |  

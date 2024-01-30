@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/03/2023
+ms.date: 01/29/2024
 ms.topic: end-user-help
 ms.prod:
 ms.localizationpriority: high
@@ -103,8 +103,7 @@ These password-related messages are sent to Android devices.
 | Password must contain alphanumeric characters and symbols. | Set a password that contains a mix of letters, numbers, and special characters such as `&`, `!`, `$`, `%`, and `#`. |
 | Password must use biometric technology.| Set up your device to use biometric authentication, such as fingerprint or facial recognition.
 | Password has expired. | Set a new password. Your organization requires you to change your password after a certain number of days. |
-| Your password was used too recently. | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |
-
+| Your password was used too recently. | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |  
 
 ## Next steps  
 For more information about password requirements, including how to change the password or screen lock on your device, see [Secure device with lock screen or password](password-does-not-meet-it-administrator-requirements.md).  

@@ -3,8 +3,8 @@ title: Updates Publisher
 titleSuffix: Configuration Manager
 description: Use System Center Updates Publisher to manage custom updates
 ms.date: 10/31/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

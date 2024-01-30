@@ -3,8 +3,8 @@ title: Diagnostic data for 1710 | Configuration Manager
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1710 collects.
 ms.date: 11/20/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur

@@ -7,8 +7,8 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.date: 05/19/2022
 ms.topic: how-to
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 

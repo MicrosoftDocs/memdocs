@@ -3,8 +3,8 @@ title: Blocking clients
 titleSuffix: Configuration Manager
 description: Block client access for system security by using Configuration Manager.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

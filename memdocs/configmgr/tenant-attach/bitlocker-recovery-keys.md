@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Intune admin center.
 ms.date: 01/25/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur

@@ -3,8 +3,8 @@ title: GetEvaluationState Method
 titleSuffix: Configuration Manager
 description: The GetEvaluationState Windows Management Instrumentation (WMI) class method in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: abe568e3-3859-44a1-a97b-e9127055480b
 author: Banreet
@@ -54,7 +54,7 @@ uint32 GetEvaluationState
 
  Qualifiers: [id("2"), in]  
 
- `true` if this is a device targeted application.    
+ `true` if it's a device targeted application.    
 
  `PolicyEvalState`  
  Data type: `CCM_EvaluationState`  

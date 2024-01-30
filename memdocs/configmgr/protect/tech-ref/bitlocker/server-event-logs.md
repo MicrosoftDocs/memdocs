@@ -3,8 +3,8 @@ title: Server event logs
 titleSuffix: Configuration Manager
 description: A technical reference for the possible BitLocker (MBAM) server entries in the Windows event log
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell

@@ -3,8 +3,8 @@ title: RequestLock Method
 description: Learn how to use the RequestLock method in Configuration Manager to synchronously acquire a lock to edit a global object.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c13a5af4-d822-41ea-92c3-3bf17b9a5600
 author: Banreet

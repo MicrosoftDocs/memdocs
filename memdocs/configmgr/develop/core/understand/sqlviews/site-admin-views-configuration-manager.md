@@ -3,8 +3,8 @@ title: Site administration views
 titleSuffix: Configuration Manager
 description: Information such as the site code, Configuration Manager version, and the location of the SMS provider.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

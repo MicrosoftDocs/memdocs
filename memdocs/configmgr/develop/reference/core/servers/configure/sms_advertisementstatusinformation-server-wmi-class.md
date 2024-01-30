@@ -3,8 +3,8 @@ description: Learn how to represent the state and description for a software dis
 title: SMS_AdvertisementStatusInformation Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7bc41725-e274-4ce8-986f-1f55376a38c3
 author: Banreet

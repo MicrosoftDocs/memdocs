@@ -3,8 +3,8 @@ title: SMS_UserApplicationRequest Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_UserApplicationRequest WMI class is an SMS Provider server class that represents a user's application request.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 74290916-947a-432f-ab33-cbf7358ee126
 author: Banreet

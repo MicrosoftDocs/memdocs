@@ -3,8 +3,8 @@ title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
 ms.author: sheetg

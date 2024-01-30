@@ -3,8 +3,8 @@ title: SMS_DeploymentInfoFlat Class
 description: Learn how the SMS_DeploymentInfoFlat Windows Management Instrumentation (WMI) class is an SMS Provider server class.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5bcdc5a5-1989-4c84-9df3-bdeb0c275eee
 author: Banreet

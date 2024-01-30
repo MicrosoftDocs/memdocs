@@ -45,7 +45,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Select Minimum PIN length  | 4  | iOS/iPadOS, Android  |   |
 | Touch ID instead of PIN for access (iOS 8+/iPadOS)  | Allow  | iOS/iPadOS  |   |
 | Override biometrics with PIN after timeout  | Require  | iOS/iPadOS, Android  |   |
-| Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
+| Timeout (minutes of activity)  | 1440  | iOS/iPadOS, Android  |   |
 | Face ID instead of PIN for access (iOS 11+/iPadOS)  | Allow  | iOS/iPadOS  |   |
 | Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |

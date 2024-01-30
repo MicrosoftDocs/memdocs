@@ -1,10 +1,10 @@
 ---
 title: Prepare for unknown computer deployments
 titleSuffix: Configuration Manager
-description: Learn how to deploy operating systems to computers that are not managed by Configuration Manager in your Configuration Manager environment.
+description: Learn how to deploy operating systems to computers that aren't managed by Configuration Manager in your Configuration Manager environment.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -17,13 +17,13 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the information in this topic to deploy operating systems to unknown computers in your Configuration Manager environment. An unknown computer is a computer that is not managed by Configuration Manager. This means that there is no record of these computers in the Configuration Manager database. Unknown computers include the following:  
+Use the information in this topic to deploy operating systems to unknown computers in your Configuration Manager environment. An unknown computer is a computer that isn't managed by Configuration Manager. This means that there's no record of these computers in the Configuration Manager database. Unknown computers include the following:  
 
-- A computer where the Configuration Manager client is not installed  
+- A computer where the Configuration Manager client isn't installed  
 
-- A computer that is not imported into Configuration Manager  
+- A computer that isn't imported into Configuration Manager  
 
-- A computer that is not been discovered by Configuration Manager  
+- A computer that isn't been discovered by Configuration Manager  
 
   You can deploy operating systems to unknown computers with the following deployment methods:  
 
@@ -46,13 +46,13 @@ Use the information in this topic to deploy operating systems to unknown compute
 -   Deploy the task sequence to install the  operating system.  
 
 ## Unknown Computer Installation Process  
- When a computer is first started from PXE or from media, Configuration Manager checks to see if a record for that computer exists in the Configuration Manager database. If there is a record, Configuration Manager then checks to see if there are any task sequences deployed to the record. If there is not a record, Configuration Manager checks to see if there are any task sequences deployed to an unknown computer object. In either case, Configuration Manager then performs one of the following actions:  
+ When a computer is first started from PXE or from media, Configuration Manager checks to see if a record for that computer exists in the Configuration Manager database. If there's a record, Configuration Manager then checks to see if there are any task sequences deployed to the record. If there isn't a record, Configuration Manager checks to see if there are any task sequences deployed to an unknown computer object. In either case, Configuration Manager then performs one of the following actions:  
 
-- If there is an available task sequence, Configuration Manager prompts the user to run the task sequence.  
+- If there's an available task sequence, Configuration Manager prompts the user to run the task sequence.  
 
-- If there is a required task sequence, Configuration Manager automatically runs the task sequence.  
+- If there's a required task sequence, Configuration Manager automatically runs the task sequence.  
 
-- If a task sequence is not deployed for the record, Configuration Manager generates an error that there is no deployed task sequence for the destination computer.  
+- If a task sequence isn't deployed for the record, Configuration Manager generates an error that there's no deployed task sequence for the destination computer.  
 
   When an unknown computer is started, Configuration Manager recognizes the computer as an unprovisioned computer rather than an unknown computer. This means that the computer can now receive the task sequences that were deployed to the unknown computer object. The deployed task sequence then installs an operating system image that must include the Configuration Manager client.  
 

@@ -3,8 +3,8 @@ title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
 ms.date: 02/17/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

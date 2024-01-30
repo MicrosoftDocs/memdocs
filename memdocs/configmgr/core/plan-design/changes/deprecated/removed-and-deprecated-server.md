@@ -3,8 +3,8 @@ title: Deprecated for site servers
 titleSuffix: Configuration Manager
 description: Learn about the products and operating systems that Configuration Manager no longer supports for site servers and database servers.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
