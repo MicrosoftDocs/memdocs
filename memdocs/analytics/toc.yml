@@ -19,7 +19,7 @@ items:
     href: device-scopes.md
   - name: Device query
     href: device-query.md
-  - name: Intune data platform schema
+  - name: Data platform schema
     href: data-platform-schema.md
 - name: Quickstarts
   items:

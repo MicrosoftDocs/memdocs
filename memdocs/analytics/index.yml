@@ -66,5 +66,5 @@ landingContent:
             url: device-scopes.md
           - text: Device query
             url: device-query.md
-          - text: Intune data platform schema
+          - text: Data platform schema
             url: data-platform-schema.md                         

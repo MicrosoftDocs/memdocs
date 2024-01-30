@@ -129,4 +129,4 @@ On corporate-owned Windows devices, admins can query for:
 
  - Details about running processes
 
-For more information go to [Device Query](../fundamentals/device-query.md)
+For more information go to [Device Query](../../analytics/device-query.md)

@@ -41,7 +41,7 @@ To use Device query in your tenant, you must have a license that includes Micros
 - The Advanced Analytics Add-on
 - Microsoft Intune Suite
 
-To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](../../analytics/enroll-intune.md).
+To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](enroll-intune.md).
 
 For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.  
 
@@ -226,9 +226,8 @@ Device query supports the following entities. To learn more about what propertie
 
   - If running Windows 10 22H2, ensure that it's running version 10.0.19045.3393.
 
-
 ## Next Steps
 
 For more information, go to:
 
-- [What is Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [What is Advanced Analytics](advanced-endpoint-analytics.md)
