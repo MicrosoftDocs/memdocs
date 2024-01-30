@@ -189,6 +189,13 @@ Applies to:
 
 ## Device enrollment
 
+
+
+### Account-driven Apple User Enrollment to be generally available for iOS/iPadOS 15+ devices<!-- 10277062 -->  
+Intune will support account-driven Apple User Enrollment, the new and improved version of Apple User Enrollment, for devices running iOS/iPadOS 15 and later. This new enrollment method utilizes just-in-time registration, removing the Company Portal app for iOS as an enrollment requirement. Device users will be able to initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. For more information, see [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md) on Microsoft Learn.
+
+If you prefer, you can continue to target iOS/iPadOS devices using the Apple User Enrollment method that requires Company Portal. Devices running iOS/iPadOS 14.8.1 and earlier will be unaffected by this update and can continue to use the method with Company Portal.
+
 ### Intune supporting await final configuration experience for macOS automated device enrollment <!-- 24973562 -->  
 The new Intune-supported enrollment feature for macOS, *await final configuration*, will enable a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience will work on devices targeted with new and existing enrollment profiles.
 
