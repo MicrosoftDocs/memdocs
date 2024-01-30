@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/14/2024
+ms.date: 01/30/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -151,7 +151,7 @@ If you don't want to allow the default managed Universal Links, you can delete t
 
 | Setting | How to use | Default value |
 |------|----------|-------|
-| **PIN for access** | Select **Require** to require a PIN to use this app. The user is prompted to set up this PIN the first time they run the app in a work or school context. The PIN is applied when working either online or offline.    <br><br> You can configure the PIN strength using the settings available under the **PIN for access** section. <br><br> **Note:** End-users that are allowed to access the app can reset the app PIN.   | **Require** |
+| **PIN for access** | Select **Require** to require a PIN to use this app. The user is prompted to set up this PIN the first time they run the app in a work or school context. The PIN is applied when working either online or offline.    <br><br> You can configure the PIN strength using the settings available under the **PIN for access** section. <br><br> **Note:** End-users that are allowed to access the app can reset the app PIN. This setting may not be visible in some cases on iOS devices. iOS devices have a maximum limitation of four available shortcuts. In order to view the reset APP PIN shortcut, the end user may need to access the shortcut from a different MAM app.   | **Require** |
 | <ul> **PIN type** | Set a requirement for either numeric or passcode type PINs before accessing an app that has app protection policies applied. Numeric requirements involve only numbers, while a passcode can be defined with at least 1 alphabetical letter **or** at least 1 special character.  <br><br> **Note:** *To configure passcode type, it requires app to have Intune SDK version 7.1.12 or above. Numeric type has no Intune SDK version restriction. Special characters allowed include the special characters and symbols on the iOS/iPadOS English language keyboard.*  | **Numeric**  |
 | <ul> **Simple PIN** | Select **Allow** to allow users to use simple PIN sequences like 1234, 1111, abcd or aaaa. Select **Block** to prevent them from using simple sequences. Simple sequences are checked in 3 character sliding windows. If **Block** is configured, 1235 or 1112 wouldn't be accepted as PIN set by the end user, but 1122 would be allowed. <br><br>**Note**: *If Passcode type PIN is configured, and Allow simple PIN is set to Yes, the user needs at least 1 letter **or** at least 1 special character in their PIN. If Passcode type PIN is configured, and Allow simple PIN is set to No, the user needs at least 1 number **and** 1 letter **and** at least 1 special character in their PIN.*   |**Allow**  |
 | <ul> **Select minimum PIN length** | Specify the minimum number of digits in a PIN sequence.  | **4**  |

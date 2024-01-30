@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 01/30/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -122,7 +122,7 @@ For more information, see [Data transfer policy exceptions for apps](app-protect
 |Setting |How to use |
 |:------ |:------|
 |**PIN for access** |Select **Require** to require a PIN to use this app. The user is prompted to set up this PIN the first time they run the app in a work or school context. <br><br> Default value = **Require**<br><br> You can configure the PIN strength using the settings available under the PIN for access section.<br><br> **Note:** End-users that are allowed to access the app can reset the app PIN.
-|<ol><br>**PIN type** |Set a requirement for either numeric or passcode type PINs before accessing an app that has app protection policies applied. Numeric requirements involve only numbers, while a passcode can be defined with at least 1 alphabetical letter **or** at least 1 special character. <br><br> Default value = **Numeric**<br><br> **Note:** Special characters allowed include the special characters and symbols on the Android English language keyboard. |
+|<ol><br>**PIN type** |Set a requirement for either numeric or passcode type PINs before accessing an app that has app protection policies applied. Numeric requirements involve only numbers, while a passcode can be defined with at least 1 alphabetical letter **or** at least 1 special character. <br><br> Default value = **Numeric**<br><br> **Note:** Special characters allowed include the special characters and symbols on the Android English language keyboard. This setting may not be visible in some cases on Android devices. Android devices have a maximum limitation of four available shortcuts. When the maximum has been reached, the end user must remove any personalized shortcuts (or access the shortcut from a different MAM app view) to view the reset APP PIN shortcut. Alternatively, the end user could pin the shortcut to their homepage.  |
 |<ul><b> **Simple PIN** |Select **Allow** to allow users to use simple PIN sequences like *1234*, *1111*, *abcd* or *aaaa*. Select **Blocks** to prevent them from using simple sequences. Simple sequences are checked in 3 character sliding windows. If **Block** is configured, 1235 or 1112 wouldn't be accepted as PIN set by the end user, but 1122 would be allowed. <br><br>Default value = **Allow** <br><br>**Note:** If Passcode type PIN is configured, and Simple PIN is set to Allow, the user needs at least one letter **or** at least one special character in their PIN. If Passcode type PIN is configured, and Simple PIN is set to Block, the user needs at least one number **and** one letter **and** at least one special character in their PIN. </li> |
 |<ul><b> **Select minimum PIN length** |Specify the minimum number of digits in a PIN sequence. <br><br>Default value = **4** |
 |<ul><b>**Biometrics instead of PIN for access** |Select **Allow** to allow the user to use biometrics to authenticate users on Android devices. If allowed, biometrics is used to access the app on Android 10 or higher devices.    |
