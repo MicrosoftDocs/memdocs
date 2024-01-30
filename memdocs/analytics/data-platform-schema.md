@@ -53,8 +53,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 | SerialNumber | String (Max length 256 characters) | Assigned serial number of this software element. |
 | SmBiosVersion | String (Max length 256 characters) | BIOS version as reported by SMBIOS. |
 
-
-## H2: Certificate
+## Certificate
 
 **Description**: Certificate Authorities installed in Keychains/ca-bundles. Only certificates for computers are returned.
  **Supported for**: Device query, single device on-demand.

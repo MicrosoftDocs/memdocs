@@ -116,7 +116,7 @@ The following table summarizes operators:
 
 ### Aggregation functions
 
-Aggregation functions can be used with the summarize table operator to calculated summarized values. Currently the following aggregation functions are supported:
+Aggregation functions can be used with the summarize table operator to calculate summarized values. Currently the following aggregation functions are supported:
 
 |Function|Description|
 |---|---|
@@ -207,7 +207,7 @@ Device query supports the following entities. To learn more about what propertie
 
 - Query inputs have a length limit of 2048 characters. If you encounter a *query too long* error, then refine your query to have fewer characters and try again.
 
-- The now() scalar function does not support the offset parameter.
+- The now() scalar function doesn't support the offset parameter.
 
 - The input window auto-recommends double quotes when only single quotes are supported on the following operators:
   - contains
@@ -216,9 +216,9 @@ Device query supports the following entities. To learn more about what propertie
   - !startswith
   - endswith
 
-- The WindowsRegistry entity will fail to return the RegistryKey for root
+- The WindowsRegistry entity fails to return the RegistryKey for root.
 
-- The WindowsRegistry entity will fail to return binary ValueData  
+- The WindowsRegistry entity fails to return binary ValueData.  
 
 - If you’re querying devices that are running on Windows 10, they must be on a minimum quality version.
 

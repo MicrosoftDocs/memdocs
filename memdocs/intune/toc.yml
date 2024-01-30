@@ -1662,11 +1662,7 @@ items:
         - name: Review logs with Azure Monitor
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
-          href: ./configuration/device-profile-monitor.md
-        - name: Device query
-          href: ./fundamentals/device-query.md
-        - name: Intune data platform schema
-          href: ./fundamentals/data-platform-schema.md                    
+          href: ./configuration/device-profile-monitor.md                    
         - name: Endpoint analytics
           href: ../analytics/
 
