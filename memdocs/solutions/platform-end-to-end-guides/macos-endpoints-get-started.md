@@ -57,11 +57,11 @@ This guide has seven phases. Each phase has a set of steps that help build your 
 The phases include:
 
 - [Phase 1 - Set up your environment](#phase-1---set-up-your-environment)
-- [Phase 2 - Pre-enrollment tasks](#phase-2---pre-enrollment-tasks)
+- [Phase 2 - Enroll a test endpoint](#phase-2---enroll-a-test-endpoint)
 - [Phase 3 - Secure your macOS endpoint](#phase-3---secure-your-macos-endpoints)
 - [Phase 4 - Apply organization specific customizations](#phase-4---apply-organization-specific-customizations)
 - [Phase 5 - Optional advanced configuration](#phase-5---caching-optional)
-- [Phase 6 - Enroll your devices](#phase-6---enroll-your-devices)
+- [Phase 6 - Enroll your remaining macOS endpoints](#phase-6---enroll-your-remaining-macos-endpoints)
 - [Phase 7 - Support and maintenance](#phase-7---support-and-maintenance)
 
 At the end of this guide, you have a macOS endpoint enrolled into Intune and ready to start validating in your scenarios.
@@ -268,7 +268,7 @@ Some must-have apps include:
   - [Assign Microsoft 365 to macOS devices with Microsoft Intune](../../intune/apps/apps-add-office365-macos.md)
   - [Deploying Microsoft 365 Apps for Mac with Microsoft Intune - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
 
-## Phase 2 - Pre-enrollment tasks
+## Phase 2 - Enroll a test endpoint
 
 To enroll your first organization macOS endpoint, make sure the macOS device is:
 
@@ -615,7 +615,7 @@ You can use the [GitHub - Microsoft AutoUpdate Cache Admin](https://github.com/p
 
 For more information, go to [GitHub - Microsoft AutoUpdate Cache Admin](https://github.com/pbowden-msft/MAUCacheAdmin).
 
-## Phase 6 - Enroll your devices
+## Phase 6 - Enroll your remaining macOS endpoints
 
 ✅ Create the Automated Device Enrollment policy
 
