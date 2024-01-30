@@ -78,7 +78,7 @@ To update macOS devices owned by your organization, Microsoft recommends the fol
 - **[Configure and deploy Nudge](#consider-using-the-nudge-community-tool)**: This community tool prompts users quickly when an update is available. If the first two policies don't motivate end users to install updates, then Nudge reminds them.
 - **[Use built-in reporting for update status](#use-built-in-reporting-for-update-status)**: After the update policies are deployed, you can use the reporting feature to check the status of the updates.
 
-## macOS 14 and newer
+### macOS 14 and newer
 
 ✅ Use managed software updates to configure Apple's declarative device management (DDM)
 
@@ -90,7 +90,7 @@ You can use Apple's declarative device management (DDM) to manage software updat
 
 These settings are configurable in the [Intune settings catalog](../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](managed-software-updates-ios-macos.md).
 
-## macOS 13 and older
+### macOS 13 and older
 
 On macOS versions 13 and older, you can use Apple's MDM settings built-in to Intune. For these devices, use the following policies:
 
@@ -103,7 +103,7 @@ Both policies work together to manage the update experience. This section focuse
 > [!NOTE]
 > If your devices are running macOS 14+, then use the DDM settings described in [macOS 14 and newer](#macos-14-and-newer) (in this article). It's not recommended to use the software update policy and settings catalog policy on macOS 14 and newer.
 
-### ✅ Step 1 - Use a software update policy to manage when updates are installed
+#### ✅ Step 1 - Use a software update policy to manage when updates are installed
 
 In a software update policy, you can manage when critical updates and firmware updates are installed. You can also manage how many times the user can defer an update before it's force installed.
 
@@ -133,7 +133,7 @@ You can change the values to your preferred scheduled times. Some of the values 
 
 For the specific steps, and more information on these settings & their values, go to [Manage macOS software update policies in Intune](software-updates-macos.md).
 
-#### End user experience
+##### End user experience
 
 With these settings, this policy locks these settings so users can't change them. The policy also:
 
@@ -152,7 +152,7 @@ With these settings, this policy locks these settings so users can't change them
 
 3. If end users use all the deferrals, then the update is force installed. For a forced installation, a restart doesn't prompt the end user, and could result in data loss.
 
-### ✅ Step 2 - Use a settings catalog policy to manage how updates are installed
+#### ✅ Step 2 - Use a settings catalog policy to manage how updates are installed
 
 The [Intune settings catalog](../configuration/settings-catalog.md) also includes settings to help manage software updates. You can configure the device to automatically install updates when they're available, including app updates.
 
@@ -171,7 +171,7 @@ In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), g
 
 For more information on the settings catalog, including how to create a settings catalog policy, go to [Use the settings catalog to configure settings](../configuration/settings-catalog.md).
 
-#### End user experience
+##### End user experience
 
 This policy locks these settings so users can't change them. On the device, the software update settings are greyed out:
 
