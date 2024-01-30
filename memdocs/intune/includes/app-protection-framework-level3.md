@@ -4,7 +4,7 @@ description: include file
 author: erikre 
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 12/14/2023
+ms.date: 01/30/2024
 ms.author: erikre
 ms.custom: include file
 ---
@@ -51,9 +51,3 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor.Build <br>Example:   15.0* / Block access |          iOS/iPadOS        | Microsoft recommends configuring   the maximum iOS/iPadOS major version to ensure beta or unsupported versions of the operating system aren't used. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
 | Device conditions  |       Samsung Knox device attestation  | Wipe data |          Android        | Microsoft recommends configuring the **Samsung Knox device attestation** setting to **Wipe data** to ensure the org data is removed if the device doesn't meet Samsung's Knox hardware-based verification of device health.  This setting verifies all Intune MAM client responses to the Intune service were sent from a healthy device.  <p> This setting will apply to all devices targeted.  To apply this setting only to Samsung devices, you can use "Managed apps" assignment filters.  For more information on assignment filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters).|
 
-#### Health checks
-
-| Setting | Setting description |          Value / Action  |          Platform        | Notes |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| App conditions |       Offline grace period  |          1 / Block access (minutes)  |         Windows  |                  |
-| App conditions |       Offline grace period  |          7 / Wipe data (days)  |         Windows  |                  |
