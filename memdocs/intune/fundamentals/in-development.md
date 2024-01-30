@@ -189,6 +189,17 @@ Applies to:
 
 ## Device enrollment
 
+### Intune supporting await final configuration experience for macOS automated device enrollment <!-- 24973562 -->  
+The new Intune-supported enrollment feature for macOS, *await final configuration*, will enable a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience will work on devices targeted with new and existing enrollment profiles.
+
+Supported devices include:
+
+- macOS 10.11+ devices enrolling with Setup Assistant with modern authentication  
+- macOS 10.11+ devices enrolling with Setup Assistant (legacy)  
+- macOS 10.11+ devices enrolling without user device affinity  
+
+This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. This configuration is enabled by default for new macOS enrollment profiles. We recommend using it with all macOS enrollment profiles for a better onboarding experience.
+
 ### New local primary account configuration for macOS automated device enrollment (ADE) <!-- 5877061 -->
 
 Configure local primary account settings for Macs enrolling in Intune via Apple automated device enrollment (ADE). These settings, supported on devices running macOS 10.11 and later, will be available in new and existing enrollment profiles under the new **Account Settings** tab. For this feature to work, the enrollment profile must be configured with user-device affinity and one of the following authentication methods:   
