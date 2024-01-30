@@ -71,10 +71,10 @@ Because of these potential issues, Microsoft recommends that you evaluate your u
 To update macOS devices owned by your organization, Microsoft recommends the following features. You can also use these features as a starting point for your own update strategy.
 
 - **[Use DDM settings - macOS 14.0+](#macos-14-and-newer)**: On macOS 14.0 and newer devices, use managed software updates to configure Apple's declarative device management (DDM).
-- **[Use MDM settings - macOS 13 and older](#macos-13-and-older)**: On macOS 13 and older, use a software update policy to manage when updates are installed, and a settings catalog policy to manage how updates are installed.
 
   You can use MDM settings on macOS 14+ devices, but it's not recommended. Instead, use the DDM settings.
 
+- **[Use MDM settings - macOS 13 and older](#macos-13-and-older)**: On macOS 13 and older devices, use a software update policy to manage when updates are installed, and a settings catalog policy to manage how updates are installed.
 - **[Configure and deploy Nudge](#consider-using-the-nudge-community-tool)**: This community tool prompts users quickly when an update is available. If the first two policies don't motivate end users to install updates, then Nudge reminds them.
 - **[Use built-in reporting for update status](#use-built-in-reporting-for-update-status)**: After the update policies are deployed, you can use the reporting feature to check the status of the updates.
 
@@ -88,9 +88,7 @@ You can use Apple's declarative device management (DDM) to manage software updat
 
 - macOS 14 and newer
 
-To create a DDM policy, use the [Intune settings catalog](../configuration/settings-catalog.md). Specifically, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Settings catalog > Declarative Device Management > Software Update**.
-
-For more information on managed software updates with DDM, go to [Managed software updates with the settings catalog](managed-software-updates-ios-macos.md).
+These settings are configurable in the [Intune settings catalog](../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](managed-software-updates-ios-macos.md).
 
 ## macOS 13 and older
 
@@ -156,9 +154,9 @@ With these settings, this policy locks these settings so users can't change them
 
 ### ✅ Step 2 - Use a settings catalog policy to manage how updates are installed
 
-You can use an [Intune settings catalog](../configuration/settings-catalog.md) policy to manage software updates. You can configure the device to automatically install updates, including app updates, when they're available.
+The [Intune settings catalog](../configuration/settings-catalog.md) also includes settings to help manage software updates. You can configure the device to automatically install updates when they're available, including app updates.
 
-This settings catalog policy works with [Step 1 - Use a software update policy to manage when updates are installed](#step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
+This settings catalog policy works with [Step 1 - Use a software update policy to manage when updates are installed](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
 
 In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Settings catalog > Software Update**. Configure the following settings:
 
