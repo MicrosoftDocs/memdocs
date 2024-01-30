@@ -160,7 +160,7 @@ Create a specially formatted NFC tag to provision NFC-supported devices running 
 For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
 
 ## Enroll by using a token  
-We recommend this method for new or factory-reset devices, in scenarios where the QR code or NFC method aren't available. It requires the person provisioning the device to type in the enrollment token string (example: `12345`) that they're provided. The token works for all Intune-licensed users and doesn't expire.   
+We recommend this method for new or factory-reset devices, in scenarios where the QR code or NFC method aren't available. It requires the person provisioning the device to type in the enrollment token string (example: `12345`) that they're provided. When you're ready for enrollment, share the token directly with targeted users or post it to your organization's support site for easy retrieval. The token works for all Intune-licensed users and doesn't expire.   
 
 This method is supported on corporate-owned devices running Android 8.0 and later. It isn't supported with device enrollment manager accounts. 
 
