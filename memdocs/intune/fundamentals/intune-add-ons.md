@@ -53,25 +53,19 @@ The following table provides a list of add-on capabilities and associated Intune
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
-|Advanced endpoint analytics| | |✔️|
+|Microsoft Intune Advanced Analytics|✔️ | |✔️|
 |Endpoint Privilege Management |✔️| |✔️|
 |Firmware-over-the-air update| |✔️ |✔️ |
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Remote help|✔️| |✔️|
 |Specialized devices management| |✔️|✔️|
 
-<!-- original sequence >
-|Remote help|✔️| |✔️|
-|Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
-|Specialized devices management| |✔️|✔️|
-|Advanced endpoint analytics| | |✔️|
--->
 
-### Advanced endpoint analytics
+### Microsoft Intune Advanced Analytics
 
-Microsoft Intune advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
+Microsoft Intune Advanced Analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
 
-For more information, see [Advanced endpoint analytics](../../analytics/advanced-endpoint-analytics.md).
+For more information, see [Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md).
 
 ### Endpoint Privilege Management
 
@@ -169,7 +163,7 @@ Learn more about:
 - [Remote Help](/mem/intune/fundamentals/remote-help)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)
-- [Advanced endpoint analytics](../../analytics/overview.md)
+- [Intune Advanced Analytics](../../analytics/overview.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Remote Help](..\fundamentals\remote-help.md)

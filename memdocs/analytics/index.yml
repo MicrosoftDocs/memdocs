@@ -54,7 +54,7 @@ landingContent:
             url: troubleshoot.md
 
   # Card
-  - title: Microsoft Intune Advanced analytics
+  - title: Microsoft Intune Advanced Analytics
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -63,7 +63,7 @@ landingContent:
           - text: Enhanced device timeline 
             url: enhanced-device-timeline.md
           - text: Device Scopes
-            url: device-scopes.md
+            url: device-scopes.md    
           - text: Device query
             url: device-query.md
           - text: Data platform schema

@@ -17,7 +17,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > This capability is available as an Intune add-on. For more information, see [Intune add-ons](/mem/intune/fundamentals/intune-add-ons).
 
-Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your user’s technology experience.
+Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
 
 The Microsoft Intune Suite includes features for Advanced Analytics, such as:
 
@@ -25,11 +25,11 @@ The Microsoft Intune Suite includes features for Advanced Analytics, such as:
 
 - **Anomalies** monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. For more information, see [Anomaly detection](anomaly-detection.md).
 
-- An **enhanced device timeline** includes more events and lower data latency to assist with troubleshooting device issues. For more information, see [Enhanced device timeline](enhanced-device-timeline.md).
+- An **Enhanced device timeline** includes more events and lower data latency to assist with troubleshooting device issues. For more information, see [Enhanced device timeline](enhanced-device-timeline.md).
 
 - **Device query** enables you to get near-real time access to data about the state and configuration of devices. For more information, see [Device query](device-query.md).
 
--A **Battery health** report to gain visibility into hardware performance issues impacting user technology experience. For more information, see [Battery health](battery-health.md)
+- A **Battery health** report to gain visibility into hardware performance issues impacting user technology experience. For more information, see [Battery health](battery-health.md)
 
 Intune Advanced Analytics is automatically integrated into the existing base Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
 
@@ -54,7 +54,7 @@ Currently, the highest functional subscription sets the Endpoint analytics exper
 
 ## Enabling Advanced Analytics in Microsoft Intune
 
-When license requirements are met, then advanced features in Endpoint analytics are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include advanced features in Endpoint analytics, your tenant is automatically reverted to the base Endpoint analytics experience.
+When license requirements are met, then Advanced Analytics features are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include Advanced Analytics, your tenant is automatically reverted to the base Endpoint analytics experience.
 
 > [!NOTE]
 > It may take up to 48 hours after you buy licenses or start a trial to see Advanced Analytics features in your tenant.
@@ -67,3 +67,4 @@ For more information, go to:
 - [Device scopes](device-scopes.md)
 - [Enhanced device timeline](enhanced-device-timeline.md)  
 - [Battery health](battery-health.md)
+- [Device query](device-query.md)
