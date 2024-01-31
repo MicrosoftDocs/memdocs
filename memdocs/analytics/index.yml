@@ -68,3 +68,5 @@ landingContent:
             url: device-query.md
           - text: Data platform schema
             url: data-platform-schema.md                         
+          - text: Battery health
+            url: battery-health.md              
