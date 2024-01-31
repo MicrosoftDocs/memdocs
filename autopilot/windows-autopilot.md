@@ -1,8 +1,8 @@
 ---
 title: Overview of Windows Autopilot
 description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
