@@ -76,7 +76,7 @@ To view classic Conditional Access policies, in [Azure](https://portal.azure.com
 
 > [!NOTE]
 >
-> Ensure your tenant's MDM Authority is [set to Intune](/fundamentals/mdm-authority-set#set-mdm-authority-to-intune) to see the full list of toggle options.
+> Ensure your tenant's MDM Authority is [set to Intune](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) to see the full list of toggle options.
 
 The available options for connectors are divided into three categories. When a partner doesn't support a category, that category isn't available:
 
