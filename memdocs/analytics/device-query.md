@@ -38,7 +38,7 @@ Device query allows you to quickly gain on-demand information about the state of
 
 To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
 
-- The Advanced Analytics Add-on
+- The Intune Advanced Analytics Add-on
 - Microsoft Intune Suite
 
 To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](enroll-intune.md).
@@ -236,4 +236,4 @@ Device query supports the following entities. To learn more about what propertie
 
 For more information, go to:
 
-- [What is Advanced Analytics](advanced-endpoint-analytics.md)
+- [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
