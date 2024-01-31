@@ -43,7 +43,7 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 > EAM only supports managed Windows devices running 64-bit versions of Windows.
 
 > [!NOTE]
-> If your intention is to install a 32-bit application on a 32-bit OS, you will need to modify some of the prefilled information. 
+> If your intention is to install a 32-bit application, you will need to modify some of the prefilled information. 
 
 The following steps help you add a Windows App Catalog app to Intune:
 
