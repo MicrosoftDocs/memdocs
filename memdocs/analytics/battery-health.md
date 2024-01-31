@@ -1,5 +1,5 @@
 ---
-title: Battery Health report in advanced Endpoint analytics
+title: Battery Health report in Microsoft Intune Advanced Analytics
 titleSuffix: Microsoft Intune
 description: Learn about the battery health report as an advanced feature in Endpoint analytics
 ms.date: 01/26/2024
