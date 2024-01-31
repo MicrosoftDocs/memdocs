@@ -17,6 +17,10 @@ items:
     href: enhanced-device-timeline.md    
   - name: Device scopes
     href: device-scopes.md
+  - name: Device query
+    href: device-query.md
+  - name: Data platform schema
+    href: data-platform-schema.md
   - name: Battery health
     href: battery-health.md          
 - name: Quickstarts

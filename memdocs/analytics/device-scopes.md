@@ -2,7 +2,7 @@
 title: Device scopes in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about Device scopes as an Advanced Analytics feature in Microsoft Intune
-ms.date: 10/23/2023
+ms.date: 01/31/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -101,5 +101,5 @@ For more information, go to:
 
 - [Enhanced device timeline](enhanced-device-timeline.md)
 - [Anomaly detection](anomaly-detection.md)
-- [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)  
+- [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)  
 - [Battery health](battery-health.md)

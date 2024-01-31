@@ -1664,7 +1664,7 @@ items:
         - name: Review logs with Azure Monitor
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
-          href: ./configuration/device-profile-monitor.md
+          href: ./configuration/device-profile-monitor.md                    
         - name: Endpoint analytics
           href: ../analytics/
 
