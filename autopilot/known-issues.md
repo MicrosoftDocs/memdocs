@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot known issues
 description: Inform yourself about known issues that may occur during Windows Autopilot deployment.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

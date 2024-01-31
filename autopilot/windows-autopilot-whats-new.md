@@ -1,8 +1,8 @@
 ---
 title: What's new in Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

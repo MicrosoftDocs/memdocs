@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables easily deploying the latest version of Windows to existing devices.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

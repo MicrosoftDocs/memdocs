@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Autopilot OOBE issues
 description: How to troubleshoot Autopilot OOBE issues.
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
