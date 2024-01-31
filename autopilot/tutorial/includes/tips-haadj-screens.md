@@ -2,8 +2,8 @@
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.topic: include
 ms.date: 06/26/2023
 ms.localizationpriority: medium
