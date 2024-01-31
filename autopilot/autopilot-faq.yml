@@ -2,8 +2,8 @@
 metadata:
   title: Windows Autopilot FAQ
   description: This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
-  ms.prod: windows-client
-  ms.technology: itpro-deploy
+  ms.service: windows-client
+  ms.subservice: itpro-deploy
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
