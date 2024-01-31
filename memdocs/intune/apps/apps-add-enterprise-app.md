@@ -40,7 +40,7 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 ## Add a Windows App Catalog app to Intune
 
 > [!IMPORTANT]
-> Only 64-bit apps are offered for the initial EAM release. 32-bit apps are planned to be supported in the future.
+> EAM only supports managed Windows devices running 64-bit versions of Windows.
 
 The following steps help you add a Windows App Catalog app to Intune:
 
@@ -119,7 +119,7 @@ The **Program** step provides the following options:
     
     `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
 
-- **Installation time required (mins)**: The number of minutes the system will wait for the install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will fail the app install. Max timeout value is 1440 minutes (1 day).
+- **Installation time required (mins)**: The number of minutes the system will wait for the install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will initially report the app installation as failed but will not stop it on the device. Max timeout value is 1440 minutes (1 day).
 
 - **Allow available uninstall**: Select 'Yes' to provide the uninstall option for this app for users from the Company Portal. Select 'No' to prevent users from uninstalling the app from the Company Portal.
 
