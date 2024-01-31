@@ -39,12 +39,6 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 
 ## Add a Windows App Catalog app to Intune
 
-> [!IMPORTANT]
-> EAM only supports managed Windows devices running 64-bit versions of Windows.
-
-> [!NOTE]
-> If your intention is to install a 32-bit application on a 32-bit OS, you will need to modify some of the prefilled information. 
-
 The following steps help you add a Windows App Catalog app to Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -89,47 +83,19 @@ The **App information** step provides the fields:
 On the **Program** step, you configure the app installation and removal commands for the app.
 
 > [!IMPORTANT]
-> Many of the app details are pre-populated and designed to function without change. Changing the install commands might cause the app installation to fail.
+> Many of the app details are pre-populated and designed to function without change. Changing the install commands might cause the app installation to fail.  Unexpected or harmful commands can be passed via the **Install command** and **Uninstall command** fields.
 
 The **Program** step provides the following options:
 
-- **Install command**: (Required) Confirm, modify, or add the complete installation command line to install the app.
+- **Install command**: Prefilled by Enterprise App Management review the install command line provided.
 
-    For example, if your app installers's file name is `MyApp123.msi`, add the following:
-
-    `msiexec /i "MyApp123.msi"`
-    
-    If the app installer's file name is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) that the package supports. For example:
-
-    `ApplicationName.exe /quiet`
-    
-    In the preceding command, the `ApplicationName.exe` package supports the `/quiet` command argument.
-    
-    > [!NOTE]
-    > For the specific arguments that the application package supports, contact your application vendor or refer to their documentation for installing the app.
-
-    > [!IMPORTANT]
-    > Admins must be careful when they use the command tools. Unexpected or harmful commands can be passed via the **Install command** and **Uninstall command** fields.
-
-    > [!NOTE]
-    > Calling `powershell.exe` in either of these fields will result in a 32-bit Powershell instance being launched. To force 64-bit Powershell execution, use the following command:
-    >
-    > `%SystemRoot%\Sysnative\WindowsPowerShell\v1.0\powershell.exe`
-
-- **Uninstall command**: (Required) Add the complete uninstall command line used to uninstall this app.
-
-    For example:
-    
-    `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
+- **Uninstall command**: Prefilled by Enterprise App Management review the uninstall command line provided.
 
 - **Installation time required (mins)**: The number of minutes the system will wait for the install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will initially report the app installation as failed but will not stop it on the device. Max timeout value is 1440 minutes (1 day).
 
 - **Allow available uninstall**: Select 'Yes' to provide the uninstall option for this app for users from the Company Portal. Select 'No' to prevent users from uninstalling the app from the Company Portal.
 
-- **Install behavior**: If available, you can set the install behavior to either **System** or **User**. Select **System** to install this app for all users if supported. Select **User** to install this app for the logged-in user on the device. For dual-purpose MSI apps, changes will prevent updates and uninstalls from successfully completing until the value applied to the device at the time of the original install is restored.
-
-    > [!IMPORTANT]
-    > On initial release, EAM only supports the **System** install behavior.
+- **Install behavior**: Enterprise App Management selects the install behaviour. This cannot be modified and is determined by the installer. 
     
 - **Device restart behavior**: Select the device restart behavior after the app has successfully installed, based on the following options:
     - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration, a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
@@ -151,12 +117,18 @@ Select **Next** to display the **Requirements** step.
 
 ## Step 3: Requirements
 
+> [!IMPORTANT]
+> EAM only supports managed Windows devices running 64-bit versions of Windows.
+
+> [!NOTE]
+> If your intention is to install a 32-bit application on a 32-bit OS, you will need to modify some of the prefilled information.
+
 On the **Requirements** step, specify the requirements that devices must meet before the app is installed:
 
 The **Requirements** step provides the following options:
 
-- **Operating system architecture**: (Required) Choose the architectures needed to install the app.
-- **Minimum operating system**: (Required) Select the minimum operating system needed to install the app.
+- **Operating system architecture**: Prefilled by Enterprise App Management.
+- **Minimum operating system**: Prefilled by Enterprise App Management.
 - **Disk space required (MB)**: Add the free disk space needed on the system drive to install the app.
 - **Physical memory required (MB)**: Add the physical memory (RAM) required to install the app.
 - **Minimum number of logical processors required**: Add the minimum number of logical processors required to install the app.
@@ -188,7 +160,7 @@ Select **Next** to display the **Detection rules** step.
 
 ## Step 4: Detection rules
 
-The **Detection rules** step allows you to configure the rules to detect the presence of the app. You can choose to add multiple rules.
+The **Detection rules** step allows you to configure the rules to detect the presence of the app. Enterprise App Management automatically prefills this information.
 
 The **Detection rules** step provides the following options:
 
@@ -210,39 +182,17 @@ The **Rules format** provides the following options:
     - **File**: Verify based on file or folder detection, date, version, or size.
         - **Path**: (Required) Enter the full path of the folder that contains the file or folder to detect. This shouldn't include special characters such as **,** or **"**.
         - **File or folder**: (Required) Enter the file or folder to detect.
-        - **Detection method**: (Required) Select the type of detection method used to validate the presence of the app. You can choose options, such as **File or folder exists**, **Date created**, **String (version)**, and **Size in MB**.
+        - **Detection method**: (Required) Select the type of detection method used to validate the presence of the app. You can choose options, such as **File or folder exists**, **Date created**, **String (version)**, **Size in MB**, and **Size in bytes**.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
-            
-        **Examples of file-based detection**
-
-        Check for file existence.
-         
-        ![Screenshot of detection rule pane - file existence.](./media/enterprise-app-catalog/apps-add-enterprise-app-03.png)
-        
-        Check for folder existence.
-        
-        ![Screenshot of detection rule pane - folder existence.](./media/enterprise-app-catalog/apps-add-enterprise-app-04.png)
-        
+        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule. 
+<screenshot>                   
     - **Registry**: Verify based on value, string, integer, or version.
         - **Key path**: The full path of the registry entry that contains the value to detect. A valid syntax is HKEY_LOCAL_MACHINE\Software\WinRAR or HKLM\Software\WinRAR.
         - **Value name**: The name of the registry value to detect. If this value is empty, the detection will happen on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.
         - **Detection method**: Select the type of detection method that's used to validate the presence of the app.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
-            
-        **Examples for registry-based detection**
-        
-        Check if the registry key exists.
-            
-        ![Screenshot of detection rule pane - registry key exists.](./media/enterprise-app-catalog/apps-add-enterprise-app-05.png)    
-            
-        Check if the registry value exists.
-        
-        ![Screenshot of detection rule pane - registry value exists.](./media/enterprise-app-catalog/apps-add-enterprise-app-06.png)    
-        
-        Check for registry value string equals.
-        
-        ![Screenshot of detection rule pane - registry value string equals.](./media/enterprise-app-catalog/apps-add-enterprise-app-07.png)    
-     
+        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule. 
+<screenshot>                   
 - **Use a custom detection script**: Specify the PowerShell script that will be used to detect this app. 
     
    - **Script file**: Select a PowerShell script that will detect the presence of the app on the client. The app will be detected when the script both returns a **0** value exit code and writes a string value to STDOUT.
