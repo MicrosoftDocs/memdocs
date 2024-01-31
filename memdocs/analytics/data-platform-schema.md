@@ -140,7 +140,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 **Supported for**: Device query, single device on-demand.
 
 > [!NOTE]
-> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`.
+> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return info on the files in the directory and sub-directories.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |

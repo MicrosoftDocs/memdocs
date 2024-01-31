@@ -143,7 +143,7 @@ Your organization may enable optional features within Intune which enable collec
 
 - Device query for Corporate-owned Windows Devices
 
-  When a customer enables Device query, the admin can query device details such as File Name and File Path. See a complete list of data here [Link].
+  When a customer enables Device query, the admin can query device details such as File Name and File Path. For a complete list of data, see [Intune data platform schema](../../analytics/data-platform-schema.md).
 
 Customers can control the collection of pseudonymized diagnostics and telemetry data from Intune components installed on their devices.  We think there are compelling reasons for people to share this optional data as it helps Microsoft improve the reliability and performance of its products and we understand the importance of providing users the opportunity to make these choices for themselves.
 

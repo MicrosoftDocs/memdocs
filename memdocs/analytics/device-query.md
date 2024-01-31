@@ -226,6 +226,12 @@ Device query supports the following entities. To learn more about what propertie
 
   - If running Windows 10 22H2, ensure that it's running version 10.0.19045.3393.
 
+- If there are multiple network cards available on the machine, then only the first configured domain is returned.
+
+- If TPM 2.0 is present on the device, then activated and enabled is always returned as TRUE.
+
+- If a file is currently in use on the machine, then FileInfo queries returns an error.
+
 ## Next Steps
 
 For more information, go to:
