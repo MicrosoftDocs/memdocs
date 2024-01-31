@@ -30,7 +30,7 @@ The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/a
 > [!IMPORTANT]
 > The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-When you add an app to Intune, you'll commonly want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings have been configured and confirmed by Microsoft. You must be careful if you modify the package as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
+When you add an app to Intune, you'll commonly want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings have been configured and confirmed by Microsoft. You must be careful if you modify the application properties as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
 
 > [!IMPORTANT]
 > Microsoft does not assert compliance or authorizations for non-Microsoft apps. Customers are responsible for ensuring that apps meet their requirements.
@@ -41,6 +41,9 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 
 > [!IMPORTANT]
 > EAM only supports managed Windows devices running 64-bit versions of Windows.
+
+> [!NOTE]
+> If your intention is to install a 32-bit application on a 32-bit OS, you will need to modify some of the prefilled information. 
 
 The following steps help you add a Windows App Catalog app to Intune:
 
