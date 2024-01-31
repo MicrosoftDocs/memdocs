@@ -65,7 +65,7 @@ The following table provides a list of add-on capabilities and associated Intune
 
 Microsoft Intune Advanced Analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
 
-For more information, see [Intune Advanced analytics](../../analytics/advanced-endpoint-analytics.md).
+For more information, see [Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md).
 
 ### Endpoint Privilege Management
 
