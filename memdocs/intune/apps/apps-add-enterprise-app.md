@@ -185,14 +185,18 @@ The **Rules format** provides the following options:
         - **Detection method**: (Required) Select the type of detection method used to validate the presence of the app. You can choose options, such as **File or folder exists**, **Date created**, **String (version)**, **Size in MB**, and **Size in bytes**.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
         - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule. 
-<screenshot>                   
+
+          :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-09.png" alt-text="Screenshot of file detection rule.":::
+                 
     - **Registry**: Verify based on value, string, integer, or version.
         - **Key path**: The full path of the registry entry that contains the value to detect. A valid syntax is HKEY_LOCAL_MACHINE\Software\WinRAR or HKLM\Software\WinRAR.
         - **Value name**: The name of the registry value to detect. If this value is empty, the detection will happen on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.
         - **Detection method**: Select the type of detection method that's used to validate the presence of the app.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
         - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule. 
-<screenshot>                   
+
+          :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-08.png" alt-text="Screenshot of registry detection rule.":::
+                 
 - **Use a custom detection script**: Specify the PowerShell script that will be used to detect this app. 
     
    - **Script file**: Select a PowerShell script that will detect the presence of the app on the client. The app will be detected when the script both returns a **0** value exit code and writes a string value to STDOUT.
