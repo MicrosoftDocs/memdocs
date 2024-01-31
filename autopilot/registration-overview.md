@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot registration overview
 description: Overview of Windows Autopilot device registration.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
