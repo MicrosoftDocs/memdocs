@@ -1,7 +1,7 @@
 ---
 title: Device scopes in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
-description: Learn about Device scopes as an advanced feature in Endpoint analytics
+description: Learn about Device scopes as an Advanced Analytics feature in Microsoft Intune
 ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
@@ -25,6 +25,8 @@ Custom device scopes are supported on the following Endpoint analytics reports:
 - [Work from anywhere](work-from-anywhere.md)
 
 - [Application reliability](app-reliability.md)
+ 
+- [Battery health](battery-health.md)
 
 ## Permissions  
 
@@ -100,4 +102,4 @@ For more information, go to:
 - [Enhanced device timeline](enhanced-device-timeline.md)
 - [Anomaly detection](anomaly-detection.md)
 - [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)  
-  
+- [Battery health](battery-health.md)
