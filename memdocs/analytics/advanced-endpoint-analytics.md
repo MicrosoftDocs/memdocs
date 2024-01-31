@@ -2,7 +2,7 @@
 title: What is Microsoft Intune Advanced Analytics
 titleSuffix: Microsoft Intune
 description: Learn about Intune Advanced Analytics
-ms.date: 10/20/2023
+ms.date: 01/26/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 
 Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
 
-The Microsoft Intune Suite includes features for Advanced Analytics, such as: 
+The Microsoft Intune Suite includes features for Advanced Analytics, such as:
 
 - **Custom device scopes** allow you to use [Scope tags](../intune/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region. For more information, see [Device scopes](device-scopes.md).
 
@@ -66,3 +66,5 @@ For more information, go to:
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
 - [Enhanced device timeline](enhanced-device-timeline.md)  
+- [Battery health](battery-health.md)
+- [Device query](device-query.md)

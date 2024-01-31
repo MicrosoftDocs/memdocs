@@ -127,3 +127,5 @@ For more information, go to:
 - [Use Intune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md)
 
 - [Device scopes](device-scopes.md)
+
+- [Device query](device-query.md)

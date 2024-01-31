@@ -63,6 +63,10 @@ landingContent:
           - text: Enhanced device timeline 
             url: enhanced-device-timeline.md
           - text: Device Scopes
-            url: device-scopes.md
-          - text: Battery-health
-            url: Battery-health.md    
+            url: device-scopes.md    
+          - text: Device query
+            url: device-query.md
+          - text: Data platform schema
+            url: data-platform-schema.md                         
+          - text: Battery health
+            url: battery-health.md              

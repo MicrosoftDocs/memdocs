@@ -1390,7 +1390,7 @@ items:
           displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: 
+          displayName: Set up enrollment notifications
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
@@ -1462,6 +1462,8 @@ items:
             href: ./enrollment/android-enroll-device-administrator.md
           - name: Switch to Android Enterprise work profile management 
             href: ./enrollment/android-move-device-admin-work-profile.md  
+          - name: Move to mobile application management without enrollment    
+            href: ./enrollment/move-to-android-mobile-application-management.md 
         - name: Samsung Knox enrollment solutions  
           items: 
           - name: Use Samsung Knox Mobile Enrollment 
@@ -1662,7 +1664,7 @@ items:
         - name: Review logs with Azure Monitor
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
-          href: ./configuration/device-profile-monitor.md
+          href: ./configuration/device-profile-monitor.md                    
         - name: Endpoint analytics
           href: ../analytics/
 

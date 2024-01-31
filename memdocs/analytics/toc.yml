@@ -16,9 +16,13 @@ items:
   - name: Enhanced device timeline
     href: enhanced-device-timeline.md    
   - name: Device scopes
-    href: device-scopes.md
+    href: device-scopes.md        
+  - name: Device query
+    href: device-query.md
+  - name: Data platform schema
+    href: data-platform-schema.md
   - name: Battery health
-    href: Battery-health.md        
+    href: battery-health.md          
 - name: Quickstarts
   items:
   - name: Enroll Intune devices
@@ -36,7 +40,7 @@ items:
   - name: Work from anywhere
     href: work-from-anywhere.md
   - name: Endpoint analytics in Microsoft Adoption Score
-    href: adoption-score.md
+    href: adoption-score.md    
 - name: How-to guides
   items:
   - name: Manage settings
