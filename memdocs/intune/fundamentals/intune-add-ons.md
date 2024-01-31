@@ -49,29 +49,26 @@ Some capabilities are available to buy as a standalone add-on. Other capabilitie
 
 - **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
 
+- **Enterprise App Management**: Microsoft Intune [Enterprise App Management](#enterprise-app-management) enables you to easily discover prepackaged apps contained in the Enterprise App Catalog. 
+
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
-|Advanced endpoint analytics| | |✔️|
+|Microsoft Intune Advanced Analytics|✔️ | |✔️|
 |Endpoint Privilege Management |✔️| |✔️|
 |Firmware-over-the-air update| |✔️ |✔️ |
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Remote help|✔️| |✔️|
 |Specialized devices management| |✔️|✔️|
+|Enterprise App Management |✔️| |✔️|
 
-<!-- original sequence >
-|Remote help|✔️| |✔️|
-|Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
-|Specialized devices management| |✔️|✔️|
-|Advanced endpoint analytics| | |✔️|
--->
 
-### Advanced endpoint analytics
+### Microsoft Intune Advanced Analytics
 
-Microsoft Intune advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
+Microsoft Intune Advanced Analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
 
-For more information, see [Advanced endpoint analytics](../../analytics/advanced-endpoint-analytics.md).
+For more information, see [Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md).
 
 ### Endpoint Privilege Management
 
@@ -100,6 +97,10 @@ Remote Help is a cloud-based solution for secure help desk connections with role
 Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices.
 
 For more information, see [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
+
+### Enterprise App Management
+
+Enterprise App Management enables you to easily discover prepackaged Enterprise App Catalog apps (Win32) contained in the Enterprise App Catalog in Microsoft Intune. The Enterprise App Catalog is a collection of Win32 apps that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app (Win32) is a Windows app that leverages the Win32 platform and has support for customizable capabilities. For more information, see [Enterprise App Catalog app (Win32)](../apps/apps-add-enterprise-app.md).
 
 ## Using the Intune add-ons page
 
@@ -169,7 +170,7 @@ Learn more about:
 - [Remote Help](/mem/intune/fundamentals/remote-help)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)
-- [Advanced endpoint analytics](../../analytics/overview.md)
+- [Intune Advanced Analytics](../../analytics/overview.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Remote Help](..\fundamentals\remote-help.md)
