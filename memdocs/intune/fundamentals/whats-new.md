@@ -72,7 +72,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Intune Suite
 
-### Introducing the Advanced Analytics standalone add-on<!--25194145 -->
+### Introducing the Microsoft Intune Advanced Analytics standalone add-on<!--25194145 -->
 
 Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. It includes capabilities that provide near real-time data about your devices with Device query, increased visibility with custom device scopes and Battery health report, device timeline for troubleshooting device issues, and anomaly detection to simplify your everyday IT operations.
 
@@ -84,9 +84,9 @@ For more information, go to:
 
 - [Microsoft Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
 
-#### Introducing a Battery health report<!-- 9747162 -->  
+#### Battery health report in Intune Advanced Analytics<!-- 9747162 -->  
 
-Introducing a battery health report that provides visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
+The battery health report provides visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
 
 The battery health report is a part of the Microsoft Intune Advanced Analytics features and is included as an Intune-add on under [Microsoft Intune Suite](../fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
@@ -101,6 +101,11 @@ For more information, go to:
 Intune allows you to quickly gain on-demand information about the state of your device. When you enter a query on a selected device, Intune runs a query in real time.
 
 The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
+
+To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Intune Advanced Analytics features are available with:
+ 
+- The Intune Advanced Analytics Add-on
+- Microsoft Intune Suite
 
 **Applies to**:
 
