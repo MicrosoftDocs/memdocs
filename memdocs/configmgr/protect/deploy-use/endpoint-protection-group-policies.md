@@ -3,8 +3,8 @@ title: Manage Endpoint Protection using Group Policies
 titleSuffix: Configuration Manager
 description: Learn how to manage Endpoint Protection using Group Policies.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

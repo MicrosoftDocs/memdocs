@@ -92,7 +92,7 @@ Consider the following fields:
 
 ## Review a devices policy
 
-To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, you can view the [**Device configuration report**](../fundamentals/reports.md#device-configuration-report-operational). Both *endpoint security* and *security baseline* policies are device configuration policies.
+To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, see [**Security reports**](../fundamentals/reports.md#security-reports). Both *endpoint security* and *security baseline* policies are device configuration policies.
 
 To view the report, select a device and then select **Device configuration**, which is found below the *Monitor* category.
   

@@ -51,7 +51,7 @@ This article shows you how to create a custom device configuration profile in In
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Choose the platform of your devices. Your options:
@@ -62,7 +62,7 @@ This article shows you how to create a custom device configuration profile in In
         - **macOS**
         - **Windows 10 and later**
 
-    - **Profile**: Select **Custom**. Or, select **Templates** > **Custom**.
+    - **Profile type**: Select **Custom**. Or, select **Templates** > **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

@@ -51,7 +51,7 @@ To make it easier for you to configure and use Android Enterprise management, up
 ## Before you start
 
 - Make sure you have connected your Intune tenant to Managed Google Play. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
-- If you intend to enroll personally owned work profile devices, make sure you have configured Intune and Android personally owned work profiles to work together in the **Device enrollment** workload of the portal. For more information, see [Enroll Android devices](../enrollment/android-work-profile-enroll.md).
+- If you intend to enroll personally owned work profile devices, make sure you have configured Intune and Android personally owned work profiles to work together in the **Enrollment** workload of the portal. For more information, see [Enroll Android devices](../enrollment/android-work-profile-enroll.md).
 
 >[!NOTE]
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.
