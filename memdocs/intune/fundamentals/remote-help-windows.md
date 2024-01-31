@@ -108,6 +108,10 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.trouter.communication.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
 |\*.registrar.skype.com  | Registrar service for Azure Communication Service (ACS) |
 |\*.flightproxy.skype.com | Conversation service URL for Azure Communication Service |
+|api.flightproxy.skype.com | Required for Azure Communication Service (ACS) |
+|edge.microsoft.com | |
+|login.live.com | |
+|ecs.communication.microsoft.com| |
 
 ## Remote Help modes available for Windows
 
