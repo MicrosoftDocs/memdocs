@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot device guidelines
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

@@ -8,8 +8,8 @@ manager: aaroncz
 ms.reviewer: jubaptis
 ms.date: 12/13/2023
 ms.topic: how-to
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 ms.collection: 
   - M365-identity-device-management
