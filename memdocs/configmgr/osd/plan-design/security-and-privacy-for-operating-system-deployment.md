@@ -3,8 +3,8 @@ title: Security and privacy for OS deployment
 titleSuffix: Configuration Manager
 description: Learn about security and privacy best practices for OS deployment in Configuration Manager.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

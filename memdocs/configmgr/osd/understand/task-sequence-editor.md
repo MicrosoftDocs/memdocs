@@ -3,8 +3,8 @@ title: Use the task sequence editor
 titleSuffix: Configuration Manager
 description: Understand how to use the task sequence editor in the Configuration Manager console
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

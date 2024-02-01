@@ -5,8 +5,8 @@ description: Follow these best practices for security for software updates and l
 manager: apoorvseth
 ms.date: 09/16/2020
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 author: BalaDelli
 ms.author: baladell
 ms.localizationpriority: medium

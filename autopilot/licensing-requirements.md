@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot licensing requirements
 description: Inform yourself about licensing requirements for Windows Autopilot deployment.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

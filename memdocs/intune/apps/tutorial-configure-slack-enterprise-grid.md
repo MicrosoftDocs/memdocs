@@ -88,7 +88,7 @@ Add an app configuration policy for the iOS/iPadOS Slack for EMM app.
 
 ### (Optional) Create an iOS device compliance policy
 Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for iOS/iPadOS devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on Android devices.
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance**, and then select **Create Policy**.
 2. Select **iOS/iPadOS** as the **Platform**. Then, click **Create**.
 3. In the **Basics** step, enter "iOS compliance policy test" as the **Name** and click **Next**.
 4. In the **Compliance settings**, under **Device Health** and next to **Jailbroken devices**, select **Block**.
@@ -137,7 +137,7 @@ Add an app configuration policy for Slack. App configuration policies for manage
 
 ### (Optional) Create an Android device compliance policy
 Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for Android devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on iOS/iPadOS devices.
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance** > **Create policy**.
 2. Select **Android Enterprise** as the **Platform** and select **Personally-owned work profile** as the **Profile type**. Then, click **Create**.
 3. In the **Basics** step, enter "Android Enterprise compliance policy test" as the **Name** and click **Next**.
 4. In the **Compliance settings**, under **Device Health** and next to **Rooted devices**, select **Block**.
