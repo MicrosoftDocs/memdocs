@@ -73,7 +73,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Intune Suite
 
 #### Enterprise Application Management<!-- 10986080 -->  
-Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an enterprise catalog of 32bit applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the enterprise catalog. When you add a catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings. Intune hosts enterprise catalog apps in Microsoft storage. Also, Intune also provides enterprise application update capabilities. The application update capabilities are planned to be available in early Q1 2024. For more information, see [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md).
+Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. Intune hosts Enterprise App Catalog apps in Microsoft storage.
+
+For more information, go to:
+- [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md)
+- [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md)
 
 #### Introducing the Advanced Analytics standalone add-on<!--25194145 -->
 
