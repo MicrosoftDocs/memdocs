@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure app protection policies for Windows 10/11 
+title: Configure app protection policies for Windows 10/11
 titleSuffix: Microsoft Intune
 description: This topic describes how to configure app protection policies (APP) for Windows 10/11 devices.
 keywords:
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 
 # optional metadata
@@ -25,7 +24,6 @@ ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
