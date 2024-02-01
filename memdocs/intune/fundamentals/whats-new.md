@@ -100,7 +100,7 @@ Intune Advanced Analytics provides comprehensive visibility of the end-user expe
 
 Intune Advanced Analytics is part of the Microsoft Intune Suite. For added flexibility, this new set of capabilities, together with the existing Advanced Analytics features, is also now available as an individual add-on to Microsoft subscriptions that include Intune.
 
-To use Device query and battery health report in your tenant, or any of the existing Advanced Analytics capabilities, you must have a license either:
+To use Device query and battery health report in your tenant, or any of the existing Advanced Analytics capabilities, you must have a license for either:
 
 - The Intune Advanced Analytics add-on
 - The Microsoft Intune Suite add-on
