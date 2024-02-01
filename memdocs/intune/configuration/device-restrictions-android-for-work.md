@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 02/01/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -245,45 +245,41 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
   - **Kiosk mode**: Choose if the device runs one app or runs multiple apps.
 
-    > [!IMPORTANT]
-      > When using kiosk mode (single-app or multi-app), familiar user-interfaces and workflows on the device are disabled by the platform by default. Some of these can be re-enabled on OS 9 and
-      > and newer. For example, when a device is operating in a kiosk state, the system changes in the following ways (non-exhaustive list):
-      > - The device's status bar is removed from view, and system information and notifications are hidden from the user;
-      > - Device navigation buttons, like the home and overview buttons, are disabled and removed from view;
-      > - The device's lock screen (e.g. keyguard), is disabled.
-      >
-      >  In kiosk mode, to use dialer & phone applications, or for your users to receive push notifications, enable system notifications and the device's home button. These features are available on Android devices running 9.0 and newer. To enable system notifications and the device's home button, see [General settings for dedicated devices](#dedicated-devices) (in this article).
-      >
-      > On OS 9 and newer, the device's lock screen behavior is altered by the [Device password](https://learn.microsoft.com/mem/intune/configuration/device-restrictions-android-for-work#device-password) restrictions in this article. To keep the keyguard disabled, see **Disable lock screen**.
+    > [!NOTE]
+    > When using kiosk mode (single-app or multi-app), by default, the platform disables familiar user interfaces and workflows. Some of these features can be re-enabled on OS 9 and newer. For example, when a device is operating in a kiosk state, the system change some behaviors, including:
+    > - The device's status bar is removed from view. System information and notifications are hidden from end users.
+    > - Device navigation buttons, like the home and overview buttons, are disabled and removed from view.
+    > - The device's lock screen, like the keyguard, is disabled.
+    >
+    > To use dialer & phone applications or for your users to receive push notifications in kiosk mode, use the [**Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings](#dedicated-devices) (in this article). These features are available on Android devices running 9.0 and newer.
+    >
+    > On OS 9 and newer, the [Device password](#device-password) > **Disable lock screen** (in this article) setting manages the device's lock screen behavior.
   
-Your options:
+    Your kiosk mode options:
 
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Single app**: Users can only access the app you have selected while they're on the device. When the device starts, only the specific app stgarts. Users are restricted from changing the running app.
+    - **Single app**: When users are on the devices, they can only access the app you selected. When the device starts, only the specific app starts. Users are restricted from changing the running app.
 
-      - **Select an app to use for kiosk mode**: Select the Managed Google Play or Android Enterprise system app from the list.
+      - **Select an app to use for kiosk mode**: Select the Managed Google Play or Android Enterprise system app from the list. For single-app dedicated devices, the app you select **must be**:
 
-      > [!IMPORTANT]
-      > For single-app dedicated devices, the app you have selected **must be**:
-      >
-      > - [Added in Intune](../apps/apps-add-android-for-work.md)
-      > - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
+        - [Added in Intune](../apps/apps-add-android-for-work.md).
+        - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
   
     - **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
 
-      > [!IMPORTANT]
-      > For multi-app dedicated devices, The **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app(https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
-      >
-      > - [Added in Intune](../apps/apps-add-android-for-work.md)
-      > - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
-      >
-      > Similarly, any packages you want launchable from Managed Home Screen **must be**:
-      > - [Added in Intune](../apps/apps-add-android-for-work.md)
-      > - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
-      >
-      > When the **Managed Home Screen** app is added, any other installed apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
-      >
-      > For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
+      For multi-app dedicated devices, The **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app(https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
+
+      - [Added in Intune](../apps/apps-add-android-for-work.md).
+      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
+
+      Also, any packages you want launchable from Managed Home Screen **must be**:
+
+      - [Added in Intune](../apps/apps-add-android-for-work.md).
+      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
+
+      When the **Managed Home Screen** app is added, any other installed apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
+
+      For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       - **Custom app layout**: **Enable** lets you put apps and folders in different places on the Managed Home Screen. When set to **Not configured**, Intune doesn't change or update this setting. By default, the apps and folders you add are shown on the home screen in alphabetical order.
 
