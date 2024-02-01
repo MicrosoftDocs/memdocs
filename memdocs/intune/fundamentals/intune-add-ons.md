@@ -49,7 +49,7 @@ Some capabilities are available to buy as a standalone add-on. Other capabilitie
 
 - **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
 
-- **Enterprise App Management**: Microsoft Intune [Enterprise App Management](#enterprise-app-management) enables you to easily discover prepackaged apps contained in the Enterprise App Catalog. 
+- **Enterprise App Management**: Microsoft Intune [Enterprise App Management](#enterprise-app-management) enables you to easily discover prepared apps contained in the Enterprise App Catalog.
 
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
@@ -100,7 +100,7 @@ For more information, see [Managing specialized devices with Microsoft Intune](s
 
 ### Enterprise App Management
 
-Enterprise App Management enables you to easily discover prepackaged Enterprise App Catalog apps (Win32) contained in the Enterprise App Catalog in Microsoft Intune. The Enterprise App Catalog is a collection of Win32 apps that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app (Win32) is a Windows app that leverages the Win32 platform and has support for customizable capabilities. For more information, see [Enterprise App Catalog app (Win32)](../apps/apps-add-enterprise-app.md).
+Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. In addition, Intune hosts Enterprise App Catalog apps in Microsoft storage. For more information, see [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md).
 
 ## Using the Intune add-ons page
 

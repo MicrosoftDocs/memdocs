@@ -1,7 +1,7 @@
 ---
-title: Add an Enterprise App Catalog app (Win32) to Microsoft Intune
+title: Add an Enterprise App Catalog app to Microsoft Intune
 titleSuffix:
-description: Learn how to add an Enterprise App Catalog app (Win32) to Microsoft Intune. 
+description: Learn how to add an Enterprise App Catalog app to Microsoft Intune. 
 keywords:
 author: Erikre
 ms.author: erikre
@@ -23,9 +23,9 @@ ms.collection:
 - highpri
 ---
 
-# Add an Enterprise App Catalog app (Win32) to Microsoft Intune
+# Add an Enterprise App Catalog app to Microsoft Intune
 
-The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app (Win32) is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. 
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. 
 
 > [!IMPORTANT]
 > The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
@@ -37,7 +37,7 @@ When you add an app to Intune, you'll commonly want to use default installation,
 
 Once you add an Enterprise App Catalog app to Intune, you can assign that app to end-users or devices. Intune silently adds the app to your tenant.
 
-## Add a Windows App Catalog app to Intune
+## Add a Windows catalog app (Win32) to Intune
 
 The following steps help you add a Windows App Catalog app to Intune:
 
@@ -121,7 +121,7 @@ Select **Next** to display the **Requirements** step.
 > EAM only supports managed Windows devices running 64-bit versions of Windows.
 
 > [!NOTE]
-> If your intention is to install a 32-bit application on a 32-bit OS, you will need to modify some of the prefilled information.
+> If your intention is to install an application on a 32-bit OS, you will need to modify some of the prefilled information.
 
 On the **Requirements** step, specify the requirements that devices must meet before the app is installed:
 
