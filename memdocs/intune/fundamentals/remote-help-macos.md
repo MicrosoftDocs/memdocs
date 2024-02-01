@@ -129,7 +129,7 @@ To request help, you must reach out to your support staff to request assistance.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
-1. The helper sends you a Remote Help session link (For example: https://aka.ms/rh?passcode=4060r0gx) and you can navigate in your browser.
+1. The helper sends you a Remote Help session link (For example: `https://aka.ms/rh?passcode=4060r0gx`) and you can navigate in your browser.
 
 2. You may need to sign in to authenticate. After you sign in, you can see information about the helper including the full name, job title, company, profile picture, and verified domain. At this time, the helper can only request a screen sharing session. You can either choose to Allow or to Decline the request.
 

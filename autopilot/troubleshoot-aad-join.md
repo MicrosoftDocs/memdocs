@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Windows Autopilot Microsoft Entra join issues
 description: Troubleshoot issues with Microsoft Entra join issues during the Windows Autopilot deployment process.
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

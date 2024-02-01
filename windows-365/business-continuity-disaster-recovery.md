@@ -64,7 +64,7 @@ Although rare, in-zone failures may disrupt Cloud PC operations. Examples of suc
 
 Azure automatically identifies compute failures and automatically moves the user workload to another resource in the zone.
 
-If a user is actively using a session, there may be a slight disruption to the user while the service is restored. After restoration, the user must restore the connection by signing into their Cloud PC session again. If an in-zone failure occurs while the user is signed in and actively using their Cloud PC session, the user will lose access until the system is restored.
+If a user is actively using a session, there may be a slight disruption to the user while the service is restored. After restoration, the user must restore the connection by signing into their Cloud PC session again. If an in-zone failure occurs while the user is signed in and actively using their Cloud PC session, the user loses access until the system is restored.
 
 Storage systems are separate from compute functions, and use storage redundancy to help deliver Windows 365 disaster recovery with an RPO of ~0. Automated Windows 365 disaster recovery is based on an up-to-date copy of the OS disk, with an RPO of ~0. Therefore, the process of recovery starts automatically because there's no need to accept the data loss associated with a past point-in-time recovery.
 
@@ -98,7 +98,7 @@ The Cloud PC Management Service has a regionally redundant architecture that is 
 - RTO of < 6 hours.
 - RPO of <30 minutes for changes made in the management service.
 
-If there's a Management Service outage, assuming no other impacting outages, users won’t be able to access their Cloud PC sessions through the end user portal. Users will still be able to access their Cloud PC instances by using any of the following options:
+If there's a Management Service outage, assuming no other impacting outages, users won’t be able to access their Cloud PC sessions through the end user portal. Users can still access their Cloud PC instances by using any of the following options:
 
 - a native app.
 - directly from a bookmark for their Cloud PC session.
@@ -112,7 +112,7 @@ Windows 365 offers organizations with user workspaces that are:
 - Automatically recovered if there's an in-zone Azure compute failure, with an expected RTO of <10 minutes and an RPO of ~0.
 - Automatic recovery, after the underlying regional or zone failure, with an RPO of ~0.
 
-When using Windows 365 with specified Windows and Microsoft 365 solutions and features, organizations enjoy:
+When organizations use Windows 365 with specified Windows and Microsoft 365 solutions and features, they enjoy:
 
 - An even higher level of user data and user context resilience.
 - Portable user data and user context.

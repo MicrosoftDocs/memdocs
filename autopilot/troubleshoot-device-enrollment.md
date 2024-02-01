@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Autopilot device import and enrollment
 description: Troubleshoot issues that can occur during Autopilot device import and enrollment.
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
