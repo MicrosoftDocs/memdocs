@@ -63,7 +63,7 @@ This feature applies to:
   > - TeamViewer may not support Windows Holographic (HoloLens), Windows Team (Surface Hub), or Windows 10 S. For supportability, see [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) for any updates.
 
 
-- A [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) account with the sign-in credentials. Only some TeamViewer licenses may support integration with Intune. For specific TeamViewer needs, see [TeamViewer Integration Partner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
+- A [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) account with the sign-in credentials. Only some TeamViewer licenses support integration with Intune. For specific TeamViewer needs, see [TeamViewer Integration Partner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
 
 By using TeamViewer, you're allowing the TeamViewer for Intune Connector to create TeamViewer sessions, read Active Directory data, and save the TeamViewer account access token.
 
@@ -84,9 +84,9 @@ To provide remote assistance to devices, configure the Intune TeamViewer connect
 
 After the connector is configured, you're ready to remotely administer a device. 
 
-1. In the the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
-3. From the list, select the device that you want to remotely administer > **New Remote Assistance Session**. You may have to select the three dots (**...**) to see this option.
+3. From the list, select the device that you want to remotely administer > **New Remote Assistance Session**. Select the three dots (**...**) to see this option.
 4. After Intune connects to the TeamViewer service, you'll see some information about the device. **Connect** to start the remote session.
 
 In TeamViewer, you can complete a range of actions on the device, including taking control of the device. For full details of what you can do, see the [TeamViewer community page](https://community.teamviewer.com/) (opens TeamViewer's web site).
