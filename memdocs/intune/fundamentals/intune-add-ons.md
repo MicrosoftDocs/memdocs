@@ -93,7 +93,7 @@ When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by 
 
 For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
-### Managing Specialty devices with Microsoft Intune
+### Managing specialty devices with Microsoft Intune
 
 Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices.
 
