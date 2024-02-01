@@ -2284,6 +2284,11 @@
       "source_path": "memdocs/intune/protect/software-updates-declarative-ios-macos.md",
       "redirect_url": "/mem/intune/protect/managed-software-updates-ios-macos",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/business-continuity-disaster-recovery.md",
+      "redirect_url": "/windows-365/business-continuity-disaster-recovery",
+      "redirect_document_id": false
     }
   ]
 }
