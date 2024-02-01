@@ -68,6 +68,50 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of January 29, 2024
+
+### Microsoft Intune Suite
+
+#### Microsoft Intune Enterprise Application Management<!-- 10986080 -->
+
+Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. Intune hosts Enterprise App Catalog apps in Microsoft storage.
+
+For more information, see:
+
+- [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
+- [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md)
+- [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md)
+
+#### Microsoft Intune Advanced Analytics<!--25194145 -->
+
+Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. It includes near real-time data about your devices with Device query, increased visibility with custom device scopes, a battery health report and a detailed device timeline for troubleshooting device issues, as well as anomaly detection to help identify potential vulnerabilities or risks across your device estate.
+
+- **Battery health report**<!-- 9747162 -->  
+
+  The battery health report provides visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
+  
+- **Run on-demand device queries on single devices**<!--16719466 -->
+
+  Intune allows you to quickly gain on-demand information about the state of your device. When you enter a query on a selected device, Intune runs a query in real time.
+
+  The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
+  
+  Applies to: Windows devices
+
+Intune Advanced Analytics is part of the Microsoft Intune Suite. For added flexibility, this new set of capabilities, together with the existing Advanced Analytics features, is also now available as an individual add-on to Microsoft subscriptions that include Intune.
+
+To use Device query and battery health report in your tenant, or any of the existing Advanced Analytics capabilities, you must have a license for either:
+
+- The Intune Advanced Analytics add-on
+- The Microsoft Intune Suite add-on
+
+For more information, see:
+
+- [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
+- [Microsoft Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [Battery health](../../analytics/battery-health.md)
+- [Device query](../../analytics/device-query.md)
+
 ## Week of January 22, 2024 (Service release 2401)
 
 ### App management
