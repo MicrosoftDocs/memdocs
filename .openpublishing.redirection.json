@@ -1161,11 +1161,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "windows-365/business-continuity-disaster-recovery.md",
-      "redirect_url": "/windows-365/enterprise/business-continuity-disaster-recovery",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "windows-365/cloud-pc-size-recommendations.md",
       "redirect_url": "/windows-365/enterprise/cloud-pc-size-recommendations",
       "redirect_document_id": false
