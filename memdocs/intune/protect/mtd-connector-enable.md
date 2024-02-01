@@ -41,7 +41,7 @@ Applies to:
 
 ## Classic conditional access policies for Mobile Threat Defense (MTD) apps
 
-When you integrate a new Mobile Threat Defense application with Intune and enable the connection to Intune, Intune creates a classic Conditional Access policy in Microsoft Entra ID. Each third-party MTD partner you integrate with creates a new classic Conditional Access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
+When you integrate a new Mobile Threat Defense application with Intune and enable the connection to Intune, Intune creates a classic Conditional Access policy in Microsoft Entra ID. Each third-party MTD partner you integrate with creates a new classic Conditional Access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled. 
 
 > [!NOTE]
 >
@@ -53,7 +53,7 @@ Classic Conditional Access policies for MTD apps:
 
 - Are used by Intune MTD to require that devices are registered in Microsoft Entra ID, and that they have a device ID before they communicate with the MTD partner. The ID is required so that devices and can successfully report their status to Intune.
 - Have no effect on any other Cloud apps or Resources.
-- Are distinct from conditional access policies you might create to help manage MTD.
+- Are distinct from Conditional Access policies you might create to help manage MTD.
 - By default, don't interact with other Conditional Access policies you use for evaluation.
 
 To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
