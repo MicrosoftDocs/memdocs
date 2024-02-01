@@ -8,7 +8,7 @@ keywords:
 author: smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 02/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -47,7 +47,7 @@ Some capabilities are available to buy as a standalone add-on. Other capabilitie
 
 - **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices, Microsoft Tunnel for Mobile Application Management and Firmware-over-the-air updates.
 
-- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
+- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone add-on capabilities and all capabilities that come with Intune Plan 2.
 
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
@@ -56,7 +56,7 @@ The following table provides a list of add-on capabilities and associated Intune
 |Endpoint Privilege Management |✔️| |✔️|
 |Enterprise App Management |✔️| |✔️|
 |Microsoft Intune Advanced Analytics|✔️ | |✔️|
-|Remote help|✔️| |✔️|
+|Remote Help|✔️| |✔️|
 |Firmware-over-the-air update| |✔️ |✔️ |
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Specialized devices management| |✔️|✔️|
@@ -93,7 +93,7 @@ When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by 
 
 For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
-### Managing Specialty devices with Microsoft Intune
+### Managing specialty devices with Microsoft Intune
 
 Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices.
 
