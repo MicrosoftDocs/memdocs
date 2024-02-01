@@ -56,7 +56,7 @@ The following table provides a list of add-on capabilities and associated Intune
 |Endpoint Privilege Management |✔️| |✔️|
 |Enterprise App Management |✔️| |✔️|
 |Microsoft Intune Advanced Analytics|✔️ | |✔️|
-|Remote help|✔️| |✔️|
+|Remote Help|✔️| |✔️|
 |Firmware-over-the-air update| |✔️ |✔️ |
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Specialized devices management| |✔️|✔️|
