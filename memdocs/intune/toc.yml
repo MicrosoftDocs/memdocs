@@ -1460,7 +1460,7 @@ items:
           items: 
           - name: Set up enrollment for Android device administrator 
             href: ./enrollment/android-enroll-device-administrator.md
-          - name: Switch to Android Enterprise work profile management 
+          - name: Move to Android Enterprise work profile management 
             href: ./enrollment/android-move-device-admin-work-profile.md  
           - name: Move to mobile application management without enrollment    
             href: ./enrollment/move-to-android-mobile-application-management.md 
