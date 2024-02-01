@@ -81,7 +81,7 @@ When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by 
 
 For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
-### Microsoft Intune Firmware-over-the-air update
+### Mobile Firmware-over-the-air update
 
 Firmware over-the-air (FOTA) update allows you to remotely update the firmware of supported devices wirelessly with more control.
 
