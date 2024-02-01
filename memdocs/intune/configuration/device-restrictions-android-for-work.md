@@ -16,6 +16,7 @@ ms.localizationpriority: medium
 
 #ROBOTS:
 #audience:
+params:
   siblings_only: true
 ms.reviewer: andreibiswas, anuragjain
 ms.suite: ems
