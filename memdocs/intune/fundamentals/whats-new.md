@@ -103,7 +103,7 @@ Intune allows you to quickly gain on-demand information about the state of your 
 
 The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
-To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
+To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Intune Advanced Analytics features are available with:
 
 - The Intune Advanced Analytics Add-on
 - Microsoft Intune Suite
