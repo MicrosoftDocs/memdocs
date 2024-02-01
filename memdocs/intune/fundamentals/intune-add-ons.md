@@ -99,6 +99,10 @@ Specialized devices management is a set of device management, configuration, and
 
 For more information, see [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
 
+### Enterprise App Management
+
+Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. In addition, Intune hosts Enterprise App Catalog apps in Microsoft storage. For more information, see [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md).
+
 ## Using the Intune add-ons page
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global or Billing administrator.
