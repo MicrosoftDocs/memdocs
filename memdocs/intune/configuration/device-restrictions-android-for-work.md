@@ -246,12 +246,12 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   - **Kiosk mode**: Choose if the device runs one app or runs multiple apps.
 
     > [!NOTE]
-    > When using kiosk mode (single-app or multi-app), by default, the platform disables familiar user interfaces and workflows. Some of these features can be re-enabled on OS 9 and newer. For example, when a device is operating in a kiosk state, the system change some behaviors, including:
+    > When using kiosk mode (single-app or multi-app), by default, the platform disables familiar user interfaces and workflows. Some of these features can be re-enabled on OS 9 and newer. For example, when a device is operating in a kiosk state, the system changes some behaviors, including:
     > - The device's status bar is removed from view. System information and notifications are hidden from end users.
     > - Device navigation buttons, like the home and overview buttons, are disabled and removed from view.
     > - The device's lock screen, like the keyguard, is disabled.
     >
-    > To use dialer & phone applications or for your users to receive push notifications in kiosk mode, use the [**Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings](#dedicated-devices) (in this article). These features are available on Android devices running 9.0 and newer.
+    > To use dialer & phone applications, or for your users to receive push notifications in kiosk mode, use the [Dedicated devices](#dedicated-devices) > **Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings (in this article). These features are available on Android devices running 9.0 and newer.
     >
     > On OS 9 and newer, the [Device password](#device-password) > **Disable lock screen** (in this article) setting manages the device's lock screen behavior.
   
@@ -260,14 +260,14 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Not configured**: Intune doesn't change or update this setting.
     - **Single app**: When users are on the devices, they can only access the app you selected. When the device starts, only the specific app starts. Users are restricted from changing the running app.
 
-      - **Select an app to use for kiosk mode**: Select the Managed Google Play or Android Enterprise system app from the list. For single-app dedicated devices, the app you select **must be**:
+      **Select an app to use for kiosk mode**: Select the Managed Google Play or Android Enterprise system app from the list. For single-app dedicated devices, the app you select **must be**:
 
-        - [Added in Intune](../apps/apps-add-android-for-work.md).
-        - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
+      - [Added in Intune](../apps/apps-add-android-for-work.md).
+      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
   
     - **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
 
-      For multi-app dedicated devices, The **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app(https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
+      For multi-app dedicated devices, the **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
 
       - [Added in Intune](../apps/apps-add-android-for-work.md).
       - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices.
