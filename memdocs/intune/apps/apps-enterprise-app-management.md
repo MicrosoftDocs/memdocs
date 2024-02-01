@@ -35,7 +35,7 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 The benefits of using Enterprise App Management are the following:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
-- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as the are available in the catalog.
+- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they are available in the catalog.
 
 When you add an Enterprise App Catalog app, Intune prefills the following installation details:
 
@@ -64,7 +64,7 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 ## Self-updating apps
 
-The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, but will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps will update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
+The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, and will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps will update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
 
 > [!IMPORTANT]
 > Self-updating apps may require that your tenant has network rules configured to allow an update from the app vendor.
@@ -76,7 +76,7 @@ The Enterprise App Catalog includes apps that self update. Intune will ensure th
 If you aren't already working with a Microsoft contact, fill out the [Enterprise app management app catalog request](https://aka.ms/EAM/AppRequest) form.
 
 > [!IMPORTANT]
-> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprie App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an app to the Enterprise App Catalog.
+> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprise App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an app to the Enterprise App Catalog.
 
 ### Where are the devices downloading the app content from?
 
@@ -108,7 +108,7 @@ Graph API will be available soon after general availability.
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-No, the created app will remain at the version it was created at so the ITPro can have full control over the experience.
+No, the created app will remain at the version it was created at so the IT Pro can have full control over the experience.
 
 ### Can you get licensed applications from this catalog?
 
@@ -126,12 +126,12 @@ Enterprise App Management is only provided by Microsoft Intune. Configuration Ma
 
 No. Enterprise App Catalog apps are directly installed by the Intune management extension (IME).
 
-### How do I update my Enterprise app catalog app?
+### How do I update my Enterprise App Catalog app?
 
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
 
 ## Next steps
 
-- [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](../apps/apps-add-enterprise-app.md)
+- [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md)
 - [Monitor app information and assignments with Microsoft Intune](apps-monitor.md)
 - [Troubleshoot Win32 app issues](apps-win32-troubleshoot.md)

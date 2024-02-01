@@ -43,7 +43,7 @@ The following steps help you add a Windows App Catalog app to Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. Select **Enterprise App Catalog app (Win32)** on the **Select app type** pane under the **Other** app types.
+3. Select **Enterprise App Catalog app** on the **Select app type** pane under the **Other** app types.
 4. Click **Select** to add the app type. 
    The **Add app** pane appear and shows the steps needed to add the app to Intune.
 
@@ -63,9 +63,9 @@ The **App information** steps allows you to select an app from the Enterprise Ap
 
 The **App information** step provides the fields:
 
-- **Name**: (Required) Add a name for the app. This name will be visible in the Intune apps list and to users in the Company Portal.​ If the same app name exists twice, only one of the apps appears in the company portal.
+- **Name**: (Required) Add a name for the app. This name will be visible in the Intune apps list and to users in the Company Portal.​ If the same app name exists twice, only one of the apps appears in the Company Portal.
 - **Description**: (Required) Help your device users understand what the app is and/or what they can do in the app. This description will be visible to them in the Company Portal.
-- **Publisher**: (Required) The name of the developer or company that distributes the app. This information will be visible to users in the Company Portal.
+- **Publisher**: (Required) The name of the developer or company that created the app. This information will be visible to users in the Company Portal.
 - **App version**: The version of the app. This information will be visible to users in the Company Portal.
 - **Category**: Select one or more of the built-in app categories, or select a category that you created. When you categorize the app, end-users will be able to more easily sort and find the app in the Company Portal. You can choose multiple categories.
 - **Show this as a featured app in the Company Portal**: Featured apps are prominently placed in the Company Portal so that users can quickly get to them.
@@ -95,10 +95,10 @@ The **Program** step provides the following options:
 
 - **Allow available uninstall**: Select 'Yes' to provide the uninstall option for this app for users from the Company Portal. Select 'No' to prevent users from uninstalling the app from the Company Portal.
 
-- **Install behavior**: Enterprise App Management selects the install behaviour. This cannot be modified and is determined by the installer. 
+- **Install behavior**: Enterprise App Management selects the install behavior. This cannot be modified and is determined by the installer. 
     
 - **Device restart behavior**: Select the device restart behavior after the app has successfully installed, based on the following options:
-    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration, a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. 
     - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
     - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Windows catalog app (Win32) installation is allowed to complete without suppressing restarts. With this configuration, a hard reboot return code will notify the user that a restart of the device will be triggered in 120 minutes and a soft reboot return code will only notify the user that a restart is required to finish the installation.
     - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
@@ -109,7 +109,7 @@ The **Program** step provides the following options:
         - **Failed**: The return value that indicates an app installation failure.
         - **Hard reboot**: The hard reboot return code doesn't allow the next Windows catalog app (Win32) to be installed on the client without reboot. 
         - **Soft reboot**: The soft reboot return code allows the next Windows catalog app (Win32) to be installed without requiring a client reboot. Reboot is necessary to complete installation of the current application.
-        - **Retry**: The retry return code agent will attempt to install the app three times. It will wait for five minutes between each attempt. 
+        - **Retry**: The agent will attempt to install the app three times. It will wait for five minutes between each attempt. 
         - **Success**: The return value that indicates the app was successfully installed.
     3. If needed, select **Add** to add more return codes, or modify existing return codes.
 
