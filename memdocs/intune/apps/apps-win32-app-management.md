@@ -30,6 +30,9 @@ Microsoft Intune enables Windows Win32 app management. Although it's possible fo
 
 > [!NOTE]
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
+> 
+> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](../apps/apps-add-enterprise-app.md). 
+
 
 > [!IMPORTANT]
 > When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict.
