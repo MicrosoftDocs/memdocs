@@ -79,28 +79,26 @@ For more information, go to:
 - [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md)
 - [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md)
 
-#### Introducing the Advanced Analytics standalone add-on<!--25194145 -->
+#### Microsoft Intune Advanced Analytics standalone add-on<!--25194145 -->
 
 Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. It includes capabilities that provide near real-time data about your devices with Device query, increased visibility with custom device scopes and Battery health report, device timeline for troubleshooting device issues, and anomaly detection to simplify your everyday IT operations.
 
 Intune Advanced Analytics is part of the Microsoft Intune Suite. For added flexibility, this new set of capabilities, together with the existing Advanced Analytics features, is also available as an individual add-on to Microsoft subscriptions that include Intune.
 
-For more information, go to:
+For more information, see:
 
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
-
 - [Microsoft Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
 
-#### Introducing a Battery health report<!-- 9747162 -->  
+#### Battery health report in Intune Advanced Analytics<!-- 9747162 -->  
 
-Introducing a battery health report that provides visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
+The battery health report provides visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
 
 The battery health report is a part of the Microsoft Intune Advanced Analytics features and is included as an Intune-add on under [Microsoft Intune Suite](../fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
-For more information, go to:
+For more information, see:
 
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
-
 - [Battery health](../../analytics/battery-health.md)
 
 #### Run on-demand device queries on single devices<!--16719466 -->
@@ -109,14 +107,18 @@ Intune allows you to quickly gain on-demand information about the state of your 
 
 The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
-**Applies to**:
+To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Intune Advanced Analytics features are available with:
 
-Windows devices
+- The Intune Advanced Analytics Add-on
+- Microsoft Intune Suite
 
-For more information, go to:
+Applies to:
+
+- Windows devices
+
+For more information, see:
 
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
-
 - [Device Queries](../../analytics/device-query.md)
 
 ## Week of January 22, 2024 (Service release 2401)

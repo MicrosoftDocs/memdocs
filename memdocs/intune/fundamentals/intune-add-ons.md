@@ -8,7 +8,7 @@ keywords:
 author: smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 02/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -47,22 +47,29 @@ Some capabilities are available to buy as a standalone add-on. Other capabilitie
 
 - **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices, Microsoft Tunnel for Mobile Application Management and Firmware-over-the-air updates.
 
-- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
-
-- **Enterprise App Management**: Microsoft Intune [Enterprise App Management](#enterprise-app-management) enables you to easily discover prepared apps contained in the Enterprise App Catalog.
+- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone add-on capabilities and all capabilities that come with Intune Plan 2.
 
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
-|Microsoft Intune Advanced Analytics|✔️ | |✔️|
 |Endpoint Privilege Management |✔️| |✔️|
+|Enterprise App Management |✔️| |✔️|
+|Microsoft Intune Advanced Analytics|✔️ | |✔️|
+|Remote Help|✔️| |✔️|
 |Firmware-over-the-air update| |✔️ |✔️ |
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
-|Remote help|✔️| |✔️|
 |Specialized devices management| |✔️|✔️|
-|Enterprise App Management |✔️| |✔️|
 
+### Endpoint Privilege Management
+
+Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
+
+For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
+
+### Enterprise App Management
+
+Enterprise App Management enables you to easily discover prepackaged Enterprise App Catalog apps (Win32) contained in the Enterprise App Catalog in Microsoft Intune. The Enterprise App Catalog is a collection of Win32 apps that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app (Win32) is a Windows app that leverages the Win32 platform and has support for customizable capabilities. For more information, see [Enterprise App Catalog app (Win32)](../apps/apps-add-enterprise-app.md).
 
 ### Microsoft Intune Advanced Analytics
 
@@ -70,11 +77,9 @@ Microsoft Intune Advanced Analytics is set of analytics-driven capabilities that
 
 For more information, see [Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md).
 
-### Endpoint Privilege Management
+### Remote Help
 
-Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
-
-For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../fundamentals/remote-help.md).
 
 ### Firmware-over-the-air update
 
@@ -88,11 +93,7 @@ When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by 
 
 For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
-### Remote Help
-
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../fundamentals/remote-help.md).
-
-### Managing Specialty devices with Microsoft Intune
+### Managing specialty devices with Microsoft Intune
 
 Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices.
 
@@ -135,15 +136,15 @@ Intune add-on capabilities are disabled in [Microsoft Intune admin center](https
 
 3. Select **All add-ons** tab. The list of Intune add-ons that are available for trial or purchase is displayed. Identify the Intune add-ons that you require. The list of add-ons includes a short description, the subscription status of the add-on, and a link to view details.
 
-    4. **Subscription status** - Each add-on shows a status of either *Active* or *Available for trial or purchase*. For add-ons that say *Available for trial or purchase* in the **Subscription status** column, you can start the free trial or purchase licenses.
+    - **Subscription status** - Each add-on shows a status of either *Active* or *Available for trial or purchase*. For add-ons that say *Available for trial or purchase* in the **Subscription status** column, you can start the free trial or purchase licenses.
 
-    5. **Try or Buy** - Select **View details** in the **Try or Buy** column to know more about whats included and the trial and purchase information.
+    - **Try or Buy** - Select **View details** in the **Try or Buy** column to know more about what's included and the trial and purchase information.
 
-    6. Select **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 admin center. A new tab opens on the **Product details** page for the selected Intune add-on.
+    - Select **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 admin center. A new tab opens on the **Product details** page for the selected Intune add-on.
 
-7. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order.
+4. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order.
 
-8. Navigate to **Tenant administration** > **Intune add-ons** and see that the Intune add-on capability you added is now **Active**.
+5. Navigate to **Tenant administration** > **Intune add-ons** and see that the Intune add-on capability you added is now **Active**.
 
 ### How to purchase Intune add-ons
 
