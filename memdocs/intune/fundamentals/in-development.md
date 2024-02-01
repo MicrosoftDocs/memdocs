@@ -71,9 +71,6 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
-### Enterprise application management<!-- 10986080  -->  
-Enterprise Application Management provides a catalog of prepackaged applications designed to simplify discovery, delivery, and updates for third and first party apps. Enterprise Application Management will be generally available in early Q1 2024.
-
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
@@ -251,21 +248,7 @@ Prepare for February 2024. This policy change is expected to be released with th
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Battery health report for Advanced Analytics<!-- 9747162 -->  
-We're working on a battery health report for Advanced Analytics to provide visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
-
-The battery health report will be available as part of Microsoft Intune Advanced Analytics, which is available through the [Microsoft Intune Suite](../fundamentals/intune-add-ons.md), which requires an extra cost to the licensing options that include Microsoft Intune.
-
-### Run on-demand pivot queries on single devices<!--16719466  -->  
-Intune allows you to quickly gain on-demand information about the state of your device. When you enter a query on a selected device, Intune will run a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
-
-This feature will be available as part of Microsoft Intune Advanced Analytics, which is available through the [Microsoft Intune Suite](../fundamentals/intune-add-ons.md), which requires an extra cost to the licensing options that include Microsoft Intune.
-
-Applies to:
-
-- Windows devices
+<!-- ## Monitor and troubleshoot -->
 
 <!-- *********************************************** -->
 
