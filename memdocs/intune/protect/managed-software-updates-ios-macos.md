@@ -131,8 +131,8 @@ Managed software updates have precedence over other policies that configure soft
    
         > [!NOTE]
         > The Target Local Date Time setting will schedule the update using the UTC timezone. For example, configuring an update to install at 2PM will schedule it for 9AM EST. 
-        - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
-        - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
+          - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+          - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
             
         > [!IMPORTANT]
         > If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`. To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time using the date time picker. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
