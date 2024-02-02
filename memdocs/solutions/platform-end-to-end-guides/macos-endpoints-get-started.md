@@ -135,7 +135,7 @@ This token is required for Automated Device Enrollment (ADE) in Intune. The toke
 - Allows Intune to upload enrollment profiles to Apple.
 - Allows Intune to assign devices to those profiles.
 
-If you currently manage iOS/iPadOS devices in this same tenant using ADE, then this step might be done.
+If you currently manage iOS/iPadOS devices in this same tenant using ADE, then some of these steps might be done.
 
 For information on configuring Apple Business Manager with Intune, go to [Enroll macOS devices - Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
 
@@ -146,13 +146,23 @@ The high-level steps to configure Apple Business Manager (or Apple School Manage
 3. In Apple Business Manager, assign devices to your Intune MDM.
 4. In Intune, assign the ADE profiles to your macOS devices.
 
+Intune supports pre-filling the user information during setup assistant and enabling a feature called "Await final configuration" which keeps the user in setup assistant until the first MDM check-in is complete.
+
 ### Step 5 - Target devices
 
-✅ Target specific groups using dynamic groups or Intune filters
+✅ Target specific groups using user groups, Intune filters or dynamic groups
 
-In Intune, you might need to target specific groups of macOS devices. There are two common options for how organizations dynamically group devices:
+macOS devices with user affinity can be targeted for profiles and apps using user or device groups. There are two common options for how organizations dynamically target devices:
 
-- **Option 1 – Microsoft Entra dynamic group based on enrollmentProfileName**
+- **Option 1 - All devices with an assignment filter on enrollmentProfileName**
+  
+  For critical apps and policies that must apply immediately after enrollment (security settings, restrictions, the Company Portal app), you can assign the policies to the built-in Intune **All Devices** group with an assignment filter based on the name of the enrollment profile you created in Step 4.
+
+  Policies and apps targeted to the **All Devices** group apply faster after enrollment than dynamic groups. Not all configuration profiles (like macOS scripts) support filters.
+
+  For more information on assignment filters, go to [Create filters in Microsoft Intune](../../intune/fundamentals/filters.md).
+
+- **Option 2 – Microsoft Entra dynamic group based on enrollmentProfileName**
 
   To limit the configurations from this guide to the test devices that you import through Apple Business Manager, create a dynamic Microsoft Entra group. You can then target all your configurations and apps to this group.
 
@@ -178,14 +188,6 @@ In Intune, you might need to target specific groups of macOS devices. There are 
    >
    > For more information about dynamic groups for devices, go to [Dynamic membership rules for groups in Microsoft Entra ID: Rules for devices](/entra/identity/users/groups-dynamic-membership#rules-for-devices).
 
-- **Option 2 - All devices group with an assignment filter on enrollmentProfileName**
-  
-  For critical apps and policies that must apply immediately after enrollment (security settings, restrictions, the Company Portal app), you can assign the policies to the built-in Intune **All Devices** group with an assignment filter.
-
-  Policies and apps targeted to the **All Devices** group apply faster after enrollment than dynamic groups. Not all configuration profiles (like macOS scripts) support filters.
-
-  For more information on assignment filters, go to [Create filters in Microsoft Intune](../../intune/fundamentals/filters.md).
-
 ### Step 6 - Use single sign-on (SSO)
 
 ✅ Reduce app sign-in prompts with SSO
@@ -202,7 +204,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
     | Key | Type | Value |
     |---|---|---|
-    | AppPrefixAllowList | String | `com.microsoft.,com.apple.` |
+    | AppPrefixAllowList | String | `com.apple.` |
     | browser_sso_interaction_enabled | Integer | 1 |
     | disable_explicit_app_prompt | Integer | 1 |
 
@@ -459,6 +461,8 @@ Using the [Intune settings catalog](../../intune/configuration/settings-catalog.
 
   - **Idle Time**: Enter something like `300`, which is 5 minutes.
   - **Module Name**: Enter the name of the screensaver module, like **Flurry**.
+ 
+You can potentially save energy by setting the **Display Sleep Timer** setting in **Devices > Configuration > Settings Catalog > System Configuration > Energy Saver** under the **Desktop Power**, **Laptop Battery Power** or **Laptop Power** categories.
 
 > [!TIP]
 > To find the screensaver module name, set the screensaver, open the Terminal app, and run the following command:
@@ -491,10 +495,10 @@ In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you 
 
   In Intune, you can deploy LOB apps using the following options:
 
-  - [Add the app package (`.pkg`) to Intune, and use Intune policy to deploy the app](../../intune/apps/lob-apps-macos.md).
-  - [Add the app package (`.pkg`) to Intune, and use a shell script to deploy the app](../../intune/apps/macos-unmanaged-pkg.md). This feature uses the Intune Management Extension. It can deploy unsigned packages and packages without a payload.
+  - [Add the app package (`.pkg`) to Intune, or use a shell script to deploy the app](../../intune/apps/macos-unmanaged-pkg.md). This feature uses the Intune Management Extension. It can deploy unsigned packages and packages without a payload and has support for pre and post scripts.
   - [Add the app disk image (`.dmg`) to Intune, and use Intune policy to deploy the app](../../intune/apps/lob-apps-macos-dmg.md)
   - [Apps licensed with Apple's Volume Purchase Plan (VPP) and use Intune policy to deploy the app](../../intune/apps/vpp-apps-ios.md)
+  - [Add the app package (`.pkg`) to Intune, and use Intune policy to deploy the app](../../intune/apps/lob-apps-macos.md)
 
 - **Microsoft Edge**
 
@@ -506,7 +510,7 @@ In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you 
 
 - **Microsoft OneDrive**
 
-  In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you added Microsoft 365 apps, which include Microsoft OneDrive. So, if you previously added Microsoft OneDrive, then you don't need to add it again. If needed, you can also deploy Microsoft OneDrive separately using a [downloaded app package (`.pkg`) or using a VPP token](/sharepoint/deploy-and-configure-on-macos).
+  In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you added Microsoft 365 apps, which include Microsoft OneDrive. So, if you previously added Microsoft OneDrive, then you don't need to add it again. If needed, you can also deploy Microsoft OneDrive separately using a [downloaded app package (`.pkg`)](/sharepoint/deploy-and-configure-on-macos).
 
   You can also configure the [Microsoft OneDrive settings](/sharepoint/deploy-and-configure-on-macos) using the [Intune settings catalog](../../intune/configuration/settings-catalog.md). For example, the following settings might apply to your organization:
 
