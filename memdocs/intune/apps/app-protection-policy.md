@@ -13,7 +13,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, get-started, seoapril2019
+ms.custom: intune-azure, get-started
 ms.collection:
 - tier1
 - M365-identity-device-management

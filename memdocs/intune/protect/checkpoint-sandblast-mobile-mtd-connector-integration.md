@@ -14,7 +14,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 1e9b1576-b239-48cc-a672-da6b5fb7be0a
 
 # optional metadata
@@ -26,7 +25,7 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management

@@ -13,8 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,6 @@ ms.reviewer: scottbreenmsft
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management

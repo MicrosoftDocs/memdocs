@@ -2,8 +2,7 @@
 # required metadata
 
 title: Enroll macOS devices - Apple Business Manager or Apple School Manager
-titleSuffix: 
-description: Prepare Macs purchased through Apple Business Manager and Apple School Manager for Intune enrollment.    
+description: Prepare Macs purchased through Apple Business Manager and Apple School Manager for Intune enrollment.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -13,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +22,6 @@ ms.reviewer: benflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management

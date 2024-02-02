@@ -2,30 +2,27 @@
 # required metadata
 
 title: Install mobile threat defense app on your mobile device | Microsoft Intune
-description: Find out what mobile threat defense apps are and how to set one up to meet your organization's access requirements.   
+description: Find out what mobile threat defense apps are and how to set one up to meet your organization's access requirements.
 keywords:
 author: lenewsad
-ms.author: lanewsad  
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/07/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
-ms.assetid: 
 searchScope:
  - User help
 
 # optional metadata
 
-ROBOTS:  
+ROBOTS:
 #audience:
 
-ms.reviewer: aanavath  
+ms.reviewer: aanavath
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser, contperf-fy21q1
+ms.custom: intune-enduser
 ms.collection:
 - tier2
 ---  
