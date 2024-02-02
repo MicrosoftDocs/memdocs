@@ -62,7 +62,7 @@ The phases include:
 - [Phase 4 - Apply organization specific customizations](#phase-4---apply-organization-specific-customizations)
 - [Phase 5 - Optional advanced configuration](#phase-5---caching-optional)
 - [Phase 6 - Enroll your remaining macOS endpoints](#phase-6---enroll-your-remaining-macos-endpoints)
-- [Phase 7 - Support and maintenance](#phase-7---support-and-maintenance)
+- [Phase 7 - Support, maintenance and next steps](#phase-7---support-maintenance-and-next-steps)
 
 At the end of this guide, you have a macOS endpoint enrolled into Intune and ready to start validating in your scenarios.
 
@@ -79,6 +79,9 @@ To successfully prepare and deploy your macOS endpoint, the endpoint requires ac
 - Start your testing on an open network. Or, in your organization network, provide access to all the endpoints listed at [Network endpoints for Microsoft Intune](../../intune/fundamentals/intune-endpoints.md). Then, you can use your organization network to test your configuration.
 
 - If your wireless network requires certificates, you can start with an Ethernet connection during testing. The Ethernet connection gives you some time to determine the best approach for the wireless connections that devices need.
+
+> [!CAUTION]
+> SSL inspection can cause access to Microsoft and Apple services to fail. For more information on Apple's requirements, see [Use Apple products on enterprise networks](https://support.apple.com/en-us/HT210060).
 
 ### Step 2 - Enrollment and licensing
 
@@ -312,12 +315,16 @@ In this phase, you build security settings for your organization. This section f
 
 - **Conditional Access** can be used to enforce the compliance policies you create. When combined, end users can be required to enroll their devices and meet a minimum security standard before accessing organization resources. If a device is noncompliant, then you can block access to resources, like email, or require the user to enroll their device and fix the issue.
 
+> [!NOTE]
+> Be sure you work with your team that manages your Entra ID Conditional Access policies to confirm the proper device controls are being enforced.
+
 You can create compliance and Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 For more information, go to:
 
 - [Use compliance policies to set rules for devices you manage with Intune](../../intune/protect/device-compliance-get-started.md)
 - [Conditional Access and Intune](../../intune/protect/conditional-access.md)
+- [How to require a compliant device or MFA](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
 - [What is Conditional Access in Microsoft Entra ID?](/entra/identity/conditional-access/overview)
 
 ### Microsoft Defender for Endpoint
@@ -629,7 +636,7 @@ The enrollment policy is assigned to your new group. When the devices receive th
 
 For more information on Automated Device Enrollment, and to get started, go to [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
 
-## Phase 7 - Support and maintenance
+## Phase 7 - Support, maintenance and next steps
 
 Intune manages macOS devices using the built-in operating system MDM capabilities and the Intune Management Extension (IME) agent.
 
@@ -684,7 +691,16 @@ In Intune, you can use shell scripts to collect custom properties from managed m
 
 For more information, go to [Use shell scripts on macOS devices in Microsoft Intune](../../intune/apps/macos-shell-scripts.md#custom-attributes-for-macos).
 
+## Configure Apple Business Manager for automatic user provisioning
+
+✅ Use Entra ID user accounts for ABM administration and Managed Apple IDs
+
+Microsoft Entra ID can be confgiured to automatically provision and de-provision users to Apple Business Manager using the Microsoft Entra provisioning service.
+
+For more information, go to [Tutorial: Configure Apple Business Manager for automatic user provisioning](/entra/identity/saas-apps/apple-business-manager-provision-tutorial)
+
 ## Resources
 
 - [macOS platform guide](../../intune/fundamentals/deployment-guide-platform-macos.md)
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../intune/fundamentals/what-is-intune.md)
+
