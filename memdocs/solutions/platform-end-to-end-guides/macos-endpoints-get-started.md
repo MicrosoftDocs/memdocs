@@ -191,17 +191,24 @@ macOS devices with user affinity can be targeted for profiles and apps using use
    >
    > For more information about dynamic groups for devices, go to [Dynamic membership rules for groups in Microsoft Entra ID: Rules for devices](/entra/identity/users/groups-dynamic-membership#rules-for-devices).
 
-### Step 6 - Use single sign-on (SSO)
+### Step 6 - Configure initial settings and single sign-on (SSO)
 
-✅ Reduce app sign-in prompts with SSO
+✅ Optimize first run experience and reduce app sign-in prompts with SSO
 
 In Intune, you can configure settings that reduce the number of sign-in prompts end users receive when using apps, including Microsoft 365 apps. There are two parts to this configuration:
 
-- **Part 1** - Use the [Microsoft Enterprise SSO plug-in](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) to provide single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps. This plug-in uses an Intune device configuration policy.
+- **Part 1** - Use the [Microsoft Enterprise SSO plug-in](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) to provide single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
+  
+  To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
 
-  In the policy, you:
+  - **Devices > Configuration > Settings catalog > Authentication** > **Extensible Single Sign On (SSO)**: Add and configure the following settings:
 
-  - Enter the app bundle IDs that you want to enable SSO for.
+    | Name | Configuration |
+    |---|---|
+    | Extension Identifier | `com.microsoft.CompanyPortalMac.ssoextension`|
+    | Team Identifier | `UBF8T346G9` |
+    | Type | Redirect |
+    | URLs | `https://login.microsoftonline.com` <br/> `https://login.microsoft.com` <br/> `https://sts.windows.net` <br/> `https://login.partner.microsoftonline.cn` <br/> `https://login.chinacloudapi.cn` <br/> `https://login.microsoftonline.us` <br/> `https://login-us.microsoftonline.com` |
 
   - Configure the following optional settings:
 
@@ -213,18 +220,10 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md).
 
+  > [!NOTE]
+  > Microsoft will be releasing support for [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website). When it's available, it will be announced in [Intune What's New](/mem/intune/fundamentals/whats-new). For more information on platform SSO, go to [Coming Soon – Platform SSO for macOS](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/coming-soon-platform-sso-for-macos/ba-p/3902280).
+
 - **Part 2** - Use the [Intune settings catalog](../../intune/configuration/settings-catalog.md) to configure the following settings that reduce sign-in prompts, including Microsoft AutoUpdate (MAU) and Microsoft Office.
-
-  To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
-
-  - **Devices > Configuration > Settings catalog > Authentication** > **Extensible Single Sign On (SSO)**: Add and configure the following settings:
-
-    | Name | Configuration |
-    |---|---|
-    | Extension Identifier | `com.microsoft.CompanyPortalMac.ssoextension`|
-    | Team Identifier | `UBF8T346G9` |
-    | Type | Redirect |
-    | URLs | `https://login.microsoftonline.com` <br/> `https://login.microsoft.com` <br/> `https://sts.windows.net` <br/> `https://login.partner.microsoftonline.cn` <br/> `https://login.chinacloudapi.cn` <br/> `https://login.microsoftonline.us` <br/> `https://login-us.microsoftonline.com` |
 
   - **Devices > Configuration > Settings catalog > Microsoft AutoUpdate (MAU)**: Add and configure the following settings:
 
@@ -244,9 +243,6 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
     These settings streamline the sign in process when opening Office apps for the first time. For more information on these settings, go to [Set suite-wide preferences for Office for Mac](/deployoffice/mac/preferences-office).
 
   For more information on the settings catalog, including how to create a policy, go to [Use the settings catalog to configure settings in Microsoft Intune](../../intune/configuration/settings-catalog.md).
-
-> [!NOTE]
-> Microsoft will be releasing support for [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website). When it's available, it will be announced in [Intune What's New](/mem/intune/fundamentals/whats-new). For more information on platform SSO, go to [Coming Soon – Platform SSO for macOS](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/coming-soon-platform-sso-for-macos/ba-p/3902280).
 
 ### Step 7 - Add and assign must-have apps
 
