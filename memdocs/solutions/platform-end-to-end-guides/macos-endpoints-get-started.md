@@ -691,7 +691,7 @@ In Intune, you can use shell scripts to collect custom properties from managed m
 
 For more information, go to [Use shell scripts on macOS devices in Microsoft Intune](../../intune/apps/macos-shell-scripts.md#custom-attributes-for-macos).
 
-## Configure Apple Business Manager for automatic user provisioning
+### Configure Apple Business Manager for automatic user provisioning
 
 ✅ Use Entra ID user accounts for ABM administration and Managed Apple IDs
 
