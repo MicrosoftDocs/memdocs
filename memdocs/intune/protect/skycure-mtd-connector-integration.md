@@ -136,13 +136,9 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 4. In the **Directory ID** box, paste the Tenant ID you copied from Microsoft Entra ID in the previous section and save the settings.
 
-   ![Image showing Directory ID in the SEP Mobile portal](./media/skycure-mtd-connector-integration/symantec-portal-directory-ID.png)
-
 5. Go to the **Settings** > **Integrations** > **Intune** > **Basic Setup** section.
 
 6. Next to **iOS App**, choose the **Add to Microsoft Entra** button.
-
-   ![Image showing adding the iOS/iPadOS app to Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
 7. Sign in using the Microsoft Entra credentials for the Microsoft 365 account that manages the directory.
 
