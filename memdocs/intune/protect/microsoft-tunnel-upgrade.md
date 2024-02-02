@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2023
+ms.date: 02/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -198,6 +198,8 @@ Changes in this release:
 - Bug fix for server container: Check /dev/tun permissions only when the server container is running
 - Limit Tunnel server's maximum logging level to verbose to enhance privacy
 
+<!-- Archive of past releases
+
 ### July 24, 2023
 
 Image hash values:
@@ -223,8 +225,6 @@ Changes in this release:
 
 - Minor bug fixes
 - Agent container fixes
-
-<!-- Archive of past releases
 
 ### April 3, 2023
 
