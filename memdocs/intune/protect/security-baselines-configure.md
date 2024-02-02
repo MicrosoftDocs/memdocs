@@ -4,7 +4,7 @@
 title: Configure security baseline policies in Microsoft Intune
 description: Deploy security baselines to establish default security postures on Windows devices you manage with Microsoft Intune. Baselines include a default  configuration from the applicable product teams for Windows, Defender for Endpoint, and more.
 keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/06/2023
@@ -12,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -23,13 +21,12 @@ ms.assetid:
 ms.reviewer: juidaewo
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: 
-   - intune-azure
-   - contperf-fy21q1
+ms.custom:
+  - intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-- ContentEnagagementFY24 
+- ContentEnagagementFY24
 ---
  
 # Manage security baseline profiles in Microsoft Intune

@@ -2,13 +2,12 @@
 # required metadata
 
 title: In development - Microsoft Intune
-titleSuffix: 
 description: This article describes Microsoft Intune features that are in development.
 keywords:
-author: dougeby 
+author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/05/2024
+ms.date: 01/29/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -21,7 +20,6 @@ ms.reviewer: lebacon
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -62,17 +60,14 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
-### End-user app PIN reset<!-- 24605159   -->  
-For managed apps that require a PIN to access, allowed end-users will be able to reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
-
-#### Intune support of store-signed LOB apps for Surface Hub devices<!-- 25865620  -->  
-Intune will support the deployment of store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps will enable offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
+### Update to Intune Management Extension on Windows<!-- 26472055  -->  
+Intune Management Extension on Windows will be updated. To support this update, Windows clients must have a minimum of **.NET Framework 4.7.2** (available from Windows Update as of July 10, 2018).
+ 
+### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
+To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
-
-### Enterprise application management<!-- 10986080  -->  
-Enterprise Application Management provides a catalog of prepackaged applications designed to simplify discovery, delivery, and updates for third and first party apps. Enterprise Application Management will be generally available in early Q1 2024.
 
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
@@ -95,6 +90,60 @@ Applies to:
 
 ## Device configuration
 
+### New settings available in the Apple settings catalog <!-- 25280353 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
+
+**Full Disk Encryption > FileVault**:
+
+- Force Enable In Setup Assistant
+
+Applies to:
+
+- macOS
+
+**Restrictions**:
+
+- Allow Live Voicemail
+- Force Preserve ESIM On Erase
+
+Applies to:
+
+- iOS/iPadOS
+
+**Restrictions**:
+
+- Force Classroom Unprompted Screen Observation
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### New setting for updating MAC address randomization on Android Enterprise devices <!-- 24259789 -->
+
+Admins will have a set of new settings to update MAC address randomization on Android Enterprise devices (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
+
+Starting with Android 10, when connecting to a network, devices present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+
+Your options:
+
+- **Use device default**: Intune doesn't change or update this setting. By default, when connecting to a network, devices will present a randomized MAC address instead of the physical MAC address when connecting to a new network. Any updates made by the user to the setting will persist.
+
+- **Use randomized MAC**: Enables MAC address randomization on devices. When connecting to a new network, devices present a randomized MAC address, instead of the physical MAC address. If the user changes this value on their device, it will reset to **Use randomized MAC** on the next Intune sync.
+
+- **Use device MAC**: Forces devices to present their actual Wi-Fi MAC address instead of a random MAC address. This setting allows devices to be tracked by their MAC address. Only use this value when necessary, such as for network access control (NAC) support. If the user changes this value on their device, it will reset to **Use device MAC** on next sync.
+
+Applies to:
+
+- Android 13 and newer
+
+For more information on the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
+
 ### Import up to 20 custom ADMX and ADML administrative templates<!-- 25780608  -->  
 You can import custom ADMX and ADML administrative templates in Microsoft Intune. Currently, you can import up to 10 files.
 
@@ -106,20 +155,8 @@ Applies to:
 
 - Windows 10/11
 
-### New setting that disables location on Android Enterprise devices<!-- 21060837  -->  
-
-On Android Enterprise devices, there's a new setting that allows admins to control the location (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile > Device Restrictions** for profile type > **General**):
-
-- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
-
-For more information on the settings you can currently configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
-
-Applies to:
-
-- Android Enterprise
-
 ### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->  
-In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
+In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
 
 The Company Portal app version will support the platform SSO settings for macOS 13 and later. Platform SSO allows you to sync your Microsoft Entra ID password to local accounts on Macs using the Enterprise Single Sign-On extension.
 
@@ -147,21 +184,38 @@ Applies to:
 
 ## Device enrollment
 
+### Intune supporting await final configuration experience for macOS automated device enrollment <!-- 24973562 -->  
+The new Intune-supported enrollment feature for macOS, *await final configuration*, will enable a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience will work on devices targeted with new and existing enrollment profiles.
+
+Supported devices include:
+
+- macOS 10.11+ devices enrolling with Setup Assistant with modern authentication  
+- macOS 10.11+ devices enrolling with Setup Assistant (legacy)  
+- macOS 10.11+ devices enrolling without user device affinity  
+
+This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. This configuration is enabled by default for new macOS enrollment profiles. We recommend using it with all macOS enrollment profiles for a better onboarding experience.
+
+### New local primary account configuration for macOS automated device enrollment (ADE) <!-- 5877061 -->
+
+Configure local primary account settings for Macs enrolling in Intune via Apple automated device enrollment (ADE). These settings, supported on devices running macOS 10.11 and later, will be available in new and existing enrollment profiles under the new **Account Settings** tab. For this feature to work, the enrollment profile must be configured with user-device affinity and one of the following authentication methods:   
+
+- Setup Assistant with modern authentication  
+- Setup Assistant (legacy)  
+
 ### RBAC changes coming to enrollment settings for Windows Hello for Business<!-- 25661866   -->  
 We're updating RBAC in the enrollment area for Windows Hello for Business. Enrollment settings related to Windows Hello for Business will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to edit enrollment settings.
-
-
 
 <!-- *********************************************** -->
 
 ## Device management
 
-#### Improvements to new device experience in admin center (public preview) <!-- 23692982   -->  
-After hearing your feedback, we're rearranging the tabs in the new Devices experience so that you can focus on management first, and monitoring second. When you select a workload, instead of landing on the **Monitor** tab, which is the current default experience in public preview, you will land on the primary management tab, such as **Policies** or **Update rings**.  Monitoring will still be available but will change from being the first tab in the list to the last.
+### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
+End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website which allows end users see their recovery keys as well.
 
+Access to BitLocker recovery keys by end-users can be prevented when not allowed within your organization by using the Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**. For more information about how to prevent access to BitLocker recovery keys, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
 
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
-In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
+In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
 To support this feature, a remote action will be added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
 
@@ -173,49 +227,26 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 ## Device security
 
+### New Microsoft Cloud PKI service<!-- 17272901  -->  
+We will soon release a new Microsoft Cloud PKI service to simplify and automate the certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Intune Suite and will also be available as a standalone [Intune add-ons](../fundamentals/intune-add-ons.md). It's a cloud-based service that provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. The Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile, which includes Windows, Android, iOS/iPadOS, and macOS. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication.  
+
 ### HTML formatting supported in noncompliance email notifications <!-- 24197255   -->  
 HTML formatting will be supported in noncompliance email notifications for all platforms. You'll be able to use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
 
-### Support for Intune Device control and Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!-- 25470154, 15466620 -->  
-You’ll soon be able to use the Device control and Defender Update control profiles from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620, 25470154  -->  
 
-- **Device control** profiles are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
+You will be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+ 
+- **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
   Applies to:
-  - Windows 10/11
-
-- **Defender Update control** profiles are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).
-
-  Apples to:
-  - Linux
-  - macOS
-  - Windows 10/11
-
-Prepare for January 2024. This policy change is expected to be released with the January 2024 service update for Intune. When this change takes effect, devices that are managed by Defender for Endpoint but not enrolled with Intune, and that are assigned to either kind of profile, will start applying the settings from those profiles. Check your profiles to make sure only the devices you intend to receive these policies will get them.
+  - Windows 10/11- - Available for the *Windows 10, Windows 11, and Windows Server* platform.
+ 
+Prepare for February 2024. This policy change is expected to be released with the February 2024 service update for Intune. When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Exported report data maintains search results<!-- 17723620  -->  
-Intune will maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-and-settings-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability will also be available when calling the ExportJobs API directly.
-
-### Battery report<!-- 9747162 -->  
-We're working on a battery health report to provide visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
-
-The battery health report is a part of Microsoft Intune Advanced Analytics and will be included as an Intune-add on under [Microsoft Intune Suite](../fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
-
-### Monitoring reports for devices<!-- 17744651 -->  
-In Intune, you will be able to view a new list of all device monitoring reports. You will be able to find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane will provide reports related to configuration, compliance, enrollment, and software updates. Additionally, there will be other reports that you can view, such as **Device actions**.
-
-### Run on-demand pivot queries on single devices<!--16719466  -->  
-Intune allows you to quickly gain on-demand information about the state of your device. When you enter a query on a selected device Intune will run a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
-
-This feature will be available as part of Microsoft Intune Advanced Analytics, which is available as part of Microsoft Intune Suite, or as an individual add-on. For more information, see [Microsoft Intune add-ons](../fundamentals/intune-add-ons.md).
-
-Applies to:
-
-- Windows devices
+<!-- ## Monitor and troubleshoot -->
 
 <!-- *********************************************** -->
 
@@ -227,7 +258,10 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Customization pane support for excluding groups<!-- 17654599 -->
+The Customization pane will support setting groups to exclude when assigning policies. You will find this setting in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**.
 
 <!-- *********************************************** -->
 

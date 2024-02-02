@@ -13,8 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,6 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -110,7 +107,7 @@ If you want to designate devices as corporate-owned devices, you have two option
 * Use a script to modify the `OwnershipType` from *personal* to *corporate-owned*. For a sample script that uses an exported list (.csv) of device serial numbers as input, see [Set ownership](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).  
 
 > [!NOTE] 
-> If you use enrollment restrictions to block personally owned devices from enrolling in Intune, you will need to add the devices using corporate device identifiers prior to enrollment.  
+> If you use enrollment restrictions to block personal devices from enrolling in Intune, you will need to add the devices using corporate device identifiers prior to enrollment.  
 
 ## Next steps
 

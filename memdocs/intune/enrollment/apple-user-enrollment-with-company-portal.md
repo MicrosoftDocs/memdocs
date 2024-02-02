@@ -3,18 +3,16 @@
 
 title: Set up user enrollment with Company Portal for iOS | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Set up the profile based Apple User Enrollment option for personal devices enrolling in Microsoft Intune.    
+description: Set up the profile based Apple User Enrollment option for personal devices enrolling in Microsoft Intune.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/30/2023
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,7 @@ ms.reviewer: amanhaq
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -62,16 +60,16 @@ Complete these steps to create an enrollment profile for devices enrolling via u
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
-2. Select **Enrollment types**. 
-3. Select **Create profile** > **iOS/iPadOS**. 
-2. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details. 
+3. Under **Enrollment Options**, choose **Enrollment types**. 
+4. Select **Create profile** > **iOS/iPadOS**.  
+5. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details. 
 
      >[!TIP]
      > You can use the name field to create a dynamic group in Microsoft Entra ID, and assign devices to the enrollment profile automatically. Use the profile name to define the *enrollmentProfileName* parameter. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).  
 
-3. Select **Next**.
+6. Select **Next**.
   
-4. On the **Settings** page, select **User enrollment with Company Portal**. 
+7. On the **Settings** page, select **User enrollment with Company Portal**. 
   
    Alternatively, you can select **Determine based on user choice**, which lets assigned users select the enrollment type during enrollment. Their options:   
 
@@ -80,13 +78,13 @@ Complete these steps to create an enrollment profile for devices enrolling via u
 
    The device user's selection determines which enrollment process is carried out. Their choice is also reflected in the device ownership attribute shown in Intune. To learn more about the user experience and what they see onscreen during enrollment, see [Set up iOS/iPadOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios.md).  
     
-5. Select **Next**.  
+8. Select **Next**.  
 
-6. On the **Assignments** page, assign the profile to all users, or select specific groups. Device groups aren't supported in user enrollment scenarios because user enrollment requires user identities.  
+9. On the **Assignments** page, assign the profile to all users, or select specific groups. Device groups aren't supported in user enrollment scenarios because user enrollment requires user identities.  
 
-7. Select **Next**.  
+10. Select **Next**.  
 
-8. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.  
+11. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.  
 
 ## Profile priority  
 
