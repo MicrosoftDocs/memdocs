@@ -79,8 +79,6 @@ The Harmony Mobile Protect app authorization process consists of the following s
 
 5. Once you set Microsoft Intune as the MDM Service, the **Microsoft Intune Configuration** window pops up, choose the **Add to my organization** for each device platform: iOS/iPadOS, Android and Windows to authorize Harmony Mobile Protect to communicate with Intune and Microsoft Entra ID.
 
-   ![Image showing Check Point MTD Intune configuration](./media/checkpoint-harmony-mobile-mtd-connector-integration/checkpoint-mtd-1.png)
-
    > [!IMPORTANT]
    >
    > You must add all device platforms to proceed to the next step.
