@@ -246,5 +246,6 @@ The subsequent sections, [Stage 6: App Protection Conditional Access support] an
 
 <!-- Stage 5 links -->
 [Exit Criteria]:#exit-criteria
+[Stage 1: Plan the Integration]:app-sdk-ios-phase1.md
 [Stage 6: App Protection Conditional Access support]:app-sdk-ios-phase6.md
 [Stage 7: Web-view features]: app-sdk-ios-phase7.md
