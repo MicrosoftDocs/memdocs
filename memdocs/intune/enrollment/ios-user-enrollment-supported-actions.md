@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Overview of Apple User Enrollment in Microsoft Intune  
+title: Overview of Apple User Enrollment in Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Utilize Apple User Enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune.
 keywords:
@@ -13,8 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,7 @@ ms.reviewer: amhaq
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -123,5 +121,3 @@ After considering supported settings and enrollment features, choose the user en
 * [Set up account driven user enrollment](apple-account-driven-user-enrollment.md)   
 
 For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) on the Apple support website.  
-
-

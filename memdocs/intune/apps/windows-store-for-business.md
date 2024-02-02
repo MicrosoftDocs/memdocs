@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage VPP apps from Microsoft Store for Business 
+title: Manage VPP apps from Microsoft Store for Business
 titleSuffix: Microsoft Intune
 description: Learn how you can sync apps into Intune from the Microsoft Store for Business.
 keywords:
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, seoapril2019
+ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

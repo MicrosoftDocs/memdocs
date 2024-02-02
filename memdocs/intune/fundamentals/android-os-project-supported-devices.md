@@ -2,7 +2,6 @@
 # required metadata
 
 title: Android Open Source Project Supported Devices
-titleSuffix: 
 description: Lists Android open source project devices (AOSP) supported devices
 keywords:
 author: Smritib17
@@ -23,7 +22,7 @@ ms.reviewer: Priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started; seodec18
+ms.custom: get-started
 ms.collection:
 - tier1
 - M365-identity-device-management

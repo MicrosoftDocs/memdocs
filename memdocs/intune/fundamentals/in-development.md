@@ -2,10 +2,9 @@
 # required metadata
 
 title: In development - Microsoft Intune
-titleSuffix: 
 description: This article describes Microsoft Intune features that are in development.
 keywords:
-author: dougeby 
+author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/29/2024
@@ -21,7 +20,6 @@ ms.reviewer: lebacon
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management

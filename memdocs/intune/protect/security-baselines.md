@@ -4,7 +4,7 @@
 title: Learn about Windows security baselines you can deploy with Microsoft Intune
 description: Deploy security baselines to devices to help protect users and data on devices you manage with Microsoft Intune. The default baseline configurations are the recommended windows security settings from the relevant security teams. You can also customize baselines to meet your business requirements.
 keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/10/2023
@@ -21,15 +21,13 @@ ms.localizationpriority: high
 ms.reviewer: juidaewo
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: 
-   - intune-azure
-   - contperf-fy21q1
+ms.custom:
+  - intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
 - highseo
-
 ---
 
 # Use security baselines to configure Windows devices in Intune
