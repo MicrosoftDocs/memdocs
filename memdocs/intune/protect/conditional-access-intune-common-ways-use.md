@@ -23,7 +23,7 @@ ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started; seodec18
+ms.custom: intune-azure, get-started
 ms.collection:
 - tier1
 - M365-identity-device-management

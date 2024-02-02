@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/23/2023
-ms.topic: how-to 
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -20,7 +20,7 @@ ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 
 ms.collection:
 - tier1
