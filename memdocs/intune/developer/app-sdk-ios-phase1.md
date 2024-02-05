@@ -59,7 +59,7 @@ Before you start integrating the Intune App SDK into your iOS application, take 
   and where to find these features in the Microsoft Intune admin center.  
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Get Started with Intune App SDK Guide](app-sdk-get-started.md) explains how to prepare for integration on each supported platform.
-- [iOS app protection policy settings] describes each iOS setting in detail.
+- [iOS app protection policy settings] describe each iOS setting in detail.
   Your app will support these settings by integrating the SDK.
   During the SDK integration process, you'll also configure these settings in your own test tenant for validation.
 - (Optional) [Plan for mobile application management in Microsoft Intune - Training | Microsoft Learn] explains how to plan for mobile application management using Microsoft Intune, with a focus on adding apps to Intune, using app protection policies and app configuration policies, and troubleshooting app protection policy deployment.
@@ -84,7 +84,7 @@ See [Stage 2: MSAL prerequisite and setup] for instructions on integrating MSAL 
 Without Intune App Protection Policy support, how does your application handle user authentication and accounts?
 
 - Does your application currently only allow a single account to be logged in?
-Does your application explicitly force the logged-in account to log out—and delete that previous account's data—before allowing another account to log-in?
+Does your application explicitly force the logged-in account to log out—and delete that previous account's data—before allowing another account to log in?
 If so, your application is **single-identity**.
 
 - Does your application currently allow a second account to log in, even if a different account is already logged in?
@@ -115,7 +115,7 @@ See [Manage data transfer between iOS apps in Microsoft Intune].
 
 ### Does my application have resources that should be protected by Conditional Access?
 
-[Conditional Access (CA)] is an [Microsoft Entra ID]
+[Conditional Access (CA)] is a [Microsoft Entra ID]
 feature that can be used to control access to Microsoft Entra resources.
 Intune administrators can define CA rules that allow resource access only from devices or apps that are managed by Intune.
 
