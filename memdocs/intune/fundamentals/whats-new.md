@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 02/05/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -88,7 +88,7 @@ Intune Advanced Analytics provides comprehensive visibility of the end-user expe
 
 - **Battery health report**<!-- 9747162 -->
 
-  The battery health report provides visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
+  The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
   
 - **Run on-demand device queries on single devices**<!--16719466 -->
 
@@ -134,7 +134,7 @@ The maximum package size for uploading apps to Intune has changed from 8GB to 30
 ### Device configuration
 
 #### New setting that disables location on Android Enterprise devices<!-- 21060837 -->
-On Android Enterprise devices, there's a new setting that allows admins to control the location (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile > Device Restrictions** for profile type > **General**):
+On Android Enterprise devices, there's a new setting that allows admins to control the location (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile > Device Restrictions** for profile type > **General**):
 
 - **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
 
@@ -145,7 +145,7 @@ Applies to:
 - Android Enterprise
 
 #### Date and time picker for managed software updates in the settings catalog on iOS/iPadOS and macOS devices<!-- 26015175 -->
-Using the settings catalog, you can enforce managed updates on iOS/iPadOS and macOS devices by entering a date and time (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative Device Management > Software Update**). 
+Using the settings catalog, you can enforce managed updates on iOS/iPadOS and macOS devices by entering a date and time (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative Device Management > Software Update**).
 
 Previously, you had to manually type the date and time. Now, there's a date and time picker for the **Target Local Date Time** setting:
 
@@ -168,7 +168,7 @@ For more information about configuring Managed software updates in Intune, go to
 ### Device management
 
 #### New device management experience in Microsoft Intune<!-- 17585897 23692982 -->
-We’re rolling out an update to the device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster. The new experience, previously in public preview, will be gradually rolled out for general availability over the coming weeks. The public preview experience will continue to be available until your tenant receives the update.
+We're rolling out an update to the device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster. The new experience, previously in public preview, will be gradually rolled out for general availability over the coming weeks. The public preview experience will continue to be available until your tenant receives the update.
 
 The availability of this new admin center experience will vary tenant by tenant. While a few will see this update immediately, many might not see the new experience for several weeks. For Government clouds, the availability of this experience is estimated around late February 2024.
 
@@ -216,7 +216,7 @@ You can now use a single click within the Intune admin center to have Intune ena
 
 In contrast, the collection of verbose logs has previously required you to sign on to the server, run manual tasks and scripts to enable and collect verbose logs, and then copy them to a location from which you can transfer them to Microsoft.
 
-To find this new capability, in the admin center go to **Tenant administration** > **Microsoft Tunnel Gateway** > select a server > select the **Logs** tab.  On this tab you’ll see a new section named **Send verbose server logs**, with button labeled **Send logs**, and a list view that displays the various log sets that have been collected and submitted to Microsoft.
+To find this new capability, in the admin center go to **Tenant administration** > **Microsoft Tunnel Gateway** > select a server > select the **Logs** tab.  On this tab you'll see a new section named **Send verbose server logs**, with button labeled **Send logs**, and a list view that displays the various log sets that have been collected and submitted to Microsoft.
 
 When you select the **Send logs** button:
 
@@ -343,9 +343,11 @@ The Intune Company Portal app for Android and Microsoft Intune app for Android A
 ### Device configuration
 
 #### New settings available in the Apple settings catalog<!-- 25189345  -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
 
 **Managed Settings**:
 
@@ -353,25 +355,19 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 - Personal hotspot
 - Voice roaming (deprecated): This setting is deprecated in iOS 16.0. Data roaming is the replacement setting.
 
-Applies to:
-
-- iOS/iPadOS
+##### Shared iPad
 
 **Managed Settings**:
 
 - Diagnostic submission
 
-Applies to:
-
-- Shared iPad
+##### macOS
 
 **Microsoft Defender > Antivirus engine**:
 
 - Enable passive mode (deprecated): This setting is deprecated. Enforcement level is the replacement setting.
 - Enable real-time protection (deprecated): This setting is deprecated. Enforcement level is the replacement setting.
 - Enforcement level
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Settings to manage Windows Subsystem for Linux are now available in the Windows settings catalog<!-- 17757930  -->
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
@@ -1156,9 +1152,27 @@ Applies to:
 - Windows 10
 
 #### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541  -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+
+##### iOS/iPadOS 17.0 and later
+
+**Restrictions**:
+
+- Allow iPhone Widgets On Mac
+
+##### macOS
+
+**Microsoft Defender > Tamper protection**:
+
+- Process's arguments
+- Process path
+- Process's Signing Identifier
+- Process's Team Identifier
+- Process exclusions
+
+##### macOS 13.0 and later
 
 **Authentication > Extensible Single Sign On (SSO)**:
 
@@ -1179,11 +1193,9 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 - User Authorization Mode
 - Use Shared Device Keys
 
-Applies to:
+##### macOS 14.0 and later
 
-- macOS 13.0 and later
-
-**Login > Login Window**:
+**Login > Login Window Behavior**:
 
 - Autologin Password
 - Autologin Username
@@ -1205,32 +1217,6 @@ Applies to:
 
 - Password Content Description
 - Password Content Regex
-
-Applies to:
-
-- macOS 14.0 and later
-
-**Restrictions**:
-
-- Allow iPhone Widgets On Mac
-
-Applies to:
-
-- iOS/iPadOS 17.0 and later
-
-**Microsoft Defender > Tamper protection**:
-
-- Process's arguments
-- Process path
-- Process's Signing Identifier
-- Process's Team Identifier
-- Process exclusions
-
-Applies to:
-
-- macOS
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 ### Device enrollment
 
@@ -1460,7 +1446,7 @@ You can now add scope tags when creating deployments using Zebra LifeGuard Over-
 #### New settings available in the macOS settings catalog <!-- 24167142  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
 
 **Microsoft AutoUpdate (MAU)**:
 
@@ -1692,9 +1678,17 @@ To participate in the public preview, [complete the opt-in form](https://aka.ms/
 ### Device configuration
 
 #### New settings available in the Apple settings catalog<!-- 19951554  -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**Networking > Network Usage Rules**:
+
+- SIM Rules
+
+##### macOS
 
 **Authentication > Extensible Single Sign On (SSO)**:
 
@@ -1708,20 +1702,6 @@ A new setting is available in the Settings Catalog. In the [Microsoft Intune adm
 - Username
 - Password
 - UseKeyChain
-
-Applies to:
-
-- macOS
-
-**Networking > Network Usage Rules**:
-
-- SIM Rules
-
-Applies to:
-
-- iOS/iPadOS
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874 -->  
 For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
