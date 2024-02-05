@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 02/05/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -59,6 +59,10 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
+### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
+
+In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for seven days will be automatically turned on and synced with Windows Update for Business Policies.
+
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
@@ -70,7 +74,15 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
 
 <!-- ***********************************************-->
-<!--## Miscellaneous-->
+## Miscellaneous
+
+### Windows 365 Switch support for Windows 365 Frontline<!--46816178-->
+
+In a future update, Windows 365 Switch will support Windows 365 Frontline Cloud PCs.
+
+### Intune admin center user interface change<!--48653379-->
+
+The current **Devices** navigation list will change from **Provisioning** >  **Windows 365** to **Device onboarding** > **Cloud PC creation**.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -79,14 +91,17 @@ A new self-help button for end users will be available in a future release of Wi
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
-### New report: Cloud PCs that can't connect<!--45946128-->
-
-A new report will be available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you'll be able to observe:
-devices that have unhealthy hosts users' connections that consistently or frequently fail systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
-
 ### New alert rule: Cloud PCs that aren't available<!--47321010-->
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
+
+### Device action data kept for 90 days<!--48439987-->
+
+On the **Overview** page for individual Cloud PCs, the **Actions** will show actions performed within the last 90 days.
+
+### Alerts for Windows 365 Frontline maximum concurrent Cloud PCs<!--45903013-->
+
+A new alert will be implemented to notify admins when the maximum concurrent Cloud PCs are active for Windows 365 Frontline subscriptions.
 
 <!-- ***********************************************-->
 ## Provisioning
@@ -106,6 +121,9 @@ In a future update, Windows 365 will remove a large number of FQDNs from the cur
 
 You'll be able to turn on watermarking for Windows 365 Cloud PCs. Watermarking, alongside screen capture protection, helps prevent sensitive information from being captured on client endpoints. When you enable watermarking, QR code watermarks appear on the Cloud PC desktop. The QR code contains the connection ID of a remote session that admins can use to trace the session.
 
+### New 15-minute Sign-in frequency option<!--48439987-->
+
+When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option will provide a 15-minute re-authentication period.
 
 <!-- ***********************************************
 ## Windows 365 app-->
