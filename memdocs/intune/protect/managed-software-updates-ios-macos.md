@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 02/05/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -129,10 +129,10 @@ Managed software updates have precedence over other policies that configure soft
      
    - **Target Local Date Time**: Select the local date time value that specifies when to force the installation of the software update.
    
-        > [!NOTE]
-        > The Target Local Date Time setting will schedule the update using the UTC timezone. For example, configuring an update to install at 2PM will schedule it for 9AM EST. 
-          - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
-          - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
+     The **Target Local Date Time** setting schedules the update using the UTC timezone. For example, you configure an update to install at 2PM, which is 2PM UTC. Due to the time conversion, the update is scheduled for 9AM EST.
+
+     - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+     - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
             
         > [!IMPORTANT]
         > If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`. To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time using the date time picker. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
