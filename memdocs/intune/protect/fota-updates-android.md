@@ -42,6 +42,8 @@ You have two ways to manage software updates on android:
 
     > [!NOTE]
     > [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md) is required.
+    >
+    > If Zebra updated the available firmware list in the last 24 hours, the list of firmware available may take up to 24 hours to populate.
 
 - If FOTA isn't available you can use Device restrictions profiles, which work for all OEMs.
 
