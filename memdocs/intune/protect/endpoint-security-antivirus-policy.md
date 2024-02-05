@@ -167,7 +167,7 @@ The following profiles are supported for devices you manage with Intune:
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
-  - Profile: **Defender Updates controls** - Manage update settings for Microsoft Defender, including the following settings that are taken directly from the [Defender CSP](/windows/client-management/mdm/defender-csp):
+  - Profile: **Defender Update controls** - Manage update settings for Microsoft Defender, including the following settings that are taken directly from the [Defender CSP](/windows/client-management/mdm/defender-csp):
 
     - [Engine Updates Channel](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationengineupdateschannel)
     - [Platform Updates Channel](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationplatformupdateschannel)
