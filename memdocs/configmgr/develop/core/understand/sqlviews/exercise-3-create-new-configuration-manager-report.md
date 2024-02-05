@@ -3,8 +3,8 @@ title: 'Exercise 3: Create a new report'
 titleSuffix: Configuration Manager
 description: Create a simple report and configure the report properties.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -18,9 +18,9 @@ ms.collection: tier3
 
 # Exercise 3: Create a new Configuration Manager report
 
-In this exercise, you will create a simple report in Microsoft SQL Server Report Builder, and configure the report properties.
+In this exercise, you'll create a simple report in Microsoft SQL Server Report Builder, and configure the report properties.
 
-The report displays all collections that administrative users have created and excludes the built-in collections. The results will display the collection ID and name, the last collection refresh time and the date of the last collection membership change.
+The report displays all collections that administrative users have created, and excludes the built-in collections. The results will display the collection ID and name, the last collection refresh time and the date of the last collection membership change.
 
 ## To create a new report
 

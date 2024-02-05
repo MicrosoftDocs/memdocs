@@ -2,8 +2,8 @@
 title: Export Configuration Baselines and Items
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 0599e22f-3de3-4182-bcc2-3175d91b5b58
 author: Banreet

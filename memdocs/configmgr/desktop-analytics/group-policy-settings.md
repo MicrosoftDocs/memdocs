@@ -3,8 +3,8 @@ title: Group policy settings
 titleSuffix: Configuration Manager
 description: Understand the local and group policy settings in Windows used by Configuration Manager and Desktop Analytics
 ms.date: 07/07/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

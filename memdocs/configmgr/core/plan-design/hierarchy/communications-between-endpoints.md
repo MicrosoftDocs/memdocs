@@ -3,8 +3,8 @@ title: Communications between endpoints
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site systems and components communicate across a network.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

@@ -1,14 +1,14 @@
 ---
 title: Windows Autopilot User-Driven Mode
 description: With Windows Autopilot user-driven mode, you can configure devices to deploy to a ready-to-use state without requiring help from IT personnel.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 12/08/2023
+ms.date: 02/01/2024
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -230,8 +230,6 @@ For VPN configurations that automatically connect, the validation steps might be
 > [!NOTE]
 >
 > You can use an always-on VPN for this scenario. For more information, see [Deploy always-on VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment).
->
-> Intune can't currently deploy this per-machine VPN profile.
 
 ## Next steps
 

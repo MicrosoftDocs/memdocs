@@ -88,11 +88,7 @@ items:
 
       - name: Create an ADMX template
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
-        displayName: admx, administrative template, gpo, windows
-
-      - name: Try new Devices experience (public preview) 
-        href: ./fundamentals/microsoft-intune-admin-center-devices.md
-        displayName: devices, admin center, microsoft intune    
+        displayName: admx, administrative template, gpo, windows 
 
   - name: Security Copilot + Intune
     href: ./fundamentals/security-copilot.md
@@ -366,6 +362,12 @@ items:
                   href: ./apps/lob-apps-ios.md
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
+                - name: Enterprise App Management
+                  items:
+                  - name: Enterprise App Management overview
+                    href: ./apps/apps-enterprise-app-management.md
+                  - name: Add a Enterprise App Catalog app (Win32)
+                    href: ./apps/apps-add-enterprise-app.md                
                 - name: Sideload Windows LOB apps
                   href: ./apps/app-sideload-windows.md
                 - name: macOS LOB apps
@@ -837,7 +839,7 @@ items:
               href: ./protect/zebra-lifeguard-ota-integration.md    
           - name: iOS/iPadOS & macOS updates
             items:
-            - name: Declarative software updates
+            - name: Managed software updates (DDM)
               displayName: ddm
               href: ./protect/managed-software-updates-ios-macos.md    
             - name: iOS/iPadOS update policies
@@ -1399,7 +1401,7 @@ items:
           displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: 
+          displayName: Set up enrollment notifications
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
@@ -1469,8 +1471,10 @@ items:
           items: 
           - name: Set up enrollment for Android device administrator 
             href: ./enrollment/android-enroll-device-administrator.md
-          - name: Switch to Android Enterprise work profile management 
+          - name: Move to Android Enterprise work profile management 
             href: ./enrollment/android-move-device-admin-work-profile.md  
+          - name: Move to mobile application management without enrollment    
+            href: ./enrollment/move-to-android-mobile-application-management.md 
         - name: Samsung Knox enrollment solutions  
           items: 
           - name: Use Samsung Knox Mobile Enrollment 
@@ -1574,7 +1578,7 @@ items:
 
     - name: Initiate remote actions
       items:
-      - name: Using device actions
+      - name: Remote device actions
         href: ./remote-actions/device-management.md
 
       - name: Locks and passwords
@@ -1671,7 +1675,7 @@ items:
         - name: Review logs with Azure Monitor
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
-          href: ./configuration/device-profile-monitor.md
+          href: ./configuration/device-profile-monitor.md                    
         - name: Endpoint analytics
           href: ../analytics/
 

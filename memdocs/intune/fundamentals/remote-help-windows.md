@@ -108,6 +108,10 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.trouter.communication.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
 |\*.registrar.skype.com  | Registrar service for Azure Communication Service (ACS) |
 |\*.flightproxy.skype.com | Conversation service URL for Azure Communication Service |
+|api.flightproxy.skype.com | Required for Azure Communication Service (ACS) |
+|edge.microsoft.com | |
+|login.live.com | |
+|ecs.communication.microsoft.com| |
 
 ## Remote Help modes available for Windows
 
@@ -125,7 +129,7 @@ Remote Help is available as download from Microsoft and must be installed on eac
 
 Some users may choose to opt out of automatic updates. However, when a new version of Remote Help is necessary, the app prompts users to install that version upon opening. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
-- Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
+- Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
 
 > [!NOTE]

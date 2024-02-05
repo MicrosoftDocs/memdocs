@@ -10,23 +10,21 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
 searchScope:
  - User help
 
 # optional metadata
 
-ROBOTS:  
+ROBOTS:
 #audience:
 
 ms.reviewer: chrisbal
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser; seodec18
+ms.custom: intune-enduser
 ms.collection:
 - tier2
 ---

@@ -3,8 +3,8 @@ title: Security views
 titleSuffix: Configuration Manager
 description: Information about the permissions that are granted to users and user groups.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

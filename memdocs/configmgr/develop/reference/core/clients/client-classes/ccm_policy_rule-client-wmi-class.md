@@ -3,8 +3,8 @@ description: Learn how to define a policy object rule used in the PolicyRules pr
 title: CCM_Policy_Rule Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d59fb097-6a80-418a-9779-2d6c7e547ab9
 author: Banreet

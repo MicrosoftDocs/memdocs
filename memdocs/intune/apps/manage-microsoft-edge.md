@@ -149,13 +149,18 @@ The **Custom** layout is the default one for the new tab page. It shows top site
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected <br> **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed` |
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
 
 > [!NOTE]
 > **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes affect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
 
+
+An example of turning off the news feeds
+- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout=**custom**
+- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom=**topsites**
+- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable=**false**
 
 ### New Tab Page experiences
 
@@ -367,13 +372,23 @@ By default, Microsoft Edge for Android will block network access with invalid or
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
 
+#### Proxy for users to sign in to Edge in Android.
+
+A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android. 
+
+Organizations can specify dedicated proxy via MDM policy for users to sign in to Edge in Android.
+
+|Key  |Value  |
+|:---------|:---------|
+|EdgeOneAuthProxy |  The corresponding value is a string <br> **Example** `http://MyProxy.com:8080` |
+
 #### iOS Website data store
 
-As there's only one persistent website data store in Edge for iOS, by default the website data store is always statically used only by personal account. Work or school account cannot use the website data store, which causes the browsing data expect cookies lost after each session ends. Organizations can make the website data store used by work or school account so the browsing data will be persisted for a better users experience.
+The website data store in Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there is only one persistent website data store in Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts cannot utilize it. Consequently, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account first regardless of the sign-in order |
+|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account regardless of the sign-in order |
 
 #### Microsoft Defender SmartScreen
 
@@ -443,6 +458,9 @@ When a web page requests to open an external app, users will see a pop-up asking
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
+
+> [!NOTE]
+> As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99
 
 #### Bing Chat Enterprise 
 
@@ -576,9 +594,6 @@ Target Edge for iOS with the following key/value pair, to enable Application Pro
 |:-------------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.AppProxyRedirection |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
 
-> [!NOTE]
-> Edge for Android does not consume this key. Instead, Edge for Android consumes Microsoft Entra application proxy configuration automatically as long as the signed-in Microsoft Entra account has an App Protection Policy applied.
-
 For more information about how to use Edge for iOS and Android and Microsoft Entra application proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Microsoft Entra team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for iOS and Android as well.
 
 ### Manage NTLM single sign-on sites
@@ -620,8 +635,8 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled	| DefaultSearchProviderEnabled|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
-
-
+|com.microsoft.intune.mam.managedbrowser.Chat | EdgeChat|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext	| ChatPageContext|
 
 ## Deploy app configuration scenarios with Microsoft Intune
 

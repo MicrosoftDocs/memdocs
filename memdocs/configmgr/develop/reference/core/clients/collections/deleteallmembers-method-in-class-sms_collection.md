@@ -3,8 +3,8 @@ description: Learn how to delete all members, that is, resources and discovery d
 title: DeleteAllMembers Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ae1b7baf-751d-49ab-9188-72d1816cd852
 author: Banreet

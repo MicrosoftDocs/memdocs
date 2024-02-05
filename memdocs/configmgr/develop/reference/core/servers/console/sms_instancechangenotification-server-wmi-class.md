@@ -3,8 +3,8 @@ description: Learn how to notify the administrator console that an alert has cha
 title: SMS_InstanceChangeNotification Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: feda268d-16d9-43a0-8bef-d26070e5deca
 author: Banreet

@@ -12,19 +12,15 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-
-ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management

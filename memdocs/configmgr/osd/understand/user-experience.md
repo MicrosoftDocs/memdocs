@@ -3,8 +3,8 @@ title: User experiences for OS deployment
 titleSuffix: Configuration Manager
 description: Learn about user experiences like the task sequence progress and media wizard for operating system deployment in Configuration Manager.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

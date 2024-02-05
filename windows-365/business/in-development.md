@@ -2,17 +2,14 @@
 # required metadata
 
 title: In development - Windows 365 Business
-titleSuffix: 
 description: Windows 365 Business features in development
 keywords:
-author: ErikjeMS 
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice: 
-ms.assetid: 
 
 # optional metadata
 
@@ -22,7 +19,6 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - M365-identity-device-management
 - tier2

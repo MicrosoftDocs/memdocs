@@ -3,8 +3,8 @@ description: Learn how to retrieve an application deployment type property using
 title: GetProperty method in class CCM_AppDeploymentType
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3002c0dd-4713-42c6-bda0-f7cc7d8d1b2d
 author: Banreet
@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # GetProperty Method in Class CCM_AppDeploymentType
-The `GetProperty` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that retrieves an application deployment type property.   
+The `GetProperty` Windows Management Instrumentation (WMI) class method in Configuration Manager that retrieves an application deployment type property.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

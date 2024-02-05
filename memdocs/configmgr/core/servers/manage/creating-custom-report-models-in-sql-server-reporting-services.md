@@ -3,8 +3,8 @@ title: Create custom reports
 titleSuffix: Configuration Manager
 description: Define report models to meet your business requirements, and then deploy the report models to Configuration Manager.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

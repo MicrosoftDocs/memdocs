@@ -3,8 +3,8 @@ title: Tenant attach data collection
 titleSuffix: Configuration Manager
 description: Learn about the diagnostics data that Configuration Manager collects for tenant attach features.
 ms.date: 03/24/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: gowdhamankarthikeyan
 ms.author: gokarthi

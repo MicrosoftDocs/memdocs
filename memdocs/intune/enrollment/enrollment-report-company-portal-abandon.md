@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/11/2023
+ms.date: 01/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -25,7 +25,7 @@ ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+ms.custom: intune-azure 
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -33,7 +33,12 @@ ms.collection:
 
 # Incomplete user enrollments report
 
-This Microsoft Intune report tells you where in the Company Portal enrollment process users are abandoning enrollment. Use this information to improve onboarding efforts and support documents for users going through enrollment. To see the report, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** and select **Monitor** > **Incomplete user enrollments**.  
+This Microsoft Intune report tells you where in the Company Portal enrollment process users are abandoning enrollment. Use this information to improve onboarding efforts and support documents for users going through enrollment.  
+
+To view the report:  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Go to **Devices**.  
+3. Go to **Monitor** and select **Incomplete user enrollments**.  
 
 ## Overview  
 

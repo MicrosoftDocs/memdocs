@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/13/2023
+ms.date: 01/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -200,7 +200,7 @@ There isn't a configuration package for devices that run iOS/iPadOS. Instead, se
 For devices that run iOS/iPadOS (in Supervised Mode), there's specialized ability given the increased management capabilities provided by the platform on these types of devices. To take advantage of these capabilities, the Defender app needs to know if a device is in Supervised Mode. Intune allows you to configure the Defender for iOS app through an App Configuration policy (for managed devices) that should be targeted to all iOS Devices as a best practice. For more information, see [Complete deployment for supervised devices](/microsoft-365/security/defender-endpoint/ios-install?#complete-deployment-for-supervised-devices).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App configuration policies** > **Managed devices**.
+2. Select **Apps** > **App configuration policies** > **+ Add**, and then select**Managed devices** from the drop down list.
 3. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, select **Platform** as **iOS/iPadOS** then choose **Next**.
 4. Select **Targeted app** as **Microsoft Defender for iOS**.
 5. On the **Settings** page, set the **Configuration key** as **issupervised**, then **Value type** as **string** with the **{{issupervised}}** as the **Configuration value**.
@@ -217,7 +217,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
 
 1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **Configuration profiles** > **Create profile**.
+3. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
 6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
@@ -245,7 +245,7 @@ If you're not familiar with creating compliance policy, reference the [Create a 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance policies** > **Create policy**.
+2. Select **Devices** > **Compliance**. On the **Policies** tab, select  **+ Create policy**.  
 
 3. For **Platform**, use the drop-down box to select one of the following options:
    - **Android device administrator**

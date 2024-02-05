@@ -3,8 +3,8 @@ title: Client installation methods
 titleSuffix: Configuration Manager
 description: Learn about the methods of installing the Configuration Manager client.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

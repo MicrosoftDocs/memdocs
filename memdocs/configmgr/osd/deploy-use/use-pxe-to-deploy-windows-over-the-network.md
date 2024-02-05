@@ -3,8 +3,8 @@ title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
 description: Use PXE-initiated OS deployments to refresh a computer's operating system or to install a new version of Windows on a new computer.
 ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

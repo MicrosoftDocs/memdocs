@@ -3,8 +3,8 @@ title: Pull-distribution point
 titleSuffix: Configuration Manager
 description: Learn about configurations and limitations for using a pull-distribution point with Configuration Manager.
 ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
