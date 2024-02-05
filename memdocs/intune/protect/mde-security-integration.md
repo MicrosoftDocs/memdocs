@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Use Intune to manage Microsoft Defender security settings management on devices not enrolled with Microsoft Intune 
-description: Use Intune profiles to manage security settings management for Microsoft Defender for Endpoint on devices supported by Defender that don't enroll with Microsoft Intune. 
+title: Use Intune to manage security settings for Microsoft Defender on devices that are not enrolled with Microsoft Intune 
+description: Learn about the device management scenario called Microsoft Defender security settings management, where you use Intune profiles to manage Microsoft Defender for Endpoint settings on devices that haven't enrolled with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
