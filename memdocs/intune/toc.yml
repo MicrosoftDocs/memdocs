@@ -1767,6 +1767,8 @@ items:
       - name: Known issues
         displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
+    - name: End-to-end macOS endpoint guide
+      href: ../solutions/platform-end-to-end-guides/macos-endpoints-get-started.md
     - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
       displayName: admx, administrative template, windows, gpo
