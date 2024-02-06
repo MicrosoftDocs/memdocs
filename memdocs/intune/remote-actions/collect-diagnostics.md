@@ -106,6 +106,7 @@ Registry Keys:
 
 - HKLM\SOFTWARE\Microsoft\CloudManagedUpdate
 - HKLM\SOFTWARE\Microsoft\EPMAgent
+- HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceHealthMonitoring
 - HKLM\SOFTWARE\Microsoft\IntuneManagementExtension
 - HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
 - HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
@@ -118,7 +119,6 @@ Registry Keys:
 - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 - HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 - HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm
-- HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceHealthMonitoring
 - HKLM\SYSTEM\Setup\SetupDiag\Results
 
 Commands:
@@ -181,13 +181,13 @@ Files:
 - %windir%\logs\measuredboot\\\*.*
 - %windir%\logs\Panther\unattendgc\setupact.log
 - %windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\\*.log
+- %windir%\Logs\SetupDiag\SetupDiagResults.xml
 - %windir%\logs\WindowsUpdate\\*.etl
+- %windir%\SensorFramework\*.etl
 - %windir%\system32\config\systemprofile\AppData\Local\mdm\\\*.log
 - %windir%\temp\%computername%*.log
 - %windir%\temp\officeclicktorun*.log
 - %TEMP%\winget\defaultstate*.log
-- %windir%\Logs\SetupDiag\SetupDiagResults.xml
-- %windir%\SensorFramework\*.etl
 
 ## Disable device diagnostics
 
