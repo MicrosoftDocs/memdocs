@@ -67,11 +67,7 @@ In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-## End user experience
-
-### Self-help in Windows 365 Business<!--45828334-->
-
-A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
+<!-- ## End user experience -->
 
 <!-- ***********************************************-->
 ## Miscellaneous
