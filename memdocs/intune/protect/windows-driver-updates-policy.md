@@ -260,6 +260,37 @@ On the *Manage driver* pane, you can:
 
   Setting an update to declined doesn’t remove it from the policy, and you can change it back to *Approved* if you would like the update to deploy to applicable devices.
 
+### Bulk driver updates
+
+Bulk driver updates allow the user to approve, pause, or decline multiple drivers for devices at once.
+
+#### How to use bulk driver updates
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows 10 and later updates**> **Driver updates**, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
+2. In the driver Updates page, select **Bulk actions**.  
+3. In the **Select action** tab, select one of the actions from the **Driver actions** drop-down list; *Approve*, *Pause* or *Decline* multiple drivers.
+4. If you select an action that needs further information, for example, if you select *Approve*, then you also need to select the start date using **Make available in Windows update**. Select **Next**.
+5. In the **Select drivers** tab, use **Select drivers to include** to see and select the available drivers. The **Select available drivers** fly-out appears.
+The displayed list includes drivers that are able to be approved. For example, drivers that have a status of *Paused* or *Needs Review*. This is because you can (re)approve drivers that are *Paused* or have status as *Needs Review*.  
+Drivers that are already approved are filtered out.
+6. In the **Select available drivers** fly-out you can also bulk select the drivers.
+
+   > [!NOTE]
+   > You may lose the selection if you apply filters or  search terms.
+
+   > [!NOTE]
+   > You can only select up to 100 drivers at a time. If  you select more than a 100 and select **Save**, an error  message is displayed.  
+
+7. Select **Save** and then **Next**.
+8. In the **Review +Save** tab, you can review and save the changes you made.
+
+> [!NOTE]
+> You can't mix actions. For example, you cannot *Pause* and *Approve* a set in one action. You must go through each action separately.
+
+#### Benefits of bulk driver updates
+
+The bulk driver updates can help the user to manage the driver updates more efficiently and conveniently. For example, the user can approve all the drivers together before a service release and schedule them to start on that day.
+
 ## Next steps
 
 - Use [Windows driver update overview](../protect/windows-driver-updates-overview.md)
