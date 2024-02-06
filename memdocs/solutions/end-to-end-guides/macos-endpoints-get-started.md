@@ -397,7 +397,9 @@ For more information about Gatekeeper, go to:
 
 ✅ Configure Software Updates
 
-On devices, software updates are critical and you must determine how the updates are installed. You have some options:
+On devices, software updates are critical and you must determine how the updates are installed. You have some options.
+
+When you configure these settings, you enforce and restrict the behavior in the **Settings** app > **Software Update** node on the device.
 
 - **Option 1 - macOS 14.0 and newer devices (recommended)** - On macOS 14.0 and newer devices, use the [Intune settings catalog](../../intune/configuration/settings-catalog.md) to create a [managed software updates policy](../../intune/protect/managed-software-updates-ios-macos.md). This feature uses Apple's declarative device management (DDM), and is the recommended approach to update macOS devices.
 
@@ -420,15 +422,6 @@ On devices, software updates are critical and you must determine how the updates
   - **Devices > Apple updates > macOS updates policy**
 
   - **Devices > Configuration > Create > Settings catalog > Software Update**
-
-    When you configure these settings in the settings catalog, you enforce and restrict the behavior in the Settings app > Software Update node on the device:
-
-    - Automatic Check Enabled
-    - Critical Updates Install
-    - Automatically Install App Updates
-    - Restrict Software Require Admin To Install
-    - Config Data Install
-    - Automatic Download
 
   Some of the settings in both policy types (Software updates vs. Settings catalog) can overlap. So, pay attention to what you configure in each policy. The settings in the macOS updates policy take precedence over the Settings Catalog > Software Update settings. For more information, go to [Precedence of settings in macOS updates policy](../../intune/protect/managed-software-updates-ios-macos.md#precedence).
 
