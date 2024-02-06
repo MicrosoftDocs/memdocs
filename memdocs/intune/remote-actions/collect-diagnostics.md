@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/23/2023
+ms.date: 02/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -118,6 +118,8 @@ Registry Keys:
 - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 - HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 - HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm
+- HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceHealthMonitoring
+- HKLM\SYSTEM\Setup\SetupDiag\Results
 
 Commands:
 
@@ -184,6 +186,8 @@ Files:
 - %windir%\temp\%computername%*.log
 - %windir%\temp\officeclicktorun*.log
 - %TEMP%\winget\defaultstate*.log
+- %windir%\Logs\SetupDiag\SetupDiagResults.xml
+- %windir%\SensorFramework\*.etl
 
 ## Disable device diagnostics
 
