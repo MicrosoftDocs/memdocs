@@ -123,6 +123,9 @@ To discover build versions for all Windows 10/11 Feature Updates and Cumulative 
   | Win 10 1909 (Jun-Sept 2020) | 10.0.18363.900     | 10.0.18363.1110    |
   | Win 10 1809 (Jun-Sept 2020) | 10.0.17763.1282    | 10.0.17763.1490    |
 
+  > [!NOTE]
+  > If you specify multiple ranges of OS version builds in your policy, and a device has a build outside of the compliant ranges, Company Portal will notify the device user that the device is noncompliant with this setting. However, be aware that due to technical limitations, the compliance remediation message only shows the first OS version range specified in the policy. We recommend that you document the acceptable OS version ranges for managed devices in your organization.  
+  
 ## Configuration Manager Compliance
 
 Applies only to co-managed devices running Windows 10/11. Intune-only devices return a not available status.
