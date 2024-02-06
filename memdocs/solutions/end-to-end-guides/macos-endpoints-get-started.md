@@ -212,7 +212,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
     | Key | Type | Value |
     |---|---|---|
-    | AppPrefixAllowList | String | `com.apple.` |
+    | AppPrefixAllowList | String | `com.apple.,com.microsoft.com` |
     | browser_sso_interaction_enabled | Integer | 1 |
     | disable_explicit_app_prompt | Integer | 1 |
 
