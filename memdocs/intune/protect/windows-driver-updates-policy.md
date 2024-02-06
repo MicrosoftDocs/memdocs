@@ -267,12 +267,11 @@ Bulk driver updates allow the user to approve, pause, or decline multiple driver
 #### How to use bulk driver updates
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows 10 and later updates**> **Driver updates**, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
-2. In the driver Updates page, select **Bulk actions**.  
+2. In the Driver Updates page, select **Bulk actions**.  
 3. In the **Select action** tab, select one of the actions from the **Driver actions** drop-down list; *Approve*, *Pause* or *Decline* multiple drivers.
 4. If you select an action that needs further information, for example, if you select *Approve*, then you also need to select the start date using **Make available in Windows update**. Select **Next**.
 5. In the **Select drivers** tab, use **Select drivers to include** to see and select the available drivers. The **Select available drivers** fly-out appears.
-The displayed list includes drivers that are able to be approved. For example, drivers that have a status of *Paused* or *Needs Review*. This is because you can (re)approve drivers that are *Paused* or have status as *Needs Review*.  
-Drivers that are already approved are filtered out.
+The displayed list includes drivers that are able to be approved. For example, drivers that have a status of *Paused* or *Needs Review*. This is because you can (re)approve drivers that are *Paused* or have status as *Needs Review*. Drivers that are already approved are filtered out.
 6. In the **Select available drivers** fly-out you can also bulk select the drivers.
 
    > [!NOTE]
