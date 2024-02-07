@@ -150,6 +150,8 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 |contentauthassetscdn-prodeur.azureedge.net | Organizational messages |
 |contentauthrafcontentcdn-prod.azureedge.net | Organizational messages |
 |contentauthrafcontentcdn-prodeur.azureedge.net | Organizational messages |
+|config.edge.skype.com | Feature Deployment |
+|go.microsoft.com | Endpoint discovery |
 
 
 The following tables list the ports and services that the Intune client accesses:
