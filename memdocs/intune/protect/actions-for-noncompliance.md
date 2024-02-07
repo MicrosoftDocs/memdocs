@@ -210,7 +210,9 @@ Add variables to the message to create a personalized email with dynamic content
 
       
    >[!CAUTION]
-   > Be sure to only add Intune-supported HTML tags to the message body. Intune won't send messages that have invalid tags.  
+   > Be sure to only add Intune-supported HTML tags to the message body. Intune won't send messages that have unsupported tags or elements, including:
+   > - CSS
+   > - Any content between < and > characters not listed here as a supported tag or attribute. 
     
 
 5. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
