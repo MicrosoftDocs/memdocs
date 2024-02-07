@@ -64,7 +64,7 @@ The following list provides details about app protection status:
 - **Device model**: The Android device model.
 - **Android patch version**: The date of the last Android Security Patch received by the device.
 - **MDM device ID**: The MDM device ID is displayed if the device is enrolled with Microsoft Intune MDM.
-- **Platform version**: The operating system version.
+- **Platform version**: The operating system version. When Rapid Security Response version for iOS/iPadOS is applicable, a letter will appear after the software version number, as in this example: 16.4.1.a
 - **App Protection Status**: The app is considered protected if it is targeted with a MAM policy.
 - **iOS SDK version**: The current iOS MAM SDK version of the iOS app.
 - **Compliance State**: The app meets compliance if it is targeted with MAM policy.
