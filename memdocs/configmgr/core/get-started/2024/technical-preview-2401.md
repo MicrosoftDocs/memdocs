@@ -39,7 +39,7 @@ The following sections describe the new features to try out in this version:
 
 ## General known issues
 
-Upgrading from tp 2311 to 2401, will fail on prereq check if Resource access slider is already in Intune. This is a regression caused from previous tp, please move any other slider (Apps/ End point) to CM or Intune than choose to apply --> Ok.After this try upgrading the site to tp 2401 once done, you can revert back (Apps/ End point) to old settings.
+Upgrading from tp 2311 to 2401, will fail on prereq check if Resource access slider is already in Intune. This is a regression caused from previous tp, move any other slider (Apps/ End point) to CM or Intune then choose to apply --> Ok. After this try upgrading the site to tp 2401 once done, you can revert back (Apps/ End point) to old settings.
 
 
 <!--## Other Updates-->
