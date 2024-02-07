@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 02/06/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -31,7 +31,11 @@ ms.collection:
 
 # Use remote actions to manage devices using Microsoft Intune
 
-In Microsoft Intune, you can remotely run and execute commands on devices. For example:
+In Microsoft Intune, you can remotely run and execute commands on devices.
+
+:::image type="content" source="./media/device-management/remote-actions-steps.png" alt-text="Diagram that shows how remote actions and commands work in Microsoft Intune." lightbox="./media/device-management/remote-actions-steps.png":::
+
+For example:
 
 - If a device is lost or stolen, you can reset or wipe the device.
 - Your help desk can reset a password, lock the device, or collect diagnostic data.
@@ -52,7 +56,7 @@ This article shows you how to see the available remote actions, and lists some o
 
 ## Prerequisites
 
-- To run remote actions, at a minimum, sign into the Intune admin center with an account that has the **Help Desk Operator** role. For more information on the different roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To run remote actions, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Help Desk Operator** role. For more information on the different roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 - To receive the remote action, the device must be connected to the internet and powered on.
 
