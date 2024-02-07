@@ -201,7 +201,7 @@ Device query supports the following entities. To learn more about what propertie
 
 ## Known limitations
 
-- The result string of any query is limited to 148 K characters. If the result of your query is longer than 148 K characters, the result is truncated. An error message informs you about how many rows are truncated.  
+- The result string of any query is limited to 128kb characters. If the result of your query is longer than 128kb characters, the result is truncated. An error message informs you about how many rows are truncated.  
 
 - You can only send 15 queries a minute. If you run into a **query limit exceeded** error, wait for a minute and try again.  
 
@@ -231,6 +231,8 @@ Device query supports the following entities. To learn more about what propertie
 - If TPM 2.0 is present on the device, then activated and enabled is always returned as TRUE.
 
 - If a file is currently in use on the machine, then FileInfo queries returns an error.
+
+- If the end user has admin access to the device, they might be able to change client-based information that show up in the query results. For example, OS version and registry.
 
 ## Next Steps
 
