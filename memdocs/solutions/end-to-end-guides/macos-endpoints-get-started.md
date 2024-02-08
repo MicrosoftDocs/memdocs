@@ -34,9 +34,6 @@ ms.collection:
 
 # End-to-end guide to get started with macOS endpoints
 
-> [!IMPORTANT]
-> This article is in draft and still being written.
-
 Using Microsoft Intune, you can manage and secure macOS endpoints owned by your organization or school. When you or your organization manage the devices, you can deploy the apps your end users need, configure the device features you want, and use policies that help protect your devices & organization from threats.
 
 This article applies to:
