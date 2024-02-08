@@ -48,7 +48,7 @@ Install your organization's preferred mobile threat defense (MTD) app on your de
 * [Harmony Mobile Protect](https://apps.apple.com/app/sandblast-mobile-protect/id1006390797)
 * [SEP Mobile](https://apps.apple.com/app/sep-mobile/id695620821)
 * [Sophos Intercept X for Mobile](https://apps.apple.com/app/sophos-mobile-security/id1086924662)
-* [Wandera](https://apps.apple.com/app/wandera/id605469330)
+* [Wandera](https://apps.apple.com)  
 * [Zimperium MTD](https://apps.apple.com/app/zimperium-zips/id1030924459)  
 
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  

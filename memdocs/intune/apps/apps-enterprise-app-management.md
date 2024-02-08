@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/29/2024
+ms.date: 02/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,7 +35,7 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 The benefits of using Enterprise App Management are the following:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
-- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they are available in the catalog.
+- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog.
 
 When you add an Enterprise App Catalog app, Intune prefills the following installation details:
 
@@ -64,7 +64,7 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 ## Self-updating apps
 
-The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, and will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps will update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
+The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, and will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
 
 > [!IMPORTANT]
 > Self-updating apps may require that your tenant has network rules configured to allow an update from the app vendor.
@@ -129,6 +129,121 @@ No. Enterprise App Catalog apps are directly installed by the Intune management 
 ### How do I update my Enterprise App Catalog app?
 
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
+
+### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
+
+If the app content hasn't synced after several hours, delete the app and try again.
+
+## Apps available in the Enterprise App Catalog
+
+There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](../apps/apps-add-enterprise-app.md#add-a-windows-catalog-app-win32-to-intune).
+
+> [!NOTE]
+> Additional apps will be available on an on-going basis in the Enterprise App Catalog.
+
+The following list of Enterprise Apps is available within Intune:
+
+- 7-Zip
+- Amazon AWS Tools for Windows
+- Amazon Corretto 16
+- Amazon Kindle
+- Android Studio 2022
+- Android Studio 3
+- Android Studio 4
+- Araxis Merge
+- Artweaver Free
+- Atomi Systems ActivePresenter
+- Audacity
+- Beyond Compare
+- Blender
+- BlueJeans 2
+- Brady Workstation
+- Burp Suite Community Edition
+- Burp Suite Professional Edition
+- Calibre
+- Cisco Jabber 14
+- Cisco Webex Meetings
+- Cisco WebEx Recorder and Player
+- Cisco WebEx Recording Editor
+- Cisco Webex Teams
+- Citrix Receiver
+- Citrix Workspace app
+- Citrix Workspace app LTSR
+- CMake
+- Dell Command Update (Windows Universal Application)
+- Docker Desktop
+- draw.io Desktop
+- Duo Desktop
+- Eclipse Temurin JDK with Hotspot 11 (LTS)
+- Eclipse Temurin JDK with Hotspot 19
+- Eclipse Temurin JRE with Hotspot 11 (LTS)
+- Eclipse Temurin JRE with Hotspot 19
+- Egnyte Connect
+- Egnyte WebEdit
+- Evernote
+- Foxit PDF Editor 11
+- Foxit PDF Editor 12
+- Foxit PDF Reader
+- Frame App
+- Free Countdown Timer
+- Google Chrome for Business
+- Google Drive
+- Inkscape
+- JAM Software TreeSize Free
+- KeePass Password Safe (Classic Edition)
+- KeePassXC
+- Lansweeper
+- Lenovo Quick Clean
+- LogMeIn GoToMeeting IT Installer
+- Microsoft .NET Runtime 6.0
+- Microsoft Azure CLI
+- Microsoft Azure Storage Explorer
+- Microsoft Power BI Desktop
+- Microsoft PowerShell Core
+- Microsoft Skype for Desktop
+- Microsoft Surface Diagnostic Toolkit for Business
+- Microsoft Visual C++ 2008 Redistributable
+- Microsoft Visual C++ 2015-2022  Redistributable
+- Microsoft Visual Studio Code
+- Mozilla Firefox
+- Mozilla Thunderbird
+- Nessus Agent 10
+- Notepad++
+- NVIDIA GeForce Experience
+- OpenShot Video Editor
+- OpenVPN
+- Oracle Java Runtime Environment Version 8
+- Parallels Client 18
+- Piriform CCleaner
+- Poll Everywhere
+- Poly Lens Desktop App
+- Python 3.10
+- Python 3.11
+- QNAP Qsync
+- R for Windows
+- Rarlab WinRAR
+- Remote Help
+- Royal TS 5
+- Royal TS 6
+- Royal TS 7
+- ScreenToGif
+- Simon Tatham Putty
+- SyncBackFree
+- TeamSpeak client
+- TechSmith Snagit 2019
+- TechSmith Snagit 2020
+- TechSmith Snagit 2021
+- TechSmith Snagit 2023
+- TechSmith Snagit 2024
+- TightVNC
+- TortoiseSVN
+- TortoiseSVN ipv6
+- UltraViewer
+- voidtools Everything
+- voidtools Everything Lite
+- WinSCP
+- WireGuard
+- Zoom Client for Meetings
 
 ## Next steps
 

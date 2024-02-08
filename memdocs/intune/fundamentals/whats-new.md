@@ -199,7 +199,7 @@ With this support available, devices that are assigned this policy while managed
 The following protected apps are now available for Microsoft Intune:
 
 - PrinterOn Print by PrinterOn, Inc. (iOS/iPadOS)
-- Align for InTune by MFB Technologies, Inc. (iOS/iPadOS)
+- Align for Intune by MFB Technologies, Inc. (iOS/iPadOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
