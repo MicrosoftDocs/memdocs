@@ -130,6 +130,10 @@ No. Enterprise App Catalog apps are directly installed by the Intune management 
 
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
 
+### After several hours, what can I do if my app continues to show that it is not ready and that the requested content is still being prepared?
+
+If the app content hasn't synced after several hours, delete the app and try again.
+
 ## Next steps
 
 - [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md)
