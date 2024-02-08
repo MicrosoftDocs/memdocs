@@ -43,6 +43,8 @@ To use Device query in your tenant, you must have a license that includes Micros
 
 To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](enroll-intune.md).
 
+You cannot opt out of cloud notifications (WNS)
+
 For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.  
 
 To use Device query, devices must be Intune managed and corporate owned.
