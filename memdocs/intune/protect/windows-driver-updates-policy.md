@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/08/2023
+ms.date: 02/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -275,9 +275,6 @@ The displayed list includes drivers that are able to be approved. For example, d
 6. In the **Select available drivers** fly-out you can also bulk select the drivers.
 
    > [!NOTE]
-   > You may lose the selection if you apply filters or  search terms.
-
-   > [!NOTE]
    > You can only select up to 100 drivers at a time. If  you select more than a 100 and select **Save**, an error  message is displayed.  
 
 7. Select **Save** and then **Next**.
@@ -288,7 +285,7 @@ The displayed list includes drivers that are able to be approved. For example, d
 
 #### Benefits of bulk driver updates
 
-The bulk driver updates can help the user to manage the driver updates more efficiently and conveniently. For example, the user can approve all the drivers together before a service release and schedule them to start on that day.
+The bulk driver updates can help the user to manage the driver updates more efficiently and conveniently. For example, the user can approve all the drivers together before a regular monthly security release and schedule them to start on that day.
 
 ## Next steps
 
