@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: 
-ms.date: 02/06/2024
+ms.date: 02/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
@@ -188,7 +188,16 @@ macOS devices with user affinity can be targeted for profiles and apps using use
 
 ### Step 6 - Configure initial settings and single sign-on (SSO)
 
-✅ Optimize first run experience and reduce app sign-in prompts with SSO
+✅ Optimize first run experience
+
+Using Intune, you can optimize the first run experience using built-in setting within the ADE enrollment profile. Specifically, when you create the enrollment profile, you can:
+
+- Preconfigure end user information in Setup Assistant.
+- Use the **Await final configuration** feature. This feature prevents end users from accessing restricted content or changing settings until the Intune device configuration policies apply.
+
+For more information on this feature and ADE enrollment, go to [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../enrollment/device-enrollment-program-enroll-macos.md).
+
+✅ Reduce app sign-in prompts with SSO
 
 In Intune, you can configure settings that reduce the number of sign-in prompts end users receive when using apps, including Microsoft 365 apps. There are two parts to this configuration:
 
