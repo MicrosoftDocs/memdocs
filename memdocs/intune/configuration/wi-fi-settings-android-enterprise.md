@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2023
+ms.date: 02/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -117,7 +117,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Android 11 and newer**: New Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-      - **Android 14 and newer**: The total content length of all the Radius servers must be less than 256 characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+      - **Android 14 and newer**: Google does not alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
@@ -144,7 +144,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Android 11 and newer**: New Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-      - **Android 14 and newer**: The total content length of all the Radius servers must be less than 256 characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+      - **Android 14 and newer**: Google does not alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
@@ -172,7 +172,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Android 11 and newer**: New Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-      - **Android 14 and newer**: The total content length of all the Radius servers must be less than 256 characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+      - **Android 14 and newer**: Google does not alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
