@@ -35,7 +35,7 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 The benefits of using Enterprise App Management are the following:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
-- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they are available in the catalog.
+- **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog.
 
 When you add an Enterprise App Catalog app, Intune prefills the following installation details:
 
@@ -64,7 +64,7 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 ## Self-updating apps
 
-The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, and will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps will update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
+The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, and will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
 
 > [!IMPORTANT]
 > Self-updating apps may require that your tenant has network rules configured to allow an update from the app vendor.
@@ -130,18 +130,18 @@ No. Enterprise App Catalog apps are directly installed by the Intune management 
 
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
 
-### After several hours, what can I do if my app continues to show that it is not ready and that the requested content is still being prepared?
+### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
 
 If the app content hasn't synced after several hours, delete the app and try again.
 
 ## Apps available in the Enterprise App Catalog
 
-There are a variety of applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](../apps/apps-add-enterprise-app.md#add-a-windows-catalog-app-win32-to-intune).
+There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](../apps/apps-add-enterprise-app.md#add-a-windows-catalog-app-win32-to-intune).
 
 > [!NOTE]
 > Additional apps will be available on an on-going basis in the Enterprise App Catalog.
 
-The following list of Enterprise Apps are available within Intune:
+The following list of Enterprise Apps is available within Intune:
 
 - 7-Zip
 - Amazon AWS Tools for Windows
