@@ -1,0 +1,299 @@
+---
+title: Toolkit reference - Microsoft Deployment Toolkit (MDT) Support Files
+titleSuffix: Microsoft Deployment Toolkit
+description: Reference details for Microsoft Deployment Toolkit (MDT) Support Files
+ms.date: 09/09/2016
+ms.subservice: mdt
+ms.service: configuration-manager
+ms.topic: article
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.localizationpriority: low
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz
+---
+
+#  <a name="SupportFiles"></a> Support Files
+ The utilities and scripts used in LTI and ZTI deployments reference external configuration files to determine the process steps and configuration settings used during the deployment process.
+
+ The following information is provided for each utility:
+
+-   **Name**. Specifies the name of the file
+
+-   **Description**. Provides a description of the purpose of the file
+
+-   **Location**. Indicates the folder where the file can be found; in the information for the location, the following variables are used:
+
+    -   **program_files**. This variable points to the location of the Program Files folder on the computer where MDT is installed.
+
+    -   **distribution**. This variable points to the location of the Distribution folder for the deployment share.
+
+    -   **platform**. This variable is a placeholder for the operating system platform (x86 or x64).
+
+##  <a name="ApplicationGroups.xml"></a> ApplicationGroups.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="Applications.xml"></a> Applications.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="BootStrap.ini"></a> BootStrap.ini
+ The configuration file used when the target computer is not able to connect to the appropriate deployment share. This situation occurs in the New Computer and the Replace Computer scenarios.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="CustomSettings.ini"></a> CustomSettings.ini
+ The primary configuration file for the MDT processing rules used in all scenarios.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="Deploy.xml"></a> Deploy.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*program_files*\Microsoft Deployment Toolkit\Control|
+
+##  <a name="DriverGroups.xml"></a> DriverGroups.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="Drivers.xml"></a> Drivers.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|Description|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="LinkedDeploymentShares.xml"></a> LinkedDeploymentShares.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="ListOfLanguages.xml"></a> ListOfLanguages.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="MediaGroups.xml"></a> MediaGroups.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="Medias.xml"></a> Medias.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="OperatingSystemGroups.xml"></a> OperatingSystemGroups.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="OperatingSystems.xml"></a> OperatingSystems.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="PackageGroups.xml"></a> PackageGroups.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="Packages.xml"></a> Packages.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="SelectionProfileGroups.xml"></a> SelectionProfileGroups.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="SelectionProfiles.xml"></a> SelectionProfiles.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="ServerManager.xml"></a> ServerManager.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*program_files*\Microsoft Deployment Toolkit\Bin|
+
+##  <a name="Settings.xml"></a> Settings.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="TaskSequenceGroups.xml"></a> TaskSequenceGroups.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="TaskSequences.xml"></a> TaskSequences.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control|
+
+##  <a name="TS.xml"></a> TS.xml
+
+> [!NOTE]
+>  This XML file is managed by MDT and should not require modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Control\\*task_sequence_id*|
+
+> [!NOTE]
+>  *Task_sequence_id* is a placeholder for the task sequence ID that was assigned to each task sequence when it was created in the Task Sequences node in the Deployment Workbench.
+
+##  <a name="Wimscript.ini"></a> Wimscript.ini
+ This .ini file is an ImageX configuration file that contains the list of folders and files that will be excluded from an image. It is referenced by ImageX during the LTI Capture Phase.
+
+ For assistance with customizing this file, see the section, "Create an ImageX Configuration File," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Tools\\*platform*|
+
+##  <a name="ZTIBIOSCheck.xml"></a> ZTIBIOSCheck.xml
+ This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](#ZTIBIOSCheck.wsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="ZTIConfigure.xml"></a> ZTIConfigure.xml
+ This XML file is used by the [ZTIConfigure.wsf](#ZTIConfigure.wsf) script to translate property values (specified earlier in the deployment process) to configure settings in the Unattend.xml file. This file is already customized to make the appropriate translations and should not require further modification.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="ZTIGather.xml"></a> ZTIGather.xml
+
+> [!NOTE]
+>  This XML file is preconfigured and should not require modification. Define custom properties in the CustomSettings.ini file or the MDT DB.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="ZTIUserState_config.xml"></a> ZTIUserState_config.xml
+ This XML file is used by the [ZTIUserState.wsf](#ZTIUserState.wsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](#USMTConfigFile) property. See the [Config.xml File](/previous-versions/windows/it-pro/windows-7/dd560760(v=ws.10)) topic in the USMT documentation for more information on syntax and use.
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
+
+##  <a name="ZTITatoo.mof"></a> ZTITatoo.mof
+ This .mof file, when imported into the WMI repository of the target computer using Mofcomp.exe, creates the **Microsoft_BDD_Info** WMI class. This class contains deployment-related information, such as:
+
+-   DeploymentMethod
+
+-   DeploymentType
+
+-   DeploymentTimestamp
+
+-   BuildID
+
+-   BuildName
+
+-   BuildVersion
+
+-   OSDPackageID
+
+-   OSDProgramName
+
+-   OSDAdvertisementID
+
+-   TaskSequenceID
+
+-   TaskSequenceName
+
+-   TaskSequenceVersion
+
+|**Value**|**Description**|
+|-|-|
+|**Location**|*distribution*\Scripts|
