@@ -158,7 +158,7 @@ Windows 365 now supports encrypting Cloud PCs by setting up Microsoft Purview Cu
 
 #### Windows 365 Boot is now available for Windows 365 Government<!--46030732-->
 
-Windows 365 Boot is now available for Windows 365 Government. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md).
+Windows 365 Boot is now available for US Government Community Cloud (GCC) customers using Windows 365 Government. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
