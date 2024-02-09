@@ -305,6 +305,9 @@ The following procedures can help you configure the Network Device Enrollment Se
 
 For more information about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
 
+  > [!TIP]
+  > NDES cannot be installed on a domain controller.
+
 ### Install the NDES service
 
 1. On the server that will host your NDES service, sign in as an **Enterprise Administrator**, and then use the [Add Roles and Features Wizard](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) to install NDES:
