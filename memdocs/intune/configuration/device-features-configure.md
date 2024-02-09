@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 02/05/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: beflamm
+ms.reviewer: beflamm, arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -177,60 +177,59 @@ Applies to:
 
 - macOS 10.7 and newer
 
-## Single sign-on
+## Single sign-on (SSO)
 
-Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
+Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPadOS and macOS devices. Specifically:
 
-**The single sign-on profile is based on Kerberos**. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. The Intune settings define Kerberos account information when accessing servers or specific apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
+- **Platform SSO** (recommended)
 
-To use single sign-on, be sure you have:
+  This feature allows users to sign into their macOS devices using their Microsoft Entra ID, instead of a local account. In Intune, you create a settings catalog policy that platform SSO settings.
 
-- An app that's coded to look for the user credential store in single sign-on on the device.
-- Intune configured for iOS/iPadOS device single sign-on.
+  **Platform SSO** requires that you also use an **SSO app extension**. Platform SSO handles the initial device sign-in, and the SSO app extension handles the sign-in for apps and websites.
 
-For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
+  For more information on platform SSO, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
-Applies to:
+  Applies to:
 
-- iOS 7.0 and newer
-- iPadOS 13.0 and newer
+  - macOS 13.0 and newer
 
-## Single sign-on app extension
+- **SSO app extension** (recommended)
 
-These settings configure an app extension that enables single sign-on (SSO) for your iOS, iPadOS, and macOS devices. Most Line of Business (LOB) apps and organization websites require some level of secure user authentication. In many cases, authentication requires users to enter the same credentials repeatedly. SSO gives users access to apps and websites after entering their credentials once. SSO also provides a better authentication experience for users, and reduces the number of repeated prompts for credentials.
+  This feature allows iOS/iPadOS and macOS users to sign into apps and websites using their Microsoft Entra ID. You use Microsoft Entra ID to enable the Microsoft Enterprise SSO plug-in in your tenant, and then create an Intune device configuration policy to configure the SSO app extension settings.
 
-In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
+  In Intune, you use these settings to configure an SSO app extension created by your organization, by your identity provider, by Microsoft, or by Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth, and SAML2. You can choose between the Microsoft Entra SSO extension ([Microsoft Enterprise SSO plug-in](/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+  On macOS devices, you can use **SSO app extension** by itself. But if you also want to use **platform SSO**, then you must use **platform SSO** and the **SSO app extension** features together.
 
-- The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
+  For more information, go to:
 
-  The Microsoft Entra macOS SSO app extension should work with any third party or partner MDM. The extension must be deployed as a kerberos SSO extension, or deployed as a custom configuration profile with all the required properties configured.
+  - [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md)
+  - [iOS/iPadOS SSO app extension settings](ios-device-features-settings.md#single-sign-on-app-extension)
+  - [macOS SSO app extension settings](macos-device-features-settings.md#single-sign-on-app-extension)
 
-For a list of the settings you can configure in Intune, go to [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
+  For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web).
 
-For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web). 
+  Applies to:
 
-> [!NOTE]
-> The **Single sign-on app extension** feature is different than the **Single sign-on** feature:
->
-> - The **Single sign-on app extension** settings apply to iPadOS 13.0 (and newer), iOS 13.0 (and newer), and macOS 10.15 (and newer). **Single sign-on** settings apply to iPadOS 13.0 (and newer) and iOS 7.0 and newer.
->
-> - The **Single sign-on app extension** settings define extensions for use by identity providers or organizations to deliver a seamless enterprise sign-on experience. The **Single sign-on** settings define Kerberos account information for when users access servers or apps.
->
-> - The **Single sign-on app extension** uses the Apple operating system to authenticate. So, it might provide an end-user experience that's better than **Single sign-on**.
->
-> - From a development perspective, with **Single sign-on app extension**, you can use any type of redirect SSO or credential SSO authentication. With **Single sign-on**, you can only use Kerberos SSO authentication.
->
-> - The Kerberos **Single sign-on app extension** was developed by Apple and is built into the iOS/iPadOS 13.0+ and macOS 10.15+ platforms. The built-in Kerberos extension can be used to log users into native apps and websites that support Kerberos authentication. **Single sign-on** is not an Apple implementation of Kerberos.
->
-> - The built-in Kerberos **Single sign-on app extension** handles Kerberos challenges for web pages and apps just like **Single sign-on**. However, the built-in Kerberos extension supports password changes and behaves better in enterprise networks. When deciding between the Kerberos **Single sign-on app extension** and **Single sign-on**, we recommend using the extension due to improved performance and capabilities.
+  - iOS 13.0 and newer
+  - iPadOS 13.0 and newer
+  - macOS 10.15 and newer
 
-Applies to:
+- **Single sign-on**
 
-- iOS 13.0 and newer
-- iPadOS 13.0 and newer
-- macOS 10.15 and newer
+  Restricted to only Kerberos authentication. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. In an Intune policy, you enter the Kerberos account information that accesses servers or specific apps, like the Microsoft Entra username attribute.
+
+  To use single sign-on, your app must be coded to look for the user credential store in single sign-on on the device.
+
+  > [!NOTE]
+  > Instead of these SSO settings, Apple recommends you use the SSO app extension.  
+
+  For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
+
+  Applies to:
+
+  - iOS 7.0 and newer
+  - iPadOS 13.0 and newer
 
 ## Wallpaper
 
