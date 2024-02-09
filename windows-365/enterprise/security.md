@@ -28,6 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - M365-identity-device-management
 - tier2
+- essentials-security
 ---
 
 # Windows 365 security
