@@ -28,6 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- essentials-manage
 ---
 
 # Tutorial: Walkthrough Microsoft Intune admin center
