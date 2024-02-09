@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 02/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -75,27 +75,27 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 To help you build more accurate file detection rules, you can use the **Get-FileAttributes** PowerShell cmdlet. Available from the EpmTools PowerShell module, *Get-FileAttributes* can retrieve file attributes and the certificate chain material for a file and you can use the output to populate elevation rule properties for a particular application.
 
-Example module import steps and output from Get-FileAttributes run against powershell.exe on Windows version 10.0.19044.2728:
+Example module import steps and output from Get-FileAttributes run against notepad.exe on Windows 11 version 10.0.22621.2506:
 
 ```powershell
 PS C:\Windows\system32> Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
-PS C:\Windows\system32> Get-FileAttributes -FilePath C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -CertOutputPath C:\CertsForPoSH\
+PS C:\Windows\system32> Get-FileAttributes -FilePath C:\Windows\System32\notepad.exe -CertOutputPath C:\CertsForNotepad\
 
 
-FileName      : powershell.exe
-FilePath      : C:\Windows\System32\WindowsPowerShell\v1.0
-FileHash      : 9F914D42706FE215501044ACD85A32D58AAEF1419D404FDDFA5D3B48F66CCD9F
+FileName      : notepad.exe
+FilePath      : C:\Windows\System32
+FileHash      : 6188586345A1B370A60E43F41228EBA5746D0D17DAB8E9BE05D53FDD7ABE7061
 HashAlgorithm : Sha256
 ProductName   : Microsoft® Windows® Operating System
-InternalName  : POWERSHELL
-Version       : 10.0.19041.546
-Description   : Windows PowerShell
+InternalName  : Notepad
+Version       : 10.0.22621.2506
+Description   : Notepad
 CompanyName   : Microsoft Corporation
 
 ```
 
 > [!NOTE]
-> The certificate chain for Powershell.exe is output to the C:\CertsForPoSH directory listed in the command above.
+> The certificate chain for notepad.exe is output to the C:\CertsForNotepad directory listed in the command above.
 
 For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
