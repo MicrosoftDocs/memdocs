@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2024
+ms.date: 02/08/2024
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -69,6 +69,7 @@ The following features are available and supported in GCC High and DoD clouds:
 | Standard MDM features | ✔️ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✔️ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the government environment can be used. When you sign in to a GCC-H tenant, you'll see the connectors enabled for those specific vendors. |
 | Android (AOSP) | ✔️ <br/><br/> For more information on the supported Android open source project (AOSP) devices, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). |
+| Linux | ✔️ <br/><br/> **Generally available (GA) in February 2024**. For more information on Linux devices management, go to [Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md). |
 
 ### In the planning phase
 
@@ -78,7 +79,6 @@ The following features are currently not available and aren't supported in GCC H
 | --- | --- |
 | Expedited updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
 | Feature updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
-| Linux devices | :::image type="icon" source="../media/icons/i-article.png"::: **GA'd in February 2024**. For more information on Linux devices management, go to [Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md). |
 | Log Analytics |  :::image type="icon" source="../media/icons/i-article.png"::: **ETA is Q1 2024**. For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
 | Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | :::image type="icon" source="../media/icons/i-article.png"::: For more information on these plans, go to [Use Intune Suite add-on capabilities](intune-add-ons.md). |
 | Organizational Messages | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Organizational messages in Microsoft Intune](../remote-actions/organizational-messages-overview.md). |
