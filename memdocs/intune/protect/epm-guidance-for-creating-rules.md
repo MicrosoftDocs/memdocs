@@ -75,27 +75,27 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 To help you build more accurate file detection rules, you can use the **Get-FileAttributes** PowerShell cmdlet. Available from the EpmTools PowerShell module, *Get-FileAttributes* can retrieve file attributes and the certificate chain material for a file and you can use the output to populate elevation rule properties for a particular application.
 
-Example module import steps and output from Get-FileAttributes run against notepad.exe on Windows 11 version 10.0.22621.2506:
+Example module import steps and output from Get-FileAttributes run against msinfo32.exe on Windows 11 version 10.0.22621.2506:
 
 ```powershell
 PS C:\Windows\system32> Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
-PS C:\Windows\system32> Get-FileAttributes -FilePath C:\Windows\System32\notepad.exe -CertOutputPath C:\CertsForNotepad\
+PS C:\Windows\system32> Get-FileAttributes -FilePath C:\Windows\System32\msinfo32.exe -CertOutputPath C:\CertsForMsInfo\
 
 
-FileName      : notepad.exe
+FileName      : msinfo32.exe
 FilePath      : C:\Windows\System32
-FileHash      : 6188586345A1B370A60E43F41228EBA5746D0D17DAB8E9BE05D53FDD7ABE7061
+FileHash      : 18C8442887C36F7DB61E77013AAA5A1A6CDAF73D4648B2210F2D51D8B405191D
 HashAlgorithm : Sha256
 ProductName   : Microsoft® Windows® Operating System
-InternalName  : Notepad
+InternalName  : msinfo.dll
 Version       : 10.0.22621.2506
-Description   : Notepad
+Description   : System Information
 CompanyName   : Microsoft Corporation
 
 ```
 
 > [!NOTE]
-> The certificate chain for notepad.exe is output to the C:\CertsForNotepad directory listed in the command above.
+> The certificate chain for msinfo32.exe is output to the C:\CertsForMsInfo directory listed in the command above.
 
 For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
