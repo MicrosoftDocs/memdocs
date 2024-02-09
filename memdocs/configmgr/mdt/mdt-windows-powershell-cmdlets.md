@@ -1755,7 +1755,7 @@ Set-MDTMonitorData -ComputerObject $MonitorObject Setting @{"OSDComputerName"="W
 ```
 
 #### Description
- This example removes any monitoring data item where the name of the computer is *WDG-REF-01.* The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee177028(v=technet.10)). The [OSDComputerName](#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](#SkipWizard) property is recorded as having a value of **YES**.
+ This example removes any monitoring data item where the name of the computer is *WDG-REF-01.* The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee177028(v=technet.10)). The [OSDComputerName](properties.md#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](properties.md#SkipWizard) property is recorded as having a value of **YES**.
 
 ### Example 2
 
@@ -1764,7 +1764,7 @@ Set-MDTMonitorData -MACAddress "00:11:22:33:44:55" MonitorObject Setting @{"OSDC
 ```
 
 #### Description
- This example creates or updates a monitoring data item with a **MACAddress** that has a value of **00:11:22:33:44:55**. The [OSDComputerName](#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](#SkipWizard) property is recorded as having a value of **YES**.
+ This example creates or updates a monitoring data item with a **MACAddress** that has a value of **00:11:22:33:44:55**. The [OSDComputerName](properties.md#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](properties.md#SkipWizard) property is recorded as having a value of **YES**.
 
 ##  <a name="Test-MDTDeploymentShare"></a> Test-MDTDeploymentShare
  Although this cmdlet is returned using the **Get-Command** cmdlet as being in the Microsoft.BDD.PSSnapIn snap-in, it is not implemented.
