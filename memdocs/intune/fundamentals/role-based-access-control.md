@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- essentials-security
 ---
 
 # Role-based access control (RBAC) with Microsoft Intune
