@@ -218,6 +218,8 @@ Device query supports the following entities. To learn more about what propertie
 
 - The WindowsRegistry entity fails to return the RegistryKey for root.
 
+- The WindowsRegistry entity fails to return 64-bit shared registry keys.
+
 - The WindowsRegistry entity fails to return binary ValueData.  
 
 - If you’re querying devices that are running on Windows 10, they must be on a minimum quality version.
