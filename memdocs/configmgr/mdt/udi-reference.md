@@ -1459,3 +1459,14 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 |**Example**|
 |-|
 |`<add key="welcomeText" value="Congratulations, Windows 7 has been successfully deployed to your computer."/>`|
+
+## Related articles
+
+- [Task Sequence Steps](task-sequence-steps.md).
+- [Properties](properties.md).
+- [Scripts](scripts.md).
+- [Support Files](support-files.md).
+- [Utilities](utilities.md).
+- [MDT Windows PowerShell Cmdlets](mdt-windows-powershell-cmdlets.md).
+- [Tables and Views in the MDT DB](tables-views-mdt-db.md).
+- [Windows 7 Feature Dependency Reference](windows-7-feature-dependency.md).

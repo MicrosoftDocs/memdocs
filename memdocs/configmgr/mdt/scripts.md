@@ -2503,3 +2503,14 @@ The scripts used in LTI and ZTI deployments reference properties that determine 
 |**Name**|**Read**|**Write**|
 |-|-|-|
 |**WipeDisk**|-||
+
+## Related articles
+
+- [Task Sequence Steps](task-sequence-steps.md).
+- [Properties](properties.md).
+- [Support Files](support-files.md).
+- [Utilities](utilities.md).
+- [MDT Windows PowerShell Cmdlets](mdt-windows-powershell-cmdlets.md).
+- [Tables and Views in the MDT DB](tables-views-mdt-db.md).
+- [Windows 7 Feature Dependency Reference](windows-7-feature-dependency.md).
+- [UDI Reference](udi-reference.md).

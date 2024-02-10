@@ -2199,3 +2199,14 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
 #### Description
  This example replicates content from the deployment share to the folder containing the deployment media at the Windows PowerShell path DS001:\Media \MEDIA001 folder.
+
+## Related articles
+
+- [Task Sequence Steps](task-sequence-steps.md).
+- [Properties](properties.md).
+- [Scripts](scripts.md).
+- [Support Files](support-files.md).
+- [Utilities](utilities.md).
+- [Tables and Views in the MDT DB](tables-views-mdt-db.md).
+- [Windows 7 Feature Dependency Reference](windows-7-feature-dependency.md).
+- [UDI Reference](udi-reference.md).

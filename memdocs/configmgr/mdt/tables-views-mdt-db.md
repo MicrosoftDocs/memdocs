@@ -65,3 +65,14 @@ However, queries about the information in the tables are done using views. Views
 |RoleApplications|Used to find all applications to be deployed to the target computers with a given role. The view is a join of the RoleIdentity and Settings_Applications tables.|
 |RolePackages|Used to find all packages to be deployed to the target computers with a given role. The view is a join of the RoleIdentity and Settings_Packages tables.|
 |RoleSettings|Used to find all property settings to be configured for the target computers with a given role. The view is a join of the RoleIdentity and Settings tables.|
+
+## Related articles
+
+- [Task Sequence Steps](task-sequence-steps.md).
+- [Properties](properties.md).
+- [Scripts](scripts.md).
+- [Support Files](support-files.md).
+- [Utilities](utilities.md).
+- [MDT Windows PowerShell Cmdlets](mdt-windows-powershell-cmdlets.md).
+- [Windows 7 Feature Dependency Reference](windows-7-feature-dependency.md).
+- [UDI Reference](udi-reference.md).

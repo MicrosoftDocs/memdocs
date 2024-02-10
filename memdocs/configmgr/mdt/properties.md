@@ -51,16 +51,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### \_SMSTSOrgName
  Customizes the Task Sequencer engine's display banner
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini | ✅ |
-| CustomSettings.ini | ✅ |
-| MDT DB | ✅ |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) | ✅ |
-| ZTI (Configuration Manager) | ✅ |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -73,16 +68,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ADDSLogPath
  Fully qualified, non-UNC directory on a hard disk on the local computer to host the AD DS log files. If the directory exists it must be empty. If it does not exist, it will be created.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini | ❌ |
-| CustomSettings.ini | ✅ |
-| MDT DB | ✅ |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) | ✅ |
-| ZTI (Configuration Manager) | ✅ |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -112,11 +102,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ADDSUserDomain
  This is the domain the account specified by **ADDSUserName** should be taken from. If the operation is to create a new forest or to become a member server from a backup domain controller upgrade there is no default. If the operation is to create a new tree, the default is the DNS name of the forest the computer is currently joined to. If the operation is to create a new child domain or a replica then the default is the DNS name of the domain the computer is joined to. If the operation is to demote the computer and the computer is a domain controller in a child domain, the default is the DNS name of the parent domains. If the operation is to demote the computer, and the computer is a domain controller of a tree root domain, the default is the DNS name of the forest.
 
-| Component | Configured By | - | Scenario | Property Is Applicable |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
 | - | - | - | - | - |
-| BootStrap.ini |  | - | LTI (Stand-alone MDT) |  |
-| CustomSettings.ini |  | - |  |  |
-| MDT DB |  | - | ZTI (Configuration Manager) |  |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -129,16 +119,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ADDSUserName
  Account credentials that will be used when promoting the server to a domain controller.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -151,16 +136,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### Administrators
  A list of user accounts and domain groups that will be added to the local Administrator group on the target computer. The **Administrators** property is a list of text values that can be any non-blank value. The **Administrators** property has a numeric suffix (for example, **Administrators001** or **Administrators002**).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -173,16 +153,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### AdminPassword
  Defines the password that will be assigned to the local Administrator user account on the target computer. If not specified, the pre-deployment password of the Administrator user account will be used.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -195,16 +170,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### Applications
  A list of application GUIDs that should be installed on the target computer. These applications are specified on the Applications node in Deployment Workbench. These GUIDs are stored in the Applications.xml file. The **Applications** property is a list of text values that can be any non-blank value. The **Applications** property has a numeric suffix (for example, **Applications001** or **Applications002**).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -221,16 +191,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is only applicable to the **Install Application** task sequence step type and when **Install multiple applications** is selected.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -247,16 +212,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > The default value for this property always performs the **Apply Local GPO Package** task sequence step. You must explicitly provide a value of "NO" to override this behavior..
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -276,16 +236,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is dynamically set by MDT scripts and is not configured in CustomSettings.ini. Treat this property as read only. However, you can use this property within CustomSettings.ini, as shown in the following examples, to aid in defining the configuration of the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -299,16 +254,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### AreaCode
  The area code to be configured for the operating system on the target computer. This property allows only numeric characters. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -325,16 +275,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -355,16 +300,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property value must be specified in uppercase so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -378,16 +318,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BackupDir
  The folder in which backups of the target computer are stored. This folder exists beneath the UNC path specified in the **BackupShare** property. If the folder does not already exist, it will be created automatically.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -400,16 +335,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BackupDrive
  The drive to include in the backup of the target computer. This property defaults to the drive that contains disk 0 partition 1. It can be also set to **ALL**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -423,16 +353,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BackupFile
  Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](scripts.md#ztibackupwsf).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -459,16 +384,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 
 - **Creator Owner**. Allow the Full Control permission.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -481,16 +401,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BDEAllowAlphaNumericPin
  This property configures whether BitLocker PINs contain alphanumeric values.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -504,16 +419,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BDEDriveLetter
  The drive letter for the partition that is not encrypted by BitLocker, also known as the *System Volume*. SYSVOL is the directory that contains the hardware-specific files needed to load Windows computers after the BIOS has booted the platform.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -526,16 +436,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BDEDriveSize
  The size of the BitLocker system partition. The value is specified in megabytes. In the example, the size of the BitLocker partition to create is almost 2 GB (2,000 MB).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -548,24 +453,19 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BDEInstall
  The type of BitLocker installation to be performed. Protect the target computer using one of the following methods:
 
--   A TPM microcontroller
+- A TPM microcontroller
 
--   A TPM and an external startup key (using a key that is typically stored on a USB flash drive [UFD])
+- A TPM and an external startup key (using a key that is typically stored on a USB flash drive [UFD])
 
--   A TPM and PIN
+- A TPM and PIN
 
--   An external startup key
+- An external startup key
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -585,16 +485,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -612,16 +507,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > If this property is configured using the Deployment Wizard, the property must be the drive letter of a removable disk. If the **SkipBitLocker** property is set to **TRUE** so that the **Specify the BitLocker configuration** wizard page is skipped, this property can be set to a UNC path in CustomSettings.ini or in the MDT database (MDT DB).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -634,16 +524,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BDEPin
  The PIN to be assigned to the target computer when configuring BitLocker and the **BDEInstall** or **OSDBitLockerMode** properties are set to **TPMPin**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -660,16 +545,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > The recovery key is stored in the location specified in the **BDEKeyLocation** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -687,16 +567,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -714,16 +589,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hertz (Hz) vertical refresh rate.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -736,16 +606,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### BuildID
  Identifies the operating system task sequence to be deployed to the target computer. You create the task sequence ID on the Task Sequences node in the Deployment Workbench. The **BuildID** property allows alphanumeric characters, hyphens (-), and underscores (\_). The **BuildID** property cannot be blank or contain spaces.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -764,16 +629,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -791,16 +651,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -815,16 +670,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ChildName
  Specifies whether to append the DNS label at the beginning of the name of an existing directory service domain when installing a child domain.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -841,16 +691,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -867,16 +712,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ComputerName
  This property has been deprecated. Use **OSDComputerName** instead.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -893,16 +733,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -919,16 +754,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -945,16 +775,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -968,16 +793,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### CountryCode
  The country code to be configured for the operating system on the target computer. This property allows only numeric characters. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -994,16 +814,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1017,16 +832,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### CustomDriverSelectionProfile
  Specifies the custom selection profile used during driver installation.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1039,16 +849,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### CustomPackageSelectionProfile
  Specifies the custom selection profile used during package installation.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1061,16 +866,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### CustomWizardSelectionProfile
  Specifies the custom selection profile used by the wizard for filtering the display of various items.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1083,16 +883,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### Database
  The property that specifies the database to be used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of Microsoft SQL Server&reg; on the computer is specified in the **Instance** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1105,16 +900,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### DatabasePath
  Specifies the fully qualified, non\-UNC path to a directory on a fixed disk of the target computer that contains the domain database.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1135,16 +925,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1165,16 +950,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 >
 > This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1199,16 +979,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or in the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1226,16 +1001,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1252,16 +1022,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1282,16 +1047,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1310,16 +1070,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1334,23 +1089,18 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DeployRoot
  Specifies the UNC or local path to the folder that is the root of the folder structure that MDT uses. This folder structure contains configuration files, scripts, and other folders and files that MDT uses. The value of this property is set based on the following MDT deployment technologies:
 
--   **LTI**. This property is the UNC path to the deployment share that the Deployment Workbench creates. Use this property to select a specific deployment share. The most common use of this property is in the BootStrap.ini file to identify a deployment share before the connection to the deployment share is established. All other deployment share folders are relative to this property (such as device drivers, language packs, or operating systems).
+- **LTI**. This property is the UNC path to the deployment share that the Deployment Workbench creates. Use this property to select a specific deployment share. The most common use of this property is in the BootStrap.ini file to identify a deployment share before the connection to the deployment share is established. All other deployment share folders are relative to this property (such as device drivers, language packs, or operating systems).
 
--   **ZTI**. This property is the local path to the folder to which the MDT files package is copied. The **Use Toolkit Package** task sequence step copies the MDT files package to a local folder on the target computer, and then automatically sets this property to the local folder.
+- **ZTI**. This property is the local path to the folder to which the MDT files package is copied. The **Use Toolkit Package** task sequence step copies the MDT files package to a local folder on the target computer, and then automatically sets this property to the local folder.
 
     > [!NOTE]
     >  For ZTI, this property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or in the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1363,16 +1113,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DestinationDisk
  Disk number that the image will be deployed to.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1385,16 +1130,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DestinationLogicalDrive
  The logical drive to which the image will be deployed.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1411,16 +1151,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DestinationPartition
  Disk partition to which the image will be deployed.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1433,16 +1168,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DHCPScopes
  Specifies the number of DHCP scopes to configure.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1459,16 +1189,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1483,16 +1208,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1509,16 +1229,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1535,16 +1250,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1559,16 +1269,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1583,16 +1288,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1609,16 +1309,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1635,16 +1330,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1661,16 +1351,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1687,16 +1372,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1716,16 +1396,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1742,16 +1417,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1768,16 +1438,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1794,16 +1459,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1820,16 +1480,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1842,16 +1497,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DHCPServerOptionDNSDomainName
  Specifies the connection-specific DNS domain suffix of client computers.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1864,16 +1514,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DHCPServerOptionDNSServer
  Specifies a list of IP addresses to be used as DNS name servers that are available to the client.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1886,16 +1531,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DHCPServerOptionNBTNodeType
  Specifies the client node type for NetBT clients.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1911,16 +1551,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DHCPServerOptionPXEClient
  Specifies the IP address used for PXE client bootstrap code.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1933,16 +1568,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DHCPServerOptionRouter
  Specifies a list of IP addresses for routers on the client subnet. When more than one router is assigned, the client interprets and uses the addresses in the specified order. This option is normally used to assign a default gateway to DHCP clients on a subnet.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1955,16 +1585,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DHCPServerOptionWINSServer
  Specifies the IP addresses to be used for NBNSes on the network.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -1981,16 +1606,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2008,16 +1628,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2037,16 +1652,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2064,16 +1674,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2093,16 +1698,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2122,16 +1722,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2151,16 +1746,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2178,16 +1768,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2201,16 +1786,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DNSServerOptionNameCheckFlag
  Specifies which character standard is used when checking DNS names.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2226,16 +1806,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DNSZones
  Specifies the number of DNS zones to configure.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2252,16 +1827,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2280,16 +1850,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2306,16 +1871,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2332,16 +1892,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2358,16 +1913,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2385,16 +1935,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2415,16 +1960,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2443,16 +1983,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2472,16 +2007,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2498,16 +2028,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2524,16 +2049,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2546,16 +2066,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DomainLevel
  This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2568,16 +2083,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DomainNetBiosName
  Assigns a NetBIOS name to the new domain.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2604,16 +2114,11 @@ cscript.exe LiteTouch.vbs /debug:true
 </DomainOUs>
 ```
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2630,16 +2135,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2661,16 +2161,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2688,16 +2183,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For example, there are two sections for each of the computer manufacturers [Mfgr01] and [Mfgr02]. Two driver groups are defined for the manufacturer Mfgr01: Mfgr01 Video Drivers and Mfgr01 Network Drivers. For the manufacturer Mfgr02, one driver group is defined, Mfgr02 Drivers. One driver group, Shared Drivers, is applied to all computers found in the [Default] section.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2710,16 +2200,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DriverInjectionMode
  This property is used to control the device drivers that are injected by the [Inject Drivers](task-sequence-steps.md#inject-drivers) task sequence step.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2733,16 +2218,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DriverPaths
  A list of UNC paths to shared folders where additional device drivers are located. These device drivers are installed with the target operating system on the target computer. The MDT scripts copy the contents of these folders to the C:\Drivers folder on the target computer. The **DriverPaths** property is a list of text values that can be any non-blank value. The **DriverPaths** property has a numeric suffix (for example, **DriverPaths001** or **DriverPaths002**).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2755,16 +2235,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### DriverSelectionProfile
  Profile name used during driver installation.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2777,16 +2252,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### EventService
  The **EventService** property specifies the URL where the MDT monitoring service is running. By default, the service uses TCP port 9800 to communicate. The MDT monitoring service collects deployment information on the deployment process that can be viewed in the Deployment Workbench and using the [Get-MDTMonitorData](mdt-windows-powershell-cmdlets.md#get-mdtmonitordata) cmdlet.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2801,16 +2271,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  By default, the shared folder is created in C:\Events.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2831,16 +2296,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2859,16 +2319,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
   Besides controlling the method used to install these operating systems, this property affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. When the value of this property is set to **NEVER**, only operating system task sequences that match the processor architecture of the boot image are displayed. If the value of this property is set to any other value or is blank, all task sequences that can use the imagex.exe installation method are shown, regardless of the processor architecture.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2883,16 +2338,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### ForestLevel
  This entry specifies the forest functional level when a new domain is created in a new forest.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2909,16 +2359,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This value is different from the user credentials created after the operating system is deployed. The **FullName** property is provided as information to systems administrators about the user running applications on the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2938,16 +2383,11 @@ cscript.exe LiteTouch.vbs /debug:true
 |Windows 7 with SP1|Win7SP1-MDTGPOPack|
 |Windows Server 2008 R2|WS2008R2SP1-MDTGPOPack|
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2960,16 +2400,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### Groups
  The list of local groups on the target computer whose membership will be captured. This group membership is captured during the State Capture Phase and is restored during the State Restore Phase. (The default groups are Administrators and Power Users.) The **Groups** property is a list of text values that can be any non-blank value. The **Groups** property has a numeric suffix (for example, **Groups001** or **Groups002**).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -2986,16 +2421,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property can be used with the **DisableTaskMgr** property to help prevent users from interrupting the LTI task sequence. For more information, see the [DisableTaskMgr](#disabletaskmgr) property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3009,16 +2439,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### Home_Page
  The URL to be used as the Windows Internet Explorer&reg; home page after the target operating system is deployed.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3035,16 +2460,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This is the computer name of the target computer, not the NetBIOS computer name of the target computer. The NetBIOS computer name can be shorter than the computer name. Also, this property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3061,16 +2481,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3085,16 +2500,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  Exclude this setting in the Windows User State Migration Tool (USMT) when backing up and restoring user state information. Otherwise, the settings in the user state information will override the values specified in the *InputLocale* property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3111,16 +2521,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3133,16 +2538,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### Instance
  The instance of SQL Server used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 | **Value** | **Description** |
 |-----------|-----------------|
@@ -3159,16 +2559,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3189,16 +2584,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3214,17 +2604,17 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
 
--   **IsVM**
+- **IsVM**
 
--   **SupportsHyperVRole**
+- **SupportsHyperVRole**
 
--   **SupportsNX**
+- **SupportsNX**
 
--   **SupportsVT**
+- **SupportsVT**
 
--   **Supports64Bit**
+- **Supports64Bit**
 
--   **VMPlatform**
+- **VMPlatform**
 
 > [!NOTE]
 >
@@ -3234,16 +2624,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The IsVM property should be used to determine whether the target computer is a virtual or physical machine.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3265,16 +2650,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3288,16 +2668,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### IsServer
  Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23** or **28**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3315,16 +2690,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3342,16 +2712,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3369,16 +2734,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3394,32 +2754,27 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
 
--   **IsHypervisorRunning**
+- **IsHypervisorRunning**
 
--   **SupportsHyperVRole**
+- **SupportsHyperVRole**
 
--   **SupportsNX**
+- **SupportsNX**
 
--   **SupportsVT**
+- **SupportsVT**
 
--   **Supports64Bit**
+- **Supports64Bit**
 
--   **VMPlatform**
+- **VMPlatform**
 
 > [!NOTE]
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3433,16 +2788,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### JoinDomain
  The domain that the target computer joins after the target operating system is deployed. This is the domain where the computer account for the target computer is created. The **JoinDomain** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinDomain** property cannot be blank or contain spaces.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3455,16 +2805,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### JoinWorkgroup
  The workgroup that the target computer joins after the target operating system is deployed. The **JoinWorkgroup** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinWorkgroup** property cannot be blank or contain spaces.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3483,16 +2828,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3513,16 +2853,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3539,16 +2874,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### LanguagePacks
  A list of the GUIDs for the language packs to be deployed on the target computer. Deployment Workbench specifies these language packs on the OS Packages node. These GUIDs are stored in the Packages.xml file. The **LanguagePacks** property has a numeric suffix (for example, **LanguagePacks001** or **LanguagePacks002**).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3567,16 +2897,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > Do not add any of the following command-line arguments when configuring this property: **/hardlink**, **/nocompress**, **/decrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3595,16 +2920,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  Then the scripts parse each section that corresponds to the locations returned in the query. For example, the value `[Springfield]`and the section `[Springfield-123 Oak Street-4th Floor]` in CustomSettings.ini can represent the corresponding locations. This is an example of how one computer can belong to two locations. The `[Springfield]`section is for all computers in a larger geographic area (an entire city), and the `[Springfield-123 Oak Street-4th Floor]` section is for all computers on the fourth floor at 123 Oak Street, in Springfield.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |          **Value**           |                                    **Description**                                     |
 |------------------------------|----------------------------------------------------------------------------------------|
@@ -3617,16 +2937,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### LongDistanceAccess
  The dialing digits to gain access to an outside line to dial long distance. The property can contain only numeric digits. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3639,16 +2954,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### MACAddress
  The media access control (MAC) layer address of the primary network adapter of the target computer. The **MACAddress** property is included on the **Priority** line so that property values specific to a target computer can be provided. Create a section for each MAC address for each of the target computers (such as `[00:0F:20:35:DE:AC]`or `[00:03:FF:FE:FF:FF]`) that contain target computer-specific settings.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3669,16 +2979,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > If a computer object already exists in AD DS, specifying **MachineObjectOU** will not cause the computer object to be moved to the specified OU.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3695,16 +3000,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3717,16 +3017,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### MandatoryApplications
  A list of application GUIDs that will be installed on the target computer. These applications are specified on the Applications node in the Deployment Workbench. The GUIDs are stored in the Applications.xml file. The **MandatoryApplications** property is a list of text values that can be any non\-blank value. The **MandatoryApplications** property has a numeric suffix \(for example, **MandatoryApplications001** or **MandatoryApplications002**\).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3743,16 +3038,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3769,16 +3059,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3791,16 +3076,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### NetLib
  The protocol to be used to communicate with the computer running SQL Server specified in the **SQLServer** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3814,16 +3094,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### NewDomain
  Indicates the type of a new domain: whether a new domain in a new forest, the root of a new tree in an existing forest, or a child of an existing domain.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3838,16 +3113,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### NewDomainDNSName
  Specifies the required name of a new tree in an existing domain or when Setup installs a new forest of domains.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3862,16 +3132,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For example, if **Order\=Sequence** is specified in the CustomSettings.ini file, then an **ORDER BY** sequence clause is added to the query. **Specifying Order\=Make**, **Model** adds an **ORDER BY Make, Model** clause to the query.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3884,16 +3149,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OrgName
  The name of the organization that owns the target computer. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3910,16 +3170,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3937,16 +3192,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3964,16 +3214,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -3992,16 +3237,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0Description** or **OSDAdapter1Description**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4018,16 +3258,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSDomain** or **OSDAdapter1DNSDomain**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4044,16 +3279,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSServerList** or **OSDAdapter1DNSServerList**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4070,16 +3300,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSSuffix** or **OSDAdapter1DNSSuffix**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4096,16 +3321,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDHCP** or **OSDAdapter1EnableDHCP**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4123,16 +3343,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDNSRegistration** or **OSDAdapter1EnableDNSRegistration**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4150,16 +3365,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableFullDNSRegistration** or **OSDAdapter1EnableFullDNSRegistration**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4177,16 +3387,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableLMHosts** or **OSDAdapter1EnableLMHosts**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4202,16 +3407,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  The*x*in this property's name is a placeholder for a zero-based array that contains network adapter information, such as *OSDAdapter0EnableIPProtocolFiltering* or **OSDAdapter1EnableIPProtocolFiltering**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4229,16 +3429,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this property's name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPFiltering** or **OSDAdapter1EnableTFiltering**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4256,16 +3451,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPIPFiltering** or **OSDAdapter1EnableTCPIPFiltering**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4287,16 +3477,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4314,16 +3499,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0GatewayCostMetric** or **OSDAdapter1GatewayCostMetric**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4340,16 +3520,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Gateways** or **OSDAdapter1Gateways**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4366,16 +3541,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPAddressList** or **OSDAdapter1IPAddressList**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4392,16 +3562,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPProtocolFilterList** or **OSDAdapter1IPProtocolFilterList**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4418,16 +3583,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0MacAddress** or **OSDAdapter1MacAddress**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4444,16 +3604,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Name** or **OSDAdapter1Name**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4470,16 +3625,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0SubnetMask** or **OSDAdapter1SubnetMask**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4496,16 +3646,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPFilterPortList** or **OSDAdapter1TCPFilterPortList**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4522,16 +3667,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPIPNetBiosOptions** or **OSDAdapter1TCPIPNetBiosOptions**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4549,16 +3689,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0UDPFilterPortList** or **OSDAdapter1UDPFilterPortList**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4575,16 +3710,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0WINSServerList** or **OSDAdapter1WINSServerList**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4597,16 +3727,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDAdapterCount
  Specifies the number of network connections that are to be configured.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4623,16 +3748,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4649,16 +3769,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4672,24 +3787,19 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDBitLockerMode
  The type of BitLocker installation to be performed. Protect the target computer using one of the following methods:
 
--   A TPM microcontroller
+- A TPM microcontroller
 
--   A TPM and an external startup key \(using a key that is typically stored on a UFD\)
+- A TPM and an external startup key \(using a key that is typically stored on a UFD\)
 
--   A TPM and PIN
+- A TPM and PIN
 
--   An external startup key
+- An external startup key
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4705,16 +3815,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDBitLockerRecoveryPassword
  Instead of generating a random recovery password, the **Enable BitLocker** task sequence action uses the specified value as the recovery password. The value must be a valid numerical BitLocker recovery password.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4727,16 +3832,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDBitLockerStartupKey
  Instead of generating a random startup key for the key management option **Startup Key on USB only**, the **Enable BitLocker** task sequence action uses the value as the startup key. The value must be a valid, Base64\-encoded BitLocker startup key.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4749,16 +3849,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDBitLockerStartupKeyDrive
  The location for storing the BitLocker recovery key and startup key.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4771,16 +3866,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDBitLockerTargetDrive
  Specifies the drive to be encrypted. The default drive is the drive that contains the operating system.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4797,16 +3887,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4824,16 +3909,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property can also be set within a task sequence using a customized **Set Task Sequence Variable** task sequence step.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4850,16 +3930,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property can be used in conjunction with the **OSDDiskOffset** property to set the **offset** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskOffset](#osddiskoffset) property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4872,16 +3947,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDDiskIndex
  Specifies the disk index that will be configured.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4896,16 +3966,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  This property can be used in conjunction with the **OSDDiskAlign** property to set the **align** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskAlign](#osddiskalign) property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4918,16 +3983,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDDiskPartBiosCompatibilityMode
  This property specifies whether to disable cache alignment optimizations when partitioning the hard disk for compatibility with certain types of BIOS.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4945,16 +4005,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4971,16 +4026,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -4997,16 +4047,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5023,16 +4068,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5049,16 +4089,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5075,16 +4110,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5097,16 +4127,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDPartitions
  Specifies the number of defined partitions configurations. The maximum number of partitions that can be configured is two. The default is **None**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5123,16 +4148,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5154,16 +4174,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5184,16 +4199,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5211,16 +4221,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5237,16 +4242,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5263,16 +4263,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5291,16 +4286,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5317,16 +4307,11 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5335,33 +4320,6 @@ cscript.exe LiteTouch.vbs /debug:true
 |**Example**|
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0VolumeName=OSDisk`|
-
-### OSDPreserveDriveLetter
- This property is used to determine whether the **Apply OS** task sequence step should preserve the drive letter in the operating system image file (.wim file) being deployed to the target computer.
-
-> [!NOTE]
->
-> This property should only be set in a task sequence step, not in the CustomSettings.ini file or in the MDT DB.
-
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
-
-|**Value**|**Description**|
-|-|-|
-|**TRUE**|The drive letters in the operating system image file (.wim file) and the operating system drives letters after deployment are identical to the drive letters in the .wim file.|
-|**FALSE**|The drive letters in the operating system image file (.wim file) are ignored, which allows the task sequence to override the driver letters in the .wim file.<br /><br /> Note:<br /><br /> For MDT, this value should always be selected.|
-
-|**Example**|
-|-|
-|None|
 
 ### OSDStateStorePath
  LTI and ZTI use this property to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path.
@@ -5385,16 +4343,11 @@ BackupShare=\\fs1\Share\ComputerBackup
 BackupDir=Client01
 ```
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5411,16 +4364,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read-only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5437,16 +4385,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5467,16 +4410,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5493,16 +4431,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5524,16 +4457,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5552,16 +4480,11 @@ BackupDir=Client01
 >
 > Not all server role service IDs are compatible with all server operating systems.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5578,16 +4501,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5604,16 +4522,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5633,16 +4546,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5655,16 +4563,11 @@ BackupDir=Client01
 ### OverrideProductKey
  The Multiple Activation Key (MAK) string to be applied after the target operating is deployed to the target computer. The value specified in this property is used by the ZTILicensing.wsf script during the State Restore Phase to apply the MAK to the target operating system. The script also configures the volume licensing image to use MAK activation instead of Key Management Service (KMS). The operating system needs to be activated with Microsoft after the MAK is applied. This is used when the target computer is unable to access a server that is running KMS.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5687,16 +4590,11 @@ BackupDir=Client01
 >
 > The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5713,16 +4611,11 @@ BackupDir=Client01
 >
 > The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5735,16 +4628,11 @@ BackupDir=Client01
 ### PackageSelectionProfile
  Profile name used during package installation.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5757,16 +4645,11 @@ BackupDir=Client01
 ### Parameters
  The parameters to be passed to a database query that returns property values from columns in the table specified in the **Table** property. The table is located in the database specified in the **Database** property on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5783,16 +4666,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5806,16 +4684,11 @@ BackupDir=Client01
 ### ParentDomainDNSName
  Specifies the DNS domain name of an existing directory service domain when installing a child domain.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5828,16 +4701,11 @@ BackupDir=Client01
 ### Password
  Specifies the password for the user name (account credentials) to use for promoting the member server to a domain controller.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5858,16 +4726,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5885,16 +4748,11 @@ BackupDir=Client01
 ### Port
  The number of the port that should be used when connecting to the SQL Server database instance that is used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property. The port used during connection is specified in the **Port** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5907,16 +4765,11 @@ BackupDir=Client01
 ### PowerUsers
  A list of user accounts and domain groups to be added to the local Power Users group on the target computer. The **PowerUsers** property is a list of text values that can be any non-blank value. The **PowerUsers** property has a numeric suffix (for example, **PowerUsers1** or **PowerUsers2**).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5929,16 +4782,11 @@ BackupDir=Client01
 ### PrepareWinRE
  This property specifies if the LiteTouchPE.wim file, which includes Windows RE and optionally DaRT, is applied to the system drive as the recovery partition. This allows the target computer to use the LiteTouchPE.wim image to perform recovery tasks. DaRT may optionally be included in the image, which makes DaRT recovery features available on the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5952,16 +4800,11 @@ BackupDir=Client01
 ### Priority
  The reserved property that determines the sequence for finding configuration values. The **Priority** reserved property lists each section to be searched and the order in which the sections are searched. When a property value is found, the ZTIGather.wsf script quits searching for the property, and the remaining sections are not scanned for that property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -5978,16 +4821,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6006,16 +4844,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6028,16 +4861,11 @@ BackupDir=Client01
 ### ProductKey
  The product key string to be configured for the target computer. Before the target operating system is deployed, the product key specified is automatically inserted into the appropriate location in Unattend.xml.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6050,16 +4878,11 @@ BackupDir=Client01
 ### Properties
  A reserved property that defines any custom, user-defined properties. These user-defined properties are located by the ZTIGather.wsf script in the CustomSettings.ini file, BootStrap.ini file, or the MDT DB. These properties are additions to the predefined properties in MDT.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |                 **Value**                  |                **Description**                 |
 |--------------------------------------------|------------------------------------------------|
@@ -6072,16 +4895,11 @@ BackupDir=Client01
 ### ReplicaDomainDNSName
  Specifies the DNS domain name of the domain to replicate.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6094,16 +4912,11 @@ BackupDir=Client01
 ### ReplicaOrNewDomain
  Specifies whether to install a new domain controller as the first domain controller in a new directory service domain or to install it as a replica directory service domain controller.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6117,16 +4930,11 @@ BackupDir=Client01
 ### ReplicationSourceDC
  Indicates the full DNS name of the domain controller from which you replicate the domain information.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6143,16 +4951,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6169,16 +4972,11 @@ BackupDir=Client01
 >
 > For LTI, the scripts automatically set the **ResourceRoot** property to be the same as the **DeployRoot** property. For ZTI, the values in the **DeployRoot** and **ResourceRoot** properties can be unique.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6193,16 +4991,11 @@ BackupDir=Client01
 
  Typically, the value for the **Role** property is set by performing a database query in the MDT DB. The Deployment Workbench can assist in creating the role and property settings associated with the role, and then the Deployment Workbench can configure CustomSettings.ini to perform the database query for the **Role** property and the property settings associated with the role.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6219,16 +5012,11 @@ BackupDir=Client01
 ### SafeModeAdminPassword
  Supplies the password for the administrator account when starting the computer in Safe mode or a variant of Safe mode, such as Directory Services Restore mode.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6249,16 +5037,11 @@ BackupDir=Client01
 >
 > Do not add any of the following command line arguments when configuring this property: **/hardlink**, **/nocompress**, **/encrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6275,16 +5058,11 @@ BackupDir=Client01
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6297,16 +5075,11 @@ BackupDir=Client01
 ### SiteName
  Specifies the name of an existing site where you can place the new domain controller.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6329,16 +5102,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6358,16 +5126,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6387,16 +5150,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6420,16 +5178,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6449,16 +5202,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6476,16 +5224,11 @@ BackupDir=Client01
 
  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6505,16 +5248,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6534,16 +5272,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6563,16 +5296,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6592,16 +5320,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6621,16 +5344,11 @@ BackupDir=Client01
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6644,7 +5362,7 @@ BackupDir=Client01
 ### SkipGroupSubFolders
  By default, when specifying folders to be included when injecting drivers, patches \(packages\), and so on, values are specified something like:
 
-```
+```ini
 DriverGroup001=TopFolder\SecondFolder
 PackageGroup001=TopFolder\SecondFolder
 ```
@@ -6657,16 +5375,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6686,16 +5399,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6715,16 +5423,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6744,16 +5447,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6773,16 +5471,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6802,16 +5495,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6831,16 +5519,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6864,16 +5547,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6893,16 +5571,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6922,16 +5595,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6951,16 +5619,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6974,16 +5637,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SLShare
  The network shared folder in which the deployment logs are stored at the end of the deployment process.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -6996,16 +5654,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SLShareDynamicLogging
  The network shared folder in which all MDT logs should be written during deployment. This is used for advanced real-time debugging only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7018,16 +5671,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SMSTSAssignUserMode
  Specifies whether user device affinity (UDA) should be enabled and whether approval is required. This property only works with the UDA feature in Configuration Manager.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7042,16 +5690,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SMSTSRunCommandLineUserName
  Specifies the user name in *Domain\User_Name* format that should be used with a **Run Command Line** step that is configured to run as a user.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7064,16 +5707,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SMSTSRunCommandLineUserPassword
  Specifies the password that should be used with a **Run Command Line** step that is configured to run as a user.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7086,16 +5724,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SMSTSUdaUsers
  Specifies the users who will be assigned affinity with a specific device using the UDA feature, which is available only in Configuration Manager.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |     **Value**     |                                                                                                                                                                **Description**                                                                                                                                                                |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -7108,16 +5741,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SQLServer
  The identity of the computer running SQL Server that performs a database query that returns property values from columns in the table specified in the **Table** property. The query is based on parameters specified in the **Parameters** and **ParameterCondition** properties. The instance of SQL Server on the computer is specified in the **Instance** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7134,16 +5762,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property must be specified to perform Integrated Windows authentication. This is the recommended authentication method, rather than using the **DBID** and **DBPwd** properties (which support the SQL Server authentication method).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7160,16 +5783,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property is provided for backward compatibility with previous versions of MDT. Use the [OSDStateStorePath](#userdatalocation) property instead.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7177,23 +5795,18 @@ PackageGroup001=TopFolder\SecondFolder
 
 |**Example**|
 |-|
-|`[Settings] Priority=Default  [Default] SitePath=\\fs1\Share\Replace ComputerBackupLocation=\\fs1\Share\ComputerBackup\Client01`|
+|`[Settings] Priority=Default  [Default] StatePath=\\fs1\Share\Replace ComputerBackupLocation=\\fs1\Share\ComputerBackup\Client01`|
 
 ### StoredProcedure
  The name of the stored procedure used when performing a database query that returns property values from columns in the table or view. The stored procedure is located in the database specified in the **Database** property. The computer running SQL Server is specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property. The name of the stored procedure is specified in the **StoredProcedure** property.
 
  For more information about using a stored procedure to query a SQL Server database, see the section, "Deploying Applications Based on Earlier Application Versions", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7230,16 +5843,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7255,32 +5863,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
 
--   **IsHypervisorRunning**
+- **IsHypervisorRunning**
 
--   **IsVM**
+- **IsVM**
 
--   **SupportsHyperVRole**
+- **SupportsHyperVRole**
 
--   **SupportsVT**
+- **SupportsVT**
 
--   **Supports64Bit**
+- **Supports64Bit**
 
--   **VMPlatform**
+- **VMPlatform**
 
 > [!NOTE]
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7296,32 +5899,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For further information collected about VMs and information returned from the CPUID interface, see the following properties:
 
--   **IsHypervisorRunning**
+- **IsHypervisorRunning**
 
--   **IsVM**
+- **IsVM**
 
--   **SupportsHyperVRole**
+- **SupportsHyperVRole**
 
--   **SupportsNX**
+- **SupportsNX**
 
--   **Supports64Bit**
+- **Supports64Bit**
 
--   **VMPlatform**
+- **VMPlatform**
 
 > [!NOTE]
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7337,32 +5935,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
 
--   **IsHypervisorRunning**
+- **IsHypervisorRunning**
 
--   **IsVM**
+- **IsVM**
 
--   **SupportsHyperVRole**
+- **SupportsHyperVRole**
 
--   **SupportsNX**
+- **SupportsNX**
 
--   **SupportsVT**
+- **SupportsVT**
 
--   **VMPlatform**
+- **VMPlatform**
 
 > [!NOTE]
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7376,16 +5969,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SysVolPath
  Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7398,16 +5986,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### Table
  The name of the table or view to be used in performing a database query that returns property values from columns in the table or view. The query is based on parameters specified in the **Parameters** and **ParameterCondition** properties. The table or view is located in the database specified in the **Database** property. The computer running SQL Server is specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7420,16 +6003,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### TaskSequenceID
  Identifies the operating system task sequence to be deployed to the target computer. The task sequence ID is created on the Task Sequences node in the Deployment Workbench. The **TaskSequenceID** property allows alphanumeric characters, hyphens (-), and underscores (\_). The **TaskSequenceID** property cannot be blank or contain spaces.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7446,16 +6024,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7472,16 +6045,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7494,16 +6062,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### TimeZoneName
  The time zone in which the target computer is located. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7520,16 +6083,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7546,16 +6104,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > If the TPM ownership is already set or TPM ownership is not allowed, then the **TPMOwnerPassword** property is ignored. If the TPM password is needed and the **TPMOwnerPassword** property is not provided, the TPM password is set to the local Administrator password.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7568,16 +6121,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### UDDir
  The folder in which the user state migration data is stored. This folder exists beneath the network shared folder specified in **UDShare**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7590,16 +6138,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### UDProfiles
  A comma-delimited list of user profiles that need to be saved by Scanstate.exe during the State Capture Phase.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7612,16 +6155,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### UDShare
  The network share where user state migration data is stored.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7634,16 +6172,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### UILanguage
  The default language to be used with the target operating system. If not specified, the **Deployment Wizard** uses the language configured in the image being deployed.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7660,16 +6193,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7690,16 +6218,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7716,16 +6239,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7738,16 +6256,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### UserLocale
  The user locale to be used with the target operating system. If not specified, the **Deployment Wizard** uses the user locale configured in the image being deployed.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7768,16 +6281,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ✅ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7790,16 +6298,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### USMTConfigFile
  The USMT configuration XML file that should be used when running **Scanstate** and **Loadstate**.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7816,16 +6319,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property should only be used in the circumstance described in the [OSDStateStorePath](#osdstatestorepath) property).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ❌ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7847,16 +6345,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property name can be specified using single-digit nomenclature (**USMTMigFiles1**) or triple-digit nomenclature (**USMTMigFiles001**).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7876,6 +6369,7 @@ PackageGroup001=TopFolder\SecondFolder
 - ZTI only for the MDT Refresh Computer deployment scenario and only when the **USMTOfflineMigration** property is set to **"TRUE"**
 
   > [!NOTE]
+  >
   >  You cannot perform USMT offline user state migration in the MDT New Computer deployment scenario using ZTI.
 
 - LTI for the:
@@ -7886,16 +6380,11 @@ PackageGroup001=TopFolder\SecondFolder
 
   For more information about using MDT and USMT to perform an offline user state migration, see "Configure USMT Offline User State Migration".
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7915,16 +6404,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7941,16 +6425,11 @@ PackageGroup001=TopFolder\SecondFolder
 >
 > Ensure that no other properties in MDT use the server sharing the folder in this property. Using a server that is already referenced by other MDT properties could result in improper validation of the credentials.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -7975,32 +6454,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDDisks**
+- **VHDDisks**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8026,32 +6500,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDDisks**
+- **VHDDisks**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8078,32 +6547,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDDisks**
+- **VHDDisks**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8124,32 +6588,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDDisks**
+- **VHDDisks**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8180,32 +6639,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDDisks**
+- **VHDDisks**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8231,32 +6685,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8281,32 +6730,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDDrives**
+- **VHDDrives**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8327,32 +6771,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDDisks**
+- **VHDDisks**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDTargetDisk**
+- **VHDTargetDisk**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8371,32 +6810,27 @@ PackageGroup001=TopFolder\SecondFolder
 
  For related properties that are used with VHD files, see:
 
--   **VHDCreateDiffVHD**
+- **VHDCreateDiffVHD**
 
--   **VHDCreateFileName**
+- **VHDCreateFileName**
 
--   **VHDCreateSizeMax**
+- **VHDCreateSizeMax**
 
--   **VHDCreateSource**
+- **VHDCreateSource**
 
--   **VHDCreateType**
+- **VHDCreateType**
 
--   **VHDDisks**
+- **VHDDisks**
 
--   **VHDInputVariable**
+- **VHDInputVariable**
 
--   **VHDOutputVariable**
+- **VHDOutputVariable**
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8410,7 +6844,7 @@ PackageGroup001=TopFolder\SecondFolder
  Specifies the name of the Hyper\-V host running the VM where MDT is running. This property is available only when the Hyper\-V Integration Components are installed and running.
 
 > [!NOTE]
->
+
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 Table 4 lists the Windows operating systems that MDT supports and their corresponding Hyper\-V Integration Components support.
@@ -8423,16 +6857,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |Windows 7|Available by default in Enterprise, Ultimate, and Professional editions.|
 |Windows Server 2008 R2|Available by default in all editions.|
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8459,16 +6888,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |Windows 7|Available by default in Enterprise, Ultimate, and Professional editions.|
 |Windows Server 2008 R2|Available by default in all editions.|
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8485,16 +6909,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8514,16 +6933,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 >
 > The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8536,16 +6950,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ### VSSMaxSize
  This property is used to pass a value to the **maxsize** parameter of the **vssadmin resize shadowstorage** command in the **Vssadmin** command. The **maxsize** parameter is used to specify the maximum amount of space on the target volume that can be used for storing shadow copies. For more information on the **maxsize** parameter, see [Vssadmin resize shadowstorage](https://technet.microsoft.com/library/cc788050\(WS.10\).aspx).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8562,16 +6971,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 >
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ❌ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8592,16 +6996,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
   When the situation described in the bulleted list above occurs, MDT may be unable to find the operating system source files locally, and the installation will attempt to download the files from the Internet. Because the computer does not have Internet access, the process will fail. Setting this property to the appropriate value helps prevent this problem from occurring.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8626,16 +7025,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 >
 > This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8649,16 +7043,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ### WizardSelectionProfile
  Profile name used by the wizard for filtering the display of various items.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8673,16 +7062,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
  For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](scripts.md#ztiwindowsupdatewsf).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8697,16 +7081,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
  Deployment project team members will want to periodically review the list of updates being installed by the ZTIWindowsUpdate.wsf script to verify that each update meets the project's needs and expectations. All updates are logged and recorded in the ZTIWindowsUpdate.log file, which is generated during deployment. Each update will indicate its status as INSTALL or SKIP and lists the UpdateID, the update name, and the QNumber associated with each update. If an update needs to be excluded, that update should be added to the CustomSettings.ini file (for LTI deployments).
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8723,16 +7102,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 
  For example, if the installation of the Windows Malicious Software Removal Tool should be excluded, look up the line in the ZTIWindowsUpdate.log that shows where the update was identified and installed, and then select the UpdateID number. For example, the UpdateID number for the Windows Malicious Software Removal Tool is adbe6425-6560-4d40-9478-1e35b3cdab4f.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ❌ | \| | ZTI (Configuration Manager) | ❌ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8749,16 +7123,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 >
 > The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8775,16 +7144,11 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 >
 > The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -8827,3 +7191,14 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**Ready to begin**|SkipSummary|-|
 |**Operating system deployment completed successfully**|SkipFinalSummary|-|
 |**Operating system deployment did not complete successfully**|SkipFinalSummary|-|
+
+## Related articles
+
+- [Task Sequence Steps](task-sequence-steps.md).
+- [Scripts](scripts.md).
+- [Support Files](support-files.md).
+- [Utilities](utilities.md).
+- [MDT Windows PowerShell Cmdlets](mdt-windows-powershell-cmdlets.md).
+- [Tables and Views in the MDT DB](tables-views-mdt-db.md).
+- [Windows 7 Feature Dependency Reference](windows-7-feature-dependency.md).
+- [UDI Reference](udi-reference.md).
