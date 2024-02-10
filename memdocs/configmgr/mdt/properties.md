@@ -95,11 +95,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ADDSPassword
  Account credentials that can be used when promoting the server to a domain controller.
 
-| Component | Configured By | /| | Scenario | Property Is Applicable |
+| Component | Configured By | \| | Scenario | Property Is Applicable |
 | - | - | - | - | - |
-| BootStrap.ini | ❌ | /| | LTI (Stand-alone MDT) | ✅ |
-| CustomSettings.ini | ✅ | /| |  |  |
-| MDT DB | ✅ | /| | ZTI (Configuration Manager) | ✅ |
+| BootStrap.ini | ❌ | \| | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | \| |  |  |
+| MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
