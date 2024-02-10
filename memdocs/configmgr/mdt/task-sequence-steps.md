@@ -15,11 +15,12 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # Task Sequence Steps
- *Task sequences* are created by the Task Sequence Editor and consist of a combined series of steps that are designed to complete an action. Task sequences can operate across a computer restart and can be configured to automate tasks on a computer without requiring user intervention. In addition, you can add task sequence steps to a task sequence group, which helps keep similar task sequence steps together for better organization and error control.
 
- Each task sequence step performs a specific task, such as validating that the target computer is capable of receiving the deployment image, storing user data in a safe location, deploying an image to a target computer, and restoring saved user data. These task sequence steps accomplish their tasks by using utilities and scripts provided with MDT or by the deployment team. Use this reference to help determine the correct task sequence groups and task sequence steps to configure the deployment process and the valid properties and options to use.
+*Task sequences* are created by the Task Sequence Editor and consist of a combined series of steps that are designed to complete an action. Task sequences can operate across a computer restart and can be configured to automate tasks on a computer without requiring user intervention. In addition, you can add task sequence steps to a task sequence group, which helps keep similar task sequence steps together for better organization and error control.
 
- The following information is provided for each task sequence group and step:
+Each task sequence step performs a specific task, such as validating that the target computer is capable of receiving the deployment image, storing user data in a safe location, deploying an image to a target computer, and restoring saved user data. These task sequence steps accomplish their tasks by using utilities and scripts provided with MDT or by the deployment team. Use this reference to help determine the correct task sequence groups and task sequence steps to configure the deployment process and the valid properties and options to use.
+
+The following information is provided for each task sequence group and step:
 
 - **Name**. The name of the task sequence group or step
 

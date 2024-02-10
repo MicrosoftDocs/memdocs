@@ -15,11 +15,12 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # Tables and Views in the MDT DB
- In MDT, many property settings can be stored (typically configured in the CustomSettings.ini file) in a database. Configuring the properties in a database helps create a generic CustomSettings.ini file that requires fewer modifications and allows one CustomSettings.ini file to be used in more images (because the file is more generic).
 
- Customize the database in the Database node in the Deployment Workbench. Using the Deployment Workbench, the deployment settings can be configured and saved in tables.
+In MDT, many property settings can be stored (typically configured in the CustomSettings.ini file) in a database. Configuring the properties in a database helps create a generic CustomSettings.ini file that requires fewer modifications and allows one CustomSettings.ini file to be used in more images (because the file is more generic).
 
- However, queries about the information in the tables are done using views. Views help simplify the queries by joining results from multiple tables. ZTIGather.wsf queries the views to return the result set that the **Parameters** and **ParameterCondition** properties specify.
+Customize the database in the Database node in the Deployment Workbench. Using the Deployment Workbench, the deployment settings can be configured and saved in tables.
+
+However, queries about the information in the tables are done using views. Views help simplify the queries by joining results from multiple tables. ZTIGather.wsf queries the views to return the result set that the **Parameters** and **ParameterCondition** properties specify.
 
 ## Tables in the MDT DB
  The following table lists the database tables that Deployment Workbench creates and manages.

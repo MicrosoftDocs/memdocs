@@ -15,21 +15,22 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # Support Files
- The utilities and scripts used in LTI and ZTI deployments reference external configuration files to determine the process steps and configuration settings used during the deployment process.
+
+The utilities and scripts used in LTI and ZTI deployments reference external configuration files to determine the process steps and configuration settings used during the deployment process.
 
  The following information is provided for each utility:
 
--   **Name**. Specifies the name of the file
+- **Name**. Specifies the name of the file
 
--   **Description**. Provides a description of the purpose of the file
+- **Description**. Provides a description of the purpose of the file
 
--   **Location**. Indicates the folder where the file can be found; in the information for the location, the following variables are used:
+- **Location**. Indicates the folder where the file can be found; in the information for the location, the following variables are used:
 
-    -   **program_files**. This variable points to the location of the Program Files folder on the computer where MDT is installed.
+  - **program_files**. This variable points to the location of the Program Files folder on the computer where MDT is installed.
 
-    -   **distribution**. This variable points to the location of the Distribution folder for the deployment share.
+  - **distribution**. This variable points to the location of the Distribution folder for the deployment share.
 
-    -   **platform**. This variable is a placeholder for the operating system platform (x86 or x64).
+  - **platform**. This variable is a placeholder for the operating system platform (x86 or x64).
 
 ## ApplicationGroups.xml
 

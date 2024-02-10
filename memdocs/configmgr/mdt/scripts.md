@@ -15,7 +15,8 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # Scripts
- The scripts used in LTI and ZTI deployments reference properties that determine the process steps and configuration settings used during the deployment process. Use this reference section to help it determine the correct scripts to include in actions and the valid arguments to provide when running each script. The following information is provided for each script:
+
+The scripts used in LTI and ZTI deployments reference properties that determine the process steps and configuration settings used during the deployment process. Use this reference section to help it determine the correct scripts to include in actions and the valid arguments to provide when running each script. The following information is provided for each script:
 
 - **Name**.Specifies the name of the script.
 
@@ -1533,7 +1534,7 @@ ms.reviewer: mstewart,aaroncz
 |**ResourceRoot**|-||
 
 ## ZTIExecuteRunbook.wsf
- This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](#execute-runbook) task sequence step type, which in turn runs this script.
+ This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](task-sequence-steps.md#execute-runbook) task sequence step type, which in turn runs this script.
 
 |**Value**|**Description**|
 |-|-|

@@ -15,25 +15,26 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # Utilities
- The scripts used in LTI and ZTI reference utilities that perform specialized tasks supporting the steps used during the deployment process. Use the following information to help determine the correct utilities to include in actions and the valid arguments to provide when running each utility.
 
- The following information is provided for each utility:
+The scripts used in LTI and ZTI reference utilities that perform specialized tasks supporting the steps used during the deployment process. Use the following information to help determine the correct utilities to include in actions and the valid arguments to provide when running each utility.
 
--   **Name**. Specifies the name of the utility
+The following information is provided for each utility:
 
--   **Description**. Provides a description of the purpose of the utility
+- **Name**. Specifies the name of the utility
 
--   **Location**. Indicates the folder where the utility can be found; in the information for the location, the following variables are used:
+- **Description**. Provides a description of the purpose of the utility
 
-    -   **program_files**. This variable points to the location of the Program Files folder on the computer where MDT is installed.
+- **Location**. Indicates the folder where the utility can be found; in the information for the location, the following variables are used:
 
-    -   **distribution**. This variable points to the location of the Distribution folder for the deployment share.
+  - **program_files**. This variable points to the location of the Program Files folder on the computer where MDT is installed.
 
-    -   **platform**. This variable is a placeholder for the operating system platform (x86 or x64).
+  - **distribution**. This variable points to the location of the Distribution folder for the deployment share.
 
--   **Use**.Provides the commands and options that can be specified
+  - **platform**. This variable is a placeholder for the operating system platform (x86 or x64).
 
--   **Arguments and description**.Indicates the valid arguments to be specified for the utility and a brief description of what each argument means
+- **Use**.Provides the commands and options that can be specified
+
+- **Arguments and description**.Indicates the valid arguments to be specified for the utility and a brief description of what each argument means
 
 ## BCDBoot.exe
  BCDBoot is a tool used to quickly set up a system partition or repair the boot environment located on the system partition. The system partition is set up by copying a small set of boot environment files from an installed Windows image. BCDBoot also creates a Boot Configuration Data (BCD) store on the system partition, with a new boot entry that enables Windows to boot to the installed Windows image.

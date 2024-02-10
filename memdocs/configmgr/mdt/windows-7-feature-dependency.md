@@ -15,7 +15,8 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # Windows 7 Feature Dependency Reference
- Table 8 lists the Windows 7 features, the parent feature, and any dependent features. You can use this information to determine which features and roles need to be installed to support a specific feature using the [Install Roles and Features](#InstallRolesandFeatures) and [Uninstall Roles and Features](#UninstallRolesandFeatures) task sequence steps.
+
+Table 8 lists the Windows 7 features, the parent feature, and any dependent features. You can use this information to determine which features and roles need to be installed to support a specific feature using the [Install Roles and Features](#InstallRolesandFeatures) and [Uninstall Roles and Features](#UninstallRolesandFeatures) task sequence steps.
 
 ## Table 8. Windows 7 Feature Dependency Reference
 

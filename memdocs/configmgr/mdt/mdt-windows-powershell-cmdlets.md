@@ -15,11 +15,12 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # MDT Windows PowerShell Cmdlets
- In addition to the Deployment Workbench, MDT deployment shares can be managed using Windows PowerShell cmdlets. The MDT Windows PowerShell cmdlets are included in a Windows PowerShell snap-in—Microsoft.BDD.PSSnapIn—which is included with the installation of MDT.
 
- The MDT cmdlets must be run from a Windows PowerShell console that has the MDT Windows PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT Windows PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
+In addition to the Deployment Workbench, MDT deployment shares can be managed using Windows PowerShell cmdlets. The MDT Windows PowerShell cmdlets are included in a Windows PowerShell snap-in—Microsoft.BDD.PSSnapIn—which is included with the installation of MDT.
 
- Table 7 lists the MDT Windows PowerShell cmdlets and provides a brief description of each cmdlet. Each cmdlet is discussed in further detail in a subsequent section.
+The MDT cmdlets must be run from a Windows PowerShell console that has the MDT Windows PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT Windows PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
+
+Table 7 lists the MDT Windows PowerShell cmdlets and provides a brief description of each cmdlet. Each cmdlet is discussed in further detail in a subsequent section.
 
 ## Table 7. MDT Windows PowerShell Cmdlets
 

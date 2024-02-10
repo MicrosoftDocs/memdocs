@@ -15,29 +15,32 @@ ms.reviewer: mstewart,aaroncz
 ---
 
 # UDI Reference
- This reference provides further information about UDI and includes topics on:
 
-- UDI concepts as described in [UDI Concepts](#UDIConcepts)
+This reference provides further information about UDI and includes topics on:
 
-- OSDResults as described in [OSDResults Reference](#OSDResultsReference)
+- UDI concepts as described in [UDI Concepts](#udi-concepts)
 
-- User Centric App Installer as described in [User-Centric App Installer Reference](#UserCentricAppInstallerReference)
+- OSDResults as described in [OSDResults Reference](#osdresults-reference)
 
-- UDI stages as described in [UDI Stage Reference](#UDIStageReference)
+- User Centric App Installer as described in [User-Centric App Installer Reference](#user-centric-app-installer-reference)
 
-- UDI tasks as described in [UDI Task Reference](#UDITaskReference)
+- UDI stages as described in [UDI Stage Reference](#udi-stage-reference)
 
-- UDI validators as described in [UDI Validator Reference](#UDIValidatorReference)
+- UDI tasks as described in [UDI Task Reference](#udi-task-reference)
 
-- UDI Wizard Pages as described in [UDI Wizard Page Reference](#UDIWizardPageReference)
+- UDI validators as described in [UDI Validator Reference](#udi-validator-reference)
 
-  Each of these reference topics are discussed in subsequent sections.
+- UDI Wizard Pages as described in [UDI Wizard Page Reference](#udi-wizard-page-reference)
+
+Each of these reference topics are discussed in subsequent sections.
 
 ## UDI Concepts
- This section contains concepts that help describe UDI, the UDI Wizard, and the UDI Wizard Designer.
+
+This section contains concepts that help describe UDI, the UDI Wizard, and the UDI Wizard Designer.
 
 ### Display Name
- The display name is used to provide a user-friendly, descriptive name for a wizard page within the Page Library in the UDI Wizard Designer. The display name is displayed in blue text for each wizard page in the Page Library and on the **Flow** tab in the UDI Wizard Designer.
+
+The display name is used to provide a user-friendly, descriptive name for a wizard page within the Page Library in the UDI Wizard Designer. The display name is displayed in blue text for each wizard page in the Page Library and on the **Flow** tab in the UDI Wizard Designer.
 
  When you add a page to the Page Library, you must provide the display name. After the wizard page is added to the Page Library, you cannot change the display name.
 
@@ -82,9 +85,9 @@ ms.reviewer: mstewart,aaroncz
 >
 > The **Next** button on the wizard page where the tasks are run will be disabled if any of the tasks finish with warning or error completion status.
 
- UDI includes several built-in tasks that allow you to perform most of the tasks necessary for deployment. For more information about the UDI built-in tasks, see [Built-in UDI Tasks](#BuiltinUDITasks).
+ UDI includes several built-in tasks that allow you to perform most of the tasks necessary for deployment. For more information about the UDI built-in tasks, see [Built-in UDI Tasks](#built-in-udi-tasks).
 
- The **Shell Execute** built-in UDI task allows you to run any software (scripts) that can be initiated from a command line, such as Visual Basic or Windows PowerShell scripts. This functionality allows you create tasks using familiar scripting languages. For more information, see [Shell Execute Task](#ShellExecuteTask).
+ The **Shell Execute** built-in UDI task allows you to run any software (scripts) that can be initiated from a command line, such as Visual Basic or Windows PowerShell scripts. This functionality allows you create tasks using familiar scripting languages. For more information, see [Shell Execute Task](#shell-execute-task).
 
  If your requirements go beyond scripting, you can write custom UDI tasks. *UDI tasks* are DLLs written in C++ and implement the **ITask** interface. You register the DLL with the UDI Wizard Designer task library by creating a UDI Wizard Designer configuration (.config) file and placing it in the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT). For more information on developing custom UDI tasks, see the section, "Creating Custom UDI Tasks", in the *User-Driven Installation Developers Guide*.
 
@@ -108,7 +111,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|
 |**/preview**|Allows you to preview the current configuration of the wizard by enabling the **Next** button, which allows you to move from page to page without requiring valid input.|
 |**/xml**|Specifies the name of the UDI Wizard configuration file. The UDIWizard.wsf script automatically sets this parameter to the OSDSetupWizard.xml file, which is stored in the folder in which the task sequence stores log files. This parameter defaults to the config.xml file.<br /><br /> The syntax for this parameter is as follows (where `<full_path>` is the fully qualified path to the .xml file, including the file name and extension):<br /><br /> `/xml:<full_path>`|
-|**/stage**|Specifies the name of the UDI stage to run. The UDIWizard.wsf script automatically sets this parameter to the appropriate stage, as described in [UDI Stage Reference](#UDIStageReference). This parameter defaults to the first stage in the UDI Wizard configuration file.<br /><br /> The syntax for this parameter is as follows (where `<stage_name>` is the name of the stage to be run):<br /><br /> `/stage:<stage_name>`<br /><br /> Note:<br /><br /> The value for <stage_name> is case sensitive.|
+|**/stage**|Specifies the name of the UDI stage to run. The UDIWizard.wsf script automatically sets this parameter to the appropriate stage, as described in [UDI Stage Reference](#udi-stage-reference). This parameter defaults to the first stage in the UDI Wizard configuration file.<br /><br /> The syntax for this parameter is as follows (where `<stage_name>` is the name of the stage to be run):<br /><br /> `/stage:<stage_name>`<br /><br /> Note:<br /><br /> The value for <stage_name> is case sensitive.|
 |**/locale**|Specifies the language to use in the UDI Wizard in the form of a locale identifier (LCID), which is represented by a numeric value. For a list of the available LCIDs, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).<br /><br /> You would use this list to identify the language you want to use, and then provide the corresponding LCID.<br /><br /> The syntax for this parameter is as follows (where `<locale_id>` is the numeric value of the LCID to be used):<br /><br /> `/locale:<locale_id>`|
 
 ### UDI Wizard Application Configuration File
@@ -133,7 +136,7 @@ ms.reviewer: mstewart,aaroncz
 ### Validator
  You use UDI validators to help ensure that the correct information is entered into text fields on wizard pages in the UDI Wizard. UDI includes several built-in validators that help you perform typical validations of fields used for entering text, such as preventing users from entering invalid characters and ensuring that the field is not empty. When a validator detects an invalid entry in a text box, a message is displayed on the wizard page, and the **Next** button is disabled until all invalid entries are resolved.
 
- UDI includes built-in validators that allow you to perform most of the validation necessary for deployment. For more information about the UDI built-in validators, see [Built-in UDI Validators](#BuiltinUDIValidators).
+ UDI includes built-in validators that allow you to perform most of the validation necessary for deployment. For more information about the UDI built-in validators, see [Built-in UDI Validators](#built-in-udi-validators).
 
  If your requirements go beyond the built-in UDI validators, you can write custom UDI validators. *UDI validators* are DLLs written in C++ that implement the **IValidator** interface. Register the DLL with the UDI Wizard Designer validator library by creating a UDI Wizard Designer configuration (.config) file and placing it in the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT). For more information on developing custom UDI tasks, see the section, "Creating Custom UDI Validators", in the MDT document *User-Driven Installation Developers Guide*.
 
@@ -142,7 +145,7 @@ ms.reviewer: mstewart,aaroncz
 
  Wizard pages are stored in the wizard Page Library, and they can be used in one or more UDI stages. This design allows you to configure a wizard page that is shared between stages once for all stages, dramatically reducing the amount of effort required and the complexity of updating wizard page configuration.
 
- UDI includes built-in wizard pages and wizard page editors that are typically sufficient for most deployments. For more information about the built-in wizard pages, see [Built-in UDI Wizard Pages](#BuiltinUDIWizardPages).
+ UDI includes built-in wizard pages and wizard page editors that are typically sufficient for most deployments. For more information about the built-in wizard pages, see [Built-in UDI Wizard Pages](#built-in-udi-wizard-pages).
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard pages are implemented as DLLs that the UDI Wizard reads. Wizard page editors are created using C++ in Visual Studio.
 
@@ -190,7 +193,7 @@ ms.reviewer: mstewart,aaroncz
 
    - UDI task sequence templates, see the section, "Identify the UDI Task Sequence Templates in MDT", in the MDT document *Using the Microsoft Deployment Toolkit*
 
-   - Relationship between MDT deployment scenarios and UDI stages, see [UDI Stage Reference](#UDIStageReference)
+   - Relationship between MDT deployment scenarios and UDI stages, see [UDI Stage Reference](#udi-stage-reference)
 
 2. During the task sequence, the configuration settings provided by task sequence variables and from user input in the UDI Wizard are saved in the *%DEPLOYROOT%*\Tools\OSDResults folder on the target computer (where *%DEPLOYROOT%* is the root of the folder in which the MDT files are locally cached on the target computer).
 
@@ -211,7 +214,7 @@ ms.reviewer: mstewart,aaroncz
 
 5. The Windows logon screen is displayed, and the logon process continues normally.
 
-    AppInstall.exe is run the first time a user logs on to the target computer. For more information on this process, see [User-Centric App Installer Reference](#UserCentricAppInstallerReference).
+    AppInstall.exe is run the first time a user logs on to the target computer. For more information on this process, see [User-Centric App Installer Reference](#user-centric-app-installer-reference).
 
 ## User-Centric App Installer Reference
  The User-Centric App Installer feature in UDI is used to report any applications installed during the UDI deployment process to the Application Catalog feature in Configuration Manager. The User-Centric App Installer feature provides the link between the applications selected on the **ApplicatonPage** wizard page in the UDI Wizard and any optional Configuration Manager applications advertised to the users.
@@ -248,7 +251,7 @@ ms.reviewer: mstewart,aaroncz
 
    - In the Configuration Manger console (For more information about configuring UDA in the Configuration Manager console, see [How to Manage User Device Affinity in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699365(v=technet.10)).)
 
-   - On the **UDAPage** wizard page in the UDI Wizard (For more information about the **UDAPage** wizard page, see [UDAPage](#UDAPage).)
+   - On the **UDAPage** wizard page in the UDI Wizard. For more information about the **UDAPage** wizard page, see [UDAPage](#udapage).
 
      After UDA is configured, the specified user account will be the primary user for the target computer.
 
@@ -287,7 +290,7 @@ ms.reviewer: mstewart,aaroncz
 
 9. The target computer is started, and OSDResults.exe is run.
 
-     For more information about OSDResults.exe, see [OSDResults Reference](#OSDResultsReference).
+     For more information about OSDResults.exe, see [OSDResults Reference](#osdresults-reference).
 
 10. A user logs on to the target computer, and AppInstall.exe starts automatically.
 
@@ -341,7 +344,7 @@ ms.reviewer: mstewart,aaroncz
      The folder is retained for 1 month so that the primary users have an opportunity to be log on and run AppInstall.exe.
 
 ## UDI Stage Reference
- The MDT deployment scenarios use one or more UDI [stage](#Stage). Each UDI stage used in the MDT deployment scenarios is discussed in a subsequent section in the context of the MDT deployment scenario. In some MDT deployment scenarios, only one stage is used. In other MDT deployment scenarios, multiple stages are used within the scenario. For more information on the MDT deployment scenarios, see the section, "Identifying Deployment Scenarios", in the MDT document *Using the Microsoft Deployment Toolkit.*
+ The MDT deployment scenarios use one or more UDI [stage](#stage). Each UDI stage used in the MDT deployment scenarios is discussed in a subsequent section in the context of the MDT deployment scenario. In some MDT deployment scenarios, only one stage is used. In other MDT deployment scenarios, multiple stages are used within the scenario. For more information on the MDT deployment scenarios, see the section, "Identifying Deployment Scenarios", in the MDT document *Using the Microsoft Deployment Toolkit.*
 
  Table 12 lists the MDT deployment scenarios and provides a brief description of each, how each scenario is selected, and which UDI stages are used in each deployment scenario. MDT automatically determines which MDT deployment scenario to use based on the MDT task sequence template you use to create your task sequence and on how the task sequence is initiated.
 
@@ -351,9 +354,9 @@ ms.reviewer: mstewart,aaroncz
 
 |**Scenario**|**Description**|
 |-|-|
-|New Computer|MDT for UDI automatically selects this scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in Windows PE using PXE boot, task sequence boot media, or prestaged media for the NEWCOMPUTER.Prestaged stage<br /><br /> This scenario can be used with traditional deployments or with prestaged media deployments as supported in Configuration Manager. Run the UDI Wizard with the following UDI stages to support each type of deployment:<br /><br /> - **NEWCOMPUTER stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on distribution points. For more information, see [NEWCOMPUTER Stage](#NEWCOMPUTERStage).<br /><br /> -                         **NEWCOMPUTER.Prestage stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on a local disk on the target computer (prestaged). For more information, see [NEWCOMPUTER.Prestaged Stage](#NEWCOMPUTERPrestagedStage).|
-|Refresh Computer|MDT for UDI automatically selects this scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> - The UDI Wizard is run with the REFRESH stage to support this deployment scenario. For more information, see [REFRESH Stage](#REFRESHStage).|
-|Replace Computer|This scenario includes an existing computer and a replacement computer. A separate task sequence is created and run on each computer as described in the following process:<br /><br /> -                          **On the existing computer.** MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Replace Task Sequence task sequence template<br /><br /> Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> The UDI Wizard is run with the following UDI stages to support this deployment scenario:<br /><br /> - **REPLACE stage.** This stage is run in the existing Windows operating system and captures configuration information from within Windows.<br /><br /> -                          **REPLACE.WinPE stage.** This stage is run in Windows PE and completes the capturing of configuration information from the existing computer—for example, running USMT and capturing the user state migration data.<br /><br /> The user state is captured to a network shared folder or to a local USB drive.<br /><br /> For more information on the REPLACE and REPLACE.WinPE stages, see [REPLACE and REPLACE.WinPE Stages](#REPLACEandREPLACEWinPEStages).<br /><br /> -                          **On the replacement computer.** This portion of the scenario is identical to the New Computer scenario, except that the user state captured in the previous step is restored. MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in Windows PE using PXE boot, task sequence boot media, or prestaged media for the NEWCOMPUTER.Prestaged stage.<br /><br /> This portion of the scenario can be used with traditional deployments or with prestaged media deployments as supported in Configuration Manager. As a part of this portion of the scenario, the user state migration data is restored. The UDI Wizard is run with the following UDI stages to support each type of deployment:<br /><br /> -                          **NEWCOMPUTER stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on distribution points. For more information, see [NEWCOMPUTER Stage](#NEWCOMPUTERStage).<br /><br /> -                          **NEWCOMPUTER.Prestage stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on a local disk on the target computer (prestaged). For more information, see [NEWCOMPUTER.Prestaged Stage](#NEWCOMPUTERPrestagedStage).|
+|New Computer|MDT for UDI automatically selects this scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in Windows PE using PXE boot, task sequence boot media, or prestaged media for the NEWCOMPUTER.Prestaged stage<br /><br /> This scenario can be used with traditional deployments or with prestaged media deployments as supported in Configuration Manager. Run the UDI Wizard with the following UDI stages to support each type of deployment:<br /><br /> - **NEWCOMPUTER stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on distribution points. For more information, see [NEWCOMPUTER Stage](#newcomputer-stage).<br /><br /> -                         **NEWCOMPUTER.Prestage stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on a local disk on the target computer (prestaged). For more information, see [NEWCOMPUTER.Prestaged Stage](#newcomputerprestaged-stage).|
+|Refresh Computer|MDT for UDI automatically selects this scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> - The UDI Wizard is run with the REFRESH stage to support this deployment scenario. For more information, see [REFRESH Stage](#refresh-stage).|
+|Replace Computer|This scenario includes an existing computer and a replacement computer. A separate task sequence is created and run on each computer as described in the following process:<br /><br /> -                          **On the existing computer.** MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Replace Task Sequence task sequence template<br /><br /> Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> The UDI Wizard is run with the following UDI stages to support this deployment scenario:<br /><br /> - **REPLACE stage.** This stage is run in the existing Windows operating system and captures configuration information from within Windows.<br /><br /> -                          **REPLACE.WinPE stage.** This stage is run in Windows PE and completes the capturing of configuration information from the existing computer—for example, running USMT and capturing the user state migration data.<br /><br /> The user state is captured to a network shared folder or to a local USB drive.<br /><br /> For more information on the REPLACE and REPLACE.WinPE stages, see [REPLACE and REPLACE.WinPE Stages](#replace-and-replacewinpe-stages).<br /><br /> -                          **On the replacement computer.** This portion of the scenario is identical to the New Computer scenario, except that the user state captured in the previous step is restored. MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in Windows PE using PXE boot, task sequence boot media, or prestaged media for the NEWCOMPUTER.Prestaged stage.<br /><br /> This portion of the scenario can be used with traditional deployments or with prestaged media deployments as supported in Configuration Manager. As a part of this portion of the scenario, the user state migration data is restored. The UDI Wizard is run with the following UDI stages to support each type of deployment:<br /><br /> -                          **NEWCOMPUTER stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on distribution points. For more information, see [NEWCOMPUTER Stage](#newcomputer-stage).<br /><br /> -                          **NEWCOMPUTER.Prestage stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on a local disk on the target computer (prestaged). For more information, see [NEWCOMPUTER.Prestaged Stage](#newcomputerprestaged-stage).|
 
 #### NEWCOMPUTER Stage
  Figure 1 illustrates the use of the NEWCOMPUTER stage in a task sequence created using the User\-Driven Installation Task Sequence task sequence template. The primary difference between the task sequences calling the NEWCOMPUTER stage and the NEWCOMPUTER.Prestaged stage is that the task sequence calling the NEWCOMPUTER.Prestaged stage does not run the **Apply Operating System Image** task sequence step, because the operating system image is already located on the target computer.
@@ -392,9 +395,9 @@ ms.reviewer: mstewart,aaroncz
 
  This reference includes:
 
--   An overview of UDI tasks, as described in [UDI Task Overview](#UDITaskOverview)
+-   An overview of UDI tasks, as described in [UDI Task Overview](#udiTaskOverview)
 
--   A description of the configuration settings for UDI tasks, as described in [UDI Task Configuration Settings](#UDITaskConfigurationSettings)
+-   A description of the configuration settings for UDI tasks, as described in [UDI Task Configuration Settings](#udiTaskConfigurationSettings)
 
 -   A description of the built\-in UDI validators that are provided with MDT, as described in [Built\-in UDI Tasks](#BuiltinUDITasks)
 
@@ -432,7 +435,7 @@ ms.reviewer: mstewart,aaroncz
 |[Wired Network Check](#WiredNetworkCheck)|This UDI task is used to identify whether the target computer is connected to a wired network, not connected using a wireless network connection.|
 
 #### AC Power Check
- Use this UDI task to identify whether the target computer is connected to AC power. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
+ Use this UDI task to identify whether the target computer is connected to AC power. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
 
  Table 15 lists the error and exit codes that the **AC Power Check** task generates.
 
@@ -456,7 +459,7 @@ ms.reviewer: mstewart,aaroncz
 |**Writecfg**|This parameter specifies the fully qualified or relative path to the location of the .xml file that contains a list of the applications discovered by the task.|
 |**Log**|This parameter specifies the fully qualified or relative path to the location of the log file generated by this task. The file name of the log file is AppDiscovery.log.|
 
- In addition to the parameters in Table 16, this task uses the parameters common to all UDI tasks. For more information about these common parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
+ In addition to the parameters in Table 16, this task uses the parameters common to all UDI tasks. For more information about these common parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
 
  Table 17 lists the error and exit codes that the **Application Discovery** task generates.
 
@@ -473,7 +476,7 @@ ms.reviewer: mstewart,aaroncz
 #### CheckSMSFolderOnUSB
  Use this UDI task to identify whether the \_SMSTaskSequence folder is located on a USB drive on the target computer. By default, the Configuration Manager task sequencer places the \_SMSTaskSequence folder on the drive with the most available free disk space. This can cause problems later in the deployment process if the USB drive is removed.
 
- This task checks to see whether the folder is located on a USB drive and prevents the deployment from proceeding if it is. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
+ This task checks to see whether the folder is located on a USB drive and prevents the deployment from proceeding if it is. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
 
  If the \_SMSTaskSequence folder is located on a USB drive, this task fails and prevents the deployment from continuing. To resolve this issue and perform the deployment, complete the following steps:
 
@@ -508,7 +511,7 @@ ms.reviewer: mstewart,aaroncz
 |**Source**|This parameter specifies the fully qualified or relative path to the source file, which can contain wildcards to copy multiple files using a single task.|
 |**Destination**|This parameter specifies the fully qualified or relative path to the destination file without a file name.|
 
- In addition to the parameters in Table 19, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
+ In addition to the parameters in Table 19, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
 
  Table 20 lists the error and exit codes that the **Copy Files** task generates.
 
@@ -532,7 +535,7 @@ ms.reviewer: mstewart,aaroncz
 |**Filename**|This parameter specifies the fully qualified or relative path to the command for the task to run.|
 |**Parameters**|This parameter specifies the command\-line parameters that are to be provided when running the command.|
 
- In addition to the parameters in Table 21, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
+ In addition to the parameters in Table 21, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
 
  You can also run custom Visual Basic scripts designed to run in cscript.exe using the **Shell Execute** task. To run Visual Basic scripts, perform the following steps:
 
@@ -564,7 +567,7 @@ ms.reviewer: mstewart,aaroncz
 |          Exit          |  **\\***  |         **Error**, which indicates that the task failed          |
 
 #### Wired Network Check
- Use this UDI task to determine whether the target computer is connected to a wired network, not using a wireless network connection. This task only uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
+ Use this UDI task to determine whether the target computer is connected to a wired network, not using a wireless network connection. This task only uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
 
  Table 23 lists the common error and exit codes that the **Wired Network Check** task generates.
 
@@ -580,7 +583,7 @@ ms.reviewer: mstewart,aaroncz
 
  This reference includes:
 
--   An overview of UDI validators, as described in [UDI Validator Overview](#UDIValidatorOverview)
+-   An overview of UDI validators, as described in [UDI Validator Overview](#udiValidatorOverview)
 
 -   A description of the built\-in UDI validators provided with MDT, as described in [Built\-in UDI Validators](#BuiltinUDIValidators)
 
@@ -614,18 +617,18 @@ ms.reviewer: mstewart,aaroncz
  This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](/cpp/standard-library/regular-expressions-cpp).
 
 ## UDI Wizard Page Reference
- You add a UDI [wizard page](#WizardPage) to stages from the [Page Library](#PageLibrary) in the [UDI Wizard Designer](#UDIWizardDesigner). UDI wizard pages are displayed in the [UDI Wizard](#UDIWizard).
+ You add a UDI [wizard page](#WizardPage) to stages from the [Page Library](#PageLibrary) in the [UDI Wizard Designer](#udiWizardDesigner). UDI wizard pages are displayed in the [UDI Wizard](#udiWizard).
 
  This reference includes:
 
--   An overview of UDI wizard pages, as described in [UDI Wizard Page Overview](#UDIWizardPageOverview)
+-   An overview of UDI wizard pages, as described in [UDI Wizard Page Overview](#udiWizardPageOverview)
 
 -   A description of the built-in UDI wizard pages that are provided with MDT, as described in [Built-in UDI Wizard Pages](#BuiltinUDIWizardPages)
 
 ### UDI Wizard Page Overview
- Wizard pages are displayed in the [UDI Wizard](#UDIWizard) and collect the information required to complete the deployment process. You create wizard pages using C++ in Visual Studio. The custom wizard pages are implemented as DLLs that the UDI Wizard reads.
+ Wizard pages are displayed in the [UDI Wizard](#udiWizard) and collect the information required to complete the deployment process. You create wizard pages using C++ in Visual Studio. The custom wizard pages are implemented as DLLs that the UDI Wizard reads.
 
- Each built-in UDI wizard page has a corresponding UDI [wizard page editor](#WizardPageEditor), which you use to configure the wizard page in the [UDI Wizard Designer](#UDIWizardDesigner).
+ Each built-in UDI wizard page has a corresponding UDI [wizard page editor](#WizardPageEditor), which you use to configure the wizard page in the [UDI Wizard Designer](#udiWizardDesigner).
 
  In addition to the built-in UDI wizard pages, you can create custom UDI wizard pages using the UDI SDK. For more information about creating custom UDI wizard pages using the UDI SDK, see the MDT document *User-Driven Installation Developers Guide*.
 
