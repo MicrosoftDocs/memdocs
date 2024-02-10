@@ -295,7 +295,8 @@ ms.reviewer: mstewart,aaroncz
  Specifies whether the Active Directory Installation Wizard configures DNS for the new domain if it detects that the DNS dynamic update protocol is not available.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -348,7 +349,7 @@ ms.reviewer: mstewart,aaroncz
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|
 
 ### BackupFile
- Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](scripts.md#ztibackup.wsf).
+ Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](scripts.md#ztibackupwsf).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -479,7 +480,8 @@ ms.reviewer: mstewart,aaroncz
  Indicates whether the deployment process should skip the BitLocker installation.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -560,7 +562,8 @@ ms.reviewer: mstewart,aaroncz
  Specifies that the deployment process should not proceed until BitLocker has completed the encryption process for all specified drives. Specifying TRUE could dramatically increase the time required to complete the deployment process.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -683,7 +686,8 @@ ms.reviewer: mstewart,aaroncz
  The network shared folder where the computer backup is stored. If the target folder does not already exist, it is automatically created.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -766,7 +770,8 @@ ms.reviewer: mstewart,aaroncz
  Specifies whether the replica is also a global catalog.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -804,7 +809,8 @@ ms.reviewer: mstewart,aaroncz
  Specifies whether the promotion operation performs only critical replication and then continues, skipping the noncritical (and potentially lengthy) portion of replication.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1036,7 +1042,8 @@ cscript.exe LiteTouch.vbs /debug:true
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1058,7 +1065,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The type of deployment being performed based on the deployment scenario. For ZTI, this property is set dynamically by MDT scripts and is not configured in CustomSettings.ini. For LTI, you can bypass the page in the Deployment Wizard on which the deployment type is selected. In addition, you can specify the deployment type by passing one of the values listed below to the LiteTouch.wsf script as a command-line option.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1593,7 +1601,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The type of dialing supported by the telephony infrastructure where the target computer is located. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1638,7 +1647,8 @@ cscript.exe LiteTouch.vbs /debug:true
  By default, all Windows-based DNS servers use a fast zone transfer format. This format uses compression, and it can include multiple records per TCP message during a connected transfer. This format is also compatible with more recent BIND-based DNS servers that run version 4.9.4 and later.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1659,7 +1669,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Determines whether or not the DNS server uses recursion. By default, the DNS Server service is enabled to use recursion.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1682,7 +1693,8 @@ cscript.exe LiteTouch.vbs /debug:true
  By default, the DNS Server service uses local subnet priority to reorder A resource records.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1705,7 +1717,8 @@ cscript.exe LiteTouch.vbs /debug:true
  By default, the DNS Server service uses round robin.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1728,7 +1741,8 @@ cscript.exe LiteTouch.vbs /debug:true
  With this feature, however, the server can determine that referred names are potentially polluting or insecure and then discard them. The server determines whether to cache the name that is offered in a referral on the basis of whether it is part of the exact, related, DNS domain name tree for which the original queried name was made.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1749,7 +1763,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies that loading of a zone should fail when bad data is found.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1963,7 +1978,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Indicator of whether an image of the target computer is to be captured. If it is, Sysprep is run on the target computer to prepare for image creation. After Sysprep has run, a new WIM image is created and stored in the folder within the shared folder designated for target computer backups (**BackupDir** and **BackupShare**, respectively).
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2114,7 +2130,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies that deployments of Windows 7 and Windows Server 2008 R2 will not create the 300 MB system partition.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2139,7 +2156,8 @@ cscript.exe LiteTouch.vbs /debug:true
  This property is used to configure whether MDT performs any of the partitioning and formatting task sequence steps in task sequences created using the MDT task sequence templates.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2178,7 +2196,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Make, Default  [Default] DriverGroup001=Shared Drivers :: [Mfgr01] DriverGroup001=Mfgr01 Video Drivers DriverGroup002=Mfgr01 Network Drivers  [Mfgr02] DriverGroup001=Mfgr02 Drivers`|
 
 ### DriverInjectionMode
- This property is used to control the device drivers that are injected by the [Inject Drivers](task-sequence-steps.md#injectdrivers) task sequence step.
+ This property is used to control the device drivers that are injected by the [Inject Drivers](task-sequence-steps.md#inject-drivers) task sequence step.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2272,7 +2290,8 @@ cscript.exe LiteTouch.vbs /debug:true
 >  Use this property in conjunction with the **SkipFinalSummary** property to skip the **Summary** wizard page in the Deployment Wizard and automatically perform the action.
 
 > [!CAUTION]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3423,7 +3442,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableTCPFiltering=TRUE`|
 
 ### OSDAdapterxEnableTCPIPFiltering
- Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxEnableTCPFiltering](#osdadapterxEnableTCPFiltering) property.
+ Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxEnableTCPFiltering](#osdadapterxenabletcpfiltering) property.
 
 > [!NOTE]
 >
@@ -3452,7 +3471,8 @@ cscript.exe LiteTouch.vbs /debug:true
 > The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableWINS** or **OSDAdapter1EnableWINS**.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3861,7 +3881,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies that the deployment process should not proceed until BitLocker has completed the encryption process for all specified drives. Specifying TRUE could dramatically increase the time required to complete the deployment process.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4147,7 +4168,8 @@ cscript.exe LiteTouch.vbs /debug:true
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4171,7 +4193,8 @@ cscript.exe LiteTouch.vbs /debug:true
 > The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4324,7 +4347,7 @@ cscript.exe LiteTouch.vbs /debug:true
 >
 > The **OSDStateStorePath** property takes precedence over the [StatePath](#statepath) or [UserDataLocation](#userdatalocation) property when those properties are also specified.
 
- In a Replace Computer deployment scenario in ZTI, the [Restore User State](task-sequence-steps.md#restoreuserstate) task sequence step is skipped if the **OSDStateStorePath** property is set to a valid local or UNC path. The workaround is to set the [USMTLocal](#usmtlocal) property to TRUE. Doing so forces ZTI UserState.wsf to recognize the path in the [OSDStateStorePath](#osdstatestorepath) property. This is caused by the **Request State Store** task sequence step being skipped and the previous value in the **OSDStateStorePath** property being retained.
+ In a Replace Computer deployment scenario in ZTI, the [Restore User State](task-sequence-steps.md#restore-user-state) task sequence step is skipped if the **OSDStateStorePath** property is set to a valid local or UNC path. The workaround is to set the [USMTLocal](#usmtlocal) property to TRUE. Doing so forces ZTI UserState.wsf to recognize the path in the [OSDStateStorePath](#osdstatestorepath) property. This is caused by the **Request State Store** task sequence step being skipped and the previous value in the **OSDStateStorePath** property being retained.
 
  In a Replace Computer deployment scenario in ZTI, where user state migration data and the entire computer are being backed up, the Backup.wim file is stored in the folder specified in the **OSDStateStorePath** property. This may be caused by specifying the wrong value for the [ComputerBackupLocation](#computerbackuplocation) property.
 
@@ -4403,7 +4426,8 @@ BackupDir=Client01
 > Not all features listed in the ServerManager.xml file are compatible with all server operating systems.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4423,7 +4447,8 @@ BackupDir=Client01
  Indicates whether the target computer is authorized to have the target operating system installed. If the **OSInstall** property is not listed, the default is to allow deployment of operating systems to any target computer.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4448,7 +4473,8 @@ BackupDir=Client01
 > Not all roles are compatible with all server operating systems.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4509,7 +4535,7 @@ BackupDir=Client01
 |None|
 
 ### OSVersion
- The version of the currently running operating system. This property should only be used to detect if the currently running operating system is Windows PE. Use the [OSVersionNumber](#OSVersionNumber) property to detect other operating systems.
+ The version of the currently running operating system. This property should only be used to detect if the currently running operating system is Windows PE. Use the [OSVersionNumber](#osdversionnumber) property to detect other operating systems.
 
 > [!NOTE]
 >
@@ -4656,7 +4682,8 @@ BackupDir=Client01
  Indicator of whether a Boolean AND or OR operation is performed on the properties listed in the **Parameters** property.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4715,7 +4742,8 @@ BackupDir=Client01
 > This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5087,10 +5115,11 @@ BackupDir=Client01
 >
 > This default value for this property is **YES**, which means that the **Local Administrators** wizard page will be skipped by default. To display this wizard page, you must specifically set the value of this property to **NO** in CustomSettings.ini or in the MDT DB.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5110,10 +5139,11 @@ BackupDir=Client01
 ### SkipAdminPassword
  Indicates whether the **Administrator Password** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5133,10 +5163,11 @@ BackupDir=Client01
 ### SkipApplications
  Indicates whether the **Select one or more applications to install** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5156,14 +5187,15 @@ BackupDir=Client01
 ### SkipBDDWelcome
  Indicates whether the **Welcome to Windows Deployment** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!NOTE]
 >
 > For this property to function properly it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5183,10 +5215,11 @@ BackupDir=Client01
 ### SkipBitLocker
  Indicates whether the **Specify the BitLocker configuration** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5206,7 +5239,7 @@ BackupDir=Client01
 ### SkipBuild
  Indicates whether the **Select a task sequence to execute on this computer** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
@@ -5228,10 +5261,11 @@ BackupDir=Client01
 ### SkipCapture
  Indicates whether the **Specify whether to capture an image** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5251,10 +5285,11 @@ BackupDir=Client01
 ### SkipComputerBackup
  Indicates whether the **Specify where to save a complete computer backup** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5274,10 +5309,11 @@ BackupDir=Client01
 ### SkipComputerName
  Indicates whether the **Configure the computer name** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5297,10 +5333,11 @@ BackupDir=Client01
 ### SkipDomainMembership
  Indicates whether the **Join the computer to a domain or workgroup** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5320,7 +5357,7 @@ BackupDir=Client01
 ### SkipFinalSummary
  Indicates whether the **Operating system deployment completed successfully** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!NOTE]
 >
@@ -5354,7 +5391,8 @@ PackageGroup001=TopFolder\SecondFolder
  To exclude subfolders when matching against groups such as DriverGroup001, PackageGroup001, and so on, set **SkipGroupSubFolders** to **YES**.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5374,10 +5412,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipLocaleSelection
  Indicates whether the **Locale Selection** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5397,10 +5436,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipPackageDisplay
  Indicates whether the **Packages** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5420,10 +5460,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipProductKey
  Indicates whether the **Specify the product key needed to install this operating system** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5446,7 +5487,8 @@ PackageGroup001=TopFolder\SecondFolder
  By default, MDT rearms the Microsoft Office 2010 25\-day activation grace period when running the LTISysprep.wsf script. You can set the value of this property to **YES** so that MDT skips the rearming of the Microsoft Office 2010 25\-day activation grace period.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5466,10 +5508,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipRoles
  Indicates whether the **Roles and Features** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5489,10 +5532,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipSummary
  Indicates whether the **Ready to begin** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5512,14 +5556,15 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipTaskSequence
  Indicates whether the **Select a task sequence to execute on this computer** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!NOTE]
 >
 > Specify the **SkipBuild** property when using the Deployment Workbench to configure the Deployment Wizard to skip the **Select a task sequence to execute on this computer** wizard page.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5539,10 +5584,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipTimeZone
  Indicates whether the **Set the Time Zone** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5562,10 +5608,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipUserData
  Indicates whether the **Specify whether to restore user data** and **Specify where to save your data and settings** wizard page is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5585,10 +5632,11 @@ PackageGroup001=TopFolder\SecondFolder
 ### SkipWizard
  Indicates whether the entire **Deployment Wizard** is skipped.
 
- For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
+ For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#providing-properties-for-skipped-deployment-wizard-pages).
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6161,7 +6209,8 @@ PackageGroup001=TopFolder\SecondFolder
  The location in which USMT stores user state migration data.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6283,7 +6332,7 @@ PackageGroup001=TopFolder\SecondFolder
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTMigFiles1=MigApp.xml USMTMigFiles2=MigUser.xml USMTMigFiles3=MigSys.xml USMTMigFiles4=MigCustom.xml USMTConfigFile=USMTConfig.xml UserDataLocation=NONE`|
 
 ### USMTLocal
- This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](scripts.md#ztiuserstate.wsf) and [ZTIBackup.wsf](scripts.md#ztibackup.wsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#osdstatestorePath) property.
+ This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](scripts.md#ztiuserstate.wsf) and [ZTIBackup.wsf](scripts.md#ztibackupwsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#osdstatestorePath) property.
 
 > [!NOTE]
 >
@@ -6991,7 +7040,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 > If the disk must be securely wiped, a non-Microsoft secure disk wipe tool should be added to the task sequence using the **Run Command Line** task sequence step.
 
 > [!CAUTION]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
