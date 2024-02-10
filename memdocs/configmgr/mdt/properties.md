@@ -95,16 +95,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ADDSPassword
  Account credentials that can be used when promoting the server to a domain controller.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | - | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini | ❌ | - | LTI (Stand-alone MDT) | ✅ |
+| CustomSettings.ini | ✅ | - |  |  |
+| MDT DB | ✅ | - | ZTI (Configuration Manager) | ✅ |
 
 |**Value**|**Description**|
 |-|-|
@@ -117,16 +112,11 @@ The scripts used in Lite Touch Installation (LTI) and ZTI reference properties t
 ### ADDSUserDomain
  This is the domain the account specified by **ADDSUserName** should be taken from. If the operation is to create a new forest or to become a member server from a backup domain controller upgrade there is no default. If the operation is to create a new tree, the default is the DNS name of the forest the computer is currently joined to. If the operation is to create a new child domain or a replica then the default is the DNS name of the domain the computer is joined to. If the operation is to demote the computer and the computer is a domain controller in a child domain, the default is the DNS name of the parent domains. If the operation is to demote the computer, and the computer is a domain controller of a tree root domain, the default is the DNS name of the forest.
 
-| Component | Configured By |
-| - | - |
-| BootStrap.ini |  |
-| CustomSettings.ini |  |
-| MDT DB |  |
-
-| Scenario | Property Is Applicable |
-| - | - |
-| LTI (Stand-alone MDT) |  |
-| ZTI (Configuration Manager) |  |
+| Component | Configured By | - | Scenario | Property Is Applicable |
+| - | - | - | - | - |
+| BootStrap.ini |  | - | LTI (Stand-alone MDT) |  |
+| CustomSettings.ini |  | - |  |  |
+| MDT DB |  | - | ZTI (Configuration Manager) |  |
 
 |**Value**|**Description**|
 |-|-|
