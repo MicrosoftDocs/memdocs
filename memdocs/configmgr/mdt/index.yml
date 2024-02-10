@@ -66,11 +66,11 @@ landingContent:
           - text: Utilities
             url: utilities.md
           - text: MDT Windows PowerShell Cmdlets
-            url: (mdt-windows-powershell-cmdlets.md
+            url: mdt-windows-powershell-cmdlets.md
           - text: Tables and Views in the MDT DB
             url: tables-views-mdt-db.md
           - text: Windows 7 Feature Dependency Reference
-            url: windows-7-feature-dependency.md)
+            url: windows-7-feature-dependency.md
 
   - title: UDI References
     linkLists:
