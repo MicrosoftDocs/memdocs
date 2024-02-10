@@ -234,7 +234,7 @@ ms.reviewer: mstewart,aaroncz
 |**USMTOfflineMigration**|-||
 
 ## DeployWiz_Initialization.vbs
- This script initializes the pages in the **Deployment Wizard** (stored in [DeployWiz_Definition_ENU.xml](#deploywiz-definition-enuxml)). It also contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
+ This script initializes the pages in the **Deployment Wizard** (stored in [DeployWiz_Definition_ENU.xml](#deploywiz_definition_enuxml)). It also contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
 
 |**Value**|**Description**|
 |-|-|
@@ -310,7 +310,7 @@ ms.reviewer: mstewart,aaroncz
 |**WizardSelectionProfile**|-||
 
 ## DeployWiz_Validation.vbs
- This script initializes and validates the information typed in the pages of the Deployment Wizard (stored in [DeployWiz_Definition_ENU.xml](#deploywiz-definition-enuxml)). This script contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
+ This script initializes and validates the information typed in the pages of the Deployment Wizard (stored in [DeployWiz_Definition_ENU.xml](#deploywiz_definition_enuxml)). This script contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
 
 |**Value**|**Description**|
 |-|-|
@@ -1533,7 +1533,7 @@ ms.reviewer: mstewart,aaroncz
 |**ResourceRoot**|-||
 
 ## ZTIExecuteRunbook.wsf
- This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](#executerunbook) task sequence step type, which in turn runs this script.
+ This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](#execute-runbook) task sequence step type, which in turn runs this script.
 
 |**Value**|**Description**|
 |-|-|
@@ -1565,8 +1565,8 @@ ms.reviewer: mstewart,aaroncz
 
 |**Name**|**Description**|
 |-|-|
-|**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](task-sequence-steps.md#executerunbook) task sequence step|
-|**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](task-sequence-steps.md#executerunbook) task sequence step|
+|**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](task-sequence-steps.md#execute-runbook) task sequence step|
+|**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](task-sequence-steps.md#execute-runbook) task sequence step|
 |**RunbookID**|Identifier assigned to the runbook on the Orchestrator server|
 |**RunbookParametersxParameterID**|Identifier assigned to a specific runbook parameter on the Orchestrator server|
 |**RunbookParametersxParameterName**|Name assigned to a specific runbook parameter on the Orchestrator server|

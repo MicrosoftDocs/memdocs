@@ -69,7 +69,7 @@ ms.reviewer: mstewart,aaroncz
  Some properties and parameters of each task sequence step type are unique to that type. Each type with unique properties and settings is shown in the following sections with its unique task sequence step properties and settings.
 
 ### Apply Network Settings
- This task sequence step configures the network adapter on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](#ZTINICConfig.wsf).
+ This task sequence step configures the network adapter on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
 
  The unique properties and settings for the **Apply Network Settings** task sequence step type are:
 
@@ -98,7 +98,7 @@ ms.reviewer: mstewart,aaroncz
 |**Disable NetBIOS over TCP/IP**|Specifies that this network connection does not use NetBT and WINS.|
 
 ### Authorize DHCP
- This task sequence step authorizes the target computer as a DHCP server. For more information about which script accomplishes this task and which properties you use, see [ZTIAuthorizeDHCP.wsf](#ZTIAuthorizeDHCP.wsf).
+ This task sequence step authorizes the target computer as a DHCP server. For more information about which script accomplishes this task and which properties you use, see [ZTIAuthorizeDHCP.wsf](scripts.md#ztiauthorizedhcpwsf).
 
  The unique properties and settings for the **Authorize DHCP** task sequence step type are:
 
@@ -116,7 +116,7 @@ ms.reviewer: mstewart,aaroncz
 |**Account**|A user account that is a member of the Enterprise Admins group, to be used when authorizing DHCP for the target computer.|
 
 ### Capture Network Settings
- This task sequence step gathers the network adapter settings from the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTINICConfig.wsf](#ZTINICConfig.wsf).
+ This task sequence step gathers the network adapter settings from the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
 
  The unique properties and settings for the **Capture Network Settings** task sequence step type are:
 
@@ -166,7 +166,7 @@ ms.reviewer: mstewart,aaroncz
 |**Site name**|The value of an existing AD DS site on which to locate the new domain controller. If not specified, an appropriate site will be selected. This option only applies to the new tree in a new forest scenario. For all other scenarios, a site will be selected using the current site and subnet configuration of the forest.|
 
 ### Configure DHCP
- This task sequence step configures the DHCP server service on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDHCP.wsf](#ZTIConfigureDHCP.wsf).
+ This task sequence step configures the DHCP server service on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDHCP.wsf](scripts.md#ztuconfiguredhcpwsf).
 
  The unique properties and settings for the **Configure DHCP** task sequence step type are:
 
@@ -185,7 +185,7 @@ ms.reviewer: mstewart,aaroncz
 |Server Options|These options apply globally for all scopes and classes defined at each DHCP server and for any clients that a DHCP server services. Configured server option values always apply unless they are overridden by options assigned to other scope, class, or client reservation.<br /><br /> Within the **Server Options** setting, the following sub-settings are configurable:<br /><br /> - **003 Router**. A list of IP addresses for routers on the client subnet<br /><br /> - **006 DNS Servers**. A list of IP addresses for DNS name servers available to the client<br /><br /> - **015 DNS Domain Name**. The domain name that the DHCP client should use when resolving unqualified domain names with the DNS<br /><br /> - **044 WINS/NBNS Servers**. Lists the IP addresses for NBNSes on the network<br /><br /> -                                 **046 WINS/NBT Node Type**. Configures the client node type for NetBT clients<br /><br /> - **060 PXE Client**. The address used for PXE client bootstrap code|
 
 ### Configure DNS
- This task sequence step configures DNS on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDNS.wsf](#ZTIConfigureDNS.wsf).
+ This task sequence step configures DNS on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDNS.wsf](#ztiConfigureDNS.wsf).
 
  The unique properties and settings for the **Configure DNS** task sequence step type are:
 
@@ -349,7 +349,7 @@ ms.reviewer: mstewart,aaroncz
 
 - **imagex.exe**. This method installs the operating system image using imagex.exe with the **\/apply** option. MDT uses this method when the setup.exe method cannot be used \(i.e., it falls back to using imagex.exe\).
 
-  You can control which of these methods is used by using the **ForceApplyFallback** property, which also affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. For more information, see the [ForceApplyFallback](#ForceApplyFallback) property.
+  You can control which of these methods is used by using the **ForceApplyFallback** property, which also affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. For more information, see the [ForceApplyFallback](properties.md#forceapplyfallback) property.
 
   The unique properties and settings for the **Install Operating System** task sequence step type are:
 
@@ -368,7 +368,7 @@ ms.reviewer: mstewart,aaroncz
 |**Partition**|The partition on which to install the operating system.|
 
 ### Install Roles and Features
- This task sequence step installs the selected roles and features on the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](#ZTIOSRole.wsf).
+ This task sequence step installs the selected roles and features on the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](scripts.md#ztiosrolewsf).
 
  The unique properties and settings for the **Install Roles and Features** task sequence step type are:
 
@@ -387,7 +387,7 @@ ms.reviewer: mstewart,aaroncz
 |**Select the roles and features that should be installed**|Select one or more roles and features for installation on the target computer.|
 
 ### Install Language Packs Offline
- This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](#ZTIPatches.wsf).
+ This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
 
  The unique properties and settings for the **Install Language Packs Offline** task sequence step type are:
 
@@ -408,7 +408,7 @@ ms.reviewer: mstewart,aaroncz
 > This task sequence step is valid only when using MDT with Configuration Manager.
 
 ### Install Language Packs Online
- This task sequence step installs language packs to the image on the target computer after the operating system has been deployed and after the target computer has been restarted. For more information about which script accomplishes this task and which properties you use, see [ZTILangPacksOnline.wsf](#ZTILangPacksOnline.wsf).
+ This task sequence step installs language packs to the image on the target computer after the operating system has been deployed and after the target computer has been restarted. For more information about which script accomplishes this task and which properties you use, see [ZTILangPacksOnline.wsf](scripts.md#ztilangpacksonlinewsf).
 
  The unique properties and settings for the **Install Language Packs Online** task sequence step type are:
 
@@ -429,7 +429,7 @@ ms.reviewer: mstewart,aaroncz
 > This task sequence step is valid only when using MDT with Configuration Manager.
 
 ### Install Updates Offline
- This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](#ZTIPatches.wsf).
+ This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
 
  The unique properties and settings for the **Install Updates Offline** task sequence step type are:
 
@@ -499,7 +499,7 @@ ms.reviewer: mstewart,aaroncz
 |**Load the user's profile**|When selected, loads the user profile for the specified account|
 
 ### Run PowerShell Script
- This task sequence step runs the specified Windows PowerShell&trade; script on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTIPowerShell.wsf](#ZTIPowerShell.wsf).
+ This task sequence step runs the specified Windows PowerShell&trade; script on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTIPowerShell.wsf](#ztipowershellwsf).
 
  The unique properties and settings for the **Run PowerShell Script** task sequence step type are:
 
@@ -539,7 +539,7 @@ ms.reviewer: mstewart,aaroncz
 |**Value**|The value to assign to the specified variable|
 
 ### Uninstall Roles and Features
- This task sequence step uninstalls the selected roles and features from the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](#ZTIOSRole.wsf).
+ This task sequence step uninstalls the selected roles and features from the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](scripts.md#ztiosrolewsf).
 
  The unique properties and settings for the **Uninstall Roles and Features** task sequence step type are:
 
@@ -586,10 +586,10 @@ ms.reviewer: mstewart,aaroncz
 
 > [!NOTE]
 >
-> For more information about each task sequence step, see the corresponding topics in [Common Properties and Options for Task Sequence Step Types](#CommonPropertiesandOptionsforTaskSequenceStepTypes) and [Specific Properties and Settings for Task Sequence Step Types](#SpecificPropertiesandSettingsforTaskSequenceStepTypes).
+> For more information about each task sequence step, see the corresponding topics in [Common Properties and Options for Task Sequence Step Types](#common-properties-and-options-for-task-sequence-step-types) and [Specific Properties and Settings for Task Sequence Step Types](#specific-properties-and-settings-for-task-sequence-step-types).
 
 ### Apply Network Settings
- This task sequence step configures the network adapter on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](#ZTINICConfig.wsf).
+ This task sequence step configures the network adapter on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
 
  The default configuration of the **Apply Network Settings** task sequence step is:
 
@@ -621,7 +621,7 @@ ms.reviewer: mstewart,aaroncz
 > When using the CustomSettings.ini file to specify the network adapter configurations, only the first network adapter will be configured. Edit ZTIGather.xml to configure additional network adapters.
 
 ### Apply Patches
- This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](#ZTIPatches.wsf).
+ This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
 
  The default configuration of the **Install Updates Offline** task sequence step is:
 
@@ -679,7 +679,7 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 ### Backup
- This task sequence step backs up the target computer before starting the operating system deployment. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIBackup.wsf](#ZTIBackup.wsf).
+ This task sequence step backs up the target computer before starting the operating system deployment. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIBackup.wsf](#ztiBackup.wsf).
 
  The default configuration of the **Backup** task sequence step is:
 
@@ -709,7 +709,7 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 ### Capture Groups
- This task sequence step captures group membership of local groups that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIGroups.wsf](#ZTIGroups.wsf).
+ This task sequence step captures group membership of local groups that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIGroups.wsf](#ztiGroups.wsf).
 
  The default configuration of the **Capture Groups** task sequence step is:
 
@@ -739,7 +739,7 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 ### Capture User State
- This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf). For more information about this step type, see [Capture User State](../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md#capture-the-user-state).
+ This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ztiUserState.wsf). For more information about this step type, see [Capture User State](../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md#capture-the-user-state).
 
  The default configuration of the **Capture User State** task sequence step is:
 
@@ -769,7 +769,7 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 ### Check BIOS
- This task sequence step checks the basic input\/output system \(BIOS\) of the target computer to ensure that it is compatible with the operating system you are deploying. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTIBIOSCheck.wsf](#ZTIBIOSCheck.wsf).
+ This task sequence step checks the basic input\/output system \(BIOS\) of the target computer to ensure that it is compatible with the operating system you are deploying. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTIBIOSCheck.wsf](#ztiBIOSCheck.wsf).
 
  The default configuration of the **Check BIOS** task sequence step is:
 
@@ -799,7 +799,7 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 ### Configure
- This task sequence step configures the Unattend.xml file with the required property values that are applicable to the operating system you are deploying to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigure.wsf](#ZTIConfigure.wsf).
+ This task sequence step configures the Unattend.xml file with the required property values that are applicable to the operating system you are deploying to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigure.wsf](#ztiConfigure.wsf).
 
  The default configuration of the **Configure** task sequence step is:
 
@@ -974,7 +974,7 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 ### Enable BitLocker
- This task sequence step enables BitLocker on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and what properties are used, see [ZTIBde.wsf](#ZTIBde.wsf).
+ This task sequence step enables BitLocker on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and what properties are used, see [ZTIBde.wsf](#ztiBde.wsf).
 
  The default configuration of the **Enable BitLocker** task sequence step is:
 
@@ -1128,7 +1128,7 @@ ms.reviewer: mstewart,aaroncz
 ### Format and Partition Disk
  This task sequence step configures and formats disk partitions on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIDiskpart.wsf](#ZTIDiskpart.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIDiskpart.wsf](#ztiDiskpart.wsf).
 
  The default configuration of the **Format and Partition Disk** task sequence step is:
 
@@ -1164,7 +1164,7 @@ ms.reviewer: mstewart,aaroncz
 ### Gather local only
  This task sequence step gathers deployment configurations settings from local sources that apply to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIGather.wsf](#ZTIGather.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIGather.wsf](#ztiGather.wsf).
 
  The default configuration of the **Gather local only** task sequence step is:
 
@@ -1196,7 +1196,7 @@ ms.reviewer: mstewart,aaroncz
 ### Generate Application Migration File
  This task sequence step generates the ZTIAppXmlGen.xml file, which contains a list of file associations that are installed on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIAppXmlGen.wsf](#ZTIAppXmlGen.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIAppXmlGen.wsf](#ztiAppXmlGen.wsf).
 
  The default configuration of the **Generate Application Migration** File task sequence step is:
 
@@ -1228,7 +1228,7 @@ ms.reviewer: mstewart,aaroncz
 ### Inject Drivers
  This task sequence step injects drivers that have been configured for deployment to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIDrivers.wsf](#ZTIDrivers.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIDrivers.wsf](#ztiDrivers.wsf).
 
  The default configuration of the **Inject Drivers** task sequence step is:
 
@@ -1260,7 +1260,7 @@ ms.reviewer: mstewart,aaroncz
 ### Install Applications
  This task sequence step installs applications on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIApplications.wsf](#ZTIApplications.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIApplications.wsf](#ztiApplications.wsf).
 
  The default configuration of the **Install Applications** task sequence step is:
 
@@ -1321,7 +1321,7 @@ ms.reviewer: mstewart,aaroncz
 ### Next Phase
  This task sequence step updates the **Phase** property to the next phase in the deployment process. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTINextPhase.wsf](#ZTINextPhase.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTINextPhase.wsf](#ztiNextPhase.wsf).
 
  The default configuration of the **Next Phase** task sequence step is:
 
@@ -1383,7 +1383,7 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 ### Recover from Domain
- This task sequence step will verify the target computer has joined a domain. For more information about which script accomplishes this task and which properties are used, see [ZTIDomainJoin.wsf](#ZTIDomainJoin.wsf).
+ This task sequence step will verify the target computer has joined a domain. For more information about which script accomplishes this task and which properties are used, see [ZTIDomainJoin.wsf](#ztiDomainJoin.wsf).
 
  The unique properties and settings for the Recover from Domain task sequence step type are:
 
@@ -1432,7 +1432,7 @@ ms.reviewer: mstewart,aaroncz
 ### Restore Groups
  This task sequence step restores the previously captured group membership of local groups on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIGroups.wsf](#ZTIGroups.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIGroups.wsf](#ztiGroups.wsf).
 
  The default configuration of the **Restore Groups** task sequence step is:
 
@@ -1464,7 +1464,7 @@ ms.reviewer: mstewart,aaroncz
 ### Restore User State
  This task sequence step restores previously captured user state to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ztiUserState.wsf).
 
  For more information about this step type, see [Restore User State](../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md#restore-the-user-state).
 
@@ -1556,7 +1556,7 @@ ms.reviewer: mstewart,aaroncz
 ### Tattoo
  This task sequence step tattoos the target computer with identification and version information. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTITatoo.wsf](#ZTITatoo.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTITatoo.wsf](#ztiTatoo.wsf).
 
  The default configuration of the **Tattoo** task sequence step is:
 
@@ -1588,7 +1588,7 @@ ms.reviewer: mstewart,aaroncz
 ### Validate
  This task sequence step validates that the target computer meets the specified deployment prerequisite conditions. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIValidate.wsf](#ZTIValidate.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIValidate.wsf](#ztiValidate.wsf).
 
  The default configuration of the **Validate** task sequence step is:
 
@@ -1621,7 +1621,7 @@ ms.reviewer: mstewart,aaroncz
 ### Windows Update \(Pre\-Application Installation)
  This task sequence step installs updates to the target computer prior to the installation of applications. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIWindowsUpdate.wsf](#ZTIWindowsUpdate.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIWindowsUpdate.wsf](#ztiWindowsUpdate.wsf).
 
  The default configuration of the **Windows Update \(Pre\-Application Installation\)** task sequence step is:
 
@@ -1656,7 +1656,7 @@ ms.reviewer: mstewart,aaroncz
 ### Wipe Disk
  This task sequence step wipes all information from the disk using the **Format** command.
 
- For more information about what script accomplishes this task and what properties are used, see [ZTIWipeDisk.wsf](#ZTIWipeDisk.wsf).
+ For more information about what script accomplishes this task and what properties are used, see [ZTIWipeDisk.wsf](#ztiWipeDisk.wsf).
 
  The default configuration of the **Wipe Disk** task sequence step is:
 

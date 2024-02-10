@@ -259,14 +259,14 @@ ms.reviewer: mstewart,aaroncz
 |**Location**|*distribution*\Tools\\*platform*|
 
 ## ZTIBIOSCheck.xml
- This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](#ztibioscheckwsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.
+ This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](scripts.md#ztibioscheckwsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.
 
 |**Value**|**Description**|
 |-|-|
 |**Location**|*distribution*\Scripts|
 
 ## ZTIConfigure.xml
- This XML file is used by the [ZTIConfigure.wsf](#ZTIConfigure.wsf) script to translate property values (specified earlier in the deployment process) to configure settings in the Unattend.xml file. This file is already customized to make the appropriate translations and should not require further modification.
+ This XML file is used by the [ZTIConfigure.wsf](scripts.md#zticonfigurewsf) script to translate property values (specified earlier in the deployment process) to configure settings in the Unattend.xml file. This file is already customized to make the appropriate translations and should not require further modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -283,7 +283,7 @@ ms.reviewer: mstewart,aaroncz
 |**Location**|*distribution*\Scripts|
 
 ## ZTIUserState_config.xml
- This XML file is used by the [ZTIUserState.wsf](#ZTIUserState.wsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](#USMTConfigFile) property. See the [Config.xml File](/previous-versions/windows/it-pro/windows-7/dd560760(v=ws.10)) topic in the USMT documentation for more information on syntax and use.
+ This XML file is used by the [ZTIUserState.wsf](scripts.md#ztiuserstatewsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](properties.md#usmtconfigfile) property. See the [Config.xml File](/windows/deployment/usmt/usmt-configxml-file) topic in the USMT documentation for more information on syntax and use.
 
 |**Value**|**Description**|
 |-|-|
