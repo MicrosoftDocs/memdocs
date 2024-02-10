@@ -1291,7 +1291,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
 |**Value**|**Description**|
 |-|-|
-|*image_name*|The name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#volumeage) wizard page|
+|*image_name*|The name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#volumepage) wizard page|
 
 |**Example**|
 |-|
