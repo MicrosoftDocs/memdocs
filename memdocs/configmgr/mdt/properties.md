@@ -4535,7 +4535,7 @@ BackupDir=Client01
 |None|
 
 ### OSVersion
- The version of the currently running operating system. This property should only be used to detect if the currently running operating system is Windows PE. Use the [OSVersionNumber](#osdversionnumber) property to detect other operating systems.
+ The version of the currently running operating system. This property should only be used to detect if the currently running operating system is Windows PE. Use the [OSVersionNumber](#osversionnumber) property to detect other operating systems.
 
 > [!NOTE]
 >
@@ -5796,11 +5796,11 @@ PackageGroup001=TopFolder\SecondFolder
 |`[Settings] Priority=Computers, Default Properties=MyCustomProperty  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=MDT2010 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
 ### StatePath
- This property is used to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path. The [OSDStateStorePath](#osdstatestorePath) property takes precedence over the **StatePath** or [UserDataLocation](#UserDataLocation) property when those properties are also specified.
+ This property is used to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path. The [OSDStateStorePath](#osdstatestorepath) property takes precedence over the **StatePath** or [UserDataLocation](#userdatalocation) property when those properties are also specified.
 
 > [!NOTE]
 >
-> This property is provided for backward compatibility with previous versions of MDT. Use the [OSDStateStorePath](#UserDataLocation) property instead.
+> This property is provided for backward compatibility with previous versions of MDT. Use the [OSDStateStorePath](#userdatalocation) property instead.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6332,11 +6332,11 @@ PackageGroup001=TopFolder\SecondFolder
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTMigFiles1=MigApp.xml USMTMigFiles2=MigUser.xml USMTMigFiles3=MigSys.xml USMTMigFiles4=MigCustom.xml USMTConfigFile=USMTConfig.xml UserDataLocation=NONE`|
 
 ### USMTLocal
- This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](scripts.md#ztiuserstate.wsf) and [ZTIBackup.wsf](scripts.md#ztibackupwsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#osdstatestorePath) property.
+ This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](scripts.md#ztiuserstatewsf) and [ZTIBackup.wsf](scripts.md#ztibackupwsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#osdstatestorepath) property.
 
 > [!NOTE]
 >
-> This property should only be used in the circumstance described in the [OSDStateStorePath](#osdstatestorePath) property).
+> This property should only be used in the circumstance described in the [OSDStateStorePath](#osdstatestorepath) property).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6551,7 +6551,7 @@ PackageGroup001=TopFolder\SecondFolder
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateType=EXPANDABLE VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|
 
 ### VHDCreateSizeMax
- This property is used to specify the maximum size of a VHD file in megabytes (MB). The size of the VHD file at creation time is based on the type of VHD file being created. For more information, see the [VHDCreateType](#VHDCreateType) property. This property is valid only for the MDT New Computer deployment scenario.
+ This property is used to specify the maximum size of a VHD file in megabytes (MB). The size of the VHD file at creation time is based on the type of VHD file being created. For more information, see the [VHDCreateType](#vhdcreatetype) property. This property is valid only for the MDT New Computer deployment scenario.
 
 > [!NOTE]
 >
@@ -6820,7 +6820,7 @@ PackageGroup001=TopFolder\SecondFolder
 |None|
 
 ### VHDTargetDisk
- Specifies the drive on the target computer where the VHD is to be created. This property is later referenced in the [VHDInputVariable](#VHDInputVariable) property.
+ Specifies the drive on the target computer where the VHD is to be created. This property is later referenced in the [VHDInputVariable](#vhdinputvariable) property.
 
 > [!NOTE]
 >
@@ -7078,7 +7078,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ### WSUSServer
  This is the name of the Windows Server Update Services (WSUS) server that the target computer should use when scanning for, downloading, and installing updates.
 
- For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](scripts.md#ztiWindowsUpdate.wsf).
+ For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](scripts.md#ztiwindowsupdatewsf).
 
 |Property configured by|Property applies to|
 |-|-|

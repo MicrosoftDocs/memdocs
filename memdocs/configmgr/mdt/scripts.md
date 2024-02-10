@@ -17,34 +17,34 @@ ms.reviewer: mstewart,aaroncz
 # Scripts
  The scripts used in LTI and ZTI deployments reference properties that determine the process steps and configuration settings used during the deployment process. Use this reference section to help it determine the correct scripts to include in actions and the valid arguments to provide when running each script. The following information is provided for each script:
 
--   **Name**.Specifies the name of the script.
+- **Name**.Specifies the name of the script.
 
--   **Description**.Provides a description of the purpose of the script and any pertinent information regarding script customization.
+- **Description**.Provides a description of the purpose of the script and any pertinent information regarding script customization.
 
--   **Input**. Indicates the files used for input to the script.
+- **Input**. Indicates the files used for input to the script.
 
--   **Output**.Indicates the files created or modified by the script.
+- **Output**.Indicates the files created or modified by the script.
 
--   **References**.Indicates other scripts or configuration files that are referenced by the script.
+- **References**.Indicates other scripts or configuration files that are referenced by the script.
 
--   **Location**.Indicates the folder where the script can be found. In the information for the location, the following variables are used:
+- **Location**.Indicates the folder where the script can be found. In the information for the location, the following variables are used:
 
-    -   **program_files**. This variable points to the location of the Program Files folder on the computer where MDT is installed.
+  - **program_files**. This variable points to the location of the Program Files folder on the computer where MDT is installed.
 
-    -   **distribution**. This variable points to the location of the Distribution folder for the deployment share.
+  - **distribution**. This variable points to the location of the Distribution folder for the deployment share.
 
-    -   **platform**. This variable is a placeholder for the operating system platform (x86 or x64).
+  - **platform**. This variable is a placeholder for the operating system platform (x86 or x64).
 
--   **Use**.Provides the commands and options that you can specify.
+- **Use**.Provides the commands and options that you can specify.
 
--   **Arguments and description**. Indicate the valid arguments to be specified for the script and a brief description of what each argument means.
+- **Arguments and description**. Indicate the valid arguments to be specified for the script and a brief description of what each argument means.
 
--   **Properties**.The properties referenced by the script.
+- **Properties**.The properties referenced by the script.
 
 ## BDD_Autorun.wsf
  This script displays a dialog box that indicates the user inserted deployment media created by the MDT process (such as a bootable DVD or a removable hard disk). The message is displayed for 15 seconds. If no action is taken, the script starts LiteTouch.vbs.
 
- For more information about LiteTouch.vbs, see [LiteTouch.vbs](#LiteTouch.vbs).
+ For more information about LiteTouch.vbs, see [LiteTouch.vbs](#litetouchvbs).
 
 |**Value**|**Description**|
 |-|-|
@@ -147,41 +147,41 @@ ms.reviewer: mstewart,aaroncz
 ## DeployWiz_Definition_ENU.xml
  This XML file contains the script code and HTML layout for each wizard page in the Deployment Wizard. This file is read by Wizard.hta, which runs the wizard pages embedded in this XML file. This .xml file contains the following wizard pages:
 
--   **Welcome**
+- **Welcome**
 
--   **Specify credentials for connecting to network shares**
+- **Specify credentials for connecting to network shares**
 
--   **Task Sequence**
+- **Task Sequence**
 
--   **Computer Details**
+- **Computer Details**
 
--   **User Data**
+- **User Data**
 
--   **Move Data and Settings**
+- **Move Data and Settings**
 
--   **User Data (Restore)**
+- **User Data (Restore)**
 
--   **Computer Backup**
+- **Computer Backup**
 
--   **Product Key**
+- **Product Key**
 
--   **Language Packs**
+- **Language Packs**
 
--   **Locale and Time**
+- **Locale and Time**
 
--   **Roles and Features**
+- **Roles and Features**
 
--   **Applications**
+- **Applications**
 
--   **Administrator Password**
+- **Administrator Password**
 
--   **Local Administrators**
+- **Local Administrators**
 
--   **Capture Image**
+- **Capture Image**
 
--   **BitLocker**
+- **BitLocker**
 
--   **Ready to Begin**
+- **Ready to Begin**
 
 |**Value**|**Description**|
 |-|-|
@@ -234,7 +234,7 @@ ms.reviewer: mstewart,aaroncz
 |**USMTOfflineMigration**|-||
 
 ## DeployWiz_Initialization.vbs
- This script initializes the pages in the **Deployment Wizard** (stored in [DeployWiz_Definition_ENU.xml](#DeployWiz_Definition_ENU.xml)). It also contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
+ This script initializes the pages in the **Deployment Wizard** (stored in [DeployWiz_Definition_ENU.xml](#deploywiz-definition-enuxml)). It also contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
 
 |**Value**|**Description**|
 |-|-|
@@ -310,7 +310,7 @@ ms.reviewer: mstewart,aaroncz
 |**WizardSelectionProfile**|-||
 
 ## DeployWiz_Validation.vbs
- This script initializes and validates the information typed in the pages of the Deployment Wizard (stored in [DeployWiz_Definition_ENU.xml](#DeployWiz_Definition_ENU.xml)). This script contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
+ This script initializes and validates the information typed in the pages of the Deployment Wizard (stored in [DeployWiz_Definition_ENU.xml](#deploywiz-definition-enuxml)). This script contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
 
 |**Value**|**Description**|
 |-|-|
@@ -346,11 +346,11 @@ ms.reviewer: mstewart,aaroncz
 ## LiteTouch.vbs
  This script is called by the Deployment Wizard to initiate LTI. The script:
 
--   Removes the C:\MININT folder (if it exists)
+- Removes the C:\MININT folder (if it exists)
 
--   Checks that the target computer meets the requirements for running the Deployment Wizard by calling [ZTIPrereq.vbs](#ZTIPrereq.vbs)
+- Checks that the target computer meets the requirements for running the Deployment Wizard by calling [ZTIPrereq.vbs](#ztiprereqvbs)
 
--   Starts the Deployment Wizard by running [LiteTouch.wsf](#LiteTouch.wsf)
+- Starts the Deployment Wizard by running [LiteTouch.wsf](#litetouchwsf)
 
 |**Value**|**Description**|
 |-|-|
@@ -373,11 +373,11 @@ ms.reviewer: mstewart,aaroncz
 |None|||
 
 ## LiteTouch.wsf
- This script is called by [LiteTouch.vbs](#LiteTouch.vbs) and is responsible for controlling the LTI deployment process. This includes:
+ This script is called by [LiteTouch.vbs](#litetouchvbs) and is responsible for controlling the LTI deployment process. This includes:
 
--   Running the Deployment Wizard
+- Running the Deployment Wizard
 
--   Running the LTI deployment process by using the appropriate task sequence file
+- Running the LTI deployment process by using the appropriate task sequence file
 
 |**Value**|**Description**|
 |-|-|
@@ -678,9 +678,9 @@ ms.reviewer: mstewart,aaroncz
 ## Summary_Definition_ENU.xml
  This XML file contains the script code and HTML layout for the **Deployment Summary** wizard page in the Deployment Wizard. During an LTI deployment, Wizard.hta reads this file and runs the embedded wizard page that displays the summary results for the LTI deployment. This XML file contains the following wizard pages:
 
--   **Success**. Notification regarding the successful completion of the deployment tasks
+- **Success**. Notification regarding the successful completion of the deployment tasks
 
--   **Failure**. Notification regarding the failure to successfully complete the deployment tasks
+- **Failure**. Notification regarding the failure to successfully complete the deployment tasks
 
 |**Value**|**Description**|
 |-|-|
@@ -790,11 +790,11 @@ ms.reviewer: mstewart,aaroncz
 ## ZTIApplications.wsf
  This script initiates an installation of applications that have been configured in the Applications node in Deployment Workbench. This script will not attempt to install any application that:
 
--   Does not support the target computer's platform type
+- Does not support the target computer's platform type
 
--   Does not support the target computer's processor type
+- Does not support the target computer's processor type
 
--   Has an uninstall entry in the registry under **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall**
+- Has an uninstall entry in the registry under **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall**
 
 > [!NOTE]
 >
@@ -831,11 +831,11 @@ ms.reviewer: mstewart,aaroncz
 ## ZTIAppXmlGen.wsf
  This script generates an XML file—ZTIAppXmlGen.xml—to use when automatically capturing user data (documents) associated with installed applications. It does so through the **HKEY_CLASSES_ROOT\Software\Classes** registry key and captures any applications that:
 
--   Are not associated with one of these file extensions: .mp3, .mov, .wma, .wmv, .chm, .evt, .evtx, .exe, .com, or .fon
+- Are not associated with one of these file extensions: .mp3, .mov, .wma, .wmv, .chm, .evt, .evtx, .exe, .com, or .fon
 
--   Are not associated with Microsoft Office, such as the 2007 Office system or Microsoft Office 2003.
+- Are not associated with Microsoft Office, such as the 2007 Office system or Microsoft Office 2003.
 
--   Have a valid open handler listed at **HKEY_CLASSES_ROOT\application\shell\open\command**
+- Have a valid open handler listed at **HKEY_CLASSES_ROOT\application\shell\open\command**
 
 |**Value**|**Description**|
 |-|-|
@@ -887,7 +887,7 @@ ms.reviewer: mstewart,aaroncz
 |**IPAddress**|-||
 
 ## ZTIBackup.wsf
- This script performs a backup of the target computer using the ImageX utility. The backup is stored in the location specified in the [BackupDir](properties.md#BackupDir) and [BackupShare](properties.md#BackupShare) properties.
+ This script performs a backup of the target computer using the ImageX utility. The backup is stored in the location specified in the [BackupDir](properties.md#backupdir) and [BackupShare](properties.md#backupshare) properties.
 
 |**Value**|**Description**|
 |-|-|
@@ -1004,9 +1004,9 @@ ms.reviewer: mstewart,aaroncz
 |**TPMOwnerPassword**|-||
 
 ## ZTIBIOSCheck.wsf
- This script checks the BIOS on the target computer, and then looks at a list of BIOSes that are incompatible with Windows. The list of incompatible BIOSes is stored in the [ZTIBIOSCheck.xml](support-files.md#ZTIBIOSCheck.xml) file.
+ This script checks the BIOS on the target computer, and then looks at a list of BIOSes that are incompatible with Windows. The list of incompatible BIOSes is stored in the [ZTIBIOSCheck.xml](support-files.md#ztibioscheckxml) file.
 
- If the BIOS on the target computer is listed in the [ZTIBIOSCheck.xml](support-files.md#ZTIBIOSCheck.xml) file, then the script returns a status that indicates the BIOS is incompatible with Windows and the deployment process should be terminated. For information on populating the list of incompatible BIOSes, see [ZTIBIOSCheck.xml](support-files.md#ZTIBIOSCheck.xml).
+ If the BIOS on the target computer is listed in the [ZTIBIOSCheck.xml](support-files.md#ztibioscheckxml) file, then the script returns a status that indicates the BIOS is incompatible with Windows and the deployment process should be terminated. For information on populating the list of incompatible BIOSes, see [ZTIBIOSCheck.xml](support-files.md#ztibioscheckxml).
 
 |**Value**|**Description**|
 |-|-|
@@ -1533,7 +1533,7 @@ ms.reviewer: mstewart,aaroncz
 |**ResourceRoot**|-||
 
 ## ZTIExecuteRunbook.wsf
- This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](#ExecuteRunbook) task sequence step type, which in turn runs this script.
+ This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](#executerunbook) task sequence step type, which in turn runs this script.
 
 |**Value**|**Description**|
 |-|-|
@@ -1565,8 +1565,8 @@ ms.reviewer: mstewart,aaroncz
 
 |**Name**|**Description**|
 |-|-|
-|**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](task-sequence-steps.md#ExecuteRunbook) task sequence step|
-|**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](task-sequence-steps.md#ExecuteRunbook) task sequence step|
+|**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](task-sequence-steps.md#executerunbook) task sequence step|
+|**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](task-sequence-steps.md#executerunbook) task sequence step|
 |**RunbookID**|Identifier assigned to the runbook on the Orchestrator server|
 |**RunbookParametersxParameterID**|Identifier assigned to a specific runbook parameter on the Orchestrator server|
 |**RunbookParametersxParameterName**|Name assigned to a specific runbook parameter on the Orchestrator server|
@@ -1655,9 +1655,9 @@ ms.reviewer: mstewart,aaroncz
 ## ZTIModifyVol.wsf
  This script modifies a volume to set the GPT ID and attributes for utility volumes, which is necessary for creating Windows RE partitions on computers with UEFI. This script needs to be called when deploying to computers with UEFI for these situations:
 
--   LTI deployments where custom partition (volume) structures are being created, such as creating five partition instead of the standard four partitions that are typically created for use with UEFI
+- LTI deployments where custom partition (volume) structures are being created, such as creating five partition instead of the standard four partitions that are typically created for use with UEFI
 
--   All ZTI and UDI deployments
+- All ZTI and UDI deployments
 
 > [!NOTE]
 >
@@ -1940,31 +1940,31 @@ ms.reviewer: mstewart,aaroncz
 
 2. The script configures these properties:
 
-   -   **ScriptRoot**is set to the parent folder of the currently running script.
+   - **ScriptRoot**is set to the parent folder of the currently running script.
 
-   -   **DeployRoot** is set to the parent folder of **ScriptRoot**.
+   - **DeployRoot** is set to the parent folder of **ScriptRoot**.
 
-   -   **ResourceRoot** is set to **DeployRoot**.
+   - **ResourceRoot** is set to **DeployRoot**.
 
-   -   **DeploySystemDrive** is set to **C:**.
+   - **DeploySystemDrive** is set to **C:**.
 
-   -   **DeploymentMethod** is set to **SCCM**.
+   - **DeploymentMethod** is set to **SCCM**.
 
 3. When **DeployRoot**contains **:\\***:*
 
-   -   The **DeployRoot** folder is copied to **_SMSTSMDataPath**\WDPackage
+   - The **DeployRoot** folder is copied to **_SMSTSMDataPath**\WDPackage
 
-   -   **ScriptRoot** is set to **_SMSTSMDataPath**\WDPackage\Scripts
+   - **ScriptRoot** is set to **_SMSTSMDataPath**\WDPackage\Scripts
 
-   -   **DeployRoot** is set to the parent folder of **ScriptRoot**
+   - **DeployRoot** is set to the parent folder of **ScriptRoot**
 
-   -   **ResourceRoot** is set to **DeployRoot**
+   - **ResourceRoot** is set to **DeployRoot**
 
 4. When **Phase** is **NULL**:
 
-   -   If the %SystemDrive% environment variable is **X:**, then **DeploymentType**is set to **NEWCOMPUTER** and **Phase** is set to **PREINSTALL**. Otherwise,**DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**.
+   - If the %SystemDrive% environment variable is **X:**, then **DeploymentType**is set to **NEWCOMPUTER** and **Phase** is set to **PREINSTALL**. Otherwise,**DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**.
 
-   -   If the **OldComputer**.tag file exists in the parent folder of the current running script, **DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**. Otherwise,**DeploymentType** is set to **REFRESH** and **Phase** is set to **VALIDATION**.
+   - If the **OldComputer**.tag file exists in the parent folder of the current running script, **DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**. Otherwise,**DeploymentType** is set to **REFRESH** and **Phase** is set to **VALIDATION**.
 
    For more information about these properties, see the [Properties](task-sequence-steps.md) article.
 
@@ -2034,23 +2034,23 @@ ms.reviewer: mstewart,aaroncz
 
 3. For all deployment methods (LTI, ZTI, and UDI), these deployment details are written for all deployment methods to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:
 
-   -   **Deployment Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.
+   - **Deployment Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.
 
-   -   **Deployment Source** is set to the source for the deployment and can be set to **OEM**, **MEDIA**, or the value in the **DeploymentMethod** property.
+   - **Deployment Source** is set to the source for the deployment and can be set to **OEM**, **MEDIA**, or the value in the **DeploymentMethod** property.
 
-   -   **Deployment Type** is set to the **DeploymentType** property.
+   - **Deployment Type** is set to the **DeploymentType** property.
 
-   -   **Deployment Timestamp** is set to the current date in WMI date format.
+   - **Deployment Timestamp** is set to the current date in WMI date format.
 
-   -   **Deployment Toolkit Version** is set to the **Version** property.
+   - **Deployment Toolkit Version** is set to the **Version** property.
 
 4. For LTI deployments, these deployment details are written  to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:
 
-   -   **Task Sequence ID** is set to the **TaskSequenceID**property.
+   - **Task Sequence ID** is set to the **TaskSequenceID**property.
 
-   -   **Task Sequence Name** is set to the **TaskSequenceName** property.
+   - **Task Sequence Name** is set to the **TaskSequenceName** property.
 
-   -   **Task Sequence Version** is set to the **TaskSequenceVersion** property.
+   - **Task Sequence Version** is set to the **TaskSequenceVersion** property.
 
 5. For all Configuration Manager deployments (ZTI and UDI for Configuration Manager), these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:
 
@@ -2062,25 +2062,25 @@ ms.reviewer: mstewart,aaroncz
 
 6. For LTI deployments where an image is being captured, these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:
 
-   -   **Capture Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.
+   - **Capture Method** is set to the deployment method being used and can be set to **LTI**, **ZTI**, or **UDI**, depending on the deployment method being performed.
 
-   -   **Capture Timestamp** is set to the current date in WMI date format.
+   - **Capture Timestamp** is set to the current date in WMI date format.
 
-   -   **Capture Toolkit Version** is set to the **Version** property.
+   - **Capture Toolkit Version** is set to the **Version** property.
 
-   -   **Capture Task Sequence ID** is set to the **TaskSequenceID**property.
+   - **Capture Task Sequence ID** is set to the **TaskSequenceID**property.
 
-   -   **Capture Task Sequence Name** is set to the **TaskSequenceName** property.
+   - **Capture Task Sequence Name** is set to the **TaskSequenceName** property.
 
-   -   **Capture Task Sequence Version** is set to the **TaskSequenceVersion** property.
+   - **Capture Task Sequence Version** is set to the **TaskSequenceVersion** property.
 
 7. For all Configuration Manager deployments (ZTI and UDI for Configuration Manager) in which an image is being captured, these deployment details are written to the registry at **HKEY_LOCAL_MACHINE\Software\Microsoft\Deployment 4**:
 
-   -   **Capture OSD Package ID** is set to the **_SMSTSPackageID** task sequence variable.
+   - **Capture OSD Package ID** is set to the **_SMSTSPackageID** task sequence variable.
 
-   -   **Capture OSD Program Name** is always set to "*****".
+   - **Capture OSD Program Name** is always set to "*****".
 
-   -   **Capture OSD Advertisement ID** is set to the **_SMSTSAdvertID**task sequence variable.
+   - **Capture OSD Advertisement ID** is set to the **_SMSTSAdvertID**task sequence variable.
 
    > [!NOTE]
    >  This script is not designed to run on Windows PE.
@@ -2250,19 +2250,19 @@ ms.reviewer: mstewart,aaroncz
 ## ZTIValidate.wsf
  This script ensures that it is safe for the deployment to continue by validating the condition of the target computer. The script processes are:
 
--   If **DeploymentType** equals REFRESH and the target computer is a server, the script exits.
+- If **DeploymentType** equals REFRESH and the target computer is a server, the script exits.
 
--   If **OSInstall** exists and is not equal to YES, the script exits.
+- If **OSInstall** exists and is not equal to YES, the script exits.
 
--   Verify that the minimum amount of RAM exists on the target computer; if not, the script exits.
+- Verify that the minimum amount of RAM exists on the target computer; if not, the script exits.
 
--   Verify that the processor meets the minimum required speed; if not, the script exits.
+- Verify that the processor meets the minimum required speed; if not, the script exits.
 
--   Verify that the hard disk size meets the minimum size requirements; if not, the script exits.
+- Verify that the hard disk size meets the minimum size requirements; if not, the script exits.
 
--   Verify that the target computer's operating system is installed on drive C; if not, the script exits.
+- Verify that the target computer's operating system is installed on drive C; if not, the script exits.
 
--   If **DeploymentType = REFRESH**, verify that drive C is not compressed by running `Compact /u C:\`.
+- If **DeploymentType = REFRESH**, verify that drive C is not compressed by running `Compact /u C:\`.
 
 |**Value**|**Description**|
 |-|-|
@@ -2300,21 +2300,21 @@ ms.reviewer: mstewart,aaroncz
 ## ZTIVHDCreate.wsf
  This script is used to create a virtual hard disk (.vhd or .avhd) file on the target computer and mount the .vhd file as a disk. Then, other portions of the LTI deployment process deploy the Windows operating system and applications to the newly created virtual hard disk. The script processes are as follows:
 
--   The **Class_Initialize** method is used to initialize the **VHDInputVariable** variable.
+- The **Class_Initialize** method is used to initialize the **VHDInputVariable** variable.
 
--   Validate that **VHDCreateSource** is defined and locates the source .vhd file (if specified).
+- Validate that **VHDCreateSource** is defined and locates the source .vhd file (if specified).
 
--   Generate a random .vhd file name if **VHDCreateFilename** equals RANDOM or "" (null).
+- Generate a random .vhd file name if **VHDCreateFilename** equals RANDOM or "" (null).
 
--   Verify that the folder exists where the .vhd file (specified in **VHDCreateFileName**) is to be created.
+- Verify that the folder exists where the .vhd file (specified in **VHDCreateFileName**) is to be created.
 
--   Create the .vhd file using the values in **VHDCreateSizePercent**, **VHDCreateSizeMax**, and **VHDCreateType**.
+- Create the .vhd file using the values in **VHDCreateSizePercent**, **VHDCreateSizeMax**, and **VHDCreateType**.
 
--   Create a differencing disk (if specified) using the value in **VHDCreateDiffVHD**.
+- Create a differencing disk (if specified) using the value in **VHDCreateDiffVHD**.
 
--   The newly created .vhd file and the optional differencing disk are mounted.
+- The newly created .vhd file and the optional differencing disk are mounted.
 
--   The disk number of the mounted virtual hard disk is returned.
+- The disk number of the mounted virtual hard disk is returned.
 
 |**Value**|**Description**|
 |-|-|
@@ -2350,19 +2350,19 @@ ms.reviewer: mstewart,aaroncz
 
  This script automatically scans the target computer and downloads a wide range of updates that are found to be applicable. Among these are:
 
--   Windows service packs
+- Windows service packs
 
--   Non-Microsoft drivers that were placed on Windows Update
+- Non-Microsoft drivers that were placed on Windows Update
 
--   The latest hotfix updates
+- The latest hotfix updates
 
--   Microsoft Office updates
+- Microsoft Office updates
 
--   Microsoft Exchange Server and SQL Server updates
+- Microsoft Exchange Server and SQL Server updates
 
--   Microsoft Visual Studio&reg; updates
+- Microsoft Visual Studio&reg; updates
 
--   Some non-Microsoft application updates
+- Some non-Microsoft application updates
 
 > [!TIP]
 >  Many hardware manufacturers have placed their drivers on Windows Update. These drivers no longer need to be maintained in the Out-of-Box Drivers directory. Experiment by removing drivers from the distribution share to see which ones are available on Windows Update. Note that if the drivers are not included with Windows by default, do not remove networking or storage drivers, because the operating system will require user input.
@@ -2477,11 +2477,11 @@ ms.reviewer: mstewart,aaroncz
 ## ZTIWipeDisk.wsf
  This script formats the target computer's hard disk. The script:
 
--   Exits if **WipeDisk** is not equal to **TRUE**
+- Exits if **WipeDisk** is not equal to **TRUE**
 
--   Determines the appropriate drive to format
+- Determines the appropriate drive to format
 
--   Formats the drive by calling `cmd /c format <Drive> /fs:ntfs /p:3 /Y` (where `<Drive>` is the drive letter of the hard disk drive to be formatted)
+- Formats the drive by calling `cmd /c format <Drive> /fs:ntfs /p:3 /Y` (where `<Drive>` is the drive letter of the hard disk drive to be formatted)
 
 |**Value**|**Description**|
 |-|-|

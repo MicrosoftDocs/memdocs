@@ -259,7 +259,7 @@ ms.reviewer: mstewart,aaroncz
 |**Location**|*distribution*\Tools\\*platform*|
 
 ## ZTIBIOSCheck.xml
- This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](#ZTIBIOSCheck.wsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.
+ This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](#ztibioscheckwsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.
 
 |**Value**|**Description**|
 |-|-|
