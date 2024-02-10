@@ -33,15 +33,15 @@ ms.reviewer: mstewart,aaroncz
 
   Each of these reference topics are discussed in subsequent sections.
 
-##  <a name="UDIConcepts"></a> UDI Concepts
+## UDI Concepts
  This section contains concepts that help describe UDI, the UDI Wizard, and the UDI Wizard Designer.
 
-###  <a name="DisplayName"></a> Display Name
+### Display Name
  The display name is used to provide a user-friendly, descriptive name for a wizard page within the Page Library in the UDI Wizard Designer. The display name is displayed in blue text for each wizard page in the Page Library and on the **Flow** tab in the UDI Wizard Designer.
 
  When you add a page to the Page Library, you must provide the display name. After the wizard page is added to the Page Library, you cannot change the display name.
 
-###  <a name="Flow"></a> Flow
+### Flow
  The **Flow** tab displays the list of wizard pages within a UDI stage in the UDI Wizard Designer. You can use the **Flow** tab to perform the following tasks:
 
 -   Add a wizard page from the Page Library to a UDI stage by dragging the page from the Page Library to the UDI stage.
@@ -50,17 +50,17 @@ ms.reviewer: mstewart,aaroncz
 
 -   Change the sequence of wizard pages within a UDI stage.
 
-###  <a name="PageLibrary"></a> Page Library
+### Page Library
  The Page Library contains all the pages currently loaded in the UDI Wizard Designer. When loading a UDI Wizard configuration file, all of the wizard pages defined in the configuration file are displayed to the Page Library. The Page Library shows the wizard pages in alphabetical order by page types. Each instance of a specific page type is listed under the page type.
 
  For example, you may need two different **WelcomePage** wizard pages for different stages. The two **WelcomePage** wizard pages will be listed under the **WelcomePage** wizard page type in the Page Library in the UDI Wizard Designer.
 
  In addition, each wizard page instance in the Page Library indicates how many times the wizard page is used in the stage flows. When you hover over a wizard page in the Page Library, a thumbnail of the wizard page is displayed along with the stages that include that page.
 
-###  <a name="PageName"></a> Page Name
+### Page Name
  The page name is used to uniquely identify a wizard page within the Page Library in the UDI Wizard Designer. The *page name* is the name a UDI stage references so that the UDI Wizard knows which wizard page to display within a specific UDI stage. When you add a page to the Page Library, you must provide the page name. After the wizard page is added to the Page Library, you cannot change the page name. In the UDI Wizard Designer, the page name is shown at the bottom of each wizard page in the Page Library in smaller, non-bold text.
 
-###  <a name="PrestagedMediaDeployments"></a> Prestaged Media Deployments
+### Prestaged Media Deployments
  Prestaged media support is an operating system deployment feature in Configuration Manager that allows an administrator to copy and apply prestage bootable media and an operating system image to a hard disk prior to the provisioning process. This work can reduce network traffic and the time needed for the provisioning process. Prestaged media can be deployed as part of the manufacturing process or at an enterprise staging center that is not connected to the Configuration Manager environment.
 
  For more information about prestaged media deployments, see the following resources:
@@ -72,10 +72,10 @@ ms.reviewer: mstewart,aaroncz
 ### Stage Group
  Use a stage group to group one or more stages in the UDI Wizard Designer. UDI stage groups are loosely related to MDT deployment scenarios, but there is no one-to-one correlation between the two.
 
-###  <a name="Stage"></a> Stage
+### Stage
  A *stage* is a subset of all the pages in the UDI Wizard configuration file that an MDT deployment scenario uses. When you start the UDI Wizard using the **UDI Wizard** task sequence step, the **/stage** parameter specifies the stage to run, which in turn specifies the set of pages to use. You can preview how wizard pages will appear in a stage by clicking **Preview** in the **Preview Wizard** group on the Ribbon. You can use a UDI stage in more than one MDT deployment scenario, even though the UDI stage is defined only once in the UDI Wizard Designer. For example, the NewComputer stage can be used in the MDT New Computer and Replace Computer deployment scenarios.
 
-###  <a name="Task"></a> Task
+### Task
  *UDI tasks* are software that is run on a wizard page to perform specific functions. In some instances, these tasks are used to verify that the target computer is ready for deployment. Other tasks can be used to perform deployment steps, such as copying configuration or result files.
 
 > [!NOTE]
@@ -87,7 +87,7 @@ ms.reviewer: mstewart,aaroncz
 
  If your requirements go beyond scripting, you can write custom UDI tasks. *UDI tasks* are DLLs written in C++ and implement the **ITask** interface. You register the DLL with the UDI Wizard Designer task library by creating a UDI Wizard Designer configuration (.config) file and placing it in the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT). For more information on developing custom UDI tasks, see the section, "Creating Custom UDI Tasks", in the *User-Driven Installation Developers Guide*.
 
-###  <a name="UDITaskSequence"></a> UDI Task Sequence
+### UDI Task Sequence
  You create a UDI task sequence using one of the following UDI-specific MDT task sequence templates, which run the UDI Wizard at the appropriate step in the task sequence:
 
 - **User-Driven Installation Task Sequence.** This task sequence template is used for the New Computer, Refresh Computer, and Replace Computer MDT deployment scenarios.
@@ -96,7 +96,7 @@ ms.reviewer: mstewart,aaroncz
 
   For more information about UDI task sequence templates, see the section, "Identify the UDI Task Sequence Templates in MDT", in the MDT document *Using the Microsoft Deployment Toolkit*. For more information about these components, see the section, "Identify UDI Deployment Process Components", in the MDT document *Using the Microsoft Deployment Toolkit*, which is included with MDT.
 
-###  <a name="UDIWizard"></a> UDI Wizard
+### UDI Wizard
  The UDI Wizard provides the UI for collecting deployment settings that the UDI task sequences consume. The UDI Wizard is initiated as a part of a UDI task sequence and collects the necessary configuration information for customizing the deployment of the Windows client operating systems and applications. The wizard pages read their configuration settings from the UDI Wizard configuration file, which is customized using the UDI Wizard Designer.
 
  The UDI Wizard is initiated by the **UDI Wizard** task sequence step in task sequences created using the UDI task sequence templates. The **UDI Wizard** task sequence step runs the UDIWizard.wsf script, which in turn initiates the UDI Wizard (OSDSetupWizard.exe). Table 9 lists the UDI Wizard command-line parameters and provides a brief description of each.
@@ -110,17 +110,17 @@ ms.reviewer: mstewart,aaroncz
 |**/stage**|Specifies the name of the UDI stage to run. The UDIWizard.wsf script automatically sets this parameter to the appropriate stage, as described in [UDI Stage Reference](#UDIStageReference). This parameter defaults to the first stage in the UDI Wizard configuration file.<br /><br /> The syntax for this parameter is as follows (where `<stage_name>` is the name of the stage to be run):<br /><br /> `/stage:<stage_name>`<br /><br /> Note:<br /><br /> The value for <stage_name> is case sensitive.|
 |**/locale**|Specifies the language to use in the UDI Wizard in the form of a locale identifier (LCID), which is represented by a numeric value. For a list of the available LCIDs, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).<br /><br /> You would use this list to identify the language you want to use, and then provide the corresponding LCID.<br /><br /> The syntax for this parameter is as follows (where `<locale_id>` is the numeric value of the LCID to be used):<br /><br /> `/locale:<locale_id>`|
 
-###  <a name="UDIWizardApplicationConfigurationFile"></a> UDI Wizard Application Configuration File
+### UDI Wizard Application Configuration File
  The **ApplicationPage** wizard page configures the UDI Wizard application configuration file, which maintains the list of software to be installed. This file contains an entry for each Configuration Manager application or program and package that was added using the UDI Wizard Designer.
 
  This file has the same name as the UDI Wizard configuration file but with a .app extension. For example, if the UDI Wizard configuration file is named *Config.xml,* then the corresponding UDI Wizard application configuration file would be *Config.xml.app.* This file is the companion to the UDI Wizard configuration file.
 
-###  <a name="UDIWizardConfigurationFile"></a> UDI Wizard Configuration File
+### UDI Wizard Configuration File
  The UDI Wizard reads the UDI Wizard configuration file to determine the wizard pages to be displayed, the sequence of the wizard pages, any default for controls on the wizard pages, and whether the controls are enabled or disabled. This file contains all the configuration settings that are displayed in the UDI Wizard and are configured using the UDI Wizard Designer.
 
  A separate configuration file—the UDI Wizard application configuration file—is used to configure applications to be installed on the target computer.
 
-###  <a name="UDIWizardDesigner"></a> UDI Wizard Designer
+### UDI Wizard Designer
  The UDI Wizard Designer is the primary tool for customizing wizard pages for the different deployment scenarios that UDI supports. Changes made in the UDI Wizard Designer are saved in the UDI Wizard configuration file and ultimately reflected in the user experience in the UDI Wizard. The user performing the deployment will see only the wizard pages in the UDI Wizard that you have selected and configured using the UDI Wizard Designer.
 
  Although the UDI Wizard would run with the default UDI Wizard configuration file, the wizard pages would not be configured correctly. It is recommended that you use the UDI Wizard Designer to configure the UDI Wizard user experience.
@@ -128,14 +128,14 @@ ms.reviewer: mstewart,aaroncz
 > [!NOTE]
 >  To run the UDI Wizard Designer, you must have the appropriate rights in Configuration Manager to access objects such as packages, applications, or images.
 
-###  <a name="Validator"></a> Validator
+### Validator
  You use UDI validators to help ensure that the correct information is entered into text fields on wizard pages in the UDI Wizard. UDI includes several built-in validators that help you perform typical validations of fields used for entering text, such as preventing users from entering invalid characters and ensuring that the field is not empty. When a validator detects an invalid entry in a text box, a message is displayed on the wizard page, and the **Next** button is disabled until all invalid entries are resolved.
 
  UDI includes built-in validators that allow you to perform most of the validation necessary for deployment. For more information about the UDI built-in validators, see [Built-in UDI Validators](#BuiltinUDIValidators).
 
  If your requirements go beyond the built-in UDI validators, you can write custom UDI validators. *UDI validators* are DLLs written in C++ that implement the **IValidator** interface. Register the DLL with the UDI Wizard Designer validator library by creating a UDI Wizard Designer configuration (.config) file and placing it in the *installation_folder*\Bin\Config folder (where *installation_folder* is the folder in which you installed MDT). For more information on developing custom UDI tasks, see the section, "Creating Custom UDI Validators", in the MDT document *User-Driven Installation Developers Guide*.
 
-###  <a name="WizardPage"></a> Wizard Page
+### Wizard Page
  You use a wizard page to collect configuration information in the UDI Wizard. Configure UDI wizard pages using the UDI Wizard Designer. The configuration settings are stored in the UDI Wizard configuration file and are read by the wizard page when the page is initialized in the UDI Wizard.
 
  Wizard pages are stored in the wizard Page Library, and they can be used in one or more UDI stages. This design allows you to configure a wizard page that is shared between stages once for all stages, dramatically reducing the amount of effort required and the complexity of updating wizard page configuration.
@@ -146,7 +146,7 @@ ms.reviewer: mstewart,aaroncz
 
  For more information on developing custom UDI wizard pages, see the section, "Creating Custom UDI Wizard Pages", in the MDT document *User-Driven Installation Developers Guide*.
 
-###  <a name="WizardPageEditor"></a> Wizard Page Editor
+### Wizard Page Editor
  You use a wizard page editor to configure a wizard page in the UDI Wizard Designer. A wizard page editor updates the wizard page configuration settings in the UDI Wizard configuration file; UDI includes a built-in wizard page editor for each built-in wizard page. For more information about the built-in wizard pages and wizard page editors, see [Built-in UDI Wizard Pages](#BuiltinUDIWizardPages).
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. Create wizard page editors using:
@@ -159,7 +159,7 @@ ms.reviewer: mstewart,aaroncz
 
   For more information on developing custom UDI wizard page editors, see the section, "Creating Custom Wizard Page Editors", in the MDT document *User-Driven Installation Developers Guide*.
 
-##  <a name="OSDResultsReference"></a> OSDResults Reference
+## OSDResults Reference
  **OSDResults** is a part of UDI that displays the results of a deployment performed using UDI. **OSDResults** displays the **Deployment Complete** dialog box. **OSDResults** is displayed prior to Windows logon the first time the target computer is started. The user can use **OSDResults** and the information in the **Deployment Complete** dialog box to determine the completion status of the deployment process and the configuration of the computer prior to logging on for the first time. In addition, the information in **OSDResults** can be used for troubleshooting any problems encountered during the deployment process.
 
  You can configure some of the user interface elements for **OSDResults** using the OSDResults.exe.config file, which resides in Tools\OSDResults in the MDT files Configuration Manager package. Table 10 lists the configuration settings in the OSDResults.exe.config file.
@@ -211,7 +211,7 @@ ms.reviewer: mstewart,aaroncz
 
     AppInstall.exe is run the first time a user logs on to the target computer. For more information on this process, see [User-Centric App Installer Reference](#UserCentricAppInstallerReference).
 
-##  <a name="UserCentricAppInstallerReference"></a> User-Centric App Installer Reference
+## User-Centric App Installer Reference
  The User-Centric App Installer feature in UDI is used to report any applications installed during the UDI deployment process to the Application Catalog feature in Configuration Manager. The User-Centric App Installer feature provides the link between the applications selected on the **ApplicatonPage** wizard page in the UDI Wizard and any optional Configuration Manager applications advertised to the users.
 
  For more information on the Application Catalog feature in Configuration Manager, see [Application Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699373(v=technet.10)).
@@ -338,7 +338,7 @@ ms.reviewer: mstewart,aaroncz
 
      The folder is retained for 1 month so that the primary users have an opportunity to be log on and run AppInstall.exe.
 
-##  <a name="UDIStageReference"></a> UDI Stage Reference
+## UDI Stage Reference
  The MDT deployment scenarios use one or more UDI [stage](#Stage). Each UDI stage used in the MDT deployment scenarios is discussed in a subsequent section in the context of the MDT deployment scenario. In some MDT deployment scenarios, only one stage is used. In other MDT deployment scenarios, multiple stages are used within the scenario. For more information on the MDT deployment scenarios, see the section, "Identifying Deployment Scenarios", in the MDT document *Using the Microsoft Deployment Toolkit.*
 
  Table 12 lists the MDT deployment scenarios and provides a brief description of each, how each scenario is selected, and which UDI stages are used in each deployment scenario. MDT automatically determines which MDT deployment scenario to use based on the MDT task sequence template you use to create your task sequence and on how the task sequence is initiated.
@@ -353,35 +353,35 @@ ms.reviewer: mstewart,aaroncz
 |Refresh Computer|MDT for UDI automatically selects this scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> - The UDI Wizard is run with the REFRESH stage to support this deployment scenario. For more information, see [REFRESH Stage](#REFRESHStage).|
 |Replace Computer|This scenario includes an existing computer and a replacement computer. A separate task sequence is created and run on each computer as described in the following process:<br /><br /> -                          **On the existing computer.** MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Replace Task Sequence task sequence template<br /><br /> Start the task sequence in the existing Windows operating system on the target computer (not in Windows PE)<br /><br /> The UDI Wizard is run with the following UDI stages to support this deployment scenario:<br /><br /> - **REPLACE stage.** This stage is run in the existing Windows operating system and captures configuration information from within Windows.<br /><br /> -                          **REPLACE.WinPE stage.** This stage is run in Windows PE and completes the capturing of configuration information from the existing computer—for example, running USMT and capturing the user state migration data.<br /><br /> The user state is captured to a network shared folder or to a local USB drive.<br /><br /> For more information on the REPLACE and REPLACE.WinPE stages, see [REPLACE and REPLACE.WinPE Stages](#REPLACEandREPLACEWinPEStages).<br /><br /> -                          **On the replacement computer.** This portion of the scenario is identical to the New Computer scenario, except that the user state captured in the previous step is restored. MDT for UDI automatically selects this portion of the scenario when you:<br /><br /> - Create the advertised task sequence using the User-Driven Installation Task Sequence task sequence template<br /><br /> - Start the task sequence in Windows PE using PXE boot, task sequence boot media, or prestaged media for the NEWCOMPUTER.Prestaged stage.<br /><br /> This portion of the scenario can be used with traditional deployments or with prestaged media deployments as supported in Configuration Manager. As a part of this portion of the scenario, the user state migration data is restored. The UDI Wizard is run with the following UDI stages to support each type of deployment:<br /><br /> -                          **NEWCOMPUTER stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on distribution points. For more information, see [NEWCOMPUTER Stage](#NEWCOMPUTERStage).<br /><br /> -                          **NEWCOMPUTER.Prestage stage.** The UDI Wizard is run with this stage in the **User-Driven Installation Task Sequence** task sequence when the operating system image is stored on a local disk on the target computer (prestaged). For more information, see [NEWCOMPUTER.Prestaged Stage](#NEWCOMPUTERPrestagedStage).|
 
-####  <a name="NEWCOMPUTERStage"></a> NEWCOMPUTER Stage
+#### NEWCOMPUTER Stage
  Figure 1 illustrates the use of the NEWCOMPUTER stage in a task sequence created using the User\-Driven Installation Task Sequence task sequence template. The primary difference between the task sequences calling the NEWCOMPUTER stage and the NEWCOMPUTER.Prestaged stage is that the task sequence calling the NEWCOMPUTER.Prestaged stage does not run the **Apply Operating System Image** task sequence step, because the operating system image is already located on the target computer.
 
  ![UDI Reference 1](media/UDIReference1.jpg)
 
  **Figure  SEQ Figure \\\* ARABIC 1. Process flow for the NEWCOMPUTER stage**
 
-####  <a name="NEWCOMPUTERPrestagedStage"></a> NEWCOMPUTER.Prestaged Stage
+#### NEWCOMPUTER.Prestaged Stage
  Figure 2 illustrates the high\-level process flow for the NEWCOMPUTER.Prestaged stage in a task sequence created using the User\-Driven Installation Task Sequence task sequence template. The primary difference between the task sequences calling the NEWCOMPUTER stage and the NEWCOMPUTER.Prestaged stage is that the task sequence calling the NEWCOMPUTER.Prestaged stage does not run the **Apply Operating System Image** task sequence step, because the operating system image is already located on the target computer.
 
  ![UDI Reference 2](media/UDIReference2.jpg)
 
  **Figure 2. Process flow for the NEWCOMPUTER.Prestaged stage**
 
-###  <a name="REFRESHStage"></a> REFRESH Stage
+### REFRESH Stage
  Figure 3 illustrates the high\-level process flow for the REFRESH stage in a task sequence created using the User\-Driven Installation Task Sequence task sequence template.
 
  ![UDI Reference 3](media/UDIReference3.jpg)
 
  **Figure  SEQ Figure \\\* ARABIC 3. Process flow for the REFRESH stage**
 
-###  <a name="REPLACEandREPLACEWinPEStages"></a> REPLACE and REPLACE.WinPE Stages
+### REPLACE and REPLACE.WinPE Stages
  Figure 4 illustrates the high\-level process flow for the REPLACE and REPLACE.WinPE stages in a task sequence created using the User\-Driven Installation Replace Task Sequence task sequence template.
 
  ![UDI Reference 4](media/UDIReference4.jpg)
 
  **Figure 4. Process flow for the REPLACE and REPLACE.WinPE stages**
 
-##  <a name="UDITaskReference"></a> UDI Task Reference
+## UDI Task Reference
  *UDI tasks* are software that is run on a wizard page that perform specific functions. In some instances, these tasks are used to verify that the target computer is ready for deployment. Other tasks can be used to perform deployment steps, such as copying configuration or result files.
 
 > [!NOTE]
@@ -395,12 +395,12 @@ ms.reviewer: mstewart,aaroncz
 
 -   A description of the built\-in UDI validators that are provided with MDT, as described in [Built\-in UDI Tasks](#BuiltinUDITasks)
 
-###  <a name="UDITaskOverview"></a> UDI Task Overview
+### UDI Task Overview
  UDI tasks allow you to run software on the target computer that helps with the deployment process. UDI includes several built\-in tasks that help you perform common tasks, such as ensuring that the target computer is not running on a battery and is connected to a wired network connection.
 
  In addition to the built\-in UDI tasks, you can create custom UDI tasks using the UDI software development kit \(SDK\). For more information about creating custom UDI tasks using the UDI SDK, see *User\-Driven Installation Developers Guide*.
 
-###  <a name="UDITaskConfigurationSettings"></a> UDI Task Configuration Settings
+### UDI Task Configuration Settings
  You manage tasks using the UDI Wizard Designer. You can add tasks, remove tasks, and edit the configuration of a task in the UDI Wizard Designer. The configuration settings for a task are stored in the UDI Wizard configuration file and are read by the UDI Wizard when the wizard page that contains the task is displayed.
 
  UTI tasks have some configuration settings that are common to all UDI tasks, as listed in Table 13. For the configuration settings that are specific to each UDI task, see the corresponding section in [Built\-in UDI Tasks](#BuiltinUDITasks).
@@ -414,7 +414,7 @@ ms.reviewer: mstewart,aaroncz
 |**Exit Code Values**|This specifies a list of possible return codes for the task. An item exists in the list for each possible return code.|
 |**Error Code Values**|This specifies a list of possible unexpected exceptions that may be encountered \(thrown\) by the task. An item exists in the list for each possible exception.|
 
-###  <a name="BuiltinUDITasks"></a> Built\-in UDI Tasks
+### Built\-in UDI Tasks
  Table 14 lists the built\-in UDI tasks. Each built\-in UDI task is discussed in a subsequent section.
 
 ## Table 14. Built\-in UDI Tasks
@@ -428,7 +428,7 @@ ms.reviewer: mstewart,aaroncz
 |[Shell Execute Task](#ShellExecuteTask)|This UDI task is used to run software that can be initiated from a command line.|
 |[Wired Network Check](#WiredNetworkCheck)|This UDI task is used to identify whether the target computer is connected to a wired network, not connected using a wireless network connection.|
 
-####  <a name="ACPowerCheck"></a> AC Power Check
+#### AC Power Check
  Use this UDI task to identify whether the target computer is connected to AC power. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
 
  Table 15 lists the error and exit codes that the **AC Power Check** task generates.
@@ -440,7 +440,7 @@ ms.reviewer: mstewart,aaroncz
 |          Exit          |   **0**   |  **Success**, which indicates that the target computer is plugged into AC power  |
 |          Exit          |  **\\***  | **Error**, which indicates that the target computer is not plugged into AC power |
 
-####  <a name="ApplicationDiscovery"></a> Application Discovery
+#### Application Discovery
  Use this UDI task to discover applications that are installed on the target computer.
 
  Table 16 lists the parameters that the **Application Discovery** task uses.
@@ -467,7 +467,7 @@ ms.reviewer: mstewart,aaroncz
 |          Exit          | **16777216** | **Warning**, which indicates that critical problems were encountered while initializing the application discovery engine |
 |          Exit          | **33554432** |    **Warning**, which indicates that critical problems were encountered while processing the application master list     |
 
-####  <a name="CheckSMSFolderOnUSB"></a> CheckSMSFolderOnUSB
+#### CheckSMSFolderOnUSB
  Use this UDI task to identify whether the \_SMSTaskSequence folder is located on a USB drive on the target computer. By default, the Configuration Manager task sequencer places the \_SMSTaskSequence folder on the drive with the most available free disk space. This can cause problems later in the deployment process if the USB drive is removed.
 
  This task checks to see whether the folder is located on a USB drive and prevents the deployment from proceeding if it is. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
@@ -493,7 +493,7 @@ ms.reviewer: mstewart,aaroncz
 |          Exit          |   **0**   | **Success**, which indicates that the \_SMSTaskSequence folder is not located on a USB drive and the deployment can continue. |
 |          Exit          |  **\\***  |  **Error**, which indicates that the \_SMSTaskSequence folder is located on a USB drive and the deployment cannot continue.   |
 
-####  <a name="CopyFilesTask"></a> Copy Files Task
+#### Copy Files Task
  Use this UDI task to copy files while the UDI Wizard is running on the target computer.
 
  Table 19 lists the parameters that the **Copy Files** task uses.
@@ -517,7 +517,7 @@ ms.reviewer: mstewart,aaroncz
 |          Exit          |  **\\***  |  **Error**, which indicates that the copy process failed   |
 |         Error          |  **\-1**  |  **Error**, which indicates that the copy process failed   |
 
-####  <a name="ShellExecuteTask"></a> Shell Execute Task
+#### Shell Execute Task
  Use this UDI task to run software that can be initiated from a command line.
 
  Table 21 lists the parameters that the **Shell Execute** task uses.
@@ -559,7 +559,7 @@ ms.reviewer: mstewart,aaroncz
 |          Exit          |   **0**   | **Success**, which indicates that the task finished successfully |
 |          Exit          |  **\\***  |         **Error**, which indicates that the task failed          |
 
-####  <a name="WiredNetworkCheck"></a> Wired Network Check
+#### Wired Network Check
  Use this UDI task to determine whether the target computer is connected to a wired network, not using a wireless network connection. This task only uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#UDITaskConfigurationSettings).
 
  Table 23 lists the common error and exit codes that the **Wired Network Check** task generates.
@@ -571,7 +571,7 @@ ms.reviewer: mstewart,aaroncz
 |          Exit          |   **0**   |  **Success**, which indicates that the target computer is connected to a wired network  |
 |          Exit          |  **\\***  | **Error**, which indicates that the target computer is not connected to a wired network |
 
-##  <a name="UDIValidatorReference"></a> UDI Validator Reference
+## UDI Validator Reference
  UDI validators are used to validate values entered in text fields on wizard pages. When a UDI validator detects an invalid entry, a message is displayed for the first error encountered at the bottom of the wizard page. The next validation error message, if any, is displayed after you resolve the first validation error. This process continues until all validation errors are resolved. The **Next** button is disabled until all validation errors on the wizard page are resolved.
 
  This reference includes:
@@ -580,12 +580,12 @@ ms.reviewer: mstewart,aaroncz
 
 -   A description of the built\-in UDI validators provided with MDT, as described in [Built\-in UDI Validators](#BuiltinUDIValidators)
 
-###  <a name="UDIValidatorOverview"></a> UDI Validator Overview
+### UDI Validator Overview
  UDI validators are used to help ensure that users provide the correct information in the text fields on wizard pages in the UDI Wizard. UDI includes several built\-in validators that help you perform typical validations of fields used for entering text, such as preventing users from entering invalid characters or ensuring that the field is not empty.
 
  In addition to the built\-in UDI validators, you can create custom UDI validators using the UDI SDK. For more information about creating custom UDI validators using the UDI SDK, see the MDT document *User\-Driven Installation Developers Guide*.
 
-###  <a name="BuiltinUDIValidators"></a> Built-in UDI Validators
+### Built-in UDI Validators
  Table 24 lists the built-in UDI validators. Each built-in validator is discussed in a subsequent section. When a validator detects an invalid entry in a text box, a message is displayed on the wizard page, and the **Next** button is disabled until all invalid entries are resolved.
 
 ## Table 24. Built-in UDI Validators
@@ -597,19 +597,19 @@ ms.reviewer: mstewart,aaroncz
 |[NonEmpty](#NonEmpty)|This validator is used to require text in a field.|
 |[RegEx](#RegEx)|This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator.|
 
-####  <a name="InvalidChars"></a> InvalidChars
+#### InvalidChars
  This validator prevents users from entering specific characters. The **Message** box allows you to enter a message that is displayed if the text field contains any of the invalid characters. The **Invalid Characters** box allows you to enter the characters that are considered invalid. The characters are entered without spaces between them.
 
-####  <a name="NamedPattern"></a> NamedPattern
+#### NamedPattern
  This validator helps ensure that the text follows a predefined pattern. The **Message** box allows you to enter a message that is displayed if the text field does not match the named pattern. The **Named Pattern** box allows you to enter the name of the predefined pattern and must be **Username**, **ComputerName**, or **Workgroup**.  The names are case insensitive.
 
-####  <a name="NonEmpty"></a> NonEmpty
+#### NonEmpty
  Use this validator to require text in a field. The **Message** box allows you to enter a message that is displayed if the text field is empty.
 
-####  <a name="RegEx"></a> RegEx
+#### RegEx
  This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](/cpp/standard-library/regular-expressions-cpp).
 
-##  <a name="UDIWizardPageReference"></a> UDI Wizard Page Reference
+## UDI Wizard Page Reference
  You add a UDI [wizard page](#WizardPage) to stages from the [Page Library](#PageLibrary) in the [UDI Wizard Designer](#UDIWizardDesigner). UDI wizard pages are displayed in the [UDI Wizard](#UDIWizard).
 
  This reference includes:
@@ -618,7 +618,7 @@ ms.reviewer: mstewart,aaroncz
 
 -   A description of the built-in UDI wizard pages that are provided with MDT, as described in [Built-in UDI Wizard Pages](#BuiltinUDIWizardPages)
 
-###  <a name="UDIWizardPageOverview"></a> UDI Wizard Page Overview
+### UDI Wizard Page Overview
  Wizard pages are displayed in the [UDI Wizard](#UDIWizard) and collect the information required to complete the deployment process. You create wizard pages using C++ in Visual Studio. The custom wizard pages are implemented as DLLs that the UDI Wizard reads.
 
  Each built-in UDI wizard page has a corresponding UDI [wizard page editor](#WizardPageEditor), which you use to configure the wizard page in the [UDI Wizard Designer](#UDIWizardDesigner).
@@ -647,7 +647,7 @@ ms.reviewer: mstewart,aaroncz
 |**LogPath**<br /><br /> Specifies the fully qualified path to the log files for the UDI Wizard. You can set this variable to one of the following values:<br /><br /> - The value in the **_SMSTSLogPath** task sequence variable<br /><br /> - The value of the %TEMP% environment variable if the **_SMSTSLogPath** task sequence variable is not set|No|Yes|
 |**WizardConfigFilename**<br /><br /> Specifies the name of the UDI Wizard configuration file currently in use. The **ApplicationPage** wizard page reads the value of this variable to find the corresponding .app file, which contains the list of applications. For example, if the UDI Wizard configuration file is named *config.xml,* then the wizard page will look for the corresponding .app file (config.xml.app).|No|Yes|
 
-###  <a name="BuiltinUDIWizardPages"></a> Built-in UDI Wizard Pages
+### Built-in UDI Wizard Pages
  Table 26 lists the built-in UDI wizard pages. Each built-in UDI wizard page is discussed in a subsequent section.
 
 ## Table 26. Built-in Wizard Pages and Their Descriptions
@@ -668,7 +668,7 @@ ms.reviewer: mstewart,aaroncz
 |[VolumePage](#VolumePage)|Use this wizard page to configure the settings for the disk volume on target computer where the operating system will be deployed. These settings include selecting the target operating system, selecting the target drive, selecting any Windows installation, and determining whether the target drive should be formatted as a part of the deployment process.|
 |[WelcomePage](#WelcomePage)|Use this wizard page to provide information to the user about UDI Wizard and the deployment process. You can configure the notification message using the UDI Wizard Designer.|
 
-####  <a name="AdminAccounts"></a> AdminAccounts
+#### AdminAccounts
  Use this wizard page to set the password for the local administrator account and to add other user to the local Administrators group on the target computer.
 
 ##### Task Sequence Variables
@@ -681,7 +681,7 @@ ms.reviewer: mstewart,aaroncz
 |**OSDAddAdmin**<br /><br /> Specifies a list of additional user names to be added to the local Administrators group on the target computer.|Yes|Yes|Yes|
 |**OSDLocalAdminPassword**<br /><br /> Specifies the passwords for the local built-in Administrator account on the target computer.|Yes|Yes|Yes|
 
-####  <a name="ApplicationPage"></a> ApplicationPage
+#### ApplicationPage
  Use this wizard page to configure the list of application software that can be installed during the setup process. These applications can include applications or packages and programs from Configuration Manager.
 
 > [!NOTE]
@@ -709,7 +709,7 @@ ms.reviewer: mstewart,aaroncz
 |**VolumeArchitecture**<br /><br /> Specifies the processor architecture of the target operating system image to be deployed (whether the image contains a 32-bit or 64-bit operating system). When this page is displayed, it checks to see if this variable has changed. If the variable has changed since the last time the wizard page was displayed, the wizard page filters the programs available for selection based on architecture of the target operating system. For example, if a 32-bit operating system is to be deployed, then the wizard page removes (filters) any 64-bit applications from the list of available applications on the wizard page.|Yes|No|
 |**WizardConfigFilename**<br /><br /> Specifies the name of the UDI Wizard configuration file currently in use. If the value of the **Link.Uri** setter property is empty, the **ApplicationPage** wizard page reads the value of this variable to find the corresponding .app file, which contains the list of applications. For example, if the UDI Wizard configuration file is named *config.xml,* then the wizard page will look for the corresponding .app file (config.xml.app). This variable is set when the UDI Wizard starts.<br /><br /> The **Link.Uri** setter property is set on the **Software Settings** dialog box, which can be opened using the **Edit Software Settings** button in the **Page Behavior** group on the Ribbon in the UDI Wizard Designer.|Yes|No|
 
-####  <a name="BitLockerPage"></a> BitLockerPage
+#### BitLockerPage
  This wizard page is used to configure BitLocker settings for the target computer.
 
 ##### Task Sequence Variables
@@ -736,7 +736,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|-|
 |**KeyLocation**<br /><br /> Specifies the fully qualified path to the location where the BitLocker encryption keys are stored, which can be a local or UNC path. This configuration value is used to set the value of the **BDEKeyLocation** task sequence variable for the **BitLockerPage**. This variable is only considered valid when **OSDBitLockerMode** is set to **TPMKEY** or **KEY**.|Yes|No|Yes|
 
-####  <a name="ComputerPage"></a> ComputerPage
+#### ComputerPage
  Use this wizard page to configure the computer name of the target computer, the domain or workgroup to join, and the credentials to be used when joining a domain. When you configure this page to join the target computer to a domain, this wizard page will validate the credentials you provide for joining the domain in AD DS by default. Then, this wizard page attempts to modify a computer object in AD DS to verify that the user credentials provided on this page have permissions to create or modify the computer object. You can disable either of these behaviors. If you disable the validation of the credentials, then the verification of permissions for creating or modifying computer objects is also disabled. Both of these validations occur when the **Next** button is clicked. If either of the validations encounters an error, an error message will be displayed and this page will continue to be displayed.
 
  The following is the order of precedence for determining the default computer name:
@@ -773,7 +773,7 @@ ms.reviewer: mstewart,aaroncz
 |**ADCredentialCheck**<br /><br /> Specifies whether the **ComputerPage** wizard page will validate the credentials provided for joining a domain prior to continuing to the next wizard page. If the value is set to:<br /><br /> \-                                      **TRUE**, then the **Active Directory Credential Check** check box is selected in the wizard page editor in the **Domain Join Credentials** section in the UDI Wizard Designer, and credentials are validated<br /><br /> If this configuration setting is set to **TRUE**, then the credentials are validated even if the credential fields are disabled \(locked\).<br /><br /> \- **FALSE**, then the **Active Directory Credential Check** check box is cleared in the wizard page editor in the **Domain Join Credentials** section in the UDI Wizard Designer, and credentials are not validated<br /><br /> If this configuration setting is set to **FALSE**, then the **ADComputerObjectCheck** configuration setting is ignored and the validation that the provided credentials can modify a computer object in AD DS is not performed.|Yes|No|Yes|
 |**UseExistingComputerName**<br /><br /> Specifies whether the **ComputerPage** wizard page will use the existing computer name on the target computer as the default for the computer name.<br /><br /> Note:<br /><br /> This check box is only relevant for the Refresh Computer deployment scenario.<br /><br /> If the value is set to:<br /><br /> \- **TRUE**, then the **Use Existing Computer Name** check box is selected in the wizard page editor in the **Computer Name** section in the UDI Wizard Designer, and the existing computer name will be used as the default computer name for the target computer after the new operating system is deployed<br /><br /> \-                                      **FALSE**, then the **Use Existing Computer Name** check box is cleared in the wizard page editor in the **Computer Name** section in the UDI Wizard Designer, and the existing computer name will not be used as the default computer name for the target computer after the new operating system is deployed|Yes|No|Yes|
 
-####  <a name="ConfigScanPage"></a> ConfigScanPage
+#### ConfigScanPage
  Use this wizard page to run UDI tasks that scan the configuration of the target computer to determine whether the target computer is ready for the deployment of the operating system image. This readiness includes having sufficient system resources and any prerequisite software being installed and configured properly. In addition, other UDI tasks are run that collect configuration information about the target computer, such as identifying:
 
 -   Whether the computer is connected to power \(as opposed to running on a battery\)
@@ -784,7 +784,7 @@ ms.reviewer: mstewart,aaroncz
 
 -   Any installed printers
 
-####  <a name="LanguagePage"></a> LanguagePage
+#### LanguagePage
  Use this wizard page to determine which language packs should be installed, the default language for the target operating system, the keyboard locale, and the time zone in which the computer will be located.
 
 ##### Task Sequence Variables
@@ -799,7 +799,7 @@ ms.reviewer: mstewart,aaroncz
 |**OSDTimeZone**<br /><br /> Specifies the time zone where the target computer will be physically located. Set the value of this variable in the **Time zone** box. If not specified, the time zone configured in the image is used.|Yes|Yes|Yes|
 |**UILanguage**<br /><br /> Specifies the default language to be used for the target operating system. Set the value of this variable in the **Language to install** box. If not specified, the language configured in the image is used.|Yes|Yes|Yes|
 
-####  <a name="ProgressPage"></a> ProgressPage
+#### ProgressPage
  Use this wizard page to run UDI tasks that capture the user state migration data from the target computer. These tasks include:
 
 -   Copying the application discovery file to the location selected on the [UserStatePage](#UserStatePage) wizard page
@@ -810,13 +810,13 @@ ms.reviewer: mstewart,aaroncz
 
 -   Running the USMT and saving the user state migration data to the location selected on the [UserStatePage](#UserStatePage) wizard page
 
-####  <a name="RebootPage"></a> RebootPage
+#### RebootPage
  Use this wizard page to notify the user that the target computer is going to be restarted. You can configure the notification message using the UDI Wizard Designer.
 
-####  <a name="SummaryPage"></a> SummaryPage
+#### SummaryPage
  Use this wizard page to notify the user about the configuration options that were selected while running the UDI Wizard. The configuration information displayed on this wizard page is automatically collected from other wizard pages. Some fields on other wizard pages allow you to configure the caption \(label\) displayed on this wizard page using the UDI Wizard Designer.
 
-####  <a name="UDAPage"></a> UDAPage
+#### UDAPage
  Use this wizard page to configure the UDA between the target computer and a specified user. Assigning a user as the primary user of a computer allows automatic installation of software that is deployed to that user. The UDA feature is only available in Configuration Manager and only in the New Computer deployment scenario.
 
 ##### Task Sequence Variables
@@ -829,7 +829,7 @@ ms.reviewer: mstewart,aaroncz
 |**SMSTSAssignUsersMode**<br /><br /> Specifies the mode for configuring user affinity in Configuration Manager. Use this variable to configure the behavior of creating affinity between the target computer and user accounts in the **SMSTSUdaUsers** task sequence variable. To set this variable, select the **Use User Device Affinity** check box.<br /><br /> If the variable is set to:<br /><br /> \-                                      **Auto**, then the affinity processing is automatically approved by Configuration Manager<br /><br /> \- **Pending**, then the affinity processing rules will require approval by a Configuration Manager administrator \(This is the value used when the **Use User Device Affinity** check box is selected.\)<br /><br /> \-                                      **Disabled**, then no affinity processing will occur|No|Yes|No|
 |**SMSTSUdaUsers**<br /><br /> Specifies the users to be associated with the target computer. The **User Device Affinity Account** sets this variable. This variable can have one or many users specified and is in the format `Domain\User1, Domain\User2`.|Yes|Yes|Yes|
 
-####  <a name="UserStatePage"></a> UserStatePage
+#### UserStatePage
  Use this wizard page to configure the settings for capturing or restoring user state migration data. This wizard page is used for both user state migration data capture and restore.
 
  The **UserStatePage** can capture or restore user state migration data from a disk locally attached to the target computer, a USB drive attached to the target computer, or a network shared folder. In addition, you can select to not restore any user data. The code logic behind the wizard page enables, disables, or automatically selects each of the following options based on the deployment scenario and whether the disk is being formatted:
@@ -842,7 +842,7 @@ ms.reviewer: mstewart,aaroncz
 
 -   **Network.** This option indicates that the user state migration data should be stored on a network shared folder and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **Network**.
 
-#####  <a name="NEWCOMPUTERStageBehavior"></a> NEWCOMPUTER Stage Behavior
+##### NEWCOMPUTER Stage Behavior
  The NEWCOMPUTER stage is used for computers on which no user state migration data exists. The New Computer deployment scenario can be used as the second part of the Replace Computer deployment scenario. If the user selects to:
 
 - Format the disk on the target computer, then the **UserStatePage** assumes that no user state migration data is located on the local hard disk, so the **Local** option is disabled and all other options are enabled
@@ -858,7 +858,7 @@ ms.reviewer: mstewart,aaroncz
 |Yes|Enabled|Disabled|Enabled|Enabled|
 |No|Disabled|Selected|Disabled|Disabled|
 
-#####  <a name="NewComputerPrestagedStageBehavior"></a> NewComputer.Prestaged Stage Behavior
+##### NewComputer.Prestaged Stage Behavior
  The NEWCOMPUTER.Prestaged stage is based on the prestaged media feature in Configuration Manager. Because the local hard disk is new, there is no user state migration data to be restored from the local hard disk, so the **Local** option is disabled. All other options are valid for this deployment scenario and are enabled. No default option is selected.
 
  Table 37 lists the behavior of the options on the wizard page for the NewComputer.Prestaged stage. The **Format** column indicates whether the target hard disk is to be formatted as a part of the deployment. The other columns indicate the configuration of the options when the **UserStatePage** is loaded.
@@ -869,7 +869,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|-|-|
 |N\/A|Enabled|Disabled|Enabled|Enabled|
 
-#####  <a name="REFRESHStageBehavior"></a> REFRESH Stage Behavior
+##### REFRESH Stage Behavior
  The REFRESH stage is initiated in a full Windows operating system, instead of Windows PE. If the user selects to:
 
 - Format the disk on the target computer, then the **UserStatePage** assumes that no user state migration data is to be restored, and all options are disabled other than the **NoData** option
@@ -885,7 +885,7 @@ ms.reviewer: mstewart,aaroncz
 |Yes|Selected|Disabled|Disabled|Disabled|
 |No|Disabled|Selected|Disabled|Disabled|
 
-#####  <a name="REPLACEWinPEStageBehavior"></a> REPLACE.WinPE Stage Behavior
+##### REPLACE.WinPE Stage Behavior
  The REPLACE.WinPE stage captures the user state migration data from the existing \(old\) computer, and then restores the user state migration data later using one of the New Computer deployment scenarios. Because two different computers are involved in the deployment, the user state migration data must be saved to a USB drive or to a network shared folder. Saving user state migration data to a local disk is unavailable.
 
  Table 39 lists the behavior of the options on the wizard page for the REPLACE.WinPE stage. The **Format** column indicates whether the target hard disk is to be formatted as a part of the deployment. The other columns indicate the configuration of the options when the **UserStatePage** is loaded.
@@ -939,7 +939,7 @@ ms.reviewer: mstewart,aaroncz
 |**NetworkDrive**<br /><br /> Specifies the drive letter that this wizard page uses to map to the network shared folder in the **SMSConnectNetworkFolderPath** task sequence variable. The network shared folder mapping is used for capturing or restoring the user state migration data. Set the value of this variable in the **Mapped Drive Letter** box in the **Network Combo Box** section on the wizard paged editor in the UDI Wizard Designer. The drive letter specified must include the colon (:) after the drive letter and must not be in use on the target computer. For example, if the target computer has drives C: and D:, then C: and D: could not be used for this variable.<br /><br /> Note:<br /><br /> This variable is only valid if the **OSDUserStateMode** task sequence variable is set to **Network**.|Yes|No|Yes|
 |**State**<br /><br /> Specifies whether the wizard page is being used for capturing or restoring the user state migration data. Set the value of this variable in the **Capture or Restore** box in the **Capture/Restore Location** section on the wizard paged editor in the UDI Wizard Designer. If the variable is set to:<br /><br /> - **Capture**, then the wizard page is used to capture user state migration data<br /><br /> -                                      **Restore**, then the wizard page is used to restore user state migration data|Yes|No|Yes|
 
-####  <a name="VolumePage"></a> VolumePage
+#### VolumePage
  Use this wizard page to configure the settings for the disk volume on the target computer on which the operating system will be deployed. These settings include selecting the target operating system, selecting the target drive, selecting any Windows installation, and determining whether the target drive should be formatted as a part of the deployment process.
 
 ##### Task Sequence Variables
@@ -964,7 +964,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |**VolumeArchitecture**<br /><br /> Specifies the processor architecture of the operating system to be deployed, which is selected in the **Image Selection** box. The **VolumeArchitecture** wizard page consumes this variable to filter the architecture of applications displayed on that page. For example, if a 32-bit operating system is to be deployed, then the **VolumeArchitecture** wizard page removes (filters) any 64-bit applications from the list of available applications.<br /><br /> If the variable is set to:<br /><br /> -                                      **x86**, then a 32-bit operating system was selected<br /><br /> - **amd64**, then 64-bit operating system was selected|No|Yes|
 
-####  <a name="WelcomePage"></a> WelcomePage
+#### WelcomePage
  Use this wizard page to provide information to the user about the UDI Wizard and the deployment process. You can configure the notification message using the UDI Wizard Designer.
 
 ## UDI Build Your Own Page Toolbox Control Reference
@@ -1000,7 +1000,7 @@ ms.reviewer: mstewart,aaroncz
 
  **Figure  SEQ Figure \\\* ARABIC 5. Example custom wizard page**
 
-###  <a name="CheckboxControl"></a> Checkbox Control
+### Checkbox Control
  This control allows you select or clear a configuration option and behaves as a traditional UI check box. This control has a corresponding label that you can use to describe the purpose of the check box. The state of this control is True when the check box is selected and False when the check box is cleared. The state of the check box is stored in the task sequence variable configured for this control.
 
 #### Layout Properties
@@ -1028,7 +1028,7 @@ ms.reviewer: mstewart,aaroncz
 |**Friendly display name visible in the summary page**|Use this property to configure the descriptive name that appears on the **Summary** wizard page. This name is used to describe the value that was saved in the **Task sequence variable name** property for this control.|
 |**Unlocked**|Use this property to configure whether the user is able to interact with the control. By default, the control is enabled. This button displays the following status:<br /><br /> - **Unlocked.** The control is enabled, and users can enter information using it.<br /><br /> -                                  **Locked.** The control is disabled, and users are unable to enter information using it.<br /><br /> **Note** If you disable (lock) a control, you must provide the information the control collected by configuring MDT properties in CustomSettings.ini or in the MDT DB. Otherwise, the UDI Wizard will not collect the necessary information, and the UDI deployment will fail.|
 
-###  <a name="ComboboxControl"></a> Combobox Control
+### Combobox Control
  This control allows you to select an item from a list of items and behaves as a traditional UI drop-down list. This control allows you to add or remove items from the list and provide a corresponding value that will be set in the task sequence variable configured for this control.
 
 #### Layout Properties
@@ -1055,7 +1055,7 @@ ms.reviewer: mstewart,aaroncz
 |**Friendly display name visible in the summary page**|Use this property to configure the descriptive name that appears on the **Summary** wizard page. This name is used to describe the value that was saved in the **Task sequence variable name** property for this control.|
 |**Unlocked**|Use this property to configure whether the user is able to interact with the control. By default, the control is enabled. This button displays the following status:<br /><br /> -                                  **Unlocked.** The control is enabled, and users can enter information using it.<br /><br /> - **Locked.** The control is disabled, and users are unable to enter information using it.<br /><br /> **Note** If you disable (lock) a control, you must provide the information the control collected by configuring MDT properties in CustomSettings.ini or in the MDT DB. Otherwise, the UDI Wizard will not collect the necessary information, and the UDI deployment will fail.|
 
-###  <a name="LineControl"></a> Line Control
+### Line Control
  This control allows you to add a horizontal line to divide one portion of the custom wizard page from another. This control does not collect any configuration values but rather is used to visually enhance the UI.
 
 #### Layout Properties
@@ -1073,7 +1073,7 @@ ms.reviewer: mstewart,aaroncz
 #### Settings Properties
  The **Line** control has no settings properties.
 
-###  <a name="LabelControl"></a> Label Control
+### Label Control
  This control allows you to add descriptive, read-only text to the wizard page. This control does not collect any configuration values but rather is used to visually enhance the UI.
 
 #### Layout Properties
@@ -1092,7 +1092,7 @@ ms.reviewer: mstewart,aaroncz
 #### Settings Properties
  The **Label** control has no settings properties.
 
-###  <a name="RadioControl"></a> Radio Control
+### Radio Control
  This control allows you to select one option from a group of two or more options. As with traditional radio buttons, you can group two or more of these controls; then, the user can select one of the options in the group.
 
  A unique value is assigned to each radio button. The value assigned to the selected radio button control is saved in the task sequence variable configured for this control.
@@ -1124,7 +1124,7 @@ ms.reviewer: mstewart,aaroncz
 |**Friendly display name visible in the summary page**|Use this property to configure the descriptive name that appears on the **Summary** wizard page. This name is used to describe the value that was saved in the **Task sequence variable name** property for this control.|
 |**Unlocked**|Use this property to configure whether the user is able to interact with the control. By default, the control is enabled. This button displays the following status:<br /><br /> -                                  **Unlocked.** The control is enabled, and users can enter information using it.<br /><br /> -                                  **Locked.** The control is disabled, and users are unable to enter information using it.<br /><br /> **Note** If you disable (lock) a control, you must provide the information the control collected by configuring MDT properties in CustomSettings.ini or in the MDT DB. Otherwise, the UDI Wizard will not collect the necessary information, and the UDI deployment will fail.|
 
-###  <a name="BitmapControl"></a> Bitmap Control
+### Bitmap Control
  This control allows you to add a bitmap graphic (.bmp file) to the custom wizard page. This control does not collect any configuration values but rather is used to visually enhance the UI.
 
 #### Layout Properties
@@ -1143,7 +1143,7 @@ ms.reviewer: mstewart,aaroncz
 #### Settings Properties
  The **Bitmap** control has no settings properties.
 
-###  <a name="TextboxControl"></a> Textbox Control
+### Textbox Control
  This control allows you to enter text on the custom wizard page. The text typed into this control is saved in the task sequence variable configured for this control.
 
 #### Layout Properties
@@ -1171,7 +1171,7 @@ ms.reviewer: mstewart,aaroncz
 |**List of validators assigned to this control**|This property contains a list of validators used to verify that the content entered in the text box.<br /><br /> You can:<br /><br /> - Add validators to the list using the blue plus sign button immediately to the right of the list of validators<br /><br /> - Edit validators in the list using the pencil button immediately to the right of the list of validators<br /><br /> - Remove validators from the list using the red **X** button immediately to the right of the list of validators|
 |**Unlocked**|Use this property to configure whether the user is able to interact with the control. By default, the control is enabled. This button displays the following status:<br /><br /> - **Unlocked.** The control is enabled, and users can enter information using it.<br /><br /> -                                  **Locked.** The control is disabled, and users are unable to enter information using it.<br /><br /> Note:<br /><br /> **Note** If you disable (lock) a control, you must provide the information the control collected by configuring MDT properties in CustomSettings.ini or in the MDT DB. Otherwise, the UDI Wizard will not collect the necessary information, and the UDI deployment will fail.|
 
-##  <a name="UDITaskSequenceVariables"></a> UDI Task Sequence Variables
+## UDI Task Sequence Variables
  The task sequence variables in this section are used only in User-Driven Installation (UDI) deployments. In addition to these task sequence variables, the following ZTI task sequence variables are also used by UDI and are documented in their respective sections earlier in this guide:
 
 -   [KeyboardLocale](#KeyboardLocale)
@@ -1182,7 +1182,7 @@ ms.reviewer: mstewart,aaroncz
 
 -   [UserLocale](#UserLocale)
 
-###  <a name="OSDAddAdmin"></a> OSDAddAdmin
+### OSDAddAdmin
  This task sequence variable specifies a list of domain-based accounts or local accounts to be added to the Administrators local built-in group on the target computer.
 
 |**Value**|**Description**|
@@ -1193,7 +1193,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDAddAdmin=domain\user01;Win7-01\LocalUser01`|
 
-###  <a name="OSDApplicationList"></a> OSDApplicationList
+### OSDApplicationList
  This task sequence variable specifies which applications should be selected by default on the **Install Software** page of the Operating System Deployment (OSD) Setup Wizard.
 
 |**Value**|**Description**|
@@ -1204,7 +1204,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDApplicationList=2;3`|
 
-###  <a name="OSDArchitecture"></a> OSDArchitecture
+### OSDArchitecture
  This task sequence variable specifies the processor architecture of the target operating system to be deployed.
 
 |**Value**|**Description**|
@@ -1216,7 +1216,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDArchitecture=amd64`|
 
-###  <a name="OSDBitlockerStatus"></a> OSDBitlockerStatus
+### OSDBitlockerStatus
  This task sequence variable specifies if BitLocker is enabled on the target computer by the BitLocker preflight check.
 
 |**Value**|**Description**|
@@ -1228,7 +1228,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="OSDDiskPart"></a> OSDDiskPart
+### OSDDiskPart
  This task sequence variable specifies whether the target disk partition should be formatted.
 
 |**Value**|**Description**|
@@ -1240,7 +1240,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDDiskPart=TRUE`|
 
-###  <a name="OSDDomainName"></a> OSDDomainName
+### OSDDomainName
  This task sequence variable specifies the name of the domain to which the target computer will be joined if the computer is configured to be a domain member.
 
 |**Value**|**Description**|
@@ -1251,7 +1251,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDDomainName=domain01`|
 
-###  <a name="OSDDomainOUName"></a> OSDDomainOUName
+### OSDDomainOUName
  This task sequence variable specifies the name of the OU in the domain to which the target computer account will be created when the computer joins a domain.
 
 |**Value**|**Description**|
@@ -1262,7 +1262,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDDomainOUName=NewDeployOU`|
 
-###  <a name="OSDImageIndex2"></a> OSDImageIndex
+### OSDImageIndex
  This task sequence variable specifies the index number of the target operating system in a WIM file.
 
 |**Value**|**Description**|
@@ -1273,7 +1273,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDImageIndex=1`|
 
-###  <a name="OSDImageName"></a> OSDImageName
+### OSDImageName
  This task sequence variable specifies the name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#VolumePage) wizard page. The list of possible operating system images in the **Image Selection** box is configured in the **Image Combo Box Values** list in the **Image Combo Box** section on the [VolumePage](#VolumePage) wizard page editor. The image name is configured as a part of each image in the **Image Combo Box Values** list.
 
 > [!NOTE]
@@ -1287,7 +1287,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="OSDJoinAccount"></a> OSDJoinAccount
+### OSDJoinAccount
  This task sequence variable specifies the domain-based account used to join the target computer to the domain specified in the **OSDDomainName** task sequence variable. This task sequence variable is necessary if the target computer will be joined to a domain.
 
 |**Value**|**Description**|
@@ -1298,7 +1298,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDJoinAccount=domain\admin01`|
 
-###  <a name="OSDJoinPassword"></a> OSDJoinPassword
+### OSDJoinPassword
  This task sequence variable specifies the password for the domain-based account used to join the target computer to the domain specified in the **OSDJoinAccount** task sequence variable. This task sequence variable is necessary if the target computer will be joined to a domain.
 
 |**Value**|**Description**|
@@ -1309,7 +1309,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDJoinPassword=P@ssw0rd10`|
 
-###  <a name="OSDLocalAdminPassword"></a> OSDLocalAdminPassword
+### OSDLocalAdminPassword
  This task sequence variable specifies the password for the Administrator local built-in account on the target computer.
 
 |**Value**|**Description**|
@@ -1320,7 +1320,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDLocalAdminPassword=P@ssw0rd10`|
 
-###  <a name="OSDNetworkJoinType"></a> OSDNetworkJoinType
+### OSDNetworkJoinType
  This task sequence variable specifies whether the target computer joins a domain or a workgroup.
 
 |**Value**|**Description**|
@@ -1332,7 +1332,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDNetworkJoinType=0`|
 
-###  <a name="OSDSetupWizCancelled"></a> OSDSetupWizCancelled
+### OSDSetupWizCancelled
  This task sequence variable specifies if the user canceled the Operating System Deployment (OSD) Setup Wizard.
 
 |**Value**|**Description**|
@@ -1344,7 +1344,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="OSDTargetDrive"></a> OSDTargetDrive
+### OSDTargetDrive
  This task sequence variable specifies the disk volume where the target operating system will be deployed.
 
 |**Value**|**Description**|
@@ -1355,7 +1355,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDTargetDrive=C:`|
 
-###  <a name="OSDWinPEWinDir"></a> OSDWinPEWinDir
+### OSDWinPEWinDir
  This task sequence variable specifies the folder in which the Windows operating system is currently installed on the target computer.
 
 |**Value**|**Description**|
@@ -1366,7 +1366,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDWinPEWinDir=C:\Windows`|
 
-###  <a name="OSDWorkgroupName"></a> OSDWorkgroupName
+### OSDWorkgroupName
  This task sequence variable specifies the name of the workgroup to which the target computer will be joined if the computer is configured to be a workgroup member.
 
 |**Value**|**Description**|
@@ -1377,10 +1377,10 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`OSDWorkgroupName=WORKGROUP01`|
 
-##  <a name="OSDResultsexeconfigFileElementValues"></a> OSDResults.exe.config File Element Values
+## OSDResults.exe.config File Element Values
  The OSD Results program, OSDResults.exe, is run at the end of a UDI deployment and displays the results of the deployment process. The behavior of the OSD Results program can be customized by modifying the OSDResults.exe.config file element values. The OSDResults.exe.config file is stored in Tools\OSDResults in the MDT Package in the User Drive Installation Task Sequence.
 
-###  <a name="backgroundOpacity"></a> backgroundOpacity
+### backgroundOpacity
  This XML element configures the opaqueness of the background wallpaper image specified as a decimal-formatted percentage in the **backgroundWallpaper** element.
 
 |**Value**|**Description**|
@@ -1391,7 +1391,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`<add key="backgroundOpacity" value="0.8"/>`|
 
-###  <a name="backgroundWallpaper"></a> backgroundWallpaper
+### backgroundWallpaper
  This XML element provides the file name and relative path to the image that is displayed as the background in the **OSD Results** dialog box. The path is relative to the Tools\OSDResults folder in the MDT Package.
 
 |**Value**|**Description**|
@@ -1402,7 +1402,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`<add key="backgroundWallpaper" value="images\\Wallpaper.jpg"/>`|
 
-###  <a name="completedText"></a> completedText
+### completedText
  This XML element provides the text that is displayed in the **OSD Results** dialog box when the deployment is complete.
 
 |**Value**|**Description**|
@@ -1413,7 +1413,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`<add key="completedText" value="Deployment Complete"/>`|
 
-###  <a name="headerImagePath"></a> headerImagePath
+### headerImagePath
  This XML element provides the file name and relative path to the image that is displayed in the header of the **OSD Results** dialog box. The path is relative to the Tools\OSDResults folder in the MDT Package.
 
 |**Value**|**Description**|
@@ -1424,7 +1424,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`<add key="headerImagePath" value="images\\Windows7_h_rgb.png"/>`|
 
-###  <a name="timeoutMinutes"></a> timeoutMinutes
+### timeoutMinutes
  This XML element configures how many minutes the **OSD Result** dialog box is displayed before the dialog box is automatically closed and the computer is restarted.
 
 |**Value**|**Description**|
@@ -1439,7 +1439,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`<add key="timeoutMinutes" value="30"/>`|
 
-###  <a name="welcomeText"></a> welcomeText
+### welcomeText
  This XML element provides the welcome text that is displayed in the **OSD Results** dialog box.
 
 |**Value**|**Description**|

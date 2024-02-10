@@ -49,7 +49,7 @@ ms.reviewer: mstewart,aaroncz
 |[Update-MDTLinkedDS](#Update-MDTLinkedDS)|Replicates content from a deployment share to a linked deployment share.|
 |[Update-MDTMedia](#Update-MDTMedia)|Replicates content from a deployment share to a deployment media folder.|
 
-##  <a name="Add-MDTPersistentDrive"></a> Add-MDTPersistentDrive
+## Add-MDTPersistentDrive
  This section describes the **Add-MDTPersistentDriveWindows PowerShell** cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -133,7 +133,7 @@ New-PSDrive -Name "DS001" -PSProvider "MDTProvider" –Root "C:\DeploymentShare$
 #### Description
  This example adds the Windows PowerShell drive name *DS001,* created by the [New-PSDrive](/previous-versions//dd315340(v=technet.10)) cmdlet, to the list of persisted MDT drives by piping the newly created Windows PowerShell drive object to the **Add-MDTPersistentDrive** cmdlet.
 
-##  <a name="Disable-MDTMonitorService"></a> Disable-MDTMonitorService
+## Disable-MDTMonitorService
  This section describes the **Disable-MDTMonitorService** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -175,7 +175,7 @@ Disable-MDTMonitorService
 #### Description
  This example disables the MDT monitoring service.
 
-##  <a name="Enable-MDTMonitorService"></a> Enable-MDTMonitorService
+## Enable-MDTMonitorService
  This section describes the **Enable-MDTMonitorService** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -248,7 +248,7 @@ Enable-MDTMonitorService –EventPort 7000 –DataPort 7001
 #### Description
  This example enables the MDT monitoring service on the local computer using the value of **7000** for the event port and the value of **7001** for the data port on the MDT monitoring service.
 
-##  <a name="Get-MDTDeploymentShareStatistics"></a> Get-MDTDeploymentShareStatistics
+## Get-MDTDeploymentShareStatistics
  This section describes the **Get-MDTDeploymentShareStatistics** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -333,7 +333,7 @@ Get-MDTDeploymentShareStatistics
 #### Description
  This example returns the deployment share statistics for the deployment share that is specified in the DS001: MDTProvider Windows PowerShell drive. Use the **cd** command to set the working directory for Windows PowerShell to the DS001: MDTProvider Windows PowerShell drive.
 
-##  <a name="Get-MDTMonitorData"></a> Get-MDTMonitorData
+## Get-MDTMonitorData
  This section describes the **Get-MDTMonitorData** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -438,7 +438,7 @@ Get-MDTMonitorData –Path DS001: -ID 22
 #### Description
  This example returns the monitoring data for the deployment with an ID of 22 in the deployment share that is specified in the DS001: MDTProvider Windows PowerShell drive.
 
-##  <a name="Get-MDTOperatingSystemCatalog"></a> Get-MDTOperatingSystemCatalog
+## Get-MDTOperatingSystemCatalog
  This section describes the **Get-MDTOperatingSystemCatalog** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -497,7 +497,7 @@ Get-MDTOperatingSystemCatalog –ImageFile "DS001:\Operating Systems\Windows 8\s
 #### Description
  This example returns the operating system catalog for the operating system image at the index of 2 in the operating system image file DS001:\Operating Systems\Windows 8\sources\install.wim.
 
-##  <a name="Get-MDTPersistentDrive"></a> Get-MDTPersistentDrive
+## Get-MDTPersistentDrive
  This section describes the **Get-MDTPersistentDrive** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -542,7 +542,7 @@ Get-MDTPersistentDrive
 #### Description
  This example displays a list of the MDT persisted drives.
 
-##  <a name="Import-MDTApplication"></a> Import-MDTApplication
+## Import-MDTApplication
  This section describes the **Import-MDTApplication** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -715,7 +715,7 @@ Import-MDTApplication -Path "DS001:\Applications" -Name "Woodgrove Bank Core App
 #### Description
  This example imports an application bundle named *Woodgrove Bank Core Applications.*
 
-##  <a name="Import-MDTDriver"></a> Import-MDTDriver
+## Import-MDTDriver
  This section describes the **Import-MDTDriver** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -806,7 +806,7 @@ Import-MDTDriver -Path "DS001:\Out-of-Box Drivers" SourcePath $DriverSourcePath 
 #### Description
  This example imports all device drivers in the folders structure specified in the string array $DriverSourcePath. The device drivers are stored in the Out-of-Box Drivers folder in the deployment share that is mapped to the DS001: MDTProvder Windows PowerShell drive. If any duplicate device drivers are detected, the duplicate device drivers are imported.
 
-##  <a name="Import-MDTOperatingSystem"></a> Import-MDTOperatingSystem
+## Import-MDTOperatingSystem
  This section describes the **Import-MDTOperatingSystem** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -975,7 +975,7 @@ Import-MDTOperatingSystem -Path "DS001:\Operating Systems" WDSServer "WDG-WDS-01
 #### Description
  This example imports all the operating system images from the Windows Deployment Services server named WDG-WDS-01 and creates a link to each operating system image in DS001:\Operating Systems within the deployment share. The source operating system image files on the Windows Deployment Services server are retained on the Windows Deployment Services server.
 
-##  <a name="Import-MDTPackage"></a> Import-MDTPackage
+## Import-MDTPackage
  This section describes the **Import-MDTPackage** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1034,7 +1034,7 @@ Import-MDTOperatingSystem -Path "DS001:\Packages" SourcePath "\\WDGMDT01\Source$
 #### Description
  This example scans network shared folder at \\\WDG-MDT-01\Source$\OSPackages for operating system packages and copies the source files to DS001:\Packages folder within the deployment share. The source files are removed from the network shared folder at \\\WDG-MDT-01\Source$\OSPackages.
 
-##  <a name="Import-MDTTaskSequence"></a> Import-MDTTaskSequence
+## Import-MDTTaskSequence
  This section describes the **Import-MDTTaskSequence** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1270,7 +1270,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 
  The registered owner of the operating system will be set to **Woodgrove Bank Employee**. The registered organization of the operating system will be set to **Woodgrove Bank**. The Internet Explorer home page will default to `https://www.woodgrovebank.com`. The password for the local, built-in Administrator account will be set to a value of `P@ssw0rd`. The product key for the operating system will need to be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.
 
-##  <a name="New-MDTDatabase"></a> New-MDTDatabase
+## New-MDTDatabase
  This section describes the **New-MDTDatabase** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1422,7 +1422,7 @@ New-MDTDatabase -Path "DS001:" –Force –SQLServer "WDGSQL01" –Instance "MDT
 #### Description
  This example creates an MDT DB named *MDTDB* in the SQL Server instance named *MDTInstance* on a computer named *WDG-SQL-01.* If the database already exists, the tables in the existing database will be recreated. The connection will be made using the default SQL Server TCP port and the Named Pipes protocol.
 
-##  <a name="Remove-MDTMonitorData"></a> Remove-MDTMonitorData
+## Remove-MDTMonitorData
  This section describes the **Get-MDTPersistentDrive** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1524,7 +1524,7 @@ Remove-MDTMonitorData -ComputerObject $MonitorObject
 #### Description
  This example removes any monitoring data item where the name of the computer is WDG-REF-01. The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee177028(v=technet.10)).
 
-##  <a name="Remove-MDTPersistentDrive"></a> Remove-MDTPersistentDrive
+## Remove-MDTPersistentDrive
  This section describes the **Remove-MDTPersistentDriveWindows** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1597,7 +1597,7 @@ Remove-MDTPersistentDrive –InputObject $MDTPSDrive
 #### Description
  This example removes the deployment share at C:\DeploymentShare$ from the list of persisted drives. The **GetPSDrive** and **Where-Object** cmdlets are used to return the MDT persisted Windows PowerShell drive to the **Remove-MDTPersistentDrive** cmdlet using the *$MDTPSDrive* variable. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee177028(v=technet.10)). For more information on the **Get-PSDrive** cmdlet, see [Using the Get-PSDrive Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176856(v=technet.10)).
 
-##  <a name="Restore-MDTPersistentDrive"></a> Restore-MDTPersistentDrive
+## Restore-MDTPersistentDrive
  This section describes the **Restore-MDTPersistentDrive** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1660,7 +1660,7 @@ Get-MDTPersistentDrive -Force
 #### Description
  This example restores the list of MDT persisted drives, by creating a Windows PowerShell drive using the **MDTProvider** type. The deployment share will be upgraded when restored (if required).
 
-##  <a name="Set-MDTMonitorData"></a> Set-MDTMonitorData
+## Set-MDTMonitorData
  This section describes the **Get-MDTPersistentDrive** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1766,10 +1766,10 @@ Set-MDTMonitorData -MACAddress "00:11:22:33:44:55" MonitorObject Setting @{"OSDC
 #### Description
  This example creates or updates a monitoring data item with a **MACAddress** that has a value of **00:11:22:33:44:55**. The [OSDComputerName](properties.md#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](properties.md#SkipWizard) property is recorded as having a value of **YES**.
 
-##  <a name="Test-MDTDeploymentShare"></a> Test-MDTDeploymentShare
+## Test-MDTDeploymentShare
  Although this cmdlet is returned using the **Get-Command** cmdlet as being in the Microsoft.BDD.PSSnapIn snap-in, it is not implemented.
 
-##  <a name="Test-MDTMonitorData"></a> Test-MDTMonitorData
+## Test-MDTMonitorData
  This section describes the **Test-MDTMonitorData** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1847,7 +1847,7 @@ Test-MDTMonitorData -Server "WDG-MDT-01" -DataPort "9801" EventPort "9800"
 #### Description
  This example verifies if the MDT monitoring service on WDG-MDT-01 is installed and running. The cmdlet will verify using a data port of 9801 and an event port of 9800.
 
-##  <a name="Update-MDTDatabaseSchema"></a> Update-MDTDatabaseSchema
+## Update-MDTDatabaseSchema
  This section describes the **Update-MDTDatabaseSchema** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -1959,7 +1959,7 @@ Update-MDTDatabaseSchema –SQLServer "WDGSQL01" –Instance "MDTInstance" -Port
 #### Description
  This example updates the schema for an MDT database named *MDTDB* in the SQL Server instance named *MDTInstance* on a computer named *WDG-SQL-01.* The connection will be made to the SQL Server using TCP port 6333 and the Named Pipes protocol.
 
-##  <a name="Update-MDTDeploymentShare"></a> Update-MDTDeploymentShare
+## Update-MDTDeploymentShare
  This section describes the **Update-MDTDeploymentShare** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -2067,7 +2067,7 @@ Update-MDTDepoymentShare -Path "DS001:" -Force
 #### Description
  This example updates the deployment share at the MDT Windows PowerShell drive named *DS001:.* New versions of the Windows PE boot images will be generated.
 
-##  <a name="Update-MDTLinkedDS"></a> Update-MDTLinkedDS
+## Update-MDTLinkedDS
  This section describes the **Update-MDTLinkedDS** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax
@@ -2115,7 +2115,7 @@ Update-MDTLinkedDS -Path "DS001:\Linked Deployment Shares\LINKED001"
 #### Description
  This example replicates content from the deployment share to the linked deployment share at the Windows PowerShell path DS001:\Linked Deployment Shares\LINKED001 folder.
 
-##  <a name="Update-MDTMedia"></a> Update-MDTMedia
+## Update-MDTMedia
  This section describes the **Update-MDTMedia** Windows PowerShell cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
 
 ### Syntax

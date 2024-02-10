@@ -46,7 +46,7 @@ ms.reviewer: mstewart,aaroncz
 > [!TIP]
 >  The properties are sorted in alphabetical order.
 
-###  <a name="\_SMSTSOrgName"></a> \_SMSTSOrgName
+### \_SMSTSOrgName
  Customizes the Task Sequencer engine's display banner
 
 |Property configured by|Property applies to|
@@ -63,7 +63,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] _SMSTSOrgName=Woodgrove Bank`|
 
-###  <a name="ADDSLogPath"></a> ADDSLogPath
+### ADDSLogPath
  Fully qualified, non-UNC directory on a hard disk on the local computer to host the AD DS log files. If the directory exists it must be empty. If it does not exist, it will be created.
 
 |Property configured by|Property applies to|
@@ -80,7 +80,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ADDSLogPath=%DestinationLogicalDrive%\Windows\NTDS`|
 
-###  <a name="ADDSPassword"></a> ADDSPassword
+### ADDSPassword
  Account credentials that can be used when promoting the server to a domain controller.
 
 |Property configured by|Property applies to|
@@ -97,7 +97,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password>`|
 
-###  <a name="ADDSUserDomain"></a> ADDSUserDomain
+### ADDSUserDomain
  This is the domain the account specified by **ADDSUserName** should be taken from. If the operation is to create a new forest or to become a member server from a backup domain controller upgrade there is no default. If the operation is to create a new tree, the default is the DNS name of the forest the computer is currently joined to. If the operation is to create a new child domain or a replica then the default is the DNS name of the domain the computer is joined to. If the operation is to demote the computer and the computer is a domain controller in a child domain, the default is the DNS name of the parent domains. If the operation is to demote the computer, and the computer is a domain controller of a tree root domain, the default is the DNS name of the forest.
 
 |Property configured by|Property applies to|
@@ -114,7 +114,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password>`|
 
-###  <a name="ADDSUserName"></a> ADDSUserName
+### ADDSUserName
  Account credentials that will be used when promoting the server to a domain controller.
 
 |Property configured by|Property applies to|
@@ -131,7 +131,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=complex_password`|
 
-###  <a name="Administrators"></a> Administrators
+### Administrators
  A list of user accounts and domain groups that will be added to the local Administrator group on the target computer. The **Administrators** property is a list of text values that can be any non-blank value. The **Administrators** property has a numeric suffix (for example, **Administrators001** or **Administrators002**).
 
 |Property configured by|Property applies to|
@@ -148,7 +148,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] Administrators001=WOODGROVEBANK\NYC Help Desk Staff Administrators002=WOODGROVEBANK\North America East Help Desk Staff PowerUsers001=WOODGROVEBANK\User01 PowerUsers002=WOODGROVEBANK\User02`|
 
-###  <a name="AdminPassword"></a> AdminPassword
+### AdminPassword
  Defines the password that will be assigned to the local Administrator user account on the target computer. If not specified, the pre-deployment password of the Administrator user account will be used.
 
 |Property configured by|Property applies to|
@@ -165,7 +165,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] Administrators001=WOODGROVEBANK\NYC Help Desk Staff AdminPassword=<admin_password>`|
 
-###  <a name="Applications"></a> Applications
+### Applications
  A list of application GUIDs that should be installed on the target computer. These applications are specified on the Applications node in Deployment Workbench. These GUIDs are stored in the Applications.xml file. The **Applications** property is a list of text values that can be any non-blank value. The **Applications** property has a numeric suffix (for example, **Applications001** or **Applications002**).
 
 |Property configured by|Property applies to|
@@ -182,7 +182,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] Applications001={1D7DF331-47B7-472C-87B3-442597EC2F7D} Applications002={9d2b8999-5e4d-4f3d-bb05-edaaf4fe5628}`|
 
-###  <a name="ApplicationSuccessCodes"></a> ApplicationSuccessCodes
+### ApplicationSuccessCodes
  A space-delimited list of error codes used by the ZTIApplications script that determine the successful installation of applications.
 
 > [!NOTE]
@@ -202,7 +202,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ApplicationSuccessCodes=0 3010`|
 
-###  <a name="ApplyGPOPack"></a> ApplyGPOPack
+### ApplyGPOPack
  This property is used to determine whether the **Apply Local GPO Package** task sequence step is performed.
 
 > [!NOTE]
@@ -223,7 +223,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ApplyGPOPack=NO`|
 
-###  <a name="Architecture"></a> Architecture
+### Architecture
  The processor architecture of the processor that is currently running, which is not necessarily the processor architecture supported by the target computer. For example, when running a 32-bit–compatible operating system on a 64-bit processor, **Architecture** will indicate that the processor architecture is 32 bit.
 
  Use the **CapableArchitecture** property to identify the actual processor architecture that the target computer supports.
@@ -246,7 +246,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="AreaCode"></a> AreaCode
+### AreaCode
  The area code to be configured for the operating system on the target computer. This property allows only numeric characters. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 |Property configured by|Property applies to|
@@ -263,7 +263,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|
 
-###  <a name="AssetTag"></a> AssetTag
+### AssetTag
  The asset tag number associated with the target computer. The format for asset tag numbers is undefined. Use this property to create a subsection that contains settings targeted to a specific computer.
 
 > [!NOTE]
@@ -287,7 +287,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=AssetTag, Default  [Default] OSInstall=YES  [0034034931] OSDComputerName=HPD530-1  [0034003233] OSDNEWMACHINENAME=BVMXP`|
 
-###  <a name="AutoConfigDNS"></a> AutoConfigDNS
+### AutoConfigDNS
  Specifies whether the Active Directory Installation Wizard configures DNS for the new domain if it detects that the DNS dynamic update protocol is not available.
 
 > [!CAUTION]
@@ -308,7 +308,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] AutoConfigDNS=YES`|
 
-###  <a name="BackupDir"></a> BackupDir
+### BackupDir
  The folder in which backups of the target computer are stored. This folder exists beneath the UNC path specified in the **BackupShare** property. If the folder does not already exist, it will be created automatically.
 
 |Property configured by|Property applies to|
@@ -325,7 +325,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|
 
-###  <a name="BackupDrive"></a> BackupDrive
+### BackupDrive
  The drive to include in the backup of the target computer. This property defaults to the drive that contains disk 0 partition 1. It can be also set to **ALL**.
 
 |Property configured by|Property applies to|
@@ -343,8 +343,8 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|
 
-###  <a name="BackupFile"></a> BackupFile
- Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](#ZTIBackup.wsf).
+### BackupFile
+ Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](scripts.md#ZTIBackup.wsf).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -360,7 +360,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupFile=%OSDComputerName%.wim`|
 
-###  <a name="BackupShare"></a> BackupShare
+### BackupShare
  The shared folder in which backups of the target computer are stored.
 
  The credentials used to access this shared folder for:
@@ -391,7 +391,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|
 
-###  <a name="BDEAllowAlphaNumericPin"></a> BDEAllowAlphaNumericPin
+### BDEAllowAlphaNumericPin
  This property configures whether BitLocker PINs contain alphanumeric values.
 
 |Property configured by|Property applies to|
@@ -409,7 +409,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEAllowAlphaNumericPin=YES BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|
 
-###  <a name="BDEDriveLetter"></a> BDEDriveLetter
+### BDEDriveLetter
  The drive letter for the partition that is not encrypted by BitLocker, also known as the *System Volume*. SYSVOL is the directory that contains the hardware-specific files needed to load Windows computers after the BIOS has booted the platform.
 
 |Property configured by|Property applies to|
@@ -426,7 +426,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|
 
-###  <a name="BDEDriveSize"></a> BDEDriveSize
+### BDEDriveSize
  The size of the BitLocker system partition. The value is specified in megabytes. In the example, the size of the BitLocker partition to create is almost 2 GB (2,000 MB).
 
 |Property configured by|Property applies to|
@@ -443,7 +443,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|
 
-###  <a name="BDEInstall"></a> BDEInstall
+### BDEInstall
  The type of BitLocker installation to be performed. Protect the target computer using one of the following methods:
 
 -   A TPM microcontroller
@@ -471,7 +471,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|
 
-###  <a name="BDEInstallSuppress"></a> BDEInstallSuppress
+### BDEInstallSuppress
  Indicates whether the deployment process should skip the BitLocker installation.
 
 > [!CAUTION]
@@ -492,7 +492,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=YES`|
 
-###  <a name="BDEKeyLocation"></a> BDEKeyLocation
+### BDEKeyLocation
  The location for storing the BitLocker recovery key and startup key.
 
 > [!NOTE]
@@ -512,7 +512,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|
 
-###  <a name="BDEPin"></a> BDEPin
+### BDEPin
  The PIN to be assigned to the target computer when configuring BitLocker and the **BDEInstall** or **OSDBitLockerMode** properties are set to **TPMPin**.
 
 |Property configured by|Property applies to|
@@ -529,7 +529,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMPin BDEPin=123456789`|
 
-###  <a name="BDERecoveryKey"></a> BDERecoveryKey
+### BDERecoveryKey
  A Boolean value that indicates whether the process creates a recovery key for BitLocker. The key is used for recovering data encrypted on a BitLocker volume. This key is cryptographically equivalent to a startup key. If available, the recovery key decrypts the volume master key (VMK), which, in turn, decrypts the full volume encryption key (FVEK).
 
 > [!NOTE]
@@ -550,7 +550,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=AD BDEKeyLocation=C:`|
 
-###  <a name="BDEWaitForEncryption"></a> BDEWaitForEncryption
+### BDEWaitForEncryption
  Specifies that the deployment process should not proceed until BitLocker has completed the encryption process for all specified drives. Specifying TRUE could dramatically increase the time required to complete the deployment process.
 
 > [!CAUTION]
@@ -571,7 +571,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerStartupKeyDrive=C: OSDBitLockerCreateRecoveryPassword=AD BDEWaitForEncryption=TRUE`|
 
-###  <a name="BitsPerPel"></a> BitsPerPel
+### BitsPerPel
  A setting for displaying colors on the target computer. The property can contain numeric digits and corresponds to the color quality setting. In the example, **32** indicates 32 bits per pixel for color quality. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
@@ -591,7 +591,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|
 
-###  <a name="BuildID"></a> BuildID
+### BuildID
  Identifies the operating system task sequence to be deployed to the target computer. You create the task sequence ID on the Task Sequences node in the Deployment Workbench. The **BuildID** property allows alphanumeric characters, hyphens (-), and underscores (\_). The **BuildID** property cannot be blank or contain spaces.
 
 |Property configured by|Property applies to|
@@ -608,7 +608,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] BuildID=BareMetal`|
 
-###  <a name="CapableArchitecture"></a> CapableArchitecture
+### CapableArchitecture
  The processor architecture of the processor supported by the target computer, not the current processor architecture that is running. For example, when running a 32-bit-compatible operating system on a 64-bit processor, **CapableArchitecture** will indicate that the processor architecture is 64 bit.
 
  Use the **Architecture** property to see the processor architecture that is currently running.
@@ -631,7 +631,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="CaptureGroups"></a> CaptureGroups
+### CaptureGroups
  Controls whether the group membership of local groups on the target computer is captured. This group membership is captured during the State Capture Phase and is restored during the State Restore Phase.
 
 > [!NOTE]
@@ -653,7 +653,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ CaptureGroups=YES Groups1=NYC Application Management Groups2=NYC Help Desk Users`|
 
-###  <a name="ChildName"></a> ChildName
+### ChildName
  Specifies whether to append the DNS label at the beginning of the name of an existing directory service domain when installing a child domain.
 
 |Property configured by|Property applies to|
@@ -670,7 +670,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ChildName=childdom.parentdom.WoodGroveBank.com`|
 
-###  <a name="ComputerBackupLocation"></a> ComputerBackupLocation
+### ComputerBackupLocation
  The network shared folder where the computer backup is stored. If the target folder does not already exist, it is automatically created.
 
 > [!CAUTION]
@@ -694,7 +694,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ ComputerBackupLocation=NETWORK BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE`|
 
-###  <a name="ComputerName"></a> ComputerName
+### ComputerName
  This property has been deprecated. Use **OSDComputerName** instead.
 
 |Property configured by|Property applies to|
@@ -711,7 +711,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="ConfigFileName"></a> ConfigFileName
+### ConfigFileName
  Specifies the name of the configuration file used during OEM deployments.
 
 > [!NOTE]
@@ -731,7 +731,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="ConfigFilePackage"></a> ConfigFilePackage
+### ConfigFilePackage
  Specifies the package ID for the configuration package used during OEM deployments.
 
 > [!NOTE]
@@ -751,7 +751,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |None|
 
-###  <a name="ConfirmGC"></a> ConfirmGC
+### ConfirmGC
  Specifies whether the replica is also a global catalog.
 
 > [!CAUTION]
@@ -772,7 +772,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] ConfirmGC=YES`|
 
-###  <a name="CountryCode"></a> CountryCode
+### CountryCode
  The country code to be configured for the operating system on the target computer. This property allows only numeric characters. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 |Property configured by|Property applies to|
@@ -789,7 +789,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|
 
-###  <a name="CriticalReplicationOnly"></a> CriticalReplicationOnly
+### CriticalReplicationOnly
  Specifies whether the promotion operation performs only critical replication and then continues, skipping the noncritical (and potentially lengthy) portion of replication.
 
 > [!CAUTION]
@@ -810,7 +810,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] CriticalReplicationOnly=YES`|
 
-###  <a name="CustomDriverSelectionProfile"></a> CustomDriverSelectionProfile
+### CustomDriverSelectionProfile
  Specifies the custom selection profile used during driver installation.
 
 |Property configured by|Property applies to|
@@ -827,7 +827,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] CustomDriverSelectionProfile=CustomDrivers`|
 
-###  <a name="CustomPackageSelectionProfile"></a> CustomPackageSelectionProfile
+### CustomPackageSelectionProfile
  Specifies the custom selection profile used during package installation.
 
 |Property configured by|Property applies to|
@@ -844,7 +844,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] CustomPackageSelectionProfile=CustomPackages`|
 
-###  <a name="CustomWizardSelectionProfile"></a> CustomWizardSelectionProfile
+### CustomWizardSelectionProfile
  Specifies the custom selection profile used by the wizard for filtering the display of various items.
 
 |Property configured by|Property applies to|
@@ -861,7 +861,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] CustomWizardSelectionProfile=CustomWizard`|
 
-###  <a name="Database"></a> Database
+### Database
  The property that specifies the database to be used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of Microsoft SQL Server&reg; on the computer is specified in the **Instance** property.
 
 |Property configured by|Property applies to|
@@ -878,7 +878,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="DatabasePath"></a> DatabasePath
+### DatabasePath
  Specifies the fully qualified, non\-UNC path to a directory on a fixed disk of the target computer that contains the domain database.
 
 |Property configured by|Property applies to|
@@ -895,7 +895,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Default  [Default] DatabasePath=%DestinationLogicalDrive%\Windows\NTSD`|
 
-###  <a name="DBID"></a> DBID
+### DBID
  Specifies the user account used to connect to the computer running SQL Server \(specified by the **SQLServer** property\) using SQL Server authentication. The **DBPwd** property provides the password for the user account in the **DBID** property.
 
 > [!NOTE]
@@ -918,7 +918,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 DBID=SQL_User-01 DBPwd=<complex_password> NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="DBPwd"></a> DBPwd
+### DBPwd
  Specifies the password for the user account specified in the **DBID** property. The **DBID** and **DBPwd** properties provide the credentials for performing SQL Server authentication to the computer running SQL Server \(specified by the **SQLServer** property\).
 
 > [!NOTE]
@@ -941,7 +941,7 @@ ms.reviewer: mstewart,aaroncz
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 DBID=SQL_User-01 DBPwd=<complex_password> NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="Debug"></a> Debug
+### Debug
  Controls the verbosity of messages written to the MDT log files. This property can be configured to help assist in troubleshooting deployments by providing extended information about the MDT deployment process.
 
  You can set this property by starting the LiteTouch.vbs script with the **\/debug:true** command\-line parameter as follows:
@@ -970,7 +970,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="DefaultGateway"></a> DefaultGateway
+### DefaultGateway
  The IP address of the default gateway being used by the target computer. The format of the IP address returned by the property is standard dotted\-decimal notation; for example, 192.168.1.1. Use this property to create a subsection that contains settings targeted to a group of computers based on the IP subnets on which they are located.
 
 > [!NOTE]
@@ -990,7 +990,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=DefaultGateway, Default  [Default] OSInstall=YES  [DefaultGateway] 192.168.0.1=HOUSTON 11.1.1.11=REDMOND 172.28.20.1=REDMOND  [REDMOND] Packages001=XXX00004:Program4 Packages002=XXX00005:Program5  [HOUSTON] Packages001=XXX00006:Program6 Packages002=XXX00007:Program7 Packages003=XXX00008:Program8`|
 
-###  <a name="DeployDrive"></a> DeployDrive
+### DeployDrive
  The value used by the scripts to access files and run programs in the deployment share that the Deployment Workbench creates. The property returns the drive letter mapped to the **DeployRoot** property. ZTIApplications.wsf uses the **DeployDrive** property when running any command\-line programs with a .cmd or .bat extension.
 
 > [!NOTE]
@@ -1010,7 +1010,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="DeploymentMethod"></a> DeploymentMethod
+### DeploymentMethod
  The method being used for the deployment (UNC, media, or Configuration Manager).
 
 > [!NOTE]
@@ -1035,7 +1035,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="DeploymentType"></a> DeploymentType
+### DeploymentType
  The type of deployment being performed based on the deployment scenario. For ZTI, this property is set dynamically by MDT scripts and is not configured in CustomSettings.ini. For LTI, you can bypass the page in the Deployment Wizard on which the deployment type is selected. In addition, you can specify the deployment type by passing one of the values listed below to the LiteTouch.wsf script as a command-line option.
 
 > [!CAUTION]
@@ -1057,7 +1057,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DeploymentType=NEWCOMPUTER`|
 
-###  <a name="DeployRoot"></a> DeployRoot
+### DeployRoot
  Specifies the UNC or local path to the folder that is the root of the folder structure that MDT uses. This folder structure contains configuration files, scripts, and other folders and files that MDT uses. The value of this property is set based on the following MDT deployment technologies:
 
 -   **LTI**. This property is the UNC path to the deployment share that the Deployment Workbench creates. Use this property to select a specific deployment share. The most common use of this property is in the BootStrap.ini file to identify a deployment share before the connection to the deployment share is established. All other deployment share folders are relative to this property (such as device drivers, language packs, or operating systems).
@@ -1081,7 +1081,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ UserDataLocation=NONE`|
 
-###  <a name="DestinationDisk"></a> DestinationDisk
+### DestinationDisk
  Disk number that the image will be deployed to.
 
 |Property configured by|Property applies to|
@@ -1098,7 +1098,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DestinationDisk=0`|
 
-###  <a name="DestinationLogicalDrive"></a> DestinationLogicalDrive
+### DestinationLogicalDrive
  The logical drive to which the image will be deployed.
 
 |Property configured by|Property applies to|
@@ -1119,7 +1119,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DestinationLogicalDrive=0`<br /><br /> `[Settings] Priority=Default  [Default] InstallDNS=YES DomainNetBIOSName=WoodGroveBank NewDomain=Child DomainLevel=3 ForestLevel=3 NewDomainDNSName=newdom.WoodGroveBank.com ParentDomainDNSName=WoodGroveBank.com AutoConfigDNS=YES ConfirmGC=YES CriticalReplicationOnly=NO ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password> DatabasePath=%DestinationLogicalDrive%\Windows\NTDS ADDSLogPath=%DestinationLogicalDrive%\Windows\NTDS SysVolPath=%DestinationLogicalDrive%\Windows\SYSVOL SafeModeAdminPassword=<complex_password>`|
 
-###  <a name="DestinationPartition"></a> DestinationPartition
+### DestinationPartition
  Disk partition to which the image will be deployed.
 
 |Property configured by|Property applies to|
@@ -1136,7 +1136,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DestinationPartition=1`|
 
-###  <a name="DHCPScopes"></a> DHCPScopes
+### DHCPScopes
  Specifies the number of DHCP scopes to configure.
 
 |Property configured by|Property applies to|
@@ -1153,7 +1153,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes=1`|
 
-###  <a name="DHCPScopesxDescription"></a> DHCPScopesxDescription
+### DHCPScopesxDescription
  The description of the DHCP scope.
 
 > [!NOTE]
@@ -1173,7 +1173,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0Description=DHCPScope0`|
 
-###  <a name="DHCPScopesxEndIP"></a> DHCPScopesxEndIP
+### DHCPScopesxEndIP
  Specifies the ending IP address for the DHCP scope.
 
  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
@@ -1192,7 +1192,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0EndIP=192.168.0.30`|
 
-###  <a name="DHCPScopesxExcludeEndIP"></a> DHCPScopesxExcludeEndIP
+### DHCPScopesxExcludeEndIP
  Specifies the ending IP address for the DHCP scope exclusion. IP addresses that are excluded from the scope are not offered by the DHCP server to clients obtaining leases from this scope.
 
 > [!NOTE]
@@ -1212,7 +1212,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0ExcludeEndIP=192.168.0.15`|
 
-###  <a name="DHCPScopesxExcludeStartIP"></a> DHCPScopesxExcludeStartIP
+### DHCPScopesxExcludeStartIP
  Specifies the starting IP address for the DHCP scope exclusion. IP addresses that are excluded from the scope are not offered by the DHCP server to clients obtaining leases from this scope.
 
 > [!NOTE]
@@ -1232,7 +1232,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0ExcludeStartIP=192.168.0.10`|
 
-###  <a name="DHCPScopesxIP"></a> DHCPScopesxIP
+### DHCPScopesxIP
  Specifies the IP subnet of the scope.
 
  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
@@ -1251,7 +1251,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0IP=192.168.0.0`|
 
-###  <a name="DHCPScopesxName"></a> DHCPScopesxName
+### DHCPScopesxName
  A user-definable name to be assigned to the scope.
 
  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
@@ -1270,7 +1270,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0Name=DHCPScope0`|
 
-###  <a name="DHCPScopesxOptionDNSDomainName"></a> DHCPScopesxOptionDNSDomainName
+### DHCPScopesxOptionDNSDomainName
  Specifies the domain name that the DHCP client should use when resolving unqualified domain names with the DNS.
 
 > [!NOTE]
@@ -1290,7 +1290,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionDNSDomainName=WoodGroveBank.com`|
 
-###  <a name="DHCPScopesxOptionDNSServer"></a> DHCPScopesxOptionDNSServer
+### DHCPScopesxOptionDNSServer
  Specifies a list of IP addresses for DNS name servers available to the client. When more than one server is assigned, the client interprets and uses the addresses in the specified order.
 
 > [!NOTE]
@@ -1310,7 +1310,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionDNSServer=192.168.0.2`|
 
-###  <a name="DHCPScopesxOptionLease"></a> DHCPScopesxOptionLease
+### DHCPScopesxOptionLease
  The duration that the DHCP lease is valid for the client.
 
 > [!NOTE]
@@ -1330,7 +1330,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionLease=7`|
 
-###  <a name="DHCPScopesxOptionNBTNodeType"></a> DHCPScopesxOptionNBTNodeType
+### DHCPScopesxOptionNBTNodeType
  Specifies the client node type for NetBT clients.
 
 > [!NOTE]
@@ -1353,7 +1353,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionNBTNodeType=4`|
 
-###  <a name="DHCPScopesxOptionPXEClient"></a> DHCPScopesxOptionPXEClient
+### DHCPScopesxOptionPXEClient
  Specifies the IP address used for PXE client bootstrap code.
 
 > [!NOTE]
@@ -1373,7 +1373,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionPXEClient=192.168.0.252`|
 
-###  <a name="DHCPScopesxOptionRouter"></a> DHCPScopesxOptionRouter
+### DHCPScopesxOptionRouter
  Specifies a list of IP addresses for routers on the client subnet. When more than one router is assigned, the client interprets and uses the addresses in the specified order. This option is normally used to assign a default gateway to DHCP clients on a subnet.
 
 > [!NOTE]
@@ -1393,7 +1393,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionRouter=192.168.0.253`|
 
-###  <a name="DHCPScopesxOptionWINSServer"></a> DHCPScopesxOptionWINSServer
+### DHCPScopesxOptionWINSServer
  Specifies the IP addresses to be used for NBNSes on the network.
 
 > [!NOTE]
@@ -1413,7 +1413,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0OptionWINSServer=192.168.0.2`|
 
-###  <a name="DHCPScopesxStartIP"></a> DHCPScopesxStartIP
+### DHCPScopesxStartIP
  The starting IP address for the range of IP addresses that are to be included in the scope.
 
 > [!NOTE]
@@ -1433,7 +1433,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0StartIP=192.168.0.20`|
 
-###  <a name="DHCPScopesxSubnetMask"></a> DHCPScopesxSubnetMask
+### DHCPScopesxSubnetMask
  Specifies the subnet mask of the client subnet.
 
 > [!NOTE]
@@ -1453,7 +1453,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPScopes0SubnetMask=255.255.255.0`|
 
-###  <a name="DHCPServerOptionDNSDomainName"></a> DHCPServerOptionDNSDomainName
+### DHCPServerOptionDNSDomainName
  Specifies the connection-specific DNS domain suffix of client computers.
 
 |Property configured by|Property applies to|
@@ -1470,7 +1470,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPServerOptionDNSDomainName=Fabrikam.com`|
 
-###  <a name="DHCPServerOptionDNSServer"></a> DHCPServerOptionDNSServer
+### DHCPServerOptionDNSServer
  Specifies a list of IP addresses to be used as DNS name servers that are available to the client.
 
 |Property configured by|Property applies to|
@@ -1487,7 +1487,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPServerOptionDNSServer=192.168.0.1,192.168.0.2`|
 
-###  <a name="DHCPServerOptionNBTNodeType"></a> DHCPServerOptionNBTNodeType
+### DHCPServerOptionNBTNodeType
  Specifies the client node type for NetBT clients.
 
 |Property configured by|Property applies to|
@@ -1507,7 +1507,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPServerOptionNBTNodeType=4`|
 
-###  <a name="DHCPServerOptionPXEClient"></a> DHCPServerOptionPXEClient
+### DHCPServerOptionPXEClient
  Specifies the IP address used for PXE client bootstrap code.
 
 |Property configured by|Property applies to|
@@ -1524,7 +1524,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPServerOptionPXEClient=192.168.0.252`|
 
-###  <a name="DHCPServerOptionRouter"></a> DHCPServerOptionRouter
+### DHCPServerOptionRouter
  Specifies a list of IP addresses for routers on the client subnet. When more than one router is assigned, the client interprets and uses the addresses in the specified order. This option is normally used to assign a default gateway to DHCP clients on a subnet.
 
 |Property configured by|Property applies to|
@@ -1541,7 +1541,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPServerOptionRouter=192.168.0.253`|
 
-###  <a name="DHCPServerOptionWINSServer"></a> DHCPServerOptionWINSServer
+### DHCPServerOptionWINSServer
  Specifies the IP addresses to be used for NBNSes on the network.
 
 |Property configured by|Property applies to|
@@ -1558,7 +1558,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DHCPServerOptionWINSServer=192.168.0.2`|
 
-###  <a name="Dialing"></a> Dialing
+### Dialing
  The type of dialing supported by the telephony infrastructure where the target computer is located. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!CAUTION]
@@ -1579,7 +1579,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|
 
-###  <a name="DisableTaskMgr"></a> DisableTaskMgr
+### DisableTaskMgr
  This property controls a user's ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, they could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.
 
 > [!NOTE]
@@ -1600,7 +1600,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DisableTaskMgr=YES HideShell=YES`|
 
-###  <a name="DNSServerOptionBINDSecondaries"></a> DNSServerOptionBINDSecondaries
+### DNSServerOptionBINDSecondaries
  Determines whether to use fast transfer format for transfer of a zone to DNS servers running legacy BIND implementations.
 
  By default, all Windows-based DNS servers use a fast zone transfer format. This format uses compression, and it can include multiple records per TCP message during a connected transfer. This format is also compatible with more recent BIND-based DNS servers that run version 4.9.4 and later.
@@ -1623,7 +1623,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSServerOptionBINDSecondaries=TRUE`|
 
-###  <a name="DNSServerOptionDisableRecursion"></a> DNSServerOptionDisableRecursion
+### DNSServerOptionDisableRecursion
  Determines whether or not the DNS server uses recursion. By default, the DNS Server service is enabled to use recursion.
 
 > [!CAUTION]
@@ -1644,7 +1644,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSServerOptionDisableRecursion=TRUE`|
 
-###  <a name="DNSServerOptionEnableNetmaskOrdering"></a> DNSServerOptionEnableNetmaskOrdering
+### DNSServerOptionEnableNetmaskOrdering
  Determines whether the DNS server reorders address (A) resource records within the same resource record that is set in the server's response to a query based on the IP address of the source of the query.
 
  By default, the DNS Server service uses local subnet priority to reorder A resource records.
@@ -1667,7 +1667,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSServerOptionEnableNetmaskOrdering=TRUE`|
 
-###  <a name="DNSServerOptionEnableRoundRobin"></a> DNSServerOptionEnableRoundRobin
+### DNSServerOptionEnableRoundRobin
  Determines whether the DNS server uses the round robin mechanism to rotate and reorder a list of resource records if multiple resource records exist of the same type that exist for a query answer.
 
  By default, the DNS Server service uses round robin.
@@ -1690,7 +1690,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSServerOptionEnableRoundRobin=TRUE`|
 
-###  <a name="DNSServerOptionEnableSecureCache"></a> DNSServerOptionEnableSecureCache
+### DNSServerOptionEnableSecureCache
  Determines whether the DNS server attempts to clean up responses to avoid cache pollution. This setting is enabled by default. By default, DNS servers use a secure response option that eliminates adding unrelated resource records that are included in a referral answer to their cache. In most cases, any names that are added in referral answers are typically cached, and they help expedite the resolution of subsequent DNS queries.
 
  With this feature, however, the server can determine that referred names are potentially polluting or insecure and then discard them. The server determines whether to cache the name that is offered in a referral on the basis of whether it is part of the exact, related, DNS domain name tree for which the original queried name was made.
@@ -1713,7 +1713,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSServerOptionEnableSecureCache=TRUE`|
 
-###  <a name="DNSServerOptionFailOnLoad"></a> DNSServerOptionFailOnLoad
+### DNSServerOptionFailOnLoad
  Specifies that loading of a zone should fail when bad data is found.
 
 > [!CAUTION]
@@ -1734,7 +1734,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSServerOptionFailOnLoad=TRUE`|
 
-###  <a name="DNSServerOptionNameCheckFlag"></a> DNSServerOptionNameCheckFlag
+### DNSServerOptionNameCheckFlag
  Specifies which character standard is used when checking DNS names.
 
 |Property configured by|Property applies to|
@@ -1754,7 +1754,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSServerOptionNameCheckFlag=2`|
 
-###  <a name="DNSZones"></a> DNSZones
+### DNSZones
  Specifies the number of DNS zones to configure.
 
 |Property configured by|Property applies to|
@@ -1771,7 +1771,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSZones=1 DNSZones0Name=MyNewZone DNSZones0DirectoryPartition=Forest DNSZones0FileName=MyNewZone.dns DNSZones0MasterIP=192.168.0.1,192.168.0.2 DNSZones0Type=Secondary`|
 
-###  <a name="DNSZonesxDirectoryPartition"></a> DNSZonesxDirectoryPartition
+### DNSZonesxDirectoryPartition
  Specifies the directory partition on which to store the zone when configuring secondary or stub zones.
 
 > [!NOTE]
@@ -1793,7 +1793,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSZones0DirectoryPartition=Forest`|
 
-###  <a name="DNSZonesxFileName"></a> DNSZonesxFileName
+### DNSZonesxFileName
  Specifies the name of the file that will store the zone information.
 
 > [!NOTE]
@@ -1813,7 +1813,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSZones0FileName=MyNewZone.dns`|
 
-###  <a name="DNSZonesxMasterIP"></a> DNSZonesxMasterIP
+### DNSZonesxMasterIP
  A comma delimited list of IP addresses of the main servers to be used by the DNS server when updating the specified secondary zones. This property must be specified when configuring a secondary or stub DNS zone.
 
 > [!NOTE]
@@ -1833,7 +1833,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSZones0MasterIP=192.168.0.1,192.168.0.2`|
 
-###  <a name="DNSZonesxName"></a> DNSZonesxName
+### DNSZonesxName
  Specifies the name of the zone.
 
 > [!NOTE]
@@ -1853,7 +1853,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSZones0Name=MyNewZone`|
 
-###  <a name="DNSZonesxScavenge"></a> DNSZonesxScavenge
+### DNSZonesxScavenge
  Configures the Primary DNS server to "scavenge" stale records—that is, to search the database for records that have aged and delete them.
 
 > [!NOTE]
@@ -1898,7 +1898,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSZones0Type=Secondary`|
 
-###  <a name="DNSZonesxUpdate"></a> DNSZonesxUpdate
+### DNSZonesxUpdate
  Configures the Primary DNS server to perform dynamic updates.
 
 > [!NOTE]
@@ -1920,7 +1920,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DNSZones0Update=1`|
 
-###  <a name="DoCapture"></a> DoCapture
+### DoCapture
  Indicator of whether an image of the target computer is to be captured. If it is, Sysprep is run on the target computer to prepare for image creation. After Sysprep has run, a new WIM image is created and stored in the folder within the shared folder designated for target computer backups (**BackupDir** and **BackupShare**, respectively).
 
 > [!CAUTION]
@@ -1943,7 +1943,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DoCapture=YES DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|
 
-###  <a name="DomainAdmin"></a> DomainAdmin
+### DomainAdmin
  The user account credentials used to join the target computer to the domain specified in **JoinDomain**. Specify as *UserName*.
 
 > [!NOTE]
@@ -1963,7 +1963,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DomainAdmin=NYCAdmin DomainAdminDomain=WOODGROVEBANK DomainAdminPassword=<complex_password>`|
 
-###  <a name="DomainAdminDomain"></a> DomainAdminDomain
+### DomainAdminDomain
  The domain in which the user's credentials specified in **DomainAdmin** reside.
 
 > [!NOTE]
@@ -1983,7 +1983,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DomainAdmin=NYCAdmin DomainAdminDomain=WOODGROVEBANK DomainAdminPassword=<complex_password>`|
 
-###  <a name="DomainAdminPassword"></a> DomainAdminPassword
+### DomainAdminPassword
  The password used for the domain Administrator account specified in the **DomainAdmin** property to join the computer to the domain.
 
 > [!NOTE]
@@ -2003,7 +2003,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DomainAdmin=NYCAdmin DomainAdminDomain=WOODGROVEBANK DomainAdminPassword=<complex_password>`|
 
-###  <a name="DomainLevel"></a> DomainLevel
+### DomainLevel
  This entry specifies the domain functional level. This entry is based on the levels that exist in the forest when a new domain is created in an existing forest.
 
 |Property configured by|Property applies to|
@@ -2020,7 +2020,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DomainLevel=3`|
 
-###  <a name="DomainNetBiosName"></a> DomainNetBiosName
+### DomainNetBiosName
  Assigns a NetBIOS name to the new domain.
 
 |Property configured by|Property applies to|
@@ -2037,7 +2037,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DomainNetBiosName=NewDom`|
 
-###  <a name="DomainOUs"></a> DomainOUs
+### DomainOUs
  A list of AD DS organizational units (OUs) where the target computer account can be created. The **DomainOUs** property lists text values that can be any non-blank value. The **DomainOUs** property has a numeric suffix (for example, **DomainOUs1** or **DomainOUs2**). The values specified by DomainOUs will be displayed in the Deployment Wizard and selectable by the user. The **MachineObjectOU** property will then be set to the OU selected.
 
  In addition, the same functionality can be provided by configuring the DomainOUList.xml file. The format of the DomainOUList.xml file is as follows:
@@ -2068,7 +2068,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=Y DomainOUs1=OU=Computers, OU=Tellers, OU=NYC, DC=WOODGROVEBANK, DC=Com DomainOUs2=OU=Computers, OU=Managers, OU=NYC, DC=WOODGROVEBANK, DC=Com`|
 
-###  <a name="DoNotCreateExtraPartition"></a> DoNotCreateExtraPartition
+### DoNotCreateExtraPartition
  Specifies that deployments of Windows 7 and Windows Server 2008 R2 will not create the 300 MB system partition.
 
 > [!CAUTION]
@@ -2092,7 +2092,7 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  Do not use this property in conjunction with properties to configure BitLocker settings.
 
-###  <a name="DoNotFormatAndPartition"></a> DoNotFormatAndPartition
+### DoNotFormatAndPartition
  This property is used to configure whether MDT performs any of the partitioning and formatting task sequence steps in task sequences created using the MDT task sequence templates.
 
 > [!CAUTION]
@@ -2113,7 +2113,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES SkipUserData=YES USMTOfflineMigration=TRUE DoNotFormatAndPartition=YES OSDStateStorePath=\\WDG-MDT-01\StateStore$`|
 
-###  <a name="DriverGroup"></a> DriverGroup
+### DriverGroup
  A list of text values that associates out-of-box drivers created in the Deployment Workbench with each other (typically based on the make and model of a computer). A driver can be associated with one or more driver groups. The **DriverGroup** property allows the drivers within one or more groups to be deployed to a target computer.
 
  The text values in the list can be any non-blank value. The **DriverGroup** property value has a numeric suffix (for example, **DriverGroup001** or **DriverGroup002**). After it is defined, a driver group is associated with a computer. A computer can be associated with more than one driver group.
@@ -2134,8 +2134,8 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Make, Default  [Default] DriverGroup001=Shared Drivers :: [Mfgr01] DriverGroup001=Mfgr01 Video Drivers DriverGroup002=Mfgr01 Network Drivers  [Mfgr02] DriverGroup001=Mfgr02 Drivers`|
 
-###  <a name="DriverInjectionMode"></a> DriverInjectionMode
- This property is used to control the device drivers that are injected by the [Inject Drivers](#InjectDrivers) task sequence step.
+### DriverInjectionMode
+ This property is used to control the device drivers that are injected by the [Inject Drivers](task-sequence-steps.md#InjectDrivers) task sequence step.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2152,7 +2152,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DriverInjectionMode=ALL DriverSelectionProfile=Nothing DriverPaths001=\\NYC-AM-FIL-01\Drivers$ DriverPaths002=\\NYC-AM-FIL-03\WinDrvs`|
 
-###  <a name="DriverPaths"></a> DriverPaths
+### DriverPaths
  A list of UNC paths to shared folders where additional device drivers are located. These device drivers are installed with the target operating system on the target computer. The MDT scripts copy the contents of these folders to the C:\Drivers folder on the target computer. The **DriverPaths** property is a list of text values that can be any non-blank value. The **DriverPaths** property has a numeric suffix (for example, **DriverPaths001** or **DriverPaths002**).
 
 |Property configured by|Property applies to|
@@ -2169,7 +2169,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DriverPaths001=\\NYC-AM-FIL-01\Drivers$ DriverPaths002=\\NYC-AM-FIL-03\Win8Drvs`|
 
-###  <a name="DriverSelectionProfile"></a> DriverSelectionProfile
+### DriverSelectionProfile
  Profile name used during driver installation.
 
 |Property configured by|Property applies to|
@@ -2186,8 +2186,8 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DriverSelectionProfile=MonitorDrivers`|
 
-###  <a name="EventService"></a> EventService
- The **EventService** property specifies the URL where the MDT monitoring service is running. By default, the service uses TCP port 9800 to communicate. The MDT monitoring service collects deployment information on the deployment process that can be viewed in the Deployment Workbench and using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet.
+### EventService
+ The **EventService** property specifies the URL where the MDT monitoring service is running. By default, the service uses TCP port 9800 to communicate. The MDT monitoring service collects deployment information on the deployment process that can be viewed in the Deployment Workbench and using the [Get-MDTMonitorData](mdt-windows-powershell-cmdlets.md#Get-MDTMonitorData) cmdlet.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2203,7 +2203,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] EventService=https://WDG-MDT-01:9800 DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$`|
 
-###  <a name="EventShare"></a> EventShare
+### EventShare
  The **EventShare** property points to a shared folder in which the MDT scripts record events.
 
  By default, the shared folder is created in C:\Events.
@@ -2222,7 +2222,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] EventShare=\\NYC-AM-FIL-01\Events DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$`|
 
-###  <a name="FinishAction"></a> FinishAction
+### FinishAction
  Specifies the action to be taken when an LTI task sequence finishes, which is after the **Summary** wizard page in the Deployment Wizard.
 
 > [!TIP]
@@ -2245,7 +2245,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] FinishAction=REBOOT`|
 
-###  <a name="ForceApplyFallback"></a> ForceApplyFallback
+### ForceApplyFallback
  Controls the method used for installed Windows:
 
 - **setup.exe**. This method is the traditional method, initiated by running setup.exe from the installation media. MDT uses this method by default.
@@ -2270,7 +2270,7 @@ cscript.exe LiteTouch.vbs /debug:true
  |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ForceApplyFallback=NEVER`|
 
-###  <a name="ForestLevel"></a> ForestLevel
+### ForestLevel
  This entry specifies the forest functional level when a new domain is created in a new forest.
 
 |Property configured by|Property applies to|
@@ -2287,7 +2287,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] ForestLevel=3`|
 
-###  <a name="FullName"></a> FullName
+### FullName
  The full name of the user of the target computer provided during the installation of the operating system. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
@@ -2307,7 +2307,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=MACAddress, Default Properties=CustomProperty, ApplicationInstall  [Default] CustomProperty=TRUE OrgName=Woodgrove Bank  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1 ApplicationInstall=Custom FullName=Woodgrove Bank User  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP  ApplicationInstall=Minimum FullName=Woodgrove Bank Manager`|
 
-###  <a name="GPOPackPath"></a> GPOPackPath
+### GPOPackPath
  This property is used to override the default path to the folder in which the GPO packs reside. The path specified in this property is relative to the Templates\GPOPacks folder in a distribution share. MDT automatically scans a specific subfolder of this folder based on the operating system being deployed to the target computer, such as Templates\GPOPacks\\*operating_system* (where *operating_system* is the operating system being deployed). Table 3 list the supported operating systems and the subfolders that correspond to each operating system.
 
 #### Table 3. Windows Operating Systems and Corresponding GPO Pack Subfolder
@@ -2331,7 +2331,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] GPOPackPath=Win7-HighSecurity`|
 
-###  <a name="Groups"></a> Groups
+### Groups
  The list of local groups on the target computer whose membership will be captured. This group membership is captured during the State Capture Phase and is restored during the State Restore Phase. (The default groups are Administrators and Power Users.) The **Groups** property is a list of text values that can be any non-blank value. The **Groups** property has a numeric suffix (for example, **Groups001** or **Groups002**).
 
 |Property configured by|Property applies to|
@@ -2348,7 +2348,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ CaptureGroups=YES Groups001=NYC Application Management Groups002=NYC Help Desk Users`|
 
-###  <a name="HideShell"></a> HideShell
+### HideShell
  This property controls the display of Windows Explorer while the LTI task sequence is running in the new operating system on the target computer. This property can be used in conjunction with the **DisableTaskMgr** property.
 
 > [!NOTE]
@@ -2369,7 +2369,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] DisableTaskMgr=YES HideShell=YES`|
 
-###  <a name="Home_Page"></a> Home_Page
+### Home_Page
  The URL to be used as the Windows Internet Explorer&reg; home page after the target operating system is deployed.
 
 |Property configured by|Property applies to|
@@ -2386,7 +2386,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] Home_Page=https://portal.woodgrovebank.com`|
 
-###  <a name="HostName"></a> HostName
+### HostName
  The IP host name of the target computer (the name assigned to the target computer).
 
 > [!NOTE]
@@ -2406,7 +2406,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="ImagePackageID"></a> ImagePackageID
+### ImagePackageID
  The package ID used for the operating system to install during OEM deployments.
 
 > [!NOTE]
@@ -2426,7 +2426,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="InputLocale"></a> InputLocale
+### InputLocale
  A list of input locales to be used with the target operating system. More than one input locale can be specified for the target operating system. Each locale must be separated by a semicolon (;). If not specified, the Deployment Wizard uses the input locale configured in the image being deployed.
 
  Exclude this setting in the Windows User State Migration Tool (USMT) when backing up and restoring user state information. Otherwise, the settings in the user state information will override the values specified in the *InputLocale* property.
@@ -2445,7 +2445,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] UserLocale=en-us InputLocale=0409:00000409;0413:00020409;0413:00000409;0409:00020409`|
 
-###  <a name="InstallPackageID"></a> InstallPackageID
+### InstallPackageID
  The package ID used for the operating system to install during OEM deployments.
 
 > [!NOTE]
@@ -2465,7 +2465,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="Instance"></a> Instance
+### Instance
  The instance of SQL Server used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.
 
 |Property configured by|Property applies to|
@@ -2482,7 +2482,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="IPAddress"></a> IPAddress
+### IPAddress
  The IP address of the target computer. The format of the IP address returned by the property is standard dotted-decimal notation; for example, 192.168.1.1. Use this property to create a subsection that contains settings targeted to a specific target computer based on the IP address.
 
 > [!NOTE]
@@ -2502,7 +2502,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsDesktop"></a> IsDesktop
+### IsDesktop
  Indicator of whether the computer is a desktop, because the **Win32\_SystemEnclosure ChassisType** property value is **3**, **4**, **5**, **6**, **7**, **15**, **16**, **35**, or **36**.
 
 > [!NOTE]
@@ -2526,7 +2526,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsHypervisorRunning"></a> IsHypervisorRunning
+### IsHypervisorRunning
  Specifies whether a hypervisor is present on the target computer. This property is set using information from the **CPUID** interface.
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
@@ -2564,7 +2564,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsLaptop"></a> IsLaptop
+### IsLaptop
  Indicator of whether the computer is a portable computer, because the **Win32\_SystemEnclosure ChassisType** property value is **8**, **9**, **10**, **11**, **12**, **14**, **18**, **21**, **30**, **31**, or **32**.
 
 > [!NOTE]
@@ -2588,7 +2588,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsServer"></a> IsServer
+### IsServer
  Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23** or **28**.
 
 |Property configured by|Property applies to|
@@ -2606,7 +2606,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsServerCoreOS"></a> IsServerCoreOS
+### IsServerCoreOS
  Indicator of whether the current operating system running on the target computer is the Server Core installation option of the Windows Server operating system.
 
 > [!NOTE]
@@ -2627,7 +2627,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsServerOS"></a> IsServerOS
+### IsServerOS
  Indicator of whether the current operating system running on the target computer is a server operating system.
 
 > [!NOTE]
@@ -2648,7 +2648,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsUEFI"></a> IsUEFI
+### IsUEFI
  Specifies whether the target computer is currently running with Unified Extensible Firmware Interface \(UEFI\). The UEFI is a specification that defines a software interface between an operating system and platform firmware. UEFI is a more secure replacement for the older BIOS firmware interface present in some personal computers. For more information on UEFI, go to [https:\/\/uefi.org](https://uefi.org).
 
 > [!NOTE]
@@ -2669,7 +2669,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="IsVM"></a> IsVM
+### IsVM
  Specifies whether the target computer is a VM based on information gathered from the **CPUID** interface. You can determine the specific VM environment using the **VMPlatform** property.
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
@@ -2704,7 +2704,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="JoinDomain"></a> JoinDomain
+### JoinDomain
  The domain that the target computer joins after the target operating system is deployed. This is the domain where the computer account for the target computer is created. The **JoinDomain** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinDomain** property cannot be blank or contain spaces.
 
 |Property configured by|Property applies to|
@@ -2721,7 +2721,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] JoinDomain=WOODGROVEBANK MachineObjectOU=OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`|
 
-###  <a name="JoinWorkgroup"></a> JoinWorkgroup
+### JoinWorkgroup
  The workgroup that the target computer joins after the target operating system is deployed. The **JoinWorkgroup** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinWorkgroup** property cannot be blank or contain spaces.
 
 |Property configured by|Property applies to|
@@ -2738,7 +2738,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] JoinWorkgroup=WDGV_WORKGROUP`|
 
-###  <a name="KeyboardLocale"></a> KeyboardLocale
+### KeyboardLocale
  A list of keyboard locales to be used with the target operating system. More than one keyboard locale can be specified for the target operating system. Each locale must be separated by a semicolon \(;\). If not specified, the Deployment Wizard uses the keyboard locale configured in the image being deployed.
 
  Exclude this setting in USMT when backing up and restoring user state information. Otherwise, the settings in the user state information will override the values specified in the **KeyboardLocale** property.
@@ -2764,7 +2764,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=0409:00000409;1809:00001809;041A:0000041A;083b:0001083b`|
 
-###  <a name="KeyboardLocalePE"></a> KeyboardLocalePE
+### KeyboardLocalePE
  The name of the keyboard locale to be used while in Windows PE only.
 
 > [!NOTE]
@@ -2788,7 +2788,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] KeyboardLocalePE=0409:00000409`|
 
-###  <a name="LanguagePacks"></a> LanguagePacks
+### LanguagePacks
  A list of the GUIDs for the language packs to be deployed on the target computer. Deployment Workbench specifies these language packs on the OS Packages node. These GUIDs are stored in the Packages.xml file. The **LanguagePacks** property has a numeric suffix (for example, **LanguagePacks001** or **LanguagePacks002**).
 
 |Property configured by|Property applies to|
@@ -2805,7 +2805,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] LanguagePacks001={a1923f8d-b07b-44c7-ac1e-353b7cc4c1ad}`|
 
-###  <a name="LoadStateArgs"></a> LoadStateArgs
+### LoadStateArgs
  The arguments passed to the USMT Loadstate process. The ZTI script inserts the appropriate logging, progress, and state store parameters. If this value is not included in the settings file, the user state restore process is skipped.
 
  If the Loadstate process finishes successfully, the user state information is deleted. In the event of a Loadstate failure (or non-zero return code), the local state store is moved to %WINDIR%\StateStore to prevent deletion and to ensure that no user state information is lost.
@@ -2827,7 +2827,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|
 
-###  <a name="Location"></a> Location
+### Location
  The geographic location of the target computers. A list of IP addresses that correspond to the default gateways defined for the computers within that location defines the **Location** property. An IP address for a default gateway can be associated with more than one location.
 
  Typically, the value for the **Location** property is set by performing a database query on the database managed using Deployment Workbench. Deployment Workbench can assist in creating the locations, defining property settings associated with the locations, and then in configuring CustomSettings.ini to perform the database query for the Location property and the property settings associated with the locations.
@@ -2850,7 +2850,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=LSettings, Default  [Default] UserDataLocation=AUTO DeployRoot=\\W2K3-SP1\Distribution$ OSInstall=YES ScanStateArgs=/v:15 /o /c LoadStateArgs=/v:7 /c  [LSettings] SQLServer=w2k3-sp1 Instance=MDT2010 Database=MDTDB Netlib=DBNMPNTW SQLShare=SQL$ Table=LocationSettings Parameters=DefaultGateway  [Springfield] UDDir=%OSDComputerName% UDShare=\\Springfield-FIL-01\UserData  [Springfield-123 Oak Street-4th Floor] DeployRoot=\\Springfield-BDD-01\Distribution1$`|
 
-###  <a name="LongDistanceAccess"></a> LongDistanceAccess
+### LongDistanceAccess
  The dialing digits to gain access to an outside line to dial long distance. The property can contain only numeric digits. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 |Property configured by|Property applies to|
@@ -2867,7 +2867,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|
 
-###  <a name="MACAddress"></a> MACAddress
+### MACAddress
  The media access control (MAC) layer address of the primary network adapter of the target computer. The **MACAddress** property is included on the **Priority** line so that property values specific to a target computer can be provided. Create a section for each MAC address for each of the target computers (such as `[00:0F:20:35:DE:AC]`or `[00:03:FF:FE:FF:FF]`) that contain target computer–specific settings.
 
 |Property configured by|Property applies to|
@@ -2884,7 +2884,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=MACAddress, Default  [Default] CaptureGroups=YES Groups1=NYC Application Management Groups2=NYC Help Desk Users  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP`|
 
-###  <a name="MachineObjectOU"></a> MachineObjectOU
+### MachineObjectOU
  The AD DS OU in the target domain where the computer account for the target computer is created.
 
 > [!NOTE]
@@ -2907,7 +2907,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] JoinDomain=WOODGROVEBANK MachineObjectOU=OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`|
 
-###  <a name="Make"></a> Make
+### Make
  The manufacturer of the target computer. The format for **Make** is undefined. Use this property to create a subsection that contains settings targeted to a specific computer manufacturer \(most commonly in conjunction with the **Model** and **Product** properties\).
 
 > [!NOTE]
@@ -2927,7 +2927,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Make, Default  [Default]  [Dell Computer Corporation] Subsection=Dell-%Model%  [Dell-Latitude D600] Packages001=XXX00009:Program9 Packages002=XXX0000A:Program10`|
 
-###  <a name="MandatoryApplications"></a> MandatoryApplications
+### MandatoryApplications
  A list of application GUIDs that will be installed on the target computer. These applications are specified on the Applications node in the Deployment Workbench. The GUIDs are stored in the Applications.xml file. The **MandatoryApplications** property is a list of text values that can be any non\-blank value. The **MandatoryApplications** property has a numeric suffix \(for example, **MandatoryApplications001** or **MandatoryApplications002**\).
 
 |Property configured by|Property applies to|
@@ -2944,7 +2944,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] MandatoryApplications001={1D7DF331-47B7-472C-87B3-442597EC2F7D} MandatoryApplications002={9d2b8999-5e4d-4f3d-bb05-edaaf4fe5628} Administrators001=WOODGROVEBANK\NYC Help Desk Staff`|
 
-###  <a name="Memory"></a> Memory
+### Memory
  The amount of memory installed on the target computer in megabytes. For example, the value **2038** indicates 2,038 MB \(or 2 GB\) of memory is installed on the target computer.
 
 > [!NOTE]
@@ -2964,7 +2964,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="Model"></a> Model
+### Model
  The model of the target computer. The format for **Model** is undefined. Use this property to create a subsection that contains settings targeted to a specific computer model number for a specific computer manufacturer \(most commonly in conjunction with the **Make** and **Product** properties\).
 
 > [!NOTE]
@@ -2984,7 +2984,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Make, Default  [Default]  [Dell Computer Corporation] Subsection=Dell-%Model%  [Dell-Latitude D600] Packages001=XXX00009:Program9 Packages002=XXX0000A:Program10`|
 
-###  <a name="NetLib"></a> NetLib
+### NetLib
  The protocol to be used to communicate with the computer running SQL Server specified in the **SQLServer** property.
 
 |Property configured by|Property applies to|
@@ -3002,7 +3002,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Computers, Default  [Default] ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="NewDomain"></a> NewDomain
+### NewDomain
  Indicates the type of a new domain: whether a new domain in a new forest, the root of a new tree in an existing forest, or a child of an existing domain.
 
 |Property configured by|Property applies to|
@@ -3021,7 +3021,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] NewDomain=Tree`|
 
-###  <a name="NewDomainDNSName"></a> NewDomainDNSName
+### NewDomainDNSName
  Specifies the required name of a new tree in an existing domain or when Setup installs a new forest of domains.
 
 |Property configured by|Property applies to|
@@ -3038,7 +3038,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] NewDomainDNSName=newdom.WoodGroveBank.com`|
 
-###  <a name="Order"></a> Order
+### Order
  The sorting order for the result set on a database query. The result set is based on the configuration settings of the **Database**, **Table**, **SQLServer**, **Parameters**, and **ParameterCondition** properties. More than one property can be provided to sort the results by more than one property.
 
  For example, if **Order\=Sequence** is specified in the CustomSettings.ini file, then an **ORDER BY** sequence clause is added to the query. **Specifying Order\=Make**, **Model** adds an **ORDER BY Make, Model** clause to the query.
@@ -3057,7 +3057,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ NetLib=DBNMPNTW Database=MDTDB Instance=SQLEnterprise2005 Table=MakeModelSettings Parameters=SerialNumber, AssetTag ParameterCondition=OR Order=Make, Model`|
 
-###  <a name="OrgName"></a> OrgName
+### OrgName
  The name of the organization that owns the target computer. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 |Property configured by|Property applies to|
@@ -3074,7 +3074,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=MACAddress, Default Properties=CustomProperty, ApplicationInstall  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac UserDataLocation=NONE CustomProperty=TRUE OrgName=Woodgrove Bank  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1 ApplicationInstall=Custom FullName=Woodgrove Bank User  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP  ApplicationInstall=Minimum FullName=Woodgrove Bank Manager`|
 
-###  <a name="OSArchitecture"></a> OSArchitecture
+### OSArchitecture
  The processor architecture type for the target operating system. This property is referenced during OEM deployments. Valid values are **x86** and **x64**.
 
 > [!NOTE]
@@ -3095,7 +3095,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSCurrentBuild"></a> OSCurrentBuild
+### OSCurrentBuild
  The build number of the currently running operating system.
 
 > [!NOTE]
@@ -3116,7 +3116,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSCurrentVersion"></a> OSCurrentVersion
+### OSCurrentVersion
  The version number of the currently running operating system.
 
 > [!NOTE]
@@ -3136,7 +3136,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDAdapterxDescription"></a> OSDAdapterxDescription
+### OSDAdapterxDescription
  Specifies the name of the network connection as it appears in the Control Panel Network Connections item. The name can be between 0 and 255 characters in length.
 
  This property is for LTI only. For the equivalent property for ZTI, see [OSDAdapterxName](#OSDAdapterxName).
@@ -3158,7 +3158,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDAdapterxDNSDomain"></a> OSDAdapterxDNSDomain
+### OSDAdapterxDNSDomain
  Specifies the DNS domain name (DNS suffix) that will be assigned to the network connection. This property is for ZTI only. For LTI, see the [OSDAdapterxDNSSuffix](#OSDAdapterxDNSSuffix) property.
 
 > [!NOTE]
@@ -3178,7 +3178,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0DNSDomain=WoodGroveBank.com`|
 
-###  <a name="OSDAdapterxDNSServerList"></a> OSDAdapterxDNSServerList
+### OSDAdapterxDNSServerList
  This is a comma-delimited list of DNS server IP addresses that will be assigned to the network connection.
 
 > [!NOTE]
@@ -3198,7 +3198,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0DNSServerList=192.168.0.254,192.168.100.254`|
 
-###  <a name="OSDAdapterxDNSSuffix"></a> OSDAdapterxDNSSuffix
+### OSDAdapterxDNSSuffix
  A DNS suffix that will be assigned to the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxDNSDomain](#OSDAdapterxDNSDomain) property.
 
 > [!NOTE]
@@ -3218,7 +3218,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0DNSSuffix= WoodGroveBank.com`|
 
-###  <a name="OSDAdapterxEnableDHCP"></a> OSDAdapterxEnableDHCP
+### OSDAdapterxEnableDHCP
  Specifies whether the network connection will be configured via DHCP.
 
 > [!NOTE]
@@ -3239,7 +3239,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableDHCP=TRUE`|
 
-###  <a name="OSDAdapterxEnableDNSRegistration"></a> OSDAdapterxEnableDNSRegistration
+### OSDAdapterxEnableDNSRegistration
  Specifies whether DNS registration is enabled on the network connection.
 
 > [!NOTE]
@@ -3260,7 +3260,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableDNSRegistration=TRUE`|
 
-###  <a name="OSDAdapterxEnableFullDNSRegistration"></a> OSDAdapterxEnableFullDNSRegistration
+### OSDAdapterxEnableFullDNSRegistration
  Specifies whether full DNS registration is enabled on the network connection.
 
 > [!NOTE]
@@ -3281,7 +3281,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableFullDNSRegistration=TRUE`|
 
-###  <a name="OSDAdapterxEnableLMHosts"></a> OSDAdapterxEnableLMHosts
+### OSDAdapterxEnableLMHosts
  Specifies whether LMHOSTS lookup is enabled on the network connection.
 
 > [!NOTE]
@@ -3302,7 +3302,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableLMHosts=TRUE`|
 
-###  <a name="OSDAdapterxEnableIPProtocolFiltering"></a> OSDAdapterxEnableIPProtocolFiltering
+### OSDAdapterxEnableIPProtocolFiltering
  This property specifies whether IP protocol filtering should be enabled on the network connection.
 
  The*x*in this property's name is a placeholder for a zero-based array that contains network adapter information, such as *OSDAdapter0EnableIPProtocolFiltering* or **OSDAdapter1EnableIPProtocolFiltering**.
@@ -3322,7 +3322,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableIPProtocolFiltering =TRUE`|
 
-###  <a name="OSDAdapterxEnableTCPFiltering"></a> OSDAdapterxEnableTCPFiltering
+### OSDAdapterxEnableTCPFiltering
  Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for ZTI only. For LTI, see the [OSDAdapterxEnableTCPIPFiltering](#OSDAdapterxEnableTCPIPFiltering) property.
 
 > [!NOTE]
@@ -3343,7 +3343,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableTCPFiltering=TRUE`|
 
-###  <a name="OSDAdapterxEnableTCPIPFiltering"></a> OSDAdapterxEnableTCPIPFiltering
+### OSDAdapterxEnableTCPIPFiltering
  Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxEnableTCPFiltering](#OSDAdapterxEnableTCPFiltering) property.
 
 > [!NOTE]
@@ -3364,7 +3364,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableTCPIPFiltering=TRUE`|
 
-###  <a name="OSDAdapterxEnableWINS"></a> OSDAdapterxEnableWINS
+### OSDAdapterxEnableWINS
  Specifies whether WINS will be enabled on the network connection.
 
 > [!NOTE]
@@ -3388,7 +3388,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableWINS=TRUE OSDAdapter0WINSServerList=192.168.0.1,192.168.100.1`|
 
-###  <a name="OSDAdapterxGatewayCostMetric"></a> OSDAdapterxGatewayCostMetric
+### OSDAdapterxGatewayCostMetric
  A comma\-delimited list of Gateway Cost Metrics specified as either integers or the string "Automatic" \(if empty, uses "Automatic"\) that will be configured on the connection.
 
 > [!NOTE]
@@ -3408,7 +3408,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0GatewayCostMetrics=Automatic`|
 
-###  <a name="OSDAdapterxGateways"></a> OSDAdapterxGateways
+### OSDAdapterxGateways
  A comma\-delimited list of gateways to be assigned to the network connection.
 
 > [!NOTE]
@@ -3428,7 +3428,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0Gateways=192.168.0.1,192.168.100.1`|
 
-###  <a name="OSDAdapterxIPAddressList"></a> OSDAdapterxIPAddressList
+### OSDAdapterxIPAddressList
  A comma\-delimited list of IP addresses to be assigned to the network connection.
 
 > [!NOTE]
@@ -3448,7 +3448,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0IPAddressList=192.168.0.40,192.168.100.40 OSDAdapter0SubnetMask=255.255.255.0,255.255.255.0`|
 
-###  <a name="OSDAdapterxIPProtocolFilterList"></a> OSDAdapterxIPProtocolFilterList
+### OSDAdapterxIPProtocolFilterList
  A comma\-delimited list of IP protocol filters to be assigned to the network connection. This property can be configured using the CustomSettings.ini file or the MDT DB but not the Deployment Workbench. If using Configuration Manager it is also configurable using an **Apply Network Settings** task sequence step.
 
 > [!NOTE]
@@ -3468,7 +3468,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0IPProtocolFilterList=a list of approved IP protocols`|
 
-###  <a name="OSDAdapterxMacAddress"></a> OSDAdapterxMacAddress
+### OSDAdapterxMacAddress
  Assign the specified configuration settings to the network interface card that matches the specified MAC address.
 
 > [!NOTE]
@@ -3488,7 +3488,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0MacAddress=00:0C:29:67:A3:6B`|
 
-###  <a name="OSDAdapterxName"></a> OSDAdapterxName
+### OSDAdapterxName
  Assign the specified configuration settings to the network adapter that matches the specified name. This property is for ZTI only. For the equivalent property for LTI, see [OSDAdapterxDescription](#OSDAdapterxDescription).
 
 > [!NOTE]
@@ -3508,7 +3508,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0Name=3Com 3C920 Integrated Fast Ethernet Controller`|
 
-###  <a name="OSDAdapterxSubnetMask"></a> OSDAdapterxSubnetMask
+### OSDAdapterxSubnetMask
  A comma\-delimited list of IP subnet masks to be assigned to the network connection.
 
 > [!NOTE]
@@ -3548,7 +3548,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0TCPFilterPortList=a list of approved TCP ports`|
 
-###  <a name="OSDAdapterxTCPIPNetBiosOptions"></a> OSDAdapterxTCPIPNetBiosOptions
+### OSDAdapterxTCPIPNetBiosOptions
  Specifies the TCP\/IP NetBIOS options to be assigned to the network connection.
 
 > [!NOTE]
@@ -3569,7 +3569,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0TCPIPNetBiosOptions=0`|
 
-###  <a name="OSDAdapterxUDPFilterPortList"></a> OSDAdapterxUDPFilterPortList
+### OSDAdapterxUDPFilterPortList
  A comma\-delimited list of User Datagram Protocol \(UDP\) filter ports to be assigned to the network connection. This property can be configured using the CustomSettings.ini file and the MDT DB but not the Deployment Workbench. If using Configuration Manager it is also configurable using an **Apply Network Settings** task sequence step.
 
 > [!NOTE]
@@ -3589,7 +3589,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0UDPFilterPortList=a list of approved UDP ports`|
 
-###  <a name="OSDAdapterxWINSServerList"></a> OSDAdapterxWINSServerList
+### OSDAdapterxWINSServerList
  A two\-element, comma\-delimited list of WINS server IP addresses to be assigned to the network connection.
 
 > [!NOTE]
@@ -3609,7 +3609,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableWINS=TRUE OSDAdapter0WINSServerList=192.168.0.1,192.168.100.1`|
 
-###  <a name="OSDAdapterCount"></a> OSDAdapterCount
+### OSDAdapterCount
  Specifies the number of network connections that are to be configured.
 
 |Property configured by|Property applies to|
@@ -3646,7 +3646,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDBitLockerCreateRecoveryPassword"></a> OSDBitLockerCreateRecoveryPassword
+### OSDBitLockerCreateRecoveryPassword
  A Boolean value that indicates whether the process creates a recovery key for BitLocker. The key is used for recovering data encrypted on a BitLocker volume. This key is cryptographically equivalent to a startup key. If available, the recovery key decrypts the VMK, which, in turn, decrypts the FVEK.
 
 > [!NOTE]
@@ -3667,7 +3667,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerStartupKeyDrive=C:`|
 
-###  <a name="OSDBitLockerMode"></a> OSDBitLockerMode
+### OSDBitLockerMode
  The type of BitLocker installation to be performed. Protect the target computer using one of the following methods:
 
 -   A TPM microcontroller
@@ -3695,7 +3695,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPM OSDBitLockerCreateRecoveryPassword=AD`|
 
-###  <a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
+### OSDBitLockerRecoveryPassword
  Instead of generating a random recovery password, the **Enable BitLocker** task sequence action uses the specified value as the recovery password. The value must be a valid numerical BitLocker recovery password.
 
 |Property configured by|Property applies to|
@@ -3712,7 +3712,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerRecoveryPassword=621280128854709621167486709731081433315062587367 OSDBitLockerStartupKeyDrive=C:`|
 
-###  <a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey
+### OSDBitLockerStartupKey
  Instead of generating a random startup key for the key management option **Startup Key on USB only**, the **Enable BitLocker** task sequence action uses the value as the startup key. The value must be a valid, Base64\-encoded BitLocker startup key.
 
 |Property configured by|Property applies to|
@@ -3729,7 +3729,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=KEY OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerStartupKey=8F4922B8-2D8D-479E-B776-12629A361049`|
 
-###  <a name="OSDBitLockerStartupKeyDrive"></a> OSDBitLockerStartupKeyDrive
+### OSDBitLockerStartupKeyDrive
  The location for storing the BitLocker recovery key and startup key.
 
 |Property configured by|Property applies to|
@@ -3746,7 +3746,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLocker CreateRecoveryPassword=AD OSDBitLockerStartupKeyDrive=C:`|
 
-###  <a name="OSDBitLockerTargetDrive"></a> OSDBitLockerTargetDrive
+### OSDBitLockerTargetDrive
  Specifies the drive to be encrypted. The default drive is the drive that contains the operating system.
 
 |Property configured by|Property applies to|
@@ -3763,7 +3763,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 BDERecoveryPassword=TRUE OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerTargetDrive=C:`|
 
-###  <a name="OSDBitLockerWaitForEncryption"></a> OSDBitLockerWaitForEncryption
+### OSDBitLockerWaitForEncryption
  Specifies that the deployment process should not proceed until BitLocker has completed the encryption process for all specified drives. Specifying TRUE could dramatically increase the time required to complete the deployment process.
 
 > [!CAUTION]
@@ -3784,7 +3784,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerStartupKeyDrive=C: OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerWaitForEncryption=TRUE`|
 
-###  <a name="OSDComputerName"></a> OSDComputerName
+### OSDComputerName
  The new computer name to assign to the target computer.
 
 > [!NOTE]
@@ -3804,7 +3804,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Default] OSDComputerName=%_SMSTSMachineName%`|
 
-###  <a name="OSDDiskAlign"></a> OSDDiskAlign
+### OSDDiskAlign
  This property is used to pass a value to the **align** parameter of the **create partition primary** command in the **DiskPart** command. The **align** parameter is typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance when the logical units \(LUs\) are not cylinder aligned. The **align** parameter aligns a primary partition that is not cylinder aligned at the beginning of a disk and rounds the offset to the closest alignment boundary. For more information on the **align** parameter, see [Create partition primary](https://technet.microsoft.com/library/cc771243\(WS.10\).aspx).
 
 > [!NOTE]
@@ -3824,7 +3824,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDDiskAlign=1024 OSDDiskOffset=2048`|
 
-###  <a name="OSDDiskIndex"></a> OSDDiskIndex
+### OSDDiskIndex
  Specifies the disk index that will be configured.
 
 |Property configured by|Property applies to|
@@ -3841,7 +3841,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDDiskIndex=0`|
 
-###  <a name="OSDDiskOffset"></a> OSDDiskOffset
+### OSDDiskOffset
  This property is used to pass a value to the **offset** parameter of the **create partition primary** command in the **DiskPart** command. For more information on the **offset** parameter, see [Create partition primary](https://technet.microsoft.com/library/cc771243\(WS.10\).aspx).
 
  This property can be used in conjunction with the **OSDDiskAlign** property to set the **align** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskAlign](#OSDDiskAlign) property.
@@ -3860,7 +3860,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDDiskAlign=1024 OSDDiskOffset=2048`|
 
-###  <a name="OSDDiskPartBiosCompatibilityMode"></a> OSDDiskPartBiosCompatibilityMode
+### OSDDiskPartBiosCompatibilityMode
  This property specifies whether to disable cache alignment optimizations when partitioning the hard disk for compatibility with certain types of BIOS.
 
 |Property configured by|Property applies to|
@@ -3878,7 +3878,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDDiskPartBiosCompatibilityMode=TRUE`|
 
-###  <a name="OSDImageCreator"></a> OSDImageCreator
+### OSDImageCreator
  Specifies the name of the installation account that will be used during OEM deployments.
 
 > [!NOTE]
@@ -3898,7 +3898,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDImageIndex"></a> OSDImageIndex
+### OSDImageIndex
  Specifies the index of the image in the .wim file. This property is referenced during OEM deployments.
 
 > [!NOTE]
@@ -3918,7 +3918,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDImagePackageID"></a> OSDImagePackageID
+### OSDImagePackageID
  Specifies the package ID for the image to install during OEM deployments.
 
 > [!NOTE]
@@ -3938,7 +3938,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDInstallEditionIndex"></a> OSDInstallEditionIndex
+### OSDInstallEditionIndex
  Specifies the index of the image in the WIM file. This property is referenced during OEM deployments.
 
 > [!NOTE]
@@ -3958,7 +3958,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDInstallType"></a> OSDInstallType
+### OSDInstallType
  Specifies the installation type used for OEM deployments. The default is **Sysprep**.
 
 > [!NOTE]
@@ -3978,7 +3978,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDisk"></a> OSDisk
+### OSDisk
  Specifies the drive used to install the operating system during OEM deployments. The default value is **C:**.
 
 > [!NOTE]
@@ -3998,7 +3998,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDPartitions"></a> OSDPartitions
+### OSDPartitions
  Specifies the number of defined partitions configurations. The maximum number of partitions that can be configured is two. The default is **None**.
 
 |Property configured by|Property applies to|
@@ -4015,7 +4015,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions=1 OSDPartitions0Bootable=TRUE OSDPartitions0FileSystem=NTFS OSDPartitions0QuickFormat=TRUE OSDPartitions0Size=60 OSDPartitions0SizeUnits=GB OSDPartitions0Type=Primary OSDPartitions0VolumeName=OSDisk OSDPartitions0VolumeLetterVariable=NewDrive1`|
 
-###  <a name="OSDPartitionsxBootable"></a> OSDPartitionsxBootable
+### OSDPartitionsxBootable
  The partition at the specified index should be set bootable. The default first partition is set bootable.
 
 > [!NOTE]
@@ -4036,7 +4036,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0Bootable=TRUE`|
 
-###  <a name="OSDPartitionsxFileSystem"></a> OSDPartitionsxFileSystem
+### OSDPartitionsxFileSystem
  The type of file system for the partition at the specified index. Valid values are **NTFS** or **FAT32**.
 
 > [!NOTE]
@@ -4059,7 +4059,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0FileSystem=NTFS`|
 
-###  <a name="OSDPartitionsxQuickFormat"></a> OSDPartitionsxQuickFormat
+### OSDPartitionsxQuickFormat
  The partition at the specified index should be quick formatted. The default is **TRUE**.
 
 > [!NOTE]
@@ -4083,7 +4083,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0QuickFormat=TRUE`|
 
-###  <a name="OSDPartitionsxSize"></a> OSDPartitionsxSize
+### OSDPartitionsxSize
  The size of the partition at the specified index.
 
 > [!NOTE]
@@ -4103,7 +4103,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0Size=60 OSDPartitions0SizeUnits=GB`|
 
-###  <a name="OSDPartitionsxSizeUnits"></a> OSDPartitionsxSizeUnits
+### OSDPartitionsxSizeUnits
  The units of measure used when specifying the size of the partition. Valid values are **MB**, **GB**, or **%**. The default value is **MB**.
 
 > [!NOTE]
@@ -4123,7 +4123,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0Size=60 OSDPartitions0SizeUnits=GB`|
 
-###  <a name="OSDPartitionsxType"></a> OSDPartitionsxType
+### OSDPartitionsxType
  The type of partition to be created at the specified index.
 
 > [!NOTE]
@@ -4145,7 +4145,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0Type=Primary`|
 
-###  <a name="OSDPartitionsxVolumeLetterVariable"></a> OSDPartitionsxVolumeLetterVariable
+### OSDPartitionsxVolumeLetterVariable
  The property that receives the drive letter that is assigned to the partition being managed.
 
 > [!NOTE]
@@ -4165,7 +4165,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0VolumeLetterVariable=NewDrive1`|
 
-###  <a name="OSDPartitionsxVolumeName"></a> OSDPartitionsxVolumeName
+### OSDPartitionsxVolumeName
  The volume name that will be assigned to the partition at the specified index.
 
 > [!NOTE]
@@ -4185,7 +4185,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |`[Settings] Priority=Default  [Default] OSDPartitions0VolumeName=OSDisk`|
 
-###  <a name="OSDPreserveDriveLetter"></a> OSDPreserveDriveLetter
+### OSDPreserveDriveLetter
  This property is used to determine whether the **Apply OS** task sequence step should preserve the drive letter in the operating system image file (.wim file) being deployed to the target computer.
 
 > [!NOTE]
@@ -4206,13 +4206,13 @@ cscript.exe LiteTouch.vbs /debug:true
 |-|
 |None|
 
-###  <a name="OSDStateStorePath"></a> OSDStateStorePath
+### OSDStateStorePath
  LTI and ZTI use this property to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path.
 
 > [!NOTE]
 >  The **OSDStateStorePath** property takes precedence over the [StatePath](#StatePath) or [UserDataLocation](#UserDataLocation) property when those properties are also specified.
 
- In a Replace Computer deployment scenario in ZTI, the [Restore User State](#RestoreUserState) task sequence step is skipped if the **OSDStateStorePath** property is set to a valid local or UNC path. The workaround is to set the [USMTLocal](#USMTLocal) property to TRUE. Doing so forces ZTI UserState.wsf to recognize the path in the [OSDStateStorePath](#OSDStateStorePath) property. This is caused by the **Request State Store** task sequence step being skipped and the previous value in the **OSDStateStorePath** property being retained.
+ In a Replace Computer deployment scenario in ZTI, the [Restore User State](task-sequence-steps.md#RestoreUserState) task sequence step is skipped if the **OSDStateStorePath** property is set to a valid local or UNC path. The workaround is to set the [USMTLocal](#USMTLocal) property to TRUE. Doing so forces ZTI UserState.wsf to recognize the path in the [OSDStateStorePath](#OSDStateStorePath) property. This is caused by the **Request State Store** task sequence step being skipped and the previous value in the **OSDStateStorePath** property being retained.
 
  In a Replace Computer deployment scenario in ZTI, where user state migration data and the entire computer are being backed up, the Backup.wim file is stored in the folder specified in the **OSDStateStorePath** property. This may be caused by specifying the wrong value for the [ComputerBackupLocation](#ComputerBackupLocation) property.
 
@@ -4241,7 +4241,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] USMTLocal=True OSDStateStorePath=\\fs1\Share\Replace ComputerBackupLocation=\\fs1\Share\ComputerBackup\Client01`|
 
-###  <a name="OSDTargetSystemDrive"></a> OSDTargetSystemDrive
+### OSDTargetSystemDrive
  Specifies the drive where the operating system will be installed during OEM deployments.
 
 > [!NOTE]
@@ -4261,7 +4261,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="OSDTargetSystemRoot"></a> OSDTargetSystemRoot
+### OSDTargetSystemRoot
  Specifies the install path where the operating system will be installed during OEM deployments.
 
 > [!NOTE]
@@ -4281,7 +4281,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="OSFeatures"></a> OSFeatures
+### OSFeatures
  A comma-delimited list of server feature IDs that will be installed on the target computer.
 
 > [!NOTE]
@@ -4304,7 +4304,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] OSFeatures=CMAK,MSMQ-Multicasting,RSAT`|
 
-###  <a name="OSInstall"></a> OSInstall
+### OSInstall
  Indicates whether the target computer is authorized to have the target operating system installed. If the **OSInstall** property is not listed, the default is to allow deployment of operating systems to any target computer.
 
 > [!CAUTION]
@@ -4325,7 +4325,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES`|
 
-###  <a name="OSRoles"></a> OSRoles
+### OSRoles
  A comma-delimited list of server role IDs that will be installed on the target computer.
 
 > [!NOTE]
@@ -4350,7 +4350,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] OSRoles=ADDS`|
 
-###  <a name="OSRoleServices"></a> OSRoleServices
+### OSRoleServices
  A comma-delimited list of server role service IDs that will be installed on the target computer.
 
 > [!NOTE]
@@ -4370,7 +4370,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] OSRoleServices=ADDS-Domain-Controller`|
 
-###  <a name="OSSKU"></a> OSSKU
+### OSSKU
  The edition of the currently running operating system. The operating system edition is determined by using the **OperatingSystemSKU** property of the **Win32_OperatingSystem WMI** class. For a list of the editions the **OperatingSystemSKU** property returns, see the section, "OperatingSystemSKU," at [Win32_OperatingSystem class](https://msdn.microsoft.com/library/windows/desktop/aa394239\(v=vs.85\).aspx).
 
 > [!NOTE]
@@ -4390,7 +4390,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="OSVersion"></a> OSVersion
+### OSVersion
  The version of the currently running operating system. This property should only be used to detect if the currently running operating system is Windows PE. Use the [OSVersionNumber](#OSVersionNumber) property to detect other operating systems.
 
 > [!NOTE]
@@ -4413,7 +4413,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="OSVersionNumber"></a> OSVersionNumber
+### OSVersionNumber
  The operating system major and minor version number. This property is referenced during OEM deployments.
 
 > [!NOTE]
@@ -4433,7 +4433,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="OverrideProductKey"></a> OverrideProductKey
+### OverrideProductKey
  The Multiple Activation Key (MAK) string to be applied after the target operating is deployed to the target computer. The value specified in this property is used by the ZTILicensing.wsf script during the State Restore Phase to apply the MAK to the target operating system. The script also configures the volume licensing image to use MAK activation instead of Key Management Service (KMS). The operating system needs to be activated with Microsoft after the MAK is applied. This is used when the target computer is unable to access a server that is running KMS.
 
 |Property configured by|Property applies to|
@@ -4450,7 +4450,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] ProductKey=AAAAA-BBBBB-CCCCC-DDDDD-EEEEE-FFFFF OverrideProductKey=AAAAA-BBBBB-CCCCC-DDDDD-EEEEE-FFFFF`|
 
-###  <a name="PackageGroup"></a> PackageGroup
+### PackageGroup
  A list of text values that associates operating system packages with each other (typically based on the type of operating system package). An operating system package can be associated with one or more package groups. The **PackageGroup** property allows the operating system packages within one or more groups to be deployed to a target computer.
 
  The text values in the list can be any non-blank value. The **PackageGroup** property value has a numeric suffix (for example, **PackageGroup001** or **PackageGroup002**). After it is defined, a package group is associated with a computer. A computer can be associated with more than one package group.
@@ -4475,7 +4475,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] PackageGroup001=Updates`|
 
-###  <a name="Packages"></a> Packages
+### Packages
  The list of Configuration Manager packages to be deployed to the target computer. The **Packages** property has a numeric suffix (for example, Packages001 or Packages002).
 
 > [!NOTE]
@@ -4495,7 +4495,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] Packages001=NYC00010:Install Packages002=NYC00011:Install`|
 
-###  <a name="PackageSelectionProfile"></a> PackageSelectionProfile
+### PackageSelectionProfile
  Profile name used during package installation.
 
 |Property configured by|Property applies to|
@@ -4512,7 +4512,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] PackageSelectionProfile=CoreApplications`|
 
-###  <a name="Parameters"></a> Parameters
+### Parameters
  The parameters to be passed to a database query that returns property values from columns in the table specified in the **Table** property. The table is located in the database specified in the **Database** property on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.
 
 |Property configured by|Property applies to|
@@ -4529,7 +4529,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="ParameterCondition"></a> ParameterCondition
+### ParameterCondition
  Indicator of whether a Boolean AND or OR operation is performed on the properties listed in the **Parameters** property.
 
 > [!CAUTION]
@@ -4550,7 +4550,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="ParentDomainDNSName"></a> ParentDomainDNSName
+### ParentDomainDNSName
  Specifies the DNS domain name of an existing directory service domain when installing a child domain.
 
 |Property configured by|Property applies to|
@@ -4567,7 +4567,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] ParentDomainDNSName=WoodGroveBank.com`|
 
-###  <a name="Password"></a> Password
+### Password
  Specifies the password for the user name (account credentials) to use for promoting the member server to a domain controller.
 
 |Property configured by|Property applies to|
@@ -4584,7 +4584,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] Password=<complex_password>`|
 
-###  <a name="Phase"></a> Phase
+### Phase
  The current phase of the deployment process. The Task Sequencer uses these phases to determine which tasks must be completed.
 
 > [!NOTE]
@@ -4612,7 +4612,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="Port"></a> Port
+### Port
  The number of the port that should be used when connecting to the SQL Server database instance that is used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property. The port used during connection is specified in the **Port** property.
 
 |Property configured by|Property applies to|
@@ -4629,7 +4629,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES  [Computers] SQLServer=NYC-SQL-01 Database=MDTDB Instance=MDT2010 Port=1433 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="PowerUsers"></a> PowerUsers
+### PowerUsers
  A list of user accounts and domain groups to be added to the local Power Users group on the target computer. The **PowerUsers** property is a list of text values that can be any non-blank value. The **PowerUsers** property has a numeric suffix (for example, **PowerUsers1** or **PowerUsers2**).
 
 |Property configured by|Property applies to|
@@ -4646,7 +4646,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] Administrators001=WOODGROVEBANK\NYC Help Desk Staff PowerUsers001=WOODGROVEBANK\User01 PowerUsers002=WOODGROVEBANK\User02`|
 
-###  <a name="PrepareWinRE"></a> PrepareWinRE
+### PrepareWinRE
  This property specifies if the LiteTouchPE.wim file, which includes Windows RE and optionally DaRT, is applied to the system drive as the recovery partition. This allows the target computer to use the LiteTouchPE.wim image to perform recovery tasks. DaRT may optionally be included in the image, which makes DaRT recovery features available on the target computer.
 
 |Property configured by|Property applies to|
@@ -4664,7 +4664,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] PrepareWinRE=YES`|
 
-###  <a name="Priority"></a> Priority
+### Priority
  The reserved property that determines the sequence for finding configuration values. The **Priority** reserved property lists each section to be searched and the order in which the sections are searched. When a property value is found, the ZTIGather.wsf script quits searching for the property, and the remaining sections are not scanned for that property.
 
 |Property configured by|Property applies to|
@@ -4681,7 +4681,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=MACAddress, Default  [Default] UserDataLocation=NONE CustomProperty=TRUE  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP`|
 
-###  <a name="ProcessorSpeed"></a> ProcessorSpeed
+### ProcessorSpeed
  The speed of the processor installed on the target computer in MHz. For example, the value **1995** indicates the processor on the target computer is running at 1,995 MHz or 2 gigahertz.
 
 > [!NOTE]
@@ -4701,7 +4701,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="Product"></a> Product
+### Product
  The product name of the target computer. With some computer vendors, the make and model might not be sufficiently unique to identify the characteristics of a particular configuration (for example, hyperthreaded or non-hyperthreaded chipsets). The **Product** property can help to differentiate.
 
  The format for **Product** is undefined. Use this property to create a subsection that contains settings targeted to a specific product name for a specific computer model number for a specific computer manufacturer (most commonly in conjunction with the **Make** and **Model** properties).
@@ -4723,7 +4723,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="ProductKey"></a> ProductKey
+### ProductKey
  The product key string to be configured for the target computer. Before the target operating system is deployed, the product key specified is automatically inserted into the appropriate location in Unattend.xml.
 
 |Property configured by|Property applies to|
@@ -4740,7 +4740,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] ProductKey=AAAAA-BBBBB-CCCCC-DDDDD-EEEEE-FFFFF`|
 
-###  <a name="Properties"></a> Properties
+### Properties
  A reserved property that defines any custom, user-defined properties. These user-defined properties are located by the ZTIGather.wsf script in the CustomSettings.ini file, BootStrap.ini file, or the MDT DB. These properties are additions to the predefined properties in MDT.
 
 |Property configured by|Property applies to|
@@ -4757,7 +4757,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=MACAddress, Default Properties=CustomProperty, ApplicationInstall  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac UserDataLocation=NONE CustomProperty=TRUE  [00:0F:20:35:DE:AC] OSDNEWMACHINENAME=HPD530-1 ApplicationInstall=Custom  [00:03:FF:FE:FF:FF] OSDNEWMACHINENAME=BVMXP ApplicationInstall=Minimum`|
 
-###  <a name="ReplicaDomainDNSName"></a> ReplicaDomainDNSName
+### ReplicaDomainDNSName
  Specifies the DNS domain name of the domain to replicate.
 
 |Property configured by|Property applies to|
@@ -4774,7 +4774,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] ReplicaDomainDNSName=WoodGroveBank.com`|
 
-###  <a name="ReplicaOrNewDomain"></a> ReplicaOrNewDomain
+### ReplicaOrNewDomain
  Specifies whether to install a new domain controller as the first domain controller in a new directory service domain or to install it as a replica directory service domain controller.
 
 |Property configured by|Property applies to|
@@ -4792,7 +4792,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] ReplicaOrNewDomain=Domain`|
 
-###  <a name="ReplicationSourceDC"></a> ReplicationSourceDC
+### ReplicationSourceDC
  Indicates the full DNS name of the domain controller from which you replicate the domain information.
 
 |Property configured by|Property applies to|
@@ -4809,7 +4809,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] ReplicationSourceDC=dc01.WoodGroveBank.com`|
 
-###  <a name="ResourceDrive"></a> ResourceDrive
+### ResourceDrive
  The drive letter mapped to the **ResourceRoot** property for the ZTIDrivers.wsf and ZTIPatches.wsf scripts to use to install drivers and patches to the target computer.
 
 > [!NOTE]
@@ -4829,7 +4829,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="ResourceRoot"></a> ResourceRoot
+### ResourceRoot
  The value of this property is used by the ZTIDrivers.wsf and ZTIPatches.wsf scripts to install drivers and patches to the target computer.
 
 > [!NOTE]
@@ -4849,7 +4849,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceDrive=R: ResourceRoot=\\NYC-AM-FIL-01\Resource$ UserDataLocation=NONE`|
 
-###  <a name="Role"></a> Role
+### Role
  The purpose of a computer based on the tasks performed by the user on the target computer. The **Role** property lists text values that can be any non-blank value. The **Role** property value has a numeric suffix (for example, **Role1** or **Role2**). When defined, a role is associated with a computer. A computer can perform more than one role.
 
  Typically, the value for the **Role** property is set by performing a database query in the MDT DB. The Deployment Workbench can assist in creating the role and property settings associated with the role, and then the Deployment Workbench can configure CustomSettings.ini to perform the database query for the **Role** property and the property settings associated with the role.
@@ -4872,7 +4872,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=RoleSettings, Default  [Default] SkipCapture=NO UserDataLocation=AUTO DeployRoot=\\W2K3-SP1\Distribution$ OSInstall=YES Role1=Teller Role2=Woodgrove User  [RoleSettings] SQLServer=w2k3-sp1 Instance=MDT2010 Database=MDTDB Netlib=DBNMPNTW SQLShare=SQL_Share Table=RoleSettings Parameters=Role`|
 
-###  <a name="SafeModeAdminPassword"></a> SafeModeAdminPassword
+### SafeModeAdminPassword
  Supplies the password for the administrator account when starting the computer in Safe mode or a variant of Safe mode, such as Directory Services Restore mode.
 
 |Property configured by|Property applies to|
@@ -4889,7 +4889,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SafeModeAdminPassword=<complex_password>`|
 
-###  <a name="ScanStateArgs"></a> ScanStateArgs
+### ScanStateArgs
  Arguments passed to the **USMT Scanstate** process. The scripts call Scanstate.exe, and then insert the appropriate logging, progress, and state store parameters. If this value is not included in the settings file, the user state backup process is skipped.
 
 > [!NOTE]
@@ -4912,7 +4912,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|
 
-###  <a name="SerialNumber"></a> SerialNumber
+### SerialNumber
  The serial number of the target computer. The format for serial numbers is undefined. Use this property to create a subsection that contains settings targeted to a specific computer.
 
 > [!NOTE]
@@ -4932,7 +4932,7 @@ BackupDir=Client01
 |-|
 |None|
 
-###  <a name="SiteName"></a> SiteName
+### SiteName
  Specifies the name of an existing site where you can place the new domain controller.
 
 |Property configured by|Property applies to|
@@ -4949,7 +4949,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SiteName=FirstSite`|
 
-###  <a name="SkipAdminAccounts"></a> SkipAdminAccounts
+### SkipAdminAccounts
  Indicates whether the **Local Administrators** wizard page is skipped.
 
 > [!NOTE]
@@ -4975,7 +4975,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminAccounts=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|
 
-###  <a name="SkipAdminPassword"></a> SkipAdminPassword
+### SkipAdminPassword
  Indicates whether the **Administrator Password** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -4998,7 +4998,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|
 
-###  <a name="SkipApplications"></a> SkipApplications
+### SkipApplications
  Indicates whether the **Select one or more applications to install** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5021,7 +5021,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=YES SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|
 
-###  <a name="SkipBDDWelcome"></a> SkipBDDWelcome
+### SkipBDDWelcome
  Indicates whether the **Welcome to Windows Deployment** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5047,7 +5047,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|
 
-###  <a name="SkipBitLocker"></a> SkipBitLocker
+### SkipBitLocker
  Indicates whether the **Specify the BitLocker configuration** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5070,7 +5070,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipBDDWelcome=YES SkipBitLocker=YES SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipBuild"></a> SkipBuild
+### SkipBuild
  Indicates whether the **Select a task sequence to execute on this computer** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5092,7 +5092,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipBuild=YES SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipCapture"></a> SkipCapture
+### SkipCapture
  Indicates whether the **Specify whether to capture an image** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5115,7 +5115,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipComputerBackup"></a> SkipComputerBackup
+### SkipComputerBackup
  Indicates whether the **Specify where to save a complete computer backup** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5138,7 +5138,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=YES SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipComputerName"></a> SkipComputerName
+### SkipComputerName
  Indicates whether the **Configure the computer name** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5161,7 +5161,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=NO SkipComputerName=YES SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipDomainMembership"></a> SkipDomainMembership
+### SkipDomainMembership
  Indicates whether the **Join the computer to a domain or workgroup** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5184,7 +5184,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=NO SkipApplications=NO SkipComputerBackup=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipDomainMembership=NO`|
 
-###  <a name="SkipFinalSummary"></a> SkipFinalSummary
+### SkipFinalSummary
  Indicates whether the **Operating system deployment completed successfully** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5207,7 +5207,7 @@ BackupDir=Client01
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipBDDWelcome=YES SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|
 
-###  <a name="SkipGroupSubFolders"></a> SkipGroupSubFolders
+### SkipGroupSubFolders
  By default, when specifying folders to be included when injecting drivers, patches \(packages\), and so on, values are specified something like:
 
 ```
@@ -5237,7 +5237,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipGroupSubFolders=NO`|
 
-###  <a name="SkipLocaleSelection"></a> SkipLocaleSelection
+### SkipLocaleSelection
  Indicates whether the **Locale Selection** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5260,7 +5260,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipPackageDisplay"></a> SkipPackageDisplay
+### SkipPackageDisplay
  Indicates whether the **Packages** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5283,7 +5283,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=YES SkipLocaleSelection=NO`|
 
-###  <a name="SkipProductKey"></a> SkipProductKey
+### SkipProductKey
  Indicates whether the **Specify the product key needed to install this operating system** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5306,7 +5306,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|
 
-###  <a name="SkipRearm"></a> SkipRearm
+### SkipRearm
  This property is used to configure whether MDT rearms the Microsoft Office 2010 25\-day activation grace period. If Microsoft Office 2010 is captured in a custom image, the user sees activation notification dialog boxes immediately after the image is deployed instead of 25\-days after deployment.
 
  By default, MDT rearms the Microsoft Office 2010 25\-day activation grace period when running the LTISysprep.wsf script. You can set the value of this property to **YES** so that MDT skips the rearming of the Microsoft Office 2010 25\-day activation grace period.
@@ -5329,7 +5329,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=Y SkipCapture=YES SkipAdminPassword=NO SkipProductKey=YES SkipRearm=YES DoCapture=YES`|
 
-###  <a name="SkipRoles"></a> SkipRoles
+### SkipRoles
  Indicates whether the **Roles and Features** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5352,7 +5352,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=Yes SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipRoles=YES SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipSummary"></a> SkipSummary
+### SkipSummary
  Indicates whether the **Ready to begin** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5375,7 +5375,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=Yes SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipTaskSequence"></a> SkipTaskSequence
+### SkipTaskSequence
  Indicates whether the **Select a task sequence to execute on this computer** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5401,7 +5401,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=NO SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipTimeZone"></a> SkipTimeZone
+### SkipTimeZone
  Indicates whether the **Set the Time Zone** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5424,7 +5424,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipBDDWelcome=YES SkipTaskSequence=YES SkipComputerBackup=NO SkipComputerName=NO SkipDomainMembership=NO SkipFinalSummary=NO SkipSummary=NO SkipTimeZone=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO`|
 
-###  <a name="SkipUserData"></a> SkipUserData
+### SkipUserData
  Indicates whether the **Specify whether to restore user data** and **Specify where to save your data and settings** wizard page is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5447,7 +5447,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=NO SkipCapture=NO SkipAdminPassword=YES SkipApplications=NO SkipComputerBackup=NO SkipDomainMembership=NO SkipUserData=NO SkipPackageDisplay=NO SkipLocaleSelection=NO SkipProductKey=YES`|
 
-###  <a name="SkipWizard"></a> SkipWizard
+### SkipWizard
  Indicates whether the entire **Deployment Wizard** is skipped.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
@@ -5470,7 +5470,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SkipWizard=YES`|
 
-###  <a name="SLShare"></a> SLShare
+### SLShare
  The network shared folder in which the deployment logs are stored at the end of the deployment process.
 
 |Property configured by|Property applies to|
@@ -5487,7 +5487,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO SkipAdminPassword=YES SkipProductKey=YES`|
 
-###  <a name="SLShareDynamicLogging"></a> SLShareDynamicLogging
+### SLShareDynamicLogging
  The network shared folder in which all MDT logs should be written during deployment. This is used for advanced real-time debugging only.
 
 |Property configured by|Property applies to|
@@ -5504,7 +5504,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ SLShareDynamicLogging=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO SkipAdminPassword=YES SkipProductKey=YES`|
 
-###  <a name="SMSTSAssignUserMode"></a> SMSTSAssignUserMode
+### SMSTSAssignUserMode
  Specifies whether user device affinity (UDA) should be enabled and whether approval is required. This property only works with the UDA feature in Configuration Manager.
 
 |Property configured by|Property applies to|
@@ -5523,7 +5523,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SMSTSAssignUserMode=Auto SMSTSUdaUsers=Fabrikam\Ken, Fabrikam\Pilar`|
 
-###  <a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
+### SMSTSRunCommandLineUserName
  Specifies the user name in *Domain\User_Name* format that should be used with a **Run Command Line** step that is configured to run as a user.
 
 |Property configured by|Property applies to|
@@ -5540,7 +5540,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SMSTSRunCommandLineUserName=Fabrikam\Ken SMSTSRunCommandLineUserPassword=<complex_password>`|
 
-###  <a name="SMSTSRunCommandLineUserPassword"></a> SMSTSRunCommandLineUserPassword
+### SMSTSRunCommandLineUserPassword
  Specifies the password that should be used with a **Run Command Line** step that is configured to run as a user.
 
 |Property configured by|Property applies to|
@@ -5557,7 +5557,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SMSTSRunCommandLineUserName=Fabrikam\Ken SMSTSRunCommandLineUserPassword=<complex_password>`|
 
-###  <a name="SMSTSUdaUsers"></a> SMSTSUdaUsers
+### SMSTSUdaUsers
  Specifies the users who will be assigned affinity with a specific device using the UDA feature, which is available only in Configuration Manager.
 
 |Property configured by|Property applies to|
@@ -5574,7 +5574,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SMSTSAssignUserMode=Auto SMSTSUdaUsers=Fabrikam\Ken, Fabrikam\Pilar`|
 
-###  <a name="SQLServer"></a> SQLServer
+### SQLServer
  The identity of the computer running SQL Server that performs a database query that returns property values from columns in the table specified in the **Table** property. The query is based on parameters specified in the **Parameters** and **ParameterCondition** properties. The instance of SQL Server on the computer is specified in the **Instance** property.
 
 |Property configured by|Property applies to|
@@ -5591,7 +5591,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=SQLEnterprise2005 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="SQLShare"></a> SQLShare
+### SQLShare
  The name of a shared folder on the computer running SQL Server (specified by the **SQLServer** property). The credentials used for authentication are provided by the **UserDomain**, **UserID**, and **UserPassword** properties (for LTI and ZTI) or by the Configuration Manager Advanced Client account credentials (ZTI only).
 
 > [!NOTE]
@@ -5611,7 +5611,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Computers, Default Properties=MyCustomProperty  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=MDT2010 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="StatePath"></a> StatePath
+### StatePath
  This property is used to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path. The [OSDStateStorePath](#OSDStateStorePath) property takes precedence over the **StatePath** or [UserDataLocation](#UserDataLocation) property when those properties are also specified.
 
 > [!NOTE]
@@ -5631,7 +5631,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SitePath=\\fs1\Share\Replace ComputerBackupLocation=\\fs1\Share\ComputerBackup\Client01`|
 
-###  <a name="StoredProcedure"></a> StoredProcedure
+### StoredProcedure
  The name of the stored procedure used when performing a database query that returns property values from columns in the table or view. The stored procedure is located in the database specified in the **Database** property. The computer running SQL Server is specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property. The name of the stored procedure is specified in the **StoredProcedure** property.
 
  For more information about using a stored procedure to query a SQL Server database, see the section, "Deploying Applications Based on Earlier Application Versions", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.
@@ -5650,7 +5650,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=DynamicPackages, Default  [Default] OSInstall=YES  [DynamicPackages] SQLDefault=DB_DynamicPackages  [DB_DynamicPackages] SQLServer=SERVER1 Database=MDTDB StoredProcedure=RetrievePackages Parameters=MacAddress SQLShare=Logs Instance=MDT2013 Port=1433 Netlib=DBNMPNTW`|
 
-###  <a name="SupportsHyperVRole"></a> SupportsHyperVRole
+### SupportsHyperVRole
  Specifies whether the processor resources on the target computer can support the Hyper-V server role in Windows Server. This property is True if the value for the following properties is set to **TRUE**:
 
 - **SupportsNX**
@@ -5691,7 +5691,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="SupportsNX"></a> SupportsNX
+### SupportsNX
  Specifies whether the processor resources on the target computer support the No Execute (NX) technology. The NX technology is used in processors to segregate areas of memory for use by either storage of processor instructions (code) or for storage of data. This property is set using information from the **CPUID** interface.
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
@@ -5726,7 +5726,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="SupportsVT"></a> SupportsVT
+### SupportsVT
  Specifies whether the processor resources on the target computer support the Virtualization Technology (VT) feature. VT is used to support current virtualized environments, such as Hyper-V. This property is set using information from the CPUID interface.
 
  For further information collected about VMs and information returned from the CPUID interface, see the following properties:
@@ -5761,7 +5761,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="Supports64Bit"></a> Supports64Bit
+### Supports64Bit
  Specifies whether the processor resources on the target computer support Windows 64-bit operating systems. Most modern virtualization environments require 64-bit processor architecture. This property is set using information from the **CPUID** interface.
 
  For further information collected about VMs and information returned from the **CPUID** interface, see the following properties:
@@ -5796,7 +5796,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="SysVolPath"></a> SysVolPath
+### SysVolPath
  Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer.
 
 |Property configured by|Property applies to|
@@ -5813,7 +5813,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] SysVolPath=%DestinationLogicalDrive%\Windows\Sysvol`|
 
-###  <a name="Table"></a> Table
+### Table
  The name of the table or view to be used in performing a database query that returns property values from columns in the table or view. The query is based on parameters specified in the **Parameters** and **ParameterCondition** properties. The table or view is located in the database specified in the **Database** property. The computer running SQL Server is specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.
 
 |Property configured by|Property applies to|
@@ -5830,7 +5830,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Computers, Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=MDT2010 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
-###  <a name="TaskSequenceID"></a> TaskSequenceID
+### TaskSequenceID
  Identifies the operating system task sequence to be deployed to the target computer. The task sequence ID is created on the Task Sequences node in the Deployment Workbench. The **TaskSequenceID** property allows alphanumeric characters, hyphens (-), and underscores (\_). The **TaskSequenceID** property cannot be blank or contain spaces.
 
 |Property configured by|Property applies to|
@@ -5847,7 +5847,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] TaskSequenceID=BareMetal`|
 
-###  <a name="TaskSequenceName"></a> TaskSequenceName
+### TaskSequenceName
  Specifies the name of the task sequence being run.
 
 > [!NOTE]
@@ -5867,7 +5867,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="TaskSequenceVersion"></a> TaskSequenceVersion
+### TaskSequenceVersion
  Specifies the version of the task sequence being run.
 
 > [!NOTE]
@@ -5887,7 +5887,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="TimeZoneName"></a> TimeZoneName
+### TimeZoneName
  The time zone in which the target computer is located. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 |Property configured by|Property applies to|
@@ -5904,7 +5904,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] TimeZoneName=Pacific Standard Time DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE`|
 
-###  <a name="ToolRoot"></a> ToolRoot
+### ToolRoot
  Specifies the UNC path to the Tools\\*proc_arch* folder (where *proc_arch* is the processor architecture of the currently running operating system and can have a value of **x86** or **x64**), which is immediately beneath the root of the folder structure specified in the **DeployRoot** property. The Tools\\*proc_arch* folder contains utilities that MDT uses during the deployment process.
 
 > [!NOTE]
@@ -5924,7 +5924,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="TPMOwnerPassword"></a> TPMOwnerPassword
+### TPMOwnerPassword
  The TPM password (also known as the *TPM administration password*) for the owner of the target computer. The password can be saved to a file or stored in AD DS.
 
 > [!NOTE]
@@ -5944,7 +5944,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] BDEDriveLetter=S: BDEDriveSize=2000 BDEInstall=TPMKey BDERecoveryKey=TRUE BDEKeyLocation=C: TPMOwnerPassword=<complex_password> BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|
 
-###  <a name="UDDir"></a> UDDir
+### UDDir
  The folder in which the user state migration data is stored. This folder exists beneath the network shared folder specified in **UDShare**.
 
 |Property configured by|Property applies to|
@@ -5961,7 +5961,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO`|
 
-###  <a name="UDProfiles"></a> UDProfiles
+### UDProfiles
  A comma-delimited list of user profiles that need to be saved by Scanstate.exe during the State Capture Phase.
 
 |Property configured by|Property applies to|
@@ -5978,7 +5978,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO`|
 
-###  <a name="UDShare"></a> UDShare
+### UDShare
  The network share where user state migration data is stored.
 
 |Property configured by|Property applies to|
@@ -5995,7 +5995,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ UDProfiles=Administrator, User-01, ExtranetUser UserDataLocation=NONE SkipCapture=NO`|
 
-###  <a name="UILanguage"></a> UILanguage
+### UILanguage
  The default language to be used with the target operating system. If not specified, the **Deployment Wizard** uses the language configured in the image being deployed.
 
 |Property configured by|Property applies to|
@@ -6012,7 +6012,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] UserLocale=en-us UILanguage=en-us KeyboardLocale=0409:00000409`|
 
-###  <a name="UserDataLocation"></a> UserDataLocation
+### UserDataLocation
  The location in which USMT stores user state migration data.
 
 > [!CAUTION]
@@ -6036,7 +6036,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% UserDataLocation=NETWORK DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName%`|
 
-###  <a name="UserDomain"></a> UserDomain
+### UserDomain
  The domain in which a user's credentials (specified in the **UserID** property) reside.
 
 > [!NOTE]
@@ -6056,7 +6056,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UserDataLocation=NONE UserDomain=WOODGROVEBANK UserID=NYC Help Desk Staff UserPassword=<complex_password>`|
 
-###  <a name="UserID"></a> UserID
+### UserID
  The user credentials for accessing network resources.
 
 > [!NOTE]
@@ -6076,7 +6076,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UserDataLocation=NONE UserDomain=WOODGROVEBANK UserID=NYC-HelpDesk UserPassword=<complex_password>`|
 
-###  <a name="UserLocale"></a> UserLocale
+### UserLocale
  The user locale to be used with the target operating system. If not specified, the **Deployment Wizard** uses the user locale configured in the image being deployed.
 
 |Property configured by|Property applies to|
@@ -6097,7 +6097,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] UserLocale=en-us KeyboardLocale=en-us`|
 
-###  <a name="UserPassword"></a> UserPassword
+### UserPassword
  The password for user credentials specified in the **UserID** property.
 
 > [!NOTE]
@@ -6117,7 +6117,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] UserDataLocation=NONE UserDomain=WOODGROVEBANK UserID=NYC-HelpDesk UserPassword=<complex_password>`|
 
-###  <a name="USMTConfigFile"></a> USMTConfigFile
+### USMTConfigFile
  The USMT configuration XML file that should be used when running **Scanstate** and **Loadstate**.
 
 |Property configured by|Property applies to|
@@ -6134,8 +6134,8 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTMigFiles1=MigApp.xml USMTMigFiles2=MigUser.xml USMTMigFiles3=MigSys.xml USMTMigFiles4=MigCustom.xml USMTConfigFile=USMTConfig.xml UserDataLocation=NONE`|
 
-###  <a name="USMTLocal"></a> USMTLocal
- This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](#ZTIUserState.wsf) and [ZTIBackup.wsf](#ZTIBackup.wsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#OSDStateStorePath) property.
+### USMTLocal
+ This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](scripts.md#ZTIUserState.wsf) and [ZTIBackup.wsf](scripts.md#ZTIBackup.wsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#OSDStateStorePath) property.
 
 > [!NOTE]
 >  This property should only be used in the circumstance described in the [OSDStateStorePath](#OSDStateStorePath) property).
@@ -6155,7 +6155,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTLocal=TRUE USMTMigFiles001=MigApp.xml USMTMigFiles002=MigUser.xml USMTMigFiles003=MigSys.xml USMTMigFiles004=MigCustom.xml UserDataLocation=NONE`|
 
-###  <a name="USMTMigFiles"></a> USMTMigFiles
+### USMTMigFiles
  A list of files in XML format that are used by USMT (Scanstate.exe) to identify user state migration information to be saved. When this property is not specified, the ZTIUserState.wsf script uses MigApp.xml, MigUser.xml, and MigSys.xml. Otherwise, ZTIUserState.wsf uses the files explicitly referenced in this property. The **USMTMigFiles** property has a numeric suffix (for example, **USMTMigFiles001** or **USMTMigFiles002**).
 
 > [!NOTE]
@@ -6178,7 +6178,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTMigFiles001=MigApp.xml USMTMigFiles002=MigUser.xml USMTMigFiles003=MigSys.xml USMTMigFiles004=MigCustom.xml UserDataLocation=NONE`|
 
-###  <a name="USMTOfflineMigration"></a> USMTOfflineMigration
+### USMTOfflineMigration
  This property determines whether MDT uses USMT to perform an offline user state migration. In an offline migration, the capture is performed in Windows PE instead of the existing operating system.
 
  Offline migration is using USMT is performed for:
@@ -6213,7 +6213,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] OSInstall=YES SkipUserData=YES USMTOfflineMigration=TRUE DoNotFormatAndPartition=YES OSDStateStorePath=\\WDG-MDT-01\StateStore$`|
 
-###  <a name="UUID"></a> UUID
+### UUID
  The Universal Unique Identifier (UUID) stored in the System Management BIOS of the target computer.
 
  The format for UUID is a 16-byte value using hexadecimal digits in the following format: *12345678-1234-1234-1234-123456789ABC*. Use this property to create a subsection that contains settings targeted to a specific computer.
@@ -6235,7 +6235,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="ValidateDomainCredentialsUNC"></a> ValidateDomainCredentialsUNC
+### ValidateDomainCredentialsUNC
  This property is used to specify a UNC path to a network shared folder that is used to validate the credentials provided for joining the target computer to a domain. The credentials being validated are specified in the **DomainAdmin**, **DomainAdminDomain**, and **DomainAdminPassword** properties.
 
 > [!NOTE]
@@ -6255,7 +6255,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] ValidateDomainCredentialsUNC=\\wdg-fs-01\Source$`|
 
-###  <a name="VHDCreateDiffVHD"></a> VHDCreateDiffVHD
+### VHDCreateDiffVHD
  This property is used to specify the name of a differencing VHD (also known as a *child VHD*) file. A differencing VHD is similar to a dynamically expanding VHD but contains only the modified disk blocks of the associated parent VHD. The parent VHD is read only, so you must modify the differencing VHD. The differencing VHD file is created in the same folder as the parent VHD file, so only the file name is specified in this property. This property is only valid for the MDT New Computer deployment scenario.
 
 > [!NOTE]
@@ -6299,7 +6299,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] VHDCreateDiffVHD=Win7Diff_C.vhd VHDInputVariable=VHDTargetDisk`|
 
-###  <a name="VHDCreateFileName"></a> VHDCreateFileName
+### VHDCreateFileName
  This property is used to specify the name of a VHD file. The type of VHD file is based on the value of the **VHDCreateType** property. The property only includes the file name, not the path to the file name, and is valid only for the MDT New Computer deployment scenario.
 
 > [!NOTE]
@@ -6344,7 +6344,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateType=EXPANDABLE VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|
 
-###  <a name="VHDCreateSizeMax"></a> VHDCreateSizeMax
+### VHDCreateSizeMax
  This property is used to specify the maximum size of a VHD file in megabytes (MB). The size of the VHD file at creation time is based on the type of VHD file being created. For more information, see the [VHDCreateType](#VHDCreateType) property. This property is valid only for the MDT New Computer deployment scenario.
 
 > [!NOTE]
@@ -6387,7 +6387,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateType=FIXED VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|
 
-###  <a name="VHDCreateSource"></a> VHDCreateSource
+### VHDCreateSource
  This property is used to specify the name of a VHD file that is used as a template (source) for creating a new VHD file. You can specify the file name using a UNC path, local path, relative path, or just the file name. If just the file name is specified, then MDT attempts to find the VHD file on the target computer. This property is valid only for the MDT New Computer deployment scenario.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value that the <strong>Create Virtual Hard Disk (VHD)</strong>task sequence step sets by configuring this property in CustomSettings.ini.
@@ -6427,7 +6427,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateSource=\\wdg-mdt-01\vhds\win7_template.vhd VHDCreateType=FIXED VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|
 
-###  <a name="VHDCreateType"></a> VHDCreateType
+### VHDCreateType
  This property is used to specify the type of VHD file that is specified in the **VHDCreateFileName** property and can be one of the following VHD file types:
 
 - **Fixed VHD file**. For this VHD type, the size of the VHD specified at creation is allocated and does not change automatically after creation. For example, if you create a 24\-gigabyte \(GB\) fixed VHD file, the file will be approximately 24 GB in size \(with some space used for the internal VHD structure\) regardless of how much information is stored in the VHD file.
@@ -6477,7 +6477,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`[Settings] Priority=Default  [Default] VHDCreateSizeMax=130048 VHDCreateType=EXPANDABLE VHDCreateFileName=Win7_C.vhd VHDInputVariable=VHDTargetDisk`|
 
-###  <a name="VHDDisks"></a> VHDDisks
+### VHDDisks
  This property contains a list of the physical drive numbers assigned to VHD files separated by spaces. Each time a VHD file is created, MDT adds the disk index of the newly created disk to this property using the **Index** property of the **Win32\_DiskDrive** WMI class.
 
 > [!NOTE]
@@ -6520,7 +6520,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="VHDInputVariable"></a> VHDInputVariable
+### VHDInputVariable
  This property contains a variable that contains the drive on the target computer where the VHD files will be created. MDT creates the VHD files in the VHD folder in the root of this drive.
 
 > [!NOTE]
@@ -6563,7 +6563,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |`VHDCreateSizeMax=130048 VHDCreateType=EXPANDABLE VHDCreateFileName=Win7_C.vhd  VHDInputVariable=VHDTargetDisk`|
 
-###  <a name="VHDOutputVariable"></a> VHDOutputVariable
+### VHDOutputVariable
  This property contains a variable that contains the physical drive number that was assigned to the newly created VHD file. Each time a VHD file is created, MDT sets this property to the disk index of the newly created disk using the **Index** property of the **Win32\_DiskDrive** WMI class.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk \(VHD\)** task sequence type. You can override the value that the **Create Virtual Hard Disk \(VHD\)** task sequence step sets by configuring this property in CustomSettings.ini.
@@ -6603,7 +6603,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="VHDTargetDisk"></a> VHDTargetDisk
+### VHDTargetDisk
  Specifies the drive on the target computer where the VHD is to be created. This property is later referenced in the [VHDInputVariable](#VHDInputVariable) property.
 
 > [!NOTE]
@@ -6641,7 +6641,7 @@ PackageGroup001=TopFolder\SecondFolder
 |-|
 |None|
 
-###  <a name="VMHost"></a> VMHost
+### VMHost
  Specifies the name of the Hyper\-V host running the VM where MDT is running. This property is available only when the Hyper\-V Integration Components are installed and running.
 
 > [!NOTE]
@@ -6671,7 +6671,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |None|
 
-###  <a name="VMName"></a> VMName
+### VMName
  Specifies the name of the VM where MDT is running. This property is only available when the Hyper-V Integration Components are installed and running.
 
  Table 5 lists the Windows operating systems supported by MDT and their corresponding Hyper-V Integration Components support.
@@ -6701,7 +6701,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |None|
 
-###  <a name="VMPlatform"></a> VMPlatform
+### VMPlatform
  Specifies specific information about the virtualization environment for the target computer when the target computer is a VM. The VM platform is determined by using WMI.
 
 > [!NOTE]
@@ -6724,7 +6724,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |None|
 
-###  <a name="VRefresh"></a> VRefresh
+### VRefresh
  The vertical refresh rate for the monitor on the target computer. The vertical refresh rate is specified in Hertz. In the example, the value **60** indicates that the vertical refresh rate of the monitor is 60 Hz. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
@@ -6744,7 +6744,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|
 
-###  <a name="VSSMaxSize"></a> VSSMaxSize
+### VSSMaxSize
  This property is used to pass a value to the **maxsize** parameter of the **vssadmin resize shadowstorage** command in the **Vssadmin** command. The **maxsize** parameter is used to specify the maximum amount of space on the target volume that can be used for storing shadow copies. For more information on the **maxsize** parameter, see [Vssadmin resize shadowstorage](https://technet.microsoft.com/library/cc788050\(WS.10\).aspx).
 
 |Property configured by|Property applies to|
@@ -6761,7 +6761,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] VSSMaxSize=25%`|
 
-###  <a name="WDSServer"></a> WDSServer
+### WDSServer
  The computer running Windows Deployment Services that is used for installing Windows Deployment Services images. The default value is the server running Windows Deployment Services from which the image was initiated.
 
 > [!NOTE]
@@ -6781,7 +6781,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |None|
 
-###  <a name="WindowsSource"></a> WindowsSource
+### WindowsSource
  MDT uses this property to set the location of the sources\sxs folder in a network shared folder that contains the operating system source files. This property is used when:
 
 - MDT is running a custom task sequence or deploying a custom image
@@ -6806,7 +6806,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] WindowsSource=%DeployRoot%\Operating Systems\Windows 8\Sources\sxs`|
 
-###  <a name="WipeDisk"></a> WipeDisk
+### WipeDisk
  Specifies whether the disk should be wiped. If **WipeDisk** is TRUE, the ZTIWipeDisk.wsf script will clean the disk using the **Format** command. The **Format** command is not the most "secure" way of wiping the disk.
 
  Securely wiping the disk should be done so in a manner that follows the U.S. Department of Defense standard 5220.22-M, which states, "To clear magnetic disks, overwrite all locations three times (first time with a character, second time with its complement, and the third time with a random character)."
@@ -6834,7 +6834,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] WipeDisk=TRUE`|
 
-###  <a name="WizardSelectionProfile"></a> WizardSelectionProfile
+### WizardSelectionProfile
  Profile name used by the wizard for filtering the display of various items.
 
 |Property configured by|Property applies to|
@@ -6851,10 +6851,10 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] WizardSelectionProfile=SelectTaskSequenceOnly`|
 
-###  <a name="WSUSServer"></a> WSUSServer
+### WSUSServer
  This is the name of the Windows Server Update Services (WSUS) server that the target computer should use when scanning for, downloading, and installing updates.
 
- For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](#ZTIWindowsUpdate.wsf).
+ For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](scripts.md#ZTIWindowsUpdate.wsf).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6870,7 +6870,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] WSUSServer=https://WSUSServerName[Settings] Priority=Default  [Default] WSUSServer=https://WSUSServerName`|
 
-###  <a name="WUMU_ExcludeKB"></a> WUMU_ExcludeKB
+### WUMU_ExcludeKB
  The list of Windows Update/Microsoft Update software updates to ignore (by associated Knowledge Base articles).
 
  Deployment project team members will want to periodically review the list of updates being installed by the ZTIWindowsUpdate.wsf script to verify that each update meets the project's needs and expectations. All updates are logged and recorded in the ZTIWindowsUpdate.log file, which is generated during deployment. Each update will indicate its status as INSTALL or SKIP and lists the UpdateID, the update name, and the QNumber associated with each update. If an update needs to be excluded, that update should be added to the CustomSettings.ini file (for LTI deployments).
@@ -6910,7 +6910,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] WUMU_ExcludeID1={adbe6425-6560-4d40-9478-1e35b3cdab4f}[Settings] Priority=Default  [Default] WUMU_ExcludeID1={adbe6425-6560-4d40-9478-1e35b3cdab4f}`|
 
-###  <a name="XResolution"></a> XResolution
+### XResolution
  The horizontal resolution of the monitor on the target computer, specified in pixels. In the example, the value **1024** indicates the horizontal resolution of the monitor is 1,024 pixels. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
@@ -6930,7 +6930,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|
 
-###  <a name="YResolution"></a> YResolution
+### YResolution
  The vertical resolution of the monitor on the target computer, specified in pixels. In the example, the value **768** indicates the vertical resolution of the monitor is 768 pixels. This value gets inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
@@ -6950,7 +6950,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |-|
 |`[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768[Settings] Priority=Default  [Default] BitsPerPel=32 VRefresh=60 XResolution=1024 YResolution=768`|
 
-##  <a name="ProvidingPropertiesforSkippedDeploymentWizardPages"></a> Providing Properties for Skipped Deployment Wizard Pages
+## Providing Properties for Skipped Deployment Wizard Pages
  Table 6 lists the individual Deployment Wizard pages, the property to skip the corresponding wizard page, and the properties that must be configured when skipping the wizard page.
 
  If the **SkipWizard** property is used to skip all the Deployment Wizard pages, provide all the properties in the **Configure these properties** column. For examples of various deployment scenarios that skip Deployment Wizard pages, see the section, "Fully Automated LTI Deployment Scenario", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.

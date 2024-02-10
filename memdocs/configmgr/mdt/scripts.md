@@ -41,10 +41,10 @@ ms.reviewer: mstewart,aaroncz
 
 -   **Properties**.The properties referenced by the script.
 
-##  <a name="BDD_Autorun.wsf"></a> BDD_Autorun.wsf
+## BDD_Autorun.wsf
  This script displays a dialog box that indicates the user inserted deployment media created by the MDT process (such as a bootable DVD or a removable hard disk). The message is displayed for 15 seconds. If no action is taken, the script starts LiteTouch.vbs.
 
- For more information about LiteTouch.vbs, see the corresponding topic in [Scripts](#Scripts).
+ For more information about LiteTouch.vbs, see [LiteTouch.vbs](#LiteTouch.vbs).
 
 |**Value**|**Description**|
 |-|-|
@@ -66,7 +66,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="BDD_Welcome_ENU.xml"></a> BDD_Welcome_ENU.xml
+## BDD_Welcome_ENU.xml
  This XML file contains the script code and HTML layout for the **Welcome to Windows Deployment** page that is displayed at the start of the Deployment Wizard. This XML file is read by Wizard.hta, which runs the wizard pages embedded in this XML file.
 
 |**Value**|**Description**|
@@ -91,7 +91,7 @@ ms.reviewer: mstewart,aaroncz
 |**WelcomeWizardCommand**||-|
 |**WizardComplete**||-|
 
-##  <a name="Credentials_ENU.xml"></a> Credentials_ENU.xml
+## Credentials_ENU.xml
  This XML file contains the script code and HTML layout for the **Specify credentials for connecting to network shares** wizard page in the Deployment Wizard. This XML file is read by Wizard.hta, which runs the wizard pages embedded in this XML file.
 
 > [!NOTE]
@@ -117,10 +117,10 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="Credentials_scripts.vbs"></a> Credentials_scripts.vbs
+## Credentials_scripts.vbs
  This script parses the arguments that were provided when loading the Credentials_ENU.xml file into the Deployment Wizard. It also performs user credential validation. This script is read by the Credentials_ENU.xml file.
 
- For more information about Credentials_ENU.xml, see the corresponding topic in [Scripts](#Scripts).
+ For more information about Credentials_ENU.xml, see the corresponding topic in [Credentials_ENU.xml](#credentials_enuxml).
 
 |**Value**|**Description**|
 |-|-|
@@ -143,7 +143,7 @@ ms.reviewer: mstewart,aaroncz
 |**UserCredentials**||-|
 |**UserDomain**|-||
 
-##  <a name="DeployWiz_Definition_ENU.xml"></a> DeployWiz_Definition_ENU.xml
+## DeployWiz_Definition_ENU.xml
  This XML file contains the script code and HTML layout for each wizard page in the Deployment Wizard. This file is read by Wizard.hta, which runs the wizard pages embedded in this XML file. This .xml file contains the following wizard pages:
 
 -   **Welcome**
@@ -232,7 +232,7 @@ ms.reviewer: mstewart,aaroncz
 |**UserPassword**|-||
 |**USMTOfflineMigration**|-||
 
-##  <a name="DeployWiz_Initialization.vbs"></a> DeployWiz_Initialization.vbs
+## DeployWiz_Initialization.vbs
  This script initializes the pages in the **Deployment Wizard** (stored in [DeployWiz_Definition_ENU.xml](#DeployWiz_Definition_ENU.xml)). It also contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
 
 |**Value**|**Description**|
@@ -308,7 +308,7 @@ ms.reviewer: mstewart,aaroncz
 |**UserPassword**|-||
 |**WizardSelectionProfile**|-||
 
-##  <a name="DeployWiz_Validation.vbs"></a> DeployWiz_Validation.vbs
+## DeployWiz_Validation.vbs
  This script initializes and validates the information typed in the pages of the Deployment Wizard (stored in [DeployWiz_Definition_ENU.xml](#DeployWiz_Definition_ENU.xml)). This script contains functions and subroutines that the Deployment Wizard calls during an LTI deployment.
 
 |**Value**|**Description**|
@@ -342,7 +342,7 @@ ms.reviewer: mstewart,aaroncz
 |**UserID**||-|
 |**UserPassword**||-|
 
-##  <a name="LiteTouch.vbs"></a> LiteTouch.vbs
+## LiteTouch.vbs
  This script is called by the Deployment Wizard to initiate LTI. The script:
 
 -   Removes the C:\MININT folder (if it exists)
@@ -371,7 +371,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="LiteTouch.wsf"></a> LiteTouch.wsf
+## LiteTouch.wsf
  This script is called by [LiteTouch.vbs](#LiteTouch.vbs) and is responsible for controlling the LTI deployment process. This includes:
 
 -   Running the Deployment Wizard
@@ -438,7 +438,7 @@ ms.reviewer: mstewart,aaroncz
 |**WelcomeWizardCommand**|-||
 |**WizardComplete**|-||
 
-##  <a name="LTIApply.wsf"></a> LTIApply.wsf
+## LTIApply.wsf
  This script is responsible for installing a Windows PE image to the target computer. The Windows PE image is used to collect information about the target computer and to run the deployment tasks on the target computer.
 
 |**Value**|**Description**|
@@ -479,7 +479,7 @@ ms.reviewer: mstewart,aaroncz
 |**UserPassword**|-||
 |**WDSServer**|-||
 
-##  <a name="LTICleanup.wsf"></a> LTICleanup.wsf
+## LTICleanup.wsf
  This script removes any files or configuration settings (such as scripts, folders, registry entries, or automatic logon configuration settings) from the target computer after the deployment process finishes.
 
 |**Value**|**Description**|
@@ -505,7 +505,7 @@ ms.reviewer: mstewart,aaroncz
 |**DestinationLogicalDrive**|-||
 |**OSVersion**|-||
 
-##  <a name="LTICopyScripts.wsf"></a> LTICopyScripts.wsf
+## LTICopyScripts.wsf
  This script copies the deployment scripts for the LTI and ZTI deployment processes to a local hard drive on the target computer.
 
 |**Value**|**Description**|
@@ -528,7 +528,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="LTIGetFolder.wsf"></a> LTIGetFolder.wsf
+## LTIGetFolder.wsf
  This script displays a dialog box that allows the user to browses to a folder. The selected folder path is stored in the FOLDERPATH environment variable.
 
 |**Value**|**Description**|
@@ -552,7 +552,7 @@ ms.reviewer: mstewart,aaroncz
 |**DefaultFolderPath**|-||
 |**FolderPath**||-|
 
-##  <a name="LTIOEM.wsf"></a> LTIOEM.wsf
+## LTIOEM.wsf
  This script is used by an OEM during an LTI OEM scenario to copy the contents of a media deployment share to the target computer's hard disk to prepare it for duplication.
 
 |**Value**|**Description**|
@@ -580,7 +580,7 @@ ms.reviewer: mstewart,aaroncz
 |**DeployRoot**|-||
 |**TSGUID**|-||
 
-##  <a name="LTISuspend.wsf"></a> LTISuspend.wsf
+## LTISuspend.wsf
  This script suspends a task sequence to allow manual tasks to be performed. When this script runs, it creates a **Resume Task Sequence** shortcut on the user's desktop that allows the user to restart the task sequence after all manual tasks are completed.
 
 > [!NOTE]
@@ -608,7 +608,7 @@ ms.reviewer: mstewart,aaroncz
 |**LTISuspend**||-|
 |**SMSTSRebootRequested**||-|
 
-##  <a name="LTISysprep.wsf"></a> LTISysprep.wsf
+## LTISysprep.wsf
  This script prepares the target computer for running Sysprep, runs Sysprep on the target computer, and then verifies that Sysprep ran successfully.
 
 |**Value**|**Description**|
@@ -639,7 +639,7 @@ ms.reviewer: mstewart,aaroncz
 |**SourcePath**|-|-|
 |**TaskSequenceID**|-||
 
-##  <a name="NICSettings_Definition_ENU.xml"></a> NICSettings_Definition_ENU.xml
+## NICSettings_Definition_ENU.xml
  This XML file contains the script code and HTML layout for the **Configure Static IP Network Settings** wizard page in the Deployment Wizard. During an LTI deployment, Wizard.hta reads this file and runs the embedded wizard page that prompts for the required network addressing configuration. If no static IP addressing configuration is supplied, the deployment scripts will default to using DHCP to obtain the required network configuration.
 
 |**Value**|**Description**|
@@ -672,7 +672,7 @@ ms.reviewer: mstewart,aaroncz
 > [!NOTE]
 >  The*x*in the property names listed above is a placeholder for a zero-based array that contains network adapter information.
 
-##  <a name="Summary_Definition_ENU.xml"></a> Summary_Definition_ENU.xml
+## Summary_Definition_ENU.xml
  This XML file contains the script code and HTML layout for the **Deployment Summary** wizard page in the Deployment Wizard. During an LTI deployment, Wizard.hta reads this file and runs the embedded wizard page that displays the summary results for the LTI deployment. This XML file contains the following wizard pages:
 
 -   **Success**. Notification regarding the successful completion of the deployment tasks
@@ -700,7 +700,7 @@ ms.reviewer: mstewart,aaroncz
 |**SkipFinalSummary**|-||
 |**RetVal**|-||
 
-##  <a name="Summary_scripts.vbs"></a> Summary_scripts.vbs
+## Summary_scripts.vbs
  This script is called by the **Summary** wizard page of the Deployment Wizard. It contains functions and subroutines used for initialization and validation.
 
 |**Value**|**Description**|
@@ -724,7 +724,7 @@ ms.reviewer: mstewart,aaroncz
 |**DeploymentType**|-||
 |**RetVal**|-||
 
-##  <a name="Wizard.hta"></a> Wizard.hta
+## Wizard.hta
  This Hypertext Application displays the Deployment Wizard pages.
 
 |**Value**|**Description**|
@@ -752,7 +752,7 @@ ms.reviewer: mstewart,aaroncz
 |**FolderPath**|-||
 |**WizardComplete**||-|
 
-##  <a name="WizUtility.vbs"></a> WizUtility.vbs
+## WizUtility.vbs
  This script contains functions and subroutines that the various Deployment Wizard scripts reference.
 
 |**Value**|**Description**|
@@ -784,7 +784,7 @@ ms.reviewer: mstewart,aaroncz
 |**UserDomain**|-||
 |**UserCredentials**||-|
 
-##  <a name="ZTIApplications.wsf"></a> ZTIApplications.wsf
+## ZTIApplications.wsf
  This script initiates an installation of applications that have been configured in the Applications node in Deployment Workbench. This script will not attempt to install any application that:
 
 -   Does not support the target computer's platform type
@@ -824,7 +824,7 @@ ms.reviewer: mstewart,aaroncz
 |**SMSTSRebootRequested**||-|
 |**SMSTSRetryRequested**||-|
 
-##  <a name="ZTIAppXmlGen.wsf"></a> ZTIAppXmlGen.wsf
+## ZTIAppXmlGen.wsf
  This script generates an XML file—ZTIAppXmlGen.xml—to use when automatically capturing user data (documents) associated with installed applications. It does so through the **HKEY_CLASSES_ROOT\Software\Classes** registry key and captures any applications that:
 
 -   Are not associated with one of these file extensions: .mp3, .mov, .wma, .wmv, .chm, .evt, .evtx, .exe, .com, or .fon
@@ -857,7 +857,7 @@ ms.reviewer: mstewart,aaroncz
 |**OSCurrentVersion**|-||
 |**USMTMigFiles**|-|-|
 
-##  <a name="ZTIAuthorizeDHCP.wsf"></a> ZTIAuthorizeDHCP.wsf
+## ZTIAuthorizeDHCP.wsf
  This script uses the Netsh tool to configure the target computer so that it is an authorized DHCP server in AD DS.
 
  For more information about authorizing DHCP servers, see [Netsh commands for DHCP](/previous-versions/windows/it-pro/windows-server-2003/cc787375(v=ws.10)).
@@ -882,8 +882,8 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |**IPAddress**|-||
 
-##  <a name="ZTIBackup.wsf"></a> ZTIBackup.wsf
- This script performs a backup of the target computer using the ImageX utility. The backup is stored in the location specified in the [BackupDir](#BackupDir) and [BackupShare](#BackupShare) properties.
+## ZTIBackup.wsf
+ This script performs a backup of the target computer using the ImageX utility. The backup is stored in the location specified in the [BackupDir](properties.md#BackupDir) and [BackupShare](properties.md#BackupShare) properties.
 
 |**Value**|**Description**|
 |-|-|
@@ -922,7 +922,7 @@ ms.reviewer: mstewart,aaroncz
 |**TaskSequenceID**|-||
 |**USMTLocal**|-||
 
-##  <a name="ZTIBCDUtility.vbs"></a> ZTIBCDUtility.vbs
+## ZTIBCDUtility.vbs
  This script contains utility functions that some MDT scripts use when performing Boot Manager tasks.
 
 |**Value**|**Description**|
@@ -945,7 +945,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="ZTIBde.wsf"></a> ZTIBde.wsf
+## ZTIBde.wsf
  This script installs and configures BitLocker on the target computer. BitLocker configuration is limited to New Computer scenarios that have hard disks configured with a single partition.
 
 > [!NOTE]
@@ -998,10 +998,10 @@ ms.reviewer: mstewart,aaroncz
 |**SMSTSRetryRequested**||-|
 |**TPMOwnerPassword**|-||
 
-##  <a name="ZTIBIOSCheck.wsf"></a> ZTIBIOSCheck.wsf
- This script checks the BIOS on the target computer, and then looks at a list of BIOSes that are incompatible with Windows. The list of incompatible BIOSes is stored in the [ZTIBIOSCheck.xml](#ZTIBIOSCheck.xml) file.
+## ZTIBIOSCheck.wsf
+ This script checks the BIOS on the target computer, and then looks at a list of BIOSes that are incompatible with Windows. The list of incompatible BIOSes is stored in the [ZTIBIOSCheck.xml](support-files.md#ZTIBIOSCheck.xml) file.
 
- If the BIOS on the target computer is listed in the [ZTIBIOSCheck.xml](#ZTIBIOSCheck.xml) file, then the script returns a status that indicates the BIOS is incompatible with Windows and the deployment process should be terminated. For information on populating the list of incompatible BIOSes, see [ZTIBIOSCheck.xml](#ZTIBIOSCheck.xml).
+ If the BIOS on the target computer is listed in the [ZTIBIOSCheck.xml](support-files.md#ZTIBIOSCheck.xml) file, then the script returns a status that indicates the BIOS is incompatible with Windows and the deployment process should be terminated. For information on populating the list of incompatible BIOSes, see [ZTIBIOSCheck.xml](support-files.md#ZTIBIOSCheck.xml).
 
 |**Value**|**Description**|
 |-|-|
@@ -1023,7 +1023,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="ZTICoalesce.wsf"></a> ZTICoalesce.wsf
+## ZTICoalesce.wsf
  Configuration Manager requires packages to be numbered sequentially starting with **PACKAGES001**, with no gaps in the number sequence. Otherwise, installation will fail.
 
  This script allows you to define and name variables using identifying information about the program to run—for example, **ComputerPackages100**, **ComputerPackages110**, or **CollectionPackages150**. Then, when this script is run, Configuration Manager finds all variables that match a pattern (for example, all variable names that contain the string **Packages**) and builds a sequential list, without gaps, using the base name **PACKAGES**.
@@ -1072,7 +1072,7 @@ ms.reviewer: mstewart,aaroncz
 |**CoalescePattern**|-||
 |**CoalesceTarget**|-||
 
-##  <a name="ZTIConfigFile.vbs"></a> ZTIConfigFile.vbs
+## ZTIConfigFile.vbs
  This script contains common routines for processing MDT XML files.
 
 |**Value**|**Description**|
@@ -1097,7 +1097,7 @@ ms.reviewer: mstewart,aaroncz
 |**MandatoryApplications**|-||
 |**SkipGroupSubFolders**|-||
 
-##  <a name="ZTIConfigure.wsf"></a> ZTIConfigure.wsf
+## ZTIConfigure.wsf
  This script configures the Unattend.xml file with the property values specified earlier in the MDT deployment process. The script configures the appropriate file based on the operating system being deployed.
 
  This script reads the ZTIConfigure.xml file to determine how to update the Unattend.xml file with the appropriate values specified in the deployment properties. The ZTIConfigure.xml file contains the information to translate properties to settings in the Unattend.xml file.
@@ -1133,7 +1133,7 @@ ms.reviewer: mstewart,aaroncz
 |**Phase**|-||
 |**TaskSequenceID**|-||
 
-##  <a name="ZTIConfigureADDS.wsf"></a> ZTIConfigureADDS.wsf
+## ZTIConfigureADDS.wsf
 
 |**Value**|**Description**|
 |-|-|
@@ -1175,7 +1175,7 @@ ms.reviewer: mstewart,aaroncz
 |**SiteName**|-||
 |**SysVolPath**|-||
 
-##  <a name="ZTIConfigureDHCP.wsf"></a> ZTIConfigureDHCP.wsf
+## ZTIConfigureDHCP.wsf
  This script configures DHCP on the target computer.
 
 > [!NOTE]
@@ -1224,7 +1224,7 @@ ms.reviewer: mstewart,aaroncz
 > [!NOTE]
 >  The *x*in the properties listed here is a placeholder for a zero-based array that contains DHCP configuration information.
 
-##  <a name="ZTIConfigureDNS.wsf"></a> ZTIConfigureDNS.wsf
+## ZTIConfigureDNS.wsf
  This script configures DNS on the target computer. To perform the actual configuration tasks, the script uses the Dnscmd utility.
 
  For more information about Dnscmd.exe, see [Dnscmd Overview](/previous-versions/windows/it-pro/windows-server-2003/cc778513(v=ws.10)).
@@ -1268,7 +1268,7 @@ ms.reviewer: mstewart,aaroncz
 > [!NOTE]
 >  The *x*in the properties listed here is a placeholder for a zero-based array that contains DNS configuration information.
 
-##  <a name="ZTIConnect.wsf"></a> ZTIConnect.wsf
+## ZTIConnect.wsf
  The MDT deployment process uses this script to authenticate with a server computer (such as a computer running SQL Server or another server that has a shared network folder). When this script is run, it validates that a connection can be created to the network shared folder specified in the **/uncpath** argument.
 
 |**Value**|**Description**|
@@ -1292,7 +1292,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="ZTICopyLogs.wsf"></a> ZTICopyLogs.wsf
+## ZTICopyLogs.wsf
  Copy the Smsts.log and BDD.log files to a subfolder beneath the share that the **SLShare** property specifies. The subfolder takes the name that **OSDComputerName**, **_SMSTSMachineName**, or **HostName** specifies.
 
 |**Value**|**Description**|
@@ -1315,7 +1315,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="ZTIDataAccess.vbs"></a> ZTIDataAccess.vbs
+## ZTIDataAccess.vbs
  This script contains common routines for database access.
 
 |**Value**|**Description**|
@@ -1343,7 +1343,7 @@ ms.reviewer: mstewart,aaroncz
 |**UserID**|-|-|
 |**UserPassword**|-|-|
 
-##  <a name="ZTIDisableBDEProtectors.wsf"></a> ZTIDisableBDEProtectors.wsf
+## ZTIDisableBDEProtectors.wsf
  If BitLocker is enabled, this script suspends the BitLocker protectors configured on the system.
 
 |**Value**|**Description**|
@@ -1370,7 +1370,7 @@ ms.reviewer: mstewart,aaroncz
 |**OSCurrentVersion**|-||
 |**OSVersion**|-||
 
-##  <a name="ZTIDiskpart.wsf"></a> ZTIDiskpart.wsf
+## ZTIDiskpart.wsf
  This script creates the disk partitions on the target computer by calling the Diskpart utility. The parameters used to configure the disk are specified by the Task Sequencer or in CustomSettings.ini. ZTIDiskpart.wsf is primarily run in New Computer scenarios. The process works like this:
 
 1. The MDT deployment process runs the ZTIDiskpart.wsf script based on the steps and sequence of steps in the Task Sequencer.
@@ -1428,7 +1428,7 @@ ms.reviewer: mstewart,aaroncz
 |**SMSTSLocalDataDrive**||-|
 |**VolumeLetterVariable**|-||
 
-##  <a name="ZTIDiskUtility.vbs"></a> ZTIDiskUtility.vbs
+## ZTIDiskUtility.vbs
  This script contains disk-related functions and subroutines that the various scripts in the MDT deployment process call.
 
 |**Value**|**Description**|
@@ -1452,7 +1452,7 @@ ms.reviewer: mstewart,aaroncz
 |**DestinationLogicalDrive**|-||
 |**UILanguage**|-|-|
 
-##  <a name="ZTIDomainJoin.wsf"></a> ZTIDomainJoin.wsf
+## ZTIDomainJoin.wsf
  During the State Restore deployment phase, this script verifies that the computer is joined to a domain and recovers from failed attempts to join a domain.
 
 |**Value**|**Description**|
@@ -1486,7 +1486,7 @@ ms.reviewer: mstewart,aaroncz
 |**SMSTSRebootRequested**||-|
 |**SMSTSRetryRequested**||-|
 
-##  <a name="ZTIDrivers.wsf"></a> ZTIDrivers.wsf
+## ZTIDrivers.wsf
  This script installs additional device drivers onto the target computer before initiating the configuration of the operating system. This script reads the Drivers.xml file and copies the list of device driver files in the Drivers.xml file (created by and managed in the Drivers node in the Deployment Workbench) to the target computer.
 
 |**Value**|**Description**|
@@ -1523,7 +1523,7 @@ ms.reviewer: mstewart,aaroncz
 |**Phase**|-||
 |**ResourceRoot**|-||
 
-##  <a name="ZTIExecuteRunbook.wsf"></a> ZTIExecuteRunbook.wsf
+## ZTIExecuteRunbook.wsf
  This script runs Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using the [Execute Runbook](#ExecuteRunbook) task sequence step type, which in turn runs this script.
 
 |**Value**|**Description**|
@@ -1556,14 +1556,14 @@ ms.reviewer: mstewart,aaroncz
 
 |**Name**|**Description**|
 |-|-|
-|**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](#ExecuteRunbook) task sequence step|
-|**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](#ExecuteRunbook) task sequence step|
+|**OrchestratorServer**|Name of the server running Orchestrator specified in **Orchestrator Server** in the [Execute Runbook](task-sequence-steps.md#ExecuteRunbook) task sequence step|
+|**RunbookName**|Name of the runbook specified in **Runbook** in the [Execute Runbook](task-sequence-steps.md#ExecuteRunbook) task sequence step|
 |**RunbookID**|Identifier assigned to the runbook on the Orchestrator server|
 |**RunbookParametersxParameterID**|Identifier assigned to a specific runbook parameter on the Orchestrator server|
 |**RunbookParametersxParameterName**|Name assigned to a specific runbook parameter on the Orchestrator server|
 |**RunbookParametersxParameterValue**|Value assigned to a specific runbook parameter on the Orchestrator server|
 
-##  <a name="ZTIGather.wsf"></a> ZTIGather.wsf
+## ZTIGather.wsf
  This script gathers the properties and processing rules that control the deployment process. The properties and rules (also known as *local properties*) are explicitly defined in this script and contained in the ZTIGather.xml file, in the CustomSettings.ini file, and in the MDT DB (created in the Database node in the Deployment Workbench).
 
 |**Value**|**Description**|
@@ -1588,7 +1588,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |**All**|-|-|
 
-##  <a name="ZTIGroups.wsf"></a> ZTIGroups.wsf
+## ZTIGroups.wsf
  This script captures and restores the local group membership on the target computer. This script is called with the<strong>/capture</strong> argument to back up the group membership from the target computer before deploying the operating system. The **CaptureGroups** property contains the list of groups that script backs up. The script is called with the<strong>/restore</strong> argument to restore the group membership after the operating system is deployed. When performing a restore operation, it restores the membership of all groups that were backed up when the script was run using the **/capture** argument.
 
 > [!NOTE]
@@ -1618,7 +1618,7 @@ ms.reviewer: mstewart,aaroncz
 |**Groups**|-|-|
 |HostName|-||
 
-##  <a name="ZTILangPacksOnline.wsf"></a> ZTILangPacksOnline.wsf
+## ZTILangPacksOnline.wsf
  This script installs language packs for Windows operating systems. The script is expecting the language pack CAB files in a folder structure containing at least one folder.
 
 |**Value**|**Description**|
@@ -1642,7 +1642,7 @@ ms.reviewer: mstewart,aaroncz
 |**Architecture**|-||
 |**OSVersion**|-||
 
-##  <a name="ZTIModifyVol.wsf"></a> ZTIModifyVol.wsf
+## ZTIModifyVol.wsf
  This script modifies a volume to set the GPT ID and attributes for utility volumes, which is necessary for creating Windows RE partitions on computers with UEFI. This script needs to be called when deploying to computers with UEFI for these situations:
 
 -   LTI deployments where custom partition (volume) structures are being created, such as creating five partition instead of the standard four partitions that are typically created for use with UEFI
@@ -1673,7 +1673,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |**UtilityVol**|-||
 
-##  <a name="ZTIMoveStateStore.wsf"></a> ZTIMoveStateStore.wsf
+## ZTIMoveStateStore.wsf
  This script moves the captured user state and backup files to C:\Windows\Temp\StateStore.
 
 > [!NOTE]
@@ -1699,7 +1699,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="ZTINextPhase.wsf"></a> ZTINextPhase.wsf
+## ZTINextPhase.wsf
  This script updates the **Phase** property to the next phase in the deployment process. The Task Sequencer uses these phases to determine the sequence in which each task must be completed. The **Phase** property includes the following values:
 
 - **VALIDATION**. Identify that the target computer is capable of running the scripts necessary to complete the deployment process.
@@ -1714,7 +1714,7 @@ ms.reviewer: mstewart,aaroncz
 
 - **STATERESTORE**. Restore the user state migration data saved during the State Capture Phase.
 
-  For more information about the **Phase** property, see the corresponding topic in [Properties](#Properties).
+  For more information about the **Phase** property, see [Phase](properties.md#phase).
 
 |**Value**|**Description**|
 |-|-|
@@ -1737,7 +1737,7 @@ ms.reviewer: mstewart,aaroncz
 |**DeploymentMethod**|-||
 |**Phase**|-|-|
 
-##  <a name="ZTINICConfig.wsf"></a> ZTINICConfig.wsf
+## ZTINICConfig.wsf
  This script configures activated network adapters with values that ZTIGather.wsf captured based on the properties listed in the CustomSettings.ini file or the MDT DB (created in the Database node in the Deployment Workbench).
 
 |**Value**|**Description**|
@@ -1769,7 +1769,7 @@ ms.reviewer: mstewart,aaroncz
 |**OSDMigrateAdapterSettings**|-||
 |**Phase**|-||
 
-##  <a name="ZTINICUtility.vbs"></a> ZTINICUtility.vbs
+## ZTINICUtility.vbs
  This script contains network adapter–related functions and subroutines that the various scripts in the MDT deployment process call.
 
 |**Value**|**Description**|
@@ -1795,7 +1795,7 @@ ms.reviewer: mstewart,aaroncz
 > [!NOTE]
 >  *AdapterIndex*in this property is a placeholder for a zero-based array that contains network adapter information.
 
-##  <a name="ZTIOSRole.wsf"></a> ZTIOSRole.wsf
+## ZTIOSRole.wsf
  This script installs server roles for target computers that are running Windows operating systems. The script reads the **OSRoles**, **OSRoleServices**, and **OSFeatures** properties to determine what should be installed.
 
 > [!NOTE]
@@ -1827,7 +1827,7 @@ ms.reviewer: mstewart,aaroncz
 |**OSVersion**|-||
 |**SMSTSRebootRequested**||-|
 
-##  <a name="ZTIPatches.wsf"></a> ZTIPatches.wsf
+## ZTIPatches.wsf
  This script installs updates (language packs, security updates, and so on) that are listed in the Packages.xml file. The script self-terminates if the deployment is not in one of the following states:
 
 - **Phase** equals **PREINSTALL**
@@ -1867,7 +1867,7 @@ ms.reviewer: mstewart,aaroncz
 |**Phase**|-||
 |**ResourceRoot**|-||
 
-##  <a name="ZTIPowerShell.wsf"></a> ZTIPowerShell.wsf
+## ZTIPowerShell.wsf
  This script runs a Windows PowerShell script using a custom Windows PowerShell host.
 
 |**Value**|**Description**|
@@ -1890,7 +1890,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |**None**|||
 
-##  <a name="ZTIPrereq.vbs"></a> ZTIPrereq.vbs
+## ZTIPrereq.vbs
  This script verifies that the target computer has the prerequisite software installed and that it is functional. The checks the script performs are:
 
 - Determine whether the Windows Script version is equal to or greater than version 5.6.
@@ -1919,7 +1919,7 @@ ms.reviewer: mstewart,aaroncz
 |-|-|-|
 |None|||
 
-##  <a name="ZTISCCM.wsf"></a> ZTISCCM.wsf
+## ZTISCCM.wsf
  This script initializes ZTI when deploying using Configuration Manager. The script performs the following procedure:
 
 1. If debugging is activated, the script creates the OSD.Debug file.
@@ -1952,7 +1952,7 @@ ms.reviewer: mstewart,aaroncz
 
    -   If the **OldComputer**.tag file exists in the parent folder of the current running script, **DeploymentType** is set to **REPLACE** and **Phase** is set to **VALIDATION**. Otherwise,**DeploymentType** is set to **REFRESH** and **Phase** is set to **VALIDATION**.
 
-   For more information about these properties, see the corresponding topics in [Properties](#Properties).
+   For more information about these properties, see the [Properties](task-sequence-steps.md) article.
 
 |**Value**|**Description**|
 |-|-|
@@ -1983,7 +1983,7 @@ ms.reviewer: mstewart,aaroncz
 |**ScriptRoot**|-|-|
 |**ToolRoot**|-|-|
 
-##  <a name="ZTISetVariable.wsf"></a> ZTISetVariable.wsf
+## ZTISetVariable.wsf
  This script sets the specified global task sequence variable that corresponds to the name contained in **VariableName** to the value contained in **VariableValue**.
 
 |**Value**|**Description**|
@@ -2007,7 +2007,7 @@ ms.reviewer: mstewart,aaroncz
 |**VariableName**|-||
 |**VariableValue**|-||
 
-##  <a name="ZTITatoo.wsf"></a> ZTITatoo.wsf
+## ZTITatoo.wsf
  This script tattoos the target computer with identification and version information. The script performs the following procedure:
 
 1. Locate and copy the ZTITatoo.mof file to the %SystemRoot%\System32\Wbem folder. Any preexisting ZTITatoo.mof that exists at the destination will be deleted before starting the copy operation.
@@ -2099,7 +2099,7 @@ ms.reviewer: mstewart,aaroncz
 |**TaskSequenceName**|-||
 |**TaskSequenceVersion**|-||
 
-##  <a name="ZTIUserState.wsf"></a> ZTIUserState.wsf
+## ZTIUserState.wsf
  This script initializes USMT to capture and restore user state on the target computer.
 
 |**Value**|**Description**|
@@ -2150,7 +2150,7 @@ ms.reviewer: mstewart,aaroncz
 |**USMTLocal**||-|
 |**USMTMigFiles**|-||
 
-##  <a name="ZTIUtility.vbs"></a> ZTIUtility.vbs
+## ZTIUtility.vbs
  This script contains utility functions that most of the MDT scripts use.
 
 |**Value**|**Description**|
@@ -2233,7 +2233,7 @@ ms.reviewer: mstewart,aaroncz
 |**Version**<br /><br /> **Note:** This variable is an internal variable that represents the version of MDT.|-|-|
 |**WDSServer**|-||
 
-##  <a name="ZTIValidate.wsf"></a> ZTIValidate.wsf
+## ZTIValidate.wsf
  This script ensures that it is safe for the deployment to continue by validating the condition of the target computer. The script processes are:
 
 -   If **DeploymentType** equals REFRESH and the target computer is a server, the script exits.
@@ -2283,7 +2283,7 @@ ms.reviewer: mstewart,aaroncz
 |**SMSTSLocalDataDrive**||-|
 |**VerifyOS**|-||
 
-##  <a name="ZTIVHDCreate.wsf"></a> ZTIVHDCreate.wsf
+## ZTIVHDCreate.wsf
  This script is used to create a virtual hard disk (.vhd or .avhd) file on the target computer and mount the .vhd file as a disk. Then, other portions of the LTI deployment process deploy the Windows operating system and applications to the newly created virtual hard disk. The script processes are as follows:
 
 -   The **Class_Initialize** method is used to initialize the **VHDInputVariable** variable.
@@ -2329,7 +2329,7 @@ ms.reviewer: mstewart,aaroncz
 |**VHDInputVariable**|-||
 |**VHDOutputVariable**|-||
 
-##  <a name="ZTIWindowsUpdate.wsf"></a> ZTIWindowsUpdate.wsf
+## ZTIWindowsUpdate.wsf
  This script downloads and installs updates from computers on a corporate network that are running WSUS, Windows Update, or Microsoft Update using the [Windows Update Agent (WUA)](/windows/win32/wua_sdk/portal-client) application programming interface (API). By default, this feature is disabled in each task sequence and must be manually activated to run.
 
  Most enterprises will already have teams and infrastructures in place to update newly deployed computers over the corporate network. This process involves tracking the latest set of patches, drivers, and updates available for each desktop configuration and determining which updates should be downloaded and installed for each configuration. If the organization already has an established process, this script might not be necessary. This script was designed to fill a need for deployment teams that might not have established processes, yet want to ensure that target computers are updated when deployed.
@@ -2454,7 +2454,7 @@ ms.reviewer: mstewart,aaroncz
 |**WUMU_ExcludeID**|-||
 |**WUMU_ExcludeKB**|-||
 
-##  <a name="ZTIWipeDisk.wsf"></a> ZTIWipeDisk.wsf
+## ZTIWipeDisk.wsf
  This script formats the target computer's hard disk. The script:
 
 -   Exits if **WipeDisk** is not equal to **TRUE**

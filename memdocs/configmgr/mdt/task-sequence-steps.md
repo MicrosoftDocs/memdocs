@@ -31,7 +31,7 @@ ms.reviewer: mstewart,aaroncz
 
   For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](../osd/understand/introduction-to-operating-system-deployment.md).
 
-##  <a name="CommonPropertiesandOptionsforTaskSequenceStepTypes"></a> Common Properties and Options for Task Sequence Step Types
+## Common Properties and Options for Task Sequence Step Types
  Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.
 
 ### Common Properties
@@ -63,7 +63,7 @@ ms.reviewer: mstewart,aaroncz
 > [!NOTE]
 >  Additional conditional statements might be available when using Configuration Manager to configure task sequence steps.
 
-##  <a name="SpecificPropertiesandSettingsforTaskSequenceStepTypes"></a> Specific Properties and Settings for Task Sequence Step Types
+## Specific Properties and Settings for Task Sequence Step Types
  Some properties and parameters of each task sequence step type are unique to that type. Each type with unique properties and settings is shown in the following sections with its unique task sequence step properties and settings.
 
 ### Apply Network Settings
@@ -231,7 +231,7 @@ ms.reviewer: mstewart,aaroncz
 |**Do not create a recovery key**|When selected, the recovery key is not created. Using this option is not recommended.|
 |**Wait for BitLocker to complete**|When selected, this step will not finish until after BitLocker has finished processing all drives.|
 
-###  <a name="ExecuteRunbook"></a> Execute Runbook
+### Execute Runbook
  This task sequence step runs Microsoft System Center 2012 Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using this task sequence step type.
 
 > [!NOTE]
@@ -299,7 +299,7 @@ ms.reviewer: mstewart,aaroncz
 > [!NOTE]
 >  This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Set Dynamic Variables**in the General group.
 
-###  <a name="InjectDrivers"></a> Inject Drivers
+### Inject Drivers
  This task sequence step injects drivers that have been configured for deployment to the target computer. The unique properties and settings for the **Inject Drivers** task sequence step type are:
 
 #### Properties
@@ -360,7 +360,7 @@ ms.reviewer: mstewart,aaroncz
 |**Disk**|The disk on which to install the operating system.|
 |**Partition**|The partition on which to install the operating system.|
 
-###  <a name="InstallRolesandFeatures"></a> Install Roles and Features
+### Install Roles and Features
  This task sequence step installs the selected roles and features on the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](#ZTIOSRole.wsf).
 
  The unique properties and settings for the **Install Roles and Features** task sequence step type are:
@@ -528,7 +528,7 @@ ms.reviewer: mstewart,aaroncz
 |**Task Sequence Variable**|The name of the variable to modify|
 |**Value**|The value to assign to the specified variable|
 
-###  <a name="UninstallRolesandFeatures"></a> Uninstall Roles and Features
+### Uninstall Roles and Features
  This task sequence step uninstalls the selected roles and features from the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](#ZTIOSRole.wsf).
 
  The unique properties and settings for the **Uninstall Roles and Features** task sequence step type are:
@@ -1447,7 +1447,7 @@ ms.reviewer: mstewart,aaroncz
 |**Continue on error**|Not selected|
 |**Conditional qualifier**|If all conditions are true:<br /><br /> \- **DoCapture** does not equal YES<br /><br /> \-                                 **DoCapture** does not equal PREPARE|
 
-###  <a name="RestoreUserState"></a> Restore User State
+### Restore User State
  This task sequence step restores previously captured user state to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf](#ZTIUserState.wsf).
