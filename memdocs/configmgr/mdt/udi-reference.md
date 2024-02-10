@@ -915,7 +915,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 |**\_SMSTsInWinPE**<br /><br /> Specifies whether the UDI Wizard is running in Windows PE. If the variable is set to:<br /><br /> \- **TRUE**, then the UDI Wizard is running in Windows PE<br /><br /> \-                                      **FALSE**, then the UDI Wizard is not running in Windows PE, but rather in a full Windows operating system|Yes|No|No|
 |**OSDDataSourceDirectory**<br /><br /> Specifies the directory in which the user state migration data is stored.|No|Yes|No|
 |**OSDDataSourceDrive**<br /><br /> Specifies the USB drive used for capturing and restoring user state migration data, which you select from the **USB Target Drive** box. If the variable is set prior to showing the wizard page, the value of the variable is used as the default value.|Yes|Yes|No|
-|**OSDDiskPart**<br /><br /> Specifies whether the drive selected for the installation of the target operating system should be formatted and partitioned. You set this variable on the [VolumePage](#VolumePage) wizard page, and the code on this wizard page uses it to determine which options are selected and enabled by default. For more information, see [UserStatePage](#userstatepage).|Yes|No|Yes|
+|**OSDDiskPart**<br /><br /> Specifies whether the drive selected for the installation of the target operating system should be formatted and partitioned. You set this variable on the [VolumePage](#volumepage) wizard page, and the code on this wizard page uses it to determine which options are selected and enabled by default. For more information, see [UserStatePage](#userstatepage).|Yes|No|Yes|
 |**OSDHardLinks**<br /><br /> Specifies whether the user state migration data is to be captured to or restored from a local drive. If the variable is set to:<br /><br /> \-                                      **TRUE**, then the **Local** option was selected, and user state migration data will be captured or restored from a local drive that is attached to the target computer<br /><br /> \- **FALSE**, then the **Local** option was not selected, and no user state migration data will be captured or restored from a local drive that is attached to the target computer|No|Yes|No|
 |**OSDRestoreData**<br /><br /> Specifies whether there is data to be restored. If the variable is set to:<br /><br /> \-                                      **TRUE**, then the **Local**, **USB Target Drive**, or **Network** option was selected, and user state migration data will be captured or restored from the target computer<br /><br /> \- **FALSE**, then the **No Data to Restore** option was selected, and no user state migration data will be captured or restored from the target computer|No|Yes|No|
 |**OSDUserStateKey**<br /><br /> Specifies the user name used to secure the user state migration data. The user name is provided when the user state migration data is captured. The same user name and password must be provided when the user state migration data is restored. You set the value of this variable in the **User name** box.|Yes|Yes|Yes|
@@ -1183,13 +1183,13 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 ## UDI Task Sequence Variables
  The task sequence variables in this section are used only in User-Driven Installation (UDI) deployments. In addition to these task sequence variables, the following ZTI task sequence variables are also used by UDI and are documented in their respective sections earlier in this guide:
 
-- [KeyboardLocale](#KeyboardLocale)
+- [KeyboardLocale](properties.md#keyboardlocale)
 
-- [OSDComputerName](#OSDComputerName)
+- [OSDComputerName](properties.md#osdcomputername)
 
-- [UILanguage](#UILanguage)
+- [UILanguage](properties.md#uilanguage)
 
-- [UserLocale](#UserLocale)
+- [UserLocale](properties.md#userlocale)
 
 ### OSDAddAdmin
  This task sequence variable specifies a list of domain-based accounts or local accounts to be added to the Administrators local built-in group on the target computer.
@@ -1283,15 +1283,15 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 |`OSDImageIndex=1`|
 
 ### OSDImageName
- This task sequence variable specifies the name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#VolumePage) wizard page. The list of possible operating system images in the **Image Selection** box is configured in the **Image Combo Box Values** list in the **Image Combo Box** section on the [VolumePage](#VolumePage) wizard page editor. The image name is configured as a part of each image in the **Image Combo Box Values** list.
+ This task sequence variable specifies the name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#volumepage) wizard page. The list of possible operating system images in the **Image Selection** box is configured in the **Image Combo Box Values** list in the **Image Combo Box** section on the [VolumePage](#volumepage) wizard page editor. The image name is configured as a part of each image in the **Image Combo Box Values** list.
 
 > [!NOTE]
 >
-> **Note** This tasks sequence variable is set by the [VolumePage](#VolumePage) wizard and should not be configured in the CustomSettings.ini file or in the MDT DB. However, this tasks sequence variable can be used to set conditions for task sequence steps, as described in the section, "Configure UDI Task Sequences to Deploy Different Operating Systems", in the MDT document *Using the Microsoft Deployment Toolkit*.
+> **Note** This tasks sequence variable is set by the [VolumePage](#volumepage) wizard and should not be configured in the CustomSettings.ini file or in the MDT DB. However, this tasks sequence variable can be used to set conditions for task sequence steps, as described in the section, "Configure UDI Task Sequences to Deploy Different Operating Systems", in the MDT document *Using the Microsoft Deployment Toolkit*.
 
 |**Value**|**Description**|
 |-|-|
-|*image_name*|The name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#VolumePage) wizard page|
+|*image_name*|The name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#volumeage) wizard page|
 
 |**Example**|
 |-|
