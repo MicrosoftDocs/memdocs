@@ -47,11 +47,11 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 ### Flow
  The **Flow** tab displays the list of wizard pages within a UDI stage in the UDI Wizard Designer. You can use the **Flow** tab to perform the following tasks:
 
--   Add a wizard page from the Page Library to a UDI stage by dragging the page from the Page Library to the UDI stage.
+- Add a wizard page from the Page Library to a UDI stage by dragging the page from the Page Library to the UDI stage.
 
--   Remove a wizard page from a UDI stage.
+- Remove a wizard page from a UDI stage.
 
--   Change the sequence of wizard pages within a UDI stage.
+- Change the sequence of wizard pages within a UDI stage.
 
 ### Page Library
  The Page Library contains all the pages currently loaded in the UDI Wizard Designer. When loading a UDI Wizard configuration file, all of the wizard pages defined in the configuration file are displayed to the Page Library. The Page Library shows the wizard pages in alphabetical order by page types. Each instance of a specific page type is listed under the page type.
@@ -68,9 +68,9 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
  For more information about prestaged media deployments, see the following resources:
 
--   [Planning for Media Operating System Deployments in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh499044(v=technet.10))
+- [Planning for Media Operating System Deployments in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh499044(v=technet.10))
 
--   [About Prestaged Media for Operating System Deployment](../osd/deploy-use/create-prestaged-media.md)
+- [About Prestaged Media for Operating System Deployment](../osd/deploy-use/create-prestaged-media.md)
 
 ### Stage Group
  Use a stage group to group one or more stages in the UDI Wizard Designer. UDI stage groups are loosely related to MDT deployment scenarios, but there is no one-to-one correlation between the two.
@@ -152,7 +152,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
  For more information on developing custom UDI wizard pages, see the section, "Creating Custom UDI Wizard Pages", in the MDT document *User-Driven Installation Developers Guide*.
 
 ### Wizard Page Editor
- You use a wizard page editor to configure a wizard page in the UDI Wizard Designer. A wizard page editor updates the wizard page configuration settings in the UDI Wizard configuration file; UDI includes a built-in wizard page editor for each built-in wizard page. For more information about the built-in wizard pages and wizard page editors, see [Built-in UDI Wizard Pages](#BuiltinUDIWizardPages).
+ You use a wizard page editor to configure a wizard page in the UDI Wizard Designer. A wizard page editor updates the wizard page configuration settings in the UDI Wizard configuration file; UDI includes a built-in wizard page editor for each built-in wizard page. For more information about the built-in wizard pages and wizard page editors, see [Built-in UDI Wizard Pages](#built-in-udi-wizard-pages).
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. Create wizard page editors using:
 
@@ -395,11 +395,11 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
  This reference includes:
 
--   An overview of UDI tasks, as described in [UDI Task Overview](#udiTaskOverview)
+- An overview of UDI tasks, as described in [UDI Task Overview](#udi-task-overview)
 
--   A description of the configuration settings for UDI tasks, as described in [UDI Task Configuration Settings](#udiTaskConfigurationSettings)
+- A description of the configuration settings for UDI tasks, as described in [UDI Task Configuration Settings](#udi-task-configuration-settings)
 
--   A description of the built\-in UDI validators that are provided with MDT, as described in [Built\-in UDI Tasks](#BuiltinUDITasks)
+- A description of the built\-in UDI validators that are provided with MDT, as described in [Built\-in UDI Tasks](#built-in-udi-tasks)
 
 ### UDI Task Overview
  UDI tasks allow you to run software on the target computer that helps with the deployment process. UDI includes several built\-in tasks that help you perform common tasks, such as ensuring that the target computer is not running on a battery and is connected to a wired network connection.
@@ -409,7 +409,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 ### UDI Task Configuration Settings
  You manage tasks using the UDI Wizard Designer. You can add tasks, remove tasks, and edit the configuration of a task in the UDI Wizard Designer. The configuration settings for a task are stored in the UDI Wizard configuration file and are read by the UDI Wizard when the wizard page that contains the task is displayed.
 
- UTI tasks have some configuration settings that are common to all UDI tasks, as listed in Table 13. For the configuration settings that are specific to each UDI task, see the corresponding section in [Built\-in UDI Tasks](#BuiltinUDITasks).
+ UTI tasks have some configuration settings that are common to all UDI tasks, as listed in Table 13. For the configuration settings that are specific to each UDI task, see the corresponding section in [Built\-in UDI Tasks](#built-in-udi-tasks).
 
 ## Table 13. Configuration Settings Common to All UDI Tasks
 
@@ -427,15 +427,15 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
 |**Task**|**Description**|
 |-|-|
-|[AC Power Check](#ACPowerCheck)|This UDI task is used to identify whether the target computer is connected to AC power, not solely on battery.|
-|[Application Discovery](#ApplicationDiscovery)|This UDI task is used to discover applications that are installed on the target computer.|
-|[CheckSMSFolderOnUSB](#CheckSMSFolderOnUSB)|This UDI task is used to determine whether the \_SMSTaskSequence folder is located on a USB drive on the target computer.|
-|[Copy Files Task](#CopyFilesTask)|This UDI task is used to copy files while the UDI Wizard is running on the target computer.|
-|[Shell Execute Task](#ShellExecuteTask)|This UDI task is used to run software that can be initiated from a command line.|
-|[Wired Network Check](#WiredNetworkCheck)|This UDI task is used to identify whether the target computer is connected to a wired network, not connected using a wireless network connection.|
+|[AC Power Check](#ac-power-check)|This UDI task is used to identify whether the target computer is connected to AC power, not solely on battery.|
+|[Application Discovery](#application-discovery)|This UDI task is used to discover applications that are installed on the target computer.|
+|[CheckSMSFolderOnUSB](#checksmsfolderonusb)|This UDI task is used to determine whether the \_SMSTaskSequence folder is located on a USB drive on the target computer.|
+|[Copy Files Task](#copy-files-task)|This UDI task is used to copy files while the UDI Wizard is running on the target computer.|
+|[Shell Execute Task](#shell-execute-task)|This UDI task is used to run software that can be initiated from a command line.|
+|[Wired Network Check](#wired-network-check)|This UDI task is used to identify whether the target computer is connected to a wired network, not connected using a wireless network connection.|
 
 #### AC Power Check
- Use this UDI task to identify whether the target computer is connected to AC power. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
+ Use this UDI task to identify whether the target computer is connected to AC power. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udi-task-configuration-settings).
 
  Table 15 lists the error and exit codes that the **AC Power Check** task generates.
 
@@ -459,7 +459,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 |**Writecfg**|This parameter specifies the fully qualified or relative path to the location of the .xml file that contains a list of the applications discovered by the task.|
 |**Log**|This parameter specifies the fully qualified or relative path to the location of the log file generated by this task. The file name of the log file is AppDiscovery.log.|
 
- In addition to the parameters in Table 16, this task uses the parameters common to all UDI tasks. For more information about these common parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
+ In addition to the parameters in Table 16, this task uses the parameters common to all UDI tasks. For more information about these common parameters, see [UDI Task Configuration Settings](#udi-task-configuration-settings).
 
  Table 17 lists the error and exit codes that the **Application Discovery** task generates.
 
@@ -476,7 +476,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 #### CheckSMSFolderOnUSB
  Use this UDI task to identify whether the \_SMSTaskSequence folder is located on a USB drive on the target computer. By default, the Configuration Manager task sequencer places the \_SMSTaskSequence folder on the drive with the most available free disk space. This can cause problems later in the deployment process if the USB drive is removed.
 
- This task checks to see whether the folder is located on a USB drive and prevents the deployment from proceeding if it is. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
+ This task checks to see whether the folder is located on a USB drive and prevents the deployment from proceeding if it is. This task uses only those parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udi-task-configuration-settings).
 
  If the \_SMSTaskSequence folder is located on a USB drive, this task fails and prevents the deployment from continuing. To resolve this issue and perform the deployment, complete the following steps:
 
@@ -511,7 +511,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 |**Source**|This parameter specifies the fully qualified or relative path to the source file, which can contain wildcards to copy multiple files using a single task.|
 |**Destination**|This parameter specifies the fully qualified or relative path to the destination file without a file name.|
 
- In addition to the parameters in Table 19, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
+ In addition to the parameters in Table 19, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udi-task-configuration-settings).
 
  Table 20 lists the error and exit codes that the **Copy Files** task generates.
 
@@ -535,13 +535,13 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 |**Filename**|This parameter specifies the fully qualified or relative path to the command for the task to run.|
 |**Parameters**|This parameter specifies the command\-line parameters that are to be provided when running the command.|
 
- In addition to the parameters in Table 21, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
+ In addition to the parameters in Table 21, this task uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udi-task-configuration-settings).
 
  You can also run custom Visual Basic scripts designed to run in cscript.exe using the **Shell Execute** task. To run Visual Basic scripts, perform the following steps:
 
 1. Type the following text in the **Filename** parameter:
 
-   ```
+   ```cmd
    %windir%\system32\cscript.exe
    ```
 
@@ -549,7 +549,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
     For example, to run a Visual Basic script named *SelfTest.vbs* with a parameter value of **Debug**, type the following \(where *script\_path* is the fully qualified path to the SelfTest.vbs file\):
 
-   ```
+   ```cmd
    <script_path>\SelfTest.vbs Debug
    ```
 
@@ -567,7 +567,7 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 |          Exit          |  **\\***  |         **Error**, which indicates that the task failed          |
 
 #### Wired Network Check
- Use this UDI task to determine whether the target computer is connected to a wired network, not using a wireless network connection. This task only uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udiTaskConfigurationSettings).
+ Use this UDI task to determine whether the target computer is connected to a wired network, not using a wireless network connection. This task only uses parameters common to all UDI tasks. For more information about these parameters, see [UDI Task Configuration Settings](#udi-task-configuration-settings).
 
  Table 23 lists the common error and exit codes that the **Wired Network Check** task generates.
 
@@ -583,9 +583,9 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
  This reference includes:
 
--   An overview of UDI validators, as described in [UDI Validator Overview](#udiValidatorOverview)
+- An overview of UDI validators, as described in [UDI Validator Overview](#udi-validator-overview)
 
--   A description of the built\-in UDI validators provided with MDT, as described in [Built\-in UDI Validators](#BuiltinUDIValidators)
+- A description of the built\-in UDI validators provided with MDT, as described in [Built\-in UDI Validators](#built-in-udi-validators)
 
 ### UDI Validator Overview
  UDI validators are used to help ensure that users provide the correct information in the text fields on wizard pages in the UDI Wizard. UDI includes several built\-in validators that help you perform typical validations of fields used for entering text, such as preventing users from entering invalid characters or ensuring that the field is not empty.
@@ -599,10 +599,10 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
 |**Validator**|**Description**|
 |-|-|
-|[InvalidChars](#InvalidChars)|This validator identifies any invalid characters that have been entered from a list that you configure.|
-|[NamedPattern](#NamedPattern)|This validator helps ensure that the text follows a predefined pattern.|
-|[NonEmpty](#NonEmpty)|This validator is used to require text in a field.|
-|[RegEx](#RegEx)|This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator.|
+|[InvalidChars](#invalidchars)|This validator identifies any invalid characters that have been entered from a list that you configure.|
+|[NamedPattern](#namedpattern)|This validator helps ensure that the text follows a predefined pattern.|
+|[NonEmpty](#nonempty)|This validator is used to require text in a field.|
+|[RegEx](#regex)|This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator.|
 
 #### InvalidChars
  This validator prevents users from entering specific characters. The **Message** box allows you to enter a message that is displayed if the text field contains any of the invalid characters. The **Invalid Characters** box allows you to enter the characters that are considered invalid. The characters are entered without spaces between them.
@@ -617,18 +617,18 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
  This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](/cpp/standard-library/regular-expressions-cpp).
 
 ## UDI Wizard Page Reference
- You add a UDI [wizard page](#WizardPage) to stages from the [Page Library](#PageLibrary) in the [UDI Wizard Designer](#udiWizardDesigner). UDI wizard pages are displayed in the [UDI Wizard](#udiWizard).
+ You add a UDI [wizard page](#wizard-page) to stages from the [Page Library](#page-library) in the [UDI Wizard Designer](#udi-wizard-designer). UDI wizard pages are displayed in the [UDI Wizard](#udi-wizard).
 
  This reference includes:
 
--   An overview of UDI wizard pages, as described in [UDI Wizard Page Overview](#udiWizardPageOverview)
+- An overview of UDI wizard pages, as described in [UDI Wizard Page Overview](#udi-wizard-page-overview)
 
--   A description of the built-in UDI wizard pages that are provided with MDT, as described in [Built-in UDI Wizard Pages](#BuiltinUDIWizardPages)
+- A description of the built-in UDI wizard pages that are provided with MDT, as described in [Built-in UDI Wizard Pages](#built-in-udi-wizard-pages)
 
 ### UDI Wizard Page Overview
- Wizard pages are displayed in the [UDI Wizard](#udiWizard) and collect the information required to complete the deployment process. You create wizard pages using C++ in Visual Studio. The custom wizard pages are implemented as DLLs that the UDI Wizard reads.
+ Wizard pages are displayed in the [UDI Wizard](#udi-wizard) and collect the information required to complete the deployment process. You create wizard pages using C++ in Visual Studio. The custom wizard pages are implemented as DLLs that the UDI Wizard reads.
 
- Each built-in UDI wizard page has a corresponding UDI [wizard page editor](#WizardPageEditor), which you use to configure the wizard page in the [UDI Wizard Designer](#udiWizardDesigner).
+ Each built-in UDI wizard page has a corresponding UDI [wizard page editor](#wizard-page-editor), which you use to configure the wizard page in the [UDI Wizard Designer](#udi-wizard-designer).
 
  In addition to the built-in UDI wizard pages, you can create custom UDI wizard pages using the UDI SDK. For more information about creating custom UDI wizard pages using the UDI SDK, see the MDT document *User-Driven Installation Developers Guide*.
 
@@ -785,13 +785,13 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 #### ConfigScanPage
  Use this wizard page to run UDI tasks that scan the configuration of the target computer to determine whether the target computer is ready for the deployment of the operating system image. This readiness includes having sufficient system resources and any prerequisite software being installed and configured properly. In addition, other UDI tasks are run that collect configuration information about the target computer, such as identifying:
 
--   Whether the computer is connected to power \(as opposed to running on a battery\)
+- Whether the computer is connected to power \(as opposed to running on a battery\)
 
--   Whether the computer is connected to a wired network connection \(as opposed to using a wireless network connection\)
+- Whether the computer is connected to a wired network connection \(as opposed to using a wireless network connection\)
 
--   Any installed applications
+- Any installed applications
 
--   Any installed printers
+- Any installed printers
 
 #### LanguagePage
  Use this wizard page to determine which language packs should be installed, the default language for the target operating system, the keyboard locale, and the time zone in which the computer will be located.
@@ -811,13 +811,13 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 #### ProgressPage
  Use this wizard page to run UDI tasks that capture the user state migration data from the target computer. These tasks include:
 
--   Copying the application discovery file to the location selected on the [UserStatePage](#UserStatePage) wizard page
+- Copying the application discovery file to the location selected on the [UserStatePage](#UserStatePage) wizard page
 
--   Copying the printer configuration file to the location selected on the [UserStatePage](#UserStatePage) wizard page
+- Copying the printer configuration file to the location selected on the [UserStatePage](#UserStatePage) wizard page
 
--   Copying the list of installed products to the location selected on the [UserStatePage](#UserStatePage) wizard page
+- Copying the list of installed products to the location selected on the [UserStatePage](#UserStatePage) wizard page
 
--   Running the USMT and saving the user state migration data to the location selected on the [UserStatePage](#UserStatePage) wizard page
+- Running the USMT and saving the user state migration data to the location selected on the [UserStatePage](#UserStatePage) wizard page
 
 #### RebootPage
  Use this wizard page to notify the user that the target computer is going to be restarted. You can configure the notification message using the UDI Wizard Designer.
@@ -843,13 +843,13 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 
  The **UserStatePage** can capture or restore user state migration data from a disk locally attached to the target computer, a USB drive attached to the target computer, or a network shared folder. In addition, you can select to not restore any user data. The code logic behind the wizard page enables, disables, or automatically selects each of the following options based on the deployment scenario and whether the disk is being formatted:
 
--   **No Data to Restore.** This option indicates that there is no user state migration data to restore and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **NoData**.
+- **No Data to Restore.** This option indicates that there is no user state migration data to restore and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **NoData**.
 
--   **Local.** This option indicates that the user state migration data should be stored on a disk locally attached to the target computer and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **Local**.
+- **Local.** This option indicates that the user state migration data should be stored on a disk locally attached to the target computer and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **Local**.
 
--   **USB.** This option indicates that the user state migration data should be stored on a USB disk locally attached to the target computer and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **USB**.
+- **USB.** This option indicates that the user state migration data should be stored on a USB disk locally attached to the target computer and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **USB**.
 
--   **Network.** This option indicates that the user state migration data should be stored on a network shared folder and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **Network**.
+- **Network.** This option indicates that the user state migration data should be stored on a network shared folder and sets the **OSDUserStateMode** task sequence variable and **UserStateMode** variable to **Network**.
 
 ##### NEWCOMPUTER Stage Behavior
  The NEWCOMPUTER stage is used for computers on which no user state migration data exists. The New Computer deployment scenario can be used as the second part of the Replace Computer deployment scenario. If the user selects to:
@@ -1183,13 +1183,13 @@ The display name is used to provide a user-friendly, descriptive name for a wiza
 ## UDI Task Sequence Variables
  The task sequence variables in this section are used only in User-Driven Installation (UDI) deployments. In addition to these task sequence variables, the following ZTI task sequence variables are also used by UDI and are documented in their respective sections earlier in this guide:
 
--   [KeyboardLocale](#KeyboardLocale)
+- [KeyboardLocale](#KeyboardLocale)
 
--   [OSDComputerName](#OSDComputerName)
+- [OSDComputerName](#OSDComputerName)
 
--   [UILanguage](#UILanguage)
+- [UILanguage](#UILanguage)
 
--   [UserLocale](#UserLocale)
+- [UserLocale](#UserLocale)
 
 ### OSDAddAdmin
  This task sequence variable specifies a list of domain-based accounts or local accounts to be added to the Administrators local built-in group on the target computer.
