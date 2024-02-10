@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 1/25/2024
+ms.date: 2/12/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -94,7 +94,9 @@ The following device compliance settings may report as **Not Compliant** when be
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When using single sign-on, you're currently be prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When enabling single sign-on, you'll be prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+
+To prevent this dialog from being shown, you can create a pre-consented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
 
 <a name='single-sign-on-user-connections-are-being-denied-through-azure-ad-conditional-access---42317382--'></a>
 
@@ -106,10 +108,10 @@ When using single sign-on, you're currently be prompted to authenticate to Micro
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
-When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that user can:'
+When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
 
-1. Can relaunch the connection through the remote desktop client.
-2. perform the Microsoft Entra ID-based single sign-on authentication flow.
+1. users can use passwordless authentication to unlock their Cloud PC.
+2. Conditional Access policies and multi-factor authentication can be enforced when unlocking the Cloud PC.
 
 <a name='single-sign-on-users-arent-asked-to-reauthenticate-to-azure-ad-when-connecting-from-an-unmanaged-device---35593334--'></a>
 
@@ -117,7 +119,7 @@ When single sign-on isn't used, users have the option to see the Cloud PC lock s
 
 When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Microsoft Entra ID.
 
-**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
+**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](set-conditional-access-policies.md#configure-sign-in-frequency).
 
 ## I don’t see the Cloud PC reports on the Intune admin center Devices > Overview page
 
