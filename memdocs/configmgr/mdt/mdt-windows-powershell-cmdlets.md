@@ -62,7 +62,8 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
  This cmdlet adds an existing Windows PowerShell drive created using the **MDTProvider** to a list of drives that are persisted in the Deployment Workbench or in a Windows PowerShell session using the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet. This cmdlet is called when you create or open a deployment share in the Deployment Workbench.
 
 > [!NOTE]
->  The list of persisted **MDTProvider** drives is maintained on a per-user based in the user profile.
+>
+> The list of persisted **MDTProvider** drives is maintained on a per-user based in the user profile.
 
  The list of persisted **MDTProvider** drives can be displayed using the **Get-MDTPersistentDrive** cmdlet.
 
@@ -149,7 +150,7 @@ Disable-MDTMonitorService [<CommonParameters>]
 
 - Using the [Get-MDTMonitorData](#get-mdtmonitordata) cmdlet
 
-  The MDT monitoring service can subsequently be enabled using the [Enable-MDTMonitorService](#enable-mdtMonitorService).
+  The MDT monitoring service can subsequently be enabled using the [Enable-MDTMonitorService](#enable-mdtmonitorservice).
 
   For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.
 
@@ -191,7 +192,7 @@ Enable-MDTMonitorService [-EventPort] <Int32> [-DataPort] <Int32> [<CommonParame
 
 - Using the [Get-MDTMonitorData](#get-mdtmonitordata) cmdlet
 
-  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#disable-mdtMonitorService).
+  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#disable-mdtmonitorservice).
 
   For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.
 
@@ -285,7 +286,8 @@ Get-MDTDeploymentShareStatistics [-Path <String>] [<CommonParameters>]
 -   Roles in the MDT DB
 
 > [!NOTE]
->  The values for the statistics that relate to the MDT DB are not populated and always return a value of zero.
+>
+> The values for the statistics that relate to the MDT DB are not populated and always return a value of zero.
 
 ### Parameters
  This subsection provides information about the various parameters that can be used with the **Get-MDTDeploymentShareStatistics** cmdlet.
@@ -294,7 +296,8 @@ Get-MDTDeploymentShareStatistics [-Path <String>] [<CommonParameters>]
  This parameter specifies the MDTProvider Windows PowerShell drive for the desired deployment share.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -370,7 +373,8 @@ ComputerIdentities : {}
 ```
 
 > [!NOTE]
->  The MDTProvider Windows PowerShell drive that this cmdlet references must exist prior to running this cmdlet.
+>
+> The MDTProvider Windows PowerShell drive that this cmdlet references must exist prior to running this cmdlet.
 
 ### Parameters
  This subsection provides information about the various parameters that you can use with the **Get- MDTMonitorData** cmdlet.
@@ -379,7 +383,8 @@ ComputerIdentities : {}
  This parameter specifies the MDTProvider Windows PowerShell drive for the desired deployment share.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -451,7 +456,8 @@ Get-MDTOperatingSystemCatalog [-ImageFile] <String> [-Index] <Int32> [<CommonPar
  This cmdlet retrieves or creates an operating system catalog for a custom operating system image so that you can modify the corresponding unattend.xml file using Windows System Image Manager (WSIM). If no operating system catalog is available or if the existing operating system catalog is invalid or out of date, this cmdlet will generate a new operating system catalog.
 
 > [!NOTE]
->  The process of generating a new operating system catalog may take a long time as the custom operating system image must be mounted, inspected, and unmounted before the operating system catalog creation completes.
+>
+> The process of generating a new operating system catalog may take a long time as the custom operating system image must be mounted, inspected, and unmounted before the operating system catalog creation completes.
 
 ### Parameters
  This subsection provides information about the various parameters that can be used with the **Get-MDTOperatingSystemCatalog** cmdlet.
@@ -518,7 +524,8 @@ Get-MDTPersistentDrive [<CommonParameters>]
   Persisted MDT Windows PowerShell drives are similar to persisted network drive mappings.
 
 > [!NOTE]
->  This list of persisted MDT Windows PowerShell drives is maintained on a per user basis and are stored in the user profile.
+>
+> This list of persisted MDT Windows PowerShell drives is maintained on a per user basis and are stored in the user profile.
 
 ### Parameters
  This subsection provides information about the various parameters that can be used with the **Get- MDTPersistentDrive** cmdlet.
@@ -579,7 +586,8 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
  This parameter specifies the fully qualified path to an existing folder where the application being imported will be placed within the deployment share. If the *DestinationFolder* parameter is used, then the folder specified in the *DestinationFolder* parameter is created beneath the folder specified in this parameter. This parameter is used in all syntax usages for this cmdlet.
 
 > [!NOTE]
->  If this parameter is not provided, the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -734,7 +742,8 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
  This parameter specifies the fully qualified path to an existing folder where the device driver being imported will be placed within the deployment share.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share. This parameter must be provided if the *SourcePath* parameter is not provided.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share. This parameter must be provided if the *SourcePath* parameter is not provided.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -748,7 +757,8 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
  This parameter specifies one or more fully qualified paths in a string array for the source folders where the device driver files are located. Each folder structure, starting with the folder specified in this parameter, is searched for device drivers, including all subfolders and the contents of .cab files in the folder structure.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the folder where the device driver files are located. This parameter must be provided if the *Path* parameter is not provided.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the folder where the device driver files are located. This parameter must be provided if the *Path* parameter is not provided.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -843,7 +853,8 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
  This parameter specifies the fully qualified path to an existing folder within the deployment share where the operating system being imported will be placed. If the *DestinationFolder* parameter is used, then the folder specified in the *DestinationFolder* parameter is created beneath the folder specified in this parameter. This parameter is used in all syntax usages for this cmdlet.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -994,7 +1005,8 @@ Import-MDTPackage [-Path <String>] [[-SourcePath] <String[]>] [<CommonParameters
  This parameter specifies the fully qualified path to an existing folder within the deployment share where the operating system packages being imported will be placed.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1053,7 +1065,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
  This parameter specifies the fully qualified path to an existing folder within the deployment share where the task sequence being imported will be placed. By default, the path should point to the Control folder and or a subfolder of the Control folder in the deployment share. The value of the *ID* parameter will be used to create a subfolder within the path specified in this parameter.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1128,7 +1141,8 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
  This parameter specifies the fully qualified Windows PowerShell path to the folder in the deployment share that contains the operating system to be used with this task sequence, such as DS001:\Operating Systems\Windows 8. The operating system must already exist in the deployment share where the task sequence is being imported.
 
 > [!NOTE]
->  If you do not provide this parameter and the task sequence needs to reference an operating system, then you must provide the *OperatingSystem* parameter.
+>
+> If you do not provide this parameter and the task sequence needs to reference an operating system, then you must provide the *OperatingSystem* parameter.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1150,7 +1164,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
  For more information on the **Get-Item** cmdlet, see [Using the Get-Item Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176851(v=technet.10)).
 
 > [!NOTE]
->  If you do not provide this parameter and the task sequence needs to reference an operating system, then you must provide the *OperatingSystemPath* parameter.
+>
+> If you do not provide this parameter and the task sequence needs to reference an operating system, then you must provide the *OperatingSystemPath* parameter.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1197,7 +1212,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
  This parameter specifies the product key to be used for the operating system to be used with this task sequence. This product key is valid only for retail versions of Windows operating systems. The value of this parameter is injected into the Unattend.xml file to be associated with this task sequences.
 
 > [!NOTE]
->  If this parameter is not provided, then the product key must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.
+>
+> If this parameter is not provided, then the product key must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1211,7 +1227,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
  This parameter specifies the MAK key to be used for the operating system to be used with this task sequence. This product key is valid only for volume license versions of Windows. The value of this parameter is injected into the Unattend.xml file to be associated with this task sequences.
 
 > [!NOTE]
->  If this parameter is not provided, then the MAK key must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.
+>
+> If this parameter is not provided, then the MAK key must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1225,7 +1242,8 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
  This parameter specifies the password to be assigned to the built-in, local Administrator account on the target computer. The value of this parameter is injected into the Unattend.xml file to be associated with this task sequences.
 
 > [!NOTE]
->  If this parameter is not provided, then the password to be assigned to the built-in, local Administrator account on the target computer must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.
+>
+> If this parameter is not provided, then the password to be assigned to the built-in, local Administrator account on the target computer must be provided when deploying this task sequence in the Deployment Wizard, in the CustomSettings.ini file, or in the MDT DB.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1289,7 +1307,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
  This parameter specifies the fully qualified Windows PowerShell path to the deployment share to which the new MDT DB database will be associated placed.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1329,7 +1348,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
  This parameter specifies the SQL Server instance in which the new MDT DB database will be created. If this parameter is omitted, the MDT DB database is created in the default SQL Server instance.
 
 > [!NOTE]
->  The SQL Server Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.
+>
+> The SQL Server Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1384,7 +1404,8 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
  This parameter specifies the name of a network shared folder on the computer where SQL Server is running. This connection is used to establish Windows Integrated Security connections using the Named Pipes protocol.
 
 > [!NOTE]
->  If this parameter is not included, then a secured IPC$ connection is not established. As a result, named pipes communication with SQL Server may fail.
+>
+> If this parameter is not included, then a secured IPC$ connection is not established. As a result, named pipes communication with SQL Server may fail.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1445,7 +1466,8 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 -   Computer object for the monitoring item in the deployment share. The computer object can be obtained using the **Get-MDTMonitorData** cmdlet. The last syntax example illustrates this usage.
 
 > [!NOTE]
->  Once the monitoring data has been removed, there is no method for recovering the information.
+>
+> Once the monitoring data has been removed, there is no method for recovering the information.
 
 ### Parameters
  This subsection provides information about the various parameters that can be used with the **Get- MDTMonitorData** cmdlet.
@@ -1454,7 +1476,8 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
  This parameter specifies the **MDTProvider** Windows PowerShell drive for the desired deployment share.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1537,7 +1560,8 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
  This cmdlet removes an existing Windows PowerShell drive created using the **MDTProvider** from the list of drives that are persisted in the Deployment Workbench or in a Windows PowerShell session using the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet. This cmdlet is called when a deployment share is closed in (removed from) the Deployment Workbench.
 
 > [!NOTE]
->  The list of persisted **MDTProvider** drives is maintained on a per-user based in the user profile.
+>
+> The list of persisted **MDTProvider** drives is maintained on a per-user based in the user profile.
 
  The list of persisted **MDTProvider** drives can be displayed using the **Get-MDTPersistentDrive** cmdlet. An MDTProvider drive can be added to the list of persisted drives using the **Add-MDTPersistentDrive** cmdlet.
 
@@ -1612,7 +1636,8 @@ Restore-MDTPersistentDrive [-Force] [<CommonParameters>]
  This cmdlet calls the **New-PSDrive** cmdlet to create a Windows PowerShell drive for each drive in the MDT persisted list. Persisted MDT Windows PowerShell drives are similar to persisted network drive mappings.
 
 > [!NOTE]
->  This list of persisted MDT Windows PowerShell drives is maintained on a per-user basis and are stored in the user profile.
+>
+> This list of persisted MDT Windows PowerShell drives is maintained on a per-user basis and are stored in the user profile.
 
 ### Parameters
  This subsection provides information about the various parameters that can be used with the **Restore-MDTPersistentDrive** cmdlet.
@@ -1683,7 +1708,8 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 -   MAC address of the primary network adapter of the monitoring item for a specific deployment share. The MAC address is automatically assigned to the monitoring data item when the item is created for the deployment share. The last syntax example illustrates this usage.
 
 > [!NOTE]
->  Once the monitoring data has been removed, there is no method for recovering the information.
+>
+> Once the monitoring data has been removed, there is no method for recovering the information.
 
 ### Parameters
  This subsection provides information about the various parameters that can be used with the **Get- MDTMonitorData** cmdlet.
@@ -1692,7 +1718,8 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
  This parameter specifies the MDTProvider Windows PowerShell drive for the desired deployment share.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to a location within the desired MDTProvider Windows PowerShell drive.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1755,7 +1782,7 @@ Set-MDTMonitorData -ComputerObject $MonitorObject Setting @{"OSDComputerName"="W
 ```
 
 #### Description
- This example removes any monitoring data item where the name of the computer is *WDG-REF-01.* The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee177028(v=technet.10)). The [OSDComputerName](properties.md#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](properties.md#SkipWizard) property is recorded as having a value of **YES**.
+ This example removes any monitoring data item where the name of the computer is *WDG-REF-01.* The object is found using the **Get-MDTMonitorData** cmdlet and the **Where-Object** cmdlet. For more information on the **Where-Object** cmdlet, see [Using the Where-Object Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee177028(v=technet.10)). The [OSDComputerName](properties.md#osdcomputername) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](properties.md#skipwizard) property is recorded as having a value of **YES**.
 
 ### Example 2
 
@@ -1764,7 +1791,7 @@ Set-MDTMonitorData -MACAddress "00:11:22:33:44:55" MonitorObject Setting @{"OSDC
 ```
 
 #### Description
- This example creates or updates a monitoring data item with a **MACAddress** that has a value of **00:11:22:33:44:55**. The [OSDComputerName](properties.md#OSDComputerName) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](properties.md#SkipWizard) property is recorded as having a value of **YES**.
+ This example creates or updates a monitoring data item with a **MACAddress** that has a value of **00:11:22:33:44:55**. The [OSDComputerName](properties.md#osdcomputername) property is recorded as having a value of **WDG-MDT-01**, and the [SkipWizard](properties.md#skipwizard) property is recorded as having a value of **YES**.
 
 ## Test-MDTDeploymentShare
  Although this cmdlet is returned using the **Get-Command** cmdlet as being in the Microsoft.BDD.PSSnapIn snap-in, it is not implemented.
@@ -1785,10 +1812,11 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 
 - Using the [Get-MDTMonitorData](#get-mdtmonitordata) cmdlet
 
-  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#disable-mdtMonitorService). Monitoring information can be written to the MDT monitoring service using the [Set-MDTMonitorData](#set-mdtmonitordata) cmdlet.
+  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#disable-mdtmonitorservice). Monitoring information can be written to the MDT monitoring service using the [Set-MDTMonitorData](#set-mdtmonitordata) cmdlet.
 
 > [!NOTE]
->  For this cmdlet to function properly there must be at least one MDT monitoring data item in the deployment share. If no MDT monitoring information has been recorded, the deployment share will fail the test.
+>
+> For this cmdlet to function properly there must be at least one MDT monitoring data item in the deployment share. If no MDT monitoring information has been recorded, the deployment share will fail the test.
 
  For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.
 
@@ -1879,7 +1907,8 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
  This parameter specifies the SQL Server instance on which the MDT DB database to be upgraded exists. If this parameter is omitted, then the MDT DB database is assumed to be in the default SQL Server instance.
 
 > [!NOTE]
->  The SQL Server Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.
+>
+> The SQL Server Browser service must be running on the computer running SQL Server for the cmdlet to locate the instance specified in this parameter.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1910,7 +1939,8 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
   If this parameter is not provided, the named pipes SQL Server network library (**DBNMPNTW**) is used.
 
 > [!NOTE]
->  The Deployment Workbench does not provide the option for configuring the SQL Server network library. The Deployment Workbench always uses named pipes communication. However, the SQL Server network library can be configured in the CustomSettings.ini file.
+>
+> The Deployment Workbench does not provide the option for configuring the SQL Server network library. The Deployment Workbench always uses named pipes communication. However, the SQL Server network library can be configured in the CustomSettings.ini file.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -1978,7 +2008,8 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
  This parameter specifies the fully qualified path to an existing folder in the deployment share that is being updated.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -2011,7 +2042,8 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 -   Omitted, then the cmdlet does not compress the Windows PE boot images as they are being optimized
 
 > [!NOTE]
->  This parameter should only be provided if the *Force* parameter is not provided. If the *Force* parameter is included, new Windows PE boot images are generated and are compressed to the minimal size.
+>
+> This parameter should only be provided if the *Force* parameter is not provided. If the *Force* parameter is included, new Windows PE boot images are generated and are compressed to the minimal size.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -2086,7 +2118,8 @@ Update-MDTLinkedDS -Path <String> [<CommonParameters>]
  This parameter specifies the fully qualified path to the linked deployment share that is being updated.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|
@@ -2136,7 +2169,8 @@ Update-MDTMedia -Path <String> [<CommonParameters>]
  This parameter specifies the fully qualified path to the folder that contains the deployment media that is being updated.
 
 > [!NOTE]
->  If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
+>
+> If this parameter is not provided, then the Windows PowerShell working directory must default to the desired location within the deployment share.
 
 |**Parameter**|**Value**|
 |-|-|

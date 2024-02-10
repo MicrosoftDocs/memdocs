@@ -79,7 +79,8 @@ ms.reviewer: mstewart,aaroncz
  *UDI tasks* are software that is run on a wizard page to perform specific functions. In some instances, these tasks are used to verify that the target computer is ready for deployment. Other tasks can be used to perform deployment steps, such as copying configuration or result files.
 
 > [!NOTE]
->  The **Next** button on the wizard page where the tasks are run will be disabled if any of the tasks finish with warning or error completion status.
+>
+> The **Next** button on the wizard page where the tasks are run will be disabled if any of the tasks finish with warning or error completion status.
 
  UDI includes several built-in tasks that allow you to perform most of the tasks necessary for deployment. For more information about the UDI built-in tasks, see [Built-in UDI Tasks](#BuiltinUDITasks).
 
@@ -126,7 +127,8 @@ ms.reviewer: mstewart,aaroncz
  Although the UDI Wizard would run with the default UDI Wizard configuration file, the wizard pages would not be configured correctly. It is recommended that you use the UDI Wizard Designer to configure the UDI Wizard user experience.
 
 > [!NOTE]
->  To run the UDI Wizard Designer, you must have the appropriate rights in Configuration Manager to access objects such as packages, applications, or images.
+>
+> To run the UDI Wizard Designer, you must have the appropriate rights in Configuration Manager to access objects such as packages, applications, or images.
 
 ### Validator
  You use UDI validators to help ensure that the correct information is entered into text fields on wizard pages in the UDI Wizard. UDI includes several built-in validators that help you perform typical validations of fields used for entering text, such as preventing users from entering invalid characters and ensuring that the field is not empty. When a validator detects an invalid entry in a text box, a message is displayed on the wizard page, and the **Next** button is disabled until all invalid entries are resolved.
@@ -385,7 +387,8 @@ ms.reviewer: mstewart,aaroncz
  *UDI tasks* are software that is run on a wizard page that perform specific functions. In some instances, these tasks are used to verify that the target computer is ready for deployment. Other tasks can be used to perform deployment steps, such as copying configuration or result files.
 
 > [!NOTE]
->  The **Next** button on the wizard page where the tasks are run will be disabled if any of the tasks finish with warning or error completion status.
+>
+> The **Next** button on the wizard page where the tasks are run will be disabled if any of the tasks finish with warning or error completion status.
 
  This reference includes:
 
@@ -550,7 +553,8 @@ ms.reviewer: mstewart,aaroncz
    Table 22 lists the common error and exit codes that the **Shell Execute** task generates.
 
 > [!NOTE]
->  Each specific task based on the **Shell Execute** task has a unique set of error and exit codes. Please check the return codes for the software you are running using this task.
+>
+> Each specific task based on the **Shell Execute** task has a unique set of error and exit codes. Please check the return codes for the software you are running using this task.
 
 ## Table 22. Common Error and Exit Codes for the Shell Execute Task
 
@@ -636,7 +640,8 @@ ms.reviewer: mstewart,aaroncz
   You can reference task sequence and environment variables by bracketing the variable using percent signs (%), such as *%OSDImageIndex%.* You can reference memory variables by bracketing the variable using dollar signs ($), such as *$VolumeArchitecture$.*
 
 > [!NOTE]
->  If a task sequence variable and an environment variable both have the same name, then the task sequence variable takes precedence over the environment variable.
+>
+> If a task sequence variable and an environment variable both have the same name, then the task sequence variable takes precedence over the environment variable.
 
  Table 25 lists the memory variables that are set when the UDI Wizard starts, the description of the variables, and whether the UDI Wizard reads or writes the variables during startup.
 
@@ -685,7 +690,8 @@ ms.reviewer: mstewart,aaroncz
  Use this wizard page to configure the list of application software that can be installed during the setup process. These applications can include applications or packages and programs from Configuration Manager.
 
 > [!NOTE]
->  If applications appear to be disabled, the application may require administrator approval but has not yet been approved. If the **Require administrator approval if users request this application** check box is selected for the application, verify that the application has been approved. For more information, see [How to Deploy Applications in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682082(v=technet.10)).
+>
+> If applications appear to be disabled, the application may require administrator approval but has not yet been approved. If the **Require administrator approval if users request this application** check box is selected for the application, verify that the application has been approved. For more information, see [How to Deploy Applications in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682082(v=technet.10)).
 
 ##### Task Sequence Variables
  Table 28 lists the **ApplicationPage** task sequence variables with the description and whether the variable is read by the wizard page, written by the wizard page, or can be configured in the UDI Wizard configuration file.
@@ -1277,7 +1283,8 @@ ms.reviewer: mstewart,aaroncz
  This task sequence variable specifies the name of the operating system image in the .wim file selected in the **Image Selection** box on the [VolumePage](#VolumePage) wizard page. The list of possible operating system images in the **Image Selection** box is configured in the **Image Combo Box Values** list in the **Image Combo Box** section on the [VolumePage](#VolumePage) wizard page editor. The image name is configured as a part of each image in the **Image Combo Box Values** list.
 
 > [!NOTE]
->  **Note** This tasks sequence variable is set by the [VolumePage](#VolumePage) wizard and should not be configured in the CustomSettings.ini file or in the MDT DB. However, this tasks sequence variable can be used to set conditions for task sequence steps, as described in the section, "Configure UDI Task Sequences to Deploy Different Operating Systems", in the MDT document *Using the Microsoft Deployment Toolkit*.
+>
+> **Note** This tasks sequence variable is set by the [VolumePage](#VolumePage) wizard and should not be configured in the CustomSettings.ini file or in the MDT DB. However, this tasks sequence variable can be used to set conditions for task sequence steps, as described in the section, "Configure UDI Task Sequences to Deploy Different Operating Systems", in the MDT document *Using the Microsoft Deployment Toolkit*.
 
 |**Value**|**Description**|
 |-|-|

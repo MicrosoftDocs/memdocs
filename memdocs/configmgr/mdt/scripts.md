@@ -95,7 +95,8 @@ ms.reviewer: mstewart,aaroncz
  This XML file contains the script code and HTML layout for the **Specify credentials for connecting to network shares** wizard page in the Deployment Wizard. This XML file is read by Wizard.hta, which runs the wizard pages embedded in this XML file.
 
 > [!NOTE]
->  This wizard page is only displayed if there is a failure while validating the predefined user credentials.
+>
+> This wizard page is only displayed if there is a failure while validating the predefined user credentials.
 
 |**Value**|**Description**|
 |-|-|
@@ -584,7 +585,8 @@ ms.reviewer: mstewart,aaroncz
  This script suspends a task sequence to allow manual tasks to be performed. When this script runs, it creates a **Resume Task Sequence** shortcut on the user's desktop that allows the user to restart the task sequence after all manual tasks are completed.
 
 > [!NOTE]
->  This script is only supported while in the full operating system.
+>
+> This script is only supported while in the full operating system.
 
 |**Value**|**Description**|
 |-|-|
@@ -670,7 +672,8 @@ ms.reviewer: mstewart,aaroncz
 |**OSDAdapterCount**||-|
 
 > [!NOTE]
->  The*x*in the property names listed above is a placeholder for a zero-based array that contains network adapter information.
+>
+> The*x*in the property names listed above is a placeholder for a zero-based array that contains network adapter information.
 
 ## Summary_Definition_ENU.xml
  This XML file contains the script code and HTML layout for the **Deployment Summary** wizard page in the Deployment Wizard. During an LTI deployment, Wizard.hta reads this file and runs the embedded wizard page that displays the summary results for the LTI deployment. This XML file contains the following wizard pages:
@@ -794,7 +797,8 @@ ms.reviewer: mstewart,aaroncz
 -   Has an uninstall entry in the registry under **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall**
 
 > [!NOTE]
->  If the listed application has any dependent applications defined, this script attempts to install those dependent applications before installing the listed application.
+>
+> If the listed application has any dependent applications defined, this script attempts to install those dependent applications before installing the listed application.
 
 |**Value**|**Description**|
 |-|-|
@@ -949,7 +953,8 @@ ms.reviewer: mstewart,aaroncz
  This script installs and configures BitLocker on the target computer. BitLocker configuration is limited to New Computer scenarios that have hard disks configured with a single partition.
 
 > [!NOTE]
->  For ZTI and UDI deployments, the **UILanguage** property must be set in CustomSettings.ini or in the MDT DB, because ZTIBde.wsf tries to read the locale from the **UILanguage** property.
+>
+> For ZTI and UDI deployments, the **UILanguage** property must be set in CustomSettings.ini or in the MDT DB, because ZTIBde.wsf tries to read the locale from the **UILanguage** property.
 
 |**Value**|**Description**|
 |-|-|
@@ -1179,7 +1184,8 @@ ms.reviewer: mstewart,aaroncz
  This script configures DHCP on the target computer.
 
 > [!NOTE]
->  DHCP should already be installed on the target computer before running this script.
+>
+> DHCP should already be installed on the target computer before running this script.
 
 |**Value**|**Description**|
 |-|-|
@@ -1222,7 +1228,8 @@ ms.reviewer: mstewart,aaroncz
 |**DHCPServerOptionWINSServer**|-||
 
 > [!NOTE]
->  The *x*in the properties listed here is a placeholder for a zero-based array that contains DHCP configuration information.
+>
+> The *x*in the properties listed here is a placeholder for a zero-based array that contains DHCP configuration information.
 
 ## ZTIConfigureDNS.wsf
  This script configures DNS on the target computer. To perform the actual configuration tasks, the script uses the Dnscmd utility.
@@ -1230,7 +1237,8 @@ ms.reviewer: mstewart,aaroncz
  For more information about Dnscmd.exe, see [Dnscmd Overview](/previous-versions/windows/it-pro/windows-server-2003/cc778513(v=ws.10)).
 
 > [!NOTE]
->  DNS should already be installed on the target computer before running this script.
+>
+> DNS should already be installed on the target computer before running this script.
 
 |**Value**|**Description**|
 |-|-|
@@ -1266,7 +1274,8 @@ ms.reviewer: mstewart,aaroncz
 |**DNSZonesxUpdate**|-||
 
 > [!NOTE]
->  The *x*in the properties listed here is a placeholder for a zero-based array that contains DNS configuration information.
+>
+> The *x*in the properties listed here is a placeholder for a zero-based array that contains DNS configuration information.
 
 ## ZTIConnect.wsf
  The MDT deployment process uses this script to authenticate with a server computer (such as a computer running SQL Server or another server that has a shared network folder). When this script is run, it validates that a connection can be created to the network shared folder specified in the **/uncpath** argument.
@@ -1592,7 +1601,8 @@ ms.reviewer: mstewart,aaroncz
  This script captures and restores the local group membership on the target computer. This script is called with the<strong>/capture</strong> argument to back up the group membership from the target computer before deploying the operating system. The **CaptureGroups** property contains the list of groups that script backs up. The script is called with the<strong>/restore</strong> argument to restore the group membership after the operating system is deployed. When performing a restore operation, it restores the membership of all groups that were backed up when the script was run using the **/capture** argument.
 
 > [!NOTE]
->  When restoring group membership, the script does not create any destination groups that do not already exist on the target computer. Therefore, be sure to include all required groups in the reference computer when building the image file.
+>
+> When restoring group membership, the script does not create any destination groups that do not already exist on the target computer. Therefore, be sure to include all required groups in the reference computer when building the image file.
 
 |**Value**|**Description**|
 |-|-|
@@ -1650,7 +1660,8 @@ ms.reviewer: mstewart,aaroncz
 -   All ZTI and UDI deployments
 
 > [!NOTE]
->  This script is intended to be called only when creating partitions structures for use with UEFI. This script should not be called when creating partition structures to be used in deployments without UEFI.
+>
+> This script is intended to be called only when creating partitions structures for use with UEFI. This script should not be called when creating partition structures to be used in deployments without UEFI.
 
 |**Value**|**Description**|
 |-|-|
@@ -1677,7 +1688,8 @@ ms.reviewer: mstewart,aaroncz
  This script moves the captured user state and backup files to C:\Windows\Temp\StateStore.
 
 > [!NOTE]
->  This script is run only when deploying images using Configuration Manager.
+>
+> This script is run only when deploying images using Configuration Manager.
 
 |**Value**|**Description**|
 |-|-|
@@ -1793,13 +1805,15 @@ ms.reviewer: mstewart,aaroncz
 | **OSDAdapter*AdapterIndexAdapterName*** |    -     |     -     |
 
 > [!NOTE]
->  *AdapterIndex*in this property is a placeholder for a zero-based array that contains network adapter information.
+>
+> *AdapterIndex*in this property is a placeholder for a zero-based array that contains network adapter information.
 
 ## ZTIOSRole.wsf
  This script installs server roles for target computers that are running Windows operating systems. The script reads the **OSRoles**, **OSRoleServices**, and **OSFeatures** properties to determine what should be installed.
 
 > [!NOTE]
->  This script is intended to be called only by the **Install Roles and Features** and**Uninstall Roles and Features** task sequence steps. Calling this script directly is not supported.
+>
+> This script is intended to be called only by the **Install Roles and Features** and**Uninstall Roles and Features** task sequence steps. Calling this script directly is not supported.
 
 |**Value**|**Description**|
 |-|-|
@@ -2406,10 +2420,12 @@ ms.reviewer: mstewart,aaroncz
 - The target computer might require more than one restart during the update installation.
 
 > [!NOTE]
->  Windows Internet Explorer 7 requires user interaction, so it is not installed using this script.
+>
+> Windows Internet Explorer 7 requires user interaction, so it is not installed using this script.
 
 > [!NOTE]
->  By default, include **QNumber 925471** in the **WUMU_ExcludeKB** list to prevent Windows Vista Ultimate from installing extra language packs.
+>
+> By default, include **QNumber 925471** in the **WUMU_ExcludeKB** list to prevent Windows Vista Ultimate from installing extra language packs.
 
 |**Value**|**Description**|
 |-|-|
@@ -2428,16 +2444,20 @@ ms.reviewer: mstewart,aaroncz
 |     **/Query:*value***     |                                                     -                              <strong>True</strong>. Query only for required updates. Do not download and install any binaries.<br /><br /> -                              <strong>False</strong>. Query for and install required updates. Download and install binaries.                                                     |
 
 > [!NOTE]
->  When specified, **UpdateCommand** requires at least one option.
+>
+> When specified, **UpdateCommand** requires at least one option.
 
 > [!NOTE]
->  If specifying both options for **UpdateCommand**, they must be separated by *and*.
+>
+> If specifying both options for **UpdateCommand**, they must be separated by *and*.
 
 > [!NOTE]
->  The default value for **UpdateCommand** is **IsInstalled=0** and **IsHidden=0**.
+>
+> The default value for **UpdateCommand** is **IsInstalled=0** and **IsHidden=0**.
 
 > [!NOTE]
->  For more information about **UpdateCommand**, see [IUpdateSearcher::Search Method](https://msdn.microsoft.com/library/aa386526\(VS.85\).aspx).
+>
+> For more information about **UpdateCommand**, see [IUpdateSearcher::Search Method](https://msdn.microsoft.com/library/aa386526\(VS.85\).aspx).
 
 ### Properties
 

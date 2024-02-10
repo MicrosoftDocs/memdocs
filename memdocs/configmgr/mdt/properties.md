@@ -186,7 +186,8 @@ ms.reviewer: mstewart,aaroncz
  A space-delimited list of error codes used by the ZTIApplications script that determine the successful installation of applications.
 
 > [!NOTE]
->  This property is only applicable to the **Install Application** task sequence step type and when **Install multiple applications** is selected.
+>
+> This property is only applicable to the **Install Application** task sequence step type and when **Install multiple applications** is selected.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -206,7 +207,8 @@ ms.reviewer: mstewart,aaroncz
  This property is used to determine whether the **Apply Local GPO Package** task sequence step is performed.
 
 > [!NOTE]
->  The default value for this property always performs the **Apply Local GPO Package** task sequence step. You must explicitly provide a value of "NO" to override this behavior..
+>
+> The default value for this property always performs the **Apply Local GPO Package** task sequence step. You must explicitly provide a value of "NO" to override this behavior..
 
 |Property configured by|Property applies to|
 |-|-|
@@ -229,7 +231,8 @@ ms.reviewer: mstewart,aaroncz
  Use the **CapableArchitecture** property to identify the actual processor architecture that the target computer supports.
 
 > [!NOTE]
->  This property is dynamically set by MDT scripts and is not configured in CustomSettings.ini. Treat this property as read only. However, you can use this property within CustomSettings.ini, as shown in the following examples, to aid in defining the configuration of the target computer.
+>
+> This property is dynamically set by MDT scripts and is not configured in CustomSettings.ini. Treat this property as read only. However, you can use this property within CustomSettings.ini, as shown in the following examples, to aid in defining the configuration of the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -267,7 +270,8 @@ ms.reviewer: mstewart,aaroncz
  The asset tag number associated with the target computer. The format for asset tag numbers is undefined. Use this property to create a subsection that contains settings targeted to a specific computer.
 
 > [!NOTE]
->  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
+>
+> This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -344,7 +348,7 @@ ms.reviewer: mstewart,aaroncz
 |`[Settings] Priority=Default  [Default] DoCapture=YES BackupShare=\\NYC-AM-FIL-01\Backup$ BackupDir=%OSDComputerName% BackupDrive=C:`|
 
 ### BackupFile
- Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](scripts.md#ZTIBackup.wsf).
+ Specifies the WIM file that will be used by the ZTIBackup.wsf script. For more information about what script uses this property, see [ZTIBackup.wsf](scripts.md#ztibackup.wsf).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -496,7 +500,8 @@ ms.reviewer: mstewart,aaroncz
  The location for storing the BitLocker recovery key and startup key.
 
 > [!NOTE]
->  If this property is configured using the Deployment Wizard, the property must be the drive letter of a removable disk. If the **SkipBitLocker** property is set to **TRUE** so that the **Specify the BitLocker configuration** wizard page is skipped, this property can be set to a UNC path in CustomSettings.ini or in the MDT database (MDT DB).
+>
+> If this property is configured using the Deployment Wizard, the property must be the drive letter of a removable disk. If the **SkipBitLocker** property is set to **TRUE** so that the **Specify the BitLocker configuration** wizard page is skipped, this property can be set to a UNC path in CustomSettings.ini or in the MDT database (MDT DB).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -533,7 +538,8 @@ ms.reviewer: mstewart,aaroncz
  A Boolean value that indicates whether the process creates a recovery key for BitLocker. The key is used for recovering data encrypted on a BitLocker volume. This key is cryptographically equivalent to a startup key. If available, the recovery key decrypts the volume master key (VMK), which, in turn, decrypts the full volume encryption key (FVEK).
 
 > [!NOTE]
->  The recovery key is stored in the location specified in the **BDEKeyLocation** property.
+>
+> The recovery key is stored in the location specified in the **BDEKeyLocation** property.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -575,7 +581,8 @@ ms.reviewer: mstewart,aaroncz
  A setting for displaying colors on the target computer. The property can contain numeric digits and corresponds to the color quality setting. In the example, **32** indicates 32 bits per pixel for color quality. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
->  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hertz (Hz) vertical refresh rate.
+>
+> The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hertz (Hz) vertical refresh rate.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -614,7 +621,8 @@ ms.reviewer: mstewart,aaroncz
  Use the **Architecture** property to see the processor architecture that is currently running.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -635,7 +643,8 @@ ms.reviewer: mstewart,aaroncz
  Controls whether the group membership of local groups on the target computer is captured. This group membership is captured during the State Capture Phase and is restored during the State Restore Phase.
 
 > [!NOTE]
->  This property value must be specified in uppercase so that the deployment scripts can read it properly.
+>
+> This property value must be specified in uppercase so that the deployment scripts can read it properly.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -715,7 +724,8 @@ ms.reviewer: mstewart,aaroncz
  Specifies the name of the configuration file used during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -735,7 +745,8 @@ ms.reviewer: mstewart,aaroncz
  Specifies the package ID for the configuration package used during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -899,10 +910,12 @@ ms.reviewer: mstewart,aaroncz
  Specifies the user account used to connect to the computer running SQL Server \(specified by the **SQLServer** property\) using SQL Server authentication. The **DBPwd** property provides the password for the user account in the **DBID** property.
 
 > [!NOTE]
->  SQL Server authentication is not as secure as Integrated Windows authentication. Integrated Windows authentication is the recommended authentication method. Using the **DBID** and **DBPwd** properties stores the credentials in clear text in the CustomSettings.ini file and therefore is not secure. For more information about using Integrated Windows authentication, see the [SQLShare](#SQLShare) property.
+>
+> SQL Server authentication is not as secure as Integrated Windows authentication. Integrated Windows authentication is the recommended authentication method. Using the **DBID** and **DBPwd** properties stores the credentials in clear text in the CustomSettings.ini file and therefore is not secure. For more information about using Integrated Windows authentication, see the [SQLShare](#sqlshare) property.
 
 > [!NOTE]
->  This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.
+>
+> This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -922,10 +935,12 @@ ms.reviewer: mstewart,aaroncz
  Specifies the password for the user account specified in the **DBID** property. The **DBID** and **DBPwd** properties provide the credentials for performing SQL Server authentication to the computer running SQL Server \(specified by the **SQLServer** property\).
 
 > [!NOTE]
->  SQL Server authentication is not as secure as Integrated Windows authentication. Integrated Windows authentication is the recommended authentication method. Using the **DBID** and **DBPwd** properties stores the credentials in clear text in the CustomSettings.ini file and therefore is not secure. For more information about using Integrated Windows authentication, see the [SQLShare](#SQLShare) property.
+>
+> SQL Server authentication is not as secure as Integrated Windows authentication. Integrated Windows authentication is the recommended authentication method. Using the **DBID** and **DBPwd** properties stores the credentials in clear text in the CustomSettings.ini file and therefore is not secure. For more information about using Integrated Windows authentication, see the [SQLShare](#sqlshare) property.
 
 > [!NOTE]
->  This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.
+>
+> This property is configurable only by manually editing the CustomSettings.ini and BootStrap.ini files.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -953,7 +968,8 @@ cscript.exe LiteTouch.vbs /debug:true
  After the LiteTouch.vbs script is started, the **Debug** property's value is set to **TRUE**, and all other scripts are automatically read the value of this property and provide verbose information.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or in the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or in the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -974,7 +990,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The IP address of the default gateway being used by the target computer. The format of the IP address returned by the property is standard dotted\-decimal notation; for example, 192.168.1.1. Use this property to create a subsection that contains settings targeted to a group of computers based on the IP subnets on which they are located.
 
 > [!NOTE]
->  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
+>
+> This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -994,7 +1011,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The value used by the scripts to access files and run programs in the deployment share that the Deployment Workbench creates. The property returns the drive letter mapped to the **DeployRoot** property. ZTIApplications.wsf uses the **DeployDrive** property when running any command\-line programs with a .cmd or .bat extension.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1014,7 +1032,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The method being used for the deployment (UNC, media, or Configuration Manager).
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.
@@ -1157,7 +1176,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The description of the DHCP scope.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1196,7 +1216,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the ending IP address for the DHCP scope exclusion. IP addresses that are excluded from the scope are not offered by the DHCP server to clients obtaining leases from this scope.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1216,7 +1237,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the starting IP address for the DHCP scope exclusion. IP addresses that are excluded from the scope are not offered by the DHCP server to clients obtaining leases from this scope.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1274,7 +1296,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the domain name that the DHCP client should use when resolving unqualified domain names with the DNS.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1294,7 +1317,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies a list of IP addresses for DNS name servers available to the client. When more than one server is assigned, the client interprets and uses the addresses in the specified order.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1314,7 +1338,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The duration that the DHCP lease is valid for the client.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1334,7 +1359,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the client node type for NetBT clients.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1357,7 +1383,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the IP address used for PXE client bootstrap code.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1377,7 +1404,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies a list of IP addresses for routers on the client subnet. When more than one router is assigned, the client interprets and uses the addresses in the specified order. This option is normally used to assign a default gateway to DHCP clients on a subnet.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1397,7 +1425,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the IP addresses to be used for NBNSes on the network.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1417,7 +1446,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The starting IP address for the range of IP addresses that are to be included in the scope.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1437,7 +1467,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the subnet mask of the client subnet.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DHCP configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1583,7 +1614,8 @@ cscript.exe LiteTouch.vbs /debug:true
  This property controls a user's ability to start Task Manager by pressing CTRL+ALT+DEL. After the user starts Task Manager, they could interrupt the LTI task sequence while running in the new operating system on the target computer. This property is used in conjunction with the **HideShell** property and is only valid when the **HideShell** property is set to **YES**.
 
 > [!NOTE]
->  This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.
+>
+> This property and the **HideShell** property must both be set to **YES** to prevent the user pressing CTRL+ALT+DEL and interrupting the LTI task sequence.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1775,7 +1807,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the directory partition on which to store the zone when configuring secondary or stub zones.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1797,7 +1830,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the name of the file that will store the zone information.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1817,7 +1851,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma delimited list of IP addresses of the main servers to be used by the DNS server when updating the specified secondary zones. This property must be specified when configuring a secondary or stub DNS zone.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1837,7 +1872,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the name of the zone.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1857,7 +1893,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Configures the Primary DNS server to "scavenge" stale records—that is, to search the database for records that have aged and delete them.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1878,7 +1915,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the type of zone to create.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1902,7 +1940,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Configures the Primary DNS server to perform dynamic updates.
 
 > [!NOTE]
->  The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
+>
+> The *x* in this properties name is a placeholder for a zero-based array that contains DNS configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1947,7 +1986,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The user account credentials used to join the target computer to the domain specified in **JoinDomain**. Specify as *UserName*.
 
 > [!NOTE]
->  For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
+>
+> For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1967,7 +2007,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The domain in which the user's credentials specified in **DomainAdmin** reside.
 
 > [!NOTE]
->  For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
+>
+> For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -1987,7 +2028,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The password used for the domain Administrator account specified in the **DomainAdmin** property to join the computer to the domain.
 
 > [!NOTE]
->  For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
+>
+> For ZTI, the credentials that Configuration Manager specifies typically are used. If the **DomainAdmin** property is specified, the credentials in the **DomainAdmin** property override the credentials that Configuration Manager specifies.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2090,7 +2132,8 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] OSInstall=Y DoNotCreateExtraPartition=YES`|
 
 > [!NOTE]
->  Do not use this property in conjunction with properties to configure BitLocker settings.
+>
+> Do not use this property in conjunction with properties to configure BitLocker settings.
 
 ### DoNotFormatAndPartition
  This property is used to configure whether MDT performs any of the partitioning and formatting task sequence steps in task sequences created using the MDT task sequence templates.
@@ -2135,7 +2178,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Make, Default  [Default] DriverGroup001=Shared Drivers :: [Mfgr01] DriverGroup001=Mfgr01 Video Drivers DriverGroup002=Mfgr01 Network Drivers  [Mfgr02] DriverGroup001=Mfgr02 Drivers`|
 
 ### DriverInjectionMode
- This property is used to control the device drivers that are injected by the [Inject Drivers](task-sequence-steps.md#InjectDrivers) task sequence step.
+ This property is used to control the device drivers that are injected by the [Inject Drivers](task-sequence-steps.md#injectdrivers) task sequence step.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2187,7 +2230,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] DriverSelectionProfile=MonitorDrivers`|
 
 ### EventService
- The **EventService** property specifies the URL where the MDT monitoring service is running. By default, the service uses TCP port 9800 to communicate. The MDT monitoring service collects deployment information on the deployment process that can be viewed in the Deployment Workbench and using the [Get-MDTMonitorData](mdt-windows-powershell-cmdlets.md#Get-MDTMonitorData) cmdlet.
+ The **EventService** property specifies the URL where the MDT monitoring service is running. By default, the service uses TCP port 9800 to communicate. The MDT monitoring service collects deployment information on the deployment process that can be viewed in the Deployment Workbench and using the [Get-MDTMonitorData](mdt-windows-powershell-cmdlets.md#get-mdtmonitordata) cmdlet.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2291,7 +2334,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The full name of the user of the target computer provided during the installation of the operating system. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
->  This value is different from the user credentials created after the operating system is deployed. The **FullName** property is provided as information to systems administrators about the user running applications on the target computer.
+>
+> This value is different from the user credentials created after the operating system is deployed. The **FullName** property is provided as information to systems administrators about the user running applications on the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2352,7 +2396,8 @@ cscript.exe LiteTouch.vbs /debug:true
  This property controls the display of Windows Explorer while the LTI task sequence is running in the new operating system on the target computer. This property can be used in conjunction with the **DisableTaskMgr** property.
 
 > [!NOTE]
->  This property can be used with the **DisableTaskMgr** property to help prevent users from interrupting the LTI task sequence. For more information, see the [DisableTaskMgr](#DisableTaskMgr) property.
+>
+> This property can be used with the **DisableTaskMgr** property to help prevent users from interrupting the LTI task sequence. For more information, see the [DisableTaskMgr](#disabletaskmgr) property.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2390,7 +2435,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The IP host name of the target computer (the name assigned to the target computer).
 
 > [!NOTE]
->  This is the computer name of the target computer, not the NetBIOS computer name of the target computer. The NetBIOS computer name can be shorter than the computer name. Also, this property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
+>
+> This is the computer name of the target computer, not the NetBIOS computer name of the target computer. The NetBIOS computer name can be shorter than the computer name. Also, this property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2410,7 +2456,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The package ID used for the operating system to install during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2449,7 +2496,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The package ID used for the operating system to install during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2486,7 +2534,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The IP address of the target computer. The format of the IP address returned by the property is standard dotted-decimal notation; for example, 192.168.1.1. Use this property to create a subsection that contains settings targeted to a specific target computer based on the IP address.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2506,10 +2555,12 @@ cscript.exe LiteTouch.vbs /debug:true
  Indicator of whether the computer is a desktop, because the **Win32\_SystemEnclosure ChassisType** property value is **3**, **4**, **5**, **6**, **7**, **15**, **16**, **35**, or **36**.
 
 > [!NOTE]
->  Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.
+>
+> Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2544,10 +2595,12 @@ cscript.exe LiteTouch.vbs /debug:true
 -   **VMPlatform**
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 > [!NOTE]
->  The IsVM property should be used to determine whether the target computer is a virtual or physical machine.
+>
+> The IsVM property should be used to determine whether the target computer is a virtual or physical machine.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2568,10 +2621,12 @@ cscript.exe LiteTouch.vbs /debug:true
  Indicator of whether the computer is a portable computer, because the **Win32\_SystemEnclosure ChassisType** property value is **8**, **9**, **10**, **11**, **12**, **14**, **18**, **21**, **30**, **31**, or **32**.
 
 > [!NOTE]
->  Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.
+>
+> Only one of the following properties will be true at a time: **IsDesktop**, **IsLaptop**, **IsServer**.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2610,7 +2665,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Indicator of whether the current operating system running on the target computer is the Server Core installation option of the Windows Server operating system.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2631,7 +2687,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Indicator of whether the current operating system running on the target computer is a server operating system.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2652,7 +2709,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies whether the target computer is currently running with Unified Extensible Firmware Interface \(UEFI\). The UEFI is a specification that defines a software interface between an operating system and platform firmware. UEFI is a more secure replacement for the older BIOS firmware interface present in some personal computers. For more information on UEFI, go to [https:\/\/uefi.org](https://uefi.org).
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2687,7 +2745,8 @@ cscript.exe LiteTouch.vbs /debug:true
 -   **VMPlatform**
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2744,7 +2803,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Exclude this setting in USMT when backing up and restoring user state information. Otherwise, the settings in the user state information will override the values specified in the **KeyboardLocale** property.
 
 > [!NOTE]
->  For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
+>
+> For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2768,7 +2828,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The name of the keyboard locale to be used while in Windows PE only.
 
 > [!NOTE]
->  For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
+>
+> For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2811,7 +2872,8 @@ cscript.exe LiteTouch.vbs /debug:true
  If the Loadstate process finishes successfully, the user state information is deleted. In the event of a Loadstate failure (or non-zero return code), the local state store is moved to %WINDIR%\StateStore to prevent deletion and to ensure that no user state information is lost.
 
 > [!NOTE]
->  Do not add any of the following command-line arguments when configuring this property: **/hardlink**, **/nocompress**, **/decrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.
+>
+> Do not add any of the following command-line arguments when configuring this property: **/hardlink**, **/nocompress**, **/decrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2888,10 +2950,12 @@ cscript.exe LiteTouch.vbs /debug:true
  The AD DS OU in the target domain where the computer account for the target computer is created.
 
 > [!NOTE]
->  The OU specified in this property must exist before deploying the target operating system.
+>
+> The OU specified in this property must exist before deploying the target operating system.
 
 > [!NOTE]
->  If a computer object already exists in AD DS, specifying **MachineObjectOU** will not cause the computer object to be moved to the specified OU.
+>
+> If a computer object already exists in AD DS, specifying **MachineObjectOU** will not cause the computer object to be moved to the specified OU.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2911,7 +2975,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The manufacturer of the target computer. The format for **Make** is undefined. Use this property to create a subsection that contains settings targeted to a specific computer manufacturer \(most commonly in conjunction with the **Model** and **Product** properties\).
 
 > [!NOTE]
->  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
+>
+> This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2948,7 +3013,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The amount of memory installed on the target computer in megabytes. For example, the value **2038** indicates 2,038 MB \(or 2 GB\) of memory is installed on the target computer.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -2968,7 +3034,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The model of the target computer. The format for **Model** is undefined. Use this property to create a subsection that contains settings targeted to a specific computer model number for a specific computer manufacturer \(most commonly in conjunction with the **Make** and **Product** properties\).
 
 > [!NOTE]
->  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
+>
+> This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3078,7 +3145,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The processor architecture type for the target operating system. This property is referenced during OEM deployments. Valid values are **x86** and **x64**.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3099,7 +3167,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The build number of the currently running operating system.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3120,7 +3189,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The version number of the currently running operating system.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3139,10 +3209,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDAdapterxDescription
  Specifies the name of the network connection as it appears in the Control Panel Network Connections item. The name can be between 0 and 255 characters in length.
 
- This property is for LTI only. For the equivalent property for ZTI, see [OSDAdapterxName](#OSDAdapterxName).
+ This property is for LTI only. For the equivalent property for ZTI, see [OSDAdapterxName](#osdadapterxname).
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0Description** or **OSDAdapter1Description**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0Description** or **OSDAdapter1Description**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3159,10 +3230,11 @@ cscript.exe LiteTouch.vbs /debug:true
 |None|
 
 ### OSDAdapterxDNSDomain
- Specifies the DNS domain name (DNS suffix) that will be assigned to the network connection. This property is for ZTI only. For LTI, see the [OSDAdapterxDNSSuffix](#OSDAdapterxDNSSuffix) property.
+ Specifies the DNS domain name (DNS suffix) that will be assigned to the network connection. This property is for ZTI only. For LTI, see the [OSDAdapterxDNSSuffix](#osdadapterxdnssuffix) property.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSDomain** or **OSDAdapter1DNSDomain**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSDomain** or **OSDAdapter1DNSDomain**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3182,7 +3254,8 @@ cscript.exe LiteTouch.vbs /debug:true
  This is a comma-delimited list of DNS server IP addresses that will be assigned to the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSServerList** or **OSDAdapter1DNSServerList**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSServerList** or **OSDAdapter1DNSServerList**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3199,10 +3272,11 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] OSDAdapter0DNSServerList=192.168.0.254,192.168.100.254`|
 
 ### OSDAdapterxDNSSuffix
- A DNS suffix that will be assigned to the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxDNSDomain](#OSDAdapterxDNSDomain) property.
+ A DNS suffix that will be assigned to the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxDNSDomain](#osdadapterxdnsdomain) property.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSSuffix** or **OSDAdapter1DNSSuffix**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSSuffix** or **OSDAdapter1DNSSuffix**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3222,7 +3296,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies whether the network connection will be configured via DHCP.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDHCP** or **OSDAdapter1EnableDHCP**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDHCP** or **OSDAdapter1EnableDHCP**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3243,7 +3318,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies whether DNS registration is enabled on the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDNSRegistration** or **OSDAdapter1EnableDNSRegistration**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDNSRegistration** or **OSDAdapter1EnableDNSRegistration**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3264,7 +3340,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies whether full DNS registration is enabled on the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableFullDNSRegistration** or **OSDAdapter1EnableFullDNSRegistration**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableFullDNSRegistration** or **OSDAdapter1EnableFullDNSRegistration**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3285,7 +3362,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies whether LMHOSTS lookup is enabled on the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableLMHosts** or **OSDAdapter1EnableLMHosts**.
+>
+> The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableLMHosts** or **OSDAdapter1EnableLMHosts**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3323,10 +3401,11 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableIPProtocolFiltering =TRUE`|
 
 ### OSDAdapterxEnableTCPFiltering
- Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for ZTI only. For LTI, see the [OSDAdapterxEnableTCPIPFiltering](#OSDAdapterxEnableTCPIPFiltering) property.
+ Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for ZTI only. For LTI, see the [OSDAdapterxEnableTCPIPFiltering](#osdadapterxenabletcpipfiltering) property.
 
 > [!NOTE]
->  The*x*in this property's name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPFiltering** or **OSDAdapter1EnableTFiltering**.
+>
+> The*x*in this property's name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPFiltering** or **OSDAdapter1EnableTFiltering**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3344,10 +3423,11 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] OSDAdapter0EnableTCPFiltering=TRUE`|
 
 ### OSDAdapterxEnableTCPIPFiltering
- Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxEnableTCPFiltering](#OSDAdapterxEnableTCPFiltering) property.
+ Specifies whether TCP\/IP filtering should be enabled on the network connection. This property is for LTI only. For ZTI, see the [OSDAdapterxEnableTCPFiltering](#osdadapterxEnableTCPFiltering) property.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPIPFiltering** or **OSDAdapter1EnableTCPIPFiltering**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPIPFiltering** or **OSDAdapter1EnableTCPIPFiltering**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3368,7 +3448,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies whether WINS will be enabled on the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableWINS** or **OSDAdapter1EnableWINS**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableWINS** or **OSDAdapter1EnableWINS**.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -3392,7 +3473,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma\-delimited list of Gateway Cost Metrics specified as either integers or the string "Automatic" \(if empty, uses "Automatic"\) that will be configured on the connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0GatewayCostMetric** or **OSDAdapter1GatewayCostMetric**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0GatewayCostMetric** or **OSDAdapter1GatewayCostMetric**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3412,7 +3494,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma\-delimited list of gateways to be assigned to the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Gateways** or **OSDAdapter1Gateways**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Gateways** or **OSDAdapter1Gateways**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3432,7 +3515,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma\-delimited list of IP addresses to be assigned to the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPAddressList** or **OSDAdapter1IPAddressList**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPAddressList** or **OSDAdapter1IPAddressList**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3452,7 +3536,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma\-delimited list of IP protocol filters to be assigned to the network connection. This property can be configured using the CustomSettings.ini file or the MDT DB but not the Deployment Workbench. If using Configuration Manager it is also configurable using an **Apply Network Settings** task sequence step.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPProtocolFilterList** or **OSDAdapter1IPProtocolFilterList**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPProtocolFilterList** or **OSDAdapter1IPProtocolFilterList**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3472,7 +3557,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Assign the specified configuration settings to the network interface card that matches the specified MAC address.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0MacAddress** or **OSDAdapter1MacAddress**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0MacAddress** or **OSDAdapter1MacAddress**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3489,10 +3575,11 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] OSDAdapter0MacAddress=00:0C:29:67:A3:6B`|
 
 ### OSDAdapterxName
- Assign the specified configuration settings to the network adapter that matches the specified name. This property is for ZTI only. For the equivalent property for LTI, see [OSDAdapterxDescription](#OSDAdapterxDescription).
+ Assign the specified configuration settings to the network adapter that matches the specified name. This property is for ZTI only. For the equivalent property for LTI, see [OSDAdapterxDescription](#osdadapterxdescription).
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Name** or **OSDAdapter1Name**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Name** or **OSDAdapter1Name**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3512,7 +3599,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma\-delimited list of IP subnet masks to be assigned to the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0SubnetMask** or **OSDAdapter1SubnetMask**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0SubnetMask** or **OSDAdapter1SubnetMask**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3532,7 +3620,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma\-delimited list of TCP filter ports to be assigned to the network connection. This property can be configured using the CustomSettings.ini file or the MDT DB but not the Deployment Workbench. If using Configuration Manager it is also configurable using an **Apply Network Settings** task sequence step.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPFilterPortList** or **OSDAdapter1TCPFilterPortList**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPFilterPortList** or **OSDAdapter1TCPFilterPortList**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3552,7 +3641,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the TCP\/IP NetBIOS options to be assigned to the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPIPNetBiosOptions** or **OSDAdapter1TCPIPNetBiosOptions**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPIPNetBiosOptions** or **OSDAdapter1TCPIPNetBiosOptions**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3573,7 +3663,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A comma\-delimited list of User Datagram Protocol \(UDP\) filter ports to be assigned to the network connection. This property can be configured using the CustomSettings.ini file and the MDT DB but not the Deployment Workbench. If using Configuration Manager it is also configurable using an **Apply Network Settings** task sequence step.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0UDPFilterPortList** or **OSDAdapter1UDPFilterPortList**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0UDPFilterPortList** or **OSDAdapter1UDPFilterPortList**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3593,7 +3684,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A two\-element, comma\-delimited list of WINS server IP addresses to be assigned to the network connection.
 
 > [!NOTE]
->  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0WINSServerList** or **OSDAdapter1WINSServerList**.
+>
+> The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0WINSServerList** or **OSDAdapter1WINSServerList**.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3630,7 +3722,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the path to the answer file to be used during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3650,7 +3743,8 @@ cscript.exe LiteTouch.vbs /debug:true
  A Boolean value that indicates whether the process creates a recovery key for BitLocker. The key is used for recovering data encrypted on a BitLocker volume. This key is cryptographically equivalent to a startup key. If available, the recovery key decrypts the VMK, which, in turn, decrypts the FVEK.
 
 > [!NOTE]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3788,7 +3882,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The new computer name to assign to the target computer.
 
 > [!NOTE]
->  This property can also be set within a task sequence using a customized **Set Task Sequence Variable** task sequence step.
+>
+> This property can also be set within a task sequence using a customized **Set Task Sequence Variable** task sequence step.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3808,7 +3903,8 @@ cscript.exe LiteTouch.vbs /debug:true
  This property is used to pass a value to the **align** parameter of the **create partition primary** command in the **DiskPart** command. The **align** parameter is typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance when the logical units \(LUs\) are not cylinder aligned. The **align** parameter aligns a primary partition that is not cylinder aligned at the beginning of a disk and rounds the offset to the closest alignment boundary. For more information on the **align** parameter, see [Create partition primary](https://technet.microsoft.com/library/cc771243\(WS.10\).aspx).
 
 > [!NOTE]
->  This property can be used in conjunction with the **OSDDiskOffset** property to set the **offset** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskOffset](#OSDDiskOffset) property.
+>
+> This property can be used in conjunction with the **OSDDiskOffset** property to set the **offset** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskOffset](#osddiskoffset) property.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3844,7 +3940,7 @@ cscript.exe LiteTouch.vbs /debug:true
 ### OSDDiskOffset
  This property is used to pass a value to the **offset** parameter of the **create partition primary** command in the **DiskPart** command. For more information on the **offset** parameter, see [Create partition primary](https://technet.microsoft.com/library/cc771243\(WS.10\).aspx).
 
- This property can be used in conjunction with the **OSDDiskAlign** property to set the **align** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskAlign](#OSDDiskAlign) property.
+ This property can be used in conjunction with the **OSDDiskAlign** property to set the **align** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskAlign](#osddiskalign) property.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3882,7 +3978,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the name of the installation account that will be used during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3902,7 +3999,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the index of the image in the .wim file. This property is referenced during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3922,7 +4020,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the package ID for the image to install during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3942,7 +4041,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the index of the image in the WIM file. This property is referenced during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3962,7 +4062,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the installation type used for OEM deployments. The default is **Sysprep**.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -3982,7 +4083,8 @@ cscript.exe LiteTouch.vbs /debug:true
  Specifies the drive used to install the operating system during OEM deployments. The default value is **C:**.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4019,7 +4121,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The partition at the specified index should be set bootable. The default first partition is set bootable.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4040,7 +4143,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The type of file system for the partition at the specified index. Valid values are **NTFS** or **FAT32**.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -4063,7 +4167,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The partition at the specified index should be quick formatted. The default is **TRUE**.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -4087,7 +4192,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The size of the partition at the specified index.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4107,7 +4213,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The units of measure used when specifying the size of the partition. Valid values are **MB**, **GB**, or **%**. The default value is **MB**.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4127,7 +4234,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The type of partition to be created at the specified index.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4149,7 +4257,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The property that receives the drive letter that is assigned to the partition being managed.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4169,7 +4278,8 @@ cscript.exe LiteTouch.vbs /debug:true
  The volume name that will be assigned to the partition at the specified index.
 
 > [!NOTE]
->  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
+>
+> The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4189,7 +4299,8 @@ cscript.exe LiteTouch.vbs /debug:true
  This property is used to determine whether the **Apply OS** task sequence step should preserve the drive letter in the operating system image file (.wim file) being deployed to the target computer.
 
 > [!NOTE]
->  This property should only be set in a task sequence step, not in the CustomSettings.ini file or in the MDT DB.
+>
+> This property should only be set in a task sequence step, not in the CustomSettings.ini file or in the MDT DB.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4210,11 +4321,12 @@ cscript.exe LiteTouch.vbs /debug:true
  LTI and ZTI use this property to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path.
 
 > [!NOTE]
->  The **OSDStateStorePath** property takes precedence over the [StatePath](#StatePath) or [UserDataLocation](#UserDataLocation) property when those properties are also specified.
+>
+> The **OSDStateStorePath** property takes precedence over the [StatePath](#statepath) or [UserDataLocation](#userdatalocation) property when those properties are also specified.
 
- In a Replace Computer deployment scenario in ZTI, the [Restore User State](task-sequence-steps.md#RestoreUserState) task sequence step is skipped if the **OSDStateStorePath** property is set to a valid local or UNC path. The workaround is to set the [USMTLocal](#USMTLocal) property to TRUE. Doing so forces ZTI UserState.wsf to recognize the path in the [OSDStateStorePath](#OSDStateStorePath) property. This is caused by the **Request State Store** task sequence step being skipped and the previous value in the **OSDStateStorePath** property being retained.
+ In a Replace Computer deployment scenario in ZTI, the [Restore User State](task-sequence-steps.md#restoreuserstate) task sequence step is skipped if the **OSDStateStorePath** property is set to a valid local or UNC path. The workaround is to set the [USMTLocal](#usmtlocal) property to TRUE. Doing so forces ZTI UserState.wsf to recognize the path in the [OSDStateStorePath](#osdstatestorepath) property. This is caused by the **Request State Store** task sequence step being skipped and the previous value in the **OSDStateStorePath** property being retained.
 
- In a Replace Computer deployment scenario in ZTI, where user state migration data and the entire computer are being backed up, the Backup.wim file is stored in the folder specified in the **OSDStateStorePath** property. This may be caused by specifying the wrong value for the [ComputerBackupLocation](#ComputerBackupLocation) property.
+ In a Replace Computer deployment scenario in ZTI, where user state migration data and the entire computer are being backed up, the Backup.wim file is stored in the folder specified in the **OSDStateStorePath** property. This may be caused by specifying the wrong value for the [ComputerBackupLocation](#computerbackuplocation) property.
 
  For example, the following CustomSettings.ini file will cause the Backup.wim file to be stored in the same folder specified in the **OSDStateStorePath** property:
 
@@ -4245,7 +4357,8 @@ BackupDir=Client01
  Specifies the drive where the operating system will be installed during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read-only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read-only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4265,7 +4378,8 @@ BackupDir=Client01
  Specifies the install path where the operating system will be installed during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4285,7 +4399,8 @@ BackupDir=Client01
  A comma-delimited list of server feature IDs that will be installed on the target computer.
 
 > [!NOTE]
->  Not all features listed in the ServerManager.xml file are compatible with all server operating systems.
+>
+> Not all features listed in the ServerManager.xml file are compatible with all server operating systems.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -4329,7 +4444,8 @@ BackupDir=Client01
  A comma-delimited list of server role IDs that will be installed on the target computer.
 
 > [!NOTE]
->  Not all roles are compatible with all server operating systems.
+>
+> Not all roles are compatible with all server operating systems.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -4354,7 +4470,8 @@ BackupDir=Client01
  A comma-delimited list of server role service IDs that will be installed on the target computer.
 
 > [!NOTE]
->  Not all server role service IDs are compatible with all server operating systems.
+>
+> Not all server role service IDs are compatible with all server operating systems.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4374,7 +4491,8 @@ BackupDir=Client01
  The edition of the currently running operating system. The operating system edition is determined by using the **OperatingSystemSKU** property of the **Win32_OperatingSystem WMI** class. For a list of the editions the **OperatingSystemSKU** property returns, see the section, "OperatingSystemSKU," at [Win32_OperatingSystem class](https://msdn.microsoft.com/library/windows/desktop/aa394239\(v=vs.85\).aspx).
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4394,7 +4512,8 @@ BackupDir=Client01
  The version of the currently running operating system. This property should only be used to detect if the currently running operating system is Windows PE. Use the [OSVersionNumber](#OSVersionNumber) property to detect other operating systems.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4417,7 +4536,8 @@ BackupDir=Client01
  The operating system major and minor version number. This property is referenced during OEM deployments.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4456,10 +4576,12 @@ BackupDir=Client01
  The text values in the list can be any non-blank value. The **PackageGroup** property value has a numeric suffix (for example, **PackageGroup001** or **PackageGroup002**). After it is defined, a package group is associated with a computer. A computer can be associated with more than one package group.
 
 > [!NOTE]
->  Operating system packages are created on the OS Packages node in the Deployment Workbench.
+>
+> Operating system packages are created on the OS Packages node in the Deployment Workbench.
 
 > [!NOTE]
->  The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.
+>
+> The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4479,7 +4601,8 @@ BackupDir=Client01
  The list of Configuration Manager packages to be deployed to the target computer. The **Packages** property has a numeric suffix (for example, Packages001 or Packages002).
 
 > [!NOTE]
->  The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.
+>
+> The **PackageGroup** property can be specified in the format *PackageGroup1=Updates* or *PackageGroup001=Updates*.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4588,7 +4711,8 @@ BackupDir=Client01
  The current phase of the deployment process. The Task Sequencer uses these phases to determine which tasks must be completed.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -4685,7 +4809,8 @@ BackupDir=Client01
  The speed of the processor installed on the target computer in MHz. For example, the value **1995** indicates the processor on the target computer is running at 1,995 MHz or 2 gigahertz.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4707,7 +4832,8 @@ BackupDir=Client01
  The format for **Product** is undefined. Use this property to create a subsection that contains settings targeted to a specific product name for a specific computer model number for a specific computer manufacturer (most commonly in conjunction with the **Make** and **Model** properties).
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4813,7 +4939,8 @@ BackupDir=Client01
  The drive letter mapped to the **ResourceRoot** property for the ZTIDrivers.wsf and ZTIPatches.wsf scripts to use to install drivers and patches to the target computer.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4833,7 +4960,8 @@ BackupDir=Client01
  The value of this property is used by the ZTIDrivers.wsf and ZTIPatches.wsf scripts to install drivers and patches to the target computer.
 
 > [!NOTE]
->  For LTI, the scripts automatically set the **ResourceRoot** property to be the same as the **DeployRoot** property. For ZTI, the values in the **DeployRoot** and **ResourceRoot** properties can be unique.
+>
+> For LTI, the scripts automatically set the **ResourceRoot** property to be the same as the **DeployRoot** property. For ZTI, the values in the **DeployRoot** and **ResourceRoot** properties can be unique.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4893,10 +5021,12 @@ BackupDir=Client01
  Arguments passed to the **USMT Scanstate** process. The scripts call Scanstate.exe, and then insert the appropriate logging, progress, and state store parameters. If this value is not included in the settings file, the user state backup process is skipped.
 
 > [!NOTE]
->  Use the **USMTMigFiles** property to specify the .xml files to be used by Scanstate.exe instead of using the /I parameter in the **ScanStateArgs** property. This prevents the ZTIUserState.wsf script from potentially duplicating the same list of .xml files.
+>
+> Use the **USMTMigFiles** property to specify the .xml files to be used by Scanstate.exe instead of using the /I parameter in the **ScanStateArgs** property. This prevents the ZTIUserState.wsf script from potentially duplicating the same list of .xml files.
 
 > [!NOTE]
->  Do not add any of the following command line arguments when configuring this property: **/hardlink**, **/nocompress**, **/encrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.
+>
+> Do not add any of the following command line arguments when configuring this property: **/hardlink**, **/nocompress**, **/encrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4916,7 +5046,8 @@ BackupDir=Client01
  The serial number of the target computer. The format for serial numbers is undefined. Use this property to create a subsection that contains settings targeted to a specific computer.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -4953,7 +5084,8 @@ BackupDir=Client01
  Indicates whether the **Local Administrators** wizard page is skipped.
 
 > [!NOTE]
->  This default value for this property is **YES**, which means that the **Local Administrators** wizard page will be skipped by default. To display this wizard page, you must specifically set the value of this property to **NO** in CustomSettings.ini or in the MDT DB.
+>
+> This default value for this property is **YES**, which means that the **Local Administrators** wizard page will be skipped by default. To display this wizard page, you must specifically set the value of this property to **NO** in CustomSettings.ini or in the MDT DB.
 
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
 
@@ -5027,7 +5159,8 @@ BackupDir=Client01
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
 
 > [!NOTE]
->  For this property to function properly it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
+>
+> For this property to function properly it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -5190,7 +5323,8 @@ BackupDir=Client01
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
 
 > [!NOTE]
->  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
+>
+> This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5381,7 +5515,8 @@ PackageGroup001=TopFolder\SecondFolder
  For other properties that must be configured when this property is set to **YES**, see [Providing Properties for Skipped Deployment Wizard Pages](#ProvidingPropertiesforSkippedDeploymentWizardPages).
 
 > [!NOTE]
->  Specify the **SkipBuild** property when using the Deployment Workbench to configure the Deployment Wizard to skip the **Select a task sequence to execute on this computer** wizard page.
+>
+> Specify the **SkipBuild** property when using the Deployment Workbench to configure the Deployment Wizard to skip the **Select a task sequence to execute on this computer** wizard page.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -5595,7 +5730,8 @@ PackageGroup001=TopFolder\SecondFolder
  The name of a shared folder on the computer running SQL Server (specified by the **SQLServer** property). The credentials used for authentication are provided by the **UserDomain**, **UserID**, and **UserPassword** properties (for LTI and ZTI) or by the Configuration Manager Advanced Client account credentials (ZTI only).
 
 > [!NOTE]
->  This property must be specified to perform Integrated Windows authentication. This is the recommended authentication method, rather than using the **DBID** and **DBPwd** properties (which support the SQL Server authentication method).
+>
+> This property must be specified to perform Integrated Windows authentication. This is the recommended authentication method, rather than using the **DBID** and **DBPwd** properties (which support the SQL Server authentication method).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5612,10 +5748,11 @@ PackageGroup001=TopFolder\SecondFolder
 |`[Settings] Priority=Computers, Default Properties=MyCustomProperty  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac  [Computers] SQLServer=NYC-SQL-01 SQLShare=SQL$ Database=MDTDB Instance=MDT2010 Table=Computers Parameters=SerialNumber, AssetTag ParameterCondition=OR`|
 
 ### StatePath
- This property is used to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path. The [OSDStateStorePath](#OSDStateStorePath) property takes precedence over the **StatePath** or [UserDataLocation](#UserDataLocation) property when those properties are also specified.
+ This property is used to set the path where the user state migration data will be stored, which can be a UNC path, a local path, or a relative path. The [OSDStateStorePath](#osdstatestorePath) property takes precedence over the **StatePath** or [UserDataLocation](#UserDataLocation) property when those properties are also specified.
 
 > [!NOTE]
->  This property is provided for backward compatibility with previous versions of MDT. Use the [OSDStateStorePath](#UserDataLocation) property instead.
+>
+> This property is provided for backward compatibility with previous versions of MDT. Use the [OSDStateStorePath](#UserDataLocation) property instead.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5674,7 +5811,8 @@ PackageGroup001=TopFolder\SecondFolder
 - **VMPlatform**
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5709,7 +5847,8 @@ PackageGroup001=TopFolder\SecondFolder
 -   **VMPlatform**
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5744,7 +5883,8 @@ PackageGroup001=TopFolder\SecondFolder
 -   **VMPlatform**
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5779,7 +5919,8 @@ PackageGroup001=TopFolder\SecondFolder
 -   **VMPlatform**
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5851,7 +5992,8 @@ PackageGroup001=TopFolder\SecondFolder
  Specifies the name of the task sequence being run.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5871,7 +6013,8 @@ PackageGroup001=TopFolder\SecondFolder
  Specifies the version of the task sequence being run.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5908,7 +6051,8 @@ PackageGroup001=TopFolder\SecondFolder
  Specifies the UNC path to the Tools\\*proc_arch* folder (where *proc_arch* is the processor architecture of the currently running operating system and can have a value of **x86** or **x64**), which is immediately beneath the root of the folder structure specified in the **DeployRoot** property. The Tools\\*proc_arch* folder contains utilities that MDT uses during the deployment process.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -5928,7 +6072,8 @@ PackageGroup001=TopFolder\SecondFolder
  The TPM password (also known as the *TPM administration password*) for the owner of the target computer. The password can be saved to a file or stored in AD DS.
 
 > [!NOTE]
->  If the TPM ownership is already set or TPM ownership is not allowed, then the **TPMOwnerPassword** property is ignored. If the TPM password is needed and the **TPMOwnerPassword** property is not provided, the TPM password is set to the local Administrator password.
+>
+> If the TPM ownership is already set or TPM ownership is not allowed, then the **TPMOwnerPassword** property is ignored. If the TPM password is needed and the **TPMOwnerPassword** property is not provided, the TPM password is set to the local Administrator password.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6040,7 +6185,8 @@ PackageGroup001=TopFolder\SecondFolder
  The domain in which a user's credentials (specified in the **UserID** property) reside.
 
 > [!NOTE]
->  For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
+>
+> For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6060,7 +6206,8 @@ PackageGroup001=TopFolder\SecondFolder
  The user credentials for accessing network resources.
 
 > [!NOTE]
->  For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
+>
+> For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6101,7 +6248,8 @@ PackageGroup001=TopFolder\SecondFolder
  The password for user credentials specified in the **UserID** property.
 
 > [!NOTE]
->  For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
+>
+> For a completely automated LTI deployment, provide this property in both CustomSettings.ini and BootStrap.ini. However, note that storing the user credentials in these files stores the credentials in clear text and therefore is not secure.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6135,10 +6283,11 @@ PackageGroup001=TopFolder\SecondFolder
 |`[Settings] Priority=Default  [Default] OSInstall=YES ScanStateArgs=/v:5 /o /c LoadStateArgs=/v:5 /c /lac DeployRoot=\\NYC-AM-FIL-01\Distribution$ ResourceRoot=\\NYC-AM-FIL-01\Resource$ UDShare=\\NYC-AM-FIL-01\MigData$ UDDir=%OSDComputerName% SLShare=\\NYC-AM-FIL-01\Logs$ USMTMigFiles1=MigApp.xml USMTMigFiles2=MigUser.xml USMTMigFiles3=MigSys.xml USMTMigFiles4=MigCustom.xml USMTConfigFile=USMTConfig.xml UserDataLocation=NONE`|
 
 ### USMTLocal
- This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](scripts.md#ZTIUserState.wsf) and [ZTIBackup.wsf](scripts.md#ZTIBackup.wsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#OSDStateStorePath) property.
+ This property specifies whether the USMT user state information is stored locally on the target computer. This property is primarily used by the [ZTIUserState.wsf](scripts.md#ztiuserstate.wsf) and [ZTIBackup.wsf](scripts.md#ztibackup.wsf) scripts to indicate that the **Request State Store** and **Release State Store** task sequence steps for Configuration Manager deployments are skipped. For more information, see the [OSDStateStorePath](#osdstatestorePath) property.
 
 > [!NOTE]
->  This property should only be used in the circumstance described in the [OSDStateStorePath](#OSDStateStorePath) property).
+>
+> This property should only be used in the circumstance described in the [OSDStateStorePath](#osdstatestorePath) property).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6159,10 +6308,12 @@ PackageGroup001=TopFolder\SecondFolder
  A list of files in XML format that are used by USMT (Scanstate.exe) to identify user state migration information to be saved. When this property is not specified, the ZTIUserState.wsf script uses MigApp.xml, MigUser.xml, and MigSys.xml. Otherwise, ZTIUserState.wsf uses the files explicitly referenced in this property. The **USMTMigFiles** property has a numeric suffix (for example, **USMTMigFiles001** or **USMTMigFiles002**).
 
 > [!NOTE]
->  Use this property to specify the XML files to be used by Scanstate.exe instead of using the **/I** parameter in the **ScanStateArgs** property. This prevents the ZTIUserState.wsf script from potentially duplicating the same list of XML files.
+>
+> Use this property to specify the XML files to be used by Scanstate.exe instead of using the **/I** parameter in the **ScanStateArgs** property. This prevents the ZTIUserState.wsf script from potentially duplicating the same list of XML files.
 
 > [!NOTE]
->  This property name can be specified using single-digit nomenclature (**USMTMigFiles1**) or triple-digit nomenclature (**USMTMigFiles001**).
+>
+> This property name can be specified using single-digit nomenclature (**USMTMigFiles1**) or triple-digit nomenclature (**USMTMigFiles001**).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6219,7 +6370,8 @@ PackageGroup001=TopFolder\SecondFolder
  The format for UUID is a 16-byte value using hexadecimal digits in the following format: *12345678-1234-1234-1234-123456789ABC*. Use this property to create a subsection that contains settings targeted to a specific computer.
 
 > [!NOTE]
->  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
+>
+> This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6239,7 +6391,8 @@ PackageGroup001=TopFolder\SecondFolder
  This property is used to specify a UNC path to a network shared folder that is used to validate the credentials provided for joining the target computer to a domain. The credentials being validated are specified in the **DomainAdmin**, **DomainAdminDomain**, and **DomainAdminPassword** properties.
 
 > [!NOTE]
->  Ensure that no other properties in MDT use the server sharing the folder in this property. Using a server that is already referenced by other MDT properties could result in improper validation of the credentials.
+>
+> Ensure that no other properties in MDT use the server sharing the folder in this property. Using a server that is already referenced by other MDT properties could result in improper validation of the credentials.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6259,12 +6412,14 @@ PackageGroup001=TopFolder\SecondFolder
  This property is used to specify the name of a differencing VHD (also known as a *child VHD*) file. A differencing VHD is similar to a dynamically expanding VHD but contains only the modified disk blocks of the associated parent VHD. The parent VHD is read only, so you must modify the differencing VHD. The differencing VHD file is created in the same folder as the parent VHD file, so only the file name is specified in this property. This property is only valid for the MDT New Computer deployment scenario.
 
 > [!NOTE]
->  All parent VHD files created by MDT are stored in the VHD folder in the root of the parent drive.
+>
+> All parent VHD files created by MDT are stored in the VHD folder in the root of the parent drive.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value the **Create Virtual Hard Disk (VHD)** task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6303,12 +6458,14 @@ PackageGroup001=TopFolder\SecondFolder
  This property is used to specify the name of a VHD file. The type of VHD file is based on the value of the **VHDCreateType** property. The property only includes the file name, not the path to the file name, and is valid only for the MDT New Computer deployment scenario.
 
 > [!NOTE]
->  The VHD files created by MDT are stored in the VHD folder in the root of the parent drive.
+>
+> The VHD files created by MDT are stored in the VHD folder in the root of the parent drive.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value the **Create Virtual Hard Disk (VHD)** task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6348,12 +6505,14 @@ PackageGroup001=TopFolder\SecondFolder
  This property is used to specify the maximum size of a VHD file in megabytes (MB). The size of the VHD file at creation time is based on the type of VHD file being created. For more information, see the [VHDCreateType](#VHDCreateType) property. This property is valid only for the MDT New Computer deployment scenario.
 
 > [!NOTE]
->  If this property is not specified, the default value for the maximum size of a VHD file is 90% of the available disk space on the parent disk.
+>
+> If this property is not specified, the default value for the maximum size of a VHD file is 90% of the available disk space on the parent disk.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value that the **Create Virtual Hard Disk (VHD)** task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6393,7 +6552,8 @@ PackageGroup001=TopFolder\SecondFolder
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value that the <strong>Create Virtual Hard Disk (VHD)</strong>task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6437,12 +6597,14 @@ PackageGroup001=TopFolder\SecondFolder
   This property is only valid for the MDT New Computer deployment scenario.
 
 > [!NOTE]
->  The maximum size of the VHD file is specified in the **VHDCreateSizeMax** property.
+>
+> The maximum size of the VHD file is specified in the **VHDCreateSizeMax** property.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk \(VHD\)** task sequence type. You can override the value that the **Create Virtual Hard Disk \(VHD\)** task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6481,12 +6643,14 @@ PackageGroup001=TopFolder\SecondFolder
  This property contains a list of the physical drive numbers assigned to VHD files separated by spaces. Each time a VHD file is created, MDT adds the disk index of the newly created disk to this property using the **Index** property of the **Win32\_DiskDrive** WMI class.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk \(VHD\)** task sequence type. You can override the value that the **Create Virtual Hard Disk \(VHD\)** task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6524,12 +6688,14 @@ PackageGroup001=TopFolder\SecondFolder
  This property contains a variable that contains the drive on the target computer where the VHD files will be created. MDT creates the VHD files in the VHD folder in the root of this drive.
 
 > [!NOTE]
->  If this property is omitted, MDT attempts to create the VHD files in the VHD folder in the root of the first system drive.
+>
+> If this property is omitted, MDT attempts to create the VHD files in the VHD folder in the root of the first system drive.
 
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk \(VHD\)** task sequence type. You can override the value that the **Create Virtual Hard Disk \(VHD\)** task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6569,7 +6735,8 @@ PackageGroup001=TopFolder\SecondFolder
  This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk \(VHD\)** task sequence type. You can override the value that the **Create Virtual Hard Disk \(VHD\)** task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
->  To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
+>
+> To configure this property in CustomSettings.ini, you must add this property to the **Properties** line in CustomSettings.ini.
 
  For related properties that are used with VHD files, see:
 
@@ -6607,7 +6774,8 @@ PackageGroup001=TopFolder\SecondFolder
  Specifies the drive on the target computer where the VHD is to be created. This property is later referenced in the [VHDInputVariable](#VHDInputVariable) property.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
  For related properties that are used with VHD files, see:
 
@@ -6645,7 +6813,8 @@ PackageGroup001=TopFolder\SecondFolder
  Specifies the name of the Hyper\-V host running the VM where MDT is running. This property is available only when the Hyper\-V Integration Components are installed and running.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 Table 4 lists the Windows operating systems that MDT supports and their corresponding Hyper\-V Integration Components support.
 
@@ -6677,7 +6846,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  Table 5 lists the Windows operating systems supported by MDT and their corresponding Hyper-V Integration Components support.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 ## Table 5. Windows Operating Systems and Hyper-V Integration Components Support
 
@@ -6705,7 +6875,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  Specifies specific information about the virtualization environment for the target computer when the target computer is a VM. The VM platform is determined by using WMI.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6728,7 +6899,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  The vertical refresh rate for the monitor on the target computer. The vertical refresh rate is specified in Hertz. In the example, the value **60** indicates that the vertical refresh rate of the monitor is 60 Hz. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
->  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
+>
+> The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6765,7 +6937,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  The computer running Windows Deployment Services that is used for installing Windows Deployment Services images. The default value is the server running Windows Deployment Services from which the image was initiated.
 
 > [!NOTE]
->  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
+>
+> This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6814,7 +6987,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  When MDT wipes the disk, it uses the **Format** command with the **/P:3** switch, which instructs **Format** to zero every sector on the volume and to perform the operation three times. There is no way to tell the **Format** command to use a particular character or a random character.
 
 > [!NOTE]
->  If the disk must be securely wiped, a non-Microsoft secure disk wipe tool should be added to the task sequence using the **Run Command Line** task sequence step.
+>
+> If the disk must be securely wiped, a non-Microsoft secure disk wipe tool should be added to the task sequence using the **Run Command Line** task sequence step.
 
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.
@@ -6854,7 +7028,7 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 ### WSUSServer
  This is the name of the Windows Server Update Services (WSUS) server that the target computer should use when scanning for, downloading, and installing updates.
 
- For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](scripts.md#ZTIWindowsUpdate.wsf).
+ For more information about what script uses this property, see [ZTIWindowsUpdate.wsf](scripts.md#ztiWindowsUpdate.wsf).
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6914,7 +7088,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  The horizontal resolution of the monitor on the target computer, specified in pixels. In the example, the value **1024** indicates the horizontal resolution of the monitor is 1,024 pixels. This value is inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
->  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
+>
+> The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6934,7 +7109,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  The vertical resolution of the monitor on the target computer, specified in pixels. In the example, the value **768** indicates the vertical resolution of the monitor is 768 pixels. This value gets inserted into the appropriate configuration settings in Unattend.xml.
 
 > [!NOTE]
->  The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
+>
+> The default values (in the Unattend.xml template file) are 1,024 pixels horizontal resolution, 768 pixels vertical resolution, 32-bit color depth, and 60 Hz vertical refresh rate.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6956,7 +7132,8 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
  If the **SkipWizard** property is used to skip all the Deployment Wizard pages, provide all the properties in the **Configure these properties** column. For examples of various deployment scenarios that skip Deployment Wizard pages, see the section, "Fully Automated LTI Deployment Scenario", in the MDT document *Microsoft Deployment Toolkit Samples Guide*.
 
 > [!NOTE]
->  In instances where the **Configure These Properties** column is blank, no properties need to be configured when skipping the corresponding wizard page.
+>
+> In instances where the **Configure These Properties** column is blank, no properties need to be configured when skipping the corresponding wizard page.
 
 ## Table 6. Deployment Wizard Pages
 

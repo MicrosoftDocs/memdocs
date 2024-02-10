@@ -82,7 +82,8 @@ This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist
  You can deploy Windows 8 applications using UDI like any other application that initiates the installation process from a command line. You can add Windows 8 applications to UDI deployments on the **ApplicationPage** wizard page in the UDI Wizard Designer.
 
 > [!NOTE]
->  Deployment of Windows 8 and Windows 8 applications using UDI requires System Center 2012 R2 Configuration Manager.
+>
+> Deployment of Windows 8 and Windows 8 applications using UDI requires System Center 2012 R2 Configuration Manager.
 
  **To deploy a Windows 8 application using UDI**
 
@@ -471,7 +472,8 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
  You can remove an item from a deployment share using the [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet. The [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet uses the MDTProvider to remove a specific item, just as you can remove an item in the Deployment Workbench. If you want to remove multiple items in a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).
 
 > [!NOTE]
->  Removing an item that a task sequence uses causes the task sequence to fail. Ensure that an item is not referenced by other items in the deployment share prior to removing the item. Once an item is removed, it cannot be recovered.
+>
+> Removing an item that a task sequence uses causes the task sequence to fail. Ensure that an item is not referenced by other items in the deployment share prior to removing the item. Once an item is removed, it cannot be recovered.
 
  **To remove an item from a deployment share using Windows PowerShell**
 
@@ -840,7 +842,8 @@ ForEach-Object ($App in $List) {
  You can customize the deployment based on the chassis type of the computer. The scripts create local variables that can be processed in the CustomSettings.ini file. The local variables `IsLaptop`, `IsDesktop`, and `IsServer` indicate whether the computer is a portable computer, desktop computer, or server, respectively.
 
 > [!NOTE]
->  In earlier versions of the Deployment Workbench, the `IsServer` flag indicated that the existing operating system is a server operating system (such as Windows Server 2003 Enterprise Edition). This flag has been renamed to `IsServerOS`.
+>
+> In earlier versions of the Deployment Workbench, the `IsServer` flag indicated that the existing operating system is a server operating system (such as Windows Server 2003 Enterprise Edition). This flag has been renamed to `IsServerOS`.
 
  **To implement local variables in the CustomSettings.ini file**
 
@@ -1229,7 +1232,8 @@ Obtained AREA_CODE value from web service:  AREA_CODE = 425
  During LTI and ZTI deployment processes, you might require access to a network resource on a server different from the server hosting the deployment share. You must be authenticated on the other server so that you can access shared folders or services there. For example, you can install an application from a shared folder on a server other than the server hosting the deployment share that the MDT scripts use.
 
 > [!NOTE]
->  To query SQL Server databases hosted on a server other than the server hosting the deployment share, see the **Database**, **DBID**, **DBPwd**, **Instance**, **NetLib**, **Order**, **Parameters**, **ParameterCondition**, **SQLServer**, **SQLShare**, and **Table** properties in the MDT document *Toolkit Reference*.
+>
+> To query SQL Server databases hosted on a server other than the server hosting the deployment share, see the **Database**, **DBID**, **DBPwd**, **Instance**, **NetLib**, **Order**, **Parameters**, **ParameterCondition**, **SQLServer**, **SQLShare**, and **Table** properties in the MDT document *Toolkit Reference*.
 
  Using the ZTIConnect.wsf script, you can connect to other servers and access resources on them. The syntax for the ZTIConnect.wsf script is as follows (where *unc_path* is a Universal Naming Convention [UNC] path to connect to the server):
 
@@ -1370,7 +1374,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
  Conditional task sequence steps are configured in the Deployment Workbench, on the **Options** tab of a task sequence step. You can add one or more conditions to the task sequence step to create the appropriate condition for running or not running the step.
 
 > [!NOTE]
->  Every conditional task sequence step needs at least one **IF** statement.
+>
+> Every conditional task sequence step needs at least one **IF** statement.
 
  **To view the Options tab of a task sequence step**
 
@@ -1616,7 +1621,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
  |Windows Deployment Services |Required to allow network PXE-based installations to be initiated|
 
 > [!NOTE]
->  Windows Deployment Services must be set up and configured on each child server, but it is not necessary to add boot or installation images.
+>
+> Windows Deployment Services must be set up and configured on each child server, but it is not necessary to add boot or installation images.
 
 ###  <a name="AddContent"></a> Adding Content to MDT
  Populate the master deployment server with content using the Deployment Workbench, and create and populate the MDT DB as described in the following sections. For information on populating the database with:
@@ -1632,7 +1638,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 -   Task sequences, see the section, "Configuring Task Sequences in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
 
 > [!NOTE]
->  Ensure that the LiteTouchPE_x86.wim file created when the deployment share is updated has been added to Windows Deployment Services.
+>
+> Ensure that the LiteTouchPE_x86.wim file created when the deployment share is updated has been added to Windows Deployment Services.
 
 ###  <a name="PrepareDeployment"></a> Preparing Windows Deployment Services
  Because the LiteTouchPE_x86.wim file will be replicated on a periodic basis through the DFS-R replication group, the boot configuration data store must be updated periodically to reflect the newly replicated Windows PE environment. Perform the following steps on each of the deployment servers.
@@ -1644,13 +1651,15 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 2.  Type **WDSUtil/set-server/BCDRefreshPolicy/Enabled:yes/RefreshPeriod:60**, and then press ENTER.
 
 > [!NOTE]
->  In the example presented here, the refresh period is set to 60 minutes; however, you could configure this value to replicate during a period equal to that of the DFS-R.
+>
+> In the example presented here, the refresh period is set to 60 minutes; however, you could configure this value to replicate during a period equal to that of the DFS-R.
 
 ###  <a name="ConfigureFileReplication"></a> Configuring Distributed File System Replication
  When scaling the LTI deployment architecture, you use DFS-R as the basis for replicating the content from both the MDT deployment share and the Windows PE Lite Touch boot environment and from the master deployment server to the child deployment servers.
 
 > [!NOTE]
->  Ensure that DFS-R is installed before performing the following steps.
+>
+> Ensure that DFS-R is installed before performing the following steps.
 
  **To configure DFS-R to replicate the deployment content**
 
@@ -1747,7 +1756,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 26. On the **Confirmation** page, click **Close** to close the wizard.
 
 > [!NOTE]
->  Ensure that the new replication group is now listed beneath the Replication node.
+>
+> Ensure that the new replication group is now listed beneath the Replication node.
 
 ###  <a name="PrepareSQLReplication"></a> Preparing for SQL Server Replication
  Before SQL Server replication can be configured, complete several pre-configuration steps to ensure that the deployment servers are correctly configured.
@@ -1770,13 +1780,15 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 5. Optionally, create an empty database to host the replicated MDT DB.
 
 > [!NOTE]
->  This database must be given the same name as the MDT DB on the master deployment server. For example, if the MDT DB on the master deployment server is called *MDTDB*, create an empty database called *MDTDB* on the child deployment server.
+>
+> This database must be given the same name as the MDT DB on the master deployment server. For example, if the MDT DB on the master deployment server is called *MDTDB*, create an empty database called *MDTDB* on the child deployment server.
 
 ###  <a name="ConfigureSQLReplication"></a> Configuring SQL Server Replication
  After configuring the replication of files and folders required to build the deployment infrastructure, configure SQL Server to replicate the MDT DB.
 
 > [!NOTE]
->  It is also possible to maintain only a single central MDT DB; however, by maintaining a replicated version of the MDT DB, greater control can be maintained over data transferring across the wide area network (WAN).
+>
+> It is also possible to maintain only a single central MDT DB; however, by maintaining a replicated version of the MDT DB, greater control can be maintained over data transferring across the wide area network (WAN).
 
  SQL Server 2005 uses a replication model that is similar to a magazine distribution model:
 
@@ -1930,7 +1942,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
   **To always use the local LTI deployment server**
 
 > [!NOTE]
->  The following procedure assumes that the deployment share has been created and set as the Deployment$ share.
+>
+> The following procedure assumes that the deployment share has been created and set as the Deployment$ share.
 
 1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
@@ -2234,7 +2247,8 @@ ParameterCondition=OR
 6.  On the **Confirmation** page, click **Finish**.
 
 > [!NOTE]
->  When the update process has finished, add the new LiteTouch_x86 and LiteTouch_x64 Windows PE environments back into Windows Deployment Services, or burn them to boot media to use during deployment.
+>
+> When the update process has finished, add the new LiteTouch_x86 and LiteTouch_x64 Windows PE environments back into Windows Deployment Services, or burn them to boot media to use during deployment.
 
 ## Replacing an Existing Computer with a New Computer Using Lite Touch Installation
  You can use MDT to deploy an image to a new computer that will substitute an existing computer in the enterprise architecture. This situation could arise when upgrading from one operating system to another (a new operating system could require new hardware) or if the organization needs newer, faster computers for existing applications.
@@ -2353,7 +2367,8 @@ ParameterCondition=OR
  Configure the Windows PE options for the deployment share in the Deployment Shares node in the Deployment Workbench.
 
 > [!NOTE]
->  If the device drivers for the existing computer (WDG-EXIST-01) and the new computer (WDG-NEW-01) are included with Windows Vista, skip this step and proceed with the following step.
+>
+> If the device drivers for the existing computer (WDG-EXIST-01) and the new computer (WDG-NEW-01) are included with Windows Vista, skip this step and proceed with the following step.
 
  **To configure the Windows PE options for the deployment share**
 
@@ -2405,7 +2420,8 @@ ParameterCondition=OR
  Start the existing computer (WDG-EXIST-01) with the LTI bootable media created earlier in the process. This CD starts Windows PE on the existing computer and initiates the MDT deployment process. At the end of the MDT deployment process, the user state migration information is stored in the UserStateCapture$ shared folder.
 
 > [!NOTE]
->  You can also initiate the MDT process by starting the target computer from Windows Deployment Services. For more information, see the section, "Preparing Windows Deployment Services", in the MDT document *Using the Microsoft Deployment Toolkit*.
+>
+> You can also initiate the MDT process by starting the target computer from Windows Deployment Services. For more information, see the section, "Preparing Windows Deployment Services", in the MDT document *Using the Microsoft Deployment Toolkit*.
 
  **To start the existing computer with the LTI bootable media**
 
@@ -2439,7 +2455,8 @@ ParameterCondition=OR
  Start the new computer (WDG-NEW-02) with the LTI bootable media created earlier in the process. This CD starts Windows PE on the reference computer and initiates the MDT deployment process. At the end of the MDT deployment process, Windows Vista is deployed on the new computer and the captured user state migration information is restored to the new computer.
 
 > [!NOTE]
->  You can also initiate the MDT process by starting the target computer from Windows Deployment Services. For more information, see the section, "Preparing Windows Deployment Services", in the MDT document *Using the Microsoft Deployment Toolkit*.
+>
+> You can also initiate the MDT process by starting the target computer from Windows Deployment Services. For more information, see the section, "Preparing Windows Deployment Services", in the MDT document *Using the Microsoft Deployment Toolkit*.
 
  **To start the new computer with the LTI bootable media**
 
@@ -2517,7 +2534,8 @@ ParameterCondition=OR
   The overall structure of the MDT scripts has also changed. Most MDT scripts are now encapsulated within VBScript **Class** objects. The class is initialized and called with the **RunNewInstance** function.
 
 > [!NOTE]
->  Most existing MDT 2008 Update 1 scripts will work as-is in MDT, even with the extensive changes to ZTIUtility.vbs, as most MDT scripts will include ZTIUtility.vbs.
+>
+> Most existing MDT 2008 Update 1 scripts will work as-is in MDT, even with the extensive changes to ZTIUtility.vbs, as most MDT scripts will include ZTIUtility.vbs.
 
 ###  <a name="UnderstandLeverageZTI"></a> Understanding How to Leverage ZTIUtility
  The ZTIUtility.vbs file contains object classes that can be leveraged in your custom code. Integrate custom code with MDT by using the:
@@ -2610,7 +2628,8 @@ End Class
 ```
 
 > [!NOTE]
->  If you want to continue using scripts that call **ZTIProcess()** with **ProcessResults()**, you can continue to do so. However, certain enhanced error-handling features will not be enabled.
+>
+> If you want to continue using scripts that call **ZTIProcess()** with **ProcessResults()**, you can continue to do so. However, certain enhanced error-handling features will not be enabled.
 
 ####  <a name="UseZTIEnvironment"></a> Use the ZTIUtility Environment Class
  The environment class in ZTIUtiliy.vbs provides access to, and the ability to update, MDT properties. In preceding example, **oEnvironment.Item("Memory")** is used to retrieve the amount of available RAM; this can also be used to retrieve the value of any of the properties described in the MDT document *Toolkit Reference*.
@@ -2808,7 +2827,8 @@ The following table details some useful functions available, and their output. F
  Each device driver application must first be imported into the Deployment Workbench.
 
 > [!NOTE]
->  Configure whether the application should is visible during deployment on the **Properties** dialog box of any application by selecting or clearing the **Hide this application in the Deployment Wizard** check box. Repeat this process for each device driver application used during deployment.
+>
+> Configure whether the application should is visible during deployment on the **Properties** dialog box of any application by selecting or clearing the **Hide this application in the Deployment Wizard** check box. Repeat this process for each device driver application used during deployment.
 
  **To add the device driver application to the Deployment Workbench**
 
@@ -2896,7 +2916,8 @@ The following table details some useful functions available, and their output. F
 11. Click **OK** to submit the query, and then click **OK** to submit changes to the task sequence.
 
 > [!NOTE]
->  This process must be repeated for each hardware type of each device driver application to be installed.
+>
+> This process must be repeated for each hardware type of each device driver application to be installed.
 
  After the hardware-specific task sequence groups have been created, device driver applications can be added to each group.
 
@@ -2923,7 +2944,8 @@ The following table details some useful functions available, and their output. F
 9. On the **Properties** tab, click **Install a single application**, and in the **Application to install** list, select ***hardware_application*** (where *hardware_application* is the application for installing the hardware-specific application).
 
 > [!NOTE]
->  This process must be repeated for each device driver application that needs to be used during a deployment.
+>
+> This process must be repeated for each device driver application that needs to be used during a deployment.
 
 #### Specify the Device Driver Application in CustomSettings.ini
  When an LTI or ZTI deployment begins, one of the first actions to be completed is the processing of the BootStrap.ini and CustomSettings.ini control files. Both of these files contain rules that can be used to dynamically customize the deployment.
@@ -3038,7 +3060,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
   **To create entries in the MDT DB to allow installation of device driver applications**
 
 > [!NOTE]
->  Repeat this process for each hardware make and model that requires a device driver application.
+>
+> Repeat this process for each hardware make and model that requires a device driver application.
 
 1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
@@ -3184,7 +3207,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
  **To reference a Windows Deployment Services operating system image**
 
 > [!NOTE]
->  The following steps require that at least one operating system image has previously been imported into the Windows Deployment Services server.
+>
+> The following steps require that at least one operating system image has previously been imported into the Windows Deployment Services server.
 
 1.  Update MDT to be able to access Windows Deployment Services images by copying the following files from the Sources folder of the Windows media to the C:\Program Files\Microsoft Deployment Toolkit\bin folder on the Windows Deployment Services server:
 
@@ -3218,7 +3242,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
      All of the images available on the Windows Deployment Services server will now be available to MDT task sequences.
 
 > [!NOTE]
->  Importing images from Windows Deployment Services does not copy the source files from the Windows Deployment Services server to the deployment share. MDT continues to use the source files from their original location.
+>
+> Importing images from Windows Deployment Services does not copy the source files from the Windows Deployment Services server to the deployment share. MDT continues to use the source files from their original location.
 
 ### Option 3: Use Multicasting with MDT and the Windows Server 2008 Windows Deployment Services Role
  With the release of Windows Server 2008, Windows Deployment Services was enhanced to support the deployment of images using multicast transmissions. MDT also includes updates to integrate MDT with Windows Deployment Services multicasting.
@@ -3230,7 +3255,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
  When LTIApply.wsf runs it will always attempt to access and download WIM images from an existing multicast stream, but it will fall back to a standard file copy if a multicast stream does not exist.
 
 > [!NOTE]
->  This process applies only to WIM image files.
+>
+> This process applies only to WIM image files.
 
  The deployment server prerequisites for preparing for MDT multicasting are:
 
@@ -3245,7 +3271,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 -   As with any deployment using MDT, at least one operating system WIM image must have been imported, either as a full set of source files or as a custom image with setup files
 
 > [!NOTE]
->  It is important to use the latest version of Windows AIK for multicasting; the copy of Windows PE included in earlier versions of Windows AIK—for example, Windows AIK 1.0—does not support downloading from a multicast server.
+>
+> It is important to use the latest version of Windows AIK for multicasting; the copy of Windows PE included in earlier versions of Windows AIK—for example, Windows AIK 1.0—does not support downloading from a multicast server.
 
  **To configure MDT for multicasting from an existing deployment share**
 
@@ -3295,7 +3322,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
  In many organizations, computers are loaded with the operating system image before deployment to the production network. In some instances, loading the operating system image is performed by a team within the organization that is responsible for building the computers in a staging environment. In other instances, loading the operating system image is performed by the computer hardware vendor, also known as an *original equipment manufacturer* (OEM).
 
 > [!NOTE]
->  The OEM preload process is supported in MDT only for deployments performed using LTI. For Configuration Manager, use the prestaged media feature.
+>
+> The OEM preload process is supported in MDT only for deployments performed using LTI. For Configuration Manager, use the prestaged media feature.
 
 ### Overview of the OEM Preload Process in MDT
  The OEM preload process is divided into three phases:
@@ -3670,7 +3698,8 @@ Remove-item -path "DS002:\Media\MEDIA001" -Verbose
   To intentionally delay joining the target computer to the domain during the deployment process, you can remove certain elements from the Unattend.xml file. The ZTIConfigure.wsf script will skip over writing properties to the Unattend.xml file if the associated property element is missing from the file.
 
 > [!NOTE]
->  This sample work-around is only valid when deploying the Windows 7, Windows Server 2008, or Windows Server 2008 R2 operating systems.
+>
+> This sample work-around is only valid when deploying the Windows 7, Windows Server 2008, or Windows Server 2008 R2 operating systems.
 
  **Prepare the unattend.xml file so the target computer does not attempt to join the domain during Windows Setup**
 

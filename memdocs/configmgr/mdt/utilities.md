@@ -54,7 +54,8 @@ ms.reviewer: mstewart,aaroncz
  The executable that requires user interaction is provided as an argument to this utility. This utility runs the executable in a separate command environment.
 
 > [!NOTE]
->  This utility can only be used in LTI deployments. ZTI deployments prohibit any user interaction.
+>
+> This utility can only be used in LTI deployments. ZTI deployments prohibit any user interaction.
 
 |**Value**|**Description**|
 |-|-|
@@ -68,7 +69,8 @@ ms.reviewer: mstewart,aaroncz
 |*commandline*|The command to be run that requires user interaction|
 
 > [!NOTE]
->  Put double quotation marks around any part of the *command-line* portion of the argument that contains blanks. For example: `BDDRun.exe MyAppInstall.exe /destinationdir: "%ProgramFiles%\AppName"`.
+>
+> Put double quotation marks around any part of the *command-line* portion of the argument that contains blanks. For example: `BDDRun.exe MyAppInstall.exe /destinationdir: "%ProgramFiles%\AppName"`.
 
 ## Bootsect.exe
  Bootsect.exe updates the master boot code for hard disk partitions to switch between BOOTMGR and NTLDR. Use this utility to restore the boot sector on the computer.

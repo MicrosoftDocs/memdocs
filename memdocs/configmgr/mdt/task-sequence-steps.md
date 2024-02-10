@@ -38,7 +38,8 @@ ms.reviewer: mstewart,aaroncz
  Table 1 shows the settings that are available on the **Properties** tab of each task sequence step. For more information about the **Properties** tab for a particular task sequence step, see the topic that corresponds to the step later in this reference.
 
 > [!NOTE]
->  The task sequence step types listed here are those that are available in the Deployment Workbench. Additional task sequence step types might be available when configuring task sequences using Microsoft System Center 2012 R2 Configuration Manager.
+>
+> The task sequence step types listed here are those that are available in the Deployment Workbench. Additional task sequence step types might be available when configuring task sequences using Microsoft System Center 2012 R2 Configuration Manager.
 
 #### Table 1. Settings Available on the Properties Tab
 
@@ -61,7 +62,8 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional statements**|One or more conditions that limit the running of this task sequence group or step. These conditional are based on the following:<br /><br /> - File properties<br /><br /> - Folder properties<br /><br /> Operating system version:<br /><br /> - Is a certain architecture<br /><br /> - Is a certain version<br /><br /> - Query Windows Management Instrumentation (WMI)<br /><br /> Registry setting:<br /><br /> - Exists<br /><br /> - Does not exist<br /><br /> - Equals<br /><br /> - Does not equal<br /><br /> - Greater than<br /><br /> - Greater than or equals<br /><br /> - Less than<br /><br /> - Less than or equals<br /><br /> - Installed software<br /><br /> Task sequence variable:<br /><br /> - Exists<br /><br /> - Equals<br /><br /> - Does not equal<br /><br /> - Greater than<br /><br /> - Greater than or equals<br /><br /> - Less than<br /><br /> - Less than or equals<br /><br /> These conditions can be grouped using **IF** statements that test all conditions, any condition, or no condition that evaluates as True.|-|-|
 
 > [!NOTE]
->  Additional conditional statements might be available when using Configuration Manager to configure task sequence steps.
+>
+> Additional conditional statements might be available when using Configuration Manager to configure task sequence steps.
 
 ## Specific Properties and Settings for Task Sequence Step Types
  Some properties and parameters of each task sequence step type are unique to that type. Each type with unique properties and settings is shown in the following sections with its unique task sequence step properties and settings.
@@ -202,10 +204,12 @@ ms.reviewer: mstewart,aaroncz
 |Server Properties|Within the Server Properties setting, the following sub-settings are configurable:<br /><br /> -                                 **Disable recursion**. Specifies that the DNS server will not perform recursion on any query<br /><br /> - **BIND secondaries**. Specifies whether to use fast transfer format to transfer a zone to DNS servers running legacy Berkeley Internet Name Domain (BIND) implementations<br /><br /> - **Fail on load if bad data**. Specifies the DNS server should parse files strictly<br /><br /> -                                 **Enable round robin**. Specifies the DNS server should use the round robin mechanism to rotate and reorder a list of resource records if multiple resource records exist of the same type exist for a query answer<br /><br /> - **Enable netmask ordering**. Specifies whether the DNS server should reorder resource records within the same resource record set in its response to a query based on the IP address of the source of the query<br /><br /> - **Secure cache against pollution**. Specifies whether the DNS server will attempt to clean up responses to avoid cache pollution<br /><br /> - **Name checking**. Configures the name-checking method to be used|
 
 > [!NOTE]
->  The **Configure DNS** task sequence step uses the Dnscmd tool, which is included in Windows Support Tools, to configure DNS. Be sure that Windows Support Tools is installed before running the **Configure DNS** task sequence step.
+>
+> The **Configure DNS** task sequence step uses the Dnscmd tool, which is included in Windows Support Tools, to configure DNS. Be sure that Windows Support Tools is installed before running the **Configure DNS** task sequence step.
 
 > [!NOTE]
->  For more information about these server properties, see [Dnscmd](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772069(v=ws.11)).
+>
+> For more information about these server properties, see [Dnscmd](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772069(v=ws.11)).
 
 ### Enable BitLocker
  This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](../osd/understand/task-sequence-steps.md#enable-bitlocker).
@@ -235,7 +239,8 @@ ms.reviewer: mstewart,aaroncz
  This task sequence step runs Microsoft System Center 2012 Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using this task sequence step type.
 
 > [!NOTE]
->  This task sequence step is not included any MDT task sequence templates. You must add this task sequence step to any task sequences you create.
+>
+> This task sequence step is not included any MDT task sequence templates. You must add this task sequence step to any task sequences you create.
 
  The unique properties and settings for the **Execute Runbook** task sequence step type are:
 
@@ -277,7 +282,8 @@ ms.reviewer: mstewart,aaroncz
 |**Volume**|Within the **Volume** setting, the following sub-settings are configurable:<br /><br /> - Partition **Name**. A user-definable name.<br /><br /> - **Partition Type.** Values vary by disk type:<br /><br /> - MBR: **Primary** only<br /><br /> - GPT: **Primary**, **EFI**, or **MSR**<br /><br /> - **Use a percentage of remaining space.**<br /><br /> -                                 **Use specific drive size.** Values are in increments of 1 MB or 1 gigabyte (GB).<br /><br /> -                                 **Make this a boot partition.**<br /><br /> -                                 **File System.** Values are **NTFS** or **FAT32**.<br /><br /> - **Quick Format.** When selected, a quick format is performed.<br /><br /> - **Variable.** The drive letter that was assigned to this newly configured partition.|
 
 > [!NOTE]
->  When using the CustomSettings.ini file to specify the hard disk and partition configurations, only the first hard disk and first two partitions will be configured. Edit ZTIGather.xml to configure additional hard disks or partitions.
+>
+> When using the CustomSettings.ini file to specify the hard disk and partition configurations, only the first hard disk and first two partitions will be configured. Edit ZTIGather.xml to configure additional hard disks or partitions.
 
 ### Gather
  This task sequence step gathers data and processing rules for the target computer. The unique properties and settings for the **Gather** task sequence step type are:
@@ -297,7 +303,8 @@ ms.reviewer: mstewart,aaroncz
 |**Rules file**|The name of the Rules file to process. If left blank, the task sequence step attempts to locate and process the CustomSettings.ini file.|
 
 > [!NOTE]
->  This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Set Dynamic Variables**in the General group.
+>
+> This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Set Dynamic Variables**in the General group.
 
 ### Inject Drivers
  This task sequence step injects drivers that have been configured for deployment to the target computer. The unique properties and settings for the **Inject Drivers** task sequence step type are:
@@ -397,7 +404,8 @@ ms.reviewer: mstewart,aaroncz
 |**Package Name**|The name of the language pack package that should be applied to the target computer|
 
 > [!NOTE]
->  This task sequence step is valid only when using MDT with Configuration Manager.
+>
+> This task sequence step is valid only when using MDT with Configuration Manager.
 
 ### Install Language Packs Online
  This task sequence step installs language packs to the image on the target computer after the operating system has been deployed and after the target computer has been restarted. For more information about which script accomplishes this task and which properties you use, see [ZTILangPacksOnline.wsf](#ZTILangPacksOnline.wsf).
@@ -417,7 +425,8 @@ ms.reviewer: mstewart,aaroncz
 |**Package Name**|The name of the language pack package that should be applied to the target computer|
 
 > [!NOTE]
->  This task sequence step is valid only when using MDT with Configuration Manager.
+>
+> This task sequence step is valid only when using MDT with Configuration Manager.
 
 ### Install Updates Offline
  This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](#ZTIPatches.wsf).
@@ -508,7 +517,8 @@ ms.reviewer: mstewart,aaroncz
 |Parameters|The parameters to be passed to the Windows PowerShell script. These parameters should be specified the same as if you were adding them to the Windows PowerShell script from a command line.<br /><br /> The parameters provided should be only those parameters the script consumes, not for the Windows PowerShell command line.<br /><br /> The following example would be a valid value for this setting:<br /><br /> `-MyParameter1 MyValue1 -MyParameter2 MyValue2`<br /><br /> The following example would be an invalid value for this setting \(bold items are incorrect\):<br /><br /> `-nologo -executionpolicy unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`<br /><br /> The previous example is invalid, because the value includes Windows PowerShell command\-line parameters \(**\-nologo** and **-executionpolicy unrestricted**\).|
 
 > [!NOTE]
->  This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Run PowerShell Script** in the General group.
+>
+> This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Run PowerShell Script** in the General group.
 
 ### Set Task Sequence Variable
  This task sequence step sets the specified task sequence variable to the specified value. For more information about this step type, see [Set Task Sequence Variable](../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable).
@@ -566,7 +576,8 @@ ms.reviewer: mstewart,aaroncz
 |**Ensure current operating system to be refreshed**|When selected, this step verifies that the operating system installed on the target computer meets the requirement specified. This is a default selection.|
 
 > [!NOTE]
->  This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Check Readiness** in the General group.
+>
+> This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Check Readiness** in the General group.
 
 ## Out\-of\-Box Task Sequence Steps
  The following task sequence steps are referenced by one or more of the available task sequence templates included with MDT. Each of the following examples lists the preconfigured properties, parameters, and options and can be used as a basis for building custom task sequences.
@@ -574,7 +585,8 @@ ms.reviewer: mstewart,aaroncz
  Only the task sequence step properties, parameters, and options, and their corresponding values are listed in the examples.
 
 > [!NOTE]
->  For more information about each task sequence step, see the corresponding topics in [Common Properties and Options for Task Sequence Step Types](#CommonPropertiesandOptionsforTaskSequenceStepTypes) and [Specific Properties and Settings for Task Sequence Step Types](#SpecificPropertiesandSettingsforTaskSequenceStepTypes).
+>
+> For more information about each task sequence step, see the corresponding topics in [Common Properties and Options for Task Sequence Step Types](#CommonPropertiesandOptionsforTaskSequenceStepTypes) and [Specific Properties and Settings for Task Sequence Step Types](#SpecificPropertiesandSettingsforTaskSequenceStepTypes).
 
 ### Apply Network Settings
  This task sequence step configures the network adapter on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](#ZTINICConfig.wsf).
@@ -605,7 +617,8 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 > [!NOTE]
->  When using the CustomSettings.ini file to specify the network adapter configurations, only the first network adapter will be configured. Edit ZTIGather.xml to configure additional network adapters.
+>
+> When using the CustomSettings.ini file to specify the network adapter configurations, only the first network adapter will be configured. Edit ZTIGather.xml to configure additional network adapters.
 
 ### Apply Patches
  This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](#ZTIPatches.wsf).
@@ -1145,7 +1158,8 @@ ms.reviewer: mstewart,aaroncz
 |**Conditional qualifier**|Not specified|
 
 > [!NOTE]
->  When using the CustomSettings.ini file to specify the hard disk and partition configurations, only the first hard disk and first two partitions will be configured. Edit ZTIGather.xml to configure additional hard disks or partitions.
+>
+> When using the CustomSettings.ini file to specify the hard disk and partition configurations, only the first hard disk and first two partitions will be configured. Edit ZTIGather.xml to configure additional hard disks or partitions.
 
 ### Gather local only
  This task sequence step gathers deployment configurations settings from local sources that apply to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.

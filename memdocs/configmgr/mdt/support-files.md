@@ -34,7 +34,8 @@ ms.reviewer: mstewart,aaroncz
 ## ApplicationGroups.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -43,7 +44,8 @@ ms.reviewer: mstewart,aaroncz
 ## Applications.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -66,7 +68,8 @@ ms.reviewer: mstewart,aaroncz
 ## Deploy.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -75,7 +78,8 @@ ms.reviewer: mstewart,aaroncz
 ## DriverGroups.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -84,7 +88,8 @@ ms.reviewer: mstewart,aaroncz
 ## Drivers.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|Description|
 |-|-|
@@ -93,7 +98,8 @@ ms.reviewer: mstewart,aaroncz
 ## LinkedDeploymentShares.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -102,7 +108,8 @@ ms.reviewer: mstewart,aaroncz
 ## ListOfLanguages.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -111,7 +118,8 @@ ms.reviewer: mstewart,aaroncz
 ## MediaGroups.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -120,7 +128,8 @@ ms.reviewer: mstewart,aaroncz
 ## Medias.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -129,7 +138,8 @@ ms.reviewer: mstewart,aaroncz
 ## OperatingSystemGroups.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -138,7 +148,8 @@ ms.reviewer: mstewart,aaroncz
 ## OperatingSystems.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -147,7 +158,8 @@ ms.reviewer: mstewart,aaroncz
 ## PackageGroups.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -156,7 +168,8 @@ ms.reviewer: mstewart,aaroncz
 ## Packages.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -165,7 +178,8 @@ ms.reviewer: mstewart,aaroncz
 ## SelectionProfileGroups.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -174,7 +188,8 @@ ms.reviewer: mstewart,aaroncz
 ## SelectionProfiles.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -183,7 +198,8 @@ ms.reviewer: mstewart,aaroncz
 ## ServerManager.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -192,7 +208,8 @@ ms.reviewer: mstewart,aaroncz
 ## Settings.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -201,7 +218,8 @@ ms.reviewer: mstewart,aaroncz
 ## TaskSequenceGroups.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -210,7 +228,8 @@ ms.reviewer: mstewart,aaroncz
 ## TaskSequences.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -219,14 +238,16 @@ ms.reviewer: mstewart,aaroncz
 ## TS.xml
 
 > [!NOTE]
->  This XML file is managed by MDT and should not require modification.
+>
+> This XML file is managed by MDT and should not require modification.
 
 |**Value**|**Description**|
 |-|-|
 |**Location**|*distribution*\Control\\*task_sequence_id*|
 
 > [!NOTE]
->  *Task_sequence_id* is a placeholder for the task sequence ID that was assigned to each task sequence when it was created in the Task Sequences node in the Deployment Workbench.
+>
+> *Task_sequence_id* is a placeholder for the task sequence ID that was assigned to each task sequence when it was created in the Task Sequences node in the Deployment Workbench.
 
 ## Wimscript.ini
  This .ini file is an ImageX configuration file that contains the list of folders and files that will be excluded from an image. It is referenced by ImageX during the LTI Capture Phase.
@@ -254,7 +275,8 @@ ms.reviewer: mstewart,aaroncz
 ## ZTIGather.xml
 
 > [!NOTE]
->  This XML file is preconfigured and should not require modification. Define custom properties in the CustomSettings.ini file or the MDT DB.
+>
+> This XML file is preconfigured and should not require modification. Define custom properties in the CustomSettings.ini file or the MDT DB.
 
 |**Value**|**Description**|
 |-|-|
