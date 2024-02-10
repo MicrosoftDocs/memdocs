@@ -599,7 +599,7 @@ ms.reviewer: mstewart,aaroncz
 |     **Value**      |                                                                                                                                                                                  **Description**                                                                                                                                                                                  |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **/debug:*value*** | Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (this is the behavior when the argument is not provided) |
-|    **/Resume**     |                                                                                                                                                                                         –                                                                                                                                                                                         |
+|    **/Resume**     |                                                                                                                                                                                         -                                                                                                                                                                                         |
 
 ### Properties
 
@@ -1770,7 +1770,7 @@ ms.reviewer: mstewart,aaroncz
 |**Phase**|-||
 
 ## ZTINICUtility.vbs
- This script contains network adapter–related functions and subroutines that the various scripts in the MDT deployment process call.
+ This script contains network adapter-related functions and subroutines that the various scripts in the MDT deployment process call.
 
 |**Value**|**Description**|
 |-|-|
@@ -2115,9 +2115,9 @@ ms.reviewer: mstewart,aaroncz
 |**Value**|**Description**|
 |-|-|
 |/debug:value|Outputs the event messages to the console and to the .log files. If the value specified in value is:<br /><br /> -                              **TRUE**, event messages are sent to the console and the .log files<br /><br /> -                              **FALSE**, event messages are sent only to the .log files (This is the behavior when the argument is not provided.)|
-|**/Capture**|–|
-|**/Estimate**|–|
-|**/Restore**|–|
+|**/Capture**|-|
+|**/Estimate**|-|
+|**/Restore**|-|
 
 ### Properties
 

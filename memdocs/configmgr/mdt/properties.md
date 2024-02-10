@@ -224,7 +224,7 @@ ms.reviewer: mstewart,aaroncz
 |`[Settings] Priority=Default  [Default] ApplyGPOPack=NO`|
 
 ### Architecture
- The processor architecture of the processor that is currently running, which is not necessarily the processor architecture supported by the target computer. For example, when running a 32-bit–compatible operating system on a 64-bit processor, **Architecture** will indicate that the processor architecture is 32 bit.
+ The processor architecture of the processor that is currently running, which is not necessarily the processor architecture supported by the target computer. For example, when running a 32-bit-compatible operating system on a 64-bit processor, **Architecture** will indicate that the processor architecture is 32 bit.
 
  Use the **CapableArchitecture** property to identify the actual processor architecture that the target computer supports.
 
@@ -2868,7 +2868,7 @@ cscript.exe LiteTouch.vbs /debug:true
 |`[Settings] Priority=Default  [Default] AreaCode=206 CountryCode=001 Dialing=TONE LongDistanceAccess=9`|
 
 ### MACAddress
- The media access control (MAC) layer address of the primary network adapter of the target computer. The **MACAddress** property is included on the **Priority** line so that property values specific to a target computer can be provided. Create a section for each MAC address for each of the target computers (such as `[00:0F:20:35:DE:AC]`or `[00:03:FF:FE:FF:FF]`) that contain target computer–specific settings.
+ The media access control (MAC) layer address of the primary network adapter of the target computer. The **MACAddress** property is included on the **Priority** line so that property values specific to a target computer can be provided. Create a section for each MAC address for each of the target computers (such as `[00:0F:20:35:DE:AC]`or `[00:03:FF:FE:FF:FF]`) that contain target computer-specific settings.
 
 |Property configured by|Property applies to|
 |-|-|
@@ -6965,12 +6965,12 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**Welcome**|SkipBDDWelcome||
 |**Specify credentials for connecting to network shares**|Skipped by providing properties in next column|- UserID<br /><br /> - UserDomain<br /><br /> - UserPassword|
 |**Task Sequence**|SkipTaskSequence|- TaskSequenceID|
-|**Computer Details**|SkipComputerName,<br /><br /> SkipDomainMembership|- OSDComputerName<br /><br /> - JoinWorkgroup<br /><br /> –or–<br /><br /> - JoinDomain<br /><br /> - DomainAdmin|
+|**Computer Details**|SkipComputerName,<br /><br /> SkipDomainMembership|- OSDComputerName<br /><br /> - JoinWorkgroup<br /><br /> -or-<br /><br /> - JoinDomain<br /><br /> - DomainAdmin|
 |**User Data**|SkipUserData|- UDDir<br /><br /> - UDShare<br /><br /> - UserDataLocation|
 |**Move Data and Settings**|SkipUserData|- UDDir<br /><br /> - UDShare<br /><br /> - UserDataLocation|
 |**User Data (Restore)**|SkipUserData|- UDDir<br /><br /> - UDShare<br /><br /> - UserDataLocation|
 |**Computer Backup**|SkipComputerBackup|- BackupDir<br /><br /> - BackupShare<br /><br /> - ComputerBackupLocation|
-|**Product Key**|SkipProductKey|- ProductKey<br /><br /> –or–<br /><br /> - OverrideProductKey|
+|**Product Key**|SkipProductKey|- ProductKey<br /><br /> -or-<br /><br /> - OverrideProductKey|
 |**Language Packs**|SkipPackageDisplay|LanguagePacks|
 |**Locale and Time**|SkipLocaleSelection, SkipTimeZone|- KeyboardLocale<br /><br /> - UserLocale<br /><br /> - UILanguage<br /><br /> - TimeZoneName|
 |**Roles and Features**|SkipRoles|- OSRoles<br /><br /> - OSRoleServices<br /><br /> - OSFeatures|
@@ -6979,6 +6979,6 @@ Table 4 lists the Windows operating systems that MDT supports and their correspo
 |**Local Administrators**|SkipAdminAccounts|- Administrators|
 |**Capture Image**|SkipCapture|- ComputerBackupLocation|
 |**Bitlocker**|SkipBitLocker|- BDEDriveLetter<br /><br /> - BDEDriveSize<br /><br /> - BDEInstall<br /><br /> - BDEInstallSuppress<br /><br /> - BDERecoveryKey<br /><br /> - TPMOwnerPassword<br /><br /> - OSDBitLockerStartupKeyDrive<br /><br /> - OSDBitLockerWaitForEncryption|
-|**Ready to begin**|SkipSummary|–|
-|**Operating system deployment completed successfully**|SkipFinalSummary|–|
-|**Operating system deployment did not complete successfully**|SkipFinalSummary|–|
+|**Ready to begin**|SkipSummary|-|
+|**Operating system deployment completed successfully**|SkipFinalSummary|-|
+|**Operating system deployment did not complete successfully**|SkipFinalSummary|-|

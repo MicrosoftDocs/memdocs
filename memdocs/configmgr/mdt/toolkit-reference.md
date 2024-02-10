@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
  This reference is part of Microsoft&reg; Deployment Toolkit (MDT) 2013 and provides configuration settings that you can use in the deployment process. Review the MDT 2013 documents *Microsoft Deployment Toolkit Samples Guide* and *Using the Microsoft Deployment Toolkit* for help in customizing configuration settings for the deployment environment.
 
 > [!NOTE]
-> In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server&reg; 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.
+> In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server&reg; 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor-based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.
 
 - [Task Sequence Steps](task-sequence-steps.md).
 - [Properties](properties.md).

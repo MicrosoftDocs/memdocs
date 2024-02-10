@@ -171,7 +171,7 @@ ms.reviewer: mstewart,aaroncz
 
 |**Value**|**Description**|
 |-|-|
-|None|–|
+|None|-|
 
 ## Mofcomp.exe
  Mofcomp.exe is the Managed Object Format compiler that parses a file that contains Managed Object Format statements and adds the classes and class instances defined in the file to the WMI repository. Mofcomp.exe provides command-line help on the switch use options.

@@ -25,29 +25,29 @@ ms.reviewer: mstewart,aaroncz
 
 |**Cmdlet**|**Description**|
 |-|-|
-|[Add-MDTPersistentDrive](#Add-MDTPersistentDrive)|Adds a deployment share to the list of MDT persisted drives that can be restored using the [Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive) cmdlet.|
-|[Disable-MDTMonitorService](#Disable-MDTMonitorService)|Disables the MDT monitoring services.|
-|[Enable-MDTMonitorService](#Enable-MDTMonitorService)|Enables the MDT monitoring services.|
-|[Get-MDTDeploymentShareStatistics](#Get-MDTDeploymentShareStatistics)|Displays the statistics of a deployment share, including the number of entities per major folder in the deployment share.|
-|[Get-MDTMonitorData](#Get-MDTMonitorData)|Displays the MDT monitoring information collected for one or more monitored MTD deployments.|
-|[Get-MDTOperatingSystemCatalog](#Get-MDTOperatingSystemCatalog)|Returns the operating system catalog for a specific operating system. If the operating system catalog does not exist or is out of date, then the operating system catalog is regenerated.|
-|[Get-MDTPersistentDrive](#Get-MDTPersistentDrive)|Displays the list of deployment shares that can be restored using the [Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive) cmdlet.|
-|[Import-MDTApplication](#Import-MDTApplication)|Imports an application into a deployment share.|
-|[Import-MDTDriver](#Import-MDTDriver)|Imports one or more device drivers into a deployment share.|
-|[Import-MDTOperatingSystem](#Import-MDTOperatingSystem)|Imports one or more operating systems into a deployment share.|
-|[Import-MDTPackage](#Import-MDTPackage)|Imports one or more operating system packages into a deployment share.|
-|[Import-MDTTaskSequence](#Import-MDTTaskSequence)|Imports a task sequence into a deployment share.|
-|[New-MDTDatabase](#New-MDTDatabase)|Creates or upgrades an MDT DB database that is associated with a deployment share.|
-|[Remove-MDTMonitorData](#Remove-MDTMonitorData)|Removes one or more MDT monitoring data items from the collected MDT monitoring data in a deployment share.|
-|[Remove-MDTPersistentDrive](#Remove-MDTPersistentDrive)|Removes a deployment share from the list of MDT persisted Windows PowerShell drives that can be restored using the [Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive) cmdlet.|
-|[Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive)|Creates a Windows PowerShell drive for each deployment share in the list of MDT persisted Windows PowerShell drives.|
-|[Set-MDTMonitorData](#Set-MDTMonitorData)|Creates a new or updates an existing MDT monitoring data item in the collected MDT monitoring data in a deployment share.|
-|[Test-MDTDeploymentShare](#Test-MDTDeploymentShare)|Verifies the integrity of a deployment share.|
-|[Test-MDTMonitorData](#Test-MDTMonitorData)|Verifies that the MDT monitoring services is configured correctly and running.|
-|[Update-MDTDatabaseSchema](#Update-MDTDatabaseSchema)|Updates the MDT DB database schema.|
-|[Update-MDTDeploymentShare](#Update-MDTDeploymentShare)|Updates a deployment share.|
-|[Update-MDTLinkedDS](#Update-MDTLinkedDS)|Replicates content from a deployment share to a linked deployment share.|
-|[Update-MDTMedia](#Update-MDTMedia)|Replicates content from a deployment share to a deployment media folder.|
+|[Add-MDTPersistentDrive](#add-mdtpersistentdrive)|Adds a deployment share to the list of MDT persisted drives that can be restored using the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet.|
+|[Disable-MDTMonitorService](#disable-mdtmonitorservice)|Disables the MDT monitoring services.|
+|[Enable-MDTMonitorService](#enable-mdtmonitorservice)|Enables the MDT monitoring services.|
+|[Get-MDTDeploymentShareStatistics](#get-mdtdeploymentsharestatistics)|Displays the statistics of a deployment share, including the number of entities per major folder in the deployment share.|
+|[Get-MDTMonitorData](#get-mdtmonitordata)|Displays the MDT monitoring information collected for one or more monitored MTD deployments.|
+|[Get-MDTOperatingSystemCatalog](#get-mdtoperatingsystemcatalog)|Returns the operating system catalog for a specific operating system. If the operating system catalog does not exist or is out of date, then the operating system catalog is regenerated.|
+|[Get-MDTPersistentDrive](#get-mdtpersistentdrive)|Displays the list of deployment shares that can be restored using the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet.|
+|[Import-MDTApplication](#import-mdtapplication)|Imports an application into a deployment share.|
+|[Import-MDTDriver](#import-mdtdriver)|Imports one or more device drivers into a deployment share.|
+|[Import-MDTOperatingSystem](#import-mdtoperatingsystem)|Imports one or more operating systems into a deployment share.|
+|[Import-MDTPackage](#import-mdtpackage)|Imports one or more operating system packages into a deployment share.|
+|[Import-MDTTaskSequence](#import-mdttasksequence)|Imports a task sequence into a deployment share.|
+|[New-MDTDatabase](#new-mdtdatabase)|Creates or upgrades an MDT DB database that is associated with a deployment share.|
+|[Remove-MDTMonitorData](#remove-mdtmonitordata)|Removes one or more MDT monitoring data items from the collected MDT monitoring data in a deployment share.|
+|[Remove-MDTPersistentDrive](#remove-mdtpersistentdrive)|Removes a deployment share from the list of MDT persisted Windows PowerShell drives that can be restored using the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet.|
+|[Restore-MDTPersistentDrive](#restore-mdtpersistentdrive)|Creates a Windows PowerShell drive for each deployment share in the list of MDT persisted Windows PowerShell drives.|
+|[Set-MDTMonitorData](#set-mdtmonitordata)|Creates a new or updates an existing MDT monitoring data item in the collected MDT monitoring data in a deployment share.|
+|[Test-MDTDeploymentShare](#test-mdtdeploymentshare)|Verifies the integrity of a deployment share.|
+|[Test-MDTMonitorData](#test-mdtmonitordata)|Verifies that the MDT monitoring services is configured correctly and running.|
+|[Update-MDTDatabaseSchema](#update-mdtdatabaseschema)|Updates the MDT DB database schema.|
+|[Update-MDTDeploymentShare](#update-mdtdeploymentshare)|Updates a deployment share.|
+|[Update-MDTLinkedDS](#update-mdtlinkedds)|Replicates content from a deployment share to a linked deployment share.|
+|[Update-MDTMedia](#update-mdtmedia)|Replicates content from a deployment share to a deployment media folder.|
 
 ## Add-MDTPersistentDrive
  This section describes the **Add-MDTPersistentDriveWindows PowerShell** cmdlet. Run this cmdlet from a Windows PowerShell console that has the MDT PowerShell snap-in loaded. For more information on how to start a Windows PowerShell console that has the MDT PowerShell snap-in loaded, see "Loading the MDT Windows PowerShell Snap-In".
@@ -59,7 +59,7 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
 ```
 
 ### Description
- This cmdlet adds an existing Windows PowerShell drive created using the **MDTProvider** to a list of drives that are persisted in the Deployment Workbench or in a Windows PowerShell session using the [Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive) cmdlet. This cmdlet is called when you create or open a deployment share in the Deployment Workbench.
+ This cmdlet adds an existing Windows PowerShell drive created using the **MDTProvider** to a list of drives that are persisted in the Deployment Workbench or in a Windows PowerShell session using the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet. This cmdlet is called when you create or open a deployment share in the Deployment Workbench.
 
 > [!NOTE]
 >  The list of persisted **MDTProvider** drives is maintained on a per-user based in the user profile.
@@ -89,7 +89,7 @@ Add-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonPara
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**3** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -108,7 +108,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-Add-MDTPersistentDrive –Name DS001
+Add-MDTPersistentDrive -Name DS001
 ```
 
 #### Description
@@ -117,8 +117,8 @@ Add-MDTPersistentDrive –Name DS001
 ### Example 2
 
 ```
-$MDTPSDrive = New-PSDrive -Name "DS001" -PSProvider "MDTProvider" –Root "C:\DeploymentShare$" -Description "MDT Deployment Share" -NetworkPath \\WDG-MDT-01\DeploymentShare$ -Verbose
-Add-MDTPersistentDrive –InputObject $MDTPSDrive
+$MDTPSDrive = New-PSDrive -Name "DS001" -PSProvider "MDTProvider" -Root "C:\DeploymentShare$" -Description "MDT Deployment Share" -NetworkPath \\WDG-MDT-01\DeploymentShare$ -Verbose
+Add-MDTPersistentDrive -InputObject $MDTPSDrive
 ```
 
 #### Description
@@ -127,7 +127,7 @@ Add-MDTPersistentDrive –InputObject $MDTPSDrive
 ### Example 3
 
 ```
-New-PSDrive -Name "DS001" -PSProvider "MDTProvider" –Root "C:\DeploymentShare$" -Description "MDT Deployment Share" -NetworkPath \\WDG-MDT-01\DeploymentShare$ -Verbose | Add-MDTPersistentDrive –Verbose
+New-PSDrive -Name "DS001" -PSProvider "MDTProvider" -Root "C:\DeploymentShare$" -Description "MDT Deployment Share" -NetworkPath \\WDG-MDT-01\DeploymentShare$ -Verbose | Add-MDTPersistentDrive -Verbose
 ```
 
 #### Description
@@ -147,9 +147,9 @@ Disable-MDTMonitorService [<CommonParameters>]
 
 - In the Monitoring node in a deployment share in the Deployment Workbench
 
-- Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet
+- Using the [Get-MDTMonitorData](#get-mdtmonitordata) cmdlet
 
-  The MDT monitoring service can subsequently be enabled using the [Enable-MDTMonitorService](#Enable-MDTMonitorService).
+  The MDT monitoring service can subsequently be enabled using the [Enable-MDTMonitorService](#enable-mdtMonitorService).
 
   For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.
 
@@ -189,9 +189,9 @@ Enable-MDTMonitorService [-EventPort] <Int32> [-DataPort] <Int32> [<CommonParame
 
 - In the Monitoring node in a deployment share in the Deployment Workbench.
 
-- Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet
+- Using the [Get-MDTMonitorData](#get-mdtmonitordata) cmdlet
 
-  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#Disable-MDTMonitorService).
+  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#disable-mdtMonitorService).
 
   For more information on the MDT monitoring service, see the section "Monitoring MDT Deployments" in the MDT document, *Using the Microsoft Deployment Toolkit*.
 
@@ -242,7 +242,7 @@ Enable-MDTMonitorService
 ### Example 2
 
 ```
-Enable-MDTMonitorService –EventPort 7000 –DataPort 7001
+Enable-MDTMonitorService -EventPort 7000 -DataPort 7001
 ```
 
 #### Description
@@ -300,7 +300,7 @@ Get-MDTDeploymentShareStatistics [-Path <String>] [<CommonParameters>]
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**2** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -317,7 +317,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-Get-MDTDeploymentShareStatistics –Path DS001:
+Get-MDTDeploymentShareStatistics -Path DS001:
 ```
 
 #### Description
@@ -385,7 +385,7 @@ ComputerIdentities : {}
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**2** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -396,7 +396,7 @@ ComputerIdentities : {}
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**3** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -413,7 +413,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-Get-MDTMonitorData –Path DS001:
+Get-MDTMonitorData -Path DS001:
 ```
 
 #### Description
@@ -432,7 +432,7 @@ Get-MDTMonitorData
 ### Example 3
 
 ```
-Get-MDTMonitorData –Path DS001: -ID 22
+Get-MDTMonitorData -Path DS001: -ID 22
 ```
 
 #### Description
@@ -463,7 +463,7 @@ Get-MDTOperatingSystemCatalog [-ImageFile] <String> [-Index] <Int32> [<CommonPar
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**2** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -474,7 +474,7 @@ Get-MDTOperatingSystemCatalog [-ImageFile] <String> [-Index] <Int32> [<CommonPar
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**3** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -491,7 +491,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-Get-MDTOperatingSystemCatalog –ImageFile "DS001:\Operating Systems\Windows 8\sources\install.wim" –Index 2
+Get-MDTOperatingSystemCatalog -ImageFile "DS001:\Operating Systems\Windows 8\sources\install.wim" -Index 2
 ```
 
 #### Description
@@ -507,7 +507,7 @@ Get-MDTPersistentDrive [<CommonParameters>]
 ```
 
 ### Description
- This cmdlet displays the list of persisted MDT Windows PowerShell drives. The list of persisted MDT Windows PowerShell drives is managed using the [Add-MDTPersistentDrive](#Add-MDTPersistentDrive) and [Remove-MDTPersistentDrive](#Remove-MDTPersistentDrive) cmdlets or the Deployment Workbench.
+ This cmdlet displays the list of persisted MDT Windows PowerShell drives. The list of persisted MDT Windows PowerShell drives is managed using the [Add-MDTPersistentDrive](#add-mdtpersistentdrive) and [Remove-MDTPersistentDrive](#remove-mdtpersistentdrive) cmdlets or the Deployment Workbench.
 
  The output from this cmdlet contains the following information:
 
@@ -551,13 +551,13 @@ Get-MDTPersistentDrive
 Import-MDTApplication [-Path <String>] -Name <String> ApplicationSourcePath <String> -DestinationFolder <String> [-Move] [<CommonParameters>]
 ```
 
- –or–
+ -or-
 
 ```
 Import-MDTApplication [-Path <String>] -Name <String> NoSource [<CommonParameters>]
 ```
 
- –or–
+ -or-
 
 ```
 Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>]
@@ -585,7 +585,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -596,7 +596,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -607,7 +607,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -618,7 +618,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -637,7 +637,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -654,7 +654,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -665,7 +665,7 @@ Import-MDTApplication [-Path <String>] -Name <String> Bundle [<CommonParameters>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -740,7 +740,7 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -754,7 +754,7 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**1** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -773,7 +773,7 @@ Import-MDTDriver [-Path <String>] -SourcePath <String[]> [ImportDuplicates] [<Co
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -815,13 +815,13 @@ Import-MDTDriver -Path "DS001:\Out-of-Box Drivers" SourcePath $DriverSourcePath 
 Import-MDTOperatingSystem [-Path <String>] -SourcePath <String> [-DestinationFolder <String>] [-Move] [<CommonParameters>]
 ```
 
- –or–
+ -or-
 
 ```
 Import-MDTOperatingSystem [-Path <String>] [DestinationFolder <String>] -SourceFile <String> [SetupPath <String>] [-Move] [<CommonParameters>]
 ```
 
- –or–
+ -or-
 
 ```
 Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameters>]
@@ -849,7 +849,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -860,7 +860,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -871,7 +871,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -890,7 +890,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -901,7 +901,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -912,7 +912,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -925,7 +925,7 @@ Import-MDTOperatingSystem [-Path <String>] -WDSServer <String> [<CommonParameter
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -960,7 +960,7 @@ Import-MDTOperatingSystem -Path "DS001:\Operating Systems" SourcePath "\\WDGMDT0
 ### Example 3
 
 ```
-Import-MDTOperatingSystem -Path "DS001:\Operating Systems" DestinationFolder "Windows8x64-Reference" –SourceFile "\\WDGMDT01\Capture$\WDG-REF-01_Capture.wim"
+Import-MDTOperatingSystem -Path "DS001:\Operating Systems" DestinationFolder "Windows8x64-Reference" -SourceFile "\\WDGMDT01\Capture$\WDG-REF-01_Capture.wim"
 ```
 
 #### Description
@@ -1000,7 +1000,7 @@ Import-MDTPackage [-Path <String>] [[-SourcePath] <String[]>] [<CommonParameters
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1011,7 +1011,7 @@ Import-MDTPackage [-Path <String>] [[-SourcePath] <String[]>] [<CommonParameters
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**1** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1059,7 +1059,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1076,7 +1076,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**1** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1087,7 +1087,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**2** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1098,7 +1098,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**3** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1109,7 +1109,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**4** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1120,7 +1120,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**4** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1134,7 +1134,7 @@ Import-MDTTaskSequence [-Path <String>] -Template <String> -Name <String> -ID <S
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1156,7 +1156,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1167,7 +1167,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1178,7 +1178,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1189,7 +1189,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1203,7 +1203,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1217,7 +1217,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1231,7 +1231,7 @@ $OS=Get-Item "DS001:\Operating Systems\Windows 8"
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1248,7 +1248,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "Deploy Windows 8 to Reference Computer" –ID "WIN8REFERENCE" –Comments "Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01)" –Version "1.00" –OperatingSystemPath "DS001:\Operating Systems\Windows 8_x64" –FullName "Woodgrove Bank Employee" –OrgName "Woodgrove Bank" HomePage "https://www.woodgrovebank.com"  OverrideProductKey "1234512345123451234512345" AdministratorPassword "P@ssw0rd"
+Import-MDTTaskSequence -Path "DS001:\Control" -Template "Client.xml" -Name "Deploy Windows 8 to Reference Computer" -ID "WIN8REFERENCE" -Comments "Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01)" -Version "1.00" -OperatingSystemPath "DS001:\Operating Systems\Windows 8_x64" -FullName "Woodgrove Bank Employee" -OrgName "Woodgrove Bank" HomePage "https://www.woodgrovebank.com"  OverrideProductKey "1234512345123451234512345" AdministratorPassword "P@ssw0rd"
 ```
 
 #### Description
@@ -1260,7 +1260,7 @@ Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "
 
 ```
 $OSObject=Get-Item "DS001:\Operating Systems\Windows 8_x64"
-Import-MDTTaskSequence -Path "DS001:\Control" –Template "Client.xml" –Name "Deploy Windows 8 to Reference Computer" –ID "WIN8REFERENCE" –Comments "Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01)" –Version "1.00"–OperatingSystem $OSObject –FullName "Woodgrove Bank Employee" –OrgName "Woodgrove Bank" HomePage "https://www.woodgrovebank.com"  AdministratorPassword "P@ssw0rd"
+Import-MDTTaskSequence -Path "DS001:\Control" -Template "Client.xml" -Name "Deploy Windows 8 to Reference Computer" -ID "WIN8REFERENCE" -Comments "Task sequence for deploying Windows 8 to the reference computer (WDG-REF-01)" -Version "1.00"-OperatingSystem $OSObject -FullName "Woodgrove Bank Employee" -OrgName "Woodgrove Bank" HomePage "https://www.woodgrovebank.com"  AdministratorPassword "P@ssw0rd"
 ```
 
 #### Description
@@ -1295,7 +1295,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1310,7 +1310,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1321,7 +1321,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1335,7 +1335,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1346,7 +1346,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1363,7 +1363,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1376,7 +1376,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1390,7 +1390,7 @@ New-MDTDatabase [-Path <String>] [-Force] -SQLServer <String> [-Instance <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1407,7 +1407,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-New-MDTDatabase -Path "DS001:" –SQLServer "WDGSQL01" Database "MDTDB" –SQLShare "\\WDGSQL01\MDTShare$"
+New-MDTDatabase -Path "DS001:" -SQLServer "WDGSQL01" Database "MDTDB" -SQLShare "\\WDGSQL01\MDTShare$"
 ```
 
 #### Description
@@ -1416,7 +1416,7 @@ New-MDTDatabase -Path "DS001:" –SQLServer "WDGSQL01" Database "MDTDB" –SQLSh
 ### Example 2
 
 ```
-New-MDTDatabase -Path "DS001:" –Force –SQLServer "WDGSQL01" –Instance "MDTInstance" Database "MDTDB" –SQLShare "\\WDGSQL01\MDTShare$"
+New-MDTDatabase -Path "DS001:" -Force -SQLServer "WDGSQL01" -Instance "MDTInstance" Database "MDTDB" -SQLShare "\\WDGSQL01\MDTShare$"
 ```
 
 #### Description
@@ -1431,7 +1431,7 @@ New-MDTDatabase -Path "DS001:" –Force –SQLServer "WDGSQL01" –Instance "MDT
 Remove-MDTMonitorData [-Path <String>] [-ID <Int32>] [<CommonParameters>]
 ```
 
- –or–
+ -or-
 
 ```
 Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonParameters>]
@@ -1460,7 +1460,7 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1471,7 +1471,7 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1482,7 +1482,7 @@ Remove-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [<CommonPara
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1534,7 +1534,7 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
 ```
 
 ### Description
- This cmdlet removes an existing Windows PowerShell drive created using the **MDTProvider** from the list of drives that are persisted in the Deployment Workbench or in a Windows PowerShell session using the [Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive) cmdlet. This cmdlet is called when a deployment share is closed in (removed from) the Deployment Workbench.
+ This cmdlet removes an existing Windows PowerShell drive created using the **MDTProvider** from the list of drives that are persisted in the Deployment Workbench or in a Windows PowerShell session using the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet. This cmdlet is called when a deployment share is closed in (removed from) the Deployment Workbench.
 
 > [!NOTE]
 >  The list of persisted **MDTProvider** drives is maintained on a per-user based in the user profile.
@@ -1564,7 +1564,7 @@ Remove-MDTPersistentDrive [-Name] <String> [[-InputObject] <PSObject>] [<CommonP
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**2** and **Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1581,7 +1581,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-Remove-MDTPersistentDrive –Name "DS001:"
+Remove-MDTPersistentDrive -Name "DS001:"
 ```
 
 #### Description
@@ -1591,7 +1591,7 @@ Remove-MDTPersistentDrive –Name "DS001:"
 
 ```
 $MDTPSDrive = Get-PSDrive | Where-Object {$_.Root -eq "C:\DeploymentShare" -and $_.Provider -like "*MDTProvider"}
-Remove-MDTPersistentDrive –InputObject $MDTPSDrive
+Remove-MDTPersistentDrive -InputObject $MDTPSDrive
 ```
 
 #### Description
@@ -1607,7 +1607,7 @@ Restore-MDTPersistentDrive [-Force] [<CommonParameters>]
 ```
 
 ### Description
- This cmdlet restores a persisted MDT Windows PowerShell drive to the list of active Windows PowerShell drive for each deployment share that was added to the list of persisted MDT Windows PowerShell drives. The list of persisted MDT Windows PowerShell drives is managed using the [Add-MDTPersistentDrive](#Add-MDTPersistentDrive) and [Remove-MDTPersistentDrive](#Remove-MDTPersistentDrive) cmdlets or the Deployment Workbench.
+ This cmdlet restores a persisted MDT Windows PowerShell drive to the list of active Windows PowerShell drive for each deployment share that was added to the list of persisted MDT Windows PowerShell drives. The list of persisted MDT Windows PowerShell drives is managed using the [Add-MDTPersistentDrive](#add-mdtpersistentdrive) and [Remove-MDTPersistentDrive](#remove-mdtpersistentdrive) cmdlets or the Deployment Workbench.
 
  This cmdlet calls the **New-PSDrive** cmdlet to create a Windows PowerShell drive for each drive in the MDT persisted list. Persisted MDT Windows PowerShell drives are similar to persisted network drive mappings.
 
@@ -1628,7 +1628,7 @@ Restore-MDTPersistentDrive [-Force] [<CommonParameters>]
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1669,7 +1669,7 @@ Get-MDTPersistentDrive -Force
 Set-MDTMonitorData [-Path <String>] [-ComputerObject <PSObject>] [-Settings <Hashtable>] [<CommonParameters>]
 ```
 
- –or–
+ -or-
 
 ```
 Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>] [<CommonParameters>]
@@ -1698,7 +1698,7 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1709,7 +1709,7 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1720,7 +1720,7 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1733,7 +1733,7 @@ Set-MDTMonitorData [-Path <String>] [-MacAddress <String>] [Settings <Hashtable>
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -1783,9 +1783,9 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 
 - In the Monitoring node in a deployment share in the Deployment Workbench
 
-- Using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet
+- Using the [Get-MDTMonitorData](#get-mdtmonitordata) cmdlet
 
-  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#Disable-MDTMonitorService). Monitoring information can be written to the MDT monitoring service using the [Set-MDTMonitorData](#Set-MDTMonitorData) cmdlet.
+  The MDT monitoring service can be disabled using the [Disable-MDTMonitorService](#disable-mdtMonitorService). Monitoring information can be written to the MDT monitoring service using the [Set-MDTMonitorData](#set-mdtmonitordata) cmdlet.
 
 > [!NOTE]
 >  For this cmdlet to function properly there must be at least one MDT monitoring data item in the deployment share. If no MDT monitoring information has been recorded, the deployment share will fail the test.
@@ -1813,7 +1813,7 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1824,7 +1824,7 @@ Test-MDTMonitorData -ServerName <String> -EventPort <Int32> -DataPort <Int32> [<
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1859,7 +1859,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 ### Description
  This cmdlet updates an existing MDT DB database to the latest version of the MDT DB database schema. Each deployment share can be associated with only one MDT DB database.
 
- This cmdlet is automatically called when a deployment share is being upgraded, such as when running the [Restore-MDTPersistentDrive](#Restore-MDTPersistentDrive) cmdlet with the *Force* parameter and the [Update-MDTDeploymentShare](#Update-MDTDeploymentShare) cmdlet.
+ This cmdlet is automatically called when a deployment share is being upgraded, such as when running the [Restore-MDTPersistentDrive](#restore-mdtpersistentdrive) cmdlet with the *Force* parameter and the [Update-MDTDeploymentShare](#update-mdtdeploymentshare) cmdlet.
 
 ### Parameters
  This subsection provides information about the various parameters that can be used with the **Upgrade-MDTDatabaseSchema** cmdlet.
@@ -1871,7 +1871,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1885,7 +1885,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1896,7 +1896,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1916,7 +1916,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1927,7 +1927,7 @@ Update-MDTDatabaseSchema -SQLServer <String> [-Instance <String>] [-Port <String
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1944,7 +1944,7 @@ Get-Help about_CommonParameters
 ### Example 1
 
 ```
-Update-MDTDatabaseSchema –SQLServer "WDGSQL01" Database "MDTDB"
+Update-MDTDatabaseSchema -SQLServer "WDGSQL01" Database "MDTDB"
 ```
 
 #### Description
@@ -1953,7 +1953,7 @@ Update-MDTDatabaseSchema –SQLServer "WDGSQL01" Database "MDTDB"
 ### Example 2
 
 ```
-Update-MDTDatabaseSchema –SQLServer "WDGSQL01" –Instance "MDTInstance" -Port "6333" Database "MDTDB"
+Update-MDTDatabaseSchema -SQLServer "WDGSQL01" -Instance "MDTInstance" -Port "6333" Database "MDTDB"
 ```
 
 #### Description
@@ -1984,7 +1984,7 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -1999,7 +1999,7 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -2017,7 +2017,7 @@ Update-MDTDeploymentShare [-Path <String>] [-Force] [Compress] [<CommonParameter
 |-|-|
 |**Required?**|**False**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**True** (**ByValue**)|
 |**Accept wildcard characters?**|**False**|
 
@@ -2092,7 +2092,7 @@ Update-MDTLinkedDS -Path <String> [<CommonParameters>]
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
@@ -2142,7 +2142,7 @@ Update-MDTMedia -Path <String> [<CommonParameters>]
 |-|-|
 |**Required?**|**True**|
 |**Position?**|**Named**|
-|**Default value**|–|
+|**Default value**|-|
 |**Accept pipeline input?**|**False**|
 |**Accept wildcard characters?**|**False**|
 
