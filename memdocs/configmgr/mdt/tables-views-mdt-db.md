@@ -23,7 +23,8 @@ Customize the database in the Database node in the Deployment Workbench. Using t
 However, queries about the information in the tables are done using views. Views help simplify the queries by joining results from multiple tables. ZTIGather.wsf queries the views to return the result set that the **Parameters** and **ParameterCondition** properties specify.
 
 ## Tables in the MDT DB
- The following table lists the database tables that Deployment Workbench creates and manages.
+
+The following table lists the database tables that Deployment Workbench creates and manages.
 
 |**Table**|**Description**|
 |-|-|
@@ -41,7 +42,8 @@ However, queries about the information in the tables are done using views. Views
 |Settings_Roles|Identifies the roles to be associated with the target computer based on the settings in the Computers, Locations, and Make and Model nodes in the Database node in the Deployment Workbench.|
 
 ## Views in the MDT DB
- The following table lists and describes the database views that are used when querying configuration information in the MDT DB.
+
+The following table lists and describes the database views that are used when querying configuration information in the MDT DB.
 
 |**View**|**Description**|
 |-|-|

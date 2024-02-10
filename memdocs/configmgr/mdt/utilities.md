@@ -37,7 +37,8 @@ The following information is provided for each utility:
 - **Arguments and description**.Indicates the valid arguments to be specified for the utility and a brief description of what each argument means
 
 ## BCDBoot.exe
- BCDBoot is a tool used to quickly set up a system partition or repair the boot environment located on the system partition. The system partition is set up by copying a small set of boot environment files from an installed Windows image. BCDBoot also creates a Boot Configuration Data (BCD) store on the system partition, with a new boot entry that enables Windows to boot to the installed Windows image.
+
+BCDBoot is a tool used to quickly set up a system partition or repair the boot environment located on the system partition. The system partition is set up by copying a small set of boot environment files from an installed Windows image. BCDBoot also creates a Boot Configuration Data (BCD) store on the system partition, with a new boot entry that enables Windows to boot to the installed Windows image.
 
 |**Value**|**Description**|
 |-|-|
@@ -50,7 +51,8 @@ The following information is provided for each utility:
 ||See the command-line help provided by this utility.|
 
 ## BDDRun.exe
- This utility is run as an action by the Task Sequencer for executables (such as a script or other code) that require user interaction. By default, the task sequence cannot run an executable that requires user interaction. However, this utility allows the Task Sequencer to run an executable that requires user interaction.
+
+This utility is run as an action by the Task Sequencer for executables (such as a script or other code) that require user interaction. By default, the task sequence cannot run an executable that requires user interaction. However, this utility allows the Task Sequencer to run an executable that requires user interaction.
 
  The executable that requires user interaction is provided as an argument to this utility. This utility runs the executable in a separate command environment.
 
@@ -74,7 +76,8 @@ The following information is provided for each utility:
 > Put double quotation marks around any part of the *command-line* portion of the argument that contains blanks. For example: `BDDRun.exe MyAppInstall.exe /destinationdir: "%ProgramFiles%\AppName"`.
 
 ## Bootsect.exe
- Bootsect.exe updates the master boot code for hard disk partitions to switch between BOOTMGR and NTLDR. Use this utility to restore the boot sector on the computer.
+
+Bootsect.exe updates the master boot code for hard disk partitions to switch between BOOTMGR and NTLDR. Use this utility to restore the boot sector on the computer.
 
  For more information on Bootsect.exe, see the section, "Bootsect Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.
 
@@ -96,7 +99,8 @@ The following information is provided for each utility:
 |**/Force**|Forcibly dismounts the volumes during the boot code update. Use this option with caution.|
 
 ## Compact.exe
- Displays or alters the compression of files on NTFS file system partitions.
+
+Displays or alters the compression of files on NTFS file system partitions.
 
 |**Value**|**Description**|
 |-|-|
@@ -116,7 +120,8 @@ The following information is provided for each utility:
 |***filename***|Specifies a pattern, file, or directory.|
 
 ## Diskpart.exe
- Diskpart is a text-mode command interpreter that allows management of objects (disks, partitions, or volumes) using scripts or direct input in a Command Prompt window.
+
+Diskpart is a text-mode command interpreter that allows management of objects (disks, partitions, or volumes) using scripts or direct input in a Command Prompt window.
 
  For more information on Diskpart.exe, see the section, "Diskpart Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.
 
@@ -131,7 +136,8 @@ The following information is provided for each utility:
 ||See the guide referenced in the utility description.|
 
 ## Expand.exe
- This utility is run to expand (extract) files from compressed files.
+
+This utility is run to expand (extract) files from compressed files.
 
 |**Value**|**Description**|
 |-|-|
@@ -149,7 +155,8 @@ The following information is provided for each utility:
 | ***Destination*** | Destination file &#124; path specification (**Destination** can be a directory. If **Source** is multiple files and **-r** is not specified, **Destination** must be a directory.) |
 
 ## ImageX.exe
- ImageX is a command-line utility that enables OEMs and corporations to capture, modify, and apply file-based disk images for rapid deployment. ImageX works with WIM files for copying to a network, or it can work with other technologies that use WIM images, such as Windows Setup and Windows Deployment Services.
+
+ImageX is a command-line utility that enables OEMs and corporations to capture, modify, and apply file-based disk images for rapid deployment. ImageX works with WIM files for copying to a network, or it can work with other technologies that use WIM images, such as Windows Setup and Windows Deployment Services.
 
  For more information about ImageX, see the section, "What is ImageX," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.
 
@@ -164,7 +171,8 @@ The following information is provided for each utility:
 ||See the guide referenced in the utility description.|
 
 ## Microsoft.BDD.PnpEnum.exe
- This utility is run to enumerate Plug and Play devices installed on the target computer.
+
+This utility is run to enumerate Plug and Play devices installed on the target computer.
 
 |**Value**|**Description**|
 |-|-|
@@ -177,7 +185,8 @@ The following information is provided for each utility:
 |None|-|
 
 ## Mofcomp.exe
- Mofcomp.exe is the Managed Object Format compiler that parses a file that contains Managed Object Format statements and adds the classes and class instances defined in the file to the WMI repository. Mofcomp.exe provides command-line help on the switch use options.
+
+Mofcomp.exe is the Managed Object Format compiler that parses a file that contains Managed Object Format statements and adds the classes and class instances defined in the file to the WMI repository. Mofcomp.exe provides command-line help on the switch use options.
 
 |**Value**|**Description**|
 |-|-|
@@ -190,7 +199,8 @@ The following information is provided for each utility:
 ||See the command-line help that this utility provides.|
 
 ## Netsh.exe
- Netsh.exe is a command-line and scripting utility used to automate the configuration of networking components. For more information about Netsh.exe, see [The Netsh Command-Line Utility](/previous-versions/windows/it-pro/windows-server-2003/cc785383(v=ws.10)).
+
+Netsh.exe is a command-line and scripting utility used to automate the configuration of networking components. For more information about Netsh.exe, see [The Netsh Command-Line Utility](/previous-versions/windows/it-pro/windows-server-2003/cc785383(v=ws.10)).
 
 |**Value**|**Description**|
 |-|-|
@@ -203,7 +213,8 @@ The following information is provided for each utility:
 ||See the command-line help that this utility provides or the information found at the URL listed in the utility description.|
 
 ## Reg.exe
- The Console Registry Tool is used to read and modify registry data.
+
+The Console Registry Tool is used to read and modify registry data.
 
 |**Value**|**Description**|
 |-|-|
@@ -216,7 +227,8 @@ The following information is provided for each utility:
 ||See the command-line help that this utility provides.|
 
 ## Regsvr32.exe
- This utility is used to register files (.dll, .exe, .ocx, and so on) with the operating system.
+
+This utility is used to register files (.dll, .exe, .ocx, and so on) with the operating system.
 
 |**Value**|**Description**|
 |-|-|
@@ -231,7 +243,8 @@ The following information is provided for each utility:
 |**/u**|Unregisters the file|
 
 ## Wpeutil.exe
- The Windows PE utility (Wpeutil) is a command-line utility with which various commands can be run in a Windows PE session. For example, an administrator can shut down or reboot Windows PE, activate or deactivate a firewall, configure language settings, and initialize a network. MDT uses the utility to initialize Windows PE and network connections, and start LTI deployments.
+
+The Windows PE utility (Wpeutil) is a command-line utility with which various commands can be run in a Windows PE session. For example, an administrator can shut down or reboot Windows PE, activate or deactivate a firewall, configure language settings, and initialize a network. MDT uses the utility to initialize Windows PE and network connections, and start LTI deployments.
 
  For more information on Wpeutil.exe, see the section, "Wpeutil Command-Line Options," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.
 

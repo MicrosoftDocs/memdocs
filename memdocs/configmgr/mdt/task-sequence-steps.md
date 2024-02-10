@@ -33,10 +33,12 @@ The following information is provided for each task sequence group and step:
   For more information about the Task Sequence Editor, see [Operating System Deployment: Task Sequence Editor](../osd/understand/introduction-to-operating-system-deployment.md).
 
 ## Common Properties and Options for Task Sequence Step Types
- Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.
+
+Each task sequence group and step has configurable settings on the **Properties** and **Options** tabs that are common to all task sequence groups and steps. These common settings are briefly described in the following sections.
 
 ### Common Properties
- Table 1 shows the settings that are available on the **Properties** tab of each task sequence step. For more information about the **Properties** tab for a particular task sequence step, see the topic that corresponds to the step later in this reference.
+
+Table 1 shows the settings that are available on the **Properties** tab of each task sequence step. For more information about the **Properties** tab for a particular task sequence step, see the topic that corresponds to the step later in this reference.
 
 > [!NOTE]
 >
@@ -51,7 +53,8 @@ The following information is provided for each task sequence group and step:
 |**Description**|A user-defined description that should make the task sequence step requirements and tasks easily understandable.|-|-|
 
 ### Common Options
- Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](../osd/understand/task-sequence-steps.md#common-settings).
+
+Table 2 shows the settings that are available on the Options tab of a task sequence step. For more information about the Options tab, see [Task Sequence Options Tab](../osd/understand/task-sequence-steps.md#common-settings).
 
 #### Table 2. Settings Available on the Options Tab
 
@@ -67,10 +70,12 @@ The following information is provided for each task sequence group and step:
 > Additional conditional statements might be available when using Configuration Manager to configure task sequence steps.
 
 ## Specific Properties and Settings for Task Sequence Step Types
- Some properties and parameters of each task sequence step type are unique to that type. Each type with unique properties and settings is shown in the following sections with its unique task sequence step properties and settings.
+
+Some properties and parameters of each task sequence step type are unique to that type. Each type with unique properties and settings is shown in the following sections with its unique task sequence step properties and settings.
 
 ### Apply Network Settings
- This task sequence step configures the network adapter on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
+
+This task sequence step configures the network adapter on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
 
  The unique properties and settings for the **Apply Network Settings** task sequence step type are:
 
@@ -99,7 +104,8 @@ The following information is provided for each task sequence group and step:
 |**Disable NetBIOS over TCP/IP**|Specifies that this network connection does not use NetBT and WINS.|
 
 ### Authorize DHCP
- This task sequence step authorizes the target computer as a DHCP server. For more information about which script accomplishes this task and which properties you use, see [ZTIAuthorizeDHCP.wsf](scripts.md#ztiauthorizedhcpwsf).
+
+This task sequence step authorizes the target computer as a DHCP server. For more information about which script accomplishes this task and which properties you use, see [ZTIAuthorizeDHCP.wsf](scripts.md#ztiauthorizedhcpwsf).
 
  The unique properties and settings for the **Authorize DHCP** task sequence step type are:
 
@@ -117,7 +123,8 @@ The following information is provided for each task sequence group and step:
 |**Account**|A user account that is a member of the Enterprise Admins group, to be used when authorizing DHCP for the target computer.|
 
 ### Capture Network Settings
- This task sequence step gathers the network adapter settings from the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
+
+This task sequence step gathers the network adapter settings from the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
 
  The unique properties and settings for the **Capture Network Settings** task sequence step type are:
 
@@ -135,7 +142,8 @@ The following information is provided for each task sequence group and step:
 |None|None|
 
 ### Configure ADDS
- This task sequence step configures the target computer as an Active Directory&reg; Domain Services (AD DS) domain controller. For more information about the settings listed in the following tables and which this task sequence step can configure, see the Microsoft Help and Support article, [How to use unattended mode to install and remove Active Directory Domain Services on Windows Server 2008-based domain controllers](/troubleshoot/windows-server/identity/syntax-build-answer-files-unattended-installation-ad-ds).
+
+This task sequence step configures the target computer as an Active Directory&reg; Domain Services (AD DS) domain controller. For more information about the settings listed in the following tables and which this task sequence step can configure, see the Microsoft Help and Support article, [How to use unattended mode to install and remove Active Directory Domain Services on Windows Server 2008-based domain controllers](/troubleshoot/windows-server/identity/syntax-build-answer-files-unattended-installation-ad-ds).
 
  The unique properties and settings for the **Configure ADDS** task sequence step type are:
 
@@ -167,7 +175,8 @@ The following information is provided for each task sequence group and step:
 |**Site name**|The value of an existing AD DS site on which to locate the new domain controller. If not specified, an appropriate site will be selected. This option only applies to the new tree in a new forest scenario. For all other scenarios, a site will be selected using the current site and subnet configuration of the forest.|
 
 ### Configure DHCP
- This task sequence step configures the DHCP server service on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDHCP.wsf](scripts.md#zticonfiguredhcpwsf).
+
+This task sequence step configures the DHCP server service on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDHCP.wsf](scripts.md#zticonfiguredhcpwsf).
 
  The unique properties and settings for the **Configure DHCP** task sequence step type are:
 
@@ -186,7 +195,8 @@ The following information is provided for each task sequence group and step:
 |Server Options|These options apply globally for all scopes and classes defined at each DHCP server and for any clients that a DHCP server services. Configured server option values always apply unless they are overridden by options assigned to other scope, class, or client reservation.<br /><br /> Within the **Server Options** setting, the following sub-settings are configurable:<br /><br /> - **003 Router**. A list of IP addresses for routers on the client subnet<br /><br /> - **006 DNS Servers**. A list of IP addresses for DNS name servers available to the client<br /><br /> - **015 DNS Domain Name**. The domain name that the DHCP client should use when resolving unqualified domain names with the DNS<br /><br /> - **044 WINS/NBNS Servers**. Lists the IP addresses for NBNSes on the network<br /><br /> -                                 **046 WINS/NBT Node Type**. Configures the client node type for NetBT clients<br /><br /> - **060 PXE Client**. The address used for PXE client bootstrap code|
 
 ### Configure DNS
- This task sequence step configures DNS on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDNS.wsf](scripts.md#zticonfigurednswsf).
+
+This task sequence step configures DNS on the target computer. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigureDNS.wsf](scripts.md#zticonfigurednswsf).
 
  The unique properties and settings for the **Configure DNS** task sequence step type are:
 
@@ -213,7 +223,8 @@ The following information is provided for each task sequence group and step:
 > For more information about these server properties, see [Dnscmd](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772069(v=ws.11)).
 
 ### Enable BitLocker
- This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](../osd/understand/task-sequence-steps.md#enable-bitlocker).
+
+This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](../osd/understand/task-sequence-steps.md#enable-bitlocker).
 
  The unique properties and settings for the **Enable BitLocker** task sequence step type are:
 
@@ -237,7 +248,8 @@ The following information is provided for each task sequence group and step:
 |**Wait for BitLocker to complete**|When selected, this step will not finish until after BitLocker has finished processing all drives.|
 
 ### Execute Runbook
- This task sequence step runs Microsoft System Center 2012 Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using this task sequence step type.
+
+This task sequence step runs Microsoft System Center 2012 Orchestrator runbooks on the target computer. An Orchestrator *runbook* is the sequence of activities that orchestrate actions on computers and networks. You can initiate Orchestrator runbooks in MDT using this task sequence step type.
 
 > [!NOTE]
 >
@@ -258,13 +270,14 @@ The following information is provided for each task sequence group and step:
 |                       **Name**                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |               **Orchestrator Server**                | Type the URL for the Orchestrator web service, which includes the server name. The Orchestrator web service can use either Hypertext Transfer Protocol (HTTP) or HTTP over Secure Sockets Layer (HTTPS). The Orchestrator web service defaults to port 81.<br /><br /> The Orchestrator web service supports multiple runbook servers. By default, a runbook can run on any runbook server. A runbook can be configured to specify which runbook servers should be used to run the runbook.<br /><br /> Note:<br /><br /> The Orchestrator web service supports the ability to run a runbook on a specific runbook server. This feature is not supported in MDT.<br /><br /> Specify the URL in any of the following formats:<br /><br /> - ***servername***. When using this format, the URL defaults to:<br /><br /> `https://<servername>:81/Orchestrator2012/Orchestrator.svc`<br /><br /> - ***servername:port***. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - <strong>https://*servername:port</strong><em>. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - **https://</em>servername:port<strong><em>. When using this format, the URL defaults to:<br /><br /> `https://<servername:port>/Orchestrator2012/Orchestrator.svc.`<br /><br /> - *</em>https://*servername:port*/Orchestrator2012/Orchestrator.svc</strong>. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc.<br /><br /> -                                 **https://<em>servername:port</em>/Orchestrator2012/Orchestrator.svc**. When using this format, MDT assumes that you are providing the fully qualified URL, because the value ends with .svc. |
-|                     **Runbook**                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> Note:<br /><br /> To successfully browse for Orchestrator runbooks, install the ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                     **Runbook**                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Click **Browse**, and then select the name of the Orchestrator runbook that this task sequence should run.<br /><br /> Note:<br /><br /> To successfully browse for Orchestrator runbooks, install the ADO.NET Data Services Update for .NET Framework 3.5 SP1 for Windows 7 and Windows Server 2008 R2.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |     **Automatically provide runbook parameters**     |                                                                                                                                                                                                                                                                                                                                                                         Select this option to automatically provide the Orchestrator runbook input parameter values( which assumes that the runbook parameter values are task sequence variables). For example, if a runbook has an input parameter named **OSDComputerName**, then the **OSDComputerName** task sequence variable value is passed to the runbook.<br /><br /> Note:<br /><br /> This option works only for input parameters that are valid task sequence variable names and do not contain spaces or other special characters. Although spaces and other special characters are supported as Orchestrator parameter names, they are not valid task sequence variable names. If you need to pass values to parameters with spaces or other special characters, use the **Specify explicit runbook parameters** option.<br /><br /> The other option is **Specify explicit runbook parameters**.<br /><br /> Note:<br /><br /> The values provided for the runbook input parameters to the Orchestrator web service are formatted as XML. Passing values that contain data that is or resembles XML-formatted data may cause errors.                                                                                                                                                                                                                                                                                                                                                                          |
 |       **Specify explicit  runbook parameters**       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Select this option to explicitly provide the Orchestrator runbook input parameters.<br /><br /> You must configure the following settings for each input parameter that the Orchestrator runbook requires:<br /><br /> -                                 **Name**. This is the name of the input runbook parameter.<br /><br /> Note:<br /><br /> If you change the parameters for an existing Orchestrator runbook, you need to browse (reselect) for the runbook again, because MDT only retrieves the parameter list when initially adding the Orchestrator runbook.<br /><br /> - **Value**. This can be a constant or a variable, such as a task sequence variable or an environment variable. For example, you can specify a value of **%OSDComputerName%**, which will pass the value of the **OSDComputerName** task sequence variable to the runbook input parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | **Wait for the runbook to finish before continuing** |                                                                                                                                                                                                                                                                                                                                                                                                                                                       This check box controls whether the task sequence step will wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> If this check box is:<br /><br /> - **Selected**, then the task sequence step will wait for the runbook to finish before proceeding on to the next task sequence step.<br /><br /> When this check box is selected, the task sequence step will poll the Orchestrator web service for the runbook to finish. The amount of time between polls starts at 1 second, then increases to 2, 4, 8, 16, 32, and 64 seconds between each poll. Once the amount of time reaches 64 seconds, the task sequence step continues to poll every 64 seconds.<br /><br /> - **Cleared**, then the task sequence step will not wait for the runbook to finish before proceeding to the next task sequence step.<br /><br /> Note:<br /><br /> This check box must be selected if the runbook returns output parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### Format and Partition Disk
- This task sequence step partitions and formats disks on the target computer. For more information about this step type, see [Format and Partition Disk](../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk).
+
+This task sequence step partitions and formats disks on the target computer. For more information about this step type, see [Format and Partition Disk](../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk).
 
  The unique properties and settings for the **Format and Partition Disk** task sequence step type are:
 
@@ -287,7 +300,8 @@ The following information is provided for each task sequence group and step:
 > When using the CustomSettings.ini file to specify the hard disk and partition configurations, only the first hard disk and first two partitions will be configured. Edit ZTIGather.xml to configure additional hard disks or partitions.
 
 ### Gather
- This task sequence step gathers data and processing rules for the target computer. The unique properties and settings for the **Gather** task sequence step type are:
+
+This task sequence step gathers data and processing rules for the target computer. The unique properties and settings for the **Gather** task sequence step type are:
 
 #### Properties
 
@@ -308,7 +322,8 @@ The following information is provided for each task sequence group and step:
 > This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Set Dynamic Variables**in the General group.
 
 ### Inject Drivers
- This task sequence step injects drivers that have been configured for deployment to the target computer. The unique properties and settings for the **Inject Drivers** task sequence step type are:
+
+This task sequence step injects drivers that have been configured for deployment to the target computer. The unique properties and settings for the **Inject Drivers** task sequence step type are:
 
 #### Properties
 
@@ -325,7 +340,8 @@ The following information is provided for each task sequence group and step:
 |**Selection profile**|Installs all drivers in the selected profile|
 
 ### Install Application
- This task sequence step installs applications on the target computer. For more information about this step type, see [Install Software](../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
+
+This task sequence step installs applications on the target computer. For more information about this step type, see [Install Software](../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
 
  The unique properties and settings for the **Install Application** task sequence step type are:
 
@@ -344,7 +360,8 @@ The following information is provided for each task sequence group and step:
 |**Success codes**|A space\-delimited list of application installation exit codes that should be used when determining the successful installation of applications.|
 
 ### Install Operating System
- This task sequence step installs an operating system on the target computer. MDT can deploy Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 using:
+
+This task sequence step installs an operating system on the target computer. MDT can deploy Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 using:
 
 - **setup.exe**. This method is the traditional method used, initiated by running setup.exe from the installation media. MDT uses setup.exe by default.
 
@@ -369,7 +386,8 @@ The following information is provided for each task sequence group and step:
 |**Partition**|The partition on which to install the operating system.|
 
 ### Install Roles and Features
- This task sequence step installs the selected roles and features on the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](scripts.md#ztiosrolewsf).
+
+This task sequence step installs the selected roles and features on the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](scripts.md#ztiosrolewsf).
 
  The unique properties and settings for the **Install Roles and Features** task sequence step type are:
 
@@ -388,7 +406,8 @@ The following information is provided for each task sequence group and step:
 |**Select the roles and features that should be installed**|Select one or more roles and features for installation on the target computer.|
 
 ### Install Language Packs Offline
- This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
+
+This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
 
  The unique properties and settings for the **Install Language Packs Offline** task sequence step type are:
 
@@ -409,7 +428,8 @@ The following information is provided for each task sequence group and step:
 > This task sequence step is valid only when using MDT with Configuration Manager.
 
 ### Install Language Packs Online
- This task sequence step installs language packs to the image on the target computer after the operating system has been deployed and after the target computer has been restarted. For more information about which script accomplishes this task and which properties you use, see [ZTILangPacksOnline.wsf](scripts.md#ztilangpacksonlinewsf).
+
+This task sequence step installs language packs to the image on the target computer after the operating system has been deployed and after the target computer has been restarted. For more information about which script accomplishes this task and which properties you use, see [ZTILangPacksOnline.wsf](scripts.md#ztilangpacksonlinewsf).
 
  The unique properties and settings for the **Install Language Packs Online** task sequence step type are:
 
@@ -430,7 +450,8 @@ The following information is provided for each task sequence group and step:
 > This task sequence step is valid only when using MDT with Configuration Manager.
 
 ### Install Updates Offline
- This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
+
+This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. These updates include language packs. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
 
  The unique properties and settings for the **Install Updates Offline** task sequence step type are:
 
@@ -447,7 +468,8 @@ The following information is provided for each task sequence group and step:
 |**Selection Profile**|The name of the selection profile that should be applied to the target computer<br /><br /> Note:<br /><br /> When using MDT with Configuration Manager, specify the name of the update package that should be applied.|
 
 ### Recover from Domain Join Failure
- This task sequence step verifies that the target computer has joined a domain. The unique properties and settings for the **Recover from Domain Join Failure** task sequence step type are:
+
+This task sequence step verifies that the target computer has joined a domain. The unique properties and settings for the **Recover from Domain Join Failure** task sequence step type are:
 
 #### Properties
 
@@ -464,7 +486,8 @@ The following information is provided for each task sequence group and step:
 |**No recover**|If the target computer is not able to join a domain, the task sequence fails, stopping the task sequence.|
 
 ### Restart computer
- This task sequence step restarts the target computer. The unique properties and settings for the **Restart computer** task sequence step type are:
+
+This task sequence step restarts the target computer. The unique properties and settings for the **Restart computer** task sequence step type are:
 
 #### Properties
 
@@ -479,7 +502,8 @@ The following information is provided for each task sequence group and step:
 |**None**|None|
 
 ### Run Command Line
- This task sequence step runs the specified commands on the target computer. For more information about this step type, see [Run Command Line](../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine).
+
+This task sequence step runs the specified commands on the target computer. For more information about this step type, see [Run Command Line](../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine).
 
  The unique properties and settings for the **Run Command Line** task sequence step type are:
 
@@ -500,7 +524,8 @@ The following information is provided for each task sequence group and step:
 |**Load the user's profile**|When selected, loads the user profile for the specified account|
 
 ### Run PowerShell Script
- This task sequence step runs the specified Windows PowerShell&trade; script on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTIPowerShell.wsf](scripts.md#ztipowershellwsf).
+
+This task sequence step runs the specified Windows PowerShell&trade; script on the target computer. For more information about what script accomplishes this task and which properties are used, see [ZTIPowerShell.wsf](scripts.md#ztipowershellwsf).
 
  The unique properties and settings for the **Run PowerShell Script** task sequence step type are:
 
@@ -522,7 +547,8 @@ The following information is provided for each task sequence group and step:
 > This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Run PowerShell Script** in the General group.
 
 ### Set Task Sequence Variable
- This task sequence step sets the specified task sequence variable to the specified value. For more information about this step type, see [Set Task Sequence Variable](../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable).
+
+This task sequence step sets the specified task sequence variable to the specified value. For more information about this step type, see [Set Task Sequence Variable](../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable).
 
  The unique properties and settings for the **Set Task Sequence Variable** task sequence step type are:
 
@@ -540,7 +566,8 @@ The following information is provided for each task sequence group and step:
 |**Value**|The value to assign to the specified variable|
 
 ### Uninstall Roles and Features
- This task sequence step uninstalls the selected roles and features from the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](scripts.md#ztiosrolewsf).
+
+This task sequence step uninstalls the selected roles and features from the target computer. For more information about which script accomplishes this task and the properties used, see [ZTIOSRole.wsf](scripts.md#ztiosrolewsf).
 
  The unique properties and settings for the **Uninstall Roles and Features** task sequence step type are:
 
@@ -559,7 +586,8 @@ The following information is provided for each task sequence group and step:
 |**Select the roles and features that should be installed**|Select one or more roles and features for unstallation from the target computer.|
 
 ### Validate
- This task sequence step verifies that the target computer meets the specified deployment prerequisite conditions. The unique properties and settings for the **Validate** task sequence step type are:
+
+This task sequence step verifies that the target computer meets the specified deployment prerequisite conditions. The unique properties and settings for the **Validate** task sequence step type are:
 
 #### Properties
 
@@ -581,7 +609,8 @@ The following information is provided for each task sequence group and step:
 > This task sequence step is natively available in System Center 2012 R2 Configuration Manager as **Check Readiness** in the General group.
 
 ## Out\-of\-Box Task Sequence Steps
- The following task sequence steps are referenced by one or more of the available task sequence templates included with MDT. Each of the following examples lists the preconfigured properties, parameters, and options and can be used as a basis for building custom task sequences.
+
+The following task sequence steps are referenced by one or more of the available task sequence templates included with MDT. Each of the following examples lists the preconfigured properties, parameters, and options and can be used as a basis for building custom task sequences.
 
  Only the task sequence step properties, parameters, and options, and their corresponding values are listed in the examples.
 
@@ -590,7 +619,8 @@ The following information is provided for each task sequence group and step:
 > For more information about each task sequence step, see the corresponding topics in [Common Properties and Options for Task Sequence Step Types](#common-properties-and-options-for-task-sequence-step-types) and [Specific Properties and Settings for Task Sequence Step Types](#specific-properties-and-settings-for-task-sequence-step-types).
 
 ### Apply Network Settings
- This task sequence step configures the network adapter on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
+
+This task sequence step configures the network adapter on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTINICConfig.wsf](scripts.md#ztinicconfigwsf).
 
  The default configuration of the **Apply Network Settings** task sequence step is:
 
@@ -622,7 +652,8 @@ The following information is provided for each task sequence group and step:
 > When using the CustomSettings.ini file to specify the network adapter configurations, only the first network adapter will be configured. Edit ZTIGather.xml to configure additional network adapters.
 
 ### Apply Patches
- This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
+
+This task sequence step installs updates to the image on the target computer after the operating system has been deployed but before the target computer has been restarted. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIPatches.wsf](scripts.md#ztipatcheswsf).
 
  The default configuration of the **Install Updates Offline** task sequence step is:
 
@@ -650,7 +681,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Apply Windows PE
- This task sequence step prepares the target computer to start in Windows Preinstallation Environment \(Windows PE\). Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [LTIApply.wsf](scripts.md#ltiapplywsf).
+
+This task sequence step prepares the target computer to start in Windows Preinstallation Environment \(Windows PE\). Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [LTIApply.wsf](scripts.md#ltiapplywsf).
 
  The default configuration of the **Apply Windows PE** task sequence step is:
 
@@ -680,7 +712,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Backup
- This task sequence step backs up the target computer before starting the operating system deployment. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIBackup.wsf](scripts.md#ztibackupwsf).
+
+This task sequence step backs up the target computer before starting the operating system deployment. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIBackup.wsf](scripts.md#ztibackupwsf).
 
  The default configuration of the **Backup** task sequence step is:
 
@@ -710,7 +743,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Capture Groups
- This task sequence step captures group membership of local groups that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIGroups.wsf](scripts.md#ztigroupswsf).
+
+This task sequence step captures group membership of local groups that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIGroups.wsf](scripts.md#ztigroupswsf).
 
  The default configuration of the **Capture Groups** task sequence step is:
 
@@ -740,7 +774,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Capture User State
- This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf]((scripts.md#ztiuserstatewsf). For more information about this step type, see [Capture User State](../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md#capture-the-user-state).
+
+This task sequence step captures the user state for user profiles that exist on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf]((scripts.md#ztiuserstatewsf). For more information about this step type, see [Capture User State](../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md#capture-the-user-state).
 
  The default configuration of the **Capture User State** task sequence step is:
 
@@ -770,7 +805,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Check BIOS
- This task sequence step checks the basic input\/output system \(BIOS\) of the target computer to ensure that it is compatible with the operating system you are deploying. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTIBIOSCheck.wsf]((scripts.md#ztibioscheckwsf).
+
+This task sequence step checks the basic input\/output system \(BIOS\) of the target computer to ensure that it is compatible with the operating system you are deploying. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties are used, see [ZTIBIOSCheck.wsf]((scripts.md#ztibioscheckwsf).
 
  The default configuration of the **Check BIOS** task sequence step is:
 
@@ -800,7 +836,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Configure
- This task sequence step configures the Unattend.xml file with the required property values that are applicable to the operating system you are deploying to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigure.wsf]((scripts.md#zticonfigurewsf).
+
+This task sequence step configures the Unattend.xml file with the required property values that are applicable to the operating system you are deploying to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [ZTIConfigure.wsf]((scripts.md#zticonfigurewsf).
 
  The default configuration of the **Configure** task sequence step is:
 
@@ -830,7 +867,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Copy Scripts
- This task sequence step copies the deployment scripts used during the deployment processes to a local hard disk on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [LTICopyScripts.wsf](scripts.md#lticopyscriptswsf).
+
+This task sequence step copies the deployment scripts used during the deployment processes to a local hard disk on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [LTICopyScripts.wsf](scripts.md#lticopyscriptswsf).
 
  The default configuration of the **Copy Scripts** task sequence step is:
 
@@ -860,7 +898,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Copy Sysprep Files
- This task sequence step copies the Sysprep files to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [LTISysprep.wsf](scripts.md#ltisysprepwsf).
+
+This task sequence step copies the Sysprep files to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and which properties you use, see [LTISysprep.wsf](scripts.md#ltisysprepwsf).
 
  The default configuration of the **Copy Sysprep Files** task sequence step is:
 
@@ -890,7 +929,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Create BitLocker Partition
- This task sequence step sets the **BDEInstall** property to True, indicating that BitLocker should be installed on the target computer. The unique properties and settings for the **Create BitLocker Partition** task sequence step type are:
+
+This task sequence step sets the **BDEInstall** property to True, indicating that BitLocker should be installed on the target computer. The unique properties and settings for the **Create BitLocker Partition** task sequence step type are:
 
 #### Properties
 
@@ -917,7 +957,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Create WIM
- This task sequence step creates a backup of the target computer. The unique properties and settings for the **Create WIM** task sequence step type are:
+
+This task sequence step creates a backup of the target computer. The unique properties and settings for the **Create WIM** task sequence step type are:
 
 #### Properties
 
@@ -945,7 +986,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Disable BDE Protectors
- If BitLocker is installed on the target computer, this task sequence step disables the BitLocker protectors.
+
+If BitLocker is installed on the target computer, this task sequence step disables the BitLocker protectors.
 
  The unique properties and settings for the **Disable BDE Protectors** task sequence step type are:
 
@@ -975,7 +1017,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Enable BitLocker
- This task sequence step enables BitLocker on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and what properties are used, see [ZTIBde.wsf](scripts.md#ztibdewsf).
+
+This task sequence step enables BitLocker on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about which script accomplishes this task and what properties are used, see [ZTIBde.wsf](scripts.md#ztibdewsf).
 
  The default configuration of the **Enable BitLocker** task sequence step is:
 
@@ -1010,7 +1053,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|**BdeInstallSuppress** does not equal YES|
 
 ### Enable OEM Disk Configuration
- This task sequence step sets the **DeploymentType**property to **NEWCOMPUTER**, which allows the target computer's disk to be partitioned and formatted.
+
+This task sequence step sets the **DeploymentType**property to **NEWCOMPUTER**, which allows the target computer's disk to be partitioned and formatted.
 
  The unique properties and settings for the **Enable OEM Disk Configuration** task sequence step type are:
 
@@ -1039,7 +1083,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### End Phase
- This task sequence step ends the current deployment phase and restarts the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step ends the current deployment phase and restarts the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  The default configuration of the **End Phase** task sequence step is:
 
@@ -1067,7 +1112,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Execute Sysprep
- This task sequence step starts Sysprep on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [LTISysprep.wsf](scripts.md#ltisysprepwsf).
+
+This task sequence step starts Sysprep on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates. For more information about what script accomplishes this task and what properties are used, see [LTISysprep.wsf](scripts.md#ltisysprepwsf).
 
  The default configuration of the **Execute Sysprep** task sequence step is:
 
@@ -1097,7 +1143,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Force Diskpart Action
- If the C:\\oem.wsf file exists, this task sequence step deletes the C:\\oem.wsf file, which will allow the **Format and Partition Disk** task sequence step to run. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+If the C:\\oem.wsf file exists, this task sequence step deletes the C:\\oem.wsf file, which will allow the **Format and Partition Disk** task sequence step to run. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  The default configuration of the **Force Diskpart Action** task sequence step is:
 
@@ -1127,7 +1174,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|None|
 
 ### Format and Partition Disk
- This task sequence step configures and formats disk partitions on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step configures and formats disk partitions on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIDiskpart.wsf](scripts.md#ztidiskpartwsf).
 
@@ -1163,7 +1211,8 @@ The following information is provided for each task sequence group and step:
 > When using the CustomSettings.ini file to specify the hard disk and partition configurations, only the first hard disk and first two partitions will be configured. Edit ZTIGather.xml to configure additional hard disks or partitions.
 
 ### Gather local only
- This task sequence step gathers deployment configurations settings from local sources that apply to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step gathers deployment configurations settings from local sources that apply to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIGather.wsf](scripts.md#ztigatherwsf).
 
@@ -1195,7 +1244,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|None|
 
 ### Generate Application Migration File
- This task sequence step generates the ZTIAppXmlGen.xml file, which contains a list of file associations that are installed on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step generates the ZTIAppXmlGen.xml file, which contains a list of file associations that are installed on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIAppXmlGen.wsf](scripts.md#ztiappxmlgenwsf).
 
@@ -1227,7 +1277,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|None|
 
 ### Inject Drivers
- This task sequence step injects drivers that have been configured for deployment to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step injects drivers that have been configured for deployment to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIDrivers.wsf](scripts.md#ztidriverswsf).
 
@@ -1259,7 +1310,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Install Applications
- This task sequence step installs applications on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step installs applications on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIApplications.wsf](scripts.md#ztiapplicationswsf).
 
@@ -1290,7 +1342,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Install Operating System
- This task sequence step installs an operating system on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step installs an operating system on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  The default configuration of the **Install Operating System** task sequence step is:
 
@@ -1320,7 +1373,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Next Phase
- This task sequence step updates the **Phase** property to the next phase in the deployment process. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step updates the **Phase** property to the next phase in the deployment process. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTINextPhase.wsf](scripts.md#ztinextphasewsf).
 
@@ -1352,7 +1406,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Post\-Apply Cleanup
- This task sequence step cleans up unnecessary files after the installation of an image on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step cleans up unnecessary files after the installation of an image on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [LTIApply.wsf](scripts.md#ltiapplywsf).
 
@@ -1384,7 +1439,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Recover from Domain
- This task sequence step will verify the target computer has joined a domain. For more information about which script accomplishes this task and which properties are used, see [ZTIDomainJoin.wsf](scripts.md#ztidomainjoinwsf).
+
+This task sequence step will verify the target computer has joined a domain. For more information about which script accomplishes this task and which properties are used, see [ZTIDomainJoin.wsf](scripts.md#ztidomainjoinwsf).
 
  The unique properties and settings for the Recover from Domain task sequence step type are:
 
@@ -1403,7 +1459,8 @@ The following information is provided for each task sequence group and step:
 |**No recover**|If the target computer is not able to join a domain, the task sequence fails, stopping the task sequence.|
 
 ### Restart computer
- This task sequence step restarts the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step restarts the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  The default configuration of the **Restart computer** task sequence step is:
 
@@ -1431,7 +1488,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Restore Groups
- This task sequence step restores the previously captured group membership of local groups on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step restores the previously captured group membership of local groups on the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIGroups.wsf](scripts.md#ztigroupswsf).
 
@@ -1463,7 +1521,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|If all conditions are true:<br /><br /> \- **DoCapture** does not equal YES<br /><br /> \-                                 **DoCapture** does not equal PREPARE|
 
 ### Restore User State
- This task sequence step restores previously captured user state to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step restores previously captured user state to the target computer. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIUserState.wsf]((scripts.md#ztiuserstatewsf).
 
@@ -1497,7 +1556,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|If all conditions are true:<br /><br /> \- If **DoCapture** does not equal YES<br /><br /> \- If **DoCapture** does not equal PREPARE|
 
 ### Set Image Build
- This task sequence step sets the **ImageBuild** property to the value contained in **OSCurrentVersion**. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step sets the **ImageBuild** property to the value contained in **OSCurrentVersion**. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  The default configuration of the **Set Image Build** task sequence step is:
 
@@ -1526,7 +1586,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Set Image Flags
- This task sequence step sets the **ImageFlags** property to the value contained in **OSSKU**. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step sets the **ImageFlags** property to the value contained in **OSSKU**. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  The default configuration of the **Set Image Flags** task sequence step is:
 
@@ -1555,7 +1616,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Tattoo
- This task sequence step tattoos the target computer with identification and version information. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step tattoos the target computer with identification and version information. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTITatoo.wsf](scripts.md#ztitatoowsf).
 
@@ -1587,7 +1649,8 @@ The following information is provided for each task sequence group and step:
 |Conditional qualifier|Not specified|
 
 ### Validate
- This task sequence step validates that the target computer meets the specified deployment prerequisite conditions. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step validates that the target computer meets the specified deployment prerequisite conditions. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIValidate.wsf](scripts.md#ztivalidatewsf).
 
@@ -1620,7 +1683,8 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Windows Update \(Pre\-Application Installation)
- This task sequence step installs updates to the target computer prior to the installation of applications. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
+
+This task sequence step installs updates to the target computer prior to the installation of applications. Following is a brief listing of the settings that show how this step was originally configured in one of the MDT task sequence templates.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIWindowsUpdate.wsf](scripts.md#ztiwindowsupdatewsf).
 
@@ -1652,10 +1716,12 @@ The following information is provided for each task sequence group and step:
 |**Conditional qualifier**|Not specified|
 
 ### Windows Update (Post-Application Installation)
- This task sequence step is the same as the **Windows Update (Pre-Application Installation)** task sequence step.
+
+This task sequence step is the same as the **Windows Update (Pre-Application Installation)** task sequence step.
 
 ### Wipe Disk
- This task sequence step wipes all information from the disk using the **Format** command.
+
+This task sequence step wipes all information from the disk using the **Format** command.
 
  For more information about what script accomplishes this task and what properties are used, see [ZTIWipeDisk.wsf](scripts.md#ztiwipediskwsf).
 

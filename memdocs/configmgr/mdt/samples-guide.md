@@ -14,12 +14,12 @@ ms.collection: tier3
 ms.reviewer: frankroj,mstewart,aaroncz
 ---
 
-
 # Microsoft Deployment Toolkit Samples Guide
 
 This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist team through deploying Windows operating systems and Microsoft Office. Specifically, this guide is designed to provide sample configuration settings for specific deployment scenarios.
 
 > [!NOTE]
+>
 > In this article, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor-based versions of Windows. Similarly, *MDT* refers to the current version of MDT unless otherwise stated.
 
  **To use this guide**
@@ -45,41 +45,43 @@ This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist
    |*Quick Start Guide for User-Driven Installation* |Install the Windows 8.1 operating system with User-Driven Installation and System Center 2012 R2 Configuration Manager in a New Computer deployment scenario.|
    |*Using the Microsoft Deployment Toolkit* |Further customize the configuration files used in Zero Touch Installation (ZTI) and LTI deployments. This guide also provides generic configuration guidance and a technical reference for configuration settings.|
 
-
 ## Deploying Windows 8 Applications Using MDT
- MDT can deploy Windows 8 application packages, which have an .appx file extension. These application packages are new to Windows 8. For more information on these applications, see [Windows Store App development.](https://msdn.microsoft.com/windows/apps)
+
+MDT can deploy Windows 8 application packages, which have an .appx file extension. These application packages are new to Windows 8. For more information on these applications, see [Windows Store App development.](https://msdn.microsoft.com/windows/apps)
 
  Deploy Windows 8 applications using MDT by performing the following steps:
 
--   Deploy Windows 8 applications using LTI as described in [Deploying Windows 8 Applications Using LTI](#DeployWin8LTI).
+- Deploy Windows 8 applications using LTI as described in [Deploying Windows 8 Applications Using LTI](#DeployWin8LTI).
 
--   Deploy Windows 8 applications using User-Driven Installation (UDI) as described in [Deploying Windows 8 Applications Using UDI](#DeployWin8UDI).
+- Deploy Windows 8 applications using User-Driven Installation (UDI) as described in [Deploying Windows 8 Applications Using UDI](#DeployWin8UDI).
 
 ###  <a name="DeployWin8LTI"></a> Deploying Windows 8 Applications Using LTI
- You can deploy Windows 8 applications using LTI like any other application that initiates the installation process from a command line. You can add Windows 8 applications to LTI deployments in the Applications node in the Deployment Workbench.
+
+You can deploy Windows 8 applications using LTI like any other application that initiates the installation process from a command line. You can add Windows 8 applications to LTI deployments in the Applications node in the Deployment Workbench.
 
  **To deploy a Windows 8 application using LTI**
 
-1.  Create a network shared folder in which to store the application.
+1. Create a network shared folder in which to store the application.
 
-2.  Copy the Windows 8 application into the network shared folder that you created in the previous step.
+2. Copy the Windows 8 application into the network shared folder that you created in the previous step.
 
      Ensure that you copy the Windows 8 application .appx file and any other required files, such as a .cer file that contains the application certificate.
 
-3.  Create an LTI application item for the Windows 8 application in the Applications node in the Deployment Workbench using the New Application Wizard.
+3. Create an LTI application item for the Windows 8 application in the Applications node in the Deployment Workbench using the New Application Wizard.
 
      While completing the New Application Wizard, on the **Command Details** wizard page, in **Command line**, type **app_file_name** (where *app_file_name* is the name of the Windows 8 application).
 
      For more information about how to complete the New Application Wizard in the Deployment Workbench, see the following sections in the MDT document, *Using the Microsoft Deployment Toolkit*:
 
-    -   "Create a New Application That Is Deployed from the Deployment Share"
+    - "Create a New Application That Is Deployed from the Deployment Share"
 
-    -   "Create a New Application That Is Deployed from Another Network Shared Folder"
+    - "Create a New Application That Is Deployed from Another Network Shared Folder"
 
-4.  Select the LTI application item created in the previous step in an LTI task sequence.
+4. Select the LTI application item created in the previous step in an LTI task sequence.
 
 ###  <a name="DeployWin8UDI"></a> Deploying Windows 8 Applications Using UDI
- You can deploy Windows 8 applications using UDI like any other application that initiates the installation process from a command line. You can add Windows 8 applications to UDI deployments on the **ApplicationPage** wizard page in the UDI Wizard Designer.
+
+You can deploy Windows 8 applications using UDI like any other application that initiates the installation process from a command line. You can add Windows 8 applications to UDI deployments on the **ApplicationPage** wizard page in the UDI Wizard Designer.
 
 > [!NOTE]
 >
@@ -87,49 +89,51 @@ This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist
 
  **To deploy a Windows 8 application using UDI**
 
-1.  Create a network shared folder in which to store the application.
+1. Create a network shared folder in which to store the application.
 
      This folder will be the source folder for the Configuration Manager application that you will create later in the process.
 
-2.  Copy the Windows 8 application into the network shared folder that you created in the previous step.
+2. Copy the Windows 8 application into the network shared folder that you created in the previous step.
 
      Ensure that you copy the Windows 8 application .appx file and any other required files, such as a .cer file that contains the application certificate.
 
-3.  Add the Windows 8 application as a Configuration Manager application
+3. Add the Windows 8 application as a Configuration Manager application
 
-4.  Create a Configuration Manager application item for the Windows 8 application using the Create Application Wizard in the Configuration Manager console.
+4. Create a Configuration Manager application item for the Windows 8 application using the Create Application Wizard in the Configuration Manager console.
 
      While completing the Create Application Wizard, create a deployment type to deploy the Windows 8 application using the Create Deployment Type Wizard. In the Create Deployment Type Wizard, on the **Content** page, in **Installation program**, type **app_file_name** (where *app_file_name* is the name of the Windows 8 application).
 
      For more information about how to complete the Create Application Wizard in the Configuration Manager console, see the following sections in the Documentation Library for System Center 2012 Configuration Manager, which is included with Configuration Manager:
 
-    -   [How to Create Applications in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682159(v=technet.10))
+    - [How to Create Applications in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682159(v=technet.10))
 
-    -   [How to Create Deployment Types in Configuration Manager](/previous-versions//gg682174(v=technet.10)#BKMK_Step3)
+    - [How to Create Deployment Types in Configuration Manager](/previous-versions//gg682174(v=technet.10)#BKMK_Step3)
 
-    -   [How to Manage Applications and Deployment Types in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682031(v=technet.10))
+    - [How to Manage Applications and Deployment Types in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682031(v=technet.10))
 
-5.  Ensure that the user device affinity (UDA) feature in Configuration Manager is configured properly to support affinity between users and devices for Configuration Manager application deployment.
+5. Ensure that the user device affinity (UDA) feature in Configuration Manager is configured properly to support affinity between users and devices for Configuration Manager application deployment.
 
      For more information about how to configure UDA to support Configuration Manager application deployment, see [How to Manage User Device Affinity in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699365(v=technet.10)).
 
-6.  Deploy the application created in step 4 to the targeted users.
+6. Deploy the application created in step 4 to the targeted users.
 
      For more information about how to deploy an application to user, see [How to Deploy Applications in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682082(v=technet.10)).
 
-7.  Configure the **ApplicationPage** wizard page to include the Configuration Manager application created in step 4 using the UDI Wizard Designer.
+7. Configure the **ApplicationPage** wizard page to include the Configuration Manager application created in step 4 using the UDI Wizard Designer.
 
      For more information about how to configure the **ApplicationPage** wizard page using the UDI Wizard Designer, see the section, "Step 5-11: Customize the UDI Wizard Configuration File for the Target Computer", in the MDT document *Quick start Guide for User-Driven Installation*.
 
-8.  Select the UDI application item created in the previous step in a UDI task sequence.
+8. Select the UDI application item created in the previous step in a UDI task sequence.
 
     > [!NOTE]
-    >  The Windows 8 application is not installed by the task sequence but rather will be installed the first time the user logs on to the targeted computer (as defined by the UDA setting configured in step 5) using the User-Centric App Installer feature (AppInstall.exe) in UDI.
+    >
+    > The Windows 8 application is not installed by the task sequence but rather will be installed the first time the user logs on to the targeted computer (as defined by the UDA setting configured in step 5) using the User-Centric App Installer feature (AppInstall.exe) in UDI.
 
      For more information on the User-Centric App Installer feature in UDI, see the section, "User-Centric App Installer Reference", in the MDT document *Toolkit Reference*.
 
 ## Managing MDT Using Windows PowerShell
- You can manage MDT deployment shares using the Deployment Workbench and Windows PowerShell. MDT includes a Windows PowerShell™ snap-in—Microsoft.BDD.SnapIn—that must be loaded prior to using the MDT-specific features in Windows PowerShell. The MDT Windows PowerShell snap-in includes:
+
+You can manage MDT deployment shares using the Deployment Workbench and Windows PowerShell. MDT includes a Windows PowerShell™ snap-in—Microsoft.BDD.SnapIn—that must be loaded prior to using the MDT-specific features in Windows PowerShell. The MDT Windows PowerShell snap-in includes:
 
 - A Windows PowerShell provider—MDTProvider—that provides access to the contents of a deployment share
 
@@ -158,23 +162,26 @@ This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist
 - Manage the folders in a deployment share using Windows PowerShell as described in [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).
 
 ###  <a name="LoadMDTSnapIn"></a> Loading the MDT Windows PowerShell Snap-In
- The MDT cmdlets are provided in a Windows PowerShell snap-in **Microsoft.BDD.SnapIn** that must be loaded prior to using the MDT cmdlets. Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).
+
+The MDT cmdlets are provided in a Windows PowerShell snap-in **Microsoft.BDD.SnapIn** that must be loaded prior to using the MDT cmdlets. Load the MDT Windows PowerShell snap-in using the **Add-PSSnapIn** cmdlet as described in [Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet](#LoadMDTSnapInCmdlet).
 
 ####  <a name="LoadMDTSnapInCmdlet"></a> Load the MDT Windows PowerShell Snap-In Using the Add-PSSnapIn Cmdlet
- You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](/powershell/module/microsoft.powershell.core/add-pssnapin) cmdlet, as show in the following example:
+
+You can load the MDT Windows PowerShell snap-in **Microsoft.BDD.PSSnapIn** from any Windows PowerShell environment using the [Add-PSSnapIn](/powershell/module/microsoft.powershell.core/add-pssnapin) cmdlet, as show in the following example:
 
 ```powershell
 Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 ```
 
 ###  <a name="CreateDeployShare"></a> Creating a Deployment Share Using Windows PowerShell
- You can create deployment shares using the MDT Windows PowerShell cmdlets. The root folder for the deployment share is created and shared using standard Windows PowerShell cmdlets and calls to Windows Management Instrumentation (WMI) class commands. The deployment share is populated using the MDTProvider Windows PowerShell provider and the [NewPSDrive](/previous-versions//dd315340(v=technet.10)) cmdlet. The MDTProvider Windows PowerShell drive is persisted using the **Add-MDTPersistentDrive** cmdlet.
+
+You can create deployment shares using the MDT Windows PowerShell cmdlets. The root folder for the deployment share is created and shared using standard Windows PowerShell cmdlets and calls to Windows Management Instrumentation (WMI) class commands. The deployment share is populated using the MDTProvider Windows PowerShell provider and the [NewPSDrive](/previous-versions//dd315340(v=technet.10)) cmdlet. The MDTProvider Windows PowerShell drive is persisted using the **Add-MDTPersistentDrive** cmdlet.
 
  **To prepare a deployment share using the MDT Windows PowerShell cmdlets**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Create the folder that will be the root of the new deployment share using the **New-Item** cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176914(v=technet.10)):
+2. Create the folder that will be the root of the new deployment share using the **New-Item** cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176914(v=technet.10)):
 
     ```powershell
     New-Item "C:\MDTDeploymentShare$" -Type directory
@@ -182,7 +189,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The cmdlet displays the successful creation of the folder.
 
-3.  Share the folder created in the previous step using the **WMI win32_share** class as sown in the following example:
+3. Share the folder created in the previous step using the **WMI win32_share** class as sown in the following example:
 
     ```powershell
     ([wmiclass]"win32_share").Create("C:\MDTDeploymentShare$", "MDTDeploymentShare$",0)
@@ -190,7 +197,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The call to the **win32_share** class returns the results of the call. If the value of **ReturnValue** is zero (0), then the call was successful.
 
-4.  Specify the new shared folder as a deployment share using the [NewPSDrive](/previous-versions//dd315340(v=technet.10)) cmdlet, as shown in the following example:
+4. Specify the new shared folder as a deployment share using the [NewPSDrive](/previous-versions//dd315340(v=technet.10)) cmdlet, as shown in the following example:
 
     ```powershell
     New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "C:\MDTDeploymentShare$" -Description "MDT Deployment Share Created with Cmdlets" -NetworkPath "\\WDG-MDT-01\MDTDeploymentShare$" -Verbose
@@ -199,9 +206,10 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      The cmdlet automatically starts creating the deployment share and copying the template information into the new deployment share. Upon completion of the copy process, the cmdlet displays the information for the new deployment share.
 
     > [!NOTE]
-    >  The value provided in the *Name* parameter (DS002) must be unique and cannot be the same as an existing deployment share Windows PowerShell drive.
+    >
+    > The value provided in the *Name* parameter (DS002) must be unique and cannot be the same as an existing deployment share Windows PowerShell drive.
 
-5.  Verify that the appropriate deployment share folders have been created using the **dir** command, as show in the following example:
+5. Verify that the appropriate deployment share folders have been created using the **dir** command, as show in the following example:
 
     ```powershell
     Get-ChildItem ds002:
@@ -209,7 +217,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of default folders in the root of the deployment share is displayed.
 
-6.  Add the new deployment share to the list of persisted MDT deployment shares using the **Add-MDTPersistentDrive** cmdlet, as shown in the following example:
+6. Add the new deployment share to the list of persisted MDT deployment shares using the **Add-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     $NewDS=Get-PSDrive "DS002"
@@ -227,22 +235,24 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In the previous example, the Windows PowerShell pipeline provides both the *Name* and *InputObject* parameters.
 
 ###  <a name="ViewDeployShareProp"></a> Viewing Deployment Share Properties Using Windows PowerShell
- You can view the properties of MDT deployment shares using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet and the MDTProvider Windows PowerShell provider. These same properties can also be seen in the Deployment Workbench.
+
+You can view the properties of MDT deployment shares using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet and the MDTProvider Windows PowerShell provider. These same properties can also be seen in the Deployment Workbench.
 
  **To view deployment share properties using the MDT Windows PowerShell cmdlets**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Ensure the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+2. Ensure the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
+3. Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -250,7 +260,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives that are provided using the MDTProvider are listed.
 
-4.  View the properties of the deployment share using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet, as shown in the following example:
+4. View the properties of the deployment share using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet, as shown in the following example:
 
     ```powershell
     Get-ItemProperty "DS002:"
@@ -259,22 +269,24 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3. The cmdlet returns the properties for the deployment share.
 
 ###  <a name="ViewListDeployShare"></a> Viewing the List of Deployment Shares Using Windows PowerShell
- You can view the list of MDT deployment shares using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet and the MDTProvider Windows PowerShell provider. The same list of deployment shares can also be viewed in the Deployment Workbench.
+
+You can view the list of MDT deployment shares using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet and the MDTProvider Windows PowerShell provider. The same list of deployment shares can also be viewed in the Deployment Workbench.
 
  **To view a list of deployment shares using the MDT Windows PowerShell cmdlets**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+2. Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
+3. View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -283,22 +295,24 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.
 
 ###  <a name="UpdateDeployShare"></a> Updating a Deployment Share Using Windows PowerShell
- You can update deployment shares using the **Update-MDTDeploymentShare** cmdlet and the MDTProvider Windows PowerShell provider. Updating a deployment share creates the Windows PE boot images (WIM and International Organization for Standardization [ISO] files) necessary to start LTI deployment. You can perform the same process using the Deployment Workbench, as described in "Update a Deployment Share in the Deployment Workbench".
+
+You can update deployment shares using the **Update-MDTDeploymentShare** cmdlet and the MDTProvider Windows PowerShell provider. Updating a deployment share creates the Windows PE boot images (WIM and International Organization for Standardization [ISO] files) necessary to start LTI deployment. You can perform the same process using the Deployment Workbench, as described in "Update a Deployment Share in the Deployment Workbench".
 
  **To update a deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+2. Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
+3. Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -306,7 +320,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed.
 
-4.  Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:
+4. Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:
 
     ```powershell
     Update-MDTDeploymentShare -Path "DS002:" -Force
@@ -315,27 +329,30 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.
 
     > [!NOTE]
-    >  Updating the deployment share can take a long time. The progress of the cmdlet is shown at the top of the Windows PowerShell console.
+    >
+    > Updating the deployment share can take a long time. The progress of the cmdlet is shown at the top of the Windows PowerShell console.
 
      The cmdlet returns with no output if the update is successful.
 
 ###  <a name="UpdateLinkedDeployShare"></a> Updating a Linked Deployment Share Using Windows PowerShell
- You can update (replicate) linked deployment shares using the **Update-MDTLinkedDS** cmdlet and the MDTProvider Windows PowerShell provider. Updating a linked deployment share replicates the content from the original deployment share to the linked deployment share. You can perform the same process using the Deployment Workbench, as described in "Replicate Linked Deployment Shares in the Deployment Workbench".
+
+You can update (replicate) linked deployment shares using the **Update-MDTLinkedDS** cmdlet and the MDTProvider Windows PowerShell provider. Updating a linked deployment share replicates the content from the original deployment share to the linked deployment share. You can perform the same process using the Deployment Workbench, as described in "Replicate Linked Deployment Shares in the Deployment Workbench".
 
  **To update a linked deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+2. Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
+3. Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -343,7 +360,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed.
 
-4.  Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:
+4. Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:
 
     ```powershell
     Update-MDTLinkedDS -Path "DS002:\Linked Deployment Shares\LINKED002"
@@ -352,12 +369,14 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.
 
     > [!NOTE]
-    >  Updating the linked deployment share can take a long time. The progress of the cmdlet is shown at the top of the Windows PowerShell console.
+    >
+    > Updating the linked deployment share can take a long time. The progress of the cmdlet is shown at the top of the Windows PowerShell console.
 
      The cmdlet returns with no output if the update is successful.
 
 ###  <a name="UpdateDeployMedia"></a> Updating Deployment Media Using Windows PowerShell
- You can update (generate) deployment media using the **Update-MDTMedia** cmdlet and the MDTProvider Windows PowerShell provider. Updating deployment media replicates the content from the original deployment share to the linked deployment share, and then generates .iso and .wim files. You can perform the same process using the Deployment Workbench, as described in "Generate Media Images in the Deployment Workbench".
+
+You can update (generate) deployment media using the **Update-MDTMedia** cmdlet and the MDTProvider Windows PowerShell provider. Updating deployment media replicates the content from the original deployment share to the linked deployment share, and then generates .iso and .wim files. You can perform the same process using the Deployment Workbench, as described in "Generate Media Images in the Deployment Workbench".
 
  When the **Update-MDTMedia** cmdlet finishes, the following files are created:
 
@@ -373,18 +392,19 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
   **To update a linked deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+2. Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
+3. Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -392,7 +412,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed.
 
-4.  Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:
+4. Update the deployment share using the **Update-MDTDeploymentShare** cmdlet, as shown in the following example:
 
     ```powershell
     Update-MDTLinkedDS -Path "DS002:\Linked Deployment Shares\LINKED002"
@@ -401,17 +421,20 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.
 
     > [!NOTE]
-    >  Updating the linked deployment share can take a long time. The progress of the cmdlet is shown at the top of the Windows PowerShell console.
+    >
+    > Updating the linked deployment share can take a long time. The progress of the cmdlet is shown at the top of the Windows PowerShell console.
 
      The cmdlet returns with no output if the update is successful.
 
 ###  <a name="ManageItemDeployShare"></a> Managing Items in a Deployment Share Using Windows PowerShell
- A deployment share contains items that are used to perform deployments, such as operating systems, applications, device drivers, operating system packages, and task sequences. These items can managed using cmdlets from Windows PowerShell and those provided with MDT.
+
+A deployment share contains items that are used to perform deployments, such as operating systems, applications, device drivers, operating system packages, and task sequences. These items can managed using cmdlets from Windows PowerShell and those provided with MDT.
 
  For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](/powershell/scripting/samples/manipulating-items-directly). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).
 
 ####  <a name="ImportItemDeployShare"></a> Import an Item into a Deployment Share
- You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple items into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).
+
+You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple items into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).
 
  The following table lists the MDT Windows PowerShell cmdlets used to import items into a deployment share and provides a brief description of each cmdlet. Examples of how to use each cmdlet is provided in the section that corresponds to each cmdlet.
 
@@ -424,24 +447,26 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
  |**Import-MDTTaskSequence** |Imports a task sequence into a deployment share|
 
 ####  <a name="ViewPropertyDeployShare"></a> View the Properties of an Item in a Deployment Share
- Each item in a deployment share has different set of properties. You can view the properties of an item in a deployment share using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet. The [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet uses the MDTProvider to display the properties for a specific item, just as you can see the properties in the Deployment Workbench.
+
+Each item in a deployment share has different set of properties. You can view the properties of an item in a deployment share using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet. The [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet uses the MDTProvider to display the properties for a specific item, just as you can see the properties in the Deployment Workbench.
 
  If want wish to view the properties of multiple items in a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).
 
  **To view the properties of an item in a deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+2. Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as shown in the following example:
+3. Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as shown in the following example:
 
     ``` powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -449,7 +474,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed.
 
-4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet, as shown in the following example:
+4. Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet, as shown in the following example:
 
     ```powershell
     Get-Item "DS001:\Operating Systems\*" | Format-List
@@ -458,9 +483,10 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In the previous example, a list of all the operating systems in the deployment share is displayed. The output is piped to the **Format-List** cmdlet so that the long names of the operating systems can be seen. For more information on how to use the **Format-List** cmdlet, see [Using the Format-List Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176830(v=technet.10)). The same process could be used to return the list of other types of items, such as device drivers or applications.
 
     > [!TIP]
-    >  You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet.
+    >
+    > You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet.
 
-5.  View the properties of one of the items listed in the previous step using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet, as shown in the following example:
+5. View the properties of one of the items listed in the previous step using the [Get-ItemProperty](/powershell/module/microsoft.powershell.management/get-itemproperty) cmdlet, as shown in the following example:
 
     ```powershell
     Get-ItemProperty -Path "DS002:\Operating Systems\Windows 8 in Windows 8 x64 install.wim"
@@ -469,7 +495,8 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In this example, the value of the *Path* parameter is the fully qualified Windows PowerShell path to the item, including the file name that was returned in the previous step. You could use the same process to view the properties of other types of items, such as device drivers or applications.
 
 ####  <a name="RemoveItemDeployShare"></a> Remove an Item from a Deployment Share
- You can remove an item from a deployment share using the [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet. The [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet uses the MDTProvider to remove a specific item, just as you can remove an item in the Deployment Workbench. If you want to remove multiple items in a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).
+
+You can remove an item from a deployment share using the [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet. The [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet uses the MDTProvider to remove a specific item, just as you can remove an item in the Deployment Workbench. If you want to remove multiple items in a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).
 
 > [!NOTE]
 >
@@ -477,18 +504,19 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
  **To remove an item from a deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example.
+2. Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example.
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as shown in the following example:
+3. Verify that the MDT deployments that share Windows PowerShell drives are restored properly using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as shown in the following example:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -496,7 +524,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed.
 
-4.  Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet, as shown in the following example:
+4. Return a list of the items for the type of item for which you are wanting to view the properties using the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet, as shown in the following example:
 
     ```powershell
     Get-Item "DS001:\Operating Systems\*" | Format-List
@@ -505,9 +533,10 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      In the previous example, a list of all the operating systems in the deployment share is displayed. The output is piped to the **Format-List** cmdlet so that the long names of the operating systems can be seen. For more information on how to use the **Format-List** cmdlet, see [Using the Format-List Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176830(v=technet.10)). You could use the same process to return the list of other types of items, such as device drivers or applications.
 
     > [!TIP]
-    >  You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet.
+    >
+    > You could have also used the **dir** command to view the list of operating systems instead of the [Get-Item](/powershell/module/microsoft.powershell.management/get-item) cmdlet.
 
-5.  Remove one of the items listed in the previous step using the [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet, as shown in the following example:
+5. Remove one of the items listed in the previous step using the [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet, as shown in the following example:
 
     ```powershell
     Remove-Item -Path "DS002:\Operating Systems\Windows 8 in Windows 8 x64 install.wim"
@@ -518,10 +547,12 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
      You could use the same process to remove other types of items, such as device drivers or applications.
 
     > [!NOTE]
-    >  Removing an item that a task sequence uses causes the task sequence to fail. Ensure that an item is not referenced by other items in the deployment share prior to removing the item.
+    >
+    > Removing an item that a task sequence uses causes the task sequence to fail. Ensure that an item is not referenced by other items in the deployment share prior to removing the item.
 
 ###  <a name="AutomatePopulateDeployShare"></a> Automating Population of a Deployment Share
- The MDT Windows PowerShell cmdlets allow you to manage individual items. However, by using some of the scripting features in Windows PowerShell, the cmdlets can be used to automate the population of a deployment share.
+
+The MDT Windows PowerShell cmdlets allow you to manage individual items. However, by using some of the scripting features in Windows PowerShell, the cmdlets can be used to automate the population of a deployment share.
 
  For example, an organization may need to deploy multiple deployment shares for different business units, or an organization may provide operating system deployment services for other organizations. In both of these examples, the organizations need the ability to create and populate deployment shares that are configured consistently.
 
@@ -540,48 +571,51 @@ ForEach-Object ($App in $List) {
 
  You can use this same method to import operating systems, device drivers, and other items in a deployment share by performing the following steps:
 
-1.  Create a .csv file for each type of deployment share item that you want to populate.
+1. Create a .csv file for each type of deployment share item that you want to populate.
 
-2.  For more information about how to create a .csv file for use with the [Import-CSV](/previous-versions//dd347665(v=technet.10)) cmdlet, see [Using the Import-Csv Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176874(v=technet.10)).
+2. For more information about how to create a .csv file for use with the [Import-CSV](/previous-versions//dd347665(v=technet.10)) cmdlet, see [Using the Import-Csv Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176874(v=technet.10)).
 
-3.  Create a Windows PowerShell script file that will be used to automate the population of the deployment share.
+3. Create a Windows PowerShell script file that will be used to automate the population of the deployment share.
 
      For more information about how to create a Windows PowerShell script, see [Scripting with Windows PowerShell](/powershell/).
 
-4.  Create any prerequisite folder structure required in the deployment share prior to importing the deployment share items.
+4. Create any prerequisite folder structure required in the deployment share prior to importing the deployment share items.
 
      For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).
 
-5.  Add the [Import-CSV](/previous-versions//dd347665(v=technet.10)) cmdlet line for one of the .csv files created in step 1.
+5. Add the [Import-CSV](/previous-versions//dd347665(v=technet.10)) cmdlet line for one of the .csv files created in step 1.
 
      For more information on the [Import-CSV](/previous-versions//dd347665(v=technet.10)) cmdlet, see [Using the Import-Csv Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176874(v=technet.10)).
 
-6.  Create a [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object) cmdlet loop that processes each item from the .csv file referenced in the [Import-CSV](/previous-versions//dd347665(v=technet.10)) cmdlet in the previous step.
+6. Create a [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object) cmdlet loop that processes each item from the .csv file referenced in the [Import-CSV](/previous-versions//dd347665(v=technet.10)) cmdlet in the previous step.
 
      For more information on the [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object) cmdlet, see [Using the ForEach-Object Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176828(v=technet.10)).
 
-7.  Add the corresponding MDT cmdlet for importing the deployment share items inside the [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object) cmdlet loop created in the previous step.
+7. Add the corresponding MDT cmdlet for importing the deployment share items inside the [ForEach-Object](/powershell/module/microsoft.powershell.core/foreach-object) cmdlet loop created in the previous step.
 
      For more information on the MDT cmdlets used for importing items into a deployment share, see [Import an Item into a Deployment Share](#ImportItemDeployShare).
 
 ###  <a name="ManageDeployShareFolder"></a> Managing Deployment Share Folders Using Windows PowerShell
- You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](/powershell/module/microsoft.powershell.management/new-item) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](/powershell/scripting/samples/manipulating-items-directly).
+
+You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](/powershell/module/microsoft.powershell.management/new-item) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](/powershell/scripting/samples/manipulating-items-directly).
 
 #### Create a Folder in a Deployment Share Using Windows PowerShell
- **To create a folder in a deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+**To create a folder in a deployment share using Windows PowerShell**
 
-2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+
+2. Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet as follows:
+3. View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -589,7 +623,7 @@ ForEach-Object ($App in $List) {
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share
 
-4.  Create a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:
+4. Create a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:
 
     ```powershell
     New-Item "DS002:\Operating Systems\Windows_8"
@@ -597,7 +631,7 @@ ForEach-Object ($App in $List) {
 
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.
 
-5.  Verify that the folder is created correctly by typing the following command:
+5. Verify that the folder is created correctly by typing the following command:
 
     ```powershell
     Get-ChildItem "DS002:\Operating Systems"
@@ -605,7 +639,7 @@ ForEach-Object ($App in $List) {
 
      The Windows_8 folder and any other existing folders in the Operating Systems folder is displayed.
 
-6.  Create a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [New-Item](/powershell/module/microsoft.powershell.management/new-item) cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176914(v=technet.10)):
+6. Create a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [New-Item](/powershell/module/microsoft.powershell.management/new-item) cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176914(v=technet.10)):
 
     ```powershell
     New-Item "DS002:\Operating Systems\Windows_7" -Type directory
@@ -613,7 +647,7 @@ ForEach-Object ($App in $List) {
 
      The cmdlet displays the successful creation of the folder.
 
-7.  Verify that the folder is created correctly by typing the following command:
+7. Verify that the folder is created correctly by typing the following command:
 
     ```powershell
     Get-ChildItem "DS002:\Operating Systems"
@@ -622,20 +656,22 @@ ForEach-Object ($App in $List) {
      The Windows_7 folder and any other existing folders in the Operating Systems folder is displayed.
 
 #### Delete a Folder in a Deployment Share Using Windows PowerShell
- **To delete a folder in a deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+**To delete a folder in a deployment share using Windows PowerShell**
 
-2.  Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+
+2. Ensure that the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet as follows:
+3. View the list of MDT deployments that share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -643,7 +679,7 @@ ForEach-Object ($App in $List) {
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.
 
-4.  Delete (remove) a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:
+4. Delete (remove) a folder named *Windows_8* in the Operating Systems folder in a deployment share using the **New-Item** command, as shown in the following example:
 
     ```powershell
     Remove-Item "DS002:\Operating Systems\Windows_8"
@@ -651,7 +687,7 @@ ForEach-Object ($App in $List) {
 
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.
 
-5.  Verify that the folder is removed correctly by typing the following command:
+5. Verify that the folder is removed correctly by typing the following command:
 
     ```powershell
     Get-ChildItem "DS002:\Operating Systems"
@@ -659,7 +695,7 @@ ForEach-Object ($App in $List) {
 
      The Windows_8 folder is no longer displayed in the list of folders in the Operating Systems folder
 
-6.  Delete (remove) a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet, as shown in the following example:
+6. Delete (remove) a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [Remove-Item](/powershell/module/microsoft.powershell.management/remove-item) cmdlet, as shown in the following example:
 
     ```powershell
     Remove-Item "DS002:\Operating Systems\Windows_7"
@@ -667,7 +703,7 @@ ForEach-Object ($App in $List) {
 
      The cmdlet displays the successful removal of the folder.
 
-7.  Verify that the folder is created correctly by typing the following command:
+7. Verify that the folder is created correctly by typing the following command:
 
     ```powershell
     Get-ChildItem "DS002:\Operating Systems"
@@ -676,20 +712,22 @@ ForEach-Object ($App in $List) {
      The Windows_7 folder is no longer displayed in the list of folders in the Operating Systems folder.
 
 #### Rename a Folder in a Deployment Share Using Windows PowerShell
- **To rename a folder in a deployment share using Windows PowerShell**
 
-1.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+**To rename a folder in a deployment share using Windows PowerShell**
 
-2.  Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+1. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+
+2. Ensure that the MDT deployments share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-3.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet as follows:
+3. View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet as follows:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -697,7 +735,7 @@ ForEach-Object ($App in $List) {
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.
 
-4.  Rename a folder named *Windows_8* to *Win_8* in the Operating Systems folder in a deployment share using the **ren** command, as shown in the following example:
+4. Rename a folder named *Windows_8* to *Win_8* in the Operating Systems folder in a deployment share using the **ren** command, as shown in the following example:
 
     ```powershell
     ren "DS002:\Operating Systems\Windows_8" "Win_8"
@@ -705,7 +743,7 @@ ForEach-Object ($App in $List) {
 
      In this example, *DS002:* is the name of a Windows PowerShell drive returned in step 3.
 
-5.  Verify that the folder is removed correctly by typing the following command:
+5. Verify that the folder is removed correctly by typing the following command:
 
     ```powershell
     Get-ChildItem "DS002:\Operating Systems"
@@ -713,7 +751,7 @@ ForEach-Object ($App in $List) {
 
      The Windows_8 folder is renamed to *Win_8*.
 
-6.  Rename a folder named *Windows_7* to *Win-7* in the Operating Systems folder in a deployment share using the [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet, as shown in the following example:
+6. Rename a folder named *Windows_7* to *Win-7* in the Operating Systems folder in a deployment share using the [Rename-Item](/powershell/module/microsoft.powershell.management/rename-item) cmdlet, as shown in the following example:
 
     ```powershell
     Rename-Item "DS002:\Operating Systems\Windows_7" "Win_7"
@@ -721,7 +759,7 @@ ForEach-Object ($App in $List) {
 
      The cmdlet displays the successful rename of the folder.
 
-7.  Verify that the folder is created correctly by typing the following command:
+7. Verify that the folder is created correctly by typing the following command:
 
     ```powershell
     Get-ChildItem "DS002:\Operating Systems"
@@ -730,16 +768,18 @@ ForEach-Object ($App in $List) {
      The Windows_7 folder is renamed to *Win_7*.
 
 ## Automating the Application of Operating System Service Packs in Deployment Shares
- Operating system service packs are a normal part of the software life cycle. The existing operating systems in deployment shares need to be updated with these service packs to help ensure that newly deployed or refreshed computers are current with the latest security recommendations and configuration settings.
+
+Operating system service packs are a normal part of the software life cycle. The existing operating systems in deployment shares need to be updated with these service packs to help ensure that newly deployed or refreshed computers are current with the latest security recommendations and configuration settings.
 
  In instances where an organization has many deployment shares with multiple operating systems in each deployment share, the process for manually updating the operating systems in each deployment share with the service packs can be time consuming. The methods for automating the application of operating system service packs in deployment shares include:
 
--   Copying updated source content that already contains the service pack (for example, Windows 7 with SP1 media) to the folder in the deployment share in which the existing operating system resides, as described in [Automating the Application of Operating System Service Packs from Updated Source Media](#AutomateAppFromUSM)
+- Copying updated source content that already contains the service pack (for example, Windows 7 with SP1 media) to the folder in the deployment share in which the existing operating system resides, as described in [Automating the Application of Operating System Service Packs from Updated Source Media](#AutomateAppFromUSM)
 
--   Applying the service pack to a reference computer, and then capturing an updated image from a reference computer, as described in [Automating the Application of Operating System Service Packs Using a Reference Computer and Windows PowerShell](#AutomateAppUsingRef)
+- Applying the service pack to a reference computer, and then capturing an updated image from a reference computer, as described in [Automating the Application of Operating System Service Packs Using a Reference Computer and Windows PowerShell](#AutomateAppUsingRef)
 
 ###  <a name="AutomateAppFromUSM"></a> Automating the Application of Operating System Service Packs from Updated Source Media
- You can automate the process of updating operating system service packs using Windows PowerShell when you have source media that include the service pack, such as having a DVD that has Windows 7 with SP1 already integrated.
+
+You can automate the process of updating operating system service packs using Windows PowerShell when you have source media that include the service pack, such as having a DVD that has Windows 7 with SP1 already integrated.
 
  For this method, the operating system source media with the service pack is copied over the existing operating system files without the service pack in the deployment share using Windows PowerShell.
 
@@ -785,40 +825,42 @@ ForEach-Object ($App in $List) {
    For more information about how to update MDT deployment media based on deployment share using **Update-MDTMedia** cmdlet, see [Updating Deployment Media Using Windows PowerShell](#UpdateDeployMedia).
 
 ###  <a name="AutomateAppUsingRef"></a> Automating the Application of Operating System Service Packs Using a Reference Computer and Windows PowerShell
- You can automate the process of updating operating system service packs using Windows PowerShell when you have only the service pack that is not yet integrated with the operating system, such as having SP1 for Windows 7 not yet integrated with a Windows 7 image.
+
+You can automate the process of updating operating system service packs using Windows PowerShell when you have only the service pack that is not yet integrated with the operating system, such as having SP1 for Windows 7 not yet integrated with a Windows 7 image.
 
  For this method, deploy the operating system without the service pack to a reference computer. Then, apply the service pack to the reference computer. Next, capture an operating system image of the reference computer. Finally, copy the captured .wim file over the Install.wim file in the operating system in the deployment share using Windows PowerShell.
 
  **To automate the application of operating system service packs from updates source media using Windows PowerShell**
 
-1.  Deploy the target operating system to a reference computer.
+1. Deploy the target operating system to a reference computer.
 
      For more information on how to deploy a reference computer, see the following resources in the MDT document, *Using the Microsoft Deployment Toolkit*:
 
-    -   "Preparing for LTI Deployment to the Reference Computer"
+    - "Preparing for LTI Deployment to the Reference Computer"
 
-    -   "Deploying To and Capturing an Image of the Reference Computer in LTI"
+    - "Deploying To and Capturing an Image of the Reference Computer in LTI"
 
-2.  Install the desired service pack to the reference computer.
+2. Install the desired service pack to the reference computer.
 
      For more information on how to install the service pack, see the documentation accompanying the service pack.
 
-3.  Capture an image of the reference computer by creating and deploying a task sequence based on the **Sysprep and Capture** task sequence template.
+3. Capture an image of the reference computer by creating and deploying a task sequence based on the **Sysprep and Capture** task sequence template.
 
      For more information about creating a task sequence based on the **Sysprep and Capture** task sequence template, see "Create a New Task Sequence in the Deployment Workbench".
 
-4.  Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
+4. Load the MDT Windows PowerShell snap-in as described in [Loading the MDT Windows PowerShell Snap-In](#LoadMDTSnapIn).
 
-5.  Ensure the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
+5. Ensure the MDT deployments that share Windows PowerShell drives are restored using the **Restore-MDTPersistentDrive** cmdlet, as shown in the following example:
 
     ```powershell
     Restore-MDTPersistentDrive -Verbose
     ```
 
     > [!NOTE]
-    >  If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
+    >
+    > If the MDT deployments that share Windows PowerShell drives are already restored, you will receive a warning message indicating that the cmdlet is unable to restore the drive.
 
-6.  View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as shown in the following example:
+6. View the list of MDT deployments share Windows PowerShell drives, one for each deployment share, using the [Get-PSDrive](/powershell/module/microsoft.powershell.management/get-psdrive) cmdlet, as shown in the following example:
 
     ```powershell
     Get-PSDrive -PSProvider Microsoft.BDD.PSSnapIn\MDTProvider
@@ -826,7 +868,7 @@ ForEach-Object ($App in $List) {
 
      The list of Windows PowerShell drives provided using the MDTProvider are listed, one for each deployment share.
 
-7.  Copy the .wim file captured in step 3 over the Install.wim file in the operating system in the deployment share using the [Copy-Item](/powershell/module/microsoft.powershell.management/copy-item) cmdlet, as shown in the following example:
+7. Copy the .wim file captured in step 3 over the Install.wim file in the operating system in the deployment share using the [Copy-Item](/powershell/module/microsoft.powershell.management/copy-item) cmdlet, as shown in the following example:
 
     ```powershell
     Copy-Item "DS002:\Captures\Win7SP1.wim" -Destination "DS002:\Operating Systems\Windows 7\sources\Install.wim" Force
@@ -834,12 +876,13 @@ ForEach-Object ($App in $List) {
 
      In this example, the captured operating system image file (Win7SP1.wim) in the Captures folder in the share DS002: is the name of a Windows PowerShell drive returned in step 6, and the existing Windows 7 operating system is stored in folder named *Windows 7*.
 
-8.  Update any MDT deployment media based on deployment share using **Update-MDTMedia** cmdlet.
+8. Update any MDT deployment media based on deployment share using **Update-MDTMedia** cmdlet.
 
      For more information about how to update MDT deployment media based on deployment share using **Update-MDTMedia** cmdlet, see [Updating Deployment Media Using Windows PowerShell](#UpdateDeployMedia).
 
 ## Customizing Deployment Based on Chassis Type
- You can customize the deployment based on the chassis type of the computer. The scripts create local variables that can be processed in the CustomSettings.ini file. The local variables `IsLaptop`, `IsDesktop`, and `IsServer` indicate whether the computer is a portable computer, desktop computer, or server, respectively.
+
+You can customize the deployment based on the chassis type of the computer. The scripts create local variables that can be processed in the CustomSettings.ini file. The local variables `IsLaptop`, `IsDesktop`, and `IsServer` indicate whether the computer is a portable computer, desktop computer, or server, respectively.
 
 > [!NOTE]
 >
@@ -908,7 +951,8 @@ Subsection=Server-%IsServer%
 ```
 
 ## Deploying Applications Based on Earlier Application Versions
- Often, when installing an operating system on an existing computer, you will install the same applications you previously installed on the computer. Do this using MDT scripts (in particular, ZTIGather.wsf) to query two separate sources of information:
+
+Often, when installing an operating system on an existing computer, you will install the same applications you previously installed on the computer. Do this using MDT scripts (in particular, ZTIGather.wsf) to query two separate sources of information:
 
 - **Configuration Manager software inventory feature.** Contains one record for each application package—in this case, listings in Program and Features in Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2—installed the last time Configuration Manager inventoried the computer.
 
@@ -1007,50 +1051,52 @@ Subsection=Server-%IsServer%
    Based on the scenario presented here, if the current computer has the value `Office12.0` inserted into the table (step 2), the one row is returned (`XXX0000F:Install Office 2010 Professional Plus`). This indicates that package XXX0000F:Install Office 2001 Professional Plus will be installed by the ZTI process during the State Restore Phase.
 
 ## Fully Automated LTI Deployment Scenario
- The main purpose of LTI is to automate the deployment process as much as possible. Although ZTI provides full deployment automation using the MDT scripts and Windows Deployment Services, LTI is designed to work with fewer infrastructure requirements.
+
+The main purpose of LTI is to automate the deployment process as much as possible. Although ZTI provides full deployment automation using the MDT scripts and Windows Deployment Services, LTI is designed to work with fewer infrastructure requirements.
 
  You can automate the Windows Deployment Wizard used in the LTI deployment process to reduce (or eliminate) the wizard pages displayed. You can skip the entire Windows Deployment Wizard by specifying the **SkipWizard** property in CustomSettings.ini. To skip individual wizard pages, use the following properties:
 
--   **SkipAdminPassword**
+- **SkipAdminPassword**
 
--   **SkipApplications**
+- **SkipApplications**
 
--   **SkipBDDWelcome**
+- **SkipBDDWelcome**
 
--   **SkipBitLocker**
+- **SkipBitLocker**
 
--   **SkipBitLockerDetails**
+- **SkipBitLockerDetails**
 
--   **SkipTaskSequence**
+- **SkipTaskSequence**
 
--   **SkipCapture**
+- **SkipCapture**
 
--   **SkipComputerBackup**
+- **SkipComputerBackup**
 
--   **SkipComputerName**
+- **SkipComputerName**
 
--   **SkipDomainMembership**
+- **SkipDomainMembership**
 
--   **SkipFinalSummary**
+- **SkipFinalSummary**
 
--   **SkipLocaleSelection**
+- **SkipLocaleSelection**
 
--   **SkipPackageDisplay**
+- **SkipPackageDisplay**
 
--   **SkipProductKey**
+- **SkipProductKey**
 
--   **SkipSummary**
+- **SkipSummary**
 
--   **SkipTimeZone**
+- **SkipTimeZone**
 
--   **SkipUserData**
+- **SkipUserData**
 
 For more information about these individual properties, see the corresponding property in the MDT document *Toolkit Reference*.
 
 For each wizard page skipped, provide the values for the corresponding properties that are typically collected through the wizard page in the CustomSettings.ini and BootStrap.ini files. For more information about the properties that must be configured in these files, see the section, "Providing Properties for Skipped Deployment Wizard Pages", in the MDT document *Toolkit Reference*.
 
 ## Fully Automated LTI Deployment for a Refresh Computer Scenario
- The following illustrates a CustomSettings.ini file used for a Refresh Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.
+
+The following illustrates a CustomSettings.ini file used for a Refresh Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.
 
 ```ini
 [Settings]
@@ -1114,7 +1160,8 @@ Powerusers001=DomainName\Username
 ```
 
 ## Fully Automated LTI Deployment for a New Computer Scenario
- The following is an example of a CustomSettings.ini file used for a New Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.
+
+The following is an example of a CustomSettings.ini file used for a New Computer scenario to skip all Windows Deployment Wizard pages. In this sample, the properties to provide when skipping the wizard page are immediately beneath the property that skips the wizard page.
 
 ```ini
 [Settings]
@@ -1173,7 +1220,8 @@ Home_page=https://www.microsoft.com/NewComputer
 ```
 
 ## Calling Web Services in MDT
- In earlier versions of MDT, rules processing was supported through CustomSettings.ini and databases, from which you could retrieve values from the local computer—typically using WMI—to make decisions on what needed to be done on each computer during deployment. In addition, you could make SQL queries and stored procedure calls to retrieve additional information from external databases. There were challenges with that approach, though—especially with making secure SQL Server connections.
+
+In earlier versions of MDT, rules processing was supported through CustomSettings.ini and databases, from which you could retrieve values from the local computer—typically using WMI—to make decisions on what needed to be done on each computer during deployment. In addition, you could make SQL queries and stored procedure calls to retrieve additional information from external databases. There were challenges with that approach, though—especially with making secure SQL Server connections.
 
  To help with this problem, MDT has the ability to make web service calls based on simple rules defined in CustomSettings.ini. These web service requests do not require any special security context and can use whatever TCP/IP port is needed to simplify firewall configurations.
 
@@ -1222,14 +1270,15 @@ Obtained AREA_CODE value from web service:  AREA_CODE = 425
 
  There are a few minor complications to watch for when running a web service:
 
--   Do not do anything special with proxy servers. If there is an anonymous proxy present, use it, but authenticating proxies could cause problems. In most cases, a web service will not be called.
+- Do not do anything special with proxy servers. If there is an anonymous proxy present, use it, but authenticating proxies could cause problems. In most cases, a web service will not be called.
 
--   CustomSettings.ini or ZTIGather.xml searches for properties defined in the XML markup returned as a result of the web service call (just as with a database query or other rule). However, the XML search is case sensitive. Fortunately, the web service described here returns all uppercase property names, which is what ZTIGather.xml expects. It is possible to remap lowercase or mixed-case entries to get around this.
+- CustomSettings.ini or ZTIGather.xml searches for properties defined in the XML markup returned as a result of the web service call (just as with a database query or other rule). However, the XML search is case sensitive. Fortunately, the web service described here returns all uppercase property names, which is what ZTIGather.xml expects. It is possible to remap lowercase or mixed-case entries to get around this.
 
--   A `POST` request to the web service is recommended, so the web service call must be able to support a `POST`.
+- A `POST` request to the web service is recommended, so the web service call must be able to support a `POST`.
 
 ## Connecting to Network Resources
- During LTI and ZTI deployment processes, you might require access to a network resource on a server different from the server hosting the deployment share. You must be authenticated on the other server so that you can access shared folders or services there. For example, you can install an application from a shared folder on a server other than the server hosting the deployment share that the MDT scripts use.
+
+During LTI and ZTI deployment processes, you might require access to a network resource on a server different from the server hosting the deployment share. You must be authenticated on the other server so that you can access shared folders or services there. For example, you can install an application from a shared folder on a server other than the server hosting the deployment share that the MDT scripts use.
 
 > [!NOTE]
 >
@@ -1260,13 +1309,11 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 6. Complete the **Properties** tab of the new task using the following information:
 
-
    | **In this box** |                                                                **Do this**                                                                |
    |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
    |    **Name**     |                         Type **Connect to server** (where server is the name of the server to which to connect).                          |
    | **Description** |                                       Type text that explains why the connection needs to be made.                                        |
    |   **Command**   | Type **cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server). |
-
 
 7. Complete the **Options** tab of the new task using the following information. Unless specified, accept default values, and then click **OK**.
 
@@ -1278,25 +1325,26 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
    After adding the task that will run the ZTIConnect.wsf script, subsequent tasks can access network resources on the server specified in the **/uncpath** option of the ZTIConnect.wsf script.
 
 ## Deploying the Correct Device Drivers to Computers with the Same Hardware Devices but Different Make and Model
- Variations on model numbers and names can exist with virtually no difference in the driver set. These variations in model numbers and names can unnecessarily increase time spent making multiple database entries for a given model. The following procedure shows how to define a new property using a user exit function call that returns a substring of the model number.
+
+Variations on model numbers and names can exist with virtually no difference in the driver set. These variations in model numbers and names can unnecessarily increase time spent making multiple database entries for a given model. The following procedure shows how to define a new property using a user exit function call that returns a substring of the model number.
 
  **To create model aliases**
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the Actions pane, click **Properties**.
+3. In the Actions pane, click **Properties**.
 
-4.  In the **Properties** dialog box, click the **Rules** tab.
+4. In the **Properties** dialog box, click the **Rules** tab.
 
-5.  Create aliases for hardware types in the Make and Model sections of the MDT DB. Truncate the model type at the open parentheses "(" in the model name. For example, *HP DL360 (G112)* becomes *HP DL360*.
+5. Create aliases for hardware types in the Make and Model sections of the MDT DB. Truncate the model type at the open parentheses "(" in the model name. For example, *HP DL360 (G112)* becomes *HP DL360*.
 
-6.  Add the custom variable **ModelAlias** to each section.
+6. Add the custom variable **ModelAlias** to each section.
 
-7.  Create a new `[SetModel]` section.
+7. Create a new `[SetModel]` section.
 
-8.  Add the `[SetModel]` section to the **Priority** settings in the `[Settings]` section.
+8. Add the `[SetModel]` section to the **Priority** settings in the `[Settings]` section.
 
 9. Add a line to the `ModelAlias` section to refer to a user exit script that will truncate the model name at the "(".
 
@@ -1350,28 +1398,30 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
     ```
 
 ## Configuring Conditional Task Sequence Steps
- In some scenarios, consider running a task sequence step conditionally based on defined criteria. Any combinations of these conditions can be added to determine whether the task sequence step should run. For example, use the value of a task sequence variable and the value of a registry setting to determine whether a task sequence step should run.
+
+In some scenarios, consider running a task sequence step conditionally based on defined criteria. Any combinations of these conditions can be added to determine whether the task sequence step should run. For example, use the value of a task sequence variable and the value of a registry setting to determine whether a task sequence step should run.
 
  Using MDT, run a task sequence conditionally based on:
 
--   One or more **IF** statements
+- One or more **IF** statements
 
--   A task sequence variable
+- A task sequence variable
 
--   The version of the target operating system
+- The version of the target operating system
 
--   The Boolean results of a WMI query
+- The Boolean results of a WMI query
 
--   A registry setting
+- A registry setting
 
--   The software installed on the target computer
+- The software installed on the target computer
 
--   The properties of a folder
+- The properties of a folder
 
--   The properties of a file
+- The properties of a file
 
 ### Configuring a Conditional Task Sequence Step
- Conditional task sequence steps are configured in the Deployment Workbench, on the **Options** tab of a task sequence step. You can add one or more conditions to the task sequence step to create the appropriate condition for running or not running the step.
+
+Conditional task sequence steps are configured in the Deployment Workbench, on the **Options** tab of a task sequence step. You can add one or more conditions to the task sequence step to create the appropriate condition for running or not running the step.
 
 > [!NOTE]
 >
@@ -1391,14 +1441,15 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
    On the **Options** tab of the task sequence step, perform the following actions:
 
--   **Add.** Click this button to add a condition to the task sequence step.
+- **Add.** Click this button to add a condition to the task sequence step.
 
--   **Remove.** Click this button to remove an existing condition in a task sequence step.
+- **Remove.** Click this button to remove an existing condition in a task sequence step.
 
--   **Edit.** Click this button to modify an existing condition in a task sequence step.
+- **Edit.** Click this button to modify an existing condition in a task sequence step.
 
 ### IF Statements in Conditions
- All task sequence conditions include one or more **IF** statements. **IF** statements are the foundation for creating conditional task sequence steps. A task sequence step condition can include only one **IF** statement, but multiple **IF** statements can be nested beneath the top-level **IF** statement to create more complex conditions.
+
+All task sequence conditions include one or more **IF** statements. **IF** statements are the foundation for creating conditional task sequence steps. A task sequence step condition can include only one **IF** statement, but multiple **IF** statements can be nested beneath the top-level **IF** statement to create more complex conditions.
 
  An **IF** statement can be based on the conditions listed in  the following table, which are configured in the **IF Statement Properties** dialog box.
 
@@ -1412,166 +1463,175 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
  **To add an IF statement condition to a task sequence step**
 
-1.  On the ***step*** **Option** tab (where *step* is the name of the task sequence step to configure), click **Add**, and then click **If statement**.
+1. On the ***step*** **Option** tab (where *step* is the name of the task sequence step to configure), click **Add**, and then click **If statement**.
 
-2.  In the **If Statement Properties** dialog box, click **condition** (where *condition* is one of the conditions listed in the previous table), and then click **OK**.
+2. In the **If Statement Properties** dialog box, click **condition** (where *condition* is one of the conditions listed in the previous table), and then click **OK**.
 
 ### Task Sequence Variables in Conditions
- Use the **Task Sequence Variable** condition to evaluate any task sequence variable created by a **Set Task Sequence Variable** task or by any task in the task sequence. For example, consider a network that contains Windows XP client computers that are part of a domain and some that are in a workgroup. Knowing that the current domain policy forces all user settings to be saved on the network, user settings may need to be saved only for computers that are not part of the domain—that is, computers that are in the workgroup. In such case, add a condition to the **Capture User Files and Settings** task that targets the computers in the workgroup.
+
+Use the **Task Sequence Variable** condition to evaluate any task sequence variable created by a **Set Task Sequence Variable** task or by any task in the task sequence. For example, consider a network that contains Windows XP client computers that are part of a domain and some that are in a workgroup. Knowing that the current domain policy forces all user settings to be saved on the network, user settings may need to be saved only for computers that are not part of the domain—that is, computers that are in the workgroup. In such case, add a condition to the **Capture User Files and Settings** task that targets the computers in the workgroup.
 
  **To add a condition based on a task sequence variable**
 
-1.  On the ***step*** **Options** tab (where *step* is the name of the task sequence step to configure), click **Add Condition**, and then click **Task Sequence Variable**.
+1. On the ***step*** **Options** tab (where *step* is the name of the task sequence step to configure), click **Add Condition**, and then click **Task Sequence Variable**.
 
-2.  In the **Task Sequence Variable** Condition dialog box, in the **Variable** box, type **OSDJoinType**.
+2. In the **Task Sequence Variable** Condition dialog box, in the **Variable** box, type **OSDJoinType**.
 
     > [!NOTE]
-    >  This variable is set to **0** for computers that are joined to a domain and to **1** for those in a workgroup.
+    >
+    > This variable is set to **0** for computers that are joined to a domain and to **1** for those in a workgroup.
 
-3.  In the **Condition** box, click **equal**.
+3. In the **Condition** box, click **equal**.
 
-4.  In the **Value** box, type **1**, and then click **OK**.
+4. In the **Value** box, type **1**, and then click **OK**.
 
 ### Operating System Version in Conditions
- Use the **Operating System Version** condition to verify the existing operating system version of a target computer or the existing client (when capturing an image). For instance, consider a network that contains several servers that will be upgraded from Windows Server 2003 to Windows Server 2008. Network settings should be copied and applied only to servers that are running Windows Server 2003. All other servers will have the default network settings that Windows Server 2008 uses.
+
+Use the **Operating System Version** condition to verify the existing operating system version of a target computer or the existing client (when capturing an image). For instance, consider a network that contains several servers that will be upgraded from Windows Server 2003 to Windows Server 2008. Network settings should be copied and applied only to servers that are running Windows Server 2003. All other servers will have the default network settings that Windows Server 2008 uses.
 
  **To add a condition based on operating system version**
 
-1.  In the Task Sequence Editor, click the **Capture Network Settings** task.
+1. In the Task Sequence Editor, click the **Capture Network Settings** task.
 
-2.  Click **Add Condition**, and then click **Operating System Version**.
+2. Click **Add Condition**, and then click **Operating System Version**.
 
-3.  In the **Architecture** box, click the relevant server. For this example, click **x86**.
+3. In the **Architecture** box, click the relevant server. For this example, click **x86**.
 
-4.  In the **Operating system** box, click the operating system and version for which to set a condition. For this example, click **x86 Windows 2003**.
+4. In the **Operating system** box, click the operating system and version for which to set a condition. For this example, click **x86 Windows 2003**.
 
-5.  In the **Condition** box, click the relevant condition, and then click **OK**.
+5. In the **Condition** box, click the relevant condition, and then click **OK**.
 
 ### File Properties in Conditions
- Use the **File Properties** condition to verify the version and/or times tamp of a given file to determine whether or not to run a task or a group of tasks. In this example, the production environment contains a Windows Server 2003 image that is constantly updated and used for every new server that is added to the network. All server computers in the environment run a custom application that requires the Digital Access Object (DAO) application programming interface (API) version 3.60.6815.
+
+Use the **File Properties** condition to verify the version and/or times tamp of a given file to determine whether or not to run a task or a group of tasks. In this example, the production environment contains a Windows Server 2003 image that is constantly updated and used for every new server that is added to the network. All server computers in the environment run a custom application that requires the Digital Access Object (DAO) application programming interface (API) version 3.60.6815.
 
  All existing servers are working properly. However, each new server added to the network with the image is unable to run the application. Because it is the responsibility of a different group to maintain and update images, you decide that the deployment task sequence be changed to install the relevant version of DAO if the existing version of DAO deployed with the image is incorrect.
 
  **To add a File Properties condition to a task sequence step in Configuration Manager**
 
-1.  In Configuration Manager, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to create a package](../apps/deploy-use/packages-and-programs.md#create-a-package-and-program).
+1. In Configuration Manager, create a package to install DAO 3.60.6815. Call this package *DAO*, with a program called *InstallDAO*. To learn more about creating packages, see [How to create a package](../apps/deploy-use/packages-and-programs.md#create-a-package-and-program).
 
-2.  Create an **Install Software** step to deploy the DAO package.
+2. Create an **Install Software** step to deploy the DAO package.
 
-3.  Click the **Install Software** task sequence step created in step 2, and then click the **Options** tab.
+3. Click the **Install Software** task sequence step created in step 2, and then click the **Options** tab.
 
-4.  Click **Add Condition**, and then click **File Properties**.
+4. Click **Add Condition**, and then click **File Properties**.
 
-5.  In the **Path** box, type **C:\Program Files\Microsoft Shared\DAO\dao360.dll**.
+5. In the **Path** box, type **C:\Program Files\Microsoft Shared\DAO\dao360.dll**.
 
-6.  Select the **Check the version** check box, and then click **not equals** for the condition.
+6. Select the **Check the version** check box, and then click **not equals** for the condition.
 
-7.  In the **Version** box, type **3.60.6815**.
+7. In the **Version** box, type **3.60.6815**.
 
-8.  In this case, clear the **Check the timestamp** check box, and then click **OK**.
+8. In this case, clear the **Check the timestamp** check box, and then click **OK**.
 
 ### Folder Properties in Conditions
- Use the **Folder Properties** condition to verify the time stamp of a given folder to determine whether to run a task or a group of tasks. For instance, consider a situation in which an internally developed application has been updated to work with Windows 8. However, not all of the computers in the network have the most recent version of the application installed, and you must perform a data-conversion process before you can upgrade the application.
+
+Use the **Folder Properties** condition to verify the time stamp of a given folder to determine whether to run a task or a group of tasks. For instance, consider a situation in which an internally developed application has been updated to work with Windows 8. However, not all of the computers in the network have the most recent version of the application installed, and you must perform a data-conversion process before you can upgrade the application.
 
  If the time stamp of the folder in which the application is installed is 12/31/2007 or earlier, then the target computer is running the incompatible version of the application, and you should run the data-conversion process on the target computer. Conditionally, run a task sequence step to run the data-conversion process on computers that have an earlier version of the application.
 
  **To add a Folder Properties condition to a task sequence step**
 
-1.  In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence you want to edit).
+1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence you want to edit).
 
-2.  Create a **Command Line** task to perform the data-conversion process.
+2. Create a **Command Line** task to perform the data-conversion process.
 
-3.  Click the task created in step 1.
+3. Click the task created in step 1.
 
-4.  Click **Add Condition**, and then click **Folder Properties**.
+4. Click **Add Condition**, and then click **Folder Properties**.
 
-5.  In the **Path** box, type the path of the folder that contains the application.
+5. In the **Path** box, type the path of the folder that contains the application.
 
-6.  Select the **Check the timestamp** check box.
+6. Select the **Check the timestamp** check box.
 
-7.  Click **Less than or equals** for the condition.
+7. Click **Less than or equals** for the condition.
 
-8.  In the **Date** box, click **12/31/2007**.
+8. In the **Date** box, click **12/31/2007**.
 
 9. In the **Time** box, click **12:00:00 AM**, and then click **OK**.
 
 ### Registry Settings in Conditions
- Use the **Registry Setting** condition to verify the existence of keys and values in the registry and the corresponding data stored in registry values. For instance, consider a case in which an application currently used on a small set of computers cannot run on Windows 8, and a Windows 8 deployment is in place to upgrade computers that currently are running Windows XP. Create a condition on the very first task in a sequence to check the registry for an entry for the incompatible application and to interrupt the deployment process for that computer if it is found.
+
+Use the **Registry Setting** condition to verify the existence of keys and values in the registry and the corresponding data stored in registry values. For instance, consider a case in which an application currently used on a small set of computers cannot run on Windows 8, and a Windows 8 deployment is in place to upgrade computers that currently are running Windows XP. Create a condition on the very first task in a sequence to check the registry for an entry for the incompatible application and to interrupt the deployment process for that computer if it is found.
 
  **To add a Registry Setting condition to a task sequence step**
 
-1.  In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that deploys Windows 8).
+1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that deploys Windows 8).
 
-2.  Click the first task in the sequence, and then click the **Options** tab.
+2. Click the first task in the sequence, and then click the **Options** tab.
 
-3.  Click **Add Condition**, and then click **Registry Setting**.
+3. Click **Add Condition**, and then click **Registry Setting**.
 
-4.  In the **Root key** list, click **HKEY_LOCAL_MACHINE**.
+4. In the **Root key** list, click **HKEY_LOCAL_MACHINE**.
 
-5.  In the **Key** box, type **SOFTWARE\WOODGROVE**.
+5. In the **Key** box, type **SOFTWARE\WOODGROVE**.
 
-6.  Click **not exists** for the condition. In this case, the task will run, and the sequence continue only if the key does not exist.
+6. Click **not exists** for the condition. In this case, the task will run, and the sequence continue only if the key does not exist.
 
-7.  Optionally, the condition could check for the nonexistence of a value if the value name is typed in the **Value name** box.
+7. Optionally, the condition could check for the nonexistence of a value if the value name is typed in the **Value name** box.
 
-8.  If a condition other than **exists/not exists** was used, specify a value and value type.
+8. If a condition other than **exists/not exists** was used, specify a value and value type.
 
 9. Click **OK**.
 
 ### WMI Queries in Conditions
- Use the **WMI Query** condition to run any WMI query. The condition is evaluated as True if the query returns at least one result. For example, consider that a deployment team needs to upgrade the operating system of all servers of a given model—Dell 1950, for instance. You can use a WMI query to check each computer's model and proceed with the deployment only if the right model is found.
+
+Use the **WMI Query** condition to run any WMI query. The condition is evaluated as True if the query returns at least one result. For example, consider that a deployment team needs to upgrade the operating system of all servers of a given model—Dell 1950, for instance. You can use a WMI query to check each computer's model and proceed with the deployment only if the right model is found.
 
  **To add a WMI Query condition to a task sequence step**
 
-1.  In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
+1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
 
-2.  Click the first task in the sequence, and then click the **Options** tab.
+2. Click the first task in the sequence, and then click the **Options** tab.
 
-3.  Click **Add Condition**, and then click **Query WMI**.
+3. Click **Add Condition**, and then click **Query WMI**.
 
-4.  In the **WMI Namespace** box, type **root\cimv2**.
+4. In the **WMI Namespace** box, type **root\cimv2**.
 
-5.  In the **WQL Query** box, type **Select \* From Win32_ComputerSystem WHERE Model LIKE "%Dell%%1950%"**. Click **OK**.
+5. In the **WQL Query** box, type **Select \* From Win32_ComputerSystem WHERE Model LIKE "%Dell%%1950%"**. Click **OK**.
 
 ### Installed Software in Conditions
- Use an **Installed Software** condition to check if a particular piece of software is currently installed on a target computer. Only software installed using Microsoft Installer (MSI) files can be evaluated using this condition. As an example, imagine that you want to upgrade the operating system of all servers except those running Microsoft SQL Server 2012.
+
+Use an **Installed Software** condition to check if a particular piece of software is currently installed on a target computer. Only software installed using Microsoft Installer (MSI) files can be evaluated using this condition. As an example, imagine that you want to upgrade the operating system of all servers except those running Microsoft SQL Server 2012.
 
  **To add an Installed Software condition to a task sequence step**
 
-1.  In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
+1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
 
-2.  Click the first task in the sequence, and then click the **Options** tab.
+2. Click the first task in the sequence, and then click the **Options** tab.
 
-3.  Click **Add Condition**, and then click **Installed Software**.
+3. Click **Add Condition**, and then click **Installed Software**.
 
-4.  Click **Browse**, and then click the MSI file for SQL Server 2012.
+4. Click **Browse**, and then click the MSI file for SQL Server 2012.
 
-5.  Select the **Match this specific product** check box to specify that only computers with SQL Server 2012 and not any other versions are the target computers this query should detect.
+5. Select the **Match this specific product** check box to specify that only computers with SQL Server 2012 and not any other versions are the target computers this query should detect.
 
-6.  Click **OK**.
+6. Click **OK**.
 
 ### Complex Conditions
- Multiple conditions can be grouped using **IF** statements to create complex conditions. For instance, imagine that a particular step should only be run for Contoso 1950 computers running Windows Server 2003 or Windows Server 2008. Written as a programmatic **IF** statement, it would look similar to the following:
+
+Multiple conditions can be grouped using **IF** statements to create complex conditions. For instance, imagine that a particular step should only be run for Contoso 1950 computers running Windows Server 2003 or Windows Server 2008. Written as a programmatic **IF** statement, it would look similar to the following:
 
 `IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating system=2008))`
 
  **To add a complex condition**
 
-1.  In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
+1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
 
-2.  Click the task sequence step to which to add the condition, and then click the **Options** tab.
+2. Click the task sequence step to which to add the condition, and then click the **Options** tab.
 
-3.  Click **Add condition**, click **If Statement**, and then click **All conditions**. Click **OK**.
+3. Click **Add condition**, click **If Statement**, and then click **All conditions**. Click **OK**.
 
-4.  Click the condition statement, click **Add condition**, and then click **WMI Query**.
+4. Click the condition statement, click **Add condition**, and then click **WMI Query**.
 
-5.  Ensure **root\cimv2** is specified as the WMI namespace, and then, in the **WQL Query** box, type **SELECT \* FROM Win32_ComputerSystem WHERE ComputerModel LIKE "%Contoso%1950%"**. Click **OK**.
+5. Ensure **root\cimv2** is specified as the WMI namespace, and then, in the **WQL Query** box, type **SELECT \* FROM Win32_ComputerSystem WHERE ComputerModel LIKE "%Contoso%1950%"**. Click **OK**.
 
-6.  Click the **IF** statement, and then click **Add condition**. Click **If statement**, and then click **Any condition**. Click **OK**.
+6. Click the **IF** statement, and then click **Add condition**. Click **If statement**, and then click **Any condition**. Click **OK**.
 
-7.  Click the second **IF** statement. Click **Add condition**, and then click **Operating System Version**.
+7. Click the second **IF** statement. Click **Add condition**, and then click **Operating System Version**.
 
-8.  In the **Architecture** box, click the architecture for the servers. For this example, click **x86**.
+8. In the **Architecture** box, click the architecture for the servers. For this example, click **x86**.
 
 9. In the **Operating system** box, click the operating system and version. For this example, click **x86 Windows 2003 original release**. Click **OK**.
 
@@ -1582,7 +1642,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 12. In the **Operating system** box, click the operating system and version. For this example, click **x86 Windows 2008 original release**. Click **OK**.
 
 ## Creating a Highly Scalable LTI Deployment Infrastructure
- In this scenario, no electronic software distribution is available for the deployment infrastructure to leverage, so you use MDT to build a fully automated LTI deployment infrastructure. The scalable LTI infrastructure uses SQL Server, Windows Deployment Services, and Windows Server 2003 Distributed File System Replication (DFS-R) technologies.
+
+In this scenario, no electronic software distribution is available for the deployment infrastructure to leverage, so you use MDT to build a fully automated LTI deployment infrastructure. The scalable LTI infrastructure uses SQL Server, Windows Deployment Services, and Windows Server 2003 Distributed File System Replication (DFS-R) technologies.
 
  Scale the LTI infrastructure by:
 
@@ -1601,7 +1662,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
   This scenario presumes that MDT is configured on a master deployment server and that the configuration of the MDT DB has already been completed as discussed at the beginning of this document.
 
 ###  <a name="EnsureInfrastructure"></a> Ensuring That the Appropriate Infrastructure Exists
- The highly scalable LTI deployment infrastructure uses a hub-and-spoke topology for replication of content; therefore, first nominate a deployment server in the production environment that will perform the role of the master deployment server.  The following lists the required components for the master deployment server.
+
+The highly scalable LTI deployment infrastructure uses a hub-and-spoke topology for replication of content; therefore, first nominate a deployment server in the production environment that will perform the role of the master deployment server.  The following lists the required components for the master deployment server.
 
  |**Required component** |**Purpose/comment** |
  |-|-|
@@ -1625,37 +1687,40 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 > Windows Deployment Services must be set up and configured on each child server, but it is not necessary to add boot or installation images.
 
 ###  <a name="AddContent"></a> Adding Content to MDT
- Populate the master deployment server with content using the Deployment Workbench, and create and populate the MDT DB as described in the following sections. For information on populating the database with:
 
--   Applications, see the section, "Configuring Applications in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
+Populate the master deployment server with content using the Deployment Workbench, and create and populate the MDT DB as described in the following sections. For information on populating the database with:
 
--   Operating systems, see the section, "Configuring Operating Systems in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
+- Applications, see the section, "Configuring Applications in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
 
--   Operating system packages, see the section, "Configuring Packages in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
+- Operating systems, see the section, "Configuring Operating Systems in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
 
--   Device drivers, see the section, "Configuring Device Drivers in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
+- Operating system packages, see the section, "Configuring Packages in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
 
--   Task sequences, see the section, "Configuring Task Sequences in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
+- Device drivers, see the section, "Configuring Device Drivers in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
+
+- Task sequences, see the section, "Configuring Task Sequences in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*
 
 > [!NOTE]
 >
 > Ensure that the LiteTouchPE_x86.wim file created when the deployment share is updated has been added to Windows Deployment Services.
 
 ###  <a name="PrepareDeployment"></a> Preparing Windows Deployment Services
- Because the LiteTouchPE_x86.wim file will be replicated on a periodic basis through the DFS-R replication group, the boot configuration data store must be updated periodically to reflect the newly replicated Windows PE environment. Perform the following steps on each of the deployment servers.
+
+Because the LiteTouchPE_x86.wim file will be replicated on a periodic basis through the DFS-R replication group, the boot configuration data store must be updated periodically to reflect the newly replicated Windows PE environment. Perform the following steps on each of the deployment servers.
 
  **To prepare Windows Deployment Services**
 
-1.  Open a Command Prompt window.
+1. Open a Command Prompt window.
 
-2.  Type **WDSUtil/set-server/BCDRefreshPolicy/Enabled:yes/RefreshPeriod:60**, and then press ENTER.
+2. Type **WDSUtil/set-server/BCDRefreshPolicy/Enabled:yes/RefreshPeriod:60**, and then press ENTER.
 
 > [!NOTE]
 >
 > In the example presented here, the refresh period is set to 60 minutes; however, you could configure this value to replicate during a period equal to that of the DFS-R.
 
 ###  <a name="ConfigureFileReplication"></a> Configuring Distributed File System Replication
- When scaling the LTI deployment architecture, you use DFS-R as the basis for replicating the content from both the MDT deployment share and the Windows PE Lite Touch boot environment and from the master deployment server to the child deployment servers.
+
+When scaling the LTI deployment architecture, you use DFS-R as the basis for replicating the content from both the MDT deployment share and the Windows PE Lite Touch boot environment and from the master deployment server to the child deployment servers.
 
 > [!NOTE]
 >
@@ -1685,11 +1750,11 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 8. On the **Replication Group Members** page, perform these steps:
 
-   1.  Click **Add**.
+   1. Click **Add**.
 
-   2.  Type the names of all servers that are to be members of this replication group—for example, all child deployment servers and the master deployment server.
+   2. Type the names of all servers that are to be members of this replication group—for example, all child deployment servers and the master deployment server.
 
-   3.  Click **OK**.
+   3. Click **OK**.
 
 9. Click **Next**.
 
@@ -1729,25 +1794,25 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 21. On the **Local Path of Distribution on Other Members** page, perform these steps:
 
-    1.  Select all the members in the distribution group, and then click **Edit**.
+    1. Select all the members in the distribution group, and then click **Edit**.
 
-    2.  In the **Edit Local Path** dialog box, click **Enabled**.
+    2. In the **Edit Local Path** dialog box, click **Enabled**.
 
-    3.  Type the path where the Deployment Share folder should be stored on the child deployment server—for example, ***X:\Deployment*** (where *X* is the drive letter on the deployment server).
+    3. Type the path where the Deployment Share folder should be stored on the child deployment server—for example, ***X:\Deployment*** (where *X* is the drive letter on the deployment server).
 
-    4.  Click **OK**.
+    4. Click **OK**.
 
 22. Click **Next**.
 
 23. On the **Local Path of Boot on Other Members** page, perform these steps:
 
-    1.  Select all the members in the distribution group, and then click **Edit**.
+    1. Select all the members in the distribution group, and then click **Edit**.
 
-    2.  In the **Edit Local Path** dialog box, click **Enabled**.
+    2. In the **Edit Local Path** dialog box, click **Enabled**.
 
-    3.  Type the path where the Boot folder should be stored on the child deployment server—for example, ***X:\RemoteInstall\Boot*** (where *X* is the drive letter on the deployment server).
+    3. Type the path where the Boot folder should be stored on the child deployment server—for example, ***X:\RemoteInstall\Boot*** (where *X* is the drive letter on the deployment server).
 
-    4.  Click **OK**.
+    4. Click **OK**.
 
 24. Click **Next**.
 
@@ -1760,7 +1825,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 > Ensure that the new replication group is now listed beneath the Replication node.
 
 ###  <a name="PrepareSQLReplication"></a> Preparing for SQL Server Replication
- Before SQL Server replication can be configured, complete several pre-configuration steps to ensure that the deployment servers are correctly configured.
+
+Before SQL Server replication can be configured, complete several pre-configuration steps to ensure that the deployment servers are correctly configured.
 
  **To prepare for SQL Server replication on the master deployment server**
 
@@ -1784,7 +1850,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 > This database must be given the same name as the MDT DB on the master deployment server. For example, if the MDT DB on the master deployment server is called *MDTDB*, create an empty database called *MDTDB* on the child deployment server.
 
 ###  <a name="ConfigureSQLReplication"></a> Configuring SQL Server Replication
- After configuring the replication of files and folders required to build the deployment infrastructure, configure SQL Server to replicate the MDT DB.
+
+After configuring the replication of files and folders required to build the deployment infrastructure, configure SQL Server to replicate the MDT DB.
 
 > [!NOTE]
 >
@@ -1801,68 +1868,72 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
    This terminology is used through the SQL Server replication setup and configuration wizards.
 
 #### Configure a SQL Server Publisher
- To configure the master deployment server as a SQL Server publisher, perform these steps:
 
-1.  Open SQL Server Management Studio.
+To configure the master deployment server as a SQL Server publisher, perform these steps:
 
-2.  Right-click the **Replication** node, and then click **Configure Distribution**.
+1. Open SQL Server Management Studio.
 
-3.  In the Configure Distribution Wizard, click **Next**.
+2. Right-click the **Replication** node, and then click **Configure Distribution**.
 
-4.  On the **Distributor** page, click **will act as its own Distributor; SQL Server will create a distribution database and log**, and then click **Next**.
+3. In the Configure Distribution Wizard, click **Next**.
 
-5.  On the **Snapshot Folder** page, in the **Preparing for SQL Server Replication** section, type the UNC path to the snapshot folder created.
+4. On the **Distributor** page, click **will act as its own Distributor; SQL Server will create a distribution database and log**, and then click **Next**.
 
-6.  On the **Distribution Database** page, click **Next**.
+5. On the **Snapshot Folder** page, in the **Preparing for SQL Server Replication** section, type the UNC path to the snapshot folder created.
 
-7.  On the **Publishers** page, click the master deployment server to set it as the distributor, and then click **Next**.
+6. On the **Distribution Database** page, click **Next**.
 
-8.  On the **Wizard Actions** page, click **Configure Distribution**, and then click **Next**.
+7. On the **Publishers** page, click the master deployment server to set it as the distributor, and then click **Next**.
+
+8. On the **Wizard Actions** page, click **Configure Distribution**, and then click **Next**.
 
 9. Click **Finish**, and then click **Close** when the wizard is finished.
 
 #### Enable the MDT DB for Replication
- To enable the MDT DB for replication on the master deployment server, perform these steps:
+
+To enable the MDT DB for replication on the master deployment server, perform these steps:
 
 1. In SQL Server Management Studio, right-click the **Replication** node, and then click **Publisher Properties**.
 
 2. On the **Publisher Properties** page, perform these steps:
 
-   1.  Click **Publisher Databases**.
+   1. Click **Publisher Databases**.
 
-   2.  Click the MDT DB, and then click **Transactional**.
+   2. Click the MDT DB, and then click **Transactional**.
 
-   3.  Click **OK**.
+   3. Click **OK**.
 
    The MDT DB is now configured for transactional and snapshot replication.
 
 #### Create a Publication of the MDT DB
- To create a publication of the MDT DB to which the child deployment servers can subscribe, perform these steps:
 
-1.  In SQL Server Management Studio, expand Replication, right-click **Local Publications**, and then click **New Publication**.
+To create a publication of the MDT DB to which the child deployment servers can subscribe, perform these steps:
 
-2.  In the New Publication Wizard, click **Next**.
+1. In SQL Server Management Studio, expand Replication, right-click **Local Publications**, and then click **New Publication**.
 
-3.  On the **Publication Database** page, click the MDT DB, and then click **Next**.
+2. In the New Publication Wizard, click **Next**.
 
-4.  On the **Publication Type** page, click **Snapshot publication**, and then click **Next**.
+3. On the **Publication Database** page, click the MDT DB, and then click **Next**.
 
-5.  On the **Articles** page, select all **Tables, Stored Procedures**, and **Views**, and then click **Next**.
+4. On the **Publication Type** page, click **Snapshot publication**, and then click **Next**.
 
-6.  On the **Articles Issues** page, click **Next**.
+5. On the **Articles** page, select all **Tables, Stored Procedures**, and **Views**, and then click **Next**.
 
-7.  On the **Filter Table Rows** page, click **Next**.
+6. On the **Articles Issues** page, click **Next**.
 
-8.  On the **Snapshot Agent** page, perform these steps:
+7. On the **Filter Table Rows** page, click **Next**.
 
-    1.  Select **Create a snapshot immediately and keep the snapshot available to initialize subscriptions**.
+8. On the **Snapshot Agent** page, perform these steps:
 
-    2.  Click **Schedule the Snapshot Agent to run at the following times**.
+    1. Select **Create a snapshot immediately and keep the snapshot available to initialize subscriptions**.
 
-    3.  Click **Change**.
+    2. Click **Schedule the Snapshot Agent to run at the following times**.
+
+    3. Click **Change**.
 
     > [!NOTE]
-    >  Specify a schedule that will occur one hour before the database replicates.
+    >
+    > Specify a schedule that will occur one hour before the database replicates.
 
 9. Click **Next**.
 
@@ -1875,10 +1946,12 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 13. Click **Finish** to complete the wizard, and then click **Close** when the wizard has created the publication.
 
     > [!NOTE]
-    >  The publication will now be visible beneath the Local Publications node in SQL Server Management Studio.
+    >
+    > The publication will now be visible beneath the Local Publications node in SQL Server Management Studio.
 
 #### Subscribe Child Deployment Servers to the Published MDT DB
- Now that the MDT DB has been published, you can add the child deployment servers as subscribers to this publication; that is, that they will receive a copy of the database on a schedule so that during a deployment the client computers can query a database that is local to the network instead of going across the WAN.
+
+Now that the MDT DB has been published, you can add the child deployment servers as subscribers to this publication; that is, that they will receive a copy of the database on a schedule so that during a deployment the client computers can query a database that is local to the network instead of going across the WAN.
 
  **To subscribe the child deployment servers to the MDT DB publication**
 
@@ -1894,11 +1967,11 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 6. On the **Subscribers** page, add each of the child deployment servers by performing the following steps:
 
-   1.  Click **Add Subscriber**, and then click **Add SQL Server Subscriber**.
+   1. Click **Add Subscriber**, and then click **Add SQL Server Subscriber**.
 
-   2.  Add each child deployment server.
+   2. Add each child deployment server.
 
-   3.  For each child deployment server added, in the **Subscription Database** box, click the empty MDT DB on that child deployment server.
+   3. For each child deployment server added, in the **Subscription Database** box, click the empty MDT DB on that child deployment server.
 
    > [!NOTE]
    >  If the empty MDT DB has not yet been created, in the **Subscription Database** box, select the option to create a new database.
@@ -1914,9 +1987,9 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 10. On the **Synchronization Schedule** page, perform these steps:
 
-    1.  In the **Agent Schedule** box, click **<Define schedule\>**.
+    1. In the **Agent Schedule** box, click **<Define schedule\>**.
 
-    2.  Specify the schedule that should be used to replicate the database between master and child deployment servers, and then click **Next**.
+    2. Specify the schedule that should be used to replicate the database between master and child deployment servers, and then click **Next**.
 
 11. On the **Initialize Subscription** page, click **Next**.
 
@@ -1927,7 +2000,8 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
     SQL Server replication is now configured, and the MDT DB will be replicated from the master deployment server to all child deployment servers that have been subscribed to it on a periodic basis.
 
 #### Configure CustomSettings.ini
- The LTI deployment infrastructure has now been successfully created, and each location will contain an LTI deployment server, with a replicated copy of:
+
+The LTI deployment infrastructure has now been successfully created, and each location will contain an LTI deployment server, with a replicated copy of:
 
 - The deployment share
 
@@ -2041,7 +2115,8 @@ ParameterCondition=OR
 ```
 
 ## Selecting a Local MDT Server When Multiple Servers Exist
- In this scenario, multiple MDT servers are being used to support a high volume of simultaneous deployments and deployments across multiple sites. When an LTI deployment is initialized, the default behavior is to request a path to the MDT server to connect to and access the required files to begin the deployment process.
+
+In this scenario, multiple MDT servers are being used to support a high volume of simultaneous deployments and deployments across multiple sites. When an LTI deployment is initialized, the default behavior is to request a path to the MDT server to connect to and access the required files to begin the deployment process.
 
  The Windows Deployment Wizard can use the LocalServer.xml file to present a choice of known deployment servers for each location.
 
@@ -2060,12 +2135,14 @@ ParameterCondition=OR
   This scenario assumes that MDT is configured on a deployment server.
 
 ###  <a name="UnderstandingLocationServer"></a> Understanding LocationServer.xml
- First, you must understand How MDT uses LocationServer.xml. During LTI, MDT scripts read and process the BootStrap.ini file to gather initial information about the deployment. This happens before a connection has been made to the deployment server. Therefore, the **DeployRoot** property is commonly used to specify in the BootStrap.ini file the deployment server to which it should make a connection.
+
+First, you must understand How MDT uses LocationServer.xml. During LTI, MDT scripts read and process the BootStrap.ini file to gather initial information about the deployment. This happens before a connection has been made to the deployment server. Therefore, the **DeployRoot** property is commonly used to specify in the BootStrap.ini file the deployment server to which it should make a connection.
 
  If the BootStrap.ini file does not contain a **DeployRoot** property, MDT scripts load a wizard page to prompt the user for a path to the deployment server. While initializing the **HTML Application (HTA)** wizard page, MDT scripts check for the existence of the LocationServer.xml file and, if it exists, use LocationServer.xml to display available deployment servers.
 
 #### Understand When to Use LocationServer.xml
- MDT offers multiple ways to determine which server to connect to during an LTI deployment. Different methods for locating the deployment server are best suited for different scenarios; therefore, it is important to understand when to use LocationServer.xml.
+
+MDT offers multiple ways to determine which server to connect to during an LTI deployment. Different methods for locating the deployment server are best suited for different scenarios; therefore, it is important to understand when to use LocationServer.xml.
 
  MDT provides several methods for automatically discovering and using the most appropriate deployment server. These methods are listed in the following table.
 
@@ -2081,10 +2158,12 @@ ParameterCondition=OR
  In these scenarios, the LocationServer.xml file provides a flexible way to present this information at deployment time without requiring knowledge of server names and deployment share names.
 
 ###  <a name="CreateLocationServer"></a> Creating the LocationServer.xml File
- To present a list of available deployment servers during an LTI deployment, create a LocationServer.xml file that contains details about each server. There is no default LocationServer.xml file in MDT, so create one using the following guidance.
+
+To present a list of available deployment servers during an LTI deployment, create a LocationServer.xml file that contains details about each server. There is no default LocationServer.xml file in MDT, so create one using the following guidance.
 
 #### Create a LocationServer.xml File to Support Multiple Locations
- The simplest method for creating and using LocationServer.xml is to create a LocationServer.xml file and add entries for each deployment server in the environment (this can be either at the same location or at different locations).
+
+The simplest method for creating and using LocationServer.xml is to create a LocationServer.xml file and add entries for each deployment server in the environment (this can be either at the same location or at different locations).
 
  Construct the LocationServer.xml file by creating a new section for each server, and then adding the following information:
 
@@ -2145,7 +2224,8 @@ ParameterCondition=OR
 ```
 
 #### Create a LocationServer.xml File to Load Balance Multiple Servers at Different Locations
- Using LocationServer.xml, specify multiple servers per location entry, and then perform basic load balancing so that when a location is chosen, MDT automatically selects a deployment server from the list of available servers. To provide this functionality, the LocationServer.xml file supports specifying a weighting metric.
+
+Using LocationServer.xml, specify multiple servers per location entry, and then perform basic load balancing so that when a location is chosen, MDT automatically selects a deployment server from the list of available servers. To provide this functionality, the LocationServer.xml file supports specifying a weighting metric.
 
  The following illustrates a sample LocationServer.xml file configured for multiple servers at different locations.
 
@@ -2184,74 +2264,78 @@ ParameterCondition=OR
  In  the previous example, the three servers at Contoso HQ are listed as 1, 2, and 4. The likelihood of a server with a weighting of 2 being selected becomes 2 in 7. Therefore, to use the weighting system, determine the capacity of the servers available at a location, and weight each server by the server's capacity in relation to each of the other servers.
 
 ### Adding the LocationServer.xml File to the Extra Files Directory
- After you have created the LocationServer.xml file, add it to the LiteTouch_x86 and LiteTouch_x64 Windows PE boot images in the ***X:\\Deploy\Control folder***. Using the Deployment Workbench, add other files and folders to these Windows PE images by specifying an additional directory to add in the deployment share properties.
+
+After you have created the LocationServer.xml file, add it to the LiteTouch_x86 and LiteTouch_x64 Windows PE boot images in the ***X:\\Deploy\Control folder***. Using the Deployment Workbench, add other files and folders to these Windows PE images by specifying an additional directory to add in the deployment share properties.
 
  **To add LocationServer.xml to the deployment share**
 
-1.  Create a folder called *Extra Files* in the root deployment share folder (for example, D:\Production Deployment Share\Extra Files).
+1. Create a folder called *Extra Files* in the root deployment share folder (for example, D:\Production Deployment Share\Extra Files).
 
-2.  Create a folder structure in the Extra Files folder that mirrors the Windows PE location where the additional file should reside.
+2. Create a folder structure in the Extra Files folder that mirrors the Windows PE location where the additional file should reside.
 
      For example, the LocationServer.xml file must reside in the \Deploy\Control folder in Windows PE; therefore, create the same folder structure under Extra Files (for example, D:\Production Deployment Share\Extra Files\Deploy\Control).
 
-3.  Copy LocationServer.xml to the *deployment_share*\Extra Files\Deploy\Control folder (where *deployment_share* is the fully qualified path to the root folder of the deployment share).
+3. Copy LocationServer.xml to the *deployment_share*\Extra Files\Deploy\Control folder (where *deployment_share* is the fully qualified path to the root folder of the deployment share).
 
-4.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+4. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-5.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
+5. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-6.  In the Actions pane, click **Properties**.
+6. In the Actions pane, click **Properties**.
 
-7.  In the ***deployment_shareProperties*** dialog box (where deployment_share is the name of the deployment share), perform these steps:
+7. In the ***deployment_shareProperties*** dialog box (where deployment_share is the name of the deployment share), perform these steps:
 
-    1.  Click the **Windows PE platform Settings** tab (where *platform* is the architecture of the Windows PE image to be configured).
+    1. Click the **Windows PE platform Settings** tab (where *platform* is the architecture of the Windows PE image to be configured).
 
-    2.  In the **Windows PE Customizations** section, in the **Extra directory to add** box, type ***path*** (where *path* is the fully qualified path to the Extra Files folder—for example, D:\Production Deployment Share\Extra Files), and then click **OK**.
+    2. In the **Windows PE Customizations** section, in the **Extra directory to add** box, type ***path*** (where *path* is the fully qualified path to the Extra Files folder—for example, D:\Production Deployment Share\Extra Files), and then click **OK**.
 
 ###  <a name="UpdateBootstrap"></a> Updating the BootStrap.ini File
- When you create a deployment share using the Deployment Workbench, a **DeployRoot** property is automatically created and populated in the BootStrap.ini file. Because the LocationServer.xml file is used to populate the **DeployRoot** property, you must remove this value from the BootStrap.ini file.
+
+When you create a deployment share using the Deployment Workbench, a **DeployRoot** property is automatically created and populated in the BootStrap.ini file. Because the LocationServer.xml file is used to populate the **DeployRoot** property, you must remove this value from the BootStrap.ini file.
 
  **To remove the DeployRoot property from BootStrap.ini**
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the Actions pane, click **Properties**.
+3. In the Actions pane, click **Properties**.
 
-4.  In the ***deployment_shareProperties*** dialog box (where *deployment_share* is the name of the deployment share), click the **Rules** tab, and then click **Edit BootStrap.ini**.
+4. In the ***deployment_shareProperties*** dialog box (where *deployment_share* is the name of the deployment share), click the **Rules** tab, and then click **Edit BootStrap.ini**.
 
-5.  Remove the **DeployRoot** value (for example, **DeployRoot=\\\Server\Deployment$**).
+5. Remove the **DeployRoot** value (for example, **DeployRoot=\\\Server\Deployment$**).
 
-6.  Click **File**, and then click **Save** to save the changes to the BootStrap.ini file.
+6. Click **File**, and then click **Save** to save the changes to the BootStrap.ini file.
 
-7.  Click **OK** to submit the changes.
+7. Click **OK** to submit the changes.
 
 ###  <a name="UpdateDeploymentShare"></a> Updating the Deployment Share
- The deployment share must next be updated to generate a new LiteTouch_x86 and LiteTouch_x64 boot environment that contains the LocationServer.xml file and the updated BootStrap.ini file.
+
+The deployment share must next be updated to generate a new LiteTouch_x86 and LiteTouch_x64 boot environment that contains the LocationServer.xml file and the updated BootStrap.ini file.
 
  **To update the deployment share**
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the Actions pane, click **Update Deployment Share**.
+3. In the Actions pane, click **Update Deployment Share**.
 
      The Update Deployment Share Wizard starts.
 
-4.  On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+4. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
 
-5.  On the **Summary** page, verify the details are correct, and then click **Next**.
+5. On the **Summary** page, verify the details are correct, and then click **Next**.
 
-6.  On the **Confirmation** page, click **Finish**.
+6. On the **Confirmation** page, click **Finish**.
 
 > [!NOTE]
 >
 > When the update process has finished, add the new LiteTouch_x86 and LiteTouch_x64 Windows PE environments back into Windows Deployment Services, or burn them to boot media to use during deployment.
 
 ## Replacing an Existing Computer with a New Computer Using Lite Touch Installation
- You can use MDT to deploy an image to a new computer that will substitute an existing computer in the enterprise architecture. This situation could arise when upgrading from one operating system to another (a new operating system could require new hardware) or if the organization needs newer, faster computers for existing applications.
+
+You can use MDT to deploy an image to a new computer that will substitute an existing computer in the enterprise architecture. This situation could arise when upgrading from one operating system to another (a new operating system could require new hardware) or if the organization needs newer, faster computers for existing applications.
 
  When replacing an existing computer with a new computer, Microsoft recommends taking into account all settings that will be migrated from one computer to another, such as user accounts and user state data. In addition, it is important to create a recovery solution in case the migration fails.
 
@@ -2272,7 +2356,8 @@ ParameterCondition=OR
   A deployment share should exist prior to beginning this sample. For more information about creating a deployment share, see the section, "Managing Deployment Shares in the Deployment Workbench", in the MDT document *Using the Microsoft Deployment Toolkit*.
 
 ### Step 1: Create a Task Sequence to Capture the User State
- Create MDT task sequences in the Task Sequences node in the Deployment Workbench using the New Task Sequence Wizard. To perform the first part of the Replace Computer deployment scenario (capturing the user state on the existing computer), select the Standard Client Replace Task Sequence template in the New Task Sequence Wizard.
+
+Create MDT task sequences in the Task Sequences node in the Deployment Workbench using the New Task Sequence Wizard. To perform the first part of the Replace Computer deployment scenario (capturing the user state on the existing computer), select the Standard Client Replace Task Sequence template in the New Task Sequence Wizard.
 
  **To create a task sequence to capture the user state in the Replace Computer deployment scenario**
 
@@ -2288,7 +2373,7 @@ ParameterCondition=OR
 
    |**On this wizard page** |**Do this** |
    |-|-|
-   |**General Settings** |1.  In **Task sequence ID**, type **VISTA_EXIST**.<br />2.  In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br />3.  Click **Next**.|
+   |**General Settings** |1. In **Task sequence ID**, type **VISTA_EXIST**.<br />2. In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br />3. Click **Next**.|
    |**Select Template** |In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Replace Task Sequence**, and then click **Next**.|
    |**Summary** |Verify that the configuration details are correct, and then click **Next**.|
    |**Confirmation** |Click **Finish**.|
@@ -2296,7 +2381,8 @@ ParameterCondition=OR
    The New Task Sequence Wizard finishes, and the **VISTA_EXIST** task sequence is added to the list of task sequences.
 
 ### Step 2: Create a Task Sequence to Deploy Operating System and Restore the User State
- Create MDT task sequences in the Task Sequences node in the Deployment Workbench by using the New Task Sequence Wizard. To perform the second part of the Replace Computer deployment scenario (deploying the operating system, and then restoring the user state on the existing computer), select the Standard Client Task Sequence template in the New Task Sequence Wizard.
+
+Create MDT task sequences in the Task Sequences node in the Deployment Workbench by using the New Task Sequence Wizard. To perform the second part of the Replace Computer deployment scenario (deploying the operating system, and then restoring the user state on the existing computer), select the Standard Client Task Sequence template in the New Task Sequence Wizard.
 
  **To create a task sequence to deploy the user state in the Replace Computer deployment scenario**
 
@@ -2310,35 +2396,35 @@ ParameterCondition=OR
 
 4. Complete the New Task Sequence Wizard by using the following information. Accept the default values unless otherwise specified.
 
-
    | **On this wizard page** |                                                                                                                                                         **Do this**                                                                                                                                                         |
    |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |  **General Settings**   |                                                                          1.  In **Task sequence ID**, type **VISTA_NEW**.<br />2.  In **Task sequence name**, type **Perform Replace Computer Scenario on New Computer**.<br />3.  Click **Next**.                                                                          |
+   |  **General Settings**   |                                                                          1. In **Task sequence ID**, type **VISTA_NEW**.<br />2. In **Task sequence name**, type **Perform Replace Computer Scenario on New Computer**.<br />3. Click **Next**.                                                                          |
    |   **Select Template**   |                                                                In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.                                                                 |
    |      **Select OS**      | In **The following operating system images are available to be deployed with this task sequence**. Select one to use, select ***captured_vista_image*** (where *captured_vista_image* is the captured image the reference computer added to the Operating Systems node in the Deployment Workbench), and then click *Next*. |
    | **Specify Product Key** |                                                                                                                       Select **Do not specify a product key at this time**, and then click **Next**.                                                                                                                        |
-   |       OS Settings       |                                                  1.  In **Full Name**, type **Woodgrove Employee**.<br />2.  In **Organization**, type **Woodgrove Bank**.<br />3.  In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br />4.  Click **Next**.                                                   |
+   |       OS Settings       |                                                  1. In **Full Name**, type **Woodgrove Employee**.<br />2. In **Organization**, type **Woodgrove Bank**.<br />3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br />4. Click **Next**.                                                   |
    |   **Admin Password**    |                                                                                           In **Administrator Password** and **Please confirm Administrator Password**, type <strong>P@ssw0rd</strong>, and then click **Finish**.                                                                                           |
    |    **Confirmation**     |                                                                                                                                                      Click **Finish**.                                                                                                                                                      |
 
    The New Task Sequence Wizard finishes, and the **VISTA_NEW** task sequence is added to the list of task sequences.
 
 ### Step 3: Customize the MDT Configuration Files
- When the MDT task sequence has been created, customize the MDT configuration files that provide the configuration settings for capturing user state information. Specifically, customize the CustomSettings.ini file by modifying the file in the properties of the deployment share created earlier in the deployment process. In a later step, the deployment share will be updated to ensure that the configuration file is updated in the deployment share.
+
+When the MDT task sequence has been created, customize the MDT configuration files that provide the configuration settings for capturing user state information. Specifically, customize the CustomSettings.ini file by modifying the file in the properties of the deployment share created earlier in the deployment process. In a later step, the deployment share will be updated to ensure that the configuration file is updated in the deployment share.
 
  **To customize the MDT configuration files for capturing user state information**
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the Actions pane, click **Properties**.
+3. In the Actions pane, click **Properties**.
 
      The **Properties** dialog box appears.
 
-4.  In the **Properties** dialog box, click the **Rules** tab.
+4. In the **Properties** dialog box, click the **Rules** tab.
 
-5.  On the **Rules** tab, modify the CustomSettings.ini file to reflect the necessary changes as shown in the following example. Make any additional modifications the environment requires.
+5. On the **Rules** tab, modify the CustomSettings.ini file to reflect the necessary changes as shown in the following example. Make any additional modifications the environment requires.
 
      **Customized CustomSettings.ini File**
 
@@ -2359,12 +2445,13 @@ ParameterCondition=OR
 
     ```
 
-6.  In the **Properties** dialog box, click **OK**.
+6. In the **Properties** dialog box, click **OK**.
 
-7.  Close all open windows and dialog boxes.
+7. Close all open windows and dialog boxes.
 
 ### Step 4: Configure the Windows PE Options for the Deployment Share
- Configure the Windows PE options for the deployment share in the Deployment Shares node in the Deployment Workbench.
+
+Configure the Windows PE options for the deployment share in the Deployment Shares node in the Deployment Workbench.
 
 > [!NOTE]
 >
@@ -2372,18 +2459,19 @@ ParameterCondition=OR
 
  **To configure the Windows PE options for the deployment share**
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the Actions pane, click **Properties**.
+3. In the Actions pane, click **Properties**.
 
      The **Properties** dialog box appears.
 
-4.  In the **Properties** dialog box, on the **Windows PE *platform* Components** tab (where *platform* is the architecture of the Windows PE image to be configured), in **Selection profile**, select ***device_drivers*** (where *device_drivers* is the name of the device driver selection profile), and then click **OK**.
+4. In the **Properties** dialog box, on the **Windows PE *platform* Components** tab (where *platform* is the architecture of the Windows PE image to be configured), in **Selection profile**, select ***device_drivers*** (where *device_drivers* is the name of the device driver selection profile), and then click **OK**.
 
 ### Step 5: Update the Deployment Share
- After configuring the Windows PE options for the deployment share, update the deployment share. Updating the deployment share updates all the MDT configuration files and generates a customized version of Windows PE. The customized version of Windows PE is used to start the reference computer and initiate the LTI deployment process.
+
+After configuring the Windows PE options for the deployment share, update the deployment share. Updating the deployment share updates all the MDT configuration files and generates a customized version of Windows PE. The customized version of Windows PE is used to start the reference computer and initiate the LTI deployment process.
 
  **To update the deployment share in the Deployment Workbench**
 
@@ -2404,20 +2492,22 @@ ParameterCondition=OR
    The Deployment Workbench starts updating the deployment share. The Deployment Workbench creates the LiteTouchPE_x86.iso and LiteTouchPE_x86.wim files (for 32-bit target computers) or LiteTouchPE_x64.iso and LiteTouchPE_x64.wim files (for 64-bit target computers) in the *deployment_share*\Boot folder (where *deployment_share* is the shared folder used as the deployment share).
 
 ### Step 6: Create the LTI Bootable Media
- Provide a method for starting the computer with the customized version of Windows PE created when the deployment share was updated. The Deployment Workbench creates the LiteTouchPE_x86.iso and LiteTouchPE_x86.wim files (for 32-bit target computers) or LiteTouchPE_x64.iso and LiteTouchPE_x64.wim files (for 64-bit target computers) in the *deployment_share*\Boot folder (where *deployment_share* is the shared folder used as the deployment share). Create the appropriate LTI bootable media from one of these images.
+
+Provide a method for starting the computer with the customized version of Windows PE created when the deployment share was updated. The Deployment Workbench creates the LiteTouchPE_x86.iso and LiteTouchPE_x86.wim files (for 32-bit target computers) or LiteTouchPE_x64.iso and LiteTouchPE_x64.wim files (for 64-bit target computers) in the *deployment_share*\Boot folder (where *deployment_share* is the shared folder used as the deployment share). Create the appropriate LTI bootable media from one of these images.
 
  **To create the LTI bootable media**
 
-1.  In Windows Explorer, navigate to *deployment_share*\Boot folder (where *deployment_share* is the shared folder used as the deployment share).
+1. In Windows Explorer, navigate to *deployment_share*\Boot folder (where *deployment_share* is the shared folder used as the deployment share).
 
-2.  Based on the type of computer used for the existing computer (WDG-EXIST-01) and new computer (WDG-NEW-02), perform one of the following tasks:
+2. Based on the type of computer used for the existing computer (WDG-EXIST-01) and new computer (WDG-NEW-02), perform one of the following tasks:
 
-    -   If the reference computer is a physical computer, create a CD or DVD of the ISO file.
+    - If the reference computer is a physical computer, create a CD or DVD of the ISO file.
 
-    -   If the reference computer is a VM, start the VM directly from the ISO file or from a CD or DVD of the ISO file.
+    - If the reference computer is a VM, start the VM directly from the ISO file or from a CD or DVD of the ISO file.
 
 ### Step 7: Start the Existing Computer with the LTI Bootable Media
- Start the existing computer (WDG-EXIST-01) with the LTI bootable media created earlier in the process. This CD starts Windows PE on the existing computer and initiates the MDT deployment process. At the end of the MDT deployment process, the user state migration information is stored in the UserStateCapture$ shared folder.
+
+Start the existing computer (WDG-EXIST-01) with the LTI bootable media created earlier in the process. This CD starts Windows PE on the existing computer and initiates the MDT deployment process. At the end of the MDT deployment process, the user state migration information is stored in the UserStateCapture$ shared folder.
 
 > [!NOTE]
 >
@@ -2431,11 +2521,10 @@ ParameterCondition=OR
 
 2. Complete the Windows Deployment Wizard using the following information. Accept the default values unless otherwise specified.
 
-
    |                  **On this wizard page**                  |                                                                              **Do this**                                                                              |
    |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |                 **Welcome to Deployment**                 |                                    Click **Run the Deployment Wizard** to install a new operating system, and then click **Next**.                                    |
-   | **Specify Credentials for connecting to network shares.** | 1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type <strong>P@ssw0rd</strong>.<br />3.  In **Domain**, type **CORP**.<br />4.  Click **OK**. |
+   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br />2. In **Password**, type <strong>P@ssw0rd</strong>.<br />3. In **Domain**, type **CORP**.<br />4. Click **OK**. |
    |  **Select a task sequence to execute on this computer.**  |                                       Click *Perform Replace Computer Scenario on Existing Computer*, and then click **Next**.                                        |
    |     **Specify where to save your data and settings**      |                                                                            Click **Next**.                                                                            |
    |   **Specify where to save a complete computer backup**    |                                               Click **Do not back up the existing computer**, and then click **Next**.                                                |
@@ -2452,7 +2541,8 @@ ParameterCondition=OR
    The user state migration information is captured and is stored in the network shared folder (UserStateCapture$) created earlier in the process.
 
 ### Step 8: Start the New Computer with the LTI Bootable Media
- Start the new computer (WDG-NEW-02) with the LTI bootable media created earlier in the process. This CD starts Windows PE on the reference computer and initiates the MDT deployment process. At the end of the MDT deployment process, Windows Vista is deployed on the new computer and the captured user state migration information is restored to the new computer.
+
+Start the new computer (WDG-NEW-02) with the LTI bootable media created earlier in the process. This CD starts Windows PE on the reference computer and initiates the MDT deployment process. At the end of the MDT deployment process, Windows Vista is deployed on the new computer and the captured user state migration information is restored to the new computer.
 
 > [!NOTE]
 >
@@ -2466,15 +2556,14 @@ ParameterCondition=OR
 
 2. Complete the Windows Deployment Wizard by using the following information. Accept the default values unless otherwise specified.
 
-
    |                  **On this wizard page**                  |                                                                              **Do this**                                                                              |
    |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |                 **Welcome to Deployment**                 |                                    Click **Run the Deployment Wizard to install a new operating system**, and then click **Next**.                                    |
-   | **Specify Credentials for connecting to network shares.** | 1.  In **User Name**, type **Administrator**.<br />2.  In **Password**, type <strong>P@ssw0rd</strong>.<br />3.  In **Domain**, type **CORP**.<br />4.  Click **OK**. |
+   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br />2. In **Password**, type <strong>P@ssw0rd</strong>.<br />3. In **Domain**, type **CORP**.<br />4. Click **OK**. |
    |  **Select a task sequence to execute on this computer.**  |                                         Click **Perform Replace Computer Scenario on New Computer**, and then click **Next**.                                         |
    |              **Configure the computer name**              |                                                  In **Computer name**, type **WDG-NEW-02**, and then click **Next**.                                                  |
    |      **Join the computer to a domain or workgroup**       |                                                                            Click **Next**.                                                                            |
-   |         **Specify whether to restore user data**          |              1.  Click **Specify a location**.<br />2.  In **Location**, type **\\\WDG-MDT-01\UserStateCapture$\WDG-EXIST-01**.<br />3.  Click **Next**.              |
+   |         **Specify whether to restore user data**          |              1. Click **Specify a location**.<br />2. In **Location**, type **\\\WDG-MDT-01\UserStateCapture$\WDG-EXIST-01**.<br />3. Click **Next**.              |
    |                   **Locale Selection**                    |                                                                            Click **Next**.                                                                            |
    |                   **Set the Time Zone**                   |                                                                            Click **Next**.                                                                            |
    |          **Specify whether to capture an image**          |                                             Click **Do not capture an image of this computer**, and then click **Next**.                                              |
@@ -2492,7 +2581,8 @@ ParameterCondition=OR
    Windows Vista is now installed on the new computer and the captured user state migration information is also restored.
 
 ## Integrating Custom Deployment Code into MDT
- It is common for a deployment team to have complex requirements, specific to their target environment, that are not met by the Deployment Workbench predefined task sequence actions or by default MDT configuration files. In this situation, implement custom code to meet their requirements.
+
+It is common for a deployment team to have complex requirements, specific to their target environment, that are not met by the Deployment Workbench predefined task sequence actions or by default MDT configuration files. In this situation, implement custom code to meet their requirements.
 
  Integrate custom deployment code into MDT by:
 
@@ -2505,7 +2595,8 @@ ParameterCondition=OR
   The following sections assume that MDT is configured on a deployment server.
 
 ###  <a name="ChooseAppropLanguage"></a> Choosing the Appropriate Scripting Language
- Although any code that can be run on Windows or Windows PE can be called as an application installation or through an MDT task sequence step, Microsoft recommends using scripts in the form of .vbs or .wsf files.
+
+Although any code that can be run on Windows or Windows PE can be called as an application installation or through an MDT task sequence step, Microsoft recommends using scripts in the form of .vbs or .wsf files.
 
  The advantage of using .wsf files is built-in logging in addition to some other predefined functions already used by the ZTI and LTI processes. These functions are available in the ZTIUtility script distributed with MDT.
 
@@ -2538,16 +2629,18 @@ ParameterCondition=OR
 > Most existing MDT 2008 Update 1 scripts will work as-is in MDT, even with the extensive changes to ZTIUtility.vbs, as most MDT scripts will include ZTIUtility.vbs.
 
 ###  <a name="UnderstandLeverageZTI"></a> Understanding How to Leverage ZTIUtility
- The ZTIUtility.vbs file contains object classes that can be leveraged in your custom code. Integrate custom code with MDT by using the:
 
--   Logging class defined in ZTIUtility.vbs as described in [Use the ZTIUtility Logging Class](#UseZTILogging)
+The ZTIUtility.vbs file contains object classes that can be leveraged in your custom code. Integrate custom code with MDT by using the:
 
--   Environment class defined in ZTIUtility.vbs as described in [Use the ZTIUtility Environment Class](#UseZTIEnvironment)
+- Logging class defined in ZTIUtility.vbs as described in [Use the ZTIUtility Logging Class](#UseZTILogging)
 
--   Utility class defined in ZTIUtility.vbs as described in [Use the ZTIUtility Utility Class](#UseZTIUtility)
+- Environment class defined in ZTIUtility.vbs as described in [Use the ZTIUtility Environment Class](#UseZTIEnvironment)
+
+- Utility class defined in ZTIUtility.vbs as described in [Use the ZTIUtility Utility Class](#UseZTIUtility)
 
 ####  <a name="UseZTILogging"></a> Use the ZTIUtility Logging Class
- The logging class in ZTIUtiliy.vbs provides a simple mechanism for custom code to log status information, warnings, and errors in the same manner as other scripts during a ZTI or LTI deployment. This standardization also ensures that the **LTI Deployment Summary** dialog box correctly reports the status of any custom code that is run.
+
+The logging class in ZTIUtiliy.vbs provides a simple mechanism for custom code to log status information, warnings, and errors in the same manner as other scripts during a ZTI or LTI deployment. This standardization also ensures that the **LTI Deployment Summary** dialog box correctly reports the status of any custom code that is run.
 
  The following illustrates an example custom code script that uses the **oLogging.CreateEntry** and **TestAndFail** functions to log different types of messages, depending on the results of the various script actions.
 
@@ -2632,10 +2725,12 @@ End Class
 > If you want to continue using scripts that call **ZTIProcess()** with **ProcessResults()**, you can continue to do so. However, certain enhanced error-handling features will not be enabled.
 
 ####  <a name="UseZTIEnvironment"></a> Use the ZTIUtility Environment Class
- The environment class in ZTIUtiliy.vbs provides access to, and the ability to update, MDT properties. In preceding example, **oEnvironment.Item("Memory")** is used to retrieve the amount of available RAM; this can also be used to retrieve the value of any of the properties described in the MDT document *Toolkit Reference*.
+
+The environment class in ZTIUtiliy.vbs provides access to, and the ability to update, MDT properties. In preceding example, **oEnvironment.Item("Memory")** is used to retrieve the amount of available RAM; this can also be used to retrieve the value of any of the properties described in the MDT document *Toolkit Reference*.
 
 ####  <a name="UseZTIUtility"></a> Use the ZTIUtility Utility Class
- The ZTIUtility.vbs script contains a number of commonly used utilities that any custom deployment script can use. You can add these utilities to any script the same way as the **oLogging** and **oEnvironment** classes.
+
+The ZTIUtility.vbs script contains a number of commonly used utilities that any custom deployment script can use. You can add these utilities to any script the same way as the **oLogging** and **oEnvironment** classes.
 
 The following table details some useful functions available, and their output. For a full list of available functions, refer to the ZTIUtility.vbs file.
 
@@ -2669,7 +2764,8 @@ The following table details some useful functions available, and their output. F
 |**TestAndLog(iRc , sMessage)**|Logs a warning only if **iRc** is false or fail|
 
 ###  <a name="IntegrateCustomDeploy"></a> Integrating Custom Deployment Code
- Custom deployment code can be integrated into the MDT process in several ways; however, regardless of the method used, the following two rules should be met:
+
+Custom deployment code can be integrated into the MDT process in several ways; however, regardless of the method used, the following two rules should be met:
 
 - The custom deployment code script name should always begin with the letter Z.
 
@@ -2684,7 +2780,8 @@ The following table details some useful functions available, and their output. F
 - Launch the code as a user exit script
 
 #### Deploy Custom Code as an MDT Application
- Custom deployment code can be imported into the Deployment Workbench and managed the same way as any other application.
+
+Custom deployment code can be imported into the Deployment Workbench and managed the same way as any other application.
 
  **To create a new application to run custom deployment code**
 
@@ -2704,14 +2801,15 @@ The following table details some useful functions available, and their output. F
    |-|-|
    |**Application Type**|Click **Application without source files or elsewhere on the network**, and then click **Next**.|
    |**Details**|Complete this page based on the information from the application, and then click **Next**.|
-   |**Command Details**|1.  In the **Command line** box, type **cscript.exe %SCRIPTROOT%\custom_code** (where *custom_code* is the name of the custom code that has been developed).<br />2.  In the **Working directory** box, type ***working_directory*** (where working_directory is the name of the working directory of the custom code; this is typically the same folder specified in the **Command line** box).<br />3.  Click **Next**.|
+   |**Command Details**|1. In the **Command line** box, type **cscript.exe %SCRIPTROOT%\custom_code** (where *custom_code* is the name of the custom code that has been developed).<br />2. In the **Working directory** box, type ***working_directory*** (where working_directory is the name of the working directory of the custom code; this is typically the same folder specified in the **Command line** box).<br />3. Click **Next**.|
    |**Summary**|Verify that the configuration settings are correct, and then click **Next**.|
    |**Confirmation**|Click **Finish**.|
 
    The application appears in the Applications node in the Deployment Workbench.
 
 #### Add the Custom Code as a Task Sequence Step
- Custom deployment code can be called directly from any point within a task sequence; this gives access to the usual task sequence rules and options.
+
+Custom deployment code can be called directly from any point within a task sequence; this gives access to the usual task sequence rules and options.
 
  **To add the custom deployment code to an existing task sequence**
 
@@ -2742,12 +2840,14 @@ The following table details some useful functions available, and their output. F
     The newly created task sequence step appears in the list of task sequence steps.
 
 #### Run Custom Code as a User Exit Script
- It also is possible to run the custom code as a user exit script from CustomSettings.ini using the **UserExit** directive. This provides a mechanism for information to be passed into the CustomSettings.ini rule validation process and provides a dynamic update of MDT properties
+
+It also is possible to run the custom code as a user exit script from CustomSettings.ini using the **UserExit** directive. This provides a mechanism for information to be passed into the CustomSettings.ini rule validation process and provides a dynamic update of MDT properties
 
  For more information on user exit scripts and the **UserExit** directive, see the section, "User Exit Scripts in the CustomSettings.ini File", in the MDT document *Using the Microsoft Deployment Toolkit*.
 
 ## Installing Device Drivers Using Various Installation Methods
- In this scenario, you use MDT to deploy an operating system to different types of hardware. As part of the deployment process, identify and install device drivers so that each hardware type will function correctly. There are two main types of device drivers; each must be handled differently during the deployment process:
+
+In this scenario, you use MDT to deploy an operating system to different types of hardware. As part of the deployment process, identify and install device drivers so that each hardware type will function correctly. There are two main types of device drivers; each must be handled differently during the deployment process:
 
 - Device drivers that contain an .inf file that can be used to import the device driver into the Deployment Workbench
 
@@ -2766,7 +2866,8 @@ The following table details some useful functions available, and their output. F
   This scenario assumes that MDT is running on a deployment server.
 
 ###  <a name="WhichMethodtoInstallDriver"></a> Determining Which Method to Use to Install a Device Driver
- Hardware manufacturers release device drivers in one of two forms:
+
+Hardware manufacturers release device drivers in one of two forms:
 
 - As a package that you can extract and that contains .inf files used to import the driver into the Deployment Workbench
 
@@ -2777,7 +2878,8 @@ The following table details some useful functions available, and their output. F
   Device driver packages that cannot be extracted to isolate .inf files or those that do not work correctly without first being installed using an application installer such as an MSI or Setup.exe file can use the MDT Install Application feature and install the device driver during the deployment process just as for any normal application.
 
 ###  <a name="InstallOutofBoxDrivers"></a> Installing Device Drivers Using the Out-of-Box Drivers Method
- You can import device driver packages that include an .inf file to the Deployment Workbench and install them automatically as part of the deployment process. To implement this type of device driver deployment, first add the device driver to the Deployment Workbench.
+
+You can import device driver packages that include an .inf file to the Deployment Workbench and install them automatically as part of the deployment process. To implement this type of device driver deployment, first add the device driver to the Deployment Workbench.
 
  **To add the device driver to the Deployment Workbench**
 
@@ -2819,12 +2921,14 @@ The following table details some useful functions available, and their output. F
 13. On the **Confirmation** page, click **Finish**.
 
 ###  <a name="InstallDriversasApplications"></a> Installing Device Drivers as Applications
- Device drivers that are packaged as applications and that you cannot extract to a folder containing an .inf file, in addition to driver files, should be added to the Deployment Workbench as an application for installation during the deployment process.
+
+Device drivers that are packaged as applications and that you cannot extract to a folder containing an .inf file, in addition to driver files, should be added to the Deployment Workbench as an application for installation during the deployment process.
 
  Applications can be specified as a task sequence step or specified in CustomSettings.ini; however, device driver applications should be installed only when the task sequence is run on a computer with the devices. To ensure this, run the task sequence step for deploying the relevant device driver applications as a conditional task sequence step. The conditional criteria can be specified for running the task sequence step using WMI queries for the device on the target computer.
 
 #### Add the Device Driver Application to the Deployment Workbench
- Each device driver application must first be imported into the Deployment Workbench.
+
+Each device driver application must first be imported into the Deployment Workbench.
 
 > [!NOTE]
 >
@@ -2869,7 +2973,8 @@ The following table details some useful functions available, and their output. F
   Each approach is discussed in more detail in the following sections.
 
 ####  <a name="SpecifyDeviceAppTask"></a> Specify the Device Driver Application as Part of a Task Sequence
- The first method for adding a device driver application to the deployment process is to use a task sequence to add steps for each device driver application.
+
+The first method for adding a device driver application to the deployment process is to use a task sequence to add steps for each device driver application.
 
  There are two main approaches for managing device driver applications in the task sequence:
 
@@ -2923,23 +3028,23 @@ The following table details some useful functions available, and their output. F
 
  **To add device driver applications to hardware-specific task sequence groups**
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the details pane, click ***task_sequence*** (where *task_sequence* is the deployment task sequence that will be required to install the device driver application).
+3. In the details pane, click ***task_sequence*** (where *task_sequence* is the deployment task sequence that will be required to install the device driver application).
 
-4.  In the Actions pane, click **Properties**.
+4. In the Actions pane, click **Properties**.
 
-5.  In the ***task_sequenceProperties*** dialog box, click the **Task Sequence** tab.
+5. In the ***task_sequenceProperties*** dialog box, click the **Task Sequence** tab.
 
-6.  In the details pane, go to State Restore/*hardware_specific_group* (where *hardware_specific_group* is the name of the hardware-specific group where the task sequence step will be added to install the device driver application).
+6. In the details pane, go to State Restore/*hardware_specific_group* (where *hardware_specific_group* is the name of the hardware-specific group where the task sequence step will be added to install the device driver application).
 
-7.  On the **Task Sequence** tab, click **Add**, click **General**, and then click **Install Application**.
+7. On the **Task Sequence** tab, click **Add**, click **General**, and then click **Install Application**.
 
      The **Install Application** task sequence step appears in the details pane.
 
-8.  In the details pane, click **Install Application.**
+8. In the details pane, click **Install Application.**
 
 9. On the **Properties** tab, click **Install a single application**, and in the **Application to install** list, select ***hardware_application*** (where *hardware_application* is the application for installing the hardware-specific application).
 
@@ -2948,7 +3053,8 @@ The following table details some useful functions available, and their output. F
 > This process must be repeated for each device driver application that needs to be used during a deployment.
 
 #### Specify the Device Driver Application in CustomSettings.ini
- When an LTI or ZTI deployment begins, one of the first actions to be completed is the processing of the BootStrap.ini and CustomSettings.ini control files. Both of these files contain rules that can be used to dynamically customize the deployment.
+
+When an LTI or ZTI deployment begins, one of the first actions to be completed is the processing of the BootStrap.ini and CustomSettings.ini control files. Both of these files contain rules that can be used to dynamically customize the deployment.
 
  Because of the way MDT processes the CustomSettings.ini file, you can use it to add applications based on specific conditions. This logic will be used to add device driver-specific applications during deployment based on specific hardware types. Applications are referenced in CustomSettings.ini by the application's GUID, located in the Applications.xml file in the deployment share.
 
@@ -3045,7 +3151,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 17. Click **Apply**, and then close the **Properties** dialog box.
 
 #### Specify the Device Driver Application in the MDT DB
- The MDT DB is a database version of the CustomSettings.ini file and can be queried at deployment time for information to be used during the deployment. For more information about using the MDT DB, see "Selecting the Methods for Applying Configuration Settings".
+
+The MDT DB is a database version of the CustomSettings.ini file and can be queried at deployment time for information to be used during the deployment. For more information about using the MDT DB, see "Selecting the Methods for Applying Configuration Settings".
 
  When querying the MDT DB at deployment time, three methods are available for identifying the target computer:
 
@@ -3063,34 +3170,37 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 >
 > Repeat this process for each hardware make and model that requires a device driver application.
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/**deployment_share**/Advanced Configuration/Database/Make and Model (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/**deployment_share**/Advanced Configuration/Database/Make and Model (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the Actions pane, click **New**.
+3. In the Actions pane, click **New**.
 
-4.  In the **Properties** dialog box, on the **Identity** tab, in the **Make** box, type ***make_name*** (where *make_name* is an easily identified name to associate with the manufacturer of the target computer).
+4. In the **Properties** dialog box, on the **Identity** tab, in the **Make** box, type ***make_name*** (where *make_name* is an easily identified name to associate with the manufacturer of the target computer).
 
-5.  In the **Model** box, type ***model_name*** (where *model_name* is an easily identified name to associate with the model of the target computer).
+5. In the **Model** box, type ***model_name*** (where *model_name* is an easily identified name to associate with the model of the target computer).
 
-6.  On the **Applications** tab, add each of the device driver applications required for that model of hardware.
+6. On the **Applications** tab, add each of the device driver applications required for that model of hardware.
 
 ## Initiating MDT Using Windows Deployment Services
- Windows Server 2008 uses Windows Deployment Services as an updated and redesigned version of Remote Installation Services, the default deployment tool in Windows Server 2003 with SP2. Using Windows Deployment Services, you can deploy Windows operating systems—particularly Windows 7, Windows Server 2008 or later operating systems—across a network using either a computer's PXE-enabled network adapter or boot media.
+
+Windows Server 2008 uses Windows Deployment Services as an updated and redesigned version of Remote Installation Services, the default deployment tool in Windows Server 2003 with SP2. Using Windows Deployment Services, you can deploy Windows operating systems—particularly Windows 7, Windows Server 2008 or later operating systems—across a network using either a computer's PXE-enabled network adapter or boot media.
 
  Before deploying Windows Deployment Services, determine which of the following integration options best suits your environment:
 
--   Option 1. Boot computers in PXE to initiate the LTI process.
+- Option 1. Boot computers in PXE to initiate the LTI process.
 
--   Option 2. Deploy an operating system image from the Windows Deployment Services image store.
+- Option 2. Deploy an operating system image from the Windows Deployment Services image store.
 
--   Option 3. Use multicasting with MDT and the Windows Server 2008 Windows Deployment Services server role.
+- Option 3. Use multicasting with MDT and the Windows Server 2008 Windows Deployment Services server role.
 
 ### Option 1: Boot Computers in PXE to Initiate the LTI Process
- Help minimize the cost of managing operating system deployments by starting the MDT deployment process using Windows Deployment Services in conjunction with Dynamic Host Configuration Protocol. This removes the requirement of creating and delivering bootable media to each target computer.
+
+Help minimize the cost of managing operating system deployments by starting the MDT deployment process using Windows Deployment Services in conjunction with Dynamic Host Configuration Protocol. This removes the requirement of creating and delivering bootable media to each target computer.
 
 #### Create and Import the Deployment Workbench Windows PE Image into Windows Deployment Services
- When creating a new MDT deployment share or modifying an existing MDT deployment share, you can create a customized Windows PE boot image. When the deployment share is updated, the Windows PE boot image is automatically generated and updated with information about the deployment share, and it will inject any additional drivers or components specified during the deployment share configuration.
+
+When creating a new MDT deployment share or modifying an existing MDT deployment share, you can create a customized Windows PE boot image. When the deployment share is updated, the Windows PE boot image is automatically generated and updated with information about the deployment share, and it will inject any additional drivers or components specified during the deployment share configuration.
 
  The Windows PE boot image is generated as both an ISO image file, which you can write to a CD or DVD, and a bootable WIM file. You can import the WIM file to Windows Deployment Services so that computers that can boot in PXE can download and run the LTI Windows PE boot image across a network used to initialize an installation.
 
@@ -3159,29 +3269,30 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
     Installing and configuring Windows Deployment Services is not covered in this guide. For additional information about Windows Deployment Services, see the [Windows Deployment Services Guide](/previous-versions/tn-archive/cc265612(v=technet.10)).
 
 #### Use Windows Deployment Services to Automatically Detect the Deployment Server
- An additional option is available when using Windows Deployment Services to host MDT boot images when the MDT deployment share is hosted on the same server as Windows Deployment Services.
+
+An additional option is available when using Windows Deployment Services to host MDT boot images when the MDT deployment share is hosted on the same server as Windows Deployment Services.
 
  When a PXE client loads the MDT boot image, the name of the Windows Deployment Services server hosting the boot image is captured and placed in the MDTProperty **WDSServer**. You can then reference this property in the boot image's BootStrap.ini file and in the deployment share's CustomSettings.ini file by the **DeployRoot** property. Doing so results in a client that boots from Windows Deployment Services automatically using the deployment share hosted on the Windows Deployment Services server. This eliminates the need to specify a server name in any configuration file.
 
  **To set the local Windows Deployment Services server as the deployment server**
 
-1.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-2.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share to configure).
+2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share to configure).
 
-3.  In the Actions pane, click **Properties**.
+3. In the Actions pane, click **Properties**.
 
-4.  Click the **Rules** tab.
+4. Click the **Rules** tab.
 
      Information typed on this tab is stored in the CustomSettings.ini file.
 
-5.  Configure the **DeployRoot** property to use the **%WDSServer%** variable—for example, **DeployRoot=\\\\%WDSServer%\Deployment$**.
+5. Configure the **DeployRoot** property to use the **%WDSServer%** variable—for example, **DeployRoot=\\\\%WDSServer%\Deployment$**.
 
-6.  Click **Edit Bootstrap.ini**.
+6. Click **Edit Bootstrap.ini**.
 
-7.  Configure BootStrap.ini to use the **%WDSServer%** property by adding or changing the **DeployRoot** value to **DeployRoot=\\\\%WDSServer%\Deployment$**.
+7. Configure BootStrap.ini to use the **%WDSServer%** property by adding or changing the **DeployRoot** value to **DeployRoot=\\\\%WDSServer%\Deployment$**.
 
-8.  On the **File** menu, click **Save** to save the changes to the BootStrap.ini file.
+8. On the **File** menu, click **Save** to save the changes to the BootStrap.ini file.
 
 9. Click **OK**.
 
@@ -3202,7 +3313,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 15. Import the updated boot WIM into Windows Deployment Services.
 
 ### Option 2: Deploy an Operating System Image from the Windows Deployment Services Store
- If you are already using Windows Deployment Services for operating system deployment, extend the functionality of MDT by configuring it to reference the Windows Deployment Services operating system images already in use rather than using its own store and to supplement Windows Deployment Services deployments with driver management, application deployment, update installation, rule processing, and other MDT functionality. After MDT has reference a Windows Deployment Services operating system image, you can treat it like any operating system that has been staged to an MDT deployment share.
+
+If you are already using Windows Deployment Services for operating system deployment, extend the functionality of MDT by configuring it to reference the Windows Deployment Services operating system images already in use rather than using its own store and to supplement Windows Deployment Services deployments with driver management, application deployment, update installation, rule processing, and other MDT functionality. After MDT has reference a Windows Deployment Services operating system image, you can treat it like any operating system that has been staged to an MDT deployment share.
 
  **To reference a Windows Deployment Services operating system image**
 
@@ -3210,34 +3322,35 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 >
 > The following steps require that at least one operating system image has previously been imported into the Windows Deployment Services server.
 
-1.  Update MDT to be able to access Windows Deployment Services images by copying the following files from the Sources folder of the Windows media to the C:\Program Files\Microsoft Deployment Toolkit\bin folder on the Windows Deployment Services server:
+1. Update MDT to be able to access Windows Deployment Services images by copying the following files from the Sources folder of the Windows media to the C:\Program Files\Microsoft Deployment Toolkit\bin folder on the Windows Deployment Services server:
 
-    -   Wdsclientapi.dll
+    - Wdsclientapi.dll
 
-    -   Wdscsl.dll
+    - Wdscsl.dll
 
-    -   Wdsimage.dll
+    - Wdsimage.dll
 
-    -   Wdstptc.dll (this is only applicable if copying from the Windows Server 2008 source directories)
+    - Wdstptc.dll (this is only applicable if copying from the Windows Server 2008 source directories)
 
     > [!NOTE]
-    >  The Windows source directory being used must match the platform of the operating system running on the computer where MDT is installed.
+    >
+    > The Windows source directory being used must match the platform of the operating system running on the computer where MDT is installed.
 
-2.  Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+2. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
 
-3.  In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Operating Systems (where *deployment_share* is the name of the deployment share to configure).
+3. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Operating Systems (where *deployment_share* is the name of the deployment share to configure).
 
-4.  In the Actions pane, click **Import Operating System**.
+4. In the Actions pane, click **Import Operating System**.
 
      The New OS Wizard starts.
 
-5.  On the **OS Type** page, click **Windows Deployment Services images**, and then click **Next**.
+5. On the **OS Type** page, click **Windows Deployment Services images**, and then click **Next**.
 
-6.  On the **WDS Server** page, type the name of the Windows Deployment Services server to be referenced—for example, **WDSSvr001**—and then click **Next**.
+6. On the **WDS Server** page, type the name of the Windows Deployment Services server to be referenced—for example, **WDSSvr001**—and then click **Next**.
 
-7.  On the **Summary** page, verify the settings are correct, and then click **Next**.
+7. On the **Summary** page, verify the settings are correct, and then click **Next**.
 
-8.  On the **Confirmation** page, click **Finish**.
+8. On the **Confirmation** page, click **Finish**.
 
      All of the images available on the Windows Deployment Services server will now be available to MDT task sequences.
 
@@ -3246,7 +3359,8 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 > Importing images from Windows Deployment Services does not copy the source files from the Windows Deployment Services server to the deployment share. MDT continues to use the source files from their original location.
 
 ### Option 3: Use Multicasting with MDT and the Windows Server 2008 Windows Deployment Services Role
- With the release of Windows Server 2008, Windows Deployment Services was enhanced to support the deployment of images using multicast transmissions. MDT also includes updates to integrate MDT with Windows Deployment Services multicasting.
+
+With the release of Windows Server 2008, Windows Deployment Services was enhanced to support the deployment of images using multicast transmissions. MDT also includes updates to integrate MDT with Windows Deployment Services multicasting.
 
  In addition, an updated Windows Automated Installation Kit (Windows AIK), version 1.1, includes Wdsmcast.exe. This allows multicast sessions to be joined manually and allows the client launching Wdsmcast.exe to copy files from an active multicast session.
 
@@ -3260,15 +3374,15 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
  The deployment server prerequisites for preparing for MDT multicasting are:
 
--   The deployment server must be running Windows Server 2008 or later
+- The deployment server must be running Windows Server 2008 or later
 
--   The Windows Deployment Services role must be installed from the Server Management console
+- The Windows Deployment Services role must be installed from the Server Management console
 
--   Windows AIK 1.1 for Windows Server 2008 must be installed
+- Windows AIK 1.1 for Windows Server 2008 must be installed
 
--   MDT must be installed
+- MDT must be installed
 
--   As with any deployment using MDT, at least one operating system WIM image must have been imported, either as a full set of source files or as a custom image with setup files
+- As with any deployment using MDT, at least one operating system WIM image must have been imported, either as a full set of source files or as a custom image with setup files
 
 > [!NOTE]
 >
@@ -3319,14 +3433,16 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
     There will be two entries in the logs folder, both beginning with **Multicast transfer**; check them to verify that the transfer was successful. For more information on multicast transmissions with MDT and Windows Deployment Services, see the section, "Enable Windows Deployment Services Multicast Deployment for LTI Deployments", in the MDT document *Using the Microsoft Deployment Toolkit*.
 
 ## Performing Staged Deployments Using MDT (OEM Preload)
- In many organizations, computers are loaded with the operating system image before deployment to the production network. In some instances, loading the operating system image is performed by a team within the organization that is responsible for building the computers in a staging environment. In other instances, loading the operating system image is performed by the computer hardware vendor, also known as an *original equipment manufacturer* (OEM).
+
+In many organizations, computers are loaded with the operating system image before deployment to the production network. In some instances, loading the operating system image is performed by a team within the organization that is responsible for building the computers in a staging environment. In other instances, loading the operating system image is performed by the computer hardware vendor, also known as an *original equipment manufacturer* (OEM).
 
 > [!NOTE]
 >
 > The OEM preload process is supported in MDT only for deployments performed using LTI. For Configuration Manager, use the prestaged media feature.
 
 ### Overview of the OEM Preload Process in MDT
- The OEM preload process is divided into three phases:
+
+The OEM preload process is divided into three phases:
 
 - **Phase 1**. Create a media-based image of the reference computer to be applied in the staging environment.
 
@@ -3337,14 +3453,16 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
   Phase 1 and Phase 3 are typically performed by the deployment organization. Depending on the use of the OEM preload process in the organization, Phase 2 may be performed by the organization or by the computer hardware vendor that supplies the computers. If the organization performs Phase 2, then the staging environment is within the organization. If an OEM performs Phase 2, then the staging environment is in the OEM's environment.
 
 #### Overview of MDT Configuration Files in the OEM Preload Process
- Separate MDT configuration files (CustomSettings.ini and Bootstrap.ini) are used by the task sequences run during Phase 1 and Phase 3 of the OEM preload process. However, both configuration files exist simultaneously in different folder structures.
+
+Separate MDT configuration files (CustomSettings.ini and Bootstrap.ini) are used by the task sequences run during Phase 1 and Phase 3 of the OEM preload process. However, both configuration files exist simultaneously in different folder structures.
 
  In the first phase, the configuration files are used during the creation of the reference computer and are stored in the folder specific to the task sequence used in that phase. The configuration files used in the third and last phase of the OEM preload process are stored in the folder that is specific to the task sequence used in that phase.
 
  When making modifications to the configuration files, ensure that changes to the configuration file are made that corresponds to the appropriate task sequence in each OEM preload process phase.
 
 #### Overview of MDT Log Files in the OEM Preload Process
- Separate MDT log files are generated during Phase 1 and Phase 3 of the OEM preload process:
+
+Separate MDT log files are generated during Phase 1 and Phase 3 of the OEM preload process:
 
 - The MDT log files for Phase 1 are stored in the C:\MININT and C:\SMSTSLog folders.
 
@@ -3353,12 +3471,14 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
   Use the appropriate folder when diagnosing or troubleshooting MDT-related deployment problems.
 
 ### Staged Deployments Using LTI
- For LTI deployments, perform the OEM preload process using a *Removable media (Media)* deployment share type. Other deployment share types are not supported for the OEM preload process.
+
+For LTI deployments, perform the OEM preload process using a *Removable media (Media)* deployment share type. Other deployment share types are not supported for the OEM preload process.
 
  To perform the OEM preload process, create a task sequence based on the Litetouch OEM Task Sequence task sequence template, in addition to any task sequences that will be used to deploy the target operating system. Then, create a *Removable media (Media)* deployment share that will ultimately create an ISO file of the deployment share contents, specifically the LiteTouchPE_x86.iso file or LiteTouchPE_x64.iso file (based on the target computer's processor platform). The deployment share update process also creates a folder structure that can be used to create Universal Disk Format media.
 
 #### LTI OEM Preload Process—Phase 1: Create a Media-Based Image
- The deployment organization performs the first phase in the OEM preload process. The final deliverable of this phase is a bootable image (such as an ISO file) or media (such as a DVD) that is sent to the OEM or to the staging environment within the deployment organization. Most of these steps are performed in the Deployment Workbench.
+
+The deployment organization performs the first phase in the OEM preload process. The final deliverable of this phase is a bootable image (such as an ISO file) or media (such as a DVD) that is sent to the OEM or to the staging environment within the deployment organization. Most of these steps are performed in the Deployment Workbench.
 
  **To create a media-based image for delivery to the OEM or to the staging environment within the deployment organization**
 
@@ -3402,28 +3522,30 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 8. Deliver the ISO file or the DVD to the OEM or to the organization's staging environment.
 
 #### LTI OEM Preload Process—Phase 2: Apply the Image to the Target Computer
- The second phase of the OEM preload process is performed by the OEM or by the deployment team in the staging environment of the deployment organization. During this phase of the process, the .iso file or DVD created in Phase 1 is applied to the target computers. The deliverable of this phase is the image deployed on the target computers so that they are ready for deployment in the production environment.
+
+The second phase of the OEM preload process is performed by the OEM or by the deployment team in the staging environment of the deployment organization. During this phase of the process, the .iso file or DVD created in Phase 1 is applied to the target computers. The deliverable of this phase is the image deployed on the target computers so that they are ready for deployment in the production environment.
 
  **To apply the image to the target computers**
 
-1.  Start a target computer with the media created in the Phase 1.
+1. Start a target computer with the media created in the Phase 1.
 
      Windows PE starts, and then the Windows Deployment Wizard starts.
 
-2.  In the Windows Deployment Wizard, click the **OEM Preinstallation Task Sequence for Staging Environment** task sequence.
+2. In the Windows Deployment Wizard, click the **OEM Preinstallation Task Sequence for Staging Environment** task sequence.
 
      The task sequence will start and the contents of the bootable media will be copied to the local hard disk of the target computer.
 
-3.  When the Windows Deployment Wizard is complete for the **OEM Preinstallation Task Sequence for Staging Environment** task sequence, the hard disk will be ready to initiate the remainder of the deployment process by running the Windows Deployment Wizard for the other task sequences that are used to deploy the operating system.
+3. When the Windows Deployment Wizard is complete for the **OEM Preinstallation Task Sequence for Staging Environment** task sequence, the hard disk will be ready to initiate the remainder of the deployment process by running the Windows Deployment Wizard for the other task sequences that are used to deploy the operating system.
 
      The **OEM Preinstallation Task Sequence for Staging Environment** task sequence is responsible for deploying the image to the target computer and initiating the LTI process. The Windows Deployment Wizard will start a second time to run the task sequences used to deploy the operating system on the target computer.
 
-4.  Clone the contents of the first hard disk to as many target computers in the staging environment as required.
+4. Clone the contents of the first hard disk to as many target computers in the staging environment as required.
 
-5.  The target computers are delivered to the production environment for deployment.
+5. The target computers are delivered to the production environment for deployment.
 
 #### LTI OEM Preload Process—Phase 3: Complete Target Computer Deployment
- The third and final phase of the OEM preload process is performed in the deployment organization's production environment. During this phase of the process, the target computer is started and the bootable media image, placed on the hard disk in the staging environment during the previous phase, starts.
+
+The third and final phase of the OEM preload process is performed in the deployment organization's production environment. During this phase of the process, the target computer is started and the bootable media image, placed on the hard disk in the staging environment during the previous phase, starts.
 
  **To complete deployment of the target computers in the production environment**
 
@@ -3438,56 +3560,58 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
    When this phase is complete, the target computer will be ready to use in the production environment.
 
 ## Using Windows PowerShell to Perform Common Tasks
- The MDT administration tasks in the Deployment Workbench are performed by underlying Windows PowerShell cmdlets, which you can use to automate administrative tasks such as those in the following sections.
+
+The MDT administration tasks in the Deployment Workbench are performed by underlying Windows PowerShell cmdlets, which you can use to automate administrative tasks such as those in the following sections.
 
  You can automate MDT administration by performing the following steps:
 
--   Create a new deployment share as described in [Creating a New Deployment Share](#CreateNewDeployShare).
+- Create a new deployment share as described in [Creating a New Deployment Share](#CreateNewDeployShare).
 
--   Create a folder in a deployment share as described in [Creating a Folder](#CreateFolder).
+- Create a folder in a deployment share as described in [Creating a Folder](#CreateFolder).
 
--   Delete a folder from a deployment share as described in [Deleting a Folder](#DeleteFolder).
+- Delete a folder from a deployment share as described in [Deleting a Folder](#DeleteFolder).
 
--   Import a device driver into a deployment share as described in [Importing a Device Driver](#ImportDeviceDriver).
+- Import a device driver into a deployment share as described in [Importing a Device Driver](#ImportDeviceDriver).
 
--   Deleting a device driver from a deployment share as described in [Deleting a Device Driver](#DeleteDeviceDriver).
+- Deleting a device driver from a deployment share as described in [Deleting a Device Driver](#DeleteDeviceDriver).
 
--   Import an operating system package into a deployment share as described in [Importing an Operating System Package](#ImportOpSysPackage).
+- Import an operating system package into a deployment share as described in [Importing an Operating System Package](#ImportOpSysPackage).
 
--   Deleting an operating system package from a deployment share as described in [Deleting an Operating System Package](#DeleteOpSysPackage).
+- Deleting an operating system package from a deployment share as described in [Deleting an Operating System Package](#DeleteOpSysPackage).
 
--   Import an operating system into a deployment share as described in [Importing an Operating System](#ImportOpSys).
+- Import an operating system into a deployment share as described in [Importing an Operating System](#ImportOpSys).
 
--   Deleting an operating system from a deployment share as described in [Deleting an Operating System](#DeleteOpSys).
+- Deleting an operating system from a deployment share as described in [Deleting an Operating System](#DeleteOpSys).
 
--   Create an application in a deployment share as described in [Creating an Application](#CreateApplication).
+- Create an application in a deployment share as described in [Creating an Application](#CreateApplication).
 
--   Delete an application from a deployment share as described in [Deleting an Application](#DeleteApplication).
+- Delete an application from a deployment share as described in [Deleting an Application](#DeleteApplication).
 
--   Create a task sequence in a deployment share as described in [Creating a Task Sequence](#CreateTaskSequence).
+- Create a task sequence in a deployment share as described in [Creating a Task Sequence](#CreateTaskSequence).
 
--   Delete a task sequence from a deployment share as described in [Deleting a Task Sequence](#DeleteTaskSequence).
+- Delete a task sequence from a deployment share as described in [Deleting a Task Sequence](#DeleteTaskSequence).
 
--   Create an MDT DB as described in [Creating an MDT DB](#CreateMDTDB).
+- Create an MDT DB as described in [Creating an MDT DB](#CreateMDTDB).
 
--   Create a selection profile as described in [Creating a Selection Profile](#CreateSelectProfile).
+- Create a selection profile as described in [Creating a Selection Profile](#CreateSelectProfile).
 
--   Update a deployment share as described in [Updating a Deployment Share](#UpdatingDeployShare).
+- Update a deployment share as described in [Updating a Deployment Share](#UpdatingDeployShare).
 
--   Create a linked deployment share as described in [Creating a Linked Deployment Share](#CreateLinkedDeployShare).
+- Create a linked deployment share as described in [Creating a Linked Deployment Share](#CreateLinkedDeployShare).
 
--   Update a linked deployment share as described in [Updating a Linked Deployment Share](#UpdatingLinkedDeployShare).
+- Update a linked deployment share as described in [Updating a Linked Deployment Share](#UpdatingLinkedDeployShare).
 
--   Delete a linked deployment share as described in [Deleting a Linked Deployment Share](#DeleteLinkedDeployShare).
+- Delete a linked deployment share as described in [Deleting a Linked Deployment Share](#DeleteLinkedDeployShare).
 
--   Create deployment media as described in [Creating Media](#CreateMedia).
+- Create deployment media as described in [Creating Media](#CreateMedia).
 
--   Generate deployment media as described in [Generating Media](#GenerateMedia).
+- Generate deployment media as described in [Generating Media](#GenerateMedia).
 
--   Delete deployment media as described in [Deleting Media](#DeleteMedia).
+- Delete deployment media as described in [Deleting Media](#DeleteMedia).
 
 ###  <a name="CreateNewDeployShare"></a> Creating a New Deployment Share
- The following Windows PowerShell commands create a new deployment share at D:\Production Deployment Share named *Production$*. The new deployment share will be displayed in the Deployment Workbench as Production.
+
+The following Windows PowerShell commands create a new deployment share at D:\Production Deployment Share named *Production$*. The new deployment share will be displayed in the Deployment Workbench as Production.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3495,7 +3619,8 @@ New-PSDrive -Name "DS002" -PSProvider "MDTProvider" -Root "D:\Production Deploym
 ```
 
 ###  <a name="CreateFolder"></a> Creating a Folder
- The following Windows PowerShell commands create an Adobe folder in the Deployment Workbench console tree at Deployment Workbench\/Deployment Shares\/Production\/Applications.
+
+The following Windows PowerShell commands create an Adobe folder in the Deployment Workbench console tree at Deployment Workbench\/Deployment Shares\/Production\/Applications.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3503,10 +3628,12 @@ New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deploymen
 New-item -path "DS002:\Applications" -enable "True" -Name "Adobe" -Comments "This folder contains Adobe software" -ItemType "folder" -Verbose remove-psdrive DS001 -Verbose
 ```
 > [!NOTE]
+>
 > Adding "remove-psdrive" to the script ensures that the background process finishes before proceeding.
 
 ###  <a name="DeleteFolder"></a> Deleting a Folder
- The following Windows PowerShell commands delete the Deployment Workbench\/Deployment Shares\/Production\/Applications\/Adobe folder.
+
+The following Windows PowerShell commands delete the Deployment Workbench\/Deployment Shares\/Production\/Applications\/Adobe folder.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3515,10 +3642,12 @@ Remove-item -path "DS002:\Applications\Adobe" -Verbose
 ```
 
 > [!NOTE]
+>
 > The script will fail if the folder is not empty.
 
 ###  <a name="ImportDeviceDriver"></a> Importing a Device Driver
- The following Windows PowerShell commands will import the Dell 2407 WFP monitor device driver into the Production deployment share.
+
+The following Windows PowerShell commands will import the Dell 2407 WFP monitor device driver into the Production deployment share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3534,7 +3663,8 @@ Remove-item -path "DS002:\Out-of-Box Drivers\Dell Inc. Monitor 2407WFP.INF 1.0" 
 ```
 
 ###  <a name="ImportOpSysPackage"></a> Importing an Operating System Package
- The following Windows PowerShell commands import all operating system packages located under D:\\Updates\\Microsoft\\Vista. These operating system packages will be stored in the Production deployment share, which is in D:\\Production Deployment Share.
+
+The following Windows PowerShell commands import all operating system packages located under D:\\Updates\\Microsoft\\Vista. These operating system packages will be stored in the Production deployment share, which is in D:\\Production Deployment Share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3550,7 +3680,8 @@ Remove-item -path "DS002:\Packages\Package_1_for_KB940105 neutral x86 6.0.1.0 KB
 ```
 
 ###  <a name="ImportOpSys"></a> Importing an Operating System
- The following Windows PowerShell commands import the Windows Vista operating system located in D:\\Operating Systems\\Windows Vista x86. The operating system will be stored in the Production deployment share, which is in D:\\Production Deployment Share.
+
+The following Windows PowerShell commands import the Windows Vista operating system located in D:\\Operating Systems\\Windows Vista x86. The operating system will be stored in the Production deployment share, which is in D:\\Production Deployment Share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3559,14 +3690,16 @@ Import-mdtoperatingsystem -path "DS002:\Operating Systems" -SourcePath "D:\Opera
 ```
 
 ###  <a name="DeleteOpSys"></a> Deleting an Operating System
- The following Windows PowerShell command deletes the Windows Vista HOMEBASIC operating system from the Production deployment share.
+
+The following Windows PowerShell command deletes the Windows Vista HOMEBASIC operating system from the Production deployment share.
 
 ```powershell
 Remove-item -path "DS002:\Operating Systems\Windows Vista HOMEBASIC in Windows Vista x86 install.wim" -Verbose
 ```
 
 ###  <a name="CreateApplication"></a> Creating an Application
- The following Windows PowerShell commands create the Adobe Reader 9 application using source files from D:\\Software\\Adobe\\Reader 9. The application will be stored in the Production deployment share, which is in D:\\Production Deployment Share.
+
+The following Windows PowerShell commands create the Adobe Reader 9 application using source files from D:\\Software\\Adobe\\Reader 9. The application will be stored in the Production deployment share, which is in D:\\Production Deployment Share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3575,14 +3708,16 @@ Import-MDTApplication -path "DS002:\Applications" -enable "True" -Name "Adobe Re
 ```
 
 ###  <a name="DeleteApplication"></a> Deleting an Application
- The following Windows PowerShell command deletes the Adobe Reader 9 application from the Production deployment share.
+
+The following Windows PowerShell command deletes the Adobe Reader 9 application from the Production deployment share.
 
 ```powershell
 Remove-item -path "DS002:\Applications\Adobe Reader 9" -Verbose
 ```
 
 ###  <a name="CreateTaskSequence"></a> Creating a Task Sequence
- The following Windows PowerShell commands create the **Windows Vista Production Build** task sequence in the Production deployment share, which is located in D:\\Production Deployment Share.
+
+The following Windows PowerShell commands create the **Windows Vista Production Build** task sequence in the Production deployment share, which is located in D:\\Production Deployment Share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3591,14 +3726,16 @@ Import-mdttasksequence -path "DS002:\Task Sequences" -Name "Windows Vista Busine
 ```
 
 ###  <a name="DeleteTaskSequence"></a> Deleting a Task Sequence
- The following Windows PowerShell command deletes the **Windows Vista Production Build** task sequence from the Production deployment share.
+
+The following Windows PowerShell command deletes the **Windows Vista Production Build** task sequence from the Production deployment share.
 
 ```powershell
 Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build" -force -Verbose
 ```
 
 ###  <a name="CreateMDTDB"></a> Creating an MDT DB
- The following Windows PowerShell commands create a new MDT DB on the *deployment\_server* server for the Production deployment share. The database connection will be via TCP\/IP.
+
+The following Windows PowerShell commands create a new MDT DB on the *deployment\_server* server for the Production deployment share. The database connection will be via TCP\/IP.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3607,7 +3744,8 @@ New-MDTDatabase -path "DS002:" -SQLServer "DeploymentServer" -Netlib "DBMSSOCN" 
 ```
 
 ###  <a name="CreateSelectProfile"></a> Creating a Selection Profile
- The following Windows PowerShell commands create a new Applications selection profile.
+
+The following Windows PowerShell commands create a new Applications selection profile.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3616,7 +3754,8 @@ New-item -path "DS002:\Selection Profiles" -enable "True" -Name "Applications" -
 ```
 
 ###  <a name="UpdatingDeployShare"></a> Updating a Deployment Share
- The following Windows PowerShell commands update the Production deployment share, which is in D:\\Production Deployment Share.
+
+The following Windows PowerShell commands update the Production deployment share, which is in D:\\Production Deployment Share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3625,7 +3764,8 @@ Update\-MDTDeploymentShare \-path "DS002:" \-Verbose
 ```
 
 ###  <a name="CreateLinkedDeployShare"></a> Creating a Linked Deployment Share
- The following Windows PowerShell commands create a deployment share that is linked to the Production deployment share and resides under the \\\\*remote\_server\_name*\\Deployment$ share. The Everything selection profile is used to determine which content is replicated to the linked deployment share. Content from the Production deployment share will be merged with content that already exists in the \\\\*remote\_server\_name*\\Deployment$ share.
+
+The following Windows PowerShell commands create a deployment share that is linked to the Production deployment share and resides under the \\\\*remote\_server\_name*\\Deployment$ share. The Everything selection profile is used to determine which content is replicated to the linked deployment share. Content from the Production deployment share will be merged with content that already exists in the \\\\*remote\_server\_name*\\Deployment$ share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3634,7 +3774,8 @@ New-item -path "DS002:\Linked Deployment Shares" -enable "True" -Name "LINKED001
 ```
 
 ###  <a name="UpdatingLinkedDeployShare"></a> Updating a Linked Deployment Share
- The following Windows PowerShell commands update the LINKED001 deployment share.
+
+The following Windows PowerShell commands update the LINKED001 deployment share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3643,7 +3784,8 @@ Replicate-MDTContent -path "DS002:\Linked Deployment Shares\LINKED001" -Verbose
 ```
 
 ###  <a name="DeleteLinkedDeployShare"></a> Deleting a Linked Deployment Share
- The following Windows PowerShell commands delete the LINKED001 deployment share.
+
+The following Windows PowerShell commands delete the LINKED001 deployment share.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3651,7 +3793,8 @@ Remove-item -path "DS002:\Linked Deployment Shares\LINKED001" -Verbose
 ```
 
 ###  <a name="CreateMedia"></a> Creating Media
- The following Windows PowerShell commands create a source folder that contains content used to create bootable media. The Production deployment share will be used as the source. The Everything selection profile determines what content is placed in the media content folder. The LiteTouchMedia.iso file will be created when the media is generated. The media will support both x86 and x64 platforms.
+
+The following Windows PowerShell commands create a source folder that contains content used to create bootable media. The Production deployment share will be used as the source. The Everything selection profile determines what content is placed in the media content folder. The LiteTouchMedia.iso file will be created when the media is generated. The media will support both x86 and x64 platforms.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3661,7 +3804,8 @@ New-PSDrive -Name "MEDIA001" -PSProvider "MDTProvider" -Root "D:\Media\Content" 
 ```
 
 ###  <a name="GenerateMedia"></a> Generating Media
- The following Windows PowerShell commands create the LiteTouchMedia.iso file in D:\\Media, which will use content from the MEDIA001 media source folder.
+
+The following Windows PowerShell commands create the LiteTouchMedia.iso file in D:\\Media, which will use content from the MEDIA001 media source folder.
 
 ```powershell
 Add-PSSnapIn Microsoft.BDD.PSSnapIn
@@ -3677,7 +3821,8 @@ Remove-item -path "DS002:\Media\MEDIA001" -Verbose
 ```
 
 ## Delaying Domain Join to Avoid Application of Group Policy Objects
- Group Policy is a rich and flexible technology providing the capability to efficiently manage a large number of Active Directory Domain Services (AD DS) computer and user objects through a centralized, one-to-many model. Group Policy settings are contained in a Group Policy object (GPO) and linked to one or more AD DS service containers—sites, domains, and organizational units (OUs).
+
+Group Policy is a rich and flexible technology providing the capability to efficiently manage a large number of Active Directory Domain Services (AD DS) computer and user objects through a centralized, one-to-many model. Group Policy settings are contained in a Group Policy object (GPO) and linked to one or more AD DS service containers—sites, domains, and organizational units (OUs).
 
  Some organizations have Group Policy settings that are restrictive and could cause problems during operating system deployments. For example, the following Group Policy settings can interrupt an automated logon process:
 

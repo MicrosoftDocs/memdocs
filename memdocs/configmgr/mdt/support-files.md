@@ -53,14 +53,16 @@ The utilities and scripts used in LTI and ZTI deployments reference external con
 |**Location**|*distribution*\Control|
 
 ## BootStrap.ini
- The configuration file used when the target computer is not able to connect to the appropriate deployment share. This situation occurs in the New Computer and the Replace Computer scenarios.
+
+The configuration file used when the target computer is not able to connect to the appropriate deployment share. This situation occurs in the New Computer and the Replace Computer scenarios.
 
 |**Value**|**Description**|
 |-|-|
 |**Location**|*distribution*\Control|
 
 ## CustomSettings.ini
- The primary configuration file for the MDT processing rules used in all scenarios.
+
+The primary configuration file for the MDT processing rules used in all scenarios.
 
 |**Value**|**Description**|
 |-|-|
@@ -251,7 +253,8 @@ The utilities and scripts used in LTI and ZTI deployments reference external con
 > *Task_sequence_id* is a placeholder for the task sequence ID that was assigned to each task sequence when it was created in the Task Sequences node in the Deployment Workbench.
 
 ## Wimscript.ini
- This .ini file is an ImageX configuration file that contains the list of folders and files that will be excluded from an image. It is referenced by ImageX during the LTI Capture Phase.
+
+This .ini file is an ImageX configuration file that contains the list of folders and files that will be excluded from an image. It is referenced by ImageX during the LTI Capture Phase.
 
  For assistance with customizing this file, see the section, "Create an ImageX Configuration File," in the *Windows Preinstallation Environment (Windows PE) User's Guide*.
 
@@ -260,14 +263,16 @@ The utilities and scripts used in LTI and ZTI deployments reference external con
 |**Location**|*distribution*\Tools\\*platform*|
 
 ## ZTIBIOSCheck.xml
- This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](scripts.md#ztibioscheckwsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.
+
+This XML file contains metadata about BIOSes for target computers. This file is edited manually and is read by [ZTIBIOSCheck.wsf](scripts.md#ztibioscheckwsf). Extract the necessary information from a target computer to create an entry in this XML file using the Microsoft Visual Basic&reg; Scripting Edition (VBScript) program (ZTIBIOS_Extract_Utility.vbs) that is embedded in this XML file.
 
 |**Value**|**Description**|
 |-|-|
 |**Location**|*distribution*\Scripts|
 
 ## ZTIConfigure.xml
- This XML file is used by the [ZTIConfigure.wsf](scripts.md#zticonfigurewsf) script to translate property values (specified earlier in the deployment process) to configure settings in the Unattend.xml file. This file is already customized to make the appropriate translations and should not require further modification.
+
+This XML file is used by the [ZTIConfigure.wsf](scripts.md#zticonfigurewsf) script to translate property values (specified earlier in the deployment process) to configure settings in the Unattend.xml file. This file is already customized to make the appropriate translations and should not require further modification.
 
 |**Value**|**Description**|
 |-|-|
@@ -284,38 +289,40 @@ The utilities and scripts used in LTI and ZTI deployments reference external con
 |**Location**|*distribution*\Scripts|
 
 ## ZTIUserState_config.xml
- This XML file is used by the [ZTIUserState.wsf](scripts.md#ztiuserstatewsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](properties.md#usmtconfigfile) property. See the [Config.xml File](/windows/deployment/usmt/usmt-configxml-file) topic in the USMT documentation for more information on syntax and use.
+
+This XML file is used by the [ZTIUserState.wsf](scripts.md#ztiuserstatewsf) script as a default USMT configuration file. This file is used by default if no custom configuration file is specified by the [USMTConfigFile](properties.md#usmtconfigfile) property. See the [Config.xml File](/windows/deployment/usmt/usmt-configxml-file) topic in the USMT documentation for more information on syntax and use.
 
 |**Value**|**Description**|
 |-|-|
 |**Location**|*distribution*\Scripts|
 
 ## ZTITatoo.mof
- This .mof file, when imported into the WMI repository of the target computer using Mofcomp.exe, creates the **Microsoft_BDD_Info** WMI class. This class contains deployment-related information, such as:
 
--   DeploymentMethod
+This .mof file, when imported into the WMI repository of the target computer using Mofcomp.exe, creates the **Microsoft_BDD_Info** WMI class. This class contains deployment-related information, such as:
 
--   DeploymentType
+- DeploymentMethod
 
--   DeploymentTimestamp
+- DeploymentType
 
--   BuildID
+- DeploymentTimestamp
 
--   BuildName
+- BuildID
 
--   BuildVersion
+- BuildName
 
--   OSDPackageID
+- BuildVersion
 
--   OSDProgramName
+- OSDPackageID
 
--   OSDAdvertisementID
+- OSDProgramName
 
--   TaskSequenceID
+- OSDAdvertisementID
 
--   TaskSequenceName
+- TaskSequenceID
 
--   TaskSequenceVersion
+- TaskSequenceName
+
+- TaskSequenceVersion
 
 |**Value**|**Description**|
 |-|-|
