@@ -10,10 +10,10 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: frankroj,mstewart,aaroncz
 ---
 
-# Microsoft Deployment Toolkit release notes  
+# Microsoft Deployment Toolkit release notes
 
 This article provides details on the latest release of the Microsoft Deployment Toolkit (MDT). These details include supported platforms, prerequisites, and any limitations. It assumes familiarity with MDT version concepts, features, and capabilities.
 

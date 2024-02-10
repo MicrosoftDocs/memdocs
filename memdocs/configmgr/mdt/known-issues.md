@@ -10,7 +10,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: frankroj,mstewart,aaroncz
 ---
 
 # Microsoft Deployment Toolkit known issues
