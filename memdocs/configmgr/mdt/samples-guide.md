@@ -2027,7 +2027,7 @@ The LTI deployment infrastructure has now been successfully created, and each lo
 
 4. Click the **Rules** tab, and then modify the CustomSettings.ini file to configure the following properties:
 
-   - For each SQL Server section added, configure **SQLServer** to use the server name <strong>%WDSServer%—</strong>for example, **SQLServer=%WDSServer%**.
+   - For each SQL Server section added, configure **SQLServer** to use the server name **%WDSServer%—**for example, **SQLServer=%WDSServer%**.
 
    - If configuring **DeployRoot**, configure **DeployRoot** to use the **%WDSServer%** variable—for example, **DeployRoot=\\\\%WDSServer%\Deployment$**.
 
@@ -2148,8 +2148,8 @@ MDT offers multiple ways to determine which server to connect to during an LTI d
 
  |**Method** |**Details** |
  |-|-|
- |**%WDSServer%** |This method is used when the MDT server is co-hosted on the Windows Deployment Services server.<br /><br /> When an LTI deployment is initiated from Windows Deployment Services, an environmental variable—%WDSServer%—is created and populated with the name of the Windows Deployment Services server.<br /><br /> The **DeployRoot** variable can use this variable to automatically connect to a deployment share on the Windows Deployment Services server—for example:<br /><br /> **DeployRoot=\\\\%WDSServer%\Deployment$** |
- |**Location-based automation** |MDT can use location-based automation in the BootStrap.ini file to determine the server to which it should deploy.<br /><br /> Use the **Default Gateway** property to distinguish between different locations; for each **Default Gateway**, a different MDT server is specified.<br /><br /> For more information about using location-based automation, refer to "Selecting the Methods for Applying Configuration Settings".|
+ |**%WDSServer%** |This method is used when the MDT server is co-hosted on the Windows Deployment Services server.<br><br> When an LTI deployment is initiated from Windows Deployment Services, an environmental variable—%WDSServer%—is created and populated with the name of the Windows Deployment Services server.<br><br> The **DeployRoot** variable can use this variable to automatically connect to a deployment share on the Windows Deployment Services server—for example:<br><br> **DeployRoot=\\\\%WDSServer%\Deployment$** |
+ |**Location-based automation** |MDT can use location-based automation in the BootStrap.ini file to determine the server to which it should deploy.<br><br> Use the **Default Gateway** property to distinguish between different locations; for each **Default Gateway**, a different MDT server is specified.<br><br> For more information about using location-based automation, refer to "Selecting the Methods for Applying Configuration Settings".|
 
  Each approach listed in the preceding table offers one way to automate the selection of the deployment server at a given location for certain scenarios. These approaches are targeted to specific scenarios—for example, when the MDT server is co-hosted with Windows Deployment Services.
 
@@ -2373,7 +2373,7 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
    |**On this wizard page** |**Do this** |
    |-|-|
-   |**General Settings** |1. In **Task sequence ID**, type **VISTA_EXIST**.<br />2. In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br />3. Click **Next**.|
+   |**General Settings** |1. In **Task sequence ID**, type **VISTA_EXIST**.<br>2. In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br>3. Click **Next**.|
    |**Select Template** |In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Replace Task Sequence**, and then click **Next**.|
    |**Summary** |Verify that the configuration details are correct, and then click **Next**.|
    |**Confirmation** |Click **Finish**.|
@@ -2398,12 +2398,12 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
    | **On this wizard page** |                                                                                                                                                         **Do this**                                                                                                                                                         |
    |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |  **General Settings**   |                                                                          1. In **Task sequence ID**, type **VISTA_NEW**.<br />2. In **Task sequence name**, type **Perform Replace Computer Scenario on New Computer**.<br />3. Click **Next**.                                                                          |
+   |  **General Settings**   |                                                                          1. In **Task sequence ID**, type **VISTA_NEW**.<br>2. In **Task sequence name**, type **Perform Replace Computer Scenario on New Computer**.<br>3. Click **Next**.                                                                          |
    |   **Select Template**   |                                                                In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.                                                                 |
    |      **Select OS**      | In **The following operating system images are available to be deployed with this task sequence**. Select one to use, select ***captured_vista_image*** (where *captured_vista_image* is the captured image the reference computer added to the Operating Systems node in the Deployment Workbench), and then click *Next*. |
    | **Specify Product Key** |                                                                                                                       Select **Do not specify a product key at this time**, and then click **Next**.                                                                                                                        |
-   |       OS Settings       |                                                  1. In **Full Name**, type **Woodgrove Employee**.<br />2. In **Organization**, type **Woodgrove Bank**.<br />3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br />4. Click **Next**.                                                   |
-   |   **Admin Password**    |                                                                                           In **Administrator Password** and **Please confirm Administrator Password**, type <strong>P@ssw0rd</strong>, and then click **Finish**.                                                                                           |
+   |       OS Settings       |                                                  1. In **Full Name**, type **Woodgrove Employee**.<br>2. In **Organization**, type **Woodgrove Bank**.<br>3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br>4. Click **Next**.                                                   |
+   |   **Admin Password**    |                                                                                           In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then click **Finish**.                                                                                           |
    |    **Confirmation**     |                                                                                                                                                      Click **Finish**.                                                                                                                                                      |
 
    The New Task Sequence Wizard finishes, and the **VISTA_NEW** task sequence is added to the list of task sequences.
@@ -2524,7 +2524,7 @@ Start the existing computer (WDG-EXIST-01) with the LTI bootable media created e
    |                  **On this wizard page**                  |                                                                              **Do this**                                                                              |
    |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |                 **Welcome to Deployment**                 |                                    Click **Run the Deployment Wizard** to install a new operating system, and then click **Next**.                                    |
-   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br />2. In **Password**, type <strong>P@ssw0rd</strong>.<br />3. In **Domain**, type **CORP**.<br />4. Click **OK**. |
+   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **CORP**.<br>4. Click **OK**. |
    |  **Select a task sequence to execute on this computer.**  |                                       Click *Perform Replace Computer Scenario on Existing Computer*, and then click **Next**.                                        |
    |     **Specify where to save your data and settings**      |                                                                            Click **Next**.                                                                            |
    |   **Specify where to save a complete computer backup**    |                                               Click **Do not back up the existing computer**, and then click **Next**.                                                |
@@ -2559,11 +2559,11 @@ Start the new computer (WDG-NEW-02) with the LTI bootable media created earlier 
    |                  **On this wizard page**                  |                                                                              **Do this**                                                                              |
    |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |                 **Welcome to Deployment**                 |                                    Click **Run the Deployment Wizard to install a new operating system**, and then click **Next**.                                    |
-   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br />2. In **Password**, type <strong>P@ssw0rd</strong>.<br />3. In **Domain**, type **CORP**.<br />4. Click **OK**. |
+   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **CORP**.<br>4. Click **OK**. |
    |  **Select a task sequence to execute on this computer.**  |                                         Click **Perform Replace Computer Scenario on New Computer**, and then click **Next**.                                         |
    |              **Configure the computer name**              |                                                  In **Computer name**, type **WDG-NEW-02**, and then click **Next**.                                                  |
    |      **Join the computer to a domain or workgroup**       |                                                                            Click **Next**.                                                                            |
-   |         **Specify whether to restore user data**          |              1. Click **Specify a location**.<br />2. In **Location**, type **\\\WDG-MDT-01\UserStateCapture$\WDG-EXIST-01**.<br />3. Click **Next**.              |
+   |         **Specify whether to restore user data**          |              1. Click **Specify a location**.<br>2. In **Location**, type **\\\WDG-MDT-01\UserStateCapture$\WDG-EXIST-01**.<br>3. Click **Next**.              |
    |                   **Locale Selection**                    |                                                                            Click **Next**.                                                                            |
    |                   **Set the Time Zone**                   |                                                                            Click **Next**.                                                                            |
    |          **Specify whether to capture an image**          |                                             Click **Do not capture an image of this computer**, and then click **Next**.                                              |
@@ -2748,18 +2748,18 @@ The following table details some useful functions available, and their output. F
 |**oUtility.Sections(file)**|Reads the sections of an .ini file and stores them in an object for reference|
 |**oUtility.SectionContents(file, section)**|Reads the contents of the specified .ini file and stores them in an object|
 |**oUtility.RunWithHeartbeat(sCmd)**|When the command is run, write heartbeat information to the logs every 0.5 seconds|
-|**oUtility.FindFile**<br /><br /> **(sFilename,sFoundPath)**|Searches for the specified file in the DeployRoot folder and standard subfolders, including Servicing, Tools, USMT, Templates, Scripts, and Control|
+|**oUtility.FindFile**<br><br> **(sFilename,sFoundPath)**|Searches for the specified file in the DeployRoot folder and standard subfolders, including Servicing, Tools, USMT, Templates, Scripts, and Control|
 |**oUtility.findMappedDrive(sServerUNC)**|Checks to see whether a drive is mapped to the specified UNC path and returns the drive letter|
 |**oUtility.ValidateConnection(sServerUNC)**|Checks to see whether there is an existing connection to the server specified and, if there is not, attempts to create one|
-|**MapNetworkDrive**<br /><br /> **(sShare, SDomID, sDomPwd)**|Maps a drive letter to the UNC path specified as the share and returns the drive letter used; returns an error if unsuccessful|
+|**MapNetworkDrive**<br><br> **(sShare, SDomID, sDomPwd)**|Maps a drive letter to the UNC path specified as the share and returns the drive letter used; returns an error if unsuccessful|
 |**VerifyPathExists(strPath)**|Verifies that the specified path exists|
 |**oEnvironment.Substitute(sVal)**|Given a string, expands any variables or functions within that string|
-|**oEnvironment.Item**<br /><br /> **(sName)**|Reads or writes a variable to a persistent store|
-|**oEnvironment.Exists**<br /><br /> **(sName)**|Tests to see whether the variable exists|
-|**oEnvironment.ListItem**<br /><br /> **(sName)**|Reads or writes a variable of type **array** to a persistent store|
-|**oLogging.ReportFailure**<br /><br /> **(sMessage, iError)**|Used to perform a structured exit if an unrecoverable error is detected|
-|**oLogging.CreateEvent**<br /><br /> **(iEventID, iType, sMessage, arrParms)**|Writes a message to the log file and posts the event to a defined server|
-|**oLogging.CreateEntry**<br /><br /> **(sLogMsg, iType)**|Writes a message to the log file|
+|**oEnvironment.Item**<br><br> **(sName)**|Reads or writes a variable to a persistent store|
+|**oEnvironment.Exists**<br><br> **(sName)**|Tests to see whether the variable exists|
+|**oEnvironment.ListItem**<br><br> **(sName)**|Reads or writes a variable of type **array** to a persistent store|
+|**oLogging.ReportFailure**<br><br> **(sMessage, iError)**|Used to perform a structured exit if an unrecoverable error is detected|
+|**oLogging.CreateEvent**<br><br> **(iEventID, iType, sMessage, arrParms)**|Writes a message to the log file and posts the event to a defined server|
+|**oLogging.CreateEntry**<br><br> **(sLogMsg, iType)**|Writes a message to the log file|
 |**TestAndFail(iRc, iError, sMessage)**|Exits the script with **iError** if **iRc** is false or fail|
 |**TestAndLog(iRc , sMessage)**|Logs a warning only if **iRc** is false or fail|
 
@@ -2801,7 +2801,7 @@ Custom deployment code can be imported into the Deployment Workbench and managed
    |-|-|
    |**Application Type**|Click **Application without source files or elsewhere on the network**, and then click **Next**.|
    |**Details**|Complete this page based on the information from the application, and then click **Next**.|
-   |**Command Details**|1. In the **Command line** box, type **cscript.exe %SCRIPTROOT%\custom_code** (where *custom_code* is the name of the custom code that has been developed).<br />2. In the **Working directory** box, type ***working_directory*** (where working_directory is the name of the working directory of the custom code; this is typically the same folder specified in the **Command line** box).<br />3. Click **Next**.|
+   |**Command Details**|1. In the **Command line** box, type **cscript.exe %SCRIPTROOT%\custom_code** (where *custom_code* is the name of the custom code that has been developed).<br>2. In the **Working directory** box, type ***working_directory*** (where working_directory is the name of the working directory of the custom code; this is typically the same folder specified in the **Command line** box).<br>3. Click **Next**.|
    |**Summary**|Verify that the configuration settings are correct, and then click **Next**.|
    |**Confirmation**|Click **Finish**.|
 

@@ -411,7 +411,7 @@ The shared folder in which backups of the target computer are stored.
 
 |**Value**|**Description**|
 |-|-|
-|*UNC_path*|The UNC path of the shared folder<br /><br /> Note:<br /><br /> The UNC path specified in this property must exist before deploying the target operating system.|
+|*UNC_path*|The UNC path of the shared folder<br><br> Note:<br><br> The UNC path specified in this property must exist before deploying the target operating system.|
 
 |**Example**|
 |-|
@@ -429,7 +429,7 @@ This property configures whether BitLocker PINs contain alphanumeric values.
 
 |**Value**|**Description**|
 |-|-|
-|**YES**|Alphanumeric characters are allowed in the PIN.<br /><br /> Note:<br /><br /> In addition to setting this property to **YES**, the **Allow enhanced PINs for startup** group policy setting must be enabled.|
+|**YES**|Alphanumeric characters are allowed in the PIN.<br><br> Note:<br><br> In addition to setting this property to **YES**, the **Allow enhanced PINs for startup** group policy setting must be enabled.|
 |**NO**|Only numeric characters are allowed in the PIN.|
 
 |**Example**|
@@ -466,7 +466,7 @@ The size of the BitLocker system partition. The value is specified in megabytes.
 
 |**Value**|**Description**|
 |-|-|
-|*drive_size*|The size of the partition in megabytes; the default sizes are:<br /><br /> - Windows 7 and Windows Server 2008 R2: 300 MB|
+|*drive_size*|The size of the partition in megabytes; the default sizes are:<br><br> - Windows 7 and Windows Server 2008 R2: 300 MB|
 
 |**Example**|
 |-|
@@ -644,7 +644,7 @@ Identifies the operating system task sequence to be deployed to the target compu
 
 |**Value**|**Description**|
 |-|-|
-|*build_id*|Identifier of the operating system task sequence as defined in the Deployment Workbench for the target operating system being deployed<br /><br /> Note:<br /><br /> Make certain to use the **TaskSequenceID** specified in the Deployment Workbench user interface (UI) and not the GUID of the **TaskSequenceID**.|
+|*build_id*|Identifier of the operating system task sequence as defined in the Deployment Workbench for the target operating system being deployed<br><br> Note:<br><br> Make certain to use the **TaskSequenceID** specified in the Deployment Workbench user interface (UI) and not the GUID of the **TaskSequenceID**.|
 
 |**Example**|
 |-|
@@ -1035,7 +1035,7 @@ cscript.exe LiteTouch.vbs /debug:true
 
 |**Value**|**Description**|
 |-|-|
-|**TRUE**|Debug logging is enabled, which includes the following:<br /><br /> \- Verbose messages are logged.<br /><br /> \- Deprecated messages are logged as errors.|
+|**TRUE**|Debug logging is enabled, which includes the following:<br><br> \- Verbose messages are logged.<br><br> \- Deprecated messages are logged as errors.|
 |**FALSE**|Debug logging is not enabled. This is the default value.|
 
 |**Example**|
@@ -1202,7 +1202,7 @@ The logical drive to which the image will be deployed.
 
 |**Example 2**|
 |-|
-|`[Settings] Priority=Default  [Default] DestinationLogicalDrive=0`<br /><br /> `[Settings] Priority=Default  [Default] InstallDNS=YES DomainNetBIOSName=WoodGroveBank NewDomain=Child DomainLevel=3 ForestLevel=3 NewDomainDNSName=newdom.WoodGroveBank.com ParentDomainDNSName=WoodGroveBank.com AutoConfigDNS=YES ConfirmGC=YES CriticalReplicationOnly=NO ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password> DatabasePath=%DestinationLogicalDrive%\Windows\NTDS ADDSLogPath=%DestinationLogicalDrive%\Windows\NTDS SysVolPath=%DestinationLogicalDrive%\Windows\SYSVOL SafeModeAdminPassword=<complex_password>`|
+|`[Settings] Priority=Default  [Default] DestinationLogicalDrive=0`<br><br> `[Settings] Priority=Default  [Default] InstallDNS=YES DomainNetBIOSName=WoodGroveBank NewDomain=Child DomainLevel=3 ForestLevel=3 NewDomainDNSName=newdom.WoodGroveBank.com ParentDomainDNSName=WoodGroveBank.com AutoConfigDNS=YES ConfirmGC=YES CriticalReplicationOnly=NO ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password> DatabasePath=%DestinationLogicalDrive%\Windows\NTDS ADDSLogPath=%DestinationLogicalDrive%\Windows\NTDS SysVolPath=%DestinationLogicalDrive%\Windows\SYSVOL SafeModeAdminPassword=<complex_password>`|
 
 ### DestinationPartition
 
@@ -2091,7 +2091,7 @@ Indicator of whether an image of the target computer is to be captured. If it is
 |**YES**|Copy the necessary files to run Sysprep on the target computer, run Sysprep on the target computer, and capture a WIM image.|
 |**NO**|Do not run Sysprep on the target computer, and do not capture a WIM image.|
 |**PREPARE**|Copy the necessary files to run Sysprep on the target computer, but do not run Sysprep or other image-capture processes.|
-|**SYSPREP**|Copy the necessary files to run Sysprep on the target computer, run Sysprep on the target computer, but do not capture a WIM image.<br /><br /> Note:<br /><br /> The primary purpose of this value is to allow the creation of a VHD that contains an operating system after Sysprep has been run and no image capture is necessary.|
+|**SYSPREP**|Copy the necessary files to run Sysprep on the target computer, run Sysprep on the target computer, but do not capture a WIM image.<br><br> Note:<br><br> The primary purpose of this value is to allow the creation of a VHD that contains an operating system after Sysprep has been run and no image capture is necessary.|
 
 |**Example**|
 |-|
@@ -2175,7 +2175,7 @@ This entry specifies the domain functional level. This entry is based on the lev
 
 |**Value**|**Description**|
 |-|-|
-|*Level*|Sets the domain functional level to one of the following:<br /><br /> - 2, Windows Server 2003<br /><br /> - 3, Windows Server 2008<br /><br /> - 4, Windows Server 2008 R2<br /><br /> - 5, Windows Server 2012|
+|*Level*|Sets the domain functional level to one of the following:<br><br> - 2, Windows Server 2003<br><br> - 3, Windows Server 2008<br><br> - 4, Windows Server 2008 R2<br><br> - 5, Windows Server 2012|
 
 |**Example**|
 |-|
@@ -2416,7 +2416,7 @@ Specifies the action to be taken when an LTI task sequence finishes, which is af
 
 |**Value**|**Description**|
 |-|-|
-|*action*|Where *action* is one of the following:<br /><br /> - **SHUTDOWN**. Shuts down the target computer.<br /><br /> - **REBOOT**. Restarts the target computer.<br /><br /> - **RESTART**. Same as **REBOOT**.<br /><br /> - **LOGOFF**. Log off the current user. If the target computer is currently running Windows PE, then the target computer will be restarted.<br /><br /> - **blank**. Exit the Deployment Wizard without performing any additional actions. This is the default setting.|
+|*action*|Where *action* is one of the following:<br><br> - **SHUTDOWN**. Shuts down the target computer.<br><br> - **REBOOT**. Restarts the target computer.<br><br> - **RESTART**. Same as **REBOOT**.<br><br> - **LOGOFF**. Log off the current user. If the target computer is currently running Windows PE, then the target computer will be restarted.<br><br> - **blank**. Exit the Deployment Wizard without performing any additional actions. This is the default setting.|
 
 |**Example**|
 |-|
@@ -2459,7 +2459,7 @@ This entry specifies the forest functional level when a new domain is created in
 
 |**Value**|**Description**|
 |-|-|
-|*level*|Sets the domain functional level to one of the following:<br /><br /> - 2, Windows Server 2003<br /><br /> - 3, Windows Server 2008<br /><br /> - 4, Windows Server 2008 R2<br /><br /> - 5, Windows Server 2012|
+|*level*|Sets the domain functional level to one of the following:<br><br> - 2, Windows Server 2003<br><br> - 3, Windows Server 2008<br><br> - 4, Windows Server 2008 R2<br><br> - 5, Windows Server 2012|
 
 |**Example**|
 |-|
@@ -2506,7 +2506,7 @@ This property is used to override the default path to the folder in which the GP
 
 |**Value**|**Description**|
 |-|-|
-|*path*|The path relative to the *distribution_share*\Templates\GPOPacks folder (where *distribution_share* is the root folder of the distribution share. The default value is the *distribution_share*\Templates\GPOPacks\\*operating_system* folder (where *operating_system* is a subfolder based on the operating system version).<br /><br /> In the example below, setting the GPOPackPath property to a value of "Win7-HighSecurity" configures MDT to use the *distribution_share*\Templates\GPOPacks\Win7-HighSecurity folder as the folder where the GPO packs are stored.|
+|*path*|The path relative to the *distribution_share*\Templates\GPOPacks folder (where *distribution_share* is the root folder of the distribution share. The default value is the *distribution_share*\Templates\GPOPacks\\*operating_system* folder (where *operating_system* is a subfolder based on the operating system version).<br><br> In the example below, setting the GPOPackPath property to a value of "Win7-HighSecurity" configures MDT to use the *distribution_share*\Templates\GPOPacks\Win7-HighSecurity folder as the folder where the GPO packs are stored.|
 
 |**Example**|
 |-|
@@ -2874,7 +2874,7 @@ Specifies whether the target computer is currently running with Unified Extensib
 |**Value**|**Description**|
 |-|-|
 |**TRUE**|The target computer is currently running with UEFI.|
-|**FALSE**|The target computer is not currently running with UEFI.<br /><br /> Note:<br /><br /> It is possible that the target computer may support UEFI, but is running in a compatibility mode that emulates the older BIOS firmware interface. In this situation this value of this property will set to **FALSE** even though the target computer supports UEFI.|
+|**FALSE**|The target computer is not currently running with UEFI.<br><br> Note:<br><br> It is possible that the target computer may support UEFI, but is running in a compatibility mode that emulates the older BIOS firmware interface. In this situation this value of this property will set to **FALSE** even though the target computer supports UEFI.|
 
 |**Example**|
 |-|
@@ -2971,7 +2971,7 @@ A list of keyboard locales to be used with the target operating system. More tha
 
 |**Value**|**Description**|
 |-|-|
-|*keyboard_locale1; keyboard_locale2*|The locale of the keyboard attached to the target computer.<br /><br /> The value can be specified in the following formats:<br /><br /> - Text (en-us)<br /><br /> - Hexadecimal (0409:00000409)|
+|*keyboard_locale1; keyboard_locale2*|The locale of the keyboard attached to the target computer.<br><br> The value can be specified in the following formats:<br><br> - Text (en-us)<br><br> - Hexadecimal (0409:00000409)|
 
 |**Example 1**|
 |-|
@@ -2997,7 +2997,7 @@ The name of the keyboard locale to be used while in Windows PE only.
 
 |**Value**|**Description**|
 |-|-|
-|*keyboard_locale*|The locale of the keyboard attached to the target computer.<br /><br /> The value can be specified in the following formats:<br /><br /> - Text (en-us)<br /><br /> - Hexadecimal (0409:00000409)|
+|*keyboard_locale*|The locale of the keyboard attached to the target computer.<br><br> The value can be specified in the following formats:<br><br> - Text (en-us)<br><br> - Hexadecimal (0409:00000409)|
 
 |**Example 1**|
 |-|
@@ -3043,7 +3043,7 @@ The arguments passed to the USMT Loadstate process. The ZTI script inserts the a
 
 |**Value**|**Description**|
 |-|-|
-|Arguments|The command-line arguments passed to Loadstate.exe.<br /><br /> The default arguments specified by Deployment Workbench are as follows:<br /><br /> - **/v**. Enables verbose output in the Loadstate log. The default is **0**. Specify any number from 0 to 15. The value **5** enables verbose and status output.<br /><br /> - **/c**. When specified, Loadstate will continue to run even if there are nonfatal errors. Without the **/c** option, Loadstate exits on the first error.<br /><br /> - **/lac**. Specifies that if the account being migrated is a local (non-domain) account, and it does not exist on the destination computer, then USMT will create the account but it will be disabled.<br /><br /> For more information about these and other arguments, see the USMT Help files.|
+|Arguments|The command-line arguments passed to Loadstate.exe.<br><br> The default arguments specified by Deployment Workbench are as follows:<br><br> - **/v**. Enables verbose output in the Loadstate log. The default is **0**. Specify any number from 0 to 15. The value **5** enables verbose and status output.<br><br> - **/c**. When specified, Loadstate will continue to run even if there are nonfatal errors. Without the **/c** option, Loadstate exits on the first error.<br><br> - **/lac**. Specifies that if the account being migrated is a local (non-domain) account, and it does not exist on the destination computer, then USMT will create the account but it will be disabled.<br><br> For more information about these and other arguments, see the USMT Help files.|
 
 |**Example**|
 |-|
@@ -3986,7 +3986,7 @@ The type of BitLocker installation to be performed. Protect the target computer 
 |-|-|
 |**TPM**|Protect the computer with TPM only. The TPM is a microcontroller that stores keys, passwords, and digital certificates. The microcontroller is typically an integral part of the computer motherboard.|
 |**TPMKey**|Protect the computer with TPM and a startup key. Use this option to create a startup key and to save it on a UFD. The startup key must be present in the port each time the computer starts.|
-|**TPMPin**|Protect the computer with TPM and a pin. Use this option in conjunction with the **BDEPin** property.<br /><br /> Note:<br /><br /> This value is not valid when using ZTI.|
+|**TPMPin**|Protect the computer with TPM and a pin. Use this option in conjunction with the **BDEPin** property.<br><br> Note:<br><br> This value is not valid when using ZTI.|
 |**Key**|Protect the computer with an external key \(the recovery key\) that can be stored in a folder, in AD DS, or printed.|
 
 |**Example**|
@@ -4701,7 +4701,7 @@ A comma-delimited list of server role service IDs that will be installed on the 
 
 |**Value**|**Description**|
 |-|-|
-|*ID*|The server role service that will be installed on the target computer. The valid value is:<br /><br /> - **ADDS-Domain-Controller**|
+|*ID*|The server role service that will be installed on the target computer. The valid value is:<br><br> - **ADDS-Domain-Controller**|
 
 |**Example**|
 |-|
@@ -5286,7 +5286,7 @@ Arguments passed to the **USMT Scanstate** process. The scripts call Scanstate.e
 
 |**Value**|**Description**|
 |-|-|
-|*arguments*|The command-line arguments passed to Scanstate.exe.<br /><br /> The default arguments specified by the Deployment Workbench are as follows:<br /><br /> - **/v**. Enables verbose output in the Scanstate log. The default is **0**. Specify any number from 0 to 15. The value **5** enables verbose and status output.<br /><br /> - **/o**. Overwrites any existing data in the store. If not specified, Scanstate will fail if the store already contains data. This option cannot be specified more than once in a Command Prompt window.<br /><br /> -                             **/c**. When specified, Scanstate will continue to run even if there are nonfatal errors. Without the **/c** option, Scanstate exits on the first error.<br /><br /> For more information about these and other arguments, see the USMT Help files.|
+|*arguments*|The command-line arguments passed to Scanstate.exe.<br><br> The default arguments specified by the Deployment Workbench are as follows:<br><br> - **/v**. Enables verbose output in the Scanstate log. The default is **0**. Specify any number from 0 to 15. The value **5** enables verbose and status output.<br><br> - **/o**. Overwrites any existing data in the store. If not specified, Scanstate will fail if the store already contains data. This option cannot be specified more than once in a Command Prompt window.<br><br> -                             **/c**. When specified, Scanstate will continue to run even if there are nonfatal errors. Without the **/c** option, Scanstate exits on the first error.<br><br> For more information about these and other arguments, see the USMT Help files.|
 
 |**Example**|
 |-|
@@ -6003,7 +6003,7 @@ Specifies the users who will be assigned affinity with a specific device using t
 
 |     **Value**     |                                                                                                                                                                **Description**                                                                                                                                                                |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *user1, user2, ...* | The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br /><br /> Note:<br /><br /> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com). |
+| *user1, user2, ...* | The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br><br> Note:<br><br> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com). |
 
 |**Example**|
 |-|
@@ -6293,7 +6293,7 @@ Identifies the operating system task sequence to be deployed to the target compu
 
 |**Value**|**Description**|
 |-|-|
-|*task_sequence_id*|Identifier of the operating system task sequence defined in the Deployment Workbench for the target operating system being deployed<br /><br /> Note:<br /><br /> Be sure to use the **TaskSequenceID** specified in the Deployment Workbench UI, not the GUID of the **TaskSequenceID**.|
+|*task_sequence_id*|Identifier of the operating system task sequence defined in the Deployment Workbench for the target operating system being deployed<br><br> Note:<br><br> Be sure to use the **TaskSequenceID** specified in the Deployment Workbench UI, not the GUID of the **TaskSequenceID**.|
 
 |**Example**|
 |-|
@@ -6652,7 +6652,7 @@ A list of files in XML format that are used by USMT (Scanstate.exe) to identify 
 
 |**Value**|**Description**|
 |-|-|
-|*USMTMigFile*|The name of the .xml file to be used as input for Scanstate.exe, on separate lines. If not specified, the default is MigApp.xml, MigUser.xml, and MigSys.xml.<br /><br /> Note:<br /><br /> If this value is specified, the default files (MigApp.xml, MigUser.xml, and MigSys.xml) must also be added to the list if these files are to be included.|
+|*USMTMigFile*|The name of the .xml file to be used as input for Scanstate.exe, on separate lines. If not specified, the default is MigApp.xml, MigUser.xml, and MigSys.xml.<br><br> Note:<br><br> If this value is specified, the default files (MigApp.xml, MigUser.xml, and MigSys.xml) must also be added to the list if these files are to be included.|
 
 |**Example**|
 |-|
@@ -6781,7 +6781,7 @@ This property is used to specify the name of a differencing VHD (also known as a
 
 |**Value**|**Description**|
 |-|-|
-|*filename*|Specifies the name of the differencing VHD file, which is located in the same folder as the parent VHD file<br /><br /> The differencing VHD file cannot have the same name as the parent VHD file.|
+|*filename*|Specifies the name of the differencing VHD file, which is located in the same folder as the parent VHD file<br><br> The differencing VHD file cannot have the same name as the parent VHD file.|
 |**RANDOM**|Automatically generates a random name for the differencing VHD file, which is located in the same folder as the parent VHD file|
 
 |**Example**|
@@ -6886,7 +6886,7 @@ This property is used to specify the maximum size of a VHD file in megabytes (MB
 
 This property is used to specify the name of a VHD file that is used as a template (source) for creating a new VHD file. You can specify the file name using a UNC path, local path, relative path, or just the file name. If just the file name is specified, then MDT attempts to find the VHD file on the target computer. This property is valid only for the MDT New Computer deployment scenario.
 
- This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value that the <strong>Create Virtual Hard Disk (VHD)</strong>task sequence step sets by configuring this property in CustomSettings.ini.
+ This property is commonly set using a task sequence step created using the **Create Virtual Hard Disk (VHD)** task sequence type. You can override the value that the **Create Virtual Hard Disk (VHD)**task sequence step sets by configuring this property in CustomSettings.ini.
 
 > [!NOTE]
 >
@@ -7274,7 +7274,7 @@ This property is used to pass a value to the **maxsize** parameter of the **vssa
 
 |**Value**|**Description**|
 |-|-|
-|*maxsize_value*|Specifies the maximum amount of space that can be used for storing shadow copies. The value can be specified in bytes or as a percentage of the target volume.<br /><br /> To specify the value:<br /><br /> - In bytes, the value must be 300 MB or greater and accept the following suffixes: KB, MB, GB, TB, PB and EB. You can also use B, K, M, G, T, P, and E as suffixes—for example:<br /><br /> `VSSMaxSize=60G`<br /><br /> - As a percentage, use the % character as the suffix to the numeric value—for example:<br /><br /> `VSSMaxSize=20%`<br /><br /> Note:<br /><br /> If a suffix is not supplied, the default suffix is bytes. For example, `VSSMaxSize=1024` indicates that the **VSSMaxSize** will be set to 1,024 bytes.<br /><br /> If the value is set to **UNBOUNDED**, then there is no limit placed on the amount of storage space that can be used—for example:<br /><br /> `VSSMaxSize=UNBOUNDED`|
+|*maxsize_value*|Specifies the maximum amount of space that can be used for storing shadow copies. The value can be specified in bytes or as a percentage of the target volume.<br><br> To specify the value:<br><br> - In bytes, the value must be 300 MB or greater and accept the following suffixes: KB, MB, GB, TB, PB and EB. You can also use B, K, M, G, T, P, and E as suffixes—for example:<br><br> `VSSMaxSize=60G`<br><br> - As a percentage, use the % character as the suffix to the numeric value—for example:<br><br> `VSSMaxSize=20%`<br><br> Note:<br><br> If a suffix is not supplied, the default suffix is bytes. For example, `VSSMaxSize=1024` indicates that the **VSSMaxSize** will be set to 1,024 bytes.<br><br> If the value is set to **UNBOUNDED**, then there is no limit placed on the amount of storage space that can be used—for example:<br><br> `VSSMaxSize=UNBOUNDED`|
 
 |**Example**|
 |-|
@@ -7322,7 +7322,7 @@ MDT uses this property to set the location of the sources\sxs folder in a networ
 
 |**Value**|**Description**|
 |-|-|
-|***folder_unc***|A UNC path to the Sources\sxs folder for the operating system being deployed.<br /><br /> Note:<br /><br /> The UNC path must include the Sources\sxs folder.|
+|***folder_unc***|A UNC path to the Sources\sxs folder for the operating system being deployed.<br><br> Note:<br><br> The UNC path must include the Sources\sxs folder.|
 
 |**Example**|
 |-|
@@ -7498,22 +7498,22 @@ Table 6 lists the individual Deployment Wizard pages, the property to skip the c
 |**Skip this wizard page**|**Using this property**|**Configure these properties**|
 |-|-|-|
 |**Welcome**|SkipBDDWelcome||
-|**Specify credentials for connecting to network shares**|Skipped by providing properties in next column|- UserID<br /><br /> - UserDomain<br /><br /> - UserPassword|
+|**Specify credentials for connecting to network shares**|Skipped by providing properties in next column|- UserID<br><br> - UserDomain<br><br> - UserPassword|
 |**Task Sequence**|SkipTaskSequence|- TaskSequenceID|
-|**Computer Details**|SkipComputerName,<br /><br /> SkipDomainMembership|- OSDComputerName<br /><br /> - JoinWorkgroup<br /><br /> -or-<br /><br /> - JoinDomain<br /><br /> - DomainAdmin|
-|**User Data**|SkipUserData|- UDDir<br /><br /> - UDShare<br /><br /> - UserDataLocation|
-|**Move Data and Settings**|SkipUserData|- UDDir<br /><br /> - UDShare<br /><br /> - UserDataLocation|
-|**User Data (Restore)**|SkipUserData|- UDDir<br /><br /> - UDShare<br /><br /> - UserDataLocation|
-|**Computer Backup**|SkipComputerBackup|- BackupDir<br /><br /> - BackupShare<br /><br /> - ComputerBackupLocation|
-|**Product Key**|SkipProductKey|- ProductKey<br /><br /> -or-<br /><br /> - OverrideProductKey|
+|**Computer Details**|SkipComputerName,<br><br> SkipDomainMembership|- OSDComputerName<br><br> - JoinWorkgroup<br><br> -or-<br><br> - JoinDomain<br><br> - DomainAdmin|
+|**User Data**|SkipUserData|- UDDir<br><br> - UDShare<br><br> - UserDataLocation|
+|**Move Data and Settings**|SkipUserData|- UDDir<br><br> - UDShare<br><br> - UserDataLocation|
+|**User Data (Restore)**|SkipUserData|- UDDir<br><br> - UDShare<br><br> - UserDataLocation|
+|**Computer Backup**|SkipComputerBackup|- BackupDir<br><br> - BackupShare<br><br> - ComputerBackupLocation|
+|**Product Key**|SkipProductKey|- ProductKey<br><br> -or-<br><br> - OverrideProductKey|
 |**Language Packs**|SkipPackageDisplay|LanguagePacks|
-|**Locale and Time**|SkipLocaleSelection, SkipTimeZone|- KeyboardLocale<br /><br /> - UserLocale<br /><br /> - UILanguage<br /><br /> - TimeZoneName|
-|**Roles and Features**|SkipRoles|- OSRoles<br /><br /> - OSRoleServices<br /><br /> - OSFeatures|
+|**Locale and Time**|SkipLocaleSelection, SkipTimeZone|- KeyboardLocale<br><br> - UserLocale<br><br> - UILanguage<br><br> - TimeZoneName|
+|**Roles and Features**|SkipRoles|- OSRoles<br><br> - OSRoleServices<br><br> - OSFeatures|
 |**Applications**|SkipApplications|Applications|
 |**Administrator Password**|SkipAdminPassword|AdminPassword|
 |**Local Administrators**|SkipAdminAccounts|- Administrators|
 |**Capture Image**|SkipCapture|- ComputerBackupLocation|
-|**Bitlocker**|SkipBitLocker|- BDEDriveLetter<br /><br /> - BDEDriveSize<br /><br /> - BDEInstall<br /><br /> - BDEInstallSuppress<br /><br /> - BDERecoveryKey<br /><br /> - TPMOwnerPassword<br /><br /> - OSDBitLockerStartupKeyDrive<br /><br /> - OSDBitLockerWaitForEncryption|
+|**Bitlocker**|SkipBitLocker|- BDEDriveLetter<br><br> - BDEDriveSize<br><br> - BDEInstall<br><br> - BDEInstallSuppress<br><br> - BDERecoveryKey<br><br> - TPMOwnerPassword<br><br> - OSDBitLockerStartupKeyDrive<br><br> - OSDBitLockerWaitForEncryption|
 |**Ready to begin**|SkipSummary|-|
 |**Operating system deployment completed successfully**|SkipFinalSummary|-|
 |**Operating system deployment did not complete successfully**|SkipFinalSummary|-|

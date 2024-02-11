@@ -355,12 +355,12 @@ A UDI wizard page has methods that correspond to each stage (or phase) of the li
 
 |**Method**|**Description**|
 |-|-|
-|**OnWindowCreated**|This method is called once, after the page's window has been created.<br /><br /> For this method, write code that initializes the page for the first time and only needs to be performed once. For example, use this method to initialize fields or to read configuration information from the **Setter** elements in the UDI Wizard configuration file.|
-|**OnWindowShown**|This method is called each time the page is displayed (shown) in the UDI Wizard. It is called the first time the page is displayed and each time you navigate to the page by clicking **Next** or **Back** in the wizard.<br /><br /> For this method, write code that prepares the page to be displayed—for example, reading memory variables, task sequence variables, or environment variables, and then updating the page based on any changes to those variables.|
-|**OnCommonControlEvent**|This method can be called anytime the wizard page is displayed and receives a WM_NOTIFY message from a child (typically, common controls).<br /><br /> For this method, write code that handles WM_NOTIFY based on the notification message. For example, you may want to respond to events from a common control, such as responding to click or double-click events for a **TreeView** control.|
-|**OnUnhandledEvent**|This method is called anytime an unhandled window message occurs for your wizard page. This method provides the opportunity to intercept and handle these otherwise unhandled window messages.<br /><br /> For this method, write code that handles the window messages that are pertinent to your wizard page. Typically, you will not need to override this method.|
-|**OnNextClicked**|This method is called when you click **Next** in the wizard.<br /><br /> For this method, write code that performs any necessary actions before moving to the next wizard page—for example, performing validation that can take a long time. If the validation fails, you can cancel the **Next** request and display a message.|
-|**OnWindowHidden**|This method is called each time the page is hidden when either the previous or next wizard page is shown.<br /><br /> For this method, write code that performs any actions before the page is hidden, prior to another page being shown. Typically, you will not need to override this method.|
+|**OnWindowCreated**|This method is called once, after the page's window has been created.<br><br> For this method, write code that initializes the page for the first time and only needs to be performed once. For example, use this method to initialize fields or to read configuration information from the **Setter** elements in the UDI Wizard configuration file.|
+|**OnWindowShown**|This method is called each time the page is displayed (shown) in the UDI Wizard. It is called the first time the page is displayed and each time you navigate to the page by clicking **Next** or **Back** in the wizard.<br><br> For this method, write code that prepares the page to be displayed—for example, reading memory variables, task sequence variables, or environment variables, and then updating the page based on any changes to those variables.|
+|**OnCommonControlEvent**|This method can be called anytime the wizard page is displayed and receives a WM_NOTIFY message from a child (typically, common controls).<br><br> For this method, write code that handles WM_NOTIFY based on the notification message. For example, you may want to respond to events from a common control, such as responding to click or double-click events for a **TreeView** control.|
+|**OnUnhandledEvent**|This method is called anytime an unhandled window message occurs for your wizard page. This method provides the opportunity to intercept and handle these otherwise unhandled window messages.<br><br> For this method, write code that handles the window messages that are pertinent to your wizard page. Typically, you will not need to override this method.|
+|**OnNextClicked**|This method is called when you click **Next** in the wizard.<br><br> For this method, write code that performs any necessary actions before moving to the next wizard page—for example, performing validation that can take a long time. If the validation fails, you can cancel the **Next** request and display a message.|
+|**OnWindowHidden**|This method is called each time the page is hidden when either the previous or next wizard page is shown.<br><br> For this method, write code that performs any actions before the page is hidden, prior to another page being shown. Typically, you will not need to override this method.|
 
 ####  <a name="ReviewSamplePageExample"></a> Review the SamplePage Example
 
@@ -496,7 +496,7 @@ Before you begin creating your own custom wizard pages and wizard page editors, 
 
 The UDI Wizard Designer was developed using WPF, Prism, and Unity. The UDI Designer is used to edit the UDI Wizard configuration file (UDIWizard_Config.xml), which the UDI Wizard (OSDSetupWizard.exe) reads at runtime. The [Pages](#Pages) element in the UDI Wizard configuration file contains a list of pages that has a separate [Page](#Page) element for each wizard page.
 
- When you edit the configuration settings for a wizard page, the UDI Wizard Designer loads the custom page editor that corresponds to the wizard page type. The custom wizard page editors are developed as WPF user controls. The custom wizard page editor pages use the [Model–View–ViewModel](/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern) (MVVM) design pattern for WPF.
+ When you edit the configuration settings for a wizard page, the UDI Wizard Designer loads the custom page editor that corresponds to the wizard page type. The custom wizard page editors are developed as WPF user controls. The custom wizard page editor pages use the [Model-View-ViewModel](/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern) (MVVM) design pattern for WPF.
 
  The MVVM design pattern helps separate the user interface (UI; presentation) from the data being presented. The data is a façade over the [Page](#Page) element in the UDI Wizard configuration file (the Config.xml file in the example), which is accessed using the [CurrentPage](#CurrentPage) property of the [IDataService](#IDataService) interface.
 
@@ -2202,7 +2202,7 @@ HRESULT AddField(LPCWSTR fieldName, int controlId, BOOL suppressLog, DialogContr
 |**Fieldname**|Name of the field as it appears in your page's XML|
 |**controlId**|The ID of the control in your page's dialog box template|
 |**suppressLog**|Set to TRUE if you do not want the values from this field written to the log file; always set this parameter to TRUE for password or PIN fields|
-|**Type**|The type of control, which is one of the following:<br /><br /> -   **CONTROL_STATIC_TEXT**<br />-   **CONTROL_COMBO_BOX**<br />-   **CONTROL_LIST_VIEW**<br />-   **CONTROL_PROGRESS_BAR**<br />-   **CONTROL_GENERIC**<br />-   **CONTROL_RADIO_BUTTON**<br />-   **CONTROL_CHECK_BOX**<br />-   **CONTROL_TREE_VIEW**|
+|**Type**|The type of control, which is one of the following:<br><br> -   **CONTROL_STATIC_TEXT**<br>-   **CONTROL_COMBO_BOX**<br>-   **CONTROL_LIST_VIEW**<br>-   **CONTROL_PROGRESS_BAR**<br>-   **CONTROL_GENERIC**<br>-   **CONTROL_RADIO_BUTTON**<br>-   **CONTROL_CHECK_BOX**<br>-   **CONTROL_TREE_VIEW**|
 
 #####  <a name="AddRadioGroup"></a> AddRadioGroup
 
@@ -3244,7 +3244,7 @@ This method handles working with variables inside string values. It supports the
 |**Format**|**Description**|
 |-|-|
 |**$Name$**|Replaces the value of a memory variable with this name (If there is no memory variable with the name, the "token" will be removed.)|
-|**%Name%**|Either a task sequence variable or an environment variable. The order is as follows:<br /><br /> 1. Use the value of a task sequence variable, if present.<br />2. Use the value of an environment variable, if present.<br />3. Otherwise, remove this text from the string.|
+|**%Name%**|Either a task sequence variable or an environment variable. The order is as follows:<br><br> 1. Use the value of a task sequence variable, if present.<br>2. Use the value of an environment variable, if present.<br>3. Otherwise, remove this text from the string.|
 
 ### Table 52. HRESULT Parameter
 
@@ -3697,7 +3697,7 @@ Table 64 lists the attributes of the [TaskItem](#TaskItem) element and provides 
 
 |**Attribute**|**Description**|
 |-|-|
-|**Type**|Specifies the of element type that will be created in the UDI Wizard configuration file. An XML element will be created that corresponds to the value of this attribute. For example, if the value for this attribute is [File](#File), then a **File** element will be created in the UDI Wizard configuration file.<br /><br /> Currently, the only values supported are:<br /><br /> -   **File**, which requires two [Param](#Param) child elements (one **Param** child element with the **Name** attribute set to **Source** and another **Param** child element with the **Name** attribute set to **Dest**)<br />-   [Setter](#Setter), which requires one **Param** child element|
+|**Type**|Specifies the of element type that will be created in the UDI Wizard configuration file. An XML element will be created that corresponds to the value of this attribute. For example, if the value for this attribute is [File](#File), then a **File** element will be created in the UDI Wizard configuration file.<br><br> Currently, the only values supported are:<br><br> -   **File**, which requires two [Param](#Param) child elements (one **Param** child element with the **Name** attribute set to **Source** and another **Param** child element with the **Name** attribute set to **Dest**)<br>-   [Setter](#Setter), which requires one **Param** child element|
 
 ##### Remarks
 
@@ -4027,7 +4027,7 @@ Table 72 lists the methods for the **IMessageBoxService** interface.
 
 |**Method**|**Description**|
 |-|-|
-|[ShowMessageBox](#ShowMessageBox)|This overloaded method is used to display a message box with the following members:<br /><br /> -   [ShowMessageBox(String message, String caption, MessageBoxImage icon)](#ShowMessageBox_Stringmessage_Stringcaption_MessageBoxImage_icon)<br />-   [ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon)](#ShowMessageBox_stringmessage_stringcaption_MessageBoxButtonbutton_MessageBoxImage_icon)<br />-   [ShowMessageBox(Exception exception)](#ShowMessageBox_Exception_exception)|
+|[ShowMessageBox](#ShowMessageBox)|This overloaded method is used to display a message box with the following members:<br><br> -   [ShowMessageBox(String message, String caption, MessageBoxImage icon)](#ShowMessageBox_Stringmessage_Stringcaption_MessageBoxImage_icon)<br>-   [ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon)](#ShowMessageBox_stringmessage_stringcaption_MessageBoxButtonbutton_MessageBoxImage_icon)<br>-   [ShowMessageBox(Exception exception)](#ShowMessageBox_Exception_exception)|
 |[ShowDialogWindow](#ShowDialogWindow)|Use this method to create a new dialog box.|
 |[ShowWizardWindow](#ShowWizardWindow)|Use this method to display a custom editor inside a dialog box that includes **Next** and **Back** buttons for navigation.|
 
@@ -4342,7 +4342,7 @@ Table 86 lists the attributes of the [Error](#Error) element and provides a desc
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   **State**   |                                                                                       Specifies the return state of a task that encountered an error. Typically, the value for this attribute is set to Error. This value is displayed in the **State** column on the wizard page in the UDI Wizard.                                                                                       |
 |   **Text**    |                                                                                                                                                    Specifies the descriptive text about the error condition that the task encountered.                                                                                                                                                     |
-|   **Type**    | Specifies whether this element represents an error, warning, or success. The value specified in**Type** must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   <strong>0.</strong>The element represent a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error. |
+|   **Type**    | Specifies whether this element represents an error, warning, or success. The value specified in**Type** must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br><br> -   **0.**The element represent a success.<br>-   **1.** The element represents a warning.<br>-   **-1.** The element represents an error. |
 |   **Value**   |                                                                                  Specifies the value of the code that the task returned as a numeric value. Specifying the value of an asterisk (*) indicates the default element for return codes that are not listed in other [Error](#Error) elements.                                                                                  |
 
 ##### Remarks
@@ -4375,9 +4375,9 @@ Table 88 lists the attributes of the [ExitCode](#ExitCode) element and provides 
 
 |**Attribute**|Description|
 |-|-|
-|**State**|Specifies the return state of a task. The value of this attribute is displayed in the **State** column on the corresponding wizard page in the UDI Wizard. You can use any values for this attribute that are meaningful for your task. The following are typical values used for this attribute:<br /><br /> -   Success<br />-   Warning<br />-   Error|
+|**State**|Specifies the return state of a task. The value of this attribute is displayed in the **State** column on the corresponding wizard page in the UDI Wizard. You can use any values for this attribute that are meaningful for your task. The following are typical values used for this attribute:<br><br> -   Success<br>-   Warning<br>-   Error|
 |**Text**|Specifies the descriptive text about the exist code of the task.|
-|**Type**|Specifies whether this element represents an error, warning, or success. The value specified in type must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br /><br /> -   **0.** The element represents a success.<br />-   **1.** The element represents a warning.<br />-   **-1.** The element represents an error.|
+|**Type**|Specifies whether this element represents an error, warning, or success. The value specified in type must be unique within an [ExitCodes](#ExitCodes) element. The following are valid values for this element:<br><br> -   **0.** The element represents a success.<br>-   **1.** The element represents a warning.<br>-   **-1.** The element represents an error.|
 |**Value**|Specifies the value of the code that the task returned as a numeric value. Specifying the value of an asterisk (*) indicates the default element for return codes that are not listed in other [ExitCode](#ExitCode) elements.|
 
 ##### Remarks
@@ -4648,7 +4648,7 @@ Table 101 lists the attributes of the [RadioGroup](#RadioGroup) element and prov
 
 |**Attribute**|**Description**|
 |-|-|
-|**Locked**|Specifies whether the group of radio buttons is enabled for user input. The attribute can be set to:<br /><br /> -   **True**. Specifies that the radio buttons are disabled and users cannot select a radio button in the group.<br />-   **False**. Specifies that the radio buttons are enabled and users can select a radio button in the group.|
+|**Locked**|Specifies whether the group of radio buttons is enabled for user input. The attribute can be set to:<br><br> -   **True**. Specifies that the radio buttons are disabled and users cannot select a radio button in the group.<br>-   **False**. Specifies that the radio buttons are enabled and users can select a radio button in the group.|
 |**Name**|Specifies the name of the radio option group.|
 
 ##### Remarks
