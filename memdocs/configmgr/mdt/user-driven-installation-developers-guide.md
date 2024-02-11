@@ -174,7 +174,7 @@ The SamplePage project provides an example of how to create a custom wizard page
 
      The SamplePage project resides in the *local_folder*\SDK\UDI\SamplePage folder (where *local_folder* is the folder you created earlier in the process).
 
-3. In Visual Studio 2010, in Solution Explorer, right-click the SamplePage project, and then click **Properties**.
+3. In Visual Studio 2010, in Solution Explorer, right-click the SamplePage project, and then select **Properties**.
 
      The **SamplePage Property Pages** dialog box appears.
 
@@ -198,29 +198,29 @@ The SamplePage project provides an example of how to create a custom wizard page
     copy /y "$(ProjectDir)header.bmp" "$(TargetDir)header.bmp"
     ```
 
-10. In the **SamplePage Property Pages** dialog box, click **OK**.
+10. In the **SamplePage Property Pages** dialog box, select **OK**.
 
 11. Save the project.
 
-12. From the **Debug** menu, click **Start Debugging**.
+12. From the **Debug** menu, select **Start Debugging**.
 
      The **Microsoft Visual Studio**dialog box appears indicating that the source is out of date and asks whether you want to build the project.
 
-13. In the **Microsoft Visual Studio** dialog box, click **Yes**.
+13. In the **Microsoft Visual Studio** dialog box, select **Yes**.
 
      The **No Debugging Information** dialog box appears informing you that no debugging information is available for OSDSetupWizard.exe.
 
-14. In the **No Debugging Information** dialog box, click **Yes**.
+14. In the **No Debugging Information** dialog box, select **Yes**.
 
      The UDI Wizard opens with the custom wizard page displayed.
 
 15. Verify that you can select a value in **Choose your location**.
 
-16. In the **Wizard with sample page** form, click **Cancel**.
+16. In the **Wizard with sample page** form, select **Cancel**.
 
      The **Cancel Wizard** dialog box appears.
 
-17. In the **Cancel Wizard** dialog box, click **Yes**.
+17. In the **Cancel Wizard** dialog box, select **Yes**.
 
 18. Close Visual Studio 2010.
 
@@ -238,13 +238,13 @@ The SampleEditor project provides an example of how to create a custom wizard pa
 
 3. In Visual Studio 2010, in Solution Explorer, select the SampleEditor project.
 
-4. From the **Project** menu, click **Add Reference**.
+4. From the **Project** menu, select **Add Reference**.
 
      The **Add Reference** dialog box opens.
 
-5. In the **Add Reference** dialog box, click the **Browse** tab.
+5. In the **Add Reference** dialog box, select the **Browse** tab.
 
- 6. On the **Browse** tab, go to *installation_folder*\Bin (where *installation_folder* is the folder in which you installed MDT). Select the following files, and then click **OK**:
+ 6. On the **Browse** tab, go to *installation_folder*\Bin (where *installation_folder* is the folder in which you installed MDT). Select the following files, and then select **OK**:
 
     - Microsoft.Enterprise.UDIDesigner.Common.dll
 
@@ -262,35 +262,35 @@ The SampleEditor project provides an example of how to create a custom wizard pa
 
     > [!NOTE]
     >
-    > You can select multiple files on the **Browse** tab by holding down the CTRL key while you click the files.
+    > You can select multiple files on the **Browse** tab by holding down the CTRL key while you select the files.
 
 7. In Solution Explorer, go to SampleEditor/References.
 
 8. Verify that none of the references have any warnings or errors.
 
-9. In Solution Explorer, right-click the SampleEditor project, and then click **Properties**.
+9. In Solution Explorer, right-click the SampleEditor project, and then select **Properties**.
 
      The **SampleEditor Property Pages** dialog box appears.
 
-10. In the **SampleEditor Property Pages** dialog box, click the **Debug** tab.
+10. In the **SampleEditor Property Pages** dialog box, select the **Debug** tab.
 
-11. On the **Debug** tab, click **Start external program**.
+11. On the **Debug** tab, select **Start external program**.
 
-12. In **Start external program**, type ***installation_folder\Bin\UDIDesigner.exe*** (where *installation_folder* is the folder in which you installed MDT), and then click **OK**.
+12. In **Start external program**, type ***installation_folder\Bin\UDIDesigner.exe*** (where *installation_folder* is the folder in which you installed MDT), and then select **OK**.
 
     > [!TIP]
     >
-    > You can click the ellipsis (**...**) button to browse to the folder and select UDIDesigner.exe.
+    > You can select the ellipsis (**...**) button to browse to the folder and select UDIDesigner.exe.
 
-13. From the **File** menu, click **Save All**.
+13. From the **File** menu, select **Save All**.
 
 14. Copy the *local_folder*\SDK\SamplePage\SamplePage.dll.config file to the *installation_folder*\Bin\Config folder (where *local_folder* is the folder you created on the development computer earlier in the configuration process and*installation_folder* is the folder in which you installed MDT).
 
-15. In Visual Studio 2010, from the **Debug** menu, click **Start Debugging**.
+15. In Visual Studio 2010, from the **Debug** menu, select **Start Debugging**.
 
      The UDI Wizard Designer starts.
 
-16. In the UDI Wizard Designer, on the Ribbon, click **Open**.
+16. In the UDI Wizard Designer, on the Ribbon, select **Open**.
 
      The **Open** dialog box appears.
 
@@ -298,7 +298,7 @@ The SampleEditor project provides an example of how to create a custom wizard pa
 
      The Config.xml file opens, and the Custom [StageGroup](#StageGroup) is displayed in the details pane.
 
-18. In the details pane, click the **Configure** tab.
+18. In the details pane, select the **Configure** tab.
 
 19. Review the configuration information for the **Location** box, including the following:
 
@@ -356,10 +356,10 @@ A UDI wizard page has methods that correspond to each stage (or phase) of the li
 |**Method**|**Description**|
 |-|-|
 |**OnWindowCreated**|This method is called once, after the page's window has been created.<br><br> For this method, write code that initializes the page for the first time and only needs to be performed once. For example, use this method to initialize fields or to read configuration information from the **Setter** elements in the UDI Wizard configuration file.|
-|**OnWindowShown**|This method is called each time the page is displayed (shown) in the UDI Wizard. It is called the first time the page is displayed and each time you navigate to the page by clicking **Next** or **Back** in the wizard.<br><br> For this method, write code that prepares the page to be displayed—for example, reading memory variables, task sequence variables, or environment variables, and then updating the page based on any changes to those variables.|
-|**OnCommonControlEvent**|This method can be called anytime the wizard page is displayed and receives a WM_NOTIFY message from a child (typically, common controls).<br><br> For this method, write code that handles WM_NOTIFY based on the notification message. For example, you may want to respond to events from a common control, such as responding to click or double-click events for a **TreeView** control.|
+|**OnWindowShown**|This method is called each time the page is displayed (shown) in the UDI Wizard. It is called the first time the page is displayed and each time you navigate to the page by selecting **Next** or **Back** in the wizard.<br><br> For this method, write code that prepares the page to be displayed—for example, reading memory variables, task sequence variables, or environment variables, and then updating the page based on any changes to those variables.|
+|**OnCommonControlEvent**|This method can be called anytime the wizard page is displayed and receives a WM_NOTIFY message from a child (typically, common controls).<br><br> For this method, write code that handles WM_NOTIFY based on the notification message. For example, you may want to respond to events from a common control, such as responding to select or double-click events for a **TreeView** control.|
 |**OnUnhandledEvent**|This method is called anytime an unhandled window message occurs for your wizard page. This method provides the opportunity to intercept and handle these otherwise unhandled window messages.<br><br> For this method, write code that handles the window messages that are pertinent to your wizard page. Typically, you will not need to override this method.|
-|**OnNextClicked**|This method is called when you click **Next** in the wizard.<br><br> For this method, write code that performs any necessary actions before moving to the next wizard page—for example, performing validation that can take a long time. If the validation fails, you can cancel the **Next** request and display a message.|
+|**OnNextSelected**|This method is called when you select **Next** in the wizard.<br><br> For this method, write code that performs any necessary actions before moving to the next wizard page—for example, performing validation that can take a long time. If the validation fails, you can cancel the **Next** request and display a message.|
 |**OnWindowHidden**|This method is called each time the page is hidden when either the previous or next wizard page is shown.<br><br> For this method, write code that performs any actions before the page is hidden, prior to another page being shown. Typically, you will not need to override this method.|
 
 ####  <a name="ReviewSamplePageExample"></a> Review the SamplePage Example
@@ -372,7 +372,7 @@ Review the SamplePage example using the following list, which represents the seq
 
 3. The UDI Wizard displays the custom wizard page and allows for the desired control interaction as described in [Step 3: The UDI Wizard Displays the Custom Wizard Page](#UDIWizardDisplaysCustomWizardPage).
 
-4. When the custom wizard page has collected the information, perform any tasks necessary before clicking **Next** to proceed to the next wizard as described in [Step 4: The Next Button Is Clicked in the Custom Wizard Page](#TheNextButtonisClickedinCustomWizardPage).
+4. When the custom wizard page has collected the information, perform any tasks necessary before selecting **Next** to proceed to the next wizard as described in [Step 4: The Next Button Is Selected in the Custom Wizard Page](#TheNextButtonisSelectedinCustomWizardPage).
 
 #####  <a name="UDIWizardReadstheConfigFile"></a> Step 1: The UDI Wizard (OSDSetupWizard.exe) Reads the Config.xml File
 
@@ -466,17 +466,17 @@ The custom wizard page in the example is defined in the LocationPage.cpp file. W
 
 - **InitLocations**. This method populates the combo box from the list of locations in the Config.xml file. The [Data](#Data) element and child [DataItem](#DataItem) elements the Confg.xml file provide the list of possible values.
 
-- **OnNextClicked**. This method performs the following tasks:
+- **OnNextSelected**. This method performs the following tasks:
 
   -   Updates the **TSLocation** task sequence variable with the value selected in the combo box using the **SaveFields** method
 
   -   Adds information that will be shown on the **Summary** page using the **SaveFields** method
 
-#####  <a name="TheNextButtonisClickedinCustomWizardPage"></a> Step 4: The Next Button Is Clicked in the Custom Wizard Page
+#####  <a name="TheNextButtonisSelectedinCustomWizardPage"></a> Step 4: The Next Button Is Selected in the Custom Wizard Page
 
-When the user completes the fields on the custom wizard page, they click **Next**, which calls the **OnNextClicked** method. The **OnNextClicked** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.
+When the user completes the fields on the custom wizard page, they select **Next**, which calls the **OnNextSelected** method. The **OnNextSelected** method performs any necessary tasks before proceeding to the next wizard page, such as recording any configuration changes made on the custom wizard page.
 
- For the example custom wizard page, the override for the **OnNextClicked** method is implemented in the LocationPage.ccp file. In the **OnNextClicked** method in the example custom wizard page, the following methods are called:
+ For the example custom wizard page, the override for the **OnNextSelected** method is implemented in the LocationPage.ccp file. In the **OnNextSelected** method in the example custom wizard page, the following methods are called:
 
 1. [InitSection](#InitSection). This method initializes the header (label caption) for the summary data displayed on the **Summary** page. Typically, you can set this value using the **DisplayName()** function. The data associated with this caption is saved using the [SaveFields](#SaveFields) method.
 
@@ -596,11 +596,11 @@ When you right-click in the list box that contains the list of locations, a cont
 
 - **SelectedItem**. This data-bound property is activated when the user selects an item from the list. This property is tied to the **CurrentLocation** property in the view model, which is located in the LocationPageEditorViewModel.cs file and used by the [CollectionTControl](#CollectionTControl) control to pass the item selected when you edit or remove an existing item.
 
-- **AddItemAction**. This action is performed when the user clicks the **Add Item** option from the context-sensitive menu or the corresponding buttons on the Ribbon. There is a data binding to a property in the view model that returns the **AddLocationAction** object. This object is the **AddLocationCallback** method, located in the LocationPageEditorViewModel.cs file, and displays the dialog box in the AddEditLocationView.xaml file.
+- **AddItemAction**. This action is performed when the user selects the **Add Item** option from the context-sensitive menu or the corresponding buttons on the Ribbon. There is a data binding to a property in the view model that returns the **AddLocationAction** object. This object is the **AddLocationCallback** method, located in the LocationPageEditorViewModel.cs file, and displays the dialog box in the AddEditLocationView.xaml file.
 
-- **EditItemAction**. This action is performed when the user clicks the **Edit Item** option from the context-sensitive menu. There is a data binding to a property in the view model that returns the **EditLocationAction** object. This object is the **EditLocationCallback** method, located in the LocationPageEditorViewModel.cs file, and displays the dialog box in the AddEditLocationView.xaml file.
+- **EditItemAction**. This action is performed when the user selects the **Edit Item** option from the context-sensitive menu. There is a data binding to a property in the view model that returns the **EditLocationAction** object. This object is the **EditLocationCallback** method, located in the LocationPageEditorViewModel.cs file, and displays the dialog box in the AddEditLocationView.xaml file.
 
-- **RemoveAction**. This action is performed when the user clicks the **Remove Item** option from the context-sensitive menu. There is a data binding to a property in the view model that returns the **RemoveAction** object. This object is the **EditLocationCallback** method, located in the LocationPageEditorViewModel.cs file, and shows a message that confirms the deletion of the location.
+- **RemoveAction**. This action is performed when the user selects the **Remove Item** option from the context-sensitive menu. There is a data binding to a property in the view model that returns the **RemoveAction** object. This object is the **EditLocationCallback** method, located in the LocationPageEditorViewModel.cs file, and shows a message that confirms the deletion of the location.
 
 ######  <a name="ReviewDialogBoxforAddingEditingLocations"></a> Review the Dialog Box for Adding or Editing Locations
 
@@ -612,9 +612,9 @@ If you add a new location to the list of locations or edit an existing location,
 
     - A title, which you configure using the **DialogTitle** attribute of the dialog frame
 
-    - An **OK** button, which sets the return status as for the **Approved** property to **True** (The return status is checked in the **AddLocationCallback** method in the LocationPageEditorViewModel.cs file to determine whether the user clicked **OK**.)
+    - An **OK** button, which sets the return status as for the **Approved** property to **True** (The return status is checked in the **AddLocationCallback** method in the LocationPageEditorViewModel.cs file to determine whether the user selected **OK**.)
 
-    - A **Cancel** button, which sets the return status as for the **Approved** property to **False** (The return status is checked in the **AddLocationCallback** method in the LocationPageEditorViewModel.cs file to determine whether the user clicked **Cancel**.)
+    - A **Cancel** button, which sets the return status as for the **Approved** property to **False** (The return status is checked in the **AddLocationCallback** method in the LocationPageEditorViewModel.cs file to determine whether the user selected **Cancel**.)
 
 - A WPF element that contains:
 
@@ -654,7 +654,7 @@ The high-level process for creating custom UDI wizard pages is as follows:
 
 5. Write any code to perform the appropriate tasks while the user interacts with the wizard page.
 
- 6. Write any code to perform the appropriate tasks when the user clicks **Next** in the UDI Wizard (overrides for the **OnNextClicked** method), including the following steps:
+ 6. Write any code to perform the appropriate tasks when the user selects **Next** in the UDI Wizard (overrides for the **OnNextSelected** method), including the following steps:
 
     1. Update any memory variables, task sequence variables, environment variables, or XML file information.
 
@@ -970,7 +970,7 @@ The *property bag* is a container for memory variables. It is available from you
 
 #### TSVariableBag and TSRepository Components
 
-The **TSVariableBag** component allows you to read and write task sequence variables. It keeps the values in memory until the user clicks **Finish** (by default). You can access the **TSVariable** bag via the page's **TSVariables** method (implemented by the **WizardPageImpl** base class). These components log all reads and writes of task sequence variables.
+The **TSVariableBag** component allows you to read and write task sequence variables. It keeps the values in memory until the user selects **Finish** (by default). You can access the **TSVariable** bag via the page's **TSVariables** method (implemented by the **WizardPageImpl** base class). These components log all reads and writes of task sequence variables.
 
 #### WmiRepository Component
 
@@ -2096,9 +2096,9 @@ Form()->ControlEvent(eventId, controlId);
 
 ##### Save Form Data
 
-In the **OnNextClicked** method, call the form methods shown in Table 29.
+In the **OnNextSelected** method, call the form methods shown in Table 29.
 
-### Table 29. OnNextClicked Method
+### Table 29. OnNextSelected Method
 
 |**Method**|**Description**|
 |-|-|
@@ -2273,7 +2273,7 @@ BOOL IsFieldDisabled(int controlId)
 HRESULT InitSection(LPCWSTR key, LPCWSTR sectionCaption)
 ```
 
- This method initializes the summary data that will be shown on the **Summary** page, as shown in Table 36. Call this method in your **OnNextClicked** method before calling **SaveFields**. This method always returns **S_OK**.
+ This method initializes the summary data that will be shown on the **Summary** page, as shown in Table 36. Call this method in your **OnNextSelected** method before calling **SaveFields**. This method always returns **S_OK**.
 
 ### Table 36. HRESULT InitSection
 
@@ -2477,7 +2477,7 @@ This method reads the value of a task sequence variable.
 
 ##### void SetValue([in] LPCTSTR variableName, [in] LPCTSTR pValue)
 
-This method sets the value of a task sequence variable. This value is saved in memory. Task sequence values are written once you click **Finish** in the UDI Wizard.
+This method sets the value of a task sequence variable. This value is saved in memory. Task sequence values are written once you select **Finish** in the UDI Wizard.
 
 ##### void Clear(void)
 
@@ -2489,7 +2489,7 @@ This method removes a specific task sequence value from memory. The next time yo
 
 ##### HRESULT SuppressLogValue([in] LPCTSTR variableName)
 
-Whenever task sequence variables are written, such as when you click **Finish** in the UDI Wizard, the names and values are written to the log file. Call this method to suppress logging of sensitive values, such as passwords or PINs, for a specific task sequence variable.
+Whenever task sequence variables are written, such as when you select **Finish** in the UDI Wizard, the names and values are written to the log file. Call this method to suppress logging of sensitive values, such as passwords or PINs, for a specific task sequence variable.
 
 ##### void Save(void)
 
@@ -2517,7 +2517,7 @@ __interface IWizardFinish : IUnknown
 };
 ```
 
- This interface is useful in advanced scenarios where you want to perform additional processing when you click **Finish** or **Cancel** in the UDI Wizard. The UDI Wizard contains a **Finish** task that saves task sequence variables when you click **Finish**. If you cancel the wizard, the task only sets the **OSDSetupWizCancelled** task sequence variable to TRUE and does not save changes to any other task sequence variables.
+ This interface is useful in advanced scenarios where you want to perform additional processing when you select **Finish** or **Cancel** in the UDI Wizard. The UDI Wizard contains a **Finish** task that saves task sequence variables when you select **Finish**. If you cancel the wizard, the task only sets the **OSDSetupWizCancelled** task sequence variable to TRUE and does not save changes to any other task sequence variables.
 
  If you create your own finish component, you need to register it with code like this:
 
@@ -3038,7 +3038,7 @@ You must call this method before calling any other method. It initializes the **
 |**pPageView**|Provides access to the page that will be running tasks (This page must have a specific set of controls, which are outlined in the next few parameters.)|
 |**idListView**|The control ID of a **ListView** control that will display the list of tasks and the status of those tasks|
 |**idMessage**|The control ID of a text box that will be used to display a message for the task that you select|
-|**idRetryButton**|The control ID of a button you can click to run the tasks again|
+|**idRetryButton**|The control ID of a button you can select to run the tasks again|
 |**pPageInfo**|A wrapper around the page's XML (**TaskManager** loads the set of tasks to run from this XML.)|
 |**pCallback**|Can be null (If this parameter is not null, **TaskManager** calls the **Started** method when it starts a task and the **Finished** method for each task that finishes running.)|
 
@@ -3183,7 +3183,7 @@ __interface IWizardPage : IUnknown
     void WindowShown(void);
     void WindowHidden(void);
 
-    HRESULT NextClicked(void);
+    HRESULT NextSelected(void);
     void ControlEvent(WORD eventId, WORD controlId);
     void CommonControlEvent(WORD controlId, LPNMHDR pInfo, LPBOOL pCancel);
     void UnhandledEvent(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
@@ -3255,7 +3255,7 @@ This method handles working with variables inside string values. It supports the
 
 ##### HRESULT GotoPage(LPCTSTR pageName)
 
-This method has not been fully tested. The idea is that you can switch directly to a specific page based on the name of the page as defined in the .config XML file. Calling this method bypasses the **OnNextClicked** on your page. In addition, the behavior of this method is subject to change, so use it at your own risk.
+This method has not been fully tested. The idea is that you can switch directly to a specific page based on the name of the page as defined in the .config XML file. Calling this method bypasses the **OnNextSelected** on your page. In addition, the behavior of this method is subject to change, so use it at your own risk.
 
 ##### int ShowMessageBox(LPCTSTR message, LPCTSTR lpCaption, UINT uType)
 
@@ -4065,7 +4065,7 @@ void ShowMessageBox(String message, String caption, MessageBoxImage icon);
 MessageBoxResult ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon);
 ```
 
- This method displays a message box with the set of buttons you want shown and reports which button you clicked. See Table 75.
+ This method displays a message box with the set of buttons you want shown and reports which button you selected. See Table 75.
 
 ### Table 75. Parameters for the ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon) Method
 

@@ -1294,15 +1294,15 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
  **To add the ZTIConnect.wsf script as a task to the task sequence of a build**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the details pane, click ***task_sequence*** (where *task_sequence* is the task sequence to modify).
+3. In the details pane, select ***task_sequence*** (where *task_sequence* is the task sequence to modify).
 
-4. In the Actions pane, click **Properties**.
+4. In the Actions pane, select **Properties**.
 
-5. Click the Task Sequence tab, browse to **group** (where *group* is the group in which to run the ZTIConnec.wsf script), and click **Add**. Click **General**, and then click **Run Command Line**.
+5. Select the Task Sequence tab, browse to **group** (where *group* is the group in which to run the ZTIConnec.wsf script), and select **Add**. Select **General**, and then select **Run Command Line**.
 
    > [!NOTE]
    >  Add the task before adding any tasks that require access to resources on the target server.
@@ -1315,7 +1315,7 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
    | **Description** |                                       Type text that explains why the connection needs to be made.                                        |
    |   **Command**   | Type **cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server). |
 
-7. Complete the **Options** tab of the new task using the following information. Unless specified, accept default values, and then click **OK**.
+7. Complete the **Options** tab of the new task using the following information. Unless specified, accept default values, and then select **OK**.
 
    |**In this box** |**Do this** |
    |-|-|
@@ -1330,13 +1330,13 @@ Variations on model numbers and names can exist with virtually no difference in 
 
  **To create model aliases**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
-4. In the **Properties** dialog box, click the **Rules** tab.
+4. In the **Properties** dialog box, select the **Rules** tab.
 
 5. Create aliases for hardware types in the Make and Model sections of the MDT DB. Truncate the model type at the open parentheses "(" in the model name. For example, *HP DL360 (G112)* becomes *HP DL360*.
 
@@ -1429,23 +1429,23 @@ Conditional task sequence steps are configured in the Deployment Workbench, on t
 
  **To view the Options tab of a task sequence step**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the details pane, click **task_sequence** (where *task_sequence* is the name of the task sequence to configure).
+3. In the details pane, select **task_sequence** (where *task_sequence* is the name of the task sequence to configure).
 
-4. In the Actions pane, click **Properties**.
+4. In the Actions pane, select **Properties**.
 
-5. In the ***task_sequence*** **Properties** dialog box, on the **Task Sequence** tab, click ***step*** (where *step* is the name of the task sequence step to configure), and then click the **Options** tab.
+5. In the ***task_sequence*** **Properties** dialog box, on the **Task Sequence** tab, select ***step*** (where *step* is the name of the task sequence step to configure), and then select the **Options** tab.
 
    On the **Options** tab of the task sequence step, perform the following actions:
 
-- **Add.** Click this button to add a condition to the task sequence step.
+- **Add.** Select this button to add a condition to the task sequence step.
 
-- **Remove.** Click this button to remove an existing condition in a task sequence step.
+- **Remove.** Select this button to remove an existing condition in a task sequence step.
 
-- **Edit.** Click this button to modify an existing condition in a task sequence step.
+- **Edit.** Select this button to modify an existing condition in a task sequence step.
 
 ### IF Statements in Conditions
 
@@ -1463,9 +1463,9 @@ All task sequence conditions include one or more **IF** statements. **IF** state
 
  **To add an IF statement condition to a task sequence step**
 
-1. On the ***step*** **Option** tab (where *step* is the name of the task sequence step to configure), click **Add**, and then click **If statement**.
+1. On the ***step*** **Option** tab (where *step* is the name of the task sequence step to configure), select **Add**, and then select **If statement**.
 
-2. In the **If Statement Properties** dialog box, click **condition** (where *condition* is one of the conditions listed in the previous table), and then click **OK**.
+2. In the **If Statement Properties** dialog box, select **condition** (where *condition* is one of the conditions listed in the previous table), and then select **OK**.
 
 ### Task Sequence Variables in Conditions
 
@@ -1473,7 +1473,7 @@ Use the **Task Sequence Variable** condition to evaluate any task sequence varia
 
  **To add a condition based on a task sequence variable**
 
-1. On the ***step*** **Options** tab (where *step* is the name of the task sequence step to configure), click **Add Condition**, and then click **Task Sequence Variable**.
+1. On the ***step*** **Options** tab (where *step* is the name of the task sequence step to configure), select **Add Condition**, and then select **Task Sequence Variable**.
 
 2. In the **Task Sequence Variable** Condition dialog box, in the **Variable** box, type **OSDJoinType**.
 
@@ -1481,9 +1481,9 @@ Use the **Task Sequence Variable** condition to evaluate any task sequence varia
     >
     > This variable is set to **0** for computers that are joined to a domain and to **1** for those in a workgroup.
 
-3. In the **Condition** box, click **equal**.
+3. In the **Condition** box, select **equal**.
 
-4. In the **Value** box, type **1**, and then click **OK**.
+4. In the **Value** box, type **1**, and then select **OK**.
 
 ### Operating System Version in Conditions
 
@@ -1491,15 +1491,15 @@ Use the **Operating System Version** condition to verify the existing operating 
 
  **To add a condition based on operating system version**
 
-1. In the Task Sequence Editor, click the **Capture Network Settings** task.
+1. In the Task Sequence Editor, select the **Capture Network Settings** task.
 
-2. Click **Add Condition**, and then click **Operating System Version**.
+2. Select **Add Condition**, and then select **Operating System Version**.
 
-3. In the **Architecture** box, click the relevant server. For this example, click **x86**.
+3. In the **Architecture** box, select the relevant server. For this example, select **x86**.
 
-4. In the **Operating system** box, click the operating system and version for which to set a condition. For this example, click **x86 Windows 2003**.
+4. In the **Operating system** box, select the operating system and version for which to set a condition. For this example, select **x86 Windows 2003**.
 
-5. In the **Condition** box, click the relevant condition, and then click **OK**.
+5. In the **Condition** box, select the relevant condition, and then select **OK**.
 
 ### File Properties in Conditions
 
@@ -1513,17 +1513,17 @@ Use the **File Properties** condition to verify the version and/or times tamp of
 
 2. Create an **Install Software** step to deploy the DAO package.
 
-3. Click the **Install Software** task sequence step created in step 2, and then click the **Options** tab.
+3. Select the **Install Software** task sequence step created in step 2, and then select the **Options** tab.
 
-4. Click **Add Condition**, and then click **File Properties**.
+4. Select **Add Condition**, and then select **File Properties**.
 
 5. In the **Path** box, type **C:\Program Files\Microsoft Shared\DAO\dao360.dll**.
 
-6. Select the **Check the version** check box, and then click **not equals** for the condition.
+6. Select the **Check the version** check box, and then select **not equals** for the condition.
 
 7. In the **Version** box, type **3.60.6815**.
 
-8. In this case, clear the **Check the timestamp** check box, and then click **OK**.
+8. In this case, clear the **Check the timestamp** check box, and then select **OK**.
 
 ### Folder Properties in Conditions
 
@@ -1537,19 +1537,19 @@ Use the **Folder Properties** condition to verify the time stamp of a given fold
 
 2. Create a **Command Line** task to perform the data-conversion process.
 
-3. Click the task created in step 1.
+3. Select the task created in step 1.
 
-4. Click **Add Condition**, and then click **Folder Properties**.
+4. Select **Add Condition**, and then select **Folder Properties**.
 
 5. In the **Path** box, type the path of the folder that contains the application.
 
 6. Select the **Check the timestamp** check box.
 
-7. Click **Less than or equals** for the condition.
+7. Select **Less than or equals** for the condition.
 
-8. In the **Date** box, click **12/31/2007**.
+8. In the **Date** box, select **12/31/2007**.
 
-9. In the **Time** box, click **12:00:00 AM**, and then click **OK**.
+9. In the **Time** box, select **12:00:00 AM**, and then select **OK**.
 
 ### Registry Settings in Conditions
 
@@ -1559,21 +1559,21 @@ Use the **Registry Setting** condition to verify the existence of keys and value
 
 1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that deploys Windows 8).
 
-2. Click the first task in the sequence, and then click the **Options** tab.
+2. Select the first task in the sequence, and then select the **Options** tab.
 
-3. Click **Add Condition**, and then click **Registry Setting**.
+3. Select **Add Condition**, and then select **Registry Setting**.
 
-4. In the **Root key** list, click **HKEY_LOCAL_MACHINE**.
+4. In the **Root key** list, select **HKEY_LOCAL_MACHINE**.
 
 5. In the **Key** box, type **SOFTWARE\WOODGROVE**.
 
-6. Click **not exists** for the condition. In this case, the task will run, and the sequence continue only if the key does not exist.
+6. Select **not exists** for the condition. In this case, the task will run, and the sequence continue only if the key does not exist.
 
 7. Optionally, the condition could check for the nonexistence of a value if the value name is typed in the **Value name** box.
 
 8. If a condition other than **exists/not exists** was used, specify a value and value type.
 
-9. Click **OK**.
+9. Select **OK**.
 
 ### WMI Queries in Conditions
 
@@ -1583,13 +1583,13 @@ Use the **WMI Query** condition to run any WMI query. The condition is evaluated
 
 1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
 
-2. Click the first task in the sequence, and then click the **Options** tab.
+2. Select the first task in the sequence, and then select the **Options** tab.
 
-3. Click **Add Condition**, and then click **Query WMI**.
+3. Select **Add Condition**, and then select **Query WMI**.
 
 4. In the **WMI Namespace** box, type **root\cimv2**.
 
-5. In the **WQL Query** box, type **Select \* From Win32_ComputerSystem WHERE Model LIKE "%Dell%%1950%"**. Click **OK**.
+5. In the **WQL Query** box, type **Select \* From Win32_ComputerSystem WHERE Model LIKE "%Dell%%1950%"**. Select **OK**.
 
 ### Installed Software in Conditions
 
@@ -1599,15 +1599,15 @@ Use an **Installed Software** condition to check if a particular piece of softwa
 
 1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
 
-2. Click the first task in the sequence, and then click the **Options** tab.
+2. Select the first task in the sequence, and then select the **Options** tab.
 
-3. Click **Add Condition**, and then click **Installed Software**.
+3. Select **Add Condition**, and then select **Installed Software**.
 
-4. Click **Browse**, and then click the MSI file for SQL Server 2012.
+4. Select **Browse**, and then select the MSI file for SQL Server 2012.
 
 5. Select the **Match this specific product** check box to specify that only computers with SQL Server 2012 and not any other versions are the target computers this query should detect.
 
-6. Click **OK**.
+6. Select **OK**.
 
 ### Complex Conditions
 
@@ -1619,27 +1619,27 @@ Multiple conditions can be grouped using **IF** statements to create complex con
 
 1. In the Configuration Manager console or in the Deployment Workbench, in the task sequence editor, edit ***task_sequence*** (where *task sequence* is the task sequence that will upgrade the servers).
 
-2. Click the task sequence step to which to add the condition, and then click the **Options** tab.
+2. Select the task sequence step to which to add the condition, and then select the **Options** tab.
 
-3. Click **Add condition**, click **If Statement**, and then click **All conditions**. Click **OK**.
+3. Select **Add condition**, select **If Statement**, and then select **All conditions**. Select **OK**.
 
-4. Click the condition statement, click **Add condition**, and then click **WMI Query**.
+4. Select the condition statement, select **Add condition**, and then select **WMI Query**.
 
-5. Ensure **root\cimv2** is specified as the WMI namespace, and then, in the **WQL Query** box, type **SELECT \* FROM Win32_ComputerSystem WHERE ComputerModel LIKE "%Contoso%1950%"**. Click **OK**.
+5. Ensure **root\cimv2** is specified as the WMI namespace, and then, in the **WQL Query** box, type **SELECT \* FROM Win32_ComputerSystem WHERE ComputerModel LIKE "%Contoso%1950%"**. Select **OK**.
 
-6. Click the **IF** statement, and then click **Add condition**. Click **If statement**, and then click **Any condition**. Click **OK**.
+6. Select the **IF** statement, and then select **Add condition**. Select **If statement**, and then select **Any condition**. Select **OK**.
 
-7. Click the second **IF** statement. Click **Add condition**, and then click **Operating System Version**.
+7. Select the second **IF** statement. Select **Add condition**, and then select **Operating System Version**.
 
-8. In the **Architecture** box, click the architecture for the servers. For this example, click **x86**.
+8. In the **Architecture** box, select the architecture for the servers. For this example, select **x86**.
 
-9. In the **Operating system** box, click the operating system and version. For this example, click **x86 Windows 2003 original release**. Click **OK**.
+9. In the **Operating system** box, select the operating system and version. For this example, select **x86 Windows 2003 original release**. Select **OK**.
 
-10. Click the second **IF** statement. Click **Add condition**, and then click **Operating System Version**.
+10. Select the second **IF** statement. Select **Add condition**, and then select **Operating System Version**.
 
-11. In the **Architecture** box, click the architecture for the servers. For this example, click **x86**.
+11. In the **Architecture** box, select the architecture for the servers. For this example, select **x86**.
 
-12. In the **Operating system** box, click the operating system and version. For this example, click **x86 Windows 2008 original release**. Click **OK**.
+12. In the **Operating system** box, select the operating system and version. For this example, select **x86 Windows 2008 original release**. Select **OK**.
 
 ## Creating a Highly Scalable LTI Deployment Infrastructure
 
@@ -1732,11 +1732,11 @@ When scaling the LTI deployment architecture, you use DFS-R as the basis for rep
 
 2. In the DFS Management console, expand DFS Management.
 
-3. Right-click **Replication**, and then click **New Replication Group**.
+3. Right-click **Replication**, and then select **New Replication Group**.
 
-4. In the New Replication Group Wizard, on the **Replication Group Type** page, click **New Multipurpose Replication Group**.
+4. In the New Replication Group Wizard, on the **Replication Group Type** page, select **New Multipurpose Replication Group**.
 
-5. Click **Next**.
+5. Select **Next**.
 
 6. On the **Name and Domain** page, type the following information:
 
@@ -1746,79 +1746,79 @@ When scaling the LTI deployment architecture, you use DFS-R as the basis for rep
 
    -   Ensure that the **Domain** box contains the correct domain name.
 
-7. Click **Next**.
+7. Select **Next**.
 
 8. On the **Replication Group Members** page, perform these steps:
 
-   1. Click **Add**.
+   1. Select **Add**.
 
    2. Type the names of all servers that are to be members of this replication group—for example, all child deployment servers and the master deployment server.
 
-   3. Click **OK**.
+   3. Select **OK**.
 
-9. Click **Next**.
+9. Select **Next**.
 
-10. On the **Topology Selection** page, click **Hub and Spoke**, and then click **Next**.
+10. On the **Topology Selection** page, select **Hub and Spoke**, and then select **Next**.
 
-11. On the **Hub Members** page, click the master deployment server, and then click **Add**.
+11. On the **Hub Members** page, select the master deployment server, and then select **Add**.
 
-12. Click **Next**.
+12. Select **Next**.
 
 13. On the **Hub and Spoke Connections** page, ensure that for each child deployment server the master deployment server listed is the **Required Hub Member**.
 
-14. Click **Next**.
+14. Select **Next**.
 
 15. On the **Replication Group Schedule and Bandwidth** page, specify a schedule for replicating the content between servers.
 
-16. Click **Next**.
+16. Select **Next**.
 
-17. On the **Primary Member** page, in the **Primary Member** box, click the master deployment server.
+17. On the **Primary Member** page, in the **Primary Member** box, select the master deployment server.
 
-18. Click **Next**.
+18. Select **Next**.
 
-19. On the **Folders to Replicate** page, click **Add**, and then perform these steps:
+19. On the **Folders to Replicate** page, select **Add**, and then perform these steps:
 
-    1. In the **Local Path of the folder to replicate** box, click **Browse** to go to the <em>X:\\</em>Deployment folder (where *X* is the drive letter on the deployment server).
+    1. In the **Local Path of the folder to replicate** box, select **Browse** to go to the <em>X:\\</em>Deployment folder (where *X* is the drive letter on the deployment server).
 
-    2. Click **Use name based on path**.
+    2. Select **Use name based on path**.
 
-    3. Click **OK**.
+    3. Select **OK**.
 
-    4. Click **Add**.
+    4. Select **Add**.
 
-    5. In the **Add Folder to Replicate** dialog box, click **Browse** to go to the *X:*\RemoteInstall\Boot folder.
+    5. In the **Add Folder to Replicate** dialog box, select **Browse** to go to the *X:*\RemoteInstall\Boot folder.
 
-    6. Click **Use name based on path**.
+    6. Select **Use name based on path**.
 
-20. Click **Next**.
+20. Select **Next**.
 
 21. On the **Local Path of Distribution on Other Members** page, perform these steps:
 
-    1. Select all the members in the distribution group, and then click **Edit**.
+    1. Select all the members in the distribution group, and then select **Edit**.
 
-    2. In the **Edit Local Path** dialog box, click **Enabled**.
+    2. In the **Edit Local Path** dialog box, select **Enabled**.
 
     3. Type the path where the Deployment Share folder should be stored on the child deployment server—for example, ***X:\Deployment*** (where *X* is the drive letter on the deployment server).
 
-    4. Click **OK**.
+    4. Select **OK**.
 
-22. Click **Next**.
+22. Select **Next**.
 
 23. On the **Local Path of Boot on Other Members** page, perform these steps:
 
-    1. Select all the members in the distribution group, and then click **Edit**.
+    1. Select all the members in the distribution group, and then select **Edit**.
 
-    2. In the **Edit Local Path** dialog box, click **Enabled**.
+    2. In the **Edit Local Path** dialog box, select **Enabled**.
 
     3. Type the path where the Boot folder should be stored on the child deployment server—for example, ***X:\RemoteInstall\Boot*** (where *X* is the drive letter on the deployment server).
 
-    4. Click **OK**.
+    4. Select **OK**.
 
-24. Click **Next**.
+24. Select **Next**.
 
-25. On the **Remote Settings and Create Replication Group** page, click **Create** to complete the New Replication Group Wizard.
+25. On the **Remote Settings and Create Replication Group** page, select **Create** to complete the New Replication Group Wizard.
 
-26. On the **Confirmation** page, click **Close** to close the wizard.
+26. On the **Confirmation** page, select **Close** to close the wizard.
 
 > [!NOTE]
 >
@@ -1837,11 +1837,11 @@ Before SQL Server replication can be configured, complete several pre-configurat
 
 2. Ensure that the SQL Server Browser service is enabled and set to Automatic.
 
-3. In the **SQL Server Surface Area Configuration** box, click **Local and Remote connections**.
+3. In the **SQL Server Surface Area Configuration** box, select **Local and Remote connections**.
 
    **To prepare for SQL Server replication on the child deployment server**
 
-4. In the **SQL Server Surface Area Configuration** box, click **Local and Remote connections**.
+4. In the **SQL Server Surface Area Configuration** box, select **Local and Remote connections**.
 
 5. Optionally, create an empty database to host the replicated MDT DB.
 
@@ -1873,35 +1873,35 @@ To configure the master deployment server as a SQL Server publisher, perform the
 
 1. Open SQL Server Management Studio.
 
-2. Right-click the **Replication** node, and then click **Configure Distribution**.
+2. Right-click the **Replication** node, and then select **Configure Distribution**.
 
-3. In the Configure Distribution Wizard, click **Next**.
+3. In the Configure Distribution Wizard, select **Next**.
 
-4. On the **Distributor** page, click **will act as its own Distributor; SQL Server will create a distribution database and log**, and then click **Next**.
+4. On the **Distributor** page, select **will act as its own Distributor; SQL Server will create a distribution database and log**, and then select **Next**.
 
 5. On the **Snapshot Folder** page, in the **Preparing for SQL Server Replication** section, type the UNC path to the snapshot folder created.
 
-6. On the **Distribution Database** page, click **Next**.
+6. On the **Distribution Database** page, select **Next**.
 
-7. On the **Publishers** page, click the master deployment server to set it as the distributor, and then click **Next**.
+7. On the **Publishers** page, select the master deployment server to set it as the distributor, and then select **Next**.
 
-8. On the **Wizard Actions** page, click **Configure Distribution**, and then click **Next**.
+8. On the **Wizard Actions** page, select **Configure Distribution**, and then select **Next**.
 
-9. Click **Finish**, and then click **Close** when the wizard is finished.
+9. Select **Finish**, and then select **Close** when the wizard is finished.
 
 #### Enable the MDT DB for Replication
 
 To enable the MDT DB for replication on the master deployment server, perform these steps:
 
-1. In SQL Server Management Studio, right-click the **Replication** node, and then click **Publisher Properties**.
+1. In SQL Server Management Studio, right-click the **Replication** node, and then select **Publisher Properties**.
 
 2. On the **Publisher Properties** page, perform these steps:
 
-   1. Click **Publisher Databases**.
+   1. Select **Publisher Databases**.
 
-   2. Click the MDT DB, and then click **Transactional**.
+   2. Select the MDT DB, and then select **Transactional**.
 
-   3. Click **OK**.
+   3. Select **OK**.
 
    The MDT DB is now configured for transactional and snapshot replication.
 
@@ -1909,41 +1909,41 @@ To enable the MDT DB for replication on the master deployment server, perform th
 
 To create a publication of the MDT DB to which the child deployment servers can subscribe, perform these steps:
 
-1. In SQL Server Management Studio, expand Replication, right-click **Local Publications**, and then click **New Publication**.
+1. In SQL Server Management Studio, expand Replication, right-click **Local Publications**, and then select **New Publication**.
 
-2. In the New Publication Wizard, click **Next**.
+2. In the New Publication Wizard, select **Next**.
 
-3. On the **Publication Database** page, click the MDT DB, and then click **Next**.
+3. On the **Publication Database** page, select the MDT DB, and then select **Next**.
 
-4. On the **Publication Type** page, click **Snapshot publication**, and then click **Next**.
+4. On the **Publication Type** page, select **Snapshot publication**, and then select **Next**.
 
-5. On the **Articles** page, select all **Tables, Stored Procedures**, and **Views**, and then click **Next**.
+5. On the **Articles** page, select all **Tables, Stored Procedures**, and **Views**, and then select **Next**.
 
-6. On the **Articles Issues** page, click **Next**.
+6. On the **Articles Issues** page, select **Next**.
 
-7. On the **Filter Table Rows** page, click **Next**.
+7. On the **Filter Table Rows** page, select **Next**.
 
 8. On the **Snapshot Agent** page, perform these steps:
 
     1. Select **Create a snapshot immediately and keep the snapshot available to initialize subscriptions**.
 
-    2. Click **Schedule the Snapshot Agent to run at the following times**.
+    2. Select **Schedule the Snapshot Agent to run at the following times**.
 
-    3. Click **Change**.
+    3. Select **Change**.
 
     > [!NOTE]
     >
     > Specify a schedule that will occur one hour before the database replicates.
 
-9. Click **Next**.
+9. Select **Next**.
 
-10. On the **Agent Security** page, click the account under which the snapshot agent will run, and then click **Next**.
+10. On the **Agent Security** page, select the account under which the snapshot agent will run, and then select **Next**.
 
-11. On the **Wizard Actions** page, click **Create the publication**, and then click **Next**.
+11. On the **Wizard Actions** page, select **Create the publication**, and then select **Next**.
 
 12. On the **Complete the Wizard** page, in the **publication name** box, type a descriptive publication name.
 
-13. Click **Finish** to complete the wizard, and then click **Close** when the wizard has created the publication.
+13. Select **Finish** to complete the wizard, and then select **Close** when the wizard has created the publication.
 
     > [!NOTE]
     >
@@ -1957,21 +1957,21 @@ Now that the MDT DB has been published, you can add the child deployment servers
 
 1. In SQL Server Management Studio, go to Replication/Local Publications.
 
-2. Right-click the publication created in the previous section, and then click **New Subscriptions**.
+2. Right-click the publication created in the previous section, and then select **New Subscriptions**.
 
-3. In the New Subscriptions Wizard, click **Next**.
+3. In the New Subscriptions Wizard, select **Next**.
 
-4. On the **Publication** page, click the publication created in the previous section.
+4. On the **Publication** page, select the publication created in the previous section.
 
-5. On the **Distribution Agent Location** page, click **Run all agents at the Distributor SERVERNAME (push subscriptions)**, and then click **Next**.
+5. On the **Distribution Agent Location** page, select **Run all agents at the Distributor SERVERNAME (push subscriptions)**, and then select **Next**.
 
 6. On the **Subscribers** page, add each of the child deployment servers by performing the following steps:
 
-   1. Click **Add Subscriber**, and then click **Add SQL Server Subscriber**.
+   1. Select **Add Subscriber**, and then select **Add SQL Server Subscriber**.
 
    2. Add each child deployment server.
 
-   3. For each child deployment server added, in the **Subscription Database** box, click the empty MDT DB on that child deployment server.
+   3. For each child deployment server added, in the **Subscription Database** box, select the empty MDT DB on that child deployment server.
 
    > [!NOTE]
    >  If the empty MDT DB has not yet been created, in the **Subscription Database** box, select the option to create a new database.
@@ -1979,23 +1979,23 @@ Now that the MDT DB has been published, you can add the child deployment servers
    > [!NOTE]
    >  This database must be given the same name as the MDT DB on the master deployment server. For example, if the MDT DB on the master deployment server is called *MDTDB*, create an empty database called *MDTDB* on the child deployment server.
 
-7. Click **Next**.
+7. Select **Next**.
 
-8. On the **Distribution Agent Security** page, click **...** to open the **Distribution Agent Security** dialog box.
+8. On the **Distribution Agent Security** page, select **...** to open the **Distribution Agent Security** dialog box.
 
-9. Type the details of the account to use for the distribution agent, and then click **Next**.
+9. Type the details of the account to use for the distribution agent, and then select **Next**.
 
 10. On the **Synchronization Schedule** page, perform these steps:
 
-    1. In the **Agent Schedule** box, click **<Define schedule\>**.
+    1. In the **Agent Schedule** box, select **<Define schedule\>**.
 
-    2. Specify the schedule that should be used to replicate the database between master and child deployment servers, and then click **Next**.
+    2. Specify the schedule that should be used to replicate the database between master and child deployment servers, and then select **Next**.
 
-11. On the **Initialize Subscription** page, click **Next**.
+11. On the **Initialize Subscription** page, select **Next**.
 
-12. On the **Wizard Actions** page, click **Create the subscription(s)**, and then click **Next**.
+12. On the **Wizard Actions** page, select **Create the subscription(s)**, and then select **Next**.
 
-13. Click **Finish**, and then click **Close** when the wizard has successfully finished.
+13. Select **Finish**, and then select **Close** when the wizard has successfully finished.
 
     SQL Server replication is now configured, and the MDT DB will be replicated from the master deployment server to all child deployment servers that have been subscribed to it on a periodic basis.
 
@@ -2019,37 +2019,37 @@ The LTI deployment infrastructure has now been successfully created, and each lo
 >
 > The following procedure assumes that the deployment share has been created and set as the Deployment$ share.
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
-4. Click the **Rules** tab, and then modify the CustomSettings.ini file to configure the following properties:
+4. Select the **Rules** tab, and then modify the CustomSettings.ini file to configure the following properties:
 
    - For each SQL Server section added, configure **SQLServer** to use the server name **%WDSServer%—**for example, **SQLServer=%WDSServer%**.
 
    - If configuring **DeployRoot**, configure **DeployRoot** to use the **%WDSServer%** variable—for example, **DeployRoot=\\\\%WDSServer%\Deployment$**.
 
-5. Click **Edit Bootstrap.ini**.
+5. Select **Edit Bootstrap.ini**.
 
 6. Configure BootStrap.ini to use the **%WDSServer%** property by adding or changing the **DeployRoot** value to **DeployRoot=\\\\%WDSServer%\Deployment$**.
 
-7. Click **File**, and then click **Save** to save the changes to the BootStrap.ini file.
+7. Select **File**, and then select **Save** to save the changes to the BootStrap.ini file.
 
-8. Click **OK**.
+8. Select **OK**.
 
     The deployment share and LiteTouchPE_x86.wim Windows PE environment need to be updated.
 
-9. In the Actions pane, click **Update Deployment Share**.
+9. In the Actions pane, select **Update Deployment Share**.
 
      The Update Deployment Share Wizard starts.
 
-10. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+10. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-11. On the **Summary** page, verify the details are correct, and then click **Next**.
+11. On the **Summary** page, verify the details are correct, and then select **Next**.
 
-12. On the **Confirmation** page, click **Finish**.
+12. On the **Confirmation** page, select **Finish**.
 
     The following example illustrates CustomSettings.ini after performing the steps outlined in this section.
 
@@ -2277,17 +2277,17 @@ After you have created the LocationServer.xml file, add it to the LiteTouch_x86 
 
 3. Copy LocationServer.xml to the *deployment_share*\Extra Files\Deploy\Control folder (where *deployment_share* is the fully qualified path to the root folder of the deployment share).
 
-4. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+4. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 5. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-6. In the Actions pane, click **Properties**.
+6. In the Actions pane, select **Properties**.
 
 7. In the ***deployment_shareProperties*** dialog box (where deployment_share is the name of the deployment share), perform these steps:
 
-    1. Click the **Windows PE platform Settings** tab (where *platform* is the architecture of the Windows PE image to be configured).
+    1. Select the **Windows PE platform Settings** tab (where *platform* is the architecture of the Windows PE image to be configured).
 
-    2. In the **Windows PE Customizations** section, in the **Extra directory to add** box, type ***path*** (where *path* is the fully qualified path to the Extra Files folder—for example, D:\Production Deployment Share\Extra Files), and then click **OK**.
+    2. In the **Windows PE Customizations** section, in the **Extra directory to add** box, type ***path*** (where *path* is the fully qualified path to the Extra Files folder—for example, D:\Production Deployment Share\Extra Files), and then select **OK**.
 
 ###  <a name="UpdateBootstrap"></a> Updating the BootStrap.ini File
 
@@ -2295,19 +2295,19 @@ When you create a deployment share using the Deployment Workbench, a **DeployRoo
 
  **To remove the DeployRoot property from BootStrap.ini**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
-4. In the ***deployment_shareProperties*** dialog box (where *deployment_share* is the name of the deployment share), click the **Rules** tab, and then click **Edit BootStrap.ini**.
+4. In the ***deployment_shareProperties*** dialog box (where *deployment_share* is the name of the deployment share), select the **Rules** tab, and then select **Edit BootStrap.ini**.
 
 5. Remove the **DeployRoot** value (for example, **DeployRoot=\\\Server\Deployment$**).
 
-6. Click **File**, and then click **Save** to save the changes to the BootStrap.ini file.
+6. Select **File**, and then select **Save** to save the changes to the BootStrap.ini file.
 
-7. Click **OK** to submit the changes.
+7. Select **OK** to submit the changes.
 
 ###  <a name="UpdateDeploymentShare"></a> Updating the Deployment Share
 
@@ -2315,19 +2315,19 @@ The deployment share must next be updated to generate a new LiteTouch_x86 and Li
 
  **To update the deployment share**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Update Deployment Share**.
+3. In the Actions pane, select **Update Deployment Share**.
 
      The Update Deployment Share Wizard starts.
 
-4. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+4. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-5. On the **Summary** page, verify the details are correct, and then click **Next**.
+5. On the **Summary** page, verify the details are correct, and then select **Next**.
 
-6. On the **Confirmation** page, click **Finish**.
+6. On the **Confirmation** page, select **Finish**.
 
 > [!NOTE]
 >
@@ -2361,11 +2361,11 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
  **To create a task sequence to capture the user state in the Replace Computer deployment scenario**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/ *deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **New Task Sequence**.
+3. In the Actions pane, select **New Task Sequence**.
 
     The New Task Sequence Wizard starts.
 
@@ -2373,10 +2373,10 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
    |**On this wizard page** |**Do this** |
    |-|-|
-   |**General Settings** |1. In **Task sequence ID**, type **VISTA_EXIST**.<br>2. In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br>3. Click **Next**.|
-   |**Select Template** |In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Replace Task Sequence**, and then click **Next**.|
-   |**Summary** |Verify that the configuration details are correct, and then click **Next**.|
-   |**Confirmation** |Click **Finish**.|
+   |**General Settings** |1. In **Task sequence ID**, type **VISTA_EXIST**.<br>2. In **Task sequence name**, type **Perform Replace Computer Scenario on Existing Computer**.<br>3. Select **Next**.|
+   |**Select Template** |In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Replace Task Sequence**, and then select **Next**.|
+   |**Summary** |Verify that the configuration details are correct, and then select **Next**.|
+   |**Confirmation** |Select **Finish**.|
 
    The New Task Sequence Wizard finishes, and the **VISTA_EXIST** task sequence is added to the list of task sequences.
 
@@ -2386,11 +2386,11 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
  **To create a task sequence to deploy the user state in the Replace Computer deployment scenario**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **New Task Sequence**.
+3. In the Actions pane, select **New Task Sequence**.
 
     The New Task Sequence Wizard starts.
 
@@ -2398,13 +2398,13 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
    | **On this wizard page** |                                                                                                                                                         **Do this**                                                                                                                                                         |
    |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |  **General Settings**   |                                                                          1. In **Task sequence ID**, type **VISTA_NEW**.<br>2. In **Task sequence name**, type **Perform Replace Computer Scenario on New Computer**.<br>3. Click **Next**.                                                                          |
-   |   **Select Template**   |                                                                In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.                                                                 |
-   |      **Select OS**      | In **The following operating system images are available to be deployed with this task sequence**. Select one to use, select ***captured_vista_image*** (where *captured_vista_image* is the captured image the reference computer added to the Operating Systems node in the Deployment Workbench), and then click *Next*. |
-   | **Specify Product Key** |                                                                                                                       Select **Do not specify a product key at this time**, and then click **Next**.                                                                                                                        |
-   |       OS Settings       |                                                  1. In **Full Name**, type **Woodgrove Employee**.<br>2. In **Organization**, type **Woodgrove Bank**.<br>3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br>4. Click **Next**.                                                   |
-   |   **Admin Password**    |                                                                                           In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then click **Finish**.                                                                                           |
-   |    **Confirmation**     |                                                                                                                                                      Click **Finish**.                                                                                                                                                      |
+   |  **General Settings**   |                                                                          1. In **Task sequence ID**, type **VISTA_NEW**.<br>2. In **Task sequence name**, type **Perform Replace Computer Scenario on New Computer**.<br>3. Select **Next**.                                                                          |
+   |   **Select Template**   |                                                                In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then select **Next**.                                                                 |
+   |      **Select OS**      | In **The following operating system images are available to be deployed with this task sequence**. Select one to use, select ***captured_vista_image*** (where *captured_vista_image* is the captured image the reference computer added to the Operating Systems node in the Deployment Workbench), and then select *Next*. |
+   | **Specify Product Key** |                                                                                                                       Select **Do not specify a product key at this time**, and then select **Next**.                                                                                                                        |
+   |       OS Settings       |                                                  1. In **Full Name**, type **Woodgrove Employee**.<br>2. In **Organization**, type **Woodgrove Bank**.<br>3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br>4. Select **Next**.                                                   |
+   |   **Admin Password**    |                                                                                           In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then select **Finish**.                                                                                           |
+   |    **Confirmation**     |                                                                                                                                                      Select **Finish**.                                                                                                                                                      |
 
    The New Task Sequence Wizard finishes, and the **VISTA_NEW** task sequence is added to the list of task sequences.
 
@@ -2414,15 +2414,15 @@ When the MDT task sequence has been created, customize the MDT configuration fil
 
  **To customize the MDT configuration files for capturing user state information**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
      The **Properties** dialog box appears.
 
-4. In the **Properties** dialog box, click the **Rules** tab.
+4. In the **Properties** dialog box, select the **Rules** tab.
 
 5. On the **Rules** tab, modify the CustomSettings.ini file to reflect the necessary changes as shown in the following example. Make any additional modifications the environment requires.
 
@@ -2445,7 +2445,7 @@ When the MDT task sequence has been created, customize the MDT configuration fil
 
     ```
 
-6. In the **Properties** dialog box, click **OK**.
+6. In the **Properties** dialog box, select **OK**.
 
 7. Close all open windows and dialog boxes.
 
@@ -2459,15 +2459,15 @@ Configure the Windows PE options for the deployment share in the Deployment Shar
 
  **To configure the Windows PE options for the deployment share**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
      The **Properties** dialog box appears.
 
-4. In the **Properties** dialog box, on the **Windows PE *platform* Components** tab (where *platform* is the architecture of the Windows PE image to be configured), in **Selection profile**, select ***device_drivers*** (where *device_drivers* is the name of the device driver selection profile), and then click **OK**.
+4. In the **Properties** dialog box, on the **Windows PE *platform* Components** tab (where *platform* is the architecture of the Windows PE image to be configured), in **Selection profile**, select ***device_drivers*** (where *device_drivers* is the name of the device driver selection profile), and then select **OK**.
 
 ### Step 5: Update the Deployment Share
 
@@ -2475,19 +2475,19 @@ After configuring the Windows PE options for the deployment share, update the de
 
  **To update the deployment share in the Deployment Workbench**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Update DeploymentShare**.
+3. In the Actions pane, select **Update DeploymentShare**.
 
     The Update Deployment Share Wizard starts.
 
-4. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+4. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-5. On the **Summary** page, verify the details are correct, and then click **Next**.
+5. On the **Summary** page, verify the details are correct, and then select **Next**.
 
-6. On the **Confirmation** page, click **Finish**.
+6. On the **Confirmation** page, select **Finish**.
 
    The Deployment Workbench starts updating the deployment share. The Deployment Workbench creates the LiteTouchPE_x86.iso and LiteTouchPE_x86.wim files (for 32-bit target computers) or LiteTouchPE_x64.iso and LiteTouchPE_x64.wim files (for 64-bit target computers) in the *deployment_share*\Boot folder (where *deployment_share* is the shared folder used as the deployment share).
 
@@ -2523,20 +2523,20 @@ Start the existing computer (WDG-EXIST-01) with the LTI bootable media created e
 
    |                  **On this wizard page**                  |                                                                              **Do this**                                                                              |
    |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                 **Welcome to Deployment**                 |                                    Click **Run the Deployment Wizard** to install a new operating system, and then click **Next**.                                    |
-   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **CORP**.<br>4. Click **OK**. |
-   |  **Select a task sequence to execute on this computer.**  |                                       Click *Perform Replace Computer Scenario on Existing Computer*, and then click **Next**.                                        |
-   |     **Specify where to save your data and settings**      |                                                                            Click **Next**.                                                                            |
-   |   **Specify where to save a complete computer backup**    |                                               Click **Do not back up the existing computer**, and then click **Next**.                                                |
-   |                    **Ready to begin**                     |                                                                           Click **Begin**.                                                                            |
+   |                 **Welcome to Deployment**                 |                                    Select **Run the Deployment Wizard** to install a new operating system, and then select **Next**.                                    |
+   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **CORP**.<br>4. Select **OK**. |
+   |  **Select a task sequence to execute on this computer.**  |                                       Select *Perform Replace Computer Scenario on Existing Computer*, and then select **Next**.                                        |
+   |     **Specify where to save your data and settings**      |                                                                            Select **Next**.                                                                            |
+   |   **Specify where to save a complete computer backup**    |                                               Select **Do not back up the existing computer**, and then select **Next**.                                                |
+   |                    **Ready to begin**                     |                                                                           Select **Begin**.                                                                            |
 
     If any errors or warnings occur, consult the MDT document *Troubleshooting Reference*.
 
-3. In the **Deployment Summary** dialog box, click **Details**.
+3. In the **Deployment Summary** dialog box, select **Details**.
 
     If any errors or warnings occurred, review the errors or warnings and record any diagnostic information.
 
-4. In the **Deployment Summary** dialog box, click **Finish**.
+4. In the **Deployment Summary** dialog box, select **Finish**.
 
    The user state migration information is captured and is stored in the network shared folder (UserStateCapture$) created earlier in the process.
 
@@ -2558,25 +2558,25 @@ Start the new computer (WDG-NEW-02) with the LTI bootable media created earlier 
 
    |                  **On this wizard page**                  |                                                                              **Do this**                                                                              |
    |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                 **Welcome to Deployment**                 |                                    Click **Run the Deployment Wizard to install a new operating system**, and then click **Next**.                                    |
-   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **CORP**.<br>4. Click **OK**. |
-   |  **Select a task sequence to execute on this computer.**  |                                         Click **Perform Replace Computer Scenario on New Computer**, and then click **Next**.                                         |
-   |              **Configure the computer name**              |                                                  In **Computer name**, type **WDG-NEW-02**, and then click **Next**.                                                  |
-   |      **Join the computer to a domain or workgroup**       |                                                                            Click **Next**.                                                                            |
-   |         **Specify whether to restore user data**          |              1. Click **Specify a location**.<br>2. In **Location**, type **\\\WDG-MDT-01\UserStateCapture$\WDG-EXIST-01**.<br>3. Click **Next**.              |
-   |                   **Locale Selection**                    |                                                                            Click **Next**.                                                                            |
-   |                   **Set the Time Zone**                   |                                                                            Click **Next**.                                                                            |
-   |          **Specify whether to capture an image**          |                                             Click **Do not capture an image of this computer**, and then click **Next**.                                              |
-   |          **Specify the BitLocker configuration**          |                                             Click **Do not enable BitLocker for this computer**, and then click **Next**.                                             |
-   |                    **Ready to begin**                     |                                                                           Click **Begin**.                                                                            |
+   |                 **Welcome to Deployment**                 |                                    Select **Run the Deployment Wizard to install a new operating system**, and then select **Next**.                                    |
+   | **Specify Credentials for connecting to network shares.** | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **CORP**.<br>4. Select **OK**. |
+   |  **Select a task sequence to execute on this computer.**  |                                         Select **Perform Replace Computer Scenario on New Computer**, and then select **Next**.                                         |
+   |              **Configure the computer name**              |                                                  In **Computer name**, type **WDG-NEW-02**, and then select **Next**.                                                  |
+   |      **Join the computer to a domain or workgroup**       |                                                                            Select **Next**.                                                                            |
+   |         **Specify whether to restore user data**          |              1. Select **Specify a location**.<br>2. In **Location**, type **\\\WDG-MDT-01\UserStateCapture$\WDG-EXIST-01**.<br>3. Select **Next**.              |
+   |                   **Locale Selection**                    |                                                                            Select **Next**.                                                                            |
+   |                   **Set the Time Zone**                   |                                                                            Select **Next**.                                                                            |
+   |          **Specify whether to capture an image**          |                                             Select **Do not capture an image of this computer**, and then select **Next**.                                              |
+   |          **Specify the BitLocker configuration**          |                                             Select **Do not enable BitLocker for this computer**, and then select **Next**.                                             |
+   |                    **Ready to begin**                     |                                                                           Select **Begin**.                                                                            |
 
     If any errors or warnings should occur, consult the MDT document *Troubleshooting Reference*.
 
-3. In the **Deployment Summary** dialog box, click **Details**.
+3. In the **Deployment Summary** dialog box, select **Details**.
 
     If any errors or warnings occurred, review the errors or warnings and record any diagnostic information.
 
-4. In the **Deployment Summary** dialog box, click **Finish**.
+4. In the **Deployment Summary** dialog box, select **Finish**.
 
    Windows Vista is now installed on the new computer and the captured user state migration information is also restored.
 
@@ -2787,11 +2787,11 @@ Custom deployment code can be imported into the Deployment Workbench and managed
 
 1. Copy the custom deployment code to the *deployment_share*\Scripts folder (where *deployment_share* is the fully qualified path to the deployment share).
 
-2. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+2. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 3. In the Deployment Workbench console tree, go to Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to configure).
 
-4. In the Actions pane, click **New Application**.
+4. In the Actions pane, select **New Application**.
 
     The New Application Wizard starts.
 
@@ -2799,11 +2799,11 @@ Custom deployment code can be imported into the Deployment Workbench and managed
 
    |**On this wizard page**|**Do this**|
    |-|-|
-   |**Application Type**|Click **Application without source files or elsewhere on the network**, and then click **Next**.|
-   |**Details**|Complete this page based on the information from the application, and then click **Next**.|
-   |**Command Details**|1. In the **Command line** box, type **cscript.exe %SCRIPTROOT%\custom_code** (where *custom_code* is the name of the custom code that has been developed).<br>2. In the **Working directory** box, type ***working_directory*** (where working_directory is the name of the working directory of the custom code; this is typically the same folder specified in the **Command line** box).<br>3. Click **Next**.|
-   |**Summary**|Verify that the configuration settings are correct, and then click **Next**.|
-   |**Confirmation**|Click **Finish**.|
+   |**Application Type**|Select **Application without source files or elsewhere on the network**, and then select **Next**.|
+   |**Details**|Complete this page based on the information from the application, and then select **Next**.|
+   |**Command Details**|1. In the **Command line** box, type **cscript.exe %SCRIPTROOT%\custom_code** (where *custom_code* is the name of the custom code that has been developed).<br>2. In the **Working directory** box, type ***working_directory*** (where working_directory is the name of the working directory of the custom code; this is typically the same folder specified in the **Command line** box).<br>3. Select **Next**.|
+   |**Summary**|Verify that the configuration settings are correct, and then select **Next**.|
+   |**Confirmation**|Select **Finish**.|
 
    The application appears in the Applications node in the Deployment Workbench.
 
@@ -2815,27 +2815,27 @@ Custom deployment code can be called directly from any point within a task seque
 
 1. Copy the custom deployment code to the *deployment_share*\Scripts folder (where *deployment_share* is the fully qualified path to the deployment share).
 
-2. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+2. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 3. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share/Task Sequences* (where *deployment_share* is the name of the deployment share to configure).
 
-4. In the details pane, click ***task_sequence*** (where *task_sequence* is the name of the task sequence that runs the custom code).
+4. In the details pane, select ***task_sequence*** (where *task_sequence* is the name of the task sequence that runs the custom code).
 
-5. In the Actions pane, click **Properties**.
+5. In the Actions pane, select **Properties**.
 
-6. In the ***task_sequenceProperties*** dialog box, click the **Task Sequence** tab.
+6. In the ***task_sequenceProperties*** dialog box, select the **Task Sequence** tab.
 
 7. In the console tree, go to *group* (where *group* is the group to add the task sequence step).
 
-8. Click **Add**, click **General**, and then click **Run Command Line**.
+8. Select **Add**, select **General**, and then select **Run Command Line**.
 
-9. In the console tree, click **Run Command Line**, and then click the **Properties** tab.
+9. In the console tree, select **Run Command Line**, and then select the **Properties** tab.
 
 10. In the **Name** box, type ***name*** (where *name* is a descriptive name of the custom code).
 
 11. On the **Properties** tab, in the **Command line** box, type ***command_line*** (where *command_line* is the command to run the custom code—for example, **cscript.exe %SCRIPTROOT%\CustomCode.vbs**).
 
-12. In the **Start in** box, type ***path*** (where *path* is the fully qualified path to the working folder of the custom code; typically, this is the same path specified in the **Command line** box), and then click **OK**.
+12. In the **Start in** box, type ***path*** (where *path* is the fully qualified path to the working folder of the custom code; typically, this is the same path specified in the **Command line** box), and then select **OK**.
 
     The newly created task sequence step appears in the list of task sequence steps.
 
@@ -2885,40 +2885,40 @@ You can import device driver packages that include an .inf file to the Deploymen
 
 1. Download the device drivers required for the hardware types to be deployed, and extract the device driver package to a temporary location.
 
-2. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+2. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 3. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Out-of-Box Drivers (where *deployment_share* is the name of the deployment share to configure).
 
-4. In the Actions pane, click **Import Drivers**.
+4. In the Actions pane, select **Import Drivers**.
 
     The Import Device Driver Wizard starts.
 
-5. On the **Specify Directory** page, in the **Drive source** directory section, click **Browse** to go to the folder that contains the new device drivers, and then click **Next**.
+5. On the **Specify Directory** page, in the **Drive source** directory section, select **Browse** to go to the folder that contains the new device drivers, and then select **Next**.
 
    > [!NOTE]
    >  The New Device Driver Wizard will search all subdirectories of the driver source directory; therefore, if there are multiple drivers to install, extract them into folders within the same root directory, and then set the driver source directory as the root directory that holds all of the driver source folders.
 
-6. On the **Summary** page, verify that the settings are correct, and then click **Next** to import the drivers into the Deployment Workbench.
+6. On the **Summary** page, verify that the settings are correct, and then select **Next** to import the drivers into the Deployment Workbench.
 
-7. On the **Confirmation** page, click **Finish**.
+7. On the **Confirmation** page, select **Finish**.
 
    If the device drivers contain boot-critical drivers such as mass storage or network class drivers, the deployment share must next be updated to generate a new LiteTouch_x86 and LiteTouch_x64 boot environment that contains the new drivers.
 
    **To add device drivers to the Lite Touch Windows PE images**
 
-8. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+8. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 9. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-10. In the Actions pane, click **Update Deployment Share**.
+10. In the Actions pane, select **Update Deployment Share**.
 
      The Update Deployment Share Wizard starts.
 
-11. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+11. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-12. On the **Summary** page, verify that the details are correct, and then click **Next**.
+12. On the **Summary** page, verify that the details are correct, and then select **Next**.
 
-13. On the **Confirmation** page, click **Finish**.
+13. On the **Confirmation** page, select **Finish**.
 
 ###  <a name="InstallDriversasApplications"></a> Installing Device Drivers as Applications
 
@@ -2938,29 +2938,29 @@ Each device driver application must first be imported into the Deployment Workbe
 
 1. Download the device driver application, and save it to a temporary location.
 
-2. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+2. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 3. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to configure).
 
-4. In the Actions pane, click **New Application**.
+4. In the Actions pane, select **New Application**.
 
     The New Application Wizard starts.
 
-5. On the **Application Type** page, click **Application with source files**, and then click **Next**.
+5. On the **Application Type** page, select **Application with source files**, and then select **Next**.
 
-6. On the **Details** page, type relevant details about the application, and then click **Next**.
+6. On the **Details** page, type relevant details about the application, and then select **Next**.
 
-7. On the **Source** page, in **the Source directory** section, click **Browse** to go to, and then click the directory that contains the device driver application source files. Click **OK**.
+7. On the **Source** page, in **the Source directory** section, select **Browse** to go to, and then select the directory that contains the device driver application source files. Select **OK**.
 
-8. Click **Next**.
+8. Select **Next**.
 
-9. On the **Destination** page, type a name for the destination directory, and then click **Next**.
+9. On the **Destination** page, type a name for the destination directory, and then select **Next**.
 
 10. On the **Command Details** page, in the **Command line** section, type the command that allows silent installation of the device driver application.
 
-11. On the **Summary** page, verify the settings are correct, and then click **Next** to import the device driver application into the Deployment Workbench.
+11. On the **Summary** page, verify the settings are correct, and then select **Next** to import the device driver application into the Deployment Workbench.
 
-12. On the **Confirmation** page, click **Finish**.
+12. On the **Confirmation** page, select **Finish**.
 
     After the applications are imported into the Deployment Workbench, add them to the deployment process using the appropriate logic to ensure that the application installs only when running on the correct hardware. There are different methods for achieving this:
 
@@ -2984,25 +2984,25 @@ The first method for adding a device driver application to the deployment proces
 
   **To create a new task sequence group for each type of hardware**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the details pane, click ***task_sequence*** (where *task_sequence* is the deployment task sequence that will be required to install the device driver application).
+3. In the details pane, select ***task_sequence*** (where *task_sequence* is the deployment task sequence that will be required to install the device driver application).
 
-4. In the Actions pane, click **Properties**.
+4. In the Actions pane, select **Properties**.
 
 5. In the ***task_sequenceProperties*** dialog box, on the **Task Sequence** tab, in the details pane, go to State Restore/Windows Update (Pre-Application Installation).
 
-6. On the **Task Sequence** tab, click **Add**, and then click **New Group**.
+6. On the **Task Sequence** tab, select **Add**, and then select **New Group**.
 
     This creates a new task sequence group in the task sequence. Use this new task sequence group to create the steps for installing the hardware-specific device driver applications.
 
-7. In the details pane, click **New Group**.
+7. In the details pane, select **New Group**.
 
 8. On the **Properties** tab, in the **Name** box, type ***group_name*** (where *group_name* is the name of the group; for example, *Hardware Specific Applications - Dell Computer Corporation*).
 
-9. On the **Options** tab, click **Add**, and then click **Query WMI**.
+9. On the **Options** tab, select **Add**, and then select **Query WMI**.
 
 10. In the **Task Sequence WMI Condition** dialog box, type the following details:
 
@@ -3018,7 +3018,7 @@ The first method for adding a device driver application to the deployment proces
 
       For more information about WMI and WQL queries, see the section, "Add WMI Queries to Task Sequence Step Conditions", in the MDT document *Using the Microsoft Deployment Toolkit*, and see [Querying with WQL](/windows/win32/wmisdk/querying-with-wql).
 
-11. Click **OK** to submit the query, and then click **OK** to submit changes to the task sequence.
+11. Select **OK** to submit the query, and then select **OK** to submit changes to the task sequence.
 
 > [!NOTE]
 >
@@ -3028,25 +3028,25 @@ The first method for adding a device driver application to the deployment proces
 
  **To add device driver applications to hardware-specific task sequence groups**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the details pane, click ***task_sequence*** (where *task_sequence* is the deployment task sequence that will be required to install the device driver application).
+3. In the details pane, select ***task_sequence*** (where *task_sequence* is the deployment task sequence that will be required to install the device driver application).
 
-4. In the Actions pane, click **Properties**.
+4. In the Actions pane, select **Properties**.
 
-5. In the ***task_sequenceProperties*** dialog box, click the **Task Sequence** tab.
+5. In the ***task_sequenceProperties*** dialog box, select the **Task Sequence** tab.
 
 6. In the details pane, go to State Restore/*hardware_specific_group* (where *hardware_specific_group* is the name of the hardware-specific group where the task sequence step will be added to install the device driver application).
 
-7. On the **Task Sequence** tab, click **Add**, click **General**, and then click **Install Application**.
+7. On the **Task Sequence** tab, select **Add**, select **General**, and then select **Install Application**.
 
      The **Install Application** task sequence step appears in the details pane.
 
-8. In the details pane, click **Install Application.**
+8. In the details pane, select **Install Application.**
 
-9. On the **Properties** tab, click **Install a single application**, and in the **Application to install** list, select ***hardware_application*** (where *hardware_application* is the application for installing the hardware-specific application).
+9. On the **Properties** tab, select **Install a single application**, and in the **Application to install** list, select ***hardware_application*** (where *hardware_application* is the application for installing the hardware-specific application).
 
 > [!NOTE]
 >
@@ -3110,45 +3110,45 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
   **To modify CustomSettings.ini to add hardware-specific logic**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
-4. Click the **Rules** tab.
+4. Select the **Rules** tab.
 
 5. Information typed on this tab is stored in the CustomSettings.ini file. Modify the CustomSettings.ini file entries to add logic for each hardware model that has a device driver-specific application, as described in [Specify the Device Driver Application as Part of a Task Sequence](#SpecifyDeviceAppTask).
 
-6. Click **OK** to submit the changes.
+6. Select **OK** to submit the changes.
 
-7. In the details pane, click *deployment_share* (where *deployment_share* is the name of the deployment share to configure).
+7. In the details pane, select *deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-8. In the Actions pane, click **Update Deployment Share**.
+8. In the Actions pane, select **Update Deployment Share**.
 
     The Update Deployment Share Wizard starts.
 
-9. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+9. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-10. On the **Summary** page, verify the details are correct, and then click **Next**.
+10. On the **Summary** page, verify the details are correct, and then select **Next**.
 
-11. On the **Confirmation** page, click **Finish**.
+11. On the **Confirmation** page, select **Finish**.
 
     By default, all available applications are displayed in the Windows Deployment Wizard during an LTI deployment. Because device driver-specific applications are applicable only to specific hardware types, you might not want them displayed all the time. By specifying the device driver-specific application package in CustomSettings.ini, the application can be hidden using the **Hide the application in the Deployment Wizard** option in the application configuration.
 
     **To hide an application in the Deployment Wizard**
 
-12. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+12. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 13. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Applications (where *deployment_share* is the name of the deployment share to configure).
 
-14. In the details pane, click ***device_driver_application*** (where *device_driver_application* is the application to be hidden from the Deployment Wizard).
+14. In the details pane, select ***device_driver_application*** (where *device_driver_application* is the application to be hidden from the Deployment Wizard).
 
-15. In the Actions pane, click **Properties**.
+15. In the Actions pane, select **Properties**.
 
 16. On the **General** tab, select the **Hide the application in the Deployment Wizard** check box.
 
-17. Click **Apply**, and then close the **Properties** dialog box.
+17. Select **Apply**, and then close the **Properties** dialog box.
 
 #### Specify the Device Driver Application in the MDT DB
 
@@ -3170,11 +3170,11 @@ The MDT DB is a database version of the CustomSettings.ini file and can be queri
 >
 > Repeat this process for each hardware make and model that requires a device driver application.
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/**deployment_share**/Advanced Configuration/Database/Make and Model (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **New**.
+3. In the Actions pane, select **New**.
 
 4. In the **Properties** dialog box, on the **Identity** tab, in the **Make** box, type ***make_name*** (where *make_name* is an easily identified name to associate with the manufacturer of the target computer).
 
@@ -3206,41 +3206,41 @@ When creating a new MDT deployment share or modifying an existing MDT deployment
 
  **To create a bootable Windows PE image in the Deployment Workbench**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
-    In the ***deployment_shareProperties*** dialog box, click the **Windows PE *platform* Settings** tab (where platform is the architecture of the Windows PE image to be configured).
+    In the ***deployment_shareProperties*** dialog box, select the **Windows PE *platform* Settings** tab (where platform is the architecture of the Windows PE image to be configured).
 
 4. In the **Lite Touch Boot Image Settings** area, select the **Generate a Lite Touch bootable RAM disk ISO image** check box.
 
-5. Click the **Windows PE *platform* Components** tab (where *platform* is the architecture of the Windows PE image to be configured).
+5. Select the **Windows PE *platform* Components** tab (where *platform* is the architecture of the Windows PE image to be configured).
 
-6. In the **Driver Injection** section, click the appropriate driver types to include.
+6. In the **Driver Injection** section, select the appropriate driver types to include.
 
    > [!NOTE]
    >  This step is not necessary if Windows PE already includes the necessary device drivers.
 
 7. In the **Driver Injection** section, in the **Selection profile** list, select the appropriate driver selection profile.
 
-8. In the **Properties** dialog box, click **OK**.
+8. In the **Properties** dialog box, select **OK**.
 
    > [!NOTE]
    >  This step is not necessary if Windows PE already includes the necessary device drivers.
 
-9. In the details pane, click ***deployment_share*** (where *deployment_share* is the name of the deployment share to configure).
+9. In the details pane, select ***deployment_share*** (where *deployment_share* is the name of the deployment share to configure).
 
-10. In the Actions pane, click **Update Deployment Share**.
+10. In the Actions pane, select **Update Deployment Share**.
 
      The Update Deployment Share Wizard starts.
 
-11. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+11. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-12. On the **Summary** page, verify the details are correct, and then click **Next**.
+12. On the **Summary** page, verify the details are correct, and then select **Next**.
 
-13. On the **Confirmation** page, click **Finish**.
+13. On the **Confirmation** page, select **Finish**.
 
      When this process is complete, the Boot folder in the deployment share will contain a number of boot images—for example:
 
@@ -3258,7 +3258,7 @@ When creating a new MDT deployment share or modifying an existing MDT deployment
 
 14. Start the Windows Deployment Services console, and then connect to Windows Deployment Services.
 
-15. In the console tree, right-click **Boot Images**, and then click **Add Boot Image**.
+15. In the console tree, right-click **Boot Images**, and then select **Add Boot Image**.
 
 16. Browse to the WIM image to be imported—for example, D:\Production Deployment Share\Boot\LiteTouchPE_x86.wim.
 
@@ -3276,39 +3276,39 @@ An additional option is available when using Windows Deployment Services to host
 
  **To set the local Windows Deployment Services server as the deployment server**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Advanced Configuration/Database (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
-4. Click the **Rules** tab.
+4. Select the **Rules** tab.
 
      Information typed on this tab is stored in the CustomSettings.ini file.
 
 5. Configure the **DeployRoot** property to use the **%WDSServer%** variable—for example, **DeployRoot=\\\\%WDSServer%\Deployment$**.
 
-6. Click **Edit Bootstrap.ini**.
+6. Select **Edit Bootstrap.ini**.
 
 7. Configure BootStrap.ini to use the **%WDSServer%** property by adding or changing the **DeployRoot** value to **DeployRoot=\\\\%WDSServer%\Deployment$**.
 
-8. On the **File** menu, click **Save** to save the changes to the BootStrap.ini file.
+8. On the **File** menu, select **Save** to save the changes to the BootStrap.ini file.
 
-9. Click **OK**.
+9. Select **OK**.
 
      The deployment share needs to be updated.
 
-10. In the details pane, click **deployment_share** (where *deployment_share* is the name of the deployment share to configure).
+10. In the details pane, select **deployment_share** (where *deployment_share* is the name of the deployment share to configure).
 
-11. In the Actions pane, click **Update Deployment Share**.
+11. In the Actions pane, select **Update Deployment Share**.
 
      The Update Deployment Share Wizard starts.
 
-12. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+12. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-13. On the **Summary** page, verify the details are correct, and then click **Next**.
+13. On the **Summary** page, verify the details are correct, and then select **Next**.
 
-14. On the **Confirmation** page, click **Finish**.
+14. On the **Confirmation** page, select **Finish**.
 
 15. Import the updated boot WIM into Windows Deployment Services.
 
@@ -3336,21 +3336,21 @@ If you are already using Windows Deployment Services for operating system deploy
     >
     > The Windows source directory being used must match the platform of the operating system running on the computer where MDT is installed.
 
-2. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+2. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 3. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Operating Systems (where *deployment_share* is the name of the deployment share to configure).
 
-4. In the Actions pane, click **Import Operating System**.
+4. In the Actions pane, select **Import Operating System**.
 
      The New OS Wizard starts.
 
-5. On the **OS Type** page, click **Windows Deployment Services images**, and then click **Next**.
+5. On the **OS Type** page, select **Windows Deployment Services images**, and then select **Next**.
 
-6. On the **WDS Server** page, type the name of the Windows Deployment Services server to be referenced—for example, **WDSSvr001**—and then click **Next**.
+6. On the **WDS Server** page, type the name of the Windows Deployment Services server to be referenced—for example, **WDSSvr001**—and then select **Next**.
 
-7. On the **Summary** page, verify the settings are correct, and then click **Next**.
+7. On the **Summary** page, verify the settings are correct, and then select **Next**.
 
-8. On the **Confirmation** page, click **Finish**.
+8. On the **Confirmation** page, select **Finish**.
 
      All of the images available on the Windows Deployment Services server will now be available to MDT task sequences.
 
@@ -3390,25 +3390,25 @@ With the release of Windows Server 2008, Windows Deployment Services was enhance
 
  **To configure MDT for multicasting from an existing deployment share**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share* (where *deployment_share* is the name of the deployment share to configure).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
 4. On the **General** tab, select the **Enable multicast for this deployment share (requires Windows Server 2008 Windows Deployment Services)** check box.
 
-5. Click **OK**.
+5. Select **OK**.
 
-6. In the Actions pane, click **Update Deployment Share**.
+6. In the Actions pane, select **Update Deployment Share**.
 
     The Update Deployment Share Wizard starts.
 
-7. On the **Options** page, select the desired options for updating the deployment share, and then click **Next**.
+7. On the **Options** page, select the desired options for updating the deployment share, and then select **Next**.
 
-8. On the **Summary** page, verify the details are correct, and then click **Next**.
+8. On the **Summary** page, verify the details are correct, and then select **Next**.
 
-9. On the **Confirmation** page, click **Finish**.
+9. On the **Confirmation** page, select **Finish**.
 
    The deployment share is now configured for Windows Deployment Services multicast transmission.
 
@@ -3416,13 +3416,13 @@ With the release of Windows Server 2008, Windows Deployment Services was enhance
 
    **To verify that the multicast transmission has been generated in Windows Deployment Services**
 
-10. Click **Start**, point to **Administrative Tools**, and then click **Windows Deployment Services**.
+10. Select **Start**, point to **Administrative Tools**, and then select **Windows Deployment Services**.
 
-11. In the Windows Deployment Services console tree, right-click **Servers**, and then click **Add Server**.
+11. In the Windows Deployment Services console tree, right-click **Servers**, and then select **Add Server**.
 
-12. In the **Add Servers(s)** dialog box, click **Local computer**, and then click **OK**.
+12. In the **Add Servers(s)** dialog box, select **Local computer**, and then select **OK**.
 
-13. In the Windows Deployment Services console tree, click **Servers**, then click ***server_name*** (where *server_name* is the name of the computer running Windows Deployment Services). Click **Multicast Transmissions**.
+13. In the Windows Deployment Services console tree, select **Servers**, then select ***server_name*** (where *server_name* is the name of the computer running Windows Deployment Services). Select **Multicast Transmissions**.
 
 14. In the details pane, a new Auto-Cast transmission for the deployment share will be listed—for example, **BDD Share Deployment$**.
 
@@ -3531,7 +3531,7 @@ The second phase of the OEM preload process is performed by the OEM or by the de
 
      Windows PE starts, and then the Windows Deployment Wizard starts.
 
-2. In the Windows Deployment Wizard, click the **OEM Preinstallation Task Sequence for Staging Environment** task sequence.
+2. In the Windows Deployment Wizard, select the **OEM Preinstallation Task Sequence for Staging Environment** task sequence.
 
      The task sequence will start and the contents of the bootable media will be copied to the local hard disk of the target computer.
 
@@ -3848,42 +3848,42 @@ Group Policy is a rich and flexible technology providing the capability to effic
 
  **Prepare the unattend.xml file so the target computer does not attempt to join the domain during Windows Setup**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences/*task_sequence* (where *deployment_share* is the name of the deployment share and *task_sequence* is the name of the task sequence to be configured).
 
-3. In the Actions pane, click **Properties**.
+3. In the Actions pane, select **Properties**.
 
-4. On the **OS Info** tab, click **Edit Unattend.xml**.
+4. On the **OS Info** tab, select **Edit Unattend.xml**.
 
     The Windows System Image Manager (Windows SIM) starts.
 
-5. In the **Answer File** pane, go to **4 specialize/Identification/Credentials**. Right-click **Credentials**, and then click **Delete**.
+5. In the **Answer File** pane, go to **4 specialize/Identification/Credentials**. Right-click **Credentials**, and then select **Delete**.
 
-6. Click **Yes**.
+6. Select **Yes**.
 
 7. Save the answer file, and then exit Windows SIM.
 
-8. Click **OK** on the task sequence **Properties** dialog box.
+8. Select **OK** on the task sequence **Properties** dialog box.
 
    With the `Credentials` elements missing from the unattend.xml file, the ZTIConfigure.wsf script is not able to populate the domain join information in the Unattend.xml file, which will prevent Windows Setup from attempting to join the domain.
 
    **To add a task sequence step that joins the target computer to the domain**
 
-9. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+9. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 10. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/*deployment_share*/Task Sequences/*task_sequence* (where *deployment_share* is the name of the deployment share and *task_sequence* is the name of the task sequence to be configured).
 
-11. In the Actions pane, click **Properties**.
+11. In the Actions pane, select **Properties**.
 
 12. On the **Task Sequence** tab, go to and expand the State Restore node.
 
 13. Verify that the **Recover From Domain** task sequence step is present. If yes, proceed to step 9.
 
-14. In the task sequence **Properties** dialog box, click **Add**, go to **Settings**, and click **Recover From Domain**.
+14. In the task sequence **Properties** dialog box, select **Add**, go to **Settings**, and select **Recover From Domain**.
 
 15. Add the **Recover From Domain** task sequence step to the task sequence editor. Verify that the step is in the desired location in the task sequence.
 
 16. Verify that the settings for the **Recover From Domain** task sequence step are configured to meet your needs.
 
-17. Click **OK** on the task sequence **Properties** dialog box to save the task sequence.
+17. Select **OK** on the task sequence **Properties** dialog box to save the task sequence.

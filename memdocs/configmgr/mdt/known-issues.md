@@ -45,11 +45,11 @@ To create a new boot image using the out of box Configuration Manager functional
 
 3. In the Configuration Manager console, go to the **Software Library** node and then navigate to **Overview** > **Operating Systems** > **Boot Images**.
 
-4. Right click on **Boot Images** and select **Add Boot Image**.
+4. Right-click on **Boot Images** and select **Add Boot Image**.
 
 5. Follow the **Add Boot Image Wizard** to import the copy of `boot.wim` created in Step 2 as a new boot image. For more information on adding a boot image using the **Add Boot Image Wizard**, see [Manage boot images with Configuration Manager: Add a boot image](/mem/configmgr/osd/get-started/manage-boot-images#add-a-boot-image).
 
-6. Once the **Add Boot Image Wizard** completes and the new boot image has been added, right click on the newly created boot image and select **Update Distribution Points**.
+6. Once the **Add Boot Image Wizard** completes and the new boot image has been added, right-click on the newly created boot image and select **Update Distribution Points**.
 
     > [!NOTE]
     >
@@ -63,7 +63,7 @@ Once the **Update Distribution Points Wizard** completes, the newly created boot
 
 If additional components need to be added to the boot image:
 
-1. Right click on the newly created boot image and select **Properties**.
+1. Right-click on the newly created boot image and select **Properties**.
 
 2. In the boot image properties window, select the **Optional Components** tab
 

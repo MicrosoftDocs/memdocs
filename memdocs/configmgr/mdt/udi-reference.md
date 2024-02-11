@@ -82,7 +82,7 @@ Use a stage group to group one or more stages in the UDI Wizard Designer. UDI st
 
 ### Stage
 
-A *stage* is a subset of all the pages in the UDI Wizard configuration file that an MDT deployment scenario uses. When you start the UDI Wizard using the **UDI Wizard** task sequence step, the **/stage** parameter specifies the stage to run, which in turn specifies the set of pages to use. You can preview how wizard pages will appear in a stage by clicking **Preview** in the **Preview Wizard** group on the Ribbon. You can use a UDI stage in more than one MDT deployment scenario, even though the UDI stage is defined only once in the UDI Wizard Designer. For example, the NewComputer stage can be used in the MDT New Computer and Replace Computer deployment scenarios.
+A *stage* is a subset of all the pages in the UDI Wizard configuration file that an MDT deployment scenario uses. When you start the UDI Wizard using the **UDI Wizard** task sequence step, the **/stage** parameter specifies the stage to run, which in turn specifies the set of pages to use. You can preview how wizard pages will appear in a stage by selecting **Preview** in the **Preview Wizard** group on the Ribbon. You can use a UDI stage in more than one MDT deployment scenario, even though the UDI stage is defined only once in the UDI Wizard Designer. For example, the NewComputer stage can be used in the MDT New Computer and Replace Computer deployment scenarios.
 
 ### Task
 
@@ -223,7 +223,7 @@ You use a wizard page editor to configure a wizard page in the UDI Wizard Design
 
     The **Welcome** tab in the **Deployment Complete** dialog box is displayed. The **Welcome** tab provides helpful information about the deployment and contact information in the event that issues with the deployment are discovered.
 
-    Review the information on the **Deployment Summary** and **Applications Installed** tabs to verify that the operating system and applications were installed correctly. When you have completed reviewing these tables, click **Start Windows** to log on to Windows 7 for the first time.
+    Review the information on the **Deployment Summary** and **Applications Installed** tabs to verify that the operating system and applications were installed correctly. When you have completed reviewing these tables, select **Start Windows** to log on to Windows 7 for the first time.
 
    > [!NOTE]
    >  Configuration Manager applications are not displayed on the **Applications Installed** tab. The Configuration Manager applications are detected after the user logs on to the target computer the first time.
@@ -797,7 +797,7 @@ Table 31 lists the **BitLockerPage** configuration variables with a description 
 
 #### ComputerPage
 
-Use this wizard page to configure the computer name of the target computer, the domain or workgroup to join, and the credentials to be used when joining a domain. When you configure this page to join the target computer to a domain, this wizard page will validate the credentials you provide for joining the domain in AD DS by default. Then, this wizard page attempts to modify a computer object in AD DS to verify that the user credentials provided on this page have permissions to create or modify the computer object. You can disable either of these behaviors. If you disable the validation of the credentials, then the verification of permissions for creating or modifying computer objects is also disabled. Both of these validations occur when the **Next** button is clicked. If either of the validations encounters an error, an error message will be displayed and this page will continue to be displayed.
+Use this wizard page to configure the computer name of the target computer, the domain or workgroup to join, and the credentials to be used when joining a domain. When you configure this page to join the target computer to a domain, this wizard page will validate the credentials you provide for joining the domain in AD DS by default. Then, this wizard page attempts to modify a computer object in AD DS to verify that the user credentials provided on this page have permissions to create or modify the computer object. You can disable either of these behaviors. If you disable the validation of the credentials, then the verification of permissions for creating or modifying computer objects is also disabled. Both of these validations occur when the **Next** button is selected. If either of the validations encounters an error, an error message will be displayed and this page will continue to be displayed.
 
  The following is the order of precedence for determining the default computer name:
 
@@ -1558,10 +1558,10 @@ This XML element configures how many minutes the **OSD Result** dialog box is di
 
 |**Value**|**Description**|
 |-|-|
-|*Non-numeric value*|The dialog box remains opens until **Start Windows** is clicked.|
-|*Negative value*|The dialog box remains opens until **Start Windows** is clicked.|
-|**0**|The dialog box remains opens until **Start Windows** is clicked.|
-|Include decimal point|The dialog box remains opens until **Start Windows** is clicked.|
+|*Non-numeric value*|The dialog box remains opens until **Start Windows** is selected.|
+|*Negative value*|The dialog box remains opens until **Start Windows** is selected.|
+|**0**|The dialog box remains opens until **Start Windows** is selected.|
+|Include decimal point|The dialog box remains opens until **Start Windows** is selected.|
 |**1 - 10080**|The number of minutes the dialog box will be displayed, with a minimum value of 1 minute and a maximum value of 10080 minutes (1 week).|
 
 |**Example**|

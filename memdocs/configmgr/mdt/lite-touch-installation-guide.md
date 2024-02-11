@@ -98,7 +98,7 @@ In this step, you prepare the MDT environment prior to creating the reference co
 
 To install MDT, complete the following steps:
 
-1. Double-click **MicrosoftDeploymentToolkit2013_x64.msi** (for 64-bit operating systems) or **MicrosoftDeploymentToolkit2013_x86.msi** (for 32-bit operating systems), and then click **Install**.
+1. Double-click **MicrosoftDeploymentToolkit2013_x64.msi** (for 64-bit operating systems) or **MicrosoftDeploymentToolkit2013_x86.msi** (for 32-bit operating systems), and then select **Install**.
 
     The Microsoft Deployment Toolkit 2013 Setup Wizard starts.
 
@@ -106,12 +106,12 @@ To install MDT, complete the following steps:
 
    |**On this wizard page**|**Do this**|
    |-|-|
-   |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Next**.|
-   |**End-User License Agreement**|Click **I accept the terms in the License Agreement**, and then click **Next**.|
-   |**Custom Setup**|Click **Next**.|
-   |**Ready to install Microsoft Deployment Toolkit 2013**|Click **Install**.|
+   |**Welcome to the Microsoft Deployment Toolkit 2013 Setup Wizard**|Select **Next**.|
+   |**End-User License Agreement**|Select **I accept the terms in the License Agreement**, and then select **Next**.|
+   |**Custom Setup**|Select **Next**.|
+   |**Ready to install Microsoft Deployment Toolkit 2013**|Select **Install**.|
    |**Installing Microsoft Deployment Toolkit 2013**|The progress for installing MDT is displayed.|
-   |**Completing the Microsoft Deployment Toolkit 2013 Setup Wizard**|Click **Finish**.|
+   |**Completing the Microsoft Deployment Toolkit 2013 Setup Wizard**|Select **Finish**.|
 
    The Microsoft Deployment Toolkit 2013 Setup Wizard finishes, and MDT is installed on WDG-MDT-01.
 
@@ -129,14 +129,14 @@ To install Windows ADK, perform the following steps:
 
     |**On this wizard page**|**Do this**|
     |-|-|
-    |**Specify Location**|Click **Next**.|
-    |**Join the Customer Experience Improvement Program (CEIP)**|Click **Yes** if you want to participate or **No** if not. Then, click **Next**.|
-    |**License Agreement**|Click **Accept**.|
-    |**Select the features you want to install**|Ensure that only the check boxes for the following features are selected, and then click **Next**:<br><br> -   Deployment Tools<br>-   Windows Preinstallation Environment (Windows PE)<br>-   Windows User State Migration Tool **Note:**  MDT does not require the other features, but they can be installed, if desired.|
+    |**Specify Location**|Select **Next**.|
+    |**Join the Customer Experience Improvement Program (CEIP)**|Select **Yes** if you want to participate or **No** if not. Then, select **Next**.|
+    |**License Agreement**|Select **Accept**.|
+    |**Select the features you want to install**|Ensure that only the check boxes for the following features are selected, and then select **Next**:<br><br> -   Deployment Tools<br>-   Windows Preinstallation Environment (Windows PE)<br>-   Windows User State Migration Tool **Note:**  MDT does not require the other features, but they can be installed, if desired.|
     |**Installing features**|The progress for installing the features is displayed.|
-    |**Welcome to the Assessment and Deployment Kit**|Click **Close**.|
+    |**Welcome to the Assessment and Deployment Kit**|Select **Close**.|
 
-4. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+4. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 5. Close all open windows.
 
@@ -168,11 +168,11 @@ Before deployment can begin, create an MDT deployment share in the Deployment Wo
 
  **To create a deployment share in the Deployment Workbench**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.
 
-3. In the Actions pane, click **New Deployment Shares**.
+3. In the Actions pane, select **New Deployment Shares**.
 
     The New Deployment Share Wizard starts.
 
@@ -180,13 +180,13 @@ Before deployment can begin, create an MDT deployment share in the Deployment Wo
 
    |**On this wizard page**|**Do this**|
    |-|-|
-   |**Path**|In **Deployment share path**, type **C:\DeploymentShare$**, and then click **Next**.|
-   |**Share**|Click **Next**.|
-   |**Descriptive Name**|Click **Next**.|
-   |**Options**|Click **Next**.|
-   |**Summary**|Click **Next**.|
+   |**Path**|In **Deployment share path**, type **C:\DeploymentShare$**, and then select **Next**.|
+   |**Share**|Select **Next**.|
+   |**Descriptive Name**|Select **Next**.|
+   |**Options**|Select **Next**.|
+   |**Summary**|Select **Next**.|
    |**Progress**|The progress for creating the deployment share is displayed.|
-   |**Confirmation**|Click **Finish**.|
+   |**Confirmation**|Select **Finish**.|
 
    The New Deployment Share Wizard finishes, and the new deployment share—MDT Deployment Share (C:\DeploymentShare$)—appears in the details pane.
 
@@ -196,11 +196,11 @@ MDT acts as a repository for the operating system files deployed to the referenc
 
  **To add the Windows 8.1 operating system files to the deployment share**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/MDT Deployment Share (C:\DeploymentShare$)/Operating Systems.
 
-3. In the Actions pane, click **Import Operating System**.
+3. In the Actions pane, select **Import Operating System**.
 
     The Import Operating System Wizard starts.
 
@@ -209,12 +209,12 @@ MDT acts as a repository for the operating system files deployed to the referenc
    |**On this wizard page**|**Do this**|
    |-|-|
    |**On this wizard page**|**Do this**|
-   |**OS Type**|Click **Full set of source files**, and then click **Next**.|
-   |**Source**|In **Source directory**, type ***source_path*** (where *source_path* is the fully qualified path to the Windows 8.1 distribution files), and then click **Next**.|
-   |**Destination**|Click **Next**.|
-   |**Summary**|Click **Next**.|
+   |**OS Type**|Select **Full set of source files**, and then select **Next**.|
+   |**Source**|In **Source directory**, type ***source_path*** (where *source_path* is the fully qualified path to the Windows 8.1 distribution files), and then select **Next**.|
+   |**Destination**|Select **Next**.|
+   |**Summary**|Select **Next**.|
    |**Progress**|The progress for importing the operating system is displayed.|
-   |**Confirmation**|Click **Finish**.|
+   |**Confirmation**|Select **Finish**.|
 
    The Import Operating System Wizard finishes. Windows 8.1 is added to the list of operating systems in the details pane and copied to the *deployment_share*\Operating Systems\\*operating_system* folder (where *deployment_share* is the shared network folder you created earlier in the process and *operating_system* is the name of the operating system you added to the deployment share).
 
@@ -228,11 +228,11 @@ After you have added Windows 8.1 to the Deployment Workbench, add any device dri
 
  **To add the device drivers for the reference and target computers to the distribution share**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/MDT Deployment Share (C:\DeploymentShare$)/Out-of-Box Drivers.
 
-3. In the Actions pane, click **Import Drivers**.
+3. In the Actions pane, select **Import Drivers**.
 
     The Import Driver Wizard starts.
 
@@ -240,10 +240,10 @@ After you have added Windows 8.1 to the Deployment Workbench, add any device dri
 
    |**On this wizard page**|**Do this**|
    |-|-|
-   |**Specify Directory**|In **Driver source directory**, type ***driver_path*** (where *driver_path* is the fully qualified path to the folder containing the device drivers), and then click **Next**.|
-   |**Summary**|Click **Next**.|
+   |**Specify Directory**|In **Driver source directory**, type ***driver_path*** (where *driver_path* is the fully qualified path to the folder containing the device drivers), and then select **Next**.|
+   |**Summary**|Select **Next**.|
    |Progress|The progress for importing the device drivers is displayed.|
-   |**Confirmation**|Click **Finish**.|
+   |**Confirmation**|Select **Finish**.|
 
    The Import Driver Wizard finishes. The device drivers are added to the list of operating systems in the details pane and are copied to the *deployment_share*\Out-of-box Drivers folder (where *deployment_share* is the deployment share you created earlier in the process).
 
@@ -253,11 +253,11 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
  **To create a task sequence for deploying the reference computer**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/MDT Deployment Share (C:\DeploymentShare$)/Task Sequences
 
-3. In the Actions pane, click **New Task Sequence**.
+3. In the Actions pane, select **New Task Sequence**.
 
     The New Task Sequence Wizard starts.
 
@@ -265,15 +265,15 @@ Create MDT task sequences in the Task Sequences node in the Deployment Workbench
 
    | **On this wizard page** |                                                                                                                                              **Do this**                                                                                                                                               |
    |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |  **General Settings**   | 1. In **Task sequence ID**, type **WIN8_REFERENCE**.<br>2. In **Task sequence name**, type **Deploy Windows 8.1 to Reference Computer**.<br>3. In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**.<br>4. Click **Next**. |
-   |   **Select Template**   |                                                        In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then click **Next**.                                                        |
-   |      **Select OS**      |  In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **Windows 8.1 *edition*** (where *edition* is the edition of Windows 8.1 added to the Operating Systems node in the Deployment Workbench), and then click **Next**.  |
-   | **Specify Product Key** |                                                                                                             Click **Do not specify a product key at this time**, and then click **Next**.                                                                                                              |
-   |     **OS Settings**     |                           1. In **Full Name**, type **Woodgrove Bank Employee**.<br><br> 2. In **Organization**, type **Woodgrove Bank**.<br><br> 3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br><br> 4. Click **Next**.                           |
-   |   **Admin Password**    |                                                                                 In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then click **Next**.                                                                                  |
-   |       **Summary**       |                                                                                                                                            Click **Next**.                                                                                                                                             |
+   |  **General Settings**   | 1. In **Task sequence ID**, type **WIN8_REFERENCE**.<br>2. In **Task sequence name**, type **Deploy Windows 8.1 to Reference Computer**.<br>3. In **Task sequence comments**, type **Task sequence for deploying Windows 8.1 to the reference computer (WDG-REF-01)**.<br>4. Select **Next**. |
+   |   **Select Template**   |                                                        In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select **Standard Client Task Sequence**, and then select **Next**.                                                        |
+   |      **Select OS**      |  In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **Windows 8.1 *edition*** (where *edition* is the edition of Windows 8.1 added to the Operating Systems node in the Deployment Workbench), and then select **Next**.  |
+   | **Specify Product Key** |                                                                                                             Select **Do not specify a product key at this time**, and then select **Next**.                                                                                                              |
+   |     **OS Settings**     |                           1. In **Full Name**, type **Woodgrove Bank Employee**.<br><br> 2. In **Organization**, type **Woodgrove Bank**.<br><br> 3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br><br> 4. Select **Next**.                           |
+   |   **Admin Password**    |                                                                                 In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then select **Next**.                                                                                  |
+   |       **Summary**       |                                                                                                                                            Select **Next**.                                                                                                                                             |
    |      **Progress**       |                                                                                                                       The progress for creating the task sequence is displayed.                                                                                                                        |
-   |    **Confirmation**     |                                                                                                                                           Click **Finish**.                                                                                                                                            |
+   |    **Confirmation**     |                                                                                                                                           Select **Finish**.                                                                                                                                            |
 
    The Import Task Sequence Wizard finishes, and the **Deploy Windows 8.1 to Reference Computer** task sequence is added to the list of task sequences.
 
@@ -283,19 +283,19 @@ Prior to deploying the reference computer (WDG-REF-01) with the LTI bootable med
 
  **To enable monitoring of the LTI deployment process**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.
 
-3. In the details pane, click **MDT Deployment Share (C:\DeploymentShare$)**.
+3. In the details pane, select **MDT Deployment Share (C:\DeploymentShare$)**.
 
-4. In the Actions pane, click **Properties**
+4. In the Actions pane, select **Properties**
 
      The **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box opens.
 
-5. In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Monitoring** tab, select the **Enable monitoring for this deployment share** check box, and then click **Apply**.
+5. In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Monitoring** tab, select the **Enable monitoring for this deployment share** check box, and then select **Apply**.
 
-6. In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Rules** tab, notice that the **EventService** property has been added to the CustomSettings.ini file, and then click **OK**.
+6. In the **MDT Deployment Share (C:\DeploymentShare$) Properties** dialog box, on the **Rules** tab, notice that the **EventService** property has been added to the CustomSettings.ini file, and then select **OK**.
 
 7. Close all open windows and dialog boxes.
 
@@ -305,13 +305,13 @@ After configuring the deployment share, update it. Updating the deployment share
 
  **To update the deployment share in the Deployment Workbench**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares.
 
-3. In the details pane, click **MDT Deployment Share (C:\DeploymentShare$)**.
+3. In the details pane, select **MDT Deployment Share (C:\DeploymentShare$)**.
 
-4. In the Actions pane, click **Update Deployment Share**.
+4. In the Actions pane, select **Update Deployment Share**.
 
     The Update Deployment Share Wizard starts.
 
@@ -319,10 +319,10 @@ After configuring the deployment share, update it. Updating the deployment share
 
    |**On this wizard page**|**Do this**|
    |-|-|
-   |**Options**|Click **Next**.|
-   |**Summary**|Click **Next**.|
+   |**Options**|Select **Next**.|
+   |**Summary**|Select **Next**.|
    |**Progress**|The progress for updating the deployment share is displayed.|
-   |**Confirmation**|Click **Finish**.|
+   |**Confirmation**|Select **Finish**.|
 
    The Deployment Workbench starts updating the MDT Deployment Share (C:\DeploymentShare$) deployment share. The Deployment Workbench also creates the LiteTouchPE_x64.iso and LiteTouchPE_x64.wim files (for 64-bit target computers) or LiteTouchPE_x86.iso and LiteTouchPE_x86.wim files (for 32-bit target computers) in the *deployment_share*\Boot folder (where *deployment_share* is the network shared folder used as the deployment share).
 
@@ -370,33 +370,33 @@ Start the reference computer (WDG-REF-01) with the LTI bootable media you create
 
    |  **On this wizard page**   |                                                                               **Do this**                                                                                |
    |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |        **Welcome**         |                                                  Click **Run the Deployment Wizard to install a new Operating System**.                                                  |
-   |      **Credentials**       | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **MDT2013**.<br>4. Click **OK**. |
-   |     **Task Sequence**      |                                               Click **Deploy Windows 8.1 to Reference Computer**, and then click **Next**.                                               |
-   |    **Computer Details**    |                                                   In **Computer name**, **type WDG-REF-01**, and then click **Next**.                                                    |
-   | **Move Data and Settings** |                                                                             Click **Next**.                                                                              |
-   |  **User Data (Restore)**   |                                                                             Click **Next**.                                                                              |
-   |    **Locale and Time**     |                                                                             Click **Next**.                                                                              |
-   |     **Capture Image**      |                                             Click **Capture an image of this reference computer**, and then click **Next**.                                              |
-   |         **Ready**          |                                     1. Click **Details** to view the information provided in the wizard.<br>2. Click **Begin**.                                      |
+   |        **Welcome**         |                                                  Select **Run the Deployment Wizard to install a new Operating System**.                                                  |
+   |      **Credentials**       | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **MDT2013**.<br>4. Select **OK**. |
+   |     **Task Sequence**      |                                               Select **Deploy Windows 8.1 to Reference Computer**, and then select **Next**.                                               |
+   |    **Computer Details**    |                                                   In **Computer name**, **type WDG-REF-01**, and then select **Next**.                                                    |
+   | **Move Data and Settings** |                                                                             Select **Next**.                                                                              |
+   |  **User Data (Restore)**   |                                                                             Select **Next**.                                                                              |
+   |    **Locale and Time**     |                                                                             Select **Next**.                                                                              |
+   |     **Capture Image**      |                                             Select **Capture an image of this reference computer**, and then select **Next**.                                              |
+   |         **Ready**          |                                     1. Select **Details** to view the information provided in the wizard.<br>2. Select **Begin**.                                      |
 
    **To monitor the reference computer deployment process, complete the following steps on WDG-MDT-01**
 
-3. On WDG-MDT-01, click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+3. On WDG-MDT-01, select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 4. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/MDT Deployment Share (C:\DeploymentShare$)/Monitoring.
 
 5. In the details pane, view the deployment process for **WDG-REF-01**.
 
-6. In the Actions pane, periodically click **Refresh**.
+6. In the Actions pane, periodically select **Refresh**.
 
     The status of the deployment process is updated in the details pane.
 
     Continue to monitor the deployment process until the process is complete.
 
-7. In the details pane, click **WDG-REF-01**.
+7. In the details pane, select **WDG-REF-01**.
 
-8. In the Actions pane, click **Properties**.
+8. In the Actions pane, select **Properties**.
 
     The **WDG-REF-01 Properties** dialog box is displayed.
 
@@ -420,17 +420,17 @@ Start the reference computer (WDG-REF-01) with the LTI bootable media you create
    | **Automatically refresh this information every 10 seconds** |                                                                                                                           Check box that controls whether the information in the dialog box is automatically refreshed. If the check box is:<br><br> -   Selected, the information is refreshed every 10 seconds<br>-   Cleared, the information is not automatically refreshed and must be manually refreshed using the **Refresh Now** button                                                                                                                            |
    |                       **Refresh Now**                       |                                                                                                                                                                                                                                                  This button immediately refreshes the information displayed in the dialog box.                                                                                                                                                                                                                                                  |
 
-10. In the **WDG-REF-01 Properties** dialog box, click **OK**.
+10. In the **WDG-REF-01 Properties** dialog box, select **OK**.
 
 11. Close the Deployment Workbench.
 
     To complete the reference computer deployment process, perform the following steps on WDG-REF-01:
 
-12. On WDG-REF-01, in the **Deployment Summary** dialog box, click **Details**.
+12. On WDG-REF-01, in the **Deployment Summary** dialog box, select **Details**.
 
      If any errors or warnings occur, review the errors or warnings, and record any diagnostic information.
 
-13. In the **Deployment Summary** dialog box, click **Finish**.
+13. In the **Deployment Summary** dialog box, select **Finish**.
 
     Windows 8.1 is now installed on the reference computer, and the captured Windows Imaging Format (WIM) file of the reference computer (WIN7_REFERENCE.wim) is stored in the *deployment_share*\Captures folder (where *deployment_share* is the shared folder used as the deployment share).If errors or warnings occur, consult the MDT document *Troubleshooting Reference*.
 
@@ -450,11 +450,11 @@ To deploy the captured image of the reference computer to the target computer, a
 
  **To add the captured image of the reference computer to the Deployment Workbench**
 
-1. Click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/MDT Deployment Share (C:\DeploymentShare$)/Operating Systems.
 
-3. In the Actions pane, click **Import Operating system**.
+3. In the Actions pane, select **Import Operating system**.
 
      The Import Operating System Wizard starts.
 
@@ -462,13 +462,13 @@ To deploy the captured image of the reference computer to the target computer, a
 
     |**On this wizard page**|**Do this**|
     |-|-|
-    |**OS Type**|Click **Custom image file**, and then click **Next**.|
-    |**Image**|In **Source file**, type **C:\DeploymentShare$\Captures\WIN8_REFERENCE.wim**, and then click **Next**.|
-    |**Setup**|Click **Next**.|
-    |**Destination**|Click **Next**.|
-    |**Summary**|Click **Next**.|
+    |**OS Type**|Select **Custom image file**, and then select **Next**.|
+    |**Image**|In **Source file**, type **C:\DeploymentShare$\Captures\WIN8_REFERENCE.wim**, and then select **Next**.|
+    |**Setup**|Select **Next**.|
+    |**Destination**|Select **Next**.|
+    |**Summary**|Select **Next**.|
     |**Progress**|The progress for importing the operating system is displayed.|
-    |**Confirmation**|Click **Finish**.|
+    |**Confirmation**|Select **Finish**.|
 
      The Import Operating System Wizard finishes. The captured image of the reference computer (WDG-REF-01) operating system is added to the list of operating systems in the details pane and is copied to the *deployment_share*\Operating Systems\\*operating_system* folder (where *deployment_share* is the deployment share folder created earlier in the process and *operating_system* is the name of the operating system added to the deployment share).
 
@@ -480,11 +480,11 @@ Create an MDT task sequence for the target computer in the Task Sequences node i
 
  **To create a task sequence for deploying the captured image to the target computer**
 
-1. Click **Start**, and then point to **All Programs**. Point **to Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+1. Select **Start**, and then point to **All Programs**. Point **to Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 2. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/MDT Deployment Share (C:DeploymentShare$)/Task Sequences.
 
-3. In the Actions pane, click **New Task Sequence**.
+3. In the Actions pane, select **New Task Sequence**.
 
     The New Task Sequence Wizard starts.
 
@@ -492,15 +492,15 @@ Create an MDT task sequence for the target computer in the Task Sequences node i
 
    | **On this wizard page** |                                                                                                                                                                **Do this**                                                                                                                                                                 |
    |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |  **General Settings**   | 1. In **Task sequence ID**, type **WIN8_TARGET**.<br>2. In **Task sequence name**, type **Deploy Captured Image to Target Computer**.<br>3. In **Task sequence comments**, type **Task sequence for captured Windows 8.1 image from reference computer (WDG-REF-01) to the target computer (WDG-CLI-01)**.<br>4. Click **Next**. |
-   |   **Select Template**   |                                                                        In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select Standard **Client Task Sequence**, and then click **Next**.                                                                        |
-   |      **Select OS**      |                                                          In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **WIN8_RERENCEDrive in "WIN8_REFERENCE\WIN8_REFERENCE.wim"**, and then click **Next**.                                                           |
-   | **Specify Product Key** |                                                                                                                               Click **Do not specify a product key at this time**, and then click **Next**.                                                                                                                                |
-   |     **OS Settings**     |                                                       1. In **Full Name**, type **Woodgrove Bank Employee**.<br>2. In **Organization**, type **Woodgrove Bank**.<br>3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br>4. Click **Next**.                                                        |
-   |   **Admin Password**    |                                                                                                   In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then click **Next**.                                                                                                    |
-   |       **Summary**       |                                                                                                                                                              Click **Next**.                                                                                                                                                               |
+   |  **General Settings**   | 1. In **Task sequence ID**, type **WIN8_TARGET**.<br>2. In **Task sequence name**, type **Deploy Captured Image to Target Computer**.<br>3. In **Task sequence comments**, type **Task sequence for captured Windows 8.1 image from reference computer (WDG-REF-01) to the target computer (WDG-CLI-01)**.<br>4. Select **Next**. |
+   |   **Select Template**   |                                                                        In **The following task sequence templates are available**. **Select the one you would like to use as a starting point**, select Standard **Client Task Sequence**, and then select **Next**.                                                                        |
+   |      **Select OS**      |                                                          In **The following operating system images are available to be deployed with this task sequence**. **Select one to use**, select **WIN8_RERENCEDrive in "WIN8_REFERENCE\WIN8_REFERENCE.wim"**, and then select **Next**.                                                           |
+   | **Specify Product Key** |                                                                                                                               Select **Do not specify a product key at this time**, and then select **Next**.                                                                                                                                |
+   |     **OS Settings**     |                                                       1. In **Full Name**, type **Woodgrove Bank Employee**.<br>2. In **Organization**, type **Woodgrove Bank**.<br>3. In **Internet Explorer Home Page**, type **http:\//www.woodgrovebank.com**.<br>4. Select **Next**.                                                        |
+   |   **Admin Password**    |                                                                                                   In **Administrator Password** and **Please confirm Administrator Password**, type **P@ssw0rd**, and then select **Next**.                                                                                                    |
+   |       **Summary**       |                                                                                                                                                              Select **Next**.                                                                                                                                                               |
    |      **Progress**       |                                                                                                                                         The progress for creating the task sequence is displayed.                                                                                                                                          |
-   |    **Confirmation**     |                                                                                                                                                             Click **Finish**.                                                                                                                                                              |
+   |    **Confirmation**     |                                                                                                                                                             Select **Finish**.                                                                                                                                                              |
 
     The Import Task Sequence Wizard finishes, and the **WIN8_TARGET** task sequence is added to the list of task sequences.
 
@@ -532,30 +532,30 @@ Start the target computer (WDG-CLI-01) with the LTI bootable media you created e
 
    |  **On this wizard page**   |                                                                               **Do this**                                                                                |
    |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |        **Welcome**         |                                                  Click **Run the Deployment Wizard to install a new Operating System**.                                                  |
-   |      **Credentials**       | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **MDT2013**.<br>4. Click **OK**. |
-   |     **Task Sequence**      |                                               Click **Deploy Captured Image to Target Computer**, and then click **Next**.                                               |
-   |    **Computer Details**    |                                                   In **Computer name**, type **WDG-CLI-01**, and then click **Next**.                                                    |
-   | **Move Data and Settings** |                                                                             Click **Next**.                                                                              |
-   |  **User Data (Restore)**   |                                                                             Click **Next**.                                                                              |
-   |    **Locale and Time**     |                                                                             **Click Next**.                                                                              |
-   |     **Capture Image**      |                                                                             Click **Next**.                                                                              |
-   |       **BitLocker**        |                                                                             Click **Next**.                                                                              |
-   |         **Ready**          |                                     1. Click **Details** to view the information provided in the wizard.<br>2. Click **Begin**.                                      |
+   |        **Welcome**         |                                                  Select **Run the Deployment Wizard to install a new Operating System**.                                                  |
+   |      **Credentials**       | 1. In **User Name**, type **Administrator**.<br>2. In **Password**, type **P@ssw0rd**.<br>3. In **Domain**, type **MDT2013**.<br>4. Select **OK**. |
+   |     **Task Sequence**      |                                               Select **Deploy Captured Image to Target Computer**, and then select **Next**.                                               |
+   |    **Computer Details**    |                                                   In **Computer name**, type **WDG-CLI-01**, and then select **Next**.                                                    |
+   | **Move Data and Settings** |                                                                             Select **Next**.                                                                              |
+   |  **User Data (Restore)**   |                                                                             Select **Next**.                                                                              |
+   |    **Locale and Time**     |                                                                             **Select Next**.                                                                              |
+   |     **Capture Image**      |                                                                             Select **Next**.                                                                              |
+   |       **BitLocker**        |                                                                             Select **Next**.                                                                              |
+   |         **Ready**          |                                     1. Select **Details** to view the information provided in the wizard.<br>2. Select **Begin**.                                      |
 
    The wizard starts, and then the operating system deployment starts.
 
    **To monitor the target computer deployment process, complete the following steps on WDG-MDT-01**
 
-3. On WDG-MDT-01, click **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then click **Deployment Workbench**.
+3. On WDG-MDT-01, select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
 4. In the Deployment Workbench console tree, go to Deployment Workbench/Deployment Shares/MDT Deployment Share (C:\DeploymentShare$)/Monitoring
 
-5. In the Actions pane, periodically click **Refresh**.
+5. In the Actions pane, periodically select **Refresh**.
 
 6. In the details pane, view the deployment process for **WDG-CLI-01**.
 
-7. In the Actions pane, periodically click **Refresh**.
+7. In the Actions pane, periodically select **Refresh**.
 
     The status of the deployment process is updated in the details pane. Continue to monitor the deployment process until the process is complete.
 
@@ -563,10 +563,10 @@ Start the target computer (WDG-CLI-01) with the LTI bootable media you created e
 
    **To complete the target computer deployment process, perform the following steps on WDG-CLI-01**
 
-9. On WDG-CLI-01, in the **Deployment Summary** dialog box, click **Details**.
+9. On WDG-CLI-01, in the **Deployment Summary** dialog box, select **Details**.
 
     If any errors or warnings occur, review the errors or warnings, and record any diagnostic information.
 
-10. In the **Deployment Summary** dialog box, click **Finish**.
+10. In the **Deployment Summary** dialog box, select **Finish**.
 
     At the end of the MDT deployment process, the **Deployment Summary** dialog box appears. The image of Windows 8.1 captured from the reference computer is now installed on the target computer. If any errors or warnings occur, consult the MDT document *Troubleshooting Reference*.
