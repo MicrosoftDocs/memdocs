@@ -41,7 +41,7 @@ The Windows 365 Alerts system notifies you when specific events occur in your Cl
 
 ## Requirements
 
-To see alerts, you account must meet the following requirements:
+To see alerts, your account must meet the following requirements:
 
 - Windows 365 Enterprise
 - One of the following roles:
