@@ -152,7 +152,7 @@ The following third-party certification authorities support Intune:
 - [Keyfactor Command](https://software.keyfactor.com/Guides/SCEPGuide/Content/SCEPGuide/Introduction.htm)  
 - [KeyTalk](https://keytalk.com/)
 - [Keytos](https://docs.keytos.io/azure-pki/intune-certificate-authority/how-intune-scep-works/)
-- [Nexus Certificate Manager](https://doc.nexusgroup.com/display/PUB/Example%3A+SCEP+Intune+configuration+in+Protocol+Gateway)
+- [Nexus Certificate Manager](https://doc.nexusgroup.com/pub/scep-support-in-certificate-manager)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
