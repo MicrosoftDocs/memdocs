@@ -99,9 +99,6 @@ In the following scenarios, you should review app detection rules after performi
 
 ### Understand interactions between dependencies and supersedence
 
-> [!NOTE]
-> Supersedence GA is currently being rolled out. For more information, see [Upcoming improvements to Win32 app supersedence - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026).
-
 Interactions between dependencies and supersedence include the following:
 
 - Supersedence and dependency relationships can be created in the same app subgraph.
