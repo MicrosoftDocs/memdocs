@@ -13,7 +13,7 @@ ms.custom: include file
 >
 > To support Windows requirements for strong mapping of SCEP certificates that were introduced and announced in [KB5014754 from May 10, 2022](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16) we’ve made changes to Intune SCEP certificate issuance for new and renewed SCEP certificates. With these changes, new or renewed Intune SCEP certificates for iOS/iPadOS, macOS, and Windows now include the following tag in the Subject Alternative Name (SAN) field of the certificate: `URL=tag:microsoft.com,2022-09-14:sid:<value>`  
 >
-> This tag is used by strong mapping to tie certificate to a specific device or user SID from your Entra ID. With this change and requirement to map a SID from > Entra ID:  
+> This tag is used by strong mapping to tie the certificate to a specific device or user SID from your Entra ID. With this change and requirement to map a SID from Entra ID:  
 >
 > - Device certificates are supported for Windows hybrid-joined devices when that device has a SID in Entra ID that has been synchronized from an on-premises Active Directory.
 > - User certificates must be used for a supported devices that lack a device SID in Entra ID. User certificates use the Users SID from Entra ID.
