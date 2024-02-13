@@ -172,9 +172,9 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 2. Copy and share session link with the sharer that you're trying to help, before selecting **Start** to launch a new Remote Help session.  
 
-   a. When the sharer navigates to the session link with the passcode embedded, they're able to directly get to the specific session.
+   1. When the sharer navigates to the session link with the passcode embedded, they're able to directly get to the specific session.
 
-   b. As an alternative, you can copy and share the 8-digit passcode with the sharer. The sharer can navigate to aka.ms/rh and follow the steps.
+   1. As an alternative, you can copy and share the 8-digit passcode with the sharer. The sharer can navigate to aka.ms/rh and follow the steps.
 
 3. When Remote Help opens in a new tab, you must sign in to authenticate to your organization.
 
@@ -200,6 +200,7 @@ This section outlines the steps for provisioning the Remote Help service on the 
 
 1. Open PowerShell in admin mode.
     - It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
+
 2. Within PowerShell enter the following commands:
 
     - Install-Module -Name AzureADPreview
