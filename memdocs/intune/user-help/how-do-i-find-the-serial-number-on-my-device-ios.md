@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 02/13/2024
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -56,6 +56,30 @@ If you're prompted to identify your device during enrollment, at least one of yo
 If your device isn't listed:  
 1. Select **new device**.  
 2. Select **Continue**.
-3. Enter the last four characters of your device's serial number. For more information, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858) on Apple Support.  
+3. Enter the last four characters of your device's serial number. For more information, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858) on Apple Support.
+
+## Update operating system version 
+Keeping your device up-to-date lets you access the newest features, and it also ensures that your device has the most secure version of its operating system. While using the device for work or school, we recommend keeping both personal and corporate devices up-to-date with the newest versions. Before updating your device, back up all of the information on it. Keeping a backup can help you recover your data if something should interrupt any updates, or lets you transfer your information to a replacement device. 
+
+* To check your iOS device for available software updates, go to **Settings**  and tap **General** > **Software Update**.
+
+* To check your Mac for available software updates, go to **App Store** > **Updates**. Select the newest macOS update available, then select **Update**.  
+
+## Operating system isn't supported  
+The OS versiont that's on your device isn't supported. It's possible that being on the newest version of iOS may not work with your organization's apps, tools, and other internal infrastruture. To resolve this issue, contact your IT support person to find out what the requirements are. 
+
+## Remove an existing email account 
+
+**Applies to iOS/iPadOS**  
+
+If you set up your work email on your device prior to device enrollment, your organization might require you to remove the account and resync it. First, disconnect the email account that's linked to your work account. For steps, see [Add and remove email accounts on iPhone](https://support.apple.com/guide/iphone/add-and-remove-email-accounts-iph44d1ae58a/ios) (opens Apple Support).  
+
+After you disconnect the account, sync your device in the Intune Company Portal app.  
+
+1. Open the Company Portal app.  
+2. Select your device.  
+3. Select **Check status**. Wait while your device syncs your new email settings.
+4. Sign in to your email with your work account.  
+
 
 Need additional help? Contact your IT support person. For contact information, check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
