@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: 
-ms.date: 02/06/2024
+ms.date: 02/12/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
@@ -209,7 +209,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
     | Key | Type | Value |
     |---|---|---|
-    | AppPrefixAllowList | String | `com.apple.,com.microsoft.com` |
+    | AppPrefixAllowList | String | `com.apple.,com.microsoft` |
     | browser_sso_interaction_enabled | Integer | 1 |
     | disable_explicit_app_prompt | Integer | 1 |
 
@@ -252,6 +252,8 @@ Some must-have apps include:
 - **Company Portal app**
 
   Microsoft recommends you deploy the Intune Company Portal app to all devices as a required application. The Company Portal app is the self-service hub for users. In the Company Portal app, users can install apps, sync their device with Intune, check compliance status, and more.
+
+  The Company Portal app is also required for the SSO extension that you configure in [Step 6 - Configure initial settings and single sign-on (SSO)](#step-6---configure-initial-settings-and-single-sign-on-sso) (in this article).
 
   To deploy the Company Portal app as a required app, go to [Add the Company Portal for macOS app](../../intune/apps/apps-company-portal-macos.md).
 
