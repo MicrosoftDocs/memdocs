@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/19/2023
+ms.date: 02/12/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,6 +77,41 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.  
 
 You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to.
+
+### Intune core service
+
+ID |Desc |Category |ER |Addresses |Ports
+-- |---------------------------------------------------------------- |---------------------|--- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------|
+163 | Endpoint Manager client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.71.199.64/28, 13.73.244.48/28, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 20.49.93.160/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29` | **TCP:** 80, 443|
+172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com, *.dl.delivery.mp.microsoft.com, *.emdl.ws.microsoft.com, kv801.prod.do.dsp.mp.microsoft.com, geo.prod.do.dsp.mp.microsoft.com, emdl.ws.microsoft.com, 2.dl.delivery.mp.microsoft.com, bg.v4.emdl.ws.microsoft.com` | **TCP:** 7680, 3544, 80, 443|
+170 | MEM - PS and Win32Apps| Default<BR>Required | False | `swda01-mscdn.azureedge.net`<BR>`swda02-mscdn.azureedge.net`<BR>`swdb01-mscdn.azureedge.net`<BR>`swdb02-mscdn.azureedge.net`<BR>`swdc01-mscdn.azureedge.net`<BR>`swdc02-mscdn.azureedge.net`<BR>`swdd01-mscdn.azureedge.net`<BR>`swdd02-mscdn.azureedge.net`<BR>`swdin01-mscdn.azureedge.net`<BR>`swdin02-mscdn.azureedge.net`<BR> | **TCP:** 443|
+
+### Autoilot dependencies
+
+ID |Desc |Category |ER |Addresses |Ports
+-- |-- |-----|--- |--------------|--------------------------------|
+164 | Autopilot - Windows Update| Default<BR>Required | False | `*.download.windowsupdate.com`<BR>`*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`au.download.windowsupdate.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`download.windowsupdate.com`<BR>`dl.delivery.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`catalog.update.microsoft.com`<BR> | **TCP:** 443|
+165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com`<BR>`www.msftncsi.com`<BR>`www.msftconnecttest.com` | |
+169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`www.msftncsi.com`<BR>`c.s-microsoft.com` |  |
+173 | Autopilot - 3rd party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443
+
+### Remote Help
+
+ID |Desc |Category |ER |Addresses |Ports
+-- |-- |-----|--- | --------------| --------------------------------|
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`*.resources.lync.com`<BR>`*.infra.lync.com`<BR>`*.vortex.data.microsoft.com`<BR>`*.channelservices.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`sipfed.resources.lync.com`<BR>`webpoolbl20a23.infra.lync.com`<BR>`web.vortex.data.microsoft.com`<BR>`gateway.channelservices.microsoft.com`<BR>`trouter-azsc-usea-0-b.trouter.skype.com`<BR>`rdprelayv3eastusprod-0.support.services.microsoft.com`<BR>`*.go-mpulse.net`<BR>`s.go-mpulse.net`<BR>`*.trouter.skype.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR> | **TCP:** 443|
+187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
+188 | Remote Help Dependancy for GCC customers| Default<BR>Required | False |`remotehelp-gcc.microsoft.com`<BR>`remotehelpdev-gcc.microsoft.com`<BR>`remotehelpppe-gcc.microsoft.com`<BR>`gcc.remoteassistanceweb.usgov.communication.azure.us`<BR>`remoteassistanceprodacs.communication.azure.com`<BR> | **TCP:** 443|
+
+### Intune dependencies
+
+ID |Desc |Category |ER |Addresses |Ports
+-- |-- |-----|--- | --------------| --------------------------------|
+171 | MEM - WNS Dependencies| Default<BR>Required | False |`*.notify.windows.com`<BR>`*.wns.windows.com`<BR>`sinwns1011421.wns.windows.com`<BR>`sin.notify.windows.com`<BR> | **TCP:** 443|
+172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False |`*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.emdl.ws.microsoft.com`<BR>`kv801.prod.do.dsp.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 443|
+178 | MEM - Apple Dependencies| Default<BR>Required | False |`itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR>| **TCP:** 80, 443, 5223|
+179 | MEM - Android AOSP Dependency| Default<BR>Required | False |`intunecdnpeasd.azureedge.net`<BR> | **TCP:** 443|
+186 | Microsoft Azure Attestation| Default<BR>Required | False |`intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net`<BR> | **TCP:** 443|
 
 |FQDN    |Associated Service      |
 |-----------|----------------|
