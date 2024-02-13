@@ -50,8 +50,8 @@ Automated device enrollment via Apple Business Manager and Apple School Manager 
 
 ## Prerequisites 
 
-- You must have access to [Apple School Manager](https://school.apple.com/) or [Apple Business Manager](http://business.apple.com).    
-- A list of device serial numbers or a purchase order number for devices purchased through Apple.    
+- Access to [Apple School Manager](https://school.apple.com/) or [Apple Business Manager](http://business.apple.com) is required.    
+- A list of device serial numbers or a purchase order number for devices purchased through Apple is required.    
 - Set the [mobile device management authority](../fundamentals/mdm-authority-set.md) in your tenant.  
 - Get an [Apple MDM Push certificate](../enrollment/apple-mdm-push-certificate-get.md).    
 
@@ -72,7 +72,7 @@ The public key certificate is needed to request a trust-relationship certificate
 
 ### Step 2: Add MDM server and download server token   
 
-Add an mobile device management (MDM) server for Intune to Apple Business Manager or Apple School Manager, and then download the server token for it.   
+Add a mobile device management (MDM) server for Intune to Apple Business Manager, and then download the server token for it.   
 
 1. In the admin center, select the link that corresponds with the Apple portal you use. Your options: 
     * **Create a token via Apple Business Manager** 
@@ -161,7 +161,7 @@ At the end of this procedure, you will assign this profile to Microsoft Entra de
              
          The default configuration for new enrollment profiles is **Yes**.   
 
-        This setting is applied once during the out-of-box Apple automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their Mac. 
+     This setting is applied once during the out-of-box Apple automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their Mac. 
 
     * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment profiles.  
 
