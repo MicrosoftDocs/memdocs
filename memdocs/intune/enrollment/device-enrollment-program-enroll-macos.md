@@ -157,13 +157,13 @@ At the end of this procedure, you will assign this profile to Microsoft Entra de
          The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you assign to the device. Users can see the device configuration profiles downloading in Setup Assistant as they wait. The more policies and apps assigned, the longer the waiting time. Setup Assistant and Intune don't enforce a minimum or maximum time limit during this portion of setup. During product validation, the majority of devices we tested were released and able to access the home screen within fifteen minutes. If you enable this feature and are using a third party to help you provision devices, tell them about the potential for increased provisioning time.     
 
          The locked experience is supported on Macs running macOS 10.11 or later. It works on Macs targeted with new or existing enrollment profiles set up for these scenarios:    
-             - Enrollment via Setup Assistant with modern authentication  
-             - Enrollment with Setup Assistant (legacy)  
-             - Enrollment without user device affinity 
+         - Enrollment via Setup Assistant with modern authentication  
+         - Enrollment with Setup Assistant (legacy)  
+         - Enrollment without user device affinity 
              
-         The default configuration for new enrollment profiles is **Yes**.   
+         The default setting for new enrollment profiles is **Yes**.   
 
-     This setting is applied once during the out-of-box Apple automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their Mac. 
+         This setting is applied once during the out-of-box Apple automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their Mac. 
 
     * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment profiles.  
 
