@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/08/2024
+ms.date: 02/12/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,7 +31,7 @@ ms.collection:
 - security-copilot
 ---
 
-# Microsoft Security Copilot (preview) and Intune
+# Microsoft Copilot for Security (preview) and Intune
 
 > [!IMPORTANT]
 > The information in this article applies to the Microsoft Security Copilot Early Access Program, which is an invite-only paid preview program. Some information in this article relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided in this article.
