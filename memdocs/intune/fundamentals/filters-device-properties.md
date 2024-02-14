@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/05/2024
+ms.date: 02/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -207,7 +207,7 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
     
   > [!NOTE]
-  > The `isTpmAttested` property is evaluated at enrollment time or through re-attesting from the Device attestation status report. It is important to evaluate the Device attestaion status report before creating and applying the `isTpmAttested` property to determine impact to one's devices and users. The `isTpmAttested` property also can only successfully attest physical Windows devices with TPM 2.0 hardware, devices with TPM 1.2 or virtual machines will not pass attestation and will result in `(device.isTpmAttested -eq "False")`.
+  > The `isTpmAttested` property is evaluated at enrollment time or through re-attesting from the [Windows Health Attestation report](reports.md#windows-health-attestation-report-operational). To determine the effect on users and devices, review the Windows Health Attestation report before you create and apply the `isTpmAttested` property. The `isTpmAttested` property can only successfully attest physical Windows devices with TPM 2.0 hardware. Devices with TPM 1.2 or virtual machines don't pass attestation and result in `(device.isTpmAttested -eq "False")`.
 
 - **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Azure AD joined, Azure AD registered, Hybrid Azure AD joined,  or Unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
 
