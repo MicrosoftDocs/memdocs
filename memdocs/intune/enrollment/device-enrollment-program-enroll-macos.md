@@ -151,7 +151,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
       - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical out-of-box-experience for Apple products. This method installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. For more information about retrieving the ADFS endpoint, see [Get-ADfsEndpoint] (/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).   
 
- 1. **Await final configuration** enables a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device.
+ 1. **Await final configuration** enables a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. This setting is applied once during the out-of-box Apple automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their Mac. 
  
     Your options:  
        * **Yes**:  Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. This option is the default configuration for new enrollment profiles.      
@@ -161,11 +161,9 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
     The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you assign to the device. Users can see the device configuration profiles downloading in Setup Assistant as they wait. The more policies and apps assigned, the longer the waiting time. Setup Assistant and Intune don't enforce a minimum or maximum time limit during this portion of setup. During product validation, most devices we tested were released and able to access the home screen within 15 minutes. If you enable this feature and are working with a Microsoft partner or non-Microsoft service to help you provision devices, tell them about the potential for increased provisioning time.  
 
     The locked experience is supported on Macs running macOS 10.11 or later. It works on Macs targeted with new or existing enrollment profiles set up for these scenarios:    
-         - Enrollment via Setup Assistant with modern authentication  
-         - Enrollment with Setup Assistant (legacy)  
-         - Enrollment without user device affinity 
-             
-    This setting is applied once during the out-of-box Apple automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their Mac. 
+          - Enrollment via Setup Assistant with modern authentication  
+          - Enrollment with Setup Assistant (legacy)  
+          - Enrollment without user device affinity  
 
 1. You can enforce **Locked enrollment** to prevent users from unenrolling their devices from Intune. Select **Yes** to disable the Mac settings in System Preferences and Terminal that allow users to remove the management profile. After the device enrolls, you can't change this setting without wiping the device.  
 
@@ -178,9 +176,9 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 Your options:  
 
  * **Create a local primary account**: Select **Yes** to configure local primary account settings for targeted Macs. Select **No** to skip this step.    
- * **Prefill account info**: Select **Not configured** to require the device user to enter their account username and full name in Setup Assistant. Select **Yes** to prefill the account information for them. 
+ * **Prefill account info**: Select **Not configured** to require the device user to enter their account username and full name in Setup Assistant. 
  
- If you choose to prefill, enter the primary account name and full name settings. For more information about tokens, see [Tokens used in the property list](../apps/app-configuration-policies-use-ios#tokens-used-in-the-property-list.md). Your options:  
+ Alternatively, select **Yes** to prefill the account information for them. Then enter the primary account name and full name settings. For more information about tokens, see [Tokens used in the property list](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list). Your options:  
     * **Primary account name**: Enter the username for the account. Available for devices running macOS versions 10.15 and later. `{{partialupn}}` is the supported token variable for *account name*.    
     * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*. Available for devices running macOS versions 10.15 and later. 
  * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**.   
