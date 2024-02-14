@@ -161,34 +161,35 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
     The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you assign to the device. Users can see the device configuration profiles downloading in Setup Assistant as they wait. The more policies and apps assigned, the longer the waiting time. Setup Assistant and Intune don't enforce a minimum or maximum time limit during this portion of setup. During product validation, most devices we tested were released and able to access the home screen within 15 minutes. If you enable this feature and are working with a Microsoft partner or non-Microsoft service to help you provision devices, tell them about the potential for increased provisioning time.  
 
     The locked experience is supported on Macs running macOS 10.11 or later. It works on Macs targeted with new or existing enrollment profiles set up for these scenarios:    
-          - Enrollment via Setup Assistant with modern authentication  
-          - Enrollment with Setup Assistant (legacy)  
-          - Enrollment without user device affinity  
+       * Enrollment via Setup Assistant with modern authentication  
+       * Enrollment with Setup Assistant (legacy)  
+       * Enrollment without user device affinity  
 
 1. You can enforce **Locked enrollment** to prevent users from unenrolling their devices from Intune. Select **Yes** to disable the Mac settings in System Preferences and Terminal that allow users to remove the management profile. After the device enrolls, you can't change this setting without wiping the device.  
 
 1. Select **Next**.   
 
-1. Optionally, on the **Account Settings** page, you can create a local primary account for targeted Macs. Local primary account settings are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account will be an *admin* account after it's created. Having at least one admin account is a Mac setup requirement.  
+1. Optionally, on the **Account Settings** page, you can configure the local primary account on targeted Macs. 
 
-![Image of the new Account settings section in the automated device enrollment profile in Intune.](image.png)  
+   > [!div class="mx-imgBorder"]
+   > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)  
 
-Your options:  
+   These settings are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account will be an *admin* account after it's created. Having at least one admin account is a Mac setup requirement.  
 
- * **Create a local primary account**: Select **Yes** to configure local primary account settings for targeted Macs. Select **No** to skip this step.    
- * **Prefill account info**: Select **Not configured** to require the device user to enter their account username and full name in Setup Assistant. 
- 
- Alternatively, select **Yes** to prefill the account information for them. Then enter the primary account name and full name settings. For more information about tokens, see [Tokens used in the property list](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list). Your options:  
-    * **Primary account name**: Enter the username for the account. Available for devices running macOS versions 10.15 and later. `{{partialupn}}` is the supported token variable for *account name*.    
-    * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*. Available for devices running macOS versions 10.15 and later. 
- * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**.   
+   Your options:  
 
-For account settings to work as intended, your enrollment profile must have the following configurations:      
-* **User affinity**: Select **Enroll with User affinity**.     
-* **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.   
-* **Await final configuration**: Select **Yes**.       
+   * **Create a local primary account**: Select **Yes** to configure local primary account settings for targeted Macs. Select **No** to skip this step.    
+   * **Prefill account info**: The default configuration, **Not configured**, requires the device user to enter their account username and full name in Setup Assistant. Select **Yes** to prefill the account information for them instead. Then enter the primary account name and full name:   
+     * **Primary account name**: Enter the username for the account. `{{partialupn}}` is the supported token variable for *account name*.    
+     * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*.   
+   * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**.   
 
-Local accounts depend on the **await final configuration* feature when they're being created. As a result, whenever you configure any local account settings, this setting is enabled. Even if you don't touch the setting, it is enabled in the background and applied to the enrollment profile.  
+   For account settings to work as intended, your enrollment profile must have the following configurations:      
+    * **User affinity**: Select **Enroll with User affinity**.     
+   * **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.   
+   * **Await final configuration**: Select **Yes**.       
+
+   Local accounts depend on the **await final configuration* feature when they're being created. As a result, whenever you configure any local account settings, this setting is enabled. Even if you don't touch the setting, it is enabled in the background and applied to the enrollment profile.  
 
 1. Select **Next**.  
 
