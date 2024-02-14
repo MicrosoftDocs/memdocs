@@ -187,10 +187,7 @@ Here are some sample prompts to get you started:
 
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. You can:
-
-- [Use search and filter](#use-search-and-filter-to-find-settings) features in the settings catalog to find settings.
-- [Use Copilot](#use-copilot-to-learn-more-about-a-setting) to get more information about each setting.
+There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog, and use Copilot to get more information about each setting.
 
 # [Search and filter](#tab/sc-search-filter)
 
@@ -273,11 +270,11 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 ## Conflicts and reporting
 
-Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your policy. The data refreshes automatically, and operates in near real time.
+Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data refreshes automatically, and operates in near real time.
 
 # [Reporting and troubleshooting](#tab/sc-reporting)
 
-Intune has built-in reporting features that can help you troubleshoot conflicts and get more information for each setting.
+Intune has built-in reporting features that can help you troubleshoot conflicts, including per-setting status reporting.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
 
@@ -315,13 +312,13 @@ For more information on conflict resolution, go to:
 
 Copilot can help you find the status of your existing policies, find the status of a specific setting in your policy, and show any potential conflicts.
 
-To help avoid conflicts, you can ask questions like:
+**To help avoid conflicts**, you can ask questions like:
 
 - Will this policy cause any conflicts?
 - Is this setting configured in any other policies?
 - Will this setting cause a conflict?
 
-To get reporting-like information on existing policies, you can ask questions like:
+**To get reporting-like information on existing policies**, you can ask questions like:
 
 - Summarize the policy "Contoso Windows 10 security"​.
 - Show policies that contain encryption settings​. Describe their impact on end users.
