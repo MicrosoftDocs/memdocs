@@ -73,7 +73,7 @@ groups:
     - id: mdssc-preview
       title: Opt-in Public Preview
 
-- id: create-policy
+- id: create-policy - DELETE
   title: Create policy options
   prompt: Select your method
   pivots:

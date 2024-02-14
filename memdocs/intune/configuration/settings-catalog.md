@@ -77,8 +77,7 @@ For information on some features you can configure using the settings catalog, g
 
 ## Create the policy
 
-::: zone pivot="all,settings-catalog"
-### Create the policy using the settings catalog profile
+# [Settings catalog profile](#tab/create-policy-sc)
 
 You can create the policy using the settings catalog profile type.
 
@@ -149,10 +148,8 @@ You can create the policy using the settings catalog profile type.
 12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time the device checks for configuration updates, the settings you configured are applied.
-::: zone-end
 
-::: zone pivot="all,copilot"
-### Create the policy using Copilot
+# [Copilot](#tab/create-policy-copilot)
 
 You can create a policy using Copilot prompts.
 
@@ -171,7 +168,7 @@ You can create a policy using Copilot prompts.
 
 5. Continue creating the policy and save your changes. In **Assignments**, you can assign the policy to users or groups. Or, you can just save the policy and assign it later. The policy doesn't apply until you assign it.
 
-#### Sample Copilot prompts that create a new policy
+### Sample Copilot prompts that create a new policy
 
 When creating a policy, we recommend you use the **Generate**, **Draft**, or **Create** keywords in the prompt. These keywords help Copilot and other AI languages understand your intent.
 
@@ -185,17 +182,17 @@ Here are some sample prompts to get you started:
 - Create a policy that configures Microsoft auto update to enforce installation after 14 days on mac devices.
 - Generate a policy that hides the shutdown button on the start menu.​
 - Draft a policy from this JAMF output `paste the text`.
-::: zone-end
+
+---
 
 ## Find some settings and learn more about each setting
 
 There are thousands of settings available in the settings catalog. You can:
 
-- [Use search and filter](#use-search-and-filter-to-find-settings) features to find settings.
+- [Use search and filter](#use-search-and-filter-to-find-settings) features in the settings catalog to find settings.
 - [Use Copilot](#use-copilot-to-learn-more-about-a-setting) to get more information about each setting.
 
-::: zone pivot="all,settings-catalog"
-### Use search and filter to find settings
+# [Search and filter](#tab/sc-search-filter)
 
 When you create a new policy or update an existing policy, there are search and filter features to help you find settings.
 
@@ -217,10 +214,8 @@ When you create a new policy or update an existing policy, there are search and 
   You can also **filter the settings by device or user scope**. For more information on user scope and device scope, go to [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-scope.png" alt-text="Screenshot that shows the user and device scope filter in the settings catalog in Microsoft Intune and Intune admin center.":::
-::: zone-end
 
-::: zone pivot="all,copilot"
-### Use Copilot to learn more about a setting
+# [Copilot](#tab/copilot-tooltips)
 
 When using settings catalog policies, you can use Copilot to get more information about a specific setting.
 
@@ -234,14 +229,15 @@ When using settings catalog policies, you can use Copilot to get more informatio
 
     :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-details.png" alt-text="Screenshot that shows Copilot giving more detailed information on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
-#### Sample Copilot prompts to learn more about a setting
+### Sample Copilot prompts to learn more about a setting
 
 - Tell me about this setting.
 - What is the impact of this setting?
 - What happens if I deploy this setting to my devices?
 - Does Microsoft recommend enabling this setting?
 - Is this setting configured in any other policies?
-::: zone-end
+
+---
 
 ## Copy a profile  
 
@@ -279,8 +275,7 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your policy. The data refreshes automatically, and operates in near real time.
 
-::: zone pivot="all,settings-catalog"
-### Built-in reporting and troubleshooting conflicts
+# [Reporting and troubleshooting](#tab/sc-reporting)
 
 Intune has built-in reporting features that can help you troubleshoot conflicts and get more information for each setting.
 
@@ -315,10 +310,8 @@ For more information on conflict resolution, go to:
 
 - [Monitor device profiles](device-profile-monitor.md#view-conflicts)
 - [Common questions and answers with device policies](device-profile-troubleshoot.md)
-::: zone-end
 
-::: zone pivot="all,copilot"
-### Use Copilot to find and avoid conflicts
+# [Copilot](#tab/copilot-conflicts)
 
 Copilot can help you find the status of your existing policies, find the status of a specific setting in your policy, and show any potential conflicts.
 
@@ -334,7 +327,8 @@ To get reporting-like information on existing policies, you can ask questions li
 - Show policies that contain encryption settings​. Describe their impact on end users.
 - Describe the impact of this policy on security. Format the output in bullets instead of a table.
 - Create a summary of this change for my Change Advisory Board meeting today. Include the full scope (users and devices), summary of the settings in the policy, and possible risks to security or user productivity.
-::: zone-end
+
+---
 
 ## Settings catalog vs. templates
 
