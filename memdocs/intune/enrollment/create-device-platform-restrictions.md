@@ -131,6 +131,8 @@ The following filter properties are always available to use with enrollment poli
 * OS version 
 * Operating System SKU 
 * Ownership
+* Enrollment profile name
+* Enrollment attestation (isTpmAttested)  
 
 **iOS/iPadOS and macOS**  
 * Manufacturer 
