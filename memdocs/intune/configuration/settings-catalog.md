@@ -78,6 +78,8 @@ For information on some features you can configure using the settings catalog, g
 ## Create the policy
 
 ::: zone pivot="all,settings-catalog"
+### Create the policy using the settings catalog profile
+
 You can create the policy using the settings catalog profile type.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -150,6 +152,8 @@ The next time the device checks for configuration updates, the settings you conf
 ::: zone-end
 
 ::: zone pivot="all,copilot"
+### Create the policy using Copilot
+
 You can create a policy using Copilot prompts.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -167,7 +171,7 @@ You can create a policy using Copilot prompts.
 
 5. Continue creating the policy and save your changes. In **Assignments**, you can assign the policy to users or groups. Or, you can just save the policy and assign it later. The policy doesn't apply until you assign it.
 
-### Sample Copilot prompts that create a new settings catalog policy
+#### Sample Copilot prompts that create a new policy
 
 When creating a policy, we recommend you use the **Generate**, **Draft**, or **Create** keywords in the prompt. These keywords help Copilot and other AI languages understand your intent.
 
@@ -187,10 +191,11 @@ Here are some sample prompts to get you started:
 
 There are thousands of settings available in the settings catalog. You can:
 
-- [Use search and filter](#use-search-and-filter) features to find settings.
-- [Use Copilot](#use-copilot) to get more information about each setting.
+- [Use search and filter](#use-search-and-filter-to-find-settings) features to find settings.
+- [Use Copilot](#use-copilot-to-learn-more-about-a-setting) to get more information about each setting.
 
 ::: zone pivot="all,settings-catalog"
+### Use search and filter to find settings
 
 When you create a new policy or update an existing policy, there are search and filter features to help you find settings.
 
@@ -215,6 +220,8 @@ When you create a new policy or update an existing policy, there are search and 
 ::: zone-end
 
 ::: zone pivot="all,copilot"
+### Use Copilot to learn more about a setting
+
 When using settings catalog policies, you can use Copilot to get more information about a specific setting.
 
 1. In your policy, select **Add settings**. In the Settings Picker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the Settings Picker.
@@ -227,7 +234,7 @@ When using settings catalog policies, you can use Copilot to get more informatio
 
     :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-details.png" alt-text="Screenshot that shows Copilot giving more detailed information on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
-### Sample Copilot prompts to learn more about a setting
+#### Sample Copilot prompts to learn more about a setting
 
 - Tell me about this setting.
 - What is the impact of this setting?
@@ -273,6 +280,8 @@ When you create a settings catalog policy, you can export the policy to a `.json
 Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your policy. The data refreshes automatically, and operates in near real time.
 
 ::: zone pivot="all,settings-catalog"
+### Built-in reporting and troubleshooting conflicts
+
 Intune has built-in reporting features that can help you troubleshoot conflicts and get more information for each setting.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
@@ -309,6 +318,8 @@ For more information on conflict resolution, go to:
 ::: zone-end
 
 ::: zone pivot="all,copilot"
+### Use Copilot to find and avoid conflicts
+
 Copilot can help you find the status of your existing policies, find the status of a specific setting in your policy, and show any potential conflicts.
 
 To help avoid conflicts, you can ask questions like:
