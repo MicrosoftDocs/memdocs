@@ -72,14 +72,3 @@ groups:
       title: Generally Available
     - id: mdssc-preview
       title: Opt-in Public Preview
-
-- id: create-policy - DELETE
-  title: Create policy options
-  prompt: Select your method
-  pivots:
-    - id: all
-      title: All methods
-    - id: settings-catalog
-      title: Settings catalog
-    - id: copilot
-      title: Copilot

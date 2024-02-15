@@ -97,7 +97,7 @@ For example, you can ask Copilot to show you the settings catalog policy and set
 TO DO: also update:
 
 - DONE: /configuration/settings-catalog.md
-- /configuration/administrative-templates.md
+- DONE: /configuration/administrative-templates.md
 - /configuration/group-policy-analytics-migrate.md
 - /configuration/device-profile-monitor.md#view-conflicts
 - /configuration/device-profile-troubleshoot.md

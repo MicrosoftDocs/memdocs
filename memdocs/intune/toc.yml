@@ -90,8 +90,12 @@ items:
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
         displayName: admx, administrative template, gpo, windows 
 
-  - name: Security Copilot + Intune
-    href: ./fundamentals/security-copilot.md
+  - name: Microsoft Copilot
+    items:
+    - name: Intune plug-in in Copilot
+      href: ./fundamentals/security-copilot.md
+    - name: Copilot in Intune overview
+      href: ./fundamentals/copilot-intune-overview.md
 
   - name: Plan
     items:
