@@ -2,7 +2,6 @@
 # required metadata
 
 title: Operating systems and browsers supported by Microsoft Intune
-titleSuffix: 
 description: Lists supported device platforms and browsers for Intune device management
 keywords:
 author: Smritib17
@@ -23,7 +22,7 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started; seodec18
+ms.custom: get-started
 ms.collection:
 - tier1
 - M365-identity-device-management

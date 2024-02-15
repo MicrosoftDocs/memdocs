@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Intune to manage Microsoft Defender security settings management on devices not enrolled with Microsoft Intune 
-description: Use Intune profiles to manage security settings management for Microsoft Defender for Endpoint on devices supported by Defender that don't enroll with Microsoft Intune. 
+title: Use Intune to manage security settings for Microsoft Defender on devices that are not enrolled with Microsoft Intune 
+description: Learn about the device management scenario called Microsoft Defender security settings management, where you use Intune profiles to manage Microsoft Defender for Endpoint settings on devices that haven't enrolled with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/16/2024
+ms.date: 02/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -365,7 +365,7 @@ You can create groups for these devices [in Microsoft Entra](/azure/active-direc
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*
 - **Linux Device** - The deviceOSType or OS displays as *Linux*
 
- #### Sample Intune Dynamic Groups with Rule Syntax
+### Sample Intune Dynamic Groups with Rule Syntax
 
 **Windows Workstations**:
 
@@ -513,7 +513,7 @@ Security settings management doesn't support Server core installations due to Se
 
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
-### Managing security through MDE if you were previously using a 3rd party security tool 
+### Managing security through MDE if you were previously using a 3rd party security tool
 
 If you previously had a third-party security tool on the machine and are now managing it with MDE, you may see some impact on MDE’s capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of MDE on your machine.
 

@@ -23,7 +23,6 @@ ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier3
 - M365-identity-device-management
@@ -132,7 +131,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Android 11 and newer**: New Wi-Fi profiles might require this setting be configured. Otherwise, the devices might not connect to your Wi-Fi network.
 
-      - **Android 14 and newer**: The total content length of all the Radius servers must be less than 256 characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+      - **Android 14 and newer**: Google does not alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
@@ -156,6 +155,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
       If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then you can enter only the suffix. For example, you can enter `contoso.com`.
 
       When you enter this value, user devices can bypass the dynamic trust dialog that can be shown when connecting to the Wi-Fi network.
+
 
       - **Android 11 and newer**: New Wi-Fi profiles might require this setting be configured. Otherwise, the devices might not connect to your Wi-Fi network.
 

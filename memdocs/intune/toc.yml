@@ -368,8 +368,6 @@ items:
                     href: ./apps/apps-enterprise-app-management.md
                   - name: Add a Enterprise App Catalog app (Win32)
                     href: ./apps/apps-add-enterprise-app.md                
-                - name: Sideload Windows LOB apps
-                  href: ./apps/app-sideload-windows.md
                 - name: macOS LOB apps
                   href: ./apps/lob-apps-macos.md
                 - name: macOS app management
@@ -473,8 +471,6 @@ items:
                   displayName: vpp; volume purchased
                 - name: Volume-purchased iOS apps
                   href: ./apps/vpp-apps-ios.md
-                - name: Microsoft Store for Business apps
-                  href: ./apps/windows-store-for-business.md
                 - name: iOS eBooks
                   href: ./apps/vpp-ebooks-ios.md
             - name: Protect apps
@@ -1767,6 +1763,8 @@ items:
       - name: Known issues
         displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
+    - name: End-to-end macOS endpoint guide
+      href: ../solutions/end-to-end-guides/macos-endpoints-get-started.md
     - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
       displayName: admx, administrative template, windows, gpo
