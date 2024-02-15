@@ -108,20 +108,42 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 ID |Desc |Category |ER |Addresses |Ports|Notes|
 -- |-- |-----|--- | --------------| --------------------------------|------------|
 171 | MEM - WNS Dependencies| Default<BR>Required | False |`*.notify.windows.com`<BR>`*.wns.windows.com`<BR>`sinwns1011421.wns.windows.com`<BR>`sin.notify.windows.com`<BR> | **TCP:** 443|
-172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False |`*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.emdl.ws.microsoft.com`<BR>`kv801.prod.do.dsp.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 443|
-178 | MEM - Apple Dependencies| Default<BR>Required | False |`itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR>| **TCP:** 80, 443, 5223|
-179 | MEM - Android AOSP Dependency| Default<BR>Required | False |`intunecdnpeasd.azureedge.net`<BR> | **TCP:** 443|
+172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False |`*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.emdl.ws.microsoft.com`<BR>`kv801.prod.do.dsp.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 443|For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP or 3544 for NAT traversal (optionally Teredo). For client-service communication, it uses HTTP or HTTPS over port 80/443. To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-trouble)|
+178 | MEM - Apple Dependencies| Default<BR>Required | False |`itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR>| **TCP:** 80, 443, 5223|For more information, see [Use Apple products on enterprise networks](https://support.apple.com/HT210060), [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).|
+179 | MEM - Android AOSP Dependency| Default<BR>Required | False |`intunecdnpeasd.azureedge.net`<BR> | **TCP:** 443|Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android). |
 186 | Microsoft Azure Attestation| Default<BR>Required | False |`intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net`<BR> | **TCP:** 443|
+
+#### Delivery Optimization firewall requirements  
+
+Allow the following hostnames through your firewall to support Delivery Optimization.
+For communication between clients and the Delivery Optimization cloud service:
+- \*.do.dsp.mp.microsoft.com
+
+For Delivery Optimization metadata:
+- \*.dl.delivery.mp.microsoft.com
+- \*.emdl.ws.microsoft.com
+
+#### Android port information
+
+> [!NOTE]
+> Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
+Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
+
+#### Google Android Enterprise
+
+Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
+
+#### Android push notification
+
+Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
 
 ### Authentication dependencies
 
 ID |Desc |Category |ER |Addresses |Ports|Notes|
 -- |-- |-----|--- | --------------| --------------------------------|------------|
-56 | Authentication and Identity, includes Azure Active Directory and Azure AD related services.| Allow<BR>Required | True |`login.microsoftonline.com`<BR> | **TCP:** 80, 443|
-150 | Office Customization Service provides Office 365 ProPlus deployment configuration, application settings, and cloud based policy management. | Default | False |`*.officeconfig.msocdn.com`<BR>`config.office.com`| **TCP:** 443|
-178 | MEM - Apple Dependencies| Default<BR>Required | False |`itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR>| **TCP:** 80, 443, 5223|
-179 | MEM - Android AOSP Dependency| Default<BR>Required | False |`intunecdnpeasd.azureedge.net`<BR> | **TCP:** 443|
-186 | Microsoft Azure Attestation| Default<BR>Required | False |`intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net`<BR> | **TCP:** 443|
+56 | Authentication and Identity, includes Azure Active Directory and Azure AD related services.| Allow<BR>Required | True |`login.microsoftonline.com`<BR>`graph.windows.net` | **TCP:** 80, 443| For More information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
+150 | Office Customization Service provides Office 365 ProPlus deployment configuration, application settings, and cloud based policy management. | Default | False |`*.officeconfig.msocdn.com`<BR>`config.office.com`| **TCP:** 443|For More information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
+59 | Identity supporting services & CDNs. | Default<BR>Required | False |`enterpriseregistration.windows.net`<BR>| **TCP:** 80, 443|For More information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 
 |FQDN    |Associated Service      |
 |-----------|----------------|
@@ -262,6 +284,46 @@ However, Windows 10 and GCCH/DOD environments will continue to use the existing 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
 
 Ensure there are no firewall rules blocking outbound HTTPS/443 traffic to the endpoints listed in this section based on your Intune tenant's location. To find your tenant location navigate to the Intune admin center > **Tenant administration** > **Tenant status** > **Tenant details**, see Tenant location.
+
+# [North America](#tab/north-america)
+
+- 'https://intunemaape1.eus.attest.azure.net'
+
+- 'https://intunemaape2.eus2.attest.azure.net'
+
+- 'https://intunemaape3.cus.attest.azure.net'
+
+- 'https://intunemaape4.wus.attest.azure.net'
+
+- 'https://intunemaape5.scus.attest.azure.net'
+
+- 'https://intunemaape6.ncus.attest.azure.net'
+
+# [Europe](#tab/europe)
+
+- 'https://intunemaape7.neu.attest.azure.net'
+
+- 'https://intunemaape8.neu.attest.azure.net'
+
+- 'https://intunemaape9.neu.attest.azure.net'
+
+- 'https://intunemaape10.weu.attest.azure.net'
+
+- 'https://intunemaape11.weu.attest.azure.net'
+
+- 'https://intunemaape12.weu.attest.azure.net'
+
+# [Asia Pacific](#tab/asia-pacific)
+
+- 'https://intunemaape13.jpe.attest.azure.net'
+
+- 'https://intunemaape17.jpe.attest.azure.net'
+
+- 'https://intunemaape18.jpe.attest.azure.net'
+
+- 'https://intunemaape19.jpe.attest.azure.net'
+
+
 
 North America based locations:
 
