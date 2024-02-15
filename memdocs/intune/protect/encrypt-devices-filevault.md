@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 02/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,6 +43,8 @@ Use one of the following policy types to configure FileVault on your managed dev
 - **[Device configuration profile for endpoint protection for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Intune](../configuration/device-profile-create.md).
 
   View the [FileVault settings that are available in endpoint protection profiles for device configuration policy](../protect/endpoint-protection-macos.md#filevault).
+
+- **[Settings catalog profile for macOS FileVault](#create-settings-catalog-policy-for-filevault)**. FileVault can be configured through the Intune [settings catalog](../configuration/settings-catalog.md), which includes some settings that aren't available in the *endpoint security* and *endpoint protection* templates.
 
 To manage BitLocker for Windows 10/11, see [Manage BitLocker policy](../protect/encrypt-devices.md).
 
@@ -144,6 +146,51 @@ Select **Next**.
 Select **Next**.
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+## Create settings catalog policy for FileVault
+
+1. Sign in to the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **macOS** > **Configuration profiles** > **Create** > **New policy**.
+
+3. On the **Create a profile** page, select **Settings catalog** for the **Profile type**.
+
+4. On the **Basics** page, enter the following properties:
+
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name might include the profile type and platform.
+
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
+5. On the **Configuration settings** page, select **+ Add settings** to open the settings picker. The FileVault settings are located under the *Full Disk Encryption* category:
+
+   :::image type="content" source="./media/encrypt-devices-filevault/filevault-settings-picker.png" alt-text="Image of the FileVault options in the Full Disk Encryption category of the Settings picker.":::
+
+   To enable FileVault, select and configure the following settings from the *Full Disk Encryption* category:
+
+   - FileVault > **Enable** - Set to **On**
+   - FileVault Recovery Key Escrow > **Location** - Specify a description of the location where the recovery key will be escrowed. This text is inserted into the message the user sees when enabling FileVault.
+
+   > [!TIP]
+   >
+   > When configuring encryption for devices that run macOS 14 or later, you can use the macOS Setup Assistant to enforce FileVault encryption before a user arrives at the home screen. See [Enable FileVault through the Setup Assistant](#enable-filevault-through-the-setup-assistant) later in this article.
+
+6. Configure additional [FileVault settings](https://support.apple.com/en-md/guide/deployment/dep32bf53500/web) (opens Apple’s website) to meet your business needs, and then select **Next**.
+
+7. If applicable, on the **Scope (Tags)** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile. Select **Next** to continue.
+
+8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see Assign user and device profiles. Select **Next**.
+
+9. On the **Review + create** page, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+### Enable FileVault through the Setup Assistant
+
+For devices that run macOS 14 and later, your settings catalog policy can also enforce FileVault encryption through the macOS Setup Assistant, before a user arrives at the home screen. To be successful, this requires the following configurations:
+
+- The **Await final configuration** feature for the device must be set to **Yes**. This configuration prevents end users from accessing restricted content or changing settings until applicable Intune device configuration policies apply. For information on this configuration, see [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
+
+- When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile:
+
+  - FileVault > **Force Enable in Setup Assistant** – Set to **Enabled**.
 
 ## Manage FileVault
 
