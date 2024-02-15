@@ -61,7 +61,7 @@ This article lists the steps to create a template for Windows client devices, an
 
 - There are two ways to create an administrative template: Using a template, or using the Settings Catalog. This article focuses on using the **Administrative Templates** template. The Settings Catalog has more Administrative Template settings available.
 
-  For the specific steps to use the Settings Catalog and/or Microsoft Copilot, go to [Use the settings catalog to configure settings](settings-catalog.md).
+  For the specific steps to use the Settings Catalog, and use Microsoft Copilot to manage settings catalog policies, go to [Use the settings catalog to configure settings](settings-catalog.md).
 
 - The ADMX templates use the following sources:
 

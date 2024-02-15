@@ -7,7 +7,7 @@ keywords: settings catalog, security copilot
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2024
+ms.date: 02/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,19 +32,19 @@ zone_pivot_groups: create-policy
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
 
-Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings.
+Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
-When you combine Microsoft Copilot, you can learn more about each setting, can create settings catalog policies using prompts, and can get impact What If analysis.
+When you combine the settings catalog with Microsoft Copilot, you can use Copilot to:
 
-More settings are continually being added to the settings catalog. For a list of the settings, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
+- Learn more about each setting in the settings catalog.
+- Create settings catalog policies using prompts.
+- Get impact What If analysis on the settings you configure and the policies you create.
 
 If you prefer to configure settings at a granular level, similar to on-premises Group Policy Objects (GPOs), then the settings catalog is a natural transition to cloud-based policy.
 
 When you create the policy, you start from scratch. You add only the settings you want to control and manage.
 
-Copilot can help you find all the settings related to a specific area, like BitLocker or Microsoft Edge. You can use the settings catalog to create a BitLocker policy with all BitLocker settings, and all in one place in Intune.
-
-Use the settings catalog as part of your mobile device management (MDM) solution to manage and secure devices in your organization.
+Use the settings catalog as part of your mobile device management (MDM) solution to manage and secure devices in your organization. More settings are continually being added to the settings catalog. For a list of the settings, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
 
 This feature applies to:
 
@@ -187,11 +187,11 @@ Here are some sample prompts to get you started:
 
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog, and use Copilot to get more information about each setting.
+There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog. If you use Copilot, then you can get more Copilot-generated information about each setting.
 
 # [Search and filter](#tab/sc-search-filter)
 
-When you create a new policy or update an existing policy, there are search and filter features to help you find settings.
+When you create a new policy or update an existing policy, there are built-in search and filter features to help you find settings.
 
 - In your policy, to find specific settings, you can use **Add settings** > **Search**. You can search by category, such as `browser`, search for a keyword, such as `office` or `google`, and search for specific settings.
 
@@ -218,11 +218,11 @@ When using settings catalog policies, you can use Copilot to get more informatio
 
 1. In your policy, select **Add settings**. In the Settings Picker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the Settings Picker.
 
-2. For the settings, notice the Copilot tooltips:
+2. For the settings, notice the Copilot prompts button:
 
-    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-tooltip.png" alt-text="Screenshot that shows Copilot tooltip for on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-tooltip.png" alt-text="Screenshot that shows Copilot tooltip prompts button for on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
-3. When you select a Copilot tooltip, more information is shown about the setting. In the prompt, you can ask Copilot more questions, including the effect of the setting:
+3. When you select a Copilot prompts button, more information is shown about the setting. In the prompt, you can ask Copilot more questions, including the effect of the setting:
 
     :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-details.png" alt-text="Screenshot that shows Copilot giving more detailed information on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
@@ -272,9 +272,11 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data refreshes automatically, and operates in near real time.
 
+There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting. If you use Copilot, then you can use prompts to help avoid conflicts and get more information on existing policies.
+
 # [Reporting and troubleshooting](#tab/sc-reporting)
 
-Intune has built-in reporting features that can help you troubleshoot conflicts, including per-setting status reporting.
+In the Intune admin center, you can use the built-in reporting features to help find and resolve conflicts.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
 
