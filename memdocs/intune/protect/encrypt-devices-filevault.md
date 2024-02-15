@@ -188,9 +188,13 @@ For devices that run macOS 14 and later, your settings catalog policy can also e
 
 - The **Await final configuration** feature for the device must be set to **Yes**. This configuration prevents end users from accessing restricted content or changing settings until applicable Intune device configuration policies apply. For information on this configuration, see [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
 
-- When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile:
+- When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile
 
   - FileVault > **Force Enable in Setup Assistant** – Set to **Enabled**.
+  
+   The following image shows the settings catalog profile configured with the core settings to enable FileVault and use the Setup Assistant to enforce encryption. In this example, the Location setting uses the simple name of our domain, *Contoso*:
+
+    :::image type="content" source="./media/encrypt-devices-filevault/force-enable-in-setup-assistant.png" alt-text="Screen capture of the basic settings catalog profile to enable FileVault with the addition of the Force Enable in Setup Assistant setting.":::
 
 ## Manage FileVault
 
