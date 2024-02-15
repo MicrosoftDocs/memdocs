@@ -122,7 +122,7 @@ App Control for Business policies are an implementation of Windows Defender Appl
 
 - After you enable the Intune Management extension as a managed installer, all apps you deploy to Windows devices through Intune are tagged with the mark of the managed installer.
 
-- By itself, this tag has no effect on which apps can run on your devices. The tag is used only when you also WDAC policies that determine which apps are allowed to run on your managed devices.
+- By itself, this tag has no effect on which apps can run on your devices. The tag is used only when you also assign WDAC policies that determine which apps are allowed to run on your managed devices.
 
 - Because there's no retroactive tagging, all apps on your devices that were deployed before enabling the managed installer aren't tagged. If you apply a WDAC policy, you must include explicit configurations to allow these untagged apps to run.
 
