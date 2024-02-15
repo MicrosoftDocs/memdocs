@@ -10,7 +10,9 @@ author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+    - tier3
+    - essentials-manage
 ms.reviewer: mstewart,aaroncz 
 ---
 
