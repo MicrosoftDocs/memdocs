@@ -81,6 +81,7 @@ To verify Android Enterprise availability in your country or region, see [Is And
    > To choose a scope tag for your Managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center.  Then select a scope tag to apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this area in the admin center:  
    >  - Android Sync - Read
    >  - Android Sync – UpdateOnBoarding
+   > <br><br> 
    > Admins without these permissions can't remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.  
    
    > [!Important]
