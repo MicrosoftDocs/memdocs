@@ -193,21 +193,6 @@ You can use the following device properties in your managed device filter rules:
   - iOS/iPadOS
   - Windows 11
   - Windows 10
-    
-- **`isTpmAttested` (Windows enrollment attestation)**: Create a filter rule based on the device's enrollment attestation device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
-
-  Example:
-
-  - `(device.isTpmAttested -ne "True")`
-  - `(device.isTpmAttested -eq "False") or (device.isTpmAttested -eq "Unknown")`
-
-  This property applies to:
-
-  - Windows 10
-  - Windows 11
-    
-  > [!NOTE]
-  > The `isTpmAttested` property is evaluated at enrollment time or through re-attesting from the enrollment device attestation status report (coming soon). To determine the effect on users and devices, review this report before you create and apply the `isTpmAttested` property. The `isTpmAttested` property can only successfully attest physical Windows devices with TPM 2.0 hardware. Devices with TPM 1.2 or virtual machines don't pass attestation and result in `(device.isTpmAttested -eq "False")`.
 
 - **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Azure AD joined, Azure AD registered, Hybrid Azure AD joined,  or Unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
 
