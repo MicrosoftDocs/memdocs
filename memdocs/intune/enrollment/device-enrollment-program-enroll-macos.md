@@ -189,7 +189,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    * **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.   
    * **Await final configuration**: Select **Yes**.       
 
-   Local accounts depend on the *await final configuration* feature when they're being created. As a result, whenever you configure any local account settings, this setting is enabled. Even if you don't touch the setting, it is enabled in the background and applied to the enrollment profile.  
+   Local accounts depend on the *await final configuration* feature when they're being created. As a result, if you configure any local primary account settings, this setting is always enabled. Even if you don't touch the *await final configuration* setting, it is enabled in the background and applied to the enrollment profile.  
 
 1. Select **Next**.  
 
