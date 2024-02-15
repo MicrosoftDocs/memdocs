@@ -1,5 +1,5 @@
 ---
-title: Windows Autopilot self-deploying mode (Public Preview)
+title: Windows Autopilot self-deploying mode
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows as a kiosk, digital signage device, or a shared device.
 ms.subservice: itpro-deploy
 ms.service: windows-client
@@ -8,8 +8,8 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
-ms.collection: 
+ms.date: 02/16/2024
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
@@ -17,10 +17,10 @@ ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
-  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a> 
+  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
-# Windows Autopilot self-deploying mode (Public Preview)
+# Windows Autopilot self-deploying mode
 
 > [!NOTE]
 >

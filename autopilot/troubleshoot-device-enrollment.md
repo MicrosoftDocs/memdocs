@@ -8,8 +8,8 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2023
-ms.collection: 
+ms.date: 02/16/2024
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier2
@@ -34,7 +34,7 @@ The ETW logs may show the following error:
 
 ### Cause A for error code 0x80180014
 
-Microsoft Intune changed the Windows Autopilot self-deployment mode (Public Preview) and Pre-Provisioning mode experience. To reuse a device, you must delete the device record created by Intune.
+Microsoft Intune changed the Windows Autopilot self-deployment mode and Pre-Provisioning mode experience. To reuse a device, you must delete the device record created by Intune.
 
 This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
 
@@ -61,7 +61,7 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 
 ### Cannot convert device hash error
 
-- Clicking Import after selecting CSV does nothing 
+- Clicking Import after selecting CSV does nothing
 - A **400** error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'**
 
 #### Cause of Cannot convert device hash error

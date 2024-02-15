@@ -8,8 +8,8 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 12/08/2023
-ms.collection: 
+ms.date: 02/16/2024
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
@@ -19,7 +19,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Windows Autopilot for pre-provisioned deployment (Public preview)
+# Windows Autopilot for pre-provisioned deployment
 
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This functionality lets end users get their devices business-ready by using a simple process.
 
@@ -158,7 +158,7 @@ If the pre-provisioning process completed successfully and the device was reseal
 
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
-The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This behavior allows the ESP to install other policies that are assigned to the device after the device has completed the technician phase.  
+The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This behavior allows the ESP to install other policies that are assigned to the device after the device has completed the technician phase.
 
 > [!NOTE]
 >

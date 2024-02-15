@@ -8,8 +8,8 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 01/05/2024
-ms.collection: 
+ms.date: 02/16/2024
+ms.collection:
   - M365-modern-desktop
   - tier2
 ms.topic: conceptual
@@ -19,6 +19,21 @@ appliesto:
 ---
 
 # Windows Autopilot: What's new
+
+## Windows Autopilot self-deploying mode is now generally available
+
+Windows Autopilot self-deploying mode is now generally available and out of preview. Windows Autopilot self-deploying mode enables you to deploy Windows devices with little to no user interaction. Once the device connects to network, the device provisioning process starts automatically: the device joins Microsoft Entra ID, enrolls in Intune, and syncs all device-based configurations targeted to the device. Self-deploying mode ensures that the user can't access desktop until all device-based configuration is applied. The Enrollment Status Page (ESP) is displayed during OOBE so users can track the status of the deployment. For more information, see:
+
+- [Windows Autopilot self-deploying mode](self-deploying.md).
+- [Step by step tutorial for Windows Autopilot self-deploying mode in Intune](/tutorial/self-deploying/self-deploying-workflow.md).
+
+## Windows Autopilot for pre-provisioned deployment is now generally available
+
+Windows Autopilot for pre-provisioned deployment is now generally available and out of preview. Windows Autopilot for pre-provisioned deployment is used by organizations that want to ensure devices are business-ready before the user accesses them. With pre-provisioning, admins, partners, or OEMs can access a technician flow from the Out-of-box experience (OOBE) and kick off device setup. Next, the device is sent to the user who completes provisioning in the user phase. Pre-provisioning delivers most the configuration in advance so the end user can get to the desktop faster. For more information, see:
+
+- [Windows Autopilot for pre-provisioned deployment](pre-provision.md).
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](/tutorial/pre-provisioning/azure-ad-join-workflow.md)
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join in Intune](/tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md).
 
 ## Updates to error message for manual device uploads
 
@@ -99,7 +114,7 @@ Starting in 2307, Windows Autopilot is making it easier to manage devices by add
 
 1. Select the device you wish to remove and then select **Delete** in the toolbar at the top.
 
-## Device rename occurs during technician phase for pre-provisioning 
+## Device rename occurs during technician phase for pre-provisioning
 
 Starting in 2303, a new functional change forces the device rename to occur during the technician phase for pre-provisioning for Microsoft Entra join devices. After the technician selects the provision button, we'll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, for Windows 10, install quality update [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or later. For Windows 11, install quality update [KB5023778](https://support.microsoft.com/topic/march-28-2023-kb5023778-os-build-22621-1485-preview-d490bb51-492e-410c-871f-50ad01b0f765) or later.
 
@@ -158,7 +173,7 @@ With the Intune 2202 release, the [enrollment status page](enrollment-status.md)
 - Fixes an issue where it couldn't differentiate between store apps in online or offline mode.
 - Adds a new column for **Version** to see which version of the application is selected.
 
-:::image type="content" source="images/app-picker.png" alt-text="The enrollment status page application picker."::: 
+:::image type="content" source="images/app-picker.png" alt-text="The enrollment status page application picker.":::
 
 ## One-time self-deployment and pre-provisioning
 <!-- 2110 -->
