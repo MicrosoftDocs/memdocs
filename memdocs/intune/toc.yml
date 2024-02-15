@@ -94,7 +94,7 @@ items:
     items:
     - name: Intune plug-in in Copilot
       href: ./fundamentals/security-copilot.md
-    - name: Copilot in Intune overview
+    - name: Copilot in Intune overview (DRAFT)
       href: ./fundamentals/copilot-intune-overview.md
 
   - name: Plan

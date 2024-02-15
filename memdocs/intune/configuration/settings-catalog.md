@@ -187,7 +187,7 @@ Here are some sample prompts to get you started:
 
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog, and use Copilot to get more information about each setting.
+There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog. If you use Copilot, then you can get more Copilot-generated information about each setting.
 
 # [Search and filter](#tab/sc-search-filter)
 
