@@ -77,13 +77,11 @@ To verify Android Enterprise availability in your country or region, see [Is And
 
 8. Agree to the Android agreement, and then select **Confirm**.  
 
-   > [!TIP]
-   > To choose a scope tag for your Managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center.  Then select a scope tag to apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this area in the admin center:  
+> [!TIP]
+> To choose a scope tag for your Managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center.  Then select a scope tag to apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.   
    >  - Android Sync - Read
    >  - Android Sync – UpdateOnBoarding
-   > <br><br> 
-   > Admins without these permissions can't remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.  
-   
+
    > [!Important]
    > Only link one Intune account to a managed Google Play account. Linking multiple accounts is unsupported and prevents basic functionality from working as expected. Disconnecting a single managed Google Play account from just one of its multilinked Intune accounts could cause the managed Google Play account to disconnect from all Intune accounts. In addition, Android Enterprise devices that already enrolled in those tenants could stop working properly. 
 
