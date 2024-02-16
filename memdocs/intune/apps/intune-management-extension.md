@@ -36,7 +36,7 @@ ms.collection:
 Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows 10 devices. The management extension enhances Windows device management (MDM), and makes it easier to move to modern management.
 
 > [!IMPORTANT]
-> To support expanded functionality and bug fixes, use .NET Framework 4.7.2 with the Intune Management Extension on Windows clients. If a Windows client continue to use an earlier version of the .NET Framework, the Intune Management Extension will continue to function. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, which is included in Win10 1809 (RS5) and newer. Note that multiple version of the .NET Framework versions can coexist on a device.
+> To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or higher with the Intune Management Extension on Windows clients. If a Windows client continue to use an earlier version of the .NET Framework, the Intune Management Extension will continue to function. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, which is included in Win10 1809 (RS5) and newer. Note that multiple version of the .NET Framework versions can coexist on a device.
 
 This feature applies to:
 
