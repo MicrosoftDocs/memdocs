@@ -28,6 +28,24 @@ items:
     items:
     - name: Toolkit reference
       href: toolkit-reference.md
+    - name: Task Sequence Steps
+      href: task-sequence-steps.md
+    - name: Properties
+      href: properties.md
+    - name: Scripts
+      href: scripts.md
+    - name: Support Files
+      href: support-files.md
+    - name: Utilities
+      href: utilities.md
+    - name: MDT Windows PowerShell Cmdlets
+      href: mdt-windows-powershell-cmdlets.md
+    - name: Tables and Views in the MDT DB
+      href: tables-views-mdt-db.md
+    - name: Windows 7 Feature Dependency Reference
+      href: windows-7-feature-dependency.md
+    - name: UDI Reference
+      href: udi-reference.md
     - name: Troubleshooting reference
       href: /troubleshoot/mem/configmgr/troubleshooting-reference
     - name: UDI developers guide
