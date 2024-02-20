@@ -587,7 +587,7 @@ Before you start:
 > [!NOTE]
 > Edge for iOS and Android updates the Application Proxy redirection data based on the last successful refresh event. Updates are attempted whenever the last successful refresh event is greater than one hour.
 
-Target Edge for iOS and Android with the following key/value pair, to enable Application Proxy:
+Target Edge for iOS and Android with the following key/value pair, to enable Application Proxy.
 
 |Key |Value|
 |:-------------|:-------------|
