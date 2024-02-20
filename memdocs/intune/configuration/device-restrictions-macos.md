@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 02/20/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -289,7 +289,8 @@ This feature applies to:
 - These settings only apply on devices that have the privacy preferences profile installed before being upgraded.
 
 > [!NOTE]
-> Allowed apps that are configured through a policy will not display in the Privacy + Security pane within System Settings. Only apps that were manually allowed by the user outside of a policy will display in System Settings. 
+> When you allow apps using a policy, these apps aren't shown in System settings (Privacy + Security) on the device. Only apps manually allowed by end users are shown.
+ 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
