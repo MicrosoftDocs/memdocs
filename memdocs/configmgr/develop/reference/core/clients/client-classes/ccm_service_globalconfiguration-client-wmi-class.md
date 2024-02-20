@@ -3,19 +3,19 @@ title: CCM_Service_GlobalConfiguration Class
 description: Learn how the CCM_Service_GlobalConfiguration class is a client Windows Management Instrumentation (WMI) class that supports global configuration for the CCMEXEC service.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 62d6b768-bf45-4bca-b36c-eeec8fcc3caf
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Service_GlobalConfiguration Client WMI Class
-In Configuration Manager, the `CCM_Service_GlobalConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports global configuration for the CCMEXEC service. There is only one instance of this class on a computer.  
+In Configuration Manager, the `CCM_Service_GlobalConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports global configuration for the CCMEXEC service. There's only one instance of this class on a computer.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -40,7 +40,7 @@ Class CCM_Service_GlobalConfiguration : CCM_Policy
 ```  
 
 ## Methods  
- The `CCM_Service_GlobalConfiguration` class does not define any methods.  
+ The `CCM_Service_GlobalConfiguration` class doesn't define any methods.  
 
 ## Properties  
  `Dummy`  
@@ -59,7 +59,7 @@ Class CCM_Service_GlobalConfiguration : CCM_Policy
 
  Qualifiers: None  
 
- Default maximum number of outstanding messages that endpoints are allowed. A message is outstanding if it has been dispatched to the endpoint, but the endpoint has not called **SetComplete** on the associated context. For serial endpoints, the AMT is always 1. This can be overridden on a per-endpoint basis.  
+ Default maximum number of outstanding messages that endpoints are allowed. A message is outstanding if it has been dispatched to the endpoint, but the endpoint hasn't called **SetComplete** on the associated context. For serial endpoints, the AMT is always 1. This can be overridden on a per-endpoint basis.  
 
  `EndpointMessageTimeout`  
  Data type: `UInt32`  
@@ -77,7 +77,7 @@ Class CCM_Service_GlobalConfiguration : CCM_Policy
 
  Qualifiers: None  
 
- Endpoint defaults. The default idle time, in minutes, that endpoints are allowed before they are released by the service. An endpoint is idle when no messages are being dispatched to it. If the value is NULL or 0, endpoints are not released until the service shuts down. This can be overridden on a per-endpoint basis in the endpoint's configuration.  
+ Endpoint defaults. The default idle time, in minutes, that endpoints are allowed before they're released by the service. An endpoint is idle when no messages are being dispatched to it. If the value is NULL or 0, endpoints aren't released until the service shuts down. This can be overridden on a per-endpoint basis in the endpoint's configuration.  
 
  `OutgoingMessageTimeout`  
  Data type: `UInt32`  
@@ -149,7 +149,7 @@ Class CCM_Service_GlobalConfiguration : CCM_Policy
 
  Qualifiers: None  
 
- Root directory that the service uses internally for temporary files. The System and Administrators account must have full access to this directory (the latter is to allow the debugging of CCMEXEC as an application). The service creates this directory if it does not exist.  
+ Root directory that the service uses internally for temporary files. The System and Administrators account must have full access to this directory (the latter is to allow the debugging of CCMEXEC as an application). The service creates this directory if it doesn't exist.  
 
 ## Requirements  
 

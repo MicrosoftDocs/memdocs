@@ -3,14 +3,14 @@ title: How to Define the Hosting Technology
 titleSuffix: Configuration Manager
 description: The hosting technology is defined by implementing the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 242c1cf6-3cb8-4ed7-89fb-501130832730
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: Refresh method in class SMS_ResourceMap
 titleSuffix: Configuration Manager
 description: The Refresh Windows Management Instrumentation class method, in Configuration Manager, updates resource and inventory class definitions.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a2d1fee0-c1fc-49a2-8c01-73d31732e1d7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

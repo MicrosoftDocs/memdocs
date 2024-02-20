@@ -3,14 +3,14 @@ description: "Learn how to cancel a job in Configuration Manager using ICcmAlter
 title: "ICcmAlternateDownloadProvider : CancelJob"
 titleSuffix: Configuration Manager
 ms.date: 07/25/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 51a8436a-a9ef-449f-aaa3-49bd9768bd54
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -38,7 +38,7 @@ HRESULT CancelJob(
  The job upon which to take action.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

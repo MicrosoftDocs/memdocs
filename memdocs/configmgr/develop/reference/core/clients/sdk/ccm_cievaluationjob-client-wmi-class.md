@@ -3,14 +3,14 @@ title: CCM_CIEvaluationJob Class
 titleSuffix: Configuration Manager
 description: The CCM_CIEvaluationJob Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a configuration item evaluation job.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 72a4f893-31e1-41ab-a412-b474ccae5ae0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -38,7 +38,7 @@ Class CCM_CIEvaluationJob :
 ```  
 
 ## Methods  
- The `CCM_CIEvaluationJob` class does not define any methods.  
+ The `CCM_CIEvaluationJob` class doesn't define any methods.  
 
 ## Properties  
  `CIAgentJobId`  

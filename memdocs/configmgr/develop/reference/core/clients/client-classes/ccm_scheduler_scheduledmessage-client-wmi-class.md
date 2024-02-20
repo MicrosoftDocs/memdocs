@@ -3,14 +3,14 @@ title: CCM_Scheduler_ScheduledMessage Class
 titleSuffix: Configuration Manager
 description: A client Windows Management Instrumentation class that represents the configuration for a scheduled message.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bb58b677-85f9-4888-8d6d-5e5e8379b05e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: SMS_DCMDeploymentErrorAssetDetails Class
 titleSuffix: Configuration Manager
 description: Represents the asset details for deployment error.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5b0c3b0c-bb1c-4e2d-a1ff-5a7d06c23c72
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

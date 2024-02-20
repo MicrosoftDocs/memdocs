@@ -3,14 +3,14 @@ title: SMS_StatMsg Class
 titleSuffix: Configuration Manager
 description: The SMS_StatMsg WMI class is a high-performance version of SMS_StatusMessage Server WMI Class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 45d6f901-e4a9-4ae6-8715-7687c26d89b3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ description: Learn how to use the SMS_CH_SummaryHistory class to represent clien
 title: SMS_CH_SummaryHistory Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 91fa4d66-d2cb-4fac-abeb-2b95508bbc2a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

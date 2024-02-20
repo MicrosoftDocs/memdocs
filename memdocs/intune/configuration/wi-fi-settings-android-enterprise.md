@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2023
+ms.date: 02/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,11 +19,10 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: maholdaa
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier3
 - M365-identity-device-management
@@ -67,6 +66,12 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+
+    > [!WARNING]
+    > On Android 12 and later, Google deprecated support for WEP pre-shared keys (PSK) in Wi-Fi configuration profiles. It's possible WEP might still work. But, it's not recommended and is considered obsolete. Instead, use WPA pre-shared keys (PSK) in your Wi-Fi configuration profiles.
+    >
+    > For more information, go to the [Android developer reference - WifiConfiguration.GroupCipher](https://developer.android.com/reference/android/net/wifi/WifiConfiguration.GroupCipher#summary).
+
   - **WPA-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
 
 - **Proxy settings**: Select a proxy configuration. Your options:
@@ -110,9 +115,11 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       When you enter this value, user devices can bypass the dynamic trust dialog that's sometimes shown when connecting to the Wi-Fi network.
 
-      On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
+      - **Android 11 and newer**: New Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
+      - **Android 14 and newer**: Google does not alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+
+    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
       > [!NOTE]
       > Depending on your Android OS version and your Wi-Fi authentication infrastructure, the certificate requirements can vary. You may need to add your secure hash algorithm(s) (SHA) from the certificate used by your network policy server (NPS). Or, if your Radius or NPS server has a publicly signed certificate, then a root certificate may not be needed for validation.
@@ -135,7 +142,9 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       When you enter this value, user devices can bypass the dynamic trust dialog that's sometimes shown when connecting to the Wi-Fi network.
 
-      On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
+      - **Android 11 and newer**: New Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
+
+      - **Android 14 and newer**: Google does not allow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
@@ -161,7 +170,9 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       When you enter this value, user devices can bypass the dynamic trust dialog that's sometimes shown when connecting to the Wi-Fi network.
 
-      On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
+      - **Android 11 and newer**: New Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
+
+      - **Android 14 and newer**: Google does not alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 

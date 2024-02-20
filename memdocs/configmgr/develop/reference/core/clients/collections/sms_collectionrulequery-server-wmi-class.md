@@ -3,14 +3,14 @@ title: SMS_CollectionRuleQuery Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_CollectionRuleQuery Windows Management Instrumentation class is an SMS Provider server class that represents a member of a collection based on the results of a query.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 66ce9c02-42f9-441b-ae63-0c8862c2bc12
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

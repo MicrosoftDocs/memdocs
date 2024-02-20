@@ -3,14 +3,14 @@ description: Learn how to represent a summary for a given software update in giv
 title: "SMS_UpdateDeploymentSummary Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c9c0923f-9ec6-463c-905b-59fb515b1dfb
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

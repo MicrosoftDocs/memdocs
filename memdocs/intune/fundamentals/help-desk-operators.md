@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 07/21/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -78,7 +78,7 @@ You can use the **Troubleshooting + support** pane to review a variety of manage
 
 ### Summary
 
-The **Summary** tab provides overall details for the user who are managed by Intune.
+The **Summary** tab provides overall details for the user who is managed by Intune.
 
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +91,7 @@ The **Summary** tab provides overall details for the user who are managed by Int
 
 ### Devices
 
-Devices managed Intune.
+The **Devices** tab provides details for devices, such as OS, OS Version, Intune compliance, and last check-in.
 
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -99,7 +99,7 @@ Devices managed Intune.
 | Managed by         | Identifies how the device is managed. For more information, see [Available details by management type](../protect/endpoint-security-manage-devices.md#available-details-by-management-type).                                                                                          |
 | Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
 | Intune compliant   | Identifies whether the device is compliant with Intune. Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days. For more information, see [Use compliance policies to set rules for devices you manage with Intune](/mem/intune/protect/device-compliance-get-started).                                                                                                 |
-| AAD compliant      | Identifies whether the device is compliant with Azure Active Directory (AAD). Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days. For more information, see [Use compliance policies to set rules for devices you manage with Intune](/mem/intune/protect/device-compliance-get-started). |
+| Microsoft Entra compliant      | Identifies whether the device is compliant with Microsoft Entra ID. Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days. For more information, see [Use compliance policies to set rules for devices you manage with Intune](/mem/intune/protect/device-compliance-get-started). |
 | App lifecycle status | Denotes whether an app install failure or success has occurred on the individual device. |
 | OS                 | The Operating System installed on the device.                                                                                       |
 | OS version         | The Operating System version number of the device.                                                                                  |
@@ -107,18 +107,18 @@ Devices managed Intune.
 
 ### Groups
 
-The **Groups** tab provides the group membership of all Azure AD groups for a specific managed device. For related information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
+The **Groups** tab provides the group membership of all Microsoft Entra groups for a specific managed device. For related information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
 
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Name               | The name of the group.                                                                                                     |
-| Object ID          | The Object ID is used by Azure Active Directory. Intune commonly refers to them as Group ID.                                                                                       |
+| Object ID          | The Object ID is used by Microsoft Entra ID. Intune commonly refers to them as Group ID.                                                                                       |
 | Membership type    | Provides how you assign and add users. **Assigned** denotes you manually assign users or devices to the group, and manually remove users or devices. **Dynamic User** denotes you create membership rules to automatically add and remove members. **Dynamic Device** denotes you create dynamic group rules to automatically add and remove devices.                                                                                 |
 | Direct or Transitive      | Identifies whether the device is a direct member or a transitive member.                                                                                                       |
 
 ### Policy
 
-The policies applied to devices.
+The **Policy** tab provides the policies applied to devices, which include policy details, such as assignment, type, platform, and last modified.
 
 | Column      | Description                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -130,7 +130,7 @@ The policies applied to devices.
 
 ### Applications
 
-The managed applications on the device. 
+The **Applications** tab provides managed app install status, assigned, platform, type, and last modified.
 
 | Column    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -143,7 +143,7 @@ The managed applications on the device.
 
 ### App protection policy
 
-An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+The **App protection policy** tab provides the name, platform, and enrollment details for app protection policies. An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Column    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -153,7 +153,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 ### Updates
 
-The update report provides an overall view of updates that are deployed to users. This information also provides filtering, searching, paging, and sorting.
+The **Updates** tab provides an overall view of updates that are deployed to users. This information also provides filtering, searching, paging, and sorting.
 
 
 | Column    | Description                                                                           |
@@ -164,7 +164,7 @@ The update report provides an overall view of updates that are deployed to users
 
 ## Enrollment restrictions
 
-Enrollment restrictions are use to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
+The **Enrollment restrictions** tab provides the policy type, name, platform, and device limit. Enrollment restrictions are use to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
 
 ### Properties
 
@@ -177,7 +177,7 @@ Enrollment restrictions are use to prevent (block) personally owned devices from
 
 ### Diagnostics
 
-Diagnostics for devices and applications.
+The **Diagnostics** tab provides the device name or application, platform, created date, and diagnostic log.
 
 > [!NOTE]
 > To collect and access diagnostics you must have the Collect diagnostics permission added to your role. For more information, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md).

@@ -3,8 +3,8 @@ title: Plan for CMG
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -52,7 +52,7 @@ Deployment and operation of the CMG includes the following components:
 
 - The **CMG connection point** site system role enables a consistent and high-performance connection from the on-premises network to the CMG service in Azure. It also publishes settings to the CMG including connection information and security settings. The CMG connection point forwards client requests from the CMG to on-premises roles according to URL mappings. For example, the management point and software update point.
 
-- The [**service connection point**](../../../servers/deploy/configure/about-the-service-connection-point.md) site system role runs the cloud service manager component, which handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure Active Directory (Azure AD). Make sure your service connection point is in [online mode](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).
+- The [**service connection point**](../../../servers/deploy/configure/about-the-service-connection-point.md) site system role runs the cloud service manager component, which handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Microsoft Entra ID. Make sure your service connection point is in [online mode](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).
 
 - The **management point** and **software update point** site system roles service client requests per normal.
 
@@ -60,7 +60,7 @@ Deployment and operation of the CMG includes the following components:
 
 - **Internet-based clients** connect to the CMG to access on-premises Configuration Manager components. There are multiple options for client identity and authentication:
 
-  - Azure AD
+  - Microsoft Entra ID
   - PKI certificates
   - Configuration Manager site-issued tokens
 
@@ -74,7 +74,7 @@ Deployment and operation of the CMG includes the following components:
 ## Azure Resource Manager
 
 <!-- 1324735 -->
-You create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When you deploy a CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
+You create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When you deploy a CMG with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources.
 
 > [!IMPORTANT]
 > Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
@@ -126,7 +126,7 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 > [!TIP]
 > To clarify some Azure terminology:
 >
-> - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - The Microsoft Entra ID _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
 > - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
 >
 > For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
@@ -138,15 +138,15 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
   Customers with a Cloud Service Provider (CSP) subscription need to use version 2010 or later with a **virtual machine scale set** deployment.<!--3601040-->
 
-- Integrate the site with **Azure AD** to deploy the service with Azure Resource Manager. For more information, see [Configure Azure AD for CMG](configure-azure-ad.md).
+- Integrate the site with **Microsoft Entra ID** to deploy the service with Azure Resource Manager. For more information, see [Configure Microsoft Entra ID for CMG](configure-azure-ad.md).
 
-  When you onboard the site to Azure AD, you can optionally enable **Azure AD user discovery**. It isn't required to create the CMG, but required if you plan to use Azure AD authentication with hybrid identities. For more information, see [Install clients using Azure AD](../../deploy/deploy-clients-cmg-azure.md) and see [About Azure AD user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+  When you onboard the site to Microsoft Entra ID, you can optionally enable **Microsoft Entra user discovery**. It isn't required to create the CMG, but required if you plan to use Microsoft Entra authentication with hybrid identities. For more information, see [Install clients using Microsoft Entra ID](../../deploy/deploy-clients-cmg-azure.md) and see [About Microsoft Entra user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 - An **Azure administrator** needs to participate in the initial creation of certain components. This persona can be the same as the Configuration Manager administrator, or separate. If separate, they don't require permissions in Configuration Manager.
 
-  - When you integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Administrator**.
+  - When you integrate the site with Microsoft Entra ID for deploying the CMG using Azure Resource Manager, you need a **Global Administrator**.
 
-  - When you create the CMG, you need an account that is an Azure **Subscription Owner** and an Azure AD **Global Administrator**.
+  - When you create the CMG, you need an account that is an Azure **Subscription Owner** and a Microsoft Entra ID **Global Administrator**.
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 

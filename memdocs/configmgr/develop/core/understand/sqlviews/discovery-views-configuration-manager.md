@@ -3,14 +3,14 @@ title: Discovery views
 titleSuffix: Configuration Manager
 description: System resource objects, which include any resources that were discovered on the network.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 3692e025-4c24-4b5e-a4b0-a55039c92b21
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

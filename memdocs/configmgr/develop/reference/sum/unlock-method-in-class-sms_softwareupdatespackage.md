@@ -3,14 +3,14 @@ description: The Unlock Windows Management Instrumentation (WMI) class method, i
 title: "Unlock Method in SMS_SoftwareUpdatesPackage"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: beace883-5c9b-46ef-bf6f-9447efeb75f9
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

@@ -2,14 +2,14 @@
 title: MDM_GenericAppConfiguration Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0690b0b3-4136-4aa9-bbbf-51f8572e42a8
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the MDM_GenericAppConfiguration Server class.
 ms.reviewer: mstewart,aaroncz 

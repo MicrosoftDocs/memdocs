@@ -3,14 +3,14 @@ title: Unlock Method in SMS_OperatingSystemInstallPackage
 titleSuffix: Configuration Manager
 description: Set the source site to the current site, unlocking the operating system install package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b7438a3c-7917-43a1-984d-d300ed86d963
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

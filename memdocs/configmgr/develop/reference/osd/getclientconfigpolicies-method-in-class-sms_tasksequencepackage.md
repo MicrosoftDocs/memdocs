@@ -3,14 +3,14 @@ title: GetClientConfigPolicies Method
 titleSuffix: Configuration Manager
 description: The GetClientConfigPolicies WMI class method gets all site-wide client configuration policies and their corresponding policy assignments.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b28b0e20-24d3-4d0c-88fa-c870a927dbc1
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

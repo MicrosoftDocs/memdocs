@@ -3,14 +3,14 @@ title: SMS_AppRequirementsData Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that represents the requirements data of an application.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ce91d315-6baa-40aa-a944-2458131e5087
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

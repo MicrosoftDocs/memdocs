@@ -3,14 +3,14 @@ title: Create a Collection Variable
 titleSuffix: Configuration Manager
 description: Add instances of SMS_CollectionVariable Server WMI Class to the CollectionVariables property of SMS_CollectionSettings Server WMI Class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: a309d431-d654-42f6-883b-07dac70216f8
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

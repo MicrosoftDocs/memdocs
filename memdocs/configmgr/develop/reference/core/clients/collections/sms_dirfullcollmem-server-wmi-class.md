@@ -3,14 +3,14 @@ description: Learn how to represent the full collection membership of directly a
 title: SMS_DirFullCollMem Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1203863b-8971-4ef9-b3a6-2f394b80b839
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -30,7 +30,7 @@ Class SMS_DirFullCollMem : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DirFullCollMem` class does not define any methods.  
+ The `SMS_DirFullCollMem` class doesn't define any methods.  
 
 ## Properties  
  `CollectionID`  

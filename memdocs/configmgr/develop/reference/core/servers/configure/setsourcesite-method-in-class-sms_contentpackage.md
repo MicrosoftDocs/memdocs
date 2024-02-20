@@ -3,14 +3,14 @@ description: Learn how to change the source site code using SetSourceSite Window
 title: SetSourceSite method in class SMS_ContentPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6057c670-f3c8-4632-9a06-777f68a41dba
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

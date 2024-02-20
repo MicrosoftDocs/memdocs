@@ -3,14 +3,14 @@ description: Learn how to create a static collection with defined attributes and
 title: "Create a Static Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 53023832-57ca-47f9-96bb-ab8ab4827172
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

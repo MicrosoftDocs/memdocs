@@ -3,14 +3,14 @@ title: Unique Identifier Value for a Resource
 titleSuffix: Configuration Manager
 description: An optional property that reports inventory data for a resource.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 1fe1e9f1-daed-4df8-bf32-df7258d9a3fe
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

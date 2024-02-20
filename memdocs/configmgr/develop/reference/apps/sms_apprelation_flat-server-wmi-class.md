@@ -3,14 +3,14 @@ title: SMS_AppRelation_Flat Class
 titleSuffix: Configuration Manager
 description: Details of the SMS_AppRelation_Flat WMI class
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b6f86f0b-6593-4f58-8e6b-3934529408cd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

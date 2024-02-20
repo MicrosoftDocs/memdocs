@@ -3,14 +3,14 @@ title: UpdateDefaultImage Method
 titleSuffix: Configuration Manager
 description: Creates a copy of the .wim image pointed to by the ImagePath property. This method expects an SMS_BootImagePackage instance with the ImagePath property being a valid .wim image.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 77b6c163-3cdb-4188-9dd4-e744ad5370c4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

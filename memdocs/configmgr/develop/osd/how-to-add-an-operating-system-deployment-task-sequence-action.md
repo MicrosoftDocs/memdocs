@@ -3,14 +3,14 @@ title: Add an OS Deployment Task Sequence Action
 titleSuffix: Configuration Manager
 description: Add an OS deployment task sequence action to a task sequence by creating an instance of an SMS_TaskSequence_Action derived class, and then add it to the steps of the task sequence.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b03f13c1-d358-455b-a684-0bd8e8bd940a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

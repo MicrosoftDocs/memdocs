@@ -3,14 +3,14 @@ description: Learn how to represent the client computer compliance status for so
 title: "SMS_UpdateComplianceStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f7789fb5-fa96-4e88-8737-9adcb0498c4f
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

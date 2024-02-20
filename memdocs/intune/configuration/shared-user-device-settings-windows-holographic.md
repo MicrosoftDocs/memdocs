@@ -2,7 +2,7 @@
 # required metadata
 
 title: Windows Holographic Business shared device settings - Microsoft Intune
-description: Add and use Windows Holographic for Business to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of the Account Management settings and what they do on the devices, including Microsoft HoloLens. 
+description: Add and use Windows Holographic for Business to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of the Account Management settings and what they do on the devices, including Microsoft HoloLens.
 keywords:
 author: MandiOhlinger
 
@@ -13,19 +13,15 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-
-ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
@@ -53,7 +49,7 @@ When you create a Windows 10/11 shared user device configuration profile, there 
 > Devices that run Windows Holographic for Business, including the Microsoft HoloLens, only support the **Account management** settings. If you configure any of the other settings shown in Intune, including **Shared PC mode**, it has no impact on these devices.
 
 - **Account management**: Choose if accounts are automatically deleted. Your options:
-  - **Not configured** (default): Automatically deletes local accounts created by guests, and accounts in AD and Azure AD. When a user signs off the device, or when system maintenance runs, these accounts are deleted.
+  - **Not configured** (default): Automatically deletes local accounts created by guests, and accounts in AD and Microsoft Entra ID. When a user signs off the device, or when system maintenance runs, these accounts are deleted.
 
     Also enter:
 
@@ -67,7 +63,7 @@ When you create a Windows 10/11 shared user device configuration profile, there 
     - **Start delete threshold(%)**: Enter a percentage (0-100) of disk space. When the total disk/storage space drops below the value you enter, the cached accounts are deleted. It continuously deletes accounts to reclaim disk space. Accounts that are inactive the longest are deleted first.
     - **Stop delete threshold(%)**: Enter a percentage (0-100) of disk space. When the total disk/storage space meets the value you enter, the deleting stops.
 
-  - **Disable**: The local, AD, and Azure AD accounts created by guests stay on the device, and aren't deleted.
+  - **Disable**: The local, AD, and Microsoft Entra accounts created by guests stay on the device, and aren't deleted.
 
 ## Next steps
 

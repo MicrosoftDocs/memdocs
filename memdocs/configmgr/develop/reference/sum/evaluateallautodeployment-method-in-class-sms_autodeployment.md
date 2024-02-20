@@ -3,14 +3,14 @@ title: EvaluateAllAutoDeployment Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the EvaluateAllAutoDeployment WMI class method evaluates all automatic deployments.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 220576b6-489f-4d84-b4ad-3663ac77e67c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

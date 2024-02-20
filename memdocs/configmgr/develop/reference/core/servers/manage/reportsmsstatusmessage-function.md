@@ -3,14 +3,14 @@ title: ReportSMSStatusMessage Function
 titleSuffix: Configuration Manager
 description: The ReportSMSStatusMessage function submits a status message object to the Configuration Manager status system and then deallocates the object.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3fbdfb51-67dc-4409-9e4a-d943e1e0382f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

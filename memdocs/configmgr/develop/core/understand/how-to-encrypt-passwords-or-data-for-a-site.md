@@ -3,14 +3,14 @@ title: Encrypt Passwords or Data for a Site
 titleSuffix: Configuration Manager
 description: Encrypt Passwords or Data for a Site. Using a new WMI method, the user accounts' passwords can be encrypted for a specific site.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c640a87a-9eb6-400d-b9e2-eb71d265f50e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

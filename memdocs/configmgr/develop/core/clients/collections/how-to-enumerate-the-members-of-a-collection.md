@@ -3,14 +3,14 @@ title: "Enumerate the Members of a Collection"
 titleSuffix: "Configuration Manager"
 description: "In Configuration Manager, the preferred method to enumerate through a collection is to use SMS_FullCollectionMembership Server WMI Class."
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

@@ -3,14 +3,14 @@ description: "Learn how to retrieve the baseline info for the specified configur
 title: "IDCMSDK::GetBaselineInfo"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cfb7ce37-44b3-4cd1-b0f7-16b7c2823c09
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -54,7 +54,7 @@ HRESULT GetBaselineInfo(
 | Value | dwFlags type and descriptions |
 | ----- | ----------------------------- |
 |0|ciinfoAll. Retrieve all properties. Requires administrator privileges.|  
-|1|ciinfoPublic. Retrieve only public properties. The detailed compliance report is not a public property.|  
+|1|ciinfoPublic. Retrieve only public properties. The detailed compliance report isn't a public property.|  
 
  `ppCIInfo`  
  Data type: `ICIInfo`  
@@ -64,7 +64,7 @@ HRESULT GetBaselineInfo(
  Pointer to a pointer to an [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md) object that represents configuration item information.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  

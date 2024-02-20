@@ -7,8 +7,8 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.date: 03/21/2022
 ms.topic: overview
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -35,9 +35,9 @@ You're also able to pilot a workload with a separate collection of devices. Pilo
 
 There are two main paths to reach to co-management:
 
-- **Existing Configuration Manager clients**: You have Windows 10 or later devices that are already Configuration Manager clients. You set up hybrid Azure AD, and enroll them into Intune.
+- **Existing Configuration Manager clients**: You have Windows 10 or later devices that are already Configuration Manager clients. You set up hybrid Microsoft Entra ID, and enroll them into Intune.
 
-- **New internet-based devices**: You have new Windows 10 or later devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.
+- **New internet-based devices**: You have new Windows 10 or later devices that join Microsoft Entra ID and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.
 
 For more information on the paths, see [Paths to co-management](quickstart-paths.md).
 
@@ -51,7 +51,7 @@ When you enroll existing Configuration Manager clients in co-management, you gai
 
 - Centralized visibility of device health
 
-- Link users, devices, and apps with Azure Active Directory (Azure AD)
+- Link users, devices, and apps with Microsoft Entra ID
 
 - Modern provisioning with Windows Autopilot
 
@@ -70,17 +70,17 @@ Co-management has these prerequisites in the following areas:
 
 - [Licensing](#licensing)
 - [Configuration Manager](#configuration-manager)
-- [Azure Active Directory](#azure-ad) (Azure AD)
+- [Microsoft Entra ID](#azure-ad) (Microsoft Entra ID)
 - [Microsoft Intune](#intune)
 - [Windows](#windows)
 - [Permissions and roles](#permissions-and-roles)
 
 ### Licensing
 
-- Azure AD Premium
+- Microsoft Entra ID P1 or P2
 
     > [!NOTE]
-    > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
+    > An Enterprise Mobility + Security (EMS) subscription includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.
 
 - At least one Intune license for you as the administrator to access the Microsoft Intune admin center.
 
@@ -95,21 +95,23 @@ Co-management requires a supported version of Configuration Manager current bran
 
 You can connect multiple Configuration Manager instances to a single Intune tenant.<!--1357944-->
 
-Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](../core/clients/manage/cmg/overview.md) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management](../core/servers/deploy/configure/azure-services-wizard.md).
+Enabling co-management itself doesn't require that you onboard your site with Microsoft Entra ID. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](../core/clients/manage/cmg/overview.md) (CMG). The CMG requires the site is [onboarded to Microsoft Entra ID for cloud management](../core/servers/deploy/configure/azure-services-wizard.md).
 
-### Azure AD
+<a name='azure-ad'></a>
 
-- Windows devices must be connected to Azure AD. They can be either of the following types:
+### Microsoft Entra ID
 
-  - [Hybrid Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.
+- Windows devices must be connected to Microsoft Entra ID. They can be either of the following types:
+
+  - [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid), where the device is joined to your on-premises Active Directory and registered with your Microsoft Entra ID.
 
     > [!NOTE]
-    > Devices that are only registered with Azure AD aren't supported with co-management. This configuration is sometimes referred to as _workplace joined_. They need to be either joined to Azure AD or hybrid Azure AD joined. For more information, see [Handling devices with Azure AD registered state](/azure/active-directory/devices/hybrid-azuread-join-plan#handling-devices-with-azure-ad-registered-state).<!-- 9342566 -->
+    > Devices that are only registered with Microsoft Entra ID aren't supported with co-management. This configuration is sometimes referred to as _workplace joined_. They need to be either joined to Microsoft Entra ID or Microsoft Entra hybrid joined. For more information, see [Handling devices with Microsoft Entra registered state](/azure/active-directory/devices/hybrid-azuread-join-plan#handling-devices-with-azure-ad-registered-state).<!-- 9342566 -->
 
-  - [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan) only. This type is sometimes referred to as _cloud domain-joined_.)<!--SCCMDocs issue 605-->
+  - [Microsoft Entra joined](/azure/active-directory/devices/azureadjoin-plan) only. This type is sometimes referred to as _cloud domain-joined_.)<!--SCCMDocs issue 605-->
 
 > [!TIP]
-> As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (Azure AD) joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
+> As we talk with our customers that are using Microsoft Intune to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and Microsoft Entra hybrid joined devices. Many customers confuse these two topics. Co-management is a management option, while Microsoft Entra ID is an identity option. For more information, see [Understanding hybrid Microsoft Entra ID and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify Microsoft Entra hybrid join and co-management, how they work together, but aren't the same thing.
 
 ### Intune
 
@@ -127,9 +129,9 @@ Update your devices to a supported version of Windows 11 or Windows 10. For more
 | Action | Role needed |
 |----|----|
 | Set up a cloud management gateway in Configuration Manager | Azure **Subscription Manager** |
-| Create Azure AD apps from Configuration Manager | Azure AD **Global Administrator** |
+| Create Microsoft Entra apps from Configuration Manager | Microsoft Entra ID **Global Administrator** |
 | Import Azure apps in Configuration Manager | Configuration Manager **Full Administrator**<br>No other Azure roles needed |
-| Enable co-management in Configuration Manager | An Azure AD user<br>Configuration Manager **Full Administrator** with **All** scope rights.<!--SCCMDoc issue 626--> |
+| Enable co-management in Configuration Manager | A Microsoft Entra user<br>Configuration Manager **Full Administrator** with **All** scope rights.<!--SCCMDoc issue 626--> |
 
 For more information about Azure roles, see [Understand the different roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 

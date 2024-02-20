@@ -3,14 +3,14 @@ description: Learn how to control how Windows 8 client computers communicate wit
 title: SMS_ClientCommunicationConfig Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a9007fe8-9150-40cc-9f37-6430e49718f4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -30,7 +30,7 @@ Class SMS_ClientCommunicationConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ClientCommunicationConfig` class does not define any methods.  
+ The `SMS_ClientCommunicationConfig` class doesn't define any methods.  
 
 ## Properties  
  `MeteredNetworkUsage`  
@@ -45,7 +45,7 @@ Class SMS_ClientCommunicationConfig : SMS_ClientAgentConfig_BaseClass
 |Value|Metered network usage policy|  
 |-|-|  
 |1|Allow metered network use.|  
-|2|Only use the metered network for deployments that are marked to allow use of the metered network. This means meta-data such as policy will always use the metered network. And based on the policy, the client will decide whether or not to use the metered network for the deployment.|  
+|2|Only use the metered network for deployments that are marked to allow use of the metered network. This means meta-data such as policy will always use the metered network. And based on the policy, the client decides whether or not to use the metered network for the deployment.|  
 |4|Block metered network usage.|  
 
 ## Remarks  

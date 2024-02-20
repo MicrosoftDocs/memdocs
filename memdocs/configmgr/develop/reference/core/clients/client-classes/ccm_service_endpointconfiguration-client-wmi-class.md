@@ -3,14 +3,14 @@ description: Article outlining the use of CCM_Service_EndpointConfiguration clas
 title: CCM_Service_EndpointConfiguration Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2c1a08fa-687a-4a62-87d3-bf1699a3a01c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 > [!IMPORTANT]
 >  This class supports the Configuration Manager 2007 infrastructure; any access to this class or class properties should be read-only.  
 
- in Configuration Manager, the `CCM_Service_EndpointConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports endpoint configuration for the CCMEXEC service. There is an instance of this class for each endpoint on the computer.  
+ in Configuration Manager, the `CCM_Service_EndpointConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports endpoint configuration for the CCMEXEC service. There's an instance of this class for each endpoint on the computer.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -49,7 +49,7 @@ Class CCM_Service_EndpointConfiguration : CCM_Policy
 ```  
 
 ## Methods  
- The `CCM_Service_EndpointConfiguration` class does not define any methods.  
+ The `CCM_Service_EndpointConfiguration` class doesn't define any methods.  
 
 ## Properties  
  `ACL`  
@@ -95,7 +95,7 @@ Class CCM_Service_EndpointConfiguration : CCM_Policy
 
  Qualifiers: None  
 
- Display name of the endpoint for when it is displayed in a user interface. This is an optional field.  
+ Display name of the endpoint for when it's displayed in a user interface. This is an optional field.  
 
  `ManualStart`  
  Data type: `Boolean`  
@@ -104,7 +104,7 @@ Class CCM_Service_EndpointConfiguration : CCM_Policy
 
  Qualifiers: None  
 
- Flag indicating whether the delivery of messages should be started manually. If this flag is set, the service will not dispatch messages to the endpoint until it is explicitly started by using the **StartEndpoint** system command.  
+ Flag indicating whether the delivery of messages should be started manually. If this flag is set, the service won't dispatch messages to the endpoint until it's explicitly started by using the **StartEndpoint** system command.  
 
  `MessageTimeout`  
  Data type: `UInt32`  

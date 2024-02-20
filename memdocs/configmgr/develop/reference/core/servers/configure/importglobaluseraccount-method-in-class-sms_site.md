@@ -3,14 +3,14 @@ title: ImportGlobalUserAccount Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that encrypts data that's shared in the hierarchy.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3300967b-9080-4b60-901f-e52bc2234f8e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

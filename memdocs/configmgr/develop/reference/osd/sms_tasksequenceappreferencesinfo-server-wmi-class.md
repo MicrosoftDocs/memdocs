@@ -3,14 +3,14 @@ description: Learn how to represent a Configuration Manager application in the t
 title: SMS_TaskSequenceAppReferencesInfo Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 932e81bd-0533-46ee-9794-8a33ebdfb08d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

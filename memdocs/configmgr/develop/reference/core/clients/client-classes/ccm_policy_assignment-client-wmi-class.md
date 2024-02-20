@@ -3,14 +3,14 @@ title: CCM_Policy_Assignment Class
 titleSuffix: Configuration Manager
 description: The CCM_Policy_Assignment class is a client Windows Management Instrumentation (WMI) class that represents a policy assignment.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 78fb45c2-f30b-4f24-b755-261e98880548
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

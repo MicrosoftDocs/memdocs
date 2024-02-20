@@ -3,14 +3,14 @@ title: SMS_AppDeploymentErrorStatus Class
 description: Learn how to use the SMS_AppDeploymentErrorStatus class in Configuration Manager to represent application deployment error status.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a4be4e6b-994d-41d3-82c1-df7b1b963aa7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

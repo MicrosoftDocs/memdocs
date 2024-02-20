@@ -3,14 +3,14 @@ title: SMS_TaskSequence_ApplicationInfo Class
 titleSuffix: Configuration Manager
 description: The SMS_TaskSequence_ApplicationInfo WMI class represents application information for the application that is installed by using a task sequence.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e0240fff-c3bf-4d5c-8f21-d36f1f528ce3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -2,14 +2,14 @@
 title: Change the Deployment Package Source
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: d931362e-25f6-4316-ab95-32b5771f670c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: You change the deployment package source for a software updates deployment package in Configuration Manager by obtaining an instance of the SMS_SoftwareUpdatesPackage class and using the ValidateNewPackageSource method.
 ms.reviewer: mstewart,aaroncz 

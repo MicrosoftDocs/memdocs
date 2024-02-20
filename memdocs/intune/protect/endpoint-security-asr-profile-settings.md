@@ -231,7 +231,7 @@ Supported platforms and profiles:
 - **Block persistence through WMI event subscription**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
-  This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  This attack surface reduction (ASR) rule is controlled via the following GUID: e6db77e5-3df2-4cf1-b95a-636979351e5b
 
   This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 

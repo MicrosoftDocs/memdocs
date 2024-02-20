@@ -3,14 +3,14 @@ title: SMS_Authority Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_Authority class is a client Windows Management Instrumentation class that represents the Configuration Manager site that manages the client.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c51f2209-2382-4005-a960-c87fea65d04c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

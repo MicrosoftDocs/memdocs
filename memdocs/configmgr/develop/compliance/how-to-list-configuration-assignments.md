@@ -3,14 +3,14 @@ title: List Configuration Assignments
 description: The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

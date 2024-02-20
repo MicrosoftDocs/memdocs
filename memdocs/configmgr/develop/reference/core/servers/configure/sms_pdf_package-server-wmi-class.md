@@ -3,14 +3,14 @@ title: SMS_PDF_Package Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_PDF_Package Windows Management Instrumentation class is an SMS Provider server class that represents a package definition file template from which to create an initialized package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fa8d0144-76bb-47de-916f-ea6e7f39b8d0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

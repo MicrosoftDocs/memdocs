@@ -73,3 +73,4 @@ For each Cloud PC restore point shared, a folder is created in the storage accou
 
 - [Restore a single Cloud PC](restore-single-cloud-pc.md)
 - [Bulk restore multiple Cloud PCs](restore-bulk.md)
+- [Set up your Azure storage account](place-cloud-pc-under-review.md).

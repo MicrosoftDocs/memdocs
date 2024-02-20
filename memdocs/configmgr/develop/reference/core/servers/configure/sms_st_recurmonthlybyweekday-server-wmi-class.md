@@ -3,14 +3,14 @@ description: Learn how to represent a schedule token for events that occur for a
 title: SMS_ST_RecurMonthlyByWeekday Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: efed0902-d5cc-40e1-82aa-d6ff893ee44e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

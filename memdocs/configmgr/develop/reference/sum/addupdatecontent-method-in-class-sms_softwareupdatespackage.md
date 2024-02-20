@@ -3,14 +3,14 @@ title: AddUpdateContent Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the AddUpdateContent WMI class method downloads content to a software update package and replicates the content to distribution points.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e35c4bae-d916-4e11-82a2-09643dd239f3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

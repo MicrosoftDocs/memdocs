@@ -3,19 +3,19 @@ description: Learn how to cancel an application deployment using the Cancel clas
 title: Cancel Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6e3884b5-1598-4c54-b22a-da4518dea323
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # Cancel Method in Class CCM_Application
-The `Cancel` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that cancels an application deployment.   
+The `Cancel` Windows Management Instrumentation (WMI) class method in Configuration Manager that cancels an application deployment.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

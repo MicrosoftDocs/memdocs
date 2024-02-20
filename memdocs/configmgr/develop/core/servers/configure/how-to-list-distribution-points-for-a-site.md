@@ -3,14 +3,14 @@ title: List Distribution Points for a Site
 titleSuffix: Configuration Manager
 description: How to assign a distribution point to a package by using the SMS_DistributionPoint Server WMI Class and class properties in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: f70395dc-3266-4406-8189-2d741c746528
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

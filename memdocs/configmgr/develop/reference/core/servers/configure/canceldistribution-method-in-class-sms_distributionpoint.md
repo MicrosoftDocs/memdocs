@@ -3,19 +3,19 @@ title: CancelDistribution Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that cancels a package distribution.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bfc44693-3266-461f-988a-886333ac9aaf
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # CancelDistribution Method in Class SMS_DistributionPoint
-The `CancelDistribution` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels a package distribution. If there is a distribution in-progress for the specified package to the specified distribution point, then calling this method will cancel the ongoing distribution and the status of the package distribution will be set to failed for this distribution point.  
+The `CancelDistribution` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels a package distribution. If there's a distribution in-progress for the specified package to the specified distribution point, then calling this method cancels the ongoing distribution and the status of the package distribution will be set to fail for this distribution point.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

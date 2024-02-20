@@ -3,14 +3,14 @@ description: The ICIINFO::GetEvalState method, in Configuration Manager, gets th
 title: "ICIINFO::GetEvalState"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7a2f05e8-f5f8-4362-8e67-759624e80371
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: CreateFromOEM Method
 titleSuffix: Configuration Manager
 description: Creates a set of mass-storage SMS_Driver Server WMI Class objects referenced by the specified Txtsetup.oem file.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ff294184-6e2f-4be1-b1db-44ccd82d18db
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -52,11 +52,11 @@ SInt32 CreateFromOEM(
  An array of drivers with a complete driver catalog.  
 
 ## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure. The error values are available in the [SMS_ExtendedStatus Server WMI Class](../../../develop/reference/misc/sms_extendedstatus-server-wmi-class.md) error object. For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure. The error values are available in the [SMS_ExtendedStatus Server WMI Class](../../../develop/reference/misc/sms_extendedstatus-server-wmi-class.md) error object. For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 
  This method returns successfully if at least one of the files referenced by the Txtsetup.oem file is valid.  
 
- Possible error values include, but are not limited to, the following:  
+ Possible error values include, but aren't limited to, the following:  
 
  0  
  Success  
@@ -67,10 +67,10 @@ SInt32 CreateFromOEM(
  All drivers referenced by the Txtsetup.oem file are invalid.  
 
  2  
- The SMS provider cannot access the Txtsetup.oem file.  
+ The SMS provider can't access the Txtsetup.oem file.  
 
  1633  
- All drivers referenced by the Txtsetup.oem file are valid but do not support any platforms supported by Configuration Manager.  
+ All drivers referenced by the Txtsetup.oem file are valid but don't support any platforms supported by Configuration Manager.  
 
  183  
  All drivers referenced by the Txtsetup.oem file have already been imported.  
@@ -93,7 +93,7 @@ SInt32 CreateFromOEM(
 
  Your application calls this method with a driver Txtsetup.oem file and file path. The method examines the supplied information and creates an array of new [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) objects, one for each referenced .inf file.  
 
- This method generates [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) objects with System Definition Model (SDM) package XML defined, and allows your application to make property changes before they are saved.  
+ This method generates [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) objects with System Definition Model (SDM) package XML defined, and allows your application to make property changes before they're saved.  
 
 ## Requirements  
 

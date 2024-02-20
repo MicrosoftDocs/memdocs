@@ -3,14 +3,14 @@ description: Learn how to represent the settings that apply to the clients which
 title: SMS_ClientSettings Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f46e48ff-60cd-4a68-a36e-9ece153d93c3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -171,7 +171,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [read]  
 
- The name of the security scopes with which the setting is associated. The default value is "Default".  
+ The name of the security scopes with which the setting is associated. The default value is "Default."  
 
  `SettingsID`  
  Data type: `UInt32`  
@@ -189,7 +189,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [notnull]  
 
- Type indicates whether the settings is applied to Device or User. The default value is 1 (Device).  
+ Type indicates whether the settings are applied to Device or User. The default value is 1 (Device).  
 
 |Value|Settings type|  
 |-|-|  

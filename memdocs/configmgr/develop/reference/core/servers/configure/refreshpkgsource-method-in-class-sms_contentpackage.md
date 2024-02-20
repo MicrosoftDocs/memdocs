@@ -3,14 +3,14 @@ title: RefreshPkgSource method in class SMS_ContentPackage
 titleSuffix: Configuration Manager
 description: The RefreshPkgSource Windows Management Instrumentation (WMI) class method causes a refresh of the package source.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 26332303-5803-4daf-80e0-891458cd64de
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -29,7 +29,7 @@ sint32 RefreshPkgSource();
  None.  
 
 ## Remarks  
- This method is used when the package properties have not changed.  
+ This method is used when the package properties haven't changed.  
 
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

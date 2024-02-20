@@ -3,8 +3,8 @@ title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
 ms.date: 02/17/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -68,7 +68,7 @@ Evaluates the membership for the selected collection. For collections with many 
 
 #### Synchronize membership
 
-If you configured this collection for cloud sync, synchronize the current membership with an Azure Active Directory group. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
+If you configured this collection for cloud sync, synchronize the current membership with a Microsoft Entra group. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
 #### Add resources
 
@@ -221,7 +221,7 @@ When you view properties for a collection, you can view and configure the follow
 
 - **Distribution Point Groups**: Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](../../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
-- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
+- **Cloud Sync**: Synchronize collection membership results to Microsoft Entra groups. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
     Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center](../../../../tenant-attach/atp-onboard.md).
 

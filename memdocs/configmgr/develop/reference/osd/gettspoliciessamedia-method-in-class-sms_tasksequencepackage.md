@@ -3,14 +3,14 @@ title: GetTsPoliciesSaMedia Method
 titleSuffix: Configuration Manager
 description: Get all policies associated with the specified task sequence. The user must have rights to create stand-alone media.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: dc495673-5bc2-43d8-b5fc-4dc53424d8ad
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

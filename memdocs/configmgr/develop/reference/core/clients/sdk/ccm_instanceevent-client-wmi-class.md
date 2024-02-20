@@ -3,14 +3,14 @@ title: CCM_InstanceEvent Class
 titleSuffix: Configuration Manager
 description: The CCM_InstanceEvent Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents an instance event.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 75240595-d0c1-48d9-9279-f3165934b888
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

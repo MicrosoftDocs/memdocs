@@ -3,14 +3,14 @@ title: SMS_MigrationSourceSite Class
 description: Learn how the SMS_MigrationSourceSite class is an SMS Provider server class, in Configuration Manager, that represents a site in the source hierarchy.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ff844187-e53f-4325-a3ed-7e906baa32cf
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

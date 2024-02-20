@@ -3,14 +3,14 @@ description: Article describing the use of ClearDeploymentLocksForCollection cla
 title: ClearDeploymentLocksForCollection Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d7c2626e-b99c-48ab-bde2-429e1763d48f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

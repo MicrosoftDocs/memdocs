@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 06/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,7 @@ ms.collection:
 
 # Understand App Protection Policy delivery timing
 
-Learn the different deployment windows for app protection policies to understand when changes should appear on your end-user devices.
+Learn about the different delivery timing for app protection policies to understand when changes should appear on your end-user devices.
 
 ## Delivery timing summary
 
@@ -49,6 +49,9 @@ App protection policy (APP) delivery depends on the license state and Intune ser
 
 > [!NOTE]
 > Retry intervals may require active app use to occur, meaning the app is launched and in use.  If the retry interval is 24 hours and the user waits 48 hours to launch the app, the Intune APP SDK will retry at 48 hours.
+
+> [!NOTE]
+> Applications that have not checked-in with the Intune MAM Service within the last 90 days may be automatically deregistered from the Intune MAM Service.  When the user next launches the application, the Intune APP SDK will automatically attempt to register the application.  The user may be prompted to connect to the internet and enter credentials to complete the registration.
 
 ## Handling network connectivity issues
 

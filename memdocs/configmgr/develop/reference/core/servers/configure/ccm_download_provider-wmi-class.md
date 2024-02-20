@@ -3,14 +3,14 @@ title: CCM_Download_Provider Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the CCM_Download_Provider class defines and registers a non-Microsoft download plug-in provider.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 888329e2-1af1-4233-8ea2-90a841356c38
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: About Application Configuration Items
 description: Application configuration items include all the functionality of general configuration items, but their identity can be detected independently of its settings and objects.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 41940820-977a-4308-9e75-db106c6989b7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

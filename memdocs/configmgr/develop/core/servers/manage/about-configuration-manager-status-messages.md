@@ -3,14 +3,14 @@ title: About status messages
 titleSuffix: Configuration Manager
 description: Learn about status messages in Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -29,7 +29,7 @@ In Configuration Manager, status messages are the universal means for components
 ## Types of Status Messages  
 
 ### Predefined Status Messages  
- Each Configuration Manager component has a set of predefined status messages assigned to it. It is important that the context in which an application reports a predefined status message matches exactly the purpose of the Configuration Manager component status message. Otherwise, the integrity of the site might be affected by Configuration Manager misinterpreting the meaning of the status message. For more information, see [About Configuration Manager Component Status Messages](../../../../develop/core/servers/manage/about-configuration-manager-component-status-messages.md).  
+ Each Configuration Manager component has a set of predefined status messages assigned to it. It's important that the context in which an application reports a predefined status message matches exactly the purpose of the Configuration Manager component status message. Otherwise, the integrity of the site might be affected by Configuration Manager misinterpreting the meaning of the status message. For more information, see [About Configuration Manager Component Status Messages](../../../../develop/core/servers/manage/about-configuration-manager-component-status-messages.md).  
 
 ### User-defined Generic Status Messages  
  Configuration Manager provides three types of user-defined generic status messages.  
@@ -40,7 +40,7 @@ In Configuration Manager, status messages are the universal means for components
 
 - Error  
 
-  Along with the message type, insertion strings and attributes can be supplied. The text that is provided as the insertion string, when creating the status message, is the text seen in the user interface. This makes using generic messages simple, but it does not allow for localization. For more information, see [How to Read User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-read-user-defined-status-messages.md).  
+  Along with the message type, insertion strings and attributes can be supplied. The text that is provided as the insertion string, when creating the status message, is the text seen in the user interface. This makes using generic messages simple, but it doesn't allow for localization. For more information, see [How to Read User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-read-user-defined-status-messages.md).  
 
 ## Creating Status Messages on the Client  
  You can create events on client computers in the following ways:  
@@ -49,10 +49,10 @@ In Configuration Manager, status messages are the universal means for components
  [SMSEvent Class](../../../../develop/reference/core/servers/manage/smsevent-class.md) is a COM automation class that you use to raise user-defined status messages on a client. As a COM Automation object, it can readily be used by VBScript. For more information, see [SMSEvent Class](../../../../develop/reference/core/servers/manage/smsevent-class.md).  
 
 ### SMSCSTAT.DLL  
- SMSCSTAT.DLL is a Win32 dynamic link library that is available on clients. It has been installed on Configuration Manager clients since SMS 2.0 Service Pack 1. It cannot be easily be used by VBScript. For more information, see [About Using SMSCSTAT.DLL to Create Status Messages](../../../../develop/core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md).  
+ SMSCSTAT.DLL is a Win32 dynamic link library that is available on clients. It has been installed on Configuration Manager clients since SMS 2.0 Service Pack 1. It can't be easily be used by VBScript. For more information, see [About Using SMSCSTAT.DLL to Create Status Messages](../../../../develop/core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md).  
 
 ### Management Point Interface  
- Using the management point interfaces, you can raise status messages that are defined by XML from client computers. The management point interfaces cannot be used by VBScript. Using the management point interface is recommended for raising status messages on client computers that are not running a Windows operating system.  
+ Using the management point interfaces, you can raise status messages that are defined by XML from client computers. The management point interfaces can't be used by VBScript. Using the management point interface is recommended for raising status messages on client computers that aren't running a Windows operating system.  
 
 ## Creating Status Messages on the Site Server  
  You raise events on the server by creating instances of `SMS_StatusMessage`. For more information, see [How to Report User-Defined Status Messages](../../../../develop/core/servers/manage/how-to-report-user-defined-status-messages.md).  

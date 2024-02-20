@@ -3,14 +3,14 @@ description: Learn how to add the SoftwarePropertiesHash from SoftwareCode and T
 title: AddSoftwareHashData Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3a07f56d-e00f-4d46-9f4b-36b99e3a243b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ description: The SMS_SecondarySiteStatus WMI class is an SMS Provider server cla
 title: SMS_SecondarySiteStatus Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fc28e42f-09f5-41aa-870a-28a673dfe6bc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: Add an OS Install Package
 titleSuffix: Configuration Manager
 description: Creates and populates an instance of SMS_OperatingSystemInstallPackage.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 3410a7c8-03b1-4c9e-874a-05324fcb569e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

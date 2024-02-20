@@ -3,14 +3,14 @@ title: "ICIINFO::GetCategory"
 titleSuffix: Configuration Manager
 description: "The ICIINFO::GetCategory method gets a localized category name by index and the group name of the category."
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 76c96b11-787a-4a37-b592-f0bdd4e094ea
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

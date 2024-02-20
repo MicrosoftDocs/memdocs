@@ -3,14 +3,14 @@ description: Learn how to represent a mapping of server names to an installed As
 title: SMS_OSDeploymentKitInstalledVersion Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 634cb192-7fcd-4e8d-8730-3c1ed832bb61
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

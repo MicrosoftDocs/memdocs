@@ -3,14 +3,14 @@ title: SMS_ST_NonRecurring Class
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class that that represents a schedule token for non-recurring events.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c44ae9b7-6518-41e0-8c8f-3b2802eae34d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

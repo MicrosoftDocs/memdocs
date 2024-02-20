@@ -3,14 +3,14 @@ title: DeleteClientOperation Method
 titleSuffix: Configuration Manager
 description: A class method that deletes a client operation.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5fcf06b9-8f18-40a3-9286-d69c8cbc2512
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,7 +3,7 @@
 
 title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 titleSuffix:
-description: Enable Intune automatic enrollment for Windows devices joining or registering with your Azure AD.  
+description: Enable Intune automatic enrollment for Windows devices joining or registering with your Microsoft Entra ID.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -41,7 +41,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Azure Active Directory. 
+Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Microsoft Entra ID. 
 
 Automatic enrollment can be used in the following device management and provisioning scenarios:
 
@@ -55,7 +55,7 @@ This article describes how to enable MDM automatic enrollment for personal and c
 
 ## Prerequisites
 
-- Requires [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding    
+- Requires [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding    
 - Microsoft Intune subscription  
 - Global Administrator permissions  
 
@@ -74,13 +74,13 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 * Device users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
-* If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Microsoft Intune admin center after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.  
+* If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Microsoft Entra ID, two records will be visible in the Microsoft Intune admin center after enrollment. You can stop this by making sure that users with Microsoft Entra joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.  
 
 ## Next steps  
 
 For information about how to integrate and use automatic enrollment when provisioning devices, see:  
 
-* [Windows Autopilot scenarios](../../autopilot/tutorial/autopilot-scenarios.md)  
+* [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios)  
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
 

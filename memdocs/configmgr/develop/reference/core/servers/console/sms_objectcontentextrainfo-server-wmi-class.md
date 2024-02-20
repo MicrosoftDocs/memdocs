@@ -3,14 +3,14 @@ title: SMS_ObjectContentExtraInfo Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents Application or Package Content Information.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 48828bbd-5c57-4bdf-8511-71d548039e81
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

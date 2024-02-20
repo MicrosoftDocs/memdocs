@@ -3,14 +3,14 @@ title: WMI namespaces and classes for reports
 titleSuffix: Configuration Manager
 description: Configuration Manager WMI namespaces and classes for Configuration Manager reports
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b687399a-b750-42f7-949a-4c757d269d58
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

@@ -3,14 +3,14 @@ title: RaiseWarningStatusMsg Method
 description: Learn how to use the RaiseWarningStatusMsg method in Configuration Manager to create a warning status message.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 979ac4c3-03b9-41b2-9a3d-371ccbe0695e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

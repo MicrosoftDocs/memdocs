@@ -3,14 +3,14 @@ title: SMS_DPGroupCollections Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that describes collection association for a given distribution point group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0ed27133-baea-4d59-a18f-1a6f503b8599
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

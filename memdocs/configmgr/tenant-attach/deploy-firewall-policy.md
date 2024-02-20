@@ -1,25 +1,23 @@
 ---
-title: Tenant attach - Deploy endpoint firewall from the Microsoft Intune admin center  (preview)
+title: Tenant attach - Deploy endpoint firewall from the Microsoft Intune admin center
 titleSuffix: Configuration Manager
 description: Create and deploy firewall policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 09/27/2021
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.localizationpriority: high
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 
-# <a name="bkmk_atp"></a> Tenant attach: Create and deploy firewall policies from the admin center (preview)
+# <a name="bkmk_atp"></a> Tenant attach: Create and deploy firewall policies from the admin center
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
  Create Windows Firewall policies in the Microsoft Intune admin center and deploy them to Configuration Manager collections.
 
@@ -34,7 +32,7 @@ ms.collection: tier3
 1. Create a profile with the following settings:
    - **Platform**: Windows 10 and later
       - Only Windows 10 clients can be targeted with firewall policies currently.
-   - **Profile**: Microsoft Defender Firewall (ConfigMgr) (preview)
+   - **Profile**: Microsoft Defender Firewall (ConfigMgr)
 1. Select **Create** then give the profile a **Name** and a **Description**.
 1. On the **Configuration settings** page, set the firewall settings for the devices. For more information about the available settings, see [Settings for firewall policy for tenant attached devices](../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)  
 

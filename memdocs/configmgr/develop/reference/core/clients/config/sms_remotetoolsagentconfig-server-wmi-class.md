@@ -3,14 +3,14 @@ title: SMS_RemoteToolsAgentConfig Class
 description: Learn how the SMS_RemoteToolsAgentConfig class is an SMS Provider server class that specifies the Remote Control settings on client computers.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9b0190b8-5eec-40f5-9bb1-da8223c95951
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -48,7 +48,7 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_RemoteToolsAgentConfig` class does not define any methods.  
+ The `SMS_RemoteToolsAgentConfig` class doesn't define any methods.  
 
 ## Properties  
  `AccessLevel`  
@@ -178,7 +178,7 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Firewall profile setting masks which is combine them as an OR of domain profile 0x4, private profile 0x2, and public profile 0x1.  
+ Firewall profile setting masks which combines them as an OR of domain profile 0x4, private profile 0x2, and public profile 0x1.  
 
  `ManageRA`  
  Data type: `Boolean`  
@@ -196,7 +196,7 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Configuration Manager will manage Remote Desktop settings. This applies to the 'Manage Remote Desktop Settings' in the Admin Console's remote desktop settings.  
+ Configuration Manager manages Remote Desktop settings. This applies to the 'Manage Remote Desktop Settings' in the Admin Console's remote desktop settings.  
 
  `PermissionRequired`  
  Data type: `Boolean`  

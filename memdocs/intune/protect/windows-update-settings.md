@@ -4,10 +4,10 @@
 title: Windows Update settings you can manage with Intune Update Ring policies for Windows 10/11 devices. 
 description: View the settings for Windows Update that you can manage through Intune policy for Update rings.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/22/2022
+ms.date: 11/03/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,7 +100,7 @@ Update settings control what bits a device will download, and when. For more inf
 
 ## User experience settings  
 
-User experience settings control the end-user experience for device restart and reminders. For more information about the behavior of each setting, see the   Windows Update CSP documentation.  
+User experience settings control the end-user experience for device restart and reminders. For more information about the behavior of each setting, see the Windows Update CSP documentation.  
 
 - **Automatic update behavior**  
   **Default**: Auto install at maintenance time  
@@ -160,8 +160,13 @@ User experience settings control the end-user experience for device restart and 
 
   - **Reset to default** - Restore the original auto update settings on machines that run the Windows 10 October 2018 Update or later, and that run Windows 11. When you *reset to default*, Windows will automatically determine active hours for the device. Using the active hours, Windows then schedules the best time to install updates and restart the system after updates install.
 
-- **Restart checks**  
-  **Default**: Allow  
+- **Restart checks (EDU Restart)**  
+  
+  > [!NOTE]
+  > In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalogue](../configuration/settings-catalog.md) to set this value if required.
+  
+  **Default**: Allow
+
   Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
   - **Allow** - Perform restart checks: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.
@@ -231,8 +236,9 @@ User experience settings control the end-user experience for device restart and 
     - **Yes**
     - **No**
 
+<!-- Deleting the following section, as Rings no longer support the option described by the linked content, which is now also removed.>
 ### Delivery Optimization download mode  
 
-Delivery Optimization is no longer configured as part of a Windows update policy. Delivery Optimization is now set through device configuration. However, previous configurations remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified.
+Delivery Optimization is no longer configured as part of a Windows update policy. Delivery Optimization is now set through device configuration. However, previous configurations might remain available in the console. You can remove these previous configurations by editing them to be *Not configured*, but they can't otherwise be modified.
 
 To avoid conflicts between new and old policy, see [Remove Delivery Optimization from Update rings for Windows 10 and later](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-update-rings) and then move your settings to a Delivery Optimization profile. 

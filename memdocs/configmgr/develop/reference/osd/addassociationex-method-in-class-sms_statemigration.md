@@ -3,14 +3,14 @@ title: AddAssociationEx Method
 titleSuffix: Configuration Manager
 description: Adds the computer association between two system resources used in state migration.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 82a3558b-f2ef-4dfa-85e9-ccc720862fa0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

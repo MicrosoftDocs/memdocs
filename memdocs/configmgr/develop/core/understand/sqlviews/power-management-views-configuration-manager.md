@@ -3,8 +3,8 @@ title: Power management views
 titleSuffix: Configuration Manager
 description: Information about the power plans applied to computers by Configuration Manager.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: bfb0f6a9-09c1-4065-b0e5-be06cdc1800a
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 
@@ -22,9 +22,9 @@ Information about the power plans applied to computers by Configuration Manager
 
 For more information about power management, see [Power management in Configuration Manager](../../../../core/clients/manage/power/introduction-to-power-management.md).
 
-Wake up proxy is used to supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary.
+Wake-up proxy is used to supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary.
 
-For more information about wake up proxy, see the Power Management section of the [About client settings in Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic in the Configuration Manager Documentation Library.
+For more information about wake-up proxy, see the Power Management section of the [About client settings in Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic in the Configuration Manager Documentation Library.
 
 ## Power management views
 
@@ -61,7 +61,7 @@ The view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_POWER_MANAGEMENT_SUSPEND_ERROR
 
-Lists information, by Resource ID, about power management suspend operations that did not complete successfully.
+Lists information, by Resource ID, about power management suspend operations that didn't complete successfully.
 The view can be joined to other views by using the **ResourceID** column.
 
 ## Wake up proxy views

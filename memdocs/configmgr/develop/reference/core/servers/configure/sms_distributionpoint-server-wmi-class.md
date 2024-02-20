@@ -3,14 +3,14 @@ description: Learn how to represent a distribution point from which a given pack
 title: SMS_DistributionPoint class
 titleSuffix: Configuration Manager
 ms.date: 05/24/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f639d294-8617-43a8-adad-6fb2a4590a5e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

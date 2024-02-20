@@ -1,21 +1,21 @@
 ---
 title: CheckReferencesShareType Method
 titleSuffix: Configuration Manager
-description: In Configuration Manager, the CheckReferencesShareType WMI class method checks all referred packages for this task sequence and returns all packages that are not shared.
+description: In Configuration Manager, the CheckReferencesShareType WMI class method checks all referred packages for this task sequence and returns all packages that aren't shared.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 25ae479d-c63e-4b45-a8e7-2de6ff4b3222
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # CheckReferencesShareType Method in Class SMS_TaskSequencePackage
-The `CheckReferencesShareType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks all referred packages for this task sequence and returns all packages that are not shared.  
+The `CheckReferencesShareType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks all referred packages for this task sequence and returns all packages that aren't shared.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -51,7 +51,7 @@ uint32 CheckReferencesShareType
 
  Qualifiers: [id("2"), out]  
 
- Package identifiers for all referred packages for this task sequence that are not shared.  
+ Package identifiers for all referred packages for this task sequence that aren't shared.  
 
 > [!NOTE]
 >  The incorrect spelling of the variable "PacakgeIds" is hardcoded in WMI.  
@@ -61,7 +61,7 @@ uint32 CheckReferencesShareType
 
  Qualifiers: [id("3"), out]  
 
- Package names for all referred packages for this task sequence that are not shared.  
+ Package names for all referred packages for this task sequence that aren't shared.  
 
 ## Remarks  
 

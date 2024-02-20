@@ -1,21 +1,21 @@
 ---
 title: CCM_Policy_Expression Class
 titleSuffix: Configuration Manager
-description: A client Windows Management Instruementation class that represents a policy expression, which evaluates to either true or false.
+description: A client Windows Management Instrumentation class that represents a policy expression, which evaluates to either true or false.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2ad7dbc5-ee6f-40e2-a03f-413a8236153e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy_Expression Client WMI Class
-In Configuration Manager, the `CCM_Policy_Expression` class is a client Windows Management Instruementation (WMI) class that represents a policy expression that evaluates to either `true` or `false`.  
+In Configuration Manager, the `CCM_Policy_Expression` class is a client Windows Management Instrumentation (WMI) class that represents a policy expression that evaluates to either `true` or `false`.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -32,7 +32,7 @@ Class CCM_Policy_Expression : CCM_Policy_Config
 ```  
 
 ## Methods  
- The `CCM_Policy_Expression` class does not define any methods.  
+ The `CCM_Policy_Expression` class doesn't define any methods.  
 
 ## Properties  
  `ExpressionData`  
@@ -75,8 +75,8 @@ Class CCM_Policy_Expression : CCM_Policy_Config
 | Value | Description |
 | ----- | ----------- |
 |Once|The expression is evaluated only once.|  
-|Until-true|The expression continues to be re-evaluated until evaluation returns `true`.|  
-|Continuous|The expression is always re-evaluated.|  
+|Until-true|The expression continues to be reevaluated until evaluation returns `true`.|  
+|Continuous|The expression is always reevaluated.|  
 
 ## Requirements  
 

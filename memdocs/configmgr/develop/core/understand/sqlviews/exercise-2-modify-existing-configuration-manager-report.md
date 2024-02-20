@@ -3,8 +3,8 @@ title: 'Exercise 2: Modify an existing report'
 titleSuffix: Configuration Manager
 description: Modify a Configuration Manager report and then run the modified report.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: 24bde9a6-d05d-428d-b26e-cd8dc1ffe9ba
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

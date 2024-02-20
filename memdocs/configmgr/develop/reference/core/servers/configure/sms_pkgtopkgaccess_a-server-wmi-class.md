@@ -3,14 +3,14 @@ description: Learn how to relate an SMS Package Server class object with the SMS
 title: SMS_PkgToPkgAccess_a Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 17a0dc88-ede7-43f5-9d36-f2fb38db0514
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

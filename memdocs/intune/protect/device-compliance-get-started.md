@@ -4,8 +4,8 @@
 title: Device compliance policies in Microsoft Intune
 description: Get started with using compliance policies, including compliance policy settings and device compliance policies for Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/08/2023
 ms.topic: overview
@@ -27,6 +27,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- compliance
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune
@@ -66,30 +67,6 @@ Compliance policy settings include the following settings:
   If you use Conditional Access with your device compliance policies, change this setting to **Not compliant** to ensure that only devices that are confirmed as compliant can access your resources.
 
   If an end user isn't compliant because a policy isn't assigned to them, then the [Company Portal app](../apps/company-portal-app.md) shows No compliance policies have been assigned.
-
-- **Enhanced jailbreak detection** (*applies only to iOS/iPadOS*)
-
-  This setting works only with devices that you target with a device compliance policy that blocks jailbroken devices.  (See [Device Health](compliance-policy-create-ios.md#device-health) settings for iOS/iPadOS).
-
-  This setting has two values:
-
-  - **Disabled** (*default*): This security feature is off. This setting has no effect on your devices that receive device compliance policy that blocks jailbroken devices.
-  - **Enabled**: This security feature is on. Devices that receive device compliance policy to block jailbroken devices use the Enhanced jailbreak detection.
-
-  When enabled on an applicable iOS/iPadOS device, the device:
-
-  - Enables location services at the OS level.
-  - Always allows the Company Portal to use location services.
-  - Uses its location services to trigger jailbreak detection more frequently in the background. The user location data isn't stored by Intune.
-
-  Enhanced jailbreak detection runs an evaluation when:
-
-  - The Company Portal app opens
-  - The device physically moves a significant distance, which is approximately 500 meters or more. Intune can’t guarantee that each significant location change results in a jailbreak detection check, as the check depends on a device's network connection at the time.
-
-  If an Enhanced jailbreak detection evaluation does not run for a certain period of time, the device will be marked as _Jailbroken_, and subsequently as _Not Compliant_.
-
-  On iOS 13 and higher, this feature requires users to select *Always Allow* whenever the device prompts them to continue allowing Company Portal to use their location in the background. If enabled, this will allow more frequent jailbreak detection checks.
 
 - **Compliance status validity period (days)**
 
@@ -152,13 +129,13 @@ Intune includes a device compliance dashboard that you use to monitor the compli
 
 When you use Conditional Access, you can configure your Conditional Access policies to use the results of your device compliance policies to determine which devices can access your organizational resources. This access control is in addition to and separate from the actions for noncompliance that you include in your device compliance policies.
 
-When a device enrolls in Intune it registers in Azure AD. The compliance status for devices is reported to Azure AD. If your Conditional Access policies have Access controls set to *Require device to be marked as compliant*, Conditional access uses that compliance status to determine whether to grant or block access to email and other organization resources.
+When a device enrolls in Intune it registers in Microsoft Entra ID. The compliance status for devices is reported to Microsoft Entra ID. If your Conditional Access policies have Access controls set to *Require device to be marked as compliant*, Conditional access uses that compliance status to determine whether to grant or block access to email and other organization resources.
 
 If you’ll use device compliance status with Conditional Access policies, review how your tenant has configured *Mark devices with no compliance policy assigned as*, which you manage under [Compliance policy settings](#compliance-policy-settings).
 
 For more information about using Conditional Access with your device compliance policies, see [Device-based Conditional Access](conditional-access-intune-common-ways-use.md#device-based-conditional-access)
 
-Learn more about Conditional Access in the Azure AD documentation:
+Learn more about Conditional Access in the Microsoft Entra documentation:
 
 - [What is Conditional Access](/azure/active-directory/conditional-access/overview)
 - [What is a device identity](/azure/active-directory/device-management-introduction)

@@ -3,14 +3,14 @@ title: SMS_PDF_Program Class
 titleSuffix: Configuration Manager
 description: The SMS_PDF_Program WMI class is an SMS Provider server class that represents a package definition file (PDF) template from which to create an initialized program.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5acde161-499a-43f3-9470-a83cebb7a3cd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -43,7 +43,7 @@ Class SMS_PDF_Program : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_PDF_Program` class does not define any methods.  
+ The `SMS_PDF_Program` class doesn't define any methods.  
 
 ## Properties  
  `CommandLine`  
@@ -170,7 +170,7 @@ Class SMS_PDF_Program : SMS_BaseClass
 
  Qualifiers: None  
 
- Description of any additional requirements of the program. The default value is "".  
+ Description of any extra requirements of the program. The default value is "".  
 
  `WorkingDirectory`  
  Data type: `String`  
@@ -188,7 +188,7 @@ Class SMS_PDF_Program : SMS_BaseClass
 
   For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
-  Your application cannot delete individual programs from the package definition file store. To delete a program, the application must delete the package template and then reload the package template without the program.  
+  Your application can't delete individual programs from the package definition file store. To delete a program, the application must delete the package template and then reload the package template without the program.  
 
 ## Requirements  
 

@@ -3,14 +3,14 @@ title: SMS_G_System_History Class
 description: The SMS_G_System_History class is an SMS Provider server class that serves as an abstract base class representing hardware component state history for a client computer.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a1681a18-9456-4d91-b0d0-26831d469868
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

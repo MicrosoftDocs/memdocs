@@ -3,14 +3,14 @@ description: Learn how to use a ManagementObject object to read the Windows Mana
 title: "Read a WMI Object by Using System.Management"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 59065142-89c1-40f8-b4c0-83803650c06d
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

@@ -3,14 +3,14 @@ title: GetContextHandle Method
 titleSuffix: Configuration Manager
 description: The GetContextHandle method, in Configuration Manager, stores context objects on the server.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0e9491a9-32cb-4466-8da3-e5b2babc3c3d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

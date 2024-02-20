@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -72,9 +72,9 @@ Profiles are created in the [Microsoft Intune admin center](https://go.microsoft
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
 - **By platform**: Create and view policies and profiles by your platform. This view may also show features specific to the platform. For example, select **Windows**. You'll see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
-- **Policy**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
+- **Manage devices**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
-When you create a profile (**Configuration profiles** > **Create profile**), choose your platform:
+When you create a profile (**Configuration** > **Create**), choose your platform:
 
 - **Android device administrator**
 - **Android Enterprise**
@@ -110,7 +110,6 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [SCEP certificate](../protect/certificates-scep-configure.md)
 - [Secure assessment (Education) (Windows)](education-settings-configure.md)
 - [Shared multi-user device (Windows)](shared-user-device-settings.md)
-- [Telecom expenses (Android device administrator, iOS, iPadOS)](telecom-expenses-monitor.md)
 - [Trusted certificate](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
@@ -165,7 +164,7 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 ### Add a rule
 
-1. Select **Applicability Rules**. You can choose the **Rule**, and **Property**:
+1. In your policy, select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
     :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune.":::
 

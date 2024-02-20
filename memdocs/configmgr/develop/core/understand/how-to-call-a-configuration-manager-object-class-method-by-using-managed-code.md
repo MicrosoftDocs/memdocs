@@ -3,14 +3,14 @@ title: Call an Object Class Method by Using Managed Code
 titleSuffix: Configuration Manager
 description: To call a SMS Provider class method in Configuration Manager, use the ExecuteMethod method.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 46cb95e6-9dae-4c08-9cfb-1a570e4c05bc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

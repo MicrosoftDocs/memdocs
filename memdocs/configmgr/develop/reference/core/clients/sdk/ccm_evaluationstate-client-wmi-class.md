@@ -3,14 +3,14 @@ title: CCM_EvaluationState Class
 titleSuffix: Configuration Manager
 description: The CCM_EvaluationState WMI class is an SMS Provider server class in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cee8005f-1db4-4978-ae16-51901fd0ff1c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -33,7 +33,7 @@ Class CCM_EvaluationState :
 ```  
 
 ## Methods  
- The `CCM_EvaluationState` class does not define any methods.  
+ The `CCM_EvaluationState` class doesn't define any methods.  
 
 ## Properties  
  `ErrorCode`  
@@ -58,7 +58,7 @@ Class CCM_EvaluationState :
 |----------------------------|-----------------|  
 |0|No state information is available.|  
 |1|Application is enforced to desired/resolved state.|  
-|2|Application is not required on the client.|  
+|2|Application isn't required on the client.|  
 |3|Application is available for enforcement (install or uninstall based on resolved state). Content may/may not have been downloaded.|  
 |4|Application last failed to enforce (install/uninstall).|  
 |5|Application is currently waiting for content download to complete.|  
@@ -74,8 +74,8 @@ Class CCM_EvaluationState :
 |15|Update is available but pending installation.|  
 |16|Application failed to evaluate.|  
 |17|Application is currently waiting for an active user session to enforce.|  
-|18|Application is currently waiting for all users to logoff.|  
-|19|Application is currently waiting for a user logon.|  
+|18|Application is currently waiting for all users to sign out.|  
+|19|Application is currently waiting for a user sign in.|  
 |20|Application in progress, waiting for retry.|  
 |21|Application is waiting for presentation mode to be switched off.|  
 |22|Application is pre-downloading content (downloading outside of install job).|  

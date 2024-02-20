@@ -3,8 +3,8 @@ title: Sample queries for operating system deployment
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join operating system deployment views to each other and to compliance settings views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: d31a8e79-87a1-4e4d-bcaa-856006b4889a
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

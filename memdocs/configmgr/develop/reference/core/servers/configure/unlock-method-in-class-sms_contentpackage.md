@@ -3,14 +3,14 @@ description: Learn how to use the Unlock method in class SMS_ContentPackage to s
 title: Unlock Method in Class SMS_ContentPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5b02b374-5bec-4b0a-98b1-18229c24e1d0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

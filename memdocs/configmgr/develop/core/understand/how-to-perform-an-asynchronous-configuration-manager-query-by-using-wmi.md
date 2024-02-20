@@ -3,14 +3,14 @@ description: Learn how to perform a synchronous query for Configuration Manager 
 title: Perform an Asynchronous Query by Using WMI
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: ff1c49fa-dede-4a22-b0e8-38460c4aa057
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

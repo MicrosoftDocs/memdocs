@@ -2,12 +2,12 @@
 title: External notifications
 titleSuffix: Configuration Manager
 description: Enable the site to send notifications to an external system or application.
-ms.date: 04/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 09/18/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -226,6 +226,26 @@ The process to trigger an event depends upon the type of subscription:
 - For an app approval request, use Software Center to request an app that requires approval. For more information, see [Software Center user guide](../../understand/software-center.md#install-an-application).
 
 ## Monitor the workflow
+
+### Configuration Manager Console
+Starting in version 2309, when Azure Logic Apps generate notifications or alerts related to specific events or conditions, Configuration Manager can now capture and display these notifications. This integration enables the monitoring of Azure Logic App notifications directly within the Configuration Manager console, providing a centralized location for tracking critical events, taking appropriate actions and maintain a high level of operational efficiency. 
+
+To use this feature a valid **Microsoft Entra Web app** is required. Please deploy the Azure services for **Administration Service Management** under Administration\Overview\Cloud Services\Azure Services. If the service is already deployed, admin can use the existing web application to view **Run details** from Azure logic app.
+
+For more information, see [Configure Azure services for use with Configuration Manager](../deploy/configure/azure-services-wizard.md).
+
+Use the following process to view Run Details of subscription:
+
+1. In the Configuration Manager console  click **Monitoring**.
+2. In the Monitoring workspace, click **External Service Notifications** and select the desired subscription.
+3. Click on **Show Details**. 
+4. In the dialog box, Select the Azure Environment, Microsoft Entra tenant name from the drop down and SignIn using your **Azure Admin Account**. 
+5. Select the Subscription ID and enter the **Resource group** name and **Workflow** name.
+6. Click on **Get Run Details** button to view the **Run Details**.
+
+ :::image type="content" source="media/17668438-external-service.png" alt-text="Screenshot of the Run Details wizard in Configuration Manager console.":::
+
+### Azure Portal
 
 Within five minutes, the event triggers the logic app workflow. Check the status of the workflow in the Azure portal. Navigate to the **Runs history** page of the logic app.
 

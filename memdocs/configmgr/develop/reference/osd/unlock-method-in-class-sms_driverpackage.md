@@ -3,14 +3,14 @@ title: Unlock Method in SMS_DriverPackage
 titleSuffix: Configuration Manager
 description: Set the source site to the current site, unlocking the driver package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 082d6a5f-f16f-47e7-b314-d65962d13250
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

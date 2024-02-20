@@ -3,8 +3,8 @@ title: Migration views
 titleSuffix: Configuration Manager
 description: Information about the tasks involved in migrating to a Configuration Manager site.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: 6be79f37-cc77-4ea0-8d1d-7fe8c98d601f
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

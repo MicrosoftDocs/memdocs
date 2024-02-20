@@ -3,14 +3,14 @@ title: SMS_CM_RES_COLL_CollectionID Class
 titleSuffix: Configuration Manager
 description: The SMS_CM_RES_COLL_CollectionID Windows Management Instrumentation class represents a particular member of an SMS_Collection Server WMI Class object by collection ID.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ad11fe22-620e-4259-b71d-c393e464f3ff
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

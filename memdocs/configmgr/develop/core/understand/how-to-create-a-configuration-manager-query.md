@@ -3,14 +3,14 @@ title: Create a Query
 titleSuffix: Configuration Manager
 description: Create an SMS_Query-based query by creating an instance of SMS_Query. The SMS_Query class Expression object defines a WQL query.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 08642b5a-210f-4d60-8544-b9519cbff053
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

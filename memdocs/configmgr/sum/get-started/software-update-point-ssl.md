@@ -7,8 +7,8 @@ ms.author: baladell
 manager: apoorvseth
 ms.date: 01/14/2022
 ms.topic: tutorial
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 # Customer intent: As a Configuration Manager admin, I want to enable my WSUS servers and software update points to use TLS/SSL to reduce the ability of a potential attacker to remotely compromise a client and elevate privileges.
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
@@ -240,14 +240,14 @@ When you change the software update point to require SSL, Configuration Manager 
    Write-Host "CurrentSUP- $current"
    ```
    > [!TIP]
-   > [Open this script](https://communityhub.microsoft.com/item/8267) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
+   > Open this script in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 1. Run a software update scan cycle on your test client. You can force a scan with the following PowerShell script:
 
    ```powershell
    Invoke-WMIMethod -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000113}"
    ```
    > [!TIP]
-   > [Open this script](https://communityhub.microsoft.com/item/8268) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
+   > Open this script in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 
 1. Review the client's **ScanAgent.log** to verify the message to scan against the software update point was received.
 

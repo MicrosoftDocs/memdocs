@@ -3,14 +3,14 @@ title: Create a deployment
 titleSuffix: Configuration Manager
 description: Examples of how to programmatically create a Configuration Manager deployment.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 97f583d0-701b-41e5-8897-4e64bec0b85b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

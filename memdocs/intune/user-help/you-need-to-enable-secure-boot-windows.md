@@ -2,31 +2,29 @@
 # required metadata
 
 title: Enable Secure Boot on Windows devices - Microsoft Intune | Microsoft Docs
-description: Learn how to make your enrolled device compliant again by enabling Secure Boot.  
+description: Learn how to make your enrolled device compliant again by enabling Secure Boot.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 07/24/2023
 ms.topic: end-user-help
-ms.prod:
 ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: de881f1b-7622-4ec2-8bf8-025f71ca9887
 searchScope:
  - User help
 
 # optional metadata
 
-ROBOTS:  
+ROBOTS:
 #audience:
 
-ms.reviewer: chrisbal
+ms.reviewer: madholdaa
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser; seodec18
+ms.custom: intune-enduser
 ms.collection:
 - tier2
 ---
@@ -37,9 +35,7 @@ ms.collection:
 Secure Boot is a security standard developed by members of the PC industry to help ensure that a device boots using only software that's trusted by the original equipment manufacturer (OEM). Your organization's device management policies may require you to enable it on your enrolled Windows device. Devices that don't meet this requirement may be unable to access work or school resources.     
 
 ## Enable Secure Boot  
-If your enrolled device is a mobile device, contact your support person and they'll help enable Secure Boot for you.  
-
-If your enrolled device is a PC, you can either:  
+To enable secure boot on your PC, you can either:      
 
 * Contact your support person for help.  
 * Enable Secure Boot from the PC BIOS menu. For step-by-step instructions, see [Re-enable Secure Boot](/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).  

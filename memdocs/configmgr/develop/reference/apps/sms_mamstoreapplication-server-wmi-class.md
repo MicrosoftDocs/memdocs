@@ -3,14 +3,14 @@ title: SMS_MAMStoreApplication Class
 titleSuffix: Configuration Manager
 description: The SMS_MAMStoreApplication WMI class is an SMS Provider server class that represents mobile application management store application lists.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2f1e23a4-4a19-4502-b14f-2f7ab3c78417
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

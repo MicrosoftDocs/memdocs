@@ -3,14 +3,14 @@ title: CCM_CONTENTFLAG Enumeration
 titleSuffix: Configuration Manager
 description: Learn about the CCM_CONTENTFLAG Enumeration that contains options for transferring content.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 759cd7fa-2980-4b1a-905a-1bb1a21402af
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

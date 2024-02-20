@@ -3,14 +3,14 @@ description: Learn how to use the RemoteContent class method to remove the conte
 title: RemoveContent method in class SMS_ContentPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 94f37a42-380b-4b79-9f07-acd2b8ddfe0e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

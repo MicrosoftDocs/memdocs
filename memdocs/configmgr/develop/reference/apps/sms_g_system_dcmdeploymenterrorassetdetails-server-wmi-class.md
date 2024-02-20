@@ -3,14 +3,14 @@ title: SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that represents the asset details for a deployment error.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0d7fca8a-666e-4856-b25d-06e5bedb6d0c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

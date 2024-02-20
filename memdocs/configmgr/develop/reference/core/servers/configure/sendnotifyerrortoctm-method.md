@@ -3,14 +3,14 @@ description: Learn how to notify Content Transfer Manager of errors using the Se
 title: SendNotifyErrorToCTM Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 8bd9b7b3-ef44-429c-b82c-4958ff826206
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -50,7 +50,7 @@ HRESULT stdcall SendNotifyErrorToCTM(
 
  Qualifiers: [in]  
 
- The client-specific data which was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData.)  
+ The client-specific data that was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData.)  
 
  `hrErrorCode`  
  Data type: HRESULT  
@@ -67,7 +67,7 @@ HRESULT stdcall SendNotifyErrorToCTM(
  An extended status message. Must not be NULL.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

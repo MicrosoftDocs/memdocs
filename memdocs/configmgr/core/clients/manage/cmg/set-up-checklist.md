@@ -3,8 +3,8 @@ title: Set up checklist for CMG
 titleSuffix: Configuration Manager
 description: Get an overview of the cloud management gateway (CMG) setup process and make sure you have all prerequisites ready to start.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: overview
 author: BalaDelli
 ms.author: baladell
@@ -26,9 +26,9 @@ The overall CMG setup process is divided into the following five main parts:
 
 1. _Get the CMG server authentication certificate_: The CMG uses HTTPS for secure client communication over the public internet. You can get a certificate from a public provider, or issue one from your public key infrastructure (PKI).
 
-1. _Configure Azure Active Directory (Azure AD)_: Configuration Manager requires app registrations in Azure AD. You can let Configuration Manager create them, or an Azure administrator can pre-create the registrations.
+1. _Configure Microsoft Entra ID_: Configuration Manager requires app registrations in Microsoft Entra ID. You can let Configuration Manager create them, or an Azure administrator can pre-create the registrations.
 
-1. _Configure client authentication_: Because clients communicate across the internet, Configuration Manager requires more security for this channel. You can use Azure Active Directory (Azure AD), PKI certificates, or token-based authentication from the site server.
+1. _Configure client authentication_: Because clients communicate across the internet, Configuration Manager requires more security for this channel. You can use Microsoft Entra ID, PKI certificates, or token-based authentication from the site server.
 
 1. _Set up the CMG_: This step also includes configuring the site, and adding the CMG connection point site system role.
 
@@ -40,7 +40,7 @@ The other articles in this section step through each part of the process.
 
 The following terms are used in the context of setting up a CMG. They're defined here for clarity.
 
-- Azure AD _tenant_: The directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+- Microsoft Entra ID _tenant_: The directory of user accounts and app registrations. One tenant can have multiple subscriptions.
 
 - Azure _subscription_: A subscription separates billing, resources, and services. It's associated with a single tenant.
 
@@ -66,7 +66,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - How many VM instances you need for scale and redundancy.
 
-- An Azure **application developer**, **cloud application administrator**, **application administrator**, or **global administrator** role to register apps in Azure AD.
+- An Azure **application developer**, **cloud application administrator**, **application administrator**, or **global administrator** role to register apps in Microsoft Entra ID.
 
 - An Azure **subscription owner** role for when you create the CMG in Azure.
 
@@ -83,17 +83,17 @@ You'll set up other prerequisite components during the next steps in the process
 <!--6978300-->
 Optionally, you can automate aspects of the CMG setup using PowerShell. While some cmdlets were available in earlier versions, version 2010 includes new cmdlets and significant improvements to existing cmdlets.
 
-For example, an Azure administrator first creates the two required apps in Azure Active Directory (Azure AD). Then you write a script that uses the following cmdlets to deploy a CMG:
+For example, an Azure administrator first creates the two required apps in Microsoft Entra ID. Then you write a script that uses the following cmdlets to deploy a CMG:
 
-1. **Import-CMAADServerApplication**: Create the Azure AD server app definition in Configuration Manager.
-1. **Import-CMAADClientApplication**: Create the Azure AD client app definition in Configuration Manager.
+1. **Import-CMAADServerApplication**: Create the Microsoft Entra server app definition in Configuration Manager.
+1. **Import-CMAADClientApplication**: Create the Microsoft Entra client app definition in Configuration Manager.
 1. Use **Get-CMAADApplication** to get the app objects, and then pass to **New-CMCloudManagementAzureService** to create the Azure service connection in Configuration Manager.
 1. **New-CMCloudManagementGateway**: Create the CMG service in Azure.
 1. **Add-CMCloudManagementGatewayConnectionPoint**: Create the CMG connection point site system.
 
-You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Azure Active Directory (Azure AD) requirements.
+You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Microsoft Entra requirements.
 
-Azure AD app definitions in Configuration Manager:
+Microsoft Entra app definitions in Configuration Manager:
 
 - [Get-CMAADApplication](/powershell/module/configurationmanager/Get-CMAADApplication)
 - [Import-CMAADClientApplication](/powershell/module/configurationmanager/Import-CMAADClientApplication)

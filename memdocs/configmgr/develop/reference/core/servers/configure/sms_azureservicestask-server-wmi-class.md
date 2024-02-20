@@ -1,23 +1,23 @@
 ---
 title: SMS_AzureServicesTask Class
 titleSuffix: Configuration Manager
-description: An SMS Provider server class that represents a Microsoft Azure specific operation that can be performed on the specified Microsoft Azure service. This class can be used to initiate an operation as well as monitor the results of the operation.
+description: An SMS Provider server class that represents a Microsoft Azure specific operation that can be performed on the specified Microsoft Azure service. This class can be used to initiate an operation and monitor the results of the operation.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d9f0070c-a6ff-45d7-b5e7-62deafabb297
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_AzureServicesTask server WMI class
 
-The `SMS_AzureServicesTask` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure specific operation which can be performed on the specified Microsoft Azure service. This can be used to initiate an operation as well as monitor the results of the operation.  
+The `SMS_AzureServicesTask` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure specific operation that can be performed on the specified Microsoft Azure service. This can be used to initiate an operation and monitor the results of the operation.  
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -39,7 +39,7 @@ Class SMS_AzureServicesTask : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_AzureServicesTask` class does not define any methods.  
+ The `SMS_AzureServicesTask` class doesn't define any methods.  
 
 ## Properties  
  `AzureServiceId`  
@@ -94,7 +94,7 @@ Class SMS_AzureServicesTask : SMS_BaseClass
 
  Qualifiers: none  
 
- Input for the task - if required. This value is not needed for `CreateDeployment`, `UpgradeDeployment`, `DeleteDeployment`, `StopDeployment`, or `StartDeployment` and any value will be ignored.  
+ Input for the task - if necessary. This value isn't needed for `CreateDeployment`, `UpgradeDeployment`, `DeleteDeployment`, `StopDeployment`, or `StartDeployment` and any value will be ignored.  
 
  `TaskStateId`  
  Data type: `UInt32`  

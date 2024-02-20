@@ -3,14 +3,14 @@ title: GetCollectionsWithResourcePermissions Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the GetCollectionsWithResourcePermissions WMI class method gets the list of collection identifiers for which the user has the specified permissions. The collection must contain the specified resource.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 815a36d8-7681-4a33-921f-69268b0663af
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

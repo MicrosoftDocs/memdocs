@@ -3,14 +3,14 @@ title: "ICcmAlternateDownloadProvider : DownloadContent"
 titleSuffix: Configuration Manager
 description: Learn about the ICcmAlternateDownloadProvider::DownloadContent method. In Configuration Manager, this method instructs the provider to download content.
 ms.date: 07/25/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e3c904db-2838-47e2-ad60-68411e262778
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -62,21 +62,21 @@ HRESULT DownloadContent(
 
  Qualifiers: [in]  
 
- A hint on where to download the content. The provider is free to ignore this and download using its own mechanisms.  
+ A hint on where to download the content. The provider is free to ignore this parameter and download using its own mechanisms.  
 
  `szLocalPath`  
  Data type: `LPCWSTR`  
 
  Qualifiers: [in]  
 
- The directory to which the content should be downloaded. This directory should already exist on this call, and the provider should not change any ACLs on the directory itself for any reason. When szManifest is `null`, this parameter should be ignored.  
+ The directory to which the content should be downloaded. This directory should already exist on this call, and the provider shouldn't change any ACLs on the directory itself for any reason. When szManifest is `null`, this parameter should be ignored.  
 
  `szNotifyEndpoint`  
  Data type: `LPCWSTR`  
 
  Qualifiers: [in]  
 
- Endpoint to be used for notifying Content Transfer Manager. This should be passed verbatim into calls to SendNotify*ToCTM.  
+ Endpoint to be used for notifying Content Transfer Manager. This endpoint should be passed verbatim into calls to SendNotify*ToCTM.  
 
  `szNotifyData`  
  Data type: `LPCWSTR`  
@@ -104,28 +104,28 @@ HRESULT DownloadContent(
 
  Qualifiers: [in]  
 
- The chunk size to use for notification. If progress notifications have been requested, Content Transfer Manager should be notified every dwChunkSize bytes.  
+ The chunk size to use for notification. If there's a request for progress notifications, Content Transfer Manager should be notified every dwChunkSize byte.  
 
  `dwFlags`  
  Data type: `DWORD`  
 
  Qualifiers: [in]  
 
- Flags for the job. This corresponds to an OR of CCM_DTS_FLAG values.  
+ Flags for the job. This parameter corresponds to an OR of CCM_DTS_FLAG values.  
 
  `szLocationOptions`  
  Data type: `LPCWSTR`  
 
  Qualifiers: [in]  
 
- Reserved. Alternate providers should ignore this.  
+ Reserved. Alternate providers should ignore this parameter.  
 
  `szFileManifest`  
  Data type: `LPCWSTR`  
 
  Qualifiers: [in, unique]  
 
- Either `null` or XML data representing file byte ranges to be downloaded from the destination.  See **Remarks** below.
+ Either `null` or XML data representing file byte ranges to be downloaded from the destination.  See [Remarks](#remarks).
 
  `szOwnerSID`  
  Data type: `LPCWSTR`  
@@ -139,31 +139,31 @@ HRESULT DownloadContent(
 
  Qualifiers: [in]  
 
- Indicates whether or not a job should immediately fail due to a transient error condition. If this is false, then transient errors should simply cause the provider to internally retry unless the job times out or is instructed otherwise by Content Transfer Manager.  
+ Indicates whether or not a job should immediately fail due to a transient error condition. If this value is false, then transient errors should cause the provider to internally retry unless the job times out or is instructed otherwise by Content Transfer Manager.  
 
  `szProviderData`  
  Data type: `LPCWSTR`  
 
  Qualifiers: [in]  
 
- The provider-specific data specified in the CCM_DownloadProvider policy. This will be an empty string, if data was not specified.  
+ The provider-specific data specified in the CCM_DownloadProvider policy. This is an empty string, if data wasn't specified.  
 
  `szPackageData`  
  Data type: `LPCWSTR`  
 
  Qualifiers: [in]  
 
- The package-specific data specified server-side, wrapped in a \<Data> XML element. This will be an empty string if data was not specified.  
+ The package-specific data specified server-side, wrapped in a \<Data> XML element. This is an empty string if data wasn't specified.  
 
  `*pJobID`  
  Data type: `GUID`  
 
  Qualifiers: [out]  
 
- The job ID which should be used for reference on subsequent calls.  
+ The job ID that should be used for reference on subsequent calls.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  
@@ -223,7 +223,7 @@ When processing the manifest, remember:
 - If a `<file>` element contains `<chunk>` elements, each `<chunk>` specifies the length and byte offset of an incremental download.  
 - If no `<chunk>` elements are specified, the entire file should be downloaded.
 
-Should an alternate content provider fail to support incremental downloads, Configuration Manager automatically uses distribution points to download Microsoft 365 content.  For other download scenarios, however, the alternate content provider works without additional impact.
+Should an alternate content provider fail to support incremental downloads, Configuration Manager automatically uses distribution points to download Microsoft 365 content.  For other download scenarios, however, the alternate content provider works without more impact.
 
 > [!NOTE]
 >  If the provider cannot handle the request for any reason, it should return an error.  

@@ -3,14 +3,14 @@ title: Create an Association Between Two Computers
 titleSuffix: Configuration Manager
 description: You create an association between a reference and destination computer, in Configuration Manager, by calling the AddAssociation Method in Class SMS_StateMigration
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: f3670fc7-3b07-4812-909b-d225580a7dcb
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

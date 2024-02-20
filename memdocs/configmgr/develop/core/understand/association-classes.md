@@ -3,14 +3,14 @@ title: Association Classes
 titleSuffix: Configuration Manager
 description: An association allows you to logically relate the instances of two classes. An association consists of two key properties which are paths or pointers.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 268bb9d1-3058-4c09-8e38-148a51d879f7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

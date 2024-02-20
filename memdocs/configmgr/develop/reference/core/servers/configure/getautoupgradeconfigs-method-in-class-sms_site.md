@@ -1,21 +1,21 @@
 ---
 title: GetAutoUpgradeConfigs Method
 titleSuffix: Configuration Manager
-description: A Windows Management Instrumentation class method that gets configurations for auto-upgrade settings.
+description: A Windows Management Instrumentation class method that gets configurations for autoupgrade settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 01ad5660-fcae-4e18-bafd-453caa15bc30
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # GetAutoUpgradeConfigs Method in Class SMS_Site
-The `GetAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets configurations for auto-upgrade settings.  
+The `GetAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets configurations for autoupgrade settings.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -81,7 +81,7 @@ SInt32 GetAutoUpgradeConfigs(
 
  Qualifiers: [out]  
 
- `true` if auto-upgrade package distributed to pre-stage distribution point is allowed.  
+ `true` if autoupgrade package distributed to pre-stage distribution point is allowed.  
 
  `AllowFallbackToContentSource`  
  Data type: `Boolean`  
@@ -108,7 +108,7 @@ SInt32 GetAutoUpgradeConfigs(
 
  Qualifiers: [out]  
 
- Indicates whether auto-upgrade should be skipped on servers.  
+ Indicates whether autoupgrade should be skipped on servers.  
 
  `OverrideServiceWindow`  
  Data type: `Boolean`  
@@ -122,14 +122,14 @@ SInt32 GetAutoUpgradeConfigs(
 
  Qualifiers: [out]  
 
- Indicates whether auto-upgrade should be skipped on non-persistent virtual machines.  
+ Indicates whether autoupgrade should be skipped on non-persistent virtual machines.  
 
  `IsInitialized`  
  Data type: `Boolean`  
 
  Qualifiers: [out]  
 
- `true` if auto-upgrade settings are initialized.  
+ `true` if autoupgrade settings are initialized.  
 
  `LastModifiedTime`  
  Data type: `DateTime`  

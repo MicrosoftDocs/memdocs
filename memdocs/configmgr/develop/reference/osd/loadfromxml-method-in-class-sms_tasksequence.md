@@ -3,14 +3,14 @@ title: LoadFromXml Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the LoadFromXml WMI class method loads a task sequence into WMI objects from task sequence XML.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e51e9945-604f-4e58-b82f-0acf21df49ff
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

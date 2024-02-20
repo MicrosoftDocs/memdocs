@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 
 # optional metadata
@@ -25,7 +24,6 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -54,6 +52,17 @@ You can explicitly choose to wipe your company's corporate data from the end use
 
 The app protection policy settings table has columns for **Setting**, **Value**, and **Action**.
 
+### Preview: Windows policy settings
+
+For Windows, you're able to configure actions for the following "Health Check" settings using the **Setting** dropdown:
+- Disabled account
+- Max OS version
+- Min app version
+- Min OS version
+- Min SDK version
+- Offline grace period
+- Max allowed device threat level
+
 ### iOS policy settings
 For iOS/iPadOS, you're able to configure actions for the following settings using the **Setting** dropdown:
 - Max PIN attempts
@@ -67,20 +76,20 @@ For iOS/iPadOS, you're able to configure actions for the following settings usin
 - Max allowed device threat level
 - Disabled account
 
-To use the **Device model(s)** setting, input a semi-colon separated list of iOS/iPadOS model identifiers. These values aren't case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS/iPadOS model identifier in this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
+To use the **Device model(s)** setting, input a semi-colon separated list of iOS/iPadOS model identifiers. These values aren't case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS/iPadOS model identifier in this [third-party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
 Example input: *iPhone5,2;iPhone5,3*
 
-On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on a variety of device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
+On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on various device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
 Set one of the following actions: 
 - Allow specified (Block nonspecified)
 - Allow specified (Wipe nonspecified)
 
 **What happens if the IT admin inputs a different list of iOS/iPadOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* will be "iPhone5,3". 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app that's opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "iPhone5,3". 
 
 ### Android policy settings
 
-For Android, you'll be able to configure actions for the following settings using the **Setting** dropdown:
+For Android, you're able to configure actions for the following settings using the **Setting** dropdown:
 - Max PIN attempts
 - Offline grace period
 - Jailbroken/rooted devices
@@ -104,17 +113,17 @@ Example input: *Manufacturer A;Manufacturer B*
 >[!NOTE]
 > These are some common manufacturers reported from devices using Intune, and can be used as input: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
-On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on a variety of device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
+On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on various device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
 Set one of the following actions: 
 - Allow specified (Block on nonspecified)
 - Allow specified (Wipe on nonspecified)
 
 **What happens if the IT admin inputs a different list of Android manufacturer(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed Android manufacturers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "Google;Samsung", while *Policy B* specifies "Google", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* will be "Google". 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app being opened by the targeted Intune user would be an intersection of the listed Android manufacturers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "Google;Samsung", while *Policy B* specifies "Google", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "Google." 
 
 ### Additional settings and actions 
 
-By default, the table will have populated rows as settings configured for **Offline grace period**, and **Max PIN attempts**, if the **Require PIN for access** setting is set to **Yes**.
+By default, the table contains populated rows as settings configured for **Offline grace period**, and **Max PIN attempts**, if the **Require PIN for access** setting is set to **Yes**.
  
 To configure a setting, select a setting from the dropdown under the **Setting** column. Once a setting is selected, the editable text box becomes enabled under the **Value** column in the same row, if a value is required to be set. Also, the dropdown becomes enabled under the **Action** column with the set of conditional launch actions applicable to the setting. 
 

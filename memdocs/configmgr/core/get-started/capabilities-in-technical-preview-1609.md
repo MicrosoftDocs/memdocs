@@ -3,8 +3,8 @@ title: Capabilities in Technical Preview 1609
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1609.
 ms.date: 01/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 manager: apoorvseth
@@ -56,11 +56,11 @@ When using Configuration Manager with Intune, you can now create Windows 10 VPN 
 
 In this release, we've updated [Windows Store for Business integration](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) with these new features:
 
-**Update:** In the current technical preview release, the immediate synchronization feature is not functional.
+**Update:** In the current technical preview release, the immediate synchronization feature isn't functional.
 
 - Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid online licensed apps (for Intune enrolled devices only).
 - You can now initiate an immediate synchronization between the Windows Store for Business and Configuration Manager.
-- You can now modify the client secret key that you obtained from Azure Active Directory
+- You can now modify the client secret key that you obtained from Microsoft Entra ID
 
 ### Try it out!
 
@@ -76,7 +76,9 @@ In this release, we've updated [Windows Store for Business integration](../../ap
 The procedure to create and deploy a Configuration Manager application from a paid store app is the same as for creating an application from a free app. See the section **Create and deploy a Configuration Manager application from a Windows Store for Business app** in [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 
-#### Modify the client secret key from Azure Active Directory
+<a name='modify-the-client-secret-key-from-azure-active-directory'></a>
+
+#### Modify the client secret key from Microsoft Entra ID
 
 1. In the **Administration** workspace of the Configuration Manager console, click **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
 2. Select your Windows Store for Business account, and then click **Properties**.
@@ -221,11 +223,11 @@ If you need help with any of these settings, open [Manage settings and features 
 
 
 ## Improvements for boundary groups
-This preview introduces important changes to boundary groups and how they work with distribution points. These changes will help simplify the design of your content infrastructure while giving you more control over how and when clients fallback to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
+This preview introduces important changes to boundary groups and how they work with distribution points. These changes will help simplify the design of your content infrastructure while giving you more control over how and when clients fallback to search other distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
 
-These improvements replace concepts and behaviors you might be familiar with today (like configuring distribution points to be fast or slow) and replaces them with a new model that should be easier to setup and maintain. These changes are also groundwork for future changes that will improve other site system roles you associate to boundary groups.  
+These improvements replace concepts and behaviors you might be familiar with today (like configuring distribution points to be fast or slow) and replaces them with a new model that should be easier to set up and maintain. These changes are also groundwork for future changes that will improve other site system roles you associate to boundary groups.  
 
-During upgrade to 1609, the upgrade converts your current boundary group configurations to fit the new model so that these changes do not disturb your content distribution configurations (see [Update existing boundary groups to the new model](capabilities-in-technical-preview-1609.md#bkmk_update)).
+During upgrade to 1609, the upgrade converts your current boundary group configurations to fit the new model so that these changes don't disturb your content distribution configurations (see [Update existing boundary groups to the new model](capabilities-in-technical-preview-1609.md#bkmk_update)).
 
 The following sections detail the changes introduced with this preview, how the new model works, and what you can expect when upgrading a site that already has boundary groups configured.
 
@@ -234,7 +236,7 @@ The following sections detail the changes introduced with this preview, how the 
 ### Changes in UI and behavior for boundary groups and content locations
 The following are key changes to boundary groups and how clients find content. Many of these changes and concepts work together.
 - **Configurations for Fast or Slow are removed:** You no longer configure individual distribution points to be fast or slow.  Instead, each site system associated with a boundary group is treated the same. Because of this change, the **References** tab of the boundary group properties no longer supports the configuration of Fast or Slow.
-- **New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group\<sitecode>***.  When a client is not on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.    
+- **New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group\<sitecode>***.  When a client isn't on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.    
   -  **'Allow fallback source locations for content'** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
 
   Additionally, the result of setting **Allow clients to use a fallback source location for content** on a deployment type for applications has changed. This setting on a deployment type now enables a client to use the default site boundary group as a content source location.
@@ -244,7 +246,7 @@ The following are key changes to boundary groups and how clients find content. M
   -   Any boundary group a client can use due to an association between that client's *current* boundary group and another group is called a **neighbor** boundary group.
   -  It is on the **Relationships** tab that you add boundary groups that can be used as a *neighbor* boundary group. You can also configure a time in minutes that determines when a client that fails to find content from a distribution point in the *current* group will begin to search content locations from those *neighbor* boundary groups.
 
-      When you add or change a boundary group configuration, you will have the option to block fallback to that specific boundary group from the current group you are configuring.
+      When you add or change a boundary group configuration, you'll have the option to block fallback to that specific boundary group from the current group you're configuring.
 
   To use the new configuration, you define explicit associations (links) from one boundary group to another, and configure all distribution points in that associated group with the same time in minutes. The time you configure determines when a client that fails to find a content source from its *current* boundary group can begin to search for content sources from that neighbor boundary group.
 
@@ -259,7 +261,7 @@ The following are key changes to boundary groups and how clients find content. M
 
   - After two minutes, if the client has not found the content, it switches to a new distribution point and attempts to get content from that server. This process repeats every two minutes until the client finds the content or reaches the last server in its pool.
 
-  - If a client cannot find a valid content source location from its *current* pool before the period for fallback to a *neighbor* boundary group is reached, the client then adds the distribution points from that *neighbor* group to the end of its current list, and will then search the expanded group of source locations that includes the distribution points from both boundary groups.
+  - If a client can't find a valid content source location from its *current* pool before the period for fallback to a *neighbor* boundary group is reached, the client then adds the distribution points from that *neighbor* group to the end of its current list, and will then search the expanded group of source locations that includes the distribution points from both boundary groups.
 
       > [!TIP]  
       > When you create an explicit link from the current boundary group to the default site boundary group and define a fallback time that is less than the fallback time for a link to a neighbor boundary group, clients will begin searching source locations from the default site boundary group before including the neighbor group.
@@ -271,11 +273,11 @@ The following are key changes to boundary groups and how clients find content. M
 When you configure boundary groups, you associate  boundaries (network locations) and site system roles, like distribution points, to the boundary group. This helps link clients to site system servers like distribution points that are located near the clients on the network.   
 - You can assign the same boundary to multiple boundary groups
 - Site system servers, like distribution points, can be associated to multiple boundary groups, making them available to a wider range of network locations
-- If a distribution point is not associated to a boundary group, clients will not be able to use that distribution point as a content source location.
+- If a distribution point isn't associated to a boundary group, clients won't be able to use that distribution point as a content source location.
 
 Beginning with this technical preview, you define boundary group relationships to configure fallback behavior for content source locations. This new behavior is configured on the new **Relationships** tab of the boundary group properties and replaces configuring site systems to be slow or fast, and configuring a boundary group to allow fallback source location for content.
 
-On the Relationships tab you add other boundary groups to configure a relationship to those groups. Each relationship is a one-way link from the **current** boundary group to the boundary group you add, which is called a **neighbor**. For each link you create, you can configure distribution points with a   fallback time in minutes. This time is used to determine after how long clients in the *current* boundary group can begin using distribution points in the *neighbor* boundary group if they are unable to find a valid content source location from their current boundary group.
+On the Relationships tab you add other boundary groups to configure a relationship to those groups. Each relationship is a one-way link from the **current** boundary group to the boundary group you add, which is called a **neighbor**. For each link you create, you can configure distribution points with a   fallback time in minutes. This time is used to determine after how long clients in the *current* boundary group can begin using distribution points in the *neighbor* boundary group if they're unable to find a valid content source location from their current boundary group.
 
 When a client can't find content and begins to search locations from neighbor boundary groups, it increases the pool of available distribution points for that client in a controlled manner.  
 
@@ -283,12 +285,12 @@ When a client can't find content and begins to search locations from neighbor bo
 - Clients will only fallback to a boundary group that is a direct neighbor of their current boundary group.
 - When a client is a member of multiple boundary groups, the current boundary group is defined as a union of all that client's boundary groups.  That client can then fallback to a neighbor of any of those original boundary groups.
 
-In addition to the links you define, there is an implied link that is created automatically between the boundary groups you create and the default boundary group that is automatically created for each site. This automatic link:
-- Is used by clients that are not on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.   
+In addition to the links you define, there's an implied link that is created automatically between the boundary groups you create and the default boundary group that is automatically created for each site. This automatic link:
+- Is used by clients that aren't on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.   
 -  Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
 
 **Example of using the new model:** 
-You create three boundary groups that do not share boundaries or site system servers:
+You create three boundary groups that don't share boundaries or site system servers:
 - Group BG_A with distribution points DP_A1 and DP_A2 associated to the group
 - Group BG_B with distribution points DP_B1 and DP_B2 associated to the group
 - Group BG_C with distribution points DP_C1 and DP_C2 associated to the group
@@ -296,7 +298,7 @@ You create three boundary groups that do not share boundaries or site system ser
 You add the network locations of your clients as boundaries to only the BG_A boundary group, and you then configure relationships from that boundary group to the other two boundary groups:
 - You configure distribution points for the first *neighbor* group (BG_B) to be used after 10 minutes. This group contains distribution points DP_B1 and DP_B2. Both are well connected to the first groups boundary locations.
 - You configure the second *neighbor* group (BG_C) to be used after 20 minutes. This group contains distribution points DP_C1 and DP_C2. Both are across a WAN from the other two boundary groups.
-- You also add an additional distribution point that is located on the site server to the sites default site boundary group. This is your least preferred content source location, but it is centrally located to all your boundary groups.
+- You also add another distribution point that is located on the site server to the sites default site boundary group. This is your least preferred content source location, but it's centrally located to all your boundary groups.
 
   Example of boundary groups and fallback times:
 
@@ -306,10 +308,10 @@ You add the network locations of your clients as boundaries to only the BG_A bou
 With this configuration:
 - The client begins searching for content from distribution points in its *current* boundary group (BG_A), searching each distribution point for two minutes before switching to the next distribution point in the boundary group. The clients pool of valid content source locations includes DP_A1 and DP_A2.
 - If the client fails to find content from its *current* boundary group after searching for 10 minutes, it then adds the distribution points from the BG_B boundary group to its search. It then continues to search for content from a distribution point in its combined pool of distribution points that now includes those from both the BG_A and BG_B boundary groups. The client continues to contact each distribution point for two minutes before switching to the next distribution point from its pool. The clients pool of valid content source locations includes DP_A1, DP_A2, DP_B1, and DP_B2.
-- After an additional 10 minutes (20 minutes total) if the client still has not found a distribution point with content, it expands its pool of available distribution points to include those from the second *neighbor* group, boundary group BG_C. The client now has 6 distribution points to search (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1, and DP_C2) and continues changing to a new distribution point every two minutes until content is found.
+- After another 10 minutes (20 minutes total) if the client still has not found a distribution point with content, it expands its pool of available distribution points to include those from the second *neighbor* group, boundary group BG_C. The client now has 6 distribution points to search (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1, and DP_C2) and continues changing to a new distribution point every two minutes until content is found.
 - If the client has not found content after a total of 120 minutes, it falls back to include the *default site boundary group* as part of its continued search. Now the pool of distribution points includes all the distribution points from the three configured boundary groups and the final distribution point located on the site server computer.  The client then continues its search for content, changing distribution points every two minutes until content is found.
 
-By configuring the different neighbor groups to be available at different times you control when specific distribution points are added as a content source location, and when, or if, the client uses fallback to the default site boundary group as a safety net for content that is not available from any other location.
+By configuring the different neighbor groups to be available at different times you control when specific distribution points are added as a content source location, and when, or if, the client uses fallback to the default site boundary group as a safety net for content that isn't available from any other location.
 
 
 ### <a name="bkmk_update"></a>Update existing boundary groups to the new model
@@ -317,8 +319,8 @@ When you install version 1609 and update your site, the following configurations
 - Unprotected distribution points at a site are added to the *Default-Site-Boundary-Group\<sitecode>* boundary group of that site.
 - A copy is made of each existing boundary group that includes a site server configured with a slow connection. The name of the new group is ***\<original boundary group name>-Slow-Tmp***:  
   -   Site systems that have a fast connection are left in the original boundary group.
-  -   A copy of site systems that have a slow connection are added to the copy of the boundary group. The original site systems configured as slow remain in the original boundary group for backward compatibility, but are not used from that boundary group.
-  -   This boundary group copy does not have boundaries associated with it. However, A fallback link is created between the original group and the new boundary group copy that has the fallback time set to zero.
+  -   A copy of site systems that have a slow connection are added to the copy of the boundary group. The original site systems configured as slow remain in the original boundary group for backward compatibility, but aren't used from that boundary group.
+  -   This boundary group copy doesn't have boundaries associated with it. However, A fallback link is created between the original group and the new boundary group copy that has the fallback time set to zero.
 
   The following table identifies the new fallback behavior you can expect from the combination the original deployment settings and distribution point configurations:
 
@@ -326,7 +328,7 @@ Original deployment configuration for "Do not run program" in slow network  |Ori
 ---------|---------|---------
 Selected     |  Selected    |  **No fallback** - Only use the distribution points in current boundary group       
 Selected     |  Not selected|  **No fallback** - Only use the distribution points in current boundary group       
-Not selected |  Not selected|  **Fallback to neighbor** - Use the distribution points in current boundary group, and then add the distribution points from the neighbor boundary group. Unless an explicit link to the default site boundary group is configured, clients will not fallback to that group.    
+Not selected |  Not selected|  **Fallback to neighbor** - Use the distribution points in current boundary group, and then add the distribution points from the neighbor boundary group. Unless an explicit link to the default site boundary group is configured, clients won't fallback to that group.    
 Not selected | Selected |   **Normal fallback** - Use distribution points in current boundary group, then those from the neighbor and site default boundary groups
 
  All other deployment configurations result in **Normal fallback**.  
@@ -368,12 +370,12 @@ In this release, from the Office 365 Client Management dashboard, you can start 
 2. Click **Office 365 Installer** in the upper-right pane. The Office 365 Client Installation Wizard opens.
 3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then click **Next**. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*.
 4. On the **Import Client Settings** page, choose whether to import the Microsoft 365 client settings from an existing XML configuration file or to manually specify the settings, and then click **Next**.
-When you have an existing configuration file, enter the location for the file and skip to step 7. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
+When you have an existing configuration file, enter the location for the file and skip to step 7. The location must be specified in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
 
     > [!IMPORTANT]
     >You might have issues when you try to import existing client settings (XML) in this technical preview.
 
-5. On the **Client Products** page, select the Microsoft 365 suite that you use, select the applications that you want to include, select any additional Office products that should be included, and then click **Next**.
+5. On the **Client Products** page, select the Microsoft 365 suite that you use, select the applications that you want to include, select any other Office products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
 7. On the **Deployment** page, choose whether to deploy the application, and then click **Next**.
 If you choose not to deploy the package in the wizard, skip to step 9.
@@ -388,7 +390,7 @@ If you choose not to deploy the package in the wizard, skip to step 9.
 You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the Restart Computer step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion.
 
 #### To prepare the FAT32 partition for the conversion to UEFI:
-In an existing task sequence to install an operating system, you will add a new group with steps to do the BIOS to UEFI conversion.
+In an existing task sequence to install an operating system, you'll add a new group with steps to do the BIOS to UEFI conversion.
 
 1. Create a new task sequence group after the steps to capture files and settings, and before the steps to install the operating system. For example, create a group after the **Capture Files and Settings** group named **BIOS-to-UEFI**.
 2. On the **Options** tab of the new group, add a new task sequence variable as a condition where **_SMSTSBootUEFI** is **not equal** to **true**. This prevents the steps in the group from running when a computer is already in UEFI mode.
@@ -425,9 +427,9 @@ In this release, you can get a quick view of overall compliance for devices and 
 Complete the following sections in order:
 
 #### Check Overall Compliance chart
-1. Add at two iOS compliance policies in Configuration Manager. One policy should have one set of settings for devices (for example, set PIN length to 6). The other policy should have another set of settings (for example, PIN complexity). The policy settings should not overlap or be in conflict.
+1. Add at two iOS compliance policies in Configuration Manager. One policy should have one set of settings for devices (for example, set PIN length to 6). The other policy should have another set of settings (for example, PIN complexity). The policy settings shouldn't overlap or be in conflict.
 2. Deploy the two policies to a set of users.
-3. Enroll two iOS devices in Intune using the same user account, and an account that received the policies in the previous step. The devices should not meet the criteria of the compliance policy.
+3. Enroll two iOS devices in Intune using the same user account, and an account that received the policies in the previous step. The devices shouldn't meet the criteria of the compliance policy.
 4. In Configuration Manager, check the **Overall Device Compliance** chart. Both devices should report as non-compliant.
 <!-- 5. Click the **Non-compliant** section of the chart. Both devices should appear in the filtered view under **Assets and Compliance** > **Overview** > **Device**. -->
 

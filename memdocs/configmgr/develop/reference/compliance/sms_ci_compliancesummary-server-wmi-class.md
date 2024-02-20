@@ -2,14 +2,14 @@
 title: SMS_CI_ComplianceSummary Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 134d40db-3d25-4ff4-904f-3282c301d9c8
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_CI_ComplianceSummary server class.
 ms.reviewer: mstewart,aaroncz 

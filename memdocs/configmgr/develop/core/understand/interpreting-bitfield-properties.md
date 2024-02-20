@@ -3,14 +3,14 @@ title: Interpret Bitfield Properties
 titleSuffix: Configuration Manager
 description: Some SMS object properties are implemented as bit fields, where individual binary bits of an integer (usually a **uint32** data type) are used as Boolean flags to store information. These properties can be difficult to interpret at the user interface because the bit field is often displayed as a decimal number.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 3abf009f-13f8-4baf-a548-648777a4e2b1
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

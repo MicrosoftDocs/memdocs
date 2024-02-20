@@ -2,14 +2,14 @@
 title: SMS_TaskSequencePackageReference_All Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 247f1a76-062d-42b1-aa82-bad9763a0a1b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequencePackageReference_All server class.
 ms.reviewer: mstewart,aaroncz 

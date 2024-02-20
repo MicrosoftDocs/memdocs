@@ -3,14 +3,14 @@ description: Learn how to represent a pending re-registration at the time of sit
 title: SMS_PendingReRegistrationOnSiteReAssignment Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c3387ae1-f546-4e05-b30e-b47ed252c15f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

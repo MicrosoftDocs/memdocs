@@ -3,14 +3,14 @@ description: "Learn how to use the ICIINFO::GetCategoryCount method to get the c
 title: "ICIINFO::GetCategoryCount"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cd89fdf9-84ca-44d2-8dbe-2e95bcfc53e6
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

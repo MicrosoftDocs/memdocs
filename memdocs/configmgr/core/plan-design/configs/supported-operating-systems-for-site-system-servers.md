@@ -2,9 +2,9 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 10/19/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 12/01/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -118,9 +118,12 @@ Site system server:
 
 - Distribution point <sup>[Note 1](#bkmk_note1)</sup>
 
-## Windows Server 2012 R2
+## Windows Server 2012/2012 R2
 
-_Applies to Standard and Datacenter editions_
+_Applies to Standard and Datacenter_ 
+
+> [!NOTE]
+> On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 Site servers:
 
@@ -150,6 +153,9 @@ Site system servers:
 ## Windows Server 2012
 
 _Applies to Standard and Datacenter editions_
+
+> [!NOTE]
+> On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 Site servers:
 
@@ -188,8 +194,6 @@ The following client OS versions are supported for use as a **distribution point
 
     For more information on supported build versions and editions, see [Support for Windows 10](support-for-windows-10.md).
 
-- Windows 8.1 (x86, x64): Professional and Enterprise
-
 This support has the following limitation:
 
 - Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
@@ -204,14 +208,16 @@ The server core installation of the following server OS versions is supported fo
 - Windows Server, version 1803
 - Windows Server, version 1709
 - Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
 
 This support has the following limitation:
 
 - Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
 
 ## General notes
+
+### Extended Security Updates for Windows Server 2012 and Windows Server 2012 R2
+
+On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 will enter the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 ### <a name="bkmk_note1"></a> Note 1: Distribution points
 

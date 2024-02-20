@@ -3,14 +3,14 @@ title: SMS_FullCollectionMembership Class
 description: Learn how to use the SMS_FullCollectionMembership class in Configuration Manager to list all member resources for a specific collection.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c8c0f370-89b4-4fcf-9057-0867d1f6dc3d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,8 +3,8 @@ title: How to modify reports
 titleSuffix: Configuration Manager
 description: Information about viewing the properties of, and modifying Configuration Manager reports.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 
 
@@ -12,7 +12,7 @@ ms.assetid: 9e27d0a3-9b5a-410e-9d80-49eef493a1e2
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

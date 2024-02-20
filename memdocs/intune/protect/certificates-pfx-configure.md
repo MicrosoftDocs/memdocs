@@ -2,11 +2,11 @@
 title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/08/2023
-ms.topic: how-to 
+ms.date: 08/23/2023
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -20,12 +20,13 @@ ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- certificates
 ---
 # Configure and use PKCS certificates with Intune
 
@@ -75,7 +76,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 **Use a command line**:  
 
-1. Log into the Root Certification Authority server with Administrator Account.
+1. Log in to the Root Certification Authority server with Administrator Account.
 
 2. Go to **Start** > **Run**, and then enter **Cmd** to open command prompt.
 
@@ -95,38 +96,52 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     - Set **Certification Authority** to **Windows Server 2008 R2**
     - Set **Certificate recipient** to **Windows 7 / Server 2008 R2**
 
-5. On the **General** tab, set **Template display name** to something meaningful to you.
+5. On the **General** tab:
+  
+     - set **Template display name** to something meaningful to you.
+     - Uncheck **Publish certificate in Active Directory**.
 
     > [!WARNING]
     > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
 
-6. In **Request Handling**, select **Allow private key to be exported**.
+8. In **Request Handling**, select **Allow private key to be exported**.
 
     > [!NOTE]
+    >
     > Unlike SCEP, with PKCS the certificate private key is generated on the server where the certificate connector is installed and not on the device. The certificate template must allow the private key to be exported so that the connector can export the PFX certificate and send it to the device.
     >
     > When the certificates install on the device itself, the private key is marked as not exportable.
 
-7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
-8. In **Subject Name**, choose **Supply in the request**.
-9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
+9. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
+
+   Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 4096 as the *Minimum key size*. 
+
+   > [!NOTE]
+   >
+   > For Windows devices, 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+   >
+   > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
+   > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
+
+10. In **Subject Name**, choose **Supply in the request**.
+11. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
 
     > [!IMPORTANT]
     > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
-10. In **Security**:
+12. In **Security**:
     1. (Required): Add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
     1. (Optional but recommended): Remove the Domain Users group from the list of groups or user names allowed permissions on this template by selecting the **Domain Users** group and select *Remove*. Review the other entries in *Groups or user names* for permissions and applicability to your environment.
 
-12. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
-13. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
-14. For the server to manage certificates for enrolled devices and users, use the following steps:
+13. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
+14. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
+15. For the server to manage certificates for enrolled devices and users, use the following steps:
 
     1. Right-click the Certification Authority, choose **Properties**.
     2. On the security tab, add the Computer account of the server where you run the connector.
     3. Grant **Issue and Manage Certificates** and **Request Certificates** Allow permissions to the computer account.
 
-15. Sign out of the Enterprise CA.
+16. Sign out of the Enterprise CA.
 
 ## Download, install, and configure the Certificate Connector for Microsoft Intune
 
@@ -136,7 +151,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that will receive this profile.
@@ -170,7 +185,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
-   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that recieve a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that receive a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
@@ -182,9 +197,12 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ## Create a PKCS certificate profile
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices. Your options:
@@ -283,17 +301,17 @@ Platforms:
 
   - **CN={{UserName}}**: The user name of the user, such as *Jane Doe*.
   - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
-  - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
+  - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Microsoft Entra ID. This ID is typically used to authenticate with Microsoft Entra ID.
   - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
   - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
   - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
   - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
 
-  - **CN={{onPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
+  - **CN={{onPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Microsoft Entra ID using Microsoft Entra Connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
-    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
 
   All device variables listed in the following *Device certificate type* section can also be used in user certificate subject names.
 

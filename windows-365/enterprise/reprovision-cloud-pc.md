@@ -2,7 +2,7 @@
 # required metadata
 title: Reprovision a Cloud PC
 titleSuffix:
-description: Learn how to Reprovision a Cloud PC by using Microsoft Endpoint Manager.
+description: Learn how to Reprovision a Cloud PC by using Microsoft Intune.
 keywords:
 author: ErikjeMS  
 ms.author: erikje

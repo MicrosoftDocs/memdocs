@@ -3,14 +3,14 @@ title: UnPackNALPath Method
 titleSuffix: Configuration Manager
 description: Decodes a network abstraction layer (NAL) path into its components.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 76960011-6155-4295-8c5c-d7181018011e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

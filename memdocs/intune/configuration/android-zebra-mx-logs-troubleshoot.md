@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/17/2023
+ms.date: 09/11/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -48,13 +48,16 @@ Some issues aren't related to the contents of the StageNow profile, and aren't r
 
 This article shows you how to read the StageNow logs. It also lists some potential issues with Zebra devices that may not be reflected in the logs.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 [Use and manage Zebra devices with Zebra Mobility Extensions](android-zebra-mx-overview.md) has more information on this feature.
 
 ## Get the logs
 
 ### Use the StageNow app on the device
 
-You don't have to use [Intune to deploy the profile](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow). Instead, you can test a profile directly using StageNow on your computer. The StageNow app on the device saves the logs from the test. To get the log file, use the **More (...)** option in the StageNow app on the device.
+You don't have to use [Intune to deploy the profile](android-zebra-mx-overview.md#step-4---create-a-device-management-profile-in-stagenow). Instead, you can test a profile directly using StageNow on your computer. The StageNow app on the device saves the logs from the test. To get the log file, use the **More (...)** option in the StageNow app on the device.
 
 ### Get logs using Android Debug Bridge
 

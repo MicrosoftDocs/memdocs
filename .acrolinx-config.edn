@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["main" "release-.*"]
- :allowed-filename-matches ["(?i)memdocs/(?:(?!configmgr/mdt/use-the-mdt.md))" "windows-365"]}
+ :allowed-filename-matches ["(?i)memdocs/(?:(?!configmgr/mdt/use-the-mdt.md))" "windows-365" "autopilot"]}

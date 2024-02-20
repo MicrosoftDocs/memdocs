@@ -3,8 +3,8 @@ title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
 ms.date: 03/28/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: troubleshooting
 author: banreet
 ms.author: banreetkaur
@@ -26,11 +26,11 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2309](../../../plan-design/changes/whats-new-in-version-2309.md)
 - [What's new in version 2303](../../../plan-design/changes/whats-new-in-version-2303.md)
 - [What's new in version 2211](../../../plan-design/changes/whats-new-in-version-2211.md)
 - [What's new in version 2207](../../../plan-design/changes/whats-new-in-version-2207.md)
 - [What's new in version 2203](../../../plan-design/changes/whats-new-in-version-2203.md)
-- [What's new in version 2111](../../../plan-design/changes/whats-new-in-version-2111.md)
 
 
 > [!TIP]
@@ -148,7 +148,22 @@ AS
     WHERE RN = 1
 GO
 ```
+## Boundaries and Boundary groups
 
+### Clients not belonging to any boundary group may fail to download due to SQL issue 
+<!--22760249-->
+*Applies to: version 2303, 2309 RTM*
+
+ Consider ConfigMgr hierarchy with a remote MP and CMG and you deploy an app to a device collection. The Clients cannot download app, and reflect the below SQL permissions issue in **MP_Location.log**.
+
+ ```log
+    The SELECT permission was denied on the object 'vSMS_DefaultBoundaryGroup', database 'CM_xxx', schema 'dbo'.
+ ```
+ To workaround the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
+
+```sql
+    GRANT SELECT ON vSMS_DefaultBoundaryGroup To smsdbrole_MP
+```
 <!-- ## Cloud services -->
 
 <!-- ## Role based administration -->

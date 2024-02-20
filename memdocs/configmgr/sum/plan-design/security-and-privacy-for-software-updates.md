@@ -5,8 +5,8 @@ description: Follow these best practices for security for software updates and l
 manager: apoorvseth
 ms.date: 09/16/2020
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 author: BalaDelli
 ms.author: baladell
 ms.localizationpriority: medium
@@ -22,7 +22,7 @@ This topic contains security and privacy information for software updates in Con
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for software updates  
  Use the following security best practices when you deploy software updates to clients:  
 
--   Do not change the default permissions on software update packages.  
+-   Don't change the default permissions on software update packages.  
 
      By default, software update packages are set to allow administrators **Full Control** and users to have **Read** access. If you change these permissions, it might allow an attacker to add, remove, or delete software updates.  
 
@@ -30,7 +30,7 @@ This topic contains security and privacy information for software updates in Con
 
      The computer accounts for the SMS Provider, the site server, and the administrative user who will actually download the software updates to the download location require **Write** access to the download location. Restrict access to the download location to reduce the risk of attackers tampering with the software updates source files in the download location.  
 
-     In addition, if you use a UNC share for the download location, secure the network channel by using IPsec or SMB signing to prevent tampering of the software updates source files when they are transferred over the network.  
+     In addition, if you use a UNC share for the download location, secure the network channel by using IPsec or SMB signing to prevent tampering of the software updates source files when they're transferred over the network.  
 
 -   Use UTC for evaluating deployment times.  
 
@@ -47,7 +47,7 @@ This topic contains security and privacy information for software updates in Con
 
 -   Enable CRL checking.  
 
-     By default, Configuration Manager does not check the certificate revocation list (CRL) to verify the signature on software updates before they are deployed to computers. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  
+     By default, Configuration Manager doesn't check the certificate revocation list (CRL) to verify the signature on software updates before they're deployed to computers. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  
 
      For more information about how to enable CRL checking for software updates, see [How to enable CRL checking for software updates](../get-started/manage-settings-for-software-updates.md#crl-checking-for-software-updates).  
 
@@ -60,10 +60,10 @@ This topic contains security and privacy information for software updates in Con
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for software updates  
  Software updates scans your client computers to determine which software updates you require, and then sends that information back to the site database. During the software updates process, Configuration Manager might transmit information between clients and servers that identify the computer and logon accounts.  
 
- Configuration Manager maintains state information about the software deployment process. State information is not encrypted during transmission or storage. State information is stored in the Configuration Manager database and it is deleted by the database maintenance tasks. No state information is sent to Microsoft.  
+ Configuration Manager maintains state information about the software deployment process. State information isn't encrypted during transmission or storage. State information is stored in the Configuration Manager database and it's deleted by the database maintenance tasks. No state information is sent to Microsoft.  
 
  The use of Configuration Manager software updates to install software updates on client computers might be subject to software license terms for those updates, which is separate from the Software License Terms for Configuration Manager. Always review and agree to the Software Licensing Terms prior to installing the software updates by using Configuration Manager.  
 
- Configuration Manager does not implement software updates by default and requires several configuration steps before information is collected.  
+ Configuration Manager doesn't implement software updates by default and requires several configuration steps before information is collected.  
 
  Before you configure software updates, consider your privacy requirements.  

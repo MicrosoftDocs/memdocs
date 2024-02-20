@@ -3,14 +3,14 @@ description: Learn how the SMS_DPGroupDistributionStatus Windows Management Inst
 title: SMS_DPGroupDistributionStatus Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 72e07914-d83b-48b2-a637-828f3af05f17
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -34,7 +34,7 @@ Class SMS_DPGroupDistributionStatus : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DPGroupDistributionStatus` class does not define any methods.  
+ The `SMS_DPGroupDistributionStatus` class doesn't define any methods.  
 
 ## Properties  
  `Assets`  

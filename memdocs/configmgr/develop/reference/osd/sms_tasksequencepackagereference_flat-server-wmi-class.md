@@ -3,14 +3,14 @@ title: SMS_TaskSequencePackageReference_Flat Class
 titleSuffix: Configuration Manager
 description: The SMS_TaskSequencePackageReference_Flat WMI class represents all classic package or application references for a task sequence.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7dba381c-b2b2-461b-8e7c-fd6aadd8739a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

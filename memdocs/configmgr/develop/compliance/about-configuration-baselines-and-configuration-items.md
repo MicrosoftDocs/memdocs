@@ -3,14 +3,14 @@ title: About Configuration Baselines and Items
 description: In Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 56bdef4b-bcf8-46f5-bf92-d86e0dfce08d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

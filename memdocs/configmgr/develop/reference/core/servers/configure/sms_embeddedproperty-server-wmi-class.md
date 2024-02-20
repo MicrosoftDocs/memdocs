@@ -3,19 +3,19 @@ title: SMS_EmbeddedProperty Class
 titleSuffix: Configuration Manager
 description:  An SMS Provider that represents a general-purpose embedded property. The property is used by the site control file to define the properties of a site control item.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3086e816-3a2a-437b-a61f-1b0a2f04082d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_EmbeddedProperty Server WMI Class
-The `SMS_EmbeddedProperty` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a general-purpose embedded property used by the site control file to define the properties of a site control item.  
+The `SMS_EmbeddedProperty` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a general-purpose embedded property used by the site control file to define the properties of a site control item.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -33,7 +33,7 @@ Class SMS_EmbeddedProperty
 ```  
 
 ## Methods  
- The `SMS_EmbeddedProperty` class does not define any methods.  
+ The `SMS_EmbeddedProperty` class doesn't define any methods.  
 
 ## Properties  
  `ItemType`  
@@ -90,7 +90,7 @@ Class SMS_EmbeddedProperty
 
   Some properties contain multiple property values and store values in both `Value1` and `Value2`. Properties that contain multi-string registry data types use the [SMS_Client_Reg_MultiString_List Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_client_reg_multistring_list-server-wmi-class.md).  
 
-  There is no list that defines the properties for each site control item. Property names that contain the word "Reserved" cannot be modified.  
+  There's no list that defines the properties for each site control item. Property names that contain the word "Reserved" can't be modified.  
 
 ## Requirements  
 

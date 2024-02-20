@@ -2,14 +2,14 @@
 title: ExportXml Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d6d3f17e-75fc-48c6-b6ed-b7b0d6169f41
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how the ExportXml Method exports task sequence XML in a format that is suitable to use on another site.
 ms.reviewer: mstewart,aaroncz 

@@ -3,14 +3,14 @@ title: SMS_AIMLSParser Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_AIMLSParser Windows Management Instrumentation class imports license data.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e16df2cd-86c2-450c-998f-a2eaa7325ffb
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

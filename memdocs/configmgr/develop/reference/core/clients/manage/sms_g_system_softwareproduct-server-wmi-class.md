@@ -3,14 +3,14 @@ title: SMS_G_System_SoftwareProduct Class
 description: The SMS_G_System_SoftwareProduct class is an SMS Provider server class that provides software product information for software files that contain resource strings.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 37d49bb2-4753-4eb8-baad-627151098437
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -34,7 +34,7 @@ Class SMS_G_System_SoftwareProduct : SMS_G_System
 ```  
 
 ## Methods  
- The `SMS_G_System_SoftwareProduct` class does not define any methods.  
+ The `SMS_G_System_SoftwareProduct` class doesn't define any methods.  
 
 ## Properties  
  `CompanyName`  
@@ -60,7 +60,7 @@ Class SMS_G_System_SoftwareProduct : SMS_G_System
 
  Access type: Read/Write  
 
- Qualifiers: [Subtype("Locale Id")]  
+ Qualifiers: [Subtype("Locale ID")]  
 
  Language taken from the language resource string.  
 
@@ -104,8 +104,8 @@ Class SMS_G_System_SoftwareProduct : SMS_G_System
    |                 Reporting option                 |                                                                                                                                       Description                                                                                                                                       |
    |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |       Product version information. Bit 0.        |                                                                                                       Inventories products that contain company and product resource information.                                                                                                       |
-   |   Files associated with known products. Bit 1.   | Inventories files associated with products that contain company and product resource information. For example, Wwintl32.dll is inventoried because it is associated with Microsoft Word.<br /><br /> Set this bit only if the product version information reporting option is selected. |
-   | Files not associated with known products. Bit 2. |                                                                                             Inventories files that do not include company and product resource information (unknown files).                                                                                             |
+   |   Files associated with known products. Bit 1.   | Inventories files associated with products that contain company and product resource information. For example, Wwintl32.dll is inventoried because it's associated with Microsoft Word.<br /><br /> Set this bit only if the product version information reporting option is selected. |
+   | Files not associated with known products. Bit 2. |                                                                                             Inventories files that don't include company and product resource information (unknown files).                                                                                             |
 
 
 3. For newly added inventory types, adds entries to the following `Path`, `Subdirectories`, and `Exclude` embedded property lists.  

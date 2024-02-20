@@ -3,14 +3,14 @@ title: GetSummary Method in Class SMS_AICategory
 titleSuffix: Configuration Manager
 description: The GetSummary Windows Management Instrumentation class method provides a summary count of all the categories, families, and tags used by Asset Intelligence.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c912603e-0480-4518-a1df-fd4a9664ea3b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

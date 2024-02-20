@@ -1,16 +1,16 @@
 ---
 title: SMS_EndpointProtectionThreatData Class
 titleSuffix: Configuration Manager
-description: An SMS Provider server class that represents Microsoft official threats. It is a metadata table and all data is extracted from the signature update.
+description: An SMS Provider server class that represents Microsoft official threats. It's a metadata table and all data is extracted from the signature update.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 845956a1-e322-4a3a-bf7b-ed6dfd55da08
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -33,7 +33,7 @@ Class SMS_EndpointProtectionThreatData : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_EndpointProtectionThreatData` class does not define any methods.  
+ The `SMS_EndpointProtectionThreatData` class doesn't define any methods.  
 
 ## Properties  
  `DefaultActionID`  
@@ -43,7 +43,7 @@ Class SMS_EndpointProtectionThreatData : SMS_BaseClass
 
  Qualifiers: none  
 
- Identifier of the action the EndPoint Protection agent will take for this particular threat.  
+ Identifier of the action the EndPoint Protection agent takes for this particular threat.  
 
 | Value | Default action |  
 | ----- | -------------- |  

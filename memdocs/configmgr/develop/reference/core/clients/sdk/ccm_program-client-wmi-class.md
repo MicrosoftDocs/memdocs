@@ -3,14 +3,14 @@ title: CCM_Program Class
 titleSuffix: Configuration Manager
 description: A client class, in Configuration Manager, that represents a legacy software distribution program on the client.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2c024101-cb8e-4185-b3b2-6b9c509f7919
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

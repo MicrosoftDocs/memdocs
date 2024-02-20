@@ -2,14 +2,14 @@
 description: Learn how to use Windows Management Instrumentation (WMI) classes that represent the objects in SMS as templates for managed objects.
 title: Configuration Manager Class Schema
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 46b88ba8-9802-42fd-995f-308172d64c3b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

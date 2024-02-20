@@ -3,14 +3,14 @@ title: GetNextServiceWindowID Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the GetNextServiceWindowID WMI class method gets the identifier of the next service window instance closest to the current time.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0d183452-3798-4ac8-a210-25368c575ddf
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

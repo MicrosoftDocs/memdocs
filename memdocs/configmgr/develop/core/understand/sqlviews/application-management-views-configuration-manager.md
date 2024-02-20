@@ -3,14 +3,14 @@ title: Application management views
 titleSuffix: Configuration Manager
 description: Information about application management views and application management status views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms: "assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db"
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

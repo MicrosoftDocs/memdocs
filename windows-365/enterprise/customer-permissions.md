@@ -44,8 +44,8 @@ Windows 365 uses the Azure role-based access control (RBAC) permissions required
 You create ANCs to define the connection between your network and the Windows 365 system so that Cloud PCs can be successfully provisioned. When you create an ANC, the Windows 365 [service principal](/azure/active-directory/fundamentals/service-accounts-introduction-azure#service-principals) requires the following permissions:
 
 - **Reader permission on the Azure subscription**: This permission is used to simplify the flow when adding a custom image.
-- **Network contributor on the specified resource group**: This permission is used to create network interface cards in the selected resource group.
-- **Network contributor on the virtual network**: This permission is used to attach the created network interface cards to the selected virtual network. 
+- **Windows365 Network Interface Contributor role on the specified resource group**: This permission is used to create network interface cards in the selected resource group.
+- **Windows365 Network User role on the virtual network**: This permission is used to attach the created network interface cards to the selected virtual network. 
 
 When you create an ANC, you must be signed in with an account that is an Owner of the subscription. 
 

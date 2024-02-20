@@ -3,14 +3,14 @@ description: Learn how to use the CreateFromINF method to create an SMS_Driver S
 title: CreateFromINF Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 04e2240d-4fae-4f65-84db-ac05f6865e26
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -52,9 +52,9 @@ SInt32 CreateFromINF(
  An [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object with a complete driver catalog.  
 
 ## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure. The error values are available in the [SMS_ExtendedStatus Server WMI Class](../../../develop/reference/misc/sms_extendedstatus-server-wmi-class.md) error object. For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure. The error values are available in the [SMS_ExtendedStatus Server WMI Class](../../../develop/reference/misc/sms_extendedstatus-server-wmi-class.md) error object. For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 
- Possible error values include, but are not limited to, the following:  
+ Possible error values include, but aren't limited to, the following:  
 
  0  
  Success  
@@ -63,10 +63,10 @@ SInt32 CreateFromINF(
  The driver is invalid  
 
  1633  
- The driver is valid but does not support any platforms supported by Configuration Manager.  
+ The driver is valid but doesn't support any platforms supported by Configuration Manager.  
 
  2  
- The SMS Provider cannot access the network share.  
+ The SMS Provider can't access the network share.  
 
  183  
  The driver has already been imported.  

@@ -3,14 +3,14 @@ title: UpdateProfileIDForDevices Method
 titleSuffix: Configuration Manager
 description: Update the profile IDs for device serial numbers.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1843e467-9330-437c-b3d8-fe84a45284a3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

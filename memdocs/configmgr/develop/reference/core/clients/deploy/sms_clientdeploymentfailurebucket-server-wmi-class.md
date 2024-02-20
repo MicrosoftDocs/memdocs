@@ -3,14 +3,14 @@ description: Learn how to represent a client deployment failure bucket used to g
 title: SMS_ClientDeploymentFailureBucket Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 8a5608be-1f8a-4aea-a87c-e2b379c98107
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

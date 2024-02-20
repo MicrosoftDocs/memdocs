@@ -3,14 +3,14 @@ description: Learn how to use the Configuration Manager to change the maintenanc
 title: Change Maintenance Window Properties for a Collection
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c73f7ea3-5f13-4b93-897e-ef865418ccfd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

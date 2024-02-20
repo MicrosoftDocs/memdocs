@@ -3,8 +3,8 @@ title: Download definitions from Microsoft
 titleSuffix: Configuration Manager
 description: Learn how to enable the download of Endpoint Protection malware definitions from Microsoft Updates for Configuration Manager.
 ms.date: 11/18/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

@@ -3,30 +3,30 @@ title: Connect to an SMS Provider by Using Managed Code
 titleSuffix: Configuration Manager
 description: To connect to an SMS Provider, use WqlConnectionManager.Connect.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 2a435561-01b7-45d5-b7cf-89fc1845025f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # How to Connect to an SMS Provider in Configuration Manager by Using Managed Code
-To connect to an SMS Provider, use **WqlConnectionManager.Connect**. After it is connected, **WqlConnectionManager.Connect** has methods to query, create, delete, and otherwise use Configuration Manager Windows Management Instrumentation (WMI) objects.  
+To connect to an SMS Provider, use **WqlConnectionManager.Connect**. After it's connected, **WqlConnectionManager.Connect** has methods to query, create, delete, and otherwise use Configuration Manager Windows Management Instrumentation (WMI) objects.  
 
 > [!NOTE]
 >  **WqlConnectionManager.Connect** is a WMI-specific derivation of [ConnectionManagerBase](/previous-versions/system-center/developer/cc147366(v=msdn.10)).  
 
- If you are connecting to a local SMS Provider, you do not supply user credentials. If you are connecting to a remote SMS Provider, you do not need to supply user credentials if the current user/computer context has permissions on the remote SMS Provider.  
+ If you're connecting to a local SMS Provider, you don't supply user credentials. If you're connecting to a remote SMS Provider, you don't need to supply user credentials if the current user/computer context has permissions on the remote SMS Provider.  
 
- If you do not have access privileges on the remote SMS Provider, or if you want to use a different user account, then you must supply user credentials for a user account that has access privileges.  
+ If you don't have access privileges on the remote SMS Provider, or if you want to use a different user account, then you must supply user credentials for a user account that has access privileges.  
 
  **WQLConnectionManager.Connection** requires a [SmsNamedValuesDictionary](/previous-versions/system-center/developer/cc147435(v=msdn.10)) object. This can be used to store cached information such as the computer name.  
 
- It is pre-populated with a number of values that can be used in your application.  
+ It's pre-populated with many values that can be used in your application.  
 
 |Value|Description.|  
 |-----------|------------------|  
@@ -51,7 +51,7 @@ To connect to an SMS Provider, use **WqlConnectionManager.Connect**. After it is
 3.  Use the **WqlConnectionManager** object to connect to the provider.  
 
 ## Example  
- The following example method connects to the SMS Provider on a local or remote computer. If `servername` is remote, the method uses the supplied user name and password to connect to the remote computer. If you want to use the current user context, for the remote connection, change the code so that it does not pass the user name and password. If the connection is successful, a **WqlConnectionManager** object is returned.  
+ The following example method connects to the SMS Provider on a local or remote computer. If `servername` is remote, the method uses the supplied user name and password to connect to the remote computer. If you want to use the current user context, for the remote connection, change the code so that it doesn't pass the user name and password. If the connection is successful, a **WqlConnectionManager** object is returned.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 

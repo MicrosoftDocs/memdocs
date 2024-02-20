@@ -3,14 +3,14 @@ title: SMS_SecuredCategoryMembership Class
 description: Learn how to use the SMS_SecuredCategoryMembership class in Configuration Manager.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 918f15b3-ce2a-408b-b83f-949e5a4f1369
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

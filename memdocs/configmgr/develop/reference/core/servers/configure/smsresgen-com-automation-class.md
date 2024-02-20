@@ -3,14 +3,14 @@ title: SMSResGen COM Automation Class
 titleSuffix: Configuration Manager
 description: Use the SMSResGen COM class to automate the creation of a data discovery record (DDR).
 ms.date: 04/12/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 98b96b3e-3689-4cec-8617-597c2c850f19
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

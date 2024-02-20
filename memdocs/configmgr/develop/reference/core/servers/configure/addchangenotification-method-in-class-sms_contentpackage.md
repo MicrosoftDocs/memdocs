@@ -3,14 +3,14 @@ title: AddChangeNotification method in class SMS_ContentPackage
 titleSuffix: Configuration Manager
 description: The AddChangeNotification WMI class method adds a package change notification in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 09653802-d912-4c4a-a018-7e57e26730df
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

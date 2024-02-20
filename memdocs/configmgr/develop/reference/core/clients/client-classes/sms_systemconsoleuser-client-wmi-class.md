@@ -3,14 +3,14 @@ description: The SMS_SystemConsoleUser class is a client Windows Management Inst
 title: SMS_SystemConsoleUser Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9b5f27fc-e2e4-4c4e-8b30-f84293b886be
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

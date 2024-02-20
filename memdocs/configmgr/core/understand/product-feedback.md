@@ -3,8 +3,8 @@ title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: banreet
 ms.author: banreetkaur
@@ -43,8 +43,8 @@ When using the feedback wizard from the console, the following items are display
 
 ## Recent changes to feedback
 
-Starting in version 2203, you have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data. Currently, Azure AD authentication for government clouds isn't available. After selecting either **Send a smile** or **Send a frown**: <!--11754191-->
-1. Select **Sign in** and sign in with either your Azure AD user account or your Microsoft account.
+Starting in version 2203, you have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Microsoft Entra user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data. Currently, Microsoft Entra authentication for government clouds isn't available. After selecting either **Send a smile** or **Send a frown**: <!--11754191-->
+1. Select **Sign in** and sign in with either your Microsoft Entra user account or your Microsoft account.
    - Selecting **Continue without signing in** will allow you to send feedback, but we won't be able to contact you with questions or updates unless you provide an e-mail address.
 1. Once you're signed in, select **Next** then provide your feedback. If you need to use a different account, you can select **Sign out** to start again.
 

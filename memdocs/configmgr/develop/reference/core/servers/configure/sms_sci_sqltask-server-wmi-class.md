@@ -3,14 +3,14 @@ title: SMS_SCI_SQLTask class
 titleSuffix: Configuration Manager
 description: The technical details of the SMS_SCI_SQLTask server WMI class.
 ms.date: 04/07/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 92b5c389-ae47-4a77-8dbc-181926f23ba8
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

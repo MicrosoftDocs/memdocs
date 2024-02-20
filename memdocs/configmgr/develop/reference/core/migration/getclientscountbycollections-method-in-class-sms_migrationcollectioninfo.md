@@ -3,14 +3,14 @@ title: GetClientsCountByCollections Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that retrieves the number of clients in the specified collections.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1c44e69e-4a53-4f63-bd6a-441f15a0d97b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

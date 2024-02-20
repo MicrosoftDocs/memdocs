@@ -3,14 +3,14 @@ title: ImportMachineEntryToMultipleCollections method
 titleSuffix: Configuration Manager
 description: ImportMachineEntryToMultipleCollections method
 ms.date: 04/03/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3f516dae-a958-440e-9e7c-28de24bf2803
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -114,7 +114,7 @@ Data type: `String[]`
 
 Qualifiers: [id("10"), in, optional]  
 
-The collection identifier(s) for the collection(s) which the computer is added to. The default value is empty.  
+The collection identifier(s) for the collection(s) that the computer is added to. The default value is empty.  
 
 #### `WTGUniqueKey`
 
@@ -122,7 +122,7 @@ Data type: `String`
 
 Qualifiers: [id("11"), in, optional]  
 
-For a Windows To Go deployment, this is the USB unique key that will be used to identify the client, instead of the SMBIOS and MAC address.  
+For a Windows To Go deployment, this is the USB unique key that is used to identify the client, instead of the SMBIOS and MAC address.  
 
 #### `MachineExists`
 

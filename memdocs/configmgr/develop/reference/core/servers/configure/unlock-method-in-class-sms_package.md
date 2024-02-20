@@ -3,14 +3,14 @@ title: Unlock Method in Class SMS_Package
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that sets the source site to the current site, unlocking the package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6fc6f46e-757d-420f-b6d5-701745f07601
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

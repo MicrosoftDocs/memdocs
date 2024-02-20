@@ -3,14 +3,14 @@ title: Set the PXE Service Point Response for a Specific Network Interface
 titleSuffix: Configuration Manager
 description: In Configuration Manager, you set the operating system deployment to respond to a specific set of network addresses by adding the required media access control (MAC) addresses to the BindExcept embedded property list.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: fdfdbb2d-50d9-4f01-a1aa-a07aae85629d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

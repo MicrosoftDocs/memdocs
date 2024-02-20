@@ -3,14 +3,14 @@ title: "Configure Software Inventory Settings"
 titleSuffix: "Configuration Manager"
 description: "Set the Software Inventory Client Agent settings, in Configuration Manager, by modifying the necessary site control file settings."
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: ddbee23e-5495-4864-a0e0-49555ad18f12
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

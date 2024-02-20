@@ -3,19 +3,19 @@ title: SMS_G_System_UnknownFile Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents an unknown software file, that is, a file that doesn't contain product resource information or isn't related to a software product that contains product resource information.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0e608a1a-e069-4cbe-be18-e2173a6b8563
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_UnknownFile Server WMI Class
-The `SMS_G_System_UnknownFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an unknown software file, that is, a file that does not contain product resource information or is not related to a software product that contains product resource information.  
+The `SMS_G_System_UnknownFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an unknown software file, that is, a file that doesn't contain product resource information or isn't related to a software product that contains product resource information.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -40,7 +40,7 @@ Class SMS_G_System_UnknownFile : SMS_G_System
 ```  
 
 ## Methods  
- The `SMS_G_System_UnknownFile` class does not define any methods.  
+ The `SMS_G_System_UnknownFile` class doesn't define any methods.  
 
 ## Properties  
  `CreationDate`  
@@ -154,7 +154,7 @@ Class SMS_G_System_UnknownFile : SMS_G_System
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- Although this class contains the same unknown file information that is found in [SMS_G_System_SoftwareFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_softwarefile-server-wmi-class.md), there is no advantage to querying against this class for unknown product files. It is recommended to use `SMS_G_System_SoftwareFile` for all queries involving inventoried files.  
+ Although this class contains the same unknown file information that is found in [SMS_G_System_SoftwareFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_softwarefile-server-wmi-class.md), there's no advantage to querying against this class for unknown product files. It's recommended to use `SMS_G_System_SoftwareFile` for all queries involving inventoried files.  
 
  The Software Inventory Agent collects files identified in the site control file. To identify the files to collect, the agent:  
 
@@ -165,8 +165,8 @@ Class SMS_G_System_UnknownFile : SMS_G_System
     |Reporting option|Description|  
     |----------------------|-----------------|  
     |Product version information. Bit 0.|Inventories products that contain company and product resource information.|  
-    |Files associated with known products. Bit 1.|Inventories files associated with products that contain company and product resource information. For example, Wwintl32.dll is inventoried because it is associated with Microsoft Word.<br /><br /> Set this bit only if the product version information reporting option is selected.|  
-    |Files not associated with known products. Bit 2.|Inventories files that do not include company and product resource information (unknown files).|  
+    |Files associated with known products. Bit 1.|Inventories files associated with products that contain company and product resource information. For example, Wwintl32.dll is inventoried because it's associated with Microsoft Word.<br /><br /> Set this bit only if the product version information reporting option is selected.|  
+    |Files not associated with known products. Bit 2.|Inventories files that don't include company and product resource information (unknown files).|  
 
 3.  For newly added inventory types, adds entries to the following `Path`, `Subdirectories`, and `Exclude` embedded property lists.  
 

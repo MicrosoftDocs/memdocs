@@ -3,8 +3,8 @@ title: Sample queries for endpoint protection
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common Endpoint Protection views to other views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: c639ace8-52dd-4e91-92fa-e11e56878bd7
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

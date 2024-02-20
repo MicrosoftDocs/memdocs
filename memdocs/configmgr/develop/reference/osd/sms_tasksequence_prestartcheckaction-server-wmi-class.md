@@ -3,14 +3,14 @@ description: Learn how to represent a task sequence action to check the readines
 title: SMS_TaskSequence_PrestartCheckAction class
 titleSuffix: Configuration Manager
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6d4bf98c-7a2b-4747-9d7d-6b92b3af4fbc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

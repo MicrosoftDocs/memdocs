@@ -3,14 +3,14 @@ title: SMS_CIAllCategories Class
 titleSuffix: Configuration Manager
 description: Lists all SMS_CategoryInstance Server WMI Class or SMS_UpdateCategoryInstance Server WMI Class object instances for a given SMS_ConfigurationItem object.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 57b6120e-a157-4bd4-8b52-8ebc31b4b41f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

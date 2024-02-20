@@ -3,14 +3,14 @@ title: Example of List, Create, Modify, and Delete
 description: Learn how to use the SMS_Package class to list, create, modify and delete operations using the SMS Provider.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 6f31059a-ec25-4113-b3a7-8de92269a351
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

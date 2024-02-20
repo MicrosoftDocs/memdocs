@@ -3,14 +3,14 @@ title: ActivateHierarchy method
 titleSuffix: Configuration Manager
 description: The technical details of the ActivateHierarchy method in the SMS_MigrationSiteMapping WMI class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 51a21352-8184-4f0f-9fe0-365608ab1433
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

@@ -3,14 +3,14 @@ title: SMS_MigrationJob Class
 titleSuffix: Configuration Manager
 description: The SMS_MigrationJob WMI class is an SMS Provider server class that represents a migration job.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6ecbb0a8-2ed4-40d0-ba75-5d0c7c484b58
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

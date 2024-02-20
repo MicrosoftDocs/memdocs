@@ -2,9 +2,9 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 01/10/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 12/01/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -74,13 +74,13 @@ For more information, see the following articles:
 
 - **Windows Storage Server 2016**: Workgroup, Standard, IoT
 
-- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Storage Server 2012 R2** (x64)
+- **Windows Storage Server 2012 R2** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Storage Server 2012** (x64)
+- **Windows Storage Server 2012** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### Server Core
 
@@ -94,9 +94,9 @@ Windows Server semi-annual channel versions are Server Core installations, such 
 
 - **Windows Server 2016** (x64) <sup>[Note 2](#bkmk_note2)</sup>
 
-- **Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### <a name="bkmk_note1"></a> Note 1
 
@@ -135,11 +135,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 - **Windows 10 Enterprise** (x86, x64)
 
 - **Windows 10 IoT Enterprise** (x86, x64) <sup> [Note 4](#bkmk_note4)</sup>
-
-- **Windows Embedded 8.1 Industry** (x86, x64)
-
-- **Windows Embedded 8 Standard** (x86, x64)
-
 
 #### <a name="bkmk_note4"></a> Note 4: Windows IoT Enterprise
 

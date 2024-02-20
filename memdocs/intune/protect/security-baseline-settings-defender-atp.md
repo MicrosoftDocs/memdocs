@@ -637,7 +637,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2114050)
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
-  Baseline default: *0*  
+  Baseline default: *50*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2113940)
 
 - **Scan all downloaded files and attachments**  
@@ -682,7 +682,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2114050)
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
-  Baseline default: *0*  
+  Baseline default: *50*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2113940)
 
 - **Scan all downloaded files and attachments**  
@@ -752,7 +752,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
-  Baseline default: *0*  
+  Baseline default: *50*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2113940)
 
 - **Scan mapped network drives during a full scan**  
@@ -902,7 +902,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
-  Baseline default: *0*  
+  Baseline default: *50*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2113940)
 
 - **Scan mapped network drives during a full scan**  
@@ -1100,3 +1100,4 @@ For more information, see [PassportForWork CSP](/windows/client-management/mdm/p
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+

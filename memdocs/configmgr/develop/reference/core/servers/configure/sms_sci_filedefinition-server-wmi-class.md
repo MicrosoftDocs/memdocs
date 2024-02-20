@@ -3,14 +3,14 @@ description: Learn how to represent the basic properties of the site control fil
 title: SMS_SCI_FileDefinition Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d8a6be76-8006-4237-881e-547b757bce7c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -39,7 +39,7 @@ Class SMS_SCI_FileDefinition : SMS_SiteControlItem
 ```  
 
 ## Methods  
- The `SMS_SCI_FileDefinition` class does not define any methods.  
+ The `SMS_SCI_FileDefinition` class doesn't define any methods.  
 
 ## Properties  
  `Comment`  
@@ -94,7 +94,7 @@ Class SMS_SCI_FileDefinition : SMS_SiteControlItem
 
  Qualifiers: None  
 
- Serial number of the actual site control file. It is incremented each time the site control file changes.  
+ Serial number of the actual site control file. It's incremented each time the site control file changes.  
 
  `SiteCode`  
  Data type: `String`  
@@ -112,7 +112,7 @@ Class SMS_SCI_FileDefinition : SMS_SiteControlItem
 
  Qualifiers: None  
 
- Site for which you are creating the site control file. The default value is "".  
+ Site for which you're creating the site control file. The default value is "".  
 
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  

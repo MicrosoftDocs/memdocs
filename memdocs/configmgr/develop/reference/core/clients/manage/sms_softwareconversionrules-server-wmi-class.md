@@ -3,14 +3,14 @@ description: Learn how to use SMS_SoftwareConversionRules to describe rules to c
 title: SMS_SoftwareConversionRules Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b7b38ebe-43cf-496a-8cec-0fbef9b99ef9
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -32,7 +32,7 @@ Class SMS_SoftwareConversionRules : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_SoftwareConversionRules` class does not define any methods.  
+ The `SMS_SoftwareConversionRules` class doesn't define any methods.  
 
 ## Properties  
  `ConvertType`  

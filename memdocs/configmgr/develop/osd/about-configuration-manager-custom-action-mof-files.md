@@ -3,14 +3,14 @@ title: Custom Action MOF Files
 description: In Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: aa2b3692-f373-4c66-b22b-d14bfa0c58dd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

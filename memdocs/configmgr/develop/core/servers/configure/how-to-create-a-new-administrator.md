@@ -3,14 +3,14 @@ title: Create a New Administrator
 titleSuffix: Configuration Manager
 description: Learn how administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b7749c61-a744-4824-b36b-6ed957d30eb3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

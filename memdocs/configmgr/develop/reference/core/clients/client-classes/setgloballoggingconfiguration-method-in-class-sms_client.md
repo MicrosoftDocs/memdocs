@@ -3,19 +3,19 @@ description: Learn how to define the global logging configuration for the client
 title: SetGlobalLoggingConfiguration Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SetGlobalLoggingConfiguration Method in Class SMS_Client
-The `SetGlobalLoggingConfiguration` method, in Configuration Manager, defines the global logging configuration for the client. This configuration represents either component-level logging or default logging if component-level logging is not defined.  
+The `SetGlobalLoggingConfiguration` method, in Configuration Manager, defines the global logging configuration for the client. This configuration represents either component-level logging or default logging if component-level logging isn't defined.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -56,7 +56,7 @@ UInt32 SetGlobalLoggingConfiguration(
 
  Qualifiers: [in]  
 
- The number of incremented log files to accumulate before deleting. When this number has been reached, the creation of a new log file will result in the deletion of the oldest existing log file.  
+ The number of incremented log files to accumulate before deleting. When this number has been reached, the creation of a new log file results in the deletion of the oldest existing log file.  
 
  `DebugLogging`  
  Data type: `Boolean`  
@@ -69,7 +69,7 @@ UInt32 SetGlobalLoggingConfiguration(
  A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
 
 ## Remarks  
- This method manipulates registry keys. These keys should not be manipulated directly. However, for reference, these keys can be found at HKEY_LOCAL_MACHINE/Software/Microsoft/CCM/logging/@GLOBAL. Enabling debug logging with `DebugLogging` will result in the creation of a new key: HKEY_LOCAL_MACHINE/Software/Microsoft/CCM/logging/debuglogging.  
+ This method manipulates registry keys. These keys shouldn't be manipulated directly. However, for reference, these keys can be found at HKEY_LOCAL_MACHINE/Software/Microsoft/CCM/logging/@GLOBAL. Enabling debug logging with `DebugLogging` results in the creation of a new key: HKEY_LOCAL_MACHINE/Software/Microsoft/CCM/logging/debuglogging.  
 
 ## Requirements  
 

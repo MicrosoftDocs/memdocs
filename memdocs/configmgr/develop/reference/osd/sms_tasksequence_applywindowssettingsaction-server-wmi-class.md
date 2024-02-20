@@ -3,14 +3,14 @@ title: SMS_TaskSequence_ApplyWindowsSettingsAction class
 description: The SMS_TaskSequence_ApplyWindowsSettingsAction WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that applies Windows settings configuration information for the target computer.
 titleSuffix: Configuration Manager
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 62494ccd-da4c-430d-bad5-ed18c3067240
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

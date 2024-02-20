@@ -3,8 +3,8 @@ title: State messages
 titleSuffix: Configuration Manager
 description: Descriptions of state messages in Configuration Manager.
 ms.date: 01/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur
@@ -564,7 +564,7 @@ The following topic types have no state IDs:
 | 2                | Compliance fail at MP         |
 | 3                | Compliance fail at the client |
 | 4                | Compliance fail at Intune     |
-| 5                | Compliance fail at Azure AD   |
+| 5                | Compliance fail at Microsoft Entra ID   |
 | 6                | Compliance comgmt Intune      |
 
 ## Peer caching

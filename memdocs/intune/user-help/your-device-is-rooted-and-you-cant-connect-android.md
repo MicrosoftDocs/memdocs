@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/20/2021
+ms.date: 08/07/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -36,7 +36,7 @@ Your organization can block your device from accessing work or school resources 
 
 - You install an app on your device that the root detection software thinks is a security risk. For example, if you're prompted to unroot your device immediately after you install an app, uninstall the app and then check to see if you regain access.    
 
-- Your device manufacturer installed software on your device that the root detection software thinks is a security risk. Contact your IT support person for help. For contact information, go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+- Your device manufacturer installed software on your device that the root detection software thinks is a security risk. Contact your IT support person for help. For contact information, go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or sign in to the Intune Company Portal app.  
 
 - You rooted the device. Reverse the root (commonly done with PC software or apps) and restore the device back to its previous state. Make sure to back up your device before you begin. 
 

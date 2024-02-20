@@ -3,14 +3,14 @@ description: "Learn how to use the IDCMSDK::GetBaselineComplianceReport method t
 title: "IDCMSDK::GetBaselineComplianceReport"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1f865cb8-b8eb-414d-891a-4028bd0df477
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

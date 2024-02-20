@@ -3,19 +3,19 @@ title: "IAppManagementHandler::GetPendingComponentList"
 titleSuffix: Configuration Manager
 description: "The IAppManagementHandler::GetPendingComponentList method gets the pending component list for a specified deployment type."
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d769f0da-1b46-4a3b-9dc7-f14d7a489020
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # IAppManagementHandler::GetPendingComponentList Method
-The `IAppManagementHandler::GetPendingComponentList` method, in Configuration Manager, gets the pending component list for a specified deployment type. This is an optional method for the application deployment type handler. It will be called if the handler returns a status of "PendingUpdate" for the `EnforceApp` method.  Software Center will present a list of these components to the end user, which need to be closed in order for the `EnforceApp` method to succeed.  
+The `IAppManagementHandler::GetPendingComponentList` method, in Configuration Manager, gets the pending component list for a specified deployment type. This is an optional method for the application deployment type handler. It's called if the handler returns a status of "PendingUpdate" for the `EnforceApp` method.  Software Center presents a list of these components to the end user, which need to be closed in order for the `EnforceApp` method to succeed.  
 
 ## Syntax  
 
@@ -43,13 +43,13 @@ HRESULT GetPendingComponentList(
  The pending component list in XML format.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  
 
  E_NOTIMPL  
- The method is not supported by the handler.  
+ The method isn't supported by the handler.  
 
 ## Requirements  
 

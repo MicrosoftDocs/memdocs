@@ -2,14 +2,14 @@
 title: How to Define the Create Application Wizard XML File
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 5e09cee5-b251-42d0-b927-e1d6019f3695
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: How to create a custom deployment technology XML File for the Create Application Wizard/.
 ms.reviewer: mstewart,aaroncz 
@@ -21,7 +21,7 @@ To define the custom deployment technology XML file, create an XML file based on
 
 1.  Create a Create Application Wizard XML file.  
 
-     The following example from the RDP sample project shows how to define the Create Application Wizard XML file. Note that wizards are not extensible for the UI.  However, by creating this custom deployment technology XML, the contents of the wizard now include the ability to create a RDP deployment type.  
+     The following example from the RDP sample project shows how to define the Create Application Wizard XML file. Wizards aren't extensible for the UI.  However, by creating this custom deployment technology XML, the contents of the wizard now include the ability to create an RDP deployment type.  
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>  

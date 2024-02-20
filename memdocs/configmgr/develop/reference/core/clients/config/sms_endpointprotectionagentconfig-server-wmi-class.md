@@ -3,14 +3,14 @@ title: SMS_EndpointProtectionAgentConfig Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that specifies the settings for the Endpoint Protection client.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6c5c8c61-9afc-481e-a288-04352a1e0614
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -41,7 +41,7 @@ Class SMS_EndpointProtectionAgentConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_EndpointProtectionAgentConfig` class does not define any methods.  
+ The `SMS_EndpointProtectionAgentConfig` class doesn't define any methods.  
 
 ## Properties  
  `AgentID`  
@@ -69,7 +69,7 @@ Class SMS_EndpointProtectionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- `true` if the Windows R2 provider is enabled. This value is not visible/available in the console. The default value is `true`.  
+ `true` if the Windows R2 provider is enabled. This value isn't visible/available in the console. The default value is `true`.  
 
  `EnableEP`  
  Data type: `Boolean`  
@@ -123,7 +123,7 @@ Class SMS_EndpointProtectionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- `true` if maintenance windows should not be respected.  
+ `true` if maintenance windows shouldn't be respected.  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -166,7 +166,7 @@ Class SMS_EndpointProtectionAgentConfig : SMS_ClientAgentConfig_BaseClass
  Suppress potential reboot after Endpoint Protection client installation.  
 
 ## Remarks  
- Enabling the Endpoint Protection client may uninstall existing antivirus solutions.  The Endpoint Protection client cannot be enabled until an Endpoint Protection role is added to the hierarchy.  
+ Enabling the Endpoint Protection client may uninstall existing antivirus solutions.  The Endpoint Protection client can't be enabled until an Endpoint Protection role is added to the hierarchy.  
 
 ## Requirements  
 

@@ -3,14 +3,14 @@ description: Learn how to use the  SMS_ConfigurationPolicyAssignment to represen
 title: SMS_ConfigurationPolicyAssignment Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: eb3f5212-bc83-403a-b684-aa3339364729
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

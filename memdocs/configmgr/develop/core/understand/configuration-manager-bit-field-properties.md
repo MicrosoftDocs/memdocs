@@ -3,14 +3,14 @@ title: Bit Field Properties
 titleSuffix: Configuration Manager
 description: Some Configuration Manager object properties are implemented as bit fields, where individual binary bits of an integer (usually a uint32 data type) are used as Boolean flags to store information
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: b2e8a746-7b57-4381-87a1-c49d9434811a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

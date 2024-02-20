@@ -3,14 +3,14 @@ description: The SMS_TaskSequence_Reference Windows Management Instrumentation c
 title: SMS_TaskSequence_Reference Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7df3c90d-eba4-4ece-a2b8-e12e4781ed8b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

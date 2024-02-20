@@ -3,14 +3,14 @@ description: Learn how to use the SMS_SummarizerSiteStatus class to represent su
 title: SMS_SummarizerSiteStatus Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7254b814-8959-4c26-96ab-05e175a534e0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -30,7 +30,7 @@ Class SMS_SummarizerSiteStatus : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_SummarizerSiteStatus` class does not define any methods.  
+ The `SMS_SummarizerSiteStatus` class doesn't define any methods.  
 
 ## Properties  
  `SiteCode`  
@@ -54,7 +54,7 @@ Class SMS_SummarizerSiteStatus : SMS_BaseClass
 | Value | Status |
 | ----- | ------ |
 |GREEN(0)|OK. There are no warning or error messages.|  
-|YELLOW(1)|Warning. Warning messages were generated, but error messages were not generated. This status also indicates that the storage objects are approaching their threshold.|  
+|YELLOW(1)|Warning. Warning messages were generated, but error messages weren't generated. This status also indicates that the storage objects are approaching their threshold.|  
 |RED(2)|Critical. There are error messages, or the storage objects have exceeded their thresholds.|  
 
 ## Remarks  

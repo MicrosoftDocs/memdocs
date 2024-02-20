@@ -3,14 +3,14 @@ title: Enable the Partner Notification API
 titleSuffix: Configuration Manager
 description: Partner Notification API allows third-party partners to use the Wake on LAN feature to receive a list of computers that need to be awoken based on advertisements for software distribution.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 99994d2a-dbc5-4ae0-b77c-4cbfdbd8bcd6
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

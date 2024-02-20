@@ -3,14 +3,14 @@ title: CIPackageInfo Structure
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the CIPackageInfo structure contains package information for a configuration item.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 560625bf-5cd2-4cb0-8df8-d17951afabe7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

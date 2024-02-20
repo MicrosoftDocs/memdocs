@@ -3,14 +3,14 @@ title: CCM_AppDeploymentType Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents an application deployment type.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bf386bdb-7161-47f8-94c9-3b2613be2354
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

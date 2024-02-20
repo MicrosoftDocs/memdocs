@@ -160,12 +160,12 @@ For more information about scope tags, see [Use role-based access control (RBAC)
 > Intune only enforces scope tags and scope groups for messages created in Intune, and for admins with Intune roles.   
 
 ## Step 4: Assign message  
-Assign the message to Azure AD-registered users in your organization. You can assign the message to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
+Assign the message to Microsoft Entra registered users in your organization. You can assign the message to Microsoft Entra user groups, not Microsoft Entra device groups. If a group includes both users and devices, Intune will only send the message to the users. 
 
 1. To include groups in the assignment, you have two options:    
-   * **Add groups**: Select this option to individually choose from a list of Azure AD groups.  
-   * **Include all users**: Select the option to assign the message to all Azure AD-registered users.  
-2. If needed, exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
+   * **Add groups**: Select this option to individually choose from a list of Microsoft Entra groups.  
+   * **Include all users**: Select the option to assign the message to all Microsoft Entra registered users.  
+2. If needed, exclude Microsoft Entra groups from the assignment. Under **Exclude**, select **Add groups** and choose the Microsoft Entra groups to leave out.  
 3. Select **Next: Review + Create** to review and finalize your message.  
 
 ## Step 5: Review and create message  

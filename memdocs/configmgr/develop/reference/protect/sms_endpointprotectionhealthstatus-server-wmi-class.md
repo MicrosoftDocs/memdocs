@@ -3,14 +3,14 @@ title: SMS_EndpointProtectionHealthStatus Class
 description: Learn how the SMS_EndpointProtectionHealthStatus class is an SMS Provider server class that represents health status of Endpoint Protection.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: dd7b5aad-be22-4052-bdd4-55c082bf2324
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

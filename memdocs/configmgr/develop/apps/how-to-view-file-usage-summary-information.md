@@ -3,14 +3,14 @@ description: Learn how to use the SMS_MeteredFiles and SMS_FileUsageSummary clas
 title: View File Usage Summary Information
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c8b466d3-3f6b-4f6b-a0fd-5928de665e60
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

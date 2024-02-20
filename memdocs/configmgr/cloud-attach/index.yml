@@ -7,8 +7,8 @@ metadata:
   title: Cloud attach documentation
   titleSuffix: Configuration Manager
   description: Cloud attach your Configuration Manager environment to extend its capabilities.
-  ms.prod: configuration-manager
-  ms.technology: configmgr-core
+  ms.subservice: core-infra
+  ms.service: configuration-manager
   ms.topic: landing-page
   author: banreet
   ms.author: banreetkaur

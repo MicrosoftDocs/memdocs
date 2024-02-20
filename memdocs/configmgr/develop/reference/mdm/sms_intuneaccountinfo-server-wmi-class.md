@@ -3,14 +3,14 @@ title: SMS_IntuneAccountInfo Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_IntuneAccountInfo WMI class is an SMS Provider server class that represents Microsoft Intune account information.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e9582b73-ef71-4cf6-963b-31ecf8dced26
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -42,7 +42,7 @@ Class SMS_IntuneAccountInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- The GUID of the Azure Active Directory account.  
+ The GUID of the Microsoft Entra account.  
 
  `IntuneAccountID`  
  Data type: `String`  

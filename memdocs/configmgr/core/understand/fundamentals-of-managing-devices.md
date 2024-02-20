@@ -3,8 +3,8 @@ title: Fundamentals of managing devices
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage devices.
 ms.date: 07/26/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
@@ -80,7 +80,7 @@ Configuration Manager supports the management of some devices that have not inst
 
 ## User-based management
 
-Configuration Manager supports collections of Azure Active Directory and Active Directory Domain Services users. When you use a user collection, you can install software on all computers that members of the collection use. To make sure that the software you deploy only installs on the devices that are specified as a user's primary device, set up user device affinity. A user can have one or more primary devices.  
+Configuration Manager supports collections of Microsoft Entra ID and Active Directory Domain Services users. When you use a user collection, you can install software on all computers that members of the collection use. To make sure that the software you deploy only installs on the devices that are specified as a user's primary device, set up user device affinity. A user can have one or more primary devices.  
 
 One of the ways that users can control their software deployment experience is to use the **Software Center** client interface. The **Software Center** is automatically installed on client computers and is run from the Windows **Start** menu. The **Software Center** lets users manage their own software and do the following tasks:  
 

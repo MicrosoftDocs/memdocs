@@ -3,14 +3,14 @@ title: Import Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that imports the MLS statement as specified by the MLSFilepath parameter into the Configuration Manager database.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 384ee719-c047-49a3-9847-5df0e443245f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: Enable a PXE Service Point Role
 description: You enable the PXE Service Point role, in Configuration Manager, by getting an instance of a specific distribution point and setting the IsPXE value to 1.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 340ab144-d2e3-475b-9a1b-e3346c2be551
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

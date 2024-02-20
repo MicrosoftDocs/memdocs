@@ -3,14 +3,14 @@ description: Learn how to relate an SMS Site Server object with an SMS Identific
 title: SMS_SiteToSiteID_a Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b3b16194-ddd8-4407-8f8b-b6f375f3e89d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

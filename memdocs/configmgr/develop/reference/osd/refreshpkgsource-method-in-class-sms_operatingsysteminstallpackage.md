@@ -3,14 +3,14 @@ title: RefreshPkgSource method in class SMS_OperatingSystemInstallPackage
 titleSuffix: Configuration Manager
 description: The RefreshPkgSource class method, in Configuration Manager, refreshes the package source at all distribution points.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 569a9bd7-735a-4663-b6a1-d8cd753f39fc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

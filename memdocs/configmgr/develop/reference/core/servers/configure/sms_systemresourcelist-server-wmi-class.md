@@ -3,14 +3,14 @@ description: Learn how to map network abstraction layer (NAL) paths, resource ty
 title: SMS_SystemResourceList Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f43f66b7-5ec4-4a47-91f2-cdbd61654147
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -37,7 +37,7 @@ Class SMS_SystemResourceList : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_SystemResourceList` class does not define any methods.  
+ The `SMS_SystemResourceList` class doesn't define any methods.  
 
 ## Properties  
  `InternetEnabled`  
@@ -56,7 +56,7 @@ Class SMS_SystemResourceList : SMS_BaseClass
 
  Qualifiers: None  
 
- `true` if the site system resource instance can serve both internet clients as well as intranet clients. It has meaning only if the `InternetEnabled` property is also set to `true`.  
+ `true` if the site system resource instance can serve both internet clients and intranet clients. It has meaning only if the `InternetEnabled` property is also set to `true`.  
 
  `NALPath`  
  Data type: `String`  

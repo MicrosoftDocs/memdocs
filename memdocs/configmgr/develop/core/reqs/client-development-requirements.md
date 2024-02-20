@@ -3,14 +3,14 @@ title: Client Development Requirements
 titleSuffix: Configuration Manager
 description: The Configuration Manager client can be programmed by using programming languages that follow.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 7114139b-9615-4057-9a60-afa877346b2d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

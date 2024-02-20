@@ -3,14 +3,14 @@ title: Modify Advertisement Properties
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the following example shows how to modify an existing advertisement by using the SMS_Advertisement class and class properties.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 343783ae-0951-47cc-896e-bf74420fcb22
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

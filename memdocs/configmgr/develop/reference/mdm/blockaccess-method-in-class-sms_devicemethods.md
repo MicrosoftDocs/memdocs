@@ -2,14 +2,14 @@
 title: BlockAccess Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d659f70b-c01f-41ab-8f65-1af181a07c9d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, parameters, return values, and requirement for the BlockAccess method.
 ms.reviewer: mstewart,aaroncz 

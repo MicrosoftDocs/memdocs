@@ -2,14 +2,14 @@
 description: Learn how to use the group action in configuration manager to create a submenu for related actions.
 title: Configuration Manager Group Action
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 3156b487-c303-47d5-990f-8af010326acd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

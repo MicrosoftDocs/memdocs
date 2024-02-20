@@ -3,14 +3,14 @@ description: Learn to set the fallback time, in minutes, for a software update p
 title: FallbackSUP Method
 titleSuffix: Configuration Manager
 ms.date: 03/13/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 57854375-a2c6-461b-9631-d0dcb422c3d2
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

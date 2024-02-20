@@ -2,14 +2,14 @@
 title: Software Updates Deployments
 titleSuffix: Configuration Manager
 ms.date: 12/30/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to create software update deployments using the Configuration Manager SDK interfaces to deliver updates to client computers.
 ms.reviewer: mstewart,aaroncz 

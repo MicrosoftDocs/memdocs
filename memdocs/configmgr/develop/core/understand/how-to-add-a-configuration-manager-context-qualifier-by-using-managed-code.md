@@ -3,14 +3,14 @@ title: Add a Context Qualifier by Using Managed Code
 titleSuffix: Configuration Manager
 description: To add a context qualifier by using the managed SMS Provider, use the Context property which is a Dictionary object that holds context qualifiers.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: eef96176-cbf5-4163-bb81-047c22443527
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

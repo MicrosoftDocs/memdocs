@@ -3,14 +3,14 @@ title: SMS_TaskSequence_ApplyOperatingSystemAction Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a task sequence action. It installs a specified operating system image on a target computer.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b6adb15c-6ec0-4558-80b4-b7a831cba086
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,19 +3,19 @@ title: SMS_MachineVariable Class
 titleSuffix: Configuration Manager
 description: The SMS_MachineVariable WMI class defines the settings of a task sequence variable that is unique to a specific computer. 
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5a0951f6-f184-4c00-a7d3-94cd3f466de9
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_MachineVariable Server WMI Class
-The `SMS_MachineVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the settings of a task sequence variable that is unique to a specific computer.  
+The `SMS_MachineVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that defines the settings of a task sequence variable that is unique to a specific computer.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -31,7 +31,7 @@ Class SMS_MachineVariable
 ```  
 
 ## Methods  
- The `SMS_MachineVariable` class does not define any methods.  
+ The `SMS_MachineVariable` class doesn't define any methods.  
 
 ## Properties  
  `IsMasked`  
@@ -41,7 +41,7 @@ Class SMS_MachineVariable
 
  Qualifiers: None  
 
- This property is not currently used.  
+ This property isn't currently used.  
 
  `Name`  
  Data type: `String`  

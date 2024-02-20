@@ -3,14 +3,14 @@ title: Enumerate Administrative Assignments
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: e1d7ac85-f3ab-4b9f-9017-9a7b5769b365
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

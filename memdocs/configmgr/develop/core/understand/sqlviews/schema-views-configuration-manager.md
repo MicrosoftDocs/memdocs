@@ -3,8 +3,8 @@ title: Schema views
 titleSuffix: Configuration Manager
 description: Information about the schema that can be used when creating reports.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: c409ea11-a284-40d2-9a27-9833c876a318
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

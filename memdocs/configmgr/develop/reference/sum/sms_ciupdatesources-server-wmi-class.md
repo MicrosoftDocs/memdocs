@@ -3,14 +3,14 @@ title: SMS_CIUpdateSources Class
 titleSuffix: Configuration Manager
 description: Provides information on all the update sources associated with an [SMS_SoftwareUpdate Server WMI Class]
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 475fd0a6-dd50-4b4c-8b84-ebe32129d40f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
