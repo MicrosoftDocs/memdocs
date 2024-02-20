@@ -288,6 +288,8 @@ This feature applies to:
 - Some settings apply to macOS 10.15 and newer.
 - These settings only apply on devices that have the privacy preferences profile installed before being upgraded.
 
+> [!NOTE]
+> Allowed apps that are configured through a policy will not display in the Privacy + Security pane within System Settings. Only apps that were manually allowed by the user outside of a policy will display in System Settings. 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
