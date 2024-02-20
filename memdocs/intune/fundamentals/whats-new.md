@@ -173,7 +173,7 @@ Applies to:
 
 For more information on the Wi-Fi settings you can configure, see [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
 
-#### Turn Off Copilot in Windows setting in the Windows settings catalog<!-- 26725574 idready wnready -->
+#### Turn Off Copilot in Windows setting in the Windows settings catalog<!-- 26725574  -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
@@ -191,6 +191,22 @@ For more information about configuring Settings Catalog policies in Intune, incl
 Applies to:
 
 - Windows 10 and later
+
+### Device enrollment
+
+#### Await final configuration for macOS automated device enrollment now generally available <!-- 24973562 -->
+
+Now generally available, *await final configuration* enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience works on devices targeted with new and existing enrollment profiles, enrolling via one of these authentication methods:
+
+- Setup Assistant with modern authentication  
+- Setup Assistant (legacy)  
+- Without user device affinity  
+
+Applies to:
+
+- macOS 10.11 and later
+
+For information about how to enable await final configuration, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
 ### Device management
 
