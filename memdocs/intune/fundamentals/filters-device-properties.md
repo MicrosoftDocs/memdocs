@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2024
+ms.date: 02/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -280,49 +280,15 @@ You can use the following app properties in your managed app filter rules:
 
 - **`deviceManagementType` (Device Management Type)**: On Intune enrolled devices, create a filter rule based on the Intune device management type. Devices must be Intune enrolled to use this app property. Select from the following values using the `-eq` and `-ne` operators: 
 
-  - `Unmanaged`
-
-    This property applies to:
-
-    - Android
-    - iOS/iPadOS
-
-  - `Managed`
-
-    This property applies to:
-
-    - iOS/iPadOS
-
-  - `Android device administrator`
-
-    This property applies to:
-
-    - Android
-      
-  - `Android Enterprise`
-
-    This property applies to:
-
-    - Android
-      
-  - `AOSP userless devices`
-
-    This property applies to:
-
-    - Android
-
-  - `AOSP user-associated devices`
-
-    This property applies to:
-
-    - Android
-
-  - `Corporate-owned dedicated devices with Azure AD Shared mode`
-
-    This property applies to:
-
-    - Android
-
+  | Value | Supported platforms |
+  |-----------|------------------------|
+  | `Unmanaged` | - Android <br/>- iOS/iPadOS |
+  | `Managed`   | iOS/iPadOS |
+  | `Android device administrator` | Android |
+  | `Android Enterprise` | Android |
+  | `AOSP userless devices` | Android |
+  | `AOSP user-associated devices` | Android |
+  | `Corporate-owned dedicated devices with Azure AD Shared mode` | Android |
 
   Example:
 

@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/29/2024
+ms.date: 02/05/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -92,37 +92,27 @@ Applies to:
 
 ### New settings available in the Apple settings catalog <!-- 25280353 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.  
 
-**Full Disk Encryption > FileVault**:
-
-- Force Enable In Setup Assistant
-
-Applies to:
-
-- macOS
+#### iOS/iPadOS settings
 
 **Restrictions**:
 
 - Allow Live Voicemail
 - Force Preserve ESIM On Erase
+- Force Classroom Unprompted Screen Observation
 
-Applies to:
+#### macOS settings
 
-- iOS/iPadOS
+**Full Disk Encryption > FileVault**:
+
+- Force Enable In Setup Assistant
 
 **Restrictions**:
 
 - Force Classroom Unprompted Screen Observation
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 ### New setting for updating MAC address randomization on Android Enterprise devices <!-- 24259789 -->
 
