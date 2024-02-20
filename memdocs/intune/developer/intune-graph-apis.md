@@ -8,7 +8,7 @@ author: dougeby
 manager: dougeby
 ms.author: dougeby
 ms.date: 02/23/2023
-ms.topic: overview
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
