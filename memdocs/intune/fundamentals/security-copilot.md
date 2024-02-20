@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2023
+ms.date: 02/08/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf, rashok
+ms.reviewer: rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,7 +36,7 @@ ms.collection:
 > [!IMPORTANT]
 > The information in this article applies to the Microsoft Security Copilot Early Access Program, which is an invite-only paid preview program. Some information in this article relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided in this article.
 
-Security Copilot is a cloud-based AI platform that provides a natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot).
+Security Copilot is a cloud-based AI platform that provides a natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot)
 
 **Security Copilot integrates with Microsoft Intune**.
 
@@ -95,7 +95,7 @@ To view the list of built-in system capabilities for Intune, use the following s
     - Get the differences or comparisons between two devices.
     - Quickly gather details for a device by asking about it.
     - Get detailed information about a user's device enrollments and device compliance for troubleshooting or a security investigation.
-    - And more
+    - And more.
 
 ## Sample prompts for Intune
 
@@ -132,7 +132,7 @@ Get information about a **specific device**, like its group memberships and the 
 **Sample prompts**:
 
 - What groups are DeviceA in?
-- Tell me about DeviceA
+- Tell me about DeviceA.
 - Who is the primary user for DeviceA?
 - Is ContosoApp installed on DeviceA?
 - Show me discovered apps on DeviceA
