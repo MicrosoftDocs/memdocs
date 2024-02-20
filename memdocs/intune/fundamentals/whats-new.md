@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2024
+ms.date: 02/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 <!-- Common categories: -->
 
+<!-- ### Microsoft Intune Suite -->
 <!-- ### App management -->
 <!-- ### Device configuration -->
 <!-- ### Device enrollment -->
@@ -68,7 +69,128 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
-## Week of February 19, 2024
+## Week of February 19, 2024 (Service release 2402)
+
+### App management
+
+#### Additional app configuration permissions for Android apps<!-- 25115278 -->
+
+There are six new permissions that can be configured for an Android app using an app configuration policy. These include the following permissions:
+
+- Allow background body sensor data
+- Media Video (read)
+- Media Images (read)
+- Media Audio (read)
+- Nearby Wifi Devices
+- Nearby Devices
+
+For more information about how to use app config policies for Android apps, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+
+#### Newly available protected apps for Intune<!-- 26607067, 26607087, 26632132  -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Bob HR by Hi Bob Ltd
+- ePRINTit SaaS by ePRINTit USA LLC
+- Microsoft Copilot by Microsoft Corporation
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+#### Update to Intune Management Extension on Windows<!-- 26472055 -->
+
+To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or higher with the Intune Management Extension on Windows clients. If a Windows client continues to use an earlier version of the .NET Framework, the Intune Management Extension will continue to function. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, which is included in Win10 1809 (RS5) and newer. Note that multiple versions of the .NET Framework can coexist on a device.
+
+### Device configuration
+
+#### Use assignment filters on Endpoint Privilege Management (EPM) policies<!-- 25230705  -->
+
+You can use assignment filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy, like targeting devices with a specific OS version or a specific manufacturer.
+
+You can use filters on Endpoint Privilege Management (EPM) policies.
+
+For more information, see:
+
+- [Use filters when assigning your apps, policies, and profiles in Intune](filters.md)
+- [List of platforms, policies, and app types supported by filters in Intune](filters-supported-workloads.md)
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### New settings available in the Apple settings catalog<!-- 25280353  -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+- **Restrictions**
+
+  - Allow Live Voicemail
+  - Force Classroom Unprompted Screen Observation
+  - Force Preserve ESIM On Erase
+
+##### macOS
+
+- **Full Disk Encryption > FileVault** > Force Enable In Setup Assistant
+- **Restrictions** > Force Classroom Unprompted Screen Observation
+
+For more information, see:
+
+- [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md)
+- [Create a policy using settings catalog](../configuration/settings-catalog.md)
+
+#### Import up to 20 custom ADMX and ADML administrative templates<!-- 25780608 -->
+
+You can import custom ADMX and ADML administrative templates in Microsoft Intune. Previously, you could import up to 10 files. Now, you can upload up to 20 files.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For more information on this feature, go to [Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)](../configuration/administrative-templates-import-custom.md).
+
+#### New setting for updating MAC address randomization on Android Enterprise devices <!-- 24259789  -->
+
+There is a new **MAC address randomization** setting on Android Enterprise devices (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
+
+Starting with Android 10, when connecting to a network, devices present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+
+Your options:
+
+- **Use device default**: Intune doesn't change or update this setting. By default, when connecting to a network, devices present a randomized MAC address instead of the physical MAC address. Any updates made by the user to the setting persist.
+
+- **Use randomized MAC**: Enables MAC address randomization on devices. When connecting to a new network, devices present a randomized MAC address, instead of the physical MAC address. If the user changes this value on their device, it resets to **Use randomized MAC** on the next Intune sync.
+
+- **Use device MAC**: Forces devices to present their actual Wi-Fi MAC address instead of a random MAC address. This setting allows devices to be tracked by their MAC address. Only use this value when necessary, such as for network access control (NAC) support. If the user changes this value on their device, it resets to **Use device MAC** on the next Intune sync.
+
+Applies to:
+
+- Android 13 and newer
+
+For more information on the Wi-Fi settings you can configure, see [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
+
+#### Turn Off Copilot in Windows setting in the Windows settings catalog<!-- 26725574 idready wnready -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **Windows** for platform > **Settings catalog** for profile type.
+
+- **Windows AI > Turn Off Copilot in Windows (User)**
+
+  - If you enable this policy setting, users can't use Copilot. The Copilot icon won't appear on the taskbar.
+  - If you disable or don't configure this policy setting, users can use Copilot when it's available to them.
+
+This setting uses the [Policy CSP - WindowsAI](/windows/client-management/mdm/policy-csp-windowsai).
+
+For more information about configuring Settings Catalog policies in Intune, including user scope vs. device scope, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+
+- Windows 10 and later
 
 ### Device management
 
@@ -77,6 +199,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 In government clouds, there's a new device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster.
 
 If you want to try the new experience before your tenant is updated, go to **Devices** > **Overview**, select the **Preview upcoming changes to Devices and provide feedback** notification banner, and select **Try it now**.
+
+### Tenant administration
+
+#### Customization pane support for excluding groups<!-- 17654599 -->
+
+The Customization pane now supports selecting groups to exclude when assigning policies. You will find this setting in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**.
+
+For more information, see [Assign policies in Microsoft Intune](../configuration/device-profile-assign.md).
 
 ## Week of January 29, 2024
 
