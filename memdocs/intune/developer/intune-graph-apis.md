@@ -25,7 +25,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 # How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph
