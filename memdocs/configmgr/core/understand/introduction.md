@@ -11,7 +11,9 @@ author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+    - tier3
+    - essentials-overview
 ms.reviewer: mstewart,aaroncz 
 ---
 

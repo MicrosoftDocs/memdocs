@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/03/2023
+ms.date: 2/14/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -49,9 +49,12 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 -->
 
-<!--
-## End user experience
--->
+<!-- ***********************************************-->
+## Device management
+
+### Upgrade Cloud PCs to more storage, RAM, and CPU<!--48540819-->
+
+By using the upcoming Resize action, you'll be able to upgrade Cloud PCs to more storage, RAM, and CPU.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot

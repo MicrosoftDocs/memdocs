@@ -152,7 +152,7 @@ After onboarding a device using the configuration package, you don't need to do 
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
 6. On the **Configuration settings** page, configure the following options for **Endpoint Detection and Response**:
 
-   - **Microsoft Defender for Endpoint client configuration package type**: Select *Auto from connector* to use the onboarding package (blob) from your Defender for Endpoint deployment.
+   - **Microsoft Defender for Endpoint client configuration package type**: Select *Auto from connector* to use the onboarding package (blob) from your Defender for Endpoint deployment. If you are onboarding to a different or disconnected Defender for Endpoint deployment, select *Onboard* and paste the text from the WindowsDefenderATP.onboarding blob file into the *Onboarding (Device)* field.
    - **Sample Sharing**: Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
    - **[Deprecated] Telemetry Reporting Frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender for Endpoint service more frequently.
 

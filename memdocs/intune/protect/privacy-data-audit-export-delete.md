@@ -30,6 +30,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - privacy
+- essentials-privacy
 ---
 
 # Audit, export, or delete personal data in Intune
