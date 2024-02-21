@@ -70,7 +70,7 @@ General prerequisites for Remote Help, are listed [here](remote-help.md#prerequi
 The prerequisites for Remote Help on Windows are:
 
 - Set up the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
-- The helper and sharer can be on a enrolled or unenrolled device.
+- The helper and sharer can be on an enrolled or unenrolled device.
 
 To remotely start a session: 
 - The helper can be on an enrolled or unenrolled device.
