@@ -120,7 +120,6 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 
 ### Intune dependencies
 
-
 #### WNS dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
@@ -128,6 +127,7 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 | 171 | MEM - WNS Dependencies | Default<BR>Required | False | `*.notify.windows.com`<BR>`*.wns.windows.com`<BR>`sinwns1011421.wns.windows.com`<BR>`sin.notify.windows.com`<BR> | **TCP:** 443 |
 
 For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+
 #### Delivery optimization dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
@@ -186,9 +186,7 @@ ID |Desc |Category |ER |Addresses |Ports|
 150 | Office Customization Service provides Office 365 ProPlus deployment configuration, application settings, and cloud based policy management. | Default | False |`*.officeconfig.msocdn.com`<BR>`config.office.com`| **TCP:** 443|
 59 | Identity supporting services & CDNs. | Default<BR>Required | False |`enterpriseregistration.windows.net`<BR>| **TCP:** 80, 443|
 
-For More information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) 
-
-
+For More information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
 
 You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to. When you run the script, the URL list in the script output can be different then the URLs in the following table. At a minimum, make sure you include the URLs in the following table.
 
@@ -286,7 +284,6 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 |AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net |
 | AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net |
 | AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
-
 
 ## Microsoft Store
 
@@ -439,6 +436,7 @@ For more information about configuring Defender for Endpoint connectivity, see [
 
 Allow the following hostnames through your firewall to support Defender for Endpoint security settings management.
 For communication between clients and the cloud service:
+
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
   > [!IMPORTANT]
@@ -449,6 +447,7 @@ For communication between clients and the cloud service:
 Allow the following hostnames through your firewall to support Endpoint Privilege Management.
 
 For communication between clients and the cloud service:
+
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 - \*.events.data.microsoft.com - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
 
