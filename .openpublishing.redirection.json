@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/fundamentals/migration-guide-app-protection-policies.md",
+      "redirect_url": "/mem/intune/apps/app-configuration-policies-overview",
+      "redirect_document_id": false 
+    },    
+    {
+      "source_path": "memdocs/intune/apps/windows-store-for-business.md",
+      "redirect_url": "/mem/intune/apps/store-apps-microsoft",
+      "redirect_document_id": false 
+    },    
+    {
+      "source_path": "memdocs/intune/apps/app-sideload-windows.md",
+      "redirect_url": "/mem/intune/apps/lob-apps-windows",
+      "redirect_document_id": false 
+    },    
+    {
       "source_path": "memdocs/intune/fundamentals/microsoft-intune-admin-center-devices.md",
       "redirect_url": "/mem/intune/fundamentals/public-preview",
       "redirect_document_id": false 
