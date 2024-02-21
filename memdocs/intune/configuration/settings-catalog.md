@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, beflamm
+ms.reviewer: mikedano, beflamm, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,7 +27,6 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-zone_pivot_groups: create-policy
 ---
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices

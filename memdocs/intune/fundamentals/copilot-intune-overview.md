@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2024
+ms.date: 02/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,17 +52,19 @@ This article describes the Intune features that can use Copilot.
 
 ## Prerequisites
 
-- Copilot in Microsoft Intune is licensed with Microsoft Copilot for Security. There aren't any additional user licensing requirements for using Copilot in Intune.
+To use Copilot in Intune, you need the following:
 
-  For more information on the Microsoft Copilot for Security licensing requirements, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
+- **Copilot license**: Copilot in Microsoft Intune is licensed with Microsoft Copilot for Security. There aren't any additional licensing requirements for using Copilot in Intune.
 
-- To use Copilot in Intune, you need the following RBAC roles:
-  
-  - Policy and profile manager: If you're using Copilot to create or manage Intune policies, then at a minimum, sign in with an account that is a member of this built-in Intune role.
-  - Intune Service Administrator ??
-  - Intune Role Administrator ??
+  For more information on Microsoft Copilot licensing, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
-  Access to Copilot in Intune is managed through RBAC roles in Copilot for Security, not Intune??
+- **Copilot configuration**: Microsoft Copilot must be set up in your Microsoft Entra tenant. For the specific setup tasks, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
+
+  To confirm Copilot is set up, you can check the status in the Intune admin center > **Tenant administration** > **Copilot**.
+
+  INSERT SCREEN SHOT
+
+- **Copilot roles**: Access to Copilot in Intune is managed through Microsoft Entra ID. To use Copilot in Intune, you/your admin team must be a member of the appropriate role in Entra ID. There isn't a built-in Intune role that has access to Copilot. For the specific Entra roles, and what they can do with Copilot, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
 ## Tips for good prompts
 
@@ -103,7 +105,7 @@ TO DO: also update:
 - /configuration/device-profile-troubleshoot.md
 
 
-## Device-specific info
+## Device details and troubleshooting
 
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.
@@ -111,6 +113,8 @@ TO DO: also update:
 3. Select **Copilot** and then select one of the options, like **Explore device**:
 
     :::image type="content" source="./media/copilot-intune-overview/copilot-select-device.png" alt-text="Screenshot that shows selecting any device and then select Copilot in Microsoft Intune and Intune admin center.":::
+
+For more information on using Copilot with the settings catalog, go to [Use Microsoft Copilot for Security to troubleshoot devices in Microsoft Intune](../fundamentals/copilot-devices.md).
 
 ## Microsoft Copilot for Security and Intune
 
