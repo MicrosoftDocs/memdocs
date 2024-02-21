@@ -211,9 +211,9 @@ For more information about macOS account settings, see [Create an Apple enrollme
 
 Now generally available, *await final configuration* enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies are installed on devices. The locked experience works on devices targeted with new and existing enrollment profiles, enrolling via one of these authentication methods:
 
-- Setup Assistant with modern authentication  
-- Setup Assistant (legacy)  
-- Without user device affinity  
+- Setup Assistant with modern authentication
+- Setup Assistant (legacy)
+- Without user device affinity
 
 Applies to:
 
