@@ -25,7 +25,7 @@ ms.collection:
 
 # Add Win32 app supersedence
 
-After you've [added a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This topic provides an overview of the supersedence feature.
+After you [add a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This topic provides an overview of the supersedence feature.
 
 > [!IMPORTANT]
 > Supersedence, which enables you to update and replace a version of a Win32 app, doesn't currently allow you to interchange the Win32 app with an app dependency. For more information about app dependencies, see [Dependencies](../apps/apps-win32-add.md#step-5-dependencies).
@@ -51,14 +51,14 @@ The following steps help you create a supersedence relationship between apps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**, and then select a Win32 app from the list. If you haven't added a Win32 app, you can follow the steps to [add a Win32 app to Intune](apps-win32-add.md).
-3. After you have selected the existing Win32 app, click **Properties**.
+3. After you select the existing Win32 app, click **Properties**.
 4. In the **Supersedence** section, click **Edit** > **Add** to choose apps that should be superseded.
 
     > [!NOTE]
     > There can be a maximum of 10 nodes in a supersedence relationship in Intune.
 
 5. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
-6. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it isn't necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
+6. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command is sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it isn't necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
 7. Once this step is finalized, click **Review + save** > **Save**.
 
     > [!IMPORTANT]
