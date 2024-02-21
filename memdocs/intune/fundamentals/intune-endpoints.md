@@ -77,7 +77,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 
 The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
 
-You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to. When you run the script, the URL list in the script output can be different then the URLs in the following table. At a minimum, make sure you include the URLs in the following table.
+You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to. When you run the script, the URL list in the script output can be different than the URLs in the following table. At a minimum, make sure you include the URLs in the following table.
 
 |FQDN    |Associated Service      |
 |-----------|----------------|
