@@ -94,7 +94,7 @@ In the following scenarios, you should review app detection rules after performi
 
 | Update   type | Update description and details |
 |-|-|
-| In-place   app update | <ul><li>With an   in-place app update, admin can only swap the app content, update the   metadata, and change the detection and install commands.</li>      <li>Admin cannot change any of the fields that aren't stored on the   app with an in-place app update.  For   example, the admin cannot modify targeting at the same time as an   update.</li>      <li>Admin can only perform the in-place app update one app at a   time.</li></ul> |
+| In-place   app update | <ul><li>With an   in-place app update, admin can only swap the app content, update the   metadata, and change the detection and install commands.</li>      <li>Admin can't change any of the fields that aren't stored on the   app with an in-place app update.  For   example, the admin can't modify targeting at the same time as an   update.</li>      <li>Admin can only perform the in-place app update one app at a   time.</li></ul> |
 | Supersedence   app update | <ul><li>Admin can   update an app in its entirety with a new set of   configurations.</li>      <li>Admin can elect to send down an uninstall command to uninstall   previous app versions.</li>      <li>Admin can update devices containing multiple app versions to the   newest app version with one Supersedence configuration. The admin also   maintains access to older version of the app.</li></ul> |
 
 ### Understand interactions between dependencies and supersedence
