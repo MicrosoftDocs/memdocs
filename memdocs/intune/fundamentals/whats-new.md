@@ -192,6 +192,17 @@ Applies to:
 
 - Windows 10 and later
 
+#### Windows Autopilot self-deploying mode and Windows Autopilot for pre-provisioned deployment are now generally available!<!-- 26780755  -->
+
+Windows Autopilot self-deploying mode enables you to deploy Windows devices with little to no user interaction. Once the device connects to network, the device provisioning process starts automatically: the device joins Entra ID, enrolls in Intune, and syncs all device-based configurations targeted to the device. Self-deploying mode ensures that the user cannot access desktop until all device-based configuration is applied. The Enrollment status page is displayed in OOBE so users can track the status of the deployment. For more information, see [Windows Autopilot self-deploying mode](autopilot/self-deploying).
+
+Windows Autopilot for pre-provisioned deployment is used by organizations which want to ensure devices are business-ready before the user accesses them. With pre-provisioning, admins, partners, or OEMs can access a technician flow from the Out-of-box experience (OOBE) and kick off device setup. Next, the device is sent to the user who completes provisioning in the user phase. Pre-provisioning delivers the majority of the configuration in advance so the end user can get to the desktop faster. For more information, see  [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision).
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
 ### Device enrollment
 
 #### New local primary account configuration for macOS automated device enrollment <!-- 5877061  -->
