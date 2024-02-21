@@ -111,13 +111,6 @@ Applies to:
 
 ## Device enrollment
 
-### New local primary account configuration for macOS automated device enrollment (ADE) <!-- 5877061 -->
-
-Configure local primary account settings for Macs enrolling in Intune via Apple automated device enrollment (ADE). These settings, supported on devices running macOS 10.11 and later, will be available in new and existing enrollment profiles under the new **Account Settings** tab. For this feature to work, the enrollment profile must be configured with user-device affinity and one of the following authentication methods:
-
-- Setup Assistant with modern authentication  
-- Setup Assistant (legacy)  
-
 ### RBAC changes coming to enrollment settings for Windows Hello for Business<!-- 25661866   -->
 
 We're updating RBAC in the enrollment area for Windows Hello for Business. Enrollment settings related to Windows Hello for Business will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to edit enrollment settings.
