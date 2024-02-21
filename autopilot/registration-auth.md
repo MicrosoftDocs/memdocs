@@ -25,6 +25,9 @@ ms.topic: reference
 
 This article describes how a cloud service provider (CSP) partner (direct bill, indirect provider, or indirect reseller) or an OEM can get customer authorization to register Windows Autopilot devices on the customer's behalf.
 
+> [!NOTE]
+> As per [Partner Center - December 2023 announcements](https://learn.microsoft.com/en-us/partner-center/announcements/2023-december#:~:text=Device%20management%20will,for%20more%20details) Device management will require GDAP relationships starting January 31, 2024. To ensure a seamless experience, Microsoft recommends the Directory Reader as the least privileged role for this action. Review how to upload devices to a new batch, update devices with a policy, and upload devices to an existing batch for more details.
+
 ## CSP authorization
 
 CSP partners can get customer authorization to register Windows Autopilot devices on the customer's behalf per the following restrictions:
