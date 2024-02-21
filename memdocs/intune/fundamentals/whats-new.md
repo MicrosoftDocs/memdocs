@@ -192,16 +192,24 @@ Applies to:
 
 - Windows 10 and later
 
-#### Windows Autopilot self-deploying mode and Windows Autopilot for pre-provisioned deployment are now generally available!<!-- 26780755  -->
+#### Windows Autopilot self-deploying mode is now generally available<!-- 26780755  -->
 
-Windows Autopilot self-deploying mode enables you to deploy Windows devices with little to no user interaction. Once the device connects to network, the device provisioning process starts automatically: the device joins Entra ID, enrolls in Intune, and syncs all device-based configurations targeted to the device. Self-deploying mode ensures that the user cannot access desktop until all device-based configuration is applied. The Enrollment status page is displayed in OOBE so users can track the status of the deployment. For more information, see [Windows Autopilot self-deploying mode](autopilot/self-deploying).
+Windows Autopilot self-deploying mode is now generally available and out of preview. Windows Autopilot self-deploying mode enables you to deploy Windows devices with little to no user interaction. Once the device connects to network, the device provisioning process starts automatically: the device joins Microsoft Entra ID, enrolls in Intune, and syncs all device-based configurations targeted to the device. Self-deploying mode ensures that the user can't access desktop until all device-based configuration is applied. The Enrollment Status Page (ESP) is displayed during OOBE so users can track the status of the deployment. For more information, see:
 
-Windows Autopilot for pre-provisioned deployment is used by organizations which want to ensure devices are business-ready before the user accesses them. With pre-provisioning, admins, partners, or OEMs can access a technician flow from the Out-of-box experience (OOBE) and kick off device setup. Next, the device is sent to the user who completes provisioning in the user phase. Pre-provisioning delivers the majority of the configuration in advance so the end user can get to the desktop faster. For more information, see  [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision).
+- [Windows Autopilot self-deploying mode](self-deploying.md).
+- [Step by step tutorial for Windows Autopilot self-deploying mode in Intune](tutorial/self-deploying/self-deploying-workflow.md).
 
-Applies to:
+This information is also published in [Windows Autopilot: What's new](/autopilot/windows-autopilot-whats-new).
 
-- Windows 10
-- Windows 11
+#### Windows Autopilot for pre-provisioned deployment is now generally available<!-- 26780755  -->
+
+Windows Autopilot for pre-provisioned deployment is now generally available and out of preview. Windows Autopilot for pre-provisioned deployment is used by organizations that want to ensure devices are business-ready before the user accesses them. With pre-provisioning, admins, partners, or OEMs can access a technician flow from the Out-of-box experience (OOBE) and kick off device setup. Next, the device is sent to the user who completes provisioning in the user phase. Pre-provisioning delivers most the configuration in advance so the end user can get to the desktop faster. For more information, see:
+
+- [Windows Autopilot for pre-provisioned deployment](pre-provision.md).
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](tutorial/pre-provisioning/azure-ad-join-workflow.md)
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join in Intune](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md).
+
+This information is also published in [Windows Autopilot: What's new](/autopilot/windows-autopilot-whats-new).
 
 ### Device enrollment
 
