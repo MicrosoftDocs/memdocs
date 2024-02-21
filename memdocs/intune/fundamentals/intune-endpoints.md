@@ -120,41 +120,26 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 
 ### Intune dependencies
 
-<!--
-ID |Desc |Category |ER |Addresses |Ports|Notes|
--- |-- |-----|--- | --------------| --------------------------------|------------|
-171 | MEM - WNS Dependencies| Default<BR>Required | False |`*.notify.windows.com`<BR>`*.wns.windows.com`<BR>`sinwns1011421.wns.windows.com`<BR>`sin.notify.windows.com`<BR> | **TCP:** 443|
-172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False |`*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.emdl.ws.microsoft.com`<BR>`kv801.prod.do.dsp.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 443|For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP or 3544 for NAT traversal (optionally Teredo). For client-service communication, it uses HTTP or HTTPS over port 80/443. To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting)|
-178 | MEM - Apple Dependencies| Default<BR>Required | False |`itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR>| **TCP:** 80, 443, 5223|For more information, see [Use Apple products on enterprise networks](https://support.apple.com/HT210060), [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).|
-179 | MEM - Android AOSP Dependency| Default<BR>Required | False |`intunecdnpeasd.azureedge.net`<BR> | **TCP:** 443|Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android). |
-186 | Microsoft Azure Attestation| Default<BR>Required | False |`intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net`<BR> | **TCP:** 443|
--->
+
 #### WNS dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 171 | MEM - WNS Dependencies | Default<BR>Required | False | `*.notify.windows.com`<BR>`*.wns.windows.com`<BR>`sinwns1011421.wns.windows.com`<BR>`sin.notify.windows.com`<BR> | **TCP:** 443 |
 
+For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 #### Delivery optimization dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.emdl.ws.microsoft.com`<BR>`kv801.prod.do.dsp.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 443 |
 
-##### Port requirements
-
-For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP or 3544 for NAT traversal (optionally Teredo).
+**Port requirements** - For peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP or 3544 for NAT traversal (optionally Teredo).
 For client-service communication, it uses HTTP or HTTPS over port 80/443.
 
-##### Proxy requirements
+**Proxy requirements** - To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting).
 
-To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting).
-
-##### Firewall requirements  
-
-Allow the following hostnames through your firewall to support Delivery Optimization.
-
-For communication between clients and the Delivery Optimization cloud service:
+**Firewall requirements** - Allow the following hostnames through your firewall to support Delivery Optimization. For communication between clients and the Delivery Optimization cloud service:
 
 - \*.do.dsp.mp.microsoft.com
 
@@ -177,21 +162,15 @@ For more information, see [Use Apple products on enterprise networks](https://su
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR> | **TCP:** 443 |
 
-##### Android port information
-
-Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android).
-
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
 Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
-##### Google Android Enterprise
+**Android port information** - Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android).
 
-Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
+**Google Android Enterprise** - Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
 
-##### Android push notification
-
-Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+**Android push notification** - Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
 
 #### Microsoft Azure Attestation
 
@@ -308,6 +287,7 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 | AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net |
 | AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
 
+
 ## Microsoft Store
 
 Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – will need access to these endpoints.
@@ -344,11 +324,7 @@ For details, see the following resource:
 
 - [Microsoft Connected Cache content and services endpoints](/windows/deployment/do/delivery-optimization-endpoints)
 
-## Windows Push Notification Services (WNS)  
-
-For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
-
-### Migrating device health attestation compliance policies to Microsoft Azure attestation
+## Migrating device health attestation compliance policies to Microsoft Azure attestation
 
 If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices will begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
 However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.  
