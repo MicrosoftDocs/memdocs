@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/19/2024
+ms.date: 02/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -282,7 +282,7 @@ You can use the following app properties in your managed app filter rules:
 
   | Value | Supported platforms |
   |-----------|------------------------|
-  | `Unmanaged` | - Android <br/>- iOS/iPadOS |
+  | `Unmanaged` | Android <br/>iOS/iPadOS |
   | `Managed`   | iOS/iPadOS |
   | `Android device administrator` | Android |
   | `Android Enterprise` | Android |
