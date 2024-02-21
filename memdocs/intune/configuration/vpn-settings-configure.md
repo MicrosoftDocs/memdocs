@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/25/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -57,7 +57,7 @@ This feature applies to:
   >
   > - A Windows 11 device doesn't have an existing VPN profile assigned, and it receives one Intune VPN profile.
   > - Windows 11 devices with a VPN profile assigned, and are assigned another VPN profile with no other profile changes.
-  > - Windows 11 now has a requirement that either ALL or NONE of the IPSEC parameters (IKE Security Association Parameters  and Child Security Association Parameters ) need to be populated for the device tunnel.
+  > - For Windows 11 devices, you enter all of the settings or none of the settings in [IKE Security Association Parameters](vpn-settings-windows-10.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](vpn-settings-windows-10.md#child-security-association-parameters-ikev2-only). If you only configure one of the IKE or Child Security Association Parameters settings, then there's loss of VPN functionality. Windows 11 requires that either all of the IPSEC parameters or none of the IPSEC parameters be populated for the VPN device tunnel to work.
   > - A Windows 10 device upgrades to Windows 11, and if there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
   >
   > This issue and warning remain until Windows updates the Windows 11 client that resolves this issue.
