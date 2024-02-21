@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 02/16/2024
+ms.date: 02/23/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
