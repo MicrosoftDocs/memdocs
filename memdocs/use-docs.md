@@ -7,9 +7,9 @@ ms.service: microsoft-intune
 ms.subservice: 
 ms.topic: how-to
 ms.localizationpriority: high
-author: dougeby
-ms.author: dougeby
-manager: dansimp
+author: Smritib17
+ms.author: smbhardwaj
+manager: dougeby
 ms.collection: highpri
 ---
 

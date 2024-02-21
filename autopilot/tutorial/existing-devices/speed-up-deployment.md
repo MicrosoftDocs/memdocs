@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speed up the deployment process (optional)
 description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speed up the deployment process (optional).
-ms.prod: windows-client
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
-ms.technology: itpro-deploy
+ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices: Speed up the deployment process (optional)
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)

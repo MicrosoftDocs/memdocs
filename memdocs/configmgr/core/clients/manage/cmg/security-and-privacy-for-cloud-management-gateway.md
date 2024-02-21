@@ -7,8 +7,8 @@ ms.author: baladell
 manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
@@ -26,7 +26,7 @@ The CMG accepts and manages connections from CMG connection points. It uses mutu
 
 The CMG accepts and forwards client requests using the following methods:
 
-- Pre-authenticates connections using mutual HTTPS with the PKI-based client authentication certificate or Azure Active Directory (Azure AD).
+- Pre-authenticates connections using mutual HTTPS with the PKI-based client authentication certificate or Microsoft Entra ID.
 
   - IIS on the CMG VM instances verifies the certificate path based on the trusted root certificates that you upload to the CMG.
 
@@ -60,11 +60,11 @@ The CMG resources in Azure are part of the Azure platform as a service (PaaS). T
 
 #### Service principals and authentication
 
-The service principals are authenticated by the server app registration in Azure AD. This app is also known as the _web app_. You create this app registration automatically when you create the CMG, or manually by an Azure administrator in advance. For more information, see [Manually register Azure AD apps for the CMG](manually-register-azure-ad-apps.md).
+The service principals are authenticated by the server app registration in Microsoft Entra ID. This app is also known as the _web app_. You create this app registration automatically when you create the CMG, or manually by an Azure administrator in advance. For more information, see [Manually register Microsoft Entra apps for the CMG](manually-register-azure-ad-apps.md).
 
 The secret keys for the Azure apps are encrypted and stored in the Configuration Manager site database. As part of the setup process, the server app has **Read Directory Data** permission to the Microsoft Graph API. It also has the contributor role on the resource group that hosts the CMG. Each time the app needs to access resources like Microsoft Graph, it gets an access token from Azure, which it uses to access the cloud resource.
 
-Azure AD can automatically rotate the secret key for these apps, or you can do it manually. When the secret key changes, you need to [renew the secret key](../../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew) in Configuration Manager.
+Microsoft Entra ID can automatically rotate the secret key for these apps, or you can do it manually. When the secret key changes, you need to [renew the secret key](../../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew) in Configuration Manager.
 
 For more information, see [Purpose of app registrations](configure-azure-ad.md#purpose-of-app-registrations).
 
@@ -92,7 +92,7 @@ Publish your PKI's certificate revocation list (CRL) for internet-based clients 
 
 This CMG option verifies the client authentication certificate.
 
-- If the client is using Azure AD or Configuration Manager token-based authentication, the CRL doesn't matter.
+- If the client is using Microsoft Entra ID or Configuration Manager token-based authentication, the CRL doesn't matter.
 
 - If you use PKI, and externally publish the CRL, then enable this option (recommended).
 
@@ -126,7 +126,7 @@ For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-desig
 If you have devices that have one or more of the following conditions, consider using Configuration Manager token-based authentication:
 
 - An internet-based device that doesn't often connect to the internal network
-- The device isn't able to join Azure AD
+- The device isn't able to join Microsoft Entra ID
 - You don't have a method to install a PKI-issued certificate
 
 With token-based authentication, the site automatically issues tokens for devices that register on the internal network. You can create a bulk registration token for internet-based devices. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).<!-- SCCMDocs#2331 -->

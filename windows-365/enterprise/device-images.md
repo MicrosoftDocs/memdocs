@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/10/2023
+ms.date: 12/08/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -51,7 +51,7 @@ Both marketplace and custom images must meet the following requirements:
 A custom image must also meet the following extra requirements:
 
 - Exist in an Azure subscription.
-- Is stored as a managed image in Azure.
+- Is stored as a [managed image](/azure/virtual-machines/capture-image-resource) in Azure.
 
 Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
@@ -66,8 +66,8 @@ There are two sets of images available to choose from across the different versi
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
-  - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
-  - Microsoft Outlook first-time configuration settings (auto log on based on Azure AD profile, support for other profiles).
+  - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Microsoft Entra ID and synchronization.
+  - Microsoft Outlook first-time configuration settings (auto log on based on Microsoft Entra profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
@@ -105,8 +105,8 @@ When you upload a custom device image, Windows 365:
 2. Runs the following validation checks on the image:
     1. Verifies all the Windows 365 image requirements are met.
     2. Deploys a virtual machine and makes sure that the images can be booted and provisioned as a Cloud PC.
-3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
-4. If you have an Azure AD Join connection, Windows 365 replicates the image to the provisioned region during provisioning.
+3. If you have a Microsoft Entra hybrid join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
+4. If you have a Microsoft Entra join connection, Windows 365 replicates the image to the provisioned region during provisioning.
 
 <!-- ########################## -->
 ## Next steps

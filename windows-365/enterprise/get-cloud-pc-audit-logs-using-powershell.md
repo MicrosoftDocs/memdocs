@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2023
+ms.date: 10/20/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Get Windows 365 audit logs by using PowerShell
+# Get Windows 365 audit logs
 
 Audit logs for Windows 365 include a record of activities that generate a change in a Cloud PC. Create, update (edit), delete, assign, and remote actions all create audit events that administrators can review for most Cloud PC actions that go through Graph. By default, auditing is enabled for all customers. It can't be disabled.
 
@@ -42,14 +42,26 @@ Users with the following permissions can review audit logs:
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Audit data - Read** permissions
 
+## Send Windows 365 audit logs to diagnostic settings in Azure Monitor
+
+Azure monitor's diagnostic settings let you export platform logs and metrics to the destination of your choice. You can create up to five different diagnostic settings to send different logs and metrics to independent destinations. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/essentials/diagnostic-settings).
+
+### To create a diagnostic setting for sending logs
+
+1. Make sure you have an Azure account.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Diagnostic settings** (under **Azure monitor**)> **Add Diagnostic settings**.
+3. Under **Logs**, select **Windows365AuditLogs**.
+4. Under **Destination details**, select the destination and provide details.
+5. Select **Save**.
+
 ## Use Graph API and PowerShell to retrieve audit events
 
 To get audit log events for up to seven days for your Windows 365 tenant, follow these steps:
 
 ### Install the SDK
 
-1. In PowerShell, run this command: ```Install-Module Microsoft.Graph -Scope CurrentUser```
-2. Verify the installation by running this command:```Get-InstalledModule Microsoft.Graph```
+1. In PowerShell, run this command: ```Install-Module Microsoft.Graph.Beta -Scope CurrentUser -AllowClobber```
+2. Verify the installation by running this command:```Get-InstalledModule Microsoft.Graph.Beta```
 3. To get all Cloud PC Graph endpoints, run this command: ```Get-Command -Module Microsoft.Graph* *virtualEndpoint*```
 
 ### Sign in 
@@ -68,21 +80,21 @@ You can view audit data in multiple ways.
 
 To get the entire list of audit events including the actor (person who performed the action), use the following command:
 
-```Get-MgDeviceManagementVirtualEndpointAuditEvent | Select-Object -Property Actor,ActivityDateTime,ActivityType,ActivityResult -ExpandProperty Actor | Format-Table UserId, UserPrincipalName, ActivityType, ActivityDateTime, ActivityResult```
+```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent | Select-Object -Property Actor,ActivityDateTime,ActivityType,ActivityResult -ExpandProperty Actor | Format-Table UserId, UserPrincipalName, ActivityType, ActivityDateTime, ActivityResult```
 
 #### Get a list of audit events
 
 To get a list of audit events without the audit actor, use the following command:
 
-```Get-MgDeviceManagementVirtualEndpointAuditEvent```
+```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent```
 
-To get all the events, use the **-All** parameter: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -All```
+To get all the events, use the **-All** parameter: ```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -All```
 
-To get only the top N events, use the following parameters: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -All -Top {TopNumber}```
+To get only the top N events, use the following parameters: ```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -All -Top {TopNumber}```
 
 #### Get a single event by event ID
 
-You can use the following command to get a single audit event, where you'll need to provide the {event ID}: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
+You can use the following command to get a single audit event, where you'll need to provide the {event ID}: ```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
 
 <!-- ########################## -->
 ## Next steps

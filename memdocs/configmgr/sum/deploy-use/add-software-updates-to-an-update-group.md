@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Manually or automatically add software updates to a software update group in your environment.
 ms.date: 07/12/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 manager: apoorvseth
 author: BalaDelli
 ms.author: baladell

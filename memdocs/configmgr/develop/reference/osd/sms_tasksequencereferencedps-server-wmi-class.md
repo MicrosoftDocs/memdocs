@@ -3,8 +3,8 @@ title: SMS_TaskSequenceReferenceDps Class
 titleSuffix: Configuration Manager
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequenceReferenceDps server class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: de43cd2c-26e6-426a-8dd9-4977fcdea31c
 author: Banreet

@@ -34,13 +34,13 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. You can assign roles for your Cloud PCs by using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 will transparently assign the required built-in roles on your Azure Subscription, resource group, and virtual network associated with the ANC, if they're not already assigned.
+When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 will transparently assign the required built-in roles on your Azure Subscription, resource group, and virtual network associated with the ANC, if they're not already assigned. If you only have the Subscription Reader role, these assignments won't be done automatically. Instead, you'll need to manually configure the required built-in roles to the Windows First Party App in Azure.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
 ## Windows 365 Administrator role
 
-Windows 365 supports the Windows 365 Administrator role available for role assignment through the Microsoft Admin Center and Azure Active Directory (Azure AD). With this role, you can manage Windows 365 Cloud PCs for both Enterprise and Business editions. The Windows 365 Administrator role can grant more scoped permissions than other Azure AD roles like Global Administrator. For more information, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+Windows 365 supports the Windows 365 Administrator role available for role assignment through the Microsoft Admin Center and Microsoft Entra ID. With this role, you can manage Windows 365 Cloud PCs for both Enterprise and Business editions. The Windows 365 Administrator role can grant more scoped permissions than other Microsoft Entra roles like Global Administrator. For more information, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
 ## Cloud PC built-in roles
 

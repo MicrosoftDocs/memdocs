@@ -2,7 +2,7 @@
 # required metadata
 
 title: Update Windows BIOS features using MDM policies in Microsoft Intune
-description: Learn more about the Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings in Microsoft Intune. To use DFCI profiles, create Azure AD security groups, the Windows Autopilot deployment profile, and the Enrollment State Page profile.
+description: Learn more about the Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings in Microsoft Intune. To use DFCI profiles, create Microsoft Entra security groups, the Windows Autopilot deployment profile, and the Enrollment State Page profile.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -58,9 +58,9 @@ When you reinstall an older Windows version, install a separate OS, or format th
 
   For more information on Windows Autopilot, including any requirements, go to [Windows Autopilot registration overview](/autopilot/registration-overview).
 
-## Create your Azure AD security groups
+## Create your Microsoft Entra security groups
 
-Windows Autopilot deployment profiles are assigned to Azure AD security groups. Be sure to create groups that include your DFCI-supported devices. For DFCI devices, most organization may create device groups, instead of user groups. Consider the following scenarios:
+Windows Autopilot deployment profiles are assigned to Microsoft Entra security groups. Be sure to create groups that include your DFCI-supported devices. For DFCI devices, most organization may create device groups, instead of user groups. Consider the following scenarios:
 
 - Human Resources (HR) have different Windows devices. For security reasons, you don't want anyone in this group to use the camera on the devices. In this scenario, you can create an HR security users group so the policy applies to users in the HR group, whatever the device type.
 
@@ -94,11 +94,11 @@ This profile includes the DFCI settings you configure.
 > Configuring and assigning DFCI profiles can lock the device beyond repair. So, pay attention to the values you configure.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
    - **Platform**: Choose **Windows 10 and later**.
-   - **Profile**: Select **Templates** > **Device Firmware Configuration Interface**.
+   - **Profile type**: Select **Templates** > **Device Firmware Configuration Interface**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -123,7 +123,7 @@ The next time each device checks in, the policy is applied.
 
 ## Assign the profiles, and reboot
 
-Be sure to [assign](../configuration/device-profile-assign.md) the profiles to your Azure AD security groups that include your DFCI devices. The profile can be assigned when it's created, or after.
+Be sure to [assign](../configuration/device-profile-assign.md) the profiles to your Microsoft Entra security groups that include your DFCI devices. The profile can be assigned when it's created, or after.
 
 When the device runs the Windows Autopilot, during the Enrollment Status page, DFCI may force a reboot. This first reboot enrolls UEFI to Intune.
 
@@ -175,7 +175,7 @@ After wiping the device, move the device to the group assigned the new DFCI and 
 
 When you're ready to retire the device and release it from management, update the DFCI profile to the UEFI (BIOS) settings you want at the exit state. Typically, you want all settings enabled. For example:
 
-1. In the Intune admin center, open your DFCI profile (**Devices** > **Configuration profiles**).
+1. In the Intune admin center, open your DFCI profile (**Devices** > **Configuration**).
 2. Change the **Allow local user to change UEFI (BIOS) settings** to **Only not configured settings**.
 3. Set all other settings to **Not configured**.
 4. Save your settings.

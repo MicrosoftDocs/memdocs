@@ -3,8 +3,8 @@ description: Learn how to uninstall an application using the Uninstall Windows M
 title: Uninstall Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 24654af4-e004-417f-8874-d0e77279822b
 author: Banreet

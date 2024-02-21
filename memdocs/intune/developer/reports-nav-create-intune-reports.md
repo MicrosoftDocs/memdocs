@@ -7,8 +7,8 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
-ms.topic: overview
+ms.date: 12/04/2023
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
@@ -25,7 +25,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 

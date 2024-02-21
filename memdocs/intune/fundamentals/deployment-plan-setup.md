@@ -81,7 +81,7 @@ For guidance, go to [Sign in to Intune](account-sign-up.md).
 
 ✔️ **Get started with configuring a custom domain name for your Intune tenant**
 
-When your organization signs up for Microsoft Intune, you're given an initial domain name hosted in Azure Active Directory (Azure AD) that looks like *your-domain.onmicrosoft.com*.
+When your organization signs up for Microsoft Intune, you're given an initial domain name hosted in Microsoft Entra ID that looks like *your-domain.onmicrosoft.com*.
 
 The *onmicrosoft.com* suffix is assigned to all accounts added to subscriptions.
 
@@ -91,7 +91,7 @@ You can **optionally** configure your organization's custom domain in Intune, su
 
 - If you are simply evaluating Intune using the free trial, you can skip this step.
 
-- If you're moving to Microsoft 365 from an Office 365 subscription, your domain may already be in Azure AD. Intune uses the same Azure AD, and can use your existing domain.
+- If you're moving to Microsoft 365 from an Office 365 subscription, your domain may already be in Microsoft Entra ID. Intune uses the same Microsoft Entra ID, and can use your existing domain.
 
 For guidance, go to [Configure domain name](custom-domain-name-configure.md).
 
@@ -99,7 +99,7 @@ For guidance, go to [Configure domain name](custom-domain-name-configure.md).
 
 ✔️ **Get started with adding users to Intune**
 
-Users are stored in Azure AD, which is also included with Microsoft 365. Azure AD controls access to resources, and authenticates users.
+Users are stored in Microsoft Entra ID, which is also included with Microsoft 365. Microsoft Entra ID controls access to resources, and authenticates users.
 
 You can add users, or connect Active Directory to sync with Intune. This step is **required** unless your devices are "userless" kiosk devices.
 
@@ -117,7 +117,7 @@ You must be an admin (global, license, or a user admin) to add users to Intune. 
 
 Add groups to assign apps, settings, and other resources. For some guidance, go to [Add groups](groups-add.md).
 
-Intune uses Azure Active Directory (Azure AD) groups to organize and manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. For instance, you can create groups to organize users or devices by geographic location, department, or hardware characteristics. Also, you can use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices based on groups.
+Intune uses Microsoft Entra groups to organize and manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. For instance, you can create groups to organize users or devices by geographic location, department, or hardware characteristics. Also, you can use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices based on groups.
 
 ## 6 - Manage licenses
 
@@ -138,7 +138,7 @@ For guidance, go to [Assign licenses](licenses-assign.md).
 
 ✔️ **Unlicensed admins**
 
-You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on.
+You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Microsoft Entra administrators, and so on.
 
 For guidance, go to [Unlicensed admins](unlicensed-admins.md).
 

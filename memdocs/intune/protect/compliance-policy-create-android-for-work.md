@@ -4,8 +4,8 @@
 title: Android Enterprise compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Android Enterprise devices in Microsoft Intune. Set password rules, choose a minimum or maximum operating system version, restrict specific apps, prevent reusing password, and more.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 12/14/2022
 ms.topic: reference
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Device compliance settings for Android Enterprise in Intune
@@ -41,9 +42,9 @@ This feature applies to:
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
 > [!IMPORTANT]
-> To apply to Android Enterprise dedicated devices, compliance policy must target devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign-in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Azure AD shared device mode*](../enrollment/android-kiosk-enroll.md).
+> Android compliance policies should only be targeted at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign-in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../enrollment/android-kiosk-enroll.md).
 >
-> On Android Enterprise dedicated devices that are enrolled without Azure AD shared device mode, users of the device will be unable to sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Azure AD documentation.
+> On Android Enterprise dedicated devices that are enrolled without Microsoft Entra shared device mode, users of the device will be unable to sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
 
 <!-- Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.  -->
 
@@ -93,12 +94,12 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 > [!IMPORTANT]
 > Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
-- **SafetyNet device attestation**  
-  Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+- **Play integrity verdict**  
+  Enter the level of Google's [Play integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
 
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
-  - **Check basic integrity & certified devices**
+  - **Check basic integrity & device integrit**
 
 ### Device Properties
 
@@ -215,21 +216,21 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
-- **SafetyNet device attestation**  
-  Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+- **Play integrity verdict**  
+  Enter the level of [Google's Play device integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
-  - **Check basic integrity & certified devices**
+  - **Check basic integrity & device integrity**
 
-- **Required SafetyNet evaluation type**  
-  This setting is only available when *SafetyNet device attestation* is set to either *Check basic integrity* or *Check basic integrity & certified devices*.
+- **Play integrity verdict evaluation type**  
+  This setting is only available when *Play integrity verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.
 
-  Select the evaluation type you want to use to compute the SafetyNet device attestation response.
+  Select the evaluation type you want to use to compute Play integrity verdict response.
 
   - **Not configured (defaults to basic evaluation)** – (*default*)
-  - **Hardware-backed key** – Require that hardware-backed key attestation is used for SafetyNet evaluation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
+  - **Check strong integrity** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
 
-  For more information about SafetyNet and which devices support hardware-backed key attestation, see [Evaluation types](https://developer.android.com/training/safetynet/attestation#evaluation-types) in the SafetyNet documentation for Android.
+  For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 

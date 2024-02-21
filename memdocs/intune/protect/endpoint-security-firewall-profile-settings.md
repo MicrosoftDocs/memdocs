@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 
 ---
 # Firewall policy settings for endpoint security in Intune
@@ -52,7 +52,7 @@ Supported platforms and profiles:
   - Profile: **macOS firewall**
 
 - **Windows 10 and later**:
-  - Profile: **Microsoft Defender Firewall**
+  - Profile: **Windows Firewall**
 
 ## macOS firewall profile
 
@@ -86,10 +86,9 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 
     - **Bundle ID** - The ID identifies the app. For example: *com.apple.app*
 
-## Microsoft Defender Firewall profile
+## Windows Firewall profile
 
-
-### Microsoft Defender Firewall
+### Windows Firewall
 
 The following settings are configured as [Endpoint Security policy for Windows Firewalls](../protect/endpoint-security-firewall-policy.md).
 
@@ -170,11 +169,11 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Queue Outbound**
   - **Queue Both**
 
-- **Turn on Microsoft Defender Firewall for domain networks**  
+- **Turn on Windows Firewall for domain networks**  
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **domain** is turned on and enforced. You also gain access to additional settings for this network.
+  - **Yes** - The Windows Firewall for the network type of **domain** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
 
   Additional settings for this network, when set to *Yes*:
@@ -253,11 +252,11 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
-- **Turn on Microsoft Defender Firewall for private networks**  
+- **Turn on Windows Firewall for private networks**  
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **private** is turned on and enforced. You also gain access to additional settings for this network.
+  - **Yes** - The Windows Firewall for the network type of **private** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
 
   Additional settings for this network, when set to *Yes*:
@@ -336,11 +335,11 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
-- **Turn on Microsoft Defender Firewall for public networks**  
+- **Turn on Windows Firewall for public networks**  
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **public** is turned on and enforced. You also gain access to additional settings for this network.
+  - **Yes** - The Windows Firewall for the network type of **public** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
 
   Additional settings for this network, when set to *Yes*:
@@ -419,7 +418,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
-### Microsoft Defender Firewall rules
+### Windows Firewall rules
 
 *This profile is in Preview*.
 
@@ -487,6 +486,8 @@ Specify the local and remote ports to which this rule applies:
   - **Wireless**
   - **Local area network**
   - **Not configured**
+  - **Mobile Broadband** - This option replaces use of the previous entry for Mobile Broadband, which is deprecated and no longer supported.
+  - **[Not Supported] Mobile Broadband** - Do not use this option, which is the original Mobile Broadband option. This option no longer functions correctly. Replace use of this option with the newer version of *Mobile Broadband*.  
 
 - **Authorized users**  
   [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)

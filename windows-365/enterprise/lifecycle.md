@@ -40,7 +40,7 @@ The Cloud PC lifecycle has five stages:
 
 ## Provision
 
-Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are [provisioned](provisioning.md) in the Windows 365 service, connected to Azure, joined to your Azure AD, and enrolled into Microsoft Intune.
+Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are [provisioned](provisioning.md) in the Windows 365 service, connected to Azure, joined to your Microsoft Entra ID, and enrolled into Microsoft Intune.
 
 By assigning a Windows 365 license to a user and adding them to a group targeted with a [provisioning policy](provisioning.md), you trigger automatic provisioning of the user’s Cloud PC.
 
@@ -52,10 +52,10 @@ Windows 365 also has monitoring infrastructure and synthetic provisioning tests 
 
 Cloud PCs need to be configured and secured, just like any other endpoint in your environment. To make this configuration seamless, as part of provisioning, every Windows 365 Cloud PC is either:
 
-- [Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join) or
-- [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join) or
+- [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 
- After being joined, Cloud PCs are enrolled into Microsoft Intune. This enrollment means that every Cloud PC is instantly ready for [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview) and management through Microsoft Intune, including [co-management](/mem/configmgr/comanage/overview) if needed.
+ After being joined, Cloud PCs are enrolled into Microsoft Intune. This enrollment means that every Cloud PC is instantly ready for [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview) and management through Microsoft Intune, including [co-management](/mem/configmgr/comanage/overview) if needed.
 
 Microsoft Intune helps you to validate that your Cloud PCs are compliant by using [compliance policies](/mem/intune/protect/device-compliance-get-started). Windows 365 also provides an optimized [security baseline](/mem/intune/protect/security-baselines) for Cloud PCs. This optional baseline helps you make sure that your Cloud PCs are securely configured with minimal overhead. These baselines have been optimized to ensure that remote connectivity isn't impacted.
 
@@ -63,7 +63,7 @@ Microsoft Intune helps you to validate that your Cloud PCs are compliant by usin
 
 Windows 365 integrates with the rest of Microsoft 365 to make sure that you can secure your Cloud PCs. You can use Microsoft Intune’s [integration with Microsoft Defender for Endpoint](/mem/intune/protect/advanced-threat-protection) to protect your Cloud PCs from the moment that they’re provisioned. This protection includes using the endpoint detection and response capabilities of Microsoft Defender for Endpoint to [determine device risk](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
 
-Windows 365 can also be protected by [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview). This protection includes optionally excluding Windows 365 itself from device compliance policies to ensure that your end users can access their Cloud PCs from any device. You can still use multi-factor authentication, sign-in risk, and other controls to ensure that the user is securely authenticated.
+Windows 365 can also be protected by [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/overview). This protection includes optionally excluding Windows 365 itself from device compliance policies to ensure that your end users can access their Cloud PCs from any device. You can still use multi-factor authentication, sign-in risk, and other controls to ensure that the user is securely authenticated.
 
 Windows 365 uses the Windows Update auto-scan ability to install the latest quality updates. To make sure that updates are installed promptly, the end user should sign in to the newly provisioned Cloud PC as soon as possible.
 
@@ -80,7 +80,7 @@ You can also use [Remediation](/mem/analytics/remediations) in Endpoint analytic
 
 ## Deprovision
 
-There are a couple ways to securely remove a user’s access to their Cloud PC. If you remove the user’s license or targeted provisioning policy, their Cloud PC is moved into a seven-day grace period. This grace period allows for errors and reinstatement without affecting the user. To block access immediately, disable the user account in on-premises Active Directory and revoke the user’s refresh tokens in Microsoft Azure Active Directory.
+There are a couple ways to securely remove a user’s access to their Cloud PC. If you remove the user’s license or targeted provisioning policy, their Cloud PC is moved into a seven-day grace period. This grace period allows for errors and reinstatement without affecting the user. To block access immediately, disable the user account in on-premises Active Directory and revoke the user’s refresh tokens in Microsoft Entra ID.
 
 After the grace period expires, Windows 365 deprovisions the Cloud PC and its storage completely. The Cloud PCs are encrypted using [server-side encryption in Azure Disk Storage](/azure/virtual-machines/disk-encryption) (platform-managed keys) so that devices are deprovisioned securely.
 

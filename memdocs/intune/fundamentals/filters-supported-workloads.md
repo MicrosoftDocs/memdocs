@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2023
+ms.date: 02/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -49,17 +49,6 @@ This article assumes you're familiar with filters. If not, learn more at [Use fi
 
 You can use filters for some common app policies on the following platforms. For a list of what's not supported on managed devices, go to [not supported](#not-supported-on-managed-devices) (in this article).
 
-### Android device administrator
-
-| App type | Supported |
-| --- | --- |
-| Store app | ✔️ |
-| Microsoft 365 apps | N/A |
-| Microsoft Edge version 77 and newer | N/A |
-| Microsoft Defender for Endpoint | N/A |
-| Web link | ❌ |
-| Line-of-business apps | ✔️ |
-
 ### Android Enterprise
 
 | App type | Supported |
@@ -77,6 +66,20 @@ You can use filters for some common app policies on the following platforms. For
 
 > [!NOTE]
 > Filters aren't supported on Android Enterprise personally-owned devices with work profile (BYOD) when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
+
+### Android device administrator
+
+| App type | Supported |
+| --- | --- |
+| Store app | ✔️ |
+| Microsoft 365 apps | N/A |
+| Microsoft Edge version 77 and newer | N/A |
+| Microsoft Defender for Endpoint | N/A |
+| Web link | ❌ |
+| Line-of-business apps | ✔️ |
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ### iOS/iPadOS
 
@@ -183,6 +186,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | N/A |
@@ -190,7 +194,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | N/A |
 | Endpoint detection and response | N/A |
 | Firewall | N/A |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### Android Enterprise
 
@@ -213,6 +217,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | N/A |
@@ -220,7 +225,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | N/A |
 | Endpoint detection and response | N/A |
 | Firewall | N/A |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### Android (AOSP)
 
@@ -252,6 +257,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | N/A |
@@ -259,7 +265,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | N/A |
 | Endpoint detection and response | N/A |
 | Firewall | N/A  |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### macOS
 
@@ -284,6 +290,7 @@ You can use filters for some common app policies on the following platforms. For
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
 | Wired network | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | ❌ |
@@ -291,13 +298,14 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | ❌ |
 | Endpoint detection and response | N/A |
 | Firewall | ❌ |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### Windows 10/11
 
 | Profile type | Supported |
 | --- | --- |
 | Update rings for Windows 10/11 | ✔️ |
+| &nbsp; | &nbsp; |
 | **Device configuration profile** | &nbsp; |
 | Administrative Templates | ✔️ |
 | Custom | ✔️ |
@@ -315,7 +323,6 @@ You can use filters for some common app policies on the following platforms. For
 | Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
-| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |
 | Network boundary | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -326,16 +333,19 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
-| Wired network | ✔️ |
+| Wired network | ❌ |
 | Windows health monitoring | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ <br/> **Local user group membership** only |
+| Account protection | ✔️ <br/> **Local user group membership** and **Local admin password solution (Windows LAPS)** |
 | Antivirus | ✔️ |
-| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, **App and browser isolation**, and **Device control** |
-| Disk encryption | ❌ |
+| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
+| Disk encryption | ✔️ |
 | Endpoint detection and response | ✔️ |
+| Endpoint Privilege Management (EPM) |✔️ |
 | Firewall | ✔️ |
-| Security Baselines | ❌ |
+| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |
+| Security baselines | ❌ |
 
 ## Not supported on managed devices
 

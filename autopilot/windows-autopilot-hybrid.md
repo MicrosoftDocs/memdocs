@@ -1,35 +1,37 @@
 ---
-title: Enrollment for hybrid Azure AD-joined devices
+title: Enrollment for Microsoft Entra hybrid joined devices
 titleSuffix: Windows Autopilot
-description: Use Windows Autopilot to enroll hybrid Azure AD-joined devices in Microsoft Intune.
+description: Use Windows Autopilot to enroll Microsoft Entra hybrid joined devices in Microsoft Intune.
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 07/26/2023
+ms.date: 12/13/2023
 ms.topic: how-to
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 ms.collection: 
   - M365-identity-device-management
   - highpri
   - tier1
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
+# Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot
 
-**Applies to:**
+> [!IMPORTANT]
+>
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
-- Windows 11
-- Windows 10
-
-You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.  For more information about hybrid Azure AD join, see [Understanding hybrid Azure AD join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
+You can use Intune and Windows Autopilot to set up Microsoft Entra hybrid joined devices. To do so, follow the steps in this article.  For more information about Microsoft Entra hybrid join, see [Understanding Microsoft Entra hybrid join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
 ## Prerequisites
 
-- Successfully configured your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
-- If you have configured [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) as part of Azure Active Directory Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
+- Successfully configured your [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
+- If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
 ### Device enrollment prerequisites
 
@@ -41,9 +43,9 @@ The device to be enrolled must follow these requirements:
 - Successfully ping the domain controller of the domain you're trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
-- Use an authorization type that Azure Active Directory supports in OOBE.
+- Use an authorization type that Microsoft Entra ID supports in OOBE.
 
-Although not required, configuring hybrid Azure AD join for Active Directory Federated Services (AD FS) enables a faster Windows Autopilot Azure AD registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.  
+Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (AD FS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.  
 
 ### Intune connector server prerequisites
 
@@ -52,6 +54,7 @@ Although not required, configuring hybrid Azure AD join for Active Directory Fed
 - The server hosting the Intune Connector must have access to the internet and your Active Directory.
 
     > [!NOTE]
+    >
     > The Intune Connector server requires standard domain client access to domain controllers, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
     >
     > - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
@@ -60,110 +63,110 @@ Although not required, configuring hybrid Azure AD join for Active Directory Fed
 
 - To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
 
-- If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+<!-- MAXADO-8594181 -->
+
+- If your organization has multiple domains and you install multiple Intune Connectors, a domain service account that can create computer objects in all domains must be used. This requirement is true even if you plan to implement Microsoft Entra hybrid join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
 
   This connector service account must have the following permissions:
 
-  - [**Log on as a service**](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)
-  - Must be part of the **Domain user** group
-  - Must be a member of the local **Administrators** group on the Windows server that hosts the connector
+  - [**Log on as a service**](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service).
+  - Must be part of the **Domain user** group.
+  - Must be a member of the local **Administrators** group on the Windows server that hosts the connector.
+
+  > [!IMPORTANT]
+  >
+  > Managed service accounts aren't supported for the service account. The service account must be a domain account.
 
 - The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
 
 ## Set up Windows automatic MDM enrollment
 
-1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+1. Sign in to the [Azure portal](https://portal.azure.com/). In the left pane, select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 
-2. Make sure users who deploy Azure AD-joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
+1. Make sure users who deploy Microsoft Entra joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
-<!-- Commenting out image since screenshot incorrectly shows the MDM user scope option set to None instead of Some or All
-
-    ![The Mobility (MDM and MAM) Configure pane.](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
-
--->
-
-3. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
+1. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 
 ## Increase the computer account limit in the Organizational Unit
 
 The Intune Connector for your Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector must have the rights to create the computer objects within the domain.
 
-In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where hybrid Azure AD-joined devices are created.
+In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where Microsoft Entra hybrid joined devices are created.
 
-The organizational unit that's granted the rights to create computers must match:
+The organizational unit that has the rights to create computers must match:
 
-- The organizational unit that's entered in the Domain Join profile.
+- The organizational unit entered in the Domain Join profile.
 - If no profile is selected, the computer's domain name for your domain.
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
 
-2. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
+1. Right-click the organizational unit to use to create Microsoft Entra hybrid joined computers > **Delegate Control**.
 
-    ![The Delegate Control command.](./media/windows-autopilot-hybrid/delegate-control.png)
+    :::image type="content" source="./media/windows-autopilot-hybrid/delegate-control.png" alt-text="Screenshot of the Delegate Control command.":::
 
-3. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
+1. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
 
-4. In the **Object Types** pane, select the **Computers** > **OK**.
+1. In the **Object Types** pane, select the **Computers** > **OK**.
 
-    ![The Object Types pane.](./media/windows-autopilot-hybrid/object-types-computers.png)
+    :::image type="content" source="./media/windows-autopilot-hybrid/object-types-computers.png" alt-text="Screenshot of the Object Types pane.":::
 
-5. In the **Select Users, Computers, or Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
+1. In the **Select Users, Computers, or Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
 
-    ![The Select Users, Computers, or Groups pane.](./media/windows-autopilot-hybrid/enter-object-names.png)
+    :::image type="content" source="./media/windows-autopilot-hybrid/enter-object-names.png" alt-text="Screenshot of the Select Users, Computers, or Groups pane.":::
 
-6. Select **Check Names** to validate your entry > **OK** > **Next**.
+1. Select **Check Names** to validate your entry > **OK** > **Next**.
 
-7. Select **Create a custom task to delegate** > **Next**.
+1. Select **Create a custom task to delegate** > **Next**.
 
-8. Select **Only the following objects in the folder** > **Computer objects**.
+1. Select **Only the following objects in the folder** > **Computer objects**.
 
-9. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
+1. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
 
-    ![The Active Directory Object Type pane.](./media/windows-autopilot-hybrid/only-following-objects.png)
+    :::image type="content" source="./media/windows-autopilot-hybrid/only-following-objects.png" alt-text="Screenshot of the Active Directory Object Type pane.":::
 
-10. Select **Next**.
+1. Select **Next**.
 
-11. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
+1. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 
-    ![The Permissions pane.](./media/windows-autopilot-hybrid/full-control.png)
+    :::image type="content" source="./media/windows-autopilot-hybrid/full-control.png" alt-text="Screenshot of the Permissions pane.":::
 
-12. Select **Next** > **Finish**.
+1. Select **Next** > **Finish**.
 
 ## Install the Intune Connector
 
-Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) have been met.
+Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) are met.
 
 ### Install steps
 
 1. Turn off Internet Explorer Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off Internet Explorer Enhanced Security Configuration for the Administrator.  To turn off Internet Explorer Enhanced Security Configuration:
 
-   1. On the server where the Intune Connector will be installed, open **Server Manager**.
-   2. In the left pane of Server Manager, select **Local Server**.
-   3. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
-   4. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
+   1. On the server where the Intune Connector is being installed, open **Server Manager**.
+   1. In the left pane of Server Manager, select **Local Server**.
+   1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
+   1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
-2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
 
-3. Follow the instructions to download the Connector.
+1. Follow the instructions to download the Connector.
 
-4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
+1. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 
-5. At the end of the setup, select **Configure Now**.
+1. At the end of the setup, select **Configure Now**.
 
-6. Select **Sign In**.
+1. Select **Sign In**.
 
-7. Enter the Global administrator or Intune administrator role credentials.
+1. Enter the Global administrator or Intune administrator role credentials.
  The user account must have an assigned Intune license.
 
-8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
+1. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
 
 > [!NOTE]
 >
 > - The Global administrator role is a temporary requirement at the time of installation.
 > - After you sign in to the Connector, it can take several minutes to appear in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
-> - Inactive Intune connectors still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
+> - Inactive Intune connectors still appear in the Intune Connectors page and will automatically be cleaned up after 30 days.
 
-After installing the Intune Connector, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path you will find **Admin** and **Operational** logs.
+After the Intune Connector is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, **Admin** and **Operational** logs can be found.
 
 > [!NOTE]
 >
@@ -177,21 +180,21 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 
-2. In the **Group** pane, choose the following options:
+1. In the **Group** pane, choose the following options:
 
     1. For **Group type**, select **Security**.
-    2. Enter a **Group name** and **Group description**.
-    3. Select a **Membership type**.
+    1. Enter a **Group name** and **Group description**.
+    1. Select a **Membership type**.
 
-3. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
+1. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
 
-4. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
+1. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
 
-    - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
+    - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -startsWith "[ZTDId]")`.
+    - Intune's Group Tag field maps to the OrderID attribute on Microsoft Entra devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
     - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
 
-5. Select **Save** > **Create**.
+1. Select **Save** > **Create**.
 
 ## Register your Autopilot devices
 
@@ -201,7 +204,7 @@ Select one of the following ways to enroll your Autopilot devices.
 
 1. Create an Autopilot deployment profile with the setting **Convert all targeted devices to Autopilot** set to **Yes**.
 
-2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
+1. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
 For more information, see [Create an Autopilot deployment profile](profiles.md).
 
@@ -218,22 +221,23 @@ If you're buying new devices, some OEMs can register the devices for you. For mo
 Before they're enrolled in Intune, *registered* Autopilot devices are displayed in three places (with names set to their serial numbers):
 
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
-- The **Azure AD devices** pane in the Intune in the Azure portal. Select **Devices** > **Azure AD Devices**.
-- The **Azure AD All Devices** pane in Azure Active Directory in the Azure portal by selecting **Devices** > **All Devices**.
+- The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.
+- The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal by selecting **Devices** > **All Devices**.
 
 After your Autopilot devices are *enrolled*, they're displayed in four places:
 
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
-- The **Azure AD devices** pane in the Intune in the Azure portal. Select **Devices** > **Azure AD Devices**.
-- The **Azure AD All Devices** pane in Azure Active Directory in the Azure portal. Select **Devices** > **All Devices**.
+- The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.
+- The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal. Select **Devices** > **All Devices**.
 - The **All Devices** pane in the Intune in the Azure portal. Select **Devices** > **All Devices**.
 
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
-A device object is pre-created in Azure AD once a device is registered in Autopilot. When a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries.
+
+A device object is precreated in Microsoft Entra ID once a device is registered in Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
 ## BYO VPNs
 
-The following is a list of VPN clients that have been tested and validated:
+The following VPN clients are tested and validated:
 
 ### VPN clients
 
@@ -247,7 +251,8 @@ The following is a list of VPN clients that have been tested and validated:
 - FortiClient VPN (Win32 client)
 
 > [!NOTE]
-> The above above list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot or regarding any issues with using a VPN solution with Autopilot.
+>
+> This list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot or regarding any issues with using a VPN solution with Autopilot.
 
 ### Not supported VPN clients
 
@@ -258,7 +263,8 @@ The following VPN solutions are known not to work with Autopilot and therefore a
 - DirectAccess
 
 > [!NOTE]
-> When using BYO VPNs, you should select **Yes** for the **Skip AD connectivity check** option in the Windows Autopilot deployment profile. Always-On VPNs should not require this option since it will connect automatically.
+>
+> When using BYO VPNs, you should select **Yes** for the **Skip AD connectivity check** option in the Windows Autopilot deployment profile. Always-On VPNs shouldn't require this option since it connects automatically.
 
 ## Create and assign an Autopilot deployment profile
 
@@ -266,65 +272,65 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 
-2. On the **Basics** page, type a **Name** and optional **Description**.
+1. On the **Basics** page, type a **Name** and optional **Description**.
 
-3. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
+1. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 
-4. Select **Next**.
+1. Select **Next**.
 
-5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
+1. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 
-6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
+1. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra hybrid joined**.
 
-7. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support).
+1. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support).
 
-8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+1. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 
-9. Select **Next**.
+1. Select **Next**.
 
-10. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
+1. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
 
-11. Select **Next**.
+1. Select **Next**.
 
-12. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
+1. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
 
-13. Select **Next** > **Create**.
+1. Select **Next** > **Create**.
 
 > [!NOTE]
 >
->Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 
-2. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
+1. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
 
-3. In the **Show app and profile installation progress** box, select **Yes**.
+1. In the **Show app and profile installation progress** box, select **Yes**.
 
-4. Configure the other options as needed.
+1. Configure the other options as needed.
 
-5. Select **Save**.
+1. Select **Save**.
 
 ## Create and assign a Domain Join profile
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
 
-2. Enter the following properties:
+1. Enter the following properties:
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile.
     - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates**, choose the template name **Domain Join**, and select **Create**.
 
-3. Enter the **Name** and **Description** and select **Next**.
+1. Enter the **Name** and **Description** and select **Next**.
 
-4. Provide a **Computer name prefix** and **Domain name**.
+1. Provide a **Computer name prefix** and **Domain name**.
 
-5. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
+1. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
 
-    - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
-    - Provide an OU in which you've delegated control to the root computers in your on-premises Active Directory.
-    - If you leave this blank, the computer object will be created in the Active Directory default container (`CN=Computers` if you never [changed it](/troubleshoot/windows-server/identity/redirect-users-computers-containers)).
+    - Provide an OU in which control is delegated to your Windows 2016 device that is running the Intune Connector.
+    - Provide an OU in which control is delegated to the root computers in your on-premises Active Directory.
+    - If you leave this blank, the computer object is created in the Active Directory default container (`CN=Computers` if you never [changed it](/troubleshoot/windows-server/identity/redirect-users-computers-containers)).
 
     Here are some valid examples:
       - `OU=SubOU,OU=TopLevelOU,DC=contoso,DC=com`
@@ -337,26 +343,40 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
     > [!NOTE]
     > Don't use quotation marks around the value in **Organizational unit**.
 
-6. Select **OK** > **Create**. The profile is created and displayed in the list.
+1. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-7. [Assign a device profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](/mem/autopilot/windows-autopilot-hybrid#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+1. [Assign a device profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](/mem/autopilot/windows-autopilot-hybrid#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
-> The naming capabilities for Windows Autopilot for Hybrid Azure AD Join don't support variables such as %SERIAL% and only support prefixes for the computer name.
+>
+> The naming capability for Windows Autopilot for Microsoft Entra hybrid join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
 
 ## Uninstall the ODJ Connector
 
-The OSD connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
+The ODJ connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
 
-The following steps uninstalls the ODJ Connector from the computer where it's installed:
+To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. Sign into the computer hosting the ODJ connector.
-2. Right-click on the **Start** menu and select **Settings**.
-3. In the **Windows Settings** window, select **Apps**.
-4. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
-5. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
-6. The ODJ connector proceeds to uninstall.
+1. Right-click on the **Start** menu and select **Settings**.
+1. In the **Windows Settings** window, select **Apps**.
+1. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
+1. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
+1. The ODJ connector proceeds to uninstall.
 
 ## Next steps
 
 After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/mem/intune/remote-actions/device-management).
+
+## Related articles
+
+<!-- Intune 12378279 -->
+
+- [What is a device identity?](/azure/active-directory/devices/overview).
+- [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
+- [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
+- [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
+- [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
+- [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).

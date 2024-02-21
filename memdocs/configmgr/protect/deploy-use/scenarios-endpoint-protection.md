@@ -3,8 +3,8 @@ title: Protect computers from malware
 titleSuffix: Configuration Manager
 description: Learn how to implement Endpoint Protection in Configuration Manager to protect computers from malware attacks.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

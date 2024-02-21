@@ -3,8 +3,8 @@ title: OS deployment interoperability
 titleSuffix: Configuration Manager
 description: Understand interoperability issues when different Configuration Manager sites in a single hierarchy use different versions.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

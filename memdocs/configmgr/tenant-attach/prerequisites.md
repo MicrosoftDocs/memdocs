@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Prerequisites for Microsoft Intune tenant attach.
 ms.date: 07/11/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
@@ -27,9 +27,9 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 ## Prerequisites
 
-- An account that is a *Global Administrator* for signing in when applying this onboarding change. For more information, see [Azure Active Directory (Azure AD) administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- An account that is a *Global Administrator* for signing in when applying this onboarding change. For more information, see [Microsoft Entra administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
 
-  - Onboarding creates a third-party app and a first party service principal in your Azure AD tenant.
+  - Onboarding creates a third-party app and a first party service principal in your Microsoft Entra tenant.
 
 - An Azure cloud environment.
 
@@ -56,9 +56,9 @@ This feature supports all OS versions that Configuration Manager currently suppo
 
 The user accounts performing device actions have the following prerequisites:
 
-- The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
+- The user account needs to be a synced user object in Microsoft Entra ID (hybrid identity). This means that the user is synced to Microsoft Entra ID from Active Directory.
   - For Configuration Manager version 2103, and later: </br>
-   Has been discovered with either [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
+   Has been discovered with either [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
 - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Intune admin center.
   - For more information about adding or verifying permissions in the admin center, see [Role-based access control (RBAC) with Microsoft Intune](../../intune/fundamentals/role-based-access-control.md#roles).
 

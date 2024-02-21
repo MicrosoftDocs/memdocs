@@ -36,7 +36,7 @@ You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 36
 
 ## Permissions
 
-To use these remote actions, you must have the appropriate Azure Active Directory (Azure AD) role-based access roles.
+To use these remote actions, you must have the appropriate Microsoft Entra role-based access roles.
 
 | Admin actions | Roles required for windows365.microsoft.com | Roles required for Microsoft 365 admin center |
 | --- | --- | --- |
@@ -102,7 +102,7 @@ To assign a Windows 365 Administrator role to a user:
 5. Scroll down to the **Devices** section.
 6. Select **Windows 365 Administrator** > **Save changes**.
 
-You can also assign the Windows 365 Administrator role through the Microsoft 365 Admin Center and Azure Active Directory.
+You can also assign the Windows 365 Administrator role through the Microsoft 365 Admin Center and Microsoft Entra ID.
 
 ## Next steps
 

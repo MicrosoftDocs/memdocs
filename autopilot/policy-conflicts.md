@@ -1,26 +1,24 @@
 ---
 title: Windows Autopilot policy conflicts
 description: Inform yourself about policy conflicts that may occur during Windows Autopilot deployment.
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 11/16/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
 ms.topic: troubleshooting
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Windows Autopilot - Policy Conflicts
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
 
 There are a significant number of policy settings available for Windows, including:
 
@@ -39,5 +37,6 @@ Some policy settings can cause issues in some Windows Autopilot scenarios. These
 | Registry keys that affect Windows Autopilot if a device setting requires a reboot during device ESP<br><br>**Registry path**:<br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Automatic logon` | **Registry key**:<br>If the [AutoAdminLogon](/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon) registry key is set to `0` (disabled), this breaks Windows Autopilot. |
 | [MDM wins over Group Policy](/windows/client-management/mdm/policy-csp-controlpolicyconflict) | This policy allows you to control which policy is used when both the MDM policy and its equivalent Group Policy (GP) are set on the device. |
 | Group Policy Objects (GPOs) that affect Windows Autopilot for [pre-provisioned deployment](pre-provision.md)<br><br>**GPO path**: <br>Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options<br><br>**Policies**:<br>[Interactive logon: Message title for users attempting to log on](/windows/security/threat-protection/security-policy-settings/interactive-logon-message-title-for-users-attempting-to-log-on)<br><br>[Interactive logon: Message text for users attempting to log on](/windows/security/threat-protection/security-policy-settings/interactive-logon-message-text-for-users-attempting-to-log-on)<br><br>[Interactive logon: Require Windows Hello for Business or smart card](/windows/security/threat-protection/security-policy-settings/interactive-logon-require-smart-card)<br><br>[User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode - Prompt for credentials on the secure desktop](/windows/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode) | Windows Autopilot pre-provisioning doesn't work when any of the four GPO policy settings listed here are enabled. |
+| [PreferredAadTenantDomainName](/windows/client-management/mdm/policy-csp-authentication#preferredaadtenantdomainname) | When this policy is enabled, it will add to **DefaultUser0**, which will cause autologon to fail. |
 
 For more information, see [Troubleshooting Windows Autopilot](troubleshooting.md).

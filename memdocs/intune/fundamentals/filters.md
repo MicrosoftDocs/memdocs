@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 01/09/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -72,6 +72,9 @@ This feature applies to:
   - iOS/iPadOS
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## How filters work
 
@@ -174,6 +177,12 @@ There are some general restrictions when creating filters:
 
     :::image type="content" source="./media/filters/preview-search.png" alt-text="Screenshot that shows how to search for devices when creating a filter in Microsoft Intune.":::
 
+    > [!NOTE]
+    >
+    > When you select **Preview devices** for a property that is in preview, you get a `You cannot use Filter preview with experimental properties` message. Even though you can't preview the property, you can continue to use the property in your filters.
+    >
+    > :::image type="content" source="./media/filters/filter-preview.png" alt-text="Screenshot that shows cannot use filter preview message when clicking Preview devices with a preview property in filter rule syntax in Microsoft Intune.":::
+
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
@@ -188,7 +197,7 @@ After the filter is created, it's ready to use when assigning your apps or polic
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to your apps, compliance policies, or configuration profiles. For a list of what's supported, see [Supported workloads when creating filters](filters-supported-workloads.md). Select an existing policy, or create a new policy.
 
-    For example, select **Devices** > **Compliance policies**, and select an existing policy. Select **Properties** > **Assignments** > **Edit**:
+    For example, select **Devices** > **Compliance**, and select an existing policy. Select **Properties** > **Assignments** > **Edit**:
 
     :::image type="content" source="./media/filters/edit-compliance-policy-assignment.png" alt-text="Screenshot that shows how to select a policy or profile, and edit the assignment in Microsoft Intune.":::
 

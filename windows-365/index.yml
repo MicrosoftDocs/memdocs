@@ -10,6 +10,7 @@ metadata:
   ms.author: erikje
   manager: dougeby
   ms.date: 05/09/2023
+  ms.collection: essentials-navigation
 
 highlightedContent:
   items:
@@ -66,7 +67,7 @@ additionalContent:
           url: /microsoft-365/admin/setup/setup-business-standard
         - text: For MSPs, Microsoft 365 Lighthouse Cloud PC management
           url: /microsoft-365/lighthouse/m365-lighthouse-win365-page-overview
-      - title: Azure Active Directory
+      - title: Microsoft Entra ID
         links: 
         - text: User management documentation
           url: /azure/active-directory/fundamentals/active-directory-manage-groups

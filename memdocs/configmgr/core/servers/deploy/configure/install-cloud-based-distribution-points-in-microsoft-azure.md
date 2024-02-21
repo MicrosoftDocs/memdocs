@@ -3,8 +3,8 @@ title: Install cloud distribution points
 titleSuffix: Configuration Manager
 description: Use these steps to set up a cloud distribution point in Configuration Manager.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg
@@ -47,7 +47,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - Use the **Azure Resource Manager deployment**. It has the following requirements:<!--1322209-->  
 
-    - Integration with [Azure Active Directory](azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required.  
+    - Integration with [Microsoft Entra ID](azure-services-wizard.md) for **Cloud Management**. Microsoft Entra user discovery isn't required.  
 
     - The Azure **Subscription ID**.  
 
@@ -94,7 +94,7 @@ Perform this procedure on the site to host this cloud distribution point as dete
 
     1. First specify the **Azure environment**.  
 
-    2. Select **Azure Resource Manager deployment** as the deployment method. Select **Sign in** to authenticate with an Azure subscription admin account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.  
+    2. Select **Azure Resource Manager deployment** as the deployment method. Select **Sign in** to authenticate with an Azure subscription admin account. The wizard auto-populates the remaining fields from the information stored during the Microsoft Entra integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.  
 
 3. Select **Next**. Wait as the site tests the connection to Azure.  
 

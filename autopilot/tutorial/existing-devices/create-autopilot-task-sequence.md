@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 5 of 10 - Create Autopilot task sequence in Configuration Manager
 description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 5 of 10 - Create Autopilot task sequence in Configuration Manager.
-ms.prod: windows-client
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
-ms.technology: itpro-deploy
+ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices: Create Autopilot task sequence in Configuration Manager
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
@@ -63,7 +63,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
    1. In the **Specify task sequence information** page:
 
-      1. Next to **Name**, enter an identifiable name for the Autopilot scenario for the task sequence. For example, **Autopilot user-driven Azure AD join**.
+      1. Next to **Name**, enter an identifiable name for the Autopilot scenario for the task sequence. For example, **Autopilot user-driven Microsoft Entra join**.
 
       1. Next to **Description**, enter a description for the Autopilot scenario for the task sequence.
 
@@ -85,7 +85,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
           > [!NOTE]
           >
-          > Although BitLocker encryption could technically be enabled via the task sequence, it may result in undesired outcomes. For example, BitLocker recovery keys being saved to Configuration Manager BitLocker Management or on-premises Active Directory instead of Intune or Azure AD. Additionally, if certain BitLocker settings specified in the task sequence, such as BitLocker encryption method and strength, doesn't match the BitLocker policy settings in Intune, then this mis-match could cause the device to show as non-compliant. Resolving issues like this could mean having to decrypt and then re-encrypt the drive to resolve. Therefore it's recommended not to enable BitLocker as part of the task sequence and instead enable BitLocker as part of Intune policies deployed during Autopilot.
+          > Although BitLocker encryption could technically be enabled via the task sequence, it may result in undesired outcomes. For example, BitLocker recovery keys being saved to Configuration Manager BitLocker Management or on-premises Active Directory instead of Intune or Microsoft Entra ID. Additionally, if certain BitLocker settings specified in the task sequence, such as BitLocker encryption method and strength, doesn't match the BitLocker policy settings in Intune, then this mis-match could cause the device to show as non-compliant. Resolving issues like this could mean having to decrypt and then re-encrypt the drive to resolve. Therefore it's recommended not to enable BitLocker as part of the task sequence and instead enable BitLocker as part of Intune policies deployed during Autopilot.
 
       1. Leave **Product key** blank. The Autopilot for existing devices task sequence runs the [Windows System Preparation Tool (Sysprep)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview) at the end of the task sequence. Sysprep clears any product key that is specified.
   

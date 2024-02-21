@@ -3,8 +3,8 @@ title: Create PFX certificate profiles
 titleSuffix: Configuration Manager
 description: Learn how to use PFX files in Configuration Manager to generate user-specific certificates that support encrypted data exchange.
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

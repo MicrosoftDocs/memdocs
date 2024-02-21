@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 09/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -36,7 +36,7 @@ ms.collection:
 
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device.
 
-In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions.
+In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Microsoft Entra ID that the proper trusts are established for the Remote Help sessions.
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
@@ -44,6 +44,7 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 > This article describes the capabilities and configuration tasks that are applicable in general for Remote Help across supported platforms. For specific capabilities, prerequisites, and other details based on the platform that you are using, go to:
   > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
   > - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
+  > - [Remote Help on macOS with Microsoft Intune](remote-help-macOS.md)
 
 ## Remote Help capabilities and requirements
 
@@ -52,12 +53,13 @@ The Remote Help app supports the following capabilities in general across the su
 > To know more about specific capabilities and requirements based on the platform that you're using, go to:
 >  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
 >  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
+>  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities-and-requirements-on-macos)
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
 - **Use Remote Help with unenrolled devices**: Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
-- **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
+- **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
 - **Compliance Warnings**: Before a helper connects to a user's device, the helper will see a non-compliance warning about that device if it's not compliant with its assigned policies.
 
@@ -82,6 +84,7 @@ The following general prerequisites apply to Remote Help.
 >
 > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
 > - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
+> - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#prerequisites-for-remote-help-on-macos)
 
 > [!NOTE]
 > Remote Help has the following limitations:  
@@ -99,6 +102,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
+- macOS 11, 12, 13 and 14
 
 ## Data and privacy
 
@@ -154,6 +158,11 @@ The following Intune RBAC permissions manage the use of the Remote Help app. Set
   - **View screen** : Yes/No
   - **Take full control** : Yes/No
   - **Unattended control** : Yes/No
+ 
+> [!NOTE]
+> If the **Take full control** permission is set to *Yes*, then by default, the user will have additional permission to **View screen**, even if the user's **View screen** permission is set to *No.*
+> If the **Elevation** permission is set to *Yes*, then by default, the user will have additional permission to **View screen** and **Take full control**, even if the user's **View screen** and **Take full control** permission is set to *No.*
+> If the **Unattended control** permission is set to *Yes*, then, by default, the user will have additional permission to **View screen**, **Take full control**, and **Elevation**, even if the user's **View screen**, **Take full control**, and **Elevation** permissions is set to *No.*
 
 - Category: **Remote tasks**
 - Permissions:
@@ -196,6 +205,10 @@ You can monitor the use of Remote Help from within the Microsoft Intune admin ce
 
 > [!NOTE]
 > The Recipient ID and Recipient name display “--” for Android Enterprise Dedicated devices, as these devices do not have user affinity.
+
+### Try an interactive demo
+
+The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.html#/0/0) interactive demo walks you through scenarios step-by-step with interactive annotations and navigation controls.
 
 ## Next steps
 

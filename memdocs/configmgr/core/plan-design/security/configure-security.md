@@ -3,8 +3,8 @@ title: Configure security
 titleSuffix: Configuration Manager
 description: How to configure security-related options for Configuration Manager.
 ms.date: 12/21/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
@@ -169,9 +169,11 @@ Configuration Manager supports Windows accounts for many different tasks and use
 
 For more information, see [Accounts used in Configuration Manager](../hierarchy/accounts.md).
 
-## Azure Active Directory
+<a name='azure-active-directory'></a>
 
-Integrate Configuration Manager with Azure Active Directory (Azure AD) to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Azure AD.
+## Microsoft Entra ID
+
+Integrate Configuration Manager with Microsoft Entra ID to simplify and cloud-enable your environment. Enable the site and clients to authenticate by using Microsoft Entra ID.
 
 For more information, see the **Cloud Management** service in [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md).
 

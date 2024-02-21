@@ -3,29 +3,26 @@ title: APIs to onboard 3rd party certificate authorities
 titleSuffix: Microsoft Intune
 description: Add or integrate the SCEP GitHub solution for third party certificate authorities (CA) to issue SCEP certificates to devices in Microsoft Intune. This solution includes Java and C# APIs that validate, send success and failure notifications to Intune, and use SSL socket factory when communicating with Intune. Also view an overview of the steps to test your SCEP CA configuration.
 keywords:
-author: Brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/26/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-
-ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
+- certificates
 ---
 
 # Use APIs to add third-party CAs for SCEP to Intune
@@ -100,7 +97,7 @@ To authenticate to Intune, the SCEP server requires an Azure Application ID, an 
 
 To get this data, the SCEP server administrator signs in to the Azure portal, registers the application, gives the application both the **Microsoft Intune API\SCEP challenge validation** permission and the **Application.Read.All** permission, creates a key for the application, and then downloads the application ID, its key, and the tenant ID.
 
-For guidance on registering an application, and getting the IDs and keys, see [Use portal to create an AAD application and service principal to access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+For guidance on registering an application, and getting the IDs and keys, see [Use portal to create a Microsoft Entra application and service principal to access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 ### Java Library API
 

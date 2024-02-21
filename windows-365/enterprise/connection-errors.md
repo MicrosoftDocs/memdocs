@@ -34,14 +34,16 @@ ms.collection:
 
 The following errors can occur when connecting to a Cloud PC.
 
-## Errors when connecting to an Azure Active Directory (Azure AD) joined Cloud PC
+<a name='errors-when-connecting-to-an-azure-active-directory-azure-ad-joined-cloud-pc'></a>
+
+## Errors when connecting to a Microsoft Entra joined Cloud PC
 
 ### The logon attempt failed
 **Potential cause #1**: Either the Cloud PC or the user's physical device denied PKU2U protocol requests. The PKU2U protocol is only triggered in the following cases:
 
-- The Cloud PC is Azure AD joined.
+- The Cloud PC is Microsoft Entra joined.
 - The user is connecting from the Windows desktop client.
-- The user's physical device is Azure AD registered, Azure AD joined, or hybrid Azure AD joined to the same organization as the Cloud PC.
+- The user's physical device is Microsoft Entra registered, Microsoft Entra joined, or Microsoft Entra hybrid joined to the same organization as the Cloud PC.
 
 **Possible solution**: Turn on PKU2U protocol requests on both the Cloud PC and the user's physical device:
 
@@ -50,14 +52,14 @@ The following errors can occur when connecting to a Cloud PC.
 3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 ![Screenshot with the **Network Security Allow PKU2U Authentication Requests** set to **Allow**.](./media/connection-errors/allow-pku2u.png)
 5. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment** > select the filter you created for all Cloud PCs.
-6. On the **Assignments** page, also select an Azure AD group containing the user or the user's physical device.
+6. On the **Assignments** page, also select a Microsoft Entra group containing the user or the user's physical device.
 7. Complete the creation of the device configuration policy.
 
 If you only manage the user's physical device through Group Policy or you don't manage the user's physical device, you (or the user) can manage this setting through the [allow PKU2U authentication requests to this computer to use online identities](/windows/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities) policy.
 
-**Potential cause #2**: [Per-user multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multi-factor authentication isn't supported for users connecting to Azure AD joined Cloud PCs.
+**Potential cause #2**: [Per-user multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multi-factor authentication isn't supported for users connecting to Microsoft Entra joined Cloud PCs.
 
-**Possible solution**: [Remove per-user multi-factor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set an Azure AD conditional access policy](set-conditional-access-policies.md) and assign it to the appropriate users.
+**Possible solution**: [Remove per-user multi-factor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set a Microsoft Entra Conditional Access policy](set-conditional-access-policies.md) and assign it to the appropriate users.
 
 ## Specific connection errors
 
@@ -93,9 +95,11 @@ Some other possible causes for Cloud PC connection failures include:
 
 **Possible solution**: Update VPN clients to the most up-to-date versions.
 
-### Signing in to the Cloud PC with Azure Active Directory-only user accounts
+<a name='signing-in-to-the-cloud-pc-with-azure-active-directory-only-user-accounts'></a>
 
-**Possible solution**: Windows 365 is currently a Hybrid Azure Active Directory (Azure AD) Join device, requiring users to sign in with their on-premises Active Directory account.
+### Signing in to the Cloud PC with Microsoft Entra ID-only user accounts
+
+**Possible solution**: Windows 365 is currently a Microsoft Entra hybrid join device, requiring users to sign in with their on-premises Active Directory account.
 
 ### Using a client PC with Remote Credential Guard enabled
 

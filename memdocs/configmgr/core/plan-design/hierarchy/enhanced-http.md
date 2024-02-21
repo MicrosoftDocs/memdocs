@@ -3,8 +3,8 @@ title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
 ms.date: 12/20/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -45,7 +45,7 @@ The following scenarios benefit from enhanced HTTP:
 ### Scenario 1: Client to management point
 
 <!--1356889-->
-[Azure Active Directory (Azure AD)-joined devices](/azure/active-directory/devices/concept-azure-ad-join) and devices with a [Configuration Manager issued token](../../clients/deploy/deploy-clients-cmg-token.md) can communicate with a management point configured for HTTP if you enable enhanced HTTP for the site. With enhanced HTTP enabled, the site server generates a certificate for the management point allowing it to communicate via a secure channel.
+[Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join) and devices with a [Configuration Manager issued token](../../clients/deploy/deploy-clients-cmg-token.md) can communicate with a management point configured for HTTP if you enable enhanced HTTP for the site. With enhanced HTTP enabled, the site server generates a certificate for the management point allowing it to communicate via a secure channel.
 
 > [!NOTE]
 > This scenario doesn't require using an HTTPS-enabled management point, but it's supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#enable-management-point-for-https).
@@ -53,14 +53,16 @@ The following scenarios benefit from enhanced HTTP:
 ### Scenario 2: Client to distribution point
 
 <!--1358228-->
-A workgroup or Azure AD-joined client can authenticate and download content over a secure channel from a distribution point configured for HTTP. These types of devices can also authenticate and download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
+A workgroup or Microsoft Entra joined client can authenticate and download content over a secure channel from a distribution point configured for HTTP. These types of devices can also authenticate and download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Microsoft Entra joined client.
 
 This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Network access account](accounts.md#network-access-account).<!--1358278-->
 
-### Scenario 3: Azure AD device identity
+<a name='scenario-3-azure-ad-device-identity'></a>
+
+### Scenario 3: Microsoft Entra device identity
 
 <!--1358460-->
-An Azure AD-joined or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)
+A Microsoft Entra joined or [hybrid Microsoft Entra device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without a Microsoft Entra user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)
 
 ## Features
 
@@ -97,9 +99,9 @@ Enhanced HTTP doesn't currently secure all communication in Configuration Manage
 
 - A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.
 
-- For scenarios that require Azure AD authentication, [onboard the site](../../clients/manage/cmg/configure-azure-ad.md) to Azure AD for cloud management. If you don't onboard the site to Azure AD, you can still enable enhanced HTTP.
+- For scenarios that require Microsoft Entra authentication, [onboard the site](../../clients/manage/cmg/configure-azure-ad.md) to Microsoft Entra ID for cloud management. If you don't onboard the site to Microsoft Entra ID, you can still enable enhanced HTTP.
 
-- *For [Scenario 3](#scenario-3-azure-ad-device-identity) only*: A client running a supported version of Windows 10 or later and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
+- *For [Scenario 3](#scenario-3-azure-ad-device-identity) only*: A client running a supported version of Windows 10 or later and joined to Microsoft Entra ID. The client requires this configuration for Microsoft Entra device authentication.<!-- SCCMDocs issue 1126 -->
 
 > [!NOTE]
 > There are no OS version requirements, other than what the [Configuration Manager client supports](../configs/supported-operating-systems-for-clients-and-devices.md).
@@ -132,7 +134,7 @@ This diagram summarizes and visualizes some of the main aspects of the enhanced 
 
 :::image type="content" source="media/ehttp-diagram.svg" alt-text="Conceptual diagram of enhanced HTTP functionality.":::
 
-- The connection with Azure AD is recommended but optional. It enables scenarios that require Azure AD authentication.
+- The connection with Microsoft Entra ID is recommended but optional. It enables scenarios that require Microsoft Entra authentication.
 
 - When you enable the site option for enhanced HTTP, the site issues self-signed certificates to site systems such as the management point and distribution point roles.
 
@@ -147,9 +149,11 @@ The main benefit is to reduce the usage of pure HTTP, which is an insecure proto
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
-### Do I need to use Azure AD to enable enhanced HTTP?
+<a name='do-i-need-to-use-azure-ad-to-enable-enhanced-http'></a>
 
-No. Many of the scenarios and features that benefit from enhanced HTTP rely on Azure AD authentication. You can enable enhanced HTTP without onboarding the site to Azure AD. It then supports features like the administration service and the reduced need for the network access account. You only need Azure AD when one of the supporting features requires it.
+### Do I need to use Microsoft Entra ID to enable enhanced HTTP?
+
+No. Many of the scenarios and features that benefit from enhanced HTTP rely on Microsoft Entra authentication. You can enable enhanced HTTP without onboarding the site to Microsoft Entra ID. It then supports features like the administration service and the reduced need for the network access account. You only need Microsoft Entra ID when one of the supporting features requires it.
 
 > [!NOTE]
 > Even if you don't directly use the administration service REST API, some Configuration Manager features natively use it, including parts of the Configuration Manager console.

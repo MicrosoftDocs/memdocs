@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,6 +77,16 @@ The *Elevation report by applications* report displays details for all managed a
 - **Elevation count**
 
 The information in this report can help identify applications that might require elevation rules to function properly, including rules for child processes.
+
+## Elevation report by publisher
+
+The *Elevation report by publisher* report displays details for all managed and unmanaged elevations, aggregated by the publisher of the app that elevated. Details include:
+
+- **Publisher**
+- **Elevation type**
+- **Elevation count**
+
+The information in this report can help identify related applications as well as the source of an applications that are run elevated in your environment.
 
 ## Endpoint Privilege Management policy details
 

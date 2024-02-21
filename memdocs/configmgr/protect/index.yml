@@ -8,8 +8,8 @@ metadata:
   title: Protect data and infrastructure documentation
   titleSuffix: Configuration Manager
   description: Protect both your infrastructure and your data from exposure or malicious attack using Configuration Manager.
-  ms.prod: configuration-manager
-  ms.technology: configmgr-protect
+  ms.service: configuration-manager
+  ms.subservice: protect
   ms.topic: landing-page
   author: banreet
   ms.author: banreetkaur

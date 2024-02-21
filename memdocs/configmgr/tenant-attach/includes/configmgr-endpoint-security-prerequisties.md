@@ -1,13 +1,13 @@
 ---
 author: Banreet
 ms.author: banreetkaur
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 07/17/2022
 ms.localizationpriority: high
-ms.author:  banreetkaur
-manager: apoorvseth
+author:  gowdhamankarthikeyan
+ms.author: gokarthi
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---

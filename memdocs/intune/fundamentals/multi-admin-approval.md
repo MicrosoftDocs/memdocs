@@ -5,8 +5,8 @@ title: Use multiple administrative approvals in Intune
 titleSuffix: Microsoft Intune
 description: Configure multi-admin approval to protect your tenant against the use of compromised administrative accounts in Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 08/28/2023
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer:
+ms.reviewer: davidra
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -26,6 +26,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- setup
 ---
 
 # Use Access policies to require multiple administrative approvals
@@ -48,6 +49,8 @@ To use multi administrative approval, your tenant must have at least two adminis
 To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role.
 
 To be an approver, an account must be in the group that’s assigned to the access policy for a specific type of resource.
+
+If your organization allows unlicensed administrators for Intune roles, all approver groups must also be a member group of one or more Intune role assignments. 
 
 ## How multi admin approval and Access policies work
 

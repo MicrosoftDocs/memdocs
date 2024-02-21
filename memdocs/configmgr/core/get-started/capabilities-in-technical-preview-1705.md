@@ -3,8 +3,8 @@ title: Technical Preview 1705
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview version 1705 for Configuration Manager.
 ms.date: 06/02/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -179,23 +179,25 @@ Additionally, to learn more about Windows Defender Application Guard Standalone 
 
 
 
-## New capabilities for Azure AD and cloud management
+<a name='new-capabilities-for-azure-ad-and-cloud-management'></a>
 
-In this release, you can configure cloud services to use Azure AD to support the following scenario:
+## New capabilities for Microsoft Entra ID and cloud management
+
+In this release, you can configure cloud services to use Microsoft Entra ID to support the following scenario:
 
 - Manually install the Configuration Manager client from the internet and have it assign to a Configuration Manager site.
 - Use Intune to deploy the Configuration Manager client to devices on the internet.
 
 ### Advantages
 
-Using cloud services and Azure AD removes the need to use client authentication certificates.
+Using cloud services and Microsoft Entra ID removes the need to use client authentication certificates.
 
-You can discover Azure AD users into your site to use in collections, and other Configuration Manager operations.
+You can discover Microsoft Entra users into your site to use in collections, and other Configuration Manager operations.
 
 ### Before you start
 
-- You must have an Azure AD tenant.
-- Your devices must run Windows 10 and be Azure AD joined.  Clients can also be domain joined in addition to Azure AD joined).
+- You must have a Microsoft Entra tenant.
+- Your devices must run Windows 10 and be Microsoft Entra joined.  Clients can also be domain joined in addition to Microsoft Entra joined).
 - In addition to the [existing prerequisites](../plan-design/configs/site-and-site-system-prerequisites.md) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected with this) are enabled on the computer that hosts this site system role.
 - To use Microsoft Intune to deploy the Configuration Manager client:
     - You must have a working Intune tenant (Configuration Manager and Intune do not need to be connected).
@@ -217,11 +219,11 @@ You'll find help about how to do this in the following topics:
 
 ### Set up the Azure Services app in Configuration Manager Cloud Services
 
-This connects your Configuration Manager site to Azure AD and is a prerequisite for all other operations in this section. To do this:
+This connects your Configuration Manager site to Microsoft Entra ID and is a prerequisite for all other operations in this section. To do this:
 
 1. In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then click **Azure Services**.
 2. On the **Home** tab, in the **Azure Services** group, click **Configure Azure Services**.
-3. On the **Azure Services** page of the Azure Services Wizard, select **Cloud Management** to allow clients to authenticate with the hierarchy using Azure AD.
+3. On the **Azure Services** page of the Azure Services Wizard, select **Cloud Management** to allow clients to authenticate with the hierarchy using Microsoft Entra ID.
 4. On the **General** page of the wizard, specify a name, and a description for your Azure service.
 5. On the **App** page of the wizard, select your Azure environment from the list, then click **Browse** to select the server and client apps that will be used to configure the Azure service:
    - In the **Server App** window, select the server app you want to use, and then click **OK**. Server apps are the Azure web apps that contain the configurations for your Azure account, including your Tenant ID, Client ID, and a secret key for clients. If you do not have an available server app, use one of the following:
@@ -230,11 +232,11 @@ This connects your Configuration Manager site to Azure AD and is a prerequisite 
    - Repeat the same process for the client app.
 
    You need to grant the *Read directory data* application permission when you use Application Import, to set the correct permissions in the portal. If you use Application Creation the permissions are automatically created with the application, but you still need to give consent to the application in the Azure portal.
-6. On the **Discovery** page of the wizard, optionally **Enable Azure Active Directory User Discovery**, and then click **Settings**.
-   In the **Azure AD User Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Azure AD.
+6. On the **Discovery** page of the wizard, optionally **Enable Microsoft Entra user Discovery**, and then click **Settings**.
+   In the **Microsoft Entra user Discovery Settings** dialog box, configure a schedule for when discovery occurs. You can also enable delta discovery which checks for only new, or changed accounts in Microsoft Entra ID.
 7. Complete the wizard.
 
-At this point, you have connected your Configuration Manager site to Azure AD.
+At this point, you have connected your Configuration Manager site to Microsoft Entra ID.
 
 
 ### Install the CM client from the Internet
@@ -249,14 +251,14 @@ Then, use the instructions in [How to deploy clients to Windows computers](../cl
 - **CCMHOSTNAME**: The name of your Internet management point. You can find this by running **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** from a command prompt on a managed client.
 - **SMSMP**: The name of your lookup management point – this can be on your intranet.
 - **SMSSiteCode**: The site code of your Configuration Manager site.
-- **AADTENANTID**, **AADTENANTNAME**: The ID and name of the Azure AD tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on an Azure AD joined device.
-- **AADCLIENTAPPID**: The Azure AD client app ID. For help finding this, see [Use portal to create an Azure Active Directory application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
-- **AADResourceUri**: The identifier URI of the onboarded Azure AD server app.
+- **AADTENANTID**, **AADTENANTNAME**: The ID and name of the Microsoft Entra tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on a Microsoft Entra joined device.
+- **AADCLIENTAPPID**: The Microsoft Entra client app ID. For help finding this, see [Use portal to create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+- **AADResourceUri**: The identifier URI of the onboarded Microsoft Entra server app.
 
 ## Use Azure Services Wizard to configure a connection to OMS
 Beginning with the 1705 technical preview release, you use the **Azure Services Wizard** to configure your connection from Configuration Manager to Operations Management Suite (OMS) cloud service. The wizard replaces previous workflows to configure this connection.
 
--   The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Azure Active Directory (Azure AD).  
+-   The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Microsoft Entra ID.  
 
 -   Configuration Manager connects to OMS for features like Log Analytics or Upgrade Readiness.
 

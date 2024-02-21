@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/28/2023
+ms.date: 10/04/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -79,7 +79,7 @@ The environment in the diagram was set up using the following Azure Firewall app
 | Windows 365 FQDNs | FQDN Tag | Windows365 | HTTP: 80, HTTPS: 443 | [Not recommended](/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Intune FQDNs | FQDN Tag | MicrosoftIntune | HTTP: 80, HTTPS: 443 | [Not recommended](/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Office 365 FQDNs | FQDN Tag | Office365 | HTTP: 80, HTTPS: 443 | [Not recommend for optimize & allow categories](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide&preserve-view=true)  | Optional, but recommended|
-| Windows Update | FQDN Tag | Windows Update| HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional|
+| Windows Update | FQDN Tag | WindowsUpdate| HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional|
 | Citrix HDX Plus | FQDN Tag | CitrixHDXPlusForWindows365 | HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional (only required when using Citrix HDX Plus) |
 
 ### Windows365 tag
@@ -96,17 +96,17 @@ Azure Firewall doesn’t currently handle nonstandard ports in an FQDN tag. Wind
 
 | Rule Description | Destination type | FQDN/IP| Protocol | Port/s | TLS inspection | Required/Optional |
 | --- | --- | --- | --- | --- | --- | --- |
-| Windows Activation| FQDN | kms.core.windows.net| TCP | 1688 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Windows Activation| FQDN | azkms.core.windows.net | TCP | 1688 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | global.azure-devices-provisioning.net | TCP | 443, 5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-preu01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prap01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prau01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-prod-prna02.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-2-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-3-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
-| Registration | FQDN | hm-iot-in-2-prod-prna01.azure-devices.net  | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
-| Registration | FQDN | hm-iot-in-3-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-2-prod-preu01.azure-devices.net  | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-3-prod-preu01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | UDP connectivity via TURN | IP | 20.202.0.0/16 | UDP | 3478 | Not recommended | Required |
 | TURN connectivity | IP | 20.202.0.0/16 | TCP | 443 | Not recommended | Required |
 

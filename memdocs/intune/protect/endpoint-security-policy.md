@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,7 +55,7 @@ Following are brief descriptions of each endpoint security policy type. To learn
 
 - [Antivirus](../protect/endpoint-security-antivirus-policy.md) - Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices.
 
-- [Application Control (Preview)](../protect/endpoint-security-app-control-policy.md) - Manage approved apps for Windows devices with Application Control policy and Managed Installers for Microsoft Intune. Intune Application Control policies are an implementation of Windows Defender Application Control (WDAC).
+- [App Control for Business (Preview)](../protect/endpoint-security-app-control-policy.md) - Manage approved apps for Windows devices with App Control for Business policy and Managed Installers for Microsoft Intune. Intune App Control for Business policies are an implementation of Windows Defender Application Control (WDAC).
 
 - [Attack surface reduction](../protect/endpoint-security-asr-policy.md) - When Defender antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 

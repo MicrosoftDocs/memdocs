@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/04/2021
+ms.date: 12/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,7 +38,7 @@ Intune is a cloud-based enterprise mobility management (EMM) service that helps 
 * Protect your company information by helping to control the way your workforce accesses and shares it.
 * Ensure devices and apps are compliant with company security requirements.
 
-Intune integrates closely with Azure Active Directory (Azure AD) for identity and access control, and Azure Information Protection for data protection. You can also integrate it with Configuration Manager to extend your management capabilities.
+Intune integrates closely with Microsoft Entra ID for identity and access control, and Azure Information Protection for data protection. You can also integrate it with Configuration Manager to extend your management capabilities.
 
 To learn more about how you can manage devices, apps, and protect corporate data with Intune, see the [Intune documentation](../index.yml).
 
@@ -68,19 +68,19 @@ Because the mobile device management ecosystem changes frequently with operating
 
   A few helpful hints:
 
-  * The messages in the Microsoft 365 Message Center are targeted. This means that if your company doesn't have an Intune for EDU offer, we won't message you about Intune for EDU.
+  * The messages in the Microsoft 365 Message Center are targeted. This means that if your company doesn't have an Intune for Education offer, we won't message you about Intune for Education.
 
-  * Messages expire. For example, the notification that your service has been updated with a link to the What's New page will likely expire prior to the next service update notification. Otherwise, you'd have a large backlog of posts that may no longer be relevant.
+  * Messages expire. For example, the notification that your service has been updated with a link to the What's new page will likely expire prior to the next service update notification. Otherwise, you'd have a large backlog of posts that may no longer be relevant.
 
   * The Microsoft 365 admin mobile app allows you to search through all the messages and to forward the notification if you wanted to share it with peers in your organization.
 
   * Under Edit message center preferences, we'll eventually have a toggle for **Intune** so you can look at those messages posted to an Intune subscription. If you see Mobile Device Management for Microsoft 365, that is a different service, not Intune.
 
-* We also use two blogs to share the EMS message and Intune support best practices:
+* We also use two blogs to share new features and capabilities and best practices with Microsoft Intune:
 
-  * [Enterprise Mobility + Security blog](https://blogs.technet.microsoft.com/enterprisemobility/)
+  * [Microsoft Intune Blog](https://aka.ms/IntuneBlog)
 
-  * [Intune support blog](https://blogs.technet.microsoft.com/intunesupport/)
+  * [Intune Customer Success Blog](https://aka.ms/IntuneCustomerSuccess)
 
 > [!NOTE]
 > You can monitor Intune service health in the [Microsoft 365 admin center](https://admin.microsoft.com). Choose **Service Health** in the left pane. You can also use the [Microsoft 365 Admin mobile app](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) to view service health.
@@ -89,7 +89,7 @@ Because the mobile device management ecosystem changes frequently with operating
 
 To help you plan for service changes, we notify you at least 7-90 days prior to the service change, depending on the impact of the change. These changes might include any of the following types of change:
 
-- Changes to the end-user experience that you may want to share with your helpdesk staff or your end users. We provide typically 7 to 30 days notice of those changes and document them on the [What's New in Intune App UI](whats-new-app-ui.md). For something like a spelling error fix, we won't typically call out in documentation. But a change in the end-user enrollment experience is significant enough in the UI that we'll both post a message to customers in the Microsoft 365 Message center and link to the What's New in the Intune App UI so you are notified of what's changing and have time to evaluate and update your end-user guidance before the changes rolling out in production.
+- Changes to the end-user experience that you may want to share with your helpdesk staff or your end users. We provide typically 7 to 30 days notice of those changes and document them on the [What's new in Intune App UI](whats-new-app-ui.md). For something like a spelling error fix, we won't typically call out in documentation. But a change in the end-user enrollment experience is significant enough in the UI that we'll both post a message to customers in the Microsoft 365 Message center and link to the What's new in the Intune App UI so you are notified of what's changing and have time to evaluate and update your end-user guidance before the changes rolling out in production.
 
 - Changes that require you to take action are called **Plan for Change** and typically provide about 30 days notice. In the Microsoft 365 Message Center the Category specifically says Plan for Change, and if we have an exact date for when the change is in production, we also put in an **Act By** date and that gives you a visual queue and an explanation mark.
 

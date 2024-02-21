@@ -3,8 +3,8 @@ title: Discover device and user resources
 titleSuffix: Configuration Manager
 description: Read an overview of the discovery process and discovery data records.
 ms.date: 02/8/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg
@@ -30,9 +30,9 @@ You use one or more discovery methods in Configuration Manager to find device an
 
 -   Active Directory User Discovery  
 
--   Azure Active Directory User Discovery  
+-   Microsoft Entra user Discovery  
 
--   Azure Active Directory User Group Discovery  
+-   Microsoft Entra user Group Discovery  
 
 -   Heartbeat Discovery  
 

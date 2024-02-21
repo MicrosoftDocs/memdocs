@@ -38,11 +38,11 @@ If the partner agent installation fails, the user can still connect to their Clo
 
 While troubleshooting errors, make sure that the following steps have all been successful:
 
-- The users license state is synchronized from the partner service to Microsoft Intune, including the users Azure Active Directory (Azure AD) user ID.
+- The users license state is synchronized from the partner service to Microsoft Intune, including the users Microsoft Entra user ID.
   - The prerequisites have been met.
   - The partner connector is enabled and healthy in Microsoft Intune.
-  - The correct permissions have been set for the partner third-party apps in Azure AD.
-  - The Azure AD user is added and discoverable  in the Parter Cloud console.
+  - The correct permissions have been set for the partner third-party apps in Microsoft Entra ID.
+  - The Microsoft Entra user is added and discoverable  in the Parter Cloud console.
 - The partner agent is downloaded on the Cloud PC.
   - The Cloud PC can access partner download URL.
   - No security policy is blocking PowerShell or any app/agent installation as System.

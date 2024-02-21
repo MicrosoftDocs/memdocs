@@ -94,11 +94,11 @@ In the central model, a single local admin team (parent) manages multiple child 
 
 - There's only one scope tag used to cover all the managed local admins.
 
-- If possible, the local admin team should standardize assignments across local admins and place all their devices into a single Azure AD group for assignment. When it isn't possible to create a single Azure AD group, the local admin team can create different Azure AD groups to make different assignments.
+- If possible, the local admin team should standardize assignments across local admins and place all their devices into a single Microsoft Entra group for assignment. When it isn't possible to create a single Microsoft Entra group, the local admin team can create different Microsoft Entra groups to make different assignments.
 
 - If a different local admin team manages or moves an org, the following steps must be taken:
 
-  - All the org's devices and users must be extracted from common Azure AD groups in scope of the original local admin team.
+  - All the org's devices and users must be extracted from common Microsoft Entra groups in scope of the original local admin team.
 
   - All policies/apps/profiles assigned uniquely for that org must have their scope tag updated for the new local admin team.
 
@@ -173,7 +173,7 @@ In this section:
 
 - Grant local admins permission to create, update, delete within their own scope.
 
-- Use the **Settings Catalog** and **Security Baselines** to the maximum possible extent, instead of profiles created in the Configuration profiles list, to mitigate scale in the Microsoft Intune admin center.
+- Use the **Settings Catalog** and **security baselines** to the maximum possible extent, instead of profiles created in the Configuration profiles list, to mitigate scale in the Microsoft Intune admin center.
 
 - In general, the central team should try to centrally monitor the content of configurations and replace lots of duplicate profiles where possible with a shared profile.
 

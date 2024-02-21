@@ -13,8 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,7 @@ ms.reviewer: rosssmi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -61,7 +59,7 @@ For Android Enterprise personally owned work profile high security (Level 3), th
 | Android device administrator| Block | All versions | Yes |  
 
 ## Conditional access policies
-Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content on enrolled Android devices. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require managed devices for cloud app access with Conditional Access](/azure/active-directory/conditional-access/require-managed-devices).
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content on enrolled Android devices. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require managed devices for cloud app access with Conditional Access](/azure/active-directory/conditional-access/require-managed-devices).
 
 Follow the steps in [Scenario: Require device enrollment for iOS and Android devices](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices) to ensure that only compliant mobile devices can connect to Microsoft 365 endpoints.  
 

@@ -57,7 +57,7 @@ Both the Line of Business and Windows app (win32) options within Intune support 
 
 ### MSIX  
 
-MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and install files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
+MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and installs files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
 
 MSIX combines the best features of MSI, .appx, App-V.
 
@@ -79,7 +79,7 @@ Windows 365 Cloud PCs only support the Microsoft 365 Apps version of Office. For
 
 For information on Universal Print requirements, see [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool).
 
-For information on setting up Universal Print with a Windows 365 Enterprise hybrid Azure Active Directory configuration, see [Enable Hybrid AD/AAD Environment on Universal Print](/universal-print/fundamentals/universal-print-hybrid-ad-aad-environment-setup).
+For information on setting up Universal Print with a Windows 365 Enterprise hybrid Microsoft Entra configuration, see [Enable Hybrid AD / Azure AD Environment on Universal Print](/universal-print/fundamentals/universal-print-hybrid-ad-aad-environment-setup).
 
 <!-- ########################## -->
 ## Next steps

@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 11/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -59,15 +59,15 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 - Import your on-premises GPOs, and review the results.
 
-  For the specific steps, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md).
+  For the specific steps, go to [Import and analyze your on-premises GPOs using Group Policy analytics in Intune](group-policy-analytics.md#import-gpos-and-run-analytics).
 
 - Only admins scoped to the GPO can create a settings catalog policy from that imported GPO. Scope tags are first applied during import of the GPO and can be edited. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used.
 
-- This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+- This feature is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
-After you import your GPOs, review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After they've been reviewed, you can migrate the settings to a Settings Catalog policy.
+After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After you review them, you can migrate the settings to a Settings Catalog policy.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
@@ -122,7 +122,7 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
 
 9. In **Review + deploy**, review your settings.
 
-    When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Configuration profiles** list.
+    When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Configuration** list.
 
 The next time any device within your assigned groups checks for configuration updates, the settings you configured are applied.
 
@@ -154,13 +154,15 @@ When you create the Settings Catalog profile, any settings that can be included 
   - [Endpoint security firewall rule migration tool overview](../protect/endpoint-security-firewall-rule-tool.md)
   - [Application control policy in Endpoint Security](../protect/endpoint-security-asr-policy.md).
 
-  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../protect/endpoint-security.md), including Security Baselines and mobile threat defense.
+  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../protect/endpoint-security.md), including security baselines and mobile threat defense.
 
 - **Some settings don't migrate exactly, and may use a different setting**
 
   In some scenarios, some GPO settings don't migrate to the exact same setting in the Settings Catalog. Intune shows an alternate setting that has a similar effect.
 
-  For example, you may see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings.
+  You can see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings. In the following image, an older Office setting isn't supported. So, Intune suggests migrating to a supported version:
+
+  :::image type="content" source="./media/group-policy-analytics-migrate/setting-not-supported-migrate.png" alt-text="Screenshot that shows older Office setting that isn't supported and suggests migrating to a supported version in Microsoft Intune.":::
 
 - **Some settings fail to migrate**
 
@@ -168,7 +170,7 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   :::image type="content" source="./media/group-policy-analytics-migrate/notifications.png" alt-text="Screenshot that shows notifications with additional information when the policy is being created in Microsoft Intune.":::
 
-  Some common reasons a setting may show an error include:
+  Some common reasons a setting might show an error include:
 
   - The setting value is in an unexpected format.
   - A child setting is missing from the imported GPO and is required to configure the parent setting.

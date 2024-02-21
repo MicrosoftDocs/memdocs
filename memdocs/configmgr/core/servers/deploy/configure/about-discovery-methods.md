@@ -1,10 +1,10 @@
 ---
 title: Discovery methods
 titleSuffix: Configuration Manager
-description: Learn about the available discovery methods to find devices on your network, from Active Directory, or Azure Active Directory.
+description: Learn about the available discovery methods to find devices on your network, from Active Directory, or Microsoft Entra ID.
 ms.date: 03/23/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan
@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager discovery methods find different devices on your network, devices and users from Active Directory, or users from Azure Active Directory (Azure AD). To efficiently use a discovery method, you should understand its available configurations and limitations.
+Configuration Manager discovery methods find different devices on your network, devices and users from Active Directory, or users from Microsoft Entra ID. To efficiently use a discovery method, you should understand its available configurations and limitations.
 
 ## <a name="bkmk_aboutForest"></a> Active Directory forest discovery
 
@@ -187,9 +187,9 @@ Actions for Active Directory User Discovery are recorded in the file **adusrdis.
 
 For more information about how to configure this discovery method, see [Configure discovery methods](configure-discovery-methods.md#BKMK_ConfigADDiscGeneral).
 
-## <a name="azureaddisc"></a> Azure AD user discovery
+## <a name="azureaddisc"></a> Microsoft Entra user discovery
 
-Use Azure Active Directory (Azure AD) user discovery to search your Azure AD subscription for users with a modern cloud identity. Azure AD user discovery can find the following attributes:
+Use Microsoft Entra user discovery to search your Microsoft Entra subscription for users with a modern cloud identity. Microsoft Entra user discovery can find the following attributes:
 
 - `objectId`
 - `displayName`
@@ -202,16 +202,16 @@ Use Azure Active Directory (Azure AD) user discovery to search your Azure AD sub
 - `onPremisesSamAccountName`
 - `onPremisesDistinguishedName`
 
-This method supports full and delta synchronization of user attributes from Azure AD. This information can then be used along-side discovery data you collect from the other discovery methods.
+This method supports full and delta synchronization of user attributes from Microsoft Entra ID. This information can then be used along-side discovery data you collect from the other discovery methods.
 
-Actions for Azure AD user discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy.
+Actions for Microsoft Entra user discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy.
 
-To configure Azure AD user discovery, see [Configure Azure Services](azure-services-wizard.md) for Cloud Management. For information about how to configure this discovery method, see [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc).
+To configure Microsoft Entra user discovery, see [Configure Azure Services](azure-services-wizard.md) for Cloud Management. For information about how to configure this discovery method, see [Configure Microsoft Entra user Discovery](configure-discovery-methods.md#azureaadisc).
 
-## <a name="bkmk_azuregroupdisco"></a> Azure AD user group discovery
+## <a name="bkmk_azuregroupdisco"></a> Microsoft Entra user group discovery
 <!--3611956-->
 
-You can discover user groups and members of those groups from Azure Active directory (Azure AD). Azure AD user group discovery can find the following attributes:
+You can discover user groups and members of those groups from Microsoft Entra ID. Microsoft Entra user group discovery can find the following attributes:
 
 - `objectId`
 - `displayName`
@@ -219,7 +219,7 @@ You can discover user groups and members of those groups from Azure Active direc
 - `onPremisesSecurityIdentifier`
 - `tenantID`
 
-Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](configure-discovery-methods.md#bkmk_azuregroupdisco).
+Actions for Microsoft Entra user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Microsoft Entra user group discovery](configure-discovery-methods.md#bkmk_azuregroupdisco).
 
 ## <a name="bkmk_aboutHeartbeat"></a> Heartbeat discovery
 

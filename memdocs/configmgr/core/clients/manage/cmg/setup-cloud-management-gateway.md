@@ -5,10 +5,10 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
-ms.date: 04/08/2022
+ms.date: 09/18/2022
 ms.topic: how-to
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
@@ -64,8 +64,13 @@ Do this procedure on the top-level site. That site is either a standalone primar
         - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set because of one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107-and-later).
 
         - In versions 2010 and 2103, most customers should use this deployment method.
+     
+1. Starting in version 2309,  select **Microsoft Entra tenant name**,  **Microsoft Entra app name** automatically populates. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
-1. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
+   > [!NOTE]
+   > Starting in version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens.
+
+1. In versions 2303 and below, Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Microsoft Entra integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
     Select **Next**, and wait as the site tests the connection to Azure.
 
@@ -93,7 +98,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
     1. If you're using client authentication certificates, select **Certificates** to add trusted root certificates. Add all of the certificates in the trust chain.
 
         > [!NOTE]
-        > A trusted root certificate isn't required when using Azure Active Directory (Azure AD) or site-issued tokens for client authentication.
+        > A trusted root certificate isn't required when using Microsoft Entra ID or site-issued tokens for client authentication.
 
     1. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 

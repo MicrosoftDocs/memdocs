@@ -1,19 +1,20 @@
 ---
 # required metadata
 
-title: Use role-based access control (RBAC) and scope tags for distributed IT in Intune | Microsoft Docs
-description: Use scope tags to filter configuration profiles to specific roles.
+title: Use role-based access control (RBAC) and scope tags for distributed IT
+titleSuffix: Microsoft Intune
+description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/06/2019
+ms.date: 09/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 
 # optional metadata
-
+# CustomerIntent: As an  IT admin, I want to create and use scope tags so that right admins have the right access and visibility to the right Intune objects.
 #ROBOTS:
 #audience:
 
@@ -35,7 +36,7 @@ You can use role-based access control and scope tags to make sure that the right
 For example, let's say a Seattle regional office admin has the Policy and Profile Manager role. You want this admin to see and manage only the profiles and policies that only apply to Seattle devices. To set up this access, you would:
 
 1. Create a scope tag called Seattle.
-2. Create a role assignment for the Policy and Profile Manager role with: 
+2. Create a role assignment for the Policy and Profile Manager role with:
     - Members (Groups) = A security group named Seattle IT admins. All admins in this group will have  permission to manage policies and profiles for users/devices in the Scope (Groups).
     - Scope (Groups) = A security group named Seattle users. All users/devices in this group can have their profiles and policies managed by the admins in the Members (Groups). 
     - Scope (Tags) = Seattle. Admins in the Member (Groups) can see Intune objects that also have the Seattle scope tag.
@@ -84,23 +85,24 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 For objects that support scope tags, scope tags usually appear under **Properties**. For example, to assign a scope tag to a configuration profile, follow these steps:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration** > choose a profile.
 
 2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile. You can assign a maximum of 100 scope tags to an object.
 4. Choose **Select** > **Review + save**.
 
 ## Scope tag details
-When working with scope tags, remember these details: 
+
+When working with scope tags, remember these details:
 
 - You can assign scope tags to an Intune object type if the tenant can have multiple versions of that object (such as role assignments or apps).
   The following Intune objects are exceptions to this rule and don't currently support scope tags:
-    - Corp Device Identifiers
-    - Autopilot Devices
-    - Device compliance locations
-    - Jamf devices
+  - Corp Device Identifiers
+  - Autopilot Devices
+  - Device compliance locations
+  - Jamf devices
 - Volume Purchase Program (VPP) apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
 - When an admin creates an object in Intune, all scope tags assigned to that admin will be automatically assigned to the new object.
-- Intune RBAC doesn't apply to Azure Active Directory roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
+- Intune RBAC doesn't apply to Microsoft Entra roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
 - If a role assignment has no scope tag, that IT admin can see all objects based on the IT admins permissions. Admins that have no scope tags essentially have all scope tags.
 - You can only assign a scope tag that you have in your role assignments.
 - You can only target groups that are listed in the Scope (Groups) of your role assignment.
@@ -110,5 +112,3 @@ When working with scope tags, remember these details:
 
 Learn how scope tags behave when there are [multiple role assignments](role-based-access-control.md#multiple-role-assignments).
 Manage your [roles](role-based-access-control.md) and [profiles](../configuration/device-profile-assign.md).
-
-

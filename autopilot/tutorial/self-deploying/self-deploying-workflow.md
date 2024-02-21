@@ -1,7 +1,7 @@
 ---
 title: Overview for Windows Autopilot self-deploying mode in Intune
 description: Overview for Windows Autopilot self-deploying mode in Intune.
-ms.prod: windows-client
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
-ms.technology: itpro-deploy
+ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -24,11 +24,11 @@ This step by step tutorial guides you through using Intune to perform a Windows 
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot self-deploying mode deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
-Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
+Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Microsoft Entra ID.
 
 ## Windows Autopilot self-deploying mode overview
 
-Windows Autopilot self-deploying mode is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller to the end-user. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Azure AD join. It doesn't support hybrid Azure AD join.
+Windows Autopilot self-deploying mode is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller to the end-user. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Microsoft Entra join. It doesn't support Microsoft Entra hybrid join.
 
 The main advantage of Windows Autopilot self-deploying mode over other Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device. Interactions are minimized because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
 
@@ -39,13 +39,13 @@ In certain scenarios after first turning on the device, such as when the device 
 
 Windows Autopilot self-deploying mode can perform the following tasks during the deployment:
 
-- Joins the device to Azure AD.
+- Joins the device to Microsoft Entra ID.
 - Enrolls the device in Intune.
 - Installs applications.
 - Applies device configuration policies such as BitLocker and Windows Hello for Business.
 - Checks for compliance.
 
-Once the Windows Autopilot self-deploying mode is complete, the device goes to the Windows sign-on screen and is ready for use. Any end-user signing into the device needs to sign on with their Azure AD credentials. For devices such as kiosks, it's also possible to configure Intune policies that automatically sign a user into the device.
+Once the Windows Autopilot self-deploying mode is complete, the device goes to the Windows sign-on screen and is ready for use. Any end-user signing into the device needs to sign on with their Microsoft Entra credentials. For devices such as kiosks, it's also possible to configure Intune policies that automatically sign a user into the device.
 
 ## Workflow
 

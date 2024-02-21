@@ -7,7 +7,7 @@ description: View the list of settings in the Microsoft Intune security baseline
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/13/2022
+ms.date: 01/11/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -542,340 +542,340 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 ::: zone-end
 
 ## Internet Explorer
-
+<!-- /windows/client-management/mdm/policy-csp-internetexplorer -->
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Internet Explorer encryption support**:  
   Baseline default: Two items:  *TLS v1.1* and *TLS v1.2*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067057)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disableencryptionsupport)
 
 - **Internet Explorer prevent managing smart screen filter**:  
   Baseline default: *Enable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067135)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowsmartscreenie)
 
 - **Internet Explorer restricted zone script Active X controls marked safe for scripting**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067062)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneinitializeandscriptactivexcontrols)
 
 - **Internet Explorer restricted zone file downloads**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067038)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowfiledownloads)
 
 - **Internet Explorer certificate address mismatch warning**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067153)  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#allowcertificateaddressmismatchwarning)  
 
 - **Internet Explorer enhanced protected mode**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067158)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#allowenhancedprotectedmode)
 
 - **Internet Explorer fallback to SSL3**:  
   Baseline default: *No sites*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067118)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#allowfallbacktossl3)
 
 - **Internet Explorer software when signature is invalid**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067201)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#allowsoftwarewhensignatureisinvalid)
 
 - **Internet Explorer check server certificate revocation**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067046)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#checkservercertificaterevocation)
 
 - **Internet Explorer check signatures on downloaded programs**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067051)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#checksignaturesondownloadedprograms)
 
 - **Internet Explorer processes consistent MIME handling**:  
   Baseline default: *Enable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067144)  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#consistentmimehandlinginternetexplorerprocesses)  
 
 - **Internet Explorer bypass smart screen warnings**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067159)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disablebypassofsmartscreenwarnings)
 
 - **Internet Explorer bypass smart screen warnings about uncommon files**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067068)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disablebypassofsmartscreenwarningsaboutuncommonfiles)
 
 - **Internet Explorer crash detection**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067094)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disablecrashdetection)
 
 - **Internet Explorer download enclosures**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067245)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disableenclosuredownloading)
 
 - **Internet Explorer ignore certificate errors**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067071)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disableignoringcertificateerrors)
 
 - **Internet Explorer disable processes in enhanced protected mode**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067149)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disableprocessesinenhancedprotectedmode)
 
 - **Internet Explorer security settings check**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067182)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disablesecuritysettingscheck)
 
 - **Internet Explorer Active X controls in protected mode**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067145)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#donotallowactivexcontrolsinprotectedmode)
 
 - **Internet Explorer users adding sites**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067167)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#donotallowuserstoaddsites)
 
 - **Internet Explorer users changing policies**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067155)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#donotallowuserstochangepolicies)
 
 - **Internet Explorer block outdated Active X controls**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067203)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#donotblockoutdatedactivexcontrols)
 
 - **Internet Explorer include all network paths**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067090)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#includeallnetworkpaths)
 
 - **Internet Explorer internet zone access to data sources**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067078)  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowaccesstodatasources)  
 
 - **Internet Explorer internet zone automatic prompt for file downloads**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067117)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowautomaticpromptingforfiledownloads)
 
 - **Internet Explorer internet zone copy and paste via script**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067084)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowcopypasteviascript)
 
 - **Internet Explorer internet zone drag and drop or copy and paste files**:  
   Baseline default: *Disabled*.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067076)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowdraganddropcopyandpastefiles)
 
 - **Internet Explorer internet zone less privileged sites**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067109)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowlessprivilegedsites)
 
 - **Internet Explorer internet zone loading of XAML files**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067147)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowloadingofxamlfiles)
 
 - **Internet Explorer internet zone .NET Framework reliant components**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067073)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallownetframeworkreliantcomponents)
 
 - **Internet Explorer internet zone allow only approved domains to use ActiveX controls**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067091)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowonlyapproveddomainstouseactivexcontrols)
 
 - **Internet Explorer internet zone allow only approved domains to use tdc ActiveX controls**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067151)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
 
 - **Internet Explorer internet zone scripting of web browser controls**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067157)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowscriptingofinternetexplorerwebbrowsercontrols)
 
 - **Internet Explorer internet zone script initiated windows**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067088)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowscriptinitiatedwindows)
 
 - **Internet Explorer internet zone scriptlets**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067176)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowscriptlets)
 
 - **Internet Explorer internet zone smart screen**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067047)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowsmartscreenie)
 
 - **Internet Explorer internet zone updates to status bar via script**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067087)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowupdatestostatusbarviascript)
 
 - **Internet Explorer internet zone user data persistence**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067156)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowuserdatapersistence)
 
 - **Internet Explorer internet zone allow VBscript to run**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067119)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneallowvbscripttorunininternetexplorer)
 
 - **Internet Explorer internet zone do not run antimalware against ActiveX controls**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067162)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonedonotrunantimalwareagainstactivexcontrols)
 
 - **Internet Explorer internet zone download signed ActiveX controls**:  
   Baseline default: *Disable*Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067064)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonedownloadsignedactivexcontrols)
 
 - **Internet Explorer internet zone download unsigned ActiveX controls**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067325)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonedownloadunsignedactivexcontrols)
 
 - **Internet Explorer internet zone cross site scripting filter**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067053)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneenablecrosssitescriptingfilter)
 
 - **Internet Explorer internet zone drag content from different domains across windows**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067093)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
 
 - **Internet Explorer internet zone drag content from different domains within windows**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067095)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneenabledraggingofcontentfromdifferentdomainswithinwindows)
 
 - **Internet Explorer internet zone protected mode**:  
   Baseline default: *Enable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067171)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneenableprotectedmode)
 
 - **Internet Explorer internet zone include local path when uploading files to server**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067072)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneincludelocalpathwhenuploadingfilestoserver)
 
 - **Internet Explorer internet zone initialize and script Active X controls not marked as safe**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067170)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneinitializeandscriptactivexcontrols)
 
 - **Internet Explorer internet zone java permissions**:  
   Baseline default: *Disable java*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067174)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonejavapermissions)
 
 - **Internet Explorer internet zone launch applications and files in an iframe**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067020)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonelaunchingapplicationsandfilesiniframe)
 
 - **Internet Explorer internet zone logon options**:  
   Baseline default: *Prompt*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067194)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonelogonoptions)
 
 - **Internet Explorer internet zone navigate windows and frames across different domains**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067083)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonenavigatewindowsandframes)
 
 - **Internet Explorer internet zone run .NET Framework reliant components signed with Authenticode**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067033)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzonerunnetframeworkreliantcomponentssignedwithauthenticode)
 
 - **Internet Explorer internet zone security warning for potentially unsafe files**:  
   Baseline default: *Prompt*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067204)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneshowsecuritywarningforpotentiallyunsafefiles)
 
 - **Internet Explorer internet zone popup blocker**:  
   Baseline default: *Enable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067069)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetzoneusepopupblocker)
 
 - **Internet Explorer intranet zone do not run antimalware against Active X controls**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067138)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#intranetzonedonotrunantimalwareagainstactivexcontrols)
 
 - **Internet Explorer intranet zone initialize and script Active X controls not marked as safe**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067175)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#intranetzoneinitializeandscriptactivexcontrols)
 
 - **Internet Explorer intranet zone java permissions**:  
   Baseline default: *High safety*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067206)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#intranetzonejavapermissions)
 
 - **Internet Explorer local machine zone do not run antimalware against Active X controls**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067152)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#localmachinezonedonotrunantimalwareagainstactivexcontrols)
 
 - **Internet Explorer local machine zone java permissions**:  
   TBaseline default: *Disable java*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067113)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#localmachinezonejavapermissions)
 
 - **Internet Explorer locked down internet zone smart screen**:  
   Baseline default: *Enabled*.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067059)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#lockeddowninternetzoneallowsmartscreenie)
 
 - **Internet Explorer locked down intranet zone java permissions**:  
   Baseline default: *Disable java*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067082)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#lockeddownintranetjavapermissions)
 
 - **Internet Explorer locked down local machine zone java permissions**:  
   Baseline default: *Disable java*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067253)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#lockeddownlocalmachinezonejavapermissions)
 
 - **Internet Explorer locked down restricted zone smart screen**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067092)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#lockeddownrestrictedsiteszoneallowsmartscreenie)
 
 - **Internet Explorer locked down restricted zone java permissions**:  
   Baseline default: *Disable Java*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067181)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#lockeddownrestrictedsiteszonejavapermissions)
 
 - **Internet Explorer locked down trusted zone java permissions**:  
   Baseline default: *Disable java*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067142)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#lockeddowntrustedsiteszonejavapermissions)
 
 - **Internet Explorer processes MIME sniffing safety feature**:  
   Baseline default: *Enable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067124)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#mimesniffingsafetyfeatureinternetexplorerprocesses)
 
 - **Internet Explorer processes MK protocol security restriction**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067179)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#mkprotocolsecurityrestrictioninternetexplorerprocesses)
 
 - **Internet Explorer processes notification bar**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067139)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#notificationbarinternetexplorerprocesses)
 
 - **Internet Explorer prevent per user installation of Active X controls**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067058)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#preventperuserinstallationofactivexcontrols)
 
 - **Internet Explorer processes protection from zone elevation**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067160)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#protectionfromzoneelevationinternetexplorerprocesses)
 
 - **Internet Explorer remove run this time button for outdated Active X controls**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067123)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#removerunthistimebuttonforoutdatedactivexcontrols)
 
 - **Internet Explorer processes restrict Active X install**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067250)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictactivexinstallinternetexplorerprocesses)
 
 - **Internet Explorer restricted zone access to data sources**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067161)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowaccesstodatasources)
 
 - **Internet Explorer restricted zone active scripting**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067172)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowactivescripting)
 
 - **Internet Explorer restricted zone automatic prompt for file downloads**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067150)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowautomaticpromptingforfiledownloads)
 
 - **Internet Explorer restricted zone binary and script behaviors**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067224)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowbinaryandscriptbehaviors)
 
 - **Internet Explorer restricted zone copy and paste via script**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067165)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowcopypasteviascript)
 
 - **Internet Explorer restricted zone drag and drop or copy and paste files**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067096)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowdraganddropcopyandpastefiles)
 
 - **Internet Explorer restricted zone less privileged sites**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067148)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowlessprivilegedsites)
 
 - **Internet Explorer restricted zone loading of XAML files**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067070)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowloadingofxamlfiles)
 
 - **Internet Explorer restricted zone meta refresh**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067154)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowmetarefresh)
 
 - **Internet Explorer restricted zone .NET Framework reliant components**:  
    Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067077)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallownetframeworkreliantcomponents)
 
 - **Internet Explorer restricted zone allow only approved domains to use Active X controls**:  
   Baseline default: *Enabled*  
@@ -883,143 +883,144 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Internet Explorer restricted zone allow only approved domains to use tdc Active X controls**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067032)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
 
 - **Internet Explorer restricted zone scripting of web browser controls**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067098)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowscriptingofinternetexplorerwebbrowsercontrols)
 
 - **Internet Explorer restricted zone script initiated windows**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067075)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowscriptinitiatedwindows)
 
 - **Internet Explorer restricted zone scriptlets**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067112)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowscriptlets)
 
 - **Internet Explorer restricted zone smart screen**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067034)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowsmartscreenie)
 
 - **Internet Explorer restricted zone updates to status bar via script**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067074)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowupdatestostatusbarviascript)
 
 - **Internet Explorer restricted zone user data persistence**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067081)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowuserdatapersistence)
 
 - **Internet Explorer restricted zone allow vbscript to run**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067173)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneallowvbscripttorunininternetexplorer)
 
 - **Internet Explorer restricted zone do not run antimalware against Active X controls**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067089)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonedonotrunantimalwareagainstactivexcontrols)
 
 - **Internet Explorer restricted zone download signed Active X controls**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067120)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonedownloadsignedactivexcontrols)
 
 - **Internet Explorer restricted zone download unsigned Active X controls**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067177)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonedownloadunsignedactivexcontrols)
 
 - **Internet Explorer restricted zone cross site scripting filter**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067178)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneenablecrosssitescriptingfilter)
 
 - **Internet Explorer restricted zone drag content from different domains across windows**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067166)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
 
 - **Internet Explorer restricted zone drag content from different domains within windows**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067079)  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainswithinwindows)  
 
 - **Internet Explorer restricted zone include local path when uploading files to server**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067085)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneincludelocalpathwhenuploadingfilestoserver)
 
 - **Internet Explorer restricted zone initialize and script Active X controls not marked as safe**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067097)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneinitializeandscriptactivexcontrols)
 
 - **Internet Explorer restricted zone java permissions**:  
   Baseline default: *Disable java*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067132)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonejavapermissions)
 
 - **Internet Explorer restricted zone launch applications and files in an iFrame**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067061)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonelaunchingapplicationsandfilesiniframe)
 
 - **Internet Explorer restricted zone logon options**:  
   Baseline default: *Anonymous*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067110)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonelogonoptions)
 
 - **Internet Explorer restricted zone navigate windows and frames across different domains**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067050)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonenavigatewindowsandframes)
 
 - **Internet Explorer restricted zone run Active X controls and plugins**:  
   Baseline default: *Disable*.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067114)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonerunactivexcontrolsandplugins)
 
 - **Internet Explorer restricted zone run .NET Framework reliant components signed with Authenticode**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067169)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonerunnetframeworkreliantcomponentssignedwithauthenticode)
 
 - **Internet Explorer restricted zone scripting of java applets**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067202)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszonescriptingofjavaapplets)
 
 - **Internet Explorer restricted zone security warning for potentially unsafe files**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2066797)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneshowsecuritywarningforpotentiallyunsafefiles)
 
 - **Internet Explorer restricted zone protected mode**:  
   Baseline default: *Enable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067080)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneturnonprotectedmode)
 
 - **Internet Explorer restricted zone popup blocker**:  
   Baseline default: *Enable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067180)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneusepopupblocker)
 
 - **Internet Explorer processes restrict file download**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067164)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictfiledownloadinternetexplorerprocesses)
 
 - **Internet Explorer processes scripted window security restrictions**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067146)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#scriptedwindowsecurityrestrictionsinternetexplorerprocesses)
 
 - **Internet Explorer security zones use only machine settings**:  
   Baseline default: *Enabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067086)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#securityzonesuseonlymachinesettings)
 
 - **Internet Explorer use Active X installer service**:  
   Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-specifyuseofactivexinstallerservice)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#specifyuseofactivexinstallerservice)
 
 - **Internet Explorer trusted zone do not run antimalware against Active X controls**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067115)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#trustedsiteszonedonotrunantimalwareagainstactivexcontrols)
 
 - **Internet Explorer trusted zone initialize and script Active X controls not marked as safe**:  
   Baseline default: *Disable*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067137)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#trustedsiteszoneinitializeandscriptactivexcontrols)
 
 - **Internet Explorer trusted zone java permissions**:  
   Baseline default: *High safety*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067200)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#trustedsiteszonejavapermissions)
 
 - **Internet Explorer auto complete**:  
   Baseline default: *Disabled*  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067122)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#allowautocomplete)
 
 ::: zone-end
 
 ## Local Policies Security Options
+<!-- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions -->
 
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 

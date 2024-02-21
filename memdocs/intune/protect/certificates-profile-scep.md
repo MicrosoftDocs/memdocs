@@ -2,8 +2,8 @@
 title: Use SCEP certificate profiles with Microsoft Intune
 description: Create and assign Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/23/2023
 ms.topic: how-to
@@ -25,15 +25,21 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- certificates
 ---
 
 # Create and assign SCEP certificate profiles in Intune
+
+[!INCLUDE [azure_portal](../includes/strong-mapping-cert.md)]
 
 After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
 For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
 
 Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../protect/certificates-scep-configure.md#pin-requirement-for-android-enterprise).
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
@@ -48,7 +54,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices.
@@ -147,7 +153,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
        - **CN={{UserName}}**: The user name of the user, such as janedoe. 
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
-       - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
+       - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Microsoft Entra ID. This ID is typically used to authenticate with Microsoft Entra ID.
        - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
         > [!NOTE]
          > Avoid using {{DeviceId}} for subject name on Windows devices. In certain instances, certificate generated with this subject name causes sync with Intune to fail.
@@ -156,12 +162,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
          To use the *{{OnPrem_Distinguished_Name}}* variable:
-         - Be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+         - Be sure to sync the *onpremisesdistinguishedname* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
          - If the CN value contains a comma, the Subject name format must be in quotes. For example: **CN="{{OnPrem_Distinguished_Name}}"**
         
-       - **CN={{OnPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
+       - **CN={{OnPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Microsoft Entra ID using Microsoft Entra Connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
-         To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+         To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
 
        All device variables listed in the following *Device certificate type* section can also be used in user certificate subject names.
 
@@ -175,7 +181,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
        Format options for the Subject name format include the following variables:
 
-       - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
+       - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Microsoft Entra ID.
        - **{{DeviceId}}** - The Intune device ID
        - **{{Device_Serial}}**
        - **{{Device_IMEI}}**

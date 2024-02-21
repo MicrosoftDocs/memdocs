@@ -52,7 +52,14 @@ There's also a visual guide of the different enrollment options for each platfor
 
 ## Before you begin
 
-For a list of all the Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
+For a list of all the Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md). 
+
+> [!NOTE]
+> After you create an enrollment profile and assign it to users or groups, don't rename the enrollment profile. It can prevent future enrollments. If you need to change the name of the enrollment profile, then:
+>
+> 1. Create a new enrollment profile with the new name
+> 2. Assign the new profile to the your users & devices
+> 3. Delete the old profile
 
 ## BYOD: Android Enterprise personally owned devices with a work profile
 
@@ -77,7 +84,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 
 This task list provides an overview. For more specific information, go to [Set up enrollment of Android Enterprise personally owned work profile devices](../enrollment/android-work-profile-enroll.md).
 
-- Be sure your devices are [supported](supported-devices-browsers.md).
+- Be sure your devices are [supported based on platform](supported-devices-browsers.md). For AOSP devices, see [Android Open Source Project Supported Devices](../fundamentals/android-os-project-supported-devices.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, go to [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 ### End user tasks (personally owned devices with a work profile)
@@ -280,26 +287,24 @@ Admins can complete the enrollment themselves, and then give the devices to the 
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
-## Android device administrator
+## Android device administrator  
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
 These Android devices are corporate, or personal/BYOD (bring your own device) devices that can access organization email, apps, and other data.
 
-Google is reducing device administrator support in new Android releases. To avoid reduced functionality, Microsoft recommends:
+[Google deprecated Android device administrator management](https://blog.google/products/android-enterprise/da-migration/) in 2020 and Intune will be ending support for device administrator devices with access to Google Mobile Services in August 2024.
 
-- Enroll new devices using [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article). Don't enroll new devices using Android device administrator.
+Microsoft recommends:
+
+- Don't enroll new devices using Android device administrator.
+
+- Enroll new devices using one of the other methods described in this article and/or using [App protection policies](../apps/app-protection-policy.md).
+
+- Move existing Android device administrator devices to one of the other methods described in this article. If you will be moving them to [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article), consider using the streamlined flow to move [Android devices from device administrator to personally owned work profile management](../enrollment/android-move-device-admin-work-profile.md).
+
 - Create a device enrollment restriction to block device administrator enrollment. Android devices may try to enroll using device administrator before trying other enrollment methods. So, create the restriction to prevent this behavior. For more information, go to [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
-- If devices will update to Android 10, then migrate devices off device administrator management.
-- Move existing Android device administrator devices to [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article) or [corporate-owned work profiles](#android-enterprise-corporate-owned-work-profile) (in this article). For more information, go to [Move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).
-- By default, device administrator enrollment is blocked on new tenants.
 
-There are some situations when you must use Device Administrator enrollment:
-
-- Android Enterprise requires access to Google services. Google services may not be available because of geography, or because of the device manufacturer. For example:
-
-  - There are places where Google services aren't available, like China. In this situation, use Android device administrator enrollment.  
-  - Some devices are based on Android, but don't have access to Google Services, such as Microsoft Teams Android devices and Amazon Fire tablets. In this situation, use Android device administrator enrollment.
-
-- Android OS versions older than 5.0 must use Android device administrator enrollment. Android Enterprise enrollment isn't an option.
 
 <!-- MandiA 9.10.2020: Commenting out this section.
 
