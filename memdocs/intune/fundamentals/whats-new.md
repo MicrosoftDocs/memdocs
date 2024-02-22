@@ -213,6 +213,12 @@ This information is also published in [Windows Autopilot: What's new](/autopilot
 
 ### Device enrollment
 
+#### ESP setting to install required apps during Windows Autopilot pre-provisioning <!-- 26583413 -->
+
+The setting **Only fail selected blocking apps in technician phase** is now generally available to configure in Enrollment Status Page (ESP) profiles. This setting only appears in ESP profiles that have *blocking apps* selected.
+
+For more information, see  [Set up the Enrollment Status Page](./enrollment/windows-enrollment-status.md#create-new-profile).
+
 #### New local primary account configuration for macOS automated device enrollment <!-- 5877061  -->
 
 Configure local primary account settings for Macs enrolling in Intune via Apple automated device enrollment. These settings, supported on devices running macOS 10.11 and later, are available in new and existing enrollment profiles under the new **Account Settings** tab. For this feature to work, the enrollment profile must be configured with user-device affinity and one of the following authentication methods:
