@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+zone_pivot_groups: create-policy
 ---
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
