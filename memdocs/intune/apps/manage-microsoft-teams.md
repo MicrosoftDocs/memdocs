@@ -142,12 +142,12 @@ Use the following options to configure your notifications on the portal through 
 
    :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-02.png" alt-text="app-configuration-properties-at-a-glance" border="true" :::
 
-   Other configuration keys provided in the table below can be used to control specific functionality.
+   You can simplify the sign-in experience on Teams for iOS and Android by pre-filling the domain name on the sign-in screen for users on shared and managed devices by applying the following policies: 
    
    | Name | Value |
    |---|---|
-   | domain_name | A string value providing the domain of the tenant to appended. Use a semicolon delimited value to add multiple domains. |
-   | enable_numeric_emp_id_keypad | A boolean value used to indicate that the employee ID is all numeric and the number keypad should be enabled for easy entry. If the value is not set, then the alphanumeric keyboard will open.  |
+   | domain_name | A string value providing the domain of the tenant to appended. Use a semicolon delimited value to add multiple domains. This policy only works on enrolled devices. |
+   | enable_numeric_emp_id_keypad | A boolean value used to indicate that the employee ID is all numeric and the number keypad should be enabled for easy entry. If the value is not set, then the alphanumeric keyboard will open. This policy only works on enrolled devices.  |
 
 1. Set the **Assignments** for the groups of users to include and then create your policy.
 
