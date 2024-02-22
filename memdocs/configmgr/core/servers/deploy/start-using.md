@@ -10,7 +10,9 @@ ms.author: sheetg
 manager: apoorvseth
 description: Links to articles to install Configuration Manager site servers and roles.
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+    - tier3
+    - essentials-get-started
 ms.reviewer: mstewart,aaroncz 
 ---
 

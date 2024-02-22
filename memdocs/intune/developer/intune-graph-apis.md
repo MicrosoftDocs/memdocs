@@ -8,7 +8,7 @@ author: dougeby
 manager: dougeby
 ms.author: dougeby
 ms.date: 02/23/2023
-ms.topic: overview
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
@@ -25,7 +25,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 # How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph

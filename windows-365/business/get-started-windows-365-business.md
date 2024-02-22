@@ -28,6 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - M365-identity-device-management
 - tier2
+- essentials-get-started
 ---
 
 # Get started with Windows 365 Business and Cloud PCs

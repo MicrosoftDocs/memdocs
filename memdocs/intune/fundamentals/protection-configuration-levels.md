@@ -135,7 +135,7 @@ In addition to Level 1 settings, Microsoft recommends you configure the followin
   - Block disabling application accounts
   - Enforce minimum device OS requirements
   - Require minimum patch version (Android)
-  - Require SafetyNet evaluation type (Android)
+  - Require Play integrity verdict evaluation type (Android)
   - Require device lock (Android)
   - Allow app access based on increased integrity of device
 
