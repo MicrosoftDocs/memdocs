@@ -7,7 +7,7 @@ keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/21/2024
+ms.date: 02/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,10 @@ ms.collection:
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
 
 > [!WARNING]
-> This article is being updated to include Copilot.
+> This article is being updated to include Copilot. Waiting for new UI experience to be added to Woodgrove. Outstanding tasks:
+>
+> - in policy experience
+> - update Copilot location
 
 Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 

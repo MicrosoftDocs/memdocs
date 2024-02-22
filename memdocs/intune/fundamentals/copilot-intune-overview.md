@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2024
+ms.date: 02/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,7 +34,10 @@ ms.collection:
 # Microsoft Copilot in Intune (public preview)
 
 > [!WARNING]
-> This article is being written.
+> This article is being written. Waiting for new UI experience to be added to Woodgrove. Outstanding tasks:
+>
+> - Add this article to toc.yml
+> - Finish writing based on UI changes
 
 This feature is in [public preview](public-preview.md).
 

@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, device informatio
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2024
+ms.date: 02/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,11 @@ ms.collection:
 # Use Microsoft Copilot for Security to troubleshoot devices in Microsoft Intune
 
 > [!WARNING]
-> This article is being written.
+> This article is being written. Waiting for new UI experience to be added to Woodgrove. Outstanding tasks:
+>
+> - Get sample errors and error codes
+> - List of available prompts
+> - Add this article to toc.yml, possibly Troubleshooting section?
 
 This feature is in [public preview](public-preview.md).
 
