@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/12/2024
+ms.date: 02/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,6 +33,9 @@ ms.collection:
 
 # Microsoft Copilot for Security (preview) and Intune
 
+> [!WARNING]
+> This article is being updated.
+
 > [!IMPORTANT]
 > The information in this article applies to the Microsoft Security Copilot Early Access Program, which is an invite-only paid preview program. Some information in this article relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided in this article.
 
@@ -45,6 +48,27 @@ If you use [Microsoft Intune](what-is-intune.md) in the same tenant as Security 
 Specifically, Security Copilot gets insights from your Intune data. You can use the system features built into Security Copilot, and use prompts to get more information. This information can help you understand your security posture and possibly troubleshoot device issues.
 
 This article introduces you to Security Copilot and includes sample prompts that can help Intune admins.
+
+## Standalone in Copilot for Security
+
+Doc needs:
+
+1. cover the feature
+1. sample prompts
+1. why this data is interesting to SOC analytics
+
+Info important to SOC analytics
+
+device name, ID, compliance status, when it was enrolled, non-compliant reason
+
+was device recently enrolled
+is it a hacker using stolen credentials that is trying to enroll and get access
+
+
+can ask about one speicifc device, and get all properties about that device
+
+what is the device
+what is the device manufacturer
 
 ## Know before you begin
 

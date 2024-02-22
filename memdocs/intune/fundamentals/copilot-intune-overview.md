@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2024
+ms.date: 02/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,10 +31,13 @@ ms.collection:
 - security-copilot
 ---
 
-# Microsoft Copilot for Intune (public preview)
+# Microsoft Copilot in Intune (public preview)
 
 > [!WARNING]
-> This article is being written.
+> This article is being written. Waiting for new UI experience to be added to Woodgrove. Outstanding tasks:
+>
+> - Add this article to toc.yml
+> - Finish writing based on UI changes
 
 This feature is in [public preview](public-preview.md).
 
@@ -42,27 +45,29 @@ Onboarding guide: https://microsoft.sharepoint-df.com/:w:/t/IntuneOpenAI/EV8cbwN
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) is a generative-AI security analysis tool that can help your organization get information quickly, and help you make decisions that impact security and risk.
 
-Copilot is built into the Intune admin center and is available for some features, including the settings catalog.
+Copilot is built into the Microsoft Intune admin center and is available for some features, like the settings catalog.
 
-You can use Copilot to create settings catalog policies, get information about existing policies, learn more about individual settings and their impact, and get device-specific details.
-
-You can use this data to help you manage your policies & settings, understand your security posture, and possibly troubleshoot device issues.
+Security Copilot gets insights from your Intune data. You can use these insights to help you manage your policies & settings, understand your security posture, and troubleshoot device issues.
 
 This article describes the Intune features that can use Copilot.
 
 ## Prerequisites
 
-- Copilot in Microsoft Intune is licensed with Microsoft Copilot for Security. There aren't any additional user licensing requirements for using Copilot in Intune.
+To use Copilot in Intune, you need the following:
 
-  For more information on the Microsoft Copilot for Security licensing requirements, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
+- **Copilot license**: Copilot in Microsoft Intune is licensed with Microsoft Copilot for Security. There aren't any additional licensing requirements or Intune-specific licenses for using Copilot in Intune.
 
-- To use Copilot in Intune, you need the following RBAC roles:
-  
-  - Policy and profile manager: If you're using Copilot to create or manage Intune policies, then at a minimum, sign in with an account that is a member of this built-in Intune role.
-  - Intune Service Administrator ??
-  - Intune Role Administrator ??
+  For more information on Microsoft Copilot licensing, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
-  Access to Copilot in Intune is managed through RBAC roles in Copilot for Security, not Intune??
+- **Copilot configuration**: Microsoft Copilot must be configured in your Microsoft Entra tenant. For the specific setup tasks, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
+
+  To confirm Copilot is set up, you can check the status in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Copilot**.
+
+  INSERT SCREEN SHOT
+
+- **Copilot roles**: Access to Copilot in Intune is managed through Microsoft Entra ID. To use Copilot in Intune, you/your admin team must be a member of the appropriate role in Entra ID. There isn't a built-in Intune role that has access to Copilot.
+
+  For the specific Entra roles, and what they can do with Copilot, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
 ## Tips for good prompts
 
@@ -74,11 +79,11 @@ This article describes the Intune features that can use Copilot.
 
 ## Settings catalog policy and settings
 
-Copilot is embedded with the Intune settings catalog. You can use Copilot to:
+Copilot is embedded in the Intune settings catalog. You can use Copilot to:
 
 - Create new settings catalog policies.
 - Get more information about existing policies, including potential conflicts, security impact, and risk.
-- Get more information about a specific setting, including its impact on users & devices, and recommended values.
+- Learn more about individual settings, including their impact on users & devices, and recommended values.
 - List the settings catalog policies and settings for a specific device, or compare existing policies.
 
 For more information on using Copilot with the settings catalog, including sample prompts, go to [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
@@ -91,7 +96,7 @@ For example, you can ask Copilot to show you the settings catalog policy and set
 
 ??Need more information. Experience isn't in Woodgrove yet. ??
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration**.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration**.
 2. Select any existing settings catalog policy > **Copilot**.
 
 TO DO: also update:
@@ -103,14 +108,13 @@ TO DO: also update:
 - /configuration/device-profile-troubleshoot.md
 
 
-## Device-specific info
+## Device details and troubleshooting
 
+Copilot is also embedded in the Intune device details. You can use Copilot to get device-specific information, like the installed apps, group membership, and more.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.
-2. Select any existing device.
-3. Select **Copilot** and then select one of the options, like **Explore device**:
+There's also a prompt to enter an error code to get more information about the error and how to resolve it. This feature can help your support team troubleshoot device issues.
 
-    :::image type="content" source="./media/copilot-intune-overview/copilot-select-device.png" alt-text="Screenshot that shows selecting any device and then select Copilot in Microsoft Intune and Intune admin center.":::
+For more information on using Copilot with your devices, go to [Use Microsoft Copilot for Security to troubleshoot devices in Microsoft Intune](../fundamentals/copilot-devices.md).
 
 ## Microsoft Copilot for Security and Intune
 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features.
-keywords: settings catalog, security copilot
+description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to create a policy, get impact What If analysis, and learn more about each setting.
+keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/15/2024
+ms.date: 02/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, beflamm
+ms.reviewer: mikedano, beflamm, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -32,9 +32,15 @@ zone_pivot_groups: create-policy
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
 
+> [!WARNING]
+> This article is being updated to include Copilot. Waiting for new UI experience to be added to Woodgrove. Outstanding tasks:
+>
+> - in policy experience
+> - update Copilot location
+
 Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
-When you combine the settings catalog with Microsoft Copilot, you can use Copilot to:
+You can also use [Microsoft Copilot in Intune](../fundamentals/copilot-intune-overview.md). When you combine the settings catalog with Copilot, you can use Copilot to:
 
 - Learn more about each setting in the settings catalog.
 - Create settings catalog policies using prompts.
@@ -67,7 +73,7 @@ This feature applies to:
 > [!TIP]
 >
 > - For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
-> - To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`. Or, if you use Copilot, you can use a prompt like **Show me all the existing policies that configure microsoft edge**.
+> - To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`. Or, if you use Copilot, you can use a prompt like **Show me all the existing policies that configure microsoft edge browser**.
 
 This article lists the steps to create a policy, shows how to search and filter the settings in Intune, and shows how to use Copilot for these tasks.
 
@@ -214,7 +220,7 @@ When you create a new policy or update an existing policy, there are built-in se
 
 # [Copilot](#tab/copilot-tooltips)
 
-When using settings catalog policies, you can use Copilot to get more information about a specific setting.
+When you use settings catalog policies, you can use Copilot to get more information about a specific setting.
 
 1. In your policy, select **Add settings**. In the Settings Picker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the Settings Picker.
 
@@ -320,7 +326,7 @@ Copilot can help you find the status of your existing policies, find the status 
 - Is this setting configured in any other policies?
 - Will this setting cause a conflict?
 
-**To get reporting-like information on existing policies**, you can ask questions like:
+**To get reporting-like information on existing policies**, you can use prompts like:
 
 - Summarize the policy "Contoso Windows 10 security"​.
 - Show policies that contain encryption settings​. Describe their impact on end users.
