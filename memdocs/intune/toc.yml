@@ -785,6 +785,28 @@ items:
                 href: ./protect/zimperium-mtd-connector-integration.md 
         - name: Network access control
           href: ./protect/network-access-control-integrate.md
+        - name: Microsoft Cloud PKI  
+          items:
+          - name: Microsoft Cloud PKI overview  
+            href: ./protect/microsoft-cloud-pki-overview.md
+            displayName: RBAC, requirements  
+          - name: Microsoft Cloud PKI fundamentals  
+            href: ./protect/microsoft-cloud-pki-fundamentals.md              
+          - name: Configure and deploy      
+            items: 
+            - name: Overview          
+              href: ./protect/microsoft-cloud-pki-deployment.md 
+            - name: Configure Microsoft Cloud PKI CA     
+              href: ./protect/microsoft-cloud-pki-configure-root-issuing.md   
+              displayName: root, certification, authority, ca, issuing, BYO
+            - name: Configure bring-you-own CA    
+              href: ./protect/microsoft-cloud-pki-configure-byoca.md          
+          - name: Monitor issued certificates  
+            href: ./protect/microsoft-cloud-pki-monitor.md  
+          - name: Get audit logs  
+            href: ./protect/microsoft-cloud-pki-audit-logs.md 
+          - name: Troubleshooting  
+            href: ./protect/microsoft-cloud-pki-troubleshoot.md 
         - name: Certificates
           items: 
           - name: Use certificates for authentication
