@@ -66,7 +66,9 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
   - Enrolled devices that run Windows 10/11
   - Windows Holographic for Business
 
-- For Windows 11 devices, there is an issue between the Windows 11 client and the [Windows VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp). A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
+- **For Windows 11 devices, there is an issue** between the Windows 11 client and the [Windows VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+
+  A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
 
   The following changes can cause a loss of VPN functionality:
 
@@ -76,18 +78,18 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 
   This issue doesn't apply and VPN connectivity remains in the following scenarios: 
 
-  - A Windows 11 device doesn't have an existing VPN profile assigned, and it receives one Intune VPN profile.
+  - A Windows 11 device doesn't have an existing VPN profile assigned, and the devices receives one Intune VPN profile.
   - Windows 11 devices have an existing VPN profile assigned, and are assigned another VPN profile with no other profile changes.
   - A Windows 10 device upgrades to Windows 11, and there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
   - Windows 11 requires that:
 
     - All of the [IKE Security Association Parameters](vpn-settings-windows-10.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](vpn-settings-windows-10.md#child-security-association-parameters-ikev2-only) settings are configured
 
-    **OR**
+      **OR**
 
     - None of the [IKE Security Association Parameters](vpn-settings-windows-10.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](vpn-settings-windows-10.md#child-security-association-parameters-ikev2-only) settings are configured
 
-    If you only configure one of the **IKE Security Association Parameters** or **Child Security Association Parameters** settings, then there's loss of VPN functionality.
+    If you only configure one of the **IKE Security Association Parameters** or **Child Security Association Parameters** settings, then there's a loss of VPN functionality.
 
 ## Step 1 - Deploy your VPN app
 
