@@ -132,18 +132,22 @@ Use the following options to configure your notifications on the portal through 
    :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-03.png" alt-text="app-configuration-policies-at-a-glance" border="true" :::
 
 1. On the **Basics** page, add a **Name** and click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
-1. Under **General configuration settings**, set any of the notification keys to **1** to turn the feature **ON** for chat, channels, all other notifications or any of these combinations. And, set to **0** to turn off the feature. Other configuration keys provided in the table below can be used to control specific functionality.
+1. Under **General configuration settings**, set any of the notification keys to **1** to turn the feature **ON** for chat, channels, all other notifications or any of these combinations. And, set to **0** to turn off the feature. 
 
    | Name | Value |
    |---|---|
    | com.microsoft.teams.chat.notifications.IntuneMAMOnly | **1** for on, **0** for off |
    | com.microsoft.teams.channel.notifications.IntuneMAMOnly | **1** for on, **0** for off |
    | com.microsoft.teams.others.notifications.IntuneMAMOnly | **1** for on, **0** for off |
-   | domain_name | A string value providing the domain of the tenant to appended. Use a semicolon delimited value to add multiple domains. |
-   | enable_numeric_emp_id_keypad | A boolean value used to indicate that the employee ID is all numeric and the number keypad should be enabled for easy entry. If the value is not set, then the alphanumeric keyboard will open.  |
-   | login_hint_text | A string providing one or more locale values for various countries and languages separated by a semicolon, such as `en-us` and `fr-fr`. If a locale value is not found, the language will revert to `en-us`.  |
 
    :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-02.png" alt-text="app-configuration-properties-at-a-glance" border="true" :::
+
+   Other configuration keys provided in the table below can be used to control specific functionality.
+   
+   | Name | Value |
+   |---|---|
+   | domain_name | A string value providing the domain of the tenant to appended. Use a semicolon delimited value to add multiple domains. |
+   | enable_numeric_emp_id_keypad | A boolean value used to indicate that the employee ID is all numeric and the number keypad should be enabled for easy entry. If the value is not set, then the alphanumeric keyboard will open.  |
 
 1. Set the **Assignments** for the groups of users to include and then create your policy.
 
