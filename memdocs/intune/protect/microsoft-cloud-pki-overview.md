@@ -59,7 +59,7 @@ After you create a Cloud PKI issuing CA, you can start to issue certificates in 
 You can use the following configurations, provided as examples, to create two-tier root & issuing certification authorities (CA) in Microsoft Cloud PKI:   
 - One root CA with five issuing CAs  
 - Three root CAs with one issuing CA each  
-- Two root CAs with one issuing CAs each  
+- Two root CAs with one issuing CA each  
 - Six bring-your-own CAs  
 
 ## Supported device platforms  
@@ -95,7 +95,7 @@ The following table lists the features and scenarios supported with Microsoft Cl
 
 ## Architecture  
 
-Microsoft Cloud PKI validates incoming certificate requests from Intune-enrolled devices, and supports the Simple Certificate Enrollment Protocol (SCEP). 
+Microsoft Cloud PKI uses a certificate registration authority to validate incoming certificate requests from Intune-enrolled devices, and supports the Simple Certificate Enrollment Protocol (SCEP).  
 
 > [!div class="mx-imgBorder"]
 > ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/microsoft-cloud-pki-architecture.png)  
