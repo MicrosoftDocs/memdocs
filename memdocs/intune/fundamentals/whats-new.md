@@ -211,22 +211,6 @@ Windows Autopilot for pre-provisioned deployment is now generally available and 
 
 This information is also published in [Windows Autopilot: What's new](/autopilot/windows-autopilot-whats-new).
 
-#### New settings for the Attack Surface Reduction Rules profile for Windows devices<!-- 26726871  -->
-
-We've added two settings to the *Attack Surface Reduction Rules* profile for  [endpoint security attack surface reduction policy](../protect/endpoint-security-asr-policy.md). These settings are available when you select the *Windows 10, Windows 11, and Windows Server* platform, and are available in the *Defender* category of the profile:
-
-- **Block rebooting machine in Safe Mode** - This rule blocks attempts of restarting a machine in SAFE mode.
-- **Block use of copied or impersonated system tools** - This rule blocks executables that impersonate or are copies of system tools and binaries found on the machine.
-
-In addition to being added to the Attack Surface Reduction Rules profile, both settings are also available from the [settings catalog](../configuration/settings-catalog.md).
-
-Applies to:
-
-- Windows 10
-- Windows 11
-
-To learn more about Attack surface reduction rules, see [Attack surface reduction rules reference](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference) in the Microsoft 365 documentation.
-
 ### Device enrollment
 
 #### New local primary account configuration for macOS automated device enrollment <!-- 5877061  -->
