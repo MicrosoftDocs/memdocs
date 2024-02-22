@@ -32,7 +32,8 @@ zone_pivot_groups: apple-enterprise-sso
 
 ## Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune
 
-**IN PROGRESS**
+> [!WARNING]
+> This article is being updated to include platform SSO for macOS.
 
 Apple devices can use single sign-on (SSO) to access devices, apps, and websites using their Microsoft Entra ID. SSO lets users sign in and get access without entering their credentials each time. This article describes the SSO options available for Apple devices in Microsoft Intune.
 
