@@ -26,7 +26,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: has-adal-ref
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---

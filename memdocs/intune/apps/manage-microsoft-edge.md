@@ -230,7 +230,6 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 - Bookmarks can't be deleted or modified by users.
 - Bookmarks appear at the top of the list. Any bookmarks that users create appear below these bookmarks.
 - If you have enabled Application Proxy redirection, you can add Application Proxy web apps by using either their internal or external URL.
-- Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
 - Bookmarks are created in a folder named after the organization's name which is defined in Microsoft Entra ID.
 
 |Key |Value |
@@ -588,7 +587,7 @@ Before you start:
 > [!NOTE]
 > Edge for iOS and Android updates the Application Proxy redirection data based on the last successful refresh event. Updates are attempted whenever the last successful refresh event is greater than one hour.
 
-Target Edge for iOS with the following key/value pair, to enable Application Proxy:
+Target Edge for iOS and Android with the following key/value pair, to enable Application Proxy.
 
 |Key |Value|
 |:-------------|:-------------|
@@ -636,7 +635,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
 |com.microsoft.intune.mam.managedbrowser.Chat | EdgeChat|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext	| ChatPageContext|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
