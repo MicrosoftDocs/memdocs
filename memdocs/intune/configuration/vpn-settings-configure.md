@@ -70,13 +70,13 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 
   A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
 
-  The following changes can cause a loss of VPN functionality:
+  **The following changes can cause a loss of VPN functionality**:
 
   - You change or update an existing VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile, and applies the updated profile.
   - Two new VPN profiles apply to the device at the same time.
   - An active VPN profile is removed at the same time a new VPN profile is assigned.
 
-  This issue doesn't apply and VPN connectivity remains in the following scenarios: 
+  **This issue doesn't apply and VPN connectivity remains in the following scenarios**: 
 
   - A Windows 11 device doesn't have an existing VPN profile assigned, and the devices receives one Intune VPN profile.
   - Windows 11 devices have an existing VPN profile assigned, and are assigned another VPN profile with no other profile changes.
