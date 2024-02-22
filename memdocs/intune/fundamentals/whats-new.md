@@ -269,12 +269,24 @@ For more information, see:
 - [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms#some-tasks-may-be-delayed.md)
 - [Policy refresh intervals in Intune](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals)
 
-
 #### New device management experience for Government clouds in Microsoft Intune<!-- 17585897 23692982 -->
 
 In government clouds, there's a new device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster.
 
 If you want to try the new experience before your tenant is updated, go to **Devices** > **Overview**, select the **Preview upcoming changes to Devices and provide feedback** notification banner, and select **Try it now**.
+
+#### Bulk approval of drivers<!-- 14723288  -->
+
+Bulk actions are now available for Windows Driver update policies.  With bulk actions, multiple driver updates can be approved, paused, or declined at the same time, saving time and effort.  
+
+When bulk approving drivers, the date for when the drivers become available to applicable devices can also be set, enabling drivers to be installed together.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For more information, see [Bulk driver updates](../protect/windows-driver-updates-policy.md#bulk-driver-updates).
 
 ### Tenant administration
 
