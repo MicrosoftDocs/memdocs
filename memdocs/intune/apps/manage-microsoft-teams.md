@@ -103,7 +103,7 @@ You can learn more about configuring the org allowed accounts mode setting here:
 - [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
 - [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
-This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you aren't using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys.
+This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you aren't using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys. 
 
 ## Notification settings in Microsoft Teams
 
