@@ -225,6 +225,8 @@ Applies to:
 - Windows 10
 - Windows 11
 
+To learn more about Attack surface reduction rules, see [Attack surface reduction rules reference](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference) in the Microsoft 365 documentation.
+
 ### Device enrollment
 
 #### New local primary account configuration for macOS automated device enrollment <!-- 5877061  -->
