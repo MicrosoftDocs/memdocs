@@ -42,11 +42,13 @@ You have two ways to manage software updates on android:
 
     > [!NOTE]
     > [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md) is required.
+    >
+    > If Zebra updated the available firmware list in the last 24 hours, the list of firmware available may take up to 24 hours to populate.
 
 - If FOTA isn't available you can use Device restrictions profiles, which work for all OEMs.
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Navigate to **Devices** > **Android** > **Configuration profiles** > **Device restrictions**.  
+    2. Navigate to **Devices** > **Android** > **Configuration profiles** > **Create** > **New policy** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device restrictions**.  
     3. Device restrictions profiles offer control over how the device handles over-the-air updates and allow you to set a freeze period for these updates.  
     > [!NOTE]
     > Not all device manufacturers support over-the-air updates. For more information, see [Corporate-owned Android Enterprise device restriction settings in Microsoft Intune](../configuration/device-restrictions-android-for-work.md)

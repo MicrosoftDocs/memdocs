@@ -3,8 +3,8 @@ title: Manage VDI clients
 titleSuffix: Configuration Manager
 description: Manage Configuration Manager clients in a virtual desktop infrastructure (VDI).
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

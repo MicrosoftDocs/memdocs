@@ -230,7 +230,6 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 - Bookmarks can't be deleted or modified by users.
 - Bookmarks appear at the top of the list. Any bookmarks that users create appear below these bookmarks.
 - If you have enabled Application Proxy redirection, you can add Application Proxy web apps by using either their internal or external URL.
-- Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
 - Bookmarks are created in a folder named after the organization's name which is defined in Microsoft Entra ID.
 
 |Key |Value |
@@ -371,6 +370,16 @@ By default, Microsoft Edge for Android will block network access with invalid or
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
+
+#### Proxy for users to sign in to Edge in Android.
+
+A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android. 
+
+Organizations can specify dedicated proxy via MDM policy for users to sign in to Edge in Android.
+
+|Key  |Value  |
+|:---------|:---------|
+|EdgeOneAuthProxy |  The corresponding value is a string <br> **Example** `http://MyProxy.com:8080` |
 
 #### iOS Website data store
 
@@ -578,14 +587,11 @@ Before you start:
 > [!NOTE]
 > Edge for iOS and Android updates the Application Proxy redirection data based on the last successful refresh event. Updates are attempted whenever the last successful refresh event is greater than one hour.
 
-Target Edge for iOS with the following key/value pair, to enable Application Proxy:
+Target Edge for iOS and Android with the following key/value pair, to enable Application Proxy.
 
 |Key |Value|
 |:-------------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.AppProxyRedirection |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
-
-> [!NOTE]
-> Edge for Android does not consume this key. Instead, Edge for Android consumes Microsoft Entra application proxy configuration automatically as long as the signed-in Microsoft Entra account has an App Protection Policy applied.
 
 For more information about how to use Edge for iOS and Android and Microsoft Entra application proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Microsoft Entra team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for iOS and Android as well.
 
@@ -629,7 +635,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
 |com.microsoft.intune.mam.managedbrowser.Chat | EdgeChat|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext	| ChatPageContext|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
 
 ## Deploy app configuration scenarios with Microsoft Intune
 

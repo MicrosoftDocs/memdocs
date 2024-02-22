@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2023
+ms.date: 01/31/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -34,13 +34,17 @@ ms.collection:
 
 Users can access their Cloud PCs in accordance with the matrix below:
 
-| Windows 365 Edition | [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) | [windows365.microsoft.com](https://Windows365.microsoft.com) web client | Microsoft Remote Desktop | LG Web OS |
+| Windows 365 Edition | [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) | [windows365.microsoft.com](https://Windows365.microsoft.com) web client | [Microsoft Remote Desktop](#remote-desktop) | [LG Web OS](#lg-webos-23) |
 |--|--|--|--|--|
 | Windows 365 Business | X | X | X | X |
 | Windows 365 Enterprise | X | X | X | X |
 | Windows 365 Frontline | X | X | | |
 
 For information on hardware requirements, see [End user hardware requirements](end-user-hardware-requirements.md).
+
+## Windows App
+
+For more information about the requirements of running and using Windows App, see [What is Windows App?](/windows-app/overview).
 
 ## Windows 365 web site
 
@@ -80,7 +84,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
     > [!IMPORTANT]  
     > Before resetting your Cloud PC, make sure to back up any important files you need to keep to a cloud storage service or external storage. Resetting your Cloud PC will delete these files.
 
-- **Restart**: Restarts the Cloud PC.
+- **Restart**: Restarts the Cloud PC. For Cloud PCs created after 1/31/2024, you can also restart or shut down by using the keyboard combination CTRL+ALT+DEL.
 - **Troubleshoot**: Troubleshoot and attempt to resolve any issues that may be preventing a user from connecting to their Cloud PC. The checks run include:
     - Check whether any files or agents required for connectivity are correctly installed.
     - Make sure that the Azure resources are available.

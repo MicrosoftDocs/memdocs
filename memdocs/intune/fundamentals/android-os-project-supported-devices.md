@@ -2,13 +2,12 @@
 # required metadata
 
 title: Android Open Source Project Supported Devices
-titleSuffix: 
 description: Lists Android open source project devices (AOSP) supported devices
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/27/2023
+ms.date: 02/08/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -23,7 +22,7 @@ ms.reviewer: Priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started; seodec18
+ms.custom: get-started
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -37,6 +36,11 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 
 ## Intune for Android Open Source Supported Devices
 
+> [!NOTE]
+> All the devices listed here support the management capabilities available for Android AOSP platform. For more information on enrollment of Android devices, see: 
+> - [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
+> - [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
+
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |
 | HTC     | HTC Vive Focus 3   | 5.2 - 5.0.999.624    | AR/VR Headset  |                    |
@@ -49,3 +53,4 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 | Realwear| HMT-1Z1            | 11.2                | AR/VR Headset  |                    |
 | Realwear| Navigator500       | 11.2                | AR/VR Headset  |                    |
 | Lenovo| ThinkReality VRX     | VRX_user_S766001_2310192349_kona   | AR/VR Headset  |                   |
+

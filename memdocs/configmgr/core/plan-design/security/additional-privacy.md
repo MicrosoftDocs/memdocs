@@ -3,14 +3,16 @@ title: Additional privacy information
 titleSuffix: Configuration Manager
 description: Learn about how Microsoft collects and uses data from Configuration Manager.
 ms.date: 09/04/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+    - tier3
+    - essentials-privacy
 ms.reviewer: mstewart,aaroncz 
 ---
 

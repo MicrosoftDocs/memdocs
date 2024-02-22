@@ -3,8 +3,8 @@ title: Create configuration baselines
 titleSuffix: Configuration Manager
 description: Create configuration baselines in Configuration Manager that you can deploy to a collection.
 ms.date: 03/10/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth

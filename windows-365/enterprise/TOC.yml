@@ -117,6 +117,8 @@ items:
           href: requirements-citrix.md
         - name: Set up Citrix HDX Plus for Windows 365
           href: set-up-citrix.md
+        - name: Retry Citrix agent installation
+          href: retry-citrix-agent-installation.md
         - name: VMware requirements
           href: requirements-vmware-horizon.md
         - name: Set up VMware Horizon for Windows 365

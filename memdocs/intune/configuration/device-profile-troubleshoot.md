@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 02/06/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,7 +45,7 @@ This article applies to the following policies:
 
 ## Policy refresh intervals
 
-Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms.
+Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms. On Android devices, [Googe Mobile Services (GMS) can impact policy refresh intervals](../apps/manage-without-gms.md#some-tasks-may-be-delayed).
 
 If a device doesn't check in to get the policy or profile after the first notification, Intune makes three more attempts. An offline device, such as turned off, or not connected to a network, may not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with the Intune service. The same applies to checks for non-compliance, including devices that move from a compliant to a non-compliant state.
 
@@ -53,7 +53,7 @@ If a device doesn't check in to get the policy or profile after the first notifi
 
 | Platform | Refresh cycle|
 | --- | --- |
-| Android | About every 8 hours |
+| Android, AOSP | About every 8 hours |
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
@@ -63,7 +63,7 @@ If devices recently enroll, then the compliance, non-compliance, and configurati
 
 | Platform | Frequency |
 | --- | --- |
-| Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+| Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
@@ -77,7 +77,7 @@ At any time, users can open the Company Portal app, **Devices** > **Check Status
 
 There are different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, and so on. These action times vary between platforms.
 
-Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, when a lock, passcode reset, app, or policy assignment action runs.
+Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, a notification happens when a lock, passcode reset, app, or policy assignment action runs.
 
 Other changes don't cause an immediate notification to devices, including revising the contact information in the Company Portal app or updates to an `.ipa` file.
 

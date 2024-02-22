@@ -3,8 +3,8 @@ title: Certificates overview
 titleSuffix: Configuration Manager
 description: Learn about how Configuration Manager uses self-signed and PKI digital certificates.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: Banreet
 ms.author: banreetkaur

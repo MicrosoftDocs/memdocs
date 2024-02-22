@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2023
+ms.date: 02/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -130,6 +130,33 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
+### February 1, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:845aee9cbe3e4c9bd70b1b8108cd5108e454aff38237b236f75092164c885023
+
+- **serverImageDigest**: sha256:6f444d251b56e467b8791201f554b22d1431a135a5f66bc45638cec453e22b47
+
+Changes in this release:
+
+- Bug fix: do not issue the "docker network reload" command to reset the network. The command is not supported on Docker.
+- Security updates on the base image. 
+
+### January 4, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:9cd55c3f4ea4b4ff8212db46a81a0ceda29c3e9c534226ee4d0ce896bcc32596
+
+- **serverImageDigest**: sha256:0389d8c16794cf2f982a955a528b0bbba79b7c7180fd5706f44bb691ca61734d
+
+Changes in this release:
+
+- Bug fix: Rootless container fix
+- MTG handling for Diagnostic and Log Upload request in HB response
+
+
 ### November 14, 2023
 
 Image hash values:
@@ -171,6 +198,8 @@ Changes in this release:
 - Bug fix for server container: Check /dev/tun permissions only when the server container is running
 - Limit Tunnel server's maximum logging level to verbose to enhance privacy
 
+<!-- Archive of past releases
+
 ### July 24, 2023
 
 Image hash values:
@@ -196,8 +225,6 @@ Changes in this release:
 
 - Minor bug fixes
 - Agent container fixes
-
-<!-- Archive of past releases
 
 ### April 3, 2023
 

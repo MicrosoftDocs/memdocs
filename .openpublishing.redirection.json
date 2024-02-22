@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/fundamentals/migration-guide-app-protection-policies.md",
+      "redirect_url": "/mem/intune/apps/app-configuration-policies-overview",
+      "redirect_document_id": false 
+    },    
+    {
+      "source_path": "memdocs/intune/apps/windows-store-for-business.md",
+      "redirect_url": "/mem/intune/apps/store-apps-microsoft",
+      "redirect_document_id": false 
+    },    
+    {
+      "source_path": "memdocs/intune/apps/app-sideload-windows.md",
+      "redirect_url": "/mem/intune/apps/lob-apps-windows",
+      "redirect_document_id": false 
+    },    
+    {
+      "source_path": "memdocs/intune/fundamentals/microsoft-intune-admin-center-devices.md",
+      "redirect_url": "/mem/intune/fundamentals/public-preview",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/user-help/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
       "redirect_document_id": false 
@@ -1156,11 +1176,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "windows-365/business-continuity-disaster-recovery.md",
-      "redirect_url": "/windows-365/enterprise/business-continuity-disaster-recovery",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "windows-365/cloud-pc-size-recommendations.md",
       "redirect_url": "/windows-365/enterprise/cloud-pc-size-recommendations",
       "redirect_document_id": false
@@ -2278,6 +2293,11 @@
     {
       "source_path": "memdocs/intune/protect/software-updates-declarative-ios-macos.md",
       "redirect_url": "/mem/intune/protect/managed-software-updates-ios-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/business-continuity-disaster-recovery.md",
+      "redirect_url": "/windows-365/business-continuity-disaster-recovery",
       "redirect_document_id": false
     }
   ]

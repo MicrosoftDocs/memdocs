@@ -3,8 +3,8 @@ title: Diagnostic usage data for tools
 titleSuffix: Configuration Manager
 description: Learn about the diagnostics and usage data that Configuration Manager collects for its tools.
 ms.date: 08/10/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

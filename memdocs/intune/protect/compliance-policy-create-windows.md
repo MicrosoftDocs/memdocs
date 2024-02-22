@@ -112,6 +112,8 @@ To discover build versions for all Windows 10/11 Feature Updates and Cumulative 
 - **Valid operating system builds**:  
   Specify a list of minimum and maximum operating system builds. Valid operating system builds provides additional flexibility when compared against minimum and maximum OS versions. Consider a scenario where minimum OS version is set to 10.0.18362.xxx (Windows 10 1903) and maximum OS version is set to 10.0.18363.xxx (Windows 10 1909). This configuration can allow a Windows 10 1903 device that doesn't have recent cumulative updates installed to be identified as compliant. Minimum and maximum OS versions might be suitable if you have standardized on a single Windows 10 release, but might not address your requirements if you need to use multiple builds, each with specific patch levels. In such a case, consider leveraging valid operating system builds instead, which allows multiple builds to be specified as per the following example.
 
+  The largest supported value for each of the version, major, minor, and build fields is 65535. For example, the largest value you can enter is 65535.65535.65535.65535.
+
   **Example**:  
   The following table is an example of a range for the acceptable operating systems versions for different Windows 10 releases. In this example, three different Feature Updates have been allowed (1809, 1909 and 2004). Specifically, only those versions of Windows and which have applied cumulative updates from June to September 2020 will be considered to be compliant. This is sample data only. The table includes a first column that includes any text you want to describe the entry, followed by the minimum and maximum OS version for that entry. The second and third columns must adhere to valid OS build versions in the **major.minor.build.revision number** format. After you define one or more entries, you can **Export** the list as a comma-separated values (CSV) file.  
 
@@ -121,6 +123,9 @@ To discover build versions for all Windows 10/11 Feature Updates and Cumulative 
   | Win 10 1909 (Jun-Sept 2020) | 10.0.18363.900     | 10.0.18363.1110    |
   | Win 10 1809 (Jun-Sept 2020) | 10.0.17763.1282    | 10.0.17763.1490    |
 
+  > [!NOTE]
+  > If you specify multiple ranges of OS version builds in your policy, and a device has a build outside of the compliant ranges, Company Portal will notify the device user that the device is noncompliant with this setting. However, be aware that due to technical limitations, the compliance remediation message only shows the first OS version range specified in the policy. We recommend that you document the acceptable OS version ranges for managed devices in your organization.  
+  
 ## Configuration Manager Compliance
 
 Applies only to co-managed devices running Windows 10/11. Intune-only devices return a not available status.

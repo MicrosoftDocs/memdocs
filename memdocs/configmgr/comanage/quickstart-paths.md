@@ -3,8 +3,8 @@ title: Paths to co-management
 titleSuffix: Configuration Manager
 description: Understand the prerequisites for the two primary ways for you to setup co-management.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

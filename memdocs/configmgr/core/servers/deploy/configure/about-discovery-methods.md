@@ -3,8 +3,8 @@ title: Discovery methods
 titleSuffix: Configuration Manager
 description: Learn about the available discovery methods to find devices on your network, from Active Directory, or Microsoft Entra ID.
 ms.date: 03/23/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

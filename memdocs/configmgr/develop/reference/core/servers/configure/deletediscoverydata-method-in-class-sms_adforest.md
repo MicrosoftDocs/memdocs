@@ -3,8 +3,8 @@ title: DeleteDiscoveryData Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the DeleteDiscoveryData WMI class method removes information gathered by the forest discovery process.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 33723e8b-cc0c-4b1d-a2f5-a4629b32eab3
 author: Banreet

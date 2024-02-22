@@ -25,7 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -928,7 +928,7 @@ Test Steps:
 ## Next Steps
 
 If you followed this guide in order and have completed all the [Exit Criteria] above, **congratulations**, your app is now fully integrated with the Intune App SDK and can enforce app protection policies!
-If you skipped either of the previous app participations sections, [Stage 5: Multi-Identity] and [Stage 6: App Configuration], and are unsure if your app should support these features, revisit [Key Decisions for SDK integration].
+If you skipped either of the previous app participation sections, [Stage 5: Multi-Identity] and [Stage 6: App Configuration], and are unsure if your app should support these features, revisit [Key Decisions for SDK integration].
 
 App protection is now a core scenario for your app.
 Do continue to refer to this guide and the [Appendix] as you continue to develop your app.

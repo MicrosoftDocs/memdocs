@@ -2,15 +2,15 @@
 title: MDT known issues
 description: Current limitations with the Microsoft Deployment Toolkit (MDT).
 ms.date: 03/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-mdt
+ms.subservice: mdt
+ms.service: configuration-manager
 ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: frankroj,mstewart,aaroncz
 ---
 
 # Microsoft Deployment Toolkit known issues
@@ -18,7 +18,8 @@ ms.reviewer: mstewart,aaroncz
 This article provides details of any current known issues and limitations with the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
 
 > [!IMPORTANT]
-> MDT is not supported with Windows 11.  Any listed known issues for Windows 11 or the ADK for Windows 11 is for informational purposes only and does not imply support. For additional information, please see [Supported platforms](release-notes.md#supported-platforms)
+>
+> MDT is not supported with Windows 11. Any listed known issues for Windows 11 or the ADK for Windows 11 is for informational purposes only and does not imply support. For additional information, please see [Supported platforms](release-notes.md#supported-platforms)
 
 ## The Create Boot Image using MDT wizard fails when creating a boot image in Microsoft Configuration Manager after upgrading to ADK for Windows 11, version 22H2
 
@@ -44,13 +45,14 @@ To create a new boot image using the out of box Configuration Manager functional
 
 3. In the Configuration Manager console, go to the **Software Library** node and then navigate to **Overview** > **Operating Systems** > **Boot Images**.
 
-4. Right click on **Boot Images** and select **Add Boot Image**.
+4. Right-click on **Boot Images** and select **Add Boot Image**.
 
 5. Follow the **Add Boot Image Wizard** to import the copy of `boot.wim` created in Step 2 as a new boot image. For more information on adding a boot image using the **Add Boot Image Wizard**, see [Manage boot images with Configuration Manager: Add a boot image](/mem/configmgr/osd/get-started/manage-boot-images#add-a-boot-image).
 
-6. Once the **Add Boot Image Wizard** completes and the new boot image has been added, right click on the newly created boot image and select **Update Distribution Points**.
+6. Once the **Add Boot Image Wizard** completes and the new boot image has been added, right-click on the newly created boot image and select **Update Distribution Points**.
 
     > [!NOTE]
+    >
     > Don't first distribute the newly created boot image to distribution points before selecting **Update Distribution Points**. The next steps will finish updating the newly created boot image so that it is the same version as the currently installed ADK and Windows PE. This can be accomplished without first distributing the newly created boot image to the distribution points. It is better to finish properly creating the boot image before distributing the boot image to distribution points to avoid unnecessary updates to the distribution points. Distributing the boot image first before finishing updating the boot image will result in unneeded updates to the distribution points.
 
 7. In the **Update Distribution Points Wizard**, select the option **Reload this boot image with the current Windows PE version from the Windows ADK**, select **Next >**, and then **Next >** again.
@@ -61,7 +63,7 @@ Once the **Update Distribution Points Wizard** completes, the newly created boot
 
 If additional components need to be added to the boot image:
 
-1. Right click on the newly created boot image and select **Properties**.
+1. Right-click on the newly created boot image and select **Properties**.
 
 2. In the boot image properties window, select the **Optional Components** tab
 
@@ -70,6 +72,7 @@ If additional components need to be added to the boot image:
 Make any additional desired changes to the newly created boot image, such as adding drivers, and then distribute the boot image to distribution points.
 
 > [!NOTE]
+>
 > The above guide only shows x64 boot images since only x64 boot images are supported with the ADK for Windows 11, version 22H2 or newer.
 
 ## HTA applications report Script error after upgrading to ADK for Windows 11, version 22H2

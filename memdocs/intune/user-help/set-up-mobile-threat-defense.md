@@ -2,30 +2,27 @@
 # required metadata
 
 title: Install mobile threat defense app on your mobile device | Microsoft Intune
-description: Find out what mobile threat defense apps are and how to set one up to meet your organization's access requirements.   
+description: Find out what mobile threat defense apps are and how to set one up to meet your organization's access requirements.
 keywords:
 author: lenewsad
-ms.author: lanewsad  
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/07/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
-ms.assetid: 
 searchScope:
  - User help
 
 # optional metadata
 
-ROBOTS:  
+ROBOTS:
 #audience:
 
-ms.reviewer: aanavath  
+ms.reviewer: aanavath
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser, contperf-fy21q1
+ms.custom: intune-enduser
 ms.collection:
 - tier2
 ---  
@@ -51,7 +48,7 @@ Install your organization's preferred mobile threat defense (MTD) app on your de
 * [Harmony Mobile Protect](https://apps.apple.com/app/sandblast-mobile-protect/id1006390797)
 * [SEP Mobile](https://apps.apple.com/app/sep-mobile/id695620821)
 * [Sophos Intercept X for Mobile](https://apps.apple.com/app/sophos-mobile-security/id1086924662)
-* [Wandera](https://apps.apple.com/app/wandera/id605469330)
+* [Wandera](https://apps.apple.com)  
 * [Zimperium MTD](https://apps.apple.com/app/zimperium-zips/id1030924459)  
 
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
