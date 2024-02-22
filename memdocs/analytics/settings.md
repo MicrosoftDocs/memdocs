@@ -2,7 +2,7 @@
 title: Endpoint analytics settings
 titleSuffix: Microsoft Intune
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 10/23/2023
+ms.date: 02/22/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: how-to
@@ -27,7 +27,9 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information:
 
 - **Platform**: Select **Windows 10 and later**
-  
+
+- **Profile Type**: Select **Template**
+
 - **Profile**: Select **Windows health monitoring**
   
 - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
