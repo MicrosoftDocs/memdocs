@@ -284,7 +284,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br> **developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disabled extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
 #### Disable import passwords feature
 
@@ -568,6 +568,21 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://*`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
+
+### Manage websites to allow upload files
+There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]external.filesupload1.com/|https://external.filesupload2/|https://external.filesupload3.com`|
+
+The exmaple to block all websites including internal websites to upload files
+- com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+Example to allow specific websites to upload files
+- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`http://[*.]contoso.com/|https://[*.]sharepoint.com/`
+- com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
 
 ### Manage proxy configuration
 
