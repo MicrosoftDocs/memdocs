@@ -266,7 +266,7 @@ Applies to:
 
 For more information, see:
 
-- [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms#some-tasks-may-be-delayed.md)
+- [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md#some-tasks-may-be-delayed)
 - [Policy refresh intervals in Intune](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals)
 
 #### New device management experience for Government clouds in Microsoft Intune<!-- 17585897 23692982 -->
