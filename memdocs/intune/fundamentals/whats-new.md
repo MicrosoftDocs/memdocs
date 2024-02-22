@@ -256,6 +256,20 @@ For information about how to enable await final configuration, see [Create an Ap
 
 ### Device management
 
+#### AOSP devices check for new tasks and notifications approximately every 15 minutes<!-- 8506468  -->
+
+On devices enrolled with Android (AOSP) management, Intune attempts to check for new tasks and notifications approximately every 15 minutes. To use this feature, devices must be using the Intune app version 24.02.4 or newer.
+
+Applies to:
+
+- Android (AOSP)
+
+For more information, see:
+
+- [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms#some-tasks-may-be-delayed.md)
+- [Policy refresh intervals in Intune](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals)
+
+
 #### New device management experience for Government clouds in Microsoft Intune<!-- 17585897 23692982 -->
 
 In government clouds, there's a new device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster.
