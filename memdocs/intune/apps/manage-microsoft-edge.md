@@ -389,6 +389,9 @@ The website data store in Edge for iOS is essential for managing cookies, disk a
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account regardless of the sign-in order |
 
+> [!NOTE]
+> With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
+
 #### Microsoft Defender SmartScreen
 
 Microsoft Defender SmartScreen is a feature that helps users avoid malicious sites and downloads. It is enabled by default. Organizations can disable this setting.
@@ -581,7 +584,7 @@ The exmaple to block all websites including internal websites to upload files
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
 
 Example to allow specific websites to upload files
-- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`http://[*.]contoso.com/|https://[*.]sharepoint.com/`
+- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`http://[*.]contoso.com/|[*.]sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
 
 ### Manage proxy configuration
