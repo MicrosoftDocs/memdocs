@@ -258,14 +258,12 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 1. Go to **Properties**. 
 1. Next to the SCEP URI property, select **Copy to clipboard**.  
 1. In the admin center, [create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.   
-1. In the profile, under **Root Certificate**, link the trusted certificate profile. 
+1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the Root CA certificate that the Issuing CA is anchored to in the CA hierarchy.  
 
       > [!div class="mx-imgBorder"]
-      > ![Screenshot of available root certificate you can select.](./media/microsoft-cloud-pki/trusted-certificate-profile-link.png)  
+      > ![Screenshot of available root certificate you can select.](./media/microsoft-cloud-pki/.png)  
 
-  The trusted certificate you select must be the Root CA certificate that the Issuing CA is anchored to in the CA hierarchy. You must ensure the correct Root CA trusted certificate profile is selected:      
-     - For scenarios with a Cloud PKI BYOCA Issuing CA anchored to a Private CA, use the [Private CA Root Intune Trusted certificate profile]().    
-     - For scenarios with a Cloud PKI Issuing CA anchored to a Cloud PKI Root CA, use the [Cloud PKI Root CA Intune Trusted certificate profile](). 
+
 1. In **SCEP Server URLS**, paste the SCEP URI. 
 1. Configure the remaining settings, following these best practices:  
     1. **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
