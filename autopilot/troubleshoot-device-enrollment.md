@@ -28,7 +28,7 @@ See the following sections for information about issues that can occur when impo
 
 After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If you try to redeploy the device, then the `0x80180014` error code is returned.
 
-The ETW logs may show the following error:
+The Event Tracing for Windows (ETW) logs might show the following mobile device management (MDM) error:
 
 `MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
 
