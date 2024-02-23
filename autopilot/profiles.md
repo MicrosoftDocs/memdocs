@@ -23,7 +23,7 @@ appliesto:
 
 # Configure Autopilot profiles
 
-After the [device group](enrollment-autopilot.md) is created, a Windows Autopilot deployment profile can be applied to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for end users.
+After the [device group](enrollment-autopilot.md) is created, a Windows Autopilot deployment profile can be applied to each device in the group. Deployment profiles determine the deployment mode, and customize the out-of-box (OOBE) for end users.
 
 Autopilot profiles can be created via:
 
