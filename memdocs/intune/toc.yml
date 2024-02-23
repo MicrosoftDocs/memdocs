@@ -797,9 +797,9 @@ items:
             - name: Overview          
               href: ./protect/microsoft-cloud-pki-deployment.md 
             - name: Configure Microsoft Cloud PKI CA     
-              href: ./protect/microsoft-cloud-pki-configure-root-issuing.md   
+              href: ./protect/microsoft-cloud-pki-configure-ca.md   
               displayName: root, certification, authority, ca, issuing, BYO
-            - name: Configure bring-you-own CA    
+            - name: Configure bring your own CA    
               href: ./protect/microsoft-cloud-pki-configure-byoca.md          
           - name: Monitor issued certificates  
             href: ./protect/microsoft-cloud-pki-monitor.md  

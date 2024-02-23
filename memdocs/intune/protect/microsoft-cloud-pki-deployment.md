@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/21/2024
+ms.date: 02/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: wicale  
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -76,7 +76,7 @@ If the relying party isn't a member of Active Directory Domain, ensure the CA ce
 
 Also, consider the relying party software configuration needed to support additional certification authorities.  
 
-## Option 1: Microsoft Cloud PKI Root CA   
+### Option 1: Microsoft Cloud PKI Root CA   
 During a Cloud PKI Root CA deployment, the Cloud PKI root certificate needs to be deployed to all relying parties. If an Issuing CA certificate isn't present on a relying party, the relying party can automatically retrieve and install it by initiating certificate discovery. This process, known as the Certificate Chaining Engine (CCE), is platform-specific and used to retrieve missing parent certificate. The URL of the Issuing CA certificate is in the Authority Information Access (AIA) property of a leaf certificate (the certificate issued to the device using a Cloud PKI Issuing CA). A relying party can use the AIA property to retrieve parent CA certificates. The process is similar to CRL downloading.  
 
 >[!NOTE]
@@ -110,7 +110,7 @@ The following diagram shows the respective CA certificate trust chains that must
 > ![Diagram of Microsoft Cloud PKI, root CA deployment flow.](./media/microsoft-cloud-pki/root-ca-deployment-diagram.png)  
 
 
-## Option 2: Bring your own CA (BYOCA)   
+### Option 2: Bring your own CA (BYOCA)   
 During a BYOCA deployment, the private CA root certificate needs to be deployed to Intune managed devices. We also recommend deploying the private CA root certificate to:
 
 - Any intermediate/issuing CA certificates completing the private CA certificate chain.  
