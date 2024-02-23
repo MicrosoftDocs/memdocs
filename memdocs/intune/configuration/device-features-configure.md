@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/05/2024
+ms.date: 02/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -183,7 +183,7 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
 - **Platform SSO** (recommended)
 
-  This feature allows users to sign into their macOS devices using their Microsoft Entra ID, instead of a local account. In Intune, you create a settings catalog policy that platform SSO settings.
+  This feature allows users to sign into their macOS devices using their Microsoft Entra ID, instead of a local account. In Intune, you create a settings catalog policy that configures the platform SSO settings.
 
   **Platform SSO** requires that you also use an **SSO app extension**. Platform SSO handles the initial device sign-in, and the SSO app extension handles the sign-in for apps and websites.
 
@@ -199,7 +199,7 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
   In Intune, you use these settings to configure an SSO app extension created by your organization, by your identity provider, by Microsoft, or by Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-  On macOS devices, you can use **SSO app extension** by itself. But if you also want to use **platform SSO**, then you must use **platform SSO** and the **SSO app extension** features together.
+  On macOS devices, you can use **SSO app extension** by itself. If you also want to use **platform SSO**, then you must use **platform SSO** and the **SSO app extension** features together.
 
   For more information, go to:
 
