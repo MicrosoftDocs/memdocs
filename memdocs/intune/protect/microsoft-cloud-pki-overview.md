@@ -88,7 +88,7 @@ The following table lists the features and scenarios supported with Microsoft Cl
 
 ## Architecture  
 
-Microsoft Cloud PKI uses a certificate registration authority to validate incoming certificate requests from Intune-enrolled devices, and supports the Simple Certificate Enrollment Protocol (SCEP).  
+Microsoft Cloud PKI is comprised of several key components working together to simplify the complexity and management of a public key infrastructure; a Cloud PKI service for creating and hosting certification authorites, combined with a certificate registration authority to automatically service incoming certificate requests from Intune-enrolled devices. The registration authority supports the Simple Certificate Enrollment Protocol (SCEP).
 
 > [!div class="mx-imgBorder"]
 > ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/microsoft-cloud-pki-architecture.png)  
@@ -129,8 +129,6 @@ Before the device checks in to the Intune service, an Intune administrator or In
 Microsoft Cloud PKI requires one of the following licenses:
 * Microsoft Intune Suite license 
 * Microsoft Cloud PKI standalone Intune add-ons license  
-
-After Microsoft Cloud PKI is licensed, Azure managed HSM can provision and back the signing and encryption keys that belong to the CAs.   
 
 ## Role based access control     
 The following permissions are available to assign to custom Intune roles. These permissions enable users to view and manage CAs in the admin center.        
