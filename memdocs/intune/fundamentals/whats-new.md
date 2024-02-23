@@ -217,7 +217,7 @@ This information is also published in [Windows Autopilot: What's new](/autopilot
 
 The setting **Only fail selected blocking apps in technician phase** is now generally available to configure in Enrollment Status Page (ESP) profiles. This setting only appears in ESP profiles that have *blocking apps* selected.
 
-For more information, see  [Set up the Enrollment Status Page](./enrollment/windows-enrollment-status.md#create-new-profile).
+For more information, see  [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md#create-new-profile).
 
 #### New local primary account configuration for macOS automated device enrollment <!-- 5877061  -->
 
