@@ -223,6 +223,8 @@ Supported platforms and profiles:
 
 #### Attack Surface Reduction Rules
 
+To learn more about Attack surface reduction rules, see [Attack surface reduction rules reference](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference) in the Microsoft 365 documentation.
+
 > [!NOTE]  
 > This section details the settings in Attack Surface Reduction Rules profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
