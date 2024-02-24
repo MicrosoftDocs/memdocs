@@ -77,6 +77,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `weus2watcab02.blob.core.windows.net`
 
+- `cmbitsstore.blob.core.windows.net`
+
 - `umwatsonc.events.data.microsoft.com`
 
 - `*-umwatsonc.events.data.microsoft.com`
