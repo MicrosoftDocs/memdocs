@@ -86,7 +86,7 @@ The certificate chain engine tries to select certificates using the Subject Key 
 >[!NOTE]  
 > Support for the certificate chain validation methods vary by OS platform. This section describes the methods supported on devices running Windows 10 or later.  
 
-On Windows, there are there chain validation processes: exact match, key match, and name match.    
+On Windows, there are three chain validation processes: exact match, key match, and name match.    
 
 * Exact match: If the AKI extension contains the issuer’s subject, issuer serial number, and KeyID, only parent certificates that match with their subject, serial number, and KeyID are chosen in the chain-building process.  
 
@@ -114,7 +114,7 @@ The following diagram illustrates the *name matching* chain validation flow.
 
 When you use certificates to perform certificate-based authentication, you must ensure that both relying parties have the CA certificate (public-keys) trust chain. In this case, the **relying parties** are the Intune managed device and the authentication access point, such as Wi-Fi, VPN, or web service.    
 
-The root CA must be present. If the issuing CA certificate isn't present, then it can be requested by the relying party using the native certificate chain engine for the intended OS platform. The relying party can request the leaf certificate's *Authority Information Access* property.  
+The root CA must be present. If the issuing CA certificate isn't present, then it can be requested by the relying party using the native certificate chain engine for the intended OS platform. The relying party can request the issuing CA certificate using the leaf certificate's *Authority Information Access* property.  
 
 ## Certificate-based authentication  
 This section provides a basic understanding of the various certificates being used when a client or device performs certificate-based authentication.  
