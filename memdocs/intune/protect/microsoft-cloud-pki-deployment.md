@@ -111,24 +111,25 @@ The following diagram shows the respective CA certificate trust chains that must
 
 
 ### Option 2: Bring your own CA (BYOCA)   
-During a BYOCA deployment, the private CA root certificate needs to be deployed to Intune managed devices. We also recommend deploying the private CA root certificate to:
+During a BYOCA deployment, the Intune managed device will need the following CA certificates:
+ * The private CA trust chain (root and intermediate/issuing CA certficates) of the CA responsible for signing the BYOCA CSR.
+ * The BYOCA issuing CA certificate.    
 
-- Any intermediate/issuing CA certificates completing the private CA certificate chain.  
-- The Cloud PKI issuing CA certificate.   
+In a BYOCA deployment all relying parties should already have the private CA certificate chain. 
 
-BYOCA deployments are supported, assuming that all relying parties have already deployed the private CA certificate chain. Intune managed devices, regardless of OS platform, require the following CA certificate trust chain.    
+Intune managed devices, regardless of OS platform, require the following CA certificate trust chain.    
 
 | CA certificate type | Required CA certificate trust chain | Deployment method |
 | -------------------------- | ----------------- |
 | Cloud PKI CA certificates | Issuing CA optional but recommended | Intune Trusted certificate configuration profile |
 | Private CA certificates | Root CA certificate required, issuing CA optional but recommended | Intune Trusted certificate configuration profile |  
 
-These certificates should already be present on the relying party. If the member server is in Active Directory Domain, use GPO as the deployment method.   
+The relying party should already have the private CA certificate chain.  However, the BYOCA issuing CA certificate should also be deployed to relying parties. If the relying party is a member server in Active Directory Domain, use GPO as the deployment method.   
 
 >[!NOTE]   
-> If the Cloud PKI issuing CA certificate isn't deployed to the relying party platform, then the AIA (URL) property of the Cloud PKI issued SCEP certificate (end-entity/leaf certificate) can be used by the CCE of the relying party to request and install the Cloud PKI issuing CA certificate (public-key) in its trust store.  However, this behavior is not guaranteed and dependent on each OS/Platform implementation of the CCE.  It is a best practice to deploy the issuing CA certificate to the managed device and relying party.  
+> If the Cloud PKI BYOCA issuing CA certificate isn't deployed to the relying party platform, then the AIA (URL) property of the Cloud PKI issued SCEP certificate (end-entity/leaf certificate) can be used by the CCE of the relying party to request and install the Cloud PKI BYOCA issuing CA certificate (public-key) in its trust store.  However, this behavior is not guaranteed and dependent on each OS/Platform implementation of the CCE.  It is a best practice to deploy the BYOCA issuing CA certificate to the managed device and relying party.  
 
- Relying parties that are a part of your infrastructure should already have the private CA certificate trust chain installed. Relying parties trust the Cloud PKI-issued certificate to the managed device, because the private CA trust chain is installed on the managed device. The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices.  
+Relying parties trust the Cloud PKI BYOCA issued SCEP certificate to the managed device, because it chains up to the private CA trust chain already present on the relying party. The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices.  
 
 > [!div class="mx-imgBorder"]
 > ![Diagram showing the respective CA certificate trust chains that must be deployed to Intune managed devices.](./media/microsoft-cloud-pki/cloud-pki-byoca-certificate-flow.png)   
