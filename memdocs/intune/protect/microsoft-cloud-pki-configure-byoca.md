@@ -32,7 +32,7 @@ ms.collection:
 ---
 # Configure Microsoft Cloud PKI - Bring your own CA      
 
-This article describes how to configure Microsoft Cloud PKI for Intune so that you can bring your own certification authority (BYCOA). BYOCA lets you create and anchor a private issuing CA in the cloud to your on-premises CA. The private CA can be made up of N+1 CA hierarchies. 
+This article describes how to configure Microsoft Cloud PKI for Intune so that you can bring your own certification authority (BYOCA). BYOCA lets you create and anchor a private issuing CA in the cloud to your on-premises or private CA. The private CA can be made up of N+1 CA hierarchies. 
 
 > [!div class="mx-imgBorder"]
 > ![Diagram of Cloud PKI, BYOCA workflow in Intune.](./media/microsoft-cloud-pki/cloud-pki-byoca-worfklow.png)  
@@ -254,7 +254,7 @@ The issuing CA certificate you downloaded for Cloud PKI BYOCA must be installed 
 Just like you did for the trusted certificate profiles, create an SCEP certificate profile for each OS platform you're targeting. The SCEP certificate profile is used to request a leaf *Client Authentication* certificate from the Issuing CA. This type of certificate is used in certificate based authentication scenarios, for things like Wi-Fi and VPN access. 
 
 1. Return to **Tenant administration** > **Cloud PKI**.
-1. Select a CA that has an *issuing* type.  
+1. Select a CA that has an **Issuing** type.  
 1. Go to **Properties**. 
 1. Next to the SCEP URI property, select **Copy to clipboard**.  
 1. In the admin center, [create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.   
