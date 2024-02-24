@@ -7,9 +7,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 02/23/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -45,7 +45,7 @@ To create a self-deploying mode Autopilot profile, follow these steps:
 
 8. In the **Out-of-box experience (OOBE)** page:
 
-      - For **Deployment mode**, select **Self-Deploying (preview)**.
+      - For **Deployment mode**, select **Self-Deploying**.
 
       - **Join to Microsoft Entra ID as** defaults to **Microsoft Entra joined**, is greyed out, and can't be changed. Only **Microsoft Entra joined** is available because self-deploying mode only supports Microsoft Entra join. Self-deploying modes doesn't support Microsoft Entra hybrid join.
 
