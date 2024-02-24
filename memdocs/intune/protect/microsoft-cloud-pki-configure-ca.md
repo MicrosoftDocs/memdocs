@@ -59,7 +59,7 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Select **Next** to continue to **Configuration settings**.    
 1. Configure the following settings for the root CA:  
      1. **CA type**: Select **Root CA**. 
-     1. **Validity period**: Select 5, 10, 15, 20, 25, or 30 years. To create a Root CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
+     1. **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a Root CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
 1. For **Extended Key Usages**, select how you intend to use the CA. To prevent potential security risks, CAs are limited to specific types of use.   
      1. Under **Type**, select the purpose of the CA. Optionally, you can set a custom EKU. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk.  
      1. Enter the **Name** and **Object Identifier**.  
@@ -200,7 +200,7 @@ The Cloud PKI Root CA and Issuing CA you download must be installed on all relyi
 Just like you did for the trusted certificate profiles, create an SCEP certificate profile for each OS platform you're targeting. The SCEP certificate profile is used to request a leaf *Client Authentication* certificate from the Issuing CA. This type of certificate is used in certificate based authentication scenarios, for things like Wi-Fi and VPN access. 
 
 1. Return to **Tenant administration** > **Cloud PKI**.
-1. Select a CA that has an *issuing* type.  
+1. Select a CA that has an **Issuing** type.  
 1. Go to **Properties**. 
 1. Next to the SCEP URI property, select **Copy to clipboard**.  
 1. In the admin center, [create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.   
