@@ -44,26 +44,22 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 > [!NOTE]
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
-- The endpoints in this article should be accessible via TCP port 80 and 443 via whatever method you use to allow access. Windows Information Protection uses port 444.
+- The endpoints in this article allow access to the ports identified in the following tables.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
   > [!NOTE]
   > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', or 'dm.microsoft.com' endpoints.
 
-> [!NOTE]
-> **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
-
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
-
 
 <!--
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune services are accessed through a PowerShell script. There are other dependent services for Intune, which are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
+To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune endpoint information is accessed through a PowerShell script. There are other dependent services for Intune, which are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
 
-By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service. This provides the same list as the subnets indicated in the IP address table below.
+By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service.
 
 ```PowerShell
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
@@ -77,7 +73,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 
 The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
 
-You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following tables include the list of URLs returned, and the service they're tied to.
+You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following tables the service they're tied to, and the list of URLs returned.
 
 The Data columns shown in the tables are:
 
@@ -109,6 +105,7 @@ ID |Desc |Category |ER |Addresses |Ports|
 165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com`<BR>`www.msftncsi.com`<BR>`www.msftconnecttest.com` | |
 169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`www.msftncsi.com`<BR>`c.s-microsoft.com` |  |
 173 | Autopilot - 3rd party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
+182 | Autopilot - Diagnostics upload| Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR> | **TCP:** 443|
 
 ### Remote Help
 
@@ -154,7 +151,7 @@ For Delivery Optimization metadata:
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> |**TCP:** 80, 443, 5223|
 
-For more information, see [Use Apple products on enterprise networks](https://support.apple.com/HT210060), [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609). 
+For more information, see [Use Apple products on enterprise networks](https://support.apple.com/HT210060), [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).
 
 #### Android AOSP dependencies
 
@@ -278,6 +275,9 @@ The following tables list the ports and services that the Intune client accesses
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
 
 To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+
+> [!NOTE]
+> **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
