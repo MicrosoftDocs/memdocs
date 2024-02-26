@@ -238,7 +238,7 @@ Microsoft Intune admin center allows you to customize and configure the view of 
 
 The **Dashboard** to display overall details about the devices and client apps in your Intune tenant. Dashboards provide a way for you to create a focused and organized view in the Microsoft Intune admin center. Use dashboards as a workspace where you can quickly launch tasks for day-to-day operations and monitor resources. Build custom dashboards based on projects, tasks, or user roles, for example. The Microsoft Intune admin center provides a default dashboard as a starting point. You can edit the default dashboard, create and customize additional dashboards, and publish and share dashboards to make them available to other users. 
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Update dashboard" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png":::
+:::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Update dashboard" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png":::
 
 To modify your current dashboard, select **Edit**. If you don't want to change your default dashboard, you can also create a **New dashboard**. Creating a new dashboard gives you an empty, private dashboard with the **Tile Gallery**, which lets you add or rearrange tiles. You can find tiles by category or resource type. You can also search for particular tiles. Select **My Dashboard** to select any of your existing custom dashboards.
 
@@ -246,7 +246,7 @@ To modify your current dashboard, select **Edit**. If you don't want to change y
 
 You can customize the Microsoft Intune admin center by choosing the default view, the theme, the credentials timeout period, as well as language and region settings.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Portal settings" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png":::
+:::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Portal settings" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png":::
 
 ## Next steps
 
