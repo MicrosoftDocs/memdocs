@@ -43,7 +43,7 @@ For more information about how to prepare your tenant for Microsoft Cloud PKI, i
 The account you use to sign into the Microsoft Intune admin center must have permission to create CAs. The roles with built-in permissions include Microsoft Entra Global administrator and Intune service administrator account. Alternatively, you can assign Cloud PKI CA permissions to an admin user.  
 
 ## Step 1: Create root CA in admin center    
-Before you can start to issue certificates to managed devices, you need to create a Root Certification Authority in your tenant to act as the trust anchor. This section describes how to create the Root CA. At least one Root CA must be created before an Issuing CA can be created.  
+Before you can start to issue certificates to managed devices, you need to create a root CA in your tenant to act as the trust anchor. This section describes how to create the root CA. At least one root CA must be created before an issuing CA can be created.  
 
 1. Sign in to the Microsoft Intune admin center. 
 1. Go to **Tenant administration** > **Cloud PKI**, and then select **Create**.   
@@ -53,26 +53,27 @@ Before you can start to issue certificates to managed devices, you need to creat
 
 1. For **Basics**, enter the following properties:    
 
-     * Name: Enter a descriptive name for the CA object. Name it so you can easily identify it later. Example: *Contoso C-PKI Root CA*    
-     * Description: Enter a description for the CA object. This setting is optional, but recommended. Example: *Microsoft Cloud PKI root CA for Contoso corporation*   
+     * **Name**: Enter a descriptive name for the CA object. Name it so you can easily identify it later. Example: *Contoso C-PKI Root CA*    
+     * **Description**: Enter a description for the CA object. This setting is optional, but recommended. Example: *Microsoft Cloud PKI root CA for Contoso corporation*   
 
 1. Select **Next** to continue to **Configuration settings**.    
 1. Configure the following settings for the root CA:  
-     1. **CA type**: Select **Root CA**. 
-     1. **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a Root CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
+     * **CA type**: Select **Root CA**. 
+     * **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a Root CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
 1. For **Extended Key Usages**, select how you intend to use the CA.  
 
    > [!div class="mx-imgBorder"]
    > ![Image of the Configuration settings tab, showing the Extended Key Usages section for Cloud PKI.](./media/microsoft-cloud-pki/cloud-pki-extended-key-usage.png)  
 
    To prevent potential security risks, CAs are limited to select use.  
-     1. Under **Type**, select the purpose of the CA. Optionally, you can set a custom EKU. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk.  For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku)    
-     1. Alternatively, to create a custom extended key usage, enter the **Name** and **Object Identifier**.    
+
+     * Under **Type**, select the purpose of the CA. Optionally, you can set a custom EKU. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk.  For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku)    
+     * Alternatively, to create a custom extended key usage, enter the **Name** and **Object Identifier**.    
 
    > [!NOTE]
-   > Keep in mind that Root CA EKU/OID constraints are a superset of the Issuing CA. This means that when you create an Issuing CA, you can only select the EKUs defined for the Root CA.  If you don't define the EKU in the Root CA, it won't show up as an EKU option for the Issuing CA.   
+   > Keep in mind that root CA EKU/OID constraints are a superset of the issuing CA. This means that when you create an issuing CA, you can only select the EKUs defined for the root CA.  If you don't define the EKU in the root CA, it won't show up as an EKU option for the issuing CA.   
 
-1. Under **Subject attributes** enter a **Common name (CN)** for the Root CA. Optionally, you can enter other attributes including:    
+1. Under **Subject attributes** enter a **Common name (CN)** for the root CA. Optionally, you can enter other attributes including:    
      - Organization (O)  
      - Organizational unit (OU)  
      - Country (C)  
@@ -82,14 +83,15 @@ Before you can start to issue certificates to managed devices, you need to creat
      To adhere to PKI standards, Intune enforces a two-character limit for country/region.   
 
 1. Under **Encryption**, enter the **Key size and algorithm**. Your options:  
-     - **RSA-2048 and SHA-256**
+
+     - **RSA-2048 and SHA-256**  
      - **RSA-3096 and SHA-384**
      - **RSA-4096 and SHA-512**  
 
+      > [!div class="mx-imgBorder"]
+      > ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./media/microsoft-cloud-pki/key-size-algorithm.png)  
 
-    ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./media/microsoft-cloud-pki/key-size-algorithm.png)  
-
-   This setting enforces the upper bound key size and hash algorithm that can be used when configuring a device configuration SCEP certificate profile in Intune. It enables you to select any key size and hash up to what is set on the Cloud PKI Issuing CA. Keep in mind a 1024 key size and SHA-1 hash isn't supported with Cloud PKI.   
+   This setting enforces the upper bound key size and hash algorithm that can be used when configuring a device configuration SCEP certificate profile in Intune. It enables you to select any key size and hash up to what is set on the Cloud PKI issuing CA. Keep in mind a 1024 key size and SHA-1 hash isn't supported with Cloud PKI.    
 1. Select **Next** to continue to **Scope tags**.    
 1. Optionally, you can add scope tags to control visibility and access to this CA.     
 1. Select **Next** to continue to **Review + create**.    
@@ -99,10 +101,10 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Return to the Cloud PKI CA list in the admin center. Select **Refresh** to see your new CA.  
 
       > [!div class="mx-imgBorder"]
-      > ![Image of the Microsoft Cloud PKI list showing the new Root CA.](./media/microsoft-cloud-pki/cloud-pki-refresh.png)   
+      > ![Image of the Microsoft Cloud PKI list showing the new root CA.](./media/microsoft-cloud-pki/cloud-pki-refresh.png)   
 
 ## Step 2: Create issuing CA in admin center    
-An issuing CA is required to issue certificates for Intune-managed devices. Cloud PKI automatically provides a SCEP service that acts as a certificate registration authority. It requests certificates from the Issuing CA on behalf of Intune-managed devices using a SCEP profile.   
+An issuing CA is required to issue certificates for Intune-managed devices. Cloud PKI automatically provides a SCEP service that acts as a certificate registration authority. It requests certificates from the issuing CA on behalf of Intune-managed devices using a SCEP profile.   
 
 
 > [!NOTE]
@@ -111,29 +113,33 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 > - Install and configure the Intune certificate connector.   
 > - Configure a proxy service to enable access to the NDES server URL.  
 
-1.Return to ***Tenant administration** > **Cloud PKI**.  
+1.Return to **Tenant administration** > **Cloud PKI**.  
 1. Enter a **Name** and optional **Description** for so you can distinguish this CA from others in your tenant.  
 1. Select **Next** to continue to **Configuration settings**.    
 1. Select the CA type and root CA source.  
 
      > [!div class="mx-imgBorder"]
-     > ![Admin center showing the CA type selected and the Root CA source expanded, highlighting the Intune option.](./media/microsoft-cloud-pki/create-certification-authority-issuing.png)  
+     > ![Admin center showing the CA type selected and the Root CA source expanded, highlighting the Intune option.](./media/microsoft-cloud-pki/create-ca-configuration-settings.png)  
 
    Your options:  
-     1. **CA type**: Select **Issuing CA**. Then choose:   
+     * **CA type**: Select **Issuing CA**. Then configure these additional settings:  
+
         * **Root CA source**: Select **Intune**. This setting determines the root CA source anchoring the issuing CA.  
+
         * **Root CA**: Select one of the root CAs you created in Intune to anchor against. 
-     1. **Validity period**: Select 2, 4, 6, 8, or 10 years. The validity period of the issuing CA can't be longer than the Root CA. To create an issuing CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
+
+1. For **Validity period**, select 2, 4, 6, 8, or 10 years. The validity period of the issuing CA can't be longer than the root CA. To create an issuing CA with a custom validity period, use [Microsoft Graph API](/graph/use-the-api) to create the CAs. 
 1. For **Extended Key Usages**, select how you intend to use the CA. To prevent potential security risks, CAs are limited to specific types of use. Your options:  
      * **Type**:  select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk.  
      *  Alternatively, to create a custom EKU, enter the **Name** and **Object Identifier**.  
 
         > [!NOTE]
-        > You can only select from EKUs defined in the Root CA.  If you didn't define an EKU in the Root CA, it won't show up as an EKU option here.   
+        > You can only select from EKUs defined in the root CA.  If you didn't define an EKU in the root CA, it won't show up as an EKU option here.   
 
 1. Under **Subject attributes** enter a **Common name (CN)** for the issuing CA. 
 
-   ![Intune admin center showing Cloud PKI subject attributes settings.](./media/microsoft-cloud-pki/subject-attributes-issuing.png)   
+      > [!div class="mx-imgBorder"]
+      > ![Intune admin center showing Cloud PKI subject attributes settings.](./media/microsoft-cloud-pki/subject-attributes-issuing.png)   
 
    Optional attributes include:    
      - Organization (O)  
@@ -147,19 +153,18 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Select **Next** to continue to **Scope tags**.  
 1. Optionally, you can add scope tags to control visibility and access to this CA.   
 1. Select **Next** to continue to **Review + create**.    
-1. Review the summary provided. 
+1. Review the summary provided. When you're ready to finalize everything, select **Create**.   
 
    > [!TIP]
    > You won't be able to edit these properties after you create the CA. If needed, select **Back** to edit the settings and ensure they are correct and satisfy your PKI requirements. If later you require additional EKUs, you must create a new CA.
 
-   When you're ready to finalize everything, select **Create**.   
-1. Return to the Cloud PKI CA list in the admin center. Select **Refresh** to see your new issuing CA.  
-
+      
+1. Return to the Microsoft Cloud PKI CA list in the admin center. Select **Refresh** to see your new issuing CA.  
 
       > [!div class="mx-imgBorder"]
       > ![Image of the Microsoft Cloud PKI list showing the new issuing CA.](./media/microsoft-cloud-pki/cloud-pki-refresh-issuing.png)   
 
-Go to **Properties** to view the properties of root CAs and issuing CAs in your tenant. Available properties include: 
+To view the properties of root CAs and issuing CAs in your tenant, select the CA and then go to **Properties**.  Available properties include:  
 
 - Certificate Revocation List (CRL) distribution point URI 
 - Authority Information Access (AIA) URI 
@@ -213,16 +218,16 @@ The file name given to the downloaded public keys is based on the Common Names s
 
 ### Create SCEP certificate profile  
 >[!NOTE]
-> Only Cloud PKI Issuing CAs (including BYOCA Issuing CA) can be used to issue SCEP certificates to Intune managed devices.  
+> Only Cloud PKI Issuing CAs (including BYOCA issuing CA) can be used to issue SCEP certificates to Intune managed devices.  
 
-Just like you did for the trusted certificate profiles, create an SCEP certificate profile for each OS platform you're targeting. The SCEP certificate profile is used to request a leaf *Client Authentication* certificate from the Issuing CA. This type of certificate is used in certificate based authentication scenarios, for things like Wi-Fi and VPN access. 
+Just like you did for the trusted certificate profiles, create an SCEP certificate profile for each OS platform you're targeting. The SCEP certificate profile is used to request a leaf *client authentication* certificate from the issuing CA. This type of certificate is used in certificate based authentication scenarios, for things like Wi-Fi and VPN access. 
 
 1. Return to **Tenant administration** > **Cloud PKI**.
 1. Select a CA that has an **Issuing** type.  
 1. Go to **Properties**. 
 1. Next to the SCEP URI property, select **Copy to clipboard**.  
 1. In the admin center, [create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.   
-1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the Root CA certificate that the Issuing CA is anchored to in the CA hierarchy.  
+1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the root CA certificate that the issuing CA is anchored to in the CA hierarchy.  
     
       > [!div class="mx-imgBorder"]
       > ![Image of the root certificate setting, with a root CA certificate selected.](./media/microsoft-cloud-pki/scep-root-certificate.png)   
@@ -231,5 +236,5 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 1. Configure the remaining settings, following these best practices:  
     1. **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
     1. **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.   
-    1. **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI Issuing CA SCEP URLs.  
+    1. **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.  
