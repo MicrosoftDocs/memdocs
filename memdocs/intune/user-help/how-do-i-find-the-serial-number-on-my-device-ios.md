@@ -62,7 +62,7 @@ Keeping your device up-to-date lets you access the newest features, and it also 
 * To check your Mac for available software updates, go to **App Store** > **Updates**. Select the newest macOS update available, then select **Update**.  
 
 ## Operating system isn't supported  
-The operating system (OS) version that's on your device isn't supported. It's possible that the latest version of iOS/iPadOS doesn't work with your organization's apps, tools, and other internal infrastruture. To resolve this issue, contact your IT support person and find out what the OS requirements are for your device.   
+The operating system (OS) version that's on your device isn't supported. It's possible that the latest version of iOS/iPadOS doesn't work with your organization's apps, tools, and other internal infrastructure. To resolve this issue, contact your IT support person and find out what the OS requirements are for your device.   
 
 ## Remove an existing email account 
 
