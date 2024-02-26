@@ -43,11 +43,10 @@ A certification authority performs the following tasks:
 * Issues certificates to requestors  
 * Manages certificate revocation  
 
-Microsoft Cloud PKI supports these types of CA:  
+Microsoft Cloud PKI supports these types of certificate authorities:  
 
 * Root CA
 * Issuing CA  
-
 
 ## Root certification authority    
 A root certification authority (CA) is the topmost CA in a CA hierarchy. In a PKI, the root CA acts as the trust point for certificates issued by CAs in the hierarchy. The certificate is considered *trusted* if it can be traced up through the CA hierarchy to a root CA that is trusted by a user, computer, network device, or service.     
@@ -56,11 +55,11 @@ A root CA is unique in that its certificate is *self-issued*, meaning that the c
 
 The root CA can issue certificates to other CAs or to users, computers, network devices, or services on the network. When the root CA issues a certificate to another entity, the root CA certificate signs the certificate with its private key. The signing protects against content modification and indicates that the root CA issued the certificate.   
 
- >![IMPORTANT]
- > Microsoft Cloud PKI only issues certificates to network devices that are MDM-enrolled. 
+>[!IMPORTANT]
+> Microsoft Cloud PKI only issues certificates to network devices that are MDM-enrolled. 
 
 ### Issuing certification authority     
->![NOTE]
+>[!NOTE]
 >The terms *intermediate*, *issuing*, and *subordinate* are all interchangeable labels used to refer to the same role within a CA structure. Microsoft Cloud PKI uses the term *issuing* to describe this type of CA.   
 
 An issuing CA is a CA that is subordinate to another CA and can either:   

@@ -36,7 +36,9 @@ This article describes how to create and deploy a Microsoft Cloud PKI root CA an
 ## Prerequisites  
 For more information about how to prepare your tenant for Microsoft Cloud PKI, including key concepts and requirements, see:  
 * [Overview of Microsoft Cloud PKI for Intune](microsoft-cloud-pki-overview.md): Review the architecture, tenant requirements, a feature summary, and known issues and limitations.    
+
 * [Deployment models](microsoft-cloud-pki-deployment.md): Review the Microsoft Cloud PKI deployment options.  
+
 * [Fundamentals](microsoft-cloud-pki-fundamentals.md): Review the PKI fundamentals and concepts that are important to know prior to configuration and deployment.  
 
 ## Role based access control    
@@ -54,20 +56,23 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. For **Basics**, enter the following properties:    
 
      * **Name**: Enter a descriptive name for the CA object. Name it so you can easily identify it later. Example: *Contoso C-PKI Root CA*    
+
      * **Description**: Enter a description for the CA object. This setting is optional, but recommended. Example: *Microsoft Cloud PKI root CA for Contoso corporation*   
 
 1. Select **Next** to continue to **Configuration settings**.    
 1. Configure the following settings for the root CA:  
      * **CA type**: Select **Root CA**. 
+
      * **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a Root CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
+
 1. For **Extended Key Usages**, select how you intend to use the CA.  
 
    > [!div class="mx-imgBorder"]
    > ![Image of the Configuration settings tab, showing the Extended Key Usages section for Cloud PKI.](./media/microsoft-cloud-pki/cloud-pki-extended-key-usage.png)  
 
-   To prevent potential security risks, CAs are limited to select use.  
+   To prevent potential security risks, CAs are limited to select use. Your options:    
 
-     * Under **Type**, select the purpose of the CA. Optionally, you can set a custom EKU. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk.  For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku)    
+     * **Type**: Select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk. For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku)    
      * Alternatively, to create a custom extended key usage, enter the **Name** and **Object Identifier**.    
 
    > [!NOTE]
@@ -234,7 +239,9 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 
 1. For **SCEP Server URLS**, paste the SCEP URI. 
 1. Configure the remaining settings, following these best practices:  
-    1. **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
-    1. **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.   
-    1. **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
+    * **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
+
+    * **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.   
+
+    * **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.  

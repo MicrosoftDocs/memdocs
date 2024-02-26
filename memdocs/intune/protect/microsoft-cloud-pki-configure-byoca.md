@@ -102,9 +102,11 @@ Create an issuing CA in the Microsoft Intune admin center.
    > ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./media/microsoft-cloud-pki/key-size-byoca-issuing.png)  
 
    Your options:  
-     - **RSA-2048**
-     - **RSA-3072**  
-     - **RSA-4096**  
+     - **RSA-2048**  
+
+     - **RSA-3072**    
+
+     - **RSA-4096**   
 
      This setting enforces the upper bound key size that can be used when configuring a device configuration SCEP certificate profile in Intune. It enables you to select any key size up to what is set on the Cloud PKI issuing CA. Keep in mind a 1024 key size and SHA-1 hash isn't supported with Cloud PKI. However, you don't need to provide the hashing algorithm. The CA you're using to sign the CSR determines the hashing algorithm.   
 
@@ -125,6 +127,7 @@ Create an issuing CA in the Microsoft Intune admin center.
 
 A private CA is required to sign the certificate signing request (CSR) file you downloaded. The signing CA can be a root or issuing CA from any tier of the private CA. There are two ways to sign:  
   * Option 1: Use Certification Authority Web Enrollment, a feature of Active Directory Certificate Services (ADCS). This option provides a simple web interface that enables you to perform admin-specific tasks such as request and renew certificates.  
+
   * Option 2: Use the Windows ADCS command line tool `certreq.exe` executable file.  
 
 For more information about certificate signing, see the documentation provided by your CA.  
@@ -133,6 +136,7 @@ For more information about certificate signing, see the documentation provided b
 To complete these steps, use notepad.exe on a Windows device, or equivalent program on macOS.  
 
 1. Open the REQ file you downloaded after you created the issuing CA. Copy (CTRL + C) the contents of the file.  
+
 1. Open a browser on a device that has access to the web host running CA Web Enrollment. For example: `https://WebSrv_running_CAWebEnrollment/certsrv`  
 1. Select **Request a certificate**.  
 1. Select **advanced certificate request**.  
