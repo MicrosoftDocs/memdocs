@@ -57,7 +57,7 @@ Create an issuing CA in the Microsoft Intune admin center.
 1. For **Basics**, enter the following properties:    
 
    * Name: Enter a descriptive name for the CA object. Name it so you can easily identify it later. Example: *Contoso BYOCA issuing CA*    
-   * Description: Enter a description for the CA object. This setting is optional, but recommended. Example: *Cloud PKI issuing CA using bring you own root CA anchored to an on-premises ADCS issuing CA*   
+   * Description: Enter a description for the CA object. This setting is optional, but recommended. Example: *Cloud PKI issuing CA using bring-your-own-root-CA anchored to an on-premises ADCS issuing CA*   
 
 1. Select **Next** to continue to **Configuration settings**.   
 1. Select the CA type and root CA source.  
@@ -179,7 +179,7 @@ Run the command from a Windows domain joined machine with network access to ADCS
 `certutil -ca.chain c:\temp\fullChain.p7b`  
 
 To view the exported chain and verify that the export happened in Windows file explorer:
-1. Go to the path location where the file was exported.
+1. Go to the path location where the file was exported.  
 1. Double-click the file to open it.  
 
 Within the file, you should see the full chain, including root and intermediate CAs.   

@@ -72,7 +72,7 @@ Before you can start to issue certificates to managed devices, you need to creat
    > [!NOTE]
    > Keep in mind that Root CA EKU/OID constraints are a superset of the Issuing CA. This means that when you create an Issuing CA, you can only select the EKUs defined for the Root CA.  If you don't define the EKU in the Root CA, it won't show up as an EKU option for the Issuing CA.   
 
-1. Under **Subject attributes** enter a **Common name (CN)** for the Root CA. Optonally, you can enter other attributes including:    
+1. Under **Subject attributes** enter a **Common name (CN)** for the Root CA. Optionally, you can enter other attributes including:    
      - Organization (O)  
      - Organizational unit (OU)  
      - Country (C)  
@@ -102,8 +102,7 @@ Before you can start to issue certificates to managed devices, you need to creat
       > ![Image of the Microsoft Cloud PKI list showing the new Root CA.](./media/microsoft-cloud-pki/cloud-pki-refresh.png)   
 
 ## Step 2: Create issuing CA in admin center    
-An Issuing Certification Authority is required to issue certi
-ficates for Intune-managed devices. Cloud PKI automatically provides a SCEP service that acts as a Certificate Registration Authority. It requests certificates from the Issuing CA on behalf of Intune-managed devices using a SCEP profile.   
+An issuing CA is required to issue certificates for Intune-managed devices. Cloud PKI automatically provides a SCEP service that acts as a certificate registration authority. It requests certificates from the Issuing CA on behalf of Intune-managed devices using a SCEP profile.   
 
 
 > [!NOTE]

@@ -119,7 +119,7 @@ The root CA must be present. If the issuing CA certificate isn't present, then i
 ## Certificate-based authentication  
 This section provides a basic understanding of the various certificates being used when a client or device performs certificate-based authentication.  
 
-The following steps desribe the handshake that takes place between a client and a relying party service during certificate-based authentication. 
+The following steps describe the handshake that takes place between a client and a relying party service during certificate-based authentication. 
 
 1. The client issues some form of hello packet to the relying party.   
 2. The relying party responds, stating that it wishes to communicate over secure TLS/SSL. The client and relying party perform the SSL handshake and a secure channel is established.  

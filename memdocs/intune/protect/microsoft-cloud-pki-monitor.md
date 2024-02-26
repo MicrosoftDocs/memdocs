@@ -74,7 +74,7 @@ To view issued certificates, go to **Devices** > **Monitor**, and then select **
 In the admin center, go to **Devices** > **Configuration profiles**. Select the SCEP profile, and then select **Certificates**.  
 
    > [!div class="mx-imgBorder"]
-   > ![Image of the certificate count for Microsoft Cloud PKI in admin center.](./media/microsoft-cloud-pki/scep-certificate-profile.png)  
+   > ![Image of the SCEP certifiate profile report in the admin center.](./media/microsoft-cloud-pki/scep-certificate-profile.png)  
 
 
 
