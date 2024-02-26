@@ -32,23 +32,26 @@ ms.collection:
 ---
 # Monitoring for Microsoft Cloud PKI  
 
-Monitor the certificates deployed to Intune-managed devices by the Microsoft Cloud PKI service. Microsoft Cloud PKI issuing CAs have a dashboard that shows the number of deployed certificates, including:   
-- Active certificates
-- Expired certificates  
-- Revoked certificates  
+Monitor the certificates deployed to Intune-managed devices by the Microsoft Cloud PKI service. Every Microsoft Cloud PKI issuing CA has a dashboard that shows the number of deployed certificates, including:   
+
+- Active certificates  
+- Expired certificates   
+- Revoked certificates   
 - Total number of issued certificates   
 
-You can also view issued SCEP certificates by Cloud PKI. This article describes how to monitor certificates, revoke certificates, and view SCEP certificate reports in the Microsoft Intune admin center.   
+You can also view SCEP certificates issued by Cloud PKI. 
 
-### Monitor certificates   
+This article describes how to monitor certificates, revoke certificates, and view SCEP certificate reports in the Microsoft Intune admin center.   
+
+### View issued certificates   
 
 To view issued certificates, go to **Devices** > **Monitor**, and then select **Certificates**.  
 
    > [!div class="mx-imgBorder"]
    > ![Image of the admin center, highlighting Certificates.](./media/microsoft-cloud-pki/monitor-certificates-cloud-pki.png)   
 
-## Monitor Cloud PKI Issuing CA 
-Each Cloud PKI Iissuing CA has a monitoring dashboard. Select **View all certificates** to view all issued certificates. Certificate report details should be available within 24 hours of the certificate being successfully issued to the device.   
+## Monitor Cloud PKI Issuing CA  
+Each Cloud PKI issuing CA has a monitoring dashboard. Select **View all certificates** to view all issued certificates. Certificate report details should be available within 24 hours of the certificate being successfully issued to the device.   
 
    > [!div class="mx-imgBorder"]
    > ![Image of the certificate count for Microsoft Cloud PKI in admin center.](./media/microsoft-cloud-pki/intune-certificate-count-cloud-pki.png)  
