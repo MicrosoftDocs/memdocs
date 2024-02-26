@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Configure single sign-on for Windows 365
+title: Configure single sign-on for Windows 365 Business
 titleSuffix:
-description: How to configure single sign-on for Windows 365
+description: How to configure single sign-on for Windows 365 Business
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -30,11 +30,9 @@ ms.collection:
 - tier2
 ---
 
-# Configure single sign-on for Windows 365 using Microsoft Entra authentication
+# Configure single sign-on for Windows 365 Business using Microsoft Entra authentication
 
 This article explains the process of configuring single sign-on (SSO) for Windows 365 by using Microsoft Entra authentication. When you enable SSO, you can use passwordless authentication and third-party Identity Providers that federate with Microsoft Entra ID to sign in to your Cloud PC. When enabled, this feature provides a single sign-on experience both when authenticating to the Cloud PC and inside the session when accessing Microsoft Entra ID-based apps and websites.
-
-For information on using passwordless authentication within the session, see [In-session passwordless authentication](identity-authentication.md#in-session-passwordless-authentication).
 
 To enable single sign-on using Microsoft Entra ID authentication, there are four tasks you must complete:
 
@@ -69,7 +67,7 @@ Before you can enable single sign-on, you must meet the following prerequisites:
   - Windows 11 Enterprise with the [2022-10 Cumulative Updates for Windows 11 (KB5018418)](https://support.microsoft.com/kb/KB5018418) or later installed.
   - Windows 10 Enterprise with the [2022-10 Cumulative Updates for Windows 10 (KB5018410)](https://support.microsoft.com/kb/KB5018410) or later installed.
 
-- [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) version 2.9.0 or later on your local device or in [Azure Cloud Shell](../cloud-shell/overview.md).
+- [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) version 2.9.0 or later on your local device or in [Azure Cloud Shell](/azure/cloud-shell/overview).
 
 ## Enable Microsoft Entra authentication for RDP
 
@@ -188,7 +186,3 @@ When single sign-on is enabled, a new Microsoft Entra ID app is introduced to au
 ## Configure your organizational settings to enable single sign-on
 
 SSO can be enabled using the **Single sign-on** option under the **Cloud PC settings** group in your [organizational settings](change-organization-default-settings.md). When enabled, the setting applies to all your Cloud PCs.
-
-## Next steps
-
-- Check out [In-session passwordless authentication](identity-authentication.md#in-session-passwordless-authentication) to learn how to enable passwordless authentication.

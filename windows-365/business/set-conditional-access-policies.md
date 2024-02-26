@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Set conditional access policies for Windows 365
+title: Set conditional access policies for Windows 365 Business
 titleSuffix:
-description: Learn how to set conditional access policies for Windows 365.
+description: Learn how to set conditional access policies for Windows 365 Business.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Set conditional access policies
+# Set conditional access policies for Windows 365 Business
 
 Conditional Access is the protection of regulated content in a system by requiring certain criteria to be met before granting access to the content. Conditional Access policies at their simplest are if-then statements. If a user wants to access a resource, then they must complete an action. For example, a payroll manager wants to access the payroll application and is required to perform multi-factor authentication (MFA) to do so.
 
@@ -111,7 +111,3 @@ To configure the time period before a user is asked to sign-in again:
 > [!NOTE]
 > - Re-authentication only happens when a user must authenticate to a resource. Once a connection is established, users aren't prompted even if the connection lasts longer than the sign-in frequency you've configured.
 > - Users need to re-authenticate if there is a network disruption that forces the session to be re-established after the sign-in frequency you've configured. This can lead to more frequent authentication requests on unstable networks.
-
-## Next steps
-
-[Manage RDP device redirections](manage-rdp-device-redirections.md)
