@@ -34,14 +34,14 @@ ms.collection:
 
 This article describes how to configure Microsoft Cloud PKI for Intune so that you can bring your own certification authority (BYOCA). BYOCA lets you create and anchor a private issuing CA in the cloud to your on-premises or private CA. The private CA can be made up of N+1 CA hierarchies. 
 
-> [!div class="mx-imgBorder"]
-> ![Diagram of Cloud PKI, BYOCA workflow in Intune.](./media/microsoft-cloud-pki/cloud-pki-byoca-worfklow.png)  
+<!-- diagram needs to be redesigned > [!div class="mx-imgBorder"]
+> ![Diagram of Cloud PKI, BYOCA workflow in Intune.](./media/microsoft-cloud-pki/cloud-pki-byoca-workflow.png) > -->  
 
 ## Prerequisites  
 For more information about how to prepare your tenant for Microsoft Cloud PKI, including key concepts and requirements, see: 
-* [Overview of Microsoft Cloud PKI for Intune](microsoft-cloud-pki-overview.md): Review for architecture, tenant requirements, a feature summary, and known issues and limitations.  
-* [Deployment models](microsoft-cloud-pki-deployment): Review for explanation of Microsoft Cloud PKI deployment options.  
-* [Fundamentals](microsoft-cloud-pki-fundamentals): Review for PKI fundamentals and concepts that are important to know prior to configuration and deployment.  
+* [Overview of Microsoft Cloud PKI for Intune](microsoft-cloud-pki-overview.md): Review the architecture, tenant requirements, a feature summary, and known issues and limitations.  
+* [Deployment models](microsoft-cloud-pki-deployment.md): Review the Microsoft Cloud PKI deployment options.  
+* [Fundamentals](microsoft-cloud-pki-fundamentals.md): Review the PKI fundamentals and concepts that are important to know prior to configuration and deployment.  
 
 ## Role based access control     
 The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The roles with built-in permissions include Microsoft Entra Global administrator and Intune service administrator account. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).   
@@ -51,8 +51,8 @@ Create an issuing CA in the Microsoft Intune admin center.
 
 1. Go to **Tenant administration** > **Cloud PKI**, and then select **Create**.  
 
-      > [!div class="mx-imgBorder"]
-      > ![Example image of admin center highlighting the path to create a Cloud PKI.](./media/microsoft-cloud-pki/cloud-pki-create.png)  
+   > [!div class="mx-imgBorder"]
+   > ![Image of the Microsoft Intune admin center Cloud PKI page, highlighting the path to create a Cloud PKI root CA.](./media/microsoft-cloud-pki/create-microsoft-cloud-pki.png)   
 
 1. For **Basics**, enter the following properties:    
 
@@ -60,15 +60,28 @@ Create an issuing CA in the Microsoft Intune admin center.
    * Description: Enter a description for the CA object. This setting is optional, but recommended. Example: *Cloud PKI issuing CA using bring you own root CA anchored to an on-premises ADCS issuing CA*   
 
 1. Select **Next** to continue to **Configuration settings**.   
-1. Configure the following settings for the issuing CA:  
-       1. **CA type**: Select **Issuing CA**.   
-       1. **Root CA source**: Select **Bring your own root CA**. This setting specifies the root CA source anchoring the issuing CA.    
+1. Select the CA type and root CA source.  
+     
+     > [!div class="mx-imgBorder"]
+     > ![Admin center showing the CA type root CA source settings for bring your own CA Cloud PKI.](./media/microsoft-cloud-pki/create-byoca-configuration-settings.png)  
+
+   Configure the following settings for the issuing CA:  
+      * **CA type**: Select **Issuing CA**.   
+      * **Root CA source**: Select **Bring your own root CA**. This setting specifies the root CA source anchoring the issuing CA.    
 1. Skip **Validity period**. This setting isn't available to configure. The CA you're using to sign the BYOCA certificate signing request determines the validity period.  
-1. For **Extended Key Usage**, select how you intend to use the CA. To prevent potential security risks, a CA is limited to specific types of use.  
-     * For **Type**, select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** extended key usage isn't for use, because it's overly permissive and a potential security risk. For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku).    
+1. For **Extended Key Usage**, select how you intend to use the CA.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Image of the Configuration settings tab, showing the Extended Key Usages section for Cloud PKI.](./media/microsoft-cloud-pki/cloud-pki-extended-key-usage.png)   
+
+   To prevent potential security risks, CAs are limited to select use. Your options:       
+     * **Type**: Select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** extended key usage isn't for use, because it's overly permissive and a potential security risk. For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku).    
      *  Alternatively, to create a custom extended key usage, enter the **Name** and **Object Identifier**.  
 
-1. Under **Subject attributes** enter a **Common name (CN)** for the issuing CA. 
+1. Under **Subject attributes** enter a **Common name (CN)** for the issuing CA.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Intune admin center showing Cloud PKI subject attributes settings.](./media/microsoft-cloud-pki/subject-attributes-byoca-issuing.png)   
 
     Optional attributes include:    
      - Organization (O)  
@@ -84,10 +97,13 @@ Create an issuing CA in the Microsoft Intune admin center.
      - **RSA-3072**  
      - **RSA-4096**  
 
+   > [!div class="mx-imgBorder"]
+   > ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./media/microsoft-cloud-pki/key-size-byoca-issuing.png)  
+
      This setting enforces the upper bound key size that can be used when configuring a device configuration SCEP certificate profile in Intune. It enables you to select any key size up to what is set on the Cloud PKI Issuing CA. Keep in mind a 1024 key size and SHA-1 hash isn't supported with Cloud PKI. However, you don't need to provide the hashing algorithm. The CA you're using to sign the CSR determines the hashing algorithm.   
 
 1. Select **Next** to continue to **Scope tags**.    
-1. Optionally, add scope tags to control visibility and access control for this CA.  
+1. Optionally, you can add scope tags to control visibility and access to this CA.   
 1. Select **Next** to continue to **Review + create**.    
 1. Review the summary provided. You won't be able to edit these properties after you create the CA. If needed, select **Back** to edit the settings and ensure they're correct and satisfy your PKI requirements. If later you need to add an EKU, you must create a new CA.  
 
@@ -96,7 +112,7 @@ Create an issuing CA in the Microsoft Intune admin center.
 1. Return to the Cloud PKI CA list in the admin center. Select **Refresh** to see your new CA.  
 1. Select the CA.  
 1. Under **Basics**, the status should read *Signing required*. Go to **Properties**. 
-1. Select **Download CSR**. Wait while Intune downloads a REQ-formatted file with the name of the CA. The following example image shows that the file name is **Contoso BYOCA Issuing CA.req**.    
+1. Select **Download CSR**. Wait while Intune downloads a REQ-formatted file with the name of the CA. For example: *Contoso BYOCA Issuing CA.req*      
 
 ## Step 2: Sign Certificate Signing Request 
 
@@ -126,7 +142,7 @@ To complete these steps, use notepad.exe on a Windows device, or equivalent prog
 
   Intune requires both of these files to enable the issuing CA for Cloud PKI BYOCA.  
 
-1. Continue to [Upload CSR to enable BYOCA issuing CA]() in this article.  
+1. Continue to [Upload signed certificate to enable BYOCA issuing CA](#step-3-upload-signed-certificate-to-enable-byoca-issuing-ca) in this article.  
 
 >[!NOTE] 
 > If you use the admin center and CA Web enrollment console from 2 different workstations, you will need to copy or have access to the 2 certification files from the admin center workstation.    
@@ -171,7 +187,7 @@ Within the file, you should see the full chain, including root and intermediate 
 >[!NOTE]
 > Alternatively, you can use certmgr.msc or certlm.msc to export the individual public key for each CA in the private CA chain.  Each of these files have a CER extension. 
 
-## Step 3: Upload the signed certificate to enable the BYOCA Issuing CA  
+## Step 3: Upload signed certificate to enable BYOCA issuing CA  
 
 To complete the BYOCA Cloud PKI issuing CA *signing required* process and enable the CA in the cloud to start issuing certificates for Intune managed devices, you must have:  
 
@@ -192,13 +208,13 @@ For information about how to complete these tasks, which are required to proceed
       > [!div class="mx-imgBorder"]
       > ![Image showing the newly created CA in admin center.](./media/microsoft-cloud-pki/refresh-ca-intune.png)  
 
-1. Select the CA to view its properties. Properties include:  
+You can select the CA to view its properties. Properties include:  
 
    * CRL (Certificate Revocation List) distribution point URI.   
    * AIA (Authority Information Access) URI. 
    * The Cloud PKI Issuing CA shows the SCEP URI. The SCEP URI must be copied into the SCEP configuration profile for every platform issued certificate.   
 
-   Select **Download** \when you're ready to download the CA trust public key. In the next step, you'll download the root CA certificate and the issuing CA certificate public keys from the properties page of each CA. The properties are used to build the certificate trust profiles.  
+   Select **Download** when you're ready to download the CA trust public key. 
 
    >[!NOTE]
    > The AIA property for a BYOCA Issuing CA is defined by the private CA, and contains the properties defined by the private CA AIA configuration.  ADCS uses a default LDAP AIA location.  If the private CA provides a HTTP AIA location, the BYOCA properties will show the HTTP AIA location.  
@@ -242,31 +258,32 @@ Create a trusted certificate profile with the exported intermediate (or *issuing
 1. Select **Download**. Wait while the public key for the issuing CA downloads.  
 1. In the admin center, [create a trusted certificate profile](certificates-trusted-root.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. When prompted to, enter the public key you downloaded.  
 
-The issuing CA certificate you downloaded for Cloud PKI BYOCA must be installed on all relying parties. For more information about available deployment models, see [Microsoft Cloud PKI deployment](microsoft-cloud-pki-deployment).  
+The issuing CA certificate you downloaded for Cloud PKI BYOCA must be installed on all relying parties.  
 
->[!Note]
-> The file name given to the downloaded public keys is based on the Common Names specified in the CA. Some browsers, like Edge, show a warning if you download a file with a .cer or other well-known certificate extension. If you receive this warning, select **Keep**.   
+The file name given to the downloaded public keys is based on the Common Names specified in the CA. Some browsers, like Microsoft Edge, show a warning if you download a file with a .cer or other well-known certificate extension. If you receive this warning, select **Keep**.  
+
+> [!div class="mx-imgBorder"]
+> ![Image of Downloads prompt highlighting the keep option. ](./media/microsoft-cloud-pki/download-warning.png)   
 
 ## Step 5: Create SCEP certificate profile  
 >[!NOTE]
 > Only Cloud PKI Issuing CAs (including BYOCA Issuing CA) can be used to issue SCEP certificates to Intune managed devices.  
 
-Just like you did for the trusted certificate profiles, create an SCEP certificate profile for each OS platform you're targeting. The SCEP certificate profile is used to request a leaf *Client Authentication* certificate from the Issuing CA. This type of certificate is used in certificate based authentication scenarios, for things like Wi-Fi and VPN access. 
+Just like you did for the trusted certificate profiles, create an SCEP certificate profile for each OS platform you're targeting. The SCEP certificate profile is used to request a leaf *Client Authentication* certificate from the Issuing CA. This type of certificate is used in certificate based authentication scenarios, for things like Wi-Fi and VPN access.  
 
 1. Return to **Tenant administration** > **Cloud PKI**.
 1. Select a CA that has an **Issuing** type.  
 1. Go to **Properties**. 
-1. Next to the SCEP URI property, select **Copy to clipboard**.  
+1. Copy the **SCEP URI** to your clipboard.  
 1. In the admin center, [create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.   
 1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the Root CA certificate that the Issuing CA is anchored to in the CA hierarchy.  
 
       > [!div class="mx-imgBorder"]
-      > ![Screenshot of available root certificate you can select.](./media/microsoft-cloud-pki/.png)  
-
-
-1. In **SCEP Server URLS**, paste the SCEP URI. 
+      > ![Image of the root certificate setting, with a root CA certificate selected.](./media/microsoft-cloud-pki/scep-root-certificate.png)  
+1. For **SCEP Server URLS**, paste the SCEP URI.  
 1. Configure the remaining settings, following these best practices:  
     1. **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
     1. **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.   
     1. **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI Issuing CA SCEP URLs.  
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.  
+

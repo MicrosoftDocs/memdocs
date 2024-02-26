@@ -32,7 +32,7 @@ ms.collection:
 ---
 # Microsoft Cloud PKI fundamentals   
 
-*Microsoft Cloud PKI* is an Intune Suite feature that enables you as an IT pro to manage your public key infrastructure (PKI) in the cloud. You can create, configure, and manage your own certification authorities (CAs) and certificates without having to install and maintain any on-premises infrastructure. The Microsoft Cloud PKI service integrates with Microsoft Entra ID and Microsoft Intune to provide identity and device management for your cloud-based devices and applications. 
+*Microsoft Cloud PKI* is an Intune Suite feature that enables you as an IT pro to manage your public key infrastructure (PKI) in the cloud. You can create, configure, and manage your own certification authorities (CAs) and certificates without having to install and maintain on-premises infrastructure. The Microsoft Cloud PKI service integrates with Microsoft Entra ID and Microsoft Intune to provide identity and device management for your cloud-based devices and applications. 
 
 This article describes the PKI fundamentals and concepts you  need to know when you configure Microsoft Cloud PKI. We recommend reviewing all information before you configure the Microsoft Cloud PKI service in your Intune tenant. 
 
@@ -103,12 +103,12 @@ After the chain is built, the following checks are performed on each certificate
 - Check whether the certificate is revoked. 
 - Check that the chain terminates in a certificate that's in the Trusted Root Store.  
 
-The certificate and its chain are considered valid after all of the checks complete Successfully.  
+The certificate and its chain are considered valid after all checks are complete, and come back successful.     
 
-The following diagram illustrates the *name matching* chain validation flow.   
+<!-- The following diagram illustrates the *name matching* chain validation flow.   
 
-> [!div class="mx-imgBorder"]
-> ![Diagram of the chain validation process using the name match method.](./media/microsoft-cloud-pki/chain-validation.png)  
+ needs redesign to meet MS standards> [!div class="mx-imgBorder"]
+> ![Diagram of the chain validation process using the name match method.](./media/microsoft-cloud-pki/chain-validation.png) -->   
 
 ### Ensure a chain of trust  
 
@@ -119,15 +119,15 @@ The root CA must be present. If the issuing CA certificate isn't present, then i
 ## Certificate-based authentication  
 This section provides a basic understanding of the various certificates being used when a client or device performs certificate-based authentication.  
 
-The following image illustrates the handshake that takes place between a client and a relying party  service during certificate-based authentication.   
-
-> [!div class="mx-imgBorder"]
-> ![Drawing of a handshake between a client and relying party service.](./media/microsoft-cloud-pki/png)  
+The following steps desribe the handshake that takes place between a client and a relying party service during certificate-based authentication. 
 
 1. The client issues some form of hello packet to the relying party.   
-2. The relying party responds, stating that it wishes to communicate over secure TLS/SSL. The client and relying party perform the SSL handshake and a secure channel is established (not shown in the diagram).  
+2. The relying party responds, stating that it wishes to communicate over secure TLS/SSL. The client and relying party perform the SSL handshake and a secure channel is established.  
 3. The relying party requests a certificate to be used for client authentication.  
 4. The client presents its client authentication certificate to the relying party to authenticate.     
+
+<!-- diagram needs redesign > [!div class="mx-imgBorder"]
+> ![Drawing of a handshake between a client and relying party service.](./media/microsoft-cloud-pki/png)  -->
 
 In an environment without Microsoft Cloud PKI, a private CA is responsible for issuing both the TLS/SSL certificate used by the relying party, and the device client authentication certificate. Microsoft Cloud PKI can be used to issue the device client authentication certificate, effectively replacing the private CA for this specific task.  
 

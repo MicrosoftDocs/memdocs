@@ -787,26 +787,24 @@ items:
           href: ./protect/network-access-control-integrate.md
         - name: Microsoft Cloud PKI  
           items:
-          - name: Microsoft Cloud PKI overview  
+          - name: Overview of Microsoft Cloud PKI    
             href: ./protect/microsoft-cloud-pki-overview.md
             displayName: RBAC, requirements  
-          - name: Microsoft Cloud PKI fundamentals  
+          - name: Fundamentals  
             href: ./protect/microsoft-cloud-pki-fundamentals.md              
           - name: Configure and deploy      
             items: 
-            - name: Overview          
+            - name: Overview of configuration and deployment            
               href: ./protect/microsoft-cloud-pki-deployment.md 
-            - name: Configure Microsoft Cloud PKI CA     
+            - name: Root and issuing CA for Microsoft Cloud PKI CA     
               href: ./protect/microsoft-cloud-pki-configure-ca.md   
               displayName: root, certification, authority, ca, issuing, BYO
-            - name: Configure bring your own CA    
+            - name: Bring your own CA for Cloud PKI     
               href: ./protect/microsoft-cloud-pki-configure-byoca.md          
           - name: Monitor issued certificates  
             href: ./protect/microsoft-cloud-pki-monitor.md  
           - name: Get audit logs  
             href: ./protect/microsoft-cloud-pki-audit-logs.md 
-          - name: Troubleshooting  
-            href: ./protect/microsoft-cloud-pki-troubleshoot.md 
         - name: Certificates
           items: 
           - name: Use certificates for authentication
