@@ -38,7 +38,7 @@ This article describes how to access and utilize audit logs for Microsoft Cloud 
 
 Audit logs are available for the following actions on CAs and certificates:  
 
-| Audit action | Description |
+| Audit action | Purpose |
 | -------------------------- | ----------------- |
 |Create CloudCertificationAuthority| This action creates a new CA in Intune Cloud PKI.| 
 | Search CloudCertificationAuthority| This action searches for CAs available in Intune Cloud PKI. |
@@ -59,8 +59,8 @@ To access the audit logs for Intune Cloud PKI, you must have:
 
 You must also be assigned the following Microsoft Graph API permissions:  
 
-* *DeviceManagementApps.Read.All*  
-* *DeviceManagementApps.ReadWrite.All permission*  
+* *DeviceManagementApps.Read.All*    
+* *DeviceManagementApps.ReadWrite.All*  
 
 ## Access logs  
 You can access the audit logs for Microsoft Cloud PKI in the Microsoft Intune admin center or through the Microsoft Graph API. 
@@ -75,20 +75,15 @@ The Microsoft Graph API is a unified endpoint that enables you to access data an
 1.	Make a GET request to ``https://graph.microsoft.com/beta/deviceManagement/auditEvents``.     
 
 2.	Use the `$filter` query parameter to filter the audit logs. Available filters include: 
-   * activityType  
-   * activityDateTime  
-   * displayName  
-   * ID properties   
+     * activityType  
+     * activityDateTime  
+     * displayName  
+     * ID properties   
  
- For example, you can use the following query to filter the audit logs by the Intune Cloud PKI category and the CreateCaAsync action: 
+For example, you can use the following query to filter the audit logs by the Intune Cloud PKI category and the CreateCaAsync action:  
 
-`GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'Create CloudCertificationAuthority'`  
+`GET  https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'Create CloudCertificationAuthority'`  
 
+As another example, the following query requests to get audit revocation logs between the dates of January 9 and January 10.   
 
-For example, the following query can be used to audit revocation logs between the dates of January 9 and January 10.   
-
-```json  
-
-GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate' and %20activityDateTime%20gt%202024-01-09T00:00:00Z%20and%20activityDateTime%20le%202024-01-11T00:00:00Z&$orderby=activityDateTime%20desc 
-
-```  
+`GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate' and %20activityDateTime%20gt%202024-01-09T00:00:00Z%20and%20activityDateTime%20le%202024-01-11T00:00:00Z&$orderby=activityDateTime%20desc `  
