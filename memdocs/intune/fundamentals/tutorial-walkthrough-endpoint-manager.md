@@ -70,10 +70,9 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     By default, when you open the Microsoft Intune admin center, you'll see the **Home page** pane. This pane provides an overall visual snapshot of tenant status and compliance status, as well as other helpful related links.
 
-2. From the navigation pane, select **Dashboard** to display overall details about the devices and client apps in your Intune tenant. If you are starting with a new Intune tenant, you will not have any enrolled devices yet. 
+2. From the navigation pane, select **Dashboard** to display overall details about the devices and apps for your Intune tenant. If you are starting with a new Intune tenant, you won't have any enrolled devices or added apps yet.
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Dashboard" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-02.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-02.png":::
-
     
     Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
 
@@ -84,12 +83,11 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Devices**.
 
-    The **Devices - Overview** pane has several tabs that allow you to view a summary of the following statuses and alerts:
-    - **Enrollment status** - Review details about Intune enrolled devices by platform and enrollment failures.
-    - **Enrollment alerts** - Find more details about unassigned devices by platform. 
-    - **Compliance status** - Review compliance status based on device, policy, setting, threats, and protection. Additionally, this pane provides a list of devices without a compliance policy.
-    - **Configuration status** - Review configuration status of device profiles, as well as profile deployment.  
-    - **Software update status** - See a visual of the deployment status for all devices and for all users.
+    The **Devices - Overview** pane provides device details, such as the following information:
+    - **Manage devices by platform** - You can quickly see the number of devices that are managed for each platform. Selecting a platform allows you to see additional details.
+    - **Configuration policy assignment failures** - You can check wither you have any profiles with errors or conflicts. 
+    - **Noncompliant devices** - You can see a count of nocompliant devices for your tenant.
+    - **Deployment status per Windows update ring** - You can see if there are any Windows device with update errors or conflicts.  
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Devices" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png":::
 
@@ -167,7 +165,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
-10. From the navigation pane, select **Users** to display details about the users that you have included in Intune. These users are your company's workforce.
+10. From the navigation pane, select **Users** to display details about the users that you have included in Intune. These users are members of your organization that have devices and apps associated with your Intune tenant.
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Users" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-10.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-10.png":::
 
@@ -190,20 +188,29 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Tenant status**.
 
-    The **Tenant admin - Tenant status** pane provides tabs for **Tenant details**, **Connector status**, and **Service health dashboard**. If there are any issues with your tenant or Intune itself, you will find details available from this pane.
+    The **Tenant admin - Tenant status** pane provides tabs for **Tenant details**, **Connector status**, and **Service health and message center**. If there are any issues with your tenant or Intune itself, you will find details available from this pane.
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Tenant status" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png":::
 
     For more information, see [Intune Tenant Status](tenant-status.md).
 
-13. From the navigation pane, select **Troubleshooting + support** > **Troubleshoot** to check status details on a specific user. 
+13. From the navigation pane, select **Troubleshooting + support** > **Troubleshoot** to check status details on a specific user or devices. 
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Troubleshoot**.
 
-    From the **Assignments** dropdown list, you can choose to view the targeted assignments of client apps, policies, update rings, and enrollment restrictions. Additionally, this pane provides device details, app protection status, and enrollment failures for a specific user.
-
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Troubleshoot" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-13.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-13.png":::
+
+    The Troubleshooting pane provides tabs as well. You can view troubleshooting information by selecting the following tabs:
+    - Summary
+    - Devices
+    - Groups
+    - Policy
+    - Applications
+    - App protection policy
+    - Updates
+    - Enrollment restrictions
+    - Diagnostics
 
     For more information about troubleshooting within Intune, see [Use the troubleshooting portal to help users at your company](help-desk-operators.md).
 
@@ -244,7 +251,12 @@ To modify your current dashboard, select **Edit**. If you don't want to change y
 
 ### Change the Portal settings
 
-You can customize the Microsoft Intune admin center by choosing the default view, the theme, the credentials timeout period, as well as language and region settings.
+You can customize the Microsoft Intune admin center selecting and modifying the following areas:
+- **Directories + subscriptions**
+- **Appearance + startup views**
+- **Language + region**
+- **My information**
+- **Signing out + notifications**
 
 :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Portal settings" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png":::
 
