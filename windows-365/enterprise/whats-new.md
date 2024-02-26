@@ -91,6 +91,10 @@ Windows Task view identifiers for Cloud PC or local PC have moved out of preview
 
 The ability for users to seamlessly disconnect from their Cloud PC without leaving their local desktop has moved out of preview and into general availability. For more information, see [Windows 365 Switch](https://support.microsoft.com/en-us/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
 
+#### Windows 365 Switch connection status now generally available<!--48743180-->
+
+Connection status and timeout information on the connection screen for Windows 365 Switch with Windows 365 Frontline Cloud PCs has moved out of preview and into general availability.
+
 <!-- ########################## -->
 ## Week of January 29, 2024 (Service release 2401)
 
