@@ -1,7 +1,7 @@
 ---
 title: Bring your own certificate authority with Cloud PKI  
 titleSuffix: Microsoft Intune 
-description: Create a Microsoct Cloud BYOCA issuing CA in Intune and anchor it to an on-premises or private CA.  
+description: Create a Microsoft Cloud PKI BYOCA issuing CA in Intune and anchor it to an on-premises or private CA.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
