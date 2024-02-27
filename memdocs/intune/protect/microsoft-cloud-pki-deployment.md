@@ -35,7 +35,8 @@ ms.collection:
 This article describes the deployment models supported by Microsoft Intune and the Microsoft Cloud PKI service. 
 
 You have two deployment options:     
-- Microsoft Cloud PKI root CA: Deploy Microsoft Cloud PKI by using root and issuing CAs in the cloud.     
+- Microsoft Cloud PKI root CA: Deploy Microsoft Cloud PKI by using root and issuing CAs in the cloud.
+
 - Bring your own certification authority (BYOCA): Deploy Microsoft Cloud PKI by using your own private CA.   
 
 With the *Microsoft Cloud PKI root CA* approach, you can create one or more PKIs within a single Intune tenant. Deploying Cloud PKI this way creates a two-tier hierarchy, so you can have multiple issuing CAs subordinate to the root CA. These CAs aren't public. Rather, you create both the root CA and issuing CAs in the cloud, private to the Intune tenant. The issuing CA issues certificates to Intune-managed devices by using the device configuration SCEP certificate profile. 
