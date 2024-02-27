@@ -62,6 +62,13 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Boot
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New 15 minute Sign-in frequency option (preview)<!--48439987-->
+
+When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option to provide a 15 minute re-authentication period. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
 #### Windows 365 Boot sign-in page customization is now generally available<!--48742587-->
 
 Windows 365 Boot support for sign-in page customization has moved out of preview and into general availability. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
