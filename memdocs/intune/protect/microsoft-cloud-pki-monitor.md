@@ -50,7 +50,7 @@ To view issued certificates, go to **Devices** > **Monitor**, and then select **
    > [!div class="mx-imgBorder"]
    > ![Image of the admin center, highlighting Certificates.](./media/microsoft-cloud-pki/monitor-certificates-cloud-pki.png)   
 
-## Monitor Cloud PKI Issuing CA  
+## Monitor Cloud PKI issuing CA  
 Each Cloud PKI issuing CA has a monitoring dashboard. Select **View all certificates** to view all issued certificates. Certificate report details should be available within 24 hours of the certificate being successfully issued to the device.   
 
    > [!div class="mx-imgBorder"]
