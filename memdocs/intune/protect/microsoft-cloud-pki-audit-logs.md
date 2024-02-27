@@ -84,6 +84,6 @@ For example, you can use the following query to filter the audit logs by the Int
 
 `GET  https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'Create CloudCertificationAuthority'`  
 
-As another example, the following query requests to get audit revocation logs between the dates of January 9 and January 10.   
+As another example, the following query requests audit revocation logs between the dates of January 9 and January 10.   
 
 `GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate' and %20activityDateTime%20gt%202024-01-09T00:00:00Z%20and%20activityDateTime%20le%202024-01-11T00:00:00Z&$orderby=activityDateTime%20desc `  
