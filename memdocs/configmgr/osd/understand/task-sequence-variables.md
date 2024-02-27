@@ -1903,7 +1903,7 @@ This optional task sequence variable controls client behavior when a software up
 
 This variable is useful when a single **Install Software Updates** task sequence step installs software updates that need multiple restarts to finish installing.
 
-Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task sequence pauses on this step while the computer restarts. Allow sufficient time in case there's multiple restarts. For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run.
+Set the **SMSTSWaitForSecondReboot** value in seconds to specify how long the task sequence pauses on this step while the computer restarts. Allow sufficient time in case there's multiple restarts. For example, if you set **SMSTSWaitForSecondReboot** to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run.
 
 When this variable has been set before the **Install Software Updates** task, it is advisable to also set it again after the **Install Software Updates** task with a value of `0`. This resets the variable and prevents unnecessary delays during the task sequence. If there are multiple **Install Software Updates** tasks in the task sequence, define the variable to the desired value before the first **Install Software Updates** task, and then reset it back to `0` after the last **Install Software Updates** task.
 
