@@ -86,6 +86,7 @@ During a Cloud PKI root CA deployment, the Cloud PKI root certificate needs to b
 > Android OS requires servers to return an entire certificate chain and doesn't do certificate discovery following AIA paths. For more information, see [Android developer docs](https://developer.android.com/training/articles/security-ssl#MissingCa). Be sure to deploy the full certificate chain to Android managed devices and relying parties.  
 
 Intune managed devices, regardless of OS platform, require the following CA certificate trust chain.    
+
 | CA certificate type| CA certificate trust chain | Deployment method |
 | --------------------------| -------------------------- | ----------------- |
 | Cloud PKI CA certificate | Root CA certificate required, issuing CA optional but recommended | Intune trusted certificate configuration profile |
@@ -94,6 +95,7 @@ Intune managed devices, regardless of OS platform, require the following CA cert
 
 
 Relying parties require the following CA certificate trust chain.  
+
 | CA certificate type| CA certificate trust chain | Deployment method |
 | -------------------------- | ----------------- |----------------- |
 |Cloud PKI CA certificate| Root CA certificate required, issuing CA optional but recommended | If the relying party's server or service is a member server in Active Directory (AD) domain, use Group Policy to deploy CA certificates. If it's not in AD domain, a manual installation method might be required. |
@@ -115,9 +117,10 @@ During a bring-your-own-CA deployment, the Intune managed device needs the follo
  * The private CA trust chain, including the root and issuing CA certificates, of the CA responsible for signing the BYOCA CSR.  
  * The BYOCA-issuing CA certificate.       
 
-In a BYOCA deployment all relying parties should already have the private CA certificate chain. 
+All relying parties should already have the private CA certificate chain. 
 
 Intune managed devices, regardless of OS platform, require the following CA certificate trust chain.    
+
 | CA certificate type | CA certificate trust chain | Deployment method |
 | --------------------------| -------------------------- | ----------------- |
 | Cloud PKI CA certificate | Issuing CA optional but recommended | Intune trusted certificate configuration profile |
