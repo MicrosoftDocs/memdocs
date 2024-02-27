@@ -63,7 +63,7 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Configure the following settings for the root CA:  
      * **CA type**: Select **Root CA**. 
 
-     * **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a Root CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
+     * **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a root CA with a custom validity period, use [Microsoft Graph API]() to create the CAs. 
 
 1. For **Extended Key Usages**, select how you intend to use the CA.  
 
@@ -72,11 +72,12 @@ Before you can start to issue certificates to managed devices, you need to creat
 
    To prevent potential security risks, CAs are limited to select use. Your options:    
 
-     * **Type**: Select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk. For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku)    
+     * **Type**: Select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk. For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku).  
+       
      * Alternatively, to create a custom extended key usage, enter the **Name** and **Object Identifier**.    
 
-   > [!NOTE]
-   > Keep in mind that root CA EKU/OID constraints are a superset of the issuing CA. This means that when you create an issuing CA, you can only select the EKUs defined for the root CA.  If you don't define the EKU in the root CA, it won't show up as an EKU option for the issuing CA.   
+      > [!NOTE]
+      > Keep in mind that root CA EKU/OID constraints are a superset of the issuing CA. This means that when you create an issuing CA, you can only select the EKUs defined for the root CA. If you don't define the EKU in the root CA, it won't show up as an EKU option for the issuing CA.   
 
 1. Under **Subject attributes** enter a **Common name (CN)** for the root CA. Optionally, you can enter other attributes including:    
      - Organization (O)  
@@ -91,7 +92,8 @@ Before you can start to issue certificates to managed devices, you need to creat
 
      - **RSA-2048 and SHA-256**  
      - **RSA-3096 and SHA-384**
-     - **RSA-4096 and SHA-512**  
+     - **RSA-4096 and SHA-512**
+       
 
       > [!div class="mx-imgBorder"]
       > ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./media/microsoft-cloud-pki/key-size-algorithm.png)  
@@ -124,7 +126,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Select the CA type and root CA source.  
 
      > [!div class="mx-imgBorder"]
-     > ![Admin center showing the CA type selected and the Root CA source expanded, highlighting the Intune option.](./media/microsoft-cloud-pki/create-ca-configuration-settings.png)  
+     > ![Admin center showing the CA type selected and the root CA source expanded, highlighting the Intune option.](./media/microsoft-cloud-pki/create-ca-configuration-settings.png)  
 
    Your options:  
      * **CA type**: Select **Issuing CA**. Then configure these additional settings:  
@@ -171,16 +173,16 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 
 To view the properties of root CAs and issuing CAs in your tenant, select the CA and then go to **Properties**.  Available properties include:  
 
-- Certificate Revocation List (CRL) distribution point URI 
+- Certificate revocation list (CRL) distribution point URI 
 - Authority Information Access (AIA) URI 
-- SCEP URI (*issuing CA only*)  
-
+- SCEP URI - *issuing CA only*    
+ 
 Take note of these endpoint locations so you have them for later. Relying parties need network visibility to these endpoints. For example, you need to know the SCEP URI endpoint when you create SCEP profiles.    
 
->[!NOTE]
+> [!NOTE]
 > The CRL is valid for 7 days, and is refreshed and republished in the admin center every 3.5 days. A refresh also happens every time an end-entity certificate is revoked.    
 
-When you create the trusted certificate profile required for Cloud PKI, you must have the public keys for the root CA certificates and issuing CA certificates. The public keys establish a chain of trust between Intune managed devices and Cloud PKI when requesting a certificate using SCEP certificate profiles. Select **Download** to download the public keys for these certificates. Repeat this step for every CA you have. The Root and Issuing CA certificates are also required to be installed on any relying parties, or authentication endpoints, supporting certificate-based authentication.  
+When you create the trusted certificate profile required for Cloud PKI, you must have the public keys for the root CA certificates and issuing CA certificates. The public keys establish a chain of trust between Intune managed devices and Cloud PKI when requesting a certificate using SCEP certificate profiles. Select **Download** to download the public keys for these certificates. Repeat this step for every CA you have. The root and issuing CA certificates are also required to be installed on any relying parties, or authentication endpoints, supporting certificate-based authentication.  
 
 ## Step 3: Create certificate profiles   
 To issue certificates, you must create a trusted certificate profile for your root and issuing CAs. The trusted certificate profile establishes trust with the Cloud PKI certificate registration authority supporting the SCEP protocol. A trusted certificate profile required for each platform (Windows, Android, iOS/iPad, macOS) that's issuing Cloud PKI SCEP certificates. 
@@ -213,17 +215,18 @@ For the issuing CA:
 1. Go to **Properties**. 
 1. Select **Download**. Wait while the public key downloads. 
 
-The Cloud PKI Root CA and Issuing CA you download must be installed on all relying parties.  
+The Cloud PKI root CA and issuing CA you download must be installed on all relying parties.  
 
 The file name given to the downloaded public keys is based on the Common Names specified in the CA. Some browsers, like Microsoft Edge, show a warning if you download a file with a .cer or other well-known certificate extension. If you receive this warning, select **Keep**.   
 
-> [!div class="mx-imgBorder"]
-> ![Image of Downloads prompt highlighting the keep option. ](./media/microsoft-cloud-pki/download-warning.png)   
+ > [!div class="mx-imgBorder"]
+ > ![Image of Downloads prompt highlighting the keep option. ](./media/microsoft-cloud-pki/download-warning.png)   
 
 
 ### Create SCEP certificate profile  
->[!NOTE]
-> Only Cloud PKI Issuing CAs (including BYOCA issuing CA) can be used to issue SCEP certificates to Intune managed devices.  
+
+> [!NOTE]
+> Only Cloud PKI issuing CAs (including BYOCA issuing CA) can be used to issue SCEP certificates to Intune managed devices.  
 
 Just like you did for the trusted certificate profiles, create an SCEP certificate profile for each OS platform you're targeting. The SCEP certificate profile is used to request a leaf *client authentication* certificate from the issuing CA. This type of certificate is used in certificate based authentication scenarios, for things like Wi-Fi and VPN access. 
 
