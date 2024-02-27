@@ -26,9 +26,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 
 ms.collection:
-- tier3
+- tier1
 - M365-identity-device-management
 - certificates
+- IntuneSuite
 ---
 # Microsoft Cloud PKI audit logs  
 
@@ -40,50 +41,54 @@ Audit logs are available for the following actions on CAs and certificates:
 
 | Audit action | Purpose |
 | -------------------------- | ----------------- |
-|Create CloudCertificationAuthority| This action creates a new CA in Intune Cloud PKI.| 
+|Create CloudCertificationAuthority| This action creates a new CA in Intune Cloud PKI.|
 | Search CloudCertificationAuthority| This action searches for CAs available in Intune Cloud PKI. |
-|Get CloudCertificationAuthority | This action retrieves a specific CA by its ID in Intune Cloud PKI | 
-|Patch CloudCertificationAuthority | This action updates the properties of an existing CA in Intune Cloud PKI | 
+|Get CloudCertificationAuthority | This action retrieves a specific CA by its ID in Intune Cloud PKI |
+|Patch CloudCertificationAuthority | This action updates the properties of an existing CA in Intune Cloud PKI |
 | Delete CloudCertificationAuthority|This action deletes an existing CA in Intune Cloud PKI. |
 |Search CloudCertificationAuthorityLeafCertificate | This action retrieves all leaf certificates issued by a specific CA in the Cloud PKI service. |
 |RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate | This action revokes a specific leaf certificate issued by a CA in the Cloud PKI service. |
-|UploadExternallySignedCertificationAuthorityCertificateAsync CloudCertificationAuthority| This action uploads an externally signed CA certificate to an existing CA in Intune Cloud PKI. | 
+|UploadExternallySignedCertificationAuthorityCertificateAsync CloudCertificationAuthority| This action uploads an externally signed CA certificate to an existing CA in Intune Cloud PKI. |
 |ChangeCloudCertificationAuthorityStatusAsync CloudCertificationAuthority| This action changes the status of an existing CA in Intune Cloud PKI. |
 |RevokeCloudCertificationAuthorityCertificateAsync CloudCertificationAuthority | This action revokes the CA certificate of an existing CA in Intune Cloud PKI, which renders it invalid. |  
 
-## Prerequisites   
-To access the audit logs for Intune Cloud PKI, you must have: 
-- An Intune Cloud PKI license.   
-- An Intune service administrator role. 
-- An access token for the Microsoft Graph API. 
+## Prerequisites
+
+To access the audit logs for Intune Cloud PKI, you must have:
+
+- An Intune Cloud PKI license.
+- An Intune service administrator role.
+- An access token for the Microsoft Graph API.
 
 You must also be assigned the following Microsoft Graph API permissions:  
 
-* *DeviceManagementApps.Read.All*    
-* *DeviceManagementApps.ReadWrite.All*  
+- *DeviceManagementApps.Read.All*
+- *DeviceManagementApps.ReadWrite.All*  
 
-## Access logs  
-You can access the audit logs for Microsoft Cloud PKI in the Microsoft Intune admin center or through the Microsoft Graph API. 
+## Access logs
+
+You can access the audit logs for Microsoft Cloud PKI in the Microsoft Intune admin center or through the Microsoft Graph API.
 
 ### Microsoft Intune admin center  
 
-In the admin center, go to **Tenant Administration** > **Audit Logs**. 
+In the admin center, go to **Tenant Administration** > **Audit Logs**.
 
-### Microsoft Graph API  
-The Microsoft Graph API is a unified endpoint that enables you to access data and services across Microsoft 365, including Cloud PKI. You can use the Microsoft Graph API to query, filter, and export the audit logs for Cloud PKI actions. 
+### Microsoft Graph API
 
-1.	Make a GET request to ``https://graph.microsoft.com/beta/deviceManagement/auditEvents``.     
+The Microsoft Graph API is a unified endpoint that enables you to access data and services across Microsoft 365, including Cloud PKI. You can use the Microsoft Graph API to query, filter, and export the audit logs for Cloud PKI actions.
 
-2.	Use the `$filter` query parameter to filter the audit logs. Available filters include: 
-     * activityType  
-     * activityDateTime  
-     * displayName  
-     * ID properties   
- 
+1. Make a GET request to ``https://graph.microsoft.com/beta/deviceManagement/auditEvents``.
+
+2. Use the `$filter` query parameter to filter the audit logs. Available filters include:
+   - activityType
+   - activityDateTime  
+   - displayName  
+   - ID properties
+
 For example, you can use the following query to filter the audit logs by the Intune Cloud PKI category and the CreateCaAsync action:  
 
 `GET  https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'Create CloudCertificationAuthority'`  
 
-As another example, the following query requests audit revocation logs between the dates of January 9 and January 10.   
+As another example, the following query requests audit revocation logs between the dates of January 9 and January 10.
 
-`GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate' and %20activityDateTime%20gt%202024-01-09T00:00:00Z%20and%20activityDateTime%20le%202024-01-11T00:00:00Z&$orderby=activityDateTime%20desc `  
+`GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate' and %20activityDateTime%20gt%202024-01-09T00:00:00Z%20and%20activityDateTime%20le%202024-01-11T00:00:00Z&$orderby=activityDateTime%20desc`  
