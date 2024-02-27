@@ -152,12 +152,12 @@ To complete these steps, use notepad.exe on a Windows device, or equivalent prog
 
      2. Select **Download certificate chain**. The signed certificate is downloaded, including the full certificate chain, root CA, and any intermediate or issuing CA certificates in the private CA hierarchy. The file saves as *certnew.p7b*.   
 
-  Intune requires both of these files to enable the issuing CA for Cloud PKI BYOCA.  
+   Intune requires both of these files to enable the issuing CA for Cloud PKI BYOCA.  
 
 1. Continue to [Upload signed certificate to enable BYOCA issuing CA](#step-3-upload-signed-certificate-to-enable-byoca-issuing-ca) in this article.  
 
->[!NOTE] 
-> If you use the admin center and CA Web enrollment console from 2 different workstations, you will need to copy or have access to the 2 certification files from the admin center workstation.    
+> [!NOTE] 
+> If you use the admin center and CA Web enrollment console from 2 different workstations, you will need to copy or have access to the 2 certification files from the admin center workstation.
 
 ### Option 2: Windows ADCS command line tool 
 Use the *certreq.exe* command-line tool to submit a certificate request to a CA, in which you can specify the certificate template and signing CA. The REQ file you previously downloaded must be on the Windows machine where you're running the command line tool.  
