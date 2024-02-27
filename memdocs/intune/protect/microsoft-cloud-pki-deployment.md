@@ -79,25 +79,25 @@ If the relying party isn't a member of Active Directory Domain, ensure the CA ce
 Also consider the relying party software configuration needed to support additional certification authorities.  
 
 ### Option 1: Microsoft Cloud PKI root CA   
-During a Cloud PKI Root CA deployment, the Cloud PKI root certificate needs to be deployed to all relying parties. If an Issuing CA certificate isn't present on a relying party, the relying party can automatically retrieve and install it by initiating certificate discovery. This process, known as the certificate chaining engine (CCE), is platform-specific and used to retrieve missing parent certificate. The URL of the Issuing CA certificate is in the AIA property of a leaf certificate (the certificate issued to the device using a Cloud PKI Issuing CA). A relying party can use the AIA property to retrieve parent CA certificates. The process is similar to CRL downloading.  
+During a Cloud PKI root CA deployment, the Cloud PKI root certificate needs to be deployed to all relying parties. If an issuing CA certificate isn't present on a relying party, the relying party can automatically retrieve and install it by initiating certificate discovery. This process, known as the certificate chaining engine (CCE), is platform-specific and used to retrieve missing parent certificate. The URL of the issuing CA certificate is in the AIA property of a leaf certificate (the certificate issued to the device using a Cloud PKI issuing CA). A relying party can use the AIA property to retrieve parent CA certificates. The process is similar to CRL downloading.  
 
 >[!NOTE]
 > Android OS requires servers to return an entire certificate chain and doesn't do certificate discovery following AIA paths. For more information, see [Android developer docs](https://developer.android.com/training/articles/security-ssl#MissingCa). Be sure to deploy the full certificate chain to Android managed devices and relying parties.  
 
 Intune managed devices, regardless of OS platform, require the following CA certificate trust chain.    
 
-| CA certificate trust chain | Deployment method |
-| -------------------------- | ----------------- |
-| Cloud PKI CA certificates: Root CA certificate required, issuing CA optional but recommended | Intune trusted certificate configuration profile |
-| Private CA certificates: Root CA certificate required, Issuing CA certificate is optional but recommended | Intune trusted certificate configuration profile |  
+| CA certificate type| CA certificate trust chain requirements| Deployment method |
+| --------------------------| -------------------------- | ----------------- |
+| Cloud PKI CA certificate | Root CA certificate required, issuing CA optional but recommended | Intune trusted certificate configuration profile |
+| Private CA certificate | Root CA certificate required, issuing CA certificate is optional but recommended | Intune trusted certificate configuration profile |  
 
 
 Relying Parties require the following CA certificate trust chain.  
 
 | CA certificate type| CA certificate trust chain requirements | Deployment method |
 | -------------------------- | ----------------- |----------------- |
-|Cloud PKI CA certificates:| Root CA certificate required, issuing CA optional but recommended | If the relying party's server or service is a member server in Active Directory (AD) domain, use Group Policy to deploy CA certificates. If it's not in AD domain, a manual installation method might be required. |
-|Private CA certificates| Root CA certificate required, issuing CA certificate optional but recommended | If the relying party's server or service is a member server in Active Directory (AD) domain, use Group Policy to deploy CA certificates. If it's not in AD domain, a manual installation method might be required. |   
+|Cloud PKI CA certificate| Root CA certificate required, issuing CA optional but recommended | If the relying party's server or service is a member server in Active Directory (AD) domain, use Group Policy to deploy CA certificates. If it's not in AD domain, a manual installation method might be required. |
+|Private CA certificate| Root CA certificate required, issuing CA certificate optional but recommended | If the relying party's server or service is a member server in Active Directory (AD) domain, use Group Policy to deploy CA certificates. If it's not in AD domain, a manual installation method might be required. |   
 
 
 <!-- The following diagram shows certificates in action for both client and relying parties.    
@@ -120,9 +120,9 @@ In a BYOCA deployment all relying parties should already have the private CA cer
 Intune managed devices, regardless of OS platform, require the following CA certificate trust chain.    
 
 | CA certificate type | Required CA certificate trust chain | Deployment method |
-| -------------------------- | ----------------- |
-| Cloud PKI CA certificates | Issuing CA optional but recommended | Intune Trusted certificate configuration profile |
-| Private CA certificates | Root CA certificate required, issuing CA optional but recommended | Intune Trusted certificate configuration profile |  
+| --------------------------| -------------------------- | ----------------- |
+| Cloud PKI CA certificate | Issuing CA optional but recommended | Intune trusted certificate configuration profile |
+| Private CA certificate | Root CA certificate required, issuing CA optional but recommended | Intune trusted certificate configuration profile |  
 
 The relying party should already have the private CA certificate chain. However, the BYOCA issuing CA certificate should also be deployed to relying parties. If the relying party is a member server in Active Directory Domain, use GPO as the deployment method.   
 
@@ -142,7 +142,7 @@ Cloud PKI root and issuing CAs, and BYOCA issuing CAs anchored to a private CA, 
 Before starting a deployment and issuing certificates, determine the location of the *root trust anchor*. It can be in the Cloud PKI root or private root CA. The location determines the certificate trust chain required by both Intune managed devices and relying parties.  
 
 * Cloud PKI root CA:  You must deploy the Cloud PKI certificate trust chain, which is made up of the root & issuing CA public keys, to all relying parties.
-* Cloud BYOCA issuing CA using a private root CA: The private CA certificate trusted chain, which is made up of the root CA and issuing CA, should already be deployed on relying parties throughout your infrastructure. As a result, only the Cloud PKI BYOCA issuing CA certificate might be required.   
+* Cloud PKI BYOCA issuing CA using a private root CA: The private CA certificate trusted chain, which is made up of the root CA and issuing CA, should already be deployed on relying parties throughout your infrastructure. Though not required, we recommend creating a Cloud PKI BYOCA issuing CA certificate.      
 
 
 
