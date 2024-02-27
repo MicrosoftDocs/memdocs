@@ -1,7 +1,7 @@
 ---
-title: Microsoft Intune cloud PKI overview  
+title: Microsoft Cloud PKI for Microsoft Intune 
 titleSuffix: Microsoft Intune 
-description: Overview of the Microsoft cloud PKI service available in Microsoft Intune. 
+description: An overview of the Microsoft Cloud PKI service, available with Microsoft Intune Suite or as an Intune add-on. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
