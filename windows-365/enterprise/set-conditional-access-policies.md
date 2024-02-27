@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 2/12/2024
+ms.date: 2/27/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -105,7 +105,7 @@ To configure the time period after which a user is asked to sign-in again:
 1. In the **Session** pane, select **Sign-in frequency**.
 1. Select **Periodic reauthentication** or **Every time**.
     - If you select **Periodic reauthentication**, set the value for the time period after which a user is asked to sign-in again > **Select**. For example, setting the value to **1** and the unit to **Hours**, requires multi-factor authentication if a connection is launched more than an hour after the last one.
-    - If you select **Every time**, users are prompted to re-authenticate after a period of 10 to 15 minutes after the last time they authenticated for the Azure Virtual Desktop, Microsoft Remote Desktop, and Windows Cloud Login apps. Users are prompted to re-authenticate after a period of 60 minutes for the Windows 365 app.
+    - The **Every time** option is currently available in public preview and is only supported when applied to the **Microsoft Remote Desktop** and **Windows Cloud Login** apps when single sign-on is enabled for your Cloud PCs. If you select **Every time**, users are prompted to re-authenticate after a period of 10 to 15 minutes after the last time they authenticated for the Microsoft Remote Desktop and Windows Cloud Login apps.
 1. At the bottom of the page, select **Save**.
 
 > [!NOTE]
