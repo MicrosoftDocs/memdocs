@@ -7,7 +7,7 @@ keywords: Enterprise SSO plug-in, Microsoft Intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 02/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,6 +52,8 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
 
   Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Intune. For information on how to install the Microsoft Authenticator app, go to [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
 
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#required-network-configuration).
+
 # [Jamf Pro](#tab/prereq-jamf-pro)
 
 - The device is managed by Jamf Pro.
@@ -61,6 +63,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
 
   Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
 
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#required-network-configuration).
 - **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
 
 # [Other MDMs](#tab/prereq-other-mdm)
@@ -70,6 +73,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
 - The Microsoft Authenticator app must be installed on the device. Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using an MDM policy.
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#required-network-configuration).
 
 ---
 

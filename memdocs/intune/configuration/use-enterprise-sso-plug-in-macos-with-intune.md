@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2023
+ms.date: 02/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,6 +49,7 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 - The device must support the plug-in:
   - macOS 10.15 and newer
 - The Microsoft Company Portal app must be installed and configured on the device.
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#required-network-configuration).
 
 # [Jamf Pro](#tab/prereq-jamf-pro)
 
@@ -59,8 +60,10 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 
   The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, go to [Package Management - Adding a Package to Jamf Admin](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Package_Management.html#ariaid-title4) (opens Jamf Pro's web site).
 
-> [!NOTE]
-> On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+  > [!NOTE]
+  > On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#required-network-configuration).
 
 # [Other MDMs](#tab/prereq-other-mdm)
 
@@ -72,8 +75,10 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 
   The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM policy. You can [download the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
 
-> [!NOTE]
-> On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+  > [!NOTE]
+  > On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#required-network-configuration).
 
 --- 
 
