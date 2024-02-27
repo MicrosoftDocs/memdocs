@@ -48,7 +48,7 @@ For more information about how to prepare your tenant for Microsoft Cloud PKI, i
 ## Role based access control     
 The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The roles with built-in permissions include Microsoft Entra Global administrator and Intune service administrator account. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).   
 
-## Step 1: Create Issuing CA and certificate signing request  
+## Step 1: Create issuing CA and certificate signing request  
 Create an issuing CA in the Microsoft Intune admin center.   
 
 1. Go to **Tenant administration** > **Cloud PKI**, and then select **Create**.  
@@ -205,7 +205,7 @@ Within the file, you should see the full chain, including root and intermediate 
 
 To complete the BYOCA Cloud PKI issuing CA *signing required* process and enable the CA in the cloud to start issuing certificates for Intune managed devices, you must have:  
 
-- A signed certificate for the BYOCA Issuing CA.  
+- A signed certificate for the BYOCA issuing CA.  
 - The full chain of the private CA used to sign the certificate request.  
 
 For information about how to complete these tasks, which are required to proceed, see [Step 2: Sign Certificate Signing Request ](#step-2-sign-certificate-signing-request). The files must be available on the same machine where the Microsoft Intune admin center is running.  
@@ -224,7 +224,7 @@ You can select the CA in the list to view available properties. Properties inclu
 
    * Certificate revocation list (CRL) distribution point URI.   
    * Authority information access (AIA) URI. 
-   * The Cloud PKI Issuing CA shows the SCEP URI. The SCEP URI must be copied into the SCEP configuration profile for every platform-issued certificate.   
+   * The Cloud PKI issuing CA shows the SCEP URI. The SCEP URI must be copied into the SCEP configuration profile for every platform-issued certificate.   
 
    When you're ready to download the CA trust public key, select **Download**.  
 
@@ -257,7 +257,7 @@ You can use Windows file explorer to view the exported chain.
  
 1. Select **All Tasks** > **Export**. Export the trusted certificate in DER format. We recommend naming the exported certificate file using the same Common Name of the CA shown under the **Issued To** column of the certmgr utility. The name makes it easier to find the root CA in the list because the common name under **Issued To** and **Issued By** will be the same.  
 
-### Create trusted certificate profile for private Root CA  
+### Create trusted certificate profile for private root CA  
 Create a trusted certificate profile with the exported root CA file you downloaded. In the admin center, create a trusted certificate profile for each OS platform you're targeting that's using the private CA root certificate.  
 
 ### Create trusted certificate profiles for private subordinate CAs  
@@ -302,7 +302,7 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
 
 1. In the admin center, [create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.   
 
-1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the Root CA certificate that the Issuing CA is anchored to in the CA hierarchy.  
+1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the root CA certificate that the issuing CA is anchored to in the CA hierarchy.  
 
       > [!div class="mx-imgBorder"]
       > ![Image of the root certificate setting, with a root CA certificate selected.](./media/microsoft-cloud-pki/scep-root-certificate.png)  
@@ -314,6 +314,6 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
     
     * **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.   
 
-    * **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI Issuing CA SCEP URLs.  
+    * **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.   
 
