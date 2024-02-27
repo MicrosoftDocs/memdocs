@@ -231,6 +231,23 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
   - iOS 7.0 and newer
   - iPadOS 13.0 and newer
 
+> [!NOTE]
+> REMOVE THIS NOTE AFTER ADDING THIS TEXT TO THE OVERVIEW ARTICLE.
+>
+> The **Single sign-on app extension** feature is different than the **Single sign-on** feature:
+>
+> - The **Single sign-on app extension** settings apply to iPadOS 13.0 (and newer), iOS 13.0 (and newer), and macOS 10.15 (and newer). **Single sign-on** settings apply to iPadOS 13.0 (and newer) and iOS 7.0 and newer.
+>
+> - The **Single sign-on app extension** settings define extensions for use by identity providers or organizations to deliver a seamless enterprise sign-on experience. The **Single sign-on** settings define Kerberos account information for when users access servers or apps.
+>
+> - The **Single sign-on app extension** uses the Apple operating system to authenticate. So, it might provide an end-user experience that's better than **Single sign-on**.
+>
+> - From a development perspective, with **Single sign-on app extension**, you can use any type of redirect SSO or credential SSO authentication. With **Single sign-on**, you can only use Kerberos SSO authentication.
+>
+> - The Kerberos **Single sign-on app extension** was developed by Apple and is built into the iOS/iPadOS 13.0+ and macOS 10.15+ platforms. The built-in Kerberos extension can be used to log users into native apps and websites that support Kerberos authentication. **Single sign-on** is not an Apple implementation of Kerberos.
+>
+> - The built-in Kerberos **Single sign-on app extension** handles Kerberos challenges for web pages and apps just like **Single sign-on**. However, the built-in Kerberos extension supports password changes and behaves better in enterprise networks. When deciding between the Kerberos **Single sign-on app extension** and **Single sign-on**, we recommend using the extension due to improved performance and capabilities.
+
 ## Wallpaper
 
 Add a custom .png, .jpg, or .jpeg image to your supervised iOS/iPadOS devices. For example, use Intune to add a company logo to the lock screen on your devices.

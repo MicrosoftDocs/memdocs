@@ -65,7 +65,7 @@ When you configure platform SSO, users sign into the device with their Microsoft
 
 For more information on platform SSO, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
-You use platform SSO and the [Microsoft Enterprise SSO plug-in](#microsoft-enterprise-sso-plug---in-for-ios-ipad-and-macos-devices) (in this article) together. Specifically, you:
+You use platform SSO and the [Microsoft Enterprise SSO app extension plug-in](#sso-app-extension) (in this article) together. Specifically, you:
 
 1. Use platform SSO to sign into the device.
 2. Use the SSO app extension to sign into apps and websites.
@@ -171,6 +171,21 @@ The following table summarizes the Single sign-on features in Microsoft Intune. 
 | **Recommendation** | ❌ Not recommended. Instead, Microsoft recommends using the [SSO app extension](#sso-app-extension) (in this article). |
 
 ::: zone-end
+
+> [!NOTE]
+> The **Single sign-on app extension** feature is different than the **Single sign-on** feature:
+>
+> - The **Single sign-on app extension** settings apply to iPadOS 13.0 (and newer), iOS 13.0 (and newer), and macOS 10.15 (and newer). **Single sign-on** settings apply to iPadOS 13.0 (and newer) and iOS 7.0 and newer.
+>
+> - The **Single sign-on app extension** settings define extensions for use by identity providers or organizations to deliver a seamless enterprise sign-on experience. The **Single sign-on** settings define Kerberos account information for when users access servers or apps.
+>
+> - The **Single sign-on app extension** uses the Apple operating system to authenticate. So, it might provide an end-user experience that's better than **Single sign-on**.
+>
+> - From a development perspective, with **Single sign-on app extension**, you can use any type of redirect SSO or credential SSO authentication. With **Single sign-on**, you can only use Kerberos SSO authentication.
+>
+> - The Kerberos **Single sign-on app extension** was developed by Apple and is built into the iOS/iPadOS 13.0+ and macOS 10.15+ platforms. The built-in Kerberos extension can be used to log users into native apps and websites that support Kerberos authentication. **Single sign-on** is not an Apple implementation of Kerberos.
+>
+> - The built-in Kerberos **Single sign-on app extension** handles Kerberos challenges for web pages and apps just like **Single sign-on**. However, the built-in Kerberos extension supports password changes and behaves better in enterprise networks. When deciding between the Kerberos **Single sign-on app extension** and **Single sign-on**, we recommend using the extension due to improved performance and capabilities.
 
 ## Related articles
 

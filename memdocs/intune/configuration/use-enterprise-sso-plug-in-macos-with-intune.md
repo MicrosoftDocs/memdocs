@@ -84,7 +84,7 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
-For more information on the single sign-on extension, go to [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
+For more information on the single sign-on extension, go to [Single sign-on app extension](device-features-configure.md#single-sign-on-sso). ??Update link to new overview article. ??
 
 ## Create a single sign-on app extension configuration profile
 
