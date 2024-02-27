@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure platform SSO for macOS devices
-description: 
+description: Use Microsoft Intune to configure platform SSO for macOS devices. Platform SSO enables single sign-on (SSO) using a Microsoft Entra ID.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2024
+ms.date: 02/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,7 @@ ms.collection:
 # Configure platform SSO for macOS devices in Microsoft Intune
 
 > [!WARNING]
-> This article is still being written and is not yet complete.
+> This article is still being written and is not yet complete. Article is based off content in [https://microsoft-my.sharepoint-df.com/personal/arnab_microsoft_com/_layouts/15/onedrive.aspx?id=%2fpersonal%2farnab_microsoft_com%2fDocuments%2fMicrosoft%20Teams%20Chat%20Files%2f%5bEXT%5d%20MSFT-MacOS-PSSOe-PrivatePreview-ReadMe_v1.7%202.pdf&parent=%2fpersonal%2farnab_microsoft_com%2fDocuments%2fMicrosoft%20Teams%20Chat%20Files&ga=1&gaS=7](https://microsoft-my.sharepoint-df.com/personal/arnab_microsoft_com/_layouts/15/onedrive.aspx?id=%2fpersonal%2farnab_microsoft_com%2fDocuments%2fMicrosoft%20Teams%20Chat%20Files%2f%5bEXT%5d%20MSFT-MacOS-PSSOe-PrivatePreview-ReadMe_v1.7%202.pdf&parent=%2fpersonal%2farnab_microsoft_com%2fDocuments%2fMicrosoft%20Teams%20Chat%20Files&ga=1&gaS=7).
 
 On your macOS devices, you can configure platform SSO to enable single sign-on (SSO) using a Microsoft Entra ID. Platform SSO signs users into the device using their Microsoft Entra ID.
 
@@ -57,23 +57,24 @@ This article shows you how to configure platform SSO for macOS devices in Intune
 
 ## Prerequisites
 
-- To create the policy, at a minimum, sign in with an account that is a member of the **Policy and Profile Manager** RBAC role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
-- macOS 13.0 and newer devices
-- Company Portal app version 5.2307.99.2235 ?? Where to get this version? ??
+- Devices must be macOS 13.0 and newer devices.
+- Supported web browsers include:
+  - Microsoft Edge
+  - Safari
+
+  ??Why is the list of supported browsers important? I assume end users will use these browsers to sign into apps and websites. If that's correct, I'll add that info. ??
+
+- To create the Intune policy, at a minimum, sign in with an account that is a member of the **Policy and Profile Manager** Intune RBAC role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Step 1 - Configure the Enterprise SSO app extension policy in Intune
 
-Platform SSO requires the Enterprise SSO app extension be configured in Microsoft Intune. For the specific steps, go to [Use the Microsoft Enterprise SSO plug-in on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md). Platform SSO is only available with Microsoft Intune. So, make sure you follow the Intune steps when creating the SSO app extension policy.
+Platform SSO requires the Enterprise SSO app extension be configured for your apps using a Microsoft Intune policy. Platform SSO is only available with Microsoft Intune. So, make sure you follow the Intune steps when creating the SSO app extension policy.
 
-?? Oustanding questions:
-
-- To create the Enterprise SSO app extension policy, do you use the Device features template or the settings catalog? We currently document the Device Features template but it's not clear if that's still the correct way.
-- For the Enterprise SSO app extension, does the app have to be developed/coded to include something? We really don't mention this in the Intune docs and it's confusing.
-??
+For the specific steps and Enterprise SSO app extension requirements, go to [Use the Microsoft Enterprise SSO plug-in on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md).
 
 ## Step 2 - Create the platform SSO policy in Intune
 
-To configure the platform SSO policy, use the [Intune settings catalog](settings-catalog.md).
+To configure the platform SSO policy, use the following steps to create an [Intune settings catalog](settings-catalog.md) policy.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration** > **Create**.
@@ -215,12 +216,16 @@ The next time the device checks for configuration updates, the settings you conf
 
 ## Step 3 - Deploy the mac Company Portal app
 
-Using Intune, you add the correct version of the Company Portal app, make it a required app, and then deploy the app to your macOS devices:
+The Company Portal app deploys and installs the Enterprise SSO app extension. This extension is also used by platform SSO. ??Is this correct? The draft refers to SSO extension. Is that what platform SSO - an SSO extension? Then there's also the SSO app extension. Definitely confusing. What's the correct official name? Maybe **Enterprise SSO app extension** and **Platform SSO extension**? ??
 
-1. Add the macOS Company Portal app to Intune and make it a required app. For the steps, go to [Add macOS apps to Microsoft Intune](../apps/apps-add-macos.md).
+Using Intune, add the Company Portal app version 5.2309.101 and newer, make it a required app, and then deploy the app to your macOS devices:
+
+1. Add the macOS Company Portal app to Intune and make it a required app. For the steps, go to [Add the macOS Company Portal app](../apps/apps-company-portal-macos.md).
 2. Configure the Company Portal app to include your organization information. For the steps, go to [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
     There aren't any specific steps to configure the app for platform SSO. Just make sure the correct version of the Company Portal app is added to Intune and deployed to your macOS devices.
+
+?? Where to get Company Portal app version 5.2309.101? What about devices with another version of the CP app already installed? ??
 
 ## Step 4 - Enroll the devices and apply the policies
 
@@ -233,11 +238,11 @@ If these are **new devices**, then we recommend you pre-create and configure all
 
 If these are **existing devices** that are already enrolled, then you can assign the policies to the devices. The next time the devices sync or check-in with the Intune services, they receive the platform SSO policy settings you create.
 
-## Step 5 - Test platform SSO
+## Step 5 - Confirm the settings on the device
 
 When the enrollment completes and the policies are applied, you can confirm the platform SSO is configured:
 
-1. On the enrolled device, go to **Settings** > **Privacy and security** > **Profiles**.
+1. On an enrolled device, go to **Settings** > **Privacy and security** > **Profiles**.
 2. You should see your platform SSO profile listed. Select the profile to see the settings you configured, including the URLs.
 
     ?? insert screenshot from https://microsoft-my.sharepoint-df.com/personal/arnab_microsoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Farnab%5Fmicrosoft%5Fcom%2FDocuments%2FApple%2FMac%2FPlatform%20SSO%2F%5BEXT%5D%20MSFT%2DMacOS%2DPSSOe%2DPrivatePreview%2DReadMe%201%2Epdf&parent=%2Fpersonal%2Farnab%5Fmicrosoft%5Fcom%2FDocuments%2FApple%2FMac%2FPlatform%20SSO&ga=1&gaS=9 ??
