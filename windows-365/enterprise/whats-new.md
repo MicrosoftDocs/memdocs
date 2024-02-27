@@ -67,7 +67,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### New 15 minute Sign-in frequency option (preview)<!--48439987-->
 
-When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option to provide a 15 minute re-authentication period. For more information, see [Set conditional access policies](https://learn.microsoft.com/windows-365/enterprise/set-conditional-access-policies).
+When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option to provide a 15 minute re-authentication period. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
 
 #### Windows 365 Boot sign-in page customization is now generally available<!--48742587-->
 
