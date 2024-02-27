@@ -30,7 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - certificates
 ---
-# Microsoft Cloud PKI for Microsoft Intune   
+# Overview of Microsoft Cloud PKI for Microsoft Intune   
 **Applies to**:  
 * Windows  
 * Android  
