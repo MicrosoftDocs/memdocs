@@ -4,7 +4,7 @@ description: include file
 author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 02/27/2024
+ms.date: 02/28/2024
 ms.author: mandia
 ms.custom: include file
 ---
@@ -19,8 +19,10 @@ For your apps to use the Microsoft Enterprise SSO plug-in, you have two options:
 
   For a sample tutorial, go to [Tutorial: Sign in users and call Microsoft Graph from an iOS or macOS app](/entra/identity-platform/tutorial-v2-ios).
 
-- **Option 2 - AllowList**: Apps that don't support or weren't developed with MSAL can use the SSO app extension. These apps include browsers like Safari and apps that use Safari web view APIs. For these non-MSAL apps, add the application bundle ID or prefix to the extension configuration in your Intune SSO app extension policy (in this article).
+- **Option 2 - AllowList**: Apps that don't support or weren't developed with MSAL can use the SSO app extension. These apps include browsers like Safari and apps that use Safari web view APIs.
+
+  For these non-MSAL apps, add the application bundle ID or prefix to the extension configuration in your Intune SSO app extension policy (in this article).
 
   For example, to allow a Microsoft app that doesn't support MSAL, add `com.microsoft.` to the **AppPrefixAllowList** property in your Intune policy. Be careful with the apps you allow, they can bypass interactive sign-in prompts for the signed in user.
 
-  For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - apps that don't use MSAL](/entra/identity-platform/apple-sso-plugin#applications-that-dont-use-msal).
+  For more information, go to [Microsoft Enterprise SSO plug-in for Apple devices - apps that don't use MSAL](/entra/identity-platform/apple-sso-plugin#applications-that-dont-use-msal).
