@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/19/2023
+ms.date: 02/28/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -92,17 +92,18 @@ If you enforce both Intune and Azure device limit restrictions, the following ta
 
 ## Windows devices  
 
-Intune device limit restrictions don't apply for the following Windows enrollment types:
-- Co-managed enrollments
-- Group policy object (GPO) enrollments
-- Microsoft Entra joined enrollments
-- Bulk Microsoft Entra joined enrollments
-- Autopilot enrollments
-- Device enrollment manager enrollments
+Intune device limit restrictions don't apply to the following Windows enrollment types:  
+- Co-managed enrollments  
+- Group policy object (GPO) enrollments  
+- Microsoft Entra joined enrollments  
+- Automatic enrollment + bulk device enrollment  
+- Autopilot enrollments  
+- Device enrollment manager enrollments  
 
-Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices.  
+Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices. Instead, you can set a [hard limit in Microsoft Entra ID](device-limit-intune-azure.md#azure-device-limit-restriction) to limit the number of devices that an employee can join or register with Microsoft Entra ID. The **Maximum number of devices per user** setting in Microsoft Entra ID applies to devices that are Microsoft Entra joined or registered. The setting isn't supported on:      
 
-Instead, you can set a [hard limit in Microsoft Entra ID](device-limit-intune-azure.md#azure-device-limit-restriction) to limit the number of devices that an employee can join or register with Microsoft Entra ID except Bulk Microsoft Entra joined enrollments. The **Maximum number of devices per user** setting in Microsoft Entra ID applies to devices that are Microsoft Entra joined or Microsoft Entra registered. It doesn't apply to Microsoft Entra hybrid joined devices.  
+- Microsoft Entra hybrid joined devices  
+- Devices enrolled via automatic enrollment + bulk device enrollment    
 
 ### Windows 10/11 example 1
 
