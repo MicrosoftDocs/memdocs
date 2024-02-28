@@ -1909,7 +1909,7 @@ The **SMSTSWaitForSecondReboot** variable is intended for use with the **Install
 
 > [!NOTE]
 >
-> This variable only applies to OSD task sequence that deploys an OS. It doesn't work in stand-alone task sequences or in-place upgrade task sequences. <!-- 2839998 -->
+> This variable only applies to OSD task sequences that deploys an OS. It doesn't work with any task sequence that doesn't utilize the **Setup Windows and ConfigMgr** task, such as stand-alone task sequences or in-place upgrade task sequences. <!-- 2839998 -->
 
 ### <a name="TSDebugMode"></a> TSDebugMode
 
