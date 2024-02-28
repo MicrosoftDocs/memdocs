@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up Wandera Mobile Security with Intune
+title: Set up Jamf Mobile Security with Intune
 titleSuffix: Intune on Azure
-description: How to set up the Wandera Mobile Security with Microsoft Intune to control mobile device access to your corporate resources.
+description: How to set up Jamf Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -31,53 +31,57 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Wandera Mobile Threat Defense connector with Intune
+# Jamf Mobile Threat Defense connector with Intune
 
-Control mobile device access to corporate resources using conditional access based on risk assessment conducted by Wandera. Wandera is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices by the Wandera service, including:
+Control mobile device access to corporate resources using conditional access based on risk assessment conducted by Jamf. Jamf is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices by the Jamf service, including:
 
 - Operating system vulnerabilities
 - Malicious apps installed
 - Malicious network profiles
 - Cryptojacking
 
-You can configure *conditional access* policies that are based on Wandera's risk assessment, enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
+You can configure *conditional access* policies that are based on Jamf's risk assessment, enabled through Intune device compliance policies. Risk assessment policy can allow or block noncompliant devices from accessing corporate resources based on detected threats.
 
-## How do Intune and Wandera Mobile Threat Defense help protect your company resources?
+> [!NOTE]
+>
+> In July of 2021, Jamf completed acquisition of Wandera, and more recently began rebranding and updates to move Wandera to the Jamf portfolio. Work to update the Intune admin center to reflect the new branding remains in progress. This content will reflect the new branding Jamf where possible, but continue to reflect the Wandera branding when necessary to retain accuracy to the current user interface in the admin center.
 
-Wandera's mobile app seamlessly installs using Microsoft Intune. This app captures file system, network stack, and device and application telemetry (where available). This information synchronizes to the Wandera cloud service to assess the device's risk for mobile threats. These risk level classifications are configurable to suit your needs in the Wandera console, RADAR.
+## How do Intune and Jamf Mobile Threat Defense help protect your company resources?
 
-The compliance policy in Intune includes a rule for MTD based on Wandera's risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled.
+Jamf's mobile app seamlessly installs using Microsoft Intune. This app captures file system, network stack, and device and application telemetry (where available). This information synchronizes to the Jamf cloud service to assess the device's risk for mobile threats. These risk level classifications are configurable to suit your needs in the Jamf administrator console.
 
-For devices that are noncompliant, access to resources like Microsoft 365 can be blocked. Users on blocked devices receive guidance from the Wandera app to resolve the issue and regain access.
+The compliance policy in Intune includes a rule for MTD based on Jamf's risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled.
 
-Wandera updates Intune with each device’s latest threat level (Secure, Low, Medium, or High) whenever it changes. This threat level is continuously recalculated by the Wandera Security Cloud and is based upon device state, network activity, and numerous mobile threat intelligence feeds across various threat categories.
+For devices that are noncompliant, access to resources like Microsoft 365 can be blocked. Users on blocked devices receive guidance from the Jamf app to resolve the issue and regain access.
 
-These categories and their associated threat levels are configurable in Wandera's RADAR console such that the total calculated threat level for each device is customizable per your organization’s security requirements. With threat level in hand, there are two Intune policy types that make use of this information to manage access to corporate data:
+Jamf updates Intune with each device’s latest threat level (Secure, Low, Medium, or High) whenever it changes. This threat level is continuously recalculated by the Jamf Security Cloud and is based upon device state, network activity, and numerous mobile threat intelligence feeds across various threat categories.
 
-* Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Wandera-reported threat level. This compliance flag subsequently drives Conditional Access Policies to allow or deny access to applications that utilize modern authentication. See [Create Mobile Threat Defense (MTD) device compliance policy](../protect/mtd-device-compliance-policy-create.md) with Intune for configuration details.
+These categories and their associated threat levels are configurable in Jamf Security Cloud portal such that the total calculated threat level for each device is customizable per your organization’s security requirements. With threat level in hand, there are two Intune policy types that make use of this information to manage access to corporate data:
 
-* Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (for example, Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Wandera-reported threat level. These policies can also be used for unenrolled devices with MAM managed applications to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md) with Intune for configuration details.
+* Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Jamf-reported threat level. This compliance flag subsequently drives Conditional Access Policies to allow or deny access to applications that utilize modern authentication. See [Create Mobile Threat Defense (MTD) device compliance policy](../protect/mtd-device-compliance-policy-create.md) with Intune for configuration details.
+
+* Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (for example, Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Jamf-reported threat level. These policies can also be used for unenrolled devices with MAM managed applications to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md) with Intune for configuration details.
 
 ## Supported platforms
 
-The following platforms are supported for Wandera when enrolled in Intune:
+The following platforms are supported for Jamf when enrolled in Intune:
 
 - Android 9.0 and later
 - iOS 13.7 and later
 
-For more information about platform and device, see the [Wandera website](https://www.wandera.com/mobile-threat-defense/).
+For more information about platform and device, see the [Jamf website](https://www.jamf.com/products/jamf-protect/).
 
 ## Prerequisites
 
 - Microsoft Intune Plan 1 subscription
 - Microsoft Entra ID
-- Wandera Mobile Threat Defense (formerly Wandera Secure)
+- Jamf Mobile Threat Defense
 
-For more information, see [Wandera Mobile Security](https://www.wandera.com/mobile-security/).
+For more information, see [Jamf Mobile Security](https://www.jamf.com/solutions/threat-prevention-remediation/).
  
 ## Sample scenarios
 
-Here are the common scenarios when using Wandera MTD with Intune.
+Here are the common scenarios when using Jamf MTD with Intune.
 
 ### Control access based on threats from malicious apps
 
@@ -89,11 +93,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected*:
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation*: 
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -101,11 +105,11 @@ Detect threats to your network such as man-in-the-middle attacks and protect acc
 
 *Block network access through Wi-Fi*:
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation*:
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ## Control access to SharePoint Online based on threat to network
 
@@ -113,25 +117,25 @@ Detect threats to your network such as Man-in-the-middle attacks, and prevent sy
 
 *Block SharePoint Online when network threats are detected*:
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation*:
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
-When the Wandera Mobile Threat Defense solution considers a device to be infected:
+When the Jamf Mobile Threat Defense solution considers a device to be infected:
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 *Access is granted on remediation*:
 
-:::image type="content" source="./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
+:::image type="content" source="./media/wandera-mtd-connector/jamf-mobile-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 
-- [Integrate Wandera with Intune](wandera-mtd-connector-integration.md)
-- [Set up Wandera apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Create Wandera device compliance policy](mtd-device-compliance-policy-create.md)
-- [Enable Wandera MTD connector](mtd-connector-enable.md)
+- [Integrate Jamf with Intune](wandera-mtd-connector-integration.md)
+- [Set up Jamf apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Create Jamf device compliance policy](mtd-device-compliance-policy-create.md)
+- [Enable Jamf MTD connector](mtd-connector-enable.md)
