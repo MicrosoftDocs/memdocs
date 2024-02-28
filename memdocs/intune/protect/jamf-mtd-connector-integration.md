@@ -81,13 +81,13 @@ Setting up integration between Jamf and Intune doesn't require any support from 
 
 6. You're presented with a screen similar to the following image, indicating the permission grants required to complete the integration:
 
-   :::image type="content" source="./media/wandera-mtd-connector-integration/integrations-and-permissions.png" alt-text="Screen shot of the integrations and permissions for Jamf.":::
+   :::image type="content" source="./media/jamf-mtd-connector-integration/integrations-and-permissions.png" alt-text="Screen shot of the integrations and permissions for Jamf.":::
 
 7. Next to Microsoft Intune User and Device Sync, select the **Grant** button to start the process to provide consent for Jamf to perform Life Cycle Management (LCM) functions with Azure and Intune.
 
 8. When prompted, select or enter your Azure admin credentials. Review the requested permissions, then select the checkbox to Consent on behalf of your organization. Finally, select Accept to authorize the LCM integration.
 
-   :::image type="content" source="./media/wandera-mtd-connector-integration/permissions.png" alt-text="Screen shot of the permissions that you accept.":::
+   :::image type="content" source="./media/jamf-mtd-connector-integration/permissions.png" alt-text="Screen shot of the permissions that you accept.":::
 
 9. You're automatically returned to the Jamf Security Cloud portal. If the authorization was successful, there's a green tick mark next to the Grant button.
 
@@ -95,7 +95,7 @@ Setting up integration between Jamf and Intune doesn't require any support from 
 
 11. Return to the Intune admin center, and resume editing the MTD Connector. Set all of the available toggles to On, and then Save the configuration.
 
-    :::image type="content" source="./media/wandera-mtd-connector-integration/enable-jamf.png" alt-text="Screen shot that shows the enabled the MTD connector for Jamf.":::
+    :::image type="content" source="./media/jamf-mtd-connector-integration/enable-jamf.png" alt-text="Screen shot that shows the enabled the MTD connector for Jamf.":::
 
 Intune and Jamf are now connected.
 
