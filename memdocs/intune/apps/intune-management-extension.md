@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Win32
 ---
 
 # Use PowerShell scripts on Windows 10/11 devices in Intune

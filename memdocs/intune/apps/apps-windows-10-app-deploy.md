@@ -31,6 +31,7 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Deploy
 ---
 
 # Windows app deployment by using Microsoft Intune

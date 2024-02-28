@@ -28,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - iOS/iPadOS
+- FocusArea_Apps_Store
 ---
 
 # Add iOS store apps to Microsoft Intune
