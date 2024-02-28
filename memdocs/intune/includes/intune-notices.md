@@ -47,6 +47,26 @@ Notify your helpdesk, if applicable, about this updated support statement. The f
 
 For more information, review: [Manage operating system versions with Microsoft Intune](../fundamentals/manage-os-versions.md).
 
+### Plan for Change: Web based device enrollment will become default method for iOS/iPadOS device enrollment
+
+Today, when creating iOS/iPadOS enrollment profiles, “Device enrollment with Company Portal” is shown as the default method. Expected with Intune’s April (2404) service release, the default method will change to “Web based device enrollment” during profile creation. Additionally for *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
+ 
+> [!NOTE]
+> For web enrollment, you will need to deploy the single sign-on (SSO) extension policy to enable just in time (JIT) registration, for more information review: [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).
+
+#### How does this affect you or your users?
+
+This is an update to the user interface when creating new iOS/iPadOS enrollment profiles to display “Web based device enrollment” as the default method, existing profiles are not impacted. For *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
+
+#### How can you prepare?
+
+Update your documentation and user guidance as needed. If you currently use device enrollment with Company Portal, we recommend moving to web based device enrollment and deploying the SSO extension policy to enable JIT registration.
+
+**Additional information:**
+
+- [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md)
+- [Set up web based device enrollment for iOS](../enrollment/web-based-device-enrollment-ios.md)
+
 ### Wrapped iOS apps and iOS apps using the Intune App SDK will require Azure AD app registration
 
 We're making updates to improve the security of the Intune mobile application management (MAM) service. This update will require iOS wrapped apps and SDK integrated apps to be [registered with Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) (formerly Azure Active Directory (Azure AD)) by March 31, 2024 to continue receiving MAM policy. 
