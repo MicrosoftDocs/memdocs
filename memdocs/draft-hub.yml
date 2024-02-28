@@ -89,7 +89,7 @@ productDirectory:
 additionalContent:
   # Supports up to 4 subsections
   sections:
-    - title: I want to follow step-by-step instructions to set up...
+    - title: I want to follow step-by-step instructions to set up
       summary: Use these interactive guides to configure your environment with settings that are “best for most”
       items:
         # Card
@@ -148,7 +148,15 @@ additionalContent:
           - text: Follow this deployment guide
             url: https://aka.ms/IntuneGuide/UniversalPrint
 
-
-       
+    - title: Get to know Intune capabilities
+      summary: I want to see more available resources in-depth
+      items:
+        - title: Get to know Intune capabilities
+          links:
+          - text: Interactive Guided Tour of Intune
+            url: ./fundamentals/account-sign-up.md
+          - text: Walkthrough the Intune Admin Center
+            url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager
+  
   # footer (optional)
   footer: "Found a problem with Microsoft Intune docs? [Let us know](use-docs.md#about-feedback)!"
