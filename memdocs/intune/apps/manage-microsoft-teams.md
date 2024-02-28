@@ -30,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
 - Android
+- FocusArea_Apps_SpecificApp
 ---
 
 # Manage collaboration experiences in Teams for iOS and Android with Microsoft Intune

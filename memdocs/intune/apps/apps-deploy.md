@@ -30,6 +30,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Deploy
 ---
 
 # Assign apps to groups with Microsoft Intune

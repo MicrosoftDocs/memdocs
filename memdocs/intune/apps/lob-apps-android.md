@@ -28,6 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - Android
+- FocusArea_Apps_LOB
 ms.custom: intune-azure
 ---
 

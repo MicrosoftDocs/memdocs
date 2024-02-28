@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- FocusArea_Apps_Protect
 ---
 
 # Step 9: Create and assign an app protection policy
