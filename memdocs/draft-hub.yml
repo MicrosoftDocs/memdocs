@@ -148,15 +148,23 @@ additionalContent:
           - text: Follow this deployment guide
             url: https://aka.ms/IntuneGuide/UniversalPrint
 
-    - title: Get to know Intune capabilities
-      summary: I want to see more available resources in-depth
+    - title: I want to see more available resources in-depth
+      #summary:
       items:
         - title: Get to know Intune capabilities
+          summary: Check out these resources to Intune capabilities and get to know the user interface
           links:
           - text: Interactive Guided Tour of Intune
             url: ./fundamentals/account-sign-up.md
           - text: Walkthrough the Intune Admin Center
             url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager
-  
+        - title: Demo and learn about Intune capabilites for free
+          summary: Prepare yourself with a pilot group of users and devices and follow the tasks and scenarios in the guide to get real experience with applying policies
+          links:
+          - text: Sign up for a 30-day trial
+            url: ./mem/intune/fundamentals/free-trial-sign-up
+          - text: Create a Microsoft  365 Developer tenant  for a longer trial
+            url: https://youtu.be/4x7NDxdEo94?feature=shared
+
   # footer (optional)
   footer: "Found a problem with Microsoft Intune docs? [Let us know](use-docs.md#about-feedback)!"
