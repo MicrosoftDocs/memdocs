@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 02/28/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -69,7 +69,7 @@ The Windows 365 Service automatically powers on a Windows 365 Frontline Cloud PC
 
 This process lets the user seamlessly start using the Windows 365 Frontline Cloud PC the next time they sign in.
 
-<!-- ########################## -->
+<!-- ########################## --> 
 ## Next steps
 
 [Learn more about Windows Updates](/windows/deployment/update/get-started-updates-channels-tools).
