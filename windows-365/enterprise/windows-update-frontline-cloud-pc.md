@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -57,6 +57,17 @@ Windows 365 Frontline Cloud PCs rely on active hours Windows Update policies to 
 | Active hours max range | Defined by IT administrator |
 
 These settings are most important to make sure that users aren't disrupted by a Windows Update during their work hours.
+
+## Automatic sync updates for Cloud PCs that haven't been turned on for seven days
+
+The Windows 365 Service automatically powers on a Windows 365 Frontline Cloud PC if it hasn't been used and powered in the previous seven days. When the Windows 365 Frontline Cloud PC is turned on, the Windows 365 Service:
+
+- Syncs the Cloud PC with the Windows Update service.
+- Performs the Windows Update process honoring the Windows Update policy configurations set in Intune.
+- Keeps the Cloud PC powered on for two hours to make sure that the Windows Update installation can complete.
+- Checks for any pending reboots. If there are, the Cloud PC automatically reboots to complete and Windows Update before turning off.
+
+This process lets the user seamlessly start using the Windows 365 Frontline Cloud PC the next time they sign in.
 
 <!-- ########################## -->
 ## Next steps
