@@ -1,0 +1,158 @@
+### YamlMime:Hub
+title: Microsoft Intune documentation
+summary: Learn more about how Microsoft Intune can help you secure, deploy, and manage Windows, macOS, Android, iOS/iPadOS, and Linux devices.
+
+metadata:
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
+  author: v-anrostad
+  ms.author: dougeby
+  manager: dansimp
+  ms.date: 02/20/2024
+  ms.localizationpriority: high
+  ms.collection: 
+  ms.custom: intro-hub-or-landing
+
+
+# 
+  title: I want to...
+  items:
+    # Card
+    - title: Take a tour of Intune
+      imageSrc: ./media/microsoft-intune.svg
+      #summary: 
+      links:
+        - url: #get-to-know-intune-capabilities
+        - text: 
+
+
+
+
+
+
+# productDirectory section (optional)
+productDirectory:
+  title: I want to...
+  #summary:
+  items:
+    # Card
+    - title: Take a tour of Intune
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+      - url: /#get-to-know-intune-capabilities
+        text: test
+    # Card
+    - title: Set up an intune trial
+      imageSrc: ./media/configmgr.svg
+      url: /#demo-and-learn-about-intune-capabilites-for-free
+    # Card
+    - title: Plan a move to Intune
+      imageSrc: ./media/autopilot.svg
+      links:
+      - url: /#learn-how-to-migrate-to-intune-successfully
+        text: text
+    # Card
+    - title: Co-manage my endpoints
+      imageSrc: ./media/endpoint-analytics.svg
+      url: /#take-advantage-of-intune-cloud-capabilities
+    # Card
+    - title: Move from  on-prem to the cloud
+      imageSrc: ./media/endpoint-analytics.svg
+      url: /intune/fundamentals/get-started-with-intune
+    # Card
+    - title: Configure Zero trust with Intune
+      imageSrc: ./media/zero_azure.svg 
+      url: /#manage-identity-and-device-access-policies 
+    # Card
+    - title: Move to cloud native endpoints
+      imageSrc: ./media/cloud_fluent.svg
+      url: ./intune/fundamentals/get-started-with-intune 
+    # Card
+    - title: Manage access on unenrolled devices
+      imageSrc: ./media/endpoint-analytics.svg
+      url: ./intune/fundamentals/deployment-guide-enrollment-mamwe
+    # Card
+    - title: Manage Windows Updates with Intune
+      imageSrc: ./media/desktopsync_fluent.svg
+      url: ./intune/protect/windows-update-for-business-configure 
+    # Card
+    - title: Manage macOS devices with Intune
+      imageSrc: ./media/laptop_fluent.svg
+      url: ./intune/fundamentals/deployment-guide-platform-macos
+    # Card
+    - title: Manage mobile devices with Intune
+      imageSrc: ./media/devices_fluent.svg
+      url: ./intune/fundamentals/deployment-guide-enrollment
+    # Card
+    - title: Manage Linux devices with Intune
+      imageSrc: ./media/laptop_fluent.svg
+      url: ./intune/fundamentals/deployment-guide-enrollment-linux   
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 4 subsections
+  sections:
+    - title: I want to follow step-by-step instructions to set up...
+      summary: Use these interactive guides to configure your environment with settings that are “best for most”
+      items:
+        # Card
+        - title: Compliance Policies
+          links:
+          - text: Follow this deployment guide
+            url: /intune/fundamentals/get-started-with-intune
+        # Card
+        - title: Update Policies
+          links:
+          - text: Follow this deployment guide
+            url: /intune/fundamentals/get-started-with-intune
+        # Card
+        - title: Device Configuration
+          links: 
+          - text: Follow this deployment guide  
+            url: /intune/fundamentals/get-started-with-intune
+        # Card
+        - title: Resource access policies
+          links:
+          - text: Follow this deployment guide
+            url: /intune/fundamentals/get-started-with-intune
+        # Card
+        - title: Endpoint protection
+          links:
+          - text: Follow this deployment guide
+            url: /intune/fundamentals/get-started-with-intune
+        # Card
+        - title: Microsoft click-to run applications
+          links:
+          - text: Follow this deployment guide
+            url: /intune/fundamentals/get-started-with-intune
+        # Card
+        - title: Configure Conditional Access with Intune
+          links:
+          - text: Follow this deployment guide
+            url: https://aka.ms/IntuneGuide/Autopilot
+        # Card
+        - title: Configure Autopilot device deployments
+          links:
+          - text: Follow this deployment guide
+            url: https://aka.ms/IntuneGuide/Autopilot
+        # Card
+        - title: Manage Windows Updates with Intune
+          links:
+          - text: Follow this deployment guide
+            url: https://aka.ms/IntuneGuide/WindowsUpdates
+        # Card
+        - title: Manage applications with Intune
+          links:
+          - text: Follow this deployment guide
+            url: https://aka.ms/IntuneGuide/AppManagment
+        # Card
+        - title: Configure Universal Print with Intune
+          links:
+          - text: Follow this deployment guide
+            url: https://aka.ms/IntuneGuide/UniversalPrint
+
+
+       
+  # footer (optional)
+  footer: "Found a problem with Microsoft Intune docs? [Let us know](use-docs.md#about-feedback)!"
