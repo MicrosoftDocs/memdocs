@@ -39,19 +39,15 @@ productDirectory:
     # Card
     - title: Take a tour of Intune
       imageSrc: ./media/microsoft-intune.svg
-      links:
-      - url: /#get-to-know-intune-capabilities
-        text: test
+      url: /#get-to-know-intune-capabilities
     # Card
     - title: Set up an intune trial
       imageSrc: ./media/configmgr.svg
-      url: /#demo-and-learn-about-intune-capabilites-for-free
+      url: "#demo-and-learn-about-intune-capabilites-for-free"
     # Card
     - title: Plan a move to Intune
       imageSrc: ./media/autopilot.svg
-      links:
-      - url: /#learn-how-to-migrate-to-intune-successfully
-        text: text
+      url: /#learn-how-to-migrate-to-intune-successfully
     # Card
     - title: Co-manage my endpoints
       imageSrc: ./media/endpoint-analytics.svg
