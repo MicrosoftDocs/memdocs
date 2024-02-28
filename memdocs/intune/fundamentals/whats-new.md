@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 02/27/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Tenant administration -->
 
 ## Week of February 26, 2024  
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 26607121 -->
+The following protected app is now available for Microsoft Intune:
+- Cinebody by Super 6 LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ### Microsoft Intune Suite  
 
