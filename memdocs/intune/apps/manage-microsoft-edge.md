@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -284,7 +284,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br> **developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br>**coupons** disables coupons <br>**extensions** disabled extensions (Edge for Android only) <br>**developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
 #### Disable import passwords feature
 
@@ -343,6 +343,9 @@ It allows organizations to restrict various browser functionalities, providing a
 
 The locked view mode is often used together with MAM policy **com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL** or MDM policy    **EdgeNewTabPageCustomURL**, which allow organizations to configure a specific web page that is automatically launched when Edge is opened. Users are restricted to this web page and cannot navigate to other websites, providing a controlled environment for specific tasks or content consumption.
 
+> [!NOTE]
+> By default, users are not allowed to create new tabs in locked view mode. To allow tab creation, set the MDM policy **EdgeLockedViewModeAllowedActions** to **newtabs**.
+
 ### Switch network stack between Chromium and iOS 
 By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
 
@@ -388,6 +391,9 @@ The website data store in Edge for iOS is essential for managing cookies, disk a
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account regardless of the sign-in order |
+
+> [!NOTE]
+> With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
 
 #### Microsoft Defender SmartScreen
 
@@ -459,24 +465,27 @@ When a web page requests to open an external app, users will see a pop-up asking
 |com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
 
 > [!NOTE]
-> As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99
+> As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99.
 
-#### Bing Chat Enterprise 
+#### Copilot
 
-Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Copilot button in bottom bar. 
+> [!NOTE]
+> Copilot is also known as Bing Chat Enterprise.
 
-There are three settings in **Settings**->**General**->**Copilot** for Bing Chat Enterprise.
+Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by clicking on Copilot button in bottom bar. 
+
+There are three settings in **Settings**->**General**->**Copilot** for Copilot.
 
 - **Show Copilot** – Control whether to show Bing button on bottom bar
-- **Allow access to any web page or PDF** – Control whether to allow Bing Chat Enterprise to access page content or PDF
+- **Allow access to any web page or PDF** – Control whether to allow Copilot to access page content or PDF
 - **Quick access on text selection** – Control whether to show quick chat panel when text on a webpage is selected
 
-You can manage the settings for Bing Chat Enterprise.
+You can manage the settings for Copilot.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Bing button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Bing button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings are on by default and can be turned off by users <br>**false** Bing Chat Enterprise cannot access to page content.  **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Copilot can access to page content. **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings are on by default and can be turned off by users <br>**false** Copilot cannot access to page content.  **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings will be disabled and cannot be turned on by users|
 
 ## Data protection app configuration scenarios
 
@@ -568,6 +577,24 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://*`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
+
+### Manage websites to allow upload files
+There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]external.filesupload1.com/|https://external.filesupload2/|https://external.filesupload3.com`|
+
+The example to block all websites, including internal websites, from uploading files
+- com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+An example to allow specific websites to upload files
+- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`http://[*.]contoso.com/|[*.]sharepoint.com/`
+- com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+> [!NOTE]
+> For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
 
 ### Manage proxy configuration
 
