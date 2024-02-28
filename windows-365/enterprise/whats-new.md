@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 1/31/2024
+ms.date: 2/26/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -55,6 +55,52 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of February 26, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Boot
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New 15 minute Sign-in frequency option (preview)<!--48439987-->
+
+When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option to provide a 15 minute re-authentication period. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
+#### Windows 365 Boot sign-in page customization is now generally available<!--48742587-->
+
+Windows 365 Boot support for sign-in page customization has moved out of preview and into general availability. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Shared and dedicated Windows 365 Boot device modes are now generally available<!--48742628-->
+
+Windows 365 Boot shared and dedicated device modes have moved out of preview and into general availability.
+
+For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) and [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot fail fast notifications are now generally available<!--48742676-->
+
+Windows 365 Boot detection and notification of network or application setup issues has moved out of preview and into general availability.
+
+#### Manage local PC settings through Windows 365 Boot is now generally available<!--48742743-->
+
+User management of local PC settings through their Windows 365 Boot Cloud PC has moved out of preview and into general availability.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch desktop identifiers are now generally available<!--48064527-->
+
+Windows Task view identifiers for Cloud PC or local PC have moved out of preview and into general availability.
+
+#### Windows 365 Switch improved disconnecting is now generally available<!--48743248-->
+
+The ability for users to seamlessly disconnect from their Cloud PC without leaving their local desktop has moved out of preview and into general availability. For more information, see [Windows 365 Switch](https://support.microsoft.com/en-us/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### Windows 365 Switch connection status now generally available<!--48743180-->
+
+Connection status and timeout information on the connection screen for Windows 365 Switch with Windows 365 Frontline Cloud PCs has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of January 29, 2024 (Service release 2401)
