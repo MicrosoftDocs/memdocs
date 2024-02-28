@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2024
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,6 +30,9 @@ ms.collection:
 ---
 
 # Add iOS, iPadOS, or macOS device feature settings in Intune
+
+> [!IMPORTANT]
+> This article is a final draft and ready for PM review. It will go live when platform SSO goes live. **Delete this note before publishing**.
 
 Intune includes many features and settings that help administrators control iOS, iPadOS, and macOS devices. For example, administrators can:
 
@@ -183,7 +186,7 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
 - **Platform SSO** (recommended)
 
-  This feature allows users to sign into their macOS devices using their Microsoft Entra ID, instead of a local account. In Intune, you create a settings catalog policy that configures the platform SSO settings.
+  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra. It allows users to sign into their macOS devices using their Microsoft Entra ID, instead of a local account. In Intune, you create a settings catalog policy that configures the platform SSO settings.
 
   **Platform SSO** requires that you also use an **SSO app extension**. Platform SSO handles the initial device sign-in, and the SSO app extension handles the sign-in for apps and websites.
 
@@ -195,9 +198,9 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
 - **SSO app extension** (recommended)
 
-  This feature allows iOS/iPadOS and macOS users to sign into apps and websites using their Microsoft Entra ID. You use Microsoft Entra ID to enable the Microsoft Enterprise SSO plug-in in your tenant, and then create an Intune device configuration policy to configure the SSO app extension settings.
+  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra. It allows iOS/iPadOS and macOS users to sign into apps and websites using their Microsoft Entra ID. You create an Intune device configuration policy to configure the SSO app extension settings.
 
-  In Intune, you use these settings to configure an SSO app extension created by your organization, by your identity provider, by Microsoft, or by Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
+  You use these settings to configure an SSO app extension created by your organization, by your identity provider, by Microsoft, or by Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
   On macOS devices, you can use **SSO app extension** by itself. If you also want to use **platform SSO**, then you must use **platform SSO** and the **SSO app extension** features together.
 
@@ -217,12 +220,12 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
 - **Single sign-on**
 
+  > [!NOTE]
+  > Instead of these SSO settings, Apple recommends you use the SSO app extension.  
+
   Restricted to only Kerberos authentication. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. In an Intune policy, you enter the Kerberos account information that accesses servers or specific apps, like the Microsoft Entra username attribute.
 
   To use single sign-on, your app must be coded to look for the user credential store in single sign-on on the device.
-
-  > [!NOTE]
-  > Instead of these SSO settings, Apple recommends you use the SSO app extension.  
 
   For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
@@ -230,23 +233,6 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
   - iOS 7.0 and newer
   - iPadOS 13.0 and newer
-
-> [!NOTE]
-> REMOVE THIS NOTE AFTER ADDING THIS TEXT TO THE OVERVIEW ARTICLE.
->
-> The **Single sign-on app extension** feature is different than the **Single sign-on** feature:
->
-> - The **Single sign-on app extension** settings apply to iPadOS 13.0 (and newer), iOS 13.0 (and newer), and macOS 10.15 (and newer). **Single sign-on** settings apply to iPadOS 13.0 (and newer) and iOS 7.0 and newer.
->
-> - The **Single sign-on app extension** settings define extensions for use by identity providers or organizations to deliver a seamless enterprise sign-on experience. The **Single sign-on** settings define Kerberos account information for when users access servers or apps.
->
-> - The **Single sign-on app extension** uses the Apple operating system to authenticate. So, it might provide an end-user experience that's better than **Single sign-on**.
->
-> - From a development perspective, with **Single sign-on app extension**, you can use any type of redirect SSO or credential SSO authentication. With **Single sign-on**, you can only use Kerberos SSO authentication.
->
-> - The Kerberos **Single sign-on app extension** was developed by Apple and is built into the iOS/iPadOS 13.0+ and macOS 10.15+ platforms. The built-in Kerberos extension can be used to log users into native apps and websites that support Kerberos authentication. **Single sign-on** is not an Apple implementation of Kerberos.
->
-> - The built-in Kerberos **Single sign-on app extension** handles Kerberos challenges for web pages and apps just like **Single sign-on**. However, the built-in Kerberos extension supports password changes and behaves better in enterprise networks. When deciding between the Kerberos **Single sign-on app extension** and **Single sign-on**, we recommend using the extension due to improved performance and capabilities.
 
 ## Wallpaper
 
@@ -270,8 +256,7 @@ Applies to:
 - iOS 7.0 and newer
 - iPadOS 13.0 and newer
 
-## Next steps
+## Related content
 
-The profile is created, but might not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-
-View all the device feature settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- View all the device feature settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
