@@ -56,7 +56,7 @@ Windows 365 Frontline Cloud PCs rely on active hours Windows Update policies to 
 | [Active hours end](/windows/client-management/mdm/policy-csp-update) | Defined by IT administrator |
 | Active hours max range | Defined by IT administrator |
 
-These settings are most important to make sure that users aren't disrupted by a Windows Update during their work hours.
+These settings are important to make sure that users aren't disrupted by a Windows Update during their work hours.
 
 ## Automatic sync updates for Cloud PCs that haven't been turned on for seven days
 
