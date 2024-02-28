@@ -60,24 +60,24 @@ For more information about public preview items, see [Public preview in Windows 
 ## Week of February 26, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Windows 365 Boot
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
 #### New 15 minute Sign-in frequency option (preview)<!--48439987-->
 
 When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option to provide a 15 minute re-authentication period. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
 
-#### Windows 365 Boot sign-in page customization is now generally available<!--48742587-->
-
-Windows 365 Boot support for sign-in page customization has moved out of preview and into general availability. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Boot
 
 #### Shared and dedicated Windows 365 Boot device modes are now generally available<!--48742628-->
 
 Windows 365 Boot shared and dedicated device modes have moved out of preview and into general availability.
 
 For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) and [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot sign-in page customization is now generally available<!--48742587-->
+
+Windows 365 Boot support for sign-in page customization has moved out of preview and into general availability. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
 
 #### Windows 365 Boot fail fast notifications are now generally available<!--48742676-->
 

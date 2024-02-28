@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 02/28/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -56,7 +56,7 @@ Windows 365 Frontline Cloud PCs rely on active hours Windows Update policies to 
 | [Active hours end](/windows/client-management/mdm/policy-csp-update) | Defined by IT administrator |
 | Active hours max range | Defined by IT administrator |
 
-These settings are most important to make sure that users aren't disrupted by a Windows Update during their work hours.
+These settings are important to make sure that users aren't disrupted by a Windows Update during their work hours.
 
 ## Automatic sync updates for Cloud PCs that haven't been turned on for seven days
 
@@ -69,7 +69,7 @@ The Windows 365 Service automatically powers on a Windows 365 Frontline Cloud PC
 
 This process lets the user seamlessly start using the Windows 365 Frontline Cloud PC the next time they sign in.
 
-<!-- ########################## -->
+<!-- ########################## --> 
 ## Next steps
 
 [Learn more about Windows Updates](/windows/deployment/update/get-started-updates-channels-tools).
