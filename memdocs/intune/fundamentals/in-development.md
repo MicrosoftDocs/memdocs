@@ -43,7 +43,7 @@ This article and the [What's new](whats-new.md) article are updated periodically
 You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Find out when this article is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us` -->
 
-<!-- Common categories:
+<!-- Common categories: use this order:
 ## Microsoft Intune Suite
 ## App management
 ## Device configuration
@@ -134,10 +134,6 @@ For information on currently available Remote actions, see [Remote actions](../r
 <!-- *********************************************** -->
 
 ## Device security
-
-### New Microsoft Cloud PKI service<!-- 17272901  -->
-
-We will soon release a new Microsoft Cloud PKI service to simplify and automate the certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Intune Suite and will also be available as a standalone [Intune add-ons](../fundamentals/intune-add-ons.md). It's a cloud-based service that provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. The Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile, which includes Windows, Android, iOS/iPadOS, and macOS. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication.  
 
 ### HTML formatting supported in noncompliance email notifications <!-- 24197255   -->
 
