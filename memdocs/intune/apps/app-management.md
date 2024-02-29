@@ -31,6 +31,7 @@ ms.collection:
 - highpri
 - highseo
 - AIreviewed
+- FocusArea_Apps_AppManagement
 ---
 
 # What is Microsoft Intune app management?
