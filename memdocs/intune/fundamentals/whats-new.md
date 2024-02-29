@@ -55,19 +55,21 @@ You can also read:
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
-<!-- Common categories - in this order: -->
+<!-- Common categories - in this order: 
 
-<!-- ### Microsoft Intune Suite -->
-<!-- ### App management -->
-<!-- ### Device configuration -->
-<!-- ### Device enrollment -->
-<!-- ### Device management -->
-<!-- ### Device security -->
-<!-- ### Intune apps -->
-<!-- ### Monitor and troubleshoot -->
-<!-- ### Role-based access control -->
-<!-- ### Scripts -->
-<!-- ### Tenant administration -->
+### Microsoft Intune Suite  
+### App management 
+### Device configuration 
+### Device enrollment 
+### Device management 
+### Device security 
+### Intune apps 
+### Monitor and troubleshoot  
+### Role-based access control 
+### Scripts 
+### Tenant administration
+
+-->
 
 ## Week of February 26, 2024  
 
