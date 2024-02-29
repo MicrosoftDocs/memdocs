@@ -67,7 +67,7 @@ CTM job {6D0EA720-EB4E-4893-8395-8B27470A6CFB} (corresponding DTS job {708C7F21-
 > [!NOTE]
 > This log entry can be used to identify the CTM and DTS job ID's, which can be used to track the progress of the Content Transfer in **ContentTransferManager.log** and **DataTransferService.log** respectively.
 
-Data Transfer Service downloads the application content by creating a Background Intelligent Transfer Service (BITS) job and waiting for the download to complete. This activity can be tracked in **DataTransferService.log** on the client using the DTS Job ID obtained from **ContentTransferService.log**.
+Data Transfer Service downloads the application content by creating a Background Intelligent Transfer Service (BITS) job and waiting for the download to complete. This activity can be tracked in **DataTransferService.log** on the client using the DTS Job ID obtained from **ContentTransferManager.log**.
 
 ```text
 Starting BITS job '{40263E01-2EDD-462F-ABBA-A5E892CB9229}' for DTS job '{708C7F21-8898-49AB-900E-BA6E5F1A39BC}' under user 'S-1-5-18'.
