@@ -31,6 +31,7 @@ ms.collection:
 - M365-identity-device-management
 - macOS
 - highpri
+- FocusArea_Apps_LOB
 ---
 
 # How to add macOS line-of-business (LOB) apps to Microsoft Intune

@@ -1905,10 +1905,11 @@ This variable is useful when a single **Install Software Updates** task sequence
 
 Set the **SMSTSWaitForSecondReboot** value in seconds to specify how long the task sequence pauses on this step while the computer restarts. Allow sufficient time in case there's multiple restarts. For example, if you set **SMSTSWaitForSecondReboot** to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run.
 
-When this variable has been set before the **Install Software Updates** task, it is advisable to also set it again after the **Install Software Updates** task with a value of `0`. This resets the variable and prevents unnecessary delays during the task sequence. If there are multiple **Install Software Updates** tasks in the task sequence, define the variable to the desired value before the first **Install Software Updates** task, and then reset it back to `0` after the last **Install Software Updates** task.
+The **SMSTSWaitForSecondReboot** variable is intended for use with the **Install Software Updates** task, but can be set anywhere in the task sequence to introduce delays after reboots initiated by tasks other than the **Install Software Updates** task. For this reason, when this variable is set before the **Install Software Updates** task, it's advisable to also set it again after the **Install Software Updates** task with a value of `0`. This resets the variable and prevents unnecessary delays during the task sequence. If there are multiple **Install Software Updates** tasks in the task sequence, define the variable to the desired value before the first **Install Software Updates** task, and then reset it back to `0` after the last **Install Software Updates** task.
 
-> [!Note]
-> This variable only applies to a task sequence that deploys an OS. It doesn't work in a custom task sequence. <!-- 2839998 -->
+> [!NOTE]
+>
+> This variable only applies to OSD task sequences that deploys an OS. It doesn't work with any task sequence that doesn't utilize the **Setup Windows and ConfigMgr** task, such as stand-alone task sequences or in-place upgrade task sequences. <!-- 2839998 -->
 
 ### <a name="TSDebugMode"></a> TSDebugMode
 

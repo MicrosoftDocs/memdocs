@@ -29,6 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - Android
+- FocusArea_Apps_Configure
 ---
 
 # Use a VPN and per-app VPN policy on Android Enterprise devices in Microsoft Intune
