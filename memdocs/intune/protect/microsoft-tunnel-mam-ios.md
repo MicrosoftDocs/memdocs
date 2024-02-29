@@ -112,7 +112,7 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    > [!NOTE]  
    > When configuring proxy and split tunneling:
    > -  A proxy automatic configuration script (PAC) file allows you to enable both split tunneling and proxy.
-   > -  It is not supported to enable both split tunneling and proxy when using proxy address or port number. All traffic will go through the proxy if the included routes have the proxy server configured. If the included routes do not have the proxy server configured, then all traffic will be stopped.
+   > -  It is not supported to enable both split tunneling and proxy when using proxy address or port number. All traffic will go through the proxy if the included routes have the proxy server configured. If the included routes do not have the proxy server configured, then all traffic will be excluded from using the tunnel.
 
 
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
