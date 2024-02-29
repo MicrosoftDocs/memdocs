@@ -30,6 +30,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Protect
 ---
 
 # How to create and assign app protection policies

@@ -30,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - Android
 - highpri
+- FocusArea_Apps_Add
 ms.custom: intune-classic
 ---
 
