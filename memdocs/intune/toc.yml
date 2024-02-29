@@ -803,11 +803,11 @@ items:
               items:
               - name: Trend Micro Mobile Security as a Service and Intune integration
                 href: ./protect/trend-micro-mtd-connector-integration.md 
-            - name: Set up Wandera
-              href: ./protect/wandera-mtd-connector.md
+            - name: Set up Jamf
+              href: ./protect/jamf-mtd-connector.md
               items:
-              - name: Wandera and Intune integration
-                href: ./protect/wandera-mtd-connector-integration.md
+              - name: Jamf and Intune integration
+                href: ./protect/jamf-mtd-connector-integration.md
             - name: Set up Zimperium
               href: ./protect/zimperium-mobile-threat-defense-connector.md
               items:
