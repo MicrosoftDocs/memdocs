@@ -31,6 +31,8 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Win32
+- FocusArea_Apps_LOB
 ---
 
 # Add a Windows line-of-business app to Microsoft Intune

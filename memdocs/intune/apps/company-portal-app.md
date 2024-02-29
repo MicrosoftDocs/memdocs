@@ -30,6 +30,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_SpecificApp
 ---
 
 # How to configure the Intune Company Portal apps, Company Portal website, and Intune app

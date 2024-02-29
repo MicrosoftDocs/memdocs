@@ -22,6 +22,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Add
 ---
 
 # Add apps to Microsoft Intune

@@ -21,6 +21,7 @@ ms.custom:
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Win32
 ---
 
 # Deploy Windows update packages in Intune
