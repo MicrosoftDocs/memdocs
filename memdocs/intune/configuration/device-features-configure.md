@@ -208,7 +208,7 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
   You use these settings to configure an SSO app extension created by your organization, by your identity provider, by Microsoft, or by Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-  On macOS devices, you can use **SSO app extension** by itself. If you also want to use **Platform SSO**, then you must use **Platform SSO** and the **SSO app extension** features together.
+  On macOS devices, you can use **SSO app extension** by itself. If you also want to use **Platform SSO**, then you must use **Platform SSO** and the **SSO app extension** together.
 
   For more information, go to:
 
