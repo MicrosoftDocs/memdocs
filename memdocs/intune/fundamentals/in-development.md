@@ -32,7 +32,7 @@ ms.collection:
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
-- When a feature enters production, whether it's in preview or generally available, the feature description will move from this article to [What's new](whats-new.md).  
+- When a feature enters production, whether it's in preview or generally available, the feature description will move from this article to [What's new](whats-new.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
 This article and the [What's new](whats-new.md) article are updated periodically. Check back for more updates.
@@ -240,7 +240,7 @@ Customer tenants in US Government Community (GCC) High, and Department of Defens
 
 For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
 
-### Updated security baseline for Windows version 23H2<!-- 25021947 -->  
+### Updated security baseline for Windows version 23H2<!-- 25021947 -->
 
 We’re working on an update to the Intune security baseline for Windows. The updated security baseline is based on the **version 23H2** of the Group Policy security baseline found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and includes only the settings that are applicable to devices managed through Intune. Use of this updated baseline can help you maintain best-practice configurations for your Windows devices.
 
