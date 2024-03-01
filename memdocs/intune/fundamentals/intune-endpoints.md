@@ -73,7 +73,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 
 The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
 
-You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following tables the service they're tied to, and the list of URLs returned.
+You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following tables show the service they're tied to, and the list of URLs returned.
 
 The Data columns shown in the tables are:
 
@@ -81,7 +81,7 @@ The Data columns shown in the tables are:
 
 **Category**: Shows whether the endpoint set is categorized as **Optimize**, **Allow**, or **Default**. This column also lists which endpoint sets are required to have network connectivity. For endpoint sets that aren't required to have network connectivity, we provide notes in this field to indicate what functionality would be missing if the endpoint set is blocked. If you're excluding an entire service area, the endpoint sets listed as required don't require connectivity.
 
-You can read about these categories and guidance for their management in [New Microsoft 365 endpoint categories](https://learn.microsoft.com/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?#new-office-365-endpoint-categories).
+You can read about these categories and guidance for their management in [New Microsoft 365 endpoint categories](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?#new-office-365-endpoint-categories).
 
 **ER**: This is Yes/True if the endpoint set is supported over Azure ExpressRoute with Microsoft 365 route prefixes. The BGP community that includes the route prefixes shown aligns with the service area listed. When ER is No / False, then ExpressRoute is not supported for this endpoint set.
 
@@ -96,7 +96,7 @@ ID |Desc |Category |ER |Addresses |Ports
 163 | Endpoint Manager client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.71.199.64/28, 13.73.244.48/28, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 20.49.93.160/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29` | **TCP:** 80, 443|
 172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> `*.emdl.ws.microsoft.com`<BR> `kv801.prod.do.dsp.mp.microsoft.com`<BR> `geo.prod.do.dsp.mp.microsoft.com`<BR> `emdl.ws.microsoft.com`<BR> `2.dl.delivery.mp.microsoft.com`<BR> `bg.v4.emdl.ws.microsoft.com`<BR> | **TCP:** 7680, 3544, 80, 443|
 170 | MEM - PS and Win32Apps| Default<BR>Required | False | `swda01-mscdn.azureedge.net`<BR>`swda02-mscdn.azureedge.net`<BR>`swdb01-mscdn.azureedge.net`<BR>`swdb02-mscdn.azureedge.net`<BR>`swdc01-mscdn.azureedge.net`<BR>`swdc02-mscdn.azureedge.net`<BR>`swdd01-mscdn.azureedge.net`<BR>`swdd02-mscdn.azureedge.net`<BR>`swdin01-mscdn.azureedge.net`<BR>`swdin02-mscdn.azureedge.net`<BR> | **TCP:** 443|
-
+170 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR>`contentauthassetscdn-prod.azureedge.net`<BR>`contentauthassetscdn-prodeur.azureedge.net`<BR>`contentauthrafcontentcdn-prod.azureedge.net`<BR>`contentauthrafcontentcdn-prodeur.azureedge.net`<BR> | **TCP:** 443|
 ### Autopilot dependencies
 
 ID |Desc |Category |ER |Addresses |Ports|
@@ -115,9 +115,24 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
 188 | Remote Help Dependancy for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR> | **TCP:** 443|
 
+### Windows update for Business deployment service
+
+ID |Desc |Category |ER |Addresses |Ports|Notes|
+-- |-- |-----|--- | --------------| --------------------------------|------------|
+181 | Need to add| Default<BR>Required | False |`devicelistenerprod.microsoft.com`<BR>`devicelistenerprod.eudb.microsoft.com`<BR>`login.windows.net`<BR>`payloadprod*.blob.core.windows.net`<BR> | **TCP:** 443|
+187 | need to add | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
+
 ### Intune dependencies
 
-#### WNS dependencies
+In this section, the following tables list the Intune dependencies and the ports and services that the Intune client accesses.
+
+- [Windows Push Notification Services dependencies](#windows-push-notification-serviceswns-dependencies)
+- [Delivery optimization dependencies](#delivery-optimization-dependencies)
+- [Apple dependencies](#apple-dependencies)
+- [Android AOSP dependencies](#android-aosp-dependencies)
+- [Microsoft Azure Attestation](#microsoft-azure-attestation)
+
+#### Windows Push Notification Services(WNS) dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
