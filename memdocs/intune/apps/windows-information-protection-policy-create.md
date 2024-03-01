@@ -30,6 +30,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - Windows
+- FocusArea_Apps_Protect
 ---
 
 # Create and deploy Windows Information Protection (WIP) policy with Intune
