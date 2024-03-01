@@ -40,15 +40,18 @@ ms.collection:
 - Windows 10
 - Windows 11
 
-Device limit restrictions can be configured two ways: by Intune enrollment, or by Microsoft Entra joined or Microsoft Entra registered. This article clarifies when these limits are applied based on your configuration.
+There are two ways to limit the number of enrolled devices accessing your resources:  
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+* Microsoft Intune device limit restrictions: Limits the number of devices that can enroll in Microsoft Intune. 
+* Microsoft Entra registration limit: Limits the number of devices that can join or register in Microsoft Entra.  
+
+ This article provides an overview of both options, and describes the device conditions and provisioning scenarios in which they're applicable.  
 
 ## Intune device limit restrictions
 
 Use Intune device limit restrictions to limit the number of devices a user can enroll in Microsoft Intune. You can allow a user to enroll up to 15 devices. To create a device limit restriction, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Enrollment**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
 
-## Microsoft Entra device limit restriction
+## Microsoft Entra registration restriction  
 
 Use the Microsoft Entra device limit restriction to limit the number of devices that can join or register with Microsoft Entra. To set the **Maximum number of devices per user**, go to the Azure portal > **Microsoft Entra ID** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal)
 
@@ -70,11 +73,12 @@ If you enforce both Microsoft Intune and Microsoft Entra device limit restrictio
 |Windows 10/11| BYOD: User enrollment | Yes | Yes | Yes |   
 |Windows 10/11| Automatic enrollment + group policy | No | No | No |  
 |Windows 10/11| Automatic enrollment + device enrollment manager | No | Yes | No | 
-|Windows 10/11| Automatic enrollment + bulk device enrollment | No | Yes | No |
+|Windows 10/11| Automatic enrollment + bulk device enrollment | No | No | No |
 |Windows 10/11| Windows Autopilot | Yes | Yes | No |  
 |Windows 10/11| Co-management with Configuration Manager | No | Yes | No |  
 
-## Android and iOS devices
+## Android and iOS devices  
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
 ### iOS or Android devices example 1  
 
