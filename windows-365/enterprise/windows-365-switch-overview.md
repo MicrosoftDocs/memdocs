@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 02/29/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -42,7 +42,7 @@ Users can also launch and connect to their Cloud PC directly from the Task view 
 
 To use Windows 365 Switch, the physical device and Cloud PC must meet the following requirements:
 
-- Windows 11 Enterprise or Professional, version 22621.2361 or later.
+- Windows 11 Enterprise or Professional, version 22H2 build 22621.3235, or 23H2 build 22631.3235, or later.
 - Windows 365 Cloud PC license. for more information, see [Assign licenses](assign-licenses.md).
 
 For information about installing Windows 365 Switch on a user's device, see the [Windows 365 Switch end user help article](https://support.microsoft.com/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).

@@ -2299,6 +2299,16 @@
       "source_path": "windows-365/enterprise/business-continuity-disaster-recovery.md",
       "redirect_url": "/windows-365/business-continuity-disaster-recovery",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/wandera-mtd-connector.md",
+      "redirect_url": "/mem/intune/protect/jamf-mtd-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/wandera-mtd-connector-integration.md",
+      "redirect_url": "/mem/buintune/protect/jamf-mtd-connector-integration",
+      "redirect_document_id": false
     }
   ]
 }
