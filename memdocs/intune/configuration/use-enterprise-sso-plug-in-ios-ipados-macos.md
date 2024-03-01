@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 02/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ zone_pivot_groups: apple-enterprise-sso
 # Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune
 
 > [!IMPORTANT]
-> This article is a final draft and ready for PM review. It will go live when platform SSO goes live. **Delete this note before publishing**.
+> This article is a final draft and ready for PM review. It will go live when Platform SSO goes live. **Delete this note before publishing**.
 
 Apple devices can use single sign-on (SSO) to access devices, apps, and websites using their Microsoft Entra ID. SSO lets users sign in and get access without entering their credentials each time.
 
@@ -59,24 +59,24 @@ This feature applies to:
 
 - macOS
 
-The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **platform SSO** and the **SSO app extension**. This section focuses on **platform SSO**.
+The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **Platform SSO** and the **SSO app extension**. This section focuses on **Platform SSO**.
 
 On macOS devices, users normally sign in with a local account. Then, they sign into apps and websites with their Microsoft Entra ID.
 
-When you configure platform SSO, users sign into the device with their Microsoft Entra ID instead of their local account. When they sign into the device with their Microsoft Entra ID, then they get access to device features that use Microsoft Entra ID for authentication.
+When you configure Platform SSO, users sign into the device with their Microsoft Entra ID instead of their local account. When they sign into the device with their Microsoft Entra ID, then they get access to device features that use Microsoft Entra ID for authentication.
 
-For more information on platform SSO, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+For more information on Platform SSO, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
-You use platform SSO and the [SSO app extension](#sso-app-extension) (in this article) together. Specifically, you:
+You use Platform SSO and the [SSO app extension](#sso-app-extension) (in this article) together. Specifically, you:
 
-1. Use platform SSO to sign into the device with Microsoft Entra ID.
+1. Use Platform SSO to sign into the device with Microsoft Entra ID.
 2. Use the SSO app extension to sign into apps and websites with Microsoft Entra ID.
 
-With these features, users can sign in with their Entra credentials and minimize the number of times they need to enter their Entra credentials.
+With these features, users can sign in with their Microsoft Entra credentials and minimize the number of times they need to enter their Microsoft Entra credentials.
 
 ### Platform SSO feature summary
 
-The following table summarizes the platform SSO features in Microsoft Intune. Use this information to determine if platform SSO is right for your organization.
+The following table summarizes the Platform SSO features in Microsoft Intune. Use this information to determine if Platform SSO is right for your organization.
 
 | Feature | Details |
 | --- | --- |
@@ -85,7 +85,7 @@ The following table summarizes the platform SSO features in Microsoft Intune. Us
 | **Supported authentication types** | ✅ Microsoft Entra ID <br/> ✅ Smartcard |
 | **Supported app types** | ✅ Microsoft 365 apps<br/>✅ Apps, websites or services integrated with Microsoft Entra ID <br/>✅ Apps, websites or services that support Apple Enterprise SSO and are integrated with on-premises Active Directory |
 | **Intune admin center location** | **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type > **Authentication** > **Extensible Single Sign On (SSO)** |
-| **Recommendation** | ✅ Recommended. <br/><br/> You use platform SSO and the SSO app extension together. You can use the SSO app extension on its own. To use platform SSO, you must use platform SSO and the SSO app extension together. |
+| **Recommendation** | ✅ Recommended. <br/><br/> You use Platform SSO and the SSO app extension together. You can use the SSO app extension on its own. To use Platform SSO, you must use Platform SSO and the SSO app extension together. |
 
 ::: zone-end
 
@@ -97,7 +97,7 @@ This feature applies to:
 - iOS/iPadOS
 - macOS
 
-The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **platform SSO** and the **SSO app extension**. This section focuses on the **SSO app extension**.
+The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **Platform SSO** and the **SSO app extension**. This section focuses on the **SSO app extension**.
 
 The SSO app extension provides SSO to apps and websites that use Microsoft Entra ID for authentication, including:
 
@@ -133,7 +133,7 @@ The following table summarizes the SSO app extension features in Microsoft Intun
 | **Supported authentication types** | ✅ Redirect-type SSO app extension, including Microsoft Entra ID <br/> ✅ Credential app extension <br/> ✅ Apple's built-in Kerberos extension |
 | **Supported app types** | ✅ Microsoft 365 apps<br/>✅ Apps, websites or services integrated with Microsoft Entra ID <br/>✅ Apps, websites or services that support Apple's Enterprise SSO and are integrated with on-premises Active Directory |
 | **Intune admin center location** | **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Device features** for profile type > **Single sign-on app extension** |
-| **Recommendation** | ✅ Recommended. <br/><br/> On macOS devices, you can use the SSO app extension by itself. If you're also using platform SSO for macOS, then you also need the SSO app extension. |
+| **Recommendation** | ✅ Recommended. <br/><br/> On macOS devices, you can use the SSO app extension by itself. If you're also using Platform SSO for macOS, then you also need the SSO app extension. |
 
 ::: zone-end
 
