@@ -63,7 +63,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ### Extended capabilities for Managed Google Play apps on personally-owned Android devices with a work profile<!-- 26554642  -->
 
-There will be new capabilities extended to work profile devices. The following capabilities were previously available only on corporately-owned devices:
+There will be new capabilities extended to work profile devices. The following capabilities were previously available only on corporate-owned devices:
 
 - **Available apps for device groups**: You'll soon be able to use Intune to make apps available for device groups through the Managed Google Play store. Previously, apps could only be made available to user groups.
 
@@ -100,7 +100,7 @@ You'll be able to view the service subscription fields on devices that have mult
 - **MEID**
 - **Phone number**
 
-These fields will default to using labels returned by the device, such as:  *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
+These fields will default to using labels returned by the device, such as: *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
 
 Applies to:
 
@@ -251,10 +251,10 @@ Use of [Intune security baselines](../protect/security-baselines.md) can help yo
 We’re improving and simplifying the experience, workflow, and reporting details when using Intune’s [endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy to deploy Microsoft Defender for Endpoint. These changes will apply for Windows devices managed by Intune and the tenant-attach scenario. These improvements include:
 
 - Changes to dashboards and reports to improve the visibility of your Defender EDR deployment numbers.
-- A tenant-wide deployment option for Intune EDR policy that streamlines deployments of Defender for Endpoint to applicable devcies.
+- A tenant-wide deployment option for Intune EDR policy that streamlines deployments of Defender for Endpoint to applicable devices.
 - Changes to Intune’s endpoint security Overview page to provide consolidated dashboard reports for the device signals from Defender on your managed devices.
 
-Applies to the following through through cloud and tenant attach endpoints:
+Applies to the following through cloud and tenant attach endpoints:
 
 - Windows 10
 - Windows 11
