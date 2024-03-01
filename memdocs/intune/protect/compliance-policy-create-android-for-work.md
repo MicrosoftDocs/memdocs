@@ -99,7 +99,17 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
-  - **Check basic integrity & device integrit**
+  - **Check basic integrity & device integrity**
+
+- **Play integrity verdict evaluation type**  
+    This setting is only available when *Play integrity verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.
+
+    Select the evaluation type you want to use to compute Play integrity verdict response.
+
+  - **Not configured (defaults to basic evaluation)** – (*default*)
+  - **Check strong integrity** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
+
+  For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
 
 ### Device Properties
 
