@@ -64,7 +64,7 @@ By using the following PowerShell script, you can retrieve the list of IP addres
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
 ```
 
-By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and dependent services. When you run the script, the URLs in the script output may be different then the URLs in the following table. At a minimum, make sure you include the URLs in this table.
+By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and dependent services. When you run the script, the URLs in the script output may be different then the URLs in the following tables. At a minimum, make sure you include the URLs in the tables.
 
 ```PowerShell
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
