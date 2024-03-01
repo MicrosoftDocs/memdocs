@@ -228,6 +228,19 @@ We’re working on an update to the Intune security baseline for Windows. The up
 
 Use of [Intune security baselines](../protect/security-baselines.md) can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations, which you can modify to meet the requirements of your organization.
 
+### Improvements for Intune deployments of Microsoft Defender for Endpoint<!-- 26314441  -->
+
+We’re improving and simplifying the experience, workflow, and reporting details when using Intune’s [endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy to deploy Microsoft Defender for Endpoint. These changes will apply for Windows devices managed by Intune and the tenant-attach scenario. These improvements include:
+
+- Changes to dashboards and reports to improve the visibility of your Defender EDR deployment numbers.
+- A tenant-wide deployment option for Intune EDR policy that streamlines deployments of Defender for Endpoint to applicable devcies.
+- Changes to Intune’s endpoint security Overview page to provide consolidated dashboard reports for the device signals from Defender on your managed devices.
+
+Applies to the following through through cloud and tenant attach endpoints:
+
+- Windows 10
+- Windows 11
+
 ### HTML formatting supported in noncompliance email notifications <!-- 24197255   -->
 
 HTML formatting will be supported in noncompliance email notifications for all platforms. You'll be able to use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
