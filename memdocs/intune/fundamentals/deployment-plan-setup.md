@@ -43,13 +43,13 @@ The purpose of this article is to help you get a better understanding of Intune'
 
 Before you begin setting up Microsoft Intune, review the [Planning guide](intune-planning-guide.md). The planning guide helps you to plan your move or migration to Intune.  
 
-The planning guide also provides information in the following areas:
+The planning guide also helps you address these areas:
 
-- What are some of the common objectives for device management
-- How to address potential licensing needs
-- How to handle personally owned devices
-- How to review current policies and infrastructure
-- What are some examples of creating a rollout plan
+- What are some of the common objectives for device management?
+- How to address potential licensing needs?
+- How to handle personally owned devices?
+- How to review current policies and infrastructure?
+- What are some examples of creating a rollout plan?
 
 ## 1 - Review the Supported Configurations
 
@@ -88,7 +88,7 @@ The *onmicrosoft.com* suffix is assigned to all accounts added to subscriptions.
 
 You can **optionally** configure your organization's custom domain in Intune, such as `contoso.com`. If you don't add your domain account, then for example, `contoso.onmicrosoft.com` may be used.
 
-- Set DNS registration to connect your company's domain name with Intune. By connecting your company's domain name with Intune, users experience a familiar domain when connecting to Intune and using resources.
+- Set DNS registration to connect your company's domain name with Intune. When you connect your company's domain name with Intune, users experience a familiar domain when connecting to Intune and using resources.
 
 - If you're simply evaluating Intune using the free trial, you can skip this step.
 
