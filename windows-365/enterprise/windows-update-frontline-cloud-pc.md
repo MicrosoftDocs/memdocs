@@ -65,7 +65,7 @@ The Windows 365 Service automatically powers on a Windows 365 Frontline Cloud PC
 - Syncs the Cloud PC with the Windows Update service.
 - Performs the Windows Update process honoring the Windows Update policy configurations set in Intune.
 - Keeps the Cloud PC powered on for two hours to make sure that the Windows Update installation can complete.
-- Checks for any pending reboots. If there are, the Cloud PC automatically reboots to complete and Windows Update before turning off.
+- Checks for any pending reboots. If there are, the Cloud PC automatically reboots to complete any Windows Update before turning off.
 
 This process lets the user seamlessly start using the Windows 365 Frontline Cloud PC the next time they sign in.
 
