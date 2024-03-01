@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/19/2023
+ms.date: 03/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,17 +46,15 @@ Device limit restrictions can be configured two ways: by Intune enrollment, or b
 
 ## Intune device limit restrictions
 
-Intune device limit restrictions set the maximum number of devices that a user can enroll. You can allow a user to enroll up to 15 devices. To create a device limit restriction, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Enrollment**. 
+Use Intune device limit restrictions to limit the number of devices a user can enroll in Microsoft Intune. You can allow a user to enroll up to 15 devices. To create a device limit restriction, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Enrollment**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
 
-For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
+## Microsoft Entra device limit restriction
 
-## Azure device limit restriction
-
-Azure device limit restrictions set the maximum number of devices that either Microsoft Entra joins or Microsoft Entra registers. To set the **Maximum number of devices per user**, go to the Azure portal > **Microsoft Entra ID** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal)
+Use the Microsoft Entra device limit restriction to limit the number of devices that can join or register with Microsoft Entra. To set the **Maximum number of devices per user**, go to the Azure portal > **Microsoft Entra ID** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal)
 
 ## Settings applied based on user affinity  
 
-If you enforce both Intune and Azure device limit restrictions, the following table shows you how each limitation is applied.   
+If you enforce both Microsoft Intune and Microsoft Entra device limit restrictions, the following table shows you how each limitation is applied.   
 
 |Platform| Device management solution | User affinity | Does Microsoft Entra limitation apply? | Does Intune limitation apply? |  
 | -----| ----- | ----- | ----- | ----- |
@@ -78,49 +76,50 @@ If you enforce both Intune and Azure device limit restrictions, the following ta
 
 ## Android and iOS devices
 
-### iOS or Android devices example 1
+### iOS or Android devices example 1  
 
-- The Azure **Maximum number of devices per user** setting is set to 3.
+- The Microsoft Entra **Maximum number of devices per user** setting is set to 3.
 - The Intune **Device limit** setting is set to 5.
  
-**Outcome:** The maximum number is per user. For example, if you enroll three Intune devices, the Azure registration for the fourth device will fail because of the settings to limit the number of registrations for the devices.
+**Outcome:** You can enroll up to 3 devices, because The Microsoft Entra ID limits users to a maximum of 3 devices. If you try to enroll more than three devices in Intune, enrollment fails because the fourth device is blocked from registering in Microsoft Entra ID.  
 
 ### iOS or Android devices example 2
 
-- The Azure **Maximum number of devices per user** setting is set to 20.
+- The Microsoft Entra **Maximum number of devices per user** setting is set to 20.
 - The Intune **Device limit** setting is set to 2.
 
-**Outcome:** You can successfully register and enroll two devices. Intune enrollment will be blocked for any additional devices. ADE without user affinity is restricted by Azure device registration limits although it's not associated with a user.
+**Outcome:** You can successfully register and enroll two devices. Intune enrollment will be blocked for any additional devices. The Microsoft Entra limit only applies to Apple automated device enrollment when devices are configured with user affinity. 
 
 ## Windows devices  
 
-Intune device limit restrictions don't apply for the following Windows enrollment types:
-- Co-managed enrollments
-- Group policy object (GPO) enrollments
-- Microsoft Entra joined enrollments
-- Bulk Microsoft Entra joined enrollments
-- Autopilot enrollments
-- Device enrollment manager enrollments
+Intune device limit restrictions don't apply to devices enrolled via:  
 
-Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices.  
+- Co-management with Configuration Manager   
+- Automatic enrollment + group policy  
+- Automatic enrollment + device enrollment manager  
+- Automatic enrollment + bulk device enrollment    
+- Windows Autopilot  
 
-Instead, you can set a [hard limit in Microsoft Entra ID](device-limit-intune-azure.md#azure-device-limit-restriction) to limit the number of devices that an employee can join or register with Microsoft Entra ID. The **Maximum number of devices per user** setting in Microsoft Entra ID applies to devices that are Microsoft Entra joined or Microsoft Entra registered. It doesn't apply to Microsoft Entra hybrid joined devices.  
+Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices. Instead, you can apply the Microsoft Entra limitation. The **Maximum number of devices per user** setting in Microsoft Entra ID generally applies to devices that are Microsoft Entra joined or Microsoft Entra registered, with some exceptions. It doesn't apply to:   
+
+- Microsoft Entra hybrid joined devices  
+- Devices enrolled by automatic enrollment + bulk device enrollment  
 
 ### Windows 10/11 example 1
 
-- The Azure **Maximum number of devices per user** setting is set to 5.
+- The Microsoft Entra **Maximum number of devices per user** setting is set to 5.
 - The Intune **Device limit** setting is set to 3.
 - The devices are Microsoft Entra hybrid joined and enrolled automatically (GPO configured).
 
-**Outcome:** Because the enrollment is pushed through GPO, the Azure device registration limit doesn't apply.  The Intune device limit restriction also doesn't apply.
+**Outcome:** Because the enrollment is provisioned by GPO, the Microsoft Entra device limit doesn't apply. The Intune device limit restriction also doesn't apply.
 
 ### Windows 10/11 example 2  
 
-- The Azure **Maximum number of devices per user** setting is set to 5.
+- The Microsoft Entra **Maximum number of devices per user** setting is set to 5.
 - The Intune **Device limit** setting is set to 2.
-- The devices are local domain joined and enrolled by using **Settings** > **Access Work or School** > **Connect**.
+- The devices are local domain joined, and enrolled in the Settings app. 
 
-**Outcome:** You can only enroll two devices before they're blocked. You can register up to five devices.
+**Outcome:** You can only enroll two devices before they're blocked. You can register up to five devices.  
 
 
 ## Next steps
