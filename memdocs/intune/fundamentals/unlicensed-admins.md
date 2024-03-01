@@ -17,7 +17,7 @@ ms.technology:
 ms.assetid: 
 
 # optional metadata
-# CustomerIntent: As an  IT admin, I want to give other administrators access to Microsoft Intune without them requiring an Intune license so that right admins have the right access. 
+# CustomerIntent: As an  IT admin, I want to give other administrators access to Microsoft Intune without them requiring an Intune license so that right admins have the correct access. 
 
 #ROBOTS:
 #audience:
