@@ -143,6 +143,8 @@ A device must meet the following conditions to be eligible for silently enabling
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only.
 
+Additionally, if a device is Microsoft Entra hybrid joined, you must configure [required group policies for hybrid joined devices](#required-group-policies-for-hybrid-joined-devices).
+
 #### Required settings to silently enable BitLocker
 
 Depending on the type of policy that you use to silently enable BitLocker, configure the following settings. Both methods manage BitLocker through Windows encryption CSPs on Windows devices.
@@ -162,6 +164,45 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
   - **Allow standard users to enable encryption during Microsoft Entra join** = *Allow*
   - **User creation of recovery key** = *Allow or Do not allow 256-bit recovery key*
   - **User creation of recovery password** = *Allow or Require 48-digit recovery password*
+ 
+#### Required group policies for hybrid joined devices
+
+You must mirror settings applied in Intune and Group Policy for hybrid joined devices.
+
+1. Start Group Policy Management Console (gpmc.msc).
+2. Expand Forest > Domains > _<your domain>_.
+3. Right-click _<your domain>_ and select **Create a GPO in this domain and link it here**.
+4. In the **New GPO** dialog box, enter **Client BitLocker Configuration** as the name of the new Group Policy Object.
+5. Right-click the **Client BitLocker Configuration** object, and then select **Edit**.
+
+Configure the following policies as described:
+
+**Store BitLocker recovery information in Active Directory Domain Services:**
+
+1. In the Group Policy Management Editor, go to **Computer Configuration > Policies > Administrative Templates > Windows Components > BitLocker Drive Encryption > Store BitLocker recovery information in Active Directory Domain Services**
+2. Set the policy to **Enabled**.
+3. Check **Require BitLocker backup to AD DS**.
+4. Set **Select BitLocker recovery information to store** to **Recovery passwords and key packages**.
+5. Click **Apply** and **OK**.
+
+**Require additional authentication at startup:**
+
+1. In the Group Policy Management Editor, go to **Computer Configuration > Policies > Administrative Templates > Windows Components > BitLocker Drive Encryption > Operating System Drives > Require additional authentication at startup**
+2. Set the policy to **Enabled**.
+3. Set **Configure user storage of BitLocker recovery information** to **Allow 48-digit recovery password** and **Allow 256-bit recovery key**
+4. Set **Configure TPM startup** to **Allow TPM** or **Require TPM** based on your requirements.
+5. Set **Configure TPM with startup PIN** to **Do not allow startup PIN with TPM**.
+6. Set **Configure TPM startup key** to **Do not allow startup key with TPM**.
+7. Set **Configure TPM startup key and PIN** to **Do not allow startup key and PIN with TPM**.
+8. Click **Apply** and **OK**.
+
+**Choose how BitLocker-protected operating system drives can be recovered:**
+
+1. In the Group Policy Management Editor, go to **Computer Configuration > Policies > Administrative Templates > Windows Components > BitLocker Drive Encryption > Operating System Drives > Choose how BitLocker-protected operating system drives can be recovered**
+2. Set the policy to **Enabled**.
+3. Set **Save BitLocker recovery information to AD DS for operating system drives**.
+4. Set **Configure storage of BitLocker recovery information to AD DS** to **Store recovery passwords and key packages**.
+5. Click **Apply** and **OK**.
 
 #### TPM startup PIN or key
 
