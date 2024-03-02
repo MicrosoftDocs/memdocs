@@ -33,41 +33,6 @@ ms.collection:
 #Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
 ---
 
----
-# required metadata
-
-title: Walkthrough - Create an ADMX administrative template
-description: This tutorial or walkthrough uses Microsoft Intune to configure Office, Windows, and Microsoft Edge ADMX templates on Windows 10/11 client devices.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: dougeby
-ms.date: 11/09/2023
-ms.topic: tutorial
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority:
-ms.technology:
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection:
-- tier2
-- M365-identity-device-management
-- intune-scenario
-
-#Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
----
-
 # Walkthrough: Use the cloud to configure group policy on Windows 10/11 devices with ADMX templates and Microsoft Intune
 
 > [!NOTE]
@@ -141,7 +106,7 @@ This feature applies to:
     
         Wait while Windows adds the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
        
-               :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app.":::
+        :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app.":::
 
   - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Intune admin center.
 
