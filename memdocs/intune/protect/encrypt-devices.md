@@ -170,7 +170,7 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 You must mirror settings applied in Intune and Group Policy for hybrid joined devices.
 
 1. Start Group Policy Management Console (gpmc.msc).
-2. Expand Forest > Domains > _your domain>.
+2. Expand Forest > Domains > _your domain_.
 3. Right-click _your domain_ and select **Create a GPO in this domain and link it here**.
 4. In the **New GPO** dialog box, enter **Client BitLocker Configuration** as the name of the new Group Policy Object.
 5. Right-click the **Client BitLocker Configuration** object, and then select **Edit**.
