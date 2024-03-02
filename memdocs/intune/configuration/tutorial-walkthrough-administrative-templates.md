@@ -33,6 +33,41 @@ ms.collection:
 #Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
 ---
 
+---
+# required metadata
+
+title: Walkthrough - Create an ADMX administrative template
+description: This tutorial or walkthrough uses Microsoft Intune to configure Office, Windows, and Microsoft Edge ADMX templates on Windows 10/11 client devices.
+keywords:
+author: MandiOhlinger
+ms.author: mandia
+manager: dougeby
+ms.date: 11/09/2023
+ms.topic: tutorial
+ms.service: microsoft-intune
+ms.subservice: configuration
+ms.localizationpriority:
+ms.technology:
+ms.assetid: 
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: mikedano
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: intune-azure
+ms.collection:
+- tier2
+- M365-identity-device-management
+- intune-scenario
+
+#Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
+---
+
 # Walkthrough: Use the cloud to configure group policy on Windows 10/11 devices with ADMX templates and Microsoft Intune
 
 > [!NOTE]
@@ -98,14 +133,15 @@ This feature applies to:
 
   - Sign in with a Domain Administrator account.
 
-  - Install the **RSAT: Group Policy Management Tools**:
-
-    1. Open the **Settings** app > **Apps** > **Optional features** > **Add feature**.
-    2. Select **RSAT: Group Policy Management Tools** > **Install**.
-
-        Wait while Windows installs the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
-
-        :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app.":::
+  - Add the **RSAT: Group Policy Management Tools**:
+  
+    1. Open the **Settings** app > __System__ > **Optional features** > **Add feature** (if on a version older than Windows 10 22H2, navigate to **Settings** > **Apps** > **Apps & features** > **Optional features** > **Add feature** instead).
+        
+    1. Select **RSAT: Group Policy Management Tools** > **Add**.
+    
+        Wait while Windows adds the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
+       
+               :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app.":::
 
   - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Intune admin center.
 
@@ -266,8 +302,8 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 1. On the **Admin computer**, open the **Group Policy Management** app.
 
-    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you install on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps to install it.
-
+    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you add on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps to install it.
+   
 2. Expand **Domains** > select your domain. For example, select `contoso.net`.
 3. Right-click the **OfficeandEdge** policy > **Edit**. The Group Policy Management Editor app opens.
 
