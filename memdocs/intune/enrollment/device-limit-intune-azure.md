@@ -78,9 +78,8 @@ The limit applies to devices that are Microsoft Entra joined or Microsoft Entra 
 
 For more information about configuring these setting in Microsoft Entra ID, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal).  
 
-## Settings applied based on user affinity  
-
-If you enforce both Microsoft Intune and Microsoft Entra device limit restrictions, the following table shows you how each limitation is applied.   
+## Applicable scenarios        
+Use the following table to determine the type of limitations you can apply to devices.    
 
 |Platform| Device management solution | User affinity | Does Microsoft Entra limitation apply? | Does Intune limitation apply? |  
 | -----| ----- | ----- | ----- | ----- |
