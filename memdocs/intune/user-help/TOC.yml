@@ -150,22 +150,14 @@ items:
       href: turn-off-microsoft-usage-data-collection-ios.md
     - name: Remove device from Intune
       href: unenroll-your-device-from-intune-ios.md
-    - name: Compliance and setting requirements        
-      href: how-do-i-find-the-serial-number-on-my-device-ios.md
+    - name: Update iOS device settings         
+      href: how-do-i-find-the-serial-number-on-my-device-ios.md  
   - name: Get iOS/iPadOS apps
     items:
     - name: Where to find work or school apps for iOS/iPadOS
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
       href: use-microsoft-tunnel-iOS.md 
-  - name: Update device settings
-    items:
-    - name: An existing company email account was found
-      href: existing-company-email-account-found.md
-    - name: Update iOS/iPadOS version
-      href: you-need-to-update-your-ios-device.md
-    - name: iOS/iPadOS version isn't supported 
-      href: your-ios-version-isnt-yet-supported.md
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work 
@@ -207,21 +199,15 @@ items:
     - name: Sync macOS device
       href: sync-your-device-manually-macos.md
     - name: Manage Company Portal preferences
-      href: intune-company-portal-preferences-macos.md
-  - name: Update device settings
-    items:
-    - name: My version of macOS isn't yet supported
-      href: your-macos-version-isnt-yet-supported.md
-    - name: Update operating system version 
-      href: you-need-to-update-your-macos-device.md
-    - name: Device assigned to someone else
-      href: unable-to-get-macOS-device-managed.md 
-    - name: Help for JAMF-managed devices in Intune
-      href: device-little-different-jamf.md
+      href: intune-company-portal-preferences-macos.md  
+    - name: Update macOS device settings         
+      href: update-device-settings-mac.md  
   - name: Get help
     items:
     - name: Report a problem  
-      href: send-errors-macos.md
+      href: send-errors-macos.md  
+    - name: Help for JAMF-managed devices in Intune
+      href: device-little-different-jamf.md  
 - name: Windows device management
   items:
   - name: Enrollment
