@@ -67,6 +67,9 @@ The prerequisites for Remote Help on macOS are listed under [Supported devices](
 
 If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help.
 
+> [!NOTE]
+> Remote Help for macOS is not supported on GCC Tenants.
+
 ## Supported devices
 
 ### macOS versions
