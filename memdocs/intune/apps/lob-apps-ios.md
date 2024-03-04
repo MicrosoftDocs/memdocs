@@ -30,6 +30,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - iOS/iPadOS
+- FocusArea_Apps_LOB
 ---
 
 # Add an iOS/iPadOS line-of-business app to Microsoft Intune

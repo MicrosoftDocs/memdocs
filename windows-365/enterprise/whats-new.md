@@ -209,10 +209,6 @@ Windows 365 Boot is now available for US Government Community Cloud (GCC) custom
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
 
-#### Windows 365 Switch is now available for Windows 365 Government<!--46030732-->
-
-Windows 365 Switch is now available for Windows 365 Government. For more information, see [What is Windows 365 Switch?](windows-365-switch-overview.md).
-
 #### UI change in web client<!--46838016-->
 
 The gear icon menu has been updated. For details on the new menu, see [Windows 365 web client](end-user-access-cloud-pc.md#windows-365-web-client).

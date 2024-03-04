@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 03/04/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,40 +55,64 @@ You can also read:
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
-<!-- Common categories: -->
+<!-- Common categories - in this order: 
 
-<!-- ### Microsoft Intune Suite -->
-<!-- ### App management -->
-<!-- ### Device configuration -->
-<!-- ### Device enrollment -->
-<!-- ### Device management -->
-<!-- ### Device security -->
-<!-- ### Intune apps -->
-<!-- ### Monitor and troubleshoot -->
-<!-- ### Role-based access control -->
-<!-- ### Scripts -->
-<!-- ### Tenant administration -->
+### Microsoft Intune Suite  
+### App management 
+### Device configuration 
+### Device enrollment 
+### Device management 
+### Device security 
+### Intune apps 
+### Monitor and troubleshoot  
+### Role-based access control 
+### Scripts 
+### Tenant administration
+
+-->
+
+## Week of March 3, 2024
+
+### Device enrollment
+
+#### Role-based access control changes to enrollment settings for Windows Hello for Business<!-- 25661866  -->  
+
+We've updated Role-based access control (RBAC) in the enrollment area for Windows Hello for Business. Enrollment settings related to Windows Hello for Business are read-only for all roles except the Intune Service Administrator. The Intune Service Administrator can create and edit Windows Hello for Business enrollment settings.
+
+For more information, see [Role-based access control](../protect/windows-hello.md#role-based-access-control) in the *Windows Hello at device enrollment* article.
+
+### Device security
+
+#### HTML formatting supported in noncompliance email notifications <!-- 24197255  -->
+
+Intune now supports HTML formatting in noncompliance email notifications for all platforms. You can use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
+
+For more information, see [Create a notification message template](../protect/actions-for-noncompliance.md#create-a-notification-message-template).
 
 ## Week of February 26, 2024  
+
+### Microsoft Intune Suite  
+
+#### New Microsoft Cloud PKI service<!-- 17272901 -->
+
+Use the Microsoft Cloud PKI service to simplify and automate certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../fundamentals/intune-add-ons.md). The cloud-based services provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication. For more information, see [Overview of Microsoft Cloud PKI](../protect/microsoft-cloud-pki-overview.md).
+
+Applies to:
+
+- Windows
+- Android
+- iOS/iPadOS
+- macOS
 
 ### Intune apps
 
 #### Newly available protected app for Intune<!-- 26607121 -->
+
 The following protected app is now available for Microsoft Intune:
+
 - Cinebody by Super 6 LLC
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-### Microsoft Intune Suite  
-
-#### New Microsoft Cloud PKI service<!-- 17272901 -->  
-Use the Microsoft Cloud PKI service to simplify and automate certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../fundamentals/intune-add-ons.md). The cloud-based services provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication. For more information, see [Overview of Microsoft Cloud PKI](../protect/microsoft-cloud-pki-overview.md).  
-
-Applies to:  
-- Windows  
-- Android  
-- iOS/iPadOS  
-- macOS  
 
 ## Week of February 19, 2024 (Service release 2402)
 

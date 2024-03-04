@@ -21,6 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Win32
 ---
 
 # Enable Win32 apps on S mode devices
