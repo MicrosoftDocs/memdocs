@@ -85,7 +85,7 @@ For more information, see [Role-based access control](../protect/windows-hello.m
 
 #### HTML formatting supported in noncompliance email notifications <!-- 24197255  -->
 
-Intune now supports HTML formatting in noncompliance email notifications for all platforms. You can use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages. 
+Intune now supports HTML formatting in noncompliance email notifications for all platforms. You can use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
 
 For more information, see [Create a notification message template](../protect/actions-for-noncompliance.md#create-a-notification-message-template#create-a-notification-message-template).
 
