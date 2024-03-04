@@ -220,6 +220,12 @@ End-users will be able to view the BitLocker Recovery Key for enrolled Windows d
 
 Access to BitLocker recovery keys by end-users can be prevented when not allowed within your organization by using the Microsoft Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**. For more information about how to prevent access to BitLocker recovery keys, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
 
+### Windows quality updates will support expediting non-security updates<!-- 24191406  -->
+
+Windows quality updates will support expediting non-security updates for those times when a quality fix needs to be deployed faster than the normal quality update settings.
+
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md).
+
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->
 
 In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
