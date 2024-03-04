@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Device compliance and enrollment messages for iOS devices | Microsoft Intune
+title: Compliance and setting requirements for iOS/iPadOS devices | Microsoft Intune
 description: Learn more about Intune Company Portal messages and settings requirements for iOS/iPadOS devices.       
 keywords:
 author: lenewsad
@@ -30,7 +30,7 @@ ms.collection:
 - tier3
 ---
 
-# Compliance and setting requirements for iOS/iPadoS devices          
+# Compliance and setting requirements for iOS/iPadOS      
 
 **Applies to iOS/iPadOS**  
 
@@ -53,12 +53,12 @@ If your device isn't listed:
 3. Enter the last four characters of your device's serial number. For more information, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858) on Apple Support.  
 
 ## Update operating system version  
-Keeping your device up-to-date lets you access the newest features, and it also ensures that your device has the most secure version of its operating system. While using the device for work or school, we recommend keeping both personal and corporate devices up-to-date with the newest versions. Before updating your device, back up all of the information on it. Keeping a backup can help you recover your data if something should interrupt any updates, or lets you transfer your information to a replacement device.  
+Keeping your device up-to-date lets you access the newest features, and it also ensures that your device has the most secure version of its operating system (OS). While using the device for work or school, we recommend keeping both personal and corporate devices up-to-date with the newest versions. Before updating your device, back up all of the information on it. Keeping a backup can help you recover your data if something should interrupt any updates, or lets you transfer your information to a replacement device.  
 
 To check your device for available software updates, go to **Settings**  and tap **General** > **Software Update**.  
 
 ## Operating system isn't supported  
-The operating system (OS) version that's on your device isn't supported. It's possible that the latest version of iOS/iPadOS doesn't work with your organization's apps, tools, and other internal infrastructure. To resolve this issue, contact your IT support person and find out what the OS requirements are for your device.   
+The OS version that's on your device isn't supported. It's possible that the latest version of iOS/iPadOS doesn't work with your organization's apps, tools, and other internal infrastructure. To resolve this issue, contact your IT support person and find out what the OS requirements are for your device.   
 
 ## Reconnect compromised device  
 A *jailbroken* device is a device that has been altered to enable unrestricted access to certain critical files. Jailbroken devices can compromise security and cause a threat to work or school data. If Company Portal detects a jailbroken device, it revokes access to work or school resources. You likely need to reset your device to factory settings to return your device to its original configuration. We recommend that you contact your IT support person for help and other possible options.   
