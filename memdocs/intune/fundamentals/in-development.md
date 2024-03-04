@@ -186,11 +186,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### RBAC changes coming to enrollment settings for Windows Hello for Business<!-- 25661866   -->
-
-We're updating RBAC in the enrollment area for Windows Hello for Business. Enrollment settings related to Windows Hello for Business will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to edit enrollment settings.
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
@@ -264,10 +260,6 @@ Applies to the following through cloud and tenant attach endpoints:
 
 - Windows 10
 - Windows 11
-
-### HTML formatting supported in noncompliance email notifications <!-- 24197255   -->
-
-HTML formatting will be supported in noncompliance email notifications for all platforms. You'll be able to use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
