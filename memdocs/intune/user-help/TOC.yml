@@ -130,7 +130,7 @@ items:
       href: effects-of-device-reset-company-portal-ios.md
     - name: Turn off Microsoft usage data collection
       href: turn-off-microsoft-usage-data-collection-ios.md
-    - name: Remove device from Intune
+    - name: Remove a device  
       href: unenroll-your-device-from-intune-ios.md
     - name: Update iOS device settings         
       href: how-do-i-find-the-serial-number-on-my-device-ios.md  

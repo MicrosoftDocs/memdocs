@@ -32,7 +32,8 @@ ms.collection:
 
 # Company Portal device setting requirements for Android  
 
-This article describes the macOS device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. These requirements help keep your Mac secure while you're using it for work or school purposes.   
+This article describes the Android device setting requirements that Intune Company Portal can enforce on behalf of your workplace or school. Requirements are determined by your organization, and help keep your device secure while you're using it for work or school purposes. You only need to update settings flagged by Company Portal. 
+
 
 ## Device limit reached  
 To prevent unauthorized access to internal data, your school or workplace might limit the number of devices you can register. If you reach the device limit, we recommend removing one of your devices or contacting your support person to increase the device limit. Your options:  

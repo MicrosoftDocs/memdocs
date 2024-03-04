@@ -33,7 +33,7 @@ ms.collection:
 
 # Turn on verbose logging in Microsoft Intune app  
 
-**Applies to Android**  
+**Applies to Microsoft Intune app for Android**  
 
 Logging enables the Microsoft Intune app to record actions that take place in the app. If you ever experience a problem in the app, and then report it, your support team can review these logs for more insight into the problem. *Verbose* logging, which is the highest level of logging, is most helpful for troubleshooting because it provides the most details about what happened in the app. 
 

@@ -32,7 +32,7 @@ ms.collection:
 
 # Company Portal device setting requirements for Macs              
 
-This article describes the macOS device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. These requirements help keep your Mac secure while you're using it for work or school purposes.   
+This article describes the macOS device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. Requirements are determined by your organization, and help keep your device secure while you're using it for work or school purposes. You only need to update settings flagged by Company Portal. 
 
 ## Device limit reached    
 
