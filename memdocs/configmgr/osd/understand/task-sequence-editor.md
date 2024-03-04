@@ -152,24 +152,24 @@ The following types of conditions are available:
 
 - **If statement**: Use an *if* statement to group conditions. You can evaluate **All conditions**, **Any condition**, or **None**.
 
-- **Task sequence variable**. Evaluate the current value of any built-in, action, custom, or read-only [task sequence variable](task-sequence-variables.md) in the task sequence environment. For more information, see [Step conditions](using-task-sequence-variables.md#bkmk_access-condition).
+- **Task Sequence Variable**. Evaluate the current value of any built-in, action, custom, or read-only [task sequence variable](task-sequence-variables.md) in the task sequence environment. For more information, see [Step conditions](using-task-sequence-variables.md#bkmk_access-condition).
 
     > [!NOTE]
     > You can use an array variable in this condition, but you have to specify the specific array member. For example, `OSDAdapter0EnableDHCP` specifies whether the *first* network adapter enables DHCP. For more information, see [Array variables](using-task-sequence-variables.md#bkmk_array).
 
-- **OS version**: Evaluate the OS version of the device where the task sequence runs. This list is the general OS versions used throughout Configuration Manager. To evaluate a more detailed OS version, such as a specific version of Windows 10, use the **Query WMI** condition.
+- **Operating System Version**: Evaluate the OS version of the device where the task sequence runs. This list is the general OS versions used throughout Configuration Manager. To evaluate a more detailed OS version, such as a specific version of Windows 10, use the **Query WMI** condition.
 
-- **OS language**: Evaluate the OS language of the device where the task sequence runs. This list includes the 257 languages that Windows supports.
+- **Operating System Language**: Evaluate the OS language of the device where the task sequence runs. This list includes the 257 languages that Windows supports.
 
-- **File properties**: Evaluate the version or timestamp of any file on the device where the task sequence runs.
+- **File Properties**: Evaluate the existence, version, or timestamp of any file on the device where the task sequence runs.
 
-- **Folder properties**: Evaluate the timestamp of any folder on the device where the task sequence runs.
+- **Folder Properties**: Evaluate the existence or timestamp of any folder on the device where the task sequence runs.
 
-- **Registry setting**: Evaluate any registry key value of the device where the task sequence runs.
+- **Registry Setting**: Evaluate the existence or value of any registry key on the device where the task sequence runs.
 
 - **Query WMI**: Specify the namespace and query to evaluate on the device where the task sequence runs.
 
-- **Installed software**: Specify a Windows Installer file to load product information to match on the device where the task sequence runs. You can match against a specific product or any version of the product.
+- **Installed Software**: Specify a Windows Installer (MSI) file to load product information to match on the device where the task sequence runs. You can match against a specific product or any version of the product.
 
 ### Cmdlets for conditions
 
