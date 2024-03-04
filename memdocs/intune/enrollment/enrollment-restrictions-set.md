@@ -124,7 +124,7 @@ By default, Intune classifies iOS/iPadOS devices as personally owned. To be clas
 #### Blocking personal Macs  
 By default, Intune classifies macOS devices as personally owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:
 - [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled via Apple Automated Device Enrollment.  
+- Enrolled via Apple Automated Device Enrollment (ADE).  
 
 #### Blocking personal Windows devices  
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
@@ -153,7 +153,7 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Limitations  
 
-* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), or Azure Virtual desktop, Intune enforces the default policy.  
+* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), Azure Virtual desktop, or userless Apple Automated device enrollment (ADE without user device affinity), Intune enforces the default policy.  
 
 * Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
 
