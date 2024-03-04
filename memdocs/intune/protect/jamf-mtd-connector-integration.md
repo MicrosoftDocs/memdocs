@@ -105,7 +105,7 @@ Intune-based deployments are facilitated using Jamf Activation Profiles defined 
 
 After creating an Activation Profile in Jamf, you assign it to users and devices in Intune. While an Activation Profile is universal across device platforms and management strategies, the following steps define how to configure Intune based upon these differences.
 
-The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links).
+The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles](https://learn.jamf.com/en-US/bundle/jamf-security-documentation/page/Activation_Profiles.html) in the Jamf Security Documentation.
 
 > [!NOTE]
 >
@@ -158,7 +158,7 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 
 1. In the Jamf Security Cloud portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications use during enrollment in Devices > Activations.
 
-2. Select the **Deployment Strategies tab then Unmanaged Devices**, and then scroll to the **Azure Device Provisioning** section.
+2. Select the **Identity-based provisioning** tab, and then scroll to the Microsoft section.
 
 3. Enter your **Microsoft Entra tenant ID** into the appropriate text field. If you don't have your tenant ID on hand, select the **Get my Tenant ID** link to open Microsoft Entra ID in a new tab where you can easily copy this value to your clipboard.
 
