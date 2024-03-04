@@ -2307,7 +2307,7 @@
     },
     {
       "source_path": "memdocs/intune/protect/wandera-mtd-connector-integration.md",
-      "redirect_url": "/mem/buintune/protect/jamf-mtd-connector-integration",
+      "redirect_url": "/mem/intune/protect/jamf-mtd-connector-integration",
       "redirect_document_id": false
     }
   ]
