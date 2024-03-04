@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/01/2024
+ms.date: 03/04/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -42,10 +42,10 @@ ms.collection:
 
 There are two ways to limit the number of enrolled devices accessing your resources:  
 
-* Microsoft Intune device limit restrictions: Limits the number of devices that can enroll in Microsoft Intune. 
-* Microsoft Entra registration limit: Limits the number of devices that can join or register in Microsoft Entra.  
+* Microsoft Intune device limit restrictions   
+* Microsoft Entra registration limit   
 
- This article provides an overview of both options, and describes the device conditions and provisioning scenarios in which they're applicable.  
+ This article provides an overview of both options, and describes the device conditions and provisioning scenarios that support them.  
 
 ## Intune device limit restrictions
 
@@ -53,7 +53,7 @@ Use Intune device limit restrictions to limit the number of devices a user can e
 
 ## Microsoft Entra registration restriction  
 
-Use the Microsoft Entra device limit restriction to limit the number of devices that can join or register with Microsoft Entra. To set the **Maximum number of devices per user**, go to the Azure portal > **Microsoft Entra ID** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal)
+Use the Microsoft Entra device limit restriction to limit the number of devices that can join or register with Microsoft Entra. To set the **Maximum number of devices per user**, go to the Azure portal > **Microsoft Entra ID** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal).  
 
 ## Settings applied based on user affinity  
 
@@ -104,24 +104,24 @@ Intune device limit restrictions don't apply to devices enrolled via:
 - Automatic enrollment + bulk device enrollment    
 - Windows Autopilot  
 
-Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices. Instead, you can apply the Microsoft Entra limitation. The **Maximum number of devices per user** setting in Microsoft Entra ID generally applies to devices that are Microsoft Entra joined or Microsoft Entra registered, with some exceptions. It doesn't apply to:   
+Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices. Instead, you can apply the Microsoft Entra limitation. The **Maximum number of devices per user** setting in Microsoft Entra ID applies to devices that are Microsoft Entra joined or Microsoft Entra registered, with some exceptions. It doesn't apply to:   
 
 - Microsoft Entra hybrid joined devices  
 - Devices enrolled by automatic enrollment + bulk device enrollment  
 
 ### Windows 10/11 example 1
 
-- The Microsoft Entra **Maximum number of devices per user** setting is set to 5.
-- The Intune **Device limit** setting is set to 3.
-- The devices are Microsoft Entra hybrid joined and enrolled automatically (GPO configured).
+- The Microsoft Entra **Maximum number of devices per user** setting is set to 5.  
+- The Intune **Device limit** setting is set to 3.  
+- The devices are Microsoft Entra hybrid joined and enrolled automatically (GPO configured).  
 
-**Outcome:** Because the enrollment is provisioned by GPO, the Microsoft Entra device limit doesn't apply. The Intune device limit restriction also doesn't apply.
+**Outcome:** Because the enrollment is provisioned by GPO, the Microsoft Entra device limit doesn't apply. The Intune device limit restriction also doesn't apply.  
 
 ### Windows 10/11 example 2  
 
 - The Microsoft Entra **Maximum number of devices per user** setting is set to 5.
 - The Intune **Device limit** setting is set to 2.
-- The devices are local domain joined, and enrolled in the Settings app. 
+- The devices are local domain joined, and enrolled in the Settings app.  
 
 **Outcome:** You can only enroll two devices before they're blocked. You can register up to five devices.  
 
