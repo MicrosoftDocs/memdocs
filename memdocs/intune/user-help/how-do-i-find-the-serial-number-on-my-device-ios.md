@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Compliance and setting requirements for iOS/iPadOS devices | Microsoft Intune
-description: Learn more about Intune Company Portal messages and settings requirements for iOS/iPadOS devices.       
+title: Company Portal device setting requirements for iOS/iPadOS | Microsoft Intune
+description: Learn more about Intune Company Portal device setting requirements for iOS/iPadOS devices.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -30,9 +30,7 @@ ms.collection:
 - tier3
 ---
 
-# Compliance and setting requirements for iOS/iPadOS      
-
-**Applies to iOS/iPadOS**  
+# Company Portal device setting requirements iOS/iPadOS      
 
 This article describes the iOS/iPadOS device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. These requirements help keep your device secure while you're using it for work or school purposes.    
 

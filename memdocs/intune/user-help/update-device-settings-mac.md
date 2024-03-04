@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Device compliance and enrollment messages for Macs | Microsoft Intune
-description: Learn more about Intune Company Portal messages and settings requirements for Macs.     
+title: Company Portal device setting requirements for Mac | Microsoft Intune
+description: Learn more about Intune Company Portal device setting requirements for Macs.     
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -30,9 +30,7 @@ ms.collection:
 - tier3
 ---
 
-# Compliance and setting requirements for Macs              
-
-**Applies to macOS**    
+# Company Portal device setting requirements for Macs              
 
 This article describes the macOS device setting requirements that the Intune Company Portal can enforce on behalf of your workplace or school. These requirements help keep your Mac secure while you're using it for work or school purposes.   
 
