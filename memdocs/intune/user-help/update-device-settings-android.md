@@ -32,13 +32,13 @@ ms.collection:
 
 # Company Portal device setting requirements for Android  
 
-This article describes the Android device setting requirements that Intune Company Portal can enforce on behalf of your workplace or school. Requirements are determined by your organization, and help keep your device secure while you're using it for work or school purposes. You only need to update settings flagged by Company Portal. 
-
+This article describes the Android device setting requirements that Intune Company Portal can enforce on behalf of your workplace or school. Requirements are determined by your organization, and help keep your device secure while you're using it for work or school purposes. You only need to update settings flagged by Company Portal.  
 
 ## Device limit reached  
 To prevent unauthorized access to internal data, your school or workplace might limit the number of devices you can register. If you reach the device limit, we recommend removing one of your devices or contacting your support person to increase the device limit. Your options:  
 
-* Remove a device in Company Portal.
+* Remove a device in Company Portal.  
+
 * Contact your IT support person and ask if they can increase the number of devices you're allowed to register.  
 
 ## Install Android security patch 
@@ -51,9 +51,13 @@ Tap the Company Portal notification to install your organization's preferred VPN
 If your device isn't enrolled in Intune, and it's missing a required certificate, you can't sign in to the Company Portal app. To resolve this issue, enable browser access in the Company Portal app.    
 
 1. In the Company Portal app, go to the right-hand corner and select the menu.  
+
 2. Select **Settings**.  
+
 3. Next to **Enable Browser Access**, select **Enable**.  
+
 4. On the Device Administrator screen, select **ACTIVATE**.  
+
 
 ## Operating system isn't supported  
 The operating system (OS) version on your device isn't supported. It's possible the latest version doesn't work with your organization's apps, tools, and other internal infrastructure. To resolve this issue, contact your IT support person and find out what the OS requirements are for your device.   
@@ -79,9 +83,10 @@ _USB debugging_ is often used by developers or IT support people to connect and 
 Some apps contain harmful behavior and can compromise the data on your device. To prevent these types of apps from harming your device, we recommend that you:  
 
 * Only download apps from verified sources, such as the Google Play Store.  
+
 * Turn on Google Play Protect. Play Protect checks the apps on your device and alerts you to security threats. For how-to steps, see [Use Google Play Protect to help keep your apps safe & your data private](https://support.google.com/googleplay/answer/2812853) (opens Google Play Help).       
 
 ## Update operating system version  
 Keeping your device up-to-date lets you access the newest features, and it also ensures that your device has the most secure version of its operating system. While using the device for work or school, we recommend keeping both personal and corporate devices up-to-date with the newest versions. Before updating your device, back up all of the information on it. Keeping a backup can help you recover your data if something should interrupt any updates, or lets you transfer your information to a replacement device. 
 
-To check your device for available software updates, open the **Settings** app and go to **About phone**. Updates**. In the Settings section, tap **Check for Updates**.  
+For information about how to install the latest software updates, see [Check & update your Android version](https://support.google.com/android/answer/7680439) (opens Android Help) or contact your device manufacturer.  
