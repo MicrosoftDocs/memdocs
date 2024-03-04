@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/24/2023
+ms.date: 02/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -308,6 +308,6 @@ If a device receives two rules targeting the same application, both rules are co
 ## Next steps
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

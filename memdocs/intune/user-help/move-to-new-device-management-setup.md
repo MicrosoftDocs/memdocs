@@ -3,30 +3,28 @@
 
 title: Move to new device management setup | Microsoft Docs
 titlesuffix: Microsoft Intune
-description: Move your work device to the new device management setup.   
+description: Move your work device to the new device management setup.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: e0c5993b-3fa5-411e-bae0-93fb66c49bea
 searchScope:
  - User help
 
 # optional metadata
 
-ROBOTS:  
+ROBOTS:
 #audience:
 
 ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser; seodec18
+ms.custom: intune-enduser
 ms.collection:
 - tier2
 ---

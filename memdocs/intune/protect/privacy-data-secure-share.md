@@ -30,6 +30,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - privacy
+- essentials-privacy
 ---
 
 # Data security and sharing in Intune

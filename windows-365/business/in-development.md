@@ -2,17 +2,14 @@
 # required metadata
 
 title: In development - Windows 365 Business
-titleSuffix: 
 description: Windows 365 Business features in development
 keywords:
-author: ErikjeMS 
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/03/2023
+ms.date: 2/14/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice: 
-ms.assetid: 
 
 # optional metadata
 
@@ -22,7 +19,6 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -53,9 +49,12 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 -->
 
-<!--
-## End user experience
--->
+<!-- ***********************************************-->
+## Device management
+
+### Upgrade Cloud PCs to more storage, RAM, and CPU<!--48540819-->
+
+By using the upcoming Resize action, you'll be able to upgrade Cloud PCs to more storage, RAM, and CPU.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot

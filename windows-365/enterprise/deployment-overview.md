@@ -28,6 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - M365-identity-device-management
 - tier1
+- essentials-get-started
 ---
 
 # Overview of Windows 365 deployment

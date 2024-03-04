@@ -2,18 +2,16 @@
 # required metadata
 
 title: Add or change device password on enrolled work device - Microsoft Intune | Microsoft Docs
-description: This article describes the Company Portal device password requirement, with resources for Windows, Android, macOS, and iOS/iPadOS, and next steps.   
+description: This article describes the Company Portal device password requirement, with resources for Windows, Android, macOS, and iOS/iPadOS, and next steps.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
  - User help
@@ -21,13 +19,13 @@ searchScope:
 
 # optional metadata
 
-ROBOTS:  
+ROBOTS:
 #audience:
 
 ms.reviewer: priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser, contperf-fy21q1
+ms.custom: intune-enduser
 ms.collection:
 - tier3
 ---

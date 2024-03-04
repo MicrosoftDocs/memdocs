@@ -11,7 +11,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 585a2f17-106b-4f02-adf7-05f08a92dbc1
 # optional metadata
 
@@ -21,7 +20,7 @@ ms.assetid: 585a2f17-106b-4f02-adf7-05f08a92dbc1
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

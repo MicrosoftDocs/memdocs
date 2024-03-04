@@ -1,15 +1,15 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 12/08/2023
-ms.collection: 
+ms.date: 02/23/2024
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
@@ -19,7 +19,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Windows Autopilot for pre-provisioned deployment (Public preview)
+# Windows Autopilot for pre-provisioned deployment
 
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This functionality lets end users get their devices business-ready by using a simple process.
 
@@ -40,7 +40,7 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - A currently supported version of Windows.
 - Windows Pro, Enterprise, or Education editions.
 - An Intune subscription.
-- Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
+- Physical devices that support Trusted Platform Module (TPM) 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
 - Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before you're able to connect and start provisioning.
 - An enrollment status page (ESP) profile must be targeted to the device.
 
@@ -107,7 +107,7 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin targets all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first OOBE screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
+- From the first out-of-box (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.
@@ -158,7 +158,7 @@ If the pre-provisioning process completed successfully and the device was reseal
 
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
-The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This behavior allows the ESP to install other policies that are assigned to the device after the device has completed the technician phase.  
+The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This behavior allows the ESP to install other policies that are assigned to the device after the device has completed the technician phase.
 
 > [!NOTE]
 >

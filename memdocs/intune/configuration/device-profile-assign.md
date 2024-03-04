@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 
 # optional metadata
@@ -24,7 +23,7 @@ ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, contperf-fy21q1
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

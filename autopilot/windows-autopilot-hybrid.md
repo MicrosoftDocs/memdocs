@@ -8,8 +8,8 @@ manager: aaroncz
 ms.reviewer: jubaptis
 ms.date: 12/13/2023
 ms.topic: how-to
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 ms.collection: 
   - M365-identity-device-management
@@ -353,7 +353,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 ## Uninstall the ODJ Connector
 
-The OSD connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
+The ODJ connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
 
 To uninstall the ODJ Connector from the computer, follow these steps:
 

@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- FocusArea_Apps_Add
 ---
 
 # Step 8: Add and assign an app

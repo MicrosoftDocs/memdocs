@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/08/2023
+ms.date: 02/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,6 +67,7 @@ Endpoint Privilege Management has the following requirements:
 
 Endpoint Privilege Management supports the following operating systems:
 
+- Windows 11, version 23H2 (22631.2506 or later) with [KB5031455](https://support.microsoft.com/topic/october-31-2023-kb5031455-os-builds-22621-2506-and-22631-2506-preview-6513c5ec-c5a2-4aaf-97f5-44c13d29e0d4)
 - Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
 - Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)
 - Windows 10, version 22H2 (19045.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
