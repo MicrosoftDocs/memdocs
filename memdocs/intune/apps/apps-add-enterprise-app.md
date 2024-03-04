@@ -21,6 +21,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_EAC
 ---
 
 # Add an Enterprise App Catalog app to Microsoft Intune

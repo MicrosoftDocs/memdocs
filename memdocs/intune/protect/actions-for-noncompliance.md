@@ -210,7 +210,7 @@ Add variables to the message to create a personalized email with dynamic content
 
       
    >[!IMPORTANT]
-   >  Be sure to only use Intune-supported HTML tags and attributes in the message body. Intune won't send a message that has other types of tags, elements, or styling, including: 
+   >  Be sure to only use Intune-supported HTML tags and attributes in the message body. Intune will send messages that contain other types of tags, elements, or styling as plaintext instead of HTML format. This includes messages that contain: 
    > - CSS  
    > - Tags and attributes not listed in this article 
     

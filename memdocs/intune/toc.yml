@@ -302,6 +302,36 @@ items:
             - name: Step 7. Verify app configuration
               href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
 
+          - name: Secure and protect apps using Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
+            - name: Understand app data protection
+              href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app protection access requirements
+              href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+            - name: Understand app protection conditional launch
+              href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+            - name: Understand app protection health checks
+              href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+            - name: Use the app protection framework
+              items:
+              - name: App protection framework overview
+                href: /microsoft-365/solutions/apps-protect-framework?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 1. Apply basic data protection
+                href: /microsoft-365/solutions/apps-protect-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 2. Apply enhanced data protection
+                href: /microsoft-365/solutions/apps-protect-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 3. Apply high data protection
+                href: /microsoft-365/solutions/apps-protect-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 4. Understand app protection delivery
+                href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 5. Verify and monitor app protection
+                href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+              - name: Step 6. Use app protection actions
+                href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+
         - name: Concepts
           items:
           - name: App lifecycle
@@ -738,6 +768,11 @@ items:
               items:
               - name: Check Point Harmony and Intune integration
                 href: ./protect/checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Set up Jamf
+              href: ./protect/jamf-mtd-connector.md
+              items:
+              - name: Jamf and Intune integration
+                href: ./protect/jamf-mtd-connector-integration.md
             - name: Set up Lookout
               href: ./protect/lookout-mobile-threat-defense-connector.md
               items:
@@ -773,11 +808,6 @@ items:
               items:
               - name: Trend Micro Mobile Security as a Service and Intune integration
                 href: ./protect/trend-micro-mtd-connector-integration.md 
-            - name: Set up Wandera
-              href: ./protect/wandera-mtd-connector.md
-              items:
-              - name: Wandera and Intune integration
-                href: ./protect/wandera-mtd-connector-integration.md
             - name: Set up Zimperium
               href: ./protect/zimperium-mobile-threat-defense-connector.md
               items:

@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Web
 ---
 
 # Add web apps to Microsoft Intune
