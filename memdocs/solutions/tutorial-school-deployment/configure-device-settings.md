@@ -47,13 +47,19 @@ With Express Configuration, you can get Intune for Education up and running in j
 
 # [Intune](#tab/intune)
 
+Intro, Windows, Intune
+
 ::: zone-end
 
 ::: zone pivot="ios"
 
 # [Intune For Education](#tab/intune-for-education)
 
+Intro, iOS, I4E
+
 # [Intune](#tab/intune)
+
+Intro, iOS, Intune
 
 ::: zone-end
 
@@ -78,13 +84,18 @@ Settings that are commonly configured for student devices include:
 
 For more information, see [Windows device settings in Intune for Education][INT-3].
 
+# [Intune](#tab/intune)
+    Intro, iOS, Intune
+
 ::: zone-end
 
 ::: zone pivot="ios"
 
 # [Intune For Education](#tab/intune-for-education)
+    Groups, iOS, I4E
 
 # [Intune](#tab/intune)
+    Groups, iOS, Intune
 
 ::: zone-end
 
@@ -116,7 +127,11 @@ For more information, see [Updates and upgrade][INT-6].
 
 # [Intune For Education](#tab/intune-for-education)
 
+Updates, ios, I4E
+
 # [Intune](#tab/intune)
+
+Updates, ios, Intune
 
 ::: zone-end
 
@@ -152,13 +167,19 @@ For more information, see [Security][INT-4].
 
 # [Intune](#tab/intune)
 
+    Security, Windows, Intune
+
 ::: zone-end
 
 ::: zone pivot="ios"
 
 # [Intune For Education](#tab/intune-for-education)
 
+Security, ios, I4E
+
 # [Intune](#tab/intune)
+
+Security, ios, Intune
 
 ::: zone-end
 
