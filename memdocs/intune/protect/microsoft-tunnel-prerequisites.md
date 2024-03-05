@@ -110,7 +110,9 @@ Set up a Linux based virtual machine or a physical server on which to install th
 
     > [!NOTE]
     >
-    > **Rootless Podman**: Microsoft Tunnel supports use of a rootless Podman container. Use of rootless Podman requires *additional prerequisites* to those detailed in this article, and use of a modified command line for the installation script. For information about the additional prerequisites and installation command line, see [Use a rootless Podman container](../protect/microsoft-tunnel-configure.md#use-a-rootless-podman-container) in the *Configure Microsoft Tunnel for Intune* article.
+    > **Rootless Podman**: Microsoft Tunnel supports use of a rootless Podman container.
+    >
+    > Use of rootless Podman requires *additional prerequisites* to those detailed in this article, and the use of a modified command line when you start the Tunnel installation script. For information about the additional prerequisites and installation command line, see [Use a rootless Podman container](../protect/microsoft-tunnel-configure.md#use-a-rootless-podman-container) in the *Configure Microsoft Tunnel for Intune* article.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. During installation of the Tunnel Gateway, you add to the server the TLS certificate and full trusted certificate chain.
 
