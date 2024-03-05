@@ -263,6 +263,12 @@ During configuration of the app configuration profile for an app that will use T
 
 The following are known issues or limitations for MAM Tunnel for Android.
 
+### Tunnel for Mobile Application Management does not support Microsoft Defender in Personal Profile mode
+
+ For information about Microsoft Defender in Personal Profile Mode, see [Microsoft Defender in Personal Profile on Android Enterprise in BYOD mode](/microsoft-365/security/defender-endpoint/android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
+
+**Workaround**: None.
+
 ### MAM Tunnel not supported when using the MDM Tunnel
 
 You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
