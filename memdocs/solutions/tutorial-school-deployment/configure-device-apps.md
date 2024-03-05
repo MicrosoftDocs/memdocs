@@ -26,9 +26,9 @@ Applications can be assigned to groups:
 
 ::: zone pivot="windows"
 
-# [Intune For Education](#tab/intune-for-education)
-
 ## Add apps
+
+# [Intune For Education](#tab/intune-for-education)
 
 Intune for Education supports the deployment of two types of Windows applications: **web apps** and **desktop apps**.
 
@@ -49,16 +49,6 @@ To create web applications in Intune for Education:
 1. Select **Save**
 
 For more information, see [Add web apps][INT-2].
-
-## Assign apps to groups
-
-To assign applications to a group of users or devices:
-
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
-1. Select **Groups** > Pick a group to manage
-1. Select **Apps**
-1. Select either **Web apps** or **Windows apps**
-1. Select the apps you want to assign to the group > Save
 
 # [Intune](#tab/intune)
 
@@ -86,6 +76,20 @@ To create web applications in Intune:
 1. Select **Save**
 
 For more information, see [Add web apps][INT-2].
+
+## Assign apps to groups
+
+# [Intune For Education](#tab/intune-for-education)
+
+To assign applications to a group of users or devices:
+
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Select **Groups** > Pick a group to manage
+1. Select **Apps**
+1. Select either **Web apps** or **Windows apps**
+1. Select the apps you want to assign to the group > Save
+
+# [Intune](#tab/intune)
 
 ## Assign apps to groups
 
