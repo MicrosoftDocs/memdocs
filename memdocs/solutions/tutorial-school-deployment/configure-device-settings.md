@@ -18,6 +18,16 @@ Settings can be assigned to groups:
 - If you target settings to a **group of users**, those settings will apply, regardless of what managed devices the targeted users sign in to
 - If you target settings to a **group of devices**, those settings will apply regardless of who is using the devices
 
+> [!div class="checklist"]
+>In this section you will:
+>
+> - Configure settings with Express Configuration
+> - Configure group settings
+> - Create Windows Update policies
+> - Configure security policies
+
+## Get started with settings
+
 ::: zone pivot="windows"
 
 # [Intune For Education](#tab/intune-for-education)
@@ -30,23 +40,28 @@ There are two ways to manage settings in Intune for Education:
 > [!NOTE]
 > Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. It is recommended to use Express Configuration to initially set up your Windows devices.
 
-
-> [!div class="checklist"]
->In this section you will:
->
-> - Configure settings with Express Configuration
-> - Configure group settings
-> - Create Windows Update policies
-> - Configure security policies
-
-## Configure settings with Express Configuration
-
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
 > [!TIP]
 > To learn more, and practice step-by-step Express Configuration in Intune for Education, try <a href="https://www.microsoft.com/en-us/education/interactive-demos/deploy-apps-and-policies" target="_blank"><u>this interactive demo</u></a>.
 
+# [Intune](#tab/intune)
+
+::: zone-end
+
+::: zone pivot="ios"
+
+# [Intune For Education](#tab/intune-for-education)
+
+# [Intune](#tab/intune)
+
+::: zone-end
+
 ## Configure group settings
+
+::: zone pivot="windows"
+
+# [Intune For Education](#tab/intune-for-education)
 
 Groups are used to manage users and devices with similar management needs, allowing you to apply changes to many devices or users at once. To review the available group settings:
 
@@ -63,7 +78,21 @@ Settings that are commonly configured for student devices include:
 
 For more information, see [Windows device settings in Intune for Education][INT-3].
 
-## Create Windows Update policies
+::: zone-end
+
+::: zone pivot="ios"
+
+# [Intune For Education](#tab/intune-for-education)
+
+# [Intune](#tab/intune)
+
+::: zone-end
+
+## Create Update policies
+
+::: zone pivot="windows"
+
+# [Intune For Education](#tab/intune-for-education)
 
 It is important to keep Windows devices up to date with the latest security updates. You can create Windows Update policies using Intune for Education.
 
@@ -81,7 +110,21 @@ For more information, see [Updates and upgrade][INT-6].
 > - [<u>What is Windows Update for Business?</u>][WIN-1]
 > - [<u>Manage Windows software updates in Intune</u>][MEM-1]
 
+::: zone-end
+
+::: zone pivot="ios"
+
+# [Intune For Education](#tab/intune-for-education)
+
+# [Intune](#tab/intune)
+
+::: zone-end
+
 ## Configure security policies
+
+::: zone pivot="windows"
+
+# [Intune For Education](#tab/intune-for-education)
 
 It is critical to ensure that the devices you manage are secured using the different security technologies available in Windows.
 Intune for Education provides different settings to secure devices.
