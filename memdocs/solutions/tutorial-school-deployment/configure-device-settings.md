@@ -7,9 +7,6 @@ author: scottbreen
 ms.author: scbree
 ms.date: 03/05/2024
 ---
-::: zone pivot="windows"
-
-# [Intune For Education](#tab/intune-for-education)
 
 # Configure and secure devices with Microsoft Intune
 
@@ -20,6 +17,10 @@ Settings can be assigned to groups:
 
 - If you target settings to a **group of users**, those settings will apply, regardless of what managed devices the targeted users sign in to
 - If you target settings to a **group of devices**, those settings will apply regardless of who is using the devices
+
+::: zone pivot="windows"
+
+# [Intune For Education](#tab/intune-for-education)
 
 There are two ways to manage settings in Intune for Education:
 
