@@ -1,8 +1,39 @@
+---
+# required metadata
 
-# Troubleshooting
-Troubleshooting Mobile Application Management (MAM) for Windows can
-involve several steps. Here are some common issues and potential
-solutions:
+title: Troubleshoot securing data with Microsoft Edge for Business
+titleSuffix:
+description: Troubleshoot securing your corporate data in Microsoft Intune with Microsoft Edge for Business.
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 03/04/2024
+ms.topic: overview
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology:
+
+# optional metadata
+
+#audience:
+#ROBOTS: 
+ms.reviewer: samarti
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: 
+ms.collection:
+- tier1
+- highpri
+- highseo
+- FocusArea_Apps_AppManagement
+---
+
+# Troubleshoot securing data with Microsoft Edge for Business
+
+Troubleshooting Mobile Application Management (MAM) for Windows can involve several steps. Here are some common issues and potential solutions:
 
 1. **Ensure that the policy is assigned to the correct user group**: Make sure that the MAM policy is being applied to the intended users.
 
@@ -10,19 +41,14 @@ solutions:
 
 3. **Update Microsoft Edge to the latest version**: If an app is crashing during MAM initialization, make sure the app version and OS Meet the conditions.
 
-If you continue to experience issues, it may be helpful to contact
-**Microsoft Support** for further assistance. Let me know if you
-need help with anything else.
+If you continue to experience issues, it may be helpful to contact **Microsoft Support** for further assistance. Let me know if you need help with anything else.
 
-:::image type="content" alt-text="Sign in with your work account--Microsoft Edge for Business." source="./media/securing_data_edge_for_business63.png" lightbox="./media/securing_data_edge_for_business63.png":::
+:::image type="content" alt-text="Sign in with your work account--Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png":::
 
-The following error means that you selected the incorrect enrollment
-method, you may have left the checkmark or select on No, sign into this
-app only, please redo the enrollment without
-this. Otherwise, you won't be MAM Enable.
+The following error means that you selected the incorrect enrollment method, you may have left the checkmark or select on No, sign into this app only, please redo the enrollment without this. Otherwise, you won't be MAM Enable.
 
 
-:::image type="content" alt-text="Enrollment Window--Microsoft Edge for Business." source="./media/securing_data_edge_for_business64.png" lightbox="./media/securing_data_edge_for_business64.png":::
+:::image type="content" alt-text="Enrollment Window--Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png":::
 
 ## FAQ
 
@@ -35,11 +61,9 @@ with a Microsoft Entra.
 
 MAM for Windows does support Windows Home Edition.
 
-**Will all policies and configurations previously set by IT be applied
-to Edge for Business?** 
+**Will all policies and configurations previously set by IT be applied to Edge for Business?** 
 
-Yes, all policies and configurations currently in place will be
-inherited by Microsoft Edge for Business.
+Yes, all policies and configurations currently in place will be inherited by Microsoft Edge for Business.
 
 **What impact will this cause to my default browser settings?** 
 
@@ -47,19 +71,11 @@ There's no impact on users\' default browser settings. 
 
 **What happens to favorites, passwords, etc.?**  
 
-Passwords, favorites, and data currently associated with the user's work
-profile will be maintained in Microsoft Edge for Business. Passwords, favorites,
-and data aren't shared between the work browser window and the personal
-browser window. 
+Passwords, favorites, and data currently associated with the user's work profile will be maintained in Microsoft Edge for Business. Passwords, favorites, and data aren't shared between the work browser window and the personal browser window. 
 
 **MAM for Windows vs Microsoft Edge management service**
 
-There are key differences between the management options, it's important to highlight that if you're using Microsoft Intune today to
-focus on creating app protection policies for your users and ensure a
-Secure Enterprise Browser configuration is in place. If you aren't
-using Microsoft Intune the Microsoft Edge management service is for you,
-and you are able to configure Microsoft Edge for Business policy and
-configuration for your organization. For more information about Microsoft Edge management service, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecurityWhitepaper).
+There are key differences between the management options, it's important to highlight that if you're using Microsoft Intune today to focus on creating app protection policies for your users and ensure a Secure Enterprise Browser configuration is in place. If you aren't using Microsoft Intune the Microsoft Edge management service is for you, and you are able to configure Microsoft Edge for Business policy and configuration for your organization. For more information about Microsoft Edge management service, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecurityWhitepaper).
 
 ## Conclusion
 

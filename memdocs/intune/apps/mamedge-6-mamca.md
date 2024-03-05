@@ -1,5 +1,37 @@
+---
+# required metadata
 
-# Microsoft Entra Conditional Access for Microsoft Edge for Business
+title: Understand Microsoft Entra Conditional Access with Microsoft Edge for Business
+titleSuffix:
+description: Understand Microsoft Entra Conditional Access with Microsoft Edge for Business.
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 03/04/2024
+ms.topic: overview
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology:
+
+# optional metadata
+
+#audience:
+#ROBOTS: 
+ms.reviewer: samarti
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: 
+ms.collection:
+- tier1
+- highpri
+- highseo
+- FocusArea_Apps_AppManagement
+---
+
+# Microsoft Entra Conditional Access with Microsoft Edge for Business
 
 The modern security perimeter extends beyond an organization's network perimeter to include user and device identity. Organizations now use identity-driven signals as part of their access control decisions. Microsoft Entra Conditional Access brings signals together, to make decisions, and enforce organizational policies. It's Microsoft's Zero
 Trust policy engine that takes signals from various sources into account when enforcing policy decisions.
@@ -14,7 +46,7 @@ These signals include:
 - Application
 - Real-time and calculated risk detection
 
-:::image type="content" alt-text="Conditional Access Policy Decision Making.." source="./media/securing_data_edge_for_businessCA.png" lightbox="./media/securing_data_edge_for_businessCA.png":::
+:::image type="content" alt-text="Conditional Access Policy Decision Making.." source="./media/securing-data-edge-for-business/securing_data_edge_for_businessCA.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_businessCA.png":::
 
 Conditional Access is enforced after first-factor authentication is completed. It isn't intended to be an organization's frontline of defense for scenarios like denial-of-service (DoS) attacks, but it can use signals from these events to determine access.
 
@@ -32,16 +64,16 @@ In this scenario we'll guide you through the process of creating a Conditional A
 
 **This will display the Microsoft Intune Admin Center**
 
-:::image type="content" alt-text="Home - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business52.png" lightbox="./media/securing_data_edge_for_business52.png":::
+:::image type="content" alt-text="Home - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business52.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business52.png":::
 
 2. Select on **Devices**, then **Conditional Access.**
 
-:::image type="content" alt-text="Devices Overview - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business53.png" lightbox="./media/securing_data_edge_for_business53.png":::
+:::image type="content" alt-text="Devices Overview - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business53.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business53.png":::
 
 3. Then select on **Create a new Policy.**
 
 
-:::image type="content" alt-text="Conditional Access Overview - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business54.png" lightbox="./media/securing_data_edge_for_business54.png":::
+:::image type="content" alt-text="Conditional Access Overview - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business54.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business54.png":::
 
 4. Fill in the Information for the Policy, below is an **Example
 of the Policy Details**.
@@ -65,13 +97,13 @@ of the Policy Details**.
 **Session:** N/A
 
 
-:::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business55.png" lightbox="./media/securing_data_edge_for_business55.png":::
+:::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png":::
 
 5. **Enable policy.**
 
 >[!NOTE]Recommend you do Report-only: On, until you confirm it is working as expected. Once confirmed you can turn this off.
 
-:::image type="content" alt-text="Successfully created message - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business56.png" lightbox="./media/securing_data_edge_for_business56.png":::
+:::image type="content" alt-text="Successfully created message - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business56.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business56.png":::
 
 
 
@@ -90,11 +122,11 @@ In the previous steps we show you how to create a conditional access policy to s
 4. On this new policy we'll restrict access from desktop apps to managed devices only, we'll select on Target resources and select apps once they select **Office 365**.
 
 
-:::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business57.png" lightbox="./media/securing_data_edge_for_business57.png":::
+:::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png":::
 
 5**. Select on the **device Platform** and select **Windows.**
 
-:::image type="content" alt-text="Device Platform--Conditional Access policy - Microsoft." source="./media/securing_data_edge_for_business58.png" lightbox="./media/securing_data_edge_for_business58.png":::
+:::image type="content" alt-text="Device Platform--Conditional Access policy - Microsoft." source="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png":::
 
 6. Select on **Client Apps** and select **Mobile apps and desktop
 clients**
@@ -102,25 +134,25 @@ clients**
 > [!NOTE]
 > For legacy authentication clients, maybe create a third CA to just block them. That's up to the customer. For this example, I will only affect Desktop apps. *
 
-:::image type="content" alt-text="Device Platform--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business59.png" lightbox="./media/securing_data_edge_for_business59.png":::
+:::image type="content" alt-text="Device Platform--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png":::
 
 7. Select on **Grant** and select **Require device to be market as compliant.**
 
-:::image type="content" alt-text="Grant--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business60.png" lightbox="./media/securing_data_edge_for_business60.png":::
+:::image type="content" alt-text="Grant--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png":::
 
 > [!NOTE] 
 > Probably to this last control, customers should add also MFA or other options as well.*
 
 8. Select on **Conditions** \> Client **apps** and select **Browser.**
 
-:::image type="content" alt-text="Client apps--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business61.png" lightbox="./media/securing_data_edge_for_business61.png":::
+:::image type="content" alt-text="Client apps--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png":::
 
 > [!NOTE] 
 > To filter out corporate devices is a bit complicated because the CA filters will be applied only to devices that are already registered (at least) in Entra ID. Entra recommends using negative operator if the rule is going to apply potentially to devices not registered yet, Maybe some companies will not need all these conditions and they can use Enrollment profile or other instead.
 
 9. Select on **Conditions** \> select on **Filter for Devices.**
 
-:::image type="content" alt-text="Filter for devices--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business62.png" lightbox="./media/securing_data_edge_for_business62.png":::
+:::image type="content" alt-text="Filter for devices--Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png":::
 
 10. Select **Done** \> select **Create** and complete the conditional access policy creation as you performed on the previous step.
 

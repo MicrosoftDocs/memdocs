@@ -1,5 +1,37 @@
+---
+# required metadata
 
-# App Protection Policy
+title: Use App Protection Policies for Microsoft Edge for Business
+titleSuffix:
+description: Use App Protection Policies for Microsoft Edge for Business.
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 03/04/2024
+ms.topic: overview
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology:
+
+# optional metadata
+
+#audience:
+#ROBOTS: 
+ms.reviewer: samarti
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: 
+ms.collection:
+- tier1
+- highpri
+- highseo
+- FocusArea_Apps_AppManagement
+---
+
+# App Protection Policies for Microsoft Edge for Business
 
 App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it and can be managed by Intune.
 
@@ -36,11 +68,11 @@ Having gained a comprehensive understanding of the app protection policy framewo
 
 2. Select on **App protection policies**.
 
-:::image type="content" alt-text="Apps Overview - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business7.png" lightbox="./media/securing_data_edge_for_business7.png":::
+:::image type="content" alt-text="Apps Overview - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business7.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business7.png":::
 
 3. Select on **Create policy** \> **Windows**.
 
-:::image type="content" alt-text="Apps Overview - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business8.png" lightbox="./media/securing_data_edge_for_business8.png":::
+:::image type="content" alt-text="Apps Overview - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business8.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business8.png":::
 
 4. On the Create policy Fill in the details as shown in
 
@@ -51,27 +83,27 @@ Having gained a comprehensive understanding of the app protection policy framewo
 >
 > **Platform:** Windows
 
-:::image type="content" alt-text="Apps -- App protection policies - Create policy - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business9.png" lightbox="./media/securing_data_edge_for_business9.png":::
+:::image type="content" alt-text="Apps -- App protection policies - Create policy - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business9.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business9.png":::
 
 Once filled with the data select **Next.**
 
 5. On the **Apps** \> select Select **Apps** \> **Microsoft Edge** and select
 **Select**, after that select **Next*.
 
-:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Select Apps -- Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business10.png" lightbox="./media/securing_data_edge_for_business10.png":::
+:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Select Apps -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business10.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business10.png":::
 
 6. **Data Protection**
 
 Following the recommendation from Level 3, configure this section with the following values \>. Then select **Next.**
 
-:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Data Protection -- Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business11.png" lightbox="./media/securing_data_edge_for_business11.png":::
+:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Data Protection -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
 
 7. **Health Check**.
 
 Follow the recommendation from Level 3 Health Checks \> Once completed select **Next.**
 
 
-:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Health Checks -- Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business12.png" lightbox="./media/securing_data_edge_for_business12.png":::
+:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Health Checks -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png":::
 
 8. **Scope Tags**:
 
@@ -79,20 +111,20 @@ Here you can create a new scope tag or select **Default. It's important to revie
 
 You can create a new scope tag and call it **"Browser Config"**\>. Then select **Next.**
 
-:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Scope tags - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business13.png" lightbox="./media/securing_data_edge_for_business13.png":::
+:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Scope tags - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business13.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business13.png":::
 
 9. **Assignments**
 
 Select on **Add Group** and select the desired group. For this example, select all VPN Users since they're BYOD type users. However, it's recommended to create a new group that will fit those browser config Users for **Level 3** \> Once you select the group you can select **Next.**
 
-:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Assignments - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business14.png" lightbox="./media/securing_data_edge_for_business14.png":::
+:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Assignments - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business14.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business14.png":::
 
 10. **Review + create**.
 
 Review each item and ensure the **level 3** configuration is correct. After you have reviewed it, \>, select **Next** to create the policy.
 
-:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Review + create - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business15.png" lightbox="./media/securing_data_edge_for_business15.png":::
+:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Review + create - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business15.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business15.png":::
 
 We have now created our first MAM for Windows Policy and it should be available on the Admin Portal.
 
-:::image type="content" alt-text="Policy Successfully created message - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business16.png" lightbox="./media/securing_data_edge_for_business16.png":::
+:::image type="content" alt-text="Policy Successfully created message - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business16.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business16.png":::

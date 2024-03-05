@@ -1,5 +1,37 @@
+---
+# required metadata
 
-# Windows Security Center Integration
+title: Integrate Windows Security Center with Microsoft Edge for Business
+titleSuffix:
+description: Integrate Windows Security Center with Microsoft Edge for Business.
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 03/04/2024
+ms.topic: overview
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology:
+
+# optional metadata
+
+#audience:
+#ROBOTS: 
+ms.reviewer: samarti
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: 
+ms.collection:
+- tier1
+- highpri
+- highseo
+- FocusArea_Apps_AppManagement
+---
+
+# Integrate Windows Security Center with Microsoft Edge for Business
 
 Mobile Application Management (MAM) threat detection can be integrated with Windows Security Center. This integration provides a client device health assessment to Intune Application Protection Policies (APP) via a service-to-service connector. This assessment supports gating of the flow and access to organizational data on personal unmanaged devices.
 
@@ -18,7 +50,7 @@ Intune App Protection Policy (APP) can secure organizational data and ensure the
 
 - **Health Checks**: Below *Device conditions*, as you can see in **Image Below**, use the drop-down box to select **Max allowed device threat level**.
 
-:::image type="content" alt-text="Health Check -- App protection policy for Windows." source="./media/securing_data_edge_for_business1.png" lightbox="./media/securing_data_edge_for_business1.png":::
+:::image type="content" alt-text="Health Check -- App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png":::
 
 
 #### Options for the threat level Value.
@@ -56,21 +88,21 @@ Administrator**
 
 2. Select on **Connectors and tokens**
 
-:::image type="content" alt-text="Tenant admin -- Tenant Status - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business2.png" lightbox="./media/securing_data_edge_for_business2.png":::
+:::image type="content" alt-text="Tenant admin -- Tenant Status - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business2.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business2.png":::
 
 
 3. Select on **Mobile Threat Defense**
 
-:::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business3.png" lightbox="./media/securing_data_edge_for_business3.png":::
+:::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png":::
 
 4. Select on **Add** \> **Add Connector** and select **Windows Security Center** \>  select **Create**.
 
-:::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense -- Add Connector-Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business4.png" lightbox="./media/securing_data_edge_for_business4.png":::
+:::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense -- Add Connector-Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
 
 5. The Connector is created**
 
-:::image type="content" alt-text="Connector successfully established - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business5.png" lightbox="./media/securing_data_edge_for_business5.png":::
+:::image type="content" alt-text="Connector successfully established - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business5.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business5.png":::
 
 The connector is now created. It's important to highlight that status remains Unavailable until the first MAM Policy arrives at the user or first MAM user enrollment.
 
-:::image type="content" alt-text="MTD Connector Note - Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business6.png" lightbox="./media/securing_data_edge_for_business6.png":::
+:::image type="content" alt-text="MTD Connector Note - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business6.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business6.png":::

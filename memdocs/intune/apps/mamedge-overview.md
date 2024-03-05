@@ -1,3 +1,36 @@
+---
+# required metadata
+
+title: Secure your corporate data in Intune with Microsoft Edge for Business
+titleSuffix:
+description: Secure your corporate data in Microsoft Intune with Microsoft Edge for Business.
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 03/04/2024
+ms.topic: overview
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology:
+
+# optional metadata
+
+#audience:
+#ROBOTS: 
+ms.reviewer: samarti
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: 
+ms.collection:
+- tier1
+- highpri
+- highseo
+- FocusArea_Apps_AppManagement
+---
+
 # Secure your corporate data in Intune with Microsoft Edge for Business
 
 **Authors:** 
@@ -55,7 +88,7 @@ Microsoft Edge for Business has several benefits for customers. For IT, Microsof
 
 **Work Browser (Visual Refresh):** The Microsoft Edge for Business icon replaces the existing Microsoft Edge icon in the taskbar and other shortcuts:
 
-:::image type="content" alt-text="" source="././media/securing_data_edge_for_business.png" lightbox="././media/securing_data_edge_for_business1.png":::
+:::image type="content" alt-text="Work Browser (Visual Refresh)" source="./media/securing-data-edge-for-business/securing-data-edge-for-business/securing_data_edge_for_business.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business/media/securing_data_edge_for_business1.png":::
 
 **Enhanced Security:** Using App protection policies ensures a more secure and protected browsing experience by making sure the enterprise
 data remain secured.

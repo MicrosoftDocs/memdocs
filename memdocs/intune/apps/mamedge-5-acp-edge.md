@@ -1,5 +1,37 @@
+---
+# required metadata
 
-# App Configuration Policy for Microsoft Edge for Business
+title: Use App Configuration Policies for Microsoft Edge for Business
+titleSuffix:
+description: Use App Configuration Policy for Microsoft Edge for Business.
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 03/04/2024
+ms.topic: overview
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology:
+
+# optional metadata
+
+#audience:
+#ROBOTS: 
+ms.reviewer: samarti
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: 
+ms.collection:
+- tier1
+- highpri
+- highseo
+- FocusArea_Apps_AppManagement
+---
+
+# App Configuration Policies for Microsoft Edge for Business
 
 Microsoft Edge for iOS and Android supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement Browser Configuration.
 
@@ -36,7 +68,7 @@ Once authenticated select on **Apps** on the left menu.
 
 2. Select on **App configuration policies.**
 
-:::image type="content" alt-text="Apps--App configuration policies - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business48.png" lightbox="./media/securing_data_edge_for_business48.png":::
+:::image type="content" alt-text="Apps--App configuration policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business48.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business48.png":::
 
 3. Select **Add** \> **Managed apps.**
 
@@ -51,7 +83,7 @@ Once authenticated select on **Apps** on the left menu.
 > \+ **Select Public Apps** \> type Edge and select the deseired **Edge
 > Configuration**, for this example we will select **iOS/IPadOS**.
 
-:::image type="content" alt-text="Apps--App configuration policies - Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business49.png" lightbox="./media/securing_data_edge_for_business49.png":::
+:::image type="content" alt-text="Apps--App configuration policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png":::
 
 5. Select **Select** on the **Microsoft Edge iOS/IPAD OS** and
 then select **Next.**
@@ -62,7 +94,7 @@ Expand **General configuration settings.**
 7. Enter each of the **names** and **keys** from **The Table**
 into each section.
 
-:::image type="content" alt-text="Apps -- App configuration policies -- Create app configuration policy- Microsoft Intune Admin Center" source="./media/securing_data_edge_for_business50.png" lightbox="./media/securing_data_edge_for_business50.png":::
+:::image type="content" alt-text="Apps -- App configuration policies -- Create app configuration policy- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png":::
 
 8. Review each value and select **Next.**
 
@@ -72,7 +104,7 @@ into each section.
 
 11. **Review + create.**
 
-:::image type="content" alt-text="Apps--App configuration policies--Create app configuration policy--Review + create -Microsoft Intune Admin Center." source="./media/securing_data_edge_for_business51.png" lightbox="./media/securing_data_edge_for_business51.png":::
+:::image type="content" alt-text="Apps--App configuration policies--Create app configuration policy--Review + create -Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png":::
 
 > [!NOTE]
 > Now that the app configuration policy has been created you can repeat steps 1 to 11 and choose a different OS depending on your need.
