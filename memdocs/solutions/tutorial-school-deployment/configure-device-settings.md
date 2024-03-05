@@ -1,10 +1,15 @@
 ---
 title: Configure and secure devices with Microsoft Intune
 description: Learn how to configure policies with Microsoft Intune in preparation for device deployment.
-ms.date: 01/16/2024
+zone_pivot_groups: platforms-windows-ios
 ms.topic: tutorial
-ms.collection: essentials-manage
+author: scottbreen
+ms.author: scbree
+ms.date: 03/05/2024
 ---
+::: zone pivot="windows"
+
+# [Intune For Education](#tab/intune-for-education)
 
 # Configure and secure devices with Microsoft Intune
 
@@ -100,6 +105,18 @@ For more information, see [Security][INT-4].
 > - [<u>Endpoint detection and response</u>][MEM-5]
 > - [<u>Attack surface reduction</u>][MEM-6]
 > - [<u>Account protection</u>][MEM-7]
+
+# [Intune](#tab/intune-windows)
+
+::: zone-end
+
+::: zone pivot="ios"
+
+# [Intune For Education](#tab/intune-for-education-ios)
+
+# [Intune](#tab/intune-ios)
+
+::: zone-end
 
 ---
 
