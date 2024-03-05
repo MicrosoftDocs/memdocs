@@ -60,7 +60,7 @@ To assign applications to a group of users or devices:
 1. Select either **Web apps** or **Windows apps**
 1. Select the apps you want to assign to the group > Save
 
-# [Intune](#tab/intune-windows)
+# [Intune](#tab/intune)
 
 ## Add apps
 
@@ -110,13 +110,13 @@ To learn more about which apps are supported in Windows 11 SE, and how to deploy
 
 ::: zone pivot="ios"
 
-# [Intune For Education](#tab/intune-for-education-ios)
+# [Intune For Education](#tab/intune-for-education
 
 ## Add apps
 
 ### Assign apps to groups
 
-# [Intune](#tab/intune-ios)
+# [Intune](#tab/intune)
 
 ## Add apps
 

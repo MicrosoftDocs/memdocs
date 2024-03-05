@@ -106,15 +106,15 @@ For more information, see [Security][INT-4].
 > - [<u>Attack surface reduction</u>][MEM-6]
 > - [<u>Account protection</u>][MEM-7]
 
-# [Intune](#tab/intune-windows)
+# [Intune](#tab/intune)
 
 ::: zone-end
 
 ::: zone pivot="ios"
 
-# [Intune For Education](#tab/intune-for-education-ios)
+# [Intune For Education](#tab/intune-for-education)
 
-# [Intune](#tab/intune-ios)
+# [Intune](#tab/intune)
 
 ::: zone-end
 
