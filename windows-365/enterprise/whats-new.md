@@ -84,7 +84,7 @@ In a future update, Windows 365 Switch will support Windows 365 Frontline Cloud 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
+#### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
 
 Windows 365 Frontline Cloud PCs that haven’t been used for seven days are now automatically turned on and synced with Windows Update for Business Policies.
 
