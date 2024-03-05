@@ -43,12 +43,12 @@ Troubleshooting Mobile Application Management (MAM) for Windows can involve seve
 
 If you continue to experience issues, it may be helpful to contact **Microsoft Support** for further assistance. Let me know if you need help with anything else.
 
-:::image type="content" alt-text="Sign in with your work account--Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png":::
+:::image type="content" alt-text="Sign in with your work account - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png":::
 
 The following error means that you selected the incorrect enrollment method, you may have left the checkmark or select on No, sign into this app only, please redo the enrollment without this. Otherwise, you won't be MAM Enable.
 
 
-:::image type="content" alt-text="Enrollment Window--Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png":::
+:::image type="content" alt-text="Enrollment Window - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png":::
 
 ## FAQ
 

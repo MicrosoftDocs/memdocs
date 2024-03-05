@@ -62,69 +62,63 @@ For more information about Framework Settings, see [App protection framework](..
 
 Having gained a comprehensive understanding of the app protection policy framework, we're now prepared to establish our initial app protection policy for Windows. In this instance, we'll be formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to our specific requirements. So, the forthcoming example may only be applicable to the **Level 3** policy that we have recommended. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet our distinct needs.
 
-**Let us begin:**
+#### Apply the data protection framework
 
-1. Go to <https://intune.microsoft.com/>. Once authenticated select on Apps on the left menu.
+Use the following steps to apply the data protection framework.
 
-2. Select on **App protection policies**.
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-:::image type="content" alt-text="Apps Overview - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business7.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business7.png":::
+2. Select **Apps** > **App protection policies** > **Create policy** > **Windows**.
 
-3. Select on **Create policy** \> **Windows**.
+3. On the **Create policy** step, set the following details:
 
-:::image type="content" alt-text="Apps Overview - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business8.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business8.png":::
+    - **Name**: Level 3 secure enterprise browser policy
+    - **Description**: The following is a Level 3 App Protection Framework policy for secure enterprise browser.
+    - **Platform**: Windows
 
-4. On the Create policy Fill in the details as shown in
+4. Click **Next** to display the next step.
 
-> **Name:** Level 3 secure enterprise browser Policy
->
-> **Description:** The following is a Level 3 App Protection Framework
-> policy for secure enterprise browser
->
-> **Platform:** Windows
+5. For the **Apps** step, click **Slect apps** to display the **Select apps to target** pane.
 
-:::image type="content" alt-text="Apps -- App protection policies - Create policy - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business9.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business9.png":::
+6. Find and select **Microsoft Edge**.
 
-Once filled with the data select **Next.**
+7. Click **Select** to selec the app.
 
-5. On the **Apps** \> select Select **Apps** \> **Microsoft Edge** and select
-**Select**, after that select **Next*.
+8. Click **Next** to display the next step.
 
-:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Select Apps -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business10.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business10.png":::
+9. Following the recommendation from Level 3, configure this step with the following values:
 
-6. **Data Protection**
-
-Following the recommendation from Level 3, configure this section with the following values \>. Then select **Next.**
+    - **Receive data from**: No sources
+    - **Send org data to**: No destinations
+    - **Allow cut, copy, and paste for**: No destination or source
+    - **Print org data**: Block
 
 :::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Data Protection -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
 
-7. **Health Check**.
+10. Click **Next** to continue to the next step.
 
-Follow the recommendation from Level 3 Health Checks \> Once completed select **Next.**
+11. Follow the recommendation from Level 3, configure this step with the following values:
 
+    - **Offline grace period**: 720, Block access (minutes)
+    - **Offline grace period**: 90, Whipe data (days)
+    - **Max OS version**: 10.0.22631.2715, Block access
+    - **Max allowed device threat level**: Secured, Block access
 
 :::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Health Checks -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png":::
 
-8. **Scope Tags**:
+12. Click **Next** to display the next step.
 
-Here you can create a new scope tag or select **Default. It's important to review it and select the proper scope tag for your environment and the roles that have access to the following policy.
+13. For the **Scope Tags** step, you must select the proper scope tag for your environment and the roles that have access to the this policy.
 
-You can create a new scope tag and call it **"Browser Config"**\>. Then select **Next.**
+14. For the **Assignments** step, select **Add Group** and select the desired group. 
+For this example, select all VPN Users. However, when you assign this policy in a production environment, you should create a new group of users that will best fit users that must adhere to **Level 3** app protection.
 
-:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Scope tags - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business13.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business13.png":::
+15. Click **Next** to continue to the next step.
 
-9. **Assignments**
+16. On the **Review + create** step, review each item and ensure the **level 3** configuration is correct. After
 
-Select on **Add Group** and select the desired group. For this example, select all VPN Users since they're BYOD type users. However, it's recommended to create a new group that will fit those browser config Users for **Level 3** \> Once you select the group you can select **Next.**
+17. Click **Next** to create the policy.
 
-:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Assignments - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business14.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business14.png":::
-
-10. **Review + create**.
-
-Review each item and ensure the **level 3** configuration is correct. After you have reviewed it, \>, select **Next** to create the policy.
-
-:::image type="content" alt-text="Apps -- App protection policies - Create policy -- Review + create - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business15.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business15.png":::
-
-We have now created our first MAM for Windows Policy and it should be available on the Admin Portal.
+You have now created your first MAM for Windows Policy and it should be available within your Intune tenant.
 
 :::image type="content" alt-text="Policy Successfully created message - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business16.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business16.png":::
