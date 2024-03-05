@@ -110,7 +110,7 @@ To learn more about which apps are supported in Windows 11 SE, and how to deploy
 
 ::: zone pivot="ios"
 
-# [Intune For Education](#tab/intune-for-education
+# [Intune For Education](#tab/intune-for-education)
 
 ## Add apps
 
