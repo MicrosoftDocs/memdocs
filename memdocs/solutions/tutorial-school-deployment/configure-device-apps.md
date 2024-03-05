@@ -5,7 +5,7 @@ ms.topic: tutorial
 author: scottbreen
 ms.author: scbree
 ms.date: 03/05/2024
-zone-pivot-group: platforms-windows-ios
+zone-pivot-groups: platforms-windows-ios
 ---
 
 # Configure applications with Microsoft Intune
