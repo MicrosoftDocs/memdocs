@@ -10,7 +10,7 @@ ms.date: 03/05/2024
 
 # Configure applications with Microsoft Intune
 
-With Intune for Education, school IT administrators have access to diverse applications to help students unlock their learning potential. This section discusses tools and resources for adding apps to Intune for Education.
+With Intune, school IT administrators have access to diverse applications to help students unlock their learning potential. This section discusses tools and resources for adding apps to Intune.
 
 Applications can be assigned to groups:
 
@@ -20,9 +20,9 @@ Applications can be assigned to groups:
 > [!div class="checklist"]
 >In this section you will:
 >
-> - Add apps to Intune for Education
+> - Add apps
 > - Assign apps to groups
-> - Review some considerations for Windows 11 SE devices
+> - Review some considerations
 
 ::: zone pivot="windows"
 
@@ -52,15 +52,13 @@ For more information, see [Add web apps][INT-2].
 
 # [Intune](#tab/intune)
 
-## Add apps
-
 Intune supports the deployment several application types including desktop apps (msi, exe), Microsoft Store apps, web apps, appxbundle and MSIX.
 
 ### Enterprise Application Management
 
 You can use Intune Suite to install apps.
 
-### Desktop apps
+### Win32 apps (MSI, exe)
 
 The addition of desktop applications to Intune should be carried out by repackaging the apps, and defining the commands to silently install them. The process is described in the article [Add, assign, and monitor a Win32 app in Microsoft Intune][MEM-1].
 
@@ -83,11 +81,11 @@ For more information, see [Add web apps][INT-2].
 
 # [Intune For Education](#tab/intune-for-education)
 
-## Add apps
+iOS Intune for Education app info here.
 
 # [Intune](#tab/intune)
 
-## Add apps
+iOS Intune app info here.
 
 ::: zone-end
 
@@ -107,7 +105,29 @@ To assign applications to a group of users or devices:
 
 # [Intune](#tab/intune)
 
-## Assign apps to groups
+To assign applications to a group of users or devices:
+
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune portal</b></a>
+1. Select **Apps**
+1. Select **All apps** > Find the app to manage
+1. Select **Properties**
+1. Next to assignments, select **Edit**
+1. Add the groups you want to target the application at
+1. Select **Save**
+
+::: zone-end
+
+::: zone pivot="ios"
+
+# [Intune For Education](#tab/intune-for-education)
+
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Select **Groups** > Pick a group to manage
+1. Select **Apps**
+1. Select either **Free iOS apps** or **iOS volume purchase apps**
+1. Select the apps you want to assign to the group > Save
+
+# [Intune](#tab/intune)
 
 To assign applications to a group of users or devices:
 
@@ -119,7 +139,11 @@ To assign applications to a group of users or devices:
 1. Add the groups you want to target the application at
 1. Select **Save**
 
-## Considerations for Windows 11 SE
+::: zone-end
+
+## Considerations
+
+::: zone pivot="windows"
 
 Windows 11 SE prevents the installation and execution of third party applications with a technology called **Windows Defender Application Control** (WDAC).
 WDAC applies an *allowlist* policy, which ensures that unwanted apps don't run or get installed. However, it also prevents IT admins from deploying apps to Windows 11 SE devices, unless they're included in the E Mode policy.
@@ -130,15 +154,10 @@ To learn more about which apps are supported in Windows 11 SE, and how to deploy
 
 ::: zone pivot="ios"
 
-# [Intune For Education](#tab/intune-for-education)
-
-### Assign apps to groups
-
-# [Intune](#tab/intune)
-
-### Assign apps to groups
+iOS VPP app info here.
 
 ::: zone-end
+
 
 ## Next steps
 
