@@ -92,9 +92,9 @@ Windows 365 Frontline Cloud PCs that haven’t been used for seven days are now 
 
 Admins can now power on and off Windows 365 Frontline Cloud PCs using remote actions. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
 
-#### Uni-directional clipboard support<!--48897413-->
+#### Uni-directional clipboard support (preview)<!--48897413-->
 
-You can now configure uni-directional clipboard for Cloud PCs that have Windows Insider Build 25898 or later.
+You can now configure uni-directional clipboard for Cloud PCs that have Windows Insider Build 25898 or later. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
