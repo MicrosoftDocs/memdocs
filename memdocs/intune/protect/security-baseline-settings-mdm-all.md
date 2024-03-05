@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Settings list for the Windows 10/11 MDM security baselines in Microsoft Intune
+title: Default configuration of Intunes Windows security baselines
 titleSuffix: Microsoft Intune
-description: View the list of settings in the Microsoft Intune security baseline for Windows 10/11 MDM security. This list includes the default values for settings as found in the default configuration of the baseline.
+description: View the default setting configuration of the various Microsoft Intune security baselines for Windows.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 03/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,10 +28,9 @@ ms.collection:
 zone_pivot_groups: windows-mdm-versions
 ---
 
+# List of the settings in the Windows MDM security baseline in Intune
 
-# List of the settings in the Windows 10/11 MDM security baseline in Intune
-
-This article is a reference for the settings that are available in the different versions of the Windows 10/11 MDM security baseline that you can deploy with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
+This article is a reference for the settings that are available in the different versions of the Windows MDM security baseline for Windows 10 and Windows 11 devices that you manage with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
 
 For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
 
@@ -47,19 +46,485 @@ To learn more about using security baselines, see [Use security baselines](secur
 <!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
+::: zone pivot="mdm-23h2"
+**Security Baseline for Windows, version 23h2**
+
+The settings in this baseline are taken from the **version 23H2** of the Group Policy security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
+
+::: zone-end
 ::: zone pivot="mdm-november-2021"
-**Security Baseline for Windows 10/11 for November 2021**
+**Security Baseline for Windows, November 2021**
 ::: zone-end
 ::: zone pivot="mdm-december-2020"
-**Security Baseline for Windows 10/11 for December 2020**
+**Security Baseline for Windows, December 2020**
 ::: zone-end
 ::: zone pivot="mdm-august-2020"
-**Security Baseline for Windows 10 and later for August 2020**
+**Security Baseline for Windows, August 2020**
 ::: zone-end
 
-## Above Lock
+::: zone pivot="mdm-23h2"
+
+## Administrative Templates
+
+### Control Panel > Personalization
+
+- [**Prevent enabling lock screen camera**](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventenablinglockscreencamera) - *Enabled*
+
+- [**Prevent enabling lock screen slide show**](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventlockscreenslideshow) - *Enabled*
+
+### MS Security Guide
+
+- [**Apply UAC restrictions to local accounts on network logons**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#applyuacrestrictionstolocalaccountsonnetworklogon) - *Enabled*
+
+- [**Configure SMB v1 client driver**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1clientdriver) - *Enabled*
+  - **Configure MrxSmb10 driver** - *Disable driver (recommended)*
+
+- [**Configure SMB v1 server**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1server) - *Disabled*
+
+- [**Enable Structured Exception Handling Overwrite Protection (SEHOP)**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#enablestructuredexceptionhandlingoverwriteprotection) - *Enabled*
+
+- [**WDigest Authentication (disabling may require KB2871997)**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#wdigestauthentication) - *Disabled*
+
+### MSS (Legacy)
+
+- [**MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipv6sourceroutingprotectionlevel) - *Enabled*
+  - **DisableIPSourceRouting IPv6 (Device)** - *Highest protection, source routing is completely disabled*
+- [**MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipsourceroutingprotectionlevel) - *Enabled*
+  - **DisableIPSourceRouting (Device)** - *Highest protection, source routing is completely disabled*
+- [**MSS: (EnableCMPRedirect) Allow ICMP redirects to override OSPF generated routes**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowicmpredirectstooverrideospfgeneratedroutes) - *Disabled*
+- [**MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowthecomputertoignorenetbiosnamereleaserequestsexceptfromwinsservers) - *Enabled*
+
+### Network > DNS Client
+
+- [**Turn off multicast name resolution**](/windows/client-management/mdm/policy-csp-admx-dnsclient?WT.mc_id=Portal-fx#turn_off_multicast) - *Enabled*
+
+### Network > Network Connections
+
+- [**Prohibit use of Internet Connection Sharing on your DNS domain network**](/windows/client-management/mdm/policy-csp-admx-networkconnections?WT.mc_id=Portal-fx#nc-showsharedaccessui) - *Enabled*
+
+### Network > Network Provider
+
+- [**Hardened UNC Paths**](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#hardeneduncpaths) - *Enabled*
+
+#### Hardened UNC Paths: (Device) 
+| Name           | Value|
+|----------------|------|
+| `\\*\SYSVOL`   | RequireMutualAuthentication=1,RequireIntegrity=1 |
+| `\\*\NETLOGON` | RequireMutualAuthentication=1,RequireIntegrity=1 |
+
+### Network > Windows Connection Manager
+
+- [**Prohibit connection to non-domain networks when connected to domain authenticated network**](/windows/client-management/mdm/policy-csp-windowsconnectionmanager?WT.mc_id=Portal-fx#prohitconnectiontonondomainnetworkswhenconnectedtodomainauthenticatednetwork) - *Enabled*
+
+### Printers
+
+- [**Configure Redirection Guard**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configureredirectionguardpolicy) - *Enabled*
+  - **Redirection Guard Options (Device)** - *Redirection Guard Enabled*
+
+- [**Configure RPC connection settings**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpcconnectionpolicy) - *Enabled*
+  - **Use authentication for outgoing RPC connections: (Device)** - *Default*
+  - **Protocol to allow for incoming RPC connections: (Device)** - *RPC over TCP*
+
+- [**Configure RPC listener settings**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpclistenerpolicy) - *Enabled*
+  - **Protocols to allow for incoming RPC connections: (Device)** - *RCP over TCP*
+  - **Authentication protocol to use for incoming RPC connections: (Device)** - *Negotiate*
+
+- [**Configure RPC over TPC port**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpctcpport) - *Enabled*
+  - **RPC over TCP port (Device)** - *0*
+
+- [**Limits print driver installation to Administrators**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#restrictdriverinstallationtoadministrators) - *Enabled*
+
+- [**Manage processing of Queue-specific files**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurecopyfilespolicy) - *Enabled*
+  - **Manage processing of Queue-specific files: (Device)** - *Limit Queue-specific files to Color profiles*
+
+### Start Menu and Taskbar > Notifications
+
+- [**Turn off toast notifications on the lock screen (User)**](/windows/client-management/mdm/policy-csp-admx-wpn?WT.mc_id=Portal-fx#nolockscreentoastnotification) - *Enabled*
+
+### System > Credentials Delegation
+
+- [**Encryption Oracle Remediation**](/windows/client-management/mdm/policy-csp-admx-credssp?WT.mc_id=Portal-fx#allowencryptionoracle) - *Enabled*
+  - **Protection Level: (Device)** - *Force Updated Clients*
+
+- [**Remote host allows delegation of non-exportable credentials**](/windows/client-management/mdm/policy-csp-credentialsdelegation?WT.mc_id=Portal-fx#remotehostallowsdelegationofnonexportablecredentials) - *Enabled*
+
+### System > Device Installation > Device Installation Restrictions
+
+- [**Prevent installation of devices using drivers that match these device setup classes**](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses) - *Enabled*
+  - **Also apply to matching devices that are already installed** - *True*
+  - **Prevented Classes**:
+    - *{d48179be-ec20-11d1-b6b8-00c04fa372a7}*
+
+### System > Early Launch Antimalware
+
+- [**Boot-Start Driver Initialization Policy**](/windows/client-management/mdm/policy-csp-system?WT.mc_id=Portal-fx#bootstartdriverinitialization) - *Enabled*
+  - **Choose the boot-start drivers that can be initialized:** - *Good, unknown and bad but critical*
+
+### System > Group Policy
+
+- [**Configure registry policy processing**](/windows/client-management/mdm/policy-csp-admx-grouppolicy?WT.mc_id=Portal-fx#cse-registry) - *Enabled*
+  - **Do not apply during periodic background processing (Device)** - *False*
+  - **Process even if the Group Policy objects have not changed (Device)** - *True*
+
+### System > Internet Communication Management > Internet Communication settings
+
+- [**Turn off downloading of print drivers**](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disabledownloadingofprintdriversoverhttp) - *Enabled*
+- [**Turn off Interent download for Web publishing and online ordering wizards**](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disableinternetdownloadforwebpublishingandonlineorderingwizards) - *Enabled*
+
+### System > Local Security Authority
+
+- [**Allow Custom SSPs and APs to be loaded into LSASS**](/windows/client-management/mdm/policy-csp-lsa#allowcustomsspsaps) - *Disabled*
+
+### System > Power Management > Sleep Settings
+
+- [**Allow standby states (S1-S3) when sleeping (on battery)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbystateswhensleepingonbattery) - *Disabled*
+- [**Allow standby states (S1-S3) when sleeping (plugged in)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbywhensleepingpluggedin) - *Disabled*
+- [**Require a password when a computer wakes (on battery)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakesonbattery) - *Enabled*
+- [**Require a password when a computer wakes (plugged in)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakespluggedin) - *Enabled*
+
+### System > Remote Assistance
+
+- [**Configure Solicited Remote Assistance**](/windows/client-management/mdm/policy-csp-remoteassistance?WT.mc_id=Portal-fx#solicitedremoteassistance) - *Disabled*
+
+### System > Remote Procedure Call
+
+- [**Restrict Unauthenticated RPC clients**](/windows/client-management/mdm/policy-csp-remoteprocedurecall?WT.mc_id=Portal-fx#restrictunauthenticatedrpcclients) - *Enabled*
+  - **RPC Runtime Unauthenticated Client Restriction to Apply:** - *Authenticated*
+
+### Windows Components > App runtime
+
+- [**Allow Microsoft accounts to be optional**](/windows/client-management/mdm/policy-csp-appruntime?WT.mc_id=Portal-fx#allowmicrosoftaccountstobeoptional) - *Enabled*
+
+### Windows Components > AutoPlay Policies
+
+- [**Disallow Autoplay for non-volume devices**](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#disallowautoplayfornonvolumedevices) - *Enabled*
+
+- [**Set the default behavior for AutoRun**](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#setdefaultautorunbehavior) - *Enabled*
+  - **Default AutoRun Behavior** - *Do not execute any autorun commands*
+
+- [**Turn off Autoplay**](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#turnoffautoplay) - *Enabled*
+  - **Turn off Autoplay on:** - *All drives*
+
+### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
+
+- [**Deny write access to fixed drives not protected by BitLocker**](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption) - *Disabled*
+
+### Windows Components > BitLocker Drive Encryption > Removable Data Drives
+
+- [**Deny write access to removable drives not protected by BitLocker**](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption) - *Enabled*
+  - **Do not allow write access to devices configured in another organization** - *False*
+
+### Windows Components > Credential User Interface
+
+- [**Enumerate administrator accounts on elevation**](/windows/client-management/mdm/policy-csp-credentialsui?WT.mc_id=Portal-fx#enumerateadministrators) - *disabled*
+
+### Windows Components > Event Log Service > Application
+
+- [**Specify the maximum log file size (KB)**](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizeapplicationlog) - *Enabled*
+  - **Maximum Log Size (KB)** - *32768*
+
+### Windows Components > Event Log Service > Security
+
+- [**Specify the maximum log file size (KB)**](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesecuritylog) - *Enabled*
+  - **Maximum Log Size (KB)** - *196608*
+
+### Windows Components > Event Log Service > System
+
+- [**Specify the maximum log file size (KB)**](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesystemlog) - *Enabled*
+  - **Maximum Log Size (KB)** - *32768*
+
+### Windows Components > File Explorer
+
+- [**Configure Windows Defender SmartScreen**](/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen) - *Enabled*
+  - **Pick one of the following settings: (Device)** - *Warn and prevent bypass*
+
+- [**Turn off Data Execution Prevention for Explorer**](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffdataexecutionpreventionforexplorer) - *Disabled*
+
+- [**Turn off heap termination on corruption**](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffheapterminationoncorruption) - *Disabled*
+
+### Windows Components > Internet Explorer > Internet Control Panel > Advanced Page
+
+- [**Allow software to run or install even if the signature is invalid**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowsoftwarewhensignatureisinvalid) - *Disabled*
+
+- [**Check for server certificate revocation**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checkservercertificaterevocation) - *Enabled*
+
+- [**Check for signatures on downloaded programs**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checksignaturesondownloadedprograms) - *Enabled*
+
+- [**Do not allow ActiveX controls to run in Protected Mode when Enhanced Protected Mode is enabled**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowactivexcontrolsinprotectedmode) - *Enabled*
+
+- [**Turn off encryption support**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableencryptionsupport) - *Enabled*
+  - **Secure Protocol combinations** - *Use TLS 1.1 and TLS 1.2*
+
+- [**Turn on 64-bit tab processes when running in Enhanced Protected Mode on 64-bit versions of Windows**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableprocessesinenhancedprotectedmode) - *Enabled*
+
+- [**Turn on Enhanced Protected Mode**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowenhancedprotectedmode) - *Enabled*
+
+
+### Windows Components > Internet Explorer > Internet Control Panel
+
+- [****]() - **
+
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Internet Zone
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+- [****]() - **
+  - **** - **
+
+Only allow approved domains to use ActiveX controls without prompt
+
+
+Enable
+Only allow approved domains to use the TDC ActiveX control
+
+Enable
+Allow script-initiated windows without size or position constraints
+
+Disable
+Internet Explorer web browser control
+
+Disable
+Scriptlets
+
+Disable
+Status bar updates via script
+
+Disable
+Automatic prompting for file downloads
+
+Disable
+Don't run antimalware programs against ActiveX controls
+
+Disable
+Enable dragging of content from different domains across windows
+
+Disable
+Enable dragging of content from different domains within a window
+
+Disable
+Include local directory path when uploading files to a server
+
+Disable
+Turn on Cross-Site Scripting (XSS) Filter
+
+Enable
+Protected Mode
+
+Enable
+Use SmartScreen Filter
+
+Enable
+Use Pop-up Blocker
+
+Enable
+Userdata persistence
+
+Disable
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page
+
+
+
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Intranet Zone
+
+
+Don't run antimalware programs against ActiveX controls
+
+Disable
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Local Machine Zone
+
+
+
+Don't run antimalware programs against ActiveX controls
+
+Disable
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Internet Zone
+
+
+Use SmartScreen Filter
+
+Enable
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Intranet Zone
+
+
+
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Local Machine Zone
+
+
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Restricted Sites Zone
+Use SmartScreen Filter
+
+Enable
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Trusted Sites Zone
+
+
+
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Restricted Sites Zone
+Allow file downloads
+
+Disable
+Allow META REFRESH
+
+Disable
+Only allow approved domains to use ActiveX controls without prompt
+
+Enable
+Only allow approved domains to use the TDC ActiveX control
+
+Enable
+Allow script-initiated windows without size or position constraints
+
+Disable
+Internet Explorer web browser control
+
+Disable
+Scriptlets
+
+Disable
+Status bar updates via script
+
+Disable
+Automatic prompting for file downloads
+
+Disable
+Don't run antimalware programs against ActiveX controls
+
+Disable
+Enable dragging of content from different domains across windows
+
+Disable
+Enable dragging of content from different domains within a window
+
+Disable
+Include local directory path when uploading files to a server
+
+Disable
+Turn on Cross-Site Scripting (XSS) Filter
+
+Enable
+Protected Mode
+
+Enable
+Use SmartScreen Filter
+
+Enable
+Use Pop-up Blocker
+
+Enable
+Userdata persistence
+
+Disable
+### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Trusted Sites Zone
+Don't run antimalware programs against ActiveX controls
+
+Disable
+### Windows Components > Internet Explorer
+### Windows Components > Internet Explorer > Security Features > Add-on Management
+### Windows Components > Internet Explorer > Security Features
+### Windows Components > Internet Explorer > Security Features > Consistent Mime Handling
+### Windows Components > Internet Explorer > Security Features > Mime Sniffing Safety Feature
+### Windows Components > Internet Explorer > Security Features > MK Protocol Security Restriction
+### Windows Components > Internet Explorer > Security Features > Notification bar
+### Windows Components > Internet Explorer > Security Features > Protection From Zone Elevation
+### Windows Components > Internet Explorer > Security Features > Restrict ActiveX Install
+### Windows Components > Internet Explorer > Security Features > Restrict File Download
+### Windows Components > Internet Explorer > Security Features > Scripted Window Security Restrictions
+### Windows Components > Microsoft Defender Antivirus > MAPS
+### Windows Components > Microsoft Defender Antivirus > Real-time Protection
+### Windows Components > Microsoft Defender Antivirus > Scan
+### Windows Components > Microsoft Defender Antivirus
+### Windows Components > Remote Desktop Services > Remote Desktop Connection Client
+### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection
+### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security
+### Windows Components > RSS Feeds
+### Windows Components > Windows Logon Options
+### Windows Components > Windows PowerShell
+Log script block invocation start / stop events:
+
+False
+### Windows Components > Windows Remote Management (WinRM) > WinRM Client
+### Windows Components > Windows Remote Management (WinRM) > WinRM Service
+
+
+## Auditing
+## Browser
+## Data Protection
+## Defender
+## Device Guard
+## Device Lock
+## Dma Guard
+## Experience
+## Firewall
+## Lanman Workstation
+## Local Policies Security Options
+## Local Security Authority
+## Microsoft App Store
+## Microsoft Edge
+## Privacy
+## Search
+## Smart Screen
+## System Services
+## Task Scheduler
+## User Rights
+## Virtualization Based Technology
+## Wi-Fi Settings
+## Windows Hello For Business
+## Windows Ink Workspace
+## LAPS
+
+
+::: zone-end
+
+
+<!-- Begin older baselines that share similar category structures -->
 
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
+## Above Lock
 
 - **Voice activate apps from locked screen**:  
   Baseline default: *Disabled*  
@@ -69,17 +534,11 @@ To learn more about using security baselines, see [Use security baselines](secur
   Baseline default: *Yes*  
   [Learn More](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)  
 
-::: zone-end
-
 ## App Runtime
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Microsoft accounts optional for Microsoft store apps**:  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-appruntime#appruntime-allowmicrosoftaccountstobeoptional)
-
-::: zone-end
 
 ## Application Management
 
@@ -97,11 +556,7 @@ To learn more about using security baselines, see [Use security baselines](secur
   Baseline default: *Yes*  
   [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-::: zone-end
-
 ## Audit
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 Audit settings configure the events that are generated for the conditions of the setting.
 
@@ -177,11 +632,7 @@ Audit settings configure the events that are generated for the conditions of the
 - **System Audit System Integrity (Device)**:  
   Baseline default: *Success and Failure*
 
-::: zone-end
-
 ## Auto Play
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Auto play default auto run behavior**:  
   Baseline default: *Do not execute*  
@@ -195,11 +646,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-autoplay#autoplay-disallowautoplayfornonvolumedevices) 
 
-::: zone-end
-
 ## BitLocker
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **BitLocker removable drive policy**:  
   Baseline default: *Configure*  
@@ -209,11 +656,7 @@ Audit settings configure the events that are generated for the conditions of the
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872540)
 
-::: zone-end
-
 ## Browser
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block Password Manager**:  
   Baseline default: *Yes*  
@@ -235,11 +678,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067126)
 
-::: zone-end
-
 ## Connectivity
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Configure secure access to UNC paths**:  
   Baseline default: *Configure Windows to only allow access to the specified UNC paths after fulfilling additional security requirements*  
@@ -256,41 +695,25 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067136)
 
-::: zone-end
-
 ## Credentials Delegation
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Remote host delegation of non-exportable credentials**:  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067103)
 
-::: zone-end
-
 ## Credentials UI
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Enumerate administrators**:  
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067021)
 
-::: zone-end
-
 ## Data Protection
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block direct memory access**:  
   Baseline default: Yes  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067031)
 
-::: zone-end
-
 ## Device Guard
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Virtualization based security**:  
   Baseline default: *Enable VBS with secure boot*
@@ -306,11 +729,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enable with UEFI lock*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872424)
 
-::: zone-end
-
 ## Device Installation
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block hardware device installation by setup classes**:  
   Baseline default: *Yes*  
@@ -345,11 +764,7 @@ Audit settings configure the events that are generated for the conditions of the
   - **Hardware device identifiers that are blocked**:  
     Baseline default: *No default configuration*
 
-::: zone-end
-
 ## Device Lock
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Require password**:  
   Baseline default: *Yes*  
@@ -395,20 +810,12 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067105)
 
-::: zone-end
-
 ## DMA Guard
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**:  
   Baseline default: *Block all*
 
-::: zone-end
-
 ## Event Log Service
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Application log maximum file size in KB**:  
   Baseline default: *32768*  
@@ -422,11 +829,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *196608*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067042)
 
-::: zone-end
-
 ## Experience
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block Windows Spotlight**:  
   Baseline default: *Yes*  
@@ -450,10 +853,9 @@ Audit settings configure the events that are generated for the conditions of the
   [Learn more](/windows/client-management/mdm/policy-csp-exploitguard#exploitguard-exploitprotectionsettings)
 
 ::: zone-end
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 ## File Explorer
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block data execution prevention**:  
   Baseline default: *Disabled*  
@@ -463,11 +865,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067107)
 
-::: zone-end
-
 ## Firewall
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796) in the Windows Protocols documentation.
 
@@ -539,11 +937,8 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872567)
 
-::: zone-end
-
 ## Internet Explorer
 <!-- /windows/client-management/mdm/policy-csp-internetexplorer -->
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Internet Explorer encryption support**:  
   Baseline default: Two items:  *TLS v1.1* and *TLS v1.2*  
@@ -1017,12 +1412,8 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#allowautocomplete)
 
-::: zone-end
-
 ## Local Policies Security Options
-<!-- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions -->
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
+<!-- /windows/client-management/mdm/policy-csp-localpoliciessecurityoptions -->
 
 - **Block remote logon with blank password**:  
   Baseline default: *Yes*  
@@ -1109,10 +1500,9 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067321)
 
 ::: zone-end
+::: zone pivot="mdm-december-2020,mdm-november-2021"
 
 ## Microsoft Defender
-
-::: zone pivot="mdm-december-2020,mdm-november-2021"
 
 - **Block Adobe Reader from creating child processes**:  
   Baseline default: *Enable*  
@@ -1327,10 +1717,9 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067131)
 
 ::: zone-end
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 ## MS Security Guide
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **SMB v1 client driver start configuration**:  
   Baseline default: *Disabled driver*  
@@ -1352,11 +1741,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067193)
 
-::: zone-end
-
 ## MSS Legacy
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Network IPv6 source routing protection level**:  
   Baseline default: *Highest protection*  
@@ -1374,11 +1759,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067326)
 
-::: zone-end
-
 ## Power
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Require password on wake while on battery**:  
   Baseline default: *Enabled*  
@@ -1396,21 +1777,13 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067196)
 
-::: zone-end
-
 ## Remote Assistance
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Remote Assistance solicited**:  
   Baseline default: *Disable Remote Assistance*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-::: zone-end
-
 ## Remote Desktop Services
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Remote desktop services client connection encryption level**:  
   Baseline default: *High*  
@@ -1431,11 +1804,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067248)
 
-::: zone-end
-
 ## Remote Management
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block client digest authentication**:  
   Baseline default: *Enabled*  
@@ -1461,31 +1830,19 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067226)
 
-::: zone-end
-
 ## Remote Procedure Call
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **RPC unauthenticated client options**:  
   Baseline default: *Authenticated*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067225)
 
-::: zone-end
-
 ## Search
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Disable indexing encrypted items**:  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067303)
 
-::: zone-end
-
 ## Smart Screen
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
@@ -1495,21 +1852,13 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872783)
 
-::: zone-end
-
 ## System
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **System boot start driver initialization**:  
   Baseline default: *Good unknown and bad critical*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067307)
 
-::: zone-end
-
 ## Wi-Fi
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block Automatically connecting to Wi-Fi hotspots**:  
   Baseline default: *Yes*  
@@ -1519,31 +1868,19 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067327)
 
-::: zone-end
-
 ## Windows Connection Manager
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block connection to non-domain networks**:  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067323)
 
-::: zone-end
-
 ## Windows Ink Workspace
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Ink Workspace**:  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067241)
 
-::: zone-end
-
 ## Windows PowerShell
-
-::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **PowerShell script block logging**:  
   Baseline default: *Enabled*  
