@@ -183,11 +183,11 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
      * **Primary account name**: Enter the username for the account. `{{partialupn}}` is the supported token variable for *account name*.    
      * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*.   
    * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**.
-   * For macOS 10.15+, when enrolling the device with Setup Assistant (legacy) only, if Restrict editing is set to Yes, then the local primary account gets created automatically without showing the account creation screen in Setup Assistant, and the password is automatically populated from the Entra ID authentication screen during enrollment. The local primary account fields then cannot be edited.
-   * If Restrict editing is set to Not configured, then the local primary account screen is shown to the end user in Setup Assistant (legacy) and is populated with the configured account values, along with the password from the Entra ID authentication screen during enrollment. These fields can be edited during Setup Assistant.   
+     * For macOS 10.15 and later, if this setting is set to **Yes** when enrolling a device in Setup Assistant (legacy), the account creation screen in Setup Assistant never appears. Instead, the local primary account is automatically created and the password is automatically populated from the Entra ID authentication screen. The device user can't edit these fields.         
+     * If this setting is set to **Not configured**, then the local primary account screen is shown to the end user in Setup Assistant (legacy) and is populated with the configured account values, along with the password from the Entra ID authentication screen. The device user can edit these fields.   
 
    For account settings to work as intended, your enrollment profile must have the following configurations:      
-    * **User affinity**: Select **Enroll with User affinity**.     
+   * **User affinity**: Select **Enroll with User affinity**.     
    * **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.   
    * **Await final configuration**: Select **Yes**.       
 
