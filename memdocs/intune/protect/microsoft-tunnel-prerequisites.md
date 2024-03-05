@@ -209,7 +209,7 @@ For more information, see [Configuring container networking with Podman](https:/
 
   To make IP forwarding permanent, on each Linux server edit the **/etc/sysctl.conf** file and remove the leading hashtag (#) from *#net.ipv4.ip_forward=1* to enable packet forwarding. After your edit, the entry should appear as follows:
 
-  ```Text
+  ```
   # Uncomment the next line to enable packet forwarding for IPv4
   net.ipv4.ip_forward=1
   ```
