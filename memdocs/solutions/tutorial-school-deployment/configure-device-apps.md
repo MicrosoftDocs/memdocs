@@ -1,8 +1,10 @@
 ---
 title: Configure applications with Microsoft Intune
 description: Learn how to configure applications with Microsoft Intune in preparation for device deployment.
-ms.date: 01/16/2024
 ms.topic: tutorial
+author: scottbreen
+ms.author: scbree
+ms.date: 03/05/2024
 zone-pivot-group: platforms-windows-ios
 ---
 
@@ -103,7 +105,7 @@ WDAC applies an *allowlist* policy, which ensures that unwanted apps don't run o
 
 To learn more about which apps are supported in Windows 11 SE, and how to deploy them, see the tutorial [Deploy applications to Windows 11 SE with Intune][EDU-1].
 
-::: zone end
+::: zone-end
 
 ::: zone pivot="ios"
 
@@ -115,7 +117,7 @@ To learn more about which apps are supported in Windows 11 SE, and how to deploy
 
 ### Assign apps to groups
 
-::: zone end
+::: zone-end
 
 ## Next steps
 
