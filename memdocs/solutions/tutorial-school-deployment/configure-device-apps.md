@@ -77,6 +77,22 @@ To create web applications in Intune:
 
 For more information, see [Add web apps][INT-2].
 
+::: zone-end
+
+::: zone pivot="ios"
+
+# [Intune For Education](#tab/intune-for-education)
+
+## Add apps
+
+# [Intune](#tab/intune)
+
+## Add apps
+
+::: zone-end
+
+::: zone pivot="windows"
+
 ## Assign apps to groups
 
 # [Intune For Education](#tab/intune-for-education)
@@ -116,13 +132,9 @@ To learn more about which apps are supported in Windows 11 SE, and how to deploy
 
 # [Intune For Education](#tab/intune-for-education)
 
-## Add apps
-
 ### Assign apps to groups
 
 # [Intune](#tab/intune)
-
-## Add apps
 
 ### Assign apps to groups
 
