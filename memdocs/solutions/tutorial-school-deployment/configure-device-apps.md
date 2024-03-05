@@ -24,9 +24,9 @@ Applications can be assigned to groups:
 > - Assign apps to groups
 > - Review some considerations
 
-::: zone pivot="windows"
-
 ## Add apps
+
+::: zone pivot="windows"
 
 # [Intune For Education](#tab/intune-for-education)
 
@@ -89,9 +89,9 @@ iOS Intune app info here.
 
 ::: zone-end
 
-::: zone pivot="windows"
-
 ## Assign apps to groups
+
+::: zone pivot="windows"
 
 # [Intune For Education](#tab/intune-for-education)
 
