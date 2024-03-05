@@ -206,58 +206,6 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
 8. If you're using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
-## Use a rootless Podman container
-
-When you use Red Hat Linux with Podman containers to host your Microsoft Tunnel, you can configure the container as a rootless container.
-
-Use of a rootless container can help to limit impact from a container escape, with all the files in and below the **/etc/mstunnel** folder on the server being owned by a nonprivileged user service account. The account name on the Linux server that runs Tunnel is unchanged from a standard installation, but is created without root user permissions.
-
-To successfully use a rootless Podman container, you must:
-
-- [Configure additional prerequisites](#additional-prerequisites-for-rootless-podman-containers) outlined in the following section.
-- [Modify the script command-line](#modified-installation-command-line-for-rootless-podman-containers) when starting the Microsoft Tunnel installation.
-
-With prerequisites in place, you can then use the [installation script procedure](#use-the-script-to-install-microsoft-tunnel) to first download the installation script, and then run the install by using the modified script command-line.
-
-### Additional prerequisites for rootless Podman containers
-
-Use of a rootless Podman container requires your environment meet the following prerequisites, which are in *addition* to the default [Microsoft Tunnel prerequisites](../protect/microsoft-tunnel-prerequisites.md):
-
-**Supported platform**:
-
-- The Linux server must run Red Hat (RHEL) 8.8 or later.
-- The container must run Podman 4.6.1 or later. *Rootless containers are not supported with Docker*.
-
-- The rootless container must be installed under the **/home** folder.
-- The **/home** folder must have a minimum of 10 GB of free space.
-
-**Network**:
-The following network settings, which are not available in a rootless namespace, must be set in **/etc/sysctl.conf**:
-
-- `net.core.somaxconn=8192`
-- `net.netfilter.nf_conntrack_acct=1`
-- `net.netfilter.nf_conntrack_timestamp=1`
-
-In addition, if you bind the rootless Tunnel Gateway to a port that is smaller than 1024, you must also add the following setting in **/etc/sysctl.conf** and set it equal to the port you use:
-
-- `net.ipv4.ip_unprivileged_port_start`
-
-For example, to specify port 443, use the following entry: `net.ipv4.ip_unprivileged_port_start=443`
-
-After editing **sysctl.conf**, you must reboot the Linux server before the new configurations take effect.
-
-**Outbound proxy for the rootless user**:
-To support an outbound proxy for the rootless user, edit **/etc/profile.d/http_proxy.sh** and add the following two lines. In the following lines, *10.10.10.1:3128* is an example *address:port* entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP address and port:
-
-- `export http_proxy=http://10.10.10.1:3128`
-- `export https_proxy=http://10.10.10.1:3128`
-
-### Modified installation command-line for rootless Podman containers
-
-To install Microsoft Tunnel to a rootless Podman container, use the following command line to begin the installation script. This command line sets **mst_rootless_mode** as an environment variable and replaces use of the default installation command line during *step 2* of the [installation procedure](use-the-script-to-install-microsoft-tunnel):
-
-- `chmod mst_rootless_mode=1 ./mstunnel-setup`
-
 ## Deploy the Microsoft Tunnel client app
 
 To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client app. Microsoft Tunnel uses Microsoft Defender for Endpoint as the Tunnel client app:
@@ -476,6 +424,58 @@ You can use the **./mst-cli** command-line tool to update the TLS certificate on
 4. Run: `mst-cli server restart`
 
 For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md).
+
+## Use a rootless Podman container
+
+When you use Red Hat Linux with Podman containers to host your Microsoft Tunnel, you can configure the container as a rootless container.
+
+Use of a rootless container can help to limit impact from a container escape, with all the files in and below the **/etc/mstunnel** folder on the server being owned by a nonprivileged user service account. The account name on the Linux server that runs Tunnel is unchanged from a standard installation, but is created without root user permissions.
+
+To successfully use a rootless Podman container, you must:
+
+- [Configure additional prerequisites](#additional-prerequisites-for-rootless-podman-containers) outlined in the following section.
+- [Modify the script command-line](#modified-installation-command-line-for-rootless-podman-containers) when starting the Microsoft Tunnel installation.
+
+With prerequisites in place, you can then use the [installation script procedure](#use-the-script-to-install-microsoft-tunnel) to first download the installation script, and then run the install by using the modified script command-line.
+
+### Additional prerequisites for rootless Podman containers
+
+Use of a rootless Podman container requires your environment meet the following prerequisites, which are in *addition* to the default [Microsoft Tunnel prerequisites](../protect/microsoft-tunnel-prerequisites.md):
+
+**Supported platform**:
+
+- The Linux server must run Red Hat (RHEL) 8.8 or later.
+- The container must run Podman 4.6.1 or later. *Rootless containers are not supported with Docker*.
+
+- The rootless container must be installed under the **/home** folder.
+- The **/home** folder must have a minimum of 10 GB of free space.
+
+**Network**:
+The following network settings, which are not available in a rootless namespace, must be set in **/etc/sysctl.conf**:
+
+- `net.core.somaxconn=8192`
+- `net.netfilter.nf_conntrack_acct=1`
+- `net.netfilter.nf_conntrack_timestamp=1`
+
+In addition, if you bind the rootless Tunnel Gateway to a port that is smaller than 1024, you must also add the following setting in **/etc/sysctl.conf** and set it equal to the port you use:
+
+- `net.ipv4.ip_unprivileged_port_start`
+
+For example, to specify port 443, use the following entry: `net.ipv4.ip_unprivileged_port_start=443`
+
+After editing **sysctl.conf**, you must reboot the Linux server before the new configurations take effect.
+
+**Outbound proxy for the rootless user**:
+To support an outbound proxy for the rootless user, edit **/etc/profile.d/http_proxy.sh** and add the following two lines. In the following lines, *10.10.10.1:3128* is an example *address:port* entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP address and port:
+
+- `export http_proxy=http://10.10.10.1:3128`
+- `export https_proxy=http://10.10.10.1:3128`
+
+### Modified installation command-line for rootless Podman containers
+
+To install Microsoft Tunnel to a rootless Podman container, use the following command line to begin the installation script. This command line sets **mst_rootless_mode** as an environment variable and replaces use of the default installation command line during *step 2* of the [installation procedure](use-the-script-to-install-microsoft-tunnel):
+
+- `chmod mst_rootless_mode=1 ./mstunnel-setup`
 
 ## Uninstall the Microsoft Tunnel
 
