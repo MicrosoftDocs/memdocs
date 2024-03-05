@@ -144,6 +144,9 @@ In general, Microsoft recommends waiting for a complementary event. For example,
 
 You can proactively reset existing devices to move to Microsoft Entra Join. This approach can be more disruptive to users and requires more planning & testing. But you can use this approach if you have a few devices or if you have a strong business case to move to Microsoft Entra Join.
 
+> [!NOTE]
+> [Windows Autopilot Reset](../../../autopilot/windows-autopilot-reset.md) does not support Microsoft Entra hybrid joined devices; a full device wipe is required.
+
 #### There's a blocker that prevents my organization from moving to Microsoft Entra Join
 
 It's possible there are blockers and challenges outside of Microsoft's control that can prevent your organization from fully moving to Microsoft Entra Join. There may also be unknown blockers that are specific to your organization and its configuration or expectations. These blockers can be technical or happen for other, nontechnical reasons.
