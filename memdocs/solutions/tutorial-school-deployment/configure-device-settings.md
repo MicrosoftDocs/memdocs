@@ -121,6 +121,10 @@ For more information, see [Updates and upgrade][INT-6].
 > - [<u>What is Windows Update for Business?</u>][WIN-1]
 > - [<u>Manage Windows software updates in Intune</u>][MEM-1]
 
+# [Intune](#tab/intune)
+
+Updates, Windows, Intune
+
 ::: zone-end
 
 ::: zone pivot="ios"
