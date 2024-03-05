@@ -1,11 +1,11 @@
 ---
-title: Install and configure Microsoft Tunnel VPN solution for Microsoft Intune
+title: Install the Microsoft Tunnel VPN for Microsoft Intune
 description: Install and configure Microsoft Tunnel Gateway, a VPN server that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/18/2024
+ms.date: 03/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -120,6 +120,10 @@ Sites are logical groups of servers that host Microsoft Tunnel. You'll assign a 
 
 Before installing Microsoft Tunnel Gateway on a Linux server, configure your tenant with at least one [Server configuration](#create-a-server-configuration), and then create a [Site](#create-a-site). Later, you'll specify the Site that a server joins when you install the tunnel on that server.
 
+With a server configuration and a site, you can then use the [following procedure](#use-the-script-to-install-microsoft-tunnel) to install the Microsoft Tunnel Gateway.
+
+However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podman container, see [Use a rootless Podman container](#use-a-rootless-podman-container) before you begin your install. The linked section details additional prerequisite requirements and a modified command-line for the installation script. After the extra prerequisites are configured, you can return here to continue with the following installation procedure.
+
 ### Use the script to install Microsoft Tunnel
 
 1. Download the Microsoft Tunnel installation script by using one of the following methods:
@@ -135,6 +139,10 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
 2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
+
+   > [!IMPORTANT]
+   >
+   > If you are installing Tunnel to a [rootless Podman container](#use-a-rootless-podman-container), use the the following  modified command-line to start the script: `chmod  mst_rootless_mode=1 ./mstunnel-setup`
 
    To see detailed console output during the tunnel and installation agent enrollment process:  
    1. Run `export mst_verbose_log="true"` before you run the *./mstunnel-setup* script. To confirm verbose logging is enabled, run `export`.
@@ -420,6 +428,57 @@ You can use the **./mst-cli** command-line tool to update the TLS certificate on
 4. Run: `mst-cli server restart`
 
 For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md).
+
+## Use a rootless Podman container
+
+When you use Red Hat Linux with Podman containers to host your Microsoft Tunnel, you can configure the container as a rootless container.
+
+Use of a rootless container can help to limit impact from a container escape, with all the files in and below the **/etc/mstunnel** folder on the server being owned by a non-privileged user service account. The account name on the Linux server that runs Tunnel is unchanged from a standard installation, but is created without root user permissions.
+
+To successfully use a rootless Podman container, you must:
+
+- [Configure additional prerequisites](#additional-prerequisites-for-rootless-podman-containers) outlined in the following section.
+- [Modify the script command-line](#modified-installation-command-line-for-rootless-podman-containers) when starting the Microsoft Tunnel installation.
+
+With prerequisites in place you can then use the [installation script procedure](#use-the-script-to-install-microsoft-tunnel) to first download the installation script, and then run the install by using the modified script command-line.
+
+### Additional prerequisites for rootless Podman containers
+
+Use of a rootless Podman container requires your environment meet the following prerequisites, which are in *addition* to the default [Microsoft Tunnel prerequisites](../protect/microsoft-tunnel-prerequisites.md):
+
+**Supported platform**:
+
+- The Linux server must run Red Hat (RHEL) 8.8 or later.
+- The container must run Podman 4.6.1 or later.  *Rootless containers are not supported with Docker*.
+
+- The rootless container must be installed under the **/home** folder.
+- The **/home** folder must have a minimum of 10 GB of free space.
+
+**Network**:
+The following network settings, which are not available in a rootless namespace, must be set in **/etc/sysctl.conf**:
+
+- `net.core.somaxconn=8192`
+- `net.netfilter.nf_conntrack_acct=1`
+- `net.netfilter.nf_conntrack_timestamp=1`
+
+In addition, if you bind the rootless Tunnel Gateway to a port that is smaller than 1024, you must also add the following setting in **/etc/sysctl.conf** and set it equal to the port you use:
+
+- `net.ipv4.ip_unprivileged_port_start`
+
+For example, to specify port 443, use the following:  `net.ipv4.ip_unprivileged_port_start=443`
+
+After editing **sysctl.conf**, you must reboot the Linux server before the new configurations take effect.
+**Outbound proxy for the rootless user**:
+To support an outbound proxy for the rootless user, edit **/etc/profile.d/http_proxy.sh** and add the following two lines. In the following lines, *10.10.10.1:3128* is an example *address:port* entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP address and port:
+
+- `export http_proxy=http://10.10.10.1:3128`
+- `export https_proxy=http://10.10.10.1:3128`
+
+### Modified installation command-line for rootless Podman containers
+
+To install Microsoft Tunnel to a rootless Podman container, use the following command line to begin the installation script. This command line sets **mst_rootless_mode** as an environment variable and replaces use of the default installation command line during *step 2* of the [installation procedure](use-the-script-to-install-microsoft-tunnel):
+
+- `chmod  mst_rootless_mode=1 ./mstunnel-setup`
 
 ## Uninstall the Microsoft Tunnel
 
