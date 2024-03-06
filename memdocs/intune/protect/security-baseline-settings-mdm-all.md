@@ -68,427 +68,1111 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 
 ### Control Panel > Personalization
 
-- [**Prevent enabling lock screen camera**](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventenablinglockscreencamera) - *Enabled*
+- **Prevent enabling lock screen camera**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventenablinglockscreencamera)
 
-- [**Prevent enabling lock screen slide show**](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventlockscreenslideshow) - *Enabled*
+- **Prevent enabling lock screen slide show**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventlockscreenslideshow)
 
 ### MS Security Guide
 
-- [**Apply UAC restrictions to local accounts on network logons**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#applyuacrestrictionstolocalaccountsonnetworklogon) - *Enabled*
+- **Apply UAC restrictions to local accounts on network logons**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#applyuacrestrictionstolocalaccountsonnetworklogon)
+  
+- **Configure SMB v1 client driver**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1clientdriver)  
+  - **Configure MrxSmb10 driver**  
+    Baseline default: *Disable driver (recommended)*
 
-- [**Configure SMB v1 client driver**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1clientdriver) - *Enabled*
-  - **Configure MrxSmb10 driver** - *Disable driver (recommended)*
+- **Configure SMB v1 server**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1server)
 
-- [**Configure SMB v1 server**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1server) - *Disabled*
+- **Enable Structured Exception Handling Overwrite Protection (SEHOP)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#enablestructuredexceptionhandlingoverwriteprotection)
 
-- [**Enable Structured Exception Handling Overwrite Protection (SEHOP)**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#enablestructuredexceptionhandlingoverwriteprotection) - *Enabled*
-
-- [**WDigest Authentication (disabling may require KB2871997)**](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#wdigestauthentication) - *Disabled*
+- **WDigest Authentication (disabling may require KB2871997)**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#wdigestauthentication)
 
 ### MSS (Legacy)
 
-- [**MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipv6sourceroutingprotectionlevel) - *Enabled*
-  - **DisableIPSourceRouting IPv6 (Device)** - *Highest protection, source routing is completely disabled*
-- [**MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipsourceroutingprotectionlevel) - *Enabled*
-  - **DisableIPSourceRouting (Device)** - *Highest protection, source routing is completely disabled*
-- [**MSS: (EnableCMPRedirect) Allow ICMP redirects to override OSPF generated routes**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowicmpredirectstooverrideospfgeneratedroutes) - *Disabled*
-- [**MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers**](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowthecomputertoignorenetbiosnamereleaserequestsexceptfromwinsservers) - *Enabled*
+- **MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipv6sourceroutingprotectionlevel)  
+  - **DisableIPSourceRouting IPv6 (Device)**  
+    Baseline default: *Highest protection, source routing is completely disabled*
+
+- **MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipsourceroutingprotectionlevel)
+
+  - **DisableIPSourceRouting (Device)**  
+    Baseline default: *Enabled*  *Highest protection, source routing is completely disabled*
+
+- **MSS: (EnableCMPRedirect) Allow ICMP redirects to override OSPF generated routes**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowicmpredirectstooverrideospfgeneratedroutes)
+
+- **MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowthecomputertoignorenetbiosnamereleaserequestsexceptfromwinsservers)
 
 ### Network > DNS Client
 
-- [**Turn off multicast name resolution**](/windows/client-management/mdm/policy-csp-admx-dnsclient?WT.mc_id=Portal-fx#turn_off_multicast) - *Enabled*
+- **Turn off multicast name resolution**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-dnsclient?WT.mc_id=Portal-fx#turn_off_multicast)
 
 ### Network > Network Connections
 
-- [**Prohibit use of Internet Connection Sharing on your DNS domain network**](/windows/client-management/mdm/policy-csp-admx-networkconnections?WT.mc_id=Portal-fx#nc-showsharedaccessui) - *Enabled*
+- **Prohibit use of Internet Connection Sharing on your DNS domain network**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-networkconnections?WT.mc_id=Portal-fx#nc-showsharedaccessui)
 
 ### Network > Network Provider
 
-- [**Hardened UNC Paths**](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#hardeneduncpaths) - *Enabled*
+- **Hardened UNC Paths**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#hardeneduncpaths)
 
-#### Hardened UNC Paths: (Device) 
-| Name           | Value|
-|----------------|------|
-| `\\*\SYSVOL`   | RequireMutualAuthentication=1,RequireIntegrity=1 |
-| `\\*\NETLOGON` | RequireMutualAuthentication=1,RequireIntegrity=1 |
+  - **Hardened UNC Paths: (Device)**  
+    Baseline defaults:
+    | Name           | Value|
+    |----------------|------|
+    | `\\*\SYSVOL`   | RequireMutualAuthentication=1,RequireIntegrity=1 |
+    | `\\*\NETLOGON` | RequireMutualAuthentication=1,RequireIntegrity=1 |
 
 ### Network > Windows Connection Manager
 
-- [**Prohibit connection to non-domain networks when connected to domain authenticated network**](/windows/client-management/mdm/policy-csp-windowsconnectionmanager?WT.mc_id=Portal-fx#prohitconnectiontonondomainnetworkswhenconnectedtodomainauthenticatednetwork) - *Enabled*
+- **Prohibit connection to non-domain networks when connected to domain authenticated network**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-windowsconnectionmanager?WT.mc_id=Portal-fx#prohitconnectiontonondomainnetworkswhenconnectedtodomainauthenticatednetwork)
 
 ### Printers
 
-- [**Configure Redirection Guard**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configureredirectionguardpolicy) - *Enabled*
-  - **Redirection Guard Options (Device)** - *Redirection Guard Enabled*
+- **Configure Redirection Guard**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configureredirectionguardpolicy)
+  - **Redirection Guard Options (Device)**  
+    Baseline default: *Redirection Guard Enabled*
 
-- [**Configure RPC connection settings**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpcconnectionpolicy) - *Enabled*
-  - **Use authentication for outgoing RPC connections: (Device)** - *Default*
-  - **Protocol to allow for incoming RPC connections: (Device)** - *RPC over TCP*
+- **Configure RPC connection settings**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpcconnectionpolicy)
+  - **Use authentication for outgoing RPC connections: (Device)**  
+    Baseline default: *Default*  
+  - **Protocol to allow for incoming RPC connections: (Device)**  
+    Baseline default: *RPC over TCP*
 
-- [**Configure RPC listener settings**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpclistenerpolicy) - *Enabled*
-  - **Protocols to allow for incoming RPC connections: (Device)** - *RCP over TCP*
-  - **Authentication protocol to use for incoming RPC connections: (Device)** - *Negotiate*
+- **Configure RPC listener settings**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpclistenerpolicy)  
+  - **Protocols to allow for incoming RPC connections: (Device)**  
+    Baseline default: *RCP over TCP*  
+  - **Authentication protocol to use for incoming RPC connections: (Device)**  
+    Baseline default: *Negotiate*
 
-- [**Configure RPC over TPC port**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpctcpport) - *Enabled*
-  - **RPC over TCP port (Device)** - *0*
+- **Configure RPC over TPC port**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpctcpport)  
+  - **RPC over TCP port (Device)**  
+    Baseline default: *0*
 
-- [**Limits print driver installation to Administrators**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#restrictdriverinstallationtoadministrators) - *Enabled*
+- **Limits print driver installation to Administrators**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#restrictdriverinstallationtoadministrators)
 
-- [**Manage processing of Queue-specific files**](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurecopyfilespolicy) - *Enabled*
-  - **Manage processing of Queue-specific files: (Device)** - *Limit Queue-specific files to Color profiles*
+- **Manage processing of Queue-specific files**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurecopyfilespolicy)  
+  - **Manage processing of Queue-specific files: (Device)**  
+    Baseline default: *Limit Queue-specific files to Color profiles*
 
 ### Start Menu and Taskbar > Notifications
 
-- [**Turn off toast notifications on the lock screen (User)**](/windows/client-management/mdm/policy-csp-admx-wpn?WT.mc_id=Portal-fx#nolockscreentoastnotification) - *Enabled*
+- **Turn off toast notifications on the lock screen (User)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-wpn?WT.mc_id=Portal-fx#nolockscreentoastnotification)
 
 ### System > Credentials Delegation
 
-- [**Encryption Oracle Remediation**](/windows/client-management/mdm/policy-csp-admx-credssp?WT.mc_id=Portal-fx#allowencryptionoracle) - *Enabled*
-  - **Protection Level: (Device)** - *Force Updated Clients*
+- **Encryption Oracle Remediation**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-credssp?WT.mc_id=Portal-fx#allowencryptionoracle)
+  - **Protection Level: (Device)**  
+    Baseline default: *Force Updated Clients*
 
-- [**Remote host allows delegation of non-exportable credentials**](/windows/client-management/mdm/policy-csp-credentialsdelegation?WT.mc_id=Portal-fx#remotehostallowsdelegationofnonexportablecredentials) - *Enabled*
+- **Remote host allows delegation of non-exportable credentials**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-credentialsdelegation?WT.mc_id=Portal-fx#remotehostallowsdelegationofnonexportablecredentials)
 
 ### System > Device Installation > Device Installation Restrictions
 
-- [**Prevent installation of devices using drivers that match these device setup classes**](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses) - *Enabled*
-  - **Also apply to matching devices that are already installed** - *True*
-  - **Prevented Classes**:
-    - *{d48179be-ec20-11d1-b6b8-00c04fa372a7}*
+- **Prevent installation of devices using drivers that match these device setup classes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
+  - **Also apply to matching devices that are already installed**  
+    Baseline default: *True*  
+  - **Prevented Classes**  
+    Baseline default: *{d48179be-ec20-11d1-b6b8-00c04fa372a7}*
 
 ### System > Early Launch Antimalware
 
-- [**Boot-Start Driver Initialization Policy**](/windows/client-management/mdm/policy-csp-system?WT.mc_id=Portal-fx#bootstartdriverinitialization) - *Enabled*
-  - **Choose the boot-start drivers that can be initialized:** - *Good, unknown and bad but critical*
+- **Boot-Start Driver Initialization Policy**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-system?WT.mc_id=Portal-fx#bootstartdriverinitialization)
+  - **Choose the boot-start drivers that can be initialized:**  
+    Baseline default: *Good, unknown and bad but critical*
 
 ### System > Group Policy
 
-- [**Configure registry policy processing**](/windows/client-management/mdm/policy-csp-admx-grouppolicy?WT.mc_id=Portal-fx#cse-registry) - *Enabled*
-  - **Do not apply during periodic background processing (Device)** - *False*
-  - **Process even if the Group Policy objects have not changed (Device)** - *True*
+- **Configure registry policy processing**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-grouppolicy?WT.mc_id=Portal-fx#cse-registry)  
+  - **Do not apply during periodic background processing (Device)**  
+    Baseline default: *False*
+  - **Process even if the Group Policy objects have not changed (Device)**  
+    Baseline default: *True*
 
 ### System > Internet Communication Management > Internet Communication settings
 
-- [**Turn off downloading of print drivers**](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disabledownloadingofprintdriversoverhttp) - *Enabled*
-- [**Turn off Interent download for Web publishing and online ordering wizards**](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disableinternetdownloadforwebpublishingandonlineorderingwizards) - *Enabled*
+- **Turn off downloading of print drivers**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disabledownloadingofprintdriversoverhttp)
+
+- **Turn off Internet download for Web publishing and online ordering wizards**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disableinternetdownloadforwebpublishingandonlineorderingwizards)
 
 ### System > Local Security Authority
 
-- [**Allow Custom SSPs and APs to be loaded into LSASS**](/windows/client-management/mdm/policy-csp-lsa#allowcustomsspsaps) - *Disabled*
+- **Allow Custom SSPs and APs to be loaded into LSASS**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lsa#allowcustomsspsaps)
 
 ### System > Power Management > Sleep Settings
 
-- [**Allow standby states (S1-S3) when sleeping (on battery)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbystateswhensleepingonbattery) - *Disabled*
-- [**Allow standby states (S1-S3) when sleeping (plugged in)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbywhensleepingpluggedin) - *Disabled*
-- [**Require a password when a computer wakes (on battery)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakesonbattery) - *Enabled*
-- [**Require a password when a computer wakes (plugged in)**](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakespluggedin) - *Enabled*
+- **Allow standby states (S1-S3) when sleeping (on battery)**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbystateswhensleepingonbattery)
+
+- **Allow standby states (S1-S3) when sleeping (plugged in)**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#allowstandbywhensleepingpluggedin)
+
+- **Require a password when a computer wakes (on battery)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakesonbattery)
+
+- **Require a password when a computer wakes (plugged in)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-power?WT.mc_id=Portal-fx#requirepasswordwhencomputerwakespluggedin)
 
 ### System > Remote Assistance
 
-- [**Configure Solicited Remote Assistance**](/windows/client-management/mdm/policy-csp-remoteassistance?WT.mc_id=Portal-fx#solicitedremoteassistance) - *Disabled*
+- **Configure Solicited Remote Assistance**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remoteassistance?WT.mc_id=Portal-fx#solicitedremoteassistance)
 
 ### System > Remote Procedure Call
 
-- [**Restrict Unauthenticated RPC clients**](/windows/client-management/mdm/policy-csp-remoteprocedurecall?WT.mc_id=Portal-fx#restrictunauthenticatedrpcclients) - *Enabled*
-  - **RPC Runtime Unauthenticated Client Restriction to Apply:** - *Authenticated*
+- **Restrict Unauthenticated RPC clients**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remoteprocedurecall?WT.mc_id=Portal-fx#restrictunauthenticatedrpcclients)
+  - **RPC Runtime Unauthenticated Client Restriction to Apply:**  
+    Baseline default: *Authenticated*
 
 ### Windows Components > App runtime
 
-- [**Allow Microsoft accounts to be optional**](/windows/client-management/mdm/policy-csp-appruntime?WT.mc_id=Portal-fx#allowmicrosoftaccountstobeoptional) - *Enabled*
+- **Allow Microsoft accounts to be optional**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-appruntime?WT.mc_id=Portal-fx#allowmicrosoftaccountstobeoptional)
 
 ### Windows Components > AutoPlay Policies
 
-- [**Disallow Autoplay for non-volume devices**](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#disallowautoplayfornonvolumedevices) - *Enabled*
+- **Disallow Autoplay for non-volume devices**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#disallowautoplayfornonvolumedevices)
 
-- [**Set the default behavior for AutoRun**](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#setdefaultautorunbehavior) - *Enabled*
-  - **Default AutoRun Behavior** - *Do not execute any autorun commands*
+- **Set the default behavior for AutoRun**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#setdefaultautorunbehavior)
+  - **Default AutoRun Behavior**  
+    Baseline default: *Do not execute any autorun commands*
 
-- [**Turn off Autoplay**](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#turnoffautoplay) - *Enabled*
-  - **Turn off Autoplay on:** - *All drives*
+- **Turn off Autoplay**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#turnoffautoplay)
+  - **Turn off Autoplay on:**  
+    Baseline default: *All drives*
 
 ### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
 
-- [**Deny write access to fixed drives not protected by BitLocker**](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption) - *Disabled*
+- **Deny write access to fixed drives not protected by BitLocker**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
 
 ### Windows Components > BitLocker Drive Encryption > Removable Data Drives
 
-- [**Deny write access to removable drives not protected by BitLocker**](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption) - *Enabled*
-  - **Do not allow write access to devices configured in another organization** - *False*
+- **Deny write access to removable drives not protected by BitLocker**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption)
+  - **Do not allow write access to devices configured in another organization**  
+    Baseline default: *False*
 
 ### Windows Components > Credential User Interface
 
-- [**Enumerate administrator accounts on elevation**](/windows/client-management/mdm/policy-csp-credentialsui?WT.mc_id=Portal-fx#enumerateadministrators) - *disabled*
+- **Enumerate administrator accounts on elevation**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-credentialsui?WT.mc_id=Portal-fx#enumerateadministrators)
 
 ### Windows Components > Event Log Service > Application
 
-- [**Specify the maximum log file size (KB)**](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizeapplicationlog) - *Enabled*
-  - **Maximum Log Size (KB)** - *32768*
+- **Specify the maximum log file size (KB)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizeapplicationlog)
+  - **Maximum Log Size (KB)**  
+    Baseline default: *32768*
 
 ### Windows Components > Event Log Service > Security
 
-- [**Specify the maximum log file size (KB)**](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesecuritylog) - *Enabled*
-  - **Maximum Log Size (KB)** - *196608*
+- **Specify the maximum log file size (KB)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesecuritylog)
+  - **Maximum Log Size (KB)**  
+    Baseline default: *196608*
 
 ### Windows Components > Event Log Service > System
 
-- [**Specify the maximum log file size (KB)**](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesystemlog) - *Enabled*
-  - **Maximum Log Size (KB)** - *32768*
+- **Specify the maximum log file size (KB)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesystemlog)
+  - **Maximum Log Size (KB)**  
+    Baseline default: *32768*
 
 ### Windows Components > File Explorer
 
-- [**Configure Windows Defender SmartScreen**](/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen) - *Enabled*
-  - **Pick one of the following settings: (Device)** - *Warn and prevent bypass*
+- **Configure Windows Defender SmartScreen**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen)
+  - **Pick one of the following settings: (Device)**  
+    Baseline default: *Warn and prevent bypass*
 
-- [**Turn off Data Execution Prevention for Explorer**](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffdataexecutionpreventionforexplorer) - *Disabled*
+- **Turn off Data Execution Prevention for Explorer**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffdataexecutionpreventionforexplorer)
 
-- [**Turn off heap termination on corruption**](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffheapterminationoncorruption) - *Disabled*
+- **Turn off heap termination on corruption**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffheapterminationoncorruption)
 
 ### Windows Components > Internet Explorer > Internet Control Panel > Advanced Page
 
-- [**Allow software to run or install even if the signature is invalid**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowsoftwarewhensignatureisinvalid) - *Disabled*
+- **Allow software to run or install even if the signature is invalid**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowsoftwarewhensignatureisinvalid)
 
-- [**Check for server certificate revocation**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checkservercertificaterevocation) - *Enabled*
+- **Check for server certificate revocation**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checkservercertificaterevocation)
 
-- [**Check for signatures on downloaded programs**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checksignaturesondownloadedprograms) - *Enabled*
+- **Check for signatures on downloaded programs**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checksignaturesondownloadedprograms)
 
-- [**Do not allow ActiveX controls to run in Protected Mode when Enhanced Protected Mode is enabled**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowactivexcontrolsinprotectedmode) - *Enabled*
+- **Do not allow ActiveX controls to run in Protected Mode when Enhanced Protected Mode is enabled**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowactivexcontrolsinprotectedmode)
 
-- [**Turn off encryption support**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableencryptionsupport) - *Enabled*
-  - **Secure Protocol combinations** - *Use TLS 1.1 and TLS 1.2*
+- **Turn off encryption support**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableencryptionsupport)
+  - **Secure Protocol combinations**  
+    Baseline default: *Use TLS 1.1 and TLS 1.2*
 
-- [**Turn on 64-bit tab processes when running in Enhanced Protected Mode on 64-bit versions of Windows**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableprocessesinenhancedprotectedmode) - *Enabled*
+- **Turn on 64-bit tab processes when running in Enhanced Protected Mode on 64-bit versions of Windows**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableprocessesinenhancedprotectedmode)
 
-- [**Turn on Enhanced Protected Mode**](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowenhancedprotectedmode) - *Enabled*
-
+- **Turn on Enhanced Protected Mode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowenhancedprotectedmode)
 
 ### Windows Components > Internet Explorer > Internet Control Panel
 
-- [****]() - **
+- **Prevent ignoring certificate errors**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableignoringcertificateerrors)
 
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Internet Zone
 
-- [****]() - **
-  - **** - **
+- **Access data sources across domains**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowaccesstodatasources)
+  - **Access data sources across domains**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow cut, copy or paste operations from the clipboard via script**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowcopypasteviascript)
+  - **Allow paste operations via script**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow drag and drop or copy and paste files**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowdraganddropcopyandpastefiles)
+  - **Allow drag and drop or copy and paste files**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow loading of XAML files**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowloadingofxamlfiles)
+  - **XAML Files**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow only approved domains to use ActiveX controls without prompt**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowonlyapproveddomainstouseactivexcontrols)
+  - **Only allow approved domains to use ActiveX controls without prompt**  
+    Baseline default: *Enable*
 
-- [****]() - **
-  - **** - **
+- **Allow only approved domains to use the TDC ActiveX control**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
+  - **Only allow approved domains to use the TDC ActiveX control**  
+    Baseline default: *Enable*
 
-- [****]() - **
-  - **** - **
+- **Allow script-initiated windows without size or position constraints**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptinitiatedwindows)
+  - **Allow script-initiated windows without size or position constraints**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow scripting of Internet Explorer WebBrowser controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptingofinternetexplorerwebbrowsercontrols)
+  - **Internet Explorer web browser control**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow scriptlets**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptlets)
+  - **Scriptlets**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow updates to status bar via script**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowupdatestostatusbarviascript)
+  - **Status bar updates via script**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Allow VBScript to run in Internet Explorer**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowvbscripttorunininternetexplorer)
+  - **Allow VBScript to run in Internet Explorer**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Automatic prompting for file downloads**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowautomaticpromptingforfiledownloads)
+  - **Automatic prompting for file downloads**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Don't run antimalware programs against ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedonotrunantimalwareagainstactivexcontrols)
+  - **Don't run antimalware programs against ActiveX controls**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Download signed ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedownloadsignedactivexcontrols)
+  - **Download signed ActiveX controls**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Download unsigned ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedownloadunsignedactivexcontrols)
+  - **Download unsigned ActiveX controls**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Enable dragging of content from different domains across windows**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+  - **Enable dragging of content from different domains across windows**  
+    Baseline default: *Disable*
 
-- [****]() - **
-  - **** - **
+- **Enable dragging of content from different domains within a window**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+  - **Enable dragging of content from different domains within a window**  
+    Baseline default: *Disable*
 
-Only allow approved domains to use ActiveX controls without prompt
+- **Include local path when user is uploading files to a server**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneincludelocalpathwhenuploadingfilestoserver)
+  - **Include local path when user is uploading files to a server**  
+    Baseline default: *Disable*
 
+- **Initialize and script ActiveX controls not marked as safe**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneinitializeandscriptactivexcontrols)
+  - **Initialize and script ActiveX controls not marked as safe**  
+    Baseline default: *Disable*
 
-Enable
-Only allow approved domains to use the TDC ActiveX control
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonejavapermissions)
+  - **Java permissions**  
+    Baseline default: *Disable Java*
 
-Enable
-Allow script-initiated windows without size or position constraints
+- **Launching applications and files in an IFRAME**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonelaunchingapplicationsandfilesiniframe)
+  - **Launching applications and files in an IFRAME**  
+    Baseline default: *Disable*
 
-Disable
-Internet Explorer web browser control
+- **Logon options**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonelogonoptions)
+  - **Logon options**  
+    Baseline default: *Prompt for user name and password*
 
-Disable
-Scriptlets
+- **Navigate windows and frames across different domains**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonenavigatewindowsandframes)
+  - **Navigate windows and frames across different domains**  
+    Baseline default: *Disable*
 
-Disable
-Status bar updates via script
+- **Run .NET Framework-reliant components not signed with Authenticode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallownetframeworkreliantcomponents)
+  - **Run .NET Framework-reliant components not signed with Authenticode**  
+    Baseline default: *Disable*
 
-Disable
-Automatic prompting for file downloads
+- **Run .NET Framework-reliant components signed with Authenticode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonerunnetframeworkreliantcomponentssignedwithauthenticode)
+  - **Run .NET Framework-reliant components signed with Authenticode**  
+    Baseline default: *Disable*
 
-Disable
-Don't run antimalware programs against ActiveX controls
+- **Show security warning for potentially unsafe files**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneshowsecuritywarningforpotentiallyunsafefiles)
+  - **Launching programs and unsafe files**  
+    Baseline default: *Prompt*
 
-Disable
-Enable dragging of content from different domains across windows
+- **Turn on Cross-Site Scripting Filter**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenablecrosssitescriptingfilter)
+  - **Turn on Cross-Site Scripting (XSS) Filter**  
+    Baseline default: *Enable*
 
-Disable
-Enable dragging of content from different domains within a window
+- **Turn on Protected Mode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenableprotectedmode)
+  - **Protected Mode**  
+    Baseline default: *Enable*
 
-Disable
-Include local directory path when uploading files to a server
+- **Turn on SmartScreen Filter scan**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowsmartscreenie)
+  - **Use SmartScreen Filter**  
+    Baseline default: *Enable*
 
-Disable
-Turn on Cross-Site Scripting (XSS) Filter
+- **Userdata persistence**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowuserdatapersistence)
+  - **Userdata persistence**  
+    Baseline default: *Disable*
 
-Enable
-Protected Mode
+- **Web sites in less privileged Web content zones can navigate into this zone**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowlessprivilegedsites)
+  - **Web sites in less privileged Web content zones can navigate into this zone**  
+    Baseline default: *Disable*
 
-Enable
-Use SmartScreen Filter
-
-Enable
-Use Pop-up Blocker
-
-Enable
-Userdata persistence
-
-Disable
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page
 
+- **Intranet Sites: Include all network paths (UNCs)**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#includeallnetworkpaths)
 
+- **Turn on certificate address mismatch warning**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowcertificateaddressmismatchwarning)
 
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Intranet Zone
 
+- **Don't run antimalware programs against ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzonedonotrunantimalwareagainstactivexcontrols)
+  - **Don't run antimalware programs against ActiveX controls**  
+    Baseline default: *Disable*
 
-Don't run antimalware programs against ActiveX controls
+- **Initialize and script ActiveX controls not marked as safe**  
+  Baseline default: *Enabled*  
+  [Learn more](.com/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzoneinitializeandscriptactivexcontrols)
+  - **Initialize and script ActiveX controls not marked as safe**  
+    Baseline default: *Disable*
 
-Disable
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzonejavapermissions)
+  - **Java permissions**  
+    Baseline default: *High safety*
+
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Local Machine Zone
 
+- **Don't run antimalware programs against ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#localmachinezonedonotrunantimalwareagainstactivexcontrols)
+  - **Don't run antimalware programs against ActiveX controls**  
+    Baseline default: *Disable*
 
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#localmachinezonejavapermissions)
+  - **Java permissions**  
+    Baseline default: *Disable Java*
 
-Don't run antimalware programs against ActiveX controls
-
-Disable
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Internet Zone
 
+- **Turn on SmartScreen Filter scan**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddowninternetzoneallowsmartscreenie)
+  - **Use SmartScreen Filter**  
+    Baseline default: *Enable*
 
-Use SmartScreen Filter
-
-Enable
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Intranet Zone
 
-
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownintranetjavapermissions)
+  - **Java permissions**  
+    Baseline default: *Disable Java*
 
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Local Machine Zone
 
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownlocalmachinezonejavapermissions)
+  - **Java permissions**  
+    Baseline default: *Disable Java*
 
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Restricted Sites Zone
-Use SmartScreen Filter
 
-Enable
+- **Java permissions**  
+  Baseline default: *Enabled*  
+    [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownlocalmachinezonejavapermissions)  
+  - **Java permissions**  
+    Baseline default: *Disable Java*
+
+- **Turn on SmartScreen Filter scan**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownrestrictedsiteszoneallowsmartscreenie)
+  - **Use SmartScreen Filter**  
+      Baseline default: *Enable*
+
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Locked-Down Trusted Sites Zone
 
-
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddowntrustedsiteszonejavapermissions)
+  - **Java permissions**  
+    Baseline default: *Disable Java*
 
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Restricted Sites Zone
-Allow file downloads
 
-Disable
-Allow META REFRESH
+- **Access data sources across domains**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowaccesstodatasources)
+  - **Access data sources across domains**  
+    Baseline default: *Disable*
 
-Disable
-Only allow approved domains to use ActiveX controls without prompt
+- **Allow active scripting**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowactivescripting)
+  - **Allow active scripting**  
+    Baseline default: *Disable*
 
-Enable
-Only allow approved domains to use the TDC ActiveX control
+- **Allow binary and script behaviors**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowbinaryandscriptbehaviors)
+  - **Allow binary and script behaviors**  
+    Baseline default: *Disable*
 
-Enable
-Allow script-initiated windows without size or position constraints
+- **Allow cut, copy or paste operations from the clipboard via script**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowcopypasteviascript)
+  - **Allow paste operations via script**  
+    Baseline default: *Disable*
 
-Disable
-Internet Explorer web browser control
+- **Allow drag and drop or copy and paste files**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowdraganddropcopyandpastefiles)
+  - **Allow drag and drop or copy and paste files**  
+    Baseline default: *Disable*
 
-Disable
-Scriptlets
+- **Allow file downloads**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowfiledownloads)
+  - **Allow file downloads**  
+    Baseline default: *Disable*
 
-Disable
-Status bar updates via script
+- **Allow loading of XAML files**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowloadingofxamlfiles)
+  - **XAML Files**  
+    Baseline default: *Disable*
 
-Disable
-Automatic prompting for file downloads
+- **Allow META REFRESH**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowmetarefresh)
+  - **Allow META REFRESH**  
+    Baseline default: *Disable*
 
-Disable
-Don't run antimalware programs against ActiveX controls
+- **Allow only approved domains to use ActiveX controls without prompt**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowonlyapproveddomainstouseactivexcontrols)
+  - **Only allow approved domains to use ActiveX controls without prompt**  
+    Baseline default: *Enable*
 
-Disable
-Enable dragging of content from different domains across windows
+- **Allow only approved domains to use the TDC ActiveX control**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
+  - **Only allow approved domains to use the TDC ActiveX control**  
+    Baseline default: **
 
-Disable
-Enable dragging of content from different domains within a window
+- **Allow script-initiated windows without size or position constraints**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptinitiatedwindows)
+  - **Allow script-initiated windows without size or position constraints**  
+    Baseline default: *Disable*
 
-Disable
-Include local directory path when uploading files to a server
+- **Allow scripting of Internet Explorer WebBrowser controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptingofinternetexplorerwebbrowsercontrols)
+  - **Internet Explorer web browser control**  
+    Baseline default: *Disable*
 
-Disable
-Turn on Cross-Site Scripting (XSS) Filter
+- **Allow scriptlets**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptlets)
+  - **Scriptlets**  
+    Baseline default: *Disable*
 
-Enable
-Protected Mode
+- **Allow updates to status bar via script**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowupdatestostatusbarviascript)
+  - **Status bar updates via script**  
+    Baseline default: *Disable*
 
-Enable
-Use SmartScreen Filter
+- **Allow VBScript to run in Internet Explorer**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowvbscripttorunininternetexplorer)
+  - **Allow VBScript to run in Internet Explorer**  
+    Baseline default: *Disable*
 
-Enable
-Use Pop-up Blocker
+- **Automatic prompting for file downloads**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowautomaticpromptingforfiledownloads)
+  - **Automatic prompting for file downloads**  
+    Baseline default: *Disable*
 
-Enable
-Userdata persistence
+- **Don't run antimalware programs against ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedonotrunantimalwareagainstactivexcontrols)
+  - **Don't run antimalware programs against ActiveX controls**  
+    Baseline default: *Disable*
 
-Disable
+- **Download signed ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedownloadsignedactivexcontrols)
+  - **Download signed ActiveX controls**  
+    Baseline default: *Disable*
+
+- **Download unsigned ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedownloadunsignedactivexcontrols)
+  - **Download unsigned ActiveX controls**  
+    Baseline default: *Disable*
+
+- **Enable dragging of content from different domains across windows**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+  - **Enable dragging of content from different domains across windows**  
+    Baseline default: *Disable*
+
+- **Enable dragging of content from different domains within a window**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainswithinwindows)
+  - **Enable dragging of content from different domains within a window**  
+    Baseline default: *Disable*
+
+- **Include local path when user is uploading files to a server**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneincludelocalpathwhenuploadingfilestoserver)
+  - **Include local directory path when uploading files to a server**  
+    Baseline default: *Disable*
+
+- **Initialize and script ActiveX controls not marked as safe**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneinitializeandscriptactivexcontrols)
+  - **Initialize and script ActiveX controls not marked as safe**  
+    Baseline default: *Disable*
+
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonejavapermissions)
+  - **Java permissions**  
+    Baseline default: *Disable Java*
+
+- **Launching applications and files in an IFRAME**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonelaunchingapplicationsandfilesiniframe)
+  - **Launching applications and files in an IFRAME**  
+    Baseline default: *Disable*
+
+- **Logon options**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonelogonoptions)
+  - **Logon options**  
+    Baseline default: *Anonymous logon*
+
+- **Navigate windows and frames across different domains**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonenavigatewindowsandframes)
+  - **Navigate windows and frames across different domains**  
+    Baseline default: *Disable*
+
+- **Run .NET Framework-reliant components not signed with Authenticode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallownetframeworkreliantcomponents)
+  - **Run .NET Framework-reliant components not signed with Authenticode**  
+    Baseline default: *Disable*
+
+- **Run .NET Framework-reliant components signed with Authenticode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonerunnetframeworkreliantcomponentssignedwithauthenticode)
+  - **Run .NET Framework-reliant components signed with Authenticode**  
+    Baseline default: *Disable*
+
+- **Run ActiveX controls and plugins**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonerunactivexcontrolsandplugins)
+  - **Run ActiveX controls and plugins**  
+    Baseline default: *Disable*
+
+- **Script ActiveX controls marked safe for scripting**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonescriptactivexcontrolsmarkedsafeforscripting)  
+  - **Script ActiveX controls marked safe for scripting**  
+    Baseline default: *Disable*
+
+- **Scripting of Java applets**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonescriptingofjavaapplets)
+  - **Scripting of Java applets**  
+    Baseline default: *Disable*
+
+- **Show security warning for potentially unsafe files**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneshowsecuritywarningforpotentiallyunsafefiles)  
+  - **Launching programs and unsafe files**  
+    Baseline default: *Disable*
+
+- **Turn on Cross-Site Scripting Filter**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenablecrosssitescriptingfilter)
+  - **Turn on Cross-Site Scripting (XSS) Filter**  
+    Baseline default: *Enabled*
+
+- **Turn on Protected Mode**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneturnonprotectedmode)
+  - **Protected Mode**  
+    Baseline default: *Enabled*
+
+- **Turn on SmartScreen Filter scan**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowsmartscreenie)
+  - **Use SmartScreen Filter**  
+    Baseline default: *Enabled*
+
+- **Use Pop-up Blocker**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneusepopupblocker)
+  - **Use Pop-up Blocker**  
+    Baseline default: *Enabled*
+
+- **Userdata persistence**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowuserdatapersistence)
+  - **Userdata persistence**  
+    Baseline default: *Disable*
+
+- **Web sites in less privileged Web content zones can navigate into this zone**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowlessprivilegedsites)
+  - **Web sites in less privileged Web content zones can navigate into this zone**  
+    Baseline default: *Disable*
+
+<!-- 
+- ****  
+  Baseline default: *Enabled*  
+  [Learn more]()
+  - ****  
+    Baseline default: **
+-->
+
 ### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Trusted Sites Zone
-Don't run antimalware programs against ActiveX controls
 
-Disable
+- **Don't run antimalware programs against ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszonedonotrunantimalwareagainstactivexcontrols)
+  - **Don't run antimalware programs against ActiveX controls**  
+    Baseline default: *Disable*
+
+- **Initialize and script ActiveX controls not marked as safe**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszoneinitializeandscriptactivexcontrols)
+  - **Initialize and script ActiveX controls not marked as safe**  
+    Baseline default: *Disable*
+
+- **Java permissions**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszonejavapermissions)
+  - **Java permissions**  
+    Baseline default: *High safety*
+
 ### Windows Components > Internet Explorer
-### Windows Components > Internet Explorer > Security Features > Add-on Management
-### Windows Components > Internet Explorer > Security Features
-### Windows Components > Internet Explorer > Security Features > Consistent Mime Handling
-### Windows Components > Internet Explorer > Security Features > Mime Sniffing Safety Feature
-### Windows Components > Internet Explorer > Security Features > MK Protocol Security Restriction
-### Windows Components > Internet Explorer > Security Features > Notification bar
-### Windows Components > Internet Explorer > Security Features > Protection From Zone Elevation
-### Windows Components > Internet Explorer > Security Features > Restrict ActiveX Install
-### Windows Components > Internet Explorer > Security Features > Restrict File Download
-### Windows Components > Internet Explorer > Security Features > Scripted Window Security Restrictions
-### Windows Components > Microsoft Defender Antivirus > MAPS
-### Windows Components > Microsoft Defender Antivirus > Real-time Protection
-### Windows Components > Microsoft Defender Antivirus > Scan
-### Windows Components > Microsoft Defender Antivirus
-### Windows Components > Remote Desktop Services > Remote Desktop Connection Client
-### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection
-### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security
-### Windows Components > RSS Feeds
-### Windows Components > Windows Logon Options
-### Windows Components > Windows PowerShell
-Log script block invocation start / stop events:
 
-False
+- **Prevent bypassing SmartScreen Filter warnings**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarnings)
+
+- **Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
+
+- **Prevent managing SmartScreen Filter**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventmanagingsmartscreenfilter)
+  - **Select SmartScreen Filter mode**  
+    Baseline default: *On*
+
+- **Prevent per-user installation of ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventperuserinstallationofactivexcontrols)
+
+- **Security Zones: Do not allow users to add/delete sites**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowuserstoaddsites)
+
+- **Security Zones: Do not allow users to change policies**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowuserstochangepolicies)
+
+- **Security Zones: Use only machine settings**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#securityzonesuseonlymachinesettings)
+
+- **Specify use of ActiveX Installer Service for installation of ActiveX controls**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#specifyuseofactivexinstallerservice)
+
+- **Turn off Crash Detection**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablecrashdetection)
+
+- **Turn off the Security Settings Check feature**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablesecuritysettingscheck)
+
+- **Turn on the auto-complete feature for user names and passwords on forms (User)**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowautocomplete)
+
+### Windows Components > Internet Explorer > Security Features > Add-on Management
+
+- **Remove "Run this time" button for outdated ActiveX controls in Internet Explorer**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#removerunthistimebuttonforoutdatedactivexcontrols)
+
+- **Turn off blocking of outdated ActiveX controls for Internet Explorer**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotblockoutdatedactivexcontrols)
+
+
+### Windows Components > Internet Explorer > Security Features
+
+- **Allow fallback to SSL 3.0 (Internet Explorer)**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowfallbacktossl3)
+  - **Allow insecure fallback for:**  
+    Baseline default: *No Sites*
+
+### Windows Components > Internet Explorer > Security Features > Consistent Mime Handling
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#consistentmimehandlinginternetexplorerprocesses)
+
+### Windows Components > Internet Explorer > Security Features > Mime Sniffing Safety Feature
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mimesniffingsafetyfeatureinternetexplorerprocesses)
+
+### Windows Components > Internet Explorer > Security Features > MK Protocol Security Restriction
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mkprotocolsecurityrestrictioninternetexplorerprocesses)
+
+### Windows Components > Internet Explorer > Security Features > Notification bar
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#notificationbarinternetexplorerprocesses)
+
+### Windows Components > Internet Explorer > Security Features > Protection From Zone Elevation
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#protectionfromzoneelevationinternetexplorerprocesses)
+
+### Windows Components > Internet Explorer > Security Features > Restrict ActiveX Install
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictactivexinstallinternetexplorerprocesses)
+
+### Windows Components > Internet Explorer > Security Features > Restrict File Download
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictfiledownloadinternetexplorerprocesses)
+
+### Windows Components > Internet Explorer > Security Features > Scripted Window Security Restrictions
+
+- **Internet Explorer Processes**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#scriptedwindowsecurityrestrictionsinternetexplorerprocesses)
+
+### Windows Components > Microsoft Defender Antivirus > MAPS
+
+- **Configure the 'Block at First Sight' feature**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableblockatfirstseen)
+
+### Windows Components > Microsoft Defender Antivirus > Real-time Protection
+
+- **Turn on process scanning whenever real-time protection is enabled**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#realtimeprotection-disablescanonrealtimeenable)
+
+### Windows Components > Microsoft Defender Antivirus > Scan
+
+- **Scan packed executables**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#scan-disablepackedexescanning)
+
+### Windows Components > Microsoft Defender Antivirus
+
+- **Turn off routine remediation**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableroutinelytakingaction)
+
+### Windows Components > Remote Desktop Services > Remote Desktop Connection Client
+
+- **Do not allow passwords to be saved**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowpasswordsaving)
+
+### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection
+
+- **Do not allow drive redirection**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowdriveredirection)
+
+### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security
+
+- **Always prompt for password upon connection**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#promptforpassworduponconnection)
+
+- **Require secure RPC communication**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#requiresecurerpccommunication)
+
+- **Set client connection encryption level**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#clientconnectionencryptionlevel)
+  - **Encryption Level**  
+    Baseline default: *High Level*  
+
+### Windows Components > RSS Feeds
+
+- **Prevent downloading of enclosures**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableenclosuredownloading)
+
+### Windows Components > Windows Logon Options
+
+- **Enable MPR notifications for the system**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-windowslogon?WT.mc_id=Portal-fx#enablemprnotifications)
+
+- **Sign-in and lock last interactive user automatically after a restart**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-windowslogon?WT.mc_id=Portal-fx#allowautomaticrestartsignon)
+
+### Windows Components > Windows PowerShell
+
+- **Turn on PowerShell Script Block Logging**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-windowspowershell?WT.mc_id=Portal-fx#turnonpowershellscriptblocklogging)
+  - ****  
+    Baseline default: *False*  
+
 ### Windows Components > Windows Remote Management (WinRM) > WinRM Client
+
+- **Allow Basic authentication**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowbasicauthentication-service)
+
+- **Allow unencrypted traffic**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowunencryptedtraffic-client)
+
+- **Disallow Digest authentication**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowdigestauthentication)
+
 ### Windows Components > Windows Remote Management (WinRM) > WinRM Service
+
+- **Allow Basic authentication**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowbasicauthentication-service)
+
+- **Allow unencrypted traffic**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowunencryptedtraffic-service)
+
+- **Disallow WinRM from storing RunAs credentials**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowstoringofrunascredentials)
+
+
+
 
 
 ## Auditing
@@ -759,7 +1443,7 @@ Audit settings configure the events that are generated for the conditions of the
   [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   - **Remove matching hardware devices**:  
-    Baseline default:  *No default configuration*
+    Baseline default: *No default configuration*
 
   - **Hardware device identifiers that are blocked**:  
     Baseline default: *No default configuration*
@@ -941,7 +1625,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 <!-- /windows/client-management/mdm/policy-csp-internetexplorer -->
 
 - **Internet Explorer encryption support**:  
-  Baseline default: Two items:  *TLS v1.1* and *TLS v1.2*  
+  Baseline default: Two items: *TLS v1.1* and *TLS v1.2*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#disableencryptionsupport)
 
 - **Internet Explorer prevent managing smart screen filter**:  
@@ -1177,7 +1861,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#localmachinezonedonotrunantimalwareagainstactivexcontrols)
 
 - **Internet Explorer local machine zone java permissions**:  
-  TBaseline default: *Disable java*  
+  Baseline default: *Disable java*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#localmachinezonejavapermissions)
 
 - **Internet Explorer locked down internet zone smart screen**:  
