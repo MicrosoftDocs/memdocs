@@ -102,7 +102,7 @@ For the best user experience, make sure to:
 The following features aren't yet supported for Windows 365 Frontline.
 
 - GPU Cloud PCs
-- Reszie a Cloud PC remote action
+- Resize a Cloud PC remote action
 
 ## Next steps
 
