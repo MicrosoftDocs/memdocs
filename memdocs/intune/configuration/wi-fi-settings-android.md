@@ -56,6 +56,7 @@ Create an [Android device administrator Wi-Fi device configuration profile](wi-f
 
 - **Wi-Fi type**: Choose **Enterprise**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
+- [Note: You cannot deploy multiple wi-fi profile to same device with the same SSID.
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 - **EAP type**: Choose the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:
 
