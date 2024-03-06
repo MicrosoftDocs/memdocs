@@ -419,6 +419,10 @@ You can use the **./mst-cli** command-line tool to update the TLS certificate on
 3. Run: `mst-cli import_cert`
 4. Run: `mst-cli server restart`
 
+ > [!NOTE]
+ > The "import-cert" command with an additional parameter called "delay." This parameter allows you to specify the delay in minutes before the imported certificate is utilized.
+ > Example:  mst-cli import_cert delay 10080
+
 For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md).
 
 ## Uninstall the Microsoft Tunnel
