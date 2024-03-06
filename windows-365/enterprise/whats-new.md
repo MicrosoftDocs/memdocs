@@ -79,7 +79,7 @@ On the **Overview** page for individual Cloud PCs, the **Actions** will show act
 
 #### Windows 365 Switch support for Windows 365 Frontline<!--46816178-->
 
-In a future update, Windows 365 Switch will support Windows 365 Frontline Cloud PCs.
+Windows 365 Switch now supports Windows 365 Frontline Cloud PCs. For more information, see [Windows 365 Switch](windows-365-switch-overview.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
