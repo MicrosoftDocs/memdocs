@@ -13,7 +13,7 @@ ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -26,16 +26,17 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
-- M365-identity-device-management
+  - tier2
+  - M365-identity-device-management
 ---
 
 # Create a custom role in Intune
 
 You can create a custom Intune role that includes any permissions required for a specific job function. For example, if an IT department group manages applications, policies, and configuration profiles, you can add all those permissions together in one custom role. After creating a custom role, you can [assign](assign-role.md)
- it to any users that need those permissions.
+it to any users that need those permissions.
 
 To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID:
+
 - **Global Administrator**
 - **Intune Service Administrator**
 
@@ -61,7 +62,7 @@ You can also copy an existing role.
 
 3. All the permissions and scope tags from the original role will already be selected. You can subsequently change the duplicate role's **Name**, **Description**, **Permissions**, and **Scope (Tags)**.
 
-4. After you've made all the changes that you want, choose **Next** to get to the **Review + create** page. Select **Create**. 
+4. After you've made all the changes that you want, choose **Next** to get to the **Review + create** page. Select **Create**.
 
 ## Custom role permissions
 
@@ -139,9 +140,9 @@ The following permissions are available when creating custom roles.
 | Enrollment programs/Update token | Upload the Apple Device Enrollment or Apple School Manager token and sync Apple Device Enrollment Program or Apple School Manager devices. | 
 | [Filters/Create](/mem/intune/fundamentals/filters#create-a-filter) | Create new filter. | 
 | [Filters/Delete](/mem/intune/fundamentals/filters#delete-a-filter)| Delete filters. | 
-| Filters/Read | View filters.  | 
+| Filters/Read | View filters.  |
 | [Filters/Update](/mem/intune/fundamentals/filters#change-an-existing-filter) | Edit filters. | 
-| Intune data warehouse/Read | View all data and reports from the data warehouse. Data can be used by Power BI or other reporting services. | 
+| Intune data warehouse/Read | View all data and reports from the data warehouse. Data can be used by Power BI or other reporting services. |
 | Managed apps/Assign | Assign application protection policies to Microsoft Entra security groups. | 
 | Managed apps/Create | Create new application protection policies. | 
 | Managed apps/Delete | Delete application protection policies. | 
@@ -152,7 +153,6 @@ The following permissions are available when creating custom roles.
 | Managed devices/Read | View Intune managed devices.  | 
 | Managed devices/Set primary user | Choose, change, or remove the primary user of a managed device. This permission must be used in combination with the managed devices read and update permissions. | 
 | Managed devices/Update | Change settings or ownership properties of a managed device. This permission does not enable remote actions for devices. To perform remote actions on the device, grant one or more of the Remote Task permissions. | 
-| Managed devices/Query | Query data with devices that are managed by Intune. | 
 | Managed devices/View reports | Generate, view, or export reports for managed devices. | 
 | Managed Google Play/Modify | Modify the settings for synchronizing Managed Google Play apps with Microsoft Intune. | 
 | Managed Google Play/Read | Display the settings for synchronizing Managed Google Play apps with Microsoft Intune. | 
@@ -243,5 +243,6 @@ The following permissions are available when creating custom roles.
 | Windows Enterprise Certificate/Read | View the code-signing certificate used to distribute line-of-business apps to your managed Windows devices. | 
 
 ## Next steps
+
 - [Assign a role to a user](assign-role.md)
 - [Learn more about role-based access control in Intune](role-based-access-control.md)
