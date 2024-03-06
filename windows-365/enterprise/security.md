@@ -40,7 +40,7 @@ Windows 365 provides an end-to-end connection flow for users to do their work ef
 - Securing the Cloud PC device itself
     - Aligns with securing the **Endpoint**, where you can place more measures on the Cloud PC devices since that is the device being used to access organizational data.
 - Securing the Cloud PC data and other data available while using the Cloud PC
-    - Aligns with securing the **Data**, where you can place more measures on the data itself or on how the Cloud PC user access the data.
+    - Aligns with securing the **Data**, where you can place more measures on the data itself or on how the Cloud PC user accesses the data.
 
 Take a look at the following sections to better understand the components and features available to you to secure your Cloud PC environment.
 
