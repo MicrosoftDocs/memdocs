@@ -73,22 +73,14 @@ To create the app protection policy, follow these steps:
 
 :::image type="content" alt-text="Apps - App protection policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business30.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business30.png":::
 
-2. Select on **Create policy** \> **Android** or **iOS/iPadOS** \> **Enter information.**
+2. Select on **Create policy** > **Android** or **iOS/iPadOS** > **Enter information.**
 
 - **Name:** Level 3 secure enterprise browser.
-
 - **Description:** The following is a Level 3 app protection policy framework.
 
+3. Click **Selected apps** > select **public apps** and find **Microsoft Edge.**
 
-:::image type="content" alt-text="Apps - App protection policies - Create policy - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business31.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business31.png":::
-
-:::image type="content" alt-text="Apps - App protection policies - Create policy - iOS - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business32.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business32.png":::
-
-3. Select Selected **apps** > select **public apps** and type **Microsoft Edge.**
-
-:::image type="content" alt-text="Apps - App protection policies - Create policy - Select apps to target - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business33.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business33.png":::
-
-4. Select **Data Protection** and configure the following **settings**.
+4. Select **Data Protection** and configure the following **settings**:
 
 
 :::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png":::

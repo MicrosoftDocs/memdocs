@@ -42,9 +42,8 @@ App configuration can be delivered either through the mobile device management (
 - Data protection settings
 - Additional app configuration for managed devices
 
-**Important**
-
-For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft Edge for Android must be deployed via the Managed Google Play store. For more information, see [**Set up enrollment of Android Enterprise personally-owned work profile devices**](/mem/intune/enrollment/android-work-profile-enroll) and [**Add app configuration policies for managed Android Enterprise devices**](/mem/intune/apps/app-configuration-policies-use-android).
+> [!IMPORTANT]
+> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft Edge for Android must be deployed via the Managed Google Play store. For more information, see [**Set up enrollment of Android Enterprise personally-owned work profile devices**](/mem/intune/enrollment/android-work-profile-enroll) and [**Add app configuration policies for managed Android Enterprise devices**](/mem/intune/apps/app-configuration-policies-use-android).
 
 We have evaluated the different Microsoft Edge App Configuration and have identified the following key items that need to be configured, we'll then guide you through the process of creating an App Configuration on Microsoft Intune Admin Center.
 
@@ -60,42 +59,37 @@ We have evaluated the different Microsoft Edge App Configuration and have identi
 |    com.microsoft.intune.mam.managedbrowser.account.syncDisabled      	|    TRUE                                                               	|
 |    com.microsoft.intune.IntuneMAMOnly.AdvancedEncryption             	|    enabled                                                            	|
 
-#### To configure the App Configuration, perform the following steps.
+#### Configure the app
 
-1. Go to <https://intune.microsoft.com/>.
+Use the following steps to configure the app:
 
-Once authenticated select on **Apps** on the left menu.
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select on **App configuration policies.**
+2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 
-:::image type="content" alt-text="Apps - App configuration policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business48.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business48.png":::
+3. On the **Create app configuration policy**, pane enter the following information:
 
-3. Select **Add** \> **Managed apps.**
+    - **Name**: Browser ACP
+    - **Description**: Secure Enterprise Browser ACP Configuration
+    - **Target Policy to**: Selected apps
 
-4. On the Create app configuration policy,** enter the following information.
+    :::image type="content" alt-text="Apps - App configuration policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png":::
 
-> **Name:** Browser ACP
->
-> **Description:** Secure Enterprsie Browser ACP Configuration
->
-> **Target Policy to:** Selected apps
->
-> \+ **Select Public Apps** \> type Edge and select the deseired **Edge
-> Configuration**, for this example we will select **iOS/IPadOS**.
+4. Click **Select public apps** to display the **Selected apps to target** pane.
 
-:::image type="content" alt-text="Apps - App configuration policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png":::
+5. Select the **Microsoft Edge** app for **iOS/iPadOS** and click **Select**.
 
-5. Select **Select** on the **Microsoft Edge iOS/IPAD OS** and
-then select **Next.**
+5. Select **Next** to display the **Settings catalog** step. Do not change settings on the **Settings catalog** step.
 
-6. Select **Next** on **Settings Catalog** \> **Settings** \>
-Expand **General configuration settings.**
+6. Select **Next** to display the **Settings** step.
 
-7. Enter each of the **names** and **keys** from **The Table**
-into each section.
+7. Enter each of the **names** and **keys** from the list below.
+    
+    - **Name**: 
+    - **Value**: 
 
-:::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png":::
-
+    :::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png":::
+    
 8. Review each value and select **Next.**
 
 9. Add a **Scope tag** and select **Next.**
@@ -106,5 +100,4 @@ into each section.
 
 :::image type="content" alt-text="Apps - App configuration policies - Create app configuration policy - Review + create -Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png":::
 
-> [!NOTE]
-> Now that the app configuration policy has been created you can repeat steps 1 to 11 and choose a different OS depending on your need.
+Repeat the previous steps to create an app configuration policy for additional OS if needed.
