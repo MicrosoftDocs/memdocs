@@ -76,7 +76,7 @@ In this scenario we'll guide you through the process of creating a Conditional A
     - **Grant:** Require App Protection Policy
     - **Session:** N/A
 
-    :::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png":::
+    :::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png":::
     
 > [!NOTE]
 > Set **Report-only** to **On** until you confirm that the policy is working as expected. Once confirmed, set this setting to **Off**.
@@ -97,7 +97,7 @@ In the previous steps we show you how to create a conditional access policy to s
 
     :::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png":::
     
-5**. Select on the **device Platform** and select **Windows.**
+5. Select on the **device Platform** and select **Windows**.
 
     :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft." source="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png":::
 

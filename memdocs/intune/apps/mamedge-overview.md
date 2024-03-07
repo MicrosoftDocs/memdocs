@@ -85,7 +85,7 @@ Microsoft Edge for Business has several benefits for customers. For IT, Microsof
 
 - **Work Browser (Visual Refresh):** The Microsoft Edge for Business icon replaces the existing Microsoft Edge icon in the taskbar and other shortcuts:
 
-    :::image type="content" alt-text="Work Browser (Visual Refresh)" source="./media/securing-data-edge-for-business/securing-data-edge-for-business0.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business0.png":::
+    :::image type="content" alt-text="Work Browser (Visual Refresh)" source="./media/securing-data-edge-for-business/securing_data_edge_for_business0.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business0.png":::
 
 - **Enhanced Security:** By using app protection policies, Microsoft Edge for Business ensures a more secure and protected browsing experience by ensuring enterprise data remain secured.
 

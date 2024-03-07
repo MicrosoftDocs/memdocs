@@ -61,7 +61,7 @@ The APP data protection framework is organized into three distinct configuration
 
 - **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
 
-To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](https://docs.microsoft.com/mem/intune/apps/app-protection-framework).
+To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](../apps/app-protection-framework.md).
 
 During this example, we'll create a **Level 3** App protection policy for Microsoft Edge from Microsoft Intune admin center.
 
@@ -85,7 +85,7 @@ To create the app protection policy, follow these steps:
 
 :::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png":::
 
-:::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png":::
+:::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png":::
 
 5. Review the **Encryption** section.
 
