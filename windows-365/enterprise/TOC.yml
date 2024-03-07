@@ -41,6 +41,8 @@ items:
       href: security.md
     - name: Encryption
       href: encryption.md
+    - name: Customer Lockbox
+      href: /purview/customer-lockbox-requests?context=/windows-365/context/pr-context
     - name: ANC domain credential life cycle
       href: azure-network-connection-domain-credential.md
   - name: Privacy and data

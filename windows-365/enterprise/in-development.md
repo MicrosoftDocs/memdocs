@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/05/2024
+ms.date: 03/06/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -72,10 +72,6 @@ In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for
 <!-- ***********************************************-->
 ## Miscellaneous
 
-### Windows 365 Switch support for Windows 365 Frontline<!--46816178-->
-
-In a future update, Windows 365 Switch will support Windows 365 Frontline Cloud PCs.
-
 ### Intune admin center user interface change<!--48653379-->
 
 The current **Devices** navigation list will change from **Provisioning** >  **Windows 365** to **Device onboarding** > **Cloud PC creation**.
@@ -90,14 +86,6 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 ### New alert rule: Cloud PCs that aren't available<!--47321010-->
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
-
-### Device action data kept for 90 days<!--48439987-->
-
-On the **Overview** page for individual Cloud PCs, the **Actions** will show actions performed within the last 90 days.
-
-### Alerts for Windows 365 Frontline maximum concurrent Cloud PCs<!--45903013-->
-
-A new alert will be implemented to notify admins when the maximum concurrent Cloud PCs are active for Windows 365 Frontline subscriptions.
 
 <!-- ***********************************************-->
 ## Provisioning
