@@ -107,7 +107,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
     Select the evaluation type you want to use to compute Play integrity verdict response.
 
   - **Not configured (defaults to basic evaluation)** – (*default*)
-  - **Check strong integrity** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
+  - **Check strong integrity using hardware-backed security features** – Require that Check strong integrity using hardware-backed security features are used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity using hardware-backed security features are marked as not compliant.
 
   For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
 
@@ -238,7 +238,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   Select the evaluation type you want to use to compute Play integrity verdict response.
 
   - **Not configured (defaults to basic evaluation)** – (*default*)
-  - **Check strong integrity** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
+  - **Check strong integrity using hardware-backed security features** – Require that Check strong integrity using hardware-backed security features are used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity using hardware-backed security features are marked as not compliant.
 
   For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
 > [!NOTE]
