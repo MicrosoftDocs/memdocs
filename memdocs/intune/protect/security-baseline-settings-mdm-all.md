@@ -1872,9 +1872,10 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-appruntime#appruntime-allowmicrosoftaccountstobeoptional)
 
-## Application Management
-
+::: zone-end
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
+
+## Application Management
 
 - **Block app installations with elevated privileges**:  
   Baseline default: *Yes*  
