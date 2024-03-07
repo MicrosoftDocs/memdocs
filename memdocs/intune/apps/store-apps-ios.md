@@ -7,7 +7,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -28,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - iOS/iPadOS
+- FocusArea_Apps_Store
 ---
 
 # Add iOS store apps to Microsoft Intune

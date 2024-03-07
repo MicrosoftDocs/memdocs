@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/23/2024
+ms.date: 03/04/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -55,19 +55,70 @@ You can also read:
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
-<!-- Common categories: -->
+<!-- Common categories - in this order: 
 
-<!-- ### Microsoft Intune Suite -->
-<!-- ### App management -->
-<!-- ### Device configuration -->
-<!-- ### Device enrollment -->
-<!-- ### Device management -->
-<!-- ### Device security -->
-<!-- ### Intune apps -->
-<!-- ### Monitor and troubleshoot -->
-<!-- ### Role-based access control -->
-<!-- ### Scripts -->
-<!-- ### Tenant administration -->
+### Microsoft Intune Suite  
+### App management 
+### Device configuration 
+### Device enrollment 
+### Device management 
+### Device security 
+### Intune apps 
+### Monitor and troubleshoot  
+### Role-based access control 
+### Scripts 
+### Tenant administration
+
+-->
+
+## Week of March 3, 2024
+
+### Device enrollment
+
+#### Role-based access control changes to enrollment settings for Windows Hello for Business<!-- 25661866  -->
+
+We've updated Role-based access control (RBAC) in the enrollment area for Windows Hello for Business. Enrollment settings related to Windows Hello for Business are read-only for all roles except the Intune Service Administrator. The Intune Service Administrator can create and edit Windows Hello for Business enrollment settings.
+
+For more information, see [Role-based access control](../protect/windows-hello.md#role-based-access-control) in the *Windows Hello at device enrollment* article.
+
+### Device security
+
+#### New enrollment configuration for Windows Hello for Business<!-- 9601416  -->
+
+A new Windows Hello for Business enrollment setting, **Enable enhanced sign in security** is available in the Intune admin center. Enhanced sign-in security is a Windows Hello feature that prevents malicious users from gaining access to a user's biometrics through external peripherals.
+
+For more information about this setting, see [Create a Windows Hello for Business policy](../protect/windows-hello.md#create-a-windows-hello-for-business-policy).
+
+#### HTML formatting supported in noncompliance email notifications<!-- 24197255  -->
+
+Intune now supports HTML formatting in noncompliance email notifications for all platforms. You can use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
+
+For more information, see [Create a notification message template](../protect/actions-for-noncompliance.md#create-a-notification-message-template).
+
+## Week of February 26, 2024  
+
+### Microsoft Intune Suite  
+
+#### New Microsoft Cloud PKI service<!-- 17272901 -->
+
+Use the Microsoft Cloud PKI service to simplify and automate certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../fundamentals/intune-add-ons.md). The cloud-based services provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication. For more information, see [Overview of Microsoft Cloud PKI](../protect/microsoft-cloud-pki-overview.md).
+
+Applies to:
+
+- Windows
+- Android
+- iOS/iPadOS
+- macOS
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 26607121 -->
+
+The following protected app is now available for Microsoft Intune:
+
+- Cinebody by Super 6 LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of February 19, 2024 (Service release 2402)
 
@@ -153,7 +204,7 @@ Applies to:
 
 For more information on this feature, go to [Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)](../configuration/administrative-templates-import-custom.md).
 
-#### New setting for updating MAC address randomization on Android Enterprise devices <!-- 24259789  -->
+#### New setting for updating MAC address randomization on Android Enterprise devices<!-- 24259789  -->
 
 There is a new **MAC address randomization** setting on Android Enterprise devices (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
 
@@ -213,13 +264,13 @@ This information is also published in [Windows Autopilot: What's new](/autopilot
 
 ### Device enrollment
 
-#### ESP setting to install required apps during Windows Autopilot pre-provisioning <!-- 26583413 -->
+#### ESP setting to install required apps during Windows Autopilot pre-provisioning<!-- 26583413 -->
 
 The setting **Only fail selected blocking apps in technician phase** is now generally available to configure in Enrollment Status Page (ESP) profiles. This setting only appears in ESP profiles that have *blocking apps* selected.
 
 For more information, see  [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md#create-new-profile).
 
-#### New local primary account configuration for macOS automated device enrollment <!-- 5877061  -->
+#### New local primary account configuration for macOS automated device enrollment<!-- 5877061  -->
 
 Configure local primary account settings for Macs enrolling in Intune via Apple automated device enrollment. These settings, supported on devices running macOS 10.11 and later, are available in new and existing enrollment profiles under the new **Account Settings** tab. For this feature to work, the enrollment profile must be configured with user-device affinity and one of the following authentication methods:
 
@@ -232,7 +283,7 @@ Applies to:
 
 For more information about macOS account settings, see [Create an Apple enrollment profile in Intune](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
-#### Await final configuration for macOS automated device enrollment now generally available <!-- 24973562 -->
+#### Await final configuration for macOS automated device enrollment now generally available<!-- 24973562 -->
 
 Now generally available, *await final configuration* enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies are installed on devices. The locked experience works on devices targeted with new and existing enrollment profiles, enrolling via one of these authentication methods:
 
@@ -601,7 +652,7 @@ Using the Intune APP SDK for .NET MAUI, you can develop Android or iOS apps for 
 
 ### App management
 
-#### New grace period status added in apps for Android, Android AOSP <!-- 13498172 13498291  -->
+#### New grace period status added in apps for Android, Android AOSP<!-- 13498172 13498291  -->
 
 The Intune Company Portal app for Android and Microsoft Intune app for Android AOSP now show a grace period status for devices that don't meet compliance requirements but are still within their given grace period. Users can see the date by which devices must be compliant, and the instructions for how to become compliant. If users don't update their device by the given date, the device is marked as noncompliant.
 
@@ -679,7 +730,7 @@ For more information, see [Set up enrollment for devices in shared device mode](
 
 ### Device management
 
-#### Improvements to new device experience in admin center (public preview) <!-- 24155098, 25103808, 17705028   -->
+#### Improvements to new device experience in admin center (public preview)<!-- 24155098, 25103808, 17705028   -->
 
 We've made the following changes to the new Devices experience in the Microsoft Intune admin center:
 
@@ -814,7 +865,7 @@ If you have a helpdesk, you might want to make them aware of the prompt to updat
 
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->
 
-The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
+The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new-archive.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
 
 With this change, the default behavior for security settings management includes all the behavior added for the opt-in preview – without having to enable support for preview features in Microsoft Defender for Endpoint. This includes the general availability and support for the following endpoint security profiles for Linux and macOS:
 
@@ -996,7 +1047,7 @@ Applies to:
 
 For a list of settings you can configure on personally owned devices with a work profile, see [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
 
-#### New settings available in the macOS settings catalog <!-- 24950434  -->
+#### New settings available in the macOS settings catalog<!-- 24950434  -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
@@ -1018,7 +1069,7 @@ For more information about configuring Settings Catalog profiles in Intune, see 
 
 ### Device enrollment
 
-#### Web based device enrollment with JIT registration for personal iOS/iPadOS devices <!-- 15412485  -->
+#### Web based device enrollment with JIT registration for personal iOS/iPadOS devices<!-- 15412485  -->
 
 Intune supports web-based device enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the Company Portal app. Also, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps.
 
@@ -1176,7 +1227,7 @@ Applies to:
 
 For more information on the Settings Catalog, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
 
-#### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->
+#### Managed Settings now available in the Apple settings catalog<!-- 21083384  -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
@@ -1317,7 +1368,7 @@ We've added support to use endpoint security [Application Control policies](../p
 - US Government clouds
 - 21Vianet in China
 
-Support for Application Control policy and managed installers was originally [released in preview in June 2023](../fundamentals/whats-new.md#new-endpoint-security-application-control-policy-in-preview). Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
+Support for Application Control policy and managed installers was originally [released in preview in June 2023](../fundamentals/whats-new-archive.md#new-endpoint-security-application-control-policy-in-preview). Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
 
 ### Device security
 
@@ -1474,7 +1525,7 @@ You can add more detection of device health compromises on Samsung Knox devices.
 
 ### Device configuration
 
-#### Remote Help for Android in public preview <!-- 16238217 -->  
+#### Remote Help for Android in public preview<!-- 16238217 -->  
 Remote Help is available in public preview for Android Enterprise Dedicated devices from Zebra and Samsung. With Remote Help, IT Pros can remotely view the device screen and take full control in both attended and unattended scenarios, to diagnose and resolve issues quickly and efficiently.
 
 Applies to:
@@ -1657,7 +1708,7 @@ The Intune remote action to [collect diagnostics](../remote-actions/collect-diag
 Log file:
 - %temp%\CloudDesktop\*.log
 
-#### Anomaly detection device cohorts in Intune Endpoint analytics is generally available <!-- 24577118  -->  
+#### Anomaly detection device cohorts in Intune Endpoint analytics is generally available<!-- 24577118  -->  
 Anomaly detection device cohorts in Intune Endpoint analytics is now generally available.
 
 Device cohorts are identified in devices associated with a high or medium severity anomaly. Devices are correlated into groups based on one or more factors they have in common like an app version, driver update, OS version, device model. A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You can also view a breakdown of devices currently affected by the anomaly and 'at risk' devices. "At risk" devices haven't yet shown symptoms of the anomaly.
@@ -1783,13 +1834,12 @@ Applies to:
 
 For more information about using Windows PowerShell scripts in Intune, see [Use PowerShell scripts on Windows 10/11 devices in Intune](../apps/intune-management-extension.md).
 
-
 ### Device configuration
 
 #### Added Support for Scope tags<!-- 16485280  -->  
 You can now add scope tags when creating deployments using Zebra LifeGuard Over-the-Air integration (in public preview).
 
-#### New settings available in the macOS settings catalog <!-- 24167142  -->  
+#### New settings available in the macOS settings catalog<!-- 24167142  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
