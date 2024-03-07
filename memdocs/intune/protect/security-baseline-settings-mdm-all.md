@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Default configuration of Intunes Windows security baselines
+title: Default configuration of Intune's Windows security baselines
 titleSuffix: Microsoft Intune
 description: View the default setting configuration of the various Microsoft Intune security baselines for Windows.
 author: brenduns
@@ -30,13 +30,13 @@ zone_pivot_groups: windows-mdm-versions
 
 # List of the settings in the Windows MDM security baseline in Intune
 
-This article is a reference for the settings that are available in the different versions of the Windows MDM security baseline for Windows 10 and Windows 11 devices that you manage with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
+This article is a reference for the settings that are available in the different versions of the Windows Mobile Device Management (MDM) security baseline for Windows 10 and Windows 11 devices that you manage with Microsoft Intune. You can use the provided Tabs to select and view the settings in the current baseline version and a few older versions that might still be in use.
 
 For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
 
 When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
 
-When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created prior to the availability of a new version:
+When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created before the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
@@ -1846,7 +1846,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 <!-- UI option uses 'Azure AD`, as does the CSP for options while the CSP description uses Microsoft Entra ID -->
 - **Backup Directory**  
   Baseline default: *Backup the password to Azure AD only*  
-  [Learn more](https://learn.microsoft.com/windows/client-management/mdm/LAPS-csp/?WT.mc_id=Portal-fx#policiesbackupdirectory)
+  [Learn more](/windows/client-management/mdm/LAPS-csp/?WT.mc_id=Portal-fx#policiesbackupdirectory)
 
 
 ::: zone-end
