@@ -143,6 +143,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 
   - **Hardened UNC Paths: (Device)**  
     Baseline defaults:
+
     | Name           | Value|
     |----------------|------|
     | `\\*\SYSVOL`   | RequireMutualAuthentication=1,RequireIntegrity=1 |
@@ -618,7 +619,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 
 - **Initialize and script ActiveX controls not marked as safe**  
   Baseline default: *Enabled*  
-  [Learn more](.com/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzoneinitializeandscriptactivexcontrols)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzoneinitializeandscriptactivexcontrols)
   - **Initialize and script ActiveX controls not marked as safe**  
     Baseline default: *Disable*
 
@@ -1173,91 +1174,91 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   <!-- UI Links add - in place of url which uses _ -->
 - **Account Logon Audit Credential Validation**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogon_auditcredentialvalidation)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogon_auditcredentialvalidation)
 
 - **Account Logon Logoff Audit Account Lockout**  
   Baseline default: *Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditaccountlockout)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditaccountlockout)
 
 - **Account Logon Logoff Audit Group Membership**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditgroupmembership)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditgroupmembership)
 
 - **Account Logon Logoff Audit Logon**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditlogon)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditlogon)
 
 - **Audit Authentication Policy Change**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditauthenticationpolicychange)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditauthenticationpolicychange)
 
 - **Audit Changes to Audit Policy**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditpolicychange)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditpolicychange)
 
 - **Audit File Share Access**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditfileshare)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditfileshare)
 
 - **Audit Other Logon Logoff Events**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditotherlogonlogoffevents)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditotherlogonlogoffevents)
 
 - **Audit Security Group Management**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_auditsecuritygroupmanagement)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_auditsecuritygroupmanagement)
 
 - **Audit Security System Extension**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritysystemextension)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritysystemextension)
 
 - **Audit Special Logon**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditspeciallogon)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditspeciallogon)
 
 - **Audit User Account Management**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_audituseraccountmanagement)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_audituseraccountmanagement)
 
 - **Detailed Tracking Audit PNP Activity**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditpnpactivity)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditpnpactivity)
 
 - **Detailed Tracking Audit Process Creation**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditprocesscreation)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditprocesscreation)
 
 - **Object Access Audit Detailed File Share**  
   Baseline default: *Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditdetailedfileshare)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditdetailedfileshare)
 
 - **Object Access Audit Other Object Access Events**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditotherobjectaccessevents)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditotherobjectaccessevents)
 
 - **Object Access Audit Removable Storage**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditremovablestorage)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditremovablestorage)
 
 - **Policy Change Audit MPSSVC Rule Level Policy Change**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditmpssvcrulelevelpolicychange)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditmpssvcrulelevelpolicychange)
 
 - **Policy Change Audit Other Policy Change Events**  
   Baseline default: *Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditotherpolicychangeevents)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditotherpolicychangeevents)
 
 - **Privilege Use Audit Sensitive Privilege Use**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#privilegeuse_auditsensitiveprivilegeuse)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#privilegeuse_auditsensitiveprivilegeuse)
 
 - **System Audit Other System Events**  
   Baseline default: *Success+ Failure*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditothersystemevents)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditothersystemevents)
 
 - **System Audit Security State Change**  
   Baseline default: *Success*  
-  [Learn more](/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritystatechange)
+  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritystatechange)
 
 - **System Audit System Integrity**  
   Baseline default: *Success+ Failure*  
@@ -1410,55 +1411,55 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 
 - **Configure System Guard Launch**  
   Baseline default: *Unmanaged Enables Secure Launch if supported by hardware*  
-  [Learn more](/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#configuresystemguardlaunch)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#configuresystemguardlaunch)
 
 - **Credential Guard**  
   Baseline default: *(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.*  
-  [Learn more](/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
 
 - **Enable Virtualization Based Security**  
   Baseline default: *Enable virtualization based security.*  
-  [Learn more](/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#enablevirtualizationbasedsecurity)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#enablevirtualizationbasedsecurity)
 
 - **Require Platform Security Features**  
   Baseline default: *Turns on VBS with Secure Boot.*  
-  [Learn more](/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#requireplatformsecurityfeatures)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#requireplatformsecurityfeatures)
 
 ## Device Lock
 
 - **Device Password Enabled**  
   Baseline default: *Enabled*  
-  [Learn more](/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordenabled)
+  [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordenabled)
 
   - **Device Password History**  
     Baseline default: *Configured*  
     Value: *24*  
-    [Learn more](/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordhistory)
+    [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordhistory)
 
   - **Min Device Password Length**  
     Baseline default: *Configured*  
     Value: *14*  
-    [Learn more](/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#mindevicepasswordlength)
+    [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#mindevicepasswordlength)
 
 ## Dma Guard
 
 - **Device Enumeration Policy**  
   Baseline default: *Block all (Most restrictive)*  
-  [Learn more](/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
+  [Learn more](/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
 
 ## Experience
 
 - **Allow Windows Spotlight (User)**  
   Baseline default: *Allow*  
-  [Learn more](/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowwindowsspotlight)
+  [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowwindowsspotlight)
 
   - **Allow Windows Consumer Features**  
     Baseline default: *Block*  
-    [Learn more](/client-management/mdm/policy-csp-experience?WT.mc_id=Portal-fx#allowwindowsconsumerfeatures)
+    [Learn more](/windows/client-management/mdm/policy-csp-experience?WT.mc_id=Portal-fx#allowwindowsconsumerfeatures)
 
   - **Allow Third Party Suggestions In Windows Spotlight (User)**  
     Baseline default: *Block*  
-    [Learn more](/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowthirdpartysuggestionsinwindowsspotlight)
+    [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowthirdpartysuggestionsinwindowsspotlight)
 
 ## Firewall
 
