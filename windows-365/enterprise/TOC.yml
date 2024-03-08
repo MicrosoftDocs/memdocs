@@ -157,6 +157,8 @@ items:
         href: deploy-security-baselines.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Microsoft Purview Customer Key
+        href: purview-customer-key.md
       - name: Enable screen capture protection
         href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
       - name: Watermarking
