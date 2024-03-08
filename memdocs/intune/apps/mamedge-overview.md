@@ -48,7 +48,7 @@ This content is a guide that provides valuable insights into secure enterprise b
 The target audience for this content primarily includes:
 
 - **Intune Administrators:** This content provides detailed guidance about configuring and managing Microsoft Edge for Business in Microsoft Intune.
-- **Security Professionals:** This content focus on security related areas, such as the [data protection framework using app protection policies](tune/apps/app-protection-framework.md), [app configuration policies](../apps/app-configuration-policies-overview.md), data encryption, and [conditional access policies](../apps/app-protection-framework#conditional-access-policies.md). This content is also beneficial for security professionals looking to enhance their organization's security posture.
+- **Security Professionals:** This content focus on security related areas, such as the [data protection framework using app protection policies](../apps/app-protection-framework.md), [app configuration policies](../apps/app-configuration-policies-overview.md), data encryption, and [conditional access policies](../apps/app-protection-framework.md#conditional-access-policies). This content is also beneficial for security professionals looking to enhance their organization's security posture.
 - **Decision Makers:** This content can help decision makers understand the security, productivity, and manageability benefits of Microsoft Edge for Business. In addition,this content will help decision makers make informed decisions about browser choice for their organization.
 
 > [!NOTE]
