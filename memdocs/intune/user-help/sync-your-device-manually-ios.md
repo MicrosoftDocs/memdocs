@@ -39,7 +39,7 @@ Manually start a device check-in from the Company Portal to:
 
 Company Portal regularly checks in with your device, but you can start a check-in anytime from the app.  During a check-in, Company Portal confirms that the settings on your device meet your organization's policy requirements. Your organization can limit or restrict access to work or school resources until you check in.  
 
-If you recently made changes to your device settings, you may need to manually check in to register these changes with Company Portal. 
+If you recently made changes to your device settings and still can't access resources, check the status of your device in Company Portal.  
 
 1. Open the Company Portal app for iOS on your device.  
 
