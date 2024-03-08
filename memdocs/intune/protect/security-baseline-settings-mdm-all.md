@@ -41,13 +41,10 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
-To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
-
-<!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
+To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
 ::: zone pivot="mdm-23h2"
-**Security Baseline for Windows, version 23h2**
+**Security Baseline for Windows, version 23H2**
 
 The settings in this baseline are taken from the **version 23H2** of the Group Policy security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
