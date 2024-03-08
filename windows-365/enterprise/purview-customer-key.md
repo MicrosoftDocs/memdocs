@@ -49,7 +49,13 @@ Windows 365 support for Customer Keys is  in [public preview](public-preview.md)
 2. [Create a DEP for use with multiple workloads for all tenant users]( /purview/customer-key-manage#create-a-dep-for-use-with-multiple-workloads-for-all-tenant-users). This includes [assigning a multi-workload policy]( /purview/customer-key-manage#assign-multi-workload-policy).
 Within 3-4 hours of completing this step, your Intune admin center will update to include the **Configure** button.
 3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Cloud PC encryption type** > **Configure**.
+
+    ![Screenshot of configure button.](media/purview-customer-key/configure.png)
+
 4. Under **Configure encryption type**, select **Microsoft Purview Customer Key** > **Encrypt existing Cloud PCs**.
+
+    ![Screenshot of Encrypt existing Cloud PCs button.](media/purview-customer-key/encrypt.png)
+
 5. In the confirmation window, select **Encrypt**. A notification will inform you that encrypting has initiated.
 
 Encryption forces a restart for each Cloud PC.
