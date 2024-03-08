@@ -584,15 +584,17 @@ There may be scenarios where users are only allowed to view websites, without th
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
-|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]external.filesupload1.com/|https://external.filesupload2/|https://external.filesupload3.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://contoso.com/|http://contoso.com/|contoso.com|.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://external.filesupload1.com/|http://external.filesupload2.com/|external.filesupload1.com|.filesupload1.com`|
 
 The example to block all websites, including internal websites, from uploading files
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
 
 An example to allow specific websites to upload files
-- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`http://[*.]contoso.com/|[*.]sharepoint.com/`
+- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://.contoso.com/|.sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+For more information about the URLs format, see [Microsoft Edge mobile policies](/edge-learnmmore-url-list-filter%20format#the-filter-format).
 
 > [!NOTE]
 > For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
