@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2023
+ms.date: 03/08/2024
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -43,9 +43,11 @@ If you recently made changes to your device settings, you may need to manually c
 
 1. Open the Company Portal app for iOS on your device.  
 
-2. Tap **Device** and then select your device.  
-
-3. Tap **Check status**. Company Portal checks your device to confirm that it's meeting your organization's policy requirements. Once the check is complete, the device settings status tells you if you have access to company resources. 
+2. Go to **Devices**.  
+   
+3. Select your device.  
+   
+4. Tap **Check status**. Company Portal checks your device to confirm that it's meeting your organization's policy requirements. After the check, the device settings status tells you if you have access to company resources.  
 
 
 Still need help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
