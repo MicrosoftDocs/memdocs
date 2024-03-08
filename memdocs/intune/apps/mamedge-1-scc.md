@@ -41,14 +41,14 @@ The health state includes the following details:
 - **A predefined health state**
 - **The time of last health state update**
 
-Only users enrolled in Mobile Application Management (MAM) send health state data. If end users want to stop sending data, they can sign out of their organization account in the protected applications. Similarly, administrators can stop data transmission by removing the Windows Security Connector from Microsoft Intune. 
+Only users enrolled in Mobile Application Management send health state data. If end users want to stop sending data, they can sign out of their organization account in the protected applications. Similarly, administrators can stop data transmission by removing the Windows Security Connector from Microsoft Intune.
 
-#### Intune App Protection Policy (APP)
-Intune App Protection Policy (APP) can secure organizational data and ensure the client device is healthy. It also can perform additional client health verification via Windows Security Center. This includes designating the Windows Security Center risk level for allowing end users to access corporate resources and setting up tenant-based connector to Microsoft Intune for Windows Security Center.
+#### Intune app protection policies
+Intune app protection policies help secure organizational data and ensure the client device is healthy. It also can perform additional client health verification via Windows Security Center. This includes designating the Windows Security Center risk level for allowing end users to access corporate resources and setting up tenant-based connector to Microsoft Intune for Windows Security Center.
 
 - **Apps**: Select the apps you want to target app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 
-- **Health Checks**: Below *Device conditions*, as you can see in **Image Below**, use the drop-down box to select **Max allowed device threat level**.
+- **Health Checks**: Below *Device conditions* use the drop-down box to select **Max allowed device threat level**.
 
 :::image type="content" alt-text="Health Check -- App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png":::
 
@@ -80,28 +80,25 @@ targeted apps via Intune app protection.
 
 The Microsoft Mobile Threat Defense (MTD) connector is a feature in Microsoft Intune that creates a channel of communication between Intune and your chosen MTD vendor. It integrates data from a Mobile Threat Defense vendor as an information source for device compliance policies and device Conditional Access rules. This information can help protect corporate resources like Exchange and SharePoint by blocking access from compromised mobile devices.
 
-**Configure the MTD Connector:**
+### Configure the MTD Connector
 
-1. Go to <https://intune.microsoft.com> \> select on **Tenant
-Administrator**
+Use the following steps to configure the MTD Connector.
 
-2. Select on **Connectors and tokens**
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-:::image type="content" alt-text="Tenant admin -- Tenant Status - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business2.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business2.png":::
-
-
-3. Select on **Mobile Threat Defense**
+2. Select **Tenant Administrator** > **Connectors and tokens** > **Mobile Threat Defense**.
 
 :::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png":::
 
-4. Select on **Add** \> **Add Connector** and select **Windows Security Center** \>  select **Create**.
+3. Select **Add** to display the **Add Connector** pane.
+
+4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
 
 :::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense -- Add Connector-Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
 
-5. The Connector is created**
+5. >  select **Create** to create the connector.
 
-:::image type="content" alt-text="Connector successfully established - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business5.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business5.png":::
+The Connector is created
 
-The connector is now created. It's important to highlight that status remains Unavailable until the first MAM Policy arrives at the user or first MAM user enrollment.
+The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first Mobile Application Management policy arrives to the user or the first MAM user enrollment.
 
-:::image type="content" alt-text="MTD Connector Note - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business6.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business6.png":::

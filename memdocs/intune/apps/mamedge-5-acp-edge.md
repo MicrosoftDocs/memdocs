@@ -3,7 +3,7 @@
 
 title: Use App Configuration Policies for Microsoft Edge for Business
 titleSuffix:
-description: Use App Configuration Policy for Microsoft Edge for Business.
+description: Use app configuration policy for Microsoft Edge for Business.
 keywords:
 author: Erikre
 ms.author: erikre

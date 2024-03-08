@@ -73,7 +73,7 @@ In this scenario we'll guide you through the process of creating a Conditional A
         - **Device platforms:** Include - Windows
         - **Client Apps:** Browser
         - **Filter for devices:** Exclude - is Compliant Equals True
-    - **Grant:** Require App Protection Policy
+    - **Grant:** Require app protection policy
     - **Session:** N/A
 
     :::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png":::
@@ -91,38 +91,38 @@ In the previous steps we show you how to create a conditional access policy to s
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select on **Devices** > **Conditional Access** > **Create a new Policy**.
+2. Select **Devices** > **Conditional Access** > **Create a new Policy**.
 
-4. On this new policy we'll restrict access from desktop apps to managed devices only, we'll select on Target resources and select apps once they select **Office 365**.
+4. On this new policy we'll restrict access from desktop apps to managed devices only, we'll Select Target resources and select apps once they select **Office 365**.
 
     :::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png":::
     
-5. Select on the **device Platform** and select **Windows**.
+5. Select the **device Platform** and select **Windows**.
 
     :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft." source="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png":::
 
-6. Select on **Client Apps** and select **Mobile apps and desktop clients**.
+6. Select **Client Apps** and select **Mobile apps and desktop clients**.
 
     > [!NOTE]
     > For legacy authentication clients, maybe create a third CA to just block them. That's up to the customer. For this example, I will only affect Desktop apps. *
     
     :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png":::
     
-7. Select on **Grant** and select **Require device to be market as compliant.**
+7. Select **Grant** and select **Require device to be market as compliant.**
 
     :::image type="content" alt-text="Grant - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png":::
 
     > [!NOTE] 
     > Probably to this last control, customers should add also MFA or other options as well.*
 
-8. Select on **Conditions** \> Client **apps** and select **Browser.**
+8. Select **Conditions** \> Client **apps** and select **Browser.**
 
     :::image type="content" alt-text="Client apps - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png":::
 
     > [!NOTE] 
     > To filter out corporate devices is a bit complicated because the CA filters will be applied only to devices that are already registered (at least) in Entra ID. Entra recommends using negative operator if the rule is going to apply potentially to devices not registered yet, Maybe some companies will not need all these conditions and they can use Enrollment profile or other instead.
 
-9. Select on **Conditions** \> select on **Filter for Devices.**
+9. Select **Conditions** \> Select **Filter for Devices.**
 
     :::image type="content" alt-text="Filter for devices - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png":::
 

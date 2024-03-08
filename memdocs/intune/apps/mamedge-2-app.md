@@ -36,7 +36,7 @@ ms.collection:
 App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it and can be managed by Intune.
 
 
-## App Protection Policy Framework
+## app protection policy framework
 
 When configuring App protection policies, there are many various settings and options to enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which combination of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening efforts, Microsoft has introduced a new taxonomy for security configurations in Windows, and Intune is using a similar taxonomy for its APP data protection framework for mobile app management.
 
@@ -56,7 +56,7 @@ With any deployment of new software, features or settings, Microsoft recommends 
 
 For more information about Framework Settings, see [App protection framework](..\apps\app-protection-framework.md).
 
-### App Protection Policy for Microsoft Edge for Business (Windows)
+### app protection policy for Microsoft Edge for Business (Windows)
 
 **App protection policies for Windows**: This feature provides secure and compliant access to work resources on personal computers with Data Loss Prevention (DLP) controls.
 

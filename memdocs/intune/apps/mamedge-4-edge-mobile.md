@@ -35,30 +35,19 @@ ms.collection:
 
 Incorporate Microsoft Edge for Business into your existing data security and management strategy. By securing the enterprise browser configuration for mobile devices, you can ensure safer and more efficient web browsing experiences.
 
-**Management**
+Microsoft Edge for Business provide benefits for both management and security.
 
-Microsoft Edge for Business is the only mobile browser natively supported by Microsoft Intune with seamless integration.
+- **Management**: Microsoft Edge for Business is the only mobile browser natively supported by Microsoft Intune with seamless integration. To secure productivity for your organization, App level management allows IT to configure the right balance between data protection and access.
+- **Security**: Data protection and leakage prevention are based on conditional access and user identities. Microsoft 365 security features extend to Microsoft Edge for Business mobile including Microsoft Entra Conditional Access, and Data Loss Prevention. For organizations utilizing VPN solutions, Microsoft Edge mobile offers support for identity-enlightened per-app VPN. This includes the integration of Microsoft Tunnel with Intune for a seamless and secure connection. Additionally, solutions that don't require a VPN are also available.
 
-To secure productivity for your organization, App level management allows IT to configure the right balance between data protection and access.
-
-**Security**
-
-Data protection and leakage prevention are based on conditional access and user identities.
-
-Microsoft 365 security features extend to Microsoft Edge for Business mobile including Microsoft Entra Conditional Access, and Data Loss Prevention.
-
-For organizations utilizing VPN solutions, Microsoft Edge mobile offers support for identity-enlightened per-app VPN. This includes the integration of Microsoft Tunnel with Intune for a seamless and secure connection. Additionally, solutions that don't require a VPN are also available.
-
-### App protection policies for Mobile
+## App protection policies for Mobile
 
 App protection policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
 
 The APP data protection framework is organized into three distinct configuration levels, as mentioned earlier in the whitepaper. Each level builds off the previous level:
 
 - **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN, encrypted, and allows selective wipe operations. For Android devices, this level validates Android device attestation.
-
 - **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
-
 - **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](../apps/app-protection-framework.md).
@@ -67,13 +56,13 @@ During this example, we'll create a **Level 3** App protection policy for Micros
 
 To create the app protection policy, follow these steps:
 
-1. Go to <https://intune.microsoft.com/> \> select on **Apps**
+1. Go to <https://intune.microsoft.com/> \> Select **Apps**
 \> **App protection policies** \> **Create policy.**
 
 
 :::image type="content" alt-text="Apps - App protection policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business30.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business30.png":::
 
-2. Select on **Create policy** > **Android** or **iOS/iPadOS** > **Enter information.**
+2. Select **Create policy** > **Android** or **iOS/iPadOS** > **Enter information.**
 
 - **Name:** Level 3 secure enterprise browser.
 - **Description:** The following is a Level 3 app protection policy framework.
@@ -81,7 +70,6 @@ To create the app protection policy, follow these steps:
 3. Click **Selected apps** > select **public apps** and find **Microsoft Edge.**
 
 4. Select **Data Protection** and configure the following **settings**:
-
 
 :::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png":::
 

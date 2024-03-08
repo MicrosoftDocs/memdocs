@@ -45,7 +45,7 @@ If you continue to experience issues, it may be helpful to contact **Microsoft S
 
 :::image type="content" alt-text="Sign in with your work account - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png":::
 
-The following error means that you selected the incorrect enrollment method, you may have left the checkmark or select on No, sign into this app only, please redo the enrollment without this. Otherwise, you won't be MAM Enable.
+The following error means that you selected the incorrect enrollment method, you may have left the checkmark or Select No, sign into this app only, please redo the enrollment without this. Otherwise, you won't be MAM Enable.
 
 :::image type="content" alt-text="Enrollment Window - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png":::
 
@@ -81,15 +81,15 @@ After completing this solution, you will have accomplished the following:
 
 - Created different scenarios to configure a **Microsoft Edge for Business** and **Microsoft Application Management** experience, from concept to implementation.
 
-- Understand **App Protection Policy framework** is and how it can enhance security in your environment. This framework provides a robust layer of security for your environment. It allows admins to control how data is accessed and handled, ensuring that sensitive information is always protected.
+- Understand **app protection policy framework** is and how it can enhance security in your environment. This framework provides a robust layer of security for your environment. It allows admins to control how data is accessed and handled, ensuring that sensitive information is always protected.
 
 - Implemented **Intune Device Encryption and Password Single Sign-On**: With Intune encryption, data is secured at rest and in transit. The password single sign-on feature in Microsoft Edge for Business enhances user convenience without compromising security.
 
-- Created a baseline of **the App Configuration Policy** that helps achieve another level of security, from Intune encryption to password single sign-on in Microsoft Edge for Business.
+- Created a baseline of **the app configuration policy** that helps achieve another level of security, from Intune encryption to password single sign-on in Microsoft Edge for Business.
 
 - Configured the **Conditional Access Policy**. This feature allows IT admins to define and implement policies based on conditions such as user role, location, and risk level. It's a powerful tool for achieving a zero-trust security model.
 
-- Understand the **end-user experience**, showing what behavior can be expected once you implement the Microsoft Intune App Protection Policy for Windows devices.
+- Understand the **end-user experience**, showing what behavior can be expected once you implement the Microsoft Intune app protection policy for Windows devices.
 
 - Understand key **troubleshooting examples**, some of them presented during research and other suggestions by the field.
 
