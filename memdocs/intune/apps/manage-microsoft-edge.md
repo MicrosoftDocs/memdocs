@@ -594,7 +594,7 @@ An example to allow specific websites to upload files
 - com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://.contoso.com/|.sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
 
-For more information about the URLs format, see [Microsoft Edge mobile policies](/edge-learnmmore-url-list-filter%20format#the-filter-format).
+For more information about the URLs format, see [Filter format for Microsoft Edge URL policies](/edge-learnmmore-url-list-filter%20format#the-filter-format).
 
 > [!NOTE]
 > For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
