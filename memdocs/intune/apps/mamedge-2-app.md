@@ -36,7 +36,7 @@ ms.collection:
 App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it and can be managed by Intune.
 
 
-## app protection policy framework
+## App protection policy framework
 
 When configuring App protection policies, there are many various settings and options to enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which combination of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening efforts, Microsoft has introduced a new taxonomy for security configurations in Windows, and Intune is using a similar taxonomy for its APP data protection framework for mobile app management.
 
@@ -56,7 +56,7 @@ With any deployment of new software, features or settings, Microsoft recommends 
 
 For more information about Framework Settings, see [App protection framework](..\apps\app-protection-framework.md).
 
-### app protection policy for Microsoft Edge for Business (Windows)
+### App protection policy for Microsoft Edge for Business (Windows)
 
 **App protection policies for Windows**: This feature provides secure and compliant access to work resources on personal computers with Data Loss Prevention (DLP) controls.
 
@@ -72,19 +72,19 @@ Use the following steps to apply the data protection framework.
 
 3. On the **Create policy** step, set the following details:
 
-    - **Name**: Level 3 secure enterprise browser policy
-    - **Description**: The following is a Level 3 App Protection Framework policy for secure enterprise browser.
+    - **Name**: Levels 3 secure enterprise browser policy
+    - **Description**: This policy is a Level 3 App Protection Framework policy for secure enterprise browser.
     - **Platform**: Windows
 
-4. Click **Next** to display the next step.
+4. Select **Next** to display the next step.
 
-5. For the **Apps** step, click **Slect apps** to display the **Select apps to target** pane.
+5. For the **Apps** step, click **Select apps** to display the **Select apps to target** pane.
 
 6. Find and select **Microsoft Edge**.
 
-7. Click **Select** to selec the app.
+7. Click **Select** to select the app.
 
-8. Click **Next** to display the next step.
+8. Select **Next** to display the next step.
 
 9. Following the recommendation from Level 3, configure this step with the following values:
 
@@ -95,12 +95,12 @@ Use the following steps to apply the data protection framework.
 
 :::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Data Protection -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
 
-10. Click **Next** to continue to the next step.
+10. Select **Next** to continue to the next step.
 
-11. Follow the recommendation from Level 3, configure this step with the following values:
+11. Following the recommendation from Level 3, configure this step with the following values:
 
     - **Offline grace period**: 720, Block access (minutes)
-    - **Offline grace period**: 90, Whipe data (days)
+    - **Offline grace period**: 90, Wipe data (days)
     - **Max OS version**: 10.0.22631.2715, Block access
     - **Max allowed device threat level**: Secured, Block access
 
