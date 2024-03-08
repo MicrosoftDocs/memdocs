@@ -37,7 +37,7 @@ ms.collection:
 
 When you use Customer Key with Windows 365 Cloud PCs:
 
-- Your Cloud CP disks, snapshots, and images are encrypted at rest with customer-managed keys.
+- Your Cloud PC disks, snapshots, and images are encrypted at rest with customer-managed keys.
 - These keys are supplied by you and managed using Azure Key Vault.
 - Microsoft manages all other keys, supporting a secure and controlled environment.
 
@@ -46,7 +46,7 @@ Windows 365 support for Customer Keys is  in [public preview](../public-preview.
 ## Set up Customer Keys for your Windows 365 Cloud PCs
 
 1. [Set up Customer Key]( /purview/customer-key-set-up) as explained in the [Microsoft Purview Customer Key documentation]( /purview/customer-key-overview).
-2. [Create a data encryption policy for use with multiple workloads for all tenant users]( /purview/customer-key-manage#create-a-dep-for-use-with-multiple-workloads-for-all-tenant-users). This includes [assigning a multi-workload policy]( /purview/customer-key-manage#assign-multi-workload-policy).
+2. [Create a data encryption policy for use with multiple workloads for all tenant users]( /purview/customer-key-manage#create-a-dep-for-use-with-multiple-workloads-for-all-tenant-users). This step includes [assigning a multi-workload policy]( /purview/customer-key-manage#assign-multi-workload-policy).
 Within 3-4 hours of completing this step, your Intune admin center will update to include the **Configure** button.
 3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Cloud PC encryption type** > **Configure**.
 
