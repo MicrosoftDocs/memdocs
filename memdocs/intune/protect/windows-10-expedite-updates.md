@@ -100,7 +100,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 **Devices must**:
 
-- Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
+- Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM.
 
 - Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
 
@@ -193,11 +193,9 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    - When the update deploys, Windows Update ensures that each device that receives the policy installs a version of the update that applies to that devices architecture and its current Windows version, like version 1809, 2004, and so on.
 
-   **Non-Security Expedite Updates**: includes quality fixes, or bug fixes after the previous B / Security release. Admins can expedite installation of the latest applicable quality update on devices, without waiting for the deferral period or the active hours. Admins are notified when a device is targeted but not supported, and the drop-down list is updated.
+   **Non-Security Expedite Updates**: includes quality fixes, or bug fixes after the previous B / Security release. Admins can expedite installation of the latest applicable quality update on devices, without waiting for the deferral period. Admins are notified when a device is targeted but not supported, and the drop-down list is updated.
 
-   - Updates without the word **SecurityUpdate** indicate that it is not a security update.
-
-   - Updates that include the letter **D** in their name identify updates that are released on the 4th Tuesday week. You might also see 2024.01 OOB Update (*out-of-band* patch releases). [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544)
+   - Updates without the word **SecurityUpdate** indicate that it is not a security update. Updates that include the letter **D** in their name identify updates that are released since the latest *patch Tuesday* security week. You might also see 2024.01 OOB Update (*out-of-band* patch releases). [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544)
 
    - Non-security updates are only shown when it is the most recent release. The drop-down list is updated to display the most recent two security updates, including if one is an out-of-band update. If the most recent non-security update is newer than the newest security update, then the non-security update is also included in the drop-down list. As a result, sometimes two updates are shown, and at other times, three updates are shown.
 
