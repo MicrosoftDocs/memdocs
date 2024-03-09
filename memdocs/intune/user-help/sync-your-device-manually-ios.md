@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2023
+ms.date: 03/08/2024
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -39,13 +39,15 @@ Manually start a device check-in from the Company Portal to:
 
 Company Portal regularly checks in with your device, but you can start a check-in anytime from the app.  During a check-in, Company Portal confirms that the settings on your device meet your organization's policy requirements. Your organization can limit or restrict access to work or school resources until you check in.  
 
-If you recently made changes to your device settings, you may need to manually check in to register these changes with Company Portal. 
+If you recently made changes to your device settings and still can't access resources, check the status of your device in Company Portal.  
 
 1. Open the Company Portal app for iOS on your device.  
 
-2. Tap **Device** and then select your device.  
-
-3. Tap **Check status**. Company Portal checks your device to confirm that it's meeting your organization's policy requirements. Once the check is complete, the device settings status tells you if you have access to company resources. 
+2. Go to **Devices**.  
+   
+3. Select your device.  
+   
+4. Tap **Check status**. Company Portal checks your device to confirm that it's meeting your organization's policy requirements. After the check, the device settings status tells you if you have access to company resources.  
 
 
 Still need help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
