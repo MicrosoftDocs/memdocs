@@ -50,14 +50,14 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Before you begin
 
-When configuring compliance policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
+With the broad range of available settings, you can tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
 
 The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
 
 - For Android Enterprise personally-owned work profile devices: [Android personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
 - For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md)
 
-When ready to proceed, [create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.
+When ready to proceed, [create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.  
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -92,7 +92,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 #### Google Play Protect
 
 > [!IMPORTANT]
-> Google Play Protect works in locations where Google Mobile Service are available. Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).  
+> Google Play Protect works in locations where Google Mobile Services is available. Devices operating in regions or countries where Google Mobile Services isn't available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services isn't available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).  
 
 - **Play Integrity Verdict**  
     Select the type of Play integrity check devices must pass. Your options:  
@@ -118,7 +118,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 #### Operating System Version
 
 - **Minimum OS version**  
-  When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
+  When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. Device users see a link with information about how to upgrade their OS. They can upgrade their device, and then access organization resources.  
 
   *By default, no version is configured*.
 
