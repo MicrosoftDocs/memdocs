@@ -135,8 +135,8 @@ additionalContent:
           links:
           - text: Read Intune device management Zero Trust documentation 
             url: ./intune/fundamentals/zero-trust-with-microsoft-intune.md
-          - text: Follow the Interactive how-to guide to Zero Trust with Intune
-            url: ./intune/fundamentals/zero-trust-with-microsoft-intune.md
+          - text: "Zero Trust: Manage devices with Intune"
+            url: /microsoft-365/solutions/manage-devices-with-intune-overview?view=o365-worldwide
 
         - title: Microsoft learning paths and modules
           summary: Explore resources to learn concepts and get hands-on practice
