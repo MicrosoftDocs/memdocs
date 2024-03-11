@@ -233,6 +233,9 @@ Notifications that have been created are available in the *Compliance policies* 
   To successfully send the preview email, your account must have permissions equal to those of the following Microsoft Entra groups or Intune roles: *Microsoft Entra Global Administrator*, Intune *Administrator* (Intune Microsoft Entra Intune Service Administrator), or  Intune *Policy and Profile Manager*.
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
 
+> [!NOTE]
+> The preview email will not contain any device variables that are specified in the notification message template. 
+
 ## Add actions for noncompliance
 
 When you create a device compliance policy, Intune automatically creates an action for noncompliance. If a device doesn't meet your compliance policy, this action marks the device as not compliant. You can customize how long the device is marked as not compliant. This action can't be removed.
