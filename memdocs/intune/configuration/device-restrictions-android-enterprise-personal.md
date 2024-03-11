@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 03/11/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -140,7 +140,7 @@ These password settings apply to the work profile password on personally owned d
 
   On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile on the device is wiped, from 4-11. When the value is blank, Intune does us the default value on this this setting.
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile on the device is wiped, from 4-11. When the value is blank, Intune uses the default value on this setting.
 
 - **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
 
