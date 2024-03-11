@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/14/2022
+ms.date: 03/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -92,24 +92,26 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 #### Google Play Protect
 
 > [!IMPORTANT]
-> Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
+> Google Play Protect works in locations where Google Mobile Service are available. Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).  
 
-- **Play integrity verdict**  
-  Enter the level of Google's [Play integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
+- **Play Integrity Verdict**  
+    Select the type of Play integrity check devices must pass. Your options:  
 
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
-  - **Check basic integrity**
-  - **Check basic integrity & device integrity**
+  - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
+  - **Check basic integrity & device integrity**: Requires devices to pass Play's basic integrity check and device integrity check.  
 
-- **Play integrity verdict evaluation type**  
-    This setting is only available when *Play integrity verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.
+- **Check strong integrity using hardware-backed security features**  
+  This setting is only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
 
-    Select the evaluation type you want to use to compute Play integrity verdict response.
+  - **Not configured** (*default*)  – Setting isn't evaluated for compliance or non-compliance. Intune assesses the verdict from the basic integrity check by default.  
+  - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
 
-  - **Not configured (defaults to basic evaluation)** – (*default*)
-  - **Check strong integrity using hardware-backed security features** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
-
-  For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
+  For more information about Google Play's integrity services, see these Android developer docs:   
+  
+  - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)  
+    
+  - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)  
 
 ### Device Properties
 
@@ -226,21 +228,23 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
-- **Play integrity verdict**  
-  Enter the level of [Google's Play device integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
-  - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
-  - **Check basic integrity**
-  - **Check basic integrity & device integrity**
+- **Play Integrity Verdict**  
+ Select the type of Play integrity check devices must pass. Your options:   
+  - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.  
+  - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
+  - **Check basic integrity & device integrity**: Require devices to pass Play's basic integrity check and device integrity check.  
 
-- **Play integrity verdict evaluation type**  
-  This setting is only available when *Play integrity verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.
+- **Check strong integrity using hardware-backed security features**  
+  This setting is only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
 
-  Select the evaluation type you want to use to compute Play integrity verdict response.
-
-  - **Not configured (defaults to basic evaluation)** – (*default*)
-  - **Check strong integrity using hardware-backed security features** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
-
-  For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
+  - **Not configured** (*default*)  – Setting isn't evaluated for compliance or non-compliance. Intune assesses the verdict from the basic integrity check by default.  
+    
+  - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
+    
+  For more information about Google Play's integrity services and device support, see:  
+  - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)    
+  - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)   
+  
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
