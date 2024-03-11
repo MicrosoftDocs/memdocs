@@ -95,14 +95,14 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 > Google Play Protect works in locations where Google Mobile Services is available. Devices operating in regions or countries where Google Mobile Services isn't available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services isn't available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).  
 
 - **Play Integrity Verdict**  
-    Select the type of Play integrity check devices must pass. Your options:  
+    Select the type of checks you want to include in the Google Play integrity verdict. Intune evaluates the verdict to determine if a device has passed the checks. Your options:  
 
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
   - **Check basic integrity & device integrity**: Requires devices to pass Play's basic integrity check and device integrity check.  
 
 - **Check strong integrity using hardware-backed security features**  
-  This setting is only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
+  This setting is optional, and only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
 
   - **Not configured** (*default*)  – Setting isn't evaluated for compliance or non-compliance. Intune assesses the verdict from the basic integrity check by default.  
   - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
@@ -229,19 +229,20 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
 - **Play Integrity Verdict**  
- Select the type of Play integrity check devices must pass. Your options:   
-  - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.  
+    Select the type of checks you want to include in the Google Play integrity verdict. Intune evaluates the verdict to determine if a device has passed the checks. Your options:  
+
+  - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
-  - **Check basic integrity & device integrity**: Require devices to pass Play's basic integrity check and device integrity check.  
+  - **Check basic integrity & device integrity**: Requires devices to pass Play's basic integrity check and device integrity check.  
 
 - **Check strong integrity using hardware-backed security features**  
-  This setting is only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
+  This setting is optional, and only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
 
   - **Not configured** (*default*)  – Setting isn't evaluated for compliance or non-compliance. Intune assesses the verdict from the basic integrity check by default.  
-    
   - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
+
+  For more information about Google Play's integrity services, see these Android developer docs:
     
-  For more information about Google Play's integrity services and device support, see:  
   - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)    
   - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)   
   
