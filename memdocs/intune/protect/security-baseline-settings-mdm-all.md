@@ -746,7 +746,7 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
   - **Only allow approved domains to use the TDC ActiveX control**  
-    Baseline default: **
+    Baseline default: *Enable*
 
 - **Allow script-initiated windows without size or position constraints**  
   Baseline default: *Enabled*  
@@ -1593,6 +1593,10 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccountsandshares)
 
+- **Network Access Restrict Anonymous Access To Named Pipes And Shares**
+  Baseline default *Enable*
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess-restrictanonymousaccesstonamedpipesandshares)
+
 - **Network Access Restrict Clients Allowed To Make Remote Calls To SAM**  
   Baseline default: *Configured*  
   Value: *O:BAG:BAD:(A;;RC;;;BA)*  
@@ -1621,6 +1625,14 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
 - **User Account Control Behavior Of The Elevation Prompt For Standard Users**  
   Baseline default: *Automatically deny elevation requests*  
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforstandardusers)
+
+- **User Account Control Detect Application Installations And Prompt For Elevation**
+  Baseline default: *Enable*
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
+
+- **User Account Control Only Elevate UI Access Applications That Are Installed In Secure Locations**
+  Baseline default: *Enabled: Application runs with UIAccess integrity only if it resides in secure location.*
+  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
 
 - **User Account Control Run All Administrators In Admin Approval Mode**  
   Baseline default: *Enabled*  
