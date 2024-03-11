@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2024
+ms.date: 03/19/2024
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -68,6 +68,7 @@ The following features are available and supported in GCC High and DoD clouds:
 | --- | --- |
 | Standard MDM features | ✅ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✅ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the government environment can be used. When you sign in to a GCC-H tenant, you see the connectors enabled for those specific vendors. |
+| Microsoft Defender for Endpoint security settings management | ✅ <br/><br/> You can use Intune endpoint security policies to manage Defender security settings on the devices onboarded to Defender but not enrolled in Intune. For more information on this feature, go to [Defender for Endpoint security settings management](../protect/mde-security-integration.md). |
 | Platform support | ✅ <br/><br/> You can use the same operating systems - Android, AOSP, iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
 
 ### In the planning phase
