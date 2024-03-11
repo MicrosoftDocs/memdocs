@@ -186,7 +186,7 @@ For devices that run macOS 14 and later, your settings catalog policy can also e
 
 - The **Await final configuration** feature for the device must be set to **Yes**. This configuration prevents end users from accessing restricted content or changing settings until applicable Intune device configuration policies apply. For information on this configuration, see [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
 
-- Create a filter using the *EnrollmentProfileName* attribute that will be assigned to the settings catalog policy. This ensures that the FileVault policy will be assigned when the device first enrolls with Intune. For more information on configuring filters, see [Create filters in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/filters). 
+- Create a filter using the *EnrollmentProfileName* attribute that will be assigned to the settings catalog policy. This ensures that the FileVault policy will be assigned when the device first enrolls with Intune. For more information on configuring filters, see [Create filters in Microsoft Intune](../fundamentals/filters.md). 
 
 - When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile
 
