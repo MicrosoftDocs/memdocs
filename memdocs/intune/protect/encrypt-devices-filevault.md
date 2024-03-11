@@ -120,12 +120,12 @@ Select **Next**.
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
-3. On the **Basics** page, enter the following properties, and then choose **Next**.
-   - **Platform**: macOS
-   - **Profile**: FileVault
+1. On the **Basics** page, enter the following properties, and then choose **Next**.
+- **Platform**: macOS
+- **Profile**: FileVault
 
    ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
+   
 4. On the **Configuration settings** page:
    1. Set *Enable FileVault* to **Yes**.
    2. For *Recovery key type*, only **Personal Recovery Key** is supported.
@@ -185,6 +185,8 @@ Select **Next**.
 For devices that run macOS 14 and later, your settings catalog policy can also enforce FileVault encryption through the macOS Setup Assistant, before a user arrives at the home screen. This goal requires additional configurations:
 
 - The **Await final configuration** feature for the device must be set to **Yes**. This configuration prevents end users from accessing restricted content or changing settings until applicable Intune device configuration policies apply. For information on this configuration, see [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
+
+- Create a filter using the *EnrollmentProfileName* attribute that will be assigned to the settings catalog policy. This ensures that the FileVault policy will be assigned when the device first enrolls with Intune. For more information on configuring filters, see [Create filters in Microsoft Intune](../fundamentals/filters.md). 
 
 - When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile
 
