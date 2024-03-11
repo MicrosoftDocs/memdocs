@@ -31,16 +31,16 @@ highlightedContent:
       url: ./intune/fundamentals/intune-add-ons.md
     - title: Get to know Intune
       itemType: overview
-      url: /draft-hub#get-to-know-intune-capabilities
+      url: /mem/draft-hub#get-to-know-intune-capabilities
     - title: Plan to move to Intune
       itemType: overview
-      url: /mem/draft-hub#learn-how-to-migrate-to-intune-successfully
+      url: /mem/draft-hub#learn-how-to-migrate-to-intune
     - title: Move some workloads to Intune
       itemType: overview
       url: /mem/draft-hub#take-advantage-of-intune-cloud-capabilities
     - title: Configure Zero Trust with Intune
       itemType: overview
-      url: /mem/draft-hub#manage-identity-and-device-access-policies
+      url: /mem/draft-hub#configure-zero-trust-with-intune
 
 # productDirectory section (optional)
 productDirectory:
@@ -120,11 +120,11 @@ additionalContent:
           summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology
           links:
           - text: Get Intune benefits without changing management policies
-            url: ./configmgr/tenant-attach/index.md
+            url: ./configmgr/tenant-attach/index.yml
           - text: Add Intune security benefits for Windows devices
             url: ./intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md
           - text: Analyze endpoint performance with Intune cloud attachment
-            url: ./analytics/enroll-configmgr?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json#bkmk_prereq
+            url: ./analytics/enroll-configmgr.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json#bkmk_prereq
           - text: Follow the interactive guide to co-managing workloads
             url: https://www.microsoft.com/modern-desktop-productivity/endpoint-management/#/SystemConfig?slide=15
           - text: Read the tutorial for enabling co-management
