@@ -54,7 +54,7 @@ With the broad range of available settings, you can tailor protection to your sp
 
 The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
 
-- For Android Enterprise personally-owned work profile devices: [Android personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+- For Android Enterprise personally owned work profile devices: [Android personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
 - For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md)
 
 When ready to proceed, [create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.  
@@ -192,9 +192,9 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
-## Personally-Owned Work Profile
+## Personally owned work profile  
 
-### Microsoft Defender for Endpoint - *for Personally-Owned Work Profile*
+### Microsoft Defender for Endpoint - *for personally owned work profile*
 
 - **Require the device to be at or under the machine risk score**  
   Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
@@ -204,7 +204,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Medium**
   - **High**
 
-### Device Health - *for Personally-Owned Work Profile*
+### Device Health - *for personally owned work profile*
 
 - **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -218,7 +218,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
   - **High** - This option is the least secure, as it allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
-#### Google Play Protect - *for Personally-Owned Work Profile*
+#### Google Play Protect - *for personally owned work profile*
 
 - **Google Play Services is configured**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -249,9 +249,9 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
-### Device Properties - *for Personally-Owned Work Profile*
+### Device Properties - *for personally owned work profile*
 
-#### Operating System Version - *for Personally-Owned Work Profile*
+#### Operating System Version - *for personally owned work profile*
 
 - **Minimum OS version**  
 When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
@@ -263,9 +263,9 @@ When a device is using an OS version later than the version in the rule, access 
 
   *By default, no version is configured*.
 
-### System security - *for Personally-Owned Work Profile*
+### System security - *for personally owned work profile*
 
-#### Encryption - *for Personally-Owned Work Profile*
+#### Encryption - *for personally owned work profile*
 
 - **Require encryption of data storage on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -273,7 +273,7 @@ When a device is using an OS version later than the version in the rule, access 
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
-#### Device Security - *for Personally-Owned Work Profile*
+#### Device Security - *for personally owned work profile*
 
 - **Block apps from unknown sources**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -309,9 +309,9 @@ When a device is using an OS version later than the version in the rule, access 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Users must enter a password before they can access their device.  
 
-  This setting applies at the device level. If you only need to require a password at the Personally-Owned Work Profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
+  This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).  
 
-#### All Android devices  - *for Personally-Owned Work Profile*
+#### All Android devices  - *for personally owned work profile*
 
 - **Number of days until password expires**  
   Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
@@ -322,7 +322,7 @@ When a device is using an OS version later than the version in the rule, access 
 - **Maximum minutes of inactivity before password is required**  
   Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
 
-#### Android 12 and later - *for Personally-Owned Work Profile*
+#### Android 12 and later - *for personally owned work profile*
 
 - **Password complexity**  
   Use this setting to set the password complexity requirements. Your options:
@@ -355,7 +355,7 @@ When a device is using an OS version later than the version in the rule, access 
   > 
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
 
-#### Android 11 and earlier - *for Personally-Owned Work Profile*
+#### Android 11 and earlier - *for personally owned work profile*
 
 > [!IMPORTANT]
 > 
