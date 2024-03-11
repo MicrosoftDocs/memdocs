@@ -6,7 +6,7 @@ metadata:
   services: service
   ms.service: microsoft-intune
   ms.topic: hub-page
-  author: v-anrostad
+  author: dougeby
   ms.author: dougeby
   manager: dansimp
   ms.date: 02/20/2024
@@ -31,16 +31,16 @@ highlightedContent:
       url: ./intune/fundamentals/intune-add-ons.md
     - title: Get to know Intune
       itemType: overview
-      url: /mem/draft-hub#get-to-know-intune-capabilities
+      url: /draft-hub#get-to-know-intune-capabilities
     - title: Plan to move to Intune
       itemType: overview
-      url: /mem/draft-hub#learn-how-to-migrate-to-intune-successfully
+      url: draft-hub#learn-how-to-migrate-to-intune-successfully
     - title: Move some workloads to Intune
       itemType: overview
-      url: /mem/draft-hub#take-advantage-of-intune-cloud-capabilities
+      url: /draft-hub#take-advantage-of-intune-cloud-capabilities
     - title: Configure Zero Trust with Intune
       itemType: overview
-      url: /mem/draft-hub#manage-identity-and-device-access-policies
+      url: /draft-hub#manage-identity-and-device-access-policies
 
 # productDirectory section (optional)
 productDirectory:
@@ -66,19 +66,19 @@ productDirectory:
     # Card
     - title: Manage macOS devices
       imageSrc: ./media/endpoint-analytics.svg
-      url: /intune/fundamentals/get-started-with-intune
+      url: ./intune/fundamentals/get-started-with-intune.md
     # Card
     - title: Manage mobile devices
-      imageSrc: ./media/zero_azure.svg 
-      url: /#manage-identity-and-device-access-policies 
+      imageSrc: ./media/zero_azure.svg
+      url: ./intune/fundamentals/deployment-guide-enrollment.md
     # Card
     - title: Manage Linux devices
-      imageSrc: ./media/cloud_fluent.svg
-      url: ./intune/fundamentals/get-started-with-intune 
+      imageSrc: ./intune/media/icons/deploy.svg
+      url: ./intune/fundamentals/deployment-guide-enrollment-linux.md
     # Card
     - title: Set up Universal Print on devices
-      imageSrc: ./media/endpoint-analytics.svg
-      url: ./intune/fundamentals/deployment-guide-enrollment-mamwe
+      imageSrc: ./intune/media/icons/deploy.svg
+      url: ./intune/configuration/settings-catalog-printer-provisioning.md
     
 # additionalContent section (optional)
 # Card with summary style
@@ -93,9 +93,9 @@ additionalContent:
           summary: Check out these resources to Intune capabilities and get to know the user interface
           links:
           - text: Interactive Guided Tour of Intune
-            url: ./fundamentals/account-sign-up.md
+            url: ./intune/fundamentals/account-sign-up.md
           - text: Walkthrough the Intune Admin Center
-            url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager
+            url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
           - text: Sign up for a 30-day trial
             url: ./mem/intune/fundamentals/free-trial-sign-up            
           - text: Create a Microsoft 365 Developer tenant for a longer trial
@@ -106,21 +106,21 @@ additionalContent:
           summary: Microsoft offers comprehensive guidance on planning a migration to Intune
           links:
           - text: Read the high-level planning guide
-            url: ./mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview
+            url: ./mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
           - text: Download the migration guide (PDF)
             url: https://www.microsoft.com/en-us/download/details.aspx?id=105665
           - text: Set up or move to Intune
-            url: ./mem/intune/fundamentals/deployment-guide-intune-setup
+            url: ./mem/intune/fundamentals/deployment-guide-intune-setup.md
           - text: Customize your migration instructions with the setup wizard
             url: https://setup.microsoft.com/intune/deploy-and-set-up-microsoft-intune
           - text: Follow step-by-step guidance for deploying Intune
-            url: ./mem/intune/fundamentals/get-started-with-intune
+            url: ./mem/intune/fundamentals/get-started-with-intune.md
                          
-        - title: Get cloud-connected benefits
-          summary: Prepare yourself with a pilot group of users and devices and follow the tasks and scenarios in the guide to get real experience with applying policies
+        - title: Take advantage of Intune cloud capabilities
+          summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology
           links:
           - text: Get Intune benefits without changing management policies
-            url: ./mem/configmgr/tenant-attach
+            url: ./mem/configmgr/tenant-attach.md
           - text: Add Intune security benefits for Windows devices
             url: ./mem/intune/protect/antivirus-windows-security-settings-windows-tenant-attach
           - text: Analyze endpoint performance with Intune cloud attachment
@@ -128,15 +128,15 @@ additionalContent:
           - text: Follow the interactive guide to co-managing workloads
             url: ./mem/intune/protect/antivirus-windows-security-settings-windows-tenant-attach
           - text: Read the tutorial for enabling co-management
-            url: ./mem/configmgr/comanage/tutorial-co-manage-clients
+            url: ./mem/configmgr/comanage/tutorial-co-manage-clients.md
     
         - title: Configure Zero Trust with Intune
           summary: A core component of enterprise-level security includes managing and protecting devices. This guidance walks through Microsoft's recommendations using Microsoft Intune.
           links:
           - text: Read Intune device management Zero Trust documentation 
-            url: ./mem/intune/fundamentals/zero-trust-with-microsoft-intune
+            url: ./mem/intune/fundamentals/zero-trust-with-microsoft-intune.md
           - text: Follow the Interactive how-to guide to Zero Trust with Intune
-            url: ./mem/intune/fundamentals/zero-trust-with-microsoft-intune
+            url: ./mem/intune/fundamentals/zero-trust-with-microsoft-intune.md
 
         - title: Microsoft learning paths and modules
           summary: Explore resources to learn concepts and get hands-on practice
@@ -174,7 +174,7 @@ conceptualContent:
    
     - title: Set up Intune subscription
       links:
-        - url: ./fundamentals/account-sign-up.md
+        - url: ./intune/fundamentals/account-sign-up.md
           itemType: how-to-guide
           text: Sign up or sign in to Microsoft Intune
         - url: ./intune/fundamentals/licenses.md
@@ -186,7 +186,7 @@ conceptualContent:
         
       footerLink:
         text: Browse all Intune subscription articles
-        url: ./fundamentals/account-sign-up.md
+        url: ./intune/fundamentals/account-sign-up.md
 
     - title: Manage apps
       links:
