@@ -234,7 +234,7 @@ Notifications that have been created are available in the *Compliance policies* 
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 > [!NOTE]
-> The preview email will not contain any device variables that are specified in the notification message template. 
+> The preview email doesn't contain the device variables that are specified in the notification message template. 
 
 ## Add actions for noncompliance
 
