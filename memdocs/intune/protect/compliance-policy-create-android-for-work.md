@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/14/2022
+ms.date: 03/19/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,14 +50,14 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Before you begin
 
-When configuring compliance policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
+With the broad range of available settings, you can tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
 
 The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
 
-- For Android Enterprise personally-owned work profile devices: [Android personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+- For Android Enterprise personally owned work profile devices: [Android personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
 - For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md)
 
-When ready to proceed, [create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.
+When ready to proceed, [create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.  
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -92,21 +92,33 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 #### Google Play Protect
 
 > [!IMPORTANT]
-> Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
+> Google Play Protect works in locations where Google Mobile Services is available. Devices operating in regions or countries where Google Mobile Services isn't available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services isn't available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).  
 
-- **Play integrity verdict**  
-  Enter the level of Google's [Play integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
+- **Play Integrity Verdict**  
+    Select the type of checks you want to include in the Google Play integrity verdict. Intune evaluates the verdict to determine if a device has passed the checks. Your options:  
 
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
-  - **Check basic integrity**
-  - **Check basic integrity & device integrit**
+  - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
+  - **Check basic integrity & device integrity**: Requires devices to pass Play's basic integrity check and device integrity check.  
+
+- **Check strong integrity using hardware-backed security features**  
+  This setting is optional, and only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
+
+  - **Not configured** (*default*)  – Setting isn't evaluated for compliance or non-compliance. Intune assesses the verdict from the basic integrity check by default.  
+  - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
+
+  For more information about Google Play's integrity services, see these Android developer docs:   
+  
+  - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)  
+    
+  - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)  
 
 ### Device Properties
 
 #### Operating System Version
 
 - **Minimum OS version**  
-  When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
+  When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. Device users see a link with information about how to upgrade their OS. They can upgrade their device, and then access organization resources.  
 
   *By default, no version is configured*.
 
@@ -180,9 +192,9 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
-## Personally-Owned Work Profile
+## Personally owned work profile  
 
-### Microsoft Defender for Endpoint - *for Personally-Owned Work Profile*
+### Microsoft Defender for Endpoint - *for personally owned work profile*
 
 - **Require the device to be at or under the machine risk score**  
   Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
@@ -192,7 +204,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Medium**
   - **High**
 
-### Device Health - *for Personally-Owned Work Profile*
+### Device Health - *for personally owned work profile*
 
 - **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -206,7 +218,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
   - **High** - This option is the least secure, as it allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
-#### Google Play Protect - *for Personally-Owned Work Profile*
+#### Google Play Protect - *for personally owned work profile*
 
 - **Google Play Services is configured**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -216,27 +228,30 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
-- **Play integrity verdict**  
-  Enter the level of [Google's Play device integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
+- **Play Integrity Verdict**  
+    Select the type of checks you want to include in the Google Play integrity verdict. Intune evaluates the verdict to determine if a device has passed the checks. Your options:  
+
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
-  - **Check basic integrity**
-  - **Check basic integrity & device integrity**
+  - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
+  - **Check basic integrity & device integrity**: Requires devices to pass Play's basic integrity check and device integrity check.  
 
-- **Play integrity verdict evaluation type**  
-  This setting is only available when *Play integrity verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.
+- **Check strong integrity using hardware-backed security features**  
+  This setting is optional, and only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
 
-  Select the evaluation type you want to use to compute Play integrity verdict response.
+  - **Not configured** (*default*)  – Setting isn't evaluated for compliance or non-compliance. Intune assesses the verdict from the basic integrity check by default.  
+  - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
 
-  - **Not configured (defaults to basic evaluation)** – (*default*)
-  - **Check strong integrity** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
-
-  For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
+  For more information about Google Play's integrity services, see these Android developer docs:
+    
+  - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)    
+  - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)   
+  
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
-### Device Properties - *for Personally-Owned Work Profile*
+### Device Properties - *for personally owned work profile*
 
-#### Operating System Version - *for Personally-Owned Work Profile*
+#### Operating System Version - *for personally owned work profile*
 
 - **Minimum OS version**  
 When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
@@ -248,9 +263,9 @@ When a device is using an OS version later than the version in the rule, access 
 
   *By default, no version is configured*.
 
-### System security - *for Personally-Owned Work Profile*
+### System security - *for personally owned work profile*
 
-#### Encryption - *for Personally-Owned Work Profile*
+#### Encryption - *for personally owned work profile*
 
 - **Require encryption of data storage on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -258,7 +273,7 @@ When a device is using an OS version later than the version in the rule, access 
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
-#### Device Security - *for Personally-Owned Work Profile*
+#### Device Security - *for personally owned work profile*
 
 - **Block apps from unknown sources**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -294,9 +309,9 @@ When a device is using an OS version later than the version in the rule, access 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Users must enter a password before they can access their device.  
 
-  This setting applies at the device level. If you only need to require a password at the Personally-Owned Work Profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
+  This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).  
 
-#### All Android devices  - *for Personally-Owned Work Profile*
+#### All Android devices  - *for personally owned work profile*
 
 - **Number of days until password expires**  
   Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
@@ -307,7 +322,7 @@ When a device is using an OS version later than the version in the rule, access 
 - **Maximum minutes of inactivity before password is required**  
   Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
 
-#### Android 12 and later - *for Personally-Owned Work Profile*
+#### Android 12 and later - *for personally owned work profile*
 
 - **Password complexity**  
   Use this setting to set the password complexity requirements. Your options:
@@ -340,7 +355,7 @@ When a device is using an OS version later than the version in the rule, access 
   > 
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
 
-#### Android 11 and earlier - *for Personally-Owned Work Profile*
+#### Android 11 and earlier - *for personally owned work profile*
 
 > [!IMPORTANT]
 > 
