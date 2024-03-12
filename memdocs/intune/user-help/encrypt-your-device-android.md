@@ -73,7 +73,7 @@ The name and location of the secure startup option can vary depending on your de
 
 
 ## Set startup passcode   
-Once you encrypt your device and enable secure startup, you'll be prompted to set your device PIN, password, or other authentication method (if allowed by your organization). Competing that step will satisfy the startup passcode requirement. 
+Once you encrypt your device and enable secure startup, you'll be prompted to set your device PIN, password, or other authentication method (if allowed by your organization). Completing that step will satisfy the startup passcode requirement. 
 
 To set a lock screen on your device or change the type that you're currently using:  
 
