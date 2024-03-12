@@ -39,9 +39,7 @@ Android device administrator (sometimes referred to "legacy" Android management 
 
 Therefore, we advise against enrolling new devices using the device administrator process described here and we also recommend that you migrate devices off of device administrator management.
 
-For information about using DA when Google Mobile Services are unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).
-
-[Microsoft Teams certified Android devices](/microsoftteams/devices/teams-ip-phones) should continue being managed with device administrator management until [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management becomes available for these devices.  
+For information about using DA when Google Mobile Services are unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md). 
 
 If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.
 
@@ -65,6 +63,13 @@ For information about other user tasks, see these articles:
 ## Block device administrator enrollment
 To block Android device administrator devices, or to block only personally owned Android device administrator devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
 
+## Microsoft Teams certified Android devices
+
+[Microsoft Teams certified Android devices](/microsoftteams/devices/teams-ip-phones) should continue being managed with device administrator management until [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management becomes available for these devices.  
+
+These devices can still be used without enrolling in Android device administrator. If a Microsoft Teams certified Android device is already enrolled in Android device administrator, it can be unenrolled from Android device administrator through deselecting the Intune license from the Microsoft Teams certified Android device device account in Microsoft Admin Center. The Microsoft Teams certified Android device will need to sign in again after this step to bypass device administrator enrollment.
+ 
+Note: there is a 30 day grace period after removing an Intune license where it will still function.
 
 ## Next steps
 - [Assign compliance policies](../protect/compliance-policy-create-android.md)
