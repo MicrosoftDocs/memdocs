@@ -57,6 +57,15 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of March 11, 2024
+
+### Documentation
+
+#### Updated documentation article: Forced browser sign-in setting for Cloud PC gallery images<!--49401955-->
+
+We’ve updated the article [Device images overview](device-images.md#gallery-images), noting that gallery images have [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin) pre-applied.
+
+<!-- ########################## -->
 ## Week of March 4, 2024 (Service release 2402)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
