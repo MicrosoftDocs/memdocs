@@ -202,7 +202,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
      > [!TIP]
      > For more information, see the blog [Windows 10 update servicing cadence - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-update-servicing-cadence/ba-p/222376).
 
-   - The non-security expedite updates apply to Windows 11 devices. Windows 10 devices aren't expedited but the devices show an alert in both  reports.
+   - The non-security expedite updates apply to Windows 11 devices. If Windows 10 devices are assigned to an Expedite policy that sets a **D** release, then those devices are not expedited and show an alert in the following reports.
      - **Reports** > **Windows Updates** > **Reports** Tab > **Windows Expedited Update Report**
      - **Devices** > **Windows 10 and later updates** > **Monitor** Tab > **Expedited quality update policies** with alerts tile, and click the title.
 
