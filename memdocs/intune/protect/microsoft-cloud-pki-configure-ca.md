@@ -249,5 +249,8 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 
    - **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.
 
-   - **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
+   - **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.
+   > [!NOTE]
+   > The string {{CloudPKIFQDN}} that included in issuing CA SCEP URI must be used as it is. The placeholder string is interpreted as appropriate FQDN when SCEP profile is processed.
+
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.  
