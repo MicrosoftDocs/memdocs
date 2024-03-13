@@ -112,7 +112,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Full Wipe of app data|X|X|
 |Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS/iPadOS, when the management profile is removed, the app is also removed.|X||
 |Prevent "Save as"|X||
-|Targeted Application Configuration (or app config through the "MAM channel")|X|X|
+|Targeted Application Configuration (or app config through the "MAM channel")|X||
 |Support for Multi-Identity|X||
 |Customizable Style |X||
 |On-demand application VPN connections with Citrix mVPN|X|X| 
