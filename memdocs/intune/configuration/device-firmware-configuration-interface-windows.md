@@ -47,7 +47,7 @@ For example, you use Windows client devices in a secure environment, and want to
 When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
 
 > [!TIP]
-> For Dell devices, you can create a **BIOS configuration** policy. For more information, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](bios-configuration.md).
+> For Dell devices, you can create a **BIOS configurations** policy. For more information, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](bios-configuration.md).
 
 ## Before you begin
 
