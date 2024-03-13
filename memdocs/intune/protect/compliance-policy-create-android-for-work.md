@@ -61,7 +61,12 @@ The security configuration framework is organized into distinct configuration le
 
 
 ## Fully managed, dedicated, and corporate-owned work profile  
-Configure a compliance profile for fully managed devices, dedicated devices, and corporate-owned devices with work profiles.  
+This section describes the compliance profile settings available for fully managed devices, dedicated devices, and corporate-owned devices with work profiles. Setting categories include: 
+
+* Microsoft Defender for Endpoint  
+* Device health  
+* Device properties  
+* System security  
 
 ### Microsoft Defender for Endpoint
 
@@ -77,7 +82,7 @@ Configure a compliance profile for fully managed devices, dedicated devices, and
 > [!NOTE]
 > Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
 
-### Device Health
+### Device health
 
 - **Require the device to be at or under the Device Threat Level**  
   Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
@@ -115,9 +120,9 @@ Configure a compliance profile for fully managed devices, dedicated devices, and
     
   - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)  
 
-### Device Properties
+### Device properties
 
-#### Operating System Version
+#### Operating system version
 
 - **Minimum OS version**  
   When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. Device users see a link with information about how to upgrade their OS. They can upgrade their device, and then access organization resources.  
@@ -134,7 +139,7 @@ Configure a compliance profile for fully managed devices, dedicated devices, and
 
   *By default, no date is configured*.
 
-### System Security
+### System security
 
 - **Require a password to unlock mobile devices**  
   - **Not configured** (*default*) -  This setting isn't evaluated for compliance or noncompliance.
@@ -142,19 +147,16 @@ Configure a compliance profile for fully managed devices, dedicated devices, and
 
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
-  - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*.
+  - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a device password by default, so it's better to select a different password type for greater control and consistency across all devices.  
   - **Password required, no restrictions**  
   - **Weak biometric** - [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
-  - **Numeric** (*default*) - Password must only be numbers, such as `123456789`. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **Numeric complex** -  Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed. Also enter:  
-
-      - **Minimum password length**: The minimum number of digits required, from 4 to 16.
-        
-  - **Alphabetic** - Letters in the alphabet are required. Numbers and symbols aren't required. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **Alphanumeric** - Includes uppercase letters, lowercase letters, and numeric characters. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **Numeric** (*default*) - Password must only be numbers, such as `123456789`. 
+  - **Numeric complex** -  Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.  
+  - **Alphabetic** - Letters in the alphabet are required. Numbers and symbols aren't required.  
+  - **Alphanumeric** - Includes uppercase letters, lowercase letters, and numeric characters.  
   - **Alphanumeric with symbols** - Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
-  Depending on the *password type* you select, the following settings are available:
+  Other settings vary by password type. The following settings appear when applicable:  
   - **Minimum password length**  
     Enter the minimum length the password must have, between 4 and 16 characters.  
 
@@ -197,14 +199,19 @@ Configure a compliance profile for fully managed devices, dedicated devices, and
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.  
 
-#### Device Security  
+#### Device security  
 
 - **Intune app runtime integrity**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Encrypt data storage on your devices.  
 
 ## Personally owned work profile  
-Configure a compliance profile for personal devices enrolling with work profiles. 
+This section describes the compliance profile settings available for personal devices enrolling with work profiles. Setting categories include: 
+
+* Microsoft Defender for Endpoint  
+* Device health  
+* Device properties  
+* System security  
 
 ### Microsoft Defender for Endpoint - *for personally owned work profile*
 
@@ -214,10 +221,9 @@ Configure a compliance profile for personal devices enrolling with work profiles
   - **Clear**
   - **Low**
   - **Medium**
-  - **High** 
+  - **High**  
 
-
-### Device Health - *for personally owned work profile*
+### Device health - *for personally owned work profile*
 
 - **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
@@ -246,31 +252,31 @@ Configure a compliance profile for personal devices enrolling with work profiles
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
 - **Play Integrity Verdict**  
-
-    Intune evaluates Play's integrity verdict to determine if a device meets requirements. Select the type of integrity checks devices must pass to stay compliant. Your options:  
+    Select the type of integrity checks devices must pass to stay compliant. Intune evaluates Google Play's integrity verdict to determine compliance. Your options:  
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.  
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
   - **Check basic integrity & device integrity**: Require devices to pass Play's basic integrity check and device integrity check.  
+  
 
 - **Check strong integrity using hardware-backed security features**  
-  This setting is optional, and only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
+  You can required devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:   
 
   - **Not configured** (*default*)  – This setting isn't evaluated for compliance or noncompliance. Intune evaluates the basic integrity check by default.  
   - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
 
-  For more information about Google Play's integrity services, see these Android developer docs:
+  For more information about Google Play's integrity services, see these Android developer docs:  
     
   - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)    
   - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)   
   
 > [!NOTE]
-> On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
+> **Threat scan on apps** is available as a device configuration policy on Android Enterprise devices. You can enable this setting on devices by using a configuration policy. For more information, see [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).  
 
 
-### Device Properties - *for personally owned work profile*
+### Device properties - *for personally owned work profile*
 
-#### Operating System Version - *for personally owned work profile*
+#### Operating system version - *for personally owned work profile*
 
 - **Minimum OS version**  
 When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. Device users see a link with information about how to upgrade their OS. They can upgrade their device, and then access organization resources.  
@@ -294,7 +300,7 @@ When a device is using an OS version later than the version in the rule, access 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
 
-#### Device Security - *for personally owned work profile*
+#### Device security - *for personally owned work profile*
 
 - **Block apps from unknown sources**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
@@ -330,32 +336,32 @@ When a device is using an OS version later than the version in the rule, access 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device.  
 
-  This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).  
+  This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. For more information, see [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).  
 
 
 ##### All Android devices  - *device security*  
 
 - **Number of days until password expires**  
-  Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
+  Enter the number of days, between 1-365, until the device password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.  
 
 - **Number of previous passwords to prevent reuse**  
-  Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
+  Use this setting to restrict users from reusing old passwords. Enter the number of passwords you want to prevent them from reusing, from 1-24. For example, enter `5` so that users can't reuse any of their past 5 passwords. When the value is blank, Intune doesn't change or update this setting. 
 
 - **Maximum minutes of inactivity before password is required**  
-  Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
+  Enter the maximum idle time allowed, from 1 minute to 8 hours. After this amount of time, the user must re-enter their password to get back into their device. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.
 
 
 ##### Android 12 and later - *device security*    
 
 - **Password complexity**  
-  Use this setting to set the password complexity requirements. Your options:
+  Select the password complexity requirements for devices running Android 12 and later. Your options:  
 
   - **None** - This setting isn't evaluated for compliance or noncompliance.
   - **Low** - Patterns or PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
   - **Medium** - The length, alphabetic length, or alphanumeric length must be at least 4 characters. PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.  
   - **High** - The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters. PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.  
 
-  On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
+  On personally owned devices with a work profile, there are two passwords affected by this setting:  
 
   - The device password that unlocks the device
   - The work profile password that allows users to access the work profile
@@ -383,25 +389,22 @@ When a device is using an OS version later than the version in the rule, access 
 
 > [!IMPORTANT]
 > 
-> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
-  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
+> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, see [Day zero support for Android 13](https://aka.ms/Intune/Android13).  
+  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.  
 
 - **Required password type**  
-  Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
-  - **Device Default**: Because the Device Default varies by device model, use one of the other values for more control and consistency across all devices.
+  Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:  
+
+  - **Device Default**: To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a device password by default, so it's better to select a different password type for greater control and consistency across all devices.  
   - **Low security biometric**: For more information about this password type, see [strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android Developers Blog).  
-  - **At least numeric** (*default*): Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **At least numeric** (*default*): Require numeric characters, such as `123456789`.  
   - **Numeric complex**: Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed. Also enter:  
-
-      - **Minimum password length**: The minimum number of digits required, from 4 to 16.  
-  - **At least alphabetic**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **At least alphanumeric**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **At least alphanumeric with symbols**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-
-Depending on the *Required password type* you select, the following setting is available:
+  - **At least alphabetic**: Require letters from the alphabet. Numbers and symbols aren't required. Also enter:        
+  - **At least alphanumeric**: Require uppercase letters, lowercase letters, and numeric characters.      
+  - **At least alphanumeric with symbols**: Require uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols. 
 
 - **Minimum password length**  
-    Enter the minimum length the password must have, between 4 and 16 characters.
+    If required for your password type, enter the minimum length a password must be, between 4 and 16 characters. 
 
 #### Work Profile Security - *for personally owned work profile*  
 If you don't configure password requirements, the use of a work profile password is optional and left up to users to configure.  
@@ -414,18 +417,18 @@ If you don't configure password requirements, the use of a work profile password
 ##### All Android devices - *work profile security*  
 
 - **Number of days until password expires** - *work profile security*  
-  Enter the number of days, between 1-365, until the work profile password must be changed. For example, to require a new password after 60 days, enter `60`. When the password expires, users are prompted to create a new password. 
+  Enter the number of days, between 1-365, until the work profile password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.  
 
 - **Number of previous passwords to prevent reuse**  
-- Use this setting to restrict users from reusing old passwords. Enter the number of passwords you want to prevent them from reusing, from 1-24. For example, enter *5* so that users can't reuse any of their past 5 passwords. When the value is blank, Intune doesn't change or update this setting.  
+  Use this setting to restrict users from reusing old passwords. Enter the number of passwords you want to prevent them from reusing, from 1-24. For example, enter *5* so that users can't reuse any of their past 5 passwords. When the value is blank, Intune doesn't change or update this setting.  
 
 - **Maximum minutes of inactivity before password is required**  
-      Enter the maximum idle time allowed, from 1 minute to 8 hours, before the user must re-enter their password to get back into their work profile. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.
+  Enter the maximum idle time allowed, from 1 minute to 8 hours. After this amount of time, the user must re-enter their password to get back into their work profile. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.  
 
 ##### Android 12 and later - *work profile security*  
 
 - **Password complexity**  
-  Use this setting to set the password complexity requirements for the work profile. Your options:  
+  Select the password complexity requirement for work profiles on devices running Android 12 and later. Your options:  
 
   - **None** - This setting isn't evaluated for compliance or noncompliance.
   - **Low** - A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
@@ -441,24 +444,16 @@ If you don't configure password requirements, the use of a work profile password
 
 - **Required password type**  
   Require users to use a certain type of password. Your options:  
-  - **Device Default**: The OS might not require a password by default. Select a different password type for more control and consistency across all devices.  
+  - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a work profile password by default, so it's better to select a different password type for greater control and consistency across all devices.  
   - **Low security biometric**: For more information about this password type, see [strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android Developers Blog).  
   - **At least numeric** (*default*): Require numeric characters, such as `123456789`.  
-  - **Numeric complex**: Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed. Also enter:  
+  - **Numeric complex**: Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.          
+  - **At least alphabetic**: Require letters from the alphabet. Numbers and symbols aren't required.       
+  - **At least alphanumeric**: Require uppercase letters, lowercase letters, and numeric characters.  
+  - **At least alphanumeric with symbols**: Require uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.  
 
-      - **Minimum password length**: Enter the minimum number of digits required, from 4 to 16.  
-        
-  - **At least alphabetic**: Require letters from the alphabet. Numbers and symbols aren't required. Also enter:  
-
-      - **Minimum password length**: Enter the minimum number of digits required, from 4 to 16.  
-         
-  - **At least alphanumeric**: Require uppercase letters, lowercase letters, and numeric characters. Also enter:  
-
-      - **Minimum password length**: Enter the minimum number of digits required, from 4 to 16.
-        
-  - **At least alphanumeric with symbols**: Require uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols. Also enter:  
-
-      - **Minimum password length**: Enter the minimum number of digits required, from 4 to 16.    
+- **Minimum password length**  
+    If required for your password type, enter the minimum length a work profile password must be, between 4 and 16 characters.  
 
 ## Next steps
 
