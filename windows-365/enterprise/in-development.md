@@ -113,7 +113,7 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 <!-- ***********************************************-->
 ## Security
 
-## FQDN requirement changes<!--46731885-->
+### FQDN requirement changes<!--46731885-->
 
 In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
 
