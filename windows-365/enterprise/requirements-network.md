@@ -130,7 +130,6 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - registration.prap01.cmdagent.trafficmanager.net
   - registration.prau01.cmdagent.trafficmanager.net
   - registration.prna02.cmdagent.trafficmanager.net
-  - hm-iot-in-4-prod-prna01.azure-devices.net (443 & 5671 outbound)
 - Registration endpoints
   - login.microsoftonline.com
   - login.live.com
@@ -145,6 +144,7 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-4-prod-prna01.azure-devices.net (443 & 5671 outbound)
   
 All endpoints connect over port 443 unless otherwise specified.
 
