@@ -55,6 +55,10 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device management
 
+### Cloud PC size recommendation tool<!--45433311-->
+
+In a future update, you'll have access to a new Intune admin center tool that recommends appropriate sizes for Cloud PCs to better fit your organization's needs.
+
 ### Support for symmetric NAT with RDP Shortpath<!--43602619-->
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
@@ -62,6 +66,14 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 ### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
 
 In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for seven days will be automatically turned on and synced with Windows Update for Business Policies.
+
+### Maintenance windows (preview)<!--48851694-->
+
+You'll be able to set maintenance windows for running remote actions on Cloud PCs. This will notify users in-session about the impending remote action period.
+
+### Intune scope tags<!--48907552-->
+
+In a future update, Windows 365 will support [Intune scope tags](/mem/intune/fundamentals/scope-tags).
 
 <!-- ***********************************************-->
 <!--## Device provisioning-->
@@ -87,6 +99,10 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
 
+### Cloud PC utilization report creation date<!--49175145-->
+
+In a future update, the Cloud PC utilization report will the Cloud PC creation date.
+
 <!-- ***********************************************-->
 ## Provisioning
 
@@ -97,7 +113,7 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 <!-- ***********************************************-->
 ## Security
 
-### FQDN requirement changes<!--46731885-->
+## FQDN requirement changes<!--46731885-->
 
 In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
 
