@@ -64,6 +64,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google Play’s device integrity check on end-user devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
 | Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end-user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
+| Device conditions  |       Max allowed device threat level  |        Low / Block   access  |          Windows  |                  |
 | Device conditions  |       Require device lock  |        Low/Warn |         Android  |          This setting ensures that Android devices have a device password that meets the minimum password requirements.                |
 
 > [!NOTE]
