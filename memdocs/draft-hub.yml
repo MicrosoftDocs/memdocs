@@ -86,17 +86,10 @@ conceptualContent:
   sections:
 
   - title: Additional in-depth resources
-    summary: "Check out these resources to:
-      - Learn about Intune before you buy
-      - Plan a migration to Intune
-      - Move some workloads from Configuration Manager to Intune
-      - See how to apply Zero trust security principles with Intune
-      - Explore resources to learn concepts and get hands-on practice
-      - Join the community of Intune Users
-      - Learn from videos, blogs, and more from Microsoft partners"
+    summary: "Go beyond the documentation with videos, blogs, training guides, communities and more from Microsoft Experts and partners"
     items:
       - title: Get to know Intune capabilities
-        
+        summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment
         links:
         - url: ./intune/fundamentals/account-sign-up.md
           itemType: how-to-guide
@@ -173,7 +166,7 @@ conceptualContent:
           url: /training/paths/endpoint-manager-fundamentals/
 
       - title: Intune community resources
-        summary: Explore resources to learn concepts and get hands-on practice
+        summary: Checkout Intune community resources for blogs, announcements, discussions, and more 
         links:
         - text: Intune Customer Success
           itemType: how-to-guide
