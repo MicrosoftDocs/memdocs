@@ -86,7 +86,14 @@ conceptualContent:
   sections:
 
   - title: Additional in-depth resources
-    #summary:
+    summary: "Check out these resources to:
+      - Learn about Intune before you buy
+      - Plan a migration to Intune
+      - Move some workloads from Configuration Manager to Intune
+      - See how to apply Zero trust security principles with Intune
+      - Explore resources to learn concepts and get hands-on practice
+      - Join the community of Intune Users
+      - Learn from videos, blogs, and more from Microsoft partners"
     items:
       - title: Get to know Intune capabilities
         
@@ -126,7 +133,7 @@ conceptualContent:
           itemType: how-to-guide
           url: ./intune/fundamentals/get-started-with-intune.md
                         
-      - title: Take advantage of Intune cloud capabilities
+      - title: Move workloads from Configuration Manager
         summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology
         links:
         - text: Get Intune benefits without changing management policies
@@ -191,7 +198,7 @@ conceptualContent:
           itemType: how-to-guide
           url: https://www.youtube.com/@IntuneTraining
 
-  - title: How-to guides
+  - title: How-to documentation
     items:
 
     - title: Set up Intune subscription
