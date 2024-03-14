@@ -936,7 +936,7 @@ You can generate the ChromeOSDevices report using the Microsoft Graph API to mak
 You can check whether the ChromeOSDevices report has completed by using the Microsoft Graph API. 
 
 | Microsoft Graph API Endpoint | Method | 
-|---|---|---|
+|---|---|
 | `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('id') ` | GET |
 
 Use the output from the above call to determine the status of the ChromeOSDevices report. An example call will look similar to the following:
