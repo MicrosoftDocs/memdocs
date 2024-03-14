@@ -57,7 +57,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
-- **Use Remote Help with unenrolled devices**: Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
+- **Use Remote Help with enrolled and unenrolled devices**: Remote Help is supported on enrolled devices that also need to be Entra registered devices. In order allow Remote Help to devices that aren't enrolled in intune, you can turn on this setting that is disabled by default.
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
