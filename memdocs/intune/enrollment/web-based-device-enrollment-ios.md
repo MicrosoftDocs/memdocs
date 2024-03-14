@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2024
+ms.date: 03/14/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,6 +33,9 @@ ms.collection:
 
 # Set up web based device enrollment for iOS  
 **Applies to iOS/iPadOS**  
+
+>[!IMPORTANT]
+> When you create an iOS/iPadOS enrollment profile in the Microsoft Intune admin center, *device enrollment with Company Portal* appears as the default method. The default method is expected to change to *web-based device enrollment* in the Microsoft Intune April service release. Additionally for new tenants, if no enrollment profile is created, the device user will enroll using web-based device enrollment. For information about how to prepare for this change, see [Plan for Change: Web based device enrollment will become default method for iOS/iPadOS device enrollment](../fundamentals/whats-new.md#plan-for-change-web-based-device-enrollment-will-become-default-method-for-iosipados-device-enrollment).  
 
 Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal devices. This is one of two *Apple device enrollment* methods supported in Microsoft Intune, with the other being [device enrollment with the Company Portal app](ios-device-enrollment.md#app-or-web-based-enrollment). Both methods give you access to a limited but appropriate set of device management settings and actions for bring-your-own-device (BYOD) scenarios, so you can protect work data without affecting the device user's personal data or apps.  
 
