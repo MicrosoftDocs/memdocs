@@ -110,19 +110,19 @@ conceptualContent:
       - title: Learn how to migrate to Intune
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune
         links:
-        - text: Read the high-level planning guide
+        - text: Set up or move to Intune
+          itemType: how-to-guide
+          url: ./intune/fundamentals/deployment-guide-intune-setup.md
+        - text: Get started with cloud-native endpoints
           itemType: how-to-guide        
           url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
         - text: Download the migration guide (PDF)
           itemType: how-to-guide
           url: https://www.microsoft.com/en-us/download/details.aspx?id=105665
-        - text: Set up or move to Intune
-          itemType: how-to-guide
-          url: ./intune/fundamentals/deployment-guide-intune-setup.md
         - text: Customize your migration instructions with the setup wizard
           itemType: how-to-guide
           url: https://setup.microsoft.com/intune/deploy-and-set-up-microsoft-intune
-        - text: Follow step-by-step guidance for deploying Intune
+        - text: Follow step-by-step guidance to deploy Intune
           itemType: how-to-guide
           url: ./intune/fundamentals/get-started-with-intune.md
                         
