@@ -30,16 +30,16 @@ highlightedContent:
       url: ./intune/fundamentals/intune-add-ons.md
     - title: Get to know Intune
       itemType: overview
-      url: /mem/draft-hub#get-to-know-intune-capabilities
+      url: /mem/draft-hub#additional-in-depth-resources
     - title: Plan to move to Intune
       itemType: overview
-      url: /mem/draft-hub#learn-how-to-migrate-to-intune
+      url: /mem/draft-hub#additional-in-depth-resources
     - title: Move some workloads to Intune
       itemType: overview
-      url: /mem/draft-hub#take-advantage-of-intune-cloud-capabilities
+      url: /mem/draft-hub#additional-in-depth-resources
     - title: Configure Zero Trust with Intune
       itemType: overview
-      url: /mem/draft-hub#configure-zero-trust-with-intune
+      url: /mem/draft-hub#additional-in-depth-resources
 
 # productDirectory section (optional)
 productDirectory:
