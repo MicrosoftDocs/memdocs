@@ -387,10 +387,10 @@ When a device is using an OS version later than the version in the rule, access 
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
 
 
-##### Android 11 and earlier - *device security*  
+#### Android 11 and earlier - *device security*  
 
 > [!IMPORTANT]
-> Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects passwords on new and existing devices, see [Android 12 and later - device security](#all-android-devices---device-security) in this article.     
+> Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects passwords on new and existing devices, see [Android 12 and later - device security](#android-12-and-later---device-security) in this article.     
 
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:  
@@ -414,7 +414,7 @@ If you don't configure password requirements, the use of a work profile password
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password to access their work profile.
 
-##### All Android devices - *work profile security*  
+#### All Android devices - *work profile security*  
 
 - **Number of days until password expires**  
   Enter the number of days, between 1-365, until the work profile password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.  
@@ -425,7 +425,7 @@ If you don't configure password requirements, the use of a work profile password
 - **Maximum minutes of inactivity before password is required**  
   Enter the maximum idle time allowed, from 1 minute to 8 hours. After this amount of time, the user must re-enter their password to get back into their work profile. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.  
 
-##### Android 12 and later - *work profile security*  
+#### Android 12 and later - *work profile security*  
 
 - **Password complexity**  
   Select the password complexity requirement for work profiles on devices running Android 12 and later. Your options:  
@@ -459,10 +459,11 @@ If you don't configure password requirements, the use of a work profile password
   > 
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.  
 
-##### Android 11 and earlier - *work profile security*   
+#### Android 11 and earlier - *work profile security*   
+These passwords settings apply to devices running Android 11 and erlier.  
 
 > [!IMPORTANT]
-> Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects work profile passwords on new and existing devices, see [Android 12 and later - work profile security](#all-android-devices---work-profile-security) in this article.    
+> Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects work profile passwords on new and existing devices, see [Android 12 and later - work profile security](#android-12-and-later---work-profile-security) in this article.    
 
 - **Required password type**  
   Require users to use a certain type of password. Your options:  
