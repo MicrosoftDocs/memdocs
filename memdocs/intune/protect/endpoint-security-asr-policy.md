@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Docs
+title: Manage attack surface reduction settings with Microsoft Intune
 description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 03/15/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,19 +31,30 @@ ms.reviewer: mattcall
 
 ---
 
-# Attack surface reduction policy for endpoint security in Intune
+# Use Microsoft Intune policy to manage rules for attack surface reduction
 
-When Defender antivirus is in use on your Windows 10/11 devices, you can use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
+When Defender antivirus is in use on your Windows 10 and Windows 11 devices, you can use Microsoft Intune endpoint security policies for *attack surface reduction* to manage those settings on your devices.
 
-Attack surface reduction policies help reduce your attack surfaces, by minimizing the places where your organization is vulnerable to cyberthreats and attacks. For more information, see [Overview of attack surface reduction]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
+You can use attack surface reduction (ASR) policies to reduce the attack surface of devices by minimizing the places where your organization is vulnerable to cyberthreats and attacks. Intune ASR policies support the following profiles:
 
-Find the endpoint security policies for attack surface reduction under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each attack surface reduction *profile* manages settings for a specific area of a Windows 10/11 device.
+- **Attack Surface Reduction Rules**: Use this profile to target behaviors that malware and malicious apps typically use to infect computers. Examples of these behaviors include use of executable files and scripts in Office apps, web mail that attempts to download or run files, and obfuscated or otherwise suspicious scripts behaviors that apps don't usually initiate during normal day-to-day work.
+
+- **Device Control**: Use this profile to allow, block, and otherwise secure removable media through controls that can monitor and help prevent threats from unauthorized peripherals from compromising your devices. and control features to help prevent threats in unauthorized peripherals from compromising your devices.
+
+For more information, see [Overview of attack surface reduction]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
+
+ Attack surface reduction polices are found in the the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 ## Prerequisites for Attack surface reduction profiles
 
 **General**:
 
-- Windows 10 or Windows 11
+- Devices must run Windows 10 or Windows 11
 - Defender antivirus must be the primary antivirus on the device
 
 **Support for Configuration Manager clients**:
