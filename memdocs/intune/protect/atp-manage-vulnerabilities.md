@@ -11,7 +11,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.reviewer: aanavath
 
 # optional metadata
@@ -50,7 +49,7 @@ Security tasks identify:
 - Status
 - Steps to take to remediate the vulnerability
 
-In the admin center, an Intune admin can review and then choose to accept or reject the task. After an admin accepts a task in Intune, they can use Intune to remediate the vulnerability, guided by the details provided in the  task.
+In the admin center, an Intune admin can review and then choose to accept or reject the task. After an admin accepts a task in Intune, they can use Intune to remediate the vulnerability, guided by the details provided in the task.
 
 With successful remediation, the Intune admin sets the security task to **Complete Task**. This status displays in Intune and is passed back to Defender for Endpoint, where security admins can confirm the revised status for the vulnerability.
 
@@ -85,7 +84,7 @@ The following example demonstrates the workflow of discovering an application vu
 
   ![View the list of security tasks in the Intune admin center](./media/atp-manage-vulnerabilities/temp-security-tasks.png)
 
-- The Intune admin selects the security task to view details about the task.  The admin then selects **Accept**, which updates the status in Intune, and in Defender for Endpoint to be *Accepted*.
+- The Intune admin selects the security task to view details about the task. The admin then selects **Accept**, which updates the status in Intune, and in Defender for Endpoint to be *Accepted*.
 
   ![Accept or reject a security task](./media/atp-manage-vulnerabilities/temp-accept-task.png)
 

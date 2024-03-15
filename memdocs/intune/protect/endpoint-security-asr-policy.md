@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -67,11 +66,12 @@ Applies to:
 
 **Support for Security Management for Microsoft Defender for Endpoint**:
 
-When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support  managed by Defender that aren't enrolled with Intune, Attack surface reduction applies to devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support managed by Defender that aren't enrolled with Intune, Attack surface reduction applies to devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 ## Attack surface reduction profiles
 
-> [!NOTE]  
+> [!NOTE]
+>
 > Beginning in April 2022, new profiles for Attack surface reduction policy have begun to release. When a new profile becomes available, it uses the same name of the profile it replaces and includes the same settings as the older profile but in the newer settings format as seen in the Settings Catalog. Your previously created instances of these profiles remain available to use and edit, but all new instances you create will be in the new format. The following profiles have been updated:
 >
 > - Attack surface reduction rules (April 5, 2022)
@@ -99,7 +99,8 @@ Profiles for this platform are supported on Windows 10 and Windows 11 devices en
   Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Settings that aren't in conflict are merged, while settings that are in conflict aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
 
   Attack surface reduction rule merge behavior is as follows:
-  - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
+
+  - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:
     - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
     - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
     - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
@@ -171,7 +172,7 @@ For information about these options, see the following articles in the Microsoft
 
 When you configure a Device control profile and one or more reusable settings groups, you also configure *Actions* to define how the settings in those groups are used.
 
-Each rule you add to the profile can include both reusable settings groups and individual settings that are added directly to the rule.  However, consider using each rule for either reusable settings groups or to manage settings you add directly to the rule. This separation can help simplify future configurations or changes you might make.  
+Each rule you add to the profile can include both reusable settings groups and individual settings that are added directly to the rule. However, consider using each rule for either reusable settings groups or to manage settings you add directly to the rule. This separation can help simplify future configurations or changes you might make.
 
 For guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../protect/reusable-settings-groups.md).
 
@@ -199,7 +200,7 @@ Intune supports the following two settings to exclude specific file and folder p
   > ASR policies do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple policies that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
 
   <!-- 
-  For more information, see the documentation for the Defender CSP  [Defender/ASROnlyPerRuleExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-asronlyperruleexclusions). 
+  For more information, see the documentation for the Defender CSP [Defender/ASROnlyPerRuleExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-asronlyperruleexclusions). 
   -->
 
 <!--
@@ -255,7 +256,7 @@ Policy merge doesn't compare or merge the configurations from different settings
 
 - Expanding on the first example, in which multiple lists from *Allow hardware device installation by setup classes* were merged into a single list, you have several instances of *Block hardware device installation by setup classes* that applies to the same device. All the related blocklists merge into a single blocklist for the device that then deploys to the device.
 
-  - The allowlist for *setup classes* isn't compared nor merged with the blocklist for *setup classes*.  
+  - The allowlist for *setup classes* isn't compared nor merged with the blocklist for *setup classes*.
   - Instead, the device receives both lists, as they are from two distinct settings. The device then enforces the most restrictive setting for *installation by setup classes*.
 
   With this example, a setup class defined in the blocklist will override the same setup class if found on the allowlist. The result would be that the setup class is blocked on the device.
