@@ -71,6 +71,174 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of March 25, 2024 (Service release 2403)
+
+### App management
+
+#### Extended capabilities for Managed Google Play apps on personally-owned Android devices with a work profile<!-- 26554642 -->
+
+There are new capabilities extended to work profile devices. The following capabilities were previously available only on corporate-owned devices:
+
+- **Available apps for device groups**: You can use Intune to make apps available for device groups through the Managed Google Play store. Previously, apps could only be made available to user groups.
+
+- **Update priority setting**: You can use Intune to configure the app update priority on devices with a work profile. To learn more about this setting, see [Update a Managed Google Play app](../apps/apps-add-android-for-work.md#update-a-managed-google-play-app).
+
+- **Required apps display as available in Managed Google Play**:  You can use Intune to make required apps available for users through the Managed Google Play store. Note that apps that are part of existing policies will now display as available.
+
+These new capabilities will follow a phased rollout over multiple months.
+
+Applies to:
+
+- Android Enterprise personally owned devices with a work profile
+
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog<!-- 26551582 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**Declarative Device Management (DDM) > Passcode**:
+
+- Maximum Passcode Age In Days
+- Minimum Complex Characters
+- Require Alphanumeric Passcode
+
+**Restrictions**:
+
+- Allow Marketplace App Installation
+
+##### macOS
+
+**Declarative Device Management (DDM) > Passcode**:
+
+- Change At Next Auth
+- Custom Regex
+- Failed Attempts Reset In Minutes
+- Maximum Passcode Age In Days
+- Minimum Complex Characters
+- Require Alphanumeric Passcode
+
+**Full Disk Encryption > FileVault**:
+
+- Recovery Key Rotation In Months
+
+#### New settings available in the Windows settings catalog<!-- 26763724, 26170998, [pending 26801723] -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
+
+- **Delivery optimization**:
+
+  - **DO Disallow Cache Server Downloads On VPN** - This setting blocks downloads from Microsoft Connected Cache servers when the device connects using VPN. By default, the device is allowed to download from Microsoft Connected Cache when connected using VPN.
+
+  - **DO Set Hours To Limit Background Download Bandwidth** - This setting specifies the maximum background download bandwidth. Delivery Optimization uses this bandwidth during and outside business hours across all concurrent download activities as a percentage of available download bandwidth.
+
+  - **DO Set Hours To Limit Foreground Download Bandwidth** - This setting specifies the maximum foreground download bandwidth. Delivery Optimization uses this bandwidth during and outside business hours across all concurrent download activities as a percentage of available download bandwidth.
+
+  - **DO Vpn Keywords** - This policy allows you to set one or more keywords used to recognize VPN connections.
+
+- **Messaging**:
+
+  - **Allow Message Sync** - This policy setting allows the backup and restore of cellular text messages to Microsoft's cloud services.
+<!-- Pending: not yet confirmed. See 26801723
+
+- **Microsoft Defender Antivirus**:
+
+  - **Specify the maximum depth to scan archive files**
+  - **Specify the maximum size of archive files to be scanned**
+-->
+
+For more information on these settings, go to:
+
+- [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization)
+- [Policy CSP - Messaging](/windows/client-management/mdm/policy-csp-messaging#allowmessagesync)
+- [Policy CSP - ADMX_MicrosoftDefenderAntivirus](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus)
+
+Applies to:
+
+- Windows 10 and later
+
+#### Filter existing assignment filters by filter type and platform <!-- 12798031 -->
+
+You can use [Intune assignment filters](filters.md) to assign a policy based on rules you create.
+
+You can now filter your existing assignment filters by Platform and by the Managed apps or Managed devices filter type. When you have many filters, this feature makes it easier to find specific filters you created.
+
+For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
+
+This feature applies to:
+
+- **Managed devices** on the following platforms:
+
+  - Android device administrator
+  - Android Enterprise
+  - Android (AOSP)
+  - iOS/iPadOS
+  - macOS
+  - Windows 10/11
+
+- **Managed apps** on the following platforms:
+
+  - Android
+  - iOS/iPadOS
+  - Windows
+
+### Device management
+
+#### Windows quality updates will support expediting non-security updates<!-- 24191406 -->
+
+Windows quality updates now support expediting non-security updates for those times when a quality fix needs to be deployed faster than the normal quality update settings.
+
+Applies to:
+
+ - Windows 11 devices
+
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md#create-and-assign-an-expedited-quality-update).
+
+### Device security
+
+#### Use a rootless implementation of Podman to hose Microsoft Tunnel<!-- 24836716 -->
+
+When prerequisites are met, you now have the option to use a rootless Podman container to host a Microsoft Tunnel server. This capability is available when you use [Podman for Red Hat Enterprise Linux (RHEL)](../protect/microsoft-tunnel-prerequisite.md#linux-server) version 8.8 or later, to host Microsoft Tunnel.
+
+When using a rootless Podman container, the mstunnel services run under a non-privileged service user. This implementation can help limit impact from a container escape. To use a rootless Podman container, you must start the tunnel installation script using a modified command line.
+
+For more information about this Microsoft Tunnel install option, see [Use a rootless Podman container](../protect/microsoft-tunnel-configure.md#use-a-rootless-podman-container).
+
+#### Improvements for Intune deployments of Microsoft Defender for Endpoint<!-- 26314441 -->
+
+We’ve improved and simplified the experience, workflow, and report details for onboarding devices to Microsoft Defender when using Intune’s endpoint detection and response (EDR) policy. These changes apply for Windows devices managed by Intune and by the tenant-attach scenario. These improvements include:
+
+- Changes to the EDR node, dashboards, and reports to improve the visibility of your Defender EDR deployment numbers. See [About the endpoint detection and response node](../preotect/endpoint-security-edr-policy.md#about-the-endpoint-detection-and-response-node).
+
+- A new tenant-wide option to deploy a preconfigured EDR policy that streamlines the deployment of Defender for Endpoint to applicable Windows devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+
+- Changes to Intune’s the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+
+These changes apply to the Endpoint security and endpoint detection and response nodes of the admin center, and the following device platforms:
+
+- Windows 10
+- Windows 11
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 26677733, 26711918, 26763096, 26763121 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Cerby by Cerby, Inc.
+- OfficeMail Go by 9Folders, Inc.
+- DealCloud by Intapp, Inc.
+- Intapp 2.0 by Intapp, Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ## Week of March 3, 2024
 
 ### Device enrollment
