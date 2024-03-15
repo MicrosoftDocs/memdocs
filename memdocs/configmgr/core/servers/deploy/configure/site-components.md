@@ -2,7 +2,7 @@
 title: Site components
 titleSuffix: Configuration Manager
 description: Learn how to configure site components to modify the behavior of site system roles and site status reporting.
-ms.date: 12/15/2021
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -42,6 +42,9 @@ Most options for the various site components are self-explanatory when viewed in
 #### Content distribution settings
 
 On the **General** tab, specify settings that modify how the site server transfers content to its distribution points. When you increase the values you use for concurrent distribution settings, content distribution can use more network bandwidth.
+
+> [!NOTE]
+> Don't increase Maximum number of packages 3 (default) in concurrent distribution settings when the content are distributed to CMG CDP. 
 
 #### Pull distribution point
 
