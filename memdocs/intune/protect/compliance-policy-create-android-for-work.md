@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/13/2024
+ms.date: 03/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -149,7 +149,7 @@ This section describes the compliance profile settings available for fully manag
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
   - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a device password by default, so it's better to select a different password type for greater control and consistency across all devices.  
   - **Password required, no restrictions**  
-  - **Weak biometric** - [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+  - **Weak biometric** - For more information about this password type, see [strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android Developers Blog).  
   - **Numeric** (*default*) - Password must only be numbers, such as `123456789`. 
   - **Numeric complex** -  Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.  
   - **Alphabetic** - Letters in the alphabet are required. Numbers and symbols aren't required.  
@@ -281,12 +281,12 @@ This section describes the compliance profile settings available for personal de
 - **Minimum OS version**  
 When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. Device users see a link with information about how to upgrade their OS. They can upgrade their device, and then access organization resources.  
 
-  *By default, no version is configured*.
+  *By default, no version is configured*.  
 
 - **Maximum OS version**  
 When a device is using an OS version later than the version in the rule, access to organization resources is blocked. The user is asked to contact their IT administrator. Until a rule is changed to allow the OS version, this device can't access organization resources.
 
-  *By default, no version is configured*.
+  *By default, no version is configured*.  
 
 
 ### System security - *for personally owned work profile*
@@ -294,7 +294,7 @@ When a device is using an OS version later than the version in the rule, access 
 #### Encryption - *for personally owned work profile*
 
 - **Require encryption of data storage on device**  
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.  
   - **Require** -  Encrypt data storage on your devices.  
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
@@ -361,16 +361,16 @@ When a device is using an OS version later than the version in the rule, access 
   - **Medium** - The length, alphabetic length, or alphanumeric length must be at least 4 characters. PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.  
   - **High** - The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters. PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.  
 
-  On personally owned devices with a work profile, there are two passwords affected by this setting:  
+  This setting affects two passwords on the device:  
 
-  - The device password that unlocks the device
-  - The work profile password that allows users to access the work profile
+  - The device password that unlocks the device.  
+  - The work profile password that allows users to access the work profile.    
 
-  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
 
   > [!IMPORTANT]
   >
-  > Before the **Password complexity** setting was available, the **Required password type** and **Minimum password length** settings were used. These settings are still available, but they're deprecated by Google for personal devices with a work profile. For information about these settings, go to [Android 11 and earlier](#android-11-and-earlier---device-security) (in this article).
+  > Before the password complexity setting was available, the **Required password type** and **Minimum password length** settings were used. These settings are still available, but Google has deprecated them for personal devices with a work profile.       
   >
   > Here's what you need to know:
   >
@@ -388,9 +388,7 @@ When a device is using an OS version later than the version in the rule, access 
 ##### Android 11 and earlier - *device security*  
 
 > [!IMPORTANT]
-> 
-> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, see [Day zero support for Android 13](https://aka.ms/Intune/Android13).  
-  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.  
+> Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects passwords on new and existing devices, see [Android 12 and later - device security](#all-android-devices---device-security) in this article.     
 
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:  
@@ -435,12 +433,34 @@ If you don't configure password requirements, the use of a work profile password
   - **Medium** - The length, alphabetic length, or alphanumeric length must be at least 4 characters. PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. 
   - **High** - The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.  
 
+  This setting affects two passwords on the device:  
+
+  - The device password that unlocks the device.  
+  - The work profile password that allows users to access the work profile.    
+
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure for the work profile.  
+
+
+   > [!IMPORTANT]
+  >
+  > Before the password complexity setting was available, the **Required password type** and **Minimum password length** settings were used. These settings are still available, but Google has since deprecated them for personal devices with a work profile.     
+  >
+  > Here's what you need to know:  
+  >
+  > - If the **Required password type** setting is changed from the **Device default** value in a policy, then:
+  >   - Newly enrolled Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.  
+  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** setting and the existing value configured.
+  >
+  >     If you change an existing policy with the **Required password type** setting that's already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
+  >
+  >     For Android Enterprise 12+ devices, it's recommended to configure the **Password complexity** setting.
+  > 
+  > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.  
+
 ##### Android 11 and earlier - *work profile security*   
 
 > [!IMPORTANT]
-> 
-> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
-  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
+> Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects work profile passwords on new and existing devices, see [Android 12 and later - work profile security](#all-android-devices---work-profile-security) in this article.    
 
 - **Required password type**  
   Require users to use a certain type of password. Your options:  
