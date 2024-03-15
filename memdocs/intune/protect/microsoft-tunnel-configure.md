@@ -473,7 +473,7 @@ To support an outbound proxy for the rootless user, edit **/etc/profile.d/http_p
 
 ### Modified installation command-line for rootless Podman containers
 
-To install Microsoft Tunnel to a rootless Podman container, use the following command line to begin the installation script. This command line sets **mst_rootless_mode** as an environment variable and replaces use of the default installation command line during *step 2* of the [installation procedure](use-the-script-to-install-microsoft-tunnel):
+To install Microsoft Tunnel to a rootless Podman container, use the following command line to begin the installation script. This command line sets **mst_rootless_mode** as an environment variable and replaces use of the default installation command line during *step 2* of the [installation procedure](#use-the-script-to-install-microsoft-tunnel):
 
 - `chmod mst_rootless_mode=1 ./mstunnel-setup`
 
