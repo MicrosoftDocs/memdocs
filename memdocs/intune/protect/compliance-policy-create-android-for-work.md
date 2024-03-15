@@ -102,14 +102,14 @@ This section describes the compliance profile settings available for fully manag
 > Google Play Protect works in locations where Google Mobile Services is available. Devices operating in regions or countries where Google Mobile Services isn't available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services isn't available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).  
 
 - **Play Integrity Verdict**  
-    Intune evaluates Play's integrity verdict to determine if a device meets requirements. Select the type of integrity checks devices must pass to stay compliant. Your options:  
+    Select the type of integrity checks devices must pass to stay compliant. Intune evaluates Google Play's integrity verdict to determine compliance. Your options:   
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
   - **Check basic integrity & device integrity**: Require devices to pass Play's basic integrity check and device integrity check.  
 
 - **Check strong integrity using hardware-backed security features**  
-  This setting is optional, and only available when *Play Integrity Verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.  Your options:   
+  Optionally, you can require devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:    
 
   - **Not configured** (*default*)  – This setting isn't evaluated for compliance or noncompliance. Intune assesses the verdict from the basic integrity check by default.  
   - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
@@ -260,7 +260,7 @@ This section describes the compliance profile settings available for personal de
   
 
 - **Check strong integrity using hardware-backed security features**  
-  You can required devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:   
+  Optionally, you can require devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:   
 
   - **Not configured** (*default*)  – This setting isn't evaluated for compliance or noncompliance. Intune evaluates the basic integrity check by default.  
   - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.  
@@ -364,6 +364,8 @@ When a device is using an OS version later than the version in the rule, access 
   This setting affects two passwords on the device:  
 
   - The device password that unlocks the device.  
+  - The work profile password that allows users to access the work profile.  
+  - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.    
 
   If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
@@ -404,7 +406,7 @@ When a device is using an OS version later than the version in the rule, access 
 - **Minimum password length**  
     If required for your password type, enter the minimum length a password must be, between 4 and 16 characters. 
 
-#### Work Profile Security - *for personally owned work profile*  
+#### Work profile security - *for personally owned work profile*  
 If you don't configure password requirements, the use of a work profile password is optional and left up to users to configure.  
 
 - **Require a password to unlock work profile**  
@@ -414,7 +416,7 @@ If you don't configure password requirements, the use of a work profile password
 
 ##### All Android devices - *work profile security*  
 
-- **Number of days until password expires** - *work profile security*  
+- **Number of days until password expires**  
   Enter the number of days, between 1-365, until the work profile password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.  
 
 - **Number of previous passwords to prevent reuse**  
@@ -431,14 +433,14 @@ If you don't configure password requirements, the use of a work profile password
   - **None** - This setting isn't evaluated for compliance or noncompliance.
   - **Low** - A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
   - **Medium** - The length, alphabetic length, or alphanumeric length must be at least 4 characters. PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. 
-  - **High** - The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.  
+  - **High** - The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters. PINs with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.  
 
   This setting affects two passwords on the device:  
 
   - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.    
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure for the work profile.  
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
 
 
    > [!IMPORTANT]
