@@ -281,7 +281,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 The Microsoft 365 remote application diagnostics will allow Intune admins to request Intune App Protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins will find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Summary** > *App protection**.
 
-This feature is exclusive to applications that are under Intune App Protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. Currently, Outlook mobile logs are supported in version 2403, with support for additional applications coming soon.
+This feature is exclusive to applications that are under Intune App Protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. Outlook mobile logs will be supported in version 2404, with support for additional applications coming soon.
 
 <!-- *********************************************** -->
 
