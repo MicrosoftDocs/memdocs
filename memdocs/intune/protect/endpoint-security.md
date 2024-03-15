@@ -64,7 +64,9 @@ The endpoint security Overview page presents a consolidated dashboard with displ
 - **Windows devices onboarded to Defender for Endpoint** – This table displays the tenant-wide status for *endpoint detection and response* (EDR) onboarding, with counts of devices that are and aren’t onboarded. The label for this view is a link that opens the Summary tab of the Endpoint detection and response policy node.
 
   Two additional links are included:
-  - **Deploy preconfigured** – This link opens the policy node for *Endpoint detection and response*.
+  - **Deploy preconfigured policy** – This link open the policy node for *Endpoint detection and response* where you can deploy a policy to onboard devices to Defender.
+
+ *Endpoint detection and response*.
   - **Onboard devices to Defender for Endpoint** – A link to open the Defender portal, where you can take other steps to onboard devices outside of Intune’s streamlined workflow.
 
 - **Antivirus agent status** – This view displays the summary details of Intune’s **Antivirus agent status** report, otherwise available in the Intune admin center by going to *Reports* > *Microsoft Defender Antivirus* where the report is on the *Summary* tab.

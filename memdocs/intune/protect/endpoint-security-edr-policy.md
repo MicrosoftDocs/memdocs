@@ -92,7 +92,7 @@ The Summary tab includes the following areas:
 
 - **Defender for Endpoint Connector status** – This view displays the current connector status for your tenant. The label, Defender for Endpoint Connector Status, is also a link that opens the Defender portal. This view is the same as found on the Endpoint security Overview page.
 
-- **Windows devices onboarded to Defender for Endpoint** – This view that shows a tenant-wide status for endpoint detection and response (EDR) onboarding, with counts for both devices that have or haven’t onboarded to Microsoft Defender for Endpoint.
+- **Windows devices onboarded to Defender for Endpoint** – This view shows a tenant-wide status for endpoint detection and response (EDR) onboarding, with counts for both devices that have or haven’t onboarded to Microsoft Defender for Endpoint.
 
 - **Endpoint detection and response (EDR) policies** – Here you can create new manually configured EDR policies, and view the list of all EDR policies for your tenant. The policy list includes both manually configured policies and the policies you create using the Deploy preconfigured policy option.
 
