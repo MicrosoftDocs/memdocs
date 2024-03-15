@@ -57,7 +57,7 @@ When you open the Endpoint security node in the Microsoft Intune admin center, i
 
 The endpoint security Overview page presents a consolidated dashboard with displays and information that is pulled from the more focused nodes of endpoint security, including *Antivirus, Endpoint detection and response*, and *Microsoft Defender for Endpoint*:
 
-- **Defender for Endpoint Connector status* – This view displays the current status for the tenant-wide *Defender for Endpoint Connector*. The label for this view also serves as a link to open the Microsoft Defender for Endpoint portal.
+- **Defender for Endpoint Connector status** – This view displays the current status for the tenant-wide *Defender for Endpoint Connector*. The label for this view also serves as a link to open the Microsoft Defender for Endpoint portal.
 
   This same view is available on the Summary tab of the *Endpoint detection and response* policy node.
 
@@ -66,10 +66,9 @@ The endpoint security Overview page presents a consolidated dashboard with displ
   Two additional links are included:
   - **Deploy preconfigured policy** – This link open the policy node for *Endpoint detection and response* where you can deploy a policy to onboard devices to Defender.
 
- *Endpoint detection and response*.
   - **Onboard devices to Defender for Endpoint** – A link to open the Defender portal, where you can take other steps to onboard devices outside of Intune’s streamlined workflow.
 
-- **Antivirus agent status** – This view displays the summary details of Intune’s **Antivirus agent status** report, otherwise available in the Intune admin center by going to *Reports* > *Microsoft Defender Antivirus* where the report is on the *Summary* tab.
+- **Antivirus agent status** – This view displays the summary details of Intune’s *Antivirus agent status* report, otherwise available in the Intune admin center by going to *Reports* > *Microsoft Defender Antivirus* where the report is on the *Summary* tab.
 
 - **Other Monitoring reports** - This section includes tiles that open additional Microsoft Defender Antivirus reports, including *Detected Malware Firewall Status*. Another tile opens the *Defender portal* where you can view sensor and antivirus health data.
 
