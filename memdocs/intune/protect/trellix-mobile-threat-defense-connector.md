@@ -3,7 +3,7 @@
 
 title: Trellix Mobile Security connector with Intune
 titleSuffix: Intune on Azure
-description: Learn about integrating Intune with Trellix Mobile Security to control mobile device access to your corporate resources.
+description: How to set up Trellix Mobile Security with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
