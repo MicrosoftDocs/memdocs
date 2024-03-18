@@ -64,6 +64,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
 - Windows 365 Boot (available for GCC, not available for GCCH)
 - Microsoft Purview Customer Lockbox
+- Windows App
 
 ## Next steps
 
