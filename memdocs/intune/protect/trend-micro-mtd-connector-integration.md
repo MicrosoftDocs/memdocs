@@ -3,7 +3,7 @@
 
 title: Set up Trend Micro MTD integration with Intune
 titleSuffix: Intune on Azure
-description: "Trend Micro Mobile Security as Service connector integration with Intune"
+description: How to set up Trend Micro Mobile Security with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
