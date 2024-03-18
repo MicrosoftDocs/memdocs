@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/06/2024
+ms.date: 03/13/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -29,7 +29,7 @@ ms.collection:
 
 To help in your readiness and planning, this page lists Windows 365 updates and features that are in development but not yet released. In addition to the information on this page:
 
-- If we anticipate that you need to take action before a change, we'll publish a complementary post in Office message center.
+- If we anticipate that you need to take action before a change, we publish a complementary post in Office message center.
 - When a feature enters production, the feature description moves from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
 - Similar features might be announced at different times for Windows 365 Business.
@@ -55,6 +55,10 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device management
 
+### Cloud PC size recommendation tool<!--45433311-->
+
+In a future update, you'll have access to a new Intune admin center tool that recommends appropriate sizes for Cloud PCs to better fit your organization's needs.
+
 ### Support for symmetric NAT with RDP Shortpath<!--43602619-->
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
@@ -62,6 +66,14 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 ### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
 
 In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for seven days will be automatically turned on and synced with Windows Update for Business Policies.
+
+### Maintenance windows (preview)<!--48851694-->
+
+You'll be able to set maintenance windows for running remote actions on Cloud PCs. This will notify users in-session about the impending remote action period.
+
+### Intune scope tags<!--48907552-->
+
+In a future update, Windows 365 will support [Intune scope tags](/mem/intune/fundamentals/scope-tags).
 
 <!-- ***********************************************-->
 <!--## Device provisioning-->
@@ -87,6 +99,10 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
 
+### Cloud PC utilization report creation date<!--49175145-->
+
+In a future update, the Cloud PC utilization report will the Cloud PC creation date.
+
 <!-- ***********************************************-->
 ## Provisioning
 
@@ -103,7 +119,7 @@ In a future update, Windows 365 will remove a large number of FQDNs from the cur
 
 ### New 15-minute Sign-in frequency option<!--48439987-->
 
-When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option will provide a 15-minute re-authentication period.
+When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option will provide a 15-minute reauthentication period.
 
 <!-- ***********************************************
 ## Windows 365 app-->
