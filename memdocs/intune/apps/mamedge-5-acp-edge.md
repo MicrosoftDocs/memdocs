@@ -13,7 +13,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -79,7 +78,7 @@ Use the following steps to configure the app:
 
 5. Select the **Microsoft Edge** app for **iOS/iPadOS** and click **Select**.
 
-5. Select **Next** to display the **Settings catalog** step. Do not change settings on the **Settings catalog** step.
+5. Select **Next** to display the **Settings catalog** step. Don't change settings on the **Settings catalog** step.
 
 6. Select **Next** to display the **Settings** step.
 
@@ -100,4 +99,4 @@ Use the following steps to configure the app:
 
     :::image type="content" alt-text="Apps - App configuration policies - Create app configuration policy - Review + create -Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png":::
 
-Repeat the previous steps to create an app configuration policy for additional OS if needed.
+Repeat the previous steps to create an app configuration policy for additional platforms if needed.
