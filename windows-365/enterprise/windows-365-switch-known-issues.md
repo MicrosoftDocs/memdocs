@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 03/12/2024
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -65,6 +65,14 @@ After selecting a Cloud PC from the Task view, users might be prompted to sign i
 **Troubleshooting steps**:
 
 Select the Task view button for the Cloud PC again. The connection continues in the background. The user should be connected to their Cloud PC within a few minutes
+
+## Local PC missing from Cloud PC task view bar
+
+If the local PC is missing from the Cloud PC's task view bar, the Azure Virtual Desktop (HostApp) might be out of date.
+
+**Troubleshooting steps**:
+
+Uninstall and reinstall the Azure Virtual Desktop (HostApp) app from the [Microsoft Store](ms-windows-store://pdp/?productid=9NRNM1N926MN).
 
 <!-- ########################## -->
 ## Next steps
