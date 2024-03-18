@@ -7,12 +7,11 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/15/2024
+ms.date: 03/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 
 # optional metadata
@@ -368,7 +367,7 @@ When a device is using an OS version later than the version in the rule, access 
   - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.    
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
 
   > [!IMPORTANT]
   >
@@ -440,7 +439,7 @@ If you don't configure password requirements, the use of a work profile password
   - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.    
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
 
 
    > [!IMPORTANT]
@@ -460,7 +459,7 @@ If you don't configure password requirements, the use of a work profile password
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.  
 
 #### Android 11 and earlier - *work profile security*   
-These passwords settings apply to devices running Android 11 and erlier.  
+These passwords settings apply to devices running Android 11 and earlier.  
 
 > [!IMPORTANT]
 > Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects work profile passwords on new and existing devices, see [Android 12 and later - work profile security](#android-12-and-later---work-profile-security) in this article.    
