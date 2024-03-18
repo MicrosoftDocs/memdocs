@@ -155,7 +155,10 @@ When clients receive the deployment policy, they'll display the icon in Software
 
     - **Run another program first**: Identify a package and program that runs before this package and program runs.  
 
-    - **Platform requirements**: Select **This program can run on any platform** or **This program can run only on specified platforms**. Then choose the OS versions that clients must have to install this package and program.  
+    - **Platform requirements**: Select **This program can run on any platform** or **This program can run only on specified platforms**. Then choose the OS versions that clients must have to install this package and program.
+
+        > [!NOTE]
+        > When you run a task sequence from boot media or PXE, Configuration Manager ignores this option. The task sequence runs as though the option **This program can run on any platform** is selected.
 
     - **Estimated disk space**: Specify the amount of disk space that the program requires to run on the computer. The default setting is **Unknown**. If necessary, specify a whole number greater than or equal to zero. If you set a value, also select units for the value.  
 
