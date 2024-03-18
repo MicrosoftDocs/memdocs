@@ -7,14 +7,11 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/13/2024 
+ms.date: 03/18/2024 
 ms.topic: end-user-help
-ms.prod:
 ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
-ms.assetid: 
 searchScope:
  - User help
 
