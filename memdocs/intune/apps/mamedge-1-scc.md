@@ -50,10 +50,11 @@ Intune app protection policies help secure organizational data and ensure the cl
 
 - **Health Checks**: Below *Device conditions* use the drop-down box to select **Max allowed device threat level**.
 
-:::image type="content" alt-text="Health Check -- App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png":::
+    :::image type="content" alt-text="Health Check -- App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png":::
 
+#### Options for the threat level
 
-#### Options for the threat level Value.
+You can select one of the following threat level values:
 
 - **Secured**: This level is the most secure. The device can't have any threats present and still access company resources. If any threats are found, the device is evaluated as noncompliant.
 
@@ -63,15 +64,15 @@ Intune app protection policies help secure organizational data and ensure the cl
 
 - **High**: This level is the least secure and allows all threat levels, using Mobile Threat Defense for reporting purposes only. Devices are required to have the MTD app activated with this setting.
 
-#### Options for**Action**:
+#### Options for Action
+
+You can select one of the following **Action** options:
 
 - **Block access:** Will prevent the users from performing any activity until they're back in compliance.
 
 - **Wipe data:** Will remove any information stored in the application related to the corporate or user data.
 
-**Assignments**: Assign the policy to groups of users. The devices used
-by the group's members are evaluated for access to corporate data on
-targeted apps via Intune app protection.
+- **Assignments**: Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
 > [!IMPORTANT]
 > If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that do not meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they are prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
@@ -88,17 +89,14 @@ Use the following steps to configure the MTD Connector.
 
 2. Select **Tenant Administrator** > **Connectors and tokens** > **Mobile Threat Defense**.
 
-:::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png":::
+    :::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png":::
 
 3. Select **Add** to display the **Add Connector** pane.
 
 4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
 
-:::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense -- Add Connector-Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
-
+    :::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense -- Add Connector-Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
+    
 5. >  select **Create** to create the connector.
 
-The Connector is created
-
-The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first Mobile Application Management policy arrives to the user or the first MAM user enrollment.
-
+The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first MAM policy arrives to the user or the first MAM user is enrolled to your Intune tenant.

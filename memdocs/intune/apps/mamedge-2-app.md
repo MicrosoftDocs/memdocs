@@ -93,7 +93,7 @@ Use the following steps to apply the data protection framework.
     - **Allow cut, copy, and paste for**: No destination or source
     - **Print org data**: Block
 
-:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Data Protection -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
+    :::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Data Protection -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
 
 10. Select **Next** to continue to the next step.
 
@@ -104,7 +104,7 @@ Use the following steps to apply the data protection framework.
     - **Max OS version**: 10.0.22631.2715, Block access
     - **Max allowed device threat level**: Secured, Block access
 
-:::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Health Checks -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png":::
+    :::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Health Checks -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png":::
 
 12. Click **Next** to display the next step.
 

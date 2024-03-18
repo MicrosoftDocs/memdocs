@@ -53,7 +53,7 @@ We have evaluated the different Microsoft Edge App Configuration and have identi
 |--------------------------------------------------------------------------	|---------------------------------------------------------------------------	|
 |    com.microsoft.intune.mam.managedbrowser.PasswordSSO               	|    TRUE                                                               	|
 |    com.microsoft.intune.mam.managedbrowser.disableShareUsageData     	|    TRUE                                                               	|
-|    com.microsoft.intune.mam.managedbrowser.disabledFeatures          	|    password\|inprivate\|autofill\|translator\|drop\|developer tools    	|
+|    com.microsoft.intune.mam.managedbrowser.disabledFeatures          	|    Option include:<br><ul><li>password</li><li>inprivate</li><li>autofill</li><li>translator</li><li>drop</li><li>developer tools</li></ul>    	|
 |    com.microsoft.intune.mam.managedbrowser.disableImportPasswords    	|    TRUE                                                               	|
 |    com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled        	|    TRUE                                                               	|
 |    com.microsoft.intune.mam.managedbrowser.account.syncDisabled      	|    TRUE                                                               	|
@@ -90,14 +90,14 @@ Use the following steps to configure the app:
 
     :::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png":::
     
-8. Review each value and select **Next.**
+8. Review each value and select **Next**.
 
-9. Add a **Scope tag** and select **Next.**
+9. Add a **Scope tag** and select **Next**.
 
-10. Review Assignment and select **Next.**
+10. Review Assignment and select **Next**.
 
-11. **Review + create.**
+11. Select **Review + create**.
 
-:::image type="content" alt-text="Apps - App configuration policies - Create app configuration policy - Review + create -Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png":::
+    :::image type="content" alt-text="Apps - App configuration policies - Create app configuration policy - Review + create -Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business51.png":::
 
 Repeat the previous steps to create an app configuration policy for additional OS if needed.

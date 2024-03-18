@@ -35,7 +35,7 @@ ms.collection:
 
 Incorporate Microsoft Edge for Business into your existing data security and management strategy. By securing the enterprise browser configuration for mobile devices, you can ensure safer and more efficient web browsing experiences.
 
-Microsoft Edge for Business provide benefits for both management and security.
+Microsoft Edge for Business provide benefits for both management and security:
 
 - **Management**: Microsoft Edge for Business is the only mobile browser natively supported by Microsoft Intune with seamless integration. To secure productivity for your organization, App level management allows IT to configure the right balance between data protection and access.
 - **Security**: Data protection and leakage prevention are based on conditional access and user identities. Microsoft 365 security features extend to Microsoft Edge for Business mobile including Microsoft Entra Conditional Access, and Data Loss Prevention. For organizations utilizing VPN solutions, Microsoft Edge mobile offers support for identity-enlightened per-app VPN. This includes the integration of Microsoft Tunnel with Intune for a seamless and secure connection. Additionally, solutions that don't require a VPN are also available.
@@ -56,75 +56,97 @@ During this example, we'll create a **Level 3** App protection policy for Micros
 
 To create the app protection policy, follow these steps:
 
-1. Go to <https://intune.microsoft.com/> \> Select **Apps**
-\> **App protection policies** \> **Create policy.**
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App protection policies** > **Create policy**.
 
+2. Select **Create policy** > **Android** or **iOS/iPadOS**. Next, enter the following information:
 
-:::image type="content" alt-text="Apps - App protection policies - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business30.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business30.png":::
+    - **Name**: Level 3 secure enterprise browser.
+    - **Description**: The following is a Level 3 app protection policy framework.
 
-2. Select **Create policy** > **Android** or **iOS/iPadOS** > **Enter information.**
-
-- **Name:** Level 3 secure enterprise browser.
-- **Description:** The following is a Level 3 app protection policy framework.
-
-3. Click **Selected apps** > select **public apps** and find **Microsoft Edge.**
+3. Click **Selected apps** > **public apps**. Find **Microsoft Edge**.
 
 4. Select **Data Protection** and configure the following **settings**:
 
-:::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png":::
+* Santos - Please convert the settings to a table for accessability. Then, we can remove the images. *
 
-:::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png":::
+    The **Data protection** step for Android policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business34.png":::
+    
+    The **Data protection** step for iOS policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Data Transfer iOS - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business35.png":::
 
-5. Review the **Encryption** section.
+5. Review the **Encryption** section:
 
+* Santos - Do we need this step? If so, please convert the settings to a table for accessability. Then, we can remove the images. *
 
-:::image type="content" alt-text="Apps - App protection policies - Data Encryption Android - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business36.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business36.png":::
+    The **Encryption** section for Android policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Data Encryption Android - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business36.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business36.png":::
+        
+    The **Encryption** section for iOS policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Encryption iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business37.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business37.png":::
 
+6. Review the **Functionality** section:
 
-:::image type="content" alt-text="Apps - App protection policies - Encryption iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business37.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business37.png":::
+* Santos - Do we need this step? If so, please convert the settings to a table for accessability. Then, we can remove the images. *
 
-6.**. **Review the Functionality**.
+    The **Functionality** section for Android policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Functionality Android - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business38.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business38.png":::
+    
+    The **Functionality** section for iOS policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Functionality iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business39.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business39.png":::
 
-:::image type="content" alt-text="Apps - App protection policies - Functionality Android - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business38.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business38.png":::
+7. Once you've completed all three sections, select **Next**.
 
-:::image type="content" alt-text="Apps - App protection policies - Functionality iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business39.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business39.png":::
+8. Review the **Access Requirements**:
 
-7.**: Once completed all three sections select **Next.**
+* Santos - Do we need this step? If so, please convert the settings to a table for accessability. Then, we can remove the images. *
 
-8. Review the **Access Requirements.**
+    The **Access Requirements** step for Android policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Access Requirements Android Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business40.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business40.png":::
+    
+    The **Access Requirements** step for iOS policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Access Requirements iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business41.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business41.png":::
 
-:::image type="content" alt-text="Apps - App protection policies - Access Requirements Android Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business40.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business40.png":::
+9. Select **Next**.
 
-:::image type="content" alt-text="Apps - App protection policies - Access Requirements iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business41.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business41.png":::
+10. Review the **Conditional Launch** step:
 
-9. Select Next** after reviewing both sections.
+* Santos - Do we need this step? If so, please convert the settings to a table for accessability. Then, we can remove the images. *
 
-10. Review the **Conditional Launch**
+    The **Conditional Launch** section for Android policies will match the following settings:
+    
+        :::image type="content" alt-text="Apps - App protection policies - Conditional Launch Android - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business42.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business42.png":::
+    
+    The **Conditional Launch** section for iOS policies will match the following settings:
+        
+        :::image type="content" alt-text="Apps - App protection policies - Conditional Launch iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business43.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business43.png":::
 
-:::image type="content" alt-text="Apps - App protection policies - Conditional Launch Android - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business42.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business42.png":::
+11. Select **Next** after you've completed the **Conditional launch** step.
 
-:::image type="content" alt-text="Apps - App protection policies - Conditional Launch iOS - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business43.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business43.png":::
+12. Review the **Scope Tags** step.
 
-
-11. Select **Next** after **Conditional launch** is completed.
-
-12. Review the **Scope Tags.**
-
-> [!NOTE]
-> Scope tag should match what has been designed before or use the default.
-
-:::image type="content" alt-text="Apps - App protection policies - scope tags - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business44.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business44.png":::
+    > [!NOTE]
+    > Scope tag should match what has been designed before or use the default.
+    
+    :::image type="content" alt-text="Apps - App protection policies - scope tags - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business44.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business44.png":::
 
 13. Select **Next** Once completed.
 
-14. Review the **Assignments.**
+14. Review the **Assignments**.
 
-:::image type="content" alt-text="Apps  -  App protection policies  -  Assignments - Microsoft 365 admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business45.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business45.png":::
+15. Review the policy details in the **Review and Create** step.
 
-15. Review the last section of **Review and Create.**
-
-:::image type="content" alt-text="Apps  -  App protection policies  -  Review + Create - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business46.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business46.png":::
+    :::image type="content" alt-text="Apps  -  App protection policies  -  Review + Create - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business46.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business46.png":::
 
 16. Select **Create** and wait until the policy is created.
 
-:::image type="content" alt-text="Apps - App protection policies - Policy successfully created - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png":::
+    :::image type="content" alt-text="Apps - App protection policies - Policy successfully created - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png":::
+    

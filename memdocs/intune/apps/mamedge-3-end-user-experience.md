@@ -3,7 +3,7 @@
 
 title: Understand Microsoft Edge for Business end user experience 
 titleSuffix:
-description: Understand Microsoft Edge for Business end user experience .
+description: Understand Microsoft Edge for Business end user experience.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -31,9 +31,9 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Edge for Business end user experience 
+# Microsoft Edge for Business end user experience
 
-Now that we have configured Microsoft Entra conditional access policy and created our first app protection policy for windows, we can launch **Microsoft Edge for Business** in a manage or unmanage device.
+Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a manage or unmanage device.
 
 The end user experience for Secure Enterprise Browser in Microsoft Edge for Business is designed to be productive, secure, and user-friendly:
 
@@ -47,22 +47,22 @@ The end user experience for Secure Enterprise Browser in Microsoft Edge for Busi
 
 5. **Security**: It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows.
 
-In conclusion, Microsoft Edge for Business provides dedicated work browsing experience that is visually distinct, secure, and user-friendly. It separates work and personal browsing into dedicated browser windows with their own favorites, separate cache, and storage locations.
+Microsoft Edge for Business provides dedicated work browsing experience that is visually distinct, secure, and user-friendly. It separates work and personal browsing into dedicated browser windows with their own favorites, separate cache, and storage locations.
 
-## **Enrollment Experience**
+## Enrollment Experience
 
-To evaluate the enrollment experience, we'll launch **Microsoft Edge** from the Desktop and perform the sign-in process into the browser for the first time. It's important to consider that the device can't be managed by any MDM Solution, otherwise we won't be able to enroll into the MAM Service.
+To evaluate the enrollment experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. It's important to consider that the device can't be managed by any MDM solution, otherwise we won't be able to enroll into the MAM Service.
 
 1. Locate **Microsoft Edge** on the desktop.
-2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you will see a user icon at the top, left of the browser window. 
+2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you will see a user icon at the top, left of the browser window.
 3. Select the user icon to display your managed account details.
 4. Select **Sign in to sync data.**
 
-:::image type="content" alt-text="Sign in to sync data  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png":::
+    :::image type="content" alt-text="Sign in to sync data  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png":::
 
 5. Enter your **email address** for the tenant.
 
-:::image type="content" alt-text="Let us get you signed in  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business20.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business20.png":::
+    :::image type="content" alt-text="Let us get you signed in  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business20.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business20.png":::
 
 6. Enter your **password** for the account.
 
@@ -83,8 +83,6 @@ To evaluate the enrollment experience, we'll launch **Microsoft Edge** from the 
 	:::image type="content" alt-text="You're all set  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business23.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business23.png":::
 
 9. Confirm that you're signed-in by clicking on the user icon again.
-
-	:::image type="content" alt-text="Managed account  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business24.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business24.png":::
 
 	> [!NOTE]
 	> Now that enrollment is complete your browser is protecting your corporate data.
