@@ -295,6 +295,11 @@ You can use the following app properties in your managed app filter rules:
 
   - `(app.deviceManagementType -eq "Unmanaged")`
 
+  This property applies:
+
+  - Android
+  - iOS/iPadOS
+
 - **`deviceManufacturer` (Manufacturer)**: Create a filter rule based on the client reported device manufacturer. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
