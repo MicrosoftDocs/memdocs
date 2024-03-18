@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -70,6 +69,7 @@ This feature applies to:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
@@ -136,6 +136,7 @@ There are some general restrictions when creating filters:
       - **Managed apps**:
         - Android
         - iOS/iPadOS
+        - Windows
 
 5. Select **Next**.
 6. In **Rules**, there are two ways to create a rule: Use the **rule builder**, or use the **rule syntax**.
