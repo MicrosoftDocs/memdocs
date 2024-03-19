@@ -21,6 +21,7 @@ Settings can be assigned to groups:
 > [!div class="checklist"]
 >In this section you will:
 >
+> - Get started with settings
 > - Configure device settings
 > - Configure update policies
 > - Configure security policies
@@ -50,15 +51,15 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Baselines**: Baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
-For more information, see [Security baselines](/protect/security-baselines).
+For more information, see [Security baselines](/mem/intune/protect/security-baselines).
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker.
 
-For more information, see [Settings catalog](/configuration/settings-catalog).
+For more information, see [Settings catalog](/mem/intune/configuration/settings-catalog).
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/configuration/device-profiles).
+For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
 
 ::: zone-end
 
@@ -85,15 +86,15 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to Networking, and create a policy that just focuses on Network.
 
-For more information, see [Settings catalog](/configuration/settings-catalog).
+For more information, see [Settings catalog](/mem/intune/configuration/settings-catalog).
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/configuration/device-profiles).
+For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
 
 ::: zone-end
 
-## Configure group settings
+## Configure device settings
 
 ::: zone pivot="windows"
 
@@ -116,7 +117,15 @@ For more information, see [Windows device settings in Intune for Education][INT-
 
 # [Intune](#tab/intune)
 
-Intro, iOS, Intune
+To create a device configuration profile in Microsoft Intune, you need to follow these steps:
+
+- Sign in to the Microsoft Intune admin center.
+- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Select **Platform** as **Windows 10 and later**.
+- Select **Profile type**:
+  - For general settings, select **Settings Catalog**.
+  - For templates including certificates, Wi-Fi and VPN, select **Templates** and then choose the required template.
+- Follow the steps to create and configure the profile as necessary.
 
 ::: zone-end
 
@@ -124,15 +133,35 @@ Intro, iOS, Intune
 
 # [Intune For Education](#tab/intune-for-education)
 
-Groups, iOS, I4E
+Groups are used to manage users and devices with similar management needs, allowing you to apply changes to many devices or users at once. To review the available group settings:
+
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Select **Groups** > Pick a group to manage
+1. Select **iOS device settings**
+1. Expand the different categories and review information about individual settings
+
+Settings that are commonly configured for student devices include:
+
+- Lock screen and wallpaper. See: [Lock screen and wallpaper](intune-education/all-edu-settings-ios#lock-screen-and-wallpaper)
+- Wi-Fi connections. See: [Add Wi-Fi profiles][INT-8]
+
+For more information, see [Windows device settings in Intune for Education][INT-3].
 
 # [Intune](#tab/intune)
 
-Groups, iOS, Intune
+To create a device configuration profile in Microsoft Intune, you need to follow these steps:
+
+- Sign in to the Microsoft Intune admin center.
+- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Select **Platform** as **iOS/iPadOS**.
+- Select **Profile type**:
+  - For general settings, select **Settings Catalog**.
+  - For templates including certificates, Wi-Fi and VPN, select **Templates** and then choose the required template.
+- Follow the steps to create and configure the profile as necessary.
 
 ::: zone-end
 
-## Create Update policies
+## Configure update policies
 
 ::: zone pivot="windows"
 
@@ -156,7 +185,10 @@ For more information, see [Updates and upgrade][INT-6].
 
 # [Intune](#tab/intune)
 
-Updates, Windows, Intune
+It is important to keep Windows devices up to date with the latest security updates. You can create Windows Update policies using Intune.
+
+- [What is Windows Update for Business?][WIN-1]
+- [Manage Windows software updates in Intune][MEM-1]
 
 ::: zone-end
 
