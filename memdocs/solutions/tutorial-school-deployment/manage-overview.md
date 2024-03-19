@@ -3,6 +3,8 @@ title: Manage devices with Microsoft Intune
 description: Overview of device management capabilities in Intune for Education, including remote actions, remote assistance and inventory/reporting.
 ms.date: 11/09/2023
 ms.topic: tutorial
+author: scottbreenmsft
+ms.author: scbree
 ---
 
 # Manage devices with Microsoft Intune
@@ -13,11 +15,13 @@ Microsoft Intune offers a streamlined remote device management experience throug
 
 ## Remote device management
 
-With Intune for Education, there are several ways to manage students' devices. Groups can be created to organize devices and students, to facilitate remote management. You can determine which applications students have access to, and fine tune device settings and restrictions. You can also monitor which devices students sign in to, and troubleshoot devices remotely.
+With Intune, there are several ways to manage students' devices. Groups can be created to organize devices and students, to facilitate remote management. You can determine which applications students have access to, and fine tune device settings and restrictions. You can also monitor which devices students sign in to, and troubleshoot devices remotely.
 
 ### Remote actions
 
-Intune fo Education allows you to perform actions on devices without having to sign in to the devices. For example, you can send a command to a device to restart or to turn off, or you can locate a device.
+Intune allows you to perform actions on devices without having to sign in to the devices. For example, you can send a command to a device to restart or to turn off, or you can locate a device.
+
+# [Intune For Education](#tab/intune-for-education)
 
 :::image type="content" source="./images/remote-actions.png" alt-text="Remote actions available in Intune for Education when selecting a Windows device" lightbox="./images/remote-actions.png" border="true":::
 
@@ -25,15 +29,23 @@ With bulk actions, remote actions can be performed on multiple devices at once.
 
 To learn more about remote actions in Intune for Education, see [Remote actions][EDU-1].
 
+# [Intune](#tab/intune)
+
+With bulk actions, remote actions can be performed on multiple devices at once.
+
+To learn more about remote actions in Intune, see [Remote actions](/mem/intune/remote-actions/device-management).
+
 ## Remote assistance
 
-With devices managed by Intune for Education, you can remotely assist students and teachers that are having issues with their devices.
+With devices managed by Intune, you can remotely assist students and teachers that are having issues with their devices.
 
 For more information, see [Remote assistance for managed devices - Intune for Education][EDU-2].
 
 ## Device inventory and reporting
 
-With Intune for Education, it's possible view and report on current devices, applications, settings, and overall health. You can also download reports to review or share offline.
+With Intune, it's possible view and report on current devices, applications, settings, and overall health. You can also download reports to review or share offline.
+
+# [Intune For Education](#tab/intune-for-education)
 
 Here are the steps for generating reports in Intune for Education:
 
@@ -51,6 +63,18 @@ Here are the steps for generating reports in Intune for Education:
     :::image type="content" source="./images/inventory-reporting.png" alt-text="Reporting options available in Intune for Education when selecting the reports blade" border="true":::
 
 To learn more about reports in Intune for Education, see [Reports in Intune for Education][EDU-3].
+
+# [Intune](#tab/intune)
+
+Here are some examples of the reports available in Intune:
+- Device compliance reports
+- Device configuration reports
+- Device enrollment reports
+- Update reports
+- Security reports
+- Application reports
+
+To learn more about reports in Intune, see [Reports in Intune](/mem/intune/fundamentals/reports).
 
 <!-- Reference links in article -->
 
