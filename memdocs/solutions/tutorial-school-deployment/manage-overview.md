@@ -17,11 +17,11 @@ Microsoft Intune offers a streamlined remote device management experience throug
 
 With Intune, there are several ways to manage students' devices. Groups can be created to organize devices and students, to facilitate remote management. You can determine which applications students have access to, and fine tune device settings and restrictions. You can also monitor which devices students sign in to, and troubleshoot devices remotely.
 
-### Remote actions
+## Remote actions
 
 Intune allows you to perform actions on devices without having to sign in to the devices. For example, you can send a command to a device to restart or to turn off, or you can locate a device.
 
-# [Intune For Education](#tab/intune-for-education)
+### [Intune For Education](#tab/intune-for-education)
 
 :::image type="content" source="./images/remote-actions.png" alt-text="Remote actions available in Intune for Education when selecting a Windows device" lightbox="./images/remote-actions.png" border="true":::
 
@@ -29,7 +29,7 @@ With bulk actions, remote actions can be performed on multiple devices at once.
 
 To learn more about remote actions in Intune for Education, see [Remote actions][EDU-1].
 
-# [Intune](#tab/intune)
+### [Intune](#tab/intune)
 
 With bulk actions, remote actions can be performed on multiple devices at once.
 
@@ -45,7 +45,7 @@ For more information, see [Remote assistance for managed devices - Intune for Ed
 
 With Intune, it's possible view and report on current devices, applications, settings, and overall health. You can also download reports to review or share offline.
 
-# [Intune For Education](#tab/intune-for-education)
+## [Intune For Education](#tab/intune-for-education)
 
 Here are the steps for generating reports in Intune for Education:
 
@@ -64,7 +64,7 @@ Here are the steps for generating reports in Intune for Education:
 
 To learn more about reports in Intune for Education, see [Reports in Intune for Education][EDU-3].
 
-# [Intune](#tab/intune)
+## [Intune](#tab/intune)
 
 Here are some examples of the reports available in Intune:
 - Device compliance reports
