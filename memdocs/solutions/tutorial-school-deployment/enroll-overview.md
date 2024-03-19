@@ -59,7 +59,6 @@ Select one of the following options to learn the next steps about the enrollment
 ::: zone pivot="ios"
 
 Select one of the following options to learn the next steps about the enrollment method you chose:
-
 > [!div class="op_single_selector"]
 > - [Automatic Intune enrollment via Apple School Manager](enroll-entra-join.md)
 > - [Automated Device Enrollment](enroll-entra-join.md)
