@@ -53,6 +53,7 @@ Select one of the following options to learn the next steps about the enrollment
 > - [Automatic Intune enrollment via Microsoft Entra join](enroll-entra-join.md)
 > - [Bulk enrollment with provisioning packages](enroll-package.md)
 > - [Enroll devices with Windows Autopilot](enroll-autopilot.md)
+[]
 
 ::: zone-end
 
@@ -60,8 +61,10 @@ Select one of the following options to learn the next steps about the enrollment
 
 Select one of the following options to learn the next steps about the enrollment method you chose:
 > [!div class="op_single_selector"]
-> - [Automatic Intune enrollment via Apple School Manager](enroll-entra-join.md)
-> - [Automated Device Enrollment](enroll-entra-join.md)
+> - [Enroll iOS with Company Portal](enroll-ios-company-portal.md)
+> - [Enroll iOS with Automated Device Enrollment for a single user](enroll-ios-ade-user.md)
+> - [Enroll iOS with Automated Device Enrollment with no user](enroll-ios-ade-no-user.md)
+> - [enroll iOS using Apple Configurator](enroll-ios-apple-configurator.md)
 
 ::: zone-end
 
