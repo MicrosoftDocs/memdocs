@@ -337,7 +337,14 @@ When a device is using an OS version later than the version in the rule, access 
 
   This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. For more information, see [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).  
 
-
+> [!IMPORTANT]
+> When a personally-owned work profile is enabled, the device and work profile passcodes are combined by default so that the same passcode is used for both places. Intune enforces the higher complexity level of the two. The device user can use two separate passcodes if they go to their work profile settings and deselect **Use one lock**. To ensure that device users use two separate passcodes upon enrollment create a device configuration profile that restricts device users from using one lock.  
+> 
+> 1. In the admin center, create a device configuration profile.   
+> 2. For profile type, select **Device restrictions**.  
+> 3. Expand **Work profile settings** and go to **Work Profile Password** > **All Android devices**.  
+> 4. Find the restriction **One lock for device and work profile**. Select **Block**.  
+> 
 ##### All Android devices  - *device security*  
 
 - **Number of days until password expires**  
@@ -364,10 +371,8 @@ When a device is using an OS version later than the version in the rule, access 
 
   - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.  
-  - The device password that unlocks the device.  
-  - The work profile password that allows users to access the work profile.    
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity level you configure under **Work Profile Security** > **Password complexity**.  
 
   > [!IMPORTANT]
   >
@@ -439,8 +444,7 @@ If you don't configure password requirements, the use of a work profile password
   - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.    
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity you configure under **Work Profile Security** > **Password complexity**.  
-
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure here.  
 
    > [!IMPORTANT]
   >
