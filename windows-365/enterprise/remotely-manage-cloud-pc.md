@@ -2,7 +2,7 @@
 # required metadata
 title: Remotely manage Windows 365 devices
 titleSuffix:
-description: Learn how to remotely manage Windows 365 devices
+description: Learn how to remotely manage Windows 365 devices.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -50,12 +49,12 @@ Cloud PCs support the following remote management actions:
 | Restart | Yes |
 | [Restore](restore-overview.md) | Yes|
 | Sync | No |
-| Troubleshoot | Yes |
+| Troubleshoot | No |
 | Update Windows Defender | No |
 
 /*This remote action is specific to Cloud PC devices.
 
-You can run remote actions for up to 5000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/intune/remote-actions/bulk-device-actions).
+You can run remote actions for up to 5000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/mem/intune/remote-actions/bulk-device-actions).
 
 ## Windows 365 Frontline Cloud PCs
 
