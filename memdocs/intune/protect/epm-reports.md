@@ -41,7 +41,7 @@ Endpoint Privilege Management supports your zero-trust journey by helping your o
 
 The information available in EPM reports depends on the *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
 
-The EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Reports** tab. Select from the following tiles to view a report:
+The EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**, and select the **Reports** tab. To view a report, select from the following tiles:
 
 - Elevation report
 - Managed elevations report
@@ -50,6 +50,7 @@ The EPM reports are available from the *Reports* tab of the *Endpoint Privilege 
 - Elevation report by user
 
 > [!NOTE]
+>
 > Data is processed once every 24 hours. There may be a delay before seeing data in the elevation usage reports.
 
 ## Elevation report
@@ -88,7 +89,7 @@ The *Elevation report by publisher* report displays details for all managed and 
 - **Elevation type**
 - **Elevation count**
 
-The information in this report can help identify related applications as well as the source of an applications that are run elevated in your environment.
+The information in this report can help identify related applications and the source of applications that are run elevated in your environment.
 
 ## Elevation report by user
 
@@ -100,11 +101,11 @@ The *Elevation report by user* report displays details for all managed and unman
 - **Elevation type**
 - **Elevation count**
 
-The information in this report can help identify applications on a per user basis that might require elevation rules to function properly, including rules for child processes.
+The information in this report can help identify applications on a per-user basis that might require elevation rules to function properly, including rules for child processes.
 
 ## Endpoint Privilege Management policy details
 
-In addition to the dedicated reports, you can view basic details about EPM policies from the Policies tab of the Endpoint Privilege Management node.  This node is the same location in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) where you create policies for EPM: In the  admin center, go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Policies** node.
+In addition to the dedicated reports, you can view basic details about EPM policies from the Policies tab of the Endpoint Privilege Management node. This node is the same location in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) where you create policies for EPM: In the admin center, go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Policies** node.
 
 ## Next steps
 

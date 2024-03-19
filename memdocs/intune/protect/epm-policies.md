@@ -39,8 +39,8 @@ Endpoint Privilege Management supports your zero-trust journey by helping your o
 
 The information in this article can help you to configure the following policies and reusable settings for EPM:
 
-- Windows elevation settings policy
-- Windows elevation rules policy
+- Windows elevation settings policy.
+- Windows elevation rules policy.
 - Reusable settings groups, which are optional configurations for your elevation rules.
 
 Applies to:
@@ -62,15 +62,16 @@ Use *Windows elevation settings policy* when you want to:
 
   If a device has EPM disabled, the client components immediately disable. There's a delay of seven days before the EPM component is completely removed. The delay helps to reduce the time it takes to restore EPM should a device accidentally have EPM disabled or its elevation settings policy unassigned.
 
-- **Default elevation response** - Set a default response for an *elevation request* of any file that’s not managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must have *explicitly requested* elevation through the *Run with elevated access* right-click menu. By default, this option isn't configured. If no setting is delivered, the EPM components fall back to their built-in default, which is to **deny all requests**.
+- **Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option isn't configured. If no setting is delivered, the EPM components fall back to their built-in default, which is to **deny all requests**.
   
   Options include:
   - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a Windows elevation rules policy.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
   - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
 
-  >[!NOTE]
-  > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.  
+  > [!NOTE]
+  >
+  > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.
 
 - **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*.
 
@@ -108,8 +109,8 @@ Each elevation rule:
 - **Configures the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for elevations.
 
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
-  - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
-  - **Support approved**: A support approved elevation requires an administrator to approve elevations for that application before they are allowed to elevate.
+  - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
+  - **Support approved**: An administrator must approve any support-required elevation request that doesn't have a matching rule, before the application is allowed to run with elevated privileges.
 
     > [!NOTE]
     > For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md).
@@ -118,8 +119,8 @@ Each elevation rule:
 
 - **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
 
-  - **Require rule to elevate** - Configure a child processes to require its own rule before that child process can run in an elevated context
-  - **Deny all** - All child processes launch without elevated context
+  - **Require rule to elevate** - Configure a child processes to require its own rule before that child process can run in an elevated context.
+  - **Deny all** - All child processes launch without elevated context.
   - **Allow child processes to run elevated** - Configure a child process to always run elevated.
 
 > [!NOTE]
@@ -140,13 +141,13 @@ We recommend using a reusable settings group when you plan to use the same certi
 
 ## Windows elevation settings policy
 
-Deploy *Windows elevation settings policy* to users or devices to configure the following options on devices:
+To configure the following options on devices, deploy *Windows elevation settings policy* to users or devices:
 
 - Enable Endpoint Privilege Management on a device.
 - Set default rules for elevation requests for any file that isn't managed by an Endpoint Privilege Management elevation rule on that device.
 - Configure what information EPM reports back to Intune.
 
-A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent which is responsible for processing the EPM policies.
+A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent, which is responsible for processing the EPM policies.
 
 ### Create a Windows elevation settings policy
 
@@ -172,9 +173,9 @@ A device must have an elevation settings policy that enables support for EPM bef
 
    - **Send elevation data for reporting**: By default, this behavior is set to **Yes**. When set to yes, you can then configure a *Reporting scope*. When set to **No**, a device doesn’t report diagnostic data or information about file elevations to Intune.
    - **Reporting scope**: Choose what type of information a device reports to Intune:
-     - **Diagnostic data and all endpoint elevations** (Default): The device reports diagnostic data and details about all file elevations that are facilitated by EPM.
+     - **Diagnostic data and all endpoint elevations** (Default): The device reports diagnostic data and details about all file elevations that EPM facilitates.
 
-       This level of information can help you identify additional files that aren't yet managed by an elevation rule that users seek to run in an elevated context.
+       This level of information can help you identify other files that aren't yet managed by an elevation rule that users seek to run in an elevated context.
 
      - **Diagnostic data and managed elevations only**: The device reports diagnostic data and details about file elevations for only those files that are managed by an elevation rule policy. File requests for unmanaged files, and files that are elevated through the Windows default action of *Run as administrator*, aren't reported as managed elevations.
      - **Diagnostic data only**: Only diagnostic data for the operation of Endpoint Privilege Management is collected. Information about file elevations isn’t reported to Intune.
@@ -216,15 +217,15 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 
    :::image type="content" source="./media/epm-policies/elevation-rules.png" alt-text="Image of the elevation rules properties." lightbox="./media/epm-policies/elevation-rules.png":::
 
-   - **Rule name**: Like a policy name, enter a descriptive name for the rule. Name your rules so you can easily identify them later.
+   - **Rule name**: Specify a descriptive name for the rule. Name your rules so you can easily identify them later.
    - **Description** (Optional): Enter a description for the profile.
 
    *Elevation conditions* are conditions that define how a file runs, and user validations that must be met before the file this rule applies to can be run.
 
    - **Elevation type**: By default, this option is set to *User confirmed*, which is the elevation type we recommend for most files.
 
-     - **User confirmed**: We recommend this option for most rules. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include additional prompts that are available from the *Validation* drop down:
-       - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry, however the user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
+     - **User confirmed**: We recommend this option for most rules. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include other prompts that are available from the *Validation* drop down:
+       - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry. The user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
      - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
      - **Support approved**: This elevation type requires an administrator to approve a request prior to the elevation being allowed to complete.
@@ -256,7 +257,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
    - **Product name**: (Optional) Specify the name of the product that the file is from.
    - **Internal name**: (Optional) Specify the internal name of the file.
 
-   Select **Save** to save the rule configuration. You can then **Add** additional rules, and when you've added all the rules this policy will include, select **Next** to continue.  
+   Select **Save** to save the rule configuration. You can then **Add** more rules. After adding all the rules this policy requires, select **Next** to continue.
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
@@ -294,7 +295,8 @@ Except for the following situation, conflicting policies for EPM are handled lik
 When a device receives two separate elevation settings policies with conflicting values, the EPM client reverts to the default client behavior until the conflict is resolved.
 
 > [!NOTE]
-> If the *Enable Endpoint Privilege Management* is in conflict the default behavior of the client is to *Enable* EPM. This means the client components will continue to function until an explicit value is delivered to the device.
+>
+> If *Enable Endpoint Privilege Management* is in conflict, the default behavior of the client is to *Enable* EPM. This means the client components will continue to function until an explicit value is delivered to the device.
 
 **Windows elevation rules policy**:
 
