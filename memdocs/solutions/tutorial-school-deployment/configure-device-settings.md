@@ -123,7 +123,7 @@ For more information, see [Windows device settings in Intune for Education][INT-
 
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
 
-- Sign in to the Microsoft Intune admin center.
+- Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>.
 - Go to **Devices** > **Configuration profiles** > **+ Create profile**.
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
@@ -303,7 +303,7 @@ In Intune, you can configure iOS security settings using Settings Catalog.
 
 To create a settings catalog device configuration profile in Microsoft Intune, you need to follow these steps:
 
-- Sign in to the Microsoft Intune admin center.
+- Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>.
 - Go to **Devices** > **Configuration profiles** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**.

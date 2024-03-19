@@ -21,10 +21,12 @@ Applications can be assigned to groups:
 >In this section you will:
 >
 > - Add apps
-> - Assign apps to groups
-> - Review some considerations
+> - Assign apps
+> - Considerations
 
 ## Add apps
+
+✅ Add applications to your inventory
 
 ::: zone pivot="windows"
 
@@ -56,7 +58,12 @@ Intune supports the deployment several application types including desktop apps 
 
 ### Enterprise Application Management
 
-You can use Intune Suite to install apps.
+Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](../apps/apps-win32-prepare.md) and hosted by Microsoft.
+
+> [!IMPORTANT]
+> Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+
+For more infomration, see [Enterprise Application Management](/mem/intune/apps/apps-enterprise-app-management)
 
 ### Win32 apps (MSI, exe)
 
@@ -66,14 +73,14 @@ The addition of desktop applications to Intune should be carried out by repackag
 
 To create web applications in Intune:
 
-1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune portal</b></a>
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 1. Select **Apps**
 1. Select **All apps**
-1. Select **New app** > **New web app**
+1. Select **New app** > **Windows web link**
 1. Provide a URL for the web app, a name and, optionally, an icon and description
 1. Select **Save**
 
-For more information, see [Add web apps][INT-2].
+For more information, see [Add web apps](/mem/intune/apps/web-app).
 
 ::: zone-end
 
@@ -81,15 +88,71 @@ For more information, see [Add web apps][INT-2].
 
 # [Intune For Education](#tab/intune-for-education)
 
-iOS Intune for Education app info here.
+### Volume purchase program (VPP) apps
+
+To add apps from VPP, set up a connection to Apple School Manager and add your apps in Apple School Manager.
+
+For more information, see [Configure VPP tokens](/intune-education/setup-ios-device-management#configure-vpp-tokens)
+
+### iOS App
+
+To add apps to iOS devices without using VPP in Intune:
+
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Select **Apps**
+1. Select **New app** > **New iOS app**
+1. Search the app store by entering the app name and selecting the country
+1. Select the app in the list
+1. Click **Add to Intune**
+
+### Web apps
+
+To create web applications in Intune for Education:
+
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Select **Apps**
+1. Select **New app** > **New web app**
+1. Provide a URL for the web app, a name and, optionally, an icon and description
+1. Select **Save**
+
+For more information, see [Add web apps][INT-2].
 
 # [Intune](#tab/intune)
 
-iOS Intune app info here.
+### Volume purchase program (VPP) apps
+
+To add apps from VPP, set up a connection to Apple School Manager and add your apps in Apple School Manager.
+
+For more information, see [Configure VPP tokens](/mem/intune/apps/vpp-apps-ios).
+
+### iOS App
+
+To add apps to iOS devices without using VPP in Intune for Education:
+
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+1. Select **Apps** > **Add** > **iOS store app**
+1. Search the app store by entering the app name and selecting the country
+1. Select the app in the list
+1. Follow the steps in the wizard
+
+### Web apps
+
+To create web applications:
+
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+1. Select **Apps**
+1. Select **All apps**
+1. Select **New app** > **iOS web link**
+1. Provide a URL for the web app, a name and, optionally, an icon and description
+1. Select **Save**
+
+For more information, see [Add web apps](/mem/intune/apps/web-app).
 
 ::: zone-end
 
-## Assign apps to groups
+## Assign apps
+
+✅ Assign apps from your inventory to groups
 
 ::: zone pivot="windows"
 
@@ -143,6 +206,8 @@ To assign applications to a group of users or devices:
 
 ## Considerations
 
+✅ Some things to consider when deploying apps
+
 ::: zone pivot="windows"
 
 Windows 11 SE prevents the installation and execution of third party applications with a technology called **Windows Defender Application Control** (WDAC).
@@ -154,10 +219,9 @@ To learn more about which apps are supported in Windows 11 SE, and how to deploy
 
 ::: zone pivot="ios"
 
-iOS VPP app info here.
+The best user experience for receving apps on a device is for apps to be assigned using Apple School Manager and the Volume Purchase Program (VPP) with device licensing. When device-licensed VPP apps are assigned to devices or users, the app can be installed without user interaction. For iOS apps without VPP, the user is prompted to sign in to the App Store with an Apple ID.
 
 ::: zone-end
-
 
 ## Next steps
 
