@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 03/13/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -73,13 +73,6 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 ### Single sign-on (public preview)
 
 Windows 365 Business will support single sign-on for new and existing Cloud PCs. You'll be able to turn on single sign-on in **Organizational settings**. When turned on, users no longer have to sign in to the operating system.
-
-<!-- ***********************************************-->
-## Windows 365 Frontline
-
-### Concurrency buffer for Windows 365 Frontline Cloud PCs<1--48929001-->
-
-In a future update, a concurrency buffer will let you exceed the max concurrency count for a limited time under certain circumstances, like during shift changes.
 
 ## Next steps
 
