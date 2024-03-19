@@ -26,7 +26,9 @@ Settings can be assigned to groups:
 > - Configure update policies
 > - Configure security policies
 
-## Get started with settings
+## Introduction
+
+✅ Learn about the different types of settings
 
 ::: zone pivot="windows"
 
@@ -94,7 +96,9 @@ Device profiles allow you to add and configure settings, and then push these set
 
 ::: zone-end
 
-## Configure device settings
+## Device settings
+
+✅ Configure settings and assign them to devices
 
 ::: zone pivot="windows"
 
@@ -161,7 +165,9 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 
 ::: zone-end
 
-## Configure update policies
+## Update policies
+
+✅ Configure updates policies and assign to devices
 
 ::: zone pivot="windows"
 
@@ -226,7 +232,9 @@ For more information, see [Software updates planning guide and scenarios for sup
 
 ::: zone-end
 
-## Configure security policies
+## Security policies
+
+✅ Configure security policies and assign them to devices
 
 ::: zone pivot="windows"
 
