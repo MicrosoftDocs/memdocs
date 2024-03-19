@@ -51,15 +51,15 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Baselines**: Baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
-For more information, see [Security baselines](/mem/intune/protect/security-baselines).
+  For more information, see [Security baselines](/mem/intune/protect/security-baselines).
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker.
 
-For more information, see [Settings catalog](/mem/intune/configuration/settings-catalog).
+  For more information, see [Settings catalog](/mem/intune/configuration/settings-catalog).
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
+  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
 
 ::: zone-end
 
@@ -86,11 +86,11 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to Networking, and create a policy that just focuses on Network.
 
-For more information, see [Settings catalog](/mem/intune/configuration/settings-catalog).
+  For more information, see [Settings catalog](/mem/intune/configuration/settings-catalog).
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
+  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
 
 ::: zone-end
 
@@ -124,7 +124,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
   - For general settings, select **Settings Catalog**.
-  - For templates including certificates, Wi-Fi and VPN, select **Templates** and then choose the required template.
+  - For templates including certificates, Wi-Fi and VPN, select **Templates** and     then choose the required template.
 - Follow the steps to create and configure the profile as necessary.
 
 ::: zone-end
@@ -145,7 +145,7 @@ Settings that are commonly configured for student devices include:
 - Lock screen and wallpaper. See: [Lock screen and wallpaper](intune-education/all-edu-settings-ios#lock-screen-and-wallpaper)
 - Wi-Fi connections. See: [Add Wi-Fi profiles][INT-8]
 
-For more information, see [Windows device settings in Intune for Education][INT-3].
+For more information, see [iOS device settings in Intune for Education](intune-education/all-edu-settings-ios).
 
 # [Intune](#tab/intune)
 
@@ -196,11 +196,33 @@ It is important to keep Windows devices up to date with the latest security upda
 
 # [Intune For Education](#tab/intune-for-education)
 
-Updates, ios, I4E
+It is important to keep iOS devices up to date with the latest security updates. You can create control when Intune triggers iOS devices to update using Intune for Education.
+
+To create a iOS update restrictions policy:
+
+1. Select **Groups** > Pick a group to manage
+1. Select **iOS device settings**
+1. Expand the category **Update restrictions**
+1. Configure the required settings as needed
+
+For more information about the other update options in the Intune console, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/mem/intune/protect/software-updates-guide-ios-ipados).
 
 # [Intune](#tab/intune)
 
-Updates, ios, Intune
+It is important to keep iOS devices up to date with the latest security updates. You can create control updates with Intune using three different methods:
+
+- **Option 1** - iOS and iPadOS 17.0 and newer devices (recommended) - [Managed software update policy](/intune/protect/managed-software-updates-ios-macos).
+- **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](intune/protect/software-updates-ios).
+- **Option 3** (not recommended) - End users manually install the updates.
+
+At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates. These settings use Apple's MDM settings:
+
+- **Defer software updates**: Yes/No
+- **Delay default visibility of software updates**: 0-90
+
+The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/intune/protect/managed-software-updates-ios-macos).
+
+For more information, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/mem/intune/protect/software-updates-guide-ios-ipados).
 
 ::: zone-end
 
@@ -233,6 +255,8 @@ For more information, see [Security][INT-4].
 > - [Endpoint detection and response][MEM-5]
 > - [Attack surface reduction][MEM-6]
 > - [Account protection][MEM-7]
+> - [Security Baselines](mem/intune/protect/security-baselines)
+> - [Local Administrator Password Solution](windows-server/identity/laps/laps-overview)
 
 # [Intune](#tab/intune)
 
@@ -244,20 +268,8 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Endpoint detection and response][MEM-5]
 - [Attack surface reduction][MEM-6]
 - [Account protection][MEM-7]
-- Security Baselines
-- Local Administrator Password Solution
-
-::: zone-end
-
-::: zone pivot="ios"
-
-# [Intune For Education](#tab/intune-for-education)
-
-Security, ios, I4E
-
-# [Intune](#tab/intune)
-
-Security, ios, Intune
+- [Security Baselines](mem/intune/protect/security-baselines)
+- [Local Administrator Password Solution](windows-server/identity/laps/laps-overview)
 
 ::: zone-end
 
@@ -271,8 +283,6 @@ With the Intune service configured, you can configure policies and applications 
 > [Next: Configure applications >](configure-device-apps.md)
 
 <!-- Reference links in article -->
-
-[EDU-1]: /education/windows/windows-11-se-overview
 
 [INT-2]: /intune-education/express-configuration-intune-edu
 [INT-3]: /intune-education/all-edu-settings-windows
