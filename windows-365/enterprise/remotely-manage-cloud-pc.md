@@ -36,18 +36,26 @@ You can remotely manage Cloud PCs in Intune just like any other managed device. 
 
 Cloud PCs support the following remote management actions:
 
-- Restart
-- Power On
-- Power Off
-- Sync
-- Rename
-- Quick Scan
-- Full Scan
-- Update Windows Defender
-- [Reprovisioning](provisioning.md#reprovisioning) (this remote action is specific to Cloud PC devices)
-- [Resize](resize-cloud-pc.md) (this remote action is specific to Cloud PC devices)
-- [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics)
-- [Place Cloud PC Under Review](place-cloud-pc-under-review.md)
+| Remote action | Bulk action support? |
+| --- | --- |
+| [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics) | No |
+| Full Scan | No |
+| [Place Cloud PC Under Review](place-cloud-pc-under-review.md) | No |
+| Power Off | No |
+| Power On | No |
+| Quick Scan | No |
+| Rename | No |
+| [Reprovisioning](provisioning.md#reprovisioning)\* | Yes |
+| [Resize](resize-cloud-pc.md)* | Yes |
+| Restart | Yes |
+| [Restore](restore-overview.md) | Yes|
+| Sync | No |
+| Troubleshoot | Yes |
+| Update Windows Defender | No |
+
+/*This remote action is specific to Cloud PC devices.
+
+You can run remote actions for up to 5000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/intune/remote-actions/bulk-device-actions).
 
 ## Windows 365 Frontline Cloud PCs
 
