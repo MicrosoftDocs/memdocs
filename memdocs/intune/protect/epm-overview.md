@@ -98,6 +98,7 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
   - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
+  - For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified they can complete the elevation on the device.
 
   > [!NOTE]
   >Each elevation rule can also set the elevation behavior for child processes that the elevated process creates.
@@ -125,22 +126,27 @@ To manage Endpoint Privilege Management, your account must be assigned an Intune
   - Update
   - Delete
   - Assign
+- **Endpoint Privilege Management Elevation Requests** - This permission is required to work with elevation requests that are submitted by users for approval, and supports the following rights:
+  - View elevation requests
+  - Modify elevation requests
 
 You can add this permission with one or more rights to your own custom RBAC roles, or use a built-in RBAC role dedicated to managing Endpoint Privilege Management:
 
-- **Endpoint Privilege Manager** – This built-in role is dedicated to managing Endpoint Privilege Management in the Intune console. This role includes all rights for *Endpoint Privilege Management Policy Authoring*.
+- **Endpoint Privilege Manager** – This built-in role is dedicated to managing Endpoint Privilege Management in the Intune console. This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
 
-- **Endpoint Privilege Reader** - Use this built-in role to view Endpoint Privilege Management policies in the Intune console, including reports. This role includes the following rights for *Endpoint Privilege Management Policy Authoring*:
+- **Endpoint Privilege Reader** - Use this built-in role to view Endpoint Privilege Management policies in the Intune console, including reports. This role includes the following rights:
   - View Reports
   - Read
+  - View elevation requests
 
 In addition to the dedicated roles, the following built-in roles for Intune also include rights for *Endpoint Privilege Management Policy Authoring*:
 
-- **Endpoint Security Manager** - This role includes all rights for *Endpoint Privilege Management Policy Authoring*.
+- **Endpoint Security Manager** - This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
 
-- **Read Only Operator** - This role includes the following rights for *Endpoint Privilege Management Policy Authoring*:
+- **Read Only Operator** - This role includes the following rights:
   - View Reports
   - Read
+  - View elevation requests
 
  For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -174,6 +180,7 @@ For more information about each cmdlet, review the **readme.txt** file from the 
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Approving elevation requests](../protect/epm-elevations.md)
 - [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
