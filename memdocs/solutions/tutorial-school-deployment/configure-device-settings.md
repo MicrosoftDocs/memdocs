@@ -10,7 +10,7 @@ ms.date: 03/05/2024
 
 # Configure and secure devices with Microsoft Intune
 
-With Intune for Education, you can configure settings for devices in the school, to ensure that they comply with specific policies.
+With Intune, you can configure settings for devices in the school, to ensure that they comply with specific policies.
 For example, you may need to secure your devices, ensuring that they are kept up to date. Or you may need to configure all the devices with the same look and feel.
 
 Settings can be assigned to groups:
@@ -21,9 +21,8 @@ Settings can be assigned to groups:
 > [!div class="checklist"]
 >In this section you will:
 >
-> - Configure settings with Express Configuration
-> - Configure group settings
-> - Create Windows Update policies
+> - Configure device settings
+> - Configure update policies
 > - Configure security policies
 
 ## Get started with settings
@@ -43,11 +42,23 @@ There are two ways to manage settings in Intune for Education:
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
 > [!TIP]
-> To learn more, and practice step-by-step Express Configuration in Intune for Education, try <a href="https://www.microsoft.com/en-us/education/interactive-demos/deploy-apps-and-policies" target="_blank"><u>this interactive demo</u></a>.
+> To learn more, and practice step-by-step Express Configuration in Intune for Education, try [this interactive demo](https://www.microsoft.com/education/interactive-demos/deploy-apps-and-policies).
 
 # [Intune](#tab/intune)
 
-Intro, Windows, Intune
+Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
+
+- **Baselines**: Baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
+
+For more information, see [Security baselines](/protect/security-baselines).
+
+- **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker.
+
+For more information, see [Settings catalog](/configuration/settings-catalog).
+
+- **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
+
+For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/configuration/device-profiles).
 
 ::: zone-end
 
@@ -55,11 +66,30 @@ Intro, Windows, Intune
 
 # [Intune For Education](#tab/intune-for-education)
 
-Intro, iOS, I4E
+There are two ways to manage settings in Intune for Education:
+
+- **Express Configuration.** This option is used to configure a selection of settings that are commonly used in school environments
+- **Group settings.** This option is used to configure all settings that are offered by Intune for Education
+
+> [!NOTE]
+> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. It is recommended to use Express Configuration to initially set up your iOS devices.
+
+With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
+
+> [!TIP]
+> To learn more, and practice step-by-step Express Configuration in Intune for Education, try [this interactive demo](https://www.microsoft.com/education/interactive-demos/deploy-apps-and-policies).
 
 # [Intune](#tab/intune)
 
-Intro, iOS, Intune
+Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
+
+- **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to Networking, and create a policy that just focuses on Network.
+
+For more information, see [Settings catalog](/configuration/settings-catalog).
+
+- **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
+
+For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/configuration/device-profiles).
 
 ::: zone-end
 
@@ -85,17 +115,20 @@ Settings that are commonly configured for student devices include:
 For more information, see [Windows device settings in Intune for Education][INT-3].
 
 # [Intune](#tab/intune)
-    Intro, iOS, Intune
+
+Intro, iOS, Intune
 
 ::: zone-end
 
 ::: zone pivot="ios"
 
 # [Intune For Education](#tab/intune-for-education)
-    Groups, iOS, I4E
+
+Groups, iOS, I4E
 
 # [Intune](#tab/intune)
-    Groups, iOS, Intune
+
+Groups, iOS, Intune
 
 ::: zone-end
 
@@ -118,8 +151,8 @@ For more information, see [Updates and upgrade][INT-6].
 
 > [!NOTE]
 > If you require a more complex Windows Update policy, you can create it in Microsoft Intune. For more information:
-> - [<u>What is Windows Update for Business?</u>][WIN-1]
-> - [<u>Manage Windows software updates in Intune</u>][MEM-1]
+> - [What is Windows Update for Business?][WIN-1]
+> - [Manage Windows software updates in Intune][MEM-1]
 
 # [Intune](#tab/intune)
 
@@ -162,16 +195,25 @@ For more information, see [Security][INT-4].
 
 > [!NOTE]
 > If you require more sophisticated security policies, you can create them in Microsoft Intune. For more information:
-> - [<u>Antivirus</u>][MEM-2]
-> - [<u>Disk encryption</u>][MEM-3]
-> - [<u>Firewall</u>][MEM-4]
-> - [<u>Endpoint detection and response</u>][MEM-5]
-> - [<u>Attack surface reduction</u>][MEM-6]
-> - [<u>Account protection</u>][MEM-7]
+> - [Antivirus][MEM-2]
+> - [Disk encryption][MEM-3]
+> - [Firewall][MEM-4]
+> - [Endpoint detection and response][MEM-5]
+> - [Attack surface reduction][MEM-6]
+> - [Account protection][MEM-7]
 
 # [Intune](#tab/intune)
 
-    Security, Windows, Intune
+It is critical to ensure that the devices you manage are secured using the different security technologies available in Windows.
+
+- [Antivirus][MEM-2]
+- [Disk encryption][MEM-3]
+- [Firewall][MEM-4]
+- [Endpoint detection and response][MEM-5]
+- [Attack surface reduction][MEM-6]
+- [Account protection][MEM-7]
+- Security Baselines
+- Local Administrator Password Solution
 
 ::: zone-end
 
