@@ -4,6 +4,7 @@ description: Learn how to configure policies and applications in preparation for
 ms.date: 11/09/2023
 ms.topic: tutorial
 ms.collection: essentials-manage
+author: scottbreenmsft
 ---
 
 # Configure settings and applications with Microsoft Intune
@@ -11,7 +12,6 @@ ms.collection: essentials-manage
 Before distributing devices to your users, you must ensure that the devices will be configured with the required policies, settings, and applications as they get enrolled in Intune.
 Microsoft Intune uses Microsoft Entra groups to assign policies and applications to devices.
 With Microsoft Intune for Education, you can conveniently create groups and assign policies and applications to them.
-
 
 > [!div class="checklist"]
 >In this section you will:

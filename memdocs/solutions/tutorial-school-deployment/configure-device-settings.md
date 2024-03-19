@@ -217,8 +217,8 @@ For more information about the other update options in the Intune console, see [
 
 It is important to keep iOS devices up to date with the latest security updates. You can create control updates with Intune using three different methods:
 
-- **Option 1** - iOS and iPadOS 17.0 and newer devices (recommended) - [Managed software update policy](/intune/protect/managed-software-updates-ios-macos).
-- **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](intune/protect/software-updates-ios).
+- **Option 1** - iOS and iPadOS 17.0 and newer devices (recommended) - [Managed software update policy](/mem/intune/protect/managed-software-updates-ios-macos).
+- **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](/mem/intune/protect/software-updates-ios).
 - **Option 3** (not recommended) - End users manually install the updates.
 
 At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
@@ -226,7 +226,7 @@ At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restr
 - **Defer software updates**: Yes/No
 - **Delay default visibility of software updates**: 0-90
 
-The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/intune/protect/managed-software-updates-ios-macos).
+The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/mem/intune/protect/managed-software-updates-ios-macos).
 
 For more information, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/mem/intune/protect/software-updates-guide-ios-ipados).
 
