@@ -36,13 +36,13 @@ There are four main methods for joining iOS devices to Microsoft Entra ID and ge
 
 **Windows Autopilot** and the **Set up School PCs** app are usually the most efficient options for school environments.
 
+This [table][INT-1] describes the ideal scenarios for using either option. It's recommended to review the table when planning your enrollment and deployment strategies.
+
 ::: zone-end
 
 ::: zone pivot="ios"
 
 ::: zone-end
-
-This [table][INT-1] describes the ideal scenarios for using either option. It's recommended to review the table when planning your enrollment and deployment strategies.
 
 :::image type="content" source="./images/enroll.png" alt-text="The device lifecycle for Intune-managed devices - enrollment" border="false":::
 
@@ -62,6 +62,7 @@ Select one of the following options to learn the next steps about the enrollment
 
 > [!div class="op_single_selector"]
 > - [Automatic Intune enrollment via Apple School Manager](enroll-entra-join.md)
+> - [Automated Device Enrollment](enroll-entra-join.md)
 
 ::: zone-end
 
