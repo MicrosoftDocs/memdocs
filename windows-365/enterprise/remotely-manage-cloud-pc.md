@@ -52,7 +52,7 @@ Cloud PCs support the following remote management actions:
 | Troubleshoot | No |
 | Update Windows Defender | No |
 
-/*This remote action is specific to Cloud PC devices.
+\*This remote action is specific to Cloud PC devices.
 
 You can run remote actions for up to 5,000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/mem/intune/remote-actions/bulk-device-actions).
 
