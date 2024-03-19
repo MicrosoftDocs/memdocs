@@ -142,10 +142,10 @@ Groups are used to manage users and devices with similar management needs, allow
 
 Settings that are commonly configured for student devices include:
 
-- Lock screen and wallpaper. See: [Lock screen and wallpaper](intune-education/all-edu-settings-ios#lock-screen-and-wallpaper)
+- Lock screen and wallpaper. See: [Lock screen and wallpaper](/intune-education/all-edu-settings-ios#lock-screen-and-wallpaper)
 - Wi-Fi connections. See: [Add Wi-Fi profiles][INT-8]
 
-For more information, see [iOS device settings in Intune for Education](intune-education/all-edu-settings-ios).
+For more information, see [iOS device settings in Intune for Education](/intune-education/all-edu-settings-ios).
 
 # [Intune](#tab/intune)
 
@@ -255,8 +255,8 @@ For more information, see [Security][INT-4].
 > - [Endpoint detection and response][MEM-5]
 > - [Attack surface reduction][MEM-6]
 > - [Account protection][MEM-7]
-> - [Security Baselines](mem/intune/protect/security-baselines)
-> - [Local Administrator Password Solution](windows-server/identity/laps/laps-overview)
+> - [Security Baselines](/mem/intune/protect/security-baselines)
+> - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
 
 # [Intune](#tab/intune)
 
@@ -268,8 +268,8 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Endpoint detection and response][MEM-5]
 - [Attack surface reduction][MEM-6]
 - [Account protection][MEM-7]
-- [Security Baselines](mem/intune/protect/security-baselines)
-- [Local Administrator Password Solution](windows-server/identity/laps/laps-overview)
+- [Security Baselines](/mem/intune/protect/security-baselines)
+- [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
 
 ::: zone-end
 
