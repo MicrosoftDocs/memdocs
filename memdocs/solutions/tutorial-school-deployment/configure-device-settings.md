@@ -15,8 +15,8 @@ For example, you may need to secure your devices, ensuring that they are kept up
 
 Settings can be assigned to groups:
 
-- If you target settings to a **group of users**, those settings will apply, regardless of what managed devices the targeted users sign in to
-- If you target settings to a **group of devices**, those settings will apply regardless of who is using the devices
+- If you target settings to a **group of users**, those settings apply, regardless of what managed devices the targeted users sign in to
+- If you target settings to a **group of devices**, those settings apply regardless of who is using the devices
 
 > [!div class="checklist"]
 >In this section you will:
@@ -35,7 +35,7 @@ Settings can be assigned to groups:
 There are two ways to manage settings in Intune for Education:
 
 - **Express Configuration.** This option is used to configure a selection of settings that are commonly used in school environments
-- **Group settings.** This option is used to configure all settings that are offered by Intune for Education
+- **Group settings.** This option is used to configure all settings offered by Intune for Education
 
 > [!NOTE]
 > Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. It is recommended to use Express Configuration to initially set up your Windows devices.
@@ -124,7 +124,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
   - For general settings, select **Settings Catalog**.
-  - For templates including certificates, Wi-Fi and VPN, select **Templates** and     then choose the required template.
+  - For templates including certificates, Wi-Fi, and VPN, select **Templates** and     then choose the required template.
 - Follow the steps to create and configure the profile as necessary.
 
 ::: zone-end
@@ -156,7 +156,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**:
   - For general settings, select **Settings Catalog**.
-  - For templates including certificates, Wi-Fi and VPN, select **Templates** and then choose the required template.
+  - For templates including certificates, Wi-Fi, and VPN, select **Templates** and then choose the required template.
 - Follow the steps to create and configure the profile as necessary.
 
 ::: zone-end
@@ -215,7 +215,7 @@ It is important to keep iOS devices up to date with the latest security updates.
 - **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](intune/protect/software-updates-ios).
 - **Option 3** (not recommended) - End users manually install the updates.
 
-At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates. These settings use Apple's MDM settings:
+At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
 
 - **Defer software updates**: Yes/No
 - **Delay default visibility of software updates**: 0-90
@@ -277,7 +277,7 @@ It is critical to ensure that the devices you manage are secured using the diffe
 
 # [Intune For Education](#tab/intune-for-education)
 
-In Intune for Education you can configure iOS security settings using Groups.
+In Intune for Education, you can configure iOS security settings using Groups.
 
 1. Select **Groups** > Pick a group to manage
 1. Select **iOS device settings**
@@ -291,14 +291,14 @@ Common areas for security include:
 
 # [Intune](#tab/intune)
 
-In Intune you can configure iOS security settings using Settings Catalog.
+In Intune, you can configure iOS security settings using Settings Catalog.
 
 To create a settings catalog device configuration profile in Microsoft Intune, you need to follow these steps:
 
 - Sign in to the Microsoft Intune admin center.
 - Go to **Devices** > **Configuration profiles** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
-- Select **Profile type**:
+- Select **Profile type**.
 - Select **Settings Catalog**.
 - Follow the steps to create and configure the profile as necessary.
 
@@ -313,7 +313,7 @@ Common areas for security include:
 
 ## Next steps
 
-With the Intune service configured, you can configure policies and applications to deploy to your students' and teachers' devices.
+Now that you've configured your device settings, you can configure applications to deploy to your students' and teachers' devices.
 
 > [!div class="nextstepaction"]
 > [Next: Configure applications >](configure-device-apps.md)
