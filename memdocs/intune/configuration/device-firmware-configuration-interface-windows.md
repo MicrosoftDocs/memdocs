@@ -106,7 +106,7 @@ This profile includes the DFCI settings you configure.
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows - DFCI settings on Surface devices**.
+    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows - DFCI settings on Windows devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
    Select **Next**.
