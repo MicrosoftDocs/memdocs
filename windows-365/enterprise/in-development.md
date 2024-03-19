@@ -101,7 +101,7 @@ A new alert rule will be available to notify you when Cloud PCs aren't available
 
 ### Cloud PC utilization report creation date<!--49175145-->
 
-In a future update, the Cloud PC utilization report will the Cloud PC creation date.
+In a future update, the Cloud PC utilization report will show the Cloud PC creation date.
 
 <!-- ***********************************************-->
 ## Provisioning
