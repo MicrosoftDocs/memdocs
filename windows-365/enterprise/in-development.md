@@ -127,7 +127,7 @@ When single sign-on is turned on, selecting the **Conditional access** > **Sessi
 <!-- ***********************************************-->
 ## Windows 365 Frontline
 
-### Concurrency buffer for Windows 365 Frontline Cloud PCs<1--48929001-->
+### Concurrency buffer for Windows 365 Frontline Cloud PCs<!--48929001-->
 
 In a future update, a concurrency buffer will let you exceed the max concurrency count for a limited time under certain circumstances, like during shift changes.
 
