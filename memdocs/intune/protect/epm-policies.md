@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 03/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,6 +67,7 @@ Use *Windows elevation settings policy* when you want to:
   Options include:
   - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a Windows elevation rules policy.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
+  - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
 
   >[!NOTE]
   > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.  
@@ -108,6 +109,7 @@ Each elevation rule:
 
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
+  - **Support approved**: A support approved elevation requires an administrator to approve elevations for that application before they are allowed to elevate.
 
     > [!NOTE]
     > For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md).
@@ -225,6 +227,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
        - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry, however the user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
      - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
+     - **Support approved**: This elevation type requires an administrator to approve a request prior to the elevation being allowed to complete.
 
      > [!CAUTION]
      >
@@ -309,5 +312,6 @@ If a device receives two rules targeting the same application, both rules are co
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
+- [Approving elevation requests](../protect/epm-elevations.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
