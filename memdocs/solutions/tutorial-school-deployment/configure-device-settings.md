@@ -135,7 +135,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 
 Groups are used to manage users and devices with similar management needs, allowing you to apply changes to many devices or users at once. To review the available group settings:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com/)
 1. Select **Groups** > Pick a group to manage
 1. Select **iOS device settings**
 1. Expand the different categories and review information about individual settings
@@ -270,6 +270,42 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Account protection][MEM-7]
 - [Security Baselines](/mem/intune/protect/security-baselines)
 - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
+
+::: zone-end
+
+::: zone pivot="ios"
+
+# [Intune For Education](#tab/intune-for-education)
+
+In Intune for Education you can configure iOS security settings using Groups.
+
+1. Select **Groups** > Pick a group to manage
+1. Select **iOS device settings**
+1. Expand the category **Update restrictions**
+1. Configure the required settings as needed
+
+Common areas for security include:
+
+- Device restrictions
+- Passcode, Touch ID, and Face ID
+
+# [Intune](#tab/intune)
+
+In Intune you can configure iOS security settings using Settings Catalog.
+
+To create a settings catalog device configuration profile in Microsoft Intune, you need to follow these steps:
+
+- Sign in to the Microsoft Intune admin center.
+- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Select **Platform** as **iOS/iPadOS**.
+- Select **Profile type**:
+- Select **Settings Catalog**.
+- Follow the steps to create and configure the profile as necessary.
+
+Common areas for security include:
+
+- Restrictions
+- Security
 
 ::: zone-end
 
