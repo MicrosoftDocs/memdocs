@@ -88,6 +88,8 @@ Consider using Autopilot reset in the following example scenarios:
 # [Intune](#tab/intune)
 Insert Intune content here.
 
+---
+
 ## Wiping and deleting a device
 
 There are scenarios that require a device to be deleted from your tenant, for example:
@@ -113,9 +115,12 @@ There are scenarios that require a device to be deleted from your tenant, for ex
 
 Instructions here for Intune delete.
 
-::: zone pivot="windows"
+---
 
-## Autopilot considerations for a motherboard replacement scenario
+## Considerations
+
+::: zone pivot="windows"
+### Autopilot considerations for a motherboard replacement scenario
 
 Repairing Autopilot-enrolled devices can be complex, as OEM requirements must be balanced with Autopilot requirements. If a motherboard replacement is needed on an Autopilot device, it's suggested the following process:
 
