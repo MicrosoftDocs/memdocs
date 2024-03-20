@@ -21,6 +21,8 @@ Microsoft Intune uses Microsoft Entra groups to assign policies and applications
 
 ## Create groups
 
+✅ Organize devices and users
+
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
 By default, Intune creates two default groups: *All devices* and *All users*.
@@ -37,7 +39,8 @@ Two group types can be created:
 
 > [!TIP]
 > **For Windows devices:**
-> If you target applications and policies to a *device dynamic group* based on Group Tag, they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+> - If you target applications and policies to a *device dynamic group* based on Group Tag, they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+> 
 > **For iOS devices:**
 > - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
