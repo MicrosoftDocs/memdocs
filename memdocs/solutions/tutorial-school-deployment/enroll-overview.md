@@ -49,13 +49,17 @@ This [table][INT-1] describes the ideal scenarios for using either option. It's 
 
 Select one of the following options to learn the next steps about the enrollment method you chose:
 
-> [!div class="op_multi_selector" title1="Platform" title2="Method"]
-> - [(Windows | Automatic Intune enrollment via Microsoft Entra join)](enroll-entra-join.md)
-> - [(Windows | Bulk enrollment with provisioning packages)](enroll-package.md)
-> - [(Windows | Enroll devices with Windows Autopilot)](enroll-autopilot.md)
-> - [(iOS | Company Portal)](enroll-ios-company-portal.md)
-> - [(iOS | Automated Device Enrollment)](enroll-ios-ade.md)
-> - [(iOS | Apple Configurator)](enroll-ios-apple-configurator.md)
+::: zone pivot="windows"
+> - [Automatic Intune enrollment via Microsoft Entra join](enroll-entra-join.md)
+> - [Bulk enrollment with provisioning packages](enroll-package.md)
+> - [Enroll devices with Windows Autopilot](enroll-autopilot.md)
+::: zone-end
+
+::: zone pivot="ios"
+> - [Company Portal](enroll-ios-company-portal.md)
+> - [utomated Device Enrollment](enroll-ios-ade.md)
+> - [pple Configurator](enroll-ios-apple-configurator.md)
+::: zone-end
 
 <!-- Reference links in article -->
 

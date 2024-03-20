@@ -92,8 +92,9 @@ Here are the steps to perform a factory reset from Intune:
 
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 
----
+::: zone-end
 
+::: zone pivot="windows"
 :::image type="content" source="./images/win11-autopilot-reset.png" alt-text="Three screenshots showing the device being wiped, ending up in the login screen" border="false":::
 
 Consider using Autopilot reset in the following example scenarios:
