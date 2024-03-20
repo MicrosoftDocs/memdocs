@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Integrate SentinelOne MTD with Microsoft Intune
+title: Set up SentinelOne MTD with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: How to set up the SentinelOne Mobile Threat Defense (MTD) solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:

@@ -410,7 +410,7 @@ For communication between clients and the cloud service:
 
 ## Microsoft Intune Endpoint Privilege Management
 
-Allow the following hostnames through your firewall to support Endpoint Privilege Management.
+Allow the following hostnames on tcp port 443 through your firewall to support Endpoint Privilege Management.
 
 For communication between clients and the cloud service:
 
