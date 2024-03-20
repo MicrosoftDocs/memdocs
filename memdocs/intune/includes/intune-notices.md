@@ -4,12 +4,27 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 02/15/2024
+ms.date: 03/13/2024
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for Change: Update your PowerShell scripts with a Microsoft Entra ID registered app ID by April 2024<!--26960016-->
+
+Last year we announced a [new Microsoft Intune GitHub repository](https://aka.ms/Intune/Scripts-blog) based on the Microsoft Graph SDK-based PowerShell module. The legacy Microsoft Intune PowerShell sample scripts GitHub repository is now read-only. Additionally, starting on **April 1, 2024**, due to updated authentication methods in the Graph SDK-based PowerShell module, the global Microsoft Intune PowerShell application (client) ID based authentication method will be removed.
+
+#### How does this affect you or your users?
+
+If you're using the Intune PowerShell application ID (d1ddf0e4-d672-4dae-b554-9d5bdfd93547), you'll need to update your scripts with a Microsoft Entra ID registered application ID to prevent your scripts from breaking.
+
+#### How can you prepare?
+
+Before April 1, 2024, update your PowerShell scripts by:
+
+1. Creating a new app registration in the Microsoft Entra admin center. For detailed instructions, read: [Quickstart: Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
+2. Update scripts containing the Intune application ID (d1ddf0e4-d672-4dae-b554-9d5bdfd93547) with the new application ID created in step 1.
 
 ### Intune moving to support Android 10 and later for user-based management methods in October 2024<!--14755802-->
 

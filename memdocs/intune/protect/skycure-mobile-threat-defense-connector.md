@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Use Symantec Endpoint Protection Mobile connector with Microsoft Intune
+title: Symantec Endpoint Protection Mobile connector with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Learn about integrating Intune with Symantec Endpoint Protection Mobile to control mobile device access to your corporate resources.
+description: How to set up Symantec Endpoint Protection Mobile with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
