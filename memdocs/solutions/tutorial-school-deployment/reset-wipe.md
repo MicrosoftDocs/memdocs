@@ -22,12 +22,18 @@ There are different scenarios that require a device to be reset, for example:
 
 :::image type="content" source="./images/retire.png" alt-text="The device lifecycle for Intune-managed devices - retirement" border="false":::
 
-# [Intune For Education](#tab/intune-for-education)
 Intune for Education provides two device reset functionalities that enable IT administrators to remotely execute them:
+::: zone pivot="windows"
 
 - **Factory reset** (also known as **wipe**) is used to wipe all data and settings from the device, returning it to the default factory settings
-::: zone pivot="windows"
 - **Autopilot reset** is used to return the device to a fully configured or known IT-approved state
+
+::: zone-end
+
+::: zone pivot="iOS"
+
+- **Factory reset** (also known as **wipe**) is used to wipe all data and settings from the device, returning it to the default factory settings
+
 ::: zone-end
 
 ### Factory reset (wipe)
@@ -36,12 +42,20 @@ A factory reset, or a wipe, reverts a device to the original settings when it wa
 
 Once the wipe is completed, the device will be in out-of-box experience.
 
+# [Intune For Education](#tab/intune-for-education)
 Here are the steps to perform a factory reset from Intune for Education: 
 
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
 1. Select **Devices**
 1. Select the device you want to reset > **Factory reset**
 1. Select **Factory reset** to confirm the action
+
+# [Intune](#tab/intune)
+Here are the steps to perform a factory reset from Intune for Education: 
+
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+
+---
 
 ::: zone pivot="windows"
 :::image type="content" source="./images/win11-wipe.png" alt-text="Three screenshots showing the device being wiped, ending up in OOBE" lightbox="./images/win11-wipe.png" border="false":::
@@ -65,12 +79,20 @@ Autopilot Reset is ideal when all data on a device needs to be wiped, but the de
 
 Once the Autopilot reset action is completed, the device will ask to chose region and keyboard layout, then it will display the sign-in screen.
 
+# [Intune For Education](#tab/intune-for-education)
 Here are the steps to perform an Autopilot reset from Intune for Education: 
 
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
 1. Select **Devices**
 1. Select the device you want to reset > **Autopilot reset**
 1. Select **Autopilot reset** to confirm the action
+
+# [Intune](#tab/intune)
+Here are the steps to perform a factory reset from Intune for Education: 
+
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+
+---
 
 :::image type="content" source="./images/win11-autopilot-reset.png" alt-text="Three screenshots showing the device being wiped, ending up in the login screen" border="false":::
 
@@ -85,11 +107,6 @@ Consider using Autopilot reset in the following example scenarios:
 
 ::: zone-end
 
-# [Intune](#tab/intune)
-Insert Intune content here.
-
----
-
 ## Wiping and deleting a device
 
 There are scenarios that require a device to be deleted from your tenant, for example:
@@ -103,19 +120,16 @@ There are scenarios that require a device to be deleted from your tenant, for ex
 
  To completely remove a device, you need to perform the following actions:
 
-# [Intune For Education](#tab/intune-for-education)
-
-1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1]
 ::: zone pivot="windows"
+1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1]
 1. If the device is registered in Autopilot, delete the Autopilot object using [these steps][MEM-2]
-::: zone-end
 1. Delete the device from Microsoft Entra ID using [these steps][MEM-3]
+::: zone-end
 
-# [Intune](#tab/intune)
-
-Instructions here for Intune delete.
-
----
+::: zone pivot="ios"
+1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1]
+1. Delete the device from Microsoft Entra ID using [these steps][MEM-3]
+::: zone-end
 
 ## Considerations
 
