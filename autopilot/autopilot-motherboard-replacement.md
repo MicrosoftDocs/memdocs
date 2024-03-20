@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2023
+ms.date: 03/20/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -24,23 +24,7 @@ This document offers guidance for Windows Autopilot device repair scenarios that
 
 Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requirements with Windows Autopilot requirements. Specifically, OEM requirements include strict uniqueness across motherboards, MAC addresses, etc. Windows Autopilot requires strict uniqueness at the hardware hash level for each device to enable successful registration. The hardware hash doesn't always accommodate all the OEM hardware component requirements. These requirements are sometimes at odds, which can cause issues with some repair scenarios. The hardware hash is also known as the hardware ID.
 
-If a motherboard is replaced on an Autopilot registered device with the following versions of Windows:
-
-- Windows 11 22H2 (all versions)
-- Windows 11 21H2 with [KB5015882](https://support.microsoft.com/topic/july-21-2022-kb5015882-os-build-22000-832-preview-473e1d95-06a0-4f40-9554-cdc7cca85584) or later installed
-- Windows 10 22H2 (all versions)
-- Windows 10 21H2 with [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later installed
-
-and the device goes back to the same tenant without an OS reset, Autopilot attempts to register the new hardware components. In Intune, the profile status for the device shows **Fix pending** as Autopilot attempts to register the new hardware components. If the new hardware components are successfully registered, the device status goes back to the assigned Autopilot profile. If the device can't be successfully registered, the profile status for the device shows **Attention required**. 
-
-If the OEM resets the OS, the device needs to be re-registered.
-
-If the following conditions are true:
-
-- The OS version is older than the ones in the above list
-- A motherboard is replaced on an Autopilot registered device
-
-then the following process is recommended:
+If the OEM resets the OS, the device needs to be re-registered. Additionally, if a motherboard is replaced on an Autopilot registered device, then the following process is recommended:
 
 1. If the device isn't going back to the original tenant, [deregister it from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). If it's going back to the same tenant, you don't need to deregister it.
 
@@ -77,8 +61,8 @@ If a customer grants an OEM permission to register devices on their behalf using
 Because the repair facility doesn't have the user's sign-in credentials, they have to reimage the device as part of the repair process. The customer should do three things before sending the device to the facility:
 
 1. Copy all important data off the device.
-2. Let the repair facility know which version of Windows they should reinstall after the repair.
-3. If applicable, let the repair facility know which version of Office they should reinstall after the repair.
+1. Let the repair facility know which version of Windows they should reinstall after the repair.
+1. If applicable, let the repair facility know which version of Office they should reinstall after the repair.
 
 ## Replace the motherboard
 
@@ -86,22 +70,22 @@ Technicians replace the motherboard or other hardware on the broken device. A re
 
 Repair and key replacement processes vary between facilities. Sometimes repair facilities receive motherboard spare parts from OEMs that have replacement DPKs already injected, but sometimes not. Sometimes repair facilities receive fully functional BIOS tools from OEMs, but sometimes not. The quality of the data in the BIOS after a motherboard replacement varies. To ensure the repaired device are still Autopilot capable following its repair, check to make sure the new post-repair BIOS can successfully gather and populate the following information at a minimum:
 
-- DiskSerialNumber
-- SmbiosSystemSerialNumber
-- SmbiosSystemManufacturer
-- SmbiosSystemProductName
-- SmbiosUuid
-- TPM EKPub
-- MacAddress
-- ProductKeyID
-- OSType
+- DiskSerialNumber.
+- SmbiosSystemSerialNumber.
+- SmbiosSystemManufacturer.
+- SmbiosSystemProductName.
+- SmbiosUuid.
+- TPM EKPub.
+- MacAddress.
+- ProductKeyID.
+- OSType.
 
 For simplicity, and because processes vary between repair facilities, we've excluded many of the additional steps often used in a motherboard replacement, such as:
 
-- Verify that the device is still functional
-- Disable or suspend BitLocker
-- Repair the Boot Configuration Data (BCD)
-- Repair and verify the network driver operation
+- Verify that the device is still functional.
+- Disable or suspend BitLocker.
+- Repair the Boot Configuration Data (BCD).
+- Repair and verify the network driver operation.
 
 ## Capture a new Autopilot device ID (4K HH) from the device
 
@@ -235,7 +219,10 @@ To use the reset feature in Windows on a device:
 
    1. Under **Ready to reset this PC**, select the **Reset** button.
 
-However, the repair facility most likely doesn't have access to Windows because they lack the user credentials to sign in. In this case, they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
+However, the repair facility most likely doesn't have access to Windows because they lack the user credentials to sign in. In this case, they need to use other means to reimage the device, such as the Deployment Image Servicing and Management (DISM) tool:
+
+- [OEM Deployment of Windows 11 desktop editions](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions).
+- [OEM Deployment of Windows 10 for desktop editions](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions?view=windows-10).
 
 ## Return the repaired device to the customer
 
@@ -246,6 +233,13 @@ The repaired device can now be returned to the customer. The device will be auto
 > If the repair facility **didn't** reimage the device, they could be sending it back in a potentially broken state. For example, there's no way to log into the device because it's been dissociated from the only known user account.
 >
 > A device can be **registered** for Autopilot before being powered-on. However, the device isn't actually **deployed** to Autopilot until it goes through OOBE. Therefore, resetting the device back to a pre-OOBE state is a required step.
+
+## Fix pending and Attention required
+
+If the profiles status of a device shows **Fix pending**, Autopilot is in the process of attempting to register the device. If the profile status of a device shows **Fix pending** for an extended period of time and doesn't switch to **Assigned**, or if the profile status of the device switches to **Attention required**, then it's recommended to:
+
+1. Manually deregister the device using the steps in the [Deregister a device](#deregister-a-device) section.
+1. Reregister the device.
 
 ## Specific repair scenarios
 
