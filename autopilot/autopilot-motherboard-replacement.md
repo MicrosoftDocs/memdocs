@@ -241,6 +241,8 @@ If the profiles status of a device shows **Fix pending**, Autopilot is in the pr
 1. Manually deregister the device using the steps in the [Deregister a device](#deregister-a-device) section.
 1. Reregister the device.
 
+For more information, see [Troubleshoot Autopilot device import and enrollment: Autopilot profile not applied after reimaging to an older OS version](troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
+
 ## Specific repair scenarios
 
 This section covers the most common repair scenarios, and their impact on Autopilot enablement.
