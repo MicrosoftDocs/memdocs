@@ -13,6 +13,7 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
+ms.technology:
 
 # optional metadata
 
