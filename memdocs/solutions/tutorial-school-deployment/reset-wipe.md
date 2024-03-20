@@ -22,7 +22,7 @@ There are different scenarios that require a device to be reset, for example:
 
 :::image type="content" source="./images/retire.png" alt-text="The device lifecycle for Intune-managed devices - retirement" border="false":::
 
-Intune for Education provides two device reset functionalities that enable IT administrators to remotely execute them:
+Intune provides two device reset functionalities that enable IT administrators to remotely execute them:
 ::: zone pivot="windows"
 
 - **Factory reset** (also known as **wipe**) is used to wipe all data and settings from the device, returning it to the default factory settings
@@ -30,7 +30,7 @@ Intune for Education provides two device reset functionalities that enable IT ad
 
 ::: zone-end
 
-::: zone pivot="iOS"
+::: zone pivot="ios"
 
 - **Factory reset** (also known as **wipe**) is used to wipe all data and settings from the device, returning it to the default factory settings
 
@@ -51,7 +51,7 @@ Here are the steps to perform a factory reset from Intune for Education:
 1. Select **Factory reset** to confirm the action
 
 # [Intune](#tab/intune)
-Here are the steps to perform a factory reset from Intune for Education: 
+Here are the steps to perform a factory reset from Intune: 
 
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 
@@ -80,7 +80,7 @@ Autopilot Reset is ideal when all data on a device needs to be wiped, but the de
 Once the Autopilot reset action is completed, the device will ask to chose region and keyboard layout, then it will display the sign-in screen.
 
 # [Intune For Education](#tab/intune-for-education)
-Here are the steps to perform an Autopilot reset from Intune for Education: 
+Here are the steps to perform an Autopilot reset from Intune for Education:
 
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
 1. Select **Devices**
@@ -88,7 +88,7 @@ Here are the steps to perform an Autopilot reset from Intune for Education:
 1. Select **Autopilot reset** to confirm the action
 
 # [Intune](#tab/intune)
-Here are the steps to perform a factory reset from Intune for Education: 
+Here are the steps to perform a factory reset from Intune:
 
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 
