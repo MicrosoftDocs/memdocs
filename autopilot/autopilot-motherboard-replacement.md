@@ -222,7 +222,7 @@ To use the reset feature in Windows on a device:
 However, the repair facility most likely doesn't have access to Windows because they lack the user credentials to sign in. In this case, they need to use other means to reimage the device, such as the Deployment Image Servicing and Management (DISM) tool:
 
 - [OEM Deployment of Windows 11 desktop editions](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions).
-- [OEM Deployment of Windows 10 for desktop editions](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions?view=windows-10).
+- [OEM Deployment of Windows 10 for desktop editions](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-desktop-editions?view=windows-10&preserve-view=true).
 
 ## Return the repaired device to the customer
 
