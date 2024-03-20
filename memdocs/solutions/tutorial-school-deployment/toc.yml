@@ -19,12 +19,14 @@ items:
     items: 
       - name: Overview
         href: enroll-overview.md
-      - name: Enroll devices via Microsoft Entra join
-        href: enroll-entra-join.md
-      - name: Enroll devices with provisioning packages
-        href: enroll-package.md
-      - name: Enroll devices with Windows Autopilot
-        href: enroll-autopilot.md
+      - name: Windows
+        items:
+          - name: Enroll devices via Microsoft Entra join
+            href: enroll-entra-join.md
+          - name: Enroll devices with provisioning packages
+            href: enroll-package.md
+          - name: Enroll devices with Windows Autopilot
+            href: enroll-autopilot.md
   - name: 4. Manage devices
     items: 
       - name: Overview
