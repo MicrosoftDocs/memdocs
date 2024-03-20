@@ -53,7 +53,7 @@ To get to the **Cloud PC recommendations** report, sign in to [Microsoft Intune 
 
 The Overview tab starts with various Cloud PC insights.
 
-- **Rightsized**: Cloud PCs used very frequently and sized appropriately for the workload that end users are putting on them.
+- **Rightsized**: Cloud PCs used frequently and sized appropriately for the workload that end users are putting on them.
 - **Undersized**: Cloud PCs underpowered for the workload they’re supporting. Users might be having a poor experience. To improve results, increase the device’s resources by resizing to a larger SKU.
 - **Oversized**: Cloud PCs overpowered for the workload they’re supporting. The same quality of experience can be delivered to users with fewer resources. To free up resources, resize them to a smaller SKU.
 - **Underutilized**: Cloud PCs used rarely or not at all. They might not be needed. Any Cloud PC with less than 40 hours of active connected time over a 28 day period falls into this category.
@@ -62,7 +62,7 @@ The Overview tab starts with various Cloud PC insights.
 
 ## Insights by device tab
 
-Recommendatinos for specific Cloud PCs are shown on this tab. Only Cloud PCs with some level of user utilization have details on the CPU and RAM used. Select a Cloud PC to see more information and an explanation of the recommendation.
+Recommendations for specific Cloud PCs are shown on this tab. Only Cloud PCs with some level of user utilization have details on the CPU and RAM used. Select a Cloud PC to see more information and an explanation of the recommendation.
 
 The report shows the following columns:
 
@@ -75,7 +75,7 @@ The report shows the following columns:
 
 ## Insights by model
 
-A summary of recommendations by the type of Cloud PC. The report shows the **PC type** and the number of Cloud PCs in each category. PC types that have many Cloud PCs in non-Righsized columns might indicate the type is not a good fit for your workloads.
+A summary of recommendations by the type of Cloud PC. The report shows the **PC type** and the number of Cloud PCs in each category. PC types that have many Cloud PCs in non-Righsized columns might indicate the type isn't a good fit for your workloads.
 
 <!-- ########################## -->
 ## Next steps
