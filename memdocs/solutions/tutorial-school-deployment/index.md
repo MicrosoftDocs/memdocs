@@ -1,6 +1,6 @@
 ---
-title: Introduction to the tutorial deploy and manage Windows devices in a school
-description: Introduction to deployment and management of Windows devices in education environments.
+title: Introduction to the tutorial deploy and manage devices in a school
+description: Introduction to deployment and management of devices in education environments.
 ms.date: 11/09/2023
 ms.topic: tutorial
 ms.collection: essentials-get-started
@@ -19,7 +19,7 @@ This tutorial is intended for education professionals responsible for deploying 
 - Teachers
 - Microsoft partners
 
-This content provides a comprehensive path for schools to deploy and manage new Windows devices with Microsoft Intune. It includes step-by-step information how to manage devices throughout their lifecycle, and specific guidance for **Windows 11 SE** and **Surface devices**.
+This content provides a comprehensive path for schools to deploy and manage new devices with Microsoft Intune. It includes step-by-step information how to manage devices throughout their lifecycle, and specific guidance for **Windows 11 SE** and **Surface devices**.
 
 > [!NOTE]
 > Depending on your school setup scenario, you may not need to implement all steps.
@@ -39,9 +39,9 @@ Microsoft Intune services include:
 
 These services are part of the Microsoft 365 stack to help secure access, protect data, and manage risk.
 
-## Why Intune for Education?
+## Why Intune?
 
-Windows devices can be managed with Intune for Education, enabling simplified management of multiple devices from a single point.
+Devices can be managed with Intune, enabling simplified management of multiple devices from a single point.
 
 From enrollment, through configuration and protection, to resetting, Intune for Education helps school IT administrators manage and optimize the devices throughout their lifecycle:
 
@@ -58,8 +58,8 @@ In the remainder of this document, we'll discuss the key concepts and benefits o
 
 - **Identity management:** setting up and configuring the identity system, with Microsoft 365 Education and Microsoft Entra ID, as the foundation for user identity and authentication
 - **Initial setup:** setting up the Intune for Education environment for managing devices, including configuring settings, deploying applications, and defining updates cadence  
-- **Device enrollment:** Setting up Windows devices for deployment and enrolling them in Intune for Education
-- **Device reset:** Resetting managed devices with Intune for Education
+- **Device enrollment:** Setting up devices for deployment and enrolling them in Intune for Education
+- **Device reset:** Resetting managed devices with Intune
 
 ---
 
