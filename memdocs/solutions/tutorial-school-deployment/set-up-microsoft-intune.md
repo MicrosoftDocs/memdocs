@@ -16,6 +16,9 @@ The Microsoft Intune service can be managed in different ways, and one of them i
 
 **Intune for Education** supports the entire device lifecycle, from the enrollment phase through retirement. IT administrators can start managing classroom devices with bulk enrollment options and a streamlined deployment. At the end of the school year, IT admins can reset devices, ensuring they're ready for the next year.
 
+> [!TIP]
+> **Intune** and **Intune for Education** both configure the **Intune** service. Changes made in one console will be reflected in the other. However, **Intune for Education** only supports a subset of policies and apps curated to suit the majority of K-12 scenarios.
+
 For more information, see [Intune for Education documentation][INT-1].
 
 > [!div class="checklist"]
@@ -26,7 +29,7 @@ For more information, see [Intune for Education documentation][INT-1].
 
 ## Prerequisites
 
-Before configuring settings with Intune for Education, consider the following prerequisites:
+Before configuring settings with Intune, consider the following prerequisites:
 
 - **Intune subscription.** Microsoft Intune is licensed in three ways:
   - As a standalone service
@@ -62,6 +65,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 ### Disable Windows Hello for Business
 
 Windows Hello for Business is a biometric authentication feature that allows users to sign in to their devices using a PIN, password, or fingerprint. Windows Hello for Business is enabled by default on Windows devices, and to set it up, users must perform for multi-factor authentication (MFA). As a result, this feature may not be ideal for students, who may not have MFA enabled.
+
 It's suggested to disable Windows Hello for Business on Windows devices at the tenant level, and enabling it only for devices that need it, for example for teachers and staff devices.
 To disable Windows Hello for Business at the tenant level:
 

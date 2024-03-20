@@ -73,8 +73,6 @@ Consider using factory reset in the following example scenarios:
 > [!TIP]
 > Consider that once the device is wiped, the new user will go through OOBE. This option may be ideal if the device is also registered in Autopilot to make the OOBE experience seamless, or if you plan to use a provisioning package to re-enroll the device.
 
-::: zone pivot="windows"
-
 ### Autopilot Reset
 
 Autopilot Reset is ideal when all data on a device needs to be wiped, but the device remains enrolled in your tenant.
