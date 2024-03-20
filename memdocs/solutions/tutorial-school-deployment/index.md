@@ -6,13 +6,13 @@ ms.topic: tutorial
 ms.collection: essentials-get-started
 ---
 
-# Tutorial: deploy and manage Windows devices in a school
+# Tutorial: deploy and manage devices in a school
 
-This guide introduces the tools and services available from Microsoft to deploy, configure and manage Windows devices in an education environment.
+This guide introduces the tools and services available from Microsoft to deploy, configure and manage devices in an education environment.
 
 ## Audience and user requirements
 
-This tutorial is intended for education professionals responsible for deploying and managing Windows devices, including:  
+This tutorial is intended for education professionals responsible for deploying and managing devices, including:  
 
 - School leaders
 - IT administrators
@@ -29,12 +29,11 @@ This content provides a comprehensive path for schools to deploy and manage new 
 Historically, school IT administrators and educators have struggled to find an easy-to-use, flexible, and secure way to manage the lifecycle of the devices in their schools. In response, Microsoft has developed integrated suites of products for streamlined, cost-effective device lifecycle management.
 
 Microsoft 365 Education provides tools and services that enable simplified management of all devices through Microsoft Intune services. With Microsoft's solutions, IT administrators have the flexibility to support diverse scenarios, including school-owned devices and bring-your-own devices.
+
 Microsoft Intune services include:
 
 - [Microsoft Intune][MEM-1]
 - [Microsoft Intune for Education][INT-1]
-- [Configuration Manager][MEM-2]
-- [Desktop Analytics][MEM-3]
 - [Windows Autopilot][MEM-4]
 - [Surface Management Portal][MEM-5]
 
@@ -43,6 +42,7 @@ These services are part of the Microsoft 365 stack to help secure access, protec
 ## Why Intune for Education?
 
 Windows devices can be managed with Intune for Education, enabling simplified management of multiple devices from a single point.
+
 From enrollment, through configuration and protection, to resetting, Intune for Education helps school IT administrators manage and optimize the devices throughout their lifecycle:
 
 :::image type="content" source="./images/device-lifecycle.png" alt-text="The device lifecycle for Intune-managed devices" border="false":::
