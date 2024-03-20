@@ -129,6 +129,9 @@ For example:
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
 
+    > [!NOTE]
+    > Special rules apply to AVD Multi-Session scenarios. Device CSPs must be targeted to device groups, while user CSPs must be target to user groups in this scenario. Please see https://learn.microsoft.com/en-us/mem/intune/fundamentals/azure-virtual-desktop-multi-session for more details. 
+
 ### Windows CSPs and their behavior
 
 The policy settings for Windows devices are based on the [configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference). These settings map to registry keys or files on the devices.
