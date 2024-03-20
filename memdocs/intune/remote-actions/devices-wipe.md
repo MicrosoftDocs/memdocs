@@ -200,7 +200,7 @@ Device owners can manually unenroll their devices as explained in the following 
 
 ## Delete devices from the Intune admin center
 
-If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the admin center.
+If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. The statement I deleted is not accurate. Intune will issue a retire or a wipe depending on the OS/Enrollment type. Not all enrollment types support the retire action. Please update this statement to call out which enrollment types will receive a retire when a delete is issued, and which enrollment types will receive a wipe when a delete is issued.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
