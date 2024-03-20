@@ -48,6 +48,8 @@ The Cloud PC recommendations report is in [public preview](..\public-preview.md)
 
 To get to the **Cloud PC recommendations** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Cloud PC Overview** > **Cloud PC recommendations (preview)**.
 
+![Screenshot of Cloud PC recommendation report.](media/report-cloud-pc-recommendations/report-cloud-pc-recommendations.png)
+
 ## Overview tab
 
 The Overview tab starts with various Cloud PC insights.
