@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 03/20/2024
+ms.date: 03/21/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -154,7 +154,7 @@ Starting in September 2022, the Intune Connector for Active Directory (ODJ conne
 
 With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](/mem/intune/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](/mem/intune/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Autopilot ESP then continues.
 
 For more information, see [How to enroll to co-management with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
 

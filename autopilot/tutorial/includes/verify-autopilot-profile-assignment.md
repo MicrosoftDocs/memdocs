@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 03/20/2024
+ms.date: 03/21/2024
 ms.localizationpriority: medium
 ---
 
@@ -19,7 +19,7 @@ user-driven\hybrid-azure-ad-join-autopilot-profile.md
 
 Headings are driven by article context. -->
 
-Before deploying a device, ensure that an Autopilot profile has been assigned to a device group that the device is a member of. Autopilot profile assignment to a device can take some time after the Autopilot profile has been assigned to the device group or after the device has been added to the device group. To verify that the profile has been assigned to a device, follow these steps:
+Before deploying a device, ensure that an Autopilot profile is assigned to a device group that the device is a member of. Autopilot profile assignment to a device can take some time after the Autopilot profile is assigned to the device group or after the device is added to the device group. To verify that the profile is assigned to a device, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -37,11 +37,11 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
    2. Once the device is located, its current status is listed under the **Profile status** column. The status has one of the following values:
 
-       - **Not assigned**: The device hasn't been assigned an Autopilot deployment profile.
+       - **Not assigned**: An Autopilot deployment profile isn't assigned to the device.
 
-       - **Assigning**: The device is being assigned an Autopilot deployment profile.
+       - **Assigning**: An Autopilot deployment profile is being assigned to the device.
 
-       - **Assigned**: The device has been assigned an Autopilot deployment profile.
+       - **Assigned**: An Autopilot deployment profile is assigned to the device.
 
        - **Fix pending**:  When a hardware change occurs on a device, this status displays while Intune tries to register the new hardware. When the link for the **Fix pending** status is selected, the following message appears:
 
