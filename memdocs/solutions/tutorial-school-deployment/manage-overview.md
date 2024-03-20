@@ -35,6 +35,8 @@ With bulk actions, remote actions can be performed on multiple devices at once.
 
 To learn more about remote actions in Intune, see [Remote actions](/mem/intune/remote-actions/device-management).
 
+---
+
 ## Remote assistance
 
 With devices managed by Intune, you can remotely assist students and teachers that are having issues with their devices.
@@ -45,7 +47,7 @@ For more information, see [Remote assistance for managed devices - Intune for Ed
 
 With Intune, it's possible view and report on current devices, applications, settings, and overall health. You can also download reports to review or share offline.
 
-## [Intune For Education](#tab/intune-for-education)
+### [Intune For Education](#tab/intune-for-education)
 
 Here are the steps for generating reports in Intune for Education:
 
@@ -64,7 +66,7 @@ Here are the steps for generating reports in Intune for Education:
 
 To learn more about reports in Intune for Education, see [Reports in Intune for Education][EDU-3].
 
-## [Intune](#tab/intune)
+### [Intune](#tab/intune)
 
 Here are some examples of the reports available in Intune:
 - Device compliance reports
@@ -75,6 +77,8 @@ Here are some examples of the reports available in Intune:
 - Application reports
 
 To learn more about reports in Intune, see [Reports in Intune](/mem/intune/fundamentals/reports).
+
+---
 
 <!-- Reference links in article -->
 
