@@ -11,7 +11,6 @@ author: scottbreenmsft
 
 Before distributing devices to your users, you must ensure that the devices will be configured with the required policies, settings, and applications as they get enrolled in Intune.
 Microsoft Intune uses Microsoft Entra groups to assign policies and applications to devices.
-With Microsoft Intune for Education, you can conveniently create groups and assign policies and applications to them.
 
 > [!div class="checklist"]
 >In this section you will:
@@ -24,7 +23,7 @@ With Microsoft Intune for Education, you can conveniently create groups and assi
 
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
-By default, Intune for Education creates two default groups: *All devices* and *All users*.
+By default, Intune creates two default groups: *All devices* and *All users*.
 Two additional groups are pre-created if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
 :::image type="content" source="./images/intune-education-groups.png" alt-text="Intune for Education - Groups blade" border="true":::
@@ -36,14 +35,31 @@ Two group types can be created:
 - **Assigned groups** are used when you want to manually add users or devices to a group
 - **Dynamic groups** reference rules that you create to assign students or devices to groups, which automate the membership's maintenance of those groups
 
+::: zone pivot="windows"
+
 > [!TIP]
 > If you target applications and policies to a *device dynamic group*, they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+
+::: zone-end
+
+::: zone pivot="ios"
+
+> [!TIP]
+> If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+
+::: zone-end
+
+### [Intune for Education](#tab/intune-for-education)
 
 For more information, see:
 
 - [Create groups in Intune for Education][EDU-1]
 - [Manually add or remove users and devices to an existing assigned group][EDU-2]
 - [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
+
+### [Intune](#tab/intune)
+
+- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
 
 ________________________________________________________
 

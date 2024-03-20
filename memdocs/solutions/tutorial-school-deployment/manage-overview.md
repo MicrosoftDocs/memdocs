@@ -69,6 +69,7 @@ To learn more about reports in Intune for Education, see [Reports in Intune for 
 ### [Intune](#tab/intune)
 
 Here are some examples of the reports available in Intune:
+
 - Device compliance reports
 - Device configuration reports
 - Device enrollment reports

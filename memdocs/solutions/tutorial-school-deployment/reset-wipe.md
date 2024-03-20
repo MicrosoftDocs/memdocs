@@ -68,6 +68,8 @@ Consider using factory reset in the following example scenarios:
 - You need to reassign the device to a different student, and you want to reset the device to its original settings
 - You're returning a device to the service center, and you want to remove all data and settings from the device
 
+::: zone pivot="windows"
+
 > [!TIP]
 > Consider that once the device is wiped, the new user will go through OOBE. This option may be ideal if the device is also registered in Autopilot to make the OOBE experience seamless, or if you plan to use a provisioning package to re-enroll the device.
 
@@ -92,9 +94,6 @@ Here are the steps to perform a factory reset from Intune:
 
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 
-::: zone-end
-
-::: zone pivot="windows"
 :::image type="content" source="./images/win11-autopilot-reset.png" alt-text="Three screenshots showing the device being wiped, ending up in the login screen" border="false":::
 
 Consider using Autopilot reset in the following example scenarios:
@@ -149,6 +148,12 @@ Repairing Autopilot-enrolled devices can be complex, as OEM requirements must be
 1. Return the device
 
 For more information, see [Autopilot motherboard replacement scenario guidance][MEM-4].
+
+::: zone-end
+
+::: zone pivot="ios"
+
+Anyone thing of any iOS considerations?
 
 ::: zone-end
 
