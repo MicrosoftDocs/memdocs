@@ -35,23 +35,15 @@ Two group types can be created:
 - **Assigned groups** are used when you want to manually add users or devices to a group
 - **Dynamic groups** reference rules that you create to assign students or devices to groups, which automate the membership's maintenance of those groups
 
-::: zone pivot="windows"
-
 > [!TIP]
-> If you target applications and policies to a *device dynamic group*, they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
-
-::: zone-end
-
-::: zone pivot="ios"
-
-> [!TIP]
-> If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
-
-::: zone-end
-
-### [Intune for Education](#tab/intune-for-education)
+> **For Windows devices:**
+> If you target applications and policies to a *device dynamic group* based on Group Tag, they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+> **For iOS devices:**
+> - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
 For more information, see:
+
+### [Intune for Education](#tab/intune-for-education)
 
 - [Create groups in Intune for Education][EDU-1]
 - [Manually add or remove users and devices to an existing assigned group][EDU-2]

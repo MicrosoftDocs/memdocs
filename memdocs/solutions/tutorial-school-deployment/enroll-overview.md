@@ -57,8 +57,8 @@ Select one of the following options to learn the next steps about the enrollment
 
 ::: zone pivot="ios"
 > - [Company Portal](enroll-ios-company-portal.md)
-> - [utomated Device Enrollment](enroll-ios-ade.md)
-> - [pple Configurator](enroll-ios-apple-configurator.md)
+> - [Automated Device Enrollment](enroll-ios-ade.md)
+> - [Apple Configurator](enroll-ios-apple-configurator.md)
 ::: zone-end
 
 <!-- Reference links in article -->

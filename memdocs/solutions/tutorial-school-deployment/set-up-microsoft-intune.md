@@ -17,7 +17,7 @@ The Microsoft Intune service can be managed in different ways, and one of them i
 **Intune for Education** supports the entire device lifecycle, from the enrollment phase through retirement. IT administrators can start managing classroom devices with bulk enrollment options and a streamlined deployment. At the end of the school year, IT admins can reset devices, ensuring they're ready for the next year.
 
 > [!TIP]
-> **Intune** and **Intune for Education** both configure the **Intune** service. Changes made in one console will be reflected in the other. However, **Intune for Education** only supports a subset of policies and apps curated to suit the majority of K-12 scenarios.
+> **Intune** and **Intune for Education** both configure the **Intune** service. Changes made in one console will be reflected in the other. However, **Intune for Education** only supports a subset of policies and apps curated to suit simple K-12 scenarios.
 
 For more information, see [Intune for Education documentation][INT-1].
 
@@ -35,7 +35,8 @@ Before configuring settings with Intune, consider the following prerequisites:
   - As a standalone service
   - As part of [Enterprise Mobility + Security][MSFT-1]
   - As part of a [Microsoft 365 Education subscription][MSFT-2]
-- **Device platform.** Intune for Education can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, iOS, and iPad OS
+- **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, iOS, and iPad OS
+- **Intune device platforms.** Intune can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, iOS, iPadOS, macOS, Android and Linux
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
 
@@ -47,11 +48,11 @@ The Intune service can be configured in different ways, depending on the needs o
 
 With enrollment restrictions, you can prevent certain types of devices from being enrolled and therefore managed by Intune. For example, you can prevent the enrollment of devices that are not owned by the school.
 
-To block personally owned Windows devices from enrolling:
+To block personally owned devices from enrolling:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** > **Enroll devices** > **Enrollment device platform restrictions**
-1. Select the **Windows restrictions** tab
+1. Select the tab for the platform you want to restrict
 1. Select **Create restriction**
 1. On the **Basics** page, provide a name for the restriction and, optionally, a description > **Next**
 1. On the **Platform settings** page, in the **Personally owned devices** field, select **Block** > **Next**
