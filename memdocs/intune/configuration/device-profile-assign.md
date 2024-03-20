@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2024
+ms.date: 03/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -129,8 +129,11 @@ For example:
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
 
-    > [!NOTE]
-    > Special rules apply to AVD Multi-Session scenarios. Device CSPs must be targeted to device groups, while user CSPs must be target to user groups in this scenario. Please see https://learn.microsoft.com/en-us/mem/intune/fundamentals/azure-virtual-desktop-multi-session for more details. 
+### Azure Virtual Desktop multi-session
+
+You can use Intune to manage Windows multi-session remote desktops created with Azure Virtual Desktop, just like you manage any other shared Windows client device. When you assign policies to user groups or devices, Azure Virtual Desktop multi-session is a special scenario. When using these virtual machines, device CSPs must target device groups. User CSPs must target user groups.
+
+For more information, go to [Use Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ### Windows CSPs and their behavior
 
