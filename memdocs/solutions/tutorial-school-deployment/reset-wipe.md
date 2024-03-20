@@ -3,9 +3,14 @@ title: Reset and wipe Windows devices
 description: Learn about the reset and wipe options for Windows devices using Intune for Education, including scenarios when to delete devices.
 ms.date: 11/09/2023
 ms.topic: tutorial
+zone_pivot_groups: platforms-windows-ios
+author: scottbreenmsft
+ms.author: scbree
 ---
 
-# Device reset options
+# Reset and wipe devices
+
+## Device reset options
 
 There are different scenarios that require a device to be reset, for example:
 
@@ -17,12 +22,15 @@ There are different scenarios that require a device to be reset, for example:
 
 :::image type="content" source="./images/retire.png" alt-text="The device lifecycle for Intune-managed devices - retirement" border="false":::
 
+# [Intune For Education](#tab/intune-for-education)
 Intune for Education provides two device reset functionalities that enable IT administrators to remotely execute them:
 
 - **Factory reset** (also known as **wipe**) is used to wipe all data and settings from the device, returning it to the default factory settings
+::: zone pivot="windows"
 - **Autopilot reset** is used to return the device to a fully configured or known IT-approved state
+::: zone-end
 
-## Factory reset (wipe)
+### Factory reset (wipe)
 
 A factory reset, or a wipe, reverts a device to the original settings when it was purchased. All settings, applications and data installed on the device after purchase are removed. The device is also removed from Intune management.
 
@@ -35,7 +43,9 @@ Here are the steps to perform a factory reset from Intune for Education:
 1. Select the device you want to reset > **Factory reset**
 1. Select **Factory reset** to confirm the action
 
+::: zone pivot="windows"
 :::image type="content" source="./images/win11-wipe.png" alt-text="Three screenshots showing the device being wiped, ending up in OOBE" lightbox="./images/win11-wipe.png" border="false":::
+::: zone-end
 
 Consider using factory reset in the following example scenarios:
 
@@ -47,7 +57,9 @@ Consider using factory reset in the following example scenarios:
 > [!TIP]
 > Consider that once the device is wiped, the new user will go through OOBE. This option may be ideal if the device is also registered in Autopilot to make the OOBE experience seamless, or if you plan to use a provisioning package to re-enroll the device.
 
-## Autopilot Reset
+::: zone pivot="windows"
+
+### Autopilot Reset
 
 Autopilot Reset is ideal when all data on a device needs to be wiped, but the device remains enrolled in your tenant.
 
@@ -71,6 +83,11 @@ Consider using Autopilot reset in the following example scenarios:
 > [!TIP]
 > Consider that the end user will **not** go through OOBE, and the association of the user to  the device in Intune doesn't change. For this reason, this option may be ideal for devices that have been enrolled in Intune as *shared devices* (for example, a device that was enrolled with a provisioning package or using Autopilot self-deploying mode).
 
+::: zone-end
+
+# [Intune](#tab/intune)
+Insert Intune content here.
+
 ## Wiping and deleting a device
 
 There are scenarios that require a device to be deleted from your tenant, for example:
@@ -84,9 +101,19 @@ There are scenarios that require a device to be deleted from your tenant, for ex
 
  To completely remove a device, you need to perform the following actions:
 
+# [Intune For Education](#tab/intune-for-education)
+
 1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1]
+::: zone pivot="windows"
 1. If the device is registered in Autopilot, delete the Autopilot object using [these steps][MEM-2]
+::: zone-end
 1. Delete the device from Microsoft Entra ID using [these steps][MEM-3]
+
+# [Intune](#tab/intune)
+
+Instructions here for Intune delete.
+
+::: zone pivot="windows"
 
 ## Autopilot considerations for a motherboard replacement scenario
 
@@ -102,6 +129,8 @@ Repairing Autopilot-enrolled devices can be complex, as OEM requirements must be
 1. Return the device
 
 For more information, see [Autopilot motherboard replacement scenario guidance][MEM-4].
+
+::: zone-end
 
 <!-- Reference links in article -->
 
