@@ -34,7 +34,7 @@ With Microsoft Intune **Endpoint Privilege Management (EPM)** your organizationâ
 
 This article explains how to use the **support approved** file *elevation type* in your Endpoint Privilege Management [Windows elevation rules policies](../protect/epm-policies.md#windows-elevation-rules-policy).
 
-The support-approved elevation process gives you more control over sensitive files than other elevation rule types, but it also requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
+Support-approved elevation gives you more control over sensitive files than other elevation rule types, but it also requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
 
 When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is informed, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
 
@@ -60,7 +60,7 @@ The following subjects are details to plan for and expect when you use the suppo
   - The prompt lets the user enter a business reason for the elevation. This reason becomes part of the elevation request, which also contains the user's name, device, and file name.
   - When the user sends the request, it goes to the Intune admin center where an Intune admin with permissions to manage these requests decides to approve or deny it.
 
-  The following image displays an example of the file elevation prompt that users experience:
+  The following image shows an example of the file elevation prompt that users experience:
 
   :::image type="content" source="./media/epm-support-approved/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/epm-support-approved/user-prompt.png":::
 
@@ -72,7 +72,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
   Admins who can manage requests for elevation can accept or reject a request. They can also provide a reason for their decision. This reason becomes part of the audit record for the request.
 
-  - **For approvals**: When an admin approves an elevation request, Intune sends a policy to the device where the user submitted the request, which enables that user to run the file as elevated for the next 24 hours. This period begins at the time the admin approves the request. There's no current support for a custom time period and, or revocation of the approved elevation before the 24-hour period expires.
+  - **For approvals**: When an admin approves an elevation request, Intune sends a policy to the device where the user submitted the request, which enables that user to run the file as elevated for the next 24 hours. This period begins at the time the admin approves the request. There's no current support for a custom time period or cancellation of the approved elevation before the 24-hour period expires.
 
     Because approval isn't immediate, Intune also uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
 
