@@ -14,7 +14,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -548,7 +547,7 @@ You can customize and set a standard start and taskbar layout using Intune.
 - **For Windows 11**:
 
   - To create and apply a Start menu layout, go to [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11).
-  - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11).
+  - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/taskbar/configure).
 
 ### Settings catalog
 
