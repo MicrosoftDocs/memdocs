@@ -58,6 +58,7 @@ The following subjects are details to plan for and expect when you use the suppo
   When a user runs a file with the right-click option *Run with elevated access*, and that file is managed by policy with a *support approved* elevation rule, Intune shows the user a prompt for sending an elevation request to the Intune admin center.
 
   - The prompt lets the user enter a business reason for the elevation. This reason becomes part of the elevation request, which also contains the user's name, device, and file name.
+
   - When the user sends the request, it goes to the Intune admin center where an Intune admin with permissions to manage these requests decides to approve or deny it.
 
   The following image shows an example of the file elevation prompt that users experience:
