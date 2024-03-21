@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/18/2024
+ms.date: 03/21/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -101,7 +101,7 @@ This section describes the compliance profile settings available for fully manag
 > Google Play Protect works in locations where Google Mobile Services is available. Devices operating in regions or countries where Google Mobile Services isn't available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services isn't available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).  
 
 - **Play Integrity Verdict**  
-    Select the type of integrity checks devices must pass to stay compliant. Intune evaluates Google Play's integrity verdict to determine compliance. Your options:   
+    Select the type of integrity checks devices must pass to stay compliant. Intune evaluates Play's integrity verdict to determine compliance. Your options:   
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
@@ -147,7 +147,7 @@ This section describes the compliance profile settings available for fully manag
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
   - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a device password by default, so it's better to select a different password type for greater control and consistency across all devices.  
-  - **Password required, no restrictions**  
+  - **Password required, no restrictions**   
   - **Weak biometric** - For more information about this password type, see [strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android Developers Blog).  
   - **Numeric** (*default*) - Password must only be numbers, such as `123456789`. 
   - **Numeric complex** -  Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.  
@@ -181,12 +181,12 @@ This section describes the compliance profile settings available for fully manag
     Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
 
   - **Number of days until password expires**  
-    Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
+    Enter the number of days, between 1 and 365, until the device password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.  
 
     *By default, no value is configured*.
 
   - **Number of passwords required before user can reuse a password**  
-    Enter the number of recent passwords that can't be reused, between 1-24. Use this setting to restrict the user from creating previously used passwords.  
+    Enter the number of recent passwords that can't be reused, between 1 and 24. Use this setting to restrict the user from creating previously used passwords.  
 
     *By default, no version is configured*.
 
@@ -244,19 +244,18 @@ This section describes the compliance profile settings available for personal de
 
 - **Google Play Services is configured**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Require** - Require that the Google Play services app is installed and enabled. Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices.
+  - **Require** - Require that the Google Play services app is installed and enabled. The Google Play services app enables security updates, and is a base-level dependency for many security features on certified-Google devices.
   
 - **Up-to-date security provider**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
 - **Play Integrity Verdict**  
-    Select the type of integrity checks devices must pass to stay compliant. Intune evaluates Google Play's integrity verdict to determine compliance. Your options:  
+    Select the type of integrity checks devices must pass to stay compliant. Intune evaluates Play's integrity verdict to determine compliance. Your options:  
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.  
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.  
   - **Check basic integrity & device integrity**: Require devices to pass Play's basic integrity check and device integrity check.  
-  
 
 - **Check strong integrity using hardware-backed security features**  
   Optionally, you can require devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:   
@@ -266,11 +265,12 @@ This section describes the compliance profile settings available for personal de
 
   For more information about Google Play's integrity services, see these Android developer docs:  
     
-  - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)    
+  - [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity)
+  
   - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)   
   
-> [!NOTE]
-> **Threat scan on apps** is available as a device configuration policy on Android Enterprise devices. You can enable this setting on devices by using a configuration policy. For more information, see [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).  
+> [!TIP]
+> Intune also has a policy that requires Play Protect to scan installed apps for threats. You can configure this setting in an Android Enterprise device configuration policy under **Device restrictons** > **System security**. For more information, see [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).  
 
 
 ### Device properties - *for personally owned work profile*
@@ -296,7 +296,7 @@ When a device is using an OS version later than the version in the rule, access 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.  
   - **Require** -  Encrypt data storage on your devices.  
 
-  You don't have to configure this setting because Android Enterprise devices enforce encryption.
+  You don't have to configure this setting because Android Enterprise devices enforce encryption.  
 
 
 #### Device security - *for personally owned work profile*
@@ -305,10 +305,10 @@ When a device is using an OS version later than the version in the rule, access 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Block** - Block devices with **Security** > **Unknown Sources** enabled sources (*supported on Android 4.0 through Android 7.x. Not supported by Android 8.0 and later*).  
 
-  To side-load apps, unknown sources must be allowed. If you're not side-loading Android apps, then set this feature to **Block** to enable this compliance policy.
+  To side-load apps, unknown sources must be allowed. If you're not side-loading Android apps, then set this feature to **Block** to enable this compliance policy.  
 
   > [!IMPORTANT]
-  > Side-loading applications require that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not side-loading Android apps on devices.
+  > Side-loading applications require that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not side-loading Android apps on devices. 
 
   You don't have to configure this setting as Android Enterprise devices always restrict installation from unknown sources.
 
@@ -335,10 +335,10 @@ When a device is using an OS version later than the version in the rule, access 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device.  
 
-  This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. For more information, see [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).  
+  This setting applies at the device level. If you only require a password at the work profile level, use a configuration policy. For more information, see [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).  
 
 > [!IMPORTANT]
-> When a personally-owned work profile is enabled, the device and work profile passcodes are combined by default so that the same passcode is used for both places. Intune enforces the higher complexity level of the two. The device user can use two separate passcodes if they go to their work profile settings and deselect **Use one lock**. To ensure that device users use two separate passcodes upon enrollment create a device configuration profile that restricts device users from using one lock.  
+> When a personally-owned work profile is enabled, the device and work profile passcodes are combined by default so that the same passcode is used in both places. Intune enforces the higher complexity level of the two. The device user can use two separate passcodes if they go to their work profile settings and deselect **Use one lock**. To ensure that device users use two separate passcodes upon enrollment create a device configuration profile that restricts device users from using one lock.  
 > 
 > 1. In the admin center, create a device configuration profile.   
 > 2. For profile type, select **Device restrictions**.  
@@ -391,7 +391,7 @@ When a device is using an OS version later than the version in the rule, access 
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
 
 
-#### Android 11 and earlier - *device security*  
+##### Android 11 and earlier - *device security*  
 
 > [!IMPORTANT]
 > Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects passwords on new and existing devices, see [Android 12 and later - device security](#android-12-and-later---device-security) in this article.     
@@ -408,7 +408,7 @@ When a device is using an OS version later than the version in the rule, access 
   - **At least alphanumeric with symbols**: Require uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols. 
 
 - **Minimum password length**  
-    If required for your password type, enter the minimum length a password must be, between 4 and 16 characters. 
+    This setting appears for certain password types. Enter the minimum number of characters required, between 4 and 16 characters.  
 
 #### Work profile security - *for personally owned work profile*  
 If you don't configure password requirements, the use of a work profile password is optional and left up to users to configure.  
@@ -418,7 +418,7 @@ If you don't configure password requirements, the use of a work profile password
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password to access their work profile.
 
-#### All Android devices - *work profile security*  
+##### All Android devices - *work profile security*  
 
 - **Number of days until password expires**  
   Enter the number of days, between 1-365, until the work profile password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.  
@@ -429,7 +429,7 @@ If you don't configure password requirements, the use of a work profile password
 - **Maximum minutes of inactivity before password is required**  
   Enter the maximum idle time allowed, from 1 minute to 8 hours. After this amount of time, the user must re-enter their password to get back into their work profile. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.  
 
-#### Android 12 and later - *work profile security*  
+##### Android 12 and later - *work profile security*  
 
 - **Password complexity**  
   Select the password complexity requirement for work profiles on devices running Android 12 and later. Your options:  
@@ -462,7 +462,7 @@ If you don't configure password requirements, the use of a work profile password
   > 
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.  
 
-#### Android 11 and earlier - *work profile security*   
+##### Android 11 and earlier - *work profile security*   
 These passwords settings apply to devices running Android 11 and earlier.  
 
 > [!IMPORTANT]
@@ -477,9 +477,8 @@ These passwords settings apply to devices running Android 11 and earlier.
   - **At least alphabetic**: Require letters from the alphabet. Numbers and symbols aren't required.       
   - **At least alphanumeric**: Require uppercase letters, lowercase letters, and numeric characters.  
   - **At least alphanumeric with symbols**: Require uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.  
-
 - **Minimum password length**  
-    If required for your password type, enter the minimum length a work profile password must be, between 4 and 16 characters.  
+    This setting appears for certain password types. Enter the minimum number of characters required, between 4 and 16 characters.  
 
 ## Next steps
 
