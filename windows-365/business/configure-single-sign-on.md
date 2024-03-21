@@ -42,15 +42,15 @@ To enable SSO using Microsoft Entra ID authentication, there are four tasks you 
 
 1. Review your conditional access policies.
 
-1. Configure your organizational settings to enable single sign-on.
+1. Configure your organizational settings to enable SSO.
 
-## Before enabling single sign-on
+## Before enabling SSO
 
-Before you enable single sign-on, review the following information for using it in your environment.
+Before you enable SSO, review the following information for using it in your environment.
 
 ### Disconnection when the session is locked
 
-When single sign-on is enabled, users sign in to Windows using a Microsoft Entra ID authentication token, which provides support for passwordless authentication to Windows. The Windows lock screen in the remote session doesn't support Microsoft Entra ID authentication tokens or passwordless authentication methods, like FIDO keys, which means:
+When SSO is enabled, users sign in to Windows using a Microsoft Entra ID authentication token, which provides support for passwordless authentication to Windows. The Windows lock screen in the remote session doesn't support Microsoft Entra ID authentication tokens or passwordless authentication methods, like FIDO keys, which means:
 
 - Users can't unlock their screens in a remote session.
 - When someone tries to lock a remote session, either through user action or system policy, the session is instead disconnected and the service sends a message to the user explaining they were disconnected.
@@ -59,7 +59,7 @@ Disconnecting the session also ensures that when the connection is relaunched af
 
 ## Prerequisites
 
-Before you can enable single sign-on, you must meet the following prerequisites:
+Before you can enable SSO, you must meet the following prerequisites:
 
 - To configure your Microsoft Entra tenant, you must be assigned one of the following [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/manage-roles-portal):
   - [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)
@@ -137,9 +137,9 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
 
 ## Configure the target device groups
 
-After you enable Microsoft Entra authentication for RDP, you must configure the target device groups. By default when enabling single sign-on, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new session host. Microsoft Entra remembers up to 15 hosts for 30 days before prompting again. If you see a dialogue to allow the Remote Desktop connection, select **Yes** to connect.
+After you enable Microsoft Entra authentication for RDP, you must configure the target device groups. By default when enabling SSO, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new session host. Microsoft Entra remembers up to 15 hosts for 30 days before prompting again. If you see a dialogue to allow the Remote Desktop connection, select **Yes** to connect.
 
-You can hide this dialog and provide single sign-on for connections to all your session hosts by configuring a list of trusted devices. You need to create one or more groups in Microsoft Entra ID that contains your session hosts, then set a property on the service principals for the same *Microsoft Remote Desktop* and *Windows Cloud Login* applications, as used in the previous section, for the group.
+You can hide this dialog and provide SSO for connections to all your session hosts by configuring a list of trusted devices. You need to create one or more groups in Microsoft Entra ID that contains your session hosts, then set a property on the service principals for the same *Microsoft Remote Desktop* and *Windows Cloud Login* applications, as used in the previous section, for the group.
 
 > [!TIP]
 > We recommend you use a dynamic group and configure the dynamic membership rules to includes all your Cloud PCs. You can use the device names in this group, but for a more secure option, you can set and use [device extension attributes](/graph/extensibility-overview) using [Microsoft Graph API](/graph/api/resources/device). While dynamic groups normally update within 5-10 minutes, large tenants can take up to 24 hours.
@@ -184,8 +184,10 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
 
 ## Review your conditional access policies
 
-When single sign-on is enabled, a new Microsoft Entra ID app is introduced to authenticate users to the session host. If you have conditional access policies that apply when accessing Windows 365, review the recommendations to [set conditional access policies](set-conditional-access-policies.md) for Windows 365 to ensure users have the desired experience and to secure your environment.
+When SSO is turned on, a new Microsoft Entra ID app is introduced to authenticate users to the session host. If you have conditional access policies that apply when accessing Windows 365, review the recommendations to [set conditional access policies](set-conditional-access-policies.md) for Windows 365 to make sure users have the desired experience and to secure your environment.
 
-## Configure your organizational settings to enable single sign-on
+## Turn on SSO for all Cloud PCs in your account
 
-SSO can be enabled using the **Single sign-on** option under the **Cloud PC settings** group in your [organizational settings](change-organization-default-settings.md). When enabled, the setting applies to all your Cloud PCs.
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an account that has either a Global Administrator or Windows 365 Administrator role.
+2. Select **Your organization’s Cloud PCs** > **Update organization settings**.
+3. Select the **Single sign-on** option under **Cloud PC settings**.
