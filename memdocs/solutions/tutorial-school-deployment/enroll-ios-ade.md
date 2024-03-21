@@ -1,6 +1,6 @@
 ---
-title: Enrollment in Intune with standard out-of-box experience (OOBE)
-description: Learn how to join devices to Microsoft Entra ID from OOBE and automatically get them enrolled in Intune.
+title: EEnroll devices with Automated Device Enrollment
+description: Learn how to automatically enroll devices through Apple School Manager with Automated Device Enrollment during Setup Assistant on iOS/iPadOS devices.
 ms.date: 11/09/2023
 ms.topic: tutorial
 author: scottbreenmsft

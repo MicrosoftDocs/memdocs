@@ -1,6 +1,6 @@
 ---
-title: Enrollment in Intune with standard out-of-box experience (OOBE)
-description: Learn how to join devices to Microsoft Entra ID from OOBE and automatically get them enrolled in Intune.
+title: Enroll devices with Company Portal
+description: Learn how enroll iOS/iPadOS devices using Company Portal.
 ms.date: 11/09/2023
 ms.topic: tutorial
 author: scottbreenmsft
