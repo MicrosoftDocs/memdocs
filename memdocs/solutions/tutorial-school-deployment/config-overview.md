@@ -7,8 +7,6 @@ author: scottbreenmsft
 ms.author: scbree
 ---
 
-# Simplfiied configuration overview
-
 ::: zone pivot="windows"
 
 Information here.
