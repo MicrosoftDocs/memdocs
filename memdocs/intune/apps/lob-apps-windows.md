@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 
 # optional metadata

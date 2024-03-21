@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 
 # optional metadata
