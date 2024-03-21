@@ -32,18 +32,20 @@ ms.collection:
 
 With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
-When you use the *support approved* file elevation type for Endpoint Privilege Management (EPM), Intune prompts a device user to submit a request when they attempt to run a file in an administrator context. An Intune admin must review and approve the elevation request before the file is eligible to run by the user in the elevated context. To approve requests, an admins account must have extra permissions that are specific to the review and approval task.
+This article explains how to use the **support approved** file *elevation type* in your Endpoint Privilege Management [Windows elevation rules policies](../protect/epm-policies.md#windows-elevation-rules-policy).
 
-The support-approved elevation process provides you with more control for sensitive files. With this elevation type you can manage which files you allow to run as elevated on a case-by-case basis.
+The support-approved elevation process gives you more control over sensitive files than other elevation rule types, but it also requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
+
+When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is informed, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
 
 Applies to:
 
 - Windows 10
 - Windows 11
 
-## About support approved elevation requests
+## About support approved elevations
 
-EPM elevation rule policies that you configure for *support approved* elevations are similar to those created for the other elevation types. They have a few differences that can require extra planning.
+Use EPM policies with the *support approved* elevation type for files that need an admin's approval before they can run with higher access. They're similar to other EPM  elevation rules, but they have some differences that need extra planning.
 
 > [!TIP]
 >
@@ -53,22 +55,22 @@ The following subjects are details to plan for and expect when you use the suppo
 
 - **Elevation requests**
 
-  When a user invokes the right-click option **Run with elevated access** for a file managed by a support approved elevation rule, Intune opens a prompt for submitting an elevation request to the Intune admin center.
+  When a user runs a file with the right-click option *Run with elevated access*, and that file is managed by policy with a *support approved* elevation rule, Intune shows the user a prompt for sending an elevation request to the Intune admin center.
 
-  - The prompt provides space for the user to specify a business justification for the file elevation. This justification becomes part of the file elevation request, which also includes the user's name, device, and the file name.
-  - When the user submits the request, it appears in the Intune admin center where an Intune admin with sufficient rights to manage these requests can review and choose to approve or deny the request.
+  - The prompt lets the user enter a business reason for the elevation. This reason becomes part of the elevation request, which also contains the user's name, device, and file name.
+  - When the user sends the request, it goes to the Intune admin center where an Intune admin with permissions to manage these requests decides to approve or deny it.
 
   The following image displays an example of the file elevation prompt that users experience:
 
   :::image type="content" source="./media/epm-support-approved/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/epm-support-approved/user-prompt.png":::
 
-- **Administrative review**
+- **Review of elevation requests**
 
-  Only an Intune admin who’s account has *view* and *manage* rights for the Intune **Endpoint Privilege Management Elevation Requests** permission can review and approval elevation requests.
+  An Intune admin must have *view* and *manage* rights for the **Intune Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests.
 
-  To discover and act on requests, applicable admins use the **Elevation requests** tab of the Endpoint Privilege Management page in the admin center. Because Intune doesn’t have a method to alert admins to the presence of active elevation requests, admins should plan to periodically review the tab for pending requests.
+  To find and respond to requests, these admins use the **Elevation requests** tab of the *Endpoint Privilege Management* page in the admin center. Because Intune doesn't have a way to notify admins about new elevation requests, admins should plan to check the tab regularly for pending requests.
 
-  Admins who can manage requests for elevation can approve or deny the request, and specify a justification for their decision. This justification becomes part of the audit record for the request.
+  Admins who can manage requests for elevation can accept or reject a request. They can also provide a reason for their decision. This reason becomes part of the audit record for the request.
 
   - **For approvals**: When an admin approves an elevation request, Intune sends a policy to the device where the user submitted the request, which enables that user to run the file as elevated for the next 24 hours. This period begins at the time the admin approves the request. There's no current support for a custom time period and, or revocation of the approved elevation before the 24-hour period expires.
 
@@ -76,17 +78,17 @@ The following subjects are details to plan for and expect when you use the suppo
 
   - **For denials**: Intune sends a notification to the user on the device that the request was denied, and the user can’t run that file in an elevated context. The can submit a new request, which is again subject to review and approval.
 
-- **Auditing for support approved elevation requests**
+- **Auditing for elevation requests**
 
-  An Intune admin with sufficient permissions can view details about EPM policy including creation, editing, and the management of elevation requests in the [Intune Audit logs](../fundamentals/monitor-audit-logs.md), available at **Tenant administration** > **Audit logs**.
+  An Intune admin who has enough permissions can view information about EPM policy such as creation, editing, and the handling of elevation requests in the [Intune Audit logs](../fundamentals/monitor-audit-logs.md), available at **Tenant administration** > **Audit logs**.
 
-  The following screen capture displays an example of the audit log for the duplication of a *Support approved* elevation policy, originally named *Test policy - support approved*:
+  The following screen capture shows an example of the audit log for the duplication of a *Support approved* elevation policy, originally named *Test policy - support approved*:
 
   :::image type="content" source="./media/epm-support-approved/sample-audit-log.png" alt-text="Image that displays an audit log entry for a support approved elevation rules policy." lightbox="./media/epm-support-approved/sample-audit-log.png":::
 
 ## RBAC permissions for elevation requests
 
-To provide oversight for elevation approvals, only Intune administrators who have the following role-based access control (RBAC) permissions in Intune can view and approve elevation requests:
+To provide oversight for elevation approvals, only Intune administrators who have the following role-based access control (RBAC) permissions in Intune can view and manage elevation requests:
 
 - **Endpoint Privilege Management Elevation Requests** - This permission is required to work with elevation requests that are submitted by users for approval, and supports the following rights:
 
@@ -101,7 +103,7 @@ To create support-approved elevation policy, use the same workflow for creating 
 
 ### Manage pending elevation requests
 
-Use the following as guidance when reviewing and managing elevation requests.
+Use the following procedure as guidance when reviewing and managing elevation requests.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > **Elevation requests** tab.
 2. *Pending*
