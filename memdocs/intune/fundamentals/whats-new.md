@@ -222,7 +222,7 @@ For more information about installing an expedited update, see [Expedite Windows
 
 ### Device security
 
-#### Use a rootless implementation of Podman to hose Microsoft Tunnel<!-- 24836716 -->
+#### Use a rootless implementation of Podman to host Microsoft Tunnel<!-- 24836716 -->
 
 When prerequisites are met, you now have the option to use a rootless Podman container to host a Microsoft Tunnel server. This capability is available when you use [Podman for Red Hat Enterprise Linux (RHEL)](../protect/microsoft-tunnel-prerequisites.md#linux-server) version 8.8 or later, to host Microsoft Tunnel.
 
