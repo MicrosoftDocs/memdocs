@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 03/07/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -100,7 +100,9 @@ This feature applies to:
 
   - Add the **RSAT: Group Policy Management Tools**:
   
-    1. Open the **Settings** app > __System__ > **Optional features** > **Add feature** (if on a version older than Windows 10 22H2, navigate to **Settings** > **Apps** > **Apps & features** > **Optional features** > **Add feature** instead).
+    1. Open the **Settings** app > **System** > **Optional features** > **Add feature**.
+
+        If you use a version older than Windows 10 22H2, go to **Settings** > **Apps** > **Apps & features** > **Optional features** > **Add feature**.
         
     1. Select **RSAT: Group Policy Management Tools** > **Add**.
     

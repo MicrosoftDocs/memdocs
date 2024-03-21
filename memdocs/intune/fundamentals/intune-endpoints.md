@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/1/2024
+ms.date: 03/6/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -103,6 +103,7 @@ ID |Desc |Category |ER |Addresses |Ports
 
 ID |Desc |Category |ER |Addresses |Ports|
 -- |-- |-----|--- |--------------|--------------------------------|
+97 | Consumer Outlook.com and OneDrive | Default<BR> | False | `account.live.com`<BR> |**TCP:** 443  |
 164 | Autopilot - Windows Update| Default<BR>Required | False | `*.download.windowsupdate.com`<BR>`*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`au.download.windowsupdate.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`download.windowsupdate.com`<BR>`dl.delivery.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`catalog.update.microsoft.com`<BR> | **TCP:** 443|
 165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com`<BR>`www.msftncsi.com`<BR>`www.msftconnecttest.com` | |
 169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`www.msftncsi.com`<BR>`c.s-microsoft.com` |  |
@@ -409,7 +410,7 @@ For communication between clients and the cloud service:
 
 ## Microsoft Intune Endpoint Privilege Management
 
-Allow the following hostnames through your firewall to support Endpoint Privilege Management.
+Allow the following hostnames on tcp port 443 through your firewall to support Endpoint Privilege Management.
 
 For communication between clients and the cloud service:
 

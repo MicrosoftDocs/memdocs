@@ -182,10 +182,12 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    * **Prefill account info**: The default configuration, **Not configured**, requires the device user to enter their account username and full name in Setup Assistant. To prefill the account information for them instead, select **Yes**.  Then enter the primary account name and full name:   
      * **Primary account name**: Enter the username for the account. `{{partialupn}}` is the supported token variable for *account name*.    
      * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*.   
-   * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**.   
+   * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**. If you're only using Setup Assistant (legacy) to enroll devices running macOS 10.15 and later, you can expect the following end user experience:   
+     * **Yes**: The account creation screen in Setup Assistant never appears. Instead, the local primary account is automatically created based on the other setting configurations, and the password is automatically populated from the Entra ID authentication screen. The device user can't edit these fields.           
+     * **Not configured**: The local primary account screen is shown to the end user in Setup Assistant and is populated with the configured account values, and the password from the Entra ID authentication screen. The device user can edit these fields during Setup Assistant.   
 
    For account settings to work as intended, your enrollment profile must have the following configurations:      
-    * **User affinity**: Select **Enroll with User affinity**.     
+   * **User affinity**: Select **Enroll with User affinity**.     
    * **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.   
    * **Await final configuration**: Select **Yes**.       
 

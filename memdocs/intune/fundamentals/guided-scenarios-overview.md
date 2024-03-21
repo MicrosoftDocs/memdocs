@@ -11,7 +11,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 
 ms.reviewer: dagerrit
 ms.suite: ems

@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up Check Point Harmony Mobile MTD connector with Intune
+title: Check Point Harmony Mobile Mobile Threat Defense Intune
 titleSuffix: Microsoft Intune
-description: Learn about integrating Intune with Check Point Harmony Mobile Threat Defense to control mobile device access to your corporate resources.
+description: How to set up Check Point Harmony Mobile Threat Defense with Microsoft Intune control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
