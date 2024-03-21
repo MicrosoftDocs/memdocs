@@ -121,3 +121,9 @@ Microsoft Edge for Business offers the following features that support the Zero 
 - Microsoft Edge management service (EMS)
 - Unmanaged device support with Microsoft Intune Mobile Application Management
 
+## What's in this solution
+
+This solution provides insights into securing your enterprise browser configuration and implementation for Mobile App Management and Microsoft Edge for Business.
+
+:::image type="content" alt-text="Health Check - App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business_steps.png" :::
+
