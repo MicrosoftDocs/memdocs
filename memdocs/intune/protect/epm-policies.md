@@ -237,7 +237,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 
        > [!Important]
        >
-       > Use of support approved elevation for files requires that Admins with additional permissions review and approve each file elevation request before that file on the device with administrator permissions. For information about using the support approved elevation type, see [Support approved file elevations for Endpoint Privilege Management](../protect/epm-support-appoved.md).
+       > Use of support approved elevation for files requires that Admins with additional permissions review and approve each file elevation request before that file on the device with administrator permissions. For information about using the support approved elevation type, see [Support approved file elevations for Endpoint Privilege Management](../protect/epm-support-approved.md).
 
    - **Child process behavior**: By default, this option is set to *Require rule to elevate*, which requires the child process to match the same rule as process that creates it. Other options include:
      - *Allow all child processes to run elevated*: This option should be used with caution as it allows applications to create child processes unconditionally.

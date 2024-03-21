@@ -60,11 +60,11 @@ The following subjects are details to plan for and expect when you use the suppo
 
   The following image displays an example of the file elevation prompt that users experience:
 
-  :::image type="content" source="./media/epm-support-approved/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/epm-support-approved/user-prompt.png":":::code language="{language}" source="{source}" range="{range}":::
+  :::image type="content" source="./media/epm-support-approved/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/epm-support-approved/user-prompt.png":":::
 
 - **Administrative review**
 
-Only an Intune admin who’s account has *view* and *manage* rights for the Intune **Endpoint Privilege Management Elevation Requests** permission can review and approval elevation requests.
+  Only an Intune admin who’s account has *view* and *manage* rights for the Intune **Endpoint Privilege Management Elevation Requests** permission can review and approval elevation requests.
 
   To discover and act on requests, applicable admins use the **Elevation requests** tab of the Endpoint Privilege Management page in the admin center. Because Intune doesn’t have a method to alert admins to the presence of active elevation requests, admins should plan to periodically review the tab for pending requests.
 
@@ -82,7 +82,7 @@ Only an Intune admin who’s account has *view* and *manage* rights for the Intu
 
   The following screen capture displays an example of the audit log for the duplication of a *Support approved* elevation policy, originally named *Test policy - support approved*:
 
-  :::image type="content" source="./media/epm-support-approved/sample-audit-log.png" alt-text="Image that displays an audit log entry for a support approved elevation rules policy." lightbox="./media/epm-policies/sample-audit-log.png":::
+  :::image type="content" source="./media/epm-support-approved/sample-audit-log.png" alt-text="Image that displays an audit log entry for a support approved elevation rules policy." lightbox="./media/epm-support-approved/sample-audit-log.png":::
 
 ## RBAC permissions for elevation requests
 
