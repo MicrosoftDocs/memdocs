@@ -7,13 +7,6 @@ author: scottbreenmsft
 ms.author: scbree
 ---
 
-::: zone pivot="windows"
+# Simplified configuration overview
 
-Information here.
-
-::: zone-end
-
-::: zone pivot="ios"
-Info here
-
-::: zone-end
+Placeholder
