@@ -3,6 +3,8 @@ title: Enrollment of Windows devices with provisioning packages
 description: Learn about how to enroll Windows devices with provisioning packages using SUSPCs and Windows Configuration Designer.
 ms.date: 11/09/2023
 ms.topic: tutorial
+author: scottbreenmsft
+ms.author: scbree
 ---
 
 # Enrollment with provisioning packages

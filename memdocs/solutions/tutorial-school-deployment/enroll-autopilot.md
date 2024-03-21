@@ -3,6 +3,8 @@ title: Enrollment in Intune with Windows Autopilot
 description: Learn how to join Microsoft Entra ID and enroll in Intune using Windows Autopilot.
 ms.date: 01/16/2024
 ms.topic: tutorial
+author: scottbreenmsft
+ms.author: scbree
 ---
 
 # Windows Autopilot

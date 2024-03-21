@@ -3,6 +3,8 @@ title: Management functionalities for Surface devices
 description: Learn about the management capabilities offered to Surface devices, including firmware management and the Surface Management Portal.
 ms.date: 11/09/2023
 ms.topic: tutorial
+author: scottbreenmsft
+ms.author: scbree
 appliesto: 
   - ✅ <b>Surface devices</b>
 ---

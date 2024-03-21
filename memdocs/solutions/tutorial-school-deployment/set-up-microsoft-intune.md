@@ -4,6 +4,7 @@ description: Learn how to configure the Intune service and set up the environmen
 ms.date: 01/16/2024
 ms.topic: tutorial
 appliesto:
+ms.author: scbree
 ---
 
 # Set up Microsoft Intune

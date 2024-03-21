@@ -5,6 +5,7 @@ ms.date: 11/09/2023
 ms.topic: overview
 zone_pivot_groups: platforms-windows-ios
 author: scottbreenmsft
+ms.author: scbree
 ---
 
 # Device enrollment overview

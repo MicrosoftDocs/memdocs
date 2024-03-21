@@ -5,6 +5,7 @@ ms.date: 11/09/2023
 ms.topic: tutorial
 ms.collection: essentials-manage
 author: scottbreenmsft
+ms.author: scbree
 ---
 
 # Configure settings and applications with Microsoft Intune

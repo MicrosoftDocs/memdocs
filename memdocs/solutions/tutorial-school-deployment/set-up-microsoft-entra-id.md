@@ -3,7 +3,8 @@ title: Set up Microsoft Entra ID
 description: Learn how to create and prepare your Microsoft Entra tenant for an education environment.
 ms.date: 01/16/2024
 ms.topic: tutorial
-appliesto:
+author: scottbreenmsft
+ms.author: scbree
 ---
 
 # Set up Microsoft Entra ID
