@@ -60,7 +60,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
   The following image displays an example of the file elevation prompt that users experience:
 
-  :::image type="content" source="./media/epm-support-approved/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/epm-support-approved/user-prompt.png":":::
+  :::image type="content" source="./media/epm-support-approved/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/epm-support-approved/user-prompt.png":::
 
 - **Administrative review**
 
