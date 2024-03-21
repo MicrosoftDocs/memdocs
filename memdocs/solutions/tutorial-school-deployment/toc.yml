@@ -27,6 +27,14 @@ items:
             href: enroll-package.md
           - name: Enroll devices with Windows Autopilot
             href: enroll-autopilot.md
+      - name: iOS
+        items:
+          - name: Enroll with Company Portal
+            href: enroll-ios-company-portal.md
+          - name: Enroll devices with Automated Device Enrollment
+            href: enroll-ios-ade.md
+          - name: Bulk enrollment with Apple Configurator
+            href: enroll-ios-apple-configurator.md
   - name: 4. Manage devices
     items: 
       - name: Overview

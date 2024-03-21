@@ -1,0 +1,23 @@
+---
+title: Enrollment in Intune with standard out-of-box experience (OOBE)
+description: Learn how to join devices to Microsoft Entra ID from OOBE and automatically get them enrolled in Intune.
+ms.date: 11/09/2023
+ms.topic: tutorial
+author: scottbreenmsft
+ms.author: scbree
+---
+
+# Bulk enrollment with Apple Configurator
+
+Intune supports the enrollment of iOS/iPadOS devices using Apple Configurator running on a Mac computer. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment.
+
+See [Set up iOS/iPadOS device enrollment with Apple Configurator](/mem/intune/enrollment/apple-configurator-enroll-ios) for more information.
+
+---
+
+## Next steps
+
+With the devices joined to managed by Intune, you can use Intune to maintain them and report on their status.
+
+> [!div class="nextstepaction"]
+> [Next: Manage devices >](manage-overview.md)

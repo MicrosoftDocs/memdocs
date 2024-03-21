@@ -24,9 +24,9 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 
 There are four main methods for joining iOS devices to Microsoft Entra ID and getting them enrolled and managed by Intune:
 
-- **Manual enrollment using Company Portal** is performed by the user by downloading and installing the Company Portal app from the App store and following the instructions to enroll the device. The device is enrolled with personal ownership. This option isn't an ideal enrollment method for education devices
-- **Automated Device Enrollment** applies your organization's settings from Apple School Manager and enrolls devices without IT needing to physically interact with the device. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Devices can be configured with user affinity for use with one user or no user affinity for shared device scenarios.
-- **Apple Configurator** can be used on a Mac to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when IT has physical access to the devices and doesn't want to use Apple School Manager and Automated Device Enrollment.s
+- **Enroll with Company Portal.** Enrollment is performed by the user by downloading and installing the Company Portal app from the App store and following the instructions to enroll the device. The device is enrolled with personal ownership. This option isn't an ideal enrollment method for education devices
+- **Enroll devices with Automated Device Enrollment.** Automated Device Enrollment applies your organization's settings from Apple School Manager and enrolls devices without IT needing to physically interact with the device. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Devices can be configured with user affinity for use with one user or no user affinity for shared device scenarios.
+- **Bulk enrollment with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when IT has physical access to the devices and doesn't want to use Apple School Manager and Automated Device Enrollment.
 
 ::: zone-end
 
@@ -57,9 +57,9 @@ Select one of the following options to learn the next steps about the enrollment
 ::: zone-end
 
 ::: zone pivot="ios"
-- [Company Portal](enroll-ios-company-portal.md)
-- [Automated Device Enrollment](enroll-ios-ade.md)
-- [Apple Configurator](enroll-ios-apple-configurator.md)
+- [Enroll with Company Portal](enroll-ios-company-portal.md)
+- [Enroll devices with Automated Device Enrollment](enroll-ios-ade.md)
+- [Bulk enrollment with Apple Configurator](enroll-ios-apple-configurator.md)
 ::: zone-end
 
 <!-- Reference links in article -->
