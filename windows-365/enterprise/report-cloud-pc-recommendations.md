@@ -59,8 +59,6 @@ The Overview tab starts with various Cloud PC insights.
 - **Oversized**: Cloud PCs overpowered for the workload they’re supporting. The same quality of experience can be delivered to users with fewer resources. To free up resources, resize them to a smaller SKU.
 - **Underutilized**: Cloud PCs used rarely or not at all. They might not be needed. Any Cloud PC with less than 40 hours of active connected time over a 28 day period falls into this category.
 
-:::image type="content" source="./media/report-cloud-pc-actions/report.png" alt-text="Screenshot of the Cloud PC actions report." lightbox="./media/report-cloud-pc-actions/report.png":::
-
 ## Insights by device tab
 
 Recommendations for specific Cloud PCs are shown on this tab. Only Cloud PCs with some level of user utilization have details on the CPU and RAM used. Select a Cloud PC to see more information and an explanation of the recommendation.
