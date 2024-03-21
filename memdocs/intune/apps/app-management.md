@@ -13,7 +13,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 
 # optional metadata
