@@ -92,29 +92,5 @@ After completing this solution, you will have accomplished the following:
 
 - Understand key **troubleshooting examples**, some of them presented during research and other suggestions by the field.
 
-Harnessing the power of these features, IT admins have the ability to construct an environment that isn't only secure and efficient, but also user-friendly. With Microsoft Edge for Business and Microsoft Application Management, you hold the key to fortifying your environment. Remember, the journey to security isn\'t a single sprint but a continuous marathon of enhancement and adaptation to emerging challenges. Keep pushing the boundaries and elevating your security posture! As your next step, we strongly urge you to implement the steps outlined in this whitepaper within your own environment. Continue to unlock the full potential of Microsoft Edge for Business and the secure Microsoft Application Management. You have the power to make a difference!
+Harnessing the power of these features, IT admins have the ability to construct an environment that isn't only secure and efficient, but also user-friendly. With Microsoft Edge for Business and Microsoft Application Management, you hold the key to fortifying your environment. Remember, the journey to security isn\'t a single sprint but a continuous marathon of enhancement and adaptation to emerging challenges. Keep pushing the boundaries and elevating your security posture! As your next step, we strongly urge you to implement the steps outlined in this whitepaper within your own environment. Continue to unlock the full potential of Microsoft Edge for Business and the secure Microsoft Application Management. You have the power to make a difference.
 
-## Additional information
-
-For related information about securing your corporate data in Microsoft Intune with Microsoft Edge for Business, see the following resources:
-- [What is Conditional Access in Microsoft Entra? \| Microsoft Learn](/entra/identity/conditional-access/overview)
-- [App protection policy settings for Windows - Microsoft Intune \| Microsoft Learn](/mem/intune/apps/app-protection-policy-settings-windows)
-- [Use app-based Conditional Access policies with Intune - Microsoft Intune \| Microsoft Learn](/MEM/intune/protect/app-based-conditional-access-intune)
-- [Data protection for Windows MAM \| Microsoft Learn](/mem/intune/apps/protect-mam-windows)
-- [Data protection framework using app protection policies - Microsoft Intune \| Microsoft Learn](/mem/intune/apps/app-protection-framework)
-- [Use role-based access control (RBAC) and scope tags for distributed IT - Microsoft Intune \| Microsoft Learn](/mem/intune/fundamentals/scope-tags)
-- [Data protection for Windows MAM \| Microsoft Learn](/mem/intune/apps/protect-mam-windows)
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune - Microsoft Intune \| Microsoft Learn](/mem/intune/protect/mtd-app-protection-policy#to-create-an-mtd-app-protection-policy-for-windows)
-- [Microsoft Edge security for your business \| Microsoft Learn](/deployedge/ms-edge-security-for-business)
-- [Microsoft Edge for Business \| Microsoft Learn](/deployedge/microsoft-edge-for-business)
-- [Browse more safely with Microsoft Edge \| Microsoft Learn](/deployedge/microsoft-edge-security-browse-safer)
-- [What's New in Web Experiences, ignite 2020: Need to secure your remote workers? Choose Microsoft Edge as your browser for business \| Windows Experience Blog](https://blogs.windows.com/windowsexperience/2020/09/22/whats-new-in-web-experiences-ignite-2020-need-to-secure-your-remote-workers-choose-microsoft-edge-as-your-browser-for-business/)
-- [Mobile Threat Defense with Microsoft Intune - Microsoft Intune \| Microsoft Learn](/mem/intune/protect/mobile-threat-defense)
-- [Enable Mobile Threat Defense connector in Microsoft Intune - Microsoft Intune \| Microsoft Learn](/mem/intune/protect/mtd-connector-enable)
-- [Set up the Better Mobile Threat Defense Connector with Intune \| Microsoft Learn](/mem/intune/protect/better-mobile-threat-defense-connector)
-- [Troubleshoot user issues for Microsoft Intune app protection policies - Intune \| Microsoft Learn](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-mam)
-- [The Secure Enterprise Browser \| Microsoft Edge for Business](https://www.microsoft.com/en-us/edge/business?form=MA13FJ)
-- [Microsoft Edge management service \| Microsoft Learn](/deployedge/microsoft-edge-management-service?form=MT00IS)
-- [Manage Microsoft Edge on iOS and Android with Intune \| Microsoft Learn](/mem/intune/apps/manage-microsoft-edge)
-- [Create and deploy app protection policies - Microsoft Intune \| Microsoft Learn](/mem/intune/apps/app-protection-policies)
-- [Protect Your Organization from Online Threats \| Microsoft Edge for Business](https://www.microsoft.com/en-in/edge/business/security?form=MA13I2)

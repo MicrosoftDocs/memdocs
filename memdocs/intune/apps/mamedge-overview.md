@@ -57,12 +57,12 @@ The target audience for this content primarily includes:
 
 This guide provides the following content:
 
-1. **Understanding Microsoft Edge for Business** - This content explains what Microsoft Edge for Business and Microsoft Application Management is, its importance in today's digital landscape, and how it can be used to protect your organization from various cyber threats.
-2. **Creating Microsoft Edge for Business Mobile Application Management for Windows Policy** - This content guides you when implementing an App Protection policy for Windows, ensuring secure access and usage of enterprise applications.
-3. **Mobile Application Management for Mobile Policy** - This content covers the creation of an App Protection policy for mobile devices, which is crucial in an era where mobile devices are extensively used for business purposes.
-4. **Microsoft Entra Conditional Access Policy** - This content shows how to create a conditional access policy, which is a critical aspect of modern security frameworks. It helps control who or what can access your business data under specific conditions.
-5. **End User Experience** - This content provides insights into the end user experience, helping you understand how security measures impact the user interaction with the system.
-6. **Windows Security Center Integration** - This content explains how the secure enterprise browser integrates with the Windows Security Center, enhancing the overall security posture of your organization.
+1. **Integrate Windows security Center with Microsoft Edge for Business** - Understand how the secure enterprise browser integrates with the Windows Security Center, enhancing the overall security posture of your organization.
+2. **App protection policies for Microsoft Edge for Business** - Understand when implementing an App Protection policy for Windows, ensuring secure access and usage of enterprise applications.
+3. **Microsoft Entra conditional access with Microsoft Edge for Business** - Understand the creation of an App Protection policy for mobile devices, which is crucial in an era where mobile devices are extensively used for business purposes.
+4. **Microsoft Edge for Business end user experience** - Understand the end user experience, helping you understand how security measures impact the user interaction with the system.
+5. **Microsoft Edge for Business mobile** - Understand how to create a conditional access policy, which is a critical aspect of modern security frameworks. It helps control who or what can access your business data under specific conditions.
+6. **App configuration policies for Microsoft Edge for Business** - Understand what Microsoft Edge for Business and Microsoft Application Management is, its importance in today's digital landscape, and how it can be used to protect your organization from various cyber threats.
 
 For more information about Microsoft Edge Security content, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecuritywhitepaper).
 
@@ -83,12 +83,8 @@ No, this isn't a new browser. This is a new, dedicated Microsoft Edge experience
 
 Microsoft Edge for Business has several benefits. For IT, Microsoft Edge for Business can reduce the cyber-attack surface area and heighten your organization's security posture because it can streamline down to one browser for all use cases. For end users who are signed in with work and personal profiles, Microsoft Edge for Business can provide a better browsing experience with automatic switching, which has security and privacy benefits.
 
-- **Work Browser (Visual Refresh):** The Microsoft Edge for Business icon replaces the existing Microsoft Edge icon in the taskbar and other shortcuts:
-
-    :::image type="content" alt-text="Work Browser (Visual Refresh)" source="./media/securing-data-edge-for-business/securing_data_edge_for_business0.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business0.png":::
-
+- **Work Browser (Visual Refresh):** The Microsoft Edge for Business icon replaces the existing Microsoft Edge icon in the taskbar and other shortcuts.
 - **Enhanced Security:** By using app protection policies, Microsoft Edge for Business ensures a more secure and protected browsing experience by ensuring enterprise data remain secured.
-
 - **Centralized Management:** Microsoft Intune provides a management experience that simplifies the process of managing a Microsoft Edge for Business policy experience.
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to org data on personal devices. This capability uses the following functionality:

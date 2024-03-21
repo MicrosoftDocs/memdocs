@@ -65,8 +65,6 @@ To evaluate the enrollment experience, launch **Microsoft Edge** from the deskto
 
 6. Enter your **password** for the account.
 
-	:::image type="content" alt-text="Let's get you signed in  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business21.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business21.png":::
-
 	> [!NOTE] 
 	> The sign-in process within your organization may vary. Regardless of the method, completing the sign-in process is essential to add your user profile to Microsoft Edge.
 

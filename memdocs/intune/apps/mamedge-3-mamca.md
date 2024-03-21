@@ -57,7 +57,7 @@ This MAM service syncs compliance state per user, per app, and per device to the
 
 Secure your Microsoft Edge for Business with Microsoft Entra Conditional Access Policies. 
 
-In this scenario we'll guide you through the process of creating a Conditional Access Policy Using Microsoft Intune, to create the policy, we need to perform the following steps.
+In this scenario, you will create a conditional access policy using Microsoft Intune. To create the policy, we need to perform the following steps:
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -75,11 +75,9 @@ In this scenario we'll guide you through the process of creating a Conditional A
     - **Grant:** Require app protection policy
     - **Session:** N/A
 
-    :::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business55.png":::
+    > [!NOTE]
+    > Set **Report-only** to **On** until you confirm that the policy is working as expected. Once confirmed, set this setting to **Off**.
     
-> [!NOTE]
-> Set **Report-only** to **On** until you confirm that the policy is working as expected. Once confirmed, set this setting to **Off**.
-
 4. Select **Create** to enable the policy. 
 
 ## Conditional access policies for BYOD - browser only access
@@ -92,9 +90,9 @@ In the previous steps we show you how to create a conditional access policy to s
 
 2. Select **Devices** > **Conditional Access** > **Create a new Policy**.
 
-4. On this new policy we'll restrict access from desktop apps to managed devices only, we'll Select Target resources and select apps once they select **Office 365**.
+4. On this new policy, you'll restrict access from desktop apps to managed devices only. You'll select target resources and select apps once they select **Office 365**.
 
-    :::image type="content" alt-text="Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png":::
+    :::image type="content" alt-text="Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png":::
     
 5. Select the **device Platform** and select **Windows**.
 
@@ -105,25 +103,25 @@ In the previous steps we show you how to create a conditional access policy to s
     > [!NOTE]
     > For legacy authentication clients, maybe create a third CA to just block them. That's up to the customer. For this example, I will only affect Desktop apps. *
     
-    :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png":::
+    :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png":::
     
 7. Select **Grant** and select **Require device to be market as compliant.**
 
-    :::image type="content" alt-text="Grant - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png":::
+    :::image type="content" alt-text="Grant - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png":::
 
     > [!NOTE] 
     > Probably to this last control, customers should add also MFA or other options as well.*
 
 8. Select **Conditions** \> Client **apps** and select **Browser.**
 
-    :::image type="content" alt-text="Client apps - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png":::
+    :::image type="content" alt-text="Client apps - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png":::
 
     > [!NOTE] 
     > To filter out corporate devices is a bit complicated because the CA filters will be applied only to devices that are already registered (at least) in Entra ID. Entra recommends using negative operator if the rule is going to apply potentially to devices not registered yet, Maybe some companies will not need all these conditions and they can use Enrollment profile or other instead.
 
 9. Select **Conditions** \> Select **Filter for Devices.**
 
-    :::image type="content" alt-text="Filter for devices - Conditional Access policy - Microsoft Intune Admin Center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png":::
+    :::image type="content" alt-text="Filter for devices - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png":::
 
 10. Select **Done** \> select **Create** and complete the conditional access policy creation as you performed on the previous step.
 

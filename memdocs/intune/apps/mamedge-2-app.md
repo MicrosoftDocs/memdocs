@@ -59,7 +59,7 @@ For more information about Framework Settings, see [App protection framework](..
 
 **App protection policies for Windows**: This feature provides secure and compliant access to work resources on personal computers with Data Loss Prevention (DLP) controls.
 
-Having gained a comprehensive understanding of the app protection policy framework, we're now prepared to establish our initial app protection policy for Windows. In this instance, we'll be formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to our specific requirements. So, the forthcoming example may only be applicable to the **Level 3** policy that we have recommended. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet our distinct needs.
+Having gained a comprehensive understanding of the app protection policy framework, you're now prepared to establish our initial app protection policy for Windows. In this instance, you'll be formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to our specific requirements. So, the forthcoming example may only be applicable to the **Level 3** policy that we have recommended. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet our distinct needs.
 
 #### Apply the data protection framework
 
@@ -92,7 +92,7 @@ Use the following steps to apply the data protection framework.
     - **Allow cut, copy, and paste for**: No destination or source
     - **Print org data**: Block
 
-    :::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Data Protection -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
+    :::image type="content" alt-text="Apps - App protection policies - Create policy - Data Protection - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
 
 10. Select **Next** to continue to the next step.
 
@@ -103,7 +103,7 @@ Use the following steps to apply the data protection framework.
     - **Max OS version**: 10.0.22631.2715, Block access
     - **Max allowed device threat level**: Secured, Block access
 
-    :::image type="content" alt-text="Apps -- App protection policies -- Create policy -- Health Checks -- Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png":::
+    :::image type="content" alt-text="Apps - App protection policies - Create policy - Health Checks - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png":::
 
 12. Click **Next** to display the next step.
 
@@ -120,4 +120,3 @@ For this example, select all VPN Users. However, when you assign this policy in 
 
 You have now created your first MAM for Windows Policy and it should be available within your Intune tenant.
 
-:::image type="content" alt-text="Policy Successfully created message - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business16.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business16.png":::

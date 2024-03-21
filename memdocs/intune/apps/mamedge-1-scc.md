@@ -49,7 +49,7 @@ Intune app protection policies help secure organizational data and ensure the cl
 
 - **Health Checks**: Below *Device conditions* use the drop-down box to select **Max allowed device threat level**.
 
-    :::image type="content" alt-text="Health Check -- App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png":::
+    :::image type="content" alt-text="Health Check - App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png":::
 
 #### Options for the threat level
 
@@ -88,13 +88,13 @@ Use the following steps to configure the MTD Connector.
 
 2. Select **Tenant Administrator** > **Connectors and tokens** > **Mobile Threat Defense**.
 
-    :::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense - Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png":::
+    :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png":::
 
 3. Select **Add** to display the **Add Connector** pane.
 
 4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
 
-    :::image type="content" alt-text="Connectors and tokens -- Mobile Threat Defense -- Add Connector-Microsoft Intune Admin Center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
+    :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Add Connector - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
     
 5. >  select **Create** to create the connector.
 
