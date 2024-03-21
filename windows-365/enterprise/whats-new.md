@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 2/26/2024
+ms.date: 3/18/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -57,14 +57,72 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of February 26, 2024
+## Week of March 11, 2024
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv --> 
+### Documentation
+
+#### Updated documentation article: Forced browser sign-in setting for Cloud PC gallery images<!--49401955-->
+
+We’ve updated the article [Device images overview](device-images.md#gallery-images), noting that gallery images have [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin) pre-applied.
+
+<!-- ########################## -->
+## Week of March 4, 2024 (Service release 2402)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Alerts for Windows 365 Frontline maximum concurrent Cloud PCs<!--45903013-->
+
+A new alert notifies admins when the maximum concurrent Cloud PCs are active for Windows 365 Frontline subscriptions.
+
+#### Cloud PC utilization report now generally available<!-- 46738247-->
+
+The **Cloud PC utilization** report has moved out of preview and into general availability. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Device action data kept for 90 days<!--48439987-->
+
+On the **Overview** page for individual Cloud PCs, the **Actions** will show actions performed within the last 90 days.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch support for Windows 365 Frontline<!--46816178-->
+
+Windows 365 Switch now supports Windows 365 Frontline Cloud PCs. For more information, see [Windows 365 Switch](windows-365-switch-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
+
+Windows 365 Frontline Cloud PCs that haven’t been used for seven days are now automatically turned on and synced with Windows Update for Business Policies.
+
+#### Admins can remotely power on and off Windows 365 Frontline Cloud PCs<!--48801654-->
+
+Admins can now power on and off Windows 365 Frontline Cloud PCs using remote actions. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+#### Uni-directional clipboard support (preview)<!--48897413-->
+
+You can now configure uni-directional clipboard for Cloud PCs that have Windows Insider Build 25898 or later. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### New 15 minute Sign-in frequency option (preview)<!--48439987-->
+#### Customer Lockbox support is now generally available<!--47499839-->
 
-When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option to provide a 15 minute re-authentication period. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+Windows 365 Enterprise and Frontline support for Microsoft Purview Customer Lockbox has moved out of preview and is now generally available.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- ########################## -->
+## Week of February 26, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New faster sign-in frequency option (preview)<!--48439987-->
+
+When single sign-on is enabled, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Boot
