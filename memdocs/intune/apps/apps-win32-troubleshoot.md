@@ -11,7 +11,6 @@ ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 
 ms.reviewer: bryanke
@@ -21,6 +20,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Win32
 ---
 
 # Troubleshoot Win32 app issues

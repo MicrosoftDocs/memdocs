@@ -84,6 +84,10 @@ Users can remove their [Android](../user-help/unenroll-your-device-from-intune-a
 
 The **Retire** action removes Intune provisioned data like company applications, data about apps that Intune is managing, policy settings, and email profiles that are provisioned through Intune. This action leaves the user's personal data on the device.
 
+### BIOS passwords
+
+If Intune has configured a BIOS password for the device as part of BIOS configuration management, the BIOS password will remain on the device until explicitly removed. BIOS passwords could be removed by editing the **BIOS configuration and other settings** policy, or locally on the device by changing the existing password.
+
 ### Delete a tenant from Microsoft Intune
 
 If an Intune tenant customer cancels their Intune account, all tenant data is deleted within 180 days after the customer closes the Intune account. If the Microsoft Entra tenant is associated with other Microsoft enterprise subscriptions (Azure, Microsoft 365), then only the Intune Customer Data is deleted. The Microsoft Entra tenant resource is maintained for use by the other subscriptions. If the Intune account is the only subscription associated with the Microsoft Entra tenant, then the tenant is deleted and all resources and Customer Data are also deleted.

@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Connect BlackBerry Protect Mobile MTD connector to Microsoft Intune
+title: Set up BlackBerry Protect with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: How to set up the BlackBerry Protect Mobile MTD connector in Microsoft Intune to control mobile device access to your corporate resources.
+description: How to set up the CylancePROTECT (BlackBerry) MTD solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns

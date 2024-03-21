@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: ee3ccbf9-82fc-4fbf-9d3d-8f05e431d090
 
 # optional metadata
@@ -25,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 

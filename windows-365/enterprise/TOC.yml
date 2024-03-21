@@ -41,6 +41,8 @@ items:
       href: security.md
     - name: Encryption
       href: encryption.md
+    - name: Customer Lockbox
+      href: /purview/customer-lockbox-requests?context=/windows-365/context/pr-context
     - name: ANC domain credential life cycle
       href: azure-network-connection-domain-credential.md
   - name: Privacy and data
@@ -155,6 +157,8 @@ items:
         href: deploy-security-baselines.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Microsoft Purview Customer Key
+        href: purview-customer-key.md
       - name: Enable screen capture protection
         href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
       - name: Watermarking

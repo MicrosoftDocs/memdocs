@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -30,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
 - Android
+- FocusArea_Apps_SpecificApp
 ---
 
 # Manage collaboration experiences in Microsoft 365 (Office) for iOS and Android with Microsoft Intune

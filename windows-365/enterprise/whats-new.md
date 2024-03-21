@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 1/31/2024
+ms.date: 3/18/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -55,6 +55,110 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of March 11, 2024
+
+### Documentation
+
+#### Updated documentation article: Forced browser sign-in setting for Cloud PC gallery images<!--49401955-->
+
+We’ve updated the article [Device images overview](device-images.md#gallery-images), noting that gallery images have [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin) pre-applied.
+
+<!-- ########################## -->
+## Week of March 4, 2024 (Service release 2402)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Alerts for Windows 365 Frontline maximum concurrent Cloud PCs<!--45903013-->
+
+A new alert notifies admins when the maximum concurrent Cloud PCs are active for Windows 365 Frontline subscriptions.
+
+#### Cloud PC utilization report now generally available<!-- 46738247-->
+
+The **Cloud PC utilization** report has moved out of preview and into general availability. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Device action data kept for 90 days<!--48439987-->
+
+On the **Overview** page for individual Cloud PCs, the **Actions** will show actions performed within the last 90 days.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch support for Windows 365 Frontline<!--46816178-->
+
+Windows 365 Switch now supports Windows 365 Frontline Cloud PCs. For more information, see [Windows 365 Switch](windows-365-switch-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
+
+Windows 365 Frontline Cloud PCs that haven’t been used for seven days are now automatically turned on and synced with Windows Update for Business Policies.
+
+#### Admins can remotely power on and off Windows 365 Frontline Cloud PCs<!--48801654-->
+
+Admins can now power on and off Windows 365 Frontline Cloud PCs using remote actions. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+#### Uni-directional clipboard support (preview)<!--48897413-->
+
+You can now configure uni-directional clipboard for Cloud PCs that have Windows Insider Build 25898 or later. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Customer Lockbox support is now generally available<!--47499839-->
+
+Windows 365 Enterprise and Frontline support for Microsoft Purview Customer Lockbox has moved out of preview and is now generally available.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- ########################## -->
+## Week of February 26, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New faster sign-in frequency option (preview)<!--48439987-->
+
+When single sign-on is enabled, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Boot
+
+#### Shared and dedicated Windows 365 Boot device modes are now generally available<!--48742628-->
+
+Windows 365 Boot shared and dedicated device modes have moved out of preview and into general availability.
+
+For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) and [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot sign-in page customization is now generally available<!--48742587-->
+
+Windows 365 Boot support for sign-in page customization has moved out of preview and into general availability. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot fail fast notifications are now generally available<!--48742676-->
+
+Windows 365 Boot detection and notification of network or application setup issues has moved out of preview and into general availability.
+
+#### Manage local PC settings through Windows 365 Boot is now generally available<!--48742743-->
+
+User management of local PC settings through their Windows 365 Boot Cloud PC has moved out of preview and into general availability.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch desktop identifiers are now generally available<!--48064527-->
+
+Windows Task view identifiers for Cloud PC or local PC have moved out of preview and into general availability.
+
+#### Windows 365 Switch improved disconnecting is now generally available<!--48743248-->
+
+The ability for users to seamlessly disconnect from their Cloud PC without leaving their local desktop has moved out of preview and into general availability. For more information, see [Windows 365 Switch](https://support.microsoft.com/en-us/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### Windows 365 Switch connection status now generally available<!--48743180-->
+
+Connection status and timeout information on the connection screen for Windows 365 Switch with Windows 365 Frontline Cloud PCs has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of January 29, 2024 (Service release 2401)
@@ -162,10 +266,6 @@ Windows 365 Boot is now available for US Government Community Cloud (GCC) custom
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
-
-#### Windows 365 Switch is now available for Windows 365 Government<!--46030732-->
-
-Windows 365 Switch is now available for Windows 365 Government. For more information, see [What is Windows 365 Switch?](windows-365-switch-overview.md).
 
 #### UI change in web client<!--46838016-->
 
