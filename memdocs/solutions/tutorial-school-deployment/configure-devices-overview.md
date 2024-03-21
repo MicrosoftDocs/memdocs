@@ -28,8 +28,6 @@ By organizing devices, students, classrooms, or learning curricula into groups, 
 By default, Intune creates two default groups: *All devices* and *All users*.
 Two additional groups are pre-created if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
-:::image type="content" source="./images/intune-education-groups.png" alt-text="Intune for Education - Groups blade" border="true":::
-
 Beyond the defaults, groups can be customized to suit various needs. For example, if you have both *Windows 10* and *Windows 11 SE* devices in your school, you can create groups, such as *Windows 10 devices* and *Windows 11 SE devices*, to assign different policies and applications to.
 
 Two group types can be created:

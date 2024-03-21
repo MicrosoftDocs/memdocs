@@ -289,7 +289,6 @@ In Intune for Education, you can configure iOS security settings using Groups.
 
 1. Select **Groups** > Pick a group to manage
 1. Select **iOS device settings**
-1. Expand the category **Update restrictions**
 1. Configure the required settings as needed
 
 Common areas for security include:

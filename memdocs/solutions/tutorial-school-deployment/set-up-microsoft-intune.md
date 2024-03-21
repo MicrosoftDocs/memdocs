@@ -90,7 +90,7 @@ For more information how to enable Windows Hello for Business on specific device
 
 ## Next steps
 
-With the Intune service configured, you can configure policies and applications in preparation to the deployment of students' and teachers' devices.
+With the Intune service configured, you can configure policies and applications in preparation for the deployment of students' and teachers' devices.
 
 > [!div class="nextstepaction"]
 > [Next: Configure devices >](configure-devices-overview.md)

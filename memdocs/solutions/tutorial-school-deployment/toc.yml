@@ -37,7 +37,7 @@ items:
         href: reset-wipe.md
   - name: 5. Troubleshoot and get help
     href: troubleshoot-overview.md
-  - name: 6. Apply simplified configuration
+  - name: 6. Simplified configuration
     items: 
       - name: Overview
         href: config-overview.md
