@@ -32,11 +32,11 @@ ms.collection:
 
 # Configure single sign-on for Windows 365 Business using Microsoft Entra authentication
 
-This article explains the process of configuring single sign-on (SSO) for Windows 365 by using Microsoft Entra authentication. When you enable SSO, you can use passwordless authentication and third-party Identity Providers that federate with Microsoft Entra ID to sign in to your Cloud PC. When enabled, this feature provides a single sign-on experience both when authenticating to the Cloud PC and inside the session when accessing Microsoft Entra ID-based apps and websites.
+This article explains the process of configuring single sign-on (SSO) for Windows 365 by using Microsoft Entra authentication. When you enable SSO, users can use passwordless authentication and third-party Identity Providers that federate with Microsoft Entra ID to sign in to their Cloud PC. When enabled, this feature provides a SSO experience both when authenticating to the Cloud PC and inside the session when accessing Microsoft Entra ID-based apps and websites.
 
-To enable single sign-on using Microsoft Entra ID authentication, there are four tasks you must complete:
+To enable SSO using Microsoft Entra ID authentication, there are four tasks you must complete:
 
-1. Enable Microsoft Entra authentication for Remote Desktop Protocol (RDP).
+1. [Enable Microsoft Entra authentication for Remote Desktop Protocol (RDP)](#enable-microsoft-entra-authentication-for-rdp).
 
 1. Configure the target device groups.
 
@@ -50,7 +50,10 @@ Before you enable single sign-on, review the following information for using it 
 
 ### Disconnection when the session is locked
 
-When single sign-on is enabled, you sign in to Windows using a Microsoft Entra ID authentication token, which provides support for passwordless authentication to Windows. The Windows lock screen in the remote session doesn't support Microsoft Entra ID authentication tokens or passwordless authentication methods, like FIDO keys. The lack of support for these authentication methods means that users can't unlock their screens in a remote session. When you try to lock a remote session, either through user action or system policy, the session is instead disconnected and the service sends a message to the user explaining they were disconnected.
+When single sign-on is enabled, users sign in to Windows using a Microsoft Entra ID authentication token, which provides support for passwordless authentication to Windows. The Windows lock screen in the remote session doesn't support Microsoft Entra ID authentication tokens or passwordless authentication methods, like FIDO keys, which means:
+
+- Users can't unlock their screens in a remote session.
+- When someone tries to lock a remote session, either through user action or system policy, the session is instead disconnected and the service sends a message to the user explaining they were disconnected.
 
 Disconnecting the session also ensures that when the connection is relaunched after a period of inactivity, Microsoft Entra ID reevaluates any applicable conditional access policies.
 
@@ -63,7 +66,7 @@ Before you can enable single sign-on, you must meet the following prerequisites:
   - [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
   - [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)
 
-- Your Cloud PCs must be running one of the following operating systems with the relevant cumulative update installed:
+- The Cloud PCs must be running one of the following operating systems with the relevant cumulative update installed:
   - Windows 11 Enterprise with the [2022-10 Cumulative Updates for Windows 11 (KB5018418)](https://support.microsoft.com/kb/KB5018418) or later installed.
   - Windows 10 Enterprise with the [2022-10 Cumulative Updates for Windows 10 (KB5018410)](https://support.microsoft.com/kb/KB5018410) or later installed.
 
@@ -71,7 +74,7 @@ Before you can enable single sign-on, you must meet the following prerequisites:
 
 ## Enable Microsoft Entra authentication for RDP
 
-You must first allow Microsoft Entra authentication for Windows in your Microsoft Entra tenant, which enables issuing RDP access tokens allowing users to sign in to your Cloud PCs. You must set the `isRemoteDesktopProtocolEnabled` property to true on the service principal's `remoteDesktopSecurityConfiguration` object for the following Microsoft Entra applications:
+You must first allow Microsoft Entra authentication for Windows in your Microsoft Entra tenant, which enables issuing RDP access tokens allowing users to sign in to their Cloud PCs. You must set the `isRemoteDesktopProtocolEnabled` property to true on the service principal's `remoteDesktopSecurityConfiguration` object for the following Microsoft Entra applications:
 
 | Application Name | Application ID |
 |--|--|
@@ -89,7 +92,7 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
 
     1. If you're using PowerShell locally, first Sign in with Azure PowerShell, then make sure your Azure context is set to the subscription you want to use.
 
-1. Make sure you installed the [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) from the [prerequisites](#prerequisites), then import the *Authentication* and *Applications* Microsoft Graph modules and connect to Microsoft Graph with the `Application.Read.All` and `Application-RemoteDesktopConfig.ReadWrite.All` scopes by running the following commands:
+1. Make sure you installed the [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) from the [prerequisites](#prerequisites). Then, import the *Authentication* and *Applications* Microsoft Graph modules and connect to Microsoft Graph with the `Application.Read.All` and `Application-RemoteDesktopConfig.ReadWrite.All` scopes by running the following commands:
 
    ```powershell
    Import-Module Microsoft.Graph.Authentication
@@ -134,7 +137,7 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
 
 ## Configure the target device groups
 
-After you enable Microsoft Entra authentication for RDP, you need to configure the target device groups. By default when enabling single sign-on, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new session host. Microsoft Entra remembers up to 15 hosts for 30 days before prompting again. If you see a dialogue to allow the Remote Desktop connection, select **Yes** to connect.
+After you enable Microsoft Entra authentication for RDP, you must configure the target device groups. By default when enabling single sign-on, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new session host. Microsoft Entra remembers up to 15 hosts for 30 days before prompting again. If you see a dialogue to allow the Remote Desktop connection, select **Yes** to connect.
 
 You can hide this dialog and provide single sign-on for connections to all your session hosts by configuring a list of trusted devices. You need to create one or more groups in Microsoft Entra ID that contains your session hosts, then set a property on the service principals for the same *Microsoft Remote Desktop* and *Windows Cloud Login* applications, as used in the previous section, for the group.
 
