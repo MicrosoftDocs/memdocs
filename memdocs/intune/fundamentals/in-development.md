@@ -61,28 +61,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Extended capabilities for Managed Google Play apps on personally-owned Android devices with a work profile<!-- 26554642  -->
-
-There will be new capabilities extended to work profile devices. The following capabilities were previously available only on corporate-owned devices:
-
-- **Available apps for device groups**: You'll soon be able to use Intune to make apps available for device groups through the Managed Google Play store. Previously, apps could only be made available to user groups.
-
-- **Update priority setting**: You'll soon be able to use Intune to configure the app update priority on devices with a work profile. To learn more about this setting, see [Update a Managed Google Play app](../apps/apps-add-android-for-work.md#update-a-managed-google-play-app).
-
-- **Required apps display as available in Managed Google Play**: You'll soon be able to use Intune to make required apps available for users through the Managed Google Play store. Apps that are part of existing policies will now display as available.
-
-Applies to:
-
-- Android Enterprise personally owned devices with a work profile
-
-### Managed app assignment filters for Windows MAM<!-- 24801139  -->
-
-You'll be able to use managed app assignment filters for Window MAM app protection policies and app configuration policies.
-
-For information about Windows MAM, see [Data protection for Windows MAM](../apps/protect-mam-windows.md).
-
-For more information about assignment filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -119,32 +97,6 @@ For example, admins can use the [Dell Command tool](https://www.dell.com/support
 Applies to
 
 - Windows 10 and later
-
-### New settings available in the Windows settings catalog<!-- 26763724  -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
-
-- **DODisallowCacheServerDownloadsOnVPN** - This setting blocks downloads from Microsoft Connected Cache servers when the device connects using VPN. By default, the device is allowed to download from Microsoft Connected Cache when connected using VPN.
-
-- **DOSetHoursToLimitBackgroundDownloadBandwidth** - This setting specifies the maximum background download bandwidth. Delivery Optimization uses this bandwidth during and outside business hours across all concurrent download activities as a percentage of available download bandwidth.
-
-- **DOSetHoursToLimitForegroundDownloadBandwidth** - This setting specifies the maximum foreground download bandwidth. Delivery Optimization uses this bandwidth during and outside business hours across all concurrent download activities as a percentage of available download bandwidth.
-
-- **DOVpnKeywords** - This policy allows you to set one or more keywords used to recognize VPN connections.
-
-For more information on these settings, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization).
-
-Applies to:
-
-- Windows 10 and later
-
-### New settings available in the Apple settings catalog<!-- 26551582  -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 #### iOS/iPadOS
 
@@ -216,12 +168,6 @@ End-users will be able to view the BitLocker Recovery Key for enrolled Windows d
 
 Access to BitLocker recovery keys by end-users can be prevented when not allowed within your organization by using the Microsoft Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**. For more information about how to prevent access to BitLocker recovery keys, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
 
-### Windows quality updates will support expediting non-security updates<!-- 24191406  -->
-
-Windows quality updates will support expediting non-security updates for those times when a quality fix needs to be deployed faster than the normal quality update settings.
-
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md).
-
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->
 
 In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
@@ -247,19 +193,6 @@ For more information about the Intune features supported in GCC High and DoD env
 We’re working on an update to the Intune security baseline for Windows. The updated security baseline is based on the **version 23H2** of the Group Policy security baseline found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and includes only the settings that are applicable to devices managed through Intune. Use of this updated baseline can help you maintain best-practice configurations for your Windows devices.
 
 Use of [Intune security baselines](../protect/security-baselines.md) can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations, which you can modify to meet the requirements of your organization.
-
-### Improvements for Intune deployments of Microsoft Defender for Endpoint<!-- 26314441  -->
-
-We’re improving and simplifying the experience, workflow, and reporting details when using Intune’s [endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy to deploy Microsoft Defender for Endpoint. These changes will apply for Windows devices managed by Intune and the tenant-attach scenario. These improvements include:
-
-- Changes to dashboards and reports to improve the visibility of your Defender EDR deployment numbers.
-- A tenant-wide deployment option for Intune EDR policy that streamlines deployments of Defender for Endpoint to applicable devices.
-- Changes to Intune’s endpoint security Overview page to provide consolidated dashboard reports for the device signals from Defender on your managed devices.
-
-Applies to the following through cloud and tenant attach endpoints:
-
-- Windows 10
-- Windows 11
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
