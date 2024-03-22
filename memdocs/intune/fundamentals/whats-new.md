@@ -518,6 +518,18 @@ Applies to:
 
 For more information, see [Bulk driver updates](../protect/windows-driver-updates-policy.md#bulk-driver-updates).
 
+#### App Control for Business policy limitation is resolved<!-- 19548950  -->
+
+A previously documented limitation for App Control for Business policy (WDAC), that limited the number of active polices per device to 32, has been resolved by Windows. The issue involves a potential [Boot stop failure when more than 32 policies are active](/windows/security/application-security/application-control/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active) on a device.
+
+This issue is resolved for devices that run Windows 10 1903 or later with a Windows security update released on or after March 12, 2024. Older versions of Windows are expected receive this fix in future Windows security updates.
+
+Applies to:
+
+- Windows 10 version 1903 and later
+
+To learn more about App Control for Business policy for Intune, see [Manage approved apps for Windows devices with App Control for Business policy and Managed Installers for Microsoft Intune](../protect/endpoint-security-app-control-policy.md).
+
 ### Tenant administration
 
 #### Customization pane support for excluding groups<!-- 17654599 -->
