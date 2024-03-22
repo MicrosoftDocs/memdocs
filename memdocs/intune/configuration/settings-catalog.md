@@ -147,7 +147,9 @@ The next time the device checks for configuration updates, the settings you conf
 
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog. If you use Copilot, then you can get AI generated information about each setting.
+There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog.
+
+If you use Copilot, then you can get AI generated information about each setting.
 
 # [Search and filter](#tab/sc-search-filter)
 
@@ -228,7 +230,9 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data refreshes automatically, and operates in near real time.
 
-There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting. If you use Copilot, then you can use some built-in prompts to get more information on existing policies, including their impact.
+There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting.
+
+If you use Copilot, then you can use some built-in prompts to get more information on existing policies, including their impact.
 
 # [Reporting and troubleshooting](#tab/sc-reporting)
 

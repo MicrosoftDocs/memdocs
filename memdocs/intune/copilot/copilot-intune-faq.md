@@ -2,7 +2,7 @@
 # required metadata
 
 title: Copilot in Intune FAQ
-description: Microsoft Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
+description: Get answers to common questions when using Copilot in Microsoft Intune.
 keywords: security copilot, intune, microsoft intune, copilot, faq
 author: MandiOhlinger
 ms.author: mandia
@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 03/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
-ms.subservice: copilot
+ms.subservice:
 ms.localizationpriority: high
 
 # optional metadata
