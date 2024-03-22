@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2024
+ms.date: 03/27/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -41,7 +41,7 @@ Using Conditional Access, you can achieve two primary goals:
 
 By using Conditional Access policies, you can apply the right access controls when needed to keep your organization secure and stay out of your user's way when not needed.
 
-How often a user is prompted to reauthenticate depends on [Microsoft Entra session lifetime configuration settings](/entra/identity/authentication/concepts-azure-multi-factor-authentication-prompts-session-lifetime#azure-ad-session-lifetime-configuration-settings). While remembering credentials is convenient, it can also make deployments using personal devices less secure. To protect your users, you can make sure the client keeps asking for Microsoft Entra multi-factor authentication credentials more frequently. You can use Conditional Access sign-in frequency to configure this behavior.
+How often a user is prompted to reauthenticate depends on [Microsoft Entra session lifetime configuration settings](/entra/identity/authentication/concepts-azure-multi-factor-authentication-prompts-session-lifetime#azure-ad-session-lifetime-configuration-settings). While remembering credentials is convenient, it can also make deployments using personal devices less secure. To protect your users, you can make sure the client asks for Microsoft Entra multi-factor authentication credentials more frequently. You can use Conditional Access sign-in frequency to configure this behavior.
 
 ## Assign a Conditional Access policy for Cloud PCs
 
@@ -55,14 +55,14 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional access** > **Create new policy**.
 1. Provide a **Name** for your specific Conditional Access policy.
 1. Under **Users**, select **0 users and groups selected**.
-1. Under the **Include** tab, select **Select users and groups** and check **Users and groups**, then under **Select**, select **0 users and groups selected**.
-1. On the new pane that opens, search for and select the specific user or group you want to target with the CA policy, then select **Select**.
+1. Under the **Include** tab, select **Select users and groups** and check **Users and groups**. If the new pane doesn't open automatically, select **0 users and groups selected**.
+1. On the **Select users and groups** pane that opens, search for and select the specific users or groups that you want to target with the CA policy, then select **Select**.
 1. Under **Target resources**, select **No target resources selected**.
 1. Under the **Include** tab, select **Select apps**, then under **Select**, select **None**.
-1. In the **Select** pane, search for and select the following apps based on the resources you are trying to protect:
+1. On the **Select** pane, search for and select the following apps based on the resources you are trying to protect:
     - **Windows 365** (app ID 0af06dc6-e4b5-4f28-818e-e78e62d137a5). You can also search for "cloud" to find this app. This app is used when retrieving the list of resources for the user and when users initiate actions on their Cloud PC like Restart.
     - **Azure Virtual Desktop** (app ID 9cdead84-a844-4324-93f2-b2e6bb768d07). This app may also appear as **Windows Virtual Desktop**. This app is used to authenticate to the Azure Virtual Desktop Gateway during the connection and when the client sends diagnostic information to the service.
-    - **Microsoft Remote Desktop** (app ID a4a365df-50f1-4397-bc59-1a1564b8bb9c) and **Windows Cloud Login** (app ID 270efc09-cd0d-444b-a71f-39af4910ec45). These apps are only needed when you [configure single sign-on](configure-single-sign-on.md) in your organization settings. These apps are used to authenticate users to the Cloud PC.
+    - **Microsoft Remote Desktop** (app ID a4a365df-50f1-4397-bc59-1a1564b8bb9c) and **Windows Cloud Login** (app ID 270efc09-cd0d-444b-a71f-39af4910ec45). These apps are only needed when you [configure single sign-on](configure-single-sign-on.md) in your environment. These apps are used to authenticate users to the Cloud PC.
 
      It's recommended to match conditional access policies between these apps. This ensures that the policy applies to the Cloud PC End-user portal, the connection to the Gateway and the Cloud PC for a consistent experience. If you want to exclude apps, you must also choose all of these apps.
 
@@ -88,7 +88,7 @@ You can see your list of active and inactive policies in the **Policies** view i
 
 ## Configure sign-in frequency
 
-Sign-in frequency policies enable you to choose the time period before a user must prove their identity again when accessing Microsoft Entra-based resources. This can help secure your environment and is especially important for personal devices, where the local OS may not require MFA or may not lock automatically after inactivity.
+Sign-in frequency policies let you set the time period after which a user must prove their identity again when accessing Microsoft Entra-based resources. This can help secure your environment and is especially important for personal devices, where the local OS may not require MFA or may not lock automatically after inactivity.
 
 Sign-in frequency policies result in different behavior based on the Microsoft Entra app selected:
 
@@ -98,16 +98,16 @@ Sign-in frequency policies result in different behavior based on the Microsoft E
 | **Azure Virtual Desktop** | 9cdead84-a844-4324-93f2-b2e6bb768d07 | Enforces re-authentication when a user authenticates to the Azure Virtual Desktop Gateway during a connection. |
 | **Microsoft Remote Desktop**<br /><br />**Windows Cloud Login** | a4a365df-50f1-4397-bc59-1a1564b8bb9c<br /><br />270efc09-cd0d-444b-a71f-39af4910ec45 | Enforces re-authentication when a user signs in to the Cloud PC when [single sign-on](configure-single-sign-on.md) is enabled.<br /><br />Both apps should be configured together as the clients will soon switch from using the Microsoft Remote Desktop app to the Windows Cloud Login app to authenticate to the Cloud PC. |
 
-To configure the time period before a user is asked to sign-in again:
+To configure the time period after which a user is asked to sign-in again:
 
 1. Open the policy you created previously.
 1. Under **Session**, select **0 controls selected**.
 1. In the **Session** pane, select **Sign-in frequency**.
 1. Select **Periodic reauthentication** or **Every time**.
-    - If you select **Periodic reauthentication**, set the value for the time period before a user is asked to sign-in again, and then select **Select**. For example, setting the value to **1** and the unit to **Hours**, requires multi-factor authentication if a connection is launched over an hour after the last one.
-    - If you select **Every time**, users are prompted to re-authenticate after a period of 10 to 15 minutes since the last time they authenticated for the Azure Virtual Desktop, Microsoft Remote Desktop and Windows Cloud Login apps. Users are prompted to re-authenticate after a period of 60 minutes for the Windows 365 app.
-1. At the bottom of the page, select **Save** when done.
+    - If you select **Periodic reauthentication**, set the value for the time period after which a user is asked to sign-in again, and then select **Select**. For example, setting the value to **1** and the unit to **Hours**, requires multi-factor authentication if a connection is launched more than an hour after the last one.
+    - The **Every time** option is currently available in public preview and is only supported when applied to the **Microsoft Remote Desktop** and **Windows Cloud Login** apps when single sign-on is enabled for your Cloud PCs. If you select **Every time**, users are prompted to re-authenticate after a period of 10 to 15 minutes after the last time they authenticated for the Microsoft Remote Desktop and Windows Cloud Login apps.
+1. At the bottom of the page, select **Save**.
 
 > [!NOTE]
-> - Re-authentication only happens when a user must authenticate to a resource. Once a connection is established, users aren't prompted even if the connection lasts longer than the sign-in frequency you've configured.
-> - Users need to re-authenticate if there is a network disruption that forces the session to be re-established after the sign-in frequency you've configured. This can lead to more frequent authentication requests on unstable networks.
+> - Reauthentication only happens when a user must authenticate to a resource. Aftter a connection is established, users aren't prompted even if the connection lasts longer than the sign-in frequency you've configured.
+> - Users must reauthenticate if there is a network disruption that forces the session to be re-established after the sign-in frequency you've configured. This can lead to more frequent authentication requests on unstable networks.
