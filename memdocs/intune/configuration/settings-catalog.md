@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to create a policy, get impact What If analysis, and learn more about each setting.
+description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get impact What If analysis, and learn more about each setting.
 keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2024
+ms.date: 03/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,25 +32,18 @@ zone_pivot_groups: create-policy
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
 
-> [!WARNING]
-> This article is being updated to include Copilot. Waiting for new UI experience to be added to Woodgrove. Outstanding tasks:
->
-> - in policy experience
-> - update Copilot location
-
 Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
-You can also use [Microsoft Copilot in Intune](../fundamentals/copilot-intune-overview.md). When you combine the settings catalog with Copilot, you can use Copilot to:
+You can also use [Microsoft Copilot in Intune](../fundamentals/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
-- Learn more about each setting in the settings catalog.
-- Create settings catalog policies using prompts.
-- Get impact What If analysis on the settings you configure and the policies you create.
+- Learn more about each setting, get impact What If analysis, and find potential conflicts.
+- Summarize existing policies and get impact analysis on users and security.
 
 If you prefer to configure settings at a granular level, similar to on-premises Group Policy Objects (GPOs), then the settings catalog is a natural transition to cloud-based policy.
 
 When you create the policy, you start from scratch. You add only the settings you want to control and manage.
 
-Use the settings catalog as part of your mobile device management (MDM) solution to manage and secure devices in your organization. More settings are continually being added to the settings catalog. For a list of the settings, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
+To manage and secure devices in your organization, use the settings catalog as part of your mobile device management (MDM) solution. More settings are continually being added to the settings catalog. For a list of the settings, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
 
 This feature applies to:
 
@@ -68,22 +61,20 @@ This feature applies to:
 
 - **Windows 10/11**
 
-  There are thousands of settings, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+  There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
 > [!TIP]
 >
 > - For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
-> - To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`. Or, if you use Copilot, you can use a prompt like **Show me all the existing policies that configure microsoft edge browser**.
+> - To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
 
-This article lists the steps to create a policy, shows how to search and filter the settings in Intune, and shows how to use Copilot for these tasks.
+This article lists the steps to create a policy, shows how to search and filter the settings in Intune, and shows how to use Copilot.
 
 When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 
 For information on some features you can configure using the settings catalog, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
 ## Create the policy
-
-# [Settings catalog profile](#tab/create-policy-sc)
 
 You can create the policy using the settings catalog profile type.
 
@@ -155,45 +146,9 @@ You can create the policy using the settings catalog profile type.
 
 The next time the device checks for configuration updates, the settings you configured are applied.
 
-# [Copilot](#tab/create-policy-copilot)
-
-You can create a policy using Copilot prompts.
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Copilot**:
-
-    :::image type="content" source="./media/settings-catalog/copilot-devices-configuration-ui.png" alt-text="Screenshot that shows how to open Copilot to create a device configuration policy using the Settings Catalog in Microsoft Intune and Intune admin center.":::
-
-3. In the prompt, enter something like **Create a settings catalog policy that configures all bitlocker settings for Windows 10 devices**. Copilot can show you the settings, can show the values the settings are set to, and can give you a **Draft policy** option:
-
-    :::image type="content" source="./media/settings-catalog/copilot-create-bitlocker-policy.png" alt-text="Screenshot that shows Copilot creating a new BitLocker policy using the Settings Catalog in Microsoft Intune and Intune admin center.":::
-
-4. To start creating the policy, select **Draft policy**. All the settings in your draft policy are shown, and they're typically set to the default value. You can change any setting value and save the policy when you're done.
-
-    :::image type="content" source="./media/settings-catalog/copilot-bitlocker-policy-default-values.png" alt-text="Screenshot that shows Copilot creating a new BitLocker policy with the default setting values using the Settings Catalog in Microsoft Intune and Intune admin center.":::
-
-5. Continue creating the policy and save your changes. In **Assignments**, you can assign the policy to users or groups. Or, you can just save the policy and assign it later. The policy doesn't apply until you assign it.
-
-### Sample Copilot prompts that create a new policy
-
-When creating a policy, we recommend you use the **Generate**, **Draft**, or **Create** keywords in the prompt. These keywords help Copilot and other AI languages understand your intent.
-
-You can also export a policy from another MDM provider and paste the text into Copilot. Copilot uses this text to create a  policy.
-
-Here are some sample prompts to get you started:
-
-- Create an Intune policy that turns on the Windows Firewall.
-- Create an Intune policy that blocks users from using any removable storage devices on Windows 11 laptops.
-- Draft a policy to prevent autoplay on removable drives.
-- Create a policy that configures Microsoft auto update to enforce installation after 14 days on mac devices.
-- Generate a policy that hides the shutdown button on the start menu.​
-- Draft a policy from this JAMF output `paste the text`.
-
----
-
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog. If you use Copilot, then you can get more Copilot-generated information about each setting.
+There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog. If you use Copilot, then you can get AI generated information about each setting.
 
 # [Search and filter](#tab/sc-search-filter)
 
@@ -220,25 +175,21 @@ When you create a new policy or update an existing policy, there are built-in se
 
 # [Copilot](#tab/copilot-tooltips)
 
-When you use settings catalog policies, you can use Copilot to get more information about a specific setting.
+When you use settings catalog policies, you can use Copilot to get more information about a specific setting and its impact.
 
 1. In your policy, select **Add settings**. In the Settings Picker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the Settings Picker.
 
-2. For the settings, notice the Copilot prompts button:
+2. For the settings, notice the Copilot tooltip:
 
-    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-tooltip.png" alt-text="Screenshot that shows Copilot tooltip prompts button for on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-tooltip.png" alt-text="Screenshot that shows Copilot tooltip prompts tooltip for on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
-3. When you select a Copilot prompts button, more information is shown about the setting. In the prompt, you can ask Copilot more questions, including the effect of the setting:
+3. When you select a Copilot prompts button, more information is automatically shown about the setting:
 
     :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-details.png" alt-text="Screenshot that shows Copilot giving more detailed information on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
-### Sample Copilot prompts to learn more about a setting
+4. In the prompt, there are more prompts that you can use. You can also select the prompt guide and select from an existing list of prompts:
 
-- Tell me about this setting.
-- What is the impact of this setting?
-- What happens if I deploy this setting to my devices?
-- Does Microsoft recommend enabling this setting?
-- Is this setting configured in any other policies?
+    :::image type="content" source="./media/settings-catalog/copilot-setting-prompt-guide.png" alt-text="Screenshot that shows the Copilot settings prompt guide and a list of the available prompts in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
 ---
 
@@ -278,7 +229,7 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data refreshes automatically, and operates in near real time.
 
-There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting. If you use Copilot, then you can use prompts to help avoid conflicts and get more information on existing policies.
+There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting. If you use Copilot, then you can use some built-in prompts to get more information on existing policies, including their impact.
 
 # [Reporting and troubleshooting](#tab/sc-reporting)
 
@@ -320,18 +271,17 @@ For more information on conflict resolution, go to:
 
 Copilot can help you find the status of your existing policies, find the status of a specific setting in your policy, and show any potential conflicts.
 
-**To help avoid conflicts**, you can ask questions like:
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**. In the policy list, select the policy you want to evaluate using Copilot.
 
-- Will this policy cause any conflicts?
-- Is this setting configured in any other policies?
-- Will this setting cause a conflict?
+2. When you select the policy, the device status shows. Select **Summarize with Copilot**:
 
-**To get reporting-like information on existing policies**, you can use prompts like:
+    :::image type="content" source="./media/settings-catalog/copilot-summarize-policy.png" alt-text="Screenshot that shows how to select the Summarize with Copilot feature in a settings catalog policy in Microsoft Intune and Intune admin center.":::
 
-- Summarize the policy "Contoso Windows 10 security"​.
-- Show policies that contain encryption settings​. Describe their impact on end users.
-- Describe the impact of this policy on security. Format the output in bullets instead of a table.
-- Create a summary of this change for my Change Advisory Board meeting today. Include the full scope (users and devices), summary of the settings in the policy, and possible risks to security or user productivity.
+    A summary is automatically shown and includes the settings in the policy & their values.
+
+3. In the prompt, there are more prompts you can select. You can also select the prompt guide and select from an existing list of prompts:
+
+    :::image type="content" source="./media/settings-catalog/copilot-policy-prompt-guide.png" alt-text="Screenshot that shows the Copilot policy prompt guide and a list of the available prompts in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
 ---
 
@@ -376,5 +326,5 @@ If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initi
 
 - [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md)
 - [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)
-- Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 - [Overview of Microsoft Copilot for Intune](../fundamentals/copilot-intune-overview.md)
