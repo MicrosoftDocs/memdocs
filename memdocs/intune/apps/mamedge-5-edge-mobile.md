@@ -181,4 +181,9 @@ To create the app protection policy, follow these steps:
 16. Select **Create** and wait until the policy is created.
 
     :::image type="content" alt-text="Apps - App protection policies - Policy successfully created - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png":::
-    
+
+## Next step
+
+[![Step 6 to understand App Configuration Policies for Microsoft Edge for Business.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-06.png)](mamedge-6-acp-edge.md)
+
+Continue with [Step 6](mamedge-6-acp-edge.md) to understand App Configuration Policies for Microsoft Edge for Business.

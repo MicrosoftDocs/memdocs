@@ -125,3 +125,8 @@ In the previous steps we show you how to create a conditional access policy to s
 
 10. Select **Done** \> select **Create** and complete the conditional access policy creation as you performed on the previous step.
 
+## Next step
+
+[![Step 4 to understand the Microsoft Edge for Business end user experience.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-04.png)](mamedge-4-end-user-experience.md)
+
+Continue with [Step 4](mamedge-4-end-user-experience.md) to the Microsoft Edge for Business end user experience.

@@ -99,3 +99,9 @@ Use the following steps to configure the MTD Connector.
 5. >  select **Create** to create the connector.
 
 The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first MAM policy arrives to the user or the first MAM user is enrolled to your Intune tenant.
+
+## Next step
+
+[![Step 2 to understand App Protection Policies for Microsoft Edge for Business.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-app.md)
+
+Continue with [Step 2](mamedge-2-app.md) to understand App Protection Policies for Microsoft Edge for Business.

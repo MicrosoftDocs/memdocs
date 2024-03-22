@@ -105,3 +105,9 @@ When Intune determines that your applied Level 3 app protection policy has faile
 When Intune determines that you have been logged in for an extended period without use, you'll see the message: **Offline Grace Period Expired.**
 
 :::image type="content" alt-text="Offline Grace Period Expired  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business29.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business29.png":::
+
+## Next step
+
+[![Step 5 to understand Microsoft Edge for Business Mobile.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-05.png)](mamedge-5-edge-mobile.md)
+
+Continue with [Step 5](mamedge-5-edge-mobile.md) to understand Microsoft Edge for Business Mobile.
