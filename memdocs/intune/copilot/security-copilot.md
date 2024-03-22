@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 03/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
-ms.subservice: copilot
+ms.subservice:
 ms.localizationpriority: high
 
 # optional metadata
@@ -38,7 +38,7 @@ ms.collection:
 
 Copilot for Security is a cloud-based AI platform that provides a natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Copilot for Security?](/security-copilot/microsoft-security-copilot)
 
-**Copilot for Security integrates with Microsoft Intune**. If you use [Microsoft Intune](what-is-intune.md) in the same tenant as Copilot for Security, then you can use Copilot for Security and gets insights about your Intune data.
+**Copilot for Security integrates with Microsoft Intune**. If you use [Microsoft Intune](../fundamentals/what-is-intune.md) in the same tenant as Copilot for Security, then you can use Copilot for Security and gets insights about your Intune data.
 
 
 

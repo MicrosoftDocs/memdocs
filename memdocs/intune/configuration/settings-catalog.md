@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -34,7 +33,7 @@ zone_pivot_groups: create-policy
 
 Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
-You can also use [Microsoft Copilot in Intune](../fundamentals/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
+You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
 - Learn more about each setting, get impact What If analysis, and find potential conflicts.
 - Summarize existing policies and get impact analysis on users and security.
@@ -148,7 +147,9 @@ The next time the device checks for configuration updates, the settings you conf
 
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog. If you use Copilot, then you can get AI generated information about each setting.
+There are thousands of settings available in the settings catalog. To help find the settings you want, you can use the search and filter features in the settings catalog.
+
+If you use Copilot, then you can get AI generated information about each setting.
 
 # [Search and filter](#tab/sc-search-filter)
 
@@ -229,7 +230,9 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data refreshes automatically, and operates in near real time.
 
-There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting. If you use Copilot, then you can use some built-in prompts to get more information on existing policies, including their impact.
+There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting.
+
+If you use Copilot, then you can use some built-in prompts to get more information on existing policies, including their impact.
 
 # [Reporting and troubleshooting](#tab/sc-reporting)
 
@@ -327,4 +330,4 @@ If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initi
 - [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md)
 - [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)
 - [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
-- [Overview of Microsoft Copilot for Intune](../fundamentals/copilot-intune-overview.md)
+- [Overview of Microsoft Copilot for Intune](../copilot/copilot-intune-overview.md)

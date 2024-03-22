@@ -92,12 +92,14 @@ items:
 
   - name: Microsoft Copilot + Intune
     items:
-    - name: Copilot in Intune overview (DRAFT)
+    - name: Copilot in Intune
       href: ./copilot/copilot-intune-overview.md
     - name: Intune plug-in in Copilot for Security
       href: ./copilot/security-copilot.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
+    - name: FAQ
+      href: ./copilot/copilot-intune-faq.md
   - name: Plan
     items:
     - name: Planning guide

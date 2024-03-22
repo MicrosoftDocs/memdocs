@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 03/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
-ms.subservice: copilot
+ms.subservice:
 ms.localizationpriority: high
 
 # optional metadata
@@ -32,7 +32,7 @@ ms.collection:
 
 Microsoft Copilot for Security is a generative-AI security analysis tool that can help your organization get information quickly. Copilot is [built into Microsoft Intune](copilot-intune-overview.md) and can help IT admins manage and troubleshoot devices.
 
-Copilot uses your Intune data. And, admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them. For more information, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.yml).
+Copilot uses your Intune data. And, admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them. For more information, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
 
 With Copilot in Intune, you can:
 
@@ -44,11 +44,11 @@ This article describes how to use Copilot to manage and troubleshoot device issu
 
 ## Before you begin
 
-- Copilot in Intune is in [public preview](public-preview.md).
+- Copilot in Intune is in [public preview](../fundamentals/public-preview.md).
 
 - To use Copilot in Intune, make sure Copilot is enabled. For more information, go to:
 
-  - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#prerequisites)
+  - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#before-you-begin)
   - [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot)
 
 - When you use the Copilot prompts to troubleshoot your devices, you are in the scope of the device you select.
@@ -110,4 +110,4 @@ In Copilot, there are existing prompts that guide you to get more information ab
 ## Related articles
 
 - [Microsoft Copilot in Intune](copilot-intune-overview.md)
-- [Microsoft Copilot in Intune FAQ](copilot-intune-faq.yml)
+- [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md)

@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 03/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
-ms.subservice: copilot
+ms.subservice:
 ms.localizationpriority: high
 
 # optional metadata
@@ -36,7 +36,7 @@ ms.collection:
 > [!IMPORTANT]
 > This article is being updated for Copilot.
 
-This feature is in [public preview](public-preview.md).
+This feature is in [public preview](../fundamentals/public-preview.md).
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) is a generative-AI security analysis tool. It can help you and your organization get information quickly, and help you make decisions that impact security and risk.
 
@@ -87,7 +87,7 @@ To use Copilot in Intune, you need the following:
 
 To access Copilot for Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Home screen lists the ways to get started with Copilot:
 
-:::image type="content" source="./media/copilot-intune-overview/copilot-home-page.png" alt-text="Screenshot that shows Copilot is enabled in the Microsoft Intune tenant and Intune admin center." lightbox="./media/copilot-intune-overview/copilot-home-page.png":::
+:::image type="content" source="./media/copilot-intune-overview/copilot-home-page.png" alt-text="Screenshot that shows the Intune admin center homepage with Copilot features in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-home-page.png":::
 
 Currently, there are two areas to use Copilot in Intune:
 
@@ -102,7 +102,7 @@ Copilot is embedded on policy settings and with your existing policies.
 
 When you create an Intune policy, you add settings and configure these settings to meet your organization requirements. When you add a setting, there's a Copilot tooltip::
 
-:::image type="content" source="./media/copilot-intune-overview/compliance-policy-setting-copilot-tooltip.png" alt-text="Screenshot that shows Copilot settings tooltip in a compliance policy in Microsoft Intune and Intune admin center." lightbox="./media/copilot-intune-overview/tenant-administration-copilot-enabled.png":::
+:::image type="content" source="./media/copilot-intune-overview/compliance-policy-setting-copilot-tooltip.png" alt-text="Screenshot that shows Copilot settings tooltip in a compliance policy in Microsoft Intune and Intune admin center." lightbox="./media/copilot-intune-overview/compliance-policy-setting-copilot-tooltip.png":::
 
 When you select the Copilot tooltip, the Copilot prompt window opens and gives more information about that setting:
 
