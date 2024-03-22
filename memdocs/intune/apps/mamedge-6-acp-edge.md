@@ -105,6 +105,6 @@ Repeat the previous steps to create an app configuration policy for additional p
 
 ## Next step
 
-[![Step 7 to troubleshoot securing data with Microsoft Edge for Business.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-07.png)](mamedge-7-troubleshooting.md)
+[![Step 7 to troubleshoot securing data with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-07.png)](mamedge-7-troubleshooting.md)
 
 Continue with [Step 7](mamedge-7-troubleshooting.md) to troubleshoot securing data with Microsoft Edge for Business.

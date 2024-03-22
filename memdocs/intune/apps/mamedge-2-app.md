@@ -122,6 +122,6 @@ You have now created your first MAM for Windows Policy and it should be availabl
 
 ## Next step
 
-[![Step 3 to understand Microsoft Entra Conditional Access with Microsoft Edge for Business.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-03.png)](mamedge-3-mamca.md)
+[![Step 3 to understand Microsoft Entra Conditional Access with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-03.png)](mamedge-3-mamca.md)
 
 Continue with [Step 3](mamedge-3-mamca.md) to Microsoft Entra Conditional Access with Microsoft Edge for Business.

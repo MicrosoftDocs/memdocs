@@ -102,6 +102,6 @@ The connector is now created. It's important to note that the **Connection statu
 
 ## Next step
 
-[![Step 2 to understand App Protection Policies for Microsoft Edge for Business.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-app.md)
+[![Step 2 to understand App Protection Policies for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-app.md)
 
 Continue with [Step 2](mamedge-2-app.md) to understand App Protection Policies for Microsoft Edge for Business.

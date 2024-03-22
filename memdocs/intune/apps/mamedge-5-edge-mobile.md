@@ -184,6 +184,6 @@ To create the app protection policy, follow these steps:
 
 ## Next step
 
-[![Step 6 to understand App Configuration Policies for Microsoft Edge for Business.](../media/securing-data-edge-for-business/securing_data_edge_for_business_steps-06.png)](mamedge-6-acp-edge.md)
+[![Step 6 to understand App Configuration Policies for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-06.png)](mamedge-6-acp-edge.md)
 
 Continue with [Step 6](mamedge-6-acp-edge.md) to understand App Configuration Policies for Microsoft Edge for Business.
