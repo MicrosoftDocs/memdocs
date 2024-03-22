@@ -44,11 +44,11 @@ This article describes how to use Copilot to manage and troubleshoot device issu
 
 ## Before you begin
 
-- Copilot in Intune is in [public preview](public-preview.md).
+- Copilot in Intune is in [public preview](../fundamentals/public-preview.md).
 
 - To use Copilot in Intune, make sure Copilot is enabled. For more information, go to:
 
-  - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#prerequisites)
+  - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#before-you-begin)
   - [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot)
 
 - When you use the Copilot prompts to troubleshoot your devices, you are in the scope of the device you select.

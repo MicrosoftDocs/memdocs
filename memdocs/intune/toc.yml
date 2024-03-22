@@ -98,6 +98,8 @@ items:
       href: ./copilot/security-copilot.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
+    - name: FAQ
+      href: ./copilot/copilot-intune-faq.yml
   - name: Plan
     items:
     - name: Planning guide
