@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 5f6682cb-5fcd-4018-b7f7-71768ad3152e
 
 # optional metadata
@@ -51,7 +50,7 @@ For more information about Windows 10 auto-enrollment and device registration fo
 
 The following tables list the ports and services that the Intune client accesses:
 
-|**Endpoint**|**IP address**|
+| Endpoint | IP address |
 |---------------------|-----------|
 |*.manage.microsoft.us | 52.227.99.114 <br> 20.141.108.112 <br> 13.72.17.166 <br> 52.126.185.115 <br> 52.227.211.91 <br> 23.97.10.212 <br> 52.227.29.124 <br> 52.247.174.16 <br> 52.227.29.244 <br> 52.227.208.144 <br> 52.227.1.233 <br> 20.141.104.221 <br> 52.247.134.218 <br> 20.141.78.227 <br> 13.77.236.201  |
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
