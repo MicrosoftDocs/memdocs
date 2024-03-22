@@ -48,7 +48,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
   > [!NOTE]
-  > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', or 'dm.microsoft.com' endpoints.
+  > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', 'dm.microsoft.com', or 'has.spserv.microsoft.com' endpoints.
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
