@@ -114,7 +114,7 @@ The installer package will check if the following components have already been i
 
 #### Get an onboarding configuration file for up-level devices
 
-1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
+1. Go to the [Microsoft Defender Security Center](https://security.microsoft.com/securitysettings/endpoint) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Endpoint** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
