@@ -36,7 +36,7 @@ The Cloud PC utilization report helps you monitor and optimize Cloud PC usage in
 By reviewing Cloud PCs with low usage, you can reduce costs by:
 
 - Reassigning under-used Cloud PC licenses to other users who might use them more often.
-- Identifying and deprovisioning Cloud PCs that have been inactive for long periods of time.
+- Identifying and deprovisioning Cloud PCs that are inactive for long periods of time.
 
 ## Use the Cloud PC utilization report
 
