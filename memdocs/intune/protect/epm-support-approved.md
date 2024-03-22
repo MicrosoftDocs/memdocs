@@ -30,13 +30,13 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+With Microsoft Intune Endpoint Privilege Management (EPM) your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
-This article explains how to use the **support approved** file *elevation type* in your Endpoint Privilege Management [Windows elevation rules policies](../protect/epm-policies.md#windows-elevation-rules-policy).
+This article explains how to use the **support approved** workflow with Endpoint Privilege Management.
 
-Support-approved elevation gives you more control over sensitive files than other elevation rule types, but it also requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
+Support approved elevations allow you to require approval prior to an elevation being allowed. You can use the support approved functionality as part of an elevation rule, or as default client behavior. Requests that are submitted require Intune administrators to approve the request on a case-by-case basis.
 
-When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is informed, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
+When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is notified, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
 
 Applies to:
 
@@ -66,7 +66,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
 - **Review of elevation requests**
 
-  An Intune admin must have *view* and *manage* rights for the **Intune Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests.
+  An Intune admin must have *view* and *manage* rights for the **Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests.
 
   To find and respond to requests, these admins use the **Elevation requests** tab of the *Endpoint Privilege Management* page in the admin center. Because Intune doesn't have a way to notify admins about new elevation requests, admins should plan to check the tab regularly for pending requests.
 
@@ -74,9 +74,9 @@ The following subjects are details to plan for and expect when you use the suppo
 
   - **For approvals**: When an admin approves an elevation request, Intune sends a policy to the device where the user submitted the request, which enables that user to run the file as elevated for the next 24 hours. This period begins at the time the admin approves the request. There's no current support for a custom time period or cancellation of the approved elevation before the 24-hour period expires.
 
-    Because approval isn't immediate, Intune also uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
+    Once the request is approved, Intune notifies the device and initiates a sync. *This can take some time.* Intune uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
 
-  - **For denials**: Intune sends a notification to the user on the device that the request was denied, and the user can’t run that file in an elevated context. The can submit a new request, which is again subject to review and approval.
+  - **For denials**: Intune does not notify the user. The administrator should manually notify the user that their request was denied.
 
 - **Auditing for elevation requests**
 
