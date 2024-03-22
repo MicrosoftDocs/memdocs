@@ -36,7 +36,7 @@ ms.reviewer: aanavath
 
 Every day new malicious files and apps appear in the wild. When run on devices in your organization they present a risk, which can be hard to manage or prevent. To help prevent undesired apps from running on your managed Windows devices, you can use Microsoft Intune *App Control for Business policies*.
 
-Intune's App Control for Business policies are part of endpoint security and use the Windows ApplicationControl CSP to manage allowed apps on Windows devices. 
+Intune's App Control for Business policies are part of endpoint security and use the Windows ApplicationControl CSP to manage allowed apps on Windows devices.
 
 Also available through App Control for Business policy, managed installer policy adds the *Intune Management Extension* to your Tenant as a managed installer. With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps can be identified by your  App Control for Business policies as safe apps that can be allowed to run on your devices.
 
@@ -440,6 +440,8 @@ You may have noticed instances of the Application Control policy in the Intune U
 
 From the Windows App Control for Business Docs, prior to Windows 10 1903, App Control for Business only supported a single active policy on a system at any given time. This significantly limits customers in situations where multiple policies with different intents would be useful.
 
+This issue is resolved for devices that run Windows 10 1903 or later with a Windows security update released on or after March 12, 2024. Older versions of Windows are expected receive this fix in future Windows security updates.
+
 ### Does the Managed Installer opt-in capability for my tenant set apps installed from Configuration Manager with the appropriate tag?
 
 No. This release focuses on setting apps installed from Intune, using the Intune Management Extension, as the Managed Installer. It can't set Configuration Manager as the Managed Installer.
@@ -449,4 +451,3 @@ If setting Configuration Manager as the Managed Installer is desired, you can al
 ## Next Steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
-
