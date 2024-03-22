@@ -11,7 +11,6 @@ ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 
 ms.reviewer: bryanke
