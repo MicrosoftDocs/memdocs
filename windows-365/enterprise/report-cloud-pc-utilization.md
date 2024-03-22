@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -37,7 +36,7 @@ The Cloud PC utilization report helps you monitor and optimize Cloud PC usage in
 By reviewing Cloud PCs with low usage, you can reduce costs by:
 
 - Reassigning under-used Cloud PC licenses to other users who might use them more often.
-- Identifying and deprovisioning Cloud PCs that have been inactive for long periods of time.
+- Identifying and deprovisioning Cloud PCs that are inactive for long periods of time.
 
 ## Use the Cloud PC utilization report
 
@@ -60,6 +59,7 @@ The report shows the following tenant data aggregated for the last four weeks:
   - **PC type**
   - **Time connected**: The total hours that the user has been connected to the Cloud PC over the last four weeks.
   - **Date last connected**: The date when the user most recently connected to their Cloud PC (within the last 60 days). If the user isn't currently connected to the Cloud PC, this date is the sign out time. If the user is connected to the Cloud PC, this date is the most recent connection time.
+  - **Date created**: The date the Cloud PC was created.
 
 ### Filters
 
