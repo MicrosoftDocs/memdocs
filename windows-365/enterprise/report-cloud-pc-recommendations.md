@@ -74,7 +74,7 @@ The report shows the following columns:
 
 ## Insights by model
 
-A summary of recommendations by the type of Cloud PC. The report shows the **PC type** and the number of Cloud PCs in each category. PC types that have many Cloud PCs in non-Righsized columns might indicate the type isn't a good fit for your workloads.
+A summary of recommendations by the type of Cloud PC. The report shows the **PC type** and the number of Cloud PCs in each category. PC types that have many Cloud PCs in non-Rightsized columns might indicate the type isn't a good fit for your workloads.
 
 <!-- ########################## -->
 ## Next steps
