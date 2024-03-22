@@ -74,7 +74,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
   - **For approvals**: When an admin approves an elevation request, Intune sends a policy to the device where the user submitted the request, which enables that user to run the file as elevated for the next 24 hours. This period begins at the time the admin approves the request. There's no current support for a custom time period or cancellation of the approved elevation before the 24-hour period expires.
 
-    Once the request is approved, Intune will notified the device and initiate a sync. *This can take some time.* Intune uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
+    Once the request is approved, Intune notifies the device and initiates a sync. *This can take some time.* Intune uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
 
   - **For denials**: Intune does not notify the user. The administrator should manually notify the user that their request was denied.
 
