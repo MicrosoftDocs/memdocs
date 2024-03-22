@@ -60,6 +60,7 @@ The report shows the following tenant data aggregated for the last four weeks:
   - **PC type**
   - **Time connected**: The total hours that the user has been connected to the Cloud PC over the last four weeks.
   - **Date last connected**: The date when the user most recently connected to their Cloud PC (within the last 60 days). If the user isn't currently connected to the Cloud PC, this date is the sign out time. If the user is connected to the Cloud PC, this date is the most recent connection time.
+  - **Date created**: The date the Cloud PC was created.
 
 ### Filters
 
