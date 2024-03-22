@@ -98,7 +98,7 @@ Use *Windows elevation settings policy* when you want to:
 
 Use profiles for *Windows elevation rules policy* to manage the identification of specific files, and how elevation requests for those files are handled. Each *Windows elevation rule policy* includes one or more *elevation rules*. It's with elevation rules that you configure details about the file being managed and requirements for it to be elevated.
 
-Each elevation rule instruct EPM on how to:
+Each elevation rule instructs EPM on how to:
 
 - **Identify the file using**:
   - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted.
@@ -123,6 +123,7 @@ Each elevation rule instruct EPM on how to:
 > For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md).
 >
 > You can also use the `Get-FileAttributes` PowerShell cmdlet from the [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module). This cmdlet can retrieve file attributes for a .exe file and extract its Publisher and CA certificates to a set location that you can use to populate Elevation Rule Properties for a particular application.
+
 > [!CAUTION]
 >
 > We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. End users will automatically elevate these applications at *every* launch of that application.
