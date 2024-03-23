@@ -50,12 +50,11 @@ Before you enable SSO, review the following information for using it in your env
 
 ### Disconnection when the session is locked
 
-When SSO is enabled, users sign in to Windows using a Microsoft Entra ID authentication token, which provides support for passwordless authentication to Windows. The Windows lock screen in the remote session doesn't support Microsoft Entra ID authentication tokens or passwordless authentication methods, like FIDO keys, which means:
+When SSO is enabled, users sign in to Windows using a Microsoft Entra ID authentication token, which provides support for passwordless authentication to Windows. The Windows lock screen in the remote session doesn't support Microsoft Entra ID authentication tokens or passwordless authentication methods, like FIDO keys. Instead of the previous behavior of showing the remote lock screen when a session is locked, the session is instead disconnected and the user is notified. Disconnecting the session ensures that:
 
-- Users can't unlock their screens in a remote session.
-- When someone tries to lock a remote session, either through user action or system policy, the session is instead disconnected and the service sends a message to the user explaining they were disconnected.
-
-Disconnecting the session also ensures that when the connection is relaunched after a period of inactivity, Microsoft Entra ID reevaluates any applicable conditional access policies.
+- Users benefit from a single sign-on experience and can reconnect without authentication prompt when allowed.
+- Users can sign back into their session using passwordless authentication like FIDO keys.
+- Conditional access policies, including multifactor authentication and sign-in frequency, are re-evaluated when the user reconnects to their session.
 
 ## Prerequisites
 
@@ -74,7 +73,7 @@ Before you can enable SSO, you must meet the following prerequisites:
 
 ## Enable Microsoft Entra authentication for RDP
 
-You must first allow Microsoft Entra authentication for Windows in your Microsoft Entra tenant, which enables issuing RDP access tokens allowing users to sign in to their Cloud PCs. You must set the `isRemoteDesktopProtocolEnabled` property to true on the service principal's `remoteDesktopSecurityConfiguration` object for the following Microsoft Entra applications:
+You must first allow Microsoft Entra authentication for Windows in your Microsoft Entra tenant, which enables issuing RDP access tokens allowing users to sign in to their Cloud PCs. This change must be done on the service principals for the following Microsoft Entra applications:
 
 | Application Name | Application ID |
 |--|--|
@@ -84,7 +83,9 @@ You must first allow Microsoft Entra authentication for Windows in your Microsof
 > [!IMPORTANT]
 > As part of an upcoming change, we're transitioning from Microsoft Remote Desktop to Windows Cloud Login, beginning in 2024. Configuring both applications now ensures you're ready for the change.
 
-To configure the service principal, use the [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/overview) to create a new [remoteDesktopSecurityConfiguration object](/graph/api/serviceprincipal-post-remotedesktopsecurityconfiguration) on the service principal and set the property `isRemoteDesktopProtocolEnabled` to `true`. You can also use the [Microsoft Graph API](/graph/use-the-api) with a tool such as [Graph Explorer](/graph/use-the-api#graph-explorer).
+To allow Entra authentication, you can use the [Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/overview) to create a new [remoteDesktopSecurityConfiguration object](/graph/api/serviceprincipal-post-remotedesktopsecurityconfiguration) on the service principal and set the property `isRemoteDesktopProtocolEnabled` to `true`. You can also use the [Microsoft Graph API](/graph/use-the-api) with a tool such as [Graph Explorer](/graph/use-the-api#graph-explorer).
+
+Follow the steps below to make the changes using PowerShell:
 
 1. Launch the Azure Cloud Shell in the Azure portal with the PowerShell terminal type, or run PowerShell on your local device.
 
@@ -111,12 +112,17 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
 1. Set the property `isRemoteDesktopProtocolEnabled` to `true` by running the following commands. There's no output from these commands.
 
    ```powershell
+   $params = @{
+       "@odata.type" = "#microsoft.graph.remoteDesktopSecurityConfiguration"
+       isRemoteDesktopProtocolEnabled = $true
+   }
+
    If ((Get-MgServicePrincipalRemoteDesktopSecurityConfiguration -ServicePrincipalId $MSRDspId) -ne $true) {
-       Update-MgServicePrincipalRemoteDesktopSecurityConfiguration -ServicePrincipalId $MSRDspId -IsRemoteDesktopProtocolEnabled
+       Update-MgServicePrincipalRemoteDesktopSecurityConfiguration -ServicePrincipalId $MSRDspId -IsRemoteDesktopProtocolEnabled -BodyParameter $params
    }
 
    If ((Get-MgServicePrincipalRemoteDesktopSecurityConfiguration -ServicePrincipalId $WCLspId) -ne $true) {
-       Update-MgServicePrincipalRemoteDesktopSecurityConfiguration -ServicePrincipalId $WCLspId -IsRemoteDesktopProtocolEnabled
+       Update-MgServicePrincipalRemoteDesktopSecurityConfiguration -ServicePrincipalId $WCLspId -IsRemoteDesktopProtocolEnabled -BodyParameter $params
    }
    ```
 
@@ -137,9 +143,9 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
 
 ## Configure the target device groups
 
-After you enable Microsoft Entra authentication for RDP, you must configure the target device groups. By default when enabling SSO, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new session host. Microsoft Entra remembers up to 15 hosts for 30 days before prompting again. If you see a dialogue to allow the Remote Desktop connection, select **Yes** to connect.
+After you enable Microsoft Entra authentication for RDP, you must configure the target device groups. By default when enabling SSO, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 hosts for 30 days before prompting again. If a user sees a dialogue to allow the Remote Desktop connection, they should select **Yes** to connect.
 
-You can hide this dialog and provide SSO for connections to all your session hosts by configuring a list of trusted devices. You need to create one or more groups in Microsoft Entra ID that contains your session hosts, then set a property on the service principals for the same *Microsoft Remote Desktop* and *Windows Cloud Login* applications, as used in the previous section, for the group.
+To hide this dialog you need to create one or more groups in Microsoft Entra ID that contains your Cloud PCs, then set a property on the service principals for the same *Microsoft Remote Desktop* and *Windows Cloud Login* applications, as used in the previous section, for the group.
 
 > [!TIP]
 > We recommend you use a dynamic group and configure the dynamic membership rules to includes all your Cloud PCs. You can use the device names in this group, but for a more secure option, you can set and use [device extension attributes](/graph/extensibility-overview) using [Microsoft Graph API](/graph/api/resources/device). While dynamic groups normally update within 5-10 minutes, large tenants can take up to 24 hours.
@@ -170,7 +176,7 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
    ```output
    Id                                   DisplayName
    --                                   -----------
-   12345678-abcd-1234-abcd-1234567890ab Contoso-session-hosts
+   12345678-abcd-1234-abcd-1234567890ab Contoso-Cloud-PC
    ```
 
    Repeat steps 2 and 3 for each group you want to add to the `targetDeviceGroup` object, up to a maximum of 10 groups.
@@ -184,10 +190,10 @@ To configure the service principal, use the [Microsoft Graph PowerShell SDK](/po
 
 ## Review your conditional access policies
 
-When SSO is turned on, a new Microsoft Entra ID app is introduced to authenticate users to the session host. If you have conditional access policies that apply when accessing Windows 365, review the recommendations to [set conditional access policies](set-conditional-access-policies.md) for Windows 365 to make sure users have the desired experience and to secure your environment.
+When SSO is turned on, a new Microsoft Entra ID app is introduced to authenticate users to the Cloud PC. If you have conditional access policies that apply when accessing Windows 365, review the recommendations to [set conditional access policies](set-conditional-access-policies.md) for Windows 365 to make sure users have the desired experience and to secure your environment.
 
 ## Turn on SSO for all Cloud PCs in your account
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an account that has either a Global Administrator or Windows 365 Administrator role.
-2. Select **Your organization’s Cloud PCs** > **Update organization settings**.
-3. Select the **Single sign-on** option under **Cloud PC settings**.
+1. Select **Your organization’s Cloud PCs**, and then select **Update organization settings**.
+1. Select the **Single sign-on** option under **Cloud PC settings**.
