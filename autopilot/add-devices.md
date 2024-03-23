@@ -99,7 +99,7 @@ To install the script directly and capture the hardware hash from the local comp
    Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
    ```
 
-   You can run the commands remotely if both of the following are true:
+You can run the commands remotely if both of the following are true:
 
    - WMI permissions are in place.
    - WMI is accessible through Windows Firewall on the remote computer.
