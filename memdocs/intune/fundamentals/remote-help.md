@@ -11,7 +11,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -49,6 +48,7 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 ## Remote Help capabilities and requirements
 
 The Remote Help app supports the following capabilities in general across the supported platforms.
+
 > [!NOTE]
 > To know more about specific capabilities and requirements based on the platform that you're using, go to:
 >  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
