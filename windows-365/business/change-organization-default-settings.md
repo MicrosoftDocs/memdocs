@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
