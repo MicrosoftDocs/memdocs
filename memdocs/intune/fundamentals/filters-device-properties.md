@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -277,6 +276,7 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - **`deviceManagementType` (Device Management Type)**: On Intune enrolled devices, create a filter rule based on the Intune device management type. Devices must be Intune enrolled to use this app property. Select from the following values using the `-eq` and `-ne` operators: 
 
@@ -294,6 +294,11 @@ You can use the following app properties in your managed app filter rules:
 
   - `(app.deviceManagementType -eq "Unmanaged")`
 
+  This property applies:
+
+  - Android
+  - iOS/iPadOS
+
 - **`deviceManufacturer` (Manufacturer)**: Create a filter rule based on the client reported device manufacturer. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
@@ -305,6 +310,7 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - **`deviceModel` (Model)**: Create a filter rule based on the client reported device model. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -318,6 +324,7 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - **`osVersion` (OS Version)**: Create a filter rule based on the client reported operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -331,6 +338,7 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 ## Advanced rule editing
 
