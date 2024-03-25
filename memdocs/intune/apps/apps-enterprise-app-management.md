@@ -159,7 +159,6 @@ The following table of Enterprise Apps is available within Intune:
 | Beyond Compare |
 | Blender |
 | BlueJeans 2 |
-| BlueJeans 2 |
 | Brady Workstation |
 | Burp Suite Community Edition |
 | Burp Suite Professional Edition |
