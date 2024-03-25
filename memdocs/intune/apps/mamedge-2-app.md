@@ -41,14 +41,11 @@ When configuring App protection policies, there are many various settings and op
 
 The APP data protection configuration framework is organized into three distinct configuration scenarios:
 
-1. **Level 1 enterprise basic data protection**
- Microsoft recommends this configuration as the minimum data protection configuration for an enterprise device.
+1. **Level 1 enterprise basic data protection:** Microsoft recommends this configuration as the minimum data protection configuration for an enterprise device.
 
-2. **Level 2 enterprise enhanced data protection**
-    Microsoft recommends this configuration for devices where users access sensitive or confidential information. This configuration is applicable to most mobile users accessing work or school data. Some of the controls may impact user experience.
+2. **Level 2 enterprise enhanced data protection:** Microsoft recommends this configuration for devices where users access sensitive or confidential information. This configuration is applicable to most mobile users accessing work or school data. Some of the controls may impact user experience.
 
-3. **Level 3 enterprise high data protection**
-    Microsoft recommends this configuration for devices run by an organization with a larger or more sophisticated security team, or for specific users or groups who are at uniquely elevated risk (users who oversee sensitive data where unauthorized disclosure causes considerable material loss to the organization). An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
+3. **Level 3 enterprise high data protection:** Microsoft recommends this configuration for devices run by an organization with a larger or more sophisticated security team, or for specific users or groups who are at uniquely elevated risk (users who oversee sensitive data where unauthorized disclosure causes considerable material loss to the organization). An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
 
 ### Data Protection Framework deployment methodology
 With any deployment of new software, features or settings, Microsoft recommends investing in a ring methodology for testing validation prior to deploying the APP data protection framework. Defining deployment rings is a one-time event (or at least infrequent), but IT should revisit these groups to ensure that the sequencing is still correct.
@@ -59,7 +56,7 @@ For more information about Framework Settings, see [App protection framework](..
 
 **App protection policies for Windows**: This feature provides secure and compliant access to work resources on personal computers with Data Loss Prevention (DLP) controls.
 
-Having gained a comprehensive understanding of the app protection policy framework, you're now prepared to establish our initial app protection policy for Windows. In this instance, you'll be formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to our specific requirements. So, the forthcoming example may only be applicable to the **Level 3** policy that we have recommended. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet our distinct needs.
+Having gained a comprehensive understanding of the app protection policy framework, you're now prepared to establish our initial app protection policy for Windows. In this instance, you'll be formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to our specific requirements. So, the forthcoming example may only be applicable to the **Level 3** policy that we have recommended. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet your distinct needs.
 
 #### Apply the data protection framework
 
@@ -119,6 +116,7 @@ For this example, select all VPN Users. However, when you assign this policy in 
 17. Click **Next** to create the policy.
 
 You have now created your first MAM for Windows Policy and it should be available within your Intune tenant.
+
 
 ## Next step
 
