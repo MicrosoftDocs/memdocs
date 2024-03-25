@@ -98,11 +98,11 @@ To provide oversight for elevation approvals, only Intune administrators who hav
 
 For more information about all the permissions for managing EPM, see [Role-based access controls for Endpoint Privilege Management](../protect/epm-overview.md#role-based-access-controls-for-endpoint-privilege-management).
 
-### Create policy for support approved file elevations
+## Create policy for support approved file elevations
 
 To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Create a Windows elevation rules policy](../protect/epm-policies.md#create-a-windows-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
 
-### Manage pending elevation requests
+## Manage pending elevation requests
 
 Use the following procedure as guidance for reviewing and managing elevation requests.
 
