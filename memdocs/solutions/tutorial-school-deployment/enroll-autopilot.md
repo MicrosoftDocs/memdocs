@@ -145,6 +145,6 @@ With the devices joined to Microsoft Entra tenant and managed by Intune, you can
 
 [M365-1]: https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2
 
-[EDU-3]: ../tutorial-deploy-apps-winse/considerations.md#enrollment-status-page
+[EDU-3]: /education/windows/tutorial-deploy-apps-winse/considerations.md#enrollment-status-page
 
 [SURF-1]: /surface/surface-autopilot-registration-support
