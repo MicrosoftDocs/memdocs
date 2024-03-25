@@ -7,7 +7,7 @@ keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2024
+ms.date: 03/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -182,9 +182,9 @@ When you use settings catalog policies, you can use Copilot to get more informat
 
 2. For the settings, notice the Copilot tooltip:
 
-    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-tooltip.png" alt-text="Screenshot that shows Copilot tooltip prompts tooltip for on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-tooltip.png" alt-text="Screenshot that shows Copilot prompts tooltip for on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
-3. When you select a Copilot prompts button, more information is automatically shown about the setting:
+3. When you select a Copilot tooltip, more information is automatically shown about the setting:
 
     :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-details.png" alt-text="Screenshot that shows Copilot giving more detailed information on any setting in the Settings Catalog in Microsoft Intune and Intune admin center.":::
 
