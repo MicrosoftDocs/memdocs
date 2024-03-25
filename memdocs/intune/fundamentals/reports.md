@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/16/2024
+ms.date: 03/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -105,7 +105,7 @@ You can view the **Device compliance trends** report using the following steps:
 
     ![Intune trend report](./media/intune-reports/intune-reports-03.png)
 
-### Noncompliant devices and settings report (Organizational)
+### Noncompliant devices (Organizational)
 
 > [!NOTE]
 > In addition to this report, see [Noncompliant devices report](#noncompliant-devices-report-operational).
