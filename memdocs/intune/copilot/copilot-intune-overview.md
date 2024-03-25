@@ -47,17 +47,20 @@ There are two ways to access your Intune data using Copilot:
 
 - **Microsoft Copilot for Security**: This option is standalone Copilot and is available in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). You can use this portal to get insights from Copilot for Security and other embedded services, like Intune, Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and more.
 
-  This experience has a Security Operations Center (SOC) focus, and can be used by IT admins. For more information on Copilot for Security and how to get Intune data, go to [Microsoft Copilot for Security](security-copilot.md).
+  This experience has a Security Operations Center (SOC) focus, and can be used by IT admins. For more information on Copilot for Security and how to get Intune data, go to [Microsoft Copilot for Security and Intune](security-copilot.md).
 
-This article focuses on Copilot in Intune and describes the Intune features that can use Copilot.
+This article focuses on Copilot in Intune and describes the Intune features that you can use with Copilot.
 
 ## Before you begin
 
-To use Copilot in Intune, you should be aware of the following information:
+To use Copilot in Intune, you should know the following information:
 
-- **Copilot security compute units (SCUs)**: Copilot in Microsoft Intune is included with Microsoft Copilot for Security. There aren't any other licensing requirements or Intune-specific licenses for using Copilot in Intune.
+- **Copilot security compute units (SCUs)**: Copilot in Intune is included with Copilot for Security. There aren't any other licensing requirements or Intune-specific licenses for using Copilot in Intune.
 
-  For more information on SCUs, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
+  For more information on SCUs, go to:
+
+  - [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
+  - [Manage capacity in Copilot for Security](/security-copilot/manage-capacity)
 
 - **Copilot configuration**: Microsoft Copilot for Security must be configured and you must complete the first run experience. For the specific setup tasks, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
@@ -71,7 +74,7 @@ To use Copilot in Intune, you should be aware of the following information:
 
 - **Intune plug-in source**: To use Copilot in Intune, you need the Intune plug-in enabled in Copilot for Security. This plug-in allows you to access your Intune data and use Copilot in the Intune admin center.
 
-  Go to the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > bottom right corner):
+  Go to the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner):
 
   :::image type="content" source="./media/copilot-intune-overview/security-copilot-sources.png" alt-text="Screenshot that shows the plugin sources that are available, enabled, and disabled in Microsoft Copilot for Security.":::
 
@@ -83,6 +86,9 @@ To use Copilot in Intune, you should be aware of the following information:
   > Some roles can enable or disable plugins. For more information, go to [Manage plugins in Microsoft Copilot for Security](/security-copilot/manage-plugins).
 
 - **Your Intune data**: Copilot uses your Intune data. Intune admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
+
+> [!TIP]
+> For some common questions asked about Copilot in Intune, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
 
 ## Start using Copilot in Intune
 
@@ -99,13 +105,13 @@ Currently, there are two areas to use Copilot in Intune:
 
 Copilot is embedded on policy settings and with your existing policies.
 
-✅ Use Copilot to learn more about individual settings, their impact, and recommended values.
+#### ✅ Use Copilot to learn more about individual settings, their impact, and recommended values
 
 When you create an Intune policy, you add settings and configure these settings to meet your organization requirements. When you add a setting, there's a Copilot tooltip:
 
 :::image type="content" source="./media/copilot-intune-overview/compliance-policy-setting-copilot-tooltip.png" alt-text="Screenshot that shows Copilot settings tooltip in a compliance policy in Microsoft Intune and Intune admin center." lightbox="./media/copilot-intune-overview/compliance-policy-setting-copilot-tooltip.png":::
 
-When you select the Copilot tooltip, the Copilot prompt window opens and gives more information about that setting:
+When you select the Copilot tooltip, the Copilot prompt window opens and automatically gives more information about that setting:
 
 :::image type="content" source="./media/copilot-intune-overview/compliance-policy-setting-prompt-results.png" alt-text="Screenshot that shows more information about a setting when you select the Copilot tooltip in a compliance policy in Microsoft Intune admin center.":::
 
@@ -119,13 +125,13 @@ You can use the Copilot tooltips on the following policy types in Intune:
 
 - Compliance policies
 - Device configuration policies, including the settings catalog
-- Endpoint security policies
+- Most endpoint security policies
 
-✅ Use Copilot to summarize an existing policy
+#### ✅ Use Copilot to summarize an existing policy
 
 On your existing Intune policies, you can use Copilot to summarize the policy. The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the impact of a policy and its settings on your users and devices.
 
-To use this feature, you select the policy and then select **Summarize with Copilot**:
+To use this feature in Intune, select an existing policy and then select **Summarize with Copilot**:
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-summarize-policy.png" alt-text="Screenshot that shows how to select the Summarize with Copilot feature in a policy in Microsoft Intune and Intune admin center.":::
 
@@ -133,28 +139,21 @@ You can use this feature on the following policy types in Intune:
 
 - Compliance policies
 - Device configuration policies, including the settings catalog
-- Endpoint security policies
+- Most endpoint security policies
 
 ### Device details and troubleshooting
 
-✅ Use Copilot to get device details and troubleshoot a device.
+#### ✅ Use Copilot to get device details and troubleshoot a device
 
 You can use Copilot to get device-specific information, like the installed apps, group membership, and more.
+
+To use this feature in Intune, select a device, and then select **Explore with Copilot**:
+
+:::image type="content" source="./media/copilot-intune-overview/explore-with-copilot.png" alt-text="Screenshot that shows selecting any device and then select Explore with Copilot in Microsoft Intune and Intune admin center.":::
 
 There's also a prompt to enter an error code to get more information about the error and how to resolve it. This feature can help your support team troubleshoot device issues.
 
 For more information on using Copilot with your devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
-
-## Microsoft Copilot for Security vs Copilot in Intune
-
-To use Copilot with your Intune, you can use Copilot in Intune or Copilot for Security. Here's a comparison of the two experiences:
-
-| Feature | Copilot in Intune | Copilot for Security |
-|---|---|---|
-| **Access and data insights** |  This Copilot is embedded in the Intune admin center, and is scoped to only show Intune data. <br/><br/> Intune admins should use Copilot in Intune for Intune-only tasks. This scoped focus can save SCU resources. | This Copilot is the standalone experience, and can access other embedded services, like Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and Microsoft Intune. <br/><br/>It accesses the same Intune capabilities as the Intune admin center. |
-| **Open prompting** |  Intune provides a set of prompts you can use. There isn't an open prompt. There are plans to include an open prompt in the future (no ETA).| Can use open prompts or use [promptbooks](/security-copilot/using-promptbooks). |
-| **Prompt history** |  The prompt/response history isn't available in the Intune admin center. To view the prompt history, use Copilot for Security. The prompt can look different compared with the prompt shown in Intune, as Intune enters the prompt for you. | You can review the prompt/response history, regardless of whether the prompt was submitted in standalone or an embedded experience. |
-| **Target audience** | Focus is the IT admin/IT Pro. | Focus is the Security Operations Center (SOC) and can be used by IT admins. |
 
 ## Related content
 
