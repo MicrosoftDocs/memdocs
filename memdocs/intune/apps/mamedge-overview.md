@@ -32,10 +32,10 @@ ms.collection:
 
 # Secure your corporate data in Intune with Microsoft Edge for Business
 
-This content is a guide that provides insights into secure enterprise browser configuration and implementation related to Mobile App Management and Microsoft Edge for Business.
+This content is a guide that provides insights into secure enterprise browser configuration and implementation related to Mobile Application Management and Microsoft Edge for Business.
 
 **Applies to:**
-- Mobile App Management (MAM) 
+- Mobile Application Management (MAM) 
 - Microsoft Edge for Business
 
 > [!NOTE]
@@ -70,55 +70,61 @@ For more information about Microsoft Edge Security content, see [Microsoft Edge 
 
 Microsoft Edge for Business is a dedicated Microsoft Edge experience designed specifically for work environments. Microsoft Edge for Business is secure by default. It enables admins in organizations to give their users a productive and secure work-browser across managed and unmanaged devices. In addition, Microsoft Edge for Business has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, but it's built to help meet the evolving needs of businesses and organizations.
 
-Microsoft Edge for Business aims to address the needs of both end users and IT Pros by automatically separating work and personal browsing. Microsoft Edge for Business does this using dedicated browser windows with their own favorites, separate caches, and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing. In addition, it helps to prevent cognitive overload where end users accidentally share sensitive information with unintended audiences. 
+Microsoft Edge for Business aims to address the needs of both end users and IT Pros by automatically separating work and personal browsing. Microsoft Edge for Business does this using dedicated browser windows with their own favorites, separate caches, and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing. In addition, it helps to prevent end users accidentally share sensitive information with unintended audiences. 
 
 ### Is this a new browser?
 
-No, this isn't a new browser. This is a new, dedicated Microsoft Edge experience built for work that enables organizations to configure it to maximize productivity and security. It has the same functionality that you're already familiar with in Microsoft Edge plus the optional automatic switching built to help meet the evolving needs of users and businesses. Signing in with Microsoft Entra will automatically enable Microsoft Edge for Business.  
+No, this isn’t a new browser. This is a new, dedicated Microsoft Edge experience built specifically for work. It allows organizations to configure it to maximize productivity and security. It retains the same functionality that users are already familiar with in Microsoft Edge. Additionally, it offers an optional feature of automatic switching between personal and corporate accounts, designed to meet the evolving needs of users and businesses. Signing in with a Microsoft Entra ID will automatically enable the Microsoft Edge for Business experience.  
 
 ### Benefits
 
-Microsoft Edge for Business has several benefits. For IT, Microsoft Edge for Business can reduce the cyber-attack surface area and heighten your organization's security posture because it can streamline down to one browser for all use cases. For end users who are signed in with work and personal profiles, Microsoft Edge for Business can provide a better browsing experience with automatic switching, which has security and privacy benefits.
+Microsoft Edge for Business offers a multitude of advantages:
 
-- **Work Browser (Visual Refresh):** The Microsoft Edge for Business icon replaces the existing Microsoft Edge icon in the taskbar and other shortcuts.
-- **Enhanced Security:** By using app protection policies, Microsoft Edge for Business ensures a more secure and protected browsing experience by ensuring enterprise data remain secured.
-- **Centralized Management:** Microsoft Intune provides a management experience that simplifies the process of managing a Microsoft Edge for Business policy experience.
+**Streamlined IT Operations:** Microsoft Edge for Business can significantly reduce the cyber-attack surface area and enhance your organization’s security posture. It achieves this by streamlining operations down to a single browser for all use cases, simplifying IT management.
+**Improved User Experience:** For end users signed in with both work and personal profiles, Microsoft Edge for Business offers a superior browsing experience. The automatic switching feature not only enhances usability but also bolsters security and privacy.
+**Work Browser with a Visual Refresh:** The Microsoft Edge for Business icon, which replaces the existing Microsoft Edge icon in the taskbar and other shortcuts, provides a distinct and recognizable identity for the business browser.
+**Enhanced Security:** Microsoft Edge for Business fortifies the browsing experience by implementing app protection policies. These policies ensure that enterprise data remains secure, providing peace of mind for both the organization and its users.
+**Centralized Management:** With Microsoft Intune, managing a Microsoft Edge for Business policy experience becomes a breeze. This centralized management system simplifies the process, saving time and resources.
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to org data on personal devices. This capability uses the following functionality:
-- Intune application configuration policies to customize the org user experience.
-- Intune application protection policies to secure org data and ensure the client device is healthy.
-- Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
+- Intune application configuration policies (ACP) to customize the org user experience.
+- Intune application protection policies(APP) to secure org data and ensure the client device is healthy.
+- Mobile Threat Protection(MTP) integrated with Intune APP to detect local health threats on personal Windows and mobile devices.
 - Microsoft Entra Conditional Access to ensure the device is protected and healthy before granting protected services access via Microsoft Entra.
 
 ## Zero Trust Methodology
 
-The Zero Trust methodology aims to bring a new way of thinking to how an organization should approach security and is increasingly becoming the standard for security strategy. Prior best practices revolved around the model of "trust but verify," however attacks in today's landscape can take advantage of the trust inherent in that model, driving a need for change in tackling this challenge. As a result, organizations are changing their security strategy to align with three principles based on the concept of "never trust, always verify":
+The Zero Trust methodology is transforming the way organizations approach security. It’s becoming the new standard for security strategy in response to the evolving threat landscape. Traditional best practices revolved around the model of “trust but verify,” but this approach can be exploited by modern attacks. This has driven the need for a shift in security strategy. The Zero Trust methodology is based on the concept of “never trust, always verify” and aligns with three key principles:
 
-**Verify explicitly** - Always authenticate and authorize based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.
-**Use least-privilege access** - Limiting user access via just-in-time and just-enough-access (JIT/JEA), risk-based adaptive policies, and data protection to help secure both data and productivity.
-**Assume breach** - Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses.
+- **Verify Explicitly:** Always authenticate and authorize based on all available data points. These include user identity, location, device health, service or workload, data classification, and anomalies.
+- **Use Least-Privilege Access:** Limit user access with just-in-time and just-enough-access (JIT/JEA). Implement risk-based adaptive policies and data protection to secure both data and productivity.
+- **Assume Breach:** Minimize the blast radius and segment access. Ensure end-to-end encryption and use analytics to gain visibility, drive threat detection, and improve defenses.
 
 #### Complements Zero Trust
 
-Microsoft Edge for Business is built with Chromium, giving it the well-engineered and tested security architecture design at its foundation. Because of this foundation, Microsoft Edge releases security updates and patches quickly to help stay ahead of security threats, such as zero-day exploits, to minimize the impact of compromise. Additionally, Microsoft Edge is built with its own unique protection features on top of Chromium and supports the following technologies:
-- Microsoft Security solutions from Microsoft Defender
-- Microsoft Entra (formerly known as Azure Active Directory)
-- Microsoft Intune
-- Microsoft Purview
- 
-Microsoft Edge for Business offers the following features that support the Zero Trust methodology:
-- Microsoft Purview Data Loss Prevention (DLP)
-- Microsoft Defender SmartScreen
-- Enhanced security mode (ESM)
-- Website typo protection
-- Native support for Microsoft Entra Conditional Access
-- Password Monitoring and Generator
-- Microsoft Edge management service (EMS)
-- Unmanaged device support with Microsoft Intune Mobile Application Management
+Microsoft Edge for Business, built on the robust and secure foundation of Chromium, is designed to stay ahead of security threats. It releases updates and patches swiftly to counter threats such as zero-day exploits, minimizing the impact of any potential compromise.
+
+In addition to the inherent security features of Chromium, Microsoft Edge for Business incorporates unique protection features and supports a range of Microsoft technologies:
+
+- **Microsoft Defender:** Provides comprehensive security solutions.
+- **Microsoft Entra:** Formerly known as Azure Active Directory, it offers identity and access management services.
+- **Microsoft Intune:** Offers mobile device and application management.
+- **Microsoft Purview:** Supports data governance across your hybrid data estate.
+
+Furthermore, Microsoft Edge for Business aligns with the Zero Trust methodology and offers the following features:
+
+- **Data Loss Prevention (DLP) with Microsoft Purview:** Helps prevent data leaks and unauthorized data access.
+- **Microsoft Defender SmartScreen:** Provides reputation-based protection against phishing and malware.
+- **Enhanced Security Mode (ESM):** Offers additional security measures.
+- **Website Typo Protection:** Helps prevent navigation to malicious sites due to typographical errors.
+- **Native Support for Microsoft Entra Conditional Access:** Ensures only authenticated and authorized users can access your resources.
+- **Password Monitoring and Generator:** Helps maintain strong, unique passwords.
+- **Microsoft Edge Management Service (EMS):** Provides centralized control over your Edge deployments.
+- **Unmanaged Device Support with Microsoft Intune Mobile Application Management:** Allows secure access to enterprise resources from unmanaged devices.
 
 ## What's in this solution
 
-This solution provides insights into securing your enterprise browser configuration and implementation for Mobile App Management and Microsoft Edge for Business.
+This solution provides insights into securing your enterprise browser configuration and implementation for Mobile Application Management and Microsoft Edge for Business.
 
 [![Steps to secure your corporate data in Intune with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps.png)](mamedge-1-scc.md)
 
