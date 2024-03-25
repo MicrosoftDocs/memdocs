@@ -138,7 +138,7 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
     - **For denials** - The admin completes the justification dialog, and then selects **Yes** to deny the request.
 
-      When an admin denies a request for approval, the elevation request isn't approved. Intune doesn't send a reply to the device and user isn't notified.
+      When an admin denies a request for approval, the elevation request isn't approved. Intune doesn't send a reply to the device and the user isn't notified.
 
       :::image type="content" source="./media/epm-support-approved/sample-request-denial-dialog.png" alt-text="Image that displays the elevation denial dialog with no sample approval justification provided" lightbox="./media/epm-support-approved/sample-request-denial-dialog.png":::
 
