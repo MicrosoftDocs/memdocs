@@ -13,7 +13,6 @@ ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 55db37c5-0da7-4d9c-8027-525afb1c6349
 Customer intent: As an Intune admin, I want to learn how to configure Slack to use Intune for EMM and app configuration..
 
