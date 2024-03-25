@@ -49,21 +49,22 @@ To enable use data from device compliance partners, complete the following tasks
 
 3. **Enroll your devices to your device compliance partner**.
 
-With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices with a state of non-compliant have that status added to their device record in Microsoft Entra ID.
-
-The compliance state stored in Microsoft Entra ID is evaluated by conditional access policies, the same as compliance state data for devices managed by Intune. By default, Intune is a registered compliance partner for iOS and Android. When you add more partners, you can set the priority order to ensure the correct partner manages device to fit your business needs.
+With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices with a state of "not compliant" have that status added to their device record in Microsoft Entra ID.
 
 ## Supported device compliance partners
 
 The following compliance partners are supported as generally available:
 
+- 7P
 - Addigy
 - BlackBerry UEM
 - Citrix Workspace device compliance
 - IBM MaaS360
-- JAMF Pro
+- Jamf Pro
 - MobileIron Device Compliance Cloud
 - MobileIron Device Compliance On-prem
+- Mosyle Fuse
+- Mosyle Onek12
 - SOTI MobiControl
 - VMware Workspace ONE UEM (formerly AirWatch)
 
