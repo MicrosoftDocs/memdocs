@@ -3,6 +3,8 @@ title: Troubleshoot Windows devices
 description: Learn how to troubleshoot Windows devices from Intune and contact Microsoft Support for issues related to Intune and other services.
 ms.date: 11/09/2023
 ms.topic: tutorial
+author: scbree
+ms.author: scottbreenmsft
 ---
 
 # Troubleshoot Windows devices

@@ -5,6 +5,7 @@ ms.date: 01/16/2024
 ms.topic: tutorial
 appliesto:
 ms.author: scbree
+autor: scottbreenmsft
 ---
 
 # Set up Microsoft Intune
