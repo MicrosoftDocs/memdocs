@@ -32,8 +32,7 @@ ms.collection:
 
 # Microsoft Entra Conditional Access with Microsoft Edge for Business
 
-The modern security perimeter extends beyond an organization's network perimeter to include user and device identity. Organizations now use identity-driven signals as part of their access control decisions. Microsoft Entra Conditional Access brings signals together, to make decisions, and enforce organizational policies. It's Microsoft's Zero
-Trust policy engine that takes signals from various sources into account when enforcing policy decisions.
+The modern security perimeter extends beyond an organization's network perimeter to include user and device identity. Organizations now use identity-driven signals as part of their access control decisions. Microsoft Entra Conditional Access brings signals together, to make decisions, and enforce organizational policies. It's Microsoft's Zero Trust policy engine that takes signals from various sources into account when enforcing policy decisions.
 
 Conditional Access policies at their simplest are if-then statements; if a user wants to access a resource, then they must complete an action. For example, if a user wants to access an application or service like Microsoft 365, then they must perform multifactor authentication to gain access.
 
@@ -41,19 +40,19 @@ These signals include:
 
 - User or group membership
 - IP Location information
-- Device and Intune device compliance
+- Device Compliance
 - Application
 - Real-time and calculated risk detection
 
 :::image type="content" alt-text="Conditional Access Policy Decision Making.." source="./media/securing-data-edge-for-business/securing_data_edge_for_businessCA.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_businessCA.png":::
 
-Conditional Access is enforced after first-factor authentication is completed. It isn't intended to be an organization's frontline of defense for scenarios like denial-of-service (DoS) attacks, but it can use signals from these events to determine access.
+Conditional Access is enforced after initial authentication is completed. It isn't intended to be an organization's frontline of defense for scenarios like denial-of-service (DoS) attacks, but it can use signals from these events to determine access.
 
 **Conditional Access Compliance**
 
-Preventing data loss is a part of protecting your organizational data. Data loss prevention (DLP) is only effective if your org data can't be accessed from any unprotected system or device. App Protection Conditional Access uses Conditional Access (CA) to ensure App protection policies (APP) are supported and enforced in a client application before allowing access to protected resources (such as org data). APP CA allows end-users with personal Windows devices to use APP managed applications, including Microsoft Edge for Business**,** to access Microsoft Entra resources without fully managing their personal device.
+Protecting your organizational data involves preventing data loss. Data Loss Prevention (DLP) is effective only when your organizational data cannot be accessed from any unprotected system or device. App Protection Policies can be used with Conditional Access to ensure that these policies are not only supported but also enforced in a client application before granting access to protected resources, such as organizational data. This approach allows end-users with personal Windows devices to use APP-managed applications, including Microsoft Edge for Business, to access Microsoft Entra resources without the need for full management of their personal device.
 
-This MAM service syncs compliance state per user, per app, and per device to the Microsoft Entra CA service. This includes the threat information received from the Mobile Threat Defense (MTD) vendors starting with Windows Security Center.
+This MAM service syncs compliance state per user, per app, and per device to the Microsoft Entra CA service. This includes the threat information received from the Mobile Threat Defense (MTD) vendors.
 
 Secure your Microsoft Edge for Business with Microsoft Entra Conditional Access Policies. 
 
@@ -69,7 +68,7 @@ In this scenario, you will create a conditional access policy using Microsoft In
     - **Users:** All Users or Specific Group dedicated to using the policy.
     - **Target Resources:** Cloud Apps - Office 365
     - **Conditions:**
-        - **Device platforms:** Include - Windows
+        - **Device platforms:** Include - Windows, Android and iOS
         - **Client Apps:** Browser
         - **Filter for devices:** Exclude - is Compliant Equals True
     - **Grant:** Require app protection policy
