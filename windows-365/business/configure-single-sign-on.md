@@ -31,7 +31,7 @@ ms.collection:
 
 # Configure single sign-on for Windows 365 Business using Microsoft Entra authentication
 
-This article explains the process of configuring single sign-on (SSO) for Windows 365 by using Microsoft Entra authentication. When you enable SSO, users can use passwordless authentication and third-party Identity Providers that federate with Microsoft Entra ID to sign in to their Cloud PC. When enabled, this feature provides a SSO experience both when authenticating to the Cloud PC and inside the session when accessing Microsoft Entra ID-based apps and websites.
+This article explains the process of configuring single sign-on (SSO) for Windows 365 by using Microsoft Entra authentication. When you enable SSO, users can use passwordless authentication and third-party Identity Providers that federate with Microsoft Entra ID to sign in to their Cloud PC. When enabled, this feature provides an SSO experience both when authenticating to the Cloud PC and inside the session when accessing Microsoft Entra ID-based apps and websites.
 
 To enable SSO using Microsoft Entra ID authentication, there are four tasks you must complete:
 
