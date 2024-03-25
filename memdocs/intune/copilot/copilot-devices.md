@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, device informatio
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2024
+ms.date: 03/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice:
@@ -53,51 +53,11 @@ This article describes how to use Copilot to manage and troubleshoot device issu
 
 - When you use the Copilot prompts to troubleshoot your devices, you are in the scope of the device you select.
 
-## Get details and troubleshoot a device
+## Use an existing prompt
 
 To troubleshoot devices, you can use Copilot with an existing set of prompts to get more information about the device. For example, you can get a list of installed apps, compare devices, and get information about an error code.
 
-This section steps through some Copilot features that you can use.
-
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All devices** > Select any device.
-3. Select **Explore with Copilot**:
-
-    :::image type="content" source="./media/copilot-devices/explore-with-copilot.png" alt-text="Screenshot that shows selecting any device and then select Explore with Copilot in Microsoft Intune and Intune admin center.":::
-
-4. In Copilot, there are existing prompts for you to choose. Select a prompt to get more information about the device. For example, select **Summarize this device**:
-
-    :::image type="content" source="./media/copilot-devices/sample-prompts.png" alt-text="Screenshot that shows the Copilot sample prompts after you select any device in Microsoft Intune and Intune admin center.":::
-
-    The summary shows device specific information, like the operating system, if the device is registered in Microsoft Entra ID, malware counts, any noncompliant policies, group membership, and more.
-
-    Remember, these prompts and their results are in the scope of the device you select.
-
-5. Select the prompt guide and select **Compare this device with another device**:
-
-    :::image type="content" source="./media/copilot-devices/prompt-guide.png" alt-text="Screenshot that shows the Copilot prompt guide after you select any device in Microsoft Intune and Intune admin center.":::
-
-    In the compare device prompt, enter another device name or Intune device ID to compare, select the comparison type > **Submit**:
-
-    :::image type="content" source="./media/copilot-devices/compare-devices-comparison-type.png" alt-text="Screenshot that shows the Copilot comparison prompt after you select any device in Microsoft Intune and Intune admin center.":::
-
-    The results show the differences and similarities between the two devices.
-
-    With this prompt, you can compare a working/healthy device with a non-working/unhealthy device. This comparison can help you identify the differences between the two devices and troubleshoot the nonworking device.
-
-6. Select the prompt guide and select > **Analyze an error code**. This prompt can help you troubleshoot an error code that you see in Intune, including error codes from a device configuration profile, compliance policy, app installation, and more. The error doesn't have to be scoped to the device you select.
-
-    For example, enter `90` > **Submit**.
-
-    The results show the error code and a description of the error. The description includes the error type, the error message, and has more information about the error. This information can help you troubleshoot the error.
-
-    :::image type="content" source="./media/copilot-devices/analyze-error-example.png" alt-text="Screenshot that shows the Analyze an error code feature in Copilot after you select any device in Microsoft Intune and Intune admin center.":::
-
-    For a list of common errors in Intune, go to [Common error codes and descriptions in Microsoft Intune](/troubleshoot/mem/intune/general/troubleshoot-company-resource-access-problems).
-
-## Use an existing prompt
-
-In Copilot, there are existing prompts that guide you to get more information about a device. The guided prompts include:
+The guided prompts include:
 
 - Summarize this device
 - Analyze an error code
@@ -106,6 +66,56 @@ In Copilot, there are existing prompts that guide you to get more information ab
 - Show policies on this device
 - Show group memberships
 - Show the primary user of this device
+
+## Get details and troubleshoot a device
+
+This section steps through some Copilot prompts that you can use.
+
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **All devices** > Select any device.
+3. Select **Explore with Copilot**:
+
+    :::image type="content" source="./media/copilot-devices/explore-with-copilot.png" alt-text="Screenshot that shows selecting any device and then select Explore with Copilot in Microsoft Intune and Intune admin center.":::
+
+4. In Copilot, there are existing prompts for you to choose. Select a prompt to get more information about the device.
+
+### Summarize this device
+
+Select **Summarize this device**:
+
+:::image type="content" source="./media/copilot-devices/sample-prompts.png" alt-text="Screenshot that shows the Copilot sample prompts after you select any device in Microsoft Intune and Intune admin center.":::
+
+The **Summarize this device** prompt shows more information about the device. The summary includes device specific information, like the operating system, if the device is registered in Microsoft Entra ID, malware counts, any noncompliant policies, group membership, and more.
+
+Remember, these prompts and their results are in the scope of the device you select.
+
+### Compare this device
+
+When you use the **Compare this device with another device** prompt, you can compare a working/healthy device with a non-working/unhealthy device. This comparison can help you identify the differences between the two devices and troubleshoot the nonworking device.
+
+Select the prompt guide and select **Compare this device with another device**:
+
+:::image type="content" source="./media/copilot-devices/prompt-guide.png" alt-text="Screenshot that shows the Copilot prompt guide after you select any device in Microsoft Intune and Intune admin center.":::
+
+In the compare device prompt, enter another device name or Intune device ID to compare, select the comparison type > **Submit**:
+
+:::image type="content" source="./media/copilot-devices/compare-devices-comparison-type.png" alt-text="Screenshot that shows the Copilot comparison prompt after you select any device in Microsoft Intune and Intune admin center.":::
+
+The results show the differences and similarities between the two devices.
+
+### Analyze an error code
+
+Select the prompt guide and select > **Analyze an error code**.
+
+This prompt can help you troubleshoot an error code that you see in Intune, including error codes from a device configuration profile, compliance policy, app installation, and more. The error doesn't have to be scoped to the device you select.
+
+For example, enter `90` > **Submit**.
+
+The results show the error code and a description of the error. The description includes the error type, the error message, and has more information about the error. This information can help you troubleshoot the error.
+
+:::image type="content" source="./media/copilot-devices/analyze-error-example.png" alt-text="Screenshot that shows the Analyze an error code feature in Copilot after you select any device in Microsoft Intune and Intune admin center.":::
+
+For a list of common errors in Intune, go to [Common error codes and descriptions in Microsoft Intune](/troubleshoot/mem/intune/general/troubleshoot-company-resource-access-problems).
 
 ## Related articles
 

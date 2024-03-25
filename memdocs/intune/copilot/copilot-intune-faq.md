@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, faq
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2024
+ms.date: 03/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice:
@@ -33,21 +33,37 @@ ms.collection:
 > [!IMPORTANT]
 > This article is being updated for Copilot.
 
+This article answers common questions about using Microsoft Copilot in Intune.
+
 ## FAQ
 
 ### open prompting
 
-### Does Copilot give my admins more access to Intune data than what they have using the Intune admin center?
+### Does Copilot for Security give admins more access to Intune data than what's available in the Intune admin center?
 
-No. The Intune features are built on top of existing Microsoft Graph API's – the same API's that the Intune admin center uses. Copilot honors existing Intune permissions and scope tags when getting data.
+No. The Intune capabilities in Copilot for Security are built using the existing Microsoft Graph API's, which are the same API's that the Intune admin center uses. Both Copilot experiences use the same Intune capabilities.
+
+Access to Copilot for Security is managed using Microsoft Entra roles. To access Intune data in Copilot for Intune and/or Copilot for Security, Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) assigned to admins when getting data.
+
+So, your Intune admins are governed by existing access to Intune data.
+
+`You don't have permission to access this feature. Reach out to your IT administrator for help.`
+
+### Can I use Copilot for Security if I'm not an Intune admin, and vice versa?
+
+Yes. Access to Copilot for Security is managed using Microsoft Entra roles. For more information on the different Copilot roles, and what they can do, go to [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication).
+
+If you're an Intune admin, you can use Copilot for Security to get insights into your Intune data. But, it's recommended to use Copilot in Intune. Copilot in Intune is scoped to only your Intune data and can use less security compute units (SCUs).
+
+If you're a security admin, then use Copilot for Intune if you want to get insights into your Intune data. Copilot for Security is scoped to all your embedded services and can use more SCUs.
 
 ### Is there any way to limit which Intune admins see the Copilot experience?
 
-No. All users of the Intune admin center can see the Copilot features.
+No. All users of the Intune admin center can see the Copilot features. But, Intune admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
 
 ### Can I use other Microsoft Copilot for Security capabilities from other services, like Defender, Microsoft Entra and Purview from within the Intune admin center?
 
-No. The Copilot in Intune is limited to only Intune capabilities. You can use the full Microsoft Copilot for Security to get insights from other Microsoft services.
+No. Copilot in Intune is available only for Intune capabilities. To get insights from other Microsoft services, you can use the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989).
 
 ### Copilot appears to show the wrong info. How can I debug and validate this?
 
@@ -63,11 +79,9 @@ If you think that the output is incorrect, you can:
 
   session ID
 
+Intune: Session ID aren't visible in UI; Must do F12
+Security:  Can view the prompt sessions from the standalone and embedded experiences. Also shows the session ID, which is helpful when troubleshooting w/MSFT
+
+- Did you get an error? You can debug aspects of the prompt input, processing and output using Copilot for Security. to view more details on what went wrong, to to [Securitycopilot.microsoft.com](https://Securitycopilot.microsoft.com) and select the last session in your history.
 
 ## token limit on output
-
-## RBAC roles and scope tags
-
-governed by existing access
-
-You don't have permission to access this feature. Reach out to your IT administrator for help.
