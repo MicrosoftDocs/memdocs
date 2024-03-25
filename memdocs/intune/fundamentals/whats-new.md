@@ -73,6 +73,25 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of March 25, 2024 (Service release 2403)
 
+### Microsoft Intune Suite
+
+#### New elevation type for Endpoint Privilege Management<!-- 25230692 wndraft wnready-->
+
+Endpoint Privilege Management has a new file elevation type, **support approved**. Endpoint Privilege Management is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../fundamentals/intune-add-ons.md).
+
+A support-approved elevation gives you a third option for both the default elevation response and the elevation type for each rule. Unlike automatic or user confirmed, a support-approved elevation request requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
+
+With support approved elevations, users can request approval to elevate an application that is not explicitly allowed for elevation by automatic or user approved rules. This takes the form of an elevation request that must be reviewed by an Intune administrator who can approve or deny the elevation request.
+
+When the request is approved, users are notified that the application can now be run as elevated, and they will have 24 hours from the time of approval to do so before the elevation approval expires.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For more information on this new capability, see [Support approved elevation requests](../protect/epm-support-approved.md).
+
 ### App management
 
 #### Extended capabilities for Managed Google Play apps on personally-owned Android devices with a work profile<!-- 26554642 -->
@@ -209,6 +228,38 @@ This feature applies to:
   - Windows
 
 ### Device management
+
+#### New compliance setting lets you verify device integrity using hardware-backed security features<!-- 12391862 -->
+
+A new compliance setting called **Check strong integrity using hardware-backed security features** lets you verify device integrity using hardware-backed key attestation. If you configure this setting, strong integrity attestation is added to Google Play's integrity verdict evaluation. Devices must meet device integrity to remain compliant. Microsoft Intune marks devices that don’t support this type of integrity check as noncompliant.
+
+This setting is available in profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile, under **Device Health** > **Google Play Protect**. It only becomes available when the Play integrity verdict policy in your profile is set to **Check basic integrity** or **Check basic integrity & device integrity**.
+
+Applies to:
+
+- Android Enterprise
+
+For more information, see [Device compliance - Google Play Protect](../protect/compliance-policy-create-android-for-work.md#google-play-protect).
+
+#### New compliance settings for Android work profile, personal devices<!-- 24743927 -->
+
+Now you can add compliance requirements for work profile passwords without impacting device passwords. All new Microsoft Intune settings are available in compliance profiles for Android Enterprise personally-owned work profiles under **System Security** > **Work Profile Security**, and include:
+
+- Require a password to unlock work profile
+- Number of days until password expires
+- Number of previous passwords to prevent reuse
+- Maximum minutes of inactivity before password is required
+- Password complexity
+- Required password type
+- Minimum password length
+
+If a work profile password fails to meet requirements, Company Portal marks the device as noncompliant. Intune compliance settings take precedence over the respective settings in an Intune device configuration profile. For example, if the password complexity in your compliance profile is set to *medium* and the one in your configuration profile is set to *high*, Intune will prioritize and enforce the compliance one.
+
+Applies to:
+
+- Android Enterprise personally owned devices with a work profile
+
+For more information, see [Compliance settings - Android Enterprise](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
 
 #### Windows quality updates support for expediting non-security updates<!-- 17614146 -->
 

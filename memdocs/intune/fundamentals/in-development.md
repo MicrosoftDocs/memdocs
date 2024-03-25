@@ -144,24 +144,6 @@ Applies to:
 
 ## Device management
 
-### New compliance settings for Android work profile, personal devices<!-- 24743927  -->
-
-New compliance settings will let you add restrictions to the work profile password on a personal device without impacting the device password. Settings will be available in Microsoft Intune compliance policies under **Android Enterprise personally-owned work profiles** >**System Security** > **Work Profile Security**, and include:
-
-- Require a password to unlock work profile
-- Number of days until password expires
-- Number of previous passwords to prevent reuse
-- Maximum minutes of inactivity before password is required
-- Password complexity
-- Required password type
-- Minimum password length
-
-Company Portal will enforce the settings and mark the device as noncompliant if the work profile password fails to meet your requirements. Intune compliance settings take precedence over the respective Intune configuration settings. For example, if the password complexity in your compliance policy is set to *medium* and the one in your configuration profile is set to *high*, Intune will prioritize and enforce the compliance setting.
-
-Applies to:
-
-- Android Enterprise personally owned devices with a work profile
-
 ### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
 
 End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website, which allows end users see their recovery keys as well.
