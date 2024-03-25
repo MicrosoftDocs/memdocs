@@ -34,7 +34,7 @@ With Microsoft Intune Endpoint Privilege Management (EPM) your organization’s 
 
 This article explains how to use the **support approved** workflow with Endpoint Privilege Management.
 
-Support approved elevations allow you to require approval prior to an elevation being allowed. You can use the support approved functionality as part of an elevation rule, or as default client behavior. Requests that are submitted require Intune administrators to approve the request on a case-by-case basis.
+Support approved elevations allow you to require approval before an elevation being allowed. You can use the support approved functionality as part of an elevation rule, or as default client behavior. Requests that are submitted require Intune administrators to approve the request on a case-by-case basis.
 
 When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is notified, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
 
@@ -104,35 +104,45 @@ To create support-approved elevation policy, use the same workflow for creating 
 
 ### Manage pending elevation requests
 
-Use the following procedure as guidance when reviewing and managing elevation requests.
+Use the following procedure as guidance for reviewing and managing elevation requests.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > **Elevation requests** tab.
-1. The elevation requests tab shows **pending requests** as well as **requests from the last 30 days**. Selecting a row opens a fly out to review the request in detail
-1. In the fly out, the following information is available:
-    1. **General Details**:
-        1. **File** - The name of the file that was requested for elevation
-        1. **Publisher** - The name of the publisher that signed the file that was requested for elevation. This link retrieves the certificate chain for the file for download.
-        1. **Device** - The device where the elevation was requested from. This link navigates to the device object in Intune.
+1. The elevation requests tab shows **pending requests** and **requests from the last 30 days**. Selecting a row opens that entries elevation request properties, where you can review the request in detail.
+1. The elevation request details include the following information:
+
+    1. **General details**:
+        1. **File** - The name of the file that was requested for elevation.
+        1. **Publisher** - The name of the publisher that signed the file that was requested for elevation. The name of the publisher is a link that retrieves the certificate chain for the file for download.
+        1. **Device** - The device where the elevation was requested from. The device name is a link that opens the device object in the admin center.
         1. **Intune compliant** - The Intune compliance state of the device.
-    1. **Request Details** - More details about the request:
-        1. **Status** - Status of the request, requests start as *Pending* and can be either *approved* or *denied* by an Administrator.
-        1. **By** - Administrator who *approved* or *denied* the request.
-        1. **Last Modified** - The last time the request entry was modified.
-        1. **User Justification** - The justification provided by the user for the elevation request.
-        1. **Approval expiration** - When the approval expires (length of time the elevation is allowed).
-        1. **Admin's reason** - Justification provided by the Admin when an *approval* or *denial* is completed.
-    1. **File Information** - Specifics of the metadata for the file that was requested for approval.
-  :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
-1. Once the request is reviewed, an administrator can select **Approve** or **Deny**
-1. The user is presented with a **justification** dialog, and the ability to provide detail for the decision.
+
+    1. **Request details**:
+        1. **Status** - Status of the request. Requests start as *Pending* and can be either *approved* or *denied* by an administrator.
+        1. **By** - The account of the administrator who *approved* or *denied* the request.
+        1. **Last modified** - The last time the request entry was modified.
+        1. **User's justification** - The justification provided by the user for the elevation request.
+        1. **Approval expiration** - The time that the approval expires. Until this expiry time is reached, elevation of the approved file is allowed.
+        1. **Admin's reason** - Justification provided by the admin when an *approval* or *denial* is completed.
+
+    1. **File information** - Specifics of the metadata for the file that was requested for approval.
+
+    :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
+
+1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
+
     :::image type="content" source="./media/epm-support-approved/sample-request-approval-dialog.png" alt-text="Image that displays the elevation approval dialog with sample approval justification provided as the reason" lightbox="./media/epm-support-approved/sample-request-approval-dialog.png":::
-1. After selecting **yes** the elevation request is approved and sent to the device.
-1. The end user is notified when they are able to elevate the application via a toast notification
-1. The end user can now complete the elevation activity with the **Run with elevated access** right-click menu.
+
+    - **For approvals** - The admin completes the justification dialog and then selects **Yes** to approve the request. Intune sends the approval to the device and the end user is notified via a toast notification that they're able to elevate the application.
+  
+      The end user can now complete the elevation activity by using the **Run with elevated access** right-click menu of the file.
+
+    - **For denials** - The admin completes the justification dialog, and then selects **Yes** to deny the request.
+
+      When an admin denies a request for approval, the elevation request isn't approved. Intune doesn't send a reply to the device and user isn't notified.
 
 > [!NOTE]
-> The elevation request contains all the information needed to create an elevation rule if required, including the *complete* certificate chain. Support approved elevations also show in the elevation usage data like any other elevation requests.
-
+>
+> Elevation requests contains all the information needed to create an elevation rule if required, including the *complete* certificate chain. Support approved elevations also show in the elevation usage data like any other elevation requests.
 
 ## Next steps
 
