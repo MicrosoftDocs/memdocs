@@ -130,15 +130,17 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
 1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
 
-    :::image type="content" source="./media/epm-support-approved/sample-request-approval-dialog.png" alt-text="Image that displays the elevation approval dialog with sample approval justification provided as the reason" lightbox="./media/epm-support-approved/sample-request-approval-dialog.png":::
-
     - **For approvals** - The admin completes the justification dialog and then selects **Yes** to approve the request. Intune sends the approval to the device and the end user is notified via a toast notification that they're able to elevate the application.
   
       The end user can now complete the elevation activity by using the **Run with elevated access** right-click menu of the file.
+    
+      :::image type="content" source="./media/epm-support-approved/sample-request-approval-dialog.png" alt-text="Image that displays the elevation approval dialog with sample approval justification provided as the reason" lightbox="./media/epm-support-approved/sample-request-approval-dialog.png":::
 
     - **For denials** - The admin completes the justification dialog, and then selects **Yes** to deny the request.
 
       When an admin denies a request for approval, the elevation request isn't approved. Intune doesn't send a reply to the device and user isn't notified.
+
+      :::image type="content" source="./media/epm-support-approved/sample-request-denial-dialog.png" alt-text="Image that displays the elevation denial dialog with no sample approval justification provided" lightbox="./media/epm-support-approved/sample-request-denial-dialog.png":::
 
 > [!NOTE]
 >
