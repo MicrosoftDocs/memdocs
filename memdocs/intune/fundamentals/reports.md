@@ -105,7 +105,7 @@ You can view the **Device compliance trends** report using the following steps:
 
     ![Intune trend report](./media/intune-reports/intune-reports-03.png)
 
-### Noncompliant devices (Organizational)
+### Noncompliant devices report (Organizational)
 
 > [!NOTE]
 > In addition to this report, see [Noncompliant devices report](#noncompliant-devices-report-operational).
