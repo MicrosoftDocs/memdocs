@@ -46,7 +46,7 @@ So, if an admin tries access Intune data that they don't have permissions to, th
 
 `You don't have permission to access this feature. Reach out to your IT administrator for help.`
 
-If you want access to Copilot in Intune, then contact the Copilot for Security workspace owner in your organization.
+If you want access to Copilot in Intune, then contact the Copilot for Security workspace owner in your organization. If you want access to all your Intune data, then contact your Intune administrator.
 
 ### Can I use Copilot for Security if I'm not an Intune admin, and vice versa?
 
@@ -60,7 +60,7 @@ If you're a security admin, then you can use Copilot in Intune if you only want 
 
 ### How do I turn on Intune capabilities?
 
-In the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner), and enable the Microsoft Intune plug-in. This plug-in allows you to access your Intune data and use Copilot in the Intune admin center.
+In the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner), and enable the Microsoft Intune plug-in. This plug-in allows you to access your Intune data and use the Copilot features in the Intune admin center.
 
 For more information on managing plugins, go to [Manage plugins in Copilot for Security](/security-copilot/manage-plugins).
 
@@ -81,7 +81,7 @@ For more information on SCUs, go to:
 
 ### Is there a limit on the prompt output?
 
-Copilot in Intune is bound by any token limits in Copilot for Security. For more information, go to [Copilot for Security FAQ - Token limits](/security-copilot/faq-security-copilot.md#how-is-copilot-for-security-dealing-with-a-token-limit).
+Copilot in Intune is bound by any token limits in Copilot for Security. For more information, go to [Copilot for Security FAQ - Token limits](/security-copilot/faq-security-copilot#how-is-copilot-for-security-dealing-with-a-token-limit).
 
 ## Copilot for Security vs Copilot in Intune
 
@@ -95,16 +95,18 @@ To use Copilot with your Intune data, you can use Copilot in Intune or Copilot f
 
 | Feature | Copilot in Intune | Copilot for Security |
 |---|---|---|
-| **Access and data insights** |  This Copilot is embedded in the Intune admin center, and is scoped to only show Intune data. <br/><br/> Intune admins should use Copilot in Intune for Intune-only tasks. | This Copilot is the standalone experience, and can access other embedded services, like Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and Microsoft Intune. <br/><br/>It accesses the same Intune capabilities as the Intune admin center. |
+| **Access and data insights** |  This Copilot is embedded in the Intune admin center, and is scoped to only show Intune data. <br/><br/> Intune admins should use Copilot in Intune for Intune-only tasks. | This Copilot is the standalone experience. It can access other embedded services, like Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and Microsoft Intune. <br/><br/>It accesses the same Intune capabilities as Copilot in Intune. |
 | **Open prompting** |  Intune provides a set of prompts you can use. There isn't an open prompt. There are plans to include an open prompt in the future (no ETA).| Can use open prompts or use [promptbooks](/security-copilot/using-promptbooks). |
-| **Prompt history** |  The prompt/response history isn't available in the Intune admin center. To view the prompt history, use Copilot for Security. The prompt can look different compared with the prompt shown in Intune, as Intune enters the prompt for you. | You can review the prompt/response history, regardless of whether the prompt was submitted in standalone or an embedded experience. |
+| **Prompt history** |  The prompt/response history isn't available in the Intune admin center. To view the prompt history, use Copilot for Security. <br/><br/>The prompts can look different compared with the prompts shown in Intune, as Intune enters the prompt for you. | You can review the prompt/response history, even when the prompt is submitted in the standalone or embedded experience. |
 | **Target audience** | Focus is the IT admin/IT Pro. | Focus is the Security Operations Center (SOC) and can be used by IT admins. |
 
 ## Feedback and troubleshooting Copilot
 
 ### Copilot appears to show the wrong info. How can I debug and validate?
 
-If you think that the output is incorrect, then submit feedback and add details about what you're seeing. This feedback helps improve the Copilot experience. In the Copilot prompt window in the Intune admin center, there's a **Feedback** button:
+If you think that the output is incorrect, then submit feedback and add details about what you're seeing. This feedback helps improve the Copilot experience.
+
+In the Copilot prompt window in the Intune admin center, there's a **Feedback** button:
 
 :::image type="content" source="./media/copilot-intune-overview/feedback-message-icon.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
 
