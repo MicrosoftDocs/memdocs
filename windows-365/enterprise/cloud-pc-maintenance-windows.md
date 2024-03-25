@@ -53,7 +53,7 @@ To create a maintenance window, follow these steps:
 3. On the **Basics** page, …
 4. Select **Next**.
 5. On the **Configuration** page, under **Weekday schedule** and/or **Weekend schedule**, select the Cloud PC local time **Start** and **End** times. Each window must be at least two hours in duration.
-6. Under **User notification**, for **Upcoming change**, select the lead time you’d like to use for notifying the user of the impending disruption. The user is notified in-session and can’t can’t override or postpone the maintenance window.
+6. Under **User notification**, for **Upcoming change**, select the lead time you’d like to use for notifying the user of the impending disruption. The user is notified in-session and can’t override or postpone the maintenance window.
 7. Select **Next**.
 8. On the **Assignments** page, select **Add groups**.
 9. In the **Select groups to include** pane, select the groups that you want included in this maintenance window > **Select**.
@@ -72,4 +72,4 @@ Maintenance windows aren’t responsible for the success or failure of the remot
 <!-- ########################## -->
 ## Next steps
 
-[Remotely manage a Cloud PC](remotely-managecloud-pc.md).
+[Remotely manage a Cloud PC](remotely-manage-cloud-pc.md).
