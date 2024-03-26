@@ -64,7 +64,7 @@ To create a maintenance window, follow these steps:
 8. In the **Select groups to include** pane, select the groups that you want included in this maintenance window > **Select**.
 9. Select **Next**.
 10. On the **Review + create** page, select **Create**.
-1`. Follow the steps to [Bulk resize Cloud PCs](resize-cloud-pc.md#bulk-resizing-cloud-pcs) and make sure to select the **Use Cloud PC maintenance windows** box on the **Basics** page.
+11. Follow the steps to [Bulk resize Cloud PCs](resize-cloud-pc.md#bulk-resizing-cloud-pcs) and make sure to select the **Use Cloud PC maintenance windows** box on the **Basics** page.
 
 ## Urgent or critical changes for Cloud PCs
 
