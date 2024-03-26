@@ -172,6 +172,31 @@ A site server or site system role isn't already installed on the server selected
 
 The primary site you plan to expand is a standalone primary site. It has the same version of Configuration Manager, but a different site code than the central administration site to be installed.
 
+### Enable site system roles for HTTPS or Enhanced HTTP
+
+*Applies to: central administration site, primary site*
+
+<!-- 9390933,9572265 -->
+
+Starting in version 2403, if your site is configured to allow HTTP communication without enhanced HTTP, you'll see this error. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP.
+
+This check looks at the following settings:
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
+1. Select a site, and then in the ribbon select **Properties**.
+
+1. Switch to the **Communication Security** tab.
+
+    Configure one of the following options:
+
+    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-certificates.md#transition-strategy-for-pki-certificates).
+
+    - **HTTPS or EHTTP** _and_ **Use Configuration Manager-generated certificates for EHTTP site systems**: This combination of settings enables [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
+
+> [!NOTE]
+> If you see this error when updating the central administration site, it may be because of a child primary site.<!-- 9480431 -->
+
 ### Firewall exception for SQL Server
 
 *Applies to: Central administration site, primary site, secondary site, management point*
@@ -306,7 +331,7 @@ For more information, see [Installing SQL Server on a domain controller](/sql/sq
 
 _Applies to: CAS, primary site_
  
-Starting in version 2403, resource access policies workspace is completely removed and are no longer supported. The co-management resource access workload will be defaulted to Intune. 
+Starting in version 2403, resource access policies workspace is removed and are no longer supported. The co-management resource access workload is defaulted to Intune. 
 
 Remove the certificate registration point site system role and all policies for company resource access features:
 
@@ -748,31 +773,6 @@ Desktop Analytics will be retired on November 30, 2022. Check out the new report
 
 <!--14840670-->
 
-
-### Enable site system roles for HTTPS or Enhanced HTTP
-
-*Applies to: central administration site, primary site*
-
-<!-- 9390933,9572265 -->
-
-Starting in version 2103, if your site is configured to allow HTTP communication without enhanced HTTP, you'll see this warning. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP.
-
-This check looks at the following settings:
-
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
-
-1. Select a site, and then in the ribbon select **Properties**.
-
-1. Switch to the **Communication Security** tab.
-
-    Configure one of the following options:
-
-    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-certificates.md#transition-strategy-for-pki-certificates).
-
-    - **HTTPS or HTTP** _and_ **Use Configuration Manager-generated certificates for HTTP site systems**: This combination of settings enables [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
-
-> [!NOTE]
-> If you see this warning when updating the central administration site, it may be because of a child primary site.<!-- 9480431 -->
 
 ### Firewall exception for SQL Server (standalone primary site)
 
