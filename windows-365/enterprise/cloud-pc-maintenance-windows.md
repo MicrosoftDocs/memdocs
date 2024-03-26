@@ -48,7 +48,7 @@ These windows help you efficiently plan and manage Cloud PC maintenance activiti
 
 To create a maintenance window, follow these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
     ![Screencap create a Cloud PC maintenance window.](media/cloud-pc-maintenance-window/create-cloud-pc-maintenance-window.png)
 
