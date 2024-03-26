@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -37,7 +36,7 @@ ms.reviewer: mattcall
 
 View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Windows Security Experience profile for Windows 10 and later in Microsoft Intune.
 
-**Windows Security**
+**Windows Security**:
 
 - **Enable tamper protection to prevent Microsoft Defender being disabled**  
   [Prevent changes to security settings with Tamper Protection](https://go.microsoft.com/fwlink/?linkid=2066083)
