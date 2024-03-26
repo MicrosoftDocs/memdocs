@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/26/2024
-ms.topic: overview
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
