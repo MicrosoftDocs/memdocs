@@ -31,7 +31,7 @@ ms.collection:
 
 # Cloud PC Maintenance windows (preview)
 
-Admins can use Cloud PC maintenance windows to schedule specific times to run bulk resize actions on Cloud PCs. For maximum flexibility, these windows can be scheduled:
+Admins can use Cloud PC maintenance windows to schedule specific times to run actions on Cloud PCs. For maximum flexibility, these windows can be scheduled:
 
 - Daily.
 - Weekly.
@@ -48,9 +48,12 @@ These windows help you efficiently plan and manage Cloud PC maintenance activiti
 
 To create a maintenance window, follow these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+
+    ![Screencap create a Cloud PC maintenance window.](media/cloud-pc-maintenance-window/create-cloud-pc-maintenance-window.png)
+
 2. Select **Tenant administration** > **Cloud PC maintenance windows (preview)** > **Create**.
-3. On the **Basics** page, …
+3. On the **Basics** page, type a **Name** and other information.
 4. Select **Next**.
 5. On the **Configuration** page, under **Weekday schedule** and/or **Weekend schedule**, select the Cloud PC local time **Start** and **End** times. Each window must be at least two hours in duration.
 6. Under **User notification**, for **Upcoming change**, select the lead time you’d like to use for notifying the user of the impending disruption. The user is notified in-session and can’t override or postpone the maintenance window.
