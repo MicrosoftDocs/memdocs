@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Understand Microsoft Edge for Business Mobile
+title: Understand Microsoft Edge for Business mobile
 titleSuffix:
-description: Understand Microsoft Edge for Business Mobile.
+description: Understand Microsoft Edge for Business mobile.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,7 +30,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Edge for Business Mobile
+# Microsoft Edge for Business mobile
 
 Incorporate Microsoft Edge for Business into your existing data security and management strategy. By securing the enterprise browser configuration for mobile devices, you can ensure safer and more efficient web browsing experiences.
 
@@ -39,7 +39,7 @@ Microsoft Edge for Business provide benefits for both management and security:
 - **Management**: Microsoft Edge for Business is the only mobile browser natively supported by Microsoft Intune with seamless integration. To secure productivity for your organization, App level management allows IT to configure the right balance between data protection and access.
 - **Security**: Data protection and leakage prevention are based on conditional access and user identities. Microsoft 365 security features extend to Microsoft Edge for Business mobile including Microsoft Entra Conditional Access, and Data Loss Prevention. For organizations utilizing VPN solutions, Microsoft Edge mobile offers support for identity-enlightened per-app VPN. This includes the integration of Microsoft Tunnel with Intune for a seamless and secure connection. Additionally, solutions that don't require a VPN are also available.
 
-## App protection policies for Mobile
+## App protection policies for mobile
 
 App protection policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
 
@@ -51,7 +51,7 @@ The APP data protection framework is organized into three distinct configuration
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](../apps/app-protection-framework.md).
 
-During this example, we create a **Level 3** App protection policy for Microsoft Edge from Microsoft Intune admin center.
+Next, you create a **Level 3** app protection policy for Microsoft Edge from Microsoft Intune admin center.
 
 To create the app protection policy, follow these steps:
 
@@ -163,13 +163,10 @@ To create the app protection policy, follow these steps:
 
 11. Select **Next** after you've completed the **Conditional launch** step.
 
-12. Review the **Scope Tags** step.
+12. Review the **Scope Tags** step. 
+    For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-    > [!NOTE]
-    > Review and configure scope tags
-    
-
-13. Select **Next** Once completed.
+13. Select **Next**.
 
 14. Review the **Assignments**.
 

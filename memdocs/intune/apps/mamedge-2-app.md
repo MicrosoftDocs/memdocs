@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Use App Protection Policies for Microsoft Edge for Business
+title: Use app protection policies for Microsoft Edge for Business
 titleSuffix:
-description: Use App Protection Policies for Microsoft Edge for Business.
+description: Use app protection policies for Microsoft Edge for Business.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,14 +30,13 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# App Protection Policies for Microsoft Edge for Business
+# App protection policies for Microsoft Edge for Business
 
-App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it and can be managed by Intune.
-
+App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the device user is using the app. A managed app is an app that has app protection policies applied to it and is managed by an enterprise management solution, such as Intune.
 
 ## App protection policy framework
 
-When configuring App protection policies, there are many various settings and options to enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which combination of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening efforts, Microsoft has introduced a new taxonomy for security configurations in Windows, and Intune is using a similar taxonomy for its APP data protection framework for mobile app management.
+When configuring app protection policies, there are various settings and options that enable organizations to tailor their data protection to their specific needs. Due to this flexibility, it may not be obvious which combination of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening efforts, Microsoft has introduced a taxonomy for security configurations in Windows, and Intune is using a similar taxonomy for its APP data protection framework for mobile app management.
 
 The APP data protection configuration framework is organized into three distinct configuration scenarios:
 
@@ -54,9 +53,9 @@ For more information about Framework Settings, see [App protection framework](..
 
 ### App protection policy for Microsoft Edge for Business (Windows)
 
-**App protection policies for Windows**: This feature provides secure and compliant access to work resources on personal computers with Data Loss Prevention (DLP) controls.
+The app protection policies for Windows provide secure and compliant access to work resources on personal computers by using Data Loss Prevention (DLP) controls.
 
-Having gained a comprehensive understanding of the app protection policy framework, you're now prepared to establish our initial app protection policy for Windows. In this instance, you'll be formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to our specific requirements. So, the forthcoming example may only be applicable to the **Level 3** policy that we have recommended. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet your distinct needs.
+Having gained a comprehensive understanding of the app protection policy framework, you're now prepared to establish your initial app protection policy for Windows. In this instance, you are formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to your specific requirements. The following example may only be applicable to the **Level 3** policy that Microsoft recommends. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet your organization's distinct needs.
 
 #### Apply the data protection framework
 
@@ -104,7 +103,7 @@ Use the following steps to apply the data protection framework.
 
 12. Click **Next** to display the next step.
 
-13. For the **Scope Tags** step, you must select the proper scope tag for your environment and the roles that have access to the this policy.
+13. For the **Scope Tags** step, you must select the proper scope tag for your environment and the roles that have access to this policy.
 
 14. For the **Assignments** step, select **Add Group** and select the desired group. 
 For this example, select all VPN Users. However, when you assign this policy in a production environment, you should create a new group of users that will best fit users that must adhere to **Level 3** app protection.

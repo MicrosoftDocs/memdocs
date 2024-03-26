@@ -30,19 +30,19 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Edge for Business end user experience (Windows)
+# Microsoft Edge for Business end user experience for Windows
 
 Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a manage or unmanage device.
 
-The end user experience for Secure Enterprise Browser in Microsoft Edge for Business is designed to be productive, secure, and user-friendly:
+The end user experience in Microsoft Edge for Business is designed to be productive, secure, and user-friendly. This secure enterprise browser experience includes the following features:
 
-1. **Visually Distinct Work Browsing Experience**: Microsoft Edge for Business provides a visually distinct work browsing experience with refreshed visual treatment. This helps users easily distinguish between their work and personal browsing sessions.
+1. **Visually distinct work browsing experience**: Microsoft Edge for Business provides a visually distinct work browsing experience with refreshed visual treatment. This helps users easily distinguish between their work and personal browsing sessions.
 
-2. **Enterprise Personal Browsing Experience**: Microsoft Edge for Business offers a lightly managed personal browsing experience that lets users access their favorite nonwork sites and services without compromising safety for the enterprise. It also automatically switches from work-related navigation into the work browser.
+2. **Enterprise personal browsing experience**: Microsoft Edge for Business offers a lightly managed personal browsing experience that lets users access their favorite nonwork sites and services without compromising safety for the enterprise. It also automatically switches from work-related navigation into the work browser.
 
-3. **Automatic Switching**: This feature helps enforce context separation between work and personal browsing. It ensures that work-related content doesn't get intermingled with personal browsing, preventing users from accidentally sharing sensitive information with unintended audiences.
+3. **Automatic switching**: This feature helps enforce context separation between work and personal browsing. It ensures that work-related content doesn't get intermingled with personal browsing, preventing users from accidentally sharing sensitive information with unintended audiences.
 
-4. **Company Branding**: This feature, which is coming soon, will increase familiarity and trust with company branding in the work browser window.
+4. **Company branding**: This feature, which is coming soon, will increase familiarity and trust with company branding in the work browser window.
 
 5. **Security**: It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows.
 
@@ -50,12 +50,12 @@ Microsoft Edge for Business provides dedicated work browsing experience that is 
 
 ## Onboarding experience
 
-To evaluate the Onboarding experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. It's important to consider that the device can't be managed by any MDM solution, otherwise we won't be able to enroll into the MAM Service.
+To evaluate the onboarding experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. It's important to consider that the device can't be managed by any MDM solution, otherwise you won't be able to enroll into the MAM Service.
 
 1. Locate **Microsoft Edge** on the desktop.
-2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you will see a user icon at the top, left of the browser window.
+2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you'll see a user icon at the top, left of the browser window.
 3. Select the user icon to display your managed account details.
-4. Select **Sign in to sync data.**
+4. Select **Sign in to sync data**.
 
     :::image type="content" alt-text="Sign in to sync data  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png":::
 
@@ -67,6 +67,8 @@ To evaluate the Onboarding experience, launch **Microsoft Edge** from the deskto
 
 	> [!NOTE] 
 	> The sign-in process within your organization may vary. Regardless of the method, completing the sign-in process is essential to add your user profile to Microsoft Edge.
+    >
+    > Always keep your password secure.
 
 7. Uncheck **Allow my organization to manage my device** and select **OK**.
 

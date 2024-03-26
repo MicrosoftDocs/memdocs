@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use App Configuration Policies for Microsoft Edge for Business
+title: Use app configuration policies for Microsoft Edge for Business
 titleSuffix:
 description: Use app configuration policy for Microsoft Edge for Business.
 keywords:
@@ -30,11 +30,13 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# App Configuration Policies for Microsoft Edge for Business
+# App configuration policies for Microsoft Edge for Business
 
-Microsoft Edge for iOS, Android and Windows supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement Browser Configuration.
+Microsoft Edge for iOS, Android, and Windows supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement browser configuration.
 
-App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android or through the MAM (Mobile Application Management) channel. Microsoft Edge for iOS and Android supports the following configuration scenarios:
+App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android or through the MAM (Mobile Application Management) channel. 
+
+Microsoft Edge for iOS and Android supports the following configuration scenarios:
 
 - Only allow work or school accounts
 - General app configuration settings
@@ -44,7 +46,7 @@ App configuration can be delivered either through the mobile device management (
 > [!IMPORTANT]
 > For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft Edge for Android must be deployed via the Managed Google Play store. For more information, see [**Set up enrollment of Android Enterprise personally-owned work profile devices**](/mem/intune/enrollment/android-work-profile-enroll) and [**Add app configuration policies for managed Android Enterprise devices**](/mem/intune/apps/app-configuration-policies-use-android).
 
-You will now review the following key items that need to be configured. Then, you'll create an app configuration policy in Microsoft Intune admin center.
+You'll now review the following key items that need to be configured. Then, you'll create an app configuration policy in Microsoft Intune admin center.
 
 ## Microsoft Edge app configuration values
 
@@ -62,7 +64,7 @@ Reference the following table when setting app configuration values for Microsof
 
 For related information, see [Manage Microsoft Edge on iOS and Android with Intune](../apps/manage-microsoft-edge.md).
 
-### Configure the App Configuration policy for Android and iOS
+### Configure the app configuration policy for Android and iOS
 
 Use the following steps to configure the app:
 
@@ -83,7 +85,7 @@ Use the following steps to configure the app:
 5. Select the **Microsoft Edge** app for **iOS/iPadOS** and click **Select**.
 
     > [!NOTE]
-    > You will need to follow the same steps for both Android. iOS and Windows. However, the steps for Windows differ after a certain point in the process. For this reason, we have included separate instructions for Windows later in the documentation.
+    > You will need to follow the same steps for both Android. iOS and Windows. However, the steps for Windows differ after a certain point in the process. For this reason, separate instructions for Windows are included later in the documentation.
 
 6. Select **Next** to display the **Settings catalog** step. Don't change settings on the **Settings catalog** step.
 
@@ -119,7 +121,7 @@ Use the following steps to configure the app:
     - **Target Policy to**: Selected apps
 
 
-4. Click **Select public apps** to display the **Selected apps to target** pane.
+4. Select **Select public apps** to display the **Selected apps to target** pane.
 
 5. Select the **Microsoft Edge** app for **Windows* and click **Select**.
 
@@ -129,24 +131,24 @@ Use the following steps to configure the app:
    - **Allow users to be alerted if their passwords are found to be unsafe**
    - **Configure password protection warning trigger**
 9. Type on the **Search for a setting** the following **StartUp** and select **Microsoft Edge\StartUp, home page and new tab page** select the following options.
-   -  **Configure the home page URL**
-   -  **Configure the new tab page URL
-   -  **Hide App Launcher on Microsoft Edge new tab page**
-10. Under Microsoft Edge configure each item for this example we entered the following details.
+   - **Configure the home page URL**
+   - **Configure the new tab page URL**
+   - **Hide App Launcher on Microsoft Edge new tab page**
+10. Under Microsoft Edge, configure each item for this example by entering the following details:
     - **Hide App Launcher on Microsoft Edge new tab page:** Enabled
     - **Configure the new tab url:** https://www.contoso.com
     - **Configure the new tba page url:** https://www.contoso.com
     - **Allow users to be alerted if their passwords are found to be unsafe:** Enabled
    -  **Configure password protection warning trigger:** Enabled
-11. Click **Next** to display the **Assignments** page.
+11. Select **Next** to display the **Assignments** page.
 12. Click **Select groups to include**.
 13. Select a group in the **Select groups to include** pane and click **Select**.
 14. Click **Select groups to exclude** to display the related pane.
 15. Choose the groups you want to exclude and then click **Select**.
     >[!NOTE]
     >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
-18. Click **Next** to display the **Review + create** page.
-19. Click **Create** to add the app configuration policy to Intune.
+18. Select **Next** to display the **Review + create** page.
+19. Select **Create** to add the app configuration policy to Intune.
 
 You have now created an App Configuration Policy for Windows and Microsoft Edge.
 

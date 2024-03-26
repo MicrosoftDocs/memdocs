@@ -30,29 +30,33 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Troubleshooting Microsoft Edge for Business Data Security
+# Troubleshooting Microsoft Edge for Business data security
 
-Troubleshooting App Protection Policies(APP) and App Configuration Policies (ACP) can involve several steps. Here are some common issues and potential solutions:
+Troubleshooting app protection policies (APP) and app configuration policies (ACP) can involve several steps. 
 
-1. **Verify Policy Assignment:** Ensure that the App Protection Policy is assigned to the correct user group. This ensures that the policy is applied to the intended users.
-2. **Review Policy Settings:** Check that the necessary conditions and settings are properly defined in the policy. This helps ensure that your App Protection Policy is configured as intended.
-3. **Update Microsoft Edge:** If Microsoft Edge is crashing during initialization, ensure that the app version and the operating system meet the required conditions.
-4. **Policy Application:** If a policy setting isn’t applied or no policy is applied at all, verify whether the user and Microsoft Edge for Business are targeted by the policy. Also, check if the user has signed in to Microsoft Edge for Business using their targeted corporate account.
-5. **Data Transfer to Unmanaged Apps:** Users can use the share extension to open work or school data in unmanaged apps, even with the data transfer policy set to Managed apps only or No apps. Intune APP can’t control the share extension without managing the device. Therefore, Intune encrypts “corporate” data before sharing it outside the app.
-6. **Microsoft Authenticator App Requirement:** The user might be prompted to install the Microsoft Authenticator app. This is needed when App Based Conditional Access is applied.
-7. **Company Portal App Requirement on Android:** On Android, much of the app protection functionality is built into the Company Portal app. Device enrollment is not required even though the Company Portal app is always required.
-8. **Save As to Local Storage:** If apps are not allowing Save As to Local Storage when the policy is enabled, remember that the App behavior for this setting is controlled by the policy.
-9. **App configuration settings not applying correctly:** If none of your app configuration policy settings are applying correctly to the app based on the communication channel used (Managed Apps or Managed Devices), review the publisher’s documentation again for the string or settings used. You may want to try using the other option for device enrollment type of the policy.
-10. **Sign in with your work account - Microsoft Edge for Business message:** If you encounter the ‘Sign in with your work account’ error message in Microsoft Edge for Business, it indicates that you have chosen an incorrect enrollment method, resulting in the App Protection Policy not being applied.
-:::image type="content" alt-text="Sign in with your work account - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png":::
+The following list provides common issues and potential solutions:
 
-11. If you encounter an error like the below, it could mean that you’ve selected the wrong enrollment method. You might have left a checkmark on ‘Select No, sign into this app only’. Please redo the enrollment process without selecting this option. Otherwise, the App Protection Policy won’t be applied.
+- **Verify Policy Assignment:** Ensure that the App Protection Policy is assigned to the correct user group. This ensures that the policy is applied to the intended users.
+- **Review Policy Settings:** Check that the necessary conditions and settings are properly defined in the policy. This helps ensure that your App Protection Policy is configured as intended.
+- **Update Microsoft Edge:** If Microsoft Edge is crashing during initialization, ensure that the app version and the operating system meet the required conditions.
+- **Policy Application:** If a policy setting isn’t applied or no policy is applied at all, verify whether the user and Microsoft Edge for Business are targeted by the policy. Also, check if the user has signed in to Microsoft Edge for Business using their targeted corporate account.
+- **Data Transfer to Unmanaged Apps:** Users can use the share extension to open work or school data in unmanaged apps, even with the data transfer policy set to Managed apps only or No apps. Intune APP can’t control the share extension without managing the device. Therefore, Intune encrypts "corporate" data before sharing it outside the app.
+- **Microsoft Authenticator App Requirement:** The user might be prompted to install the Microsoft Authenticator app. This is needed when App Based Conditional Access is applied.
+- **Company Portal App Requirement on Android:** On Android, much of the app protection functionality is built into the Company Portal app. Device enrollment isn't required even though the Company Portal app is always required.
+- **Save As to Local Storage:** If apps aren't allowing Save As to Local Storage when the policy is enabled, remember that the App behavior for this setting is controlled by the policy.
+- **App configuration settings not applying correctly:** If none of your app configuration policy settings are applying correctly to the app based on the communication channel used (Managed Apps or Managed Devices), review the publisher’s documentation again for the string or settings used. You may want to try using the other option for device enrollment type of the policy.
+- **Sign in with your work account - Microsoft Edge for Business message:** If you encounter the ‘Sign in with your work account’ error message in Microsoft Edge for Business, it indicates that you have chosen an incorrect enrollment method, resulting in the App Protection Policy not being applied.
 
-:::image type="content" alt-text="Enrollment Window - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png":::
+    :::image type="content" alt-text="Sign in with your work account - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png":::
 
-Remember, successful app protection policy deployment relies on proper configuration of settings and other dependencies. Always verify that you have met the prerequisites for deploying app protection policies.
+- If you encounter an error like the below, it could mean that you’ve selected the wrong enrollment method. You might have left a checkmark on ‘Select No, sign into this app only’. Redo the enrollment process without selecting this option. Otherwise, the App Protection Policy won’t be applied.
 
-If you continue to experience issues, it may be helpful to contact **Microsoft Support** for further assistance. 
+    :::image type="content" alt-text="Enrollment Window - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png":::
+
+Successful app protection policy deployment relies on proper configuration of settings and other dependencies. Always verify that you have met the prerequisites for deploying app protection policies.
+
+If you continue to experience issues, it may be helpful to contact [Microsoft Support](/mem/get-support) for further assistance.
+
 ## FAQ
 
 **Does Microsoft Edge for Business require a separate download?**  
@@ -63,19 +67,19 @@ No. Microsoft Edge for Business is automatically triggered by signing in with a 
 
 Yes, MAM for Windows does support the Windows Home Edition.
 
-**Will all policies and configurations previously set by IT be applied to Edge for Business?** 
+**Will all policies and configurations previously set by IT be applied to Edge for Business?**
 
 Yes, all policies and configurations currently in place will be inherited by Microsoft Edge for Business.
 
-**What impact will this cause to my default browser settings?** 
+**What impact will this cause to my default browser settings?**
 
-There's no impact on users\' default browser settings. 
+There's no impact on users\' default browser settings.
 
-**What happens to favorites, passwords, etc.?**  
+**What happens to favorites, passwords, and related data?**  
 
-Passwords, favorites, and data currently associated with the user's work profile will be maintained in Microsoft Edge for Business. Passwords, favorites, and data aren't shared between the work browser window and the personal browser window. 
+Passwords, favorites, and data currently associated with the user's work profile will be maintained in Microsoft Edge for Business. Passwords, favorites, and data aren't shared between the work browser window and the personal browser window.
 
-**MAM for Windows vs Microsoft Edge management service**
+**How does MAM for Windows and Microsoft Edge management service differ?**
 
 When comparing MAM for Windows and the Microsoft Edge management service, it’s crucial to understand the key differences and choose the right management option for your needs. If you’re currently using Microsoft Intune, your focus should be on creating app protection policies and application configuration policies to configure the browser. This ensures a secure enterprise browser configuration for your users.
 
@@ -83,7 +87,7 @@ However, if you’re not using Microsoft Intune, the Microsoft Edge management s
 
 ## Solution results
 
-After completing this solution, you will have accomplished the following:
+After completing this solution, you'll have accomplished the following:
 
 - Created different scenarios to configure a **Microsoft Edge for Business** and **Microsoft Application Management** experience, from concept to implementation.
 
@@ -97,13 +101,11 @@ After completing this solution, you will have accomplished the following:
 
 - Understand the **end-user experience**, showing what behavior can be expected once you implement the Microsoft Intune app protection policy for Windows devices.
 
-- Understand key **troubleshooting examples**, some of which were identified during our research, and others that were suggested by various professionals in the industry.
+- Understand key **troubleshooting examples**, some of which were identified during Microsoft's research, and others that were suggested by various professionals in the industry.
 
-Take advantage of these powerful features as an IT professional. You have the capability to build an environment that is not only secure and efficient, but also user-friendly. Utilize Microsoft Edge for Business and Microsoft Application Management to strengthen your environment.
+Take advantage of these powerful features as an IT professional. You have the capability to build an environment that isn't only secure and efficient, but also user-friendly. Utilize Microsoft Edge for Business and Microsoft Application Management to strengthen your environment.
 
-Remember, achieving security is not a one-time event, but a continuous process of improvement and adaptation to new challenges. Don’t stop at the status quo - keep pushing your limits and improving your security stance!
+> [!IMPORTANT]
+> Achieving security is not a one-time event, but a continuous process of improvement and adaptation to new challenges. Keep mproving your organization's security stance.
 
-Your next action step is to apply the strategies detailed in this whitepaper to your own environment. Don’t just read about the potential of Microsoft Edge for Business and the secure Microsoft Application Management - experience it for yourself.
-
-You have the power to make a significant impact. Start now, and continue to unlock the full potential of these tools. Your journey towards a more secure environment begins today
-
+Next, continue to apply the strategies detailed in this solution to your organization's environment.
