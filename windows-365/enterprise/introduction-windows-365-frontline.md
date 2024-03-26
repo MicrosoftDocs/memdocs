@@ -106,8 +106,6 @@ The concurrency buffer can be used up to four times per day with maximum of one 
 
 ### Temporary blocks
 
-### Temporary blocks
-
 Excessive use of the concurrency buffer will temporarily block its further use for the next 48 hours. A temporary block is imposed when:
 
 - On two or more occasions within a 24-hour period, the concurrency buffer is used for more than one hour.
