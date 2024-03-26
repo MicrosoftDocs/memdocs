@@ -43,7 +43,7 @@ Microsoft Edge for Business provide benefits for both management and security:
 
 App protection policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
 
-The APP data protection framework is organized into three distinct configuration levels, as mentioned earlier in the whitepaper. Each level builds off the previous level:
+The APP data protection framework is organized into three distinct configuration levels, as mentioned earlier in **Step 2**. Each level builds off the previous level:
 
 - **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN, encrypted, and allows selective wipe operations. For Android devices, this level validates Android device attestation.
 - **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
@@ -166,9 +166,8 @@ To create the app protection policy, follow these steps:
 12. Review the **Scope Tags** step.
 
     > [!NOTE]
-    > Scope tag should match what has been designed before or use the default.
+    > Review and configure scope tags
     
-    :::image type="content" alt-text="Apps - App protection policies - scope tags - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business44.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business44.png":::
 
 13. Select **Next** Once completed.
 
