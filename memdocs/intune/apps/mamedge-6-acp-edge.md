@@ -32,7 +32,7 @@ ms.collection:
 
 # App Configuration Policies for Microsoft Edge for Business
 
-Microsoft Edge for iOS and Android supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement Browser Configuration.
+Microsoft Edge for iOS, Android and Windows supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement Browser Configuration.
 
 App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android or through the MAM (Mobile Application Management) channel. Microsoft Edge for iOS and Android supports the following configuration scenarios:
 
@@ -62,7 +62,7 @@ Reference the following table when setting app configuration values for Microsof
 
 For related information, see [Manage Microsoft Edge on iOS and Android with Intune](../apps/manage-microsoft-edge.md).
 
-### Configure the app
+### Configure the App Configuration policy for Android and iOS
 
 Use the following steps to configure the app:
 
@@ -72,8 +72,8 @@ Use the following steps to configure the app:
 
 3. On the **Create app configuration policy**, pane enter the following information:
 
-    - **Name**: Browser ACP
-    - **Description**: Secure Enterprise Browser ACP Configuration
+    - **Name**: Secure Enterprise Browser ACP
+    - **Description**: Microsoft Edge for Business ACP Configuration - Mobile
     - **Target Policy to**: Selected apps
 
     :::image type="content" alt-text="Apps - App configuration policies - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png":::
@@ -81,7 +81,7 @@ Use the following steps to configure the app:
 4. Click **Select public apps** to display the **Selected apps to target** pane.
 
 5. Select the **Microsoft Edge** app for **iOS/iPadOS** and click **Select**.
-
+>[!NOTE] You will need to follow the same steps for both Android. iOS and Windows. However, the steps for Windows differ after a certain point in the process. For this reason, we have included separate instructions for Windows later in the documentation
 5. Select **Next** to display the **Settings catalog** step. Don't change settings on the **Settings catalog** step.
 
 6. Select **Next** to display the **Settings** step.
@@ -101,7 +101,51 @@ Use the following steps to configure the app:
 
 11. Select **Review + create**.
 
-Repeat the previous steps to create an app configuration policy for additional platforms if needed.
+### Configure the App Configuration policy for Windows 
+
+Use the following steps to configure the app:
+
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+
+3. On the **Create app configuration policy**, pane enter the following information:
+
+    - **Name**: Secure Enterprise Browser ACP - Windows
+    - **Description**: Microsoft Edge for Business ACP Configuration - Windows
+    - **Target Policy to**: Selected apps
+
+
+4. Click **Select public apps** to display the **Selected apps to target** pane.
+
+5. Select the **Microsoft Edge** app for **Windows* and click **Select**.
+
+6. Select **Next** to display the **Settings catalog** step.
+7. Click **Add settings** to display the **Settings picker** pane.
+8. Expand Microsoft Edge or you can type the setting on the search menu > select **Password manager and protection** select the following options.
+   - **Allow users to be alerted if their passwords are found to be unsafe**
+   - **Configure password protection warning trigger**
+9. Type on the **Search for a setting** the following **StartUp** and select **Microsoft Edge\StartUp, home page and new tab page** select the following options.
+   -  **Configure the home page URL**
+   -  **Configure the new tab page URL
+   -  **Hide App Launcher on Microsoft Edge new tab page**
+10. Under Microsoft Edge configure each item for this example we entered the following details.
+    - **Hide App Launcher on Microsoft Edge new tab page:** Enabled
+    - **Configure the new tab url:** https://www.contoso.com
+    - **Configure the new tba page url:** https://www.contoso.com
+    - **Allow users to be alerted if their passwords are found to be unsafe:** Enabled
+   -  **Configure password protection warning trigger:** Enabled
+11. Click **Next** to display the **Assignments** page.
+12. Click **Select groups to include**.
+13. Select a group in the **Select groups to include** pane and click **Select**.
+14. Click **Select groups to exclude** to display the related pane.
+15. Choose the groups you want to exclude and then click **Select**.
+    >[!NOTE]
+    >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
+18. Click **Next** to display the **Review + create** page.
+19. Click **Create** to add the app configuration policy to Intune.
+
+You have now created an App Configuration Policy for Windows and Microsoft Edge.
 
 ## Next step
 
