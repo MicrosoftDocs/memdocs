@@ -69,21 +69,6 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
-### Support for multi-SIM iOS/iPadOS device inventory<!-- 17016690  -->
-
-You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
-
-- **ICCID**
-- **IMEI**
-- **MEID**
-- **Phone number**
-
-These fields will default to using labels returned by the device, such as: *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
-
-Applies to:
-
-- iOS/iPadOS
-
 <!-- *********************************************** -->
 
 ## Device configuration
