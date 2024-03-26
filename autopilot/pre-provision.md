@@ -140,7 +140,9 @@ If the pre-provisioning process fails:
 
 ### User flow
 
-> [!IMPORTANT] <!-- MAXADO 8850476 -->
+<!-- MAXADO 8850476 -->
+
+> [!IMPORTANT]
 >
 > - In order to make sure tokens are refreshed properly between the Technician flow and the User flow, wait at least 90 minutes after running the Technician flow before running the User flow. This scenario mainly affects lab and testing scenarios when the User flow is run within 90 minutes after the Technician flow completes.
 >
