@@ -100,7 +100,7 @@ For the best user experience, make sure to:
 
 Windows 365 Frontline includes a concurrency buffer to let a tenant temporarily exceed the maximum concurrency limit for Windows 365 Frontline Cloud PCs.
 
-For example, when workers overlap during a shift change, a previous worker might need to finish something up before signing off. Or, an incoming worker might need to start a few minutes early. The concurrency buffer is intended to allow for such rare and brief over usage to make sure workers aren’t impacted by unforeseen lockouts.
+For example, when workers overlap during a shift change, a previous worker might need to finish up something before signing off. Or, an incoming worker might need to start a few minutes early. The concurrency buffer is intended to allow for such rare and brief over usage to make sure workers aren’t impacted by unforeseen lockouts.
 
 The concurrency buffer can be used up to four times per day with maximum of one hour in each instance. This hour starts from the moment the tenant exceeded the max concurrency limit.
 
