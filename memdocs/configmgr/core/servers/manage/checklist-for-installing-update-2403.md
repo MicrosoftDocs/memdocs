@@ -254,7 +254,7 @@ For more information, see the [Release notes](../deploy/install/release-notes.md
 
 When the console lists the update as **Available**, you can run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2309** update package, and select **Run prerequisite check** in the ribbon.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2403** update package, and select **Run prerequisite check** in the ribbon.
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
@@ -332,11 +332,11 @@ Update clients per the plan you created, especially if you configured client pil
 
 ### Third-party extensions
 
-If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2309.
+If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2403.
 
 ### Enable any custom solutions
 
-Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2309.
+Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2403.
 
 ### Update boot images and media
 
