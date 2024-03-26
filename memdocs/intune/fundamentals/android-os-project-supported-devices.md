@@ -52,6 +52,6 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 | PICO    | PICO 4 Enterprise     | PUI 5.6.0              | AR/VR Headset  |                    |
 | Realwear| HMT-1              | 11.2                | AR/VR Headset  |                    |
 | Realwear| HMT-1Z1            | 11.2                | AR/VR Headset  |                    |
-| Realwear| Navigator500       | 11.2                | AR/VR Headset  |                    |
+| Realwear| Navigator 500      | 1.1                | AR/VR Headset  |                    |
 | Lenovo| ThinkReality VRX     | VRX_user_S766001_2310192349_kona   | AR/VR Headset  |                   |
 | DigiLens Inc.| DigiLens ARGO    | DigiOS 2068 (B1.0001.2068)            | AR/VR Headset  |                    |
