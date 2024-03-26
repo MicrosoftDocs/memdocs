@@ -47,8 +47,8 @@ To help improve security for your Cloud PCs, consider the following general guid
     - Send data through to Microsoft 365 Secure Score.
     - Unhealthy PCs will show up on the Microsoft Defender for Endpoint Security Center and threat analysis dashboards.
     - Respond to remediation measures just like other managed devices.
-    - Support tamper protection management via [Defender](/microsoft-365/security/defender-endpoint/manage-tamper-protection-microsoft-365-defender), or via [Intune](/microsoft-365/security/defender-endpoint/manage-tamper-protection-intune)  
-7. Windows 365 integrates with Microsoft Purview. Onboarding to Defender for Endpoint also onboard to [Purview Endpoint Data Loss Protection (DLP)](/purview/endpoint-dlp-getting-started). DLP detects when sensitive items are used and shared. This gives you the visibility and control you need to ensure that data is used and protected properly, and to help prevent risky behavior that might compromise them. [Configure endpoint data loss prevention settings](Purview/dlp-configure-endpoint-settings) to prevent  data being:
+    - Support tamper protection management using [Defender](/microsoft-365/security/defender-endpoint/manage-tamper-protection-microsoft-365-defender) or [Intune](/microsoft-365/security/defender-endpoint/manage-tamper-protection-intune)  
+7. Windows 365 integrates with Microsoft Purview. Onboarding to Defender for Endpoint includes [Purview Endpoint Data Loss Protection (DLP)](/purview/endpoint-dlp-getting-started). DLP detects when sensitive items are used and shared. This gives you the visibility and control you need to make sure that data is used and protected properly, and to help prevent risky behavior that might compromise them. [Configure endpoint data loss prevention settings](Purview/dlp-configure-endpoint-settings) to prevent data from getting:
     - Copied from a Cloud PC clipboard/drive to unauthorized devices.
     - Printed to unauthorized printers.
     
