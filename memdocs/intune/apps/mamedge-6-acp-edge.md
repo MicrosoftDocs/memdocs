@@ -81,25 +81,28 @@ Use the following steps to configure the app:
 4. Click **Select public apps** to display the **Selected apps to target** pane.
 
 5. Select the **Microsoft Edge** app for **iOS/iPadOS** and click **Select**.
->[!NOTE] You will need to follow the same steps for both Android. iOS and Windows. However, the steps for Windows differ after a certain point in the process. For this reason, we have included separate instructions for Windows later in the documentation
-5. Select **Next** to display the **Settings catalog** step. Don't change settings on the **Settings catalog** step.
 
-6. Select **Next** to display the **Settings** step.
+    > [!NOTE]
+    > You will need to follow the same steps for both Android. iOS and Windows. However, the steps for Windows differ after a certain point in the process. For this reason, we have included separate instructions for Windows later in the documentation.
 
-7. Enter each of the **names** and **keys** from the list below.
+6. Select **Next** to display the **Settings catalog** step. Don't change settings on the **Settings catalog** step.
+
+7. Select **Next** to display the **Settings** step.
+
+8. Enter each of the **names** and **keys** from the list below.
     
     - **Name**: 
     - **Value**: 
 
     :::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png":::
     
-8. Review each value and select **Next**.
+9. Review each value and select **Next**.
 
-9. Add a **Scope tag** and select **Next**.
+10. Add a **Scope tag** and select **Next**.
 
-10. Review Assignment and select **Next**.
+11. Review Assignment and select **Next**.
 
-11. Select **Review + create**.
+12. Select **Review + create**.
 
 ### Configure the App Configuration policy for Windows 
 
