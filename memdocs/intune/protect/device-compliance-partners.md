@@ -49,7 +49,7 @@ To enable use data from device compliance partners, complete the following tasks
 
 3. **Enroll your devices to your device compliance partner**.
 
-With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices with a state of "not compliant" have that status added to their device record in Microsoft Entra ID.
+With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices in a noncompliant state have a *not compliant* status added to their device record in Microsoft Entra ID. 
 
 ## Supported device compliance partners
 
