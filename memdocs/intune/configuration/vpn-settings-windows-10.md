@@ -158,6 +158,8 @@ These cryptography settings are used during IKE security association negotiation
 
 These cryptography settings are used during child security association negotiations (also known as `quick mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
 
+Note: To create an IKEv2 (Native type) VPN profile you must enter either all or none of IKE Security Association Parameters and Child Security Association Parameters.
+
 - **Cipher transform algorithm**: Select the algorithm used on the VPN server. For example, if your VPN server uses AES-CBC 128 bit, then select **CBC-AES-128** from the list.
 
   When set to **Not configured**, Intune doesn't change or update this setting.
