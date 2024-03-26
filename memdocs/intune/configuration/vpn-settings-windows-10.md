@@ -145,7 +145,7 @@ The following settings are shown depending on the connection type you select. No
 >
 > - All of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
 >
-> **OR**
+>   **OR**
 >
 > - None of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
 
