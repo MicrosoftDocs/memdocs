@@ -50,7 +50,7 @@ To create a maintenance window, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-![Screencap create a Cloud PC maintenance window.](media/cloud-pc-maintenance-window/create-cloud-pc-maintenance-window.png)
+![Screencap showing how to create a Cloud PC maintenance window.](media/cloud-pc-maintenance-window/create-cloud-pc-maintenance-window.png)
 2. Select **Tenant administration** > **Cloud PC maintenance windows (preview)** > **Create**.
 3. On the **Basics** page, type a **Name** and other information.
 4. Select **Next**.
