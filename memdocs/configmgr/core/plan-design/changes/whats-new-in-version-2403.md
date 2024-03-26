@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. This article summarizes the changes and new features in Configuration Manager, version 2309.
+Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. This article summarizes the changes and new features in Configuration Manager, version 2403.
                                                                                                                                                                                                                                                                                                                           
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2309.md#post-update-checklist).
 
@@ -26,54 +26,70 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Site infrastructure
 
-### Introducing SQL ODBC driver support for Configuration Manager
+### Microsoft Azure Active Directory re-branded to Microsoft Entra ID
 
-Starting with Configuration Manager 2403 release, Configuration Manager requires the installation of the ODBC driver for SQL server 18.1.0 or later as a prerequisite. This prerequisite is required when you create a new site or update an existing one and on all remote roles.
+Starting Configuration Manager version 2403, Microsoft Azure Active Directory is re-named to Microsoft Entra ID within Configuration Manager. 
 
+### Automated diagnostic Dashboard for Software Update Issues
 
-### Option to schedule scripts' runtime
-
-
-
-### External service notification Run details from Azure Logic application  
+A new dashboard is added to the console under monitoring workspace which shows the diagnosis of the software update issues in your environment. You can fix software update issues based on troubleshooting documentations.
 
 
-### New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to clean up data older than 30 days or configured number of days
+### Introducing Centralized Search box: Effortlessly Find What You Need in the Console!
+
+Users can now use the global search box in CM console which streamlines the search experience and centralizes access to information. This enhances the overall usability, productivity and effectiveness of CM. Users no longer need to navigate through multiple nodes or sections/ folders to find information they require, saving valuable time and effort.
+
+
+### Added Folder support for Scripts node in Software Library 
+
+You can now organize scripts by using folders. This change allows for better categorization and management of scripts. Full Administrator and Operations Administrator roles can manage the folders. 
+
+### HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager
+
+HTTP-only communication is deprecated, and support is removed from this version of Configuration Manager. Please enable HTTPS or Enhanced HTTP for client communication.
+
+
+### Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager
+
+Starting 2403, Windows Server 2012/2012 R2 operating system site system roles are not supported in any CB releases. Clients with extended support (ESU) will continue.  
+
+### Resource access profiles and deployments will block Configuration manager upgrade
+
+Any configured Resource access profiles and associated deployments will block the Configuration manager upgrade. Please consider deleting them and moving the co-management workload for Resource Access (if co-managed) to Intune.
 
 
 ## Software updates
 
-### Update Orchestrator Service (USO) for Windows 11 22H2 or later with windows native reboot experience 
+### New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet
 
+A new parameter for SoftwareUpdate O365Language is added to Powershell Save-CMSoftwareUpdate cmdlet. Customers now do not, have to check for a specific language in the SUP properties from console (earlier causing a metadata download for that language for all updates).
 
-### Maintenance window creation using PS cmdlet 
+PowerShell Commandlet: Save-CMSoftwareUpdate – SoftwareUpdateO365Language <language name> (<region name>)"
 
 
 
 ## OS deployment
 
-### OSD preferred MP option for PXE boot scenario  
+### Support for ARM64 Operating System Deployment
 
+Configuration Manager operating system deployment support is now added on Windows 11 ARM64 devices. Currently Importing and customizing Arm64 boot images, Wipe and load TS, Media creation TS, and WDS PXE for Arm64 is supported.    
 
-### Enable Bitlocker through ProvisionTS  
+### Enhancement in Deploying Software Packages with Dynamic Variables  
 
+Administrators while deploying the "Install Software Package" via Dynamic variable with "Continue on error" unchecked to clients, will not be notified with task sequence failures even if package versions on the distribution point are updated.
 
-### Windows 11 Edition Upgrade using CM Policy settings 
-
-
-### Windows 11 Upgrade Readiness Dashboard 
 
 
 ## Cloud-attached management
 
-### New Cloud Management Gateway (CMG) creation via Console 
+### Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)
 
-
-### New Cloud Management Gateway (CMG) creation via PowerShell 
+The option to upgrade Configuration Manager 2403 is blocked if you are running cloud management gateway V1 (CMG) as a cloud service (classic). All CMG deployments should use a virtual machine scale set. For more information see ,
 
 
 ## Deprecated features
 
+### System Center Update Publisher (SCUP) and integration with ConfigMgr 
 
 ## Other updates
 
@@ -81,7 +97,7 @@ Starting with Configuration Manager 2403 release, Configuration Manager requires
 ## Next steps
 At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).-->
 
-As of March 28, 2024, version 2403 is globally available for all customers to install.
+<--! As of March 28, 2024, version 2403 is globally available for all customers to install.-->
 
 >[!NOTE] 
 > For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.
