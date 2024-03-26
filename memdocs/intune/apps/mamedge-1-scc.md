@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/04/2024
+ms.date: 03/26/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,7 +35,7 @@ ms.collection:
 
 The Microsoft Mobile Threat Defense (MTD) connector is a feature in Microsoft Intune that creates a channel of communication between Intune and your chosen MTD vendor, regardless of the device’s operating system. There are various supported MTD partners for both Windows and mobile devices. Intune integrates data from an MTD vendor as an information source for device compliance policies and device conditional access rules. The information provided by this communication channel can help protect corporate resources, such as Exchange and SharePoint data, by blocking access from compromised devices.
 
-## Integrate Mobile Threat Defense (MTD) partners with Microsoft Edge for Business
+## Integrate Mobile Threat Defense partners with Microsoft Edge for Business
 
 Mobile Application Management (MAM) threat detection can be integrated with various MTD partners, including Windows Security Center. This integration provides a client device health assessment to Intune application protection policies (APP) via a service-to-service connector. This assessment supports gating the flow and access to organizational data on personal unmanaged devices.
 
