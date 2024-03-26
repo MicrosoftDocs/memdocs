@@ -686,6 +686,8 @@ items:
             href: ./protect/epm-guidance-for-creating-rules.md
           - name: Endpoint Privilege Management policies
             href: ./protect/epm-policies.md
+          - name: Support approved elevation requests
+            href: ./protect/epm-support-approved.md
           - name: Endpoint Privilege Management reports
             href: ./protect/epm-reports.md
           - name: Endpoint Privilege Management data and privacy
