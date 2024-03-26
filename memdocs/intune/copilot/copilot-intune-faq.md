@@ -28,60 +28,98 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Copilot in Intune FAQ
-
-> [!IMPORTANT]
-> This article is being updated for Copilot.
+# Microsoft Copilot in Intune FAQ
 
 This article answers common questions about using Microsoft Copilot in Intune.
 
-## FAQ
+## Access to Copilot
 
-### open prompting
+### How can I control access to Copilot in Intune?
 
-### Does Copilot for Security give admins more access to Intune data than what's available in the Intune admin center?
+When you set up Copilot for Security, you determine the Copilot role that your admins can have (owner vs. contributor), as described in [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication). There are also Microsoft Entra roles that can control access to Copilot for Security.
 
-No. The Intune capabilities in Copilot for Security are built using the existing Microsoft Graph API's, which are the same API's that the Intune admin center uses. Both Copilot experiences use the same Intune capabilities.
+The Copilot for Security roles and/or the Microsoft Entra roles that you configure control access to Copilot in Intune. There aren't any Intune-specific roles-based access controls (RBAC) for Copilot in Intune.
 
-Access to Copilot for Security is managed using Microsoft Entra roles. To access Intune data in Copilot for Intune and/or Copilot for Security, Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) assigned to admins when getting data.
+Once you enable Intune in Copilot for Security, then your Intune admins can see the Copilot features in the Intune admin center. But, they can only access the data that they have permissions to. Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) assigned to your admins.
 
-So, your Intune admins are governed by existing access to Intune data.
+So, if an admin tries access Intune data that they don't have permissions to, then they'll see the following error message:
 
 `You don't have permission to access this feature. Reach out to your IT administrator for help.`
 
+If you want access to Copilot in Intune, then contact the Copilot for Security workspace owner in your organization. If you want access to all your Intune data, then contact your Intune administrator.
+
 ### Can I use Copilot for Security if I'm not an Intune admin, and vice versa?
 
-Yes. Access to Copilot for Security is managed using Microsoft Entra roles. For more information on the different Copilot roles, and what they can do, go to [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication).
+Yes. Access to Copilot for Security is managed using Copilot for Security and/or Microsoft Entra roles. For more information on the different roles, and what they can do, go to [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication).
 
-If you're an Intune admin, you can use Copilot for Security to get insights into your Intune data. But, it's recommended to use Copilot in Intune. Copilot in Intune is scoped to only your Intune data and can use less security compute units (SCUs).
+If you're an Intune admin and have the correct Copilot for Security or Microsoft Entra role assigned to you, then you can use Copilot for Security to get insights about your Intune data. But, we recommended you use Copilot in Intune, as its scope is only Intune data.
 
-If you're a security admin, then use Copilot for Intune if you want to get insights into your Intune data. Copilot for Security is scoped to all your embedded services and can use more SCUs.
+If you're a security admin, then you can use Copilot in Intune if you only want insights into your Intune data. Copilot for Security is scoped to all your embedded services.
 
-### Is there any way to limit which Intune admins see the Copilot experience?
+## Capabilities and cost
 
-No. All users of the Intune admin center can see the Copilot features. But, Intune admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
+### How do I turn on Intune capabilities?
 
-### Can I use other Microsoft Copilot for Security capabilities from other services, like Defender, Microsoft Entra and Purview from within the Intune admin center?
+In the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner), and enable the Microsoft Intune plug-in. This plug-in allows you to access your Intune data and use the Copilot features in the Intune admin center.
 
-No. Copilot in Intune is available only for Intune capabilities. To get insights from other Microsoft services, you can use the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989).
+For more information on managing plugins, go to [Manage plugins in Copilot for Security](/security-copilot/manage-plugins).
 
-### Copilot appears to show the wrong info. How can I debug and validate this?
+### Can I use capabilities for other Copilot services in the Intune admin center?
 
-If you think that the output is incorrect, you can:
+No. Copilot in Intune in the Intune admin center is available only for Intune capabilities.
 
-- Use the F12 developer tools in Microsoft Edge to debug the issue. In the developer debug tool, select the **Network** view. In Copilot, select the prompt to get the output. In the developer debug tool, use the **logs** entries to look more closely at the steps between the prompt input and output.
+You can't get insights from other Microsoft services, like Microsoft Defender, Microsoft Entra, and Microsoft Purview. To get insights from other Microsoft services, you can use the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989).
 
-- If you're using Copilot to get more information about a specific device, then please provide feedback and add details about what you're seeing. There's a **Feedback** button in the Copilot prompt:
+### How much does Copilot in Intune cost?
 
-  :::image type="content" source="./media/copilot-intune-overview/feedback-message-icon.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
+Copilot in Intune is included with Copilot for Security. Copilot for Security uses security compute units (SCUs). There aren't any other licensing requirements or Intune-specific licenses for using Copilot in Intune.
 
-- If you're working with Microsoft to debug the issue, then they may ask you to enable F12 developer tools in your browser. This information shows the capability that Copilot uses.
+For more information on SCUs, go to:
 
-  session ID
+- [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
+- [Manage capacity in Copilot for Security](/security-copilot/manage-capacity)
 
-Intune: Session ID aren't visible in UI; Must do F12
-Security:  Can view the prompt sessions from the standalone and embedded experiences. Also shows the session ID, which is helpful when troubleshooting w/MSFT
+### Is there a limit on the prompt output?
 
-- Did you get an error? You can debug aspects of the prompt input, processing and output using Copilot for Security. to view more details on what went wrong, to to [Securitycopilot.microsoft.com](https://Securitycopilot.microsoft.com) and select the last session in your history.
+Copilot in Intune is bound by any token limits in Copilot for Security. For more information, go to [Copilot for Security FAQ - Token limits](/security-copilot/faq-security-copilot#how-is-copilot-for-security-dealing-with-a-token-limit).
 
-## token limit on output
+## Copilot for Security vs Copilot in Intune
+
+### Does Copilot for Security give admins more access to Intune data than what's available in the Intune admin center?
+
+No. The Intune capabilities in Copilot for Security are built using the existing Microsoft Graph APIs, which are the same APIs that the Intune admin center uses. Both Copilot experiences use the same Intune capabilities.
+
+### To get Intune insights, should I use Copilot for Security or Copilot in Intune?
+
+To use Copilot with your Intune data, you can use Copilot in Intune or Copilot for Security. Here's a comparison of the two experiences:
+
+| Feature | Copilot in Intune | Copilot for Security |
+|---|---|---|
+| **Access and data insights** |  This Copilot is embedded in the Intune admin center, and is scoped to only show Intune data. <br/><br/> Intune admins should use Copilot in Intune for Intune-only tasks. | This Copilot is the standalone experience. It can access other embedded services, like Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and Microsoft Intune. <br/><br/>It accesses the same Intune capabilities as Copilot in Intune. |
+| **Open prompting** |  Intune provides a set of prompts you can use. There isn't an open prompt. There are plans to include an open prompt in the future (no ETA).| Can use open prompts or use [promptbooks](/security-copilot/using-promptbooks). |
+| **Prompt history** |  The prompt/response history isn't available in the Intune admin center. To view the prompt history, use Copilot for Security. <br/><br/>The prompts can look different compared with the prompts shown in Intune, as Intune enters the prompt for you. | You can review the prompt/response history, even when the prompt is submitted in the standalone or embedded experience. |
+| **Target audience** | Focus is the IT admin/IT Pro. | Focus is the Security Operations Center (SOC) and can be used by IT admins. |
+
+## Feedback and troubleshooting Copilot
+
+### Copilot appears to show the wrong info. How can I debug and validate?
+
+If you think that the output is incorrect, then submit feedback and add details about what you're seeing. This feedback helps improve the Copilot experience.
+
+In the Copilot prompt window in the Intune admin center, there's a **Feedback** button:
+
+:::image type="content" source="./media/copilot-intune-overview/feedback-message-icon.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
+
+Other things you can try:
+
+- In Microsoft Edge, you can use the F12 developer tools to debug the issue. In the developer debug tool, select the **Network** view. In Copilot, select the prompt to get the output. In the developer debug tool, use the **logs** entries to look more closely at the steps between the prompt input and output.
+
+- If you're working with Microsoft to debug the issue, then they might ask you for the session ID. To get the session ID, you can:
+
+  - Use the F12 developer tools in your browser. This information shows the capability that Copilot uses.
+  - In the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), you can view the prompt sessions and session IDs from the Intune embedded experience.
+
+## Related articles
+
+- [Microsoft Copilot for Security FAQ](/security-copilot/faq-security-copilot)
+- [Microsoft Copilot in Intune](copilot-intune-overview.md)

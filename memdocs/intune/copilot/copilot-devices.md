@@ -53,7 +53,7 @@ This article describes how to use Copilot to manage and troubleshoot device issu
 
 - When you use the Copilot prompts to troubleshoot your devices, you are in the scope of the device you select.
 
-## Use an existing prompt
+## Use a suggested prompt
 
 To troubleshoot devices, you can use Copilot with an existing set of prompts to get more information about the device. For example, you can get a list of installed apps, compare devices, and get information about an error code.
 
@@ -79,9 +79,11 @@ This section steps through some Copilot prompts that you can use.
 
 4. In Copilot, there are existing prompts for you to choose. Select a prompt to get more information about the device.
 
+Let's walk through some of the prompts you can use.
+
 ### Summarize this device
 
-Select **Summarize this device**:
+Select the **Summarize this device** prompt:
 
 :::image type="content" source="./media/copilot-devices/sample-prompts.png" alt-text="Screenshot that shows the Copilot sample prompts after you select any device in Microsoft Intune and Intune admin center.":::
 
