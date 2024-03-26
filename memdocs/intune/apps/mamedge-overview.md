@@ -81,9 +81,13 @@ No, this isn’t a new browser. This is a new, dedicated Microsoft Edge experien
 Microsoft Edge for Business offers a multitude of advantages:
 
 **Streamlined IT Operations:** Microsoft Edge for Business can significantly reduce the cyber-attack surface area and enhance your organization’s security posture. It achieves this by streamlining operations down to a single browser for all use cases, simplifying IT management.
+
 **Improved User Experience:** For end users signed in with both work and personal profiles, Microsoft Edge for Business offers a superior browsing experience. The automatic switching feature not only enhances usability but also bolsters security and privacy.
+
 **Work Browser with a Visual Refresh:** The Microsoft Edge for Business icon, which replaces the existing Microsoft Edge icon in the taskbar and other shortcuts, provides a distinct and recognizable identity for the business browser.
+
 **Enhanced Security:** Microsoft Edge for Business fortifies the browsing experience by implementing app protection policies. These policies ensure that enterprise data remains secure, providing peace of mind for both the organization and its users.
+
 **Centralized Management:** With Microsoft Intune, managing a Microsoft Edge for Business policy experience becomes a breeze. This centralized management system simplifies the process, saving time and resources.
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to org data on personal devices. This capability uses the following functionality:
