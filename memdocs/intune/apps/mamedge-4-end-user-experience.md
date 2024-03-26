@@ -30,7 +30,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Edge for Business end user experience
+# Microsoft Edge for Business end user experience (Windows)
 
 Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a manage or unmanage device.
 
@@ -48,9 +48,9 @@ The end user experience for Secure Enterprise Browser in Microsoft Edge for Busi
 
 Microsoft Edge for Business provides dedicated work browsing experience that is visually distinct, secure, and user-friendly. It separates work and personal browsing into dedicated browser windows with their own favorites, separate cache, and storage locations.
 
-## Enrollment Experience
+## Onboarding experience
 
-To evaluate the enrollment experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. It's important to consider that the device can't be managed by any MDM solution, otherwise we won't be able to enroll into the MAM Service.
+To evaluate the Onboarding experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. It's important to consider that the device can't be managed by any MDM solution, otherwise we won't be able to enroll into the MAM Service.
 
 1. Locate **Microsoft Edge** on the desktop.
 2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you will see a user icon at the top, left of the browser window.
@@ -73,7 +73,7 @@ To evaluate the enrollment experience, launch **Microsoft Edge** from the deskto
 	:::image type="content" alt-text="Stay signed in to all your apps window  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business22.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business22.png":::
 
     > [!IMPORTANT] 
-    > You need to make sure the checkmark is unselected otherwise you will enroll the device into Intune, you also need to avoid clicking on **No, sign in the app only** as this will not enroll or ensure MAM is operational for the browser.
+    > You need to make sure the checkmark is unselected otherwise you will enroll the device into Intune, you should also not select the option **No, sign in the app only** as this will not enroll or ensure MAM is operational for the browser.
 
 8. Wait until you see the message, **You're all set!** Then, select **Done.**
 
@@ -86,25 +86,22 @@ To evaluate the enrollment experience, launch **Microsoft Edge** from the deskto
 
 ## App protection notifications
 
-When Intune determines that your applied app protection policy has failed any health check, you'll see an **App access blocked** message.
+Intune will notify you with various messages in the event of a failure. Here are the scenarios:
 
-:::image type="content" alt-text="App Access Blocked  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business25.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business25.png":::
+- **App access blocked message:** This message appears when your applied app protection policy has failed any health check.
+:::image type=“content” alt-text=“App Access Blocked - Microsoft Edge for Business.” source=“./media/securing-data-edge-for-business/securing_data_edge_for_business25.png” lightbox=“./media/securing-data-edge-for-business/securing_data_edge_for_business25.png”:::
 
-When Intune determines that your applied Level 3 app protection policy has failed a protection check that prevents you from copying content, you'll see the message: **Your organization prevents you from copying content from this website.**
+- **Your organization prevents you from copying content from this website:** This message appears when your applied Level 3 app protection policy has failed a protection check that prevents you from copying content.
+:::image type=“content” alt-text=“Copying prevention by app protection policy - Microsoft Edge for Business.” source=“./media/securing-data-edge-for-business/securing_data_edge_for_business26.png” lightbox=“./media/securing-data-edge-for-business/securing_data_edge_for_business26.png”:::
 
-:::image type="content" alt-text="Copying prevention by app protection policy  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business26.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business26.png":::
+- **Your organization prevents you from printing this website:** This message appears when your applied Level 3 app protection policy has failed the printing check.
+:::image type=“content” alt-text=“Printing prevention by app protection policy - Microsoft Edge for Business.” source=“./media/securing-data-edge-for-business/securing_data_edge_for_business27.png” lightbox=“./media/securing-data-edge-for-business/securing_data_edge_for_business27.png”:::
 
-When Intune determines that your applied Level 3 app protection policy has failed the printing check, you'll see the message: **Your organization prevents you from printing this website.**
+- **Your organization prevents you from downloading this file:** This message appears when your applied Level 3 app protection policy has failed downloading apps check.
+:::image type=“content” alt-text=“Download prevention by app protection policy - Microsoft Edge for Business.” source=“./media/securing-data-edge-for-business/securing_data_edge_for_business28.png” lightbox=“./media/securing-data-edge-for-business/securing_data_edge_for_business28.png”:::
 
-:::image type="content" alt-text="Printing prevention by app protection policy  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business27.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business27.png":::
-
-When Intune determines that your applied Level 3 app protection policy has failed downloading apps check, you'll see the message: **Your organization prevents you from downloading this file.**
-
-:::image type="content" alt-text="Download prevention by app protection policy  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business28.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business28.png":::
-
-When Intune determines that you have been logged in for an extended period without use, you'll see the message: **Offline Grace Period Expired.**
-
-:::image type="content" alt-text="Offline Grace Period Expired  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business29.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business29.png":::
+- **Offline Grace Period Expired:** This message appears when Intune determines that you have been logged in for an extended period without use.
+:::image type=“content” alt-text=“Offline Grace Period Expired - Microsoft Edge for Business.” source=“./media/securing-data-edge-for-business/securing_data_edge_for_business29.png” lightbox=“./media/securing-data-edge-for-business/securing_data_edge_for_business29.png”:::
 
 ## Next step
 
