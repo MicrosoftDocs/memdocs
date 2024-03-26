@@ -24,7 +24,7 @@ To get the update for version 2403, you must use a service connection point at t
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 2309, review the following information [about installing update 2309](#about-installing-update-2309) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2403, review the following information [about installing update 2309](#about-installing-update-2309) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
@@ -65,16 +65,16 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of March 28th , 2023, version 2309 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. 
+<!-- As of March 28th , 2024, version 2309 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.-->
 
- At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2309:-->
+At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2403:
 
 [Version 2309 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target-->
 
-<!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable. -->
-<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable. 
+
 [!NOTE]
-> The version 2403 update is only applicable to sites running version 2203 or later.
+> The version 2403 update is only applicable to sites running version 2211 or later.
 
 To opt in to the early update ring:
 
@@ -88,16 +88,16 @@ To opt in to the early update ring:
 
 1. Check for updates. For more information, see [Get available updates](prepare-in-console-updates.md#get-available-updates).
 
-The version 2409 update should now be available in the console-->
+The version 2403 update should now be available in the console
 
-<!-- [!IMPORTANT]
-> This script only adds your site to the early update ring for version 2403. It's not a permanent change.-->
+ [!IMPORTANT]
+> This script only adds your site to the early update ring for version 2403. It's not a permanent change.
 
 ## Pre-update checklist
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2309, use version 2203 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2309, use version 2211 or later.
 
 ### Review the status of your product licensing
 
@@ -117,7 +117,7 @@ For more information including how to manage restarts, see [Site and site system
 
 ### Review the version of the Windows ADK
 
-The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2309. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2403. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
@@ -127,7 +127,7 @@ Install a minimum version of SQL Server 2012 Native Client, which includes suppo
 
 ### Review SQL ODBC driver for CM
 
-Starting with version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. This prerequisite is required when you create a new site or update an existing one.
+Starting with version 2309 and later, Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. This prerequisite is required when you create a new site or update an existing one.
 
 ### Review the site and hierarchy status for unresolved issues
 
@@ -228,7 +228,7 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2309. Check with the product vendor for this information.
+If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2403. Check with the product vendor for this information.
 
 > [!TIP]
 > If you develop a third-party add-on to Configuration Manager, you should test your add-on with every monthly [technical preview branch release](../../get-started/technical-preview.md). Regular testing helps confirm compatibility, and allows for early reporting of any issues with standard interfaces.
