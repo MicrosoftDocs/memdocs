@@ -170,7 +170,7 @@ These cryptography settings are used during IKE security association negotiation
 >
 > - All of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
 >
-> **OR**
+>   **OR**
 >
 > - None of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
 
