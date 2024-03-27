@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz
 
 Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2403. This article summarizes the changes and new features in Configuration Manager, version 2403.
                                                                                                                                                                                                                                                                                                                           
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2309.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2403.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2403.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -66,7 +66,7 @@ For more information, see [Enable site system roles for HTTPS or Enhanced HTTP](
 
 Starting 2403, Windows Server 2012/2012 R2 operating system site system roles are not supported in any CB releases. Clients with extended support (ESU) will continue.  
 
-For more information, see [supported-operating-systems-for-site-system-servers](../configs/supported-operating-systems-for-site-system-servers.md)
+For more information, see [Supported-operating-systems-for-site-system-servers](../configs/supported-operating-systems-for-site-system-servers.md)
 
 ### Resource access profiles and deployments will block Configuration manager upgrade
 
@@ -86,7 +86,7 @@ PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language
 > [!NOTE]
 > Languages need to be in O365 format to be consistent with Admin Console UI. E.g. "Hungarian (Hungary)". 
 
-For more information, see
+
 
 ## OS deployment
 
@@ -96,7 +96,6 @@ Configuration Manager operating system deployment support is now added on Window
 
 :::image type="content" source="media/14959666-armosd.png" alt-text="Screenshot of arm64 boot image in console.":::
 
-For more information, see []
 
 
 ### Enhancement in Deploying Software Packages with Dynamic Variables  
@@ -134,16 +133,18 @@ This release includes the following improvements to Bitlocker:
 
 For more information on BitLocker management, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/recovery-service.md) and [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
 
-- With this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2. 
+- With this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2.
+- Defender Exploit Guards policy for controlled folder now accepts regex in the file path for apps.  
+  E.g. [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
 
 ## Next steps
-At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).
+At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
 
 <!--As of March 28, 2024, version 2403 is globally available for all customers to install.
 >[!NOTE] 
 > For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.-->
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2403.md).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
@@ -155,4 +156,4 @@ When you're ready to install this version, see [Installing updates for Configura
 
 For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2309.md#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2403.md#post-update-checklist).
