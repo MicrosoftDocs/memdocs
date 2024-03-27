@@ -5,14 +5,15 @@ description: Learn about urgent issues that aren't yet fixed in the product or c
 ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: troubleshooting
+ms.topic: conceptual
 author: PalikaSingh
-ms.author:Palsi
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-
+ms.reviewer: mstewart,aaroncz 
 ---
+
 
 # Release notes for Configuration Manager
 
