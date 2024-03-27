@@ -542,6 +542,16 @@ The following sites are always allowed regardless of the defined allow list or b
 - `https://*.microsoftonline.com/*`
 - `https://*.microsoftonline-p.com/*`
 
+### Control the behavior of the "Site Blocked" popup
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites，depending on the AllowTransitionOnBlock and OpenInPrivateIfBlocked policy configurations. You can choose preferences between InPrivate and personal account.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0** (Default) Always show the popup window for user to choose <br> **1** Automatically switch to personal account  when it is signed in <br> **2** Automatically switch to personal account if it is signed in and InPrivate is simultaneously enabled <br> **3** Automatically switch to InPrivate if it is signed in and InPrivate is simultaneously enabled|
+
+> [!NOTE]
+> AutoTransitionModeOnBlock policy is currently only avaiable to Edge for iOS .
+
 #### URL formats for allowed and blocked site list
 
 You can use various URL formats to build your allowed/blocked sites lists. These permitted patterns are detailed in the following table.
