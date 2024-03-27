@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. This article summarizes the changes and new features in Configuration Manager, version 2403.
+Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2403. This article summarizes the changes and new features in Configuration Manager, version 2403.
                                                                                                                                                                                                                                                                                                                           
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2309.md#post-update-checklist).
 
@@ -30,41 +30,49 @@ To take full advantage of new Configuration Manager features, after you update t
 
 Starting Configuration Manager version 2403, Microsoft Azure Active Directory is re-named to Microsoft Entra ID within Configuration Manager.
 
+For more information, see [New name for Azure Active Directory](/entra-docs/blob/main/docs/fundamentals/new-name.md)
 
 ### Automated diagnostic Dashboard for Software Update Issues
 
 A new dashboard is added to the console under monitoring workspace which shows the diagnosis of the software update issues in your environment this feature can easily identify  any issues related to software updates. You can fix software update issues based on troubleshooting documentations. 
 
-:::image type="content" source="media/17668422-troubleshoot-dash.png" alt-text="Screenshot of new troubleshooting dashboard in console.":::
+:::image type="content" source="media/17668422-troubleshooting-dash.png" alt-text="Screenshot of new troubleshooting dashboard in console.":::
 
 
-### Introducing Centralized Search box: Effortlessly Find What You Need in the Console!
+### Introducing centralized search box: Effortlessly find what you need in the console!
 
 Users can now use the global search box in CM console which streamlines the search experience and centralizes access to information. This enhances the overall usability, productivity and effectiveness of CM. Users no longer need to navigate through multiple nodes or sections/ folders to find information they require, saving valuable time and effort.
 
 :::image type="content" source="media/24501008-search-box.png" alt-text="Screenshot of centralized search box in console.":::
 
+For more information, see [Improvements to console search](../../servers/manage/admin-console-tips.md#improvements-to-console-search)
+
 ### Added Folder support for Scripts node in Software Library 
 
 You can now organize scripts by using folders. This change allows for better categorization and management of scripts. Full Administrator and Operations Administrator roles can manage the folders. 
 
-For more information, see [Schedule scripts' runtime](../../../apps/deploy-use/create-deploy-scripts.md#schedule-scripts-runtime)
-
 :::image type="content" source="media/24475159-folder-scripts.png" alt-text="Screenshot of scripts folder structure in console.":::
+
+For more information, see [Folder support for scripts](../../../aapps/deploy-use/create-deploy-scripts.md#folder-support-for-scripts)
 
 ### HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager
 
 HTTP-only communication is deprecated, and support is removed from this version of Configuration Manager. Please enable HTTPS or Enhanced HTTP for client communication.
+
+For more information, see [Enable site system roles for HTTPS or Enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http) and [Deprecated features](deprecated/removed-and-deprecated-cmfeatures.md)
 
 
 ### Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager
 
 Starting 2403, Windows Server 2012/2012 R2 operating system site system roles are not supported in any CB releases. Clients with extended support (ESU) will continue.  
 
+For more information, see [supported-operating-systems-for-site-system-servers](../configs/supported-operating-systems-for-site-system-servers.md)
+
 ### Resource access profiles and deployments will block Configuration manager upgrade
 
 Any configured Resource access profiles and associated deployments will block the Configuration manager upgrade. Please consider deleting them and moving the co-management workload for Resource Access (if co-managed) to Intune.
 
+For more information, see [FAQ](../../../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml) and [Resource access policies are no longer supported](../../servers/deploy/install/list-of-prerequisite-checks.md)
 
 ## Software updates
 
@@ -78,6 +86,7 @@ PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language
 > [!NOTE]
 > Languages need to be in O365 format to be consistent with Admin Console UI. E.g. "Hungarian (Hungary)". 
 
+For more information, see
 
 ## OS deployment
 
@@ -87,12 +96,16 @@ Configuration Manager operating system deployment support is now added on Window
 
 :::image type="content" source="media/14959666-armosd.png" alt-text="Screenshot of arm64 boot image in console.":::
 
+For more information, see []
+
+
 ### Enhancement in Deploying Software Packages with Dynamic Variables  
 
 Administrators while deploying the "Install Software Package" via Dynamic variable with "Continue on error" unchecked to clients, will not be notified with task sequence failures even if package versions on the distribution point are updated.
 
-
 :::image type="content" source="media/24334765-dyn-var.png" alt-text="Screenshot of changes in dynamic variable in task sequence in CM console.":::
+
+For more information, see [Options for Install Application](../../../osd/understand/task-sequence-steps.md#retry-this-step-if-computer-unexpectedly-restarts)
 
 ## Cloud-attached management
 
@@ -100,12 +113,13 @@ Administrators while deploying the "Install Software Package" via Dynamic variab
 
 The option to upgrade Configuration Manager 2403 is blocked if you are running cloud management gateway V1 (CMG) as a cloud service (classic). All CMG deployments should use a virtual machine scale set. For more information see ,
 
+For more information, see[Check for a cloud management gateway (CMG) as a cloud service (classic)](../../servers/deploy/install/list-of-prerequisite-checks.md)
 
 ## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-System Center Update Publisher (SCUP) and integration with ConfigMgr 
+- System Center Update Publisher (SCUP) and integration with ConfigMgr planned end of support Jan,2024.
 
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
@@ -115,9 +129,12 @@ For more information, see [Removed and deprecated features for Configuration Man
 
 This release includes the following improvements to Bitlocker:
 
-- Based on your feedback, this feature ensures proper verification of key escrow and prevents message drops. We now validate whether the key is successfully escrowed to the database, and only on successful escrow we add the key protector.
-- This feature prevents a potential data loss scenario where BitLocker is protecting the volumes with keys that are never backed up to the database, in any failures to escrow happens.
-With this version of Configuration Manager, the Windows 11 readiness dashboard will show charts for Windows 23H2. 
+- Starting in this release, this feature ensures proper verification of key escrow and prevents message drops. We now validate whether the key is successfully escrowed to the database, and only on successful escrow we add the key protector.
+- This feature now prevents a potential data loss scenario where BitLocker is protecting the volumes with keys that are never backed up to the database, in any failures to escrow happens.
+
+For more information on BitLocker management, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/recovery-service.md) and [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
+
+- With this version of Configuration Manager, the Windows 11 readiness dashboard will show charts for Windows 23H2. 
 
 ## Next steps
 At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).
