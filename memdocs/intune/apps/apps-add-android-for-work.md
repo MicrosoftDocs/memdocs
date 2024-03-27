@@ -205,6 +205,8 @@ When the app is displayed in the **App licenses** node of the **Apps** workload 
 
 After you assign the app, it is installed (or available for install) on the devices of the users that you've targeted. The user of the device is not asked to approve the installation. For more information about Android Enterprise personally owned work profile devices, see [Set up enrollment of Android Enterprise personally owned work profile devices](../enrollment/android-work-profile-enroll.md).
 
+On both work profile devices and corporate-owned devices, you can use Intune to make apps available for device groups through the Managed Google Play store. Previously, apps could only be made available to user groups. Additionally, you can use Intune to configure the app update priority on devices with a work profile. Also, you can use Intune to make required apps available for users through the Managed Google Play store. 
+
 > [!NOTE]
 > Only apps that have been assigned will show up in the Managed Google Play store for an end user. As such, this is a key step for the admin to take when setting up apps with Managed Google Play.
 
@@ -228,13 +230,13 @@ By default, Managed Google Play apps will not update unless the following condit
 
 For more information, see the [Manage App Updates](https://support.google.com/googleplay/work/answer/9350374?hl=en) documentation from Google.
 
-You can choose to configure the wi-fi requirement for dedicated, fully managed, and corporate-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
+You can choose to configure the wi-fi requirement for dedicated, fully managed, corporate-owned, and personally-owned work profile devices by configuring app auto-updates in [device configurations policies](../configuration/device-restrictions-android-for-work.md).
 
-For dedicated, fully managed, and corporate-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
+For dedicated, fully managed, corporate-owned, and personally-owned work profile devices, you can choose an app update mode when an app is assigned to groups. The update modes available are:
 
 - **Default**: The app's updates are subject to default conditions (described above).
 - **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
-- **Postpone**: When the app receives a new update, a 90-day waiting period is triggered. After 90 days, the app is updated to the newest version available, even if that version was not the update that triggered the waiting period. Note that the 90-day window is not configurable. To terminate the waiting period early, change the update mode to either **Default** or **High Priority**.
+- **Postponed**: When the app receives a new update, a 90-day waiting period is triggered. After 90 days, the app is updated to the newest version available, even if that version was not the update that triggered the waiting period. Note that the 90-day window is not configurable. To terminate the waiting period early, change the update mode to either **Default** or **High Priority**.
 
 To edit the app update mode:
 

@@ -45,7 +45,7 @@ There are two ways to access your Intune data using Copilot:
 
   This experience has an IT admin/IT Pro focus.
 
-- **Microsoft Copilot for Security**: This option is standalone Copilot and is available in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). You can use this portal to get insights from Copilot for Security and other embedded services, like Intune, Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and more.
+- **Microsoft Copilot for Security**: This option is standalone Copilot and is available in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). You can use this portal to get insights from Copilot for Security for all your enabled services, like Intune, Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and more.
 
   This experience has a Security Operations Center (SOC) focus, and can be used by IT admins. For more information on Copilot for Security and how to get Intune data, go to [Access your Microsoft Intune data in Copilot for Security](security-copilot.md).
 
@@ -85,7 +85,7 @@ To use Copilot in Intune, you should know the following information:
   > [!TIP]
   > Some roles can enable or disable plugins. For more information, go to [Manage plugins in Microsoft Copilot for Security](/security-copilot/manage-plugins).
 
-- **Your Intune data**: Copilot uses your Intune data. Intune admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
+- **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
 
 > [!TIP]
 > For some common questions asked about Copilot in Intune, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
