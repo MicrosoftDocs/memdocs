@@ -130,9 +130,9 @@ Select the VPN connection type from the following list of vendors:
   - Enable NAC in the VPN profile.
 
   > [!IMPORTANT]
-  > The [network access control (NAC) service is being deprecated](../protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support this change, Intune sends the device ID to Cisco ISE using a different format than the original deprecated service. So, your existing profiles with the original NAC service will stop working.
+  > The [network access control (NAC) service is deprecated](../protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support changes within Cisco ISE, Intune changed the device ID format. So, your existing profiles with the original NAC service will stop working.
   > 
-  > To use the CR Service and prevent downtime with your VPN connection, redeploy this same device configuration profile. No changes are needed to the profile. You only need to redeploy. When the device syncs with Intune service, then the CR Service changes are automatically pushed to the device. And, your VPN connections will continue to work.
+  > To use the CR Service and prevent downtime with your VPN connection, redeploy this same VPN device configuration profile. No changes are needed to the profile. You only need to redeploy. When the device syncs with Intune service and receives the VPN configuration profile, then the CR Service changes are automatically deployed to the device. And, your VPN connections should continue to work.
 
   **When using Citrix SSO with Gateway**, be sure to:
 
