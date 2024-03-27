@@ -93,8 +93,6 @@ items:
       href: plan-design/changes/whats-new-in-version-2303.md
     - name: What's new in version 2211
       href: plan-design/changes/whats-new-in-version-2211.md
-    - name: What's new in version 2207
-      href: plan-design/changes/whats-new-in-version-2207.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
@@ -230,9 +228,7 @@ items:
         - name: Data for version 2303
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2303.md
         - name: Data for version 2211
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2211.md
-        - name: Data for version 2207
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2207.md        
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2211.md       
         - name: Configuration Manager tools
       href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
@@ -578,8 +574,6 @@ items:
       href: servers/manage/checklist-for-installing-update-2303.md
     - name: Checklist for installing update 2211
       href: servers/manage/checklist-for-installing-update-2211.md
-    - name: Checklist for installing update 2207
-      href: servers/manage/checklist-for-installing-update-2207.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
