@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -54,7 +53,7 @@ Supported platforms and profiles:
   - Profile: **Exploit Protection(ConfigMgr)(preview)**
   - Profile: **Web Protection (ConfigMgr)(preview)**
 
-- **Windows 10, Windows 11, and Windows Server**: Use this platform for policy you deploy to devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md). 
+- **Windows 10, Windows 11, and Windows Server**: Use this platform for policy you deploy to devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
   - Profile: **Attack Surface Reduction Rules**
 
@@ -78,7 +77,8 @@ Supported platforms and profiles:
   - **Enabled for Edge AND isolated Windows environments** - Application Guard is configured for both scenarios.
   
   > [!NOTE]
-  > If you are deploying Application Guard for Microsoft Edge via Intune, **Windows network isolation** policy must be configured as a prerequisite. Network isolation may be configured via various profiles, including **App and broswer isolation** under the **Windows network isolation** setting. 
+  >
+  > If you are deploying Application Guard for Microsoft Edge via Intune, **Windows network isolation** policy must be configured as a prerequisite. Network isolation may be configured via various profiles, including **App and broswer isolation** under the **Windows network isolation** setting.
 
   When set to *Enabled for Edge* or *Enabled for Edge AND isolated Windows environments*, the following settings are available, which apply to Edge:
   
@@ -192,7 +192,8 @@ Supported platforms and profiles:
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
   > [!NOTE]
-> After the profile is created, any devices to which the policy should apply will have Microsoft Defender Application Guard enabled. Users might have to restart their devices in order for protection to be in place.
+  >
+  > After the profile is created, any devices to which the policy should apply will have Microsoft Defender Application Guard enabled. Users might have to restart their devices in order for protection to be in place.
 
 ### Application control profile
 
@@ -223,7 +224,10 @@ Supported platforms and profiles:
 
 #### Attack Surface Reduction Rules
 
-> [!NOTE]  
+To learn more about Attack surface reduction rules, see [Attack surface reduction rules reference](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference) in the Microsoft 365 documentation.
+
+> [!NOTE]
+>
 > This section details the settings in Attack Surface Reduction Rules profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
@@ -412,7 +416,6 @@ Supported platforms and profiles:
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 
-
 - **Allow hardware device installation by device identifiers**  
   - **Not configured** *(default)*
   - **Yes** - Windows can install or update any device whose Plug and Play hardware ID or compatible ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
@@ -551,8 +554,7 @@ Supported platforms and profiles:
   - **Import** - Import a .csv file that contains a list of bluetooth services and profiles, as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
 
 - **Removable storage**  
-  CSP: [Storage/RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess) 
-
+  CSP: [Storage/RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess)
   - **Block** (*default*) - Prevent users from using external storage devices, like SD cards with the device.
   - **Not configured**
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -85,7 +85,7 @@ Set one of the following actions:
 - Allow specified (Wipe nonspecified)
 
 **What happens if the IT admin inputs a different list of iOS/iPadOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "iPhone5,3". 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifiers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "iPhone5,3". 
 
 ### Android policy settings
 
@@ -136,7 +136,7 @@ In some cases, such as the **Min OS version** setting, you can configure the set
 
 ![Screenshot of app protection access actions - Min OS version](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions05.png)
 
-Once a setting is fully configured, the row appears in a read-only view and be available to be edited at any time. In addition, the row appears to have a dropdown available for selection in the **Setting** column. Settings that have been configured and don't allow multiple actions won't be available for selection in the dropdown.
+Once a setting is fully configured, the row appears in a read-only view and be available to be edited at any time. In addition, the row appears to have a dropdown available for selection in the **Setting** column. Configured settings that don't allow multiple actions aren't available for selection in the dropdown.
 
 ## Next steps
 

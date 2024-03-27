@@ -114,7 +114,7 @@ By default, Intune lets macOS devices enroll. To block macOS devices from enroll
 
 Intune supports virtual machines running:
 
-* Parallel Desktop
+* Parallels Desktop
 * VMware Fusion  
 * Apple Silicon  
 
@@ -140,7 +140,7 @@ Enter any string of alphanumeric characters for the serial number. For hardware 
 VMware Fusion is only supported on Intel Macs. See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
 
 ### Apple Silicon 
-No changes are required for virtual machines running on Apple Silicon hardware. Parallel Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
+No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
 
 ## User-approved enrollment
 

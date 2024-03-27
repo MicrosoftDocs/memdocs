@@ -8,7 +8,7 @@ keywords:
 author: smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 02/26/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,6 +52,7 @@ The following table provides a list of add-on capabilities and associated Intune
 |Advanced Analytics|✔️ | |✔️|
 |Remote Help|✔️| |✔️|
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
+|Microsoft Cloud PKI |✔️ ||✔️|
 |Firmware-over-the-air update| |✔️ |✔️ |
 |Specialized devices management| |✔️|✔️|
 
@@ -79,7 +80,13 @@ Remote Help is a cloud-based solution for secure help desk connections with role
 
 When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune.
 
-For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
+For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).  
+
+### Microsoft Cloud PKI  
+
+Microsoft Cloud PKI is a cloud-based service that simplifies and automates certificate lifecycle management for Intune-managed devices. It provides a dedicated public key infrastructure (PKI) for your organization and handles the certificate issuance, renewal, and revocation for all Intune-supported platforms.  
+
+For more information, see [Overview of Microsoft Cloud PKI](../protect/microsoft-cloud-pki-overview.md).  
 
 ### Mobile Firmware-over-the-air update
 

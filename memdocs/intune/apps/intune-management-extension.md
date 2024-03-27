@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Win32
 ---
 
 # Use PowerShell scripts on Windows 10/11 devices in Intune

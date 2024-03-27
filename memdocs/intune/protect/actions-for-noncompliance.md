@@ -210,7 +210,7 @@ Add variables to the message to create a personalized email with dynamic content
 
       
    >[!IMPORTANT]
-   >  Be sure to only use Intune-supported HTML tags and attributes in the message body. Intune won't send a message that has other types of tags, elements, or styling, including: 
+   >  Be sure to only use Intune-supported HTML tags and attributes in the message body. Intune will send messages that contain other types of tags, elements, or styling as plaintext instead of HTML format. This includes messages that contain: 
    > - CSS  
    > - Tags and attributes not listed in this article 
     
@@ -232,6 +232,9 @@ Notifications that have been created are available in the *Compliance policies* 
 
   To successfully send the preview email, your account must have permissions equal to those of the following Microsoft Entra groups or Intune roles: *Microsoft Entra Global Administrator*, Intune *Administrator* (Intune Microsoft Entra Intune Service Administrator), or  Intune *Policy and Profile Manager*.
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
+
+> [!NOTE]
+> The preview email doesn't contain the device variables that are specified in the notification message template. 
 
 ## Add actions for noncompliance
 
