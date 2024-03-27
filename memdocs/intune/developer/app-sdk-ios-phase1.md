@@ -126,6 +126,21 @@ If your app acquires any Microsoft Entra access tokens and accesses resources th
 
 ## Creating a test iOS app protection policy
 
+### Required prerequisites
+> [!IMPORTANT]
+> Starting in mid-March 2024, we are making updates to improve security of the Intune mobile application management (MAM) service. This update will require all iOS devices to be registered with Microsoft Entra ID to continue receiving MAM policy for Microsoft 365 apps. 
+
+### How this will affect your organization?
+
+When accessing Microsoft 365 apps integrated with Intune SDK and targeted with MAM policy, users might be prompted to authenticate if the device is not already registered with Entra ID. Users will need to complete the authentication and registration to access their Microsoft 365 MAM-enabled applications.
+
+If you have Conditional Access policies or multi-factor authentication enabled, devices should already be registered, and users will not notice any change.
+
+### What you need to do to prepare?
+If you have not resgiter your apps with Azure AD, follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
+
+Notify your users or helpdesk about the authentication prompt for Microsoft 365 MAM-enabled iOS applications as needed. You can view which devices are registered by navigating to the [Microsoft Entra admin center] > Devices > All devices report, filter by 'OS' and sort by 'Registered'. For more information, read: [Manage device identities using the Microsoft Entra admin center].
+
 ### Demo tenant setup
 
 If you don't already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner] to access Microsoft CDX.
@@ -201,3 +216,6 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Assign licenses]:/mem/intune/fundamentals/licenses-assign
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
+[Microsoft Entra admin center]:https://entra.microsoft.com/
+[Manage device identities using the Microsoft Entra admin center]:https://learn.microsoft.com/en-us/entra/identity/devices/manage-device-identities
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app
