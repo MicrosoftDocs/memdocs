@@ -30,7 +30,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 Starting Configuration Manager version 2403, Microsoft Azure Active Directory is renamed to Microsoft Entra ID within Configuration Manager.
 
-For more information, see [New name for Azure Active Directory.](/entra-docs/blob/main/docs/fundamentals/new-name.md)
+For more information, see [New name for Azure Active Directory.](/entra/fundamentals/new-name.md)
 
 ### Automated diagnostic Dashboard for Software Update Issues
 
