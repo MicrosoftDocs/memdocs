@@ -151,7 +151,9 @@ To use this feature in Intune, select a device, and then select **Explore with C
 
 :::image type="content" source="./media/copilot-intune-overview/explore-with-copilot.png" alt-text="Screenshot that shows selecting any device and then select Explore with Copilot in Microsoft Intune and Intune admin center.":::
 
-There's also a prompt to enter an error code to get more information about the error and how to resolve it. This feature can help your support team troubleshoot device issues.
+When the Copilot window opens, select a prompt, and enter any required or optional input, if needed. You can also open the prompt guide for some follow-up questions:
+
+:::image type="content" source="./media/copilot-intune-overview/device-prompt-guide.png" alt-text="Screenshot that shows the Copilot prompt guide after you select any device in Microsoft Intune and Intune admin center.":::
 
 For more information on using Copilot with your devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
