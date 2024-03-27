@@ -76,9 +76,9 @@ For more information, see [FAQ](../../../../configmgr/protect/plan-design/resour
 
 ## Software updates
 
-### New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet
+### New parameter SoftwareUpdateO 365Language is added to Save-CMSoftwareUpdate cmdlet
 
-A new parameter **SoftwareUpdateO365Language** is now added to PowerShell  Save-CMSoftwareUpdate cmdlet. Customers now don't have to check a specific language in the SUP Properties (causing a metadata download for that language for all updates). 
+A new parameter **SoftwareUpdateO 365Language** is now added to PowerShell  Save-CMSoftwareUpdate cmdlet. Customers now don't have to check a specific language in the SUP Properties (causing a metadata download for that language for all updates). 
 
 
 PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language <language name> (<region name>)" ```
