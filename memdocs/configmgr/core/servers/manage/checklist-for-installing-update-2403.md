@@ -24,7 +24,7 @@ To get the update for version 2403, you must use a service connection point at t
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 2403, review the following information [about installing update 2309](#about-installing-update-2309) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2403, review the following information [about installing update 2403](#about-installing-update-2403) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
@@ -65,11 +65,11 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of March 28th , 2024, version 2309 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.-->
+<!-- As of March 28th , 2024, version 2403 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.-->
 
 At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2403:
 
-[Version 2309 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target-->
+[Version 2403 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target-->
 
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable. 
 
@@ -97,7 +97,7 @@ The version 2403 update should now be available in the console
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2309, use version 2211 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2403, use version 2211 or later.
 
 ### Review the status of your product licensing
 
@@ -275,7 +275,7 @@ After the site updates, use the following checklist to complete common tasks and
 
 ### Confirm version and restart (if necessary)
 
-Make sure each site server and site system role is updated to version 2309. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
+Make sure each site server and site system role is updated to version 2403. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
 
 Consider restarting remote site systems that don't successfully update at first. Review your site infrastructure and make sure that applicable site servers and remote site system servers successfully restarted. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.
 
