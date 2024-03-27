@@ -26,11 +26,11 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Site infrastructure
 
-### Microsoft Azure Active Directory re-branded to Microsoft Entra ID
+### Microsoft Azure Active Directory rebranded to Microsoft Entra ID
 
-Starting Configuration Manager version 2403, Microsoft Azure Active Directory is re-named to Microsoft Entra ID within Configuration Manager.
+Starting Configuration Manager version 2403, Microsoft Azure Active Directory is renamed to Microsoft Entra ID within Configuration Manager.
 
-For more information, see [New name for Azure Active Directory](/entra-docs/blob/main/docs/fundamentals/new-name.md)
+For more information, see [New name for Azure Active Directory.](/entra-docs/blob/main/docs/fundamentals/new-name.md)
 
 ### Automated diagnostic Dashboard for Software Update Issues
 
@@ -45,7 +45,7 @@ Users can now use the global search box in CM console, which streamlines the sea
 
 :::image type="content" source="media/24501008-search-box.png" alt-text="Screenshot of centralized search box in console.":::
 
-For more information, see [Improvements to console search](../../servers/manage/admin-console-tips.md#improvements-to-console-search)
+For more information, see [Improvements to console search.](../../servers/manage/admin-console-tips.md#improvements-to-console-search)
 
 ### Added Folder support for Scripts node in Software Library 
 
@@ -53,7 +53,7 @@ You can now organize scripts by using folders. This change allows for better cat
 
 :::image type="content" source="media/24475159-folder-scripts.png" alt-text="Screenshot of scripts folder structure in console.":::
 
-For more information, see [Folder support for scripts](../../../apps/deploy-use/create-deploy-scripts.md#folder-support-for-scripts)
+For more information, see [Folder support for scripts.](../../../apps/deploy-use/create-deploy-scripts.md#folder-support-for-scripts)
 
 ### HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager
 
@@ -64,9 +64,9 @@ For more information, see [Enable site system roles for HTTPS or Enhanced HTTP](
 
 ### Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager
 
-Starting 2403, Windows Server 2012/2012 R2 operating system site system roles are not supported in any CB releases. Clients with extended support (ESU) will continue.  
+Starting 2403, Windows Server 2012/2012 R2 operating system site system roles aren't supported in any CB releases. Clients with extended support (ESU) will continue.  
 
-For more information, see [Supported-operating-systems-for-site-system-servers](../configs/supported-operating-systems-for-site-system-servers.md)
+For more information, see [Supported-operating-systems-for-site-system-servers.](../configs/supported-operating-systems-for-site-system-servers.md)
 
 ### Resource access profiles and deployments will block Configuration manager upgrade
 
@@ -104,21 +104,21 @@ Administrators while deploying the "Install Software Package" via Dynamic variab
 
 :::image type="content" source="media/24334765-dyn-var.png" alt-text="Screenshot of changes in dynamic variable in task sequence in CM console.":::
 
-For more information, see [Options for Install Application](../../../osd/understand/task-sequence-steps.md#retry-this-step-if-computer-unexpectedly-restarts)
+For more information, see [Options for Install Application.](../../../osd/understand/task-sequence-steps.md#retry-this-step-if-computer-unexpectedly-restarts)
 
 ## Cloud-attached management
 
 ### Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)
 
-The option to upgrade Configuration Manager 2403 is blocked if you are running cloud management gateway V1 (CMG) as a cloud service (classic). All CMG deployments should use a virtual machine scale set. For more information see ,
+The option to upgrade Configuration Manager 2403 is blocked if you are running cloud management gateway V1 (CMG) as a cloud service (classic). All CMG deployments should use a virtual machine scale set.
 
-For more information, see[Check for a cloud management gateway (CMG) as a cloud service (classic)](../../servers/deploy/install/list-of-prerequisite-checks.md)
+For more information, see[Check for a cloud management gateway (CMG) as a cloud service (classic).](../../servers/deploy/install/list-of-prerequisite-checks.md)
 
 ## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-- System Center Update Publisher (SCUP) and integration with ConfigMgr planned end of support Jan,2024.
+- System Center Update Publisher (SCUP) and integration with ConfigMgr planned end of support Jan 2024.
 
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
@@ -131,7 +131,7 @@ This release includes the following improvements to Bitlocker:
 - Starting in this release, this feature ensures proper verification of key escrow and prevents message drops. We now validate whether the key is successfully escrowed to the database, and only on successful escrow we add the key protector.
 - This feature now prevents a potential data loss scenario where BitLocker is protecting the volumes with keys that are never backed up to the database, in any failures to escrow happens.
 
-For more information on BitLocker management, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/recovery-service.md) and [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
+For more information on BitLocker management, see [Deploy BitLocker management.](../../../protect/deploy-use/bitlocker/recovery-service.md) and [Plan for BitLocker management.](../../../protect/plan-design/bitlocker-management.md).
 
 - With this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2.
 - Defender Exploit Guards policy for controlled folder now accepts regex in the file path for apps.  
