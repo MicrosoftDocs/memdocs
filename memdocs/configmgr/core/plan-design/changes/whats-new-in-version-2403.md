@@ -64,7 +64,7 @@ For more information, see [Enable site system roles for HTTPS or Enhanced HTTP.]
 
 ### Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager
 
-Starting 2403, Windows Server 2012/2012 R2 operating system site system roles aren't supported in any CB releases. Clients with extended support (ESU) will continue.  
+Starting 2403, Windows Server 2012/2012 R2 operating system site system roles aren't supported in any CB releases. Clients with extended support (ESU) will continue to support.
 
 For more information, see [Supported-operating-systems-for-site-system-servers.](../configs/supported-operating-systems-for-site-system-servers.md)
 
@@ -110,7 +110,7 @@ For more information, see [Options for Install Application.](../../../osd/unders
 
 ### Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)
 
-The option to upgrade Configuration Manager 2403 is blocked if you are running cloud management gateway V1 (CMG) as a cloud service (classic). All CMG deployments should use a virtual machine scale set.
+The option to upgrade Configuration Manager 2403 is blocked if you're running cloud management gateway V1 (CMG) as a cloud service (classic). All CMG deployments should use a virtual machine scale set.
 
 For more information, see [Check for a cloud management gateway (CMG) as a cloud service (classic).](../../servers/deploy/install/list-of-prerequisite-checks.md)
 
