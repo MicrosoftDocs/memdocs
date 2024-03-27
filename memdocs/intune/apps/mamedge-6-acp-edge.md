@@ -91,7 +91,7 @@ Use the following steps to configure the app:
 
 7. Select **Next** to display the **Settings** step.
 
-8. Enter each of the **name** and **value** for each configuration setting you want to add. For details, see the [Microsoft Edge app configuration values](#microsoft-edge-app-configuration-values) table.
+8. Enter the **name** and **value** for each configuration setting you want to add. For details, see the [Microsoft Edge app configuration values](#microsoft-edge-app-configuration-values) table.
     
     For example, set **com.microsoft.intune.mam.managedbrowser.PasswordSSO** to `TRUE`.
 
