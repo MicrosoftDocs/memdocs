@@ -85,7 +85,7 @@ To use Copilot in Intune, you should know the following information:
   > [!TIP]
   > Some roles can enable or disable plugins. For more information, go to [Manage plugins in Microsoft Copilot for Security](/security-copilot/manage-plugins).
 
-- **Your Intune data**: Copilot uses your Intune data. Intune admins can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
+- **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
 
 > [!TIP]
 > For some common questions asked about Copilot in Intune, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
