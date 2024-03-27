@@ -45,7 +45,7 @@ There are two ways to access your Intune data using Copilot:
 
   This experience has an IT admin/IT Pro focus.
 
-- **Microsoft Copilot for Security**: This option is standalone Copilot and is available in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). You can use this portal to get insights from Copilot for Security and other embedded services, like Intune, Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and more.
+- **Microsoft Copilot for Security**: This option is standalone Copilot and is available in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). You can use this portal to get insights from Copilot for Security related to all enabled services, like Intune, Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and more.
 
   This experience has a Security Operations Center (SOC) focus, and can be used by IT admins. For more information on Copilot for Security and how to get Intune data, go to [Microsoft Copilot for Security and Intune](security-copilot.md).
 
