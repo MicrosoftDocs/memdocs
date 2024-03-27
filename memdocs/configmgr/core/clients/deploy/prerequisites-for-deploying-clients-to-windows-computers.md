@@ -2,12 +2,12 @@
 title: Windows client prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 04/01/2022
+ms.date: 03/28/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: conceptual
-author: sheetg09
-ms.author: sheetg
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -71,6 +71,7 @@ The Configuration Manager client has external dependencies. These dependencies d
 | Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`) | Required to allow clients to evaluate compliance settings. |
 | Microsoft .NET Framework version 4.6.2 or later (`NDP462-KB3151800-x86-x64-AllOS-ENU.exe`) | _Version 2107 and later_:<!--10402814--> Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net). |
 | Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`) | _Version 2103 and earlier_: Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net). |
+| Microsoft .NET Framework version 3.5 (`dotNetFx35setup.exe`) | _Version 2309 and later_:<!--26987390--> Required to support arm64 software update deployment. Install on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net). |
 | Microsoft Monitoring Agent version 10.20.18053.0 (`MMASetup-*.exe`) | Installed as needed by devices that you onboard to Microsoft Defender for Endpoint. |
 | Windows Firewall configuration (`WindowsFirewallConfigurationProvider.msi`) | Required for certain endpoint protection policies. |
 | Microsoft WebView2 (`Microsoft.WebView2.FixedVersionRuntime.x86.cab`) | Installed as needed when you use Software Center custom tabs. |
@@ -90,6 +91,8 @@ Microsoft recommends that you install the latest version of .NET version 4.8 to 
 > .NET Framework version 4.6.2 is preinstalled with Windows Server 2016 and Windows 10 version 1607. Later versions of Windows are preinstalled with a later version of the .NET Framework.
 >
 > .NET Framework version 4.8 isn't supported on some OS versions, such as Windows 10 2015 LTSB.
+>
+> .Net Framework version 3.5 isn't installed on arm64 versions.
 >
 > For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
