@@ -59,7 +59,7 @@ For more information, see [Folder support for scripts.](../../../apps/deploy-use
 
 HTTP-only communication is deprecated, and support is removed from this version of Configuration Manager. Enable HTTPS or Enhanced HTTP for client communication.
 
-For more information, see [Enable site system roles for HTTPS or Enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http) and [Deprecated features](deprecated/removed-and-deprecated-cmfeatures.md)
+For more information, see [Enable site system roles for HTTPS or Enhanced HTTP.](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http) and [Deprecated features](deprecated/removed-and-deprecated-cmfeatures.md)
 
 
 ### Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager
@@ -70,9 +70,9 @@ For more information, see [Supported-operating-systems-for-site-system-servers.]
 
 ### Resource access profiles and deployments will block Configuration manager upgrade
 
-Any configured Resource access profiles and deployments will block Configuration manager upgrade. Consider deleting them and moving the co-management workload for Resource Access (if co-managed) to Intune.
+Any configured Resource access profiles and deployments block Configuration manager upgrade. Consider deleting them and moving the co-management workload for Resource Access (if co-managed) to Intune.
 
-For more information, see [FAQ](../../../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml) and [Resource access policies are no longer supported](../../servers/deploy/install/list-of-prerequisite-checks.md)
+For more information, see [FAQ](../../../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml) and [Resource access policies are no longer supported.](../../servers/deploy/install/list-of-prerequisite-checks.md)
 
 ## Software updates
 
@@ -120,7 +120,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 - System Center Update Publisher (SCUP) and integration with ConfigMgr planned end of support Jan 2024.
 
-For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
+For more information, see [Removed and deprecated features for Configuration Manager.](deprecated/removed-and-deprecated-cmfeatures.md).
 
 ## Other updates
 
@@ -135,7 +135,7 @@ For more information on BitLocker management, see [Deploy BitLocker management.]
 
 - With this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2.
 - Defender Exploit Guards policy for controlled folder now accepts regex in the file path for apps.  
-  E.g. [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
+  E.g., [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
 
 ## Next steps
 At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
