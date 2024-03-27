@@ -28,21 +28,29 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Microsoft Azure Active Directory re-branded to Microsoft Entra ID
 
-Starting Configuration Manager version 2403, Microsoft Azure Active Directory is re-named to Microsoft Entra ID within Configuration Manager. 
+Starting Configuration Manager version 2403, Microsoft Azure Active Directory is re-named to Microsoft Entra ID within Configuration Manager.
+
 
 ### Automated diagnostic Dashboard for Software Update Issues
 
-A new dashboard is added to the console under monitoring workspace which shows the diagnosis of the software update issues in your environment. You can fix software update issues based on troubleshooting documentations.
+A new dashboard is added to the console under monitoring workspace which shows the diagnosis of the software update issues in your environment this feature can easily identify  any issues related to software updates. You can fix software update issues based on troubleshooting documentations. 
+
+:::image type="content" source="media/17668422-troubleshoot-dash.png" alt-text="Screenshot of new troubleshooting dashboard in console.":::
 
 
 ### Introducing Centralized Search box: Effortlessly Find What You Need in the Console!
 
 Users can now use the global search box in CM console which streamlines the search experience and centralizes access to information. This enhances the overall usability, productivity and effectiveness of CM. Users no longer need to navigate through multiple nodes or sections/ folders to find information they require, saving valuable time and effort.
 
+:::image type="content" source="media/24501008-search-box.png" alt-text="Screenshot of centralized search box in console.":::
 
 ### Added Folder support for Scripts node in Software Library 
 
 You can now organize scripts by using folders. This change allows for better categorization and management of scripts. Full Administrator and Operations Administrator roles can manage the folders. 
+
+For more information, see [Schedule scripts' runtime](../../../apps/deploy-use/create-deploy-scripts.md#schedule-scripts-runtime)
+
+:::image type="content" source="media/24475159-folder-scripts.png" alt-text="Screenshot of scripts folder structure in console.":::
 
 ### HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager
 
@@ -62,23 +70,29 @@ Any configured Resource access profiles and associated deployments will block th
 
 ### New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet
 
-A new parameter for SoftwareUpdate O365Language is added to Powershell Save-CMSoftwareUpdate cmdlet. Customers now do not, have to check for a specific language in the SUP properties from console (earlier causing a metadata download for that language for all updates).
+A new parameter **SoftwareUpdateO365Language** is now added to PowerShell  Save-CMSoftwareUpdate cmdlet. Customers now don't have to check a specific language in the SUP Properties (causing a metadata download for that language for all updates). 
 
-PowerShell Commandlet: Save-CMSoftwareUpdate – SoftwareUpdateO365Language <language name> (<region name>)"
 
+PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language <language name> (<region name>)" ```
+
+> [!NOTE]
+> Languages need to be in O365 format to be consistent with Admin Console UI. E.g. "Hungarian (Hungary)". 
 
 
 ## OS deployment
 
 ### Support for ARM64 Operating System Deployment
 
-Configuration Manager operating system deployment support is now added on Windows 11 ARM64 devices. Currently Importing and customizing Arm64 boot images, Wipe and load TS, Media creation TS, and WDS PXE for Arm64 is supported.    
+Configuration Manager operating system deployment support is now added on Windows 11 ARM64 devices. Currently Importing and customizing Arm64 boot images, Wipe and load TS, Media creation TS, WDS PXE for Arm64 and CMPivot is supported.    
+
+:::image type="content" source="media/14959666-armosd.png" alt-text="Screenshot of arm64 boot image in console.":::
 
 ### Enhancement in Deploying Software Packages with Dynamic Variables  
 
 Administrators while deploying the "Install Software Package" via Dynamic variable with "Continue on error" unchecked to clients, will not be notified with task sequence failures even if package versions on the distribution point are updated.
 
 
+:::image type="content" source="media/24334765-dyn-var.png" alt-text="Screenshot of changes in dynamic variable in task sequence in CM console.":::
 
 ## Cloud-attached management
 
@@ -89,18 +103,28 @@ The option to upgrade Configuration Manager 2403 is blocked if you are running c
 
 ## Deprecated features
 
-### System Center Update Publisher (SCUP) and integration with ConfigMgr 
+Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
+
+System Center Update Publisher (SCUP) and integration with ConfigMgr 
+
+For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
 ## Other updates
 
+#### Improvements to Bitlocker
+
+This release includes the following improvements to Bitlocker:
+
+- Based on your feedback, this feature ensures proper verification of key escrow and prevents message drops. We now validate whether the key is successfully escrowed to the database, and only on successful escrow we add the key protector.
+- This feature prevents a potential data loss scenario where BitLocker is protecting the volumes with keys that are never backed up to the database, in any failures to escrow happens.
+With this version of Configuration Manager, the Windows 11 readiness dashboard will show charts for Windows 23H2. 
 
 ## Next steps
-At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).-->
+At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).
 
-<--! As of March 28, 2024, version 2403 is globally available for all customers to install.-->
-
+<!--As of March 28, 2024, version 2403 is globally available for all customers to install.
 >[!NOTE] 
-> For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.
+> For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.-->
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md).
 
