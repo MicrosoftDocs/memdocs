@@ -187,6 +187,20 @@ This can be caused when the Intune tenant configuration requires Direct Memory A
 
 **Troubleshooting steps**: In the Intune policies used by the Cloud PC, remove the DMA requirement from **Virtualization-based security BS Required Security Properties**. Make sure your VBS configurations still provide your desired security.
 
+## Teams isn’t enforcing screen capture protection<!-- 49423094 -->
+
+When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn’t enforcing screen capture protection.
+
+**Troubleshooting steps**:
+
+- Confirm that the WebRTC version is up-to-date.
+- Confirm that the screen capture protection policy is configured correctly to have client and server selected:
+
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > choose the policy.
+  2. Under  **Configuration settings**, make sure the following is chosen: **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**:
+      - **Enable screen capture protection** = Enable
+      - **Screen Capture Protection Options** = Block screen capture on client and server
+
 ## Next steps
 
 [Troubleshoot Windows 365 Enterprise Cloud PC](troubleshooting.md)
