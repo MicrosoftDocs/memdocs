@@ -48,7 +48,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
   > [!NOTE]
-  > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', 'dm.microsoft.com', or 'has.spserv.microsoft.com' endpoints.
+  > SSL traffic inspection is not supported for 'manage.microsoft.com', 'dm.microsoft.com', or the [Device Health Attestation (DHA) endpoints listed in the compliance section](#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
@@ -348,7 +348,7 @@ However, Windows 10 and GCCH/DOD environments will continue to use the existing 
 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
 
-Ensure there are no firewall rules blocking outbound HTTPS/443 traffic to the endpoints listed in this section based on your Intune tenant's location.
+Ensure that there are no firewall rules blocking outbound HTTPS/443 traffic, and that SSL Traffic inspection is not in place for the endpoints listed in this section, based on your Intune tenant's location.
 
 To find your tenant location navigate to the Intune admin center > **Tenant administration** > **Tenant status** > **Tenant details**, see Tenant location.
 
