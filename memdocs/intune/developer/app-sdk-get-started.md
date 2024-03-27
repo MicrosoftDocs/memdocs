@@ -100,7 +100,7 @@ You'll need one of the following developer guides to help you integrate the Intu
 
 * **[Intune App SDK for iOS Developer Guide](app-sdk-ios-phase1.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
 
-* **[Intune App SDK for Android Developer Guide](/mem/intune/developer/app-sdk-android-phase1)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
+* **[Intune App SDK for Android Developer Guide](../developer/app-sdk-android-phase1.md)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
 
 * **[Intune App SDK Xamarin Bindings guide](app-sdk-xamarin.md)**: This document will help you build iOS and Android apps using Xamarin for Intune app protection policies.
 
