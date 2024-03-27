@@ -90,11 +90,11 @@ PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language
 
 ## OS deployment
 
-### Support for ARM64 Operating System Deployment
+### Support for ARM 64 Operating System Deployment
 
-Configuration Manager operating system deployment support is now added on Windows 11 ARM64 devices. Currently Importing and customizing Arm64 boot images, Wipe and load TS, Media creation TS, WDS PXE for Arm64 and CMPivot is supported.    
+Configuration Manager operating system deployment support is now added on Windows 11 ARM 64 devices. Currently Importing and customizing Arm 64 boot images, Wipe and load TS, Media creation TS, WDS PXE for Arm 64 and CMPivot is supported.    
 
-:::image type="content" source="media/14959666-armosd.png" alt-text="Screenshot of arm64 boot image in console.":::
+:::image type="content" source="media/14959666-armosd.png" alt-text="Screenshot of arm 64 boot image in console.":::
 
 
 
