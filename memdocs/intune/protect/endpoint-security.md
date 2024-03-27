@@ -98,7 +98,7 @@ When you integrate Intune with Microsoft Defender for Endpoint, you can review *
 
 - The Intune Admins review security tasks and then act within Intune to remediate those tasks. Once mitigated, they set the task to complete, which communicates that status back to the Microsoft Defender for Endpoint team.
 
-Through Security tasks both teams remain in synch as to which devices are at risk, and how and when those risks are remediated.
+Through Security tasks both teams remain in sync as to which devices are at risk, and how and when those risks are remediated.
 
 To learn more about using Security tasks, see [Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md).
 
