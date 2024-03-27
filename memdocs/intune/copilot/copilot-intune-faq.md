@@ -30,7 +30,7 @@ ms.collection:
 
 # Microsoft Copilot in Intune FAQ
 
-This article answers common questions about using Microsoft Copilot in Intune.
+This article answers common questions about using Microsoft Copilot in Intune. For more information about Microsoft Copilot in Intune, go to [Microsoft Copilot in Intune overview](copilot-intune-overview.md).
 
 ## Access to Copilot
 
