@@ -433,18 +433,14 @@ If this policy is not configured, the value from the **DefaultPopupsSetting** po
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
-
-For more information about the URLs format, see [Filter format for Microsoft Edge URL policies](/deployedge/edge-learnmmore-url-list-filter%20format#the-filter-format).
+|com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
 
 ### Block pop-up on specific sites
 If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
-
-For more information about the URLs format, see [Filter format for Microsoft Edge URL policies](/deployedge/edge-learnmmore-url-list-filter%20format#the-filter-format).
+|com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
 
 ### Default search provider
 By default, Edge uses the default search provider to perform a search when users enter non-URL texts in the address bar. Users can change the search provider list. Organizations can manage the search provider behavior.
@@ -587,17 +583,15 @@ There may be scenarios where users are only allowed to view websites, without th
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://contoso.com/|http://contoso.com/|contoso.com|.contoso.com`|
-|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://external.filesupload1.com/|http://external.filesupload2.com/|external.filesupload1.com|.filesupload1.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://contoso.com/|http://contoso.com/|https://[*.]contoso.com|[*.]contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://external.filesupload1.com/|http://external.filesupload2.com/|https://[*.]external.filesupload1.com|[*.].filesupload1.com`|
 
 The example to block all websites, including internal websites, from uploading files
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
 
 An example to allow specific websites to upload files
-- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://.contoso.com/|.sharepoint.com/`
+- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://[*.]contoso.com/|[*.]sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
-
-For more information about the URLs format, see [Filter format for Microsoft Edge URL policies](/deployedge/edge-learnmmore-url-list-filter%20format#the-filter-format).
 
 > [!NOTE]
 > For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
