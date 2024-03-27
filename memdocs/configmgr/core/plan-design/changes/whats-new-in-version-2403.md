@@ -41,7 +41,7 @@ A new dashboard is added to the console under monitoring workspace, which shows 
 
 ### Introducing centralized search box: Effortlessly find what you need in the console!
 
-Users can now use the global search box in CM console, which streamlines the search experience and centralizes access to information. This enhances the overall usability, productivity and effectiveness of CM. Users no longer need to navigate through multiple nodes or sections/ folders to find information they require, saving valuable time and effort.
+Users can now use the global search box in CM console, which streamlines the search experience and centralizes access to information. This feature enhances the overall usability, productivity and effectiveness of CM. Users no longer need to navigate through multiple nodes or sections/ folders to find information they require, saving valuable time and effort.
 
 :::image type="content" source="media/24501008-search-box.png" alt-text="Screenshot of centralized search box in console.":::
 
