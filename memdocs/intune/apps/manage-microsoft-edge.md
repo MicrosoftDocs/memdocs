@@ -412,7 +412,7 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 |com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled |**true** (default) Use built-in certificate verifier and Microsoft Root Store to verify certificates <br>**false** Use system certificate verifier and system root certificates as the source of public trust to verify certificates |
 
 > [!NOTE]
-> A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](../intune/protect/microsoft-tunnel-mam-android.md).
+> A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](../protect/microsoft-tunnel-mam-android.md).
 
 #### SSL warning page control
 By default, users can click through warning pages shows when users navigate to sites that have SSL errors. Organizations can manage the behavior.
