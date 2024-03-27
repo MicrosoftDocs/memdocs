@@ -116,9 +116,8 @@ For this example, select all VPN Users. However, when you assign this policy in 
 
 You have now created your first MAM for Windows Policy and it should be available within your Intune tenant.
 
-
 ## Next step
 
-[![Step 3 to understand Microsoft Entra Conditional Access with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-03.png)](mamedge-3-mamca.md)
+[![Step 3 to integrate Windows Security Center with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-03.png)](mamedge-3-mamca.md)
 
-Continue with [Step 3](mamedge-3-mamca.md) to Microsoft Entra Conditional Access with Microsoft Edge for Business.
+Continue with [Step 3](mamedge-3-mamca.md) to Integrate Windows Security Center with Microsoft Edge for Business.

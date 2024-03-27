@@ -53,12 +53,11 @@ The target audience for this content includes:
 
 This guide provides the following content:
 
-1. **Integrate Windows security Center with Microsoft Edge for Business** - Enhance the overall security posture of your organization by using the secure enterprise browser to integrate with the Windows Security Center.
+1. **Microsoft Entra conditional access with Microsoft Edge for Business** - Create an Entra conditional access policy and Intune app protection policy for browsing on Android, iOS and Windows.
 2. **App protection policies for Microsoft Edge for Business** - Ensure secure access and usage of enterprise applications when implementing an app protection policy for Windows.
-3. **Microsoft Entra conditional access with Microsoft Edge for Business** - Create an app protection policy for mobile devices, which is crucial in an era where mobile devices are extensively used for business purposes.
-4. **Microsoft Edge for Business end user experience** - Understand how security measures impact user interaction for Microsoft Edge for Business.
-5. **Microsoft Edge for Business mobile** - Create a conditional access policy to control who or what can access your business data under specific conditions.
-6. **App configuration policies for Microsoft Edge for Business** - Understand Microsoft Edge for Business and Microsoft Application Management can be used to protect your organization from various cyber threats.
+3. **Integrate Windows Security Center with Microsoft Edge for Business** - Enhance the overall security posture of your organization by using the secure enterprise browser to integrate with the Windows Security Center.
+4. **App configuration policies for Microsoft Edge for Business** - Understand Microsoft Edge for Business and Microsoft Application Management can be used to protect your organization from various cyber threats.
+5. **Microsoft Edge for Business end user experience** - Understand how security measures impact user interaction for Microsoft Edge for Business.
 
 For more information about Microsoft Edge Security content, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecuritywhitepaper).
 
@@ -113,9 +112,9 @@ In addition to the inherent security features of Chromium, Microsoft Edge for Bu
 
 Furthermore, Microsoft Edge for Business aligns with the Zero Trust methodology by offering the following features:
 
-- **[Data Loss Prevention (DLP) with Microsoft Purview](/purview/dlp-learn-about-dlp):** Helps prevent data leaks and unauthorized data access.
-- **[Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/):** Provides reputation-based protection against phishing and malware.
-- **[Enhanced Security Mode (ESM)](/deployedge/microsoft-edge-security-browse-safer#user-experience-with-enhanced-security-mode):** Offers additional security measures.
+- **Data Loss Prevention (DLP) with Microsoft Purview:** Helps prevent data leaks and unauthorized data access.
+- **Microsoft Defender SmartScreen:** Provides reputation-based protection against phishing and malware.
+- **Enhanced Security Mode (ESM):** Offers additional security measures.
 - **Website Typo Protection:** Helps prevent navigation to malicious sites due to typographical errors.
 - **Native Support for Microsoft Entra Conditional Access:** Ensures only authenticated and authorized users can access your resources.
 - **Password Monitoring and Generator:** Helps maintain strong, unique passwords.

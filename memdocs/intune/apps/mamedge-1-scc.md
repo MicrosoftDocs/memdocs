@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Integrate Windows Security Center with Microsoft Edge for Business
+title: Integrate Microsoft Entra conditional access with Microsoft Edge for Business
 titleSuffix:
-description: Integrate Windows Security Center with Microsoft Edge for Business.
+description: Integrate Microsoft Entra conditional access with Microsoft Edge for Business.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -31,11 +31,9 @@ ms.collection:
 ---
 
 
-# Mobile Threat Defense connector
+# Microsoft Entra conditional access with Microsoft Edge for Business
 
 The Microsoft Mobile Threat Defense (MTD) connector is a feature in Microsoft Intune that creates a channel of communication between Intune and your chosen MTD vendor, regardless of the device’s operating system. There are various supported MTD partners for both Windows and mobile devices. Intune integrates data from an MTD vendor as an information source for device compliance policies and device conditional access rules. The information provided by this communication channel can help protect corporate resources, such as Exchange and SharePoint data, by blocking access from compromised devices.
-
-## Integrate Mobile Threat Defense partners with Microsoft Edge for Business
 
 Mobile Application Management (MAM) threat detection can be integrated with various MTD partners, including Windows Security Center. This integration provides a client device health assessment to Intune application protection policies (APP) via a service-to-service connector. This assessment supports gating the flow and access to organizational data on personal unmanaged devices.
 
@@ -47,7 +45,7 @@ The health assessment and state includes the following details:
 
 Only users enrolled in Mobile Application Management send health state data. If end users want to stop sending data, they can sign out of their organization account in the protected applications. Similarly, administrators can stop data transmission by removing the MTD connector from Microsoft Intune.
 
-### Intune app protection policies
+## Intune app protection policies
 
 Intune app protection policies help secure organizational data and help ensure client devices are healthy. It also can perform additional client health verification via Windows Security Center. This involves designating the Windows Security Center risk level for allowing end users to access corporate resources. In addition, it also involves setting up tenant-based connectors to Microsoft Intune for Windows Security Center.
 
@@ -76,7 +74,7 @@ You can select one of the following **Action** options:
 > [!IMPORTANT]
 > If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that do not meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they are prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
 
-### Configure the MTD Connector
+## Configure the MTD Connector
 
 Use the following steps to configure the MTD Connector.
 
@@ -98,6 +96,6 @@ The connector is now created. It's important to note that the **Connection statu
 
 ## Next step
 
-[![Step 2 to understand App Protection Policies for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-app.md)
+[![Step 2 to understand App protection policies for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-app.md)
 
-Continue with [Step 2](mamedge-2-app.md) to understand App Protection Policies for Microsoft Edge for Business.
+Continue with [Step 2](mamedge-2-app.md) to understand app protection policies for Microsoft Edge for Business.
