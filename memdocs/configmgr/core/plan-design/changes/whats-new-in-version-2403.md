@@ -34,14 +34,14 @@ For more information, see [New name for Azure Active Directory](/entra-docs/blob
 
 ### Automated diagnostic Dashboard for Software Update Issues
 
-A new dashboard is added to the console under monitoring workspace which shows the diagnosis of the software update issues in your environment this feature can easily identify  any issues related to software updates. You can fix software update issues based on troubleshooting documentations. 
+A new dashboard is added to the console under monitoring workspace, which shows the diagnosis of the software update issues in your environment this feature can easily identify  any issues related to software updates. You can fix software update issues based on troubleshooting documentations. 
 
 :::image type="content" source="media/17668422-troubleshooting-dash.png" alt-text="Screenshot of new troubleshooting dashboard in console.":::
 
 
 ### Introducing centralized search box: Effortlessly find what you need in the console!
 
-Users can now use the global search box in CM console which streamlines the search experience and centralizes access to information. This enhances the overall usability, productivity and effectiveness of CM. Users no longer need to navigate through multiple nodes or sections/ folders to find information they require, saving valuable time and effort.
+Users can now use the global search box in CM console, which streamlines the search experience and centralizes access to information. This enhances the overall usability, productivity and effectiveness of CM. Users no longer need to navigate through multiple nodes or sections/ folders to find information they require, saving valuable time and effort.
 
 :::image type="content" source="media/24501008-search-box.png" alt-text="Screenshot of centralized search box in console.":::
 
@@ -53,11 +53,11 @@ You can now organize scripts by using folders. This change allows for better cat
 
 :::image type="content" source="media/24475159-folder-scripts.png" alt-text="Screenshot of scripts folder structure in console.":::
 
-For more information, see [Folder support for scripts](../../../aapps/deploy-use/create-deploy-scripts.md#folder-support-for-scripts)
+For more information, see [Folder support for scripts](../../../apps/deploy-use/create-deploy-scripts.md#folder-support-for-scripts)
 
 ### HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager
 
-HTTP-only communication is deprecated, and support is removed from this version of Configuration Manager. Please enable HTTPS or Enhanced HTTP for client communication.
+HTTP-only communication is deprecated, and support is removed from this version of Configuration Manager. Enable HTTPS or Enhanced HTTP for client communication.
 
 For more information, see [Enable site system roles for HTTPS or Enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http) and [Deprecated features](deprecated/removed-and-deprecated-cmfeatures.md)
 
@@ -70,7 +70,7 @@ For more information, see [supported-operating-systems-for-site-system-servers](
 
 ### Resource access profiles and deployments will block Configuration manager upgrade
 
-Any configured Resource access profiles and associated deployments will block the Configuration manager upgrade. Please consider deleting them and moving the co-management workload for Resource Access (if co-managed) to Intune.
+Any configured Resource access profiles and deployments will block Configuration manager upgrade. Consider deleting them and moving the co-management workload for Resource Access (if co-managed) to Intune.
 
 For more information, see [FAQ](../../../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml) and [Resource access policies are no longer supported](../../servers/deploy/install/list-of-prerequisite-checks.md)
 
@@ -134,7 +134,7 @@ This release includes the following improvements to Bitlocker:
 
 For more information on BitLocker management, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/recovery-service.md) and [Plan for BitLocker management](../../../protect/plan-design/bitlocker-management.md).
 
-- With this version of Configuration Manager, the Windows 11 readiness dashboard will show charts for Windows 23H2. 
+- With this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2. 
 
 ## Next steps
 At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).
