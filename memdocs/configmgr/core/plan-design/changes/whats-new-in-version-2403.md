@@ -112,7 +112,7 @@ For more information, see [Options for Install Application.](../../../osd/unders
 
 The option to upgrade Configuration Manager 2403 is blocked if you are running cloud management gateway V1 (CMG) as a cloud service (classic). All CMG deployments should use a virtual machine scale set.
 
-For more information, see[Check for a cloud management gateway (CMG) as a cloud service (classic).](../../servers/deploy/install/list-of-prerequisite-checks.md)
+For more information, see [Check for a cloud management gateway (CMG) as a cloud service (classic).](../../servers/deploy/install/list-of-prerequisite-checks.md)
 
 ## Deprecated features
 
@@ -133,9 +133,9 @@ This release includes the following improvements to Bitlocker:
 
 For more information on BitLocker management, see [Deploy BitLocker management.](../../../protect/deploy-use/bitlocker/recovery-service.md) and [Plan for BitLocker management.](../../../protect/plan-design/bitlocker-management.md).
 
-- With this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2.
+- From this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2.
 - Defender Exploit Guards policy for controlled folder now accepts regex in the file path for apps.  
-  E.g., [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
+  For example, [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
 
 ## Next steps
 At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
