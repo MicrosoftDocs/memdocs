@@ -106,16 +106,16 @@ Microsoft Edge for Business, built on the robust and secure foundation of Chromi
 
 In addition to the inherent security features of Chromium, Microsoft Edge for Business incorporates unique protection features and supports a range of Microsoft technologies:
 
-- **[Microsoft Defender](microsoft-365/security/defender-endpoint/?view=o365-worldwide):** Provides comprehensive security solutions.
-- **[Microsoft Entra](entra/):** Formerly known as Azure Active Directory, it offers identity and access management services.
-- **[Microsoft Intune](mem/):** Offers mobile device and application management.
-- **[Microsoft Purview](purview/):** Supports data governance across your hybrid data estate.
+- **[Microsoft Defender](/microsoft-365/security/defender-endpoint/?view=o365-worldwide):** Provides comprehensive security solutions.
+- **[Microsoft Entra](/entra/):** Formerly known as Azure Active Directory, it offers identity and access management services.
+- **[Microsoft Intune](/mem/):** Offers mobile device and application management.
+- **[Microsoft Purview](/purview/):** Supports data governance across your hybrid data estate.
 
 Furthermore, Microsoft Edge for Business aligns with the Zero Trust methodology by offering the following features:
 
-- **[Data Loss Prevention (DLP) with Microsoft Purview](purview/dlp-learn-about-dlp):** Helps prevent data leaks and unauthorized data access.
-- **[Microsoft Defender SmartScreen](windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/):** Provides reputation-based protection against phishing and malware.
-- **[Enhanced Security Mode (ESM)](deployedge/microsoft-edge-security-browse-safer#user-experience-with-enhanced-security-mode):** Offers additional security measures.
+- **[Data Loss Prevention (DLP) with Microsoft Purview](/purview/dlp-learn-about-dlp):** Helps prevent data leaks and unauthorized data access.
+- **[Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/):** Provides reputation-based protection against phishing and malware.
+- **[Enhanced Security Mode (ESM)](/deployedge/microsoft-edge-security-browse-safer#user-experience-with-enhanced-security-mode):** Offers additional security measures.
 - **Website Typo Protection:** Helps prevent navigation to malicious sites due to typographical errors.
 - **Native Support for Microsoft Entra Conditional Access:** Ensures only authenticated and authorized users can access your resources.
 - **Password Monitoring and Generator:** Helps maintain strong, unique passwords.
