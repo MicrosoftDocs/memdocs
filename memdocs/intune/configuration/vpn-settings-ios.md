@@ -129,6 +129,9 @@ Select the VPN connection type from the following list of vendors:
   - If you haven't already, integrate ISE with Intune for NAC as described at **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
   - Enable NAC in the VPN profile.
 
+  > [!NOTE]
+  > To support VPN use cases post NAC API Service deprecation, Cisco ISE will be using APIs supported through Compliance Retrieval Service.  To enable this, we’ve updated the format for sending device IDs.  To obtain the device ID in the updated format, it is necessary to update the profile. The old format will no longer function after the deprecation of the legacy NAC service.
+  
   **When using Citrix SSO with Gateway**, be sure to:
 
   - Confirm you're using Citrix Gateway 12.0.59 or higher.
