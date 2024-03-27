@@ -105,6 +105,18 @@ You can learn more about configuring the org allowed accounts mode setting here:
 
 This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you aren't using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys. 
 
+## Simplify the sign-in experience with domain-less sign in 
+
+You can simplify the sign-in experience on Teams for iOS and Android by pre-filling the domain name on the sign-in screen for users on shared and managed devices by applying the following policies: 
+   
+   | Name | Value |
+   |---|---|
+   | domain_name | A string value providing the domain of the tenant to appended. Use a semicolon delimited value to add multiple domains. This policy only works on enrolled devices. |
+   | enable_numeric_emp_id_keypad | A boolean value used to indicate that the employee ID is all numeric and the number keypad should be enabled for easy entry. If the value is not set, then the alphanumeric keyboard will open. This policy only works on enrolled devices.  |
+
+> [!NOTE]
+> These policies will only work on enrolled shared and managed devices.
+
 ## Notification settings in Microsoft Teams
 
 Notifications keep you up to date about what's happening or going to happen around you. They appear on home screen or lock screen based on the settings. 
@@ -145,18 +157,6 @@ Use the following options to configure your notifications on the portal through 
 1. Set the **Assignments** for the groups of users to include and then create your policy.
 
 1. Once the policy has been created, go to **Apps** > **App protection policies**. Find your newly created **App protection policy** and check whether the policy has been deployed by reviewing the **Deployed** column. The **Deployed** column should display **Yes** for the created policy. If it displays **No**, refresh the page, and check after 10 minutes.
-
-### Simple sign in experience with domain-less sign in
-
-You can simplify the sign-in experience on Teams for iOS and Android by pre-filling the domain name on the sign-in screen for users on shared and managed devices by applying the following policies: 
-   
-   | Name | Value |
-   |---|---|
-   | domain_name | A string value providing the domain of the tenant to appended. Use a semicolon delimited value to add multiple domains. This policy only works on enrolled devices. |
-   | enable_numeric_emp_id_keypad | A boolean value used to indicate that the employee ID is all numeric and the number keypad should be enabled for easy entry. If the value is not set, then the alphanumeric keyboard will open. This policy only works on enrolled devices.  |
-
-> [!NOTE]
-> These policies will only work on enrolled shared and managed devices.
 
 ### For the notifications to show up on iOS and Android devices
 
