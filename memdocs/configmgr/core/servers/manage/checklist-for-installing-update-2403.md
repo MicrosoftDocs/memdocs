@@ -73,7 +73,7 @@ At this time, version 2403 is released for the early update ring. To install thi
 
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable. 
 
-[!NOTE]
+> [!NOTE]
 > The version 2403 update is only applicable to sites running version 2211 or later.
 
 To opt in to the early update ring:
@@ -90,7 +90,7 @@ To opt in to the early update ring:
 
 The version 2403 update should now be available in the console
 
- [!IMPORTANT]
+> [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2403. It's not a permanent change.
 
 ## Pre-update checklist
