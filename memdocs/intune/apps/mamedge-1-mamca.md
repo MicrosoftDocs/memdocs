@@ -126,6 +126,6 @@ In the previous steps, you created a conditional access policy to support app pr
 
 ## Next step
 
-[![Step 4 to understand the Microsoft Edge for Business end user experience.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-04.png)](mamedge-4-end-user-experience.md)
+[![Step 2 to create an app protection policy.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-end-user-experience.md)
 
-Continue with [Step 4](mamedge-4-end-user-experience.md) to the Microsoft Edge for Business end user experience.
+Continue with [Step 2](mamedge-2-app.md) to create an app protection policy.

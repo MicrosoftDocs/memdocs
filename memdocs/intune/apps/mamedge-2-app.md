@@ -268,6 +268,6 @@ To create the app protection policy, follow these steps:
 
 ## Next step
 
-[![Step 3 to integrate Windows Security Center with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-03.png)](mamedge-3-mamca.md)
+[![Step 3 to integrate Mobile Threat Defense with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-03.png)](mamedge-3-scc.md)
 
-Continue with [Step 3](mamedge-3-mamca.md) to Integrate Windows Security Center with Microsoft Edge for Business.
+Continue with [Step 3](mamedge-3-scc.md) to integrate Mobile Threat Defense with Microsoft Edge for Business.

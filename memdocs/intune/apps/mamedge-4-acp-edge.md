@@ -153,6 +153,6 @@ You have now created an App Configuration Policy for Windows and Microsoft Edge.
 
 ## Next step
 
-[![Step 7 to troubleshoot securing data with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-07.png)](mamedge-7-troubleshooting.md)
+[![Step 5 to understand the end user experience for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-05.png)](mamedge-5-end-user-experience.md)
 
-Continue with [Step 7](mamedge-7-troubleshooting.md) to troubleshoot securing data with Microsoft Edge for Business.
+Continue with [Step 5](mamedge-5-end-user-experience.md) to understand the end user experience for Microsoft Edge for Business.

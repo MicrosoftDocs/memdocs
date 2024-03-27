@@ -336,20 +336,18 @@ items:
             items: 
             - name: Overview
               href: ./apps/mamedge-overview.md
-            - name: Step 1. Windows Security Center integration
-              href: ./apps/mamedge-1-scc.md
-            - name: Step 2. App protection policy
+            - name: Step 1. Create Microsoft Entra conditional access
+              href: ./apps/mamedge-1-mamca.md
+            - name: Step 2. Create an app protection policy
               href: ./apps/mamedge-2-app.md
-            - name: Step 3. Microsoft Entra conditional access
-              href: ./apps/mamedge-3-mamca.md
-            - name: Step 4. End user experience
-              href: ./apps/mamedge-4-end-user-experience.md
-            - name: Step 5. Microsoft Edge for Business mobile
-              href: ./apps/mamedge-5-edge-mobile.md
-            - name: Step 6. App configuration policy
-              href: ./apps/mamedge-6-acp-edge.md
-            - name: Step 7. Troubleshooting
-              href: ./apps/mamedge-7-troubleshooting.md
+            - name: Step 3. Integrate Mobile Threat Defense
+              href: ./apps/mamedge-3-scc.md
+            - name: Step 4. Create app configuration policies
+              href: ./apps/mamedge-4-acp-edge.md
+            - name: Step 5. Understand end user experience
+              href: ./apps/mamedge-5-end-user-experience.md
+            - name: Step 6. Troubleshoot
+              href: ./apps/mamedge-6-troubleshoot.md
 
         - name: Concepts
           items:

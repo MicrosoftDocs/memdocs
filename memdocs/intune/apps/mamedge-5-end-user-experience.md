@@ -107,6 +107,6 @@ Intune will notify you with various messages in the event of a failure. Here are
 
 ## Next step
 
-[![Step 5 to understand Microsoft Edge for Business Mobile.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-05.png)](mamedge-5-edge-mobile.md)
+[![Step 6 to troubleshoot Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-06.png)](mamedge-6-troubleshoot.md)
 
-Continue with [Step 5](mamedge-5-edge-mobile.md) to understand Microsoft Edge for Business Mobile.
+Continue with [Step 6](mamedge-6-troubleshoot.md) to troubleshoot Microsoft Edge for Business.
