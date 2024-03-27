@@ -145,7 +145,6 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - hm-iot-in-3-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-4-prod-prna01.azure-devices.net (443 & 5671 outbound)
-  - *.windows365.azure-devices.net  (TCP ports 443 & 5671 outbound)
   
 All endpoints connect over port 443 unless otherwise specified.
 
