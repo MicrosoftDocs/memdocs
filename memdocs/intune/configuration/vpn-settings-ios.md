@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/15/2023
+ms.date: 03/27/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -129,9 +129,11 @@ Select the VPN connection type from the following list of vendors:
   - If you haven't already, integrate ISE with Intune for NAC as described at **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
   - Enable NAC in the VPN profile.
 
-  > [!NOTE]
-  > To support VPN use cases post NAC API Service deprecation, Cisco ISE will be using APIs supported through Compliance Retrieval Service.  To enable this, we’ve updated the format for sending device IDs.  To obtain the device ID in the updated format, it is necessary to update the profile. The old format will no longer function after the deprecation of the legacy NAC service.
-  
+  > [!IMPORTANT]
+  > The [network access control (NAC) service is being deprecated](../protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support this change, Intune sends the device ID to Cisco ISE using a different format than the original deprecated service. So, your existing profiles with the original NAC service will stop working.
+  > 
+  > To use the CR Service and prevent downtime with your VPN connection, redeploy this same device configuration profile. No changes are needed to the profile. You only need to redeploy. When the device syncs with Intune service, then the CR Service changes are automatically pushed to the device. And, your VPN connections will continue to work.
+
   **When using Citrix SSO with Gateway**, be sure to:
 
   - Confirm you're using Citrix Gateway 12.0.59 or higher.
