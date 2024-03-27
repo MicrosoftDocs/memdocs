@@ -65,6 +65,10 @@ Before you start integrating the Intune App SDK into your iOS application, take 
 
 ## Key Decisions for SDK integration
 
+### Do I need to register my application with the Microsoft identity platform?
+ 
+Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
+
 ### Do I have access to my application's source code?
 
 If you don't have access to your application's source code and only have access to the compiled application in either .app or .ipa format, you won't be able to integrate the SDK into your application.
@@ -128,7 +132,7 @@ If your app acquires any Microsoft Entra access tokens and accesses resources th
 
 ### Required prerequisites
 > [!IMPORTANT]
-> Starting in mid-March 2024, we are making updates to improve security of the Intune mobile application management (MAM) service. This update will require all iOS devices to be registered with Microsoft Entra ID to continue receiving MAM policy for Microsoft 365 apps. 
+> We are making updates to improve security of the Intune mobile application management (MAM) service. This update will require all iOS devices to be registered with Microsoft Entra ID to continue receiving MAM policy for Microsoft 365 apps. 
 
 ### How this will affect your organization?
 
@@ -217,5 +221,5 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
 [Microsoft Entra admin center]:https://entra.microsoft.com/
-[Manage device identities using the Microsoft Entra admin center]:https://learn.microsoft.com/en-us/entra/identity/devices/manage-device-identities
+[Manage device identities using the Microsoft Entra admin center]:https://learn.microsoft.com/entra/identity/devices/manage-device-identities
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app
