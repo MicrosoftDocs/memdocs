@@ -578,12 +578,12 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-### Control the behavior of the "Site Blocked" popup
+### Control the behavior of the Site Blocked popup
 When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites，depending on the AllowTransitionOnBlock and OpenInPrivateIfBlocked policy configurations. You can choose preferences between InPrivate and personal account.
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0** (Default) Always show the popup window for user to choose <br> **1** Automatically switch to personal account  when it is signed in <br> **2** Automatically switch to personal account if it is signed in and InPrivate is simultaneously enabled <br> **3** Automatically switch to InPrivate if it is signed in and InPrivate is simultaneously enabled|
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account  when it is signed in.<br>**2**: Automatically switch to personal account if it is signed in and InPrivate is simultaneously enabled.<br>**3**:Automatically switch to InPrivate if it is signed in and InPrivate is simultaneously enabled. |
 
 > [!NOTE]
 > AutoTransitionModeOnBlock policy is currently only avaiable to Edge for iOS.
@@ -593,7 +593,7 @@ This policy is to control the behavior of opening Intune unmanaged URL.
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch |**0** (Default) URLs will be  opened in normal tabs with work accounts <br> <br> **1** Microsoft Edge adheres to Intune’s protection policy; the behavior is determined by the ‘Receive data from other apps’ configuration within the Intune protection policy <br> - **All apps** fall back to behavior for policy value 0; - **None** or **Policy managed apps** If personal account is signed-in, URLs will be opened in normal tabs with personal profile; If personal account isn't signed-in, URLs will be opened in InPrivate; If InPrivate is disabled, the URLs will not be opened <br> <br> **2** (Android only) Microsoft Edge will check URLAllowlist or URLBlocklist. The allowed URLs will be opened in normal tabs with work accounts. The blocked URLs may be opened in InPrivate or normal tabs with personal accounts, it depends on how openInPrivateIfBlocked is configured|
+|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch |**0**: (Default) URLs will be  opened in normal tabs with work accounts. <br> <br> **1**: Microsoft Edge adheres to Intune’s protection policy; the behavior is determined by the **Receive data from other apps** configuration within the Intune protection policy.<br><br>When the value is **All apps**, setting the value to **1** will fall back to behavior for policy value 0. When the value is **None** or **Policy managed apps**, and the personal account is signed-in, URLs will be opened in normal tabs with personal profile. If the personal account isn't signed-in, URLs will be opened in InPrivate. If InPrivate is disabled, the URLs will not be opened.<br><br>**2**: (Android only) Microsoft Edge will check URLAllowlist or URLBlocklist. The allowed URLs will be opened in normal tabs with work accounts. The blocked URLs may be opened in InPrivate or normal tabs with personal accounts, however the functionality depends on how openInPrivateIfBlocked is configured. |
 
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
