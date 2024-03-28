@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -140,6 +140,15 @@ The following settings are shown depending on the connection type you select. No
 
 ### IKE Security Association Parameters (IKEv2 only)
 
+> [!IMPORTANT]
+> Windows 11 requires that:
+>
+> - All of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
+>
+>   **OR**
+>
+> - None of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
+
 These cryptography settings are used during IKE security association negotiations (also known as `main mode` or `phase 1`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
 
 - **Encryption algorithm**: Select the encryption algorithm used on the VPN server. For example, if your VPN server uses AES 128 bit, then select **AES-128** from the list.
@@ -155,6 +164,15 @@ These cryptography settings are used during IKE security association negotiation
   When set to **Not configured**, Intune doesn't change or update this setting.
 
 ### Child Security Association Parameters (IKEv2 only)
+
+> [!IMPORTANT]
+> Windows 11 requires that:
+>
+> - All of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
+>
+>   **OR**
+>
+> - None of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
 
 These cryptography settings are used during child security association negotiations (also known as `quick mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
 

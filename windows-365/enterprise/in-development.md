@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/06/2024
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -29,7 +29,7 @@ ms.collection:
 
 To help in your readiness and planning, this page lists Windows 365 updates and features that are in development but not yet released. In addition to the information on this page:
 
-- If we anticipate that you need to take action before a change, we'll publish a complementary post in Office message center.
+- If we anticipate that you need to take action before a change, we publish a complementary post in Office message center.
 - When a feature enters production, the feature description moves from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
 - Similar features might be announced at different times for Windows 365 Business.
@@ -62,6 +62,10 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 ### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
 
 In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for seven days will be automatically turned on and synced with Windows Update for Business Policies.
+
+### Intune scope tags<!--48907552-->
+
+In a future update, Windows 365 will support [Intune scope tags](/mem/intune/fundamentals/scope-tags).
 
 <!-- ***********************************************-->
 <!--## Device provisioning-->
@@ -103,10 +107,13 @@ In a future update, Windows 365 will remove a large number of FQDNs from the cur
 
 ### New 15-minute Sign-in frequency option<!--48439987-->
 
-When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option will provide a 15-minute re-authentication period.
+When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option will provide a 15-minute reauthentication period.
 
 <!-- ***********************************************
 ## Windows 365 app-->
+
+<!-- ***********************************************-->
+<!--## Windows 365 Frontline-->
 
 
 ## Next steps

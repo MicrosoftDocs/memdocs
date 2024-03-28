@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 
 # optional metadata
@@ -66,6 +65,10 @@ Before you start integrating the Intune App SDK into your iOS application, take 
 
 ## Key Decisions for SDK integration
 
+### Do I need to register my application with the Microsoft identity platform?
+ 
+Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
+
 ### Do I have access to my application's source code?
 
 If you don't have access to your application's source code and only have access to the compiled application in either .app or .ipa format, you won't be able to integrate the SDK into your application.
@@ -74,8 +77,7 @@ See [App Wrapping Tool for iOS] for more details.
 
 ### Should my application integrate the Microsoft Authentication Library (MSAL)?
 
-Refer to [Overview of the Microsoft Authentication Library (MSAL)] to determine whether your application will need to integrate MSAL.
-Most applications must integrate MSAL before integrating the Intune SDK.
+Yes, you are required to integrate with MSAL before integrating the Intune SDK. Before integrating with MSAL, all apps are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 
 See [Stage 2: MSAL prerequisite and setup] for instructions on integrating MSAL and additional details on identity scenarios inside your application.
 
@@ -202,3 +204,4 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Assign licenses]:/mem/intune/fundamentals/licenses-assign
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/develop/quickstart-register-app

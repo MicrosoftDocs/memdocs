@@ -41,6 +41,8 @@ When a user turns on their physical device and signs in, Windows 365 Boot signs 
 
 Windows 365 Boot supports both dedicated and shared PC scenarios.
 
+Windows 365 Boot shared mode supports FIDO authentication. For more information, see [How-to: Password-less FIDO2 Security Key Sign-in to Windows 10 HAADJ Devices](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-password-less-fido2-security-key-sign-in-to-windows-10/ba-p/1434583).
+
 ## Shared PC scenario
 
 Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for workers such as nursing, salespeople, and call centers, who share company physical devices. Such workers might frequently switch between physical tasks and computer interaction. Windows 365 Boot lets them bypass the lengthy startup process and boot directly into their secure Cloud PC to pick up right where they left off.

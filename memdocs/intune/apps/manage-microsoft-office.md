@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/01/2023
+ms.date: 03/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -77,7 +76,8 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
-> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
+> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.
+>  For Android App Protection Policies, add the Office Hub, Office Hub [HL], and Office Hub [ROW] apps. For more information, see [Support Tip: How to enable Intune app protection policies with the Office mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
 ## Utilize app configuration
 
@@ -91,6 +91,7 @@ App configuration can be delivered either through the mobile device management (
 
 > [!IMPORTANT]
 > For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft 365 (Office) for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
+>  For Android App Configurations, add the Office Hub, Office Hub [HL], and Office Hub [ROW] apps. For more information, see [Support Tip: How to enable Intune app protection policies with the Office mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
 
