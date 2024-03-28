@@ -11,7 +11,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 ms.reviewer: bryanke
@@ -22,6 +21,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Win32
 ---
 
 # Prepare Win32 app content for upload

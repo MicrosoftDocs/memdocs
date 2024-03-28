@@ -302,6 +302,36 @@ items:
             - name: Step 7. Verify app configuration
               href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
 
+          - name: Secure and protect apps using Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-protect-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
+            - name: Understand app data protection
+              href: /microsoft-365/solutions/apps-protect-data-protection?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app protection access requirements
+              href: /microsoft-365/solutions/apps-protect-access-requirements?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+            - name: Understand app protection conditional launch
+              href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+            - name: Understand app protection health checks
+              href: /microsoft-365/solutions/apps-protect-health-checks?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json              
+            - name: Use the app protection framework
+              items:
+              - name: App protection framework overview
+                href: /microsoft-365/solutions/apps-protect-framework?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 1. Apply basic data protection
+                href: /microsoft-365/solutions/apps-protect-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 2. Apply enhanced data protection
+                href: /microsoft-365/solutions/apps-protect-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 3. Apply high data protection
+                href: /microsoft-365/solutions/apps-protect-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 4. Understand app protection delivery
+                href: /microsoft-365/solutions/apps-protect-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 5. Verify and monitor app protection
+                href: /microsoft-365/solutions/apps-protect-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json     
+              - name: Step 6. Use app protection actions
+                href: /microsoft-365/solutions/apps-protect-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+
         - name: Concepts
           items:
           - name: App lifecycle
@@ -362,8 +392,12 @@ items:
                   href: ./apps/lob-apps-ios.md
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
-                - name: Sideload Windows LOB apps
-                  href: ./apps/app-sideload-windows.md
+                - name: Enterprise App Management
+                  items:
+                  - name: Enterprise App Management overview
+                    href: ./apps/apps-enterprise-app-management.md
+                  - name: Add a Enterprise App Catalog app (Win32)
+                    href: ./apps/apps-add-enterprise-app.md                
                 - name: macOS LOB apps
                   href: ./apps/lob-apps-macos.md
                 - name: macOS app management
@@ -467,8 +501,6 @@ items:
                   displayName: vpp; volume purchased
                 - name: Volume-purchased iOS apps
                   href: ./apps/vpp-apps-ios.md
-                - name: Microsoft Store for Business apps
-                  href: ./apps/windows-store-for-business.md
                 - name: iOS eBooks
                   href: ./apps/vpp-ebooks-ios.md
             - name: Protect apps
@@ -635,6 +667,8 @@ items:
             href: ./protect/epm-guidance-for-creating-rules.md
           - name: Endpoint Privilege Management policies
             href: ./protect/epm-policies.md
+          - name: Endpoint Privilege Management support approved requests
+            href: ./protect/epm-support-approved.md
           - name: Endpoint Privilege Management reports
             href: ./protect/epm-reports.md
           - name: Endpoint Privilege Management data and privacy
@@ -736,6 +770,11 @@ items:
               items:
               - name: Check Point Harmony and Intune integration
                 href: ./protect/checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Set up Jamf
+              href: ./protect/jamf-mtd-connector.md
+              items:
+              - name: Jamf and Intune integration
+                href: ./protect/jamf-mtd-connector-integration.md
             - name: Set up Lookout
               href: ./protect/lookout-mobile-threat-defense-connector.md
               items:
@@ -771,11 +810,6 @@ items:
               items:
               - name: Trend Micro Mobile Security as a Service and Intune integration
                 href: ./protect/trend-micro-mtd-connector-integration.md 
-            - name: Set up Wandera
-              href: ./protect/wandera-mtd-connector.md
-              items:
-              - name: Wandera and Intune integration
-                href: ./protect/wandera-mtd-connector-integration.md
             - name: Set up Zimperium
               href: ./protect/zimperium-mobile-threat-defense-connector.md
               items:
@@ -783,7 +817,27 @@ items:
                 href: ./protect/zimperium-mtd-connector-integration.md 
         - name: Network access control
           href: ./protect/network-access-control-integrate.md
-        - name: Certificates
+        - name: Microsoft Cloud PKI  
+          items:
+          - name: Microsoft Cloud PKI overview     
+            href: ./protect/microsoft-cloud-pki-overview.md
+            displayName: RBAC, requirements  
+          - name: PKI fundamentals  
+            href: ./protect/microsoft-cloud-pki-fundamentals.md              
+          - name: Configure and deploy      
+            items: 
+            - name: Deployment overview             
+              href: ./protect/microsoft-cloud-pki-deployment.md 
+            - name: Configure root and issuing CA for Cloud PKI     
+              href: ./protect/microsoft-cloud-pki-configure-ca.md   
+              displayName: root, certification, authority, ca, issuing, BYO
+            - name: Configure bring your own CA for Cloud PKI     
+              href: ./protect/microsoft-cloud-pki-configure-byoca.md          
+          - name: Monitor issued certificates  
+            href: ./protect/microsoft-cloud-pki-monitor.md  
+          - name: Get audit logs  
+            href: ./protect/microsoft-cloud-pki-audit-logs.md 
+        - name: Certificates 
           items: 
           - name: Use certificates for authentication
             href: ./protect/certificates-configure.md
@@ -1390,7 +1444,7 @@ items:
           displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: 
+          displayName: Set up enrollment notifications
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
@@ -1460,7 +1514,7 @@ items:
           items: 
           - name: Set up enrollment for Android device administrator 
             href: ./enrollment/android-enroll-device-administrator.md
-          - name: Switch to Android Enterprise work profile management 
+          - name: Move to Android Enterprise work profile management 
             href: ./enrollment/android-move-device-admin-work-profile.md  
           - name: Move to mobile application management without enrollment    
             href: ./enrollment/move-to-android-mobile-application-management.md 
@@ -1625,7 +1679,9 @@ items:
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
-          href: ./remote-actions/collect-diagnostics.md  
+          href: ./remote-actions/collect-diagnostics.md
+        - name: Pause config refresh
+          href: ./remote-actions/pause-config-refresh.md    
         - name: Send organizational messages  
           items: 
           - name: Overview 
@@ -1664,7 +1720,7 @@ items:
         - name: Review logs with Azure Monitor
           href: ./fundamentals/review-logs-using-azure-monitor.md
         - name: Device configuration profile status
-          href: ./configuration/device-profile-monitor.md
+          href: ./configuration/device-profile-monitor.md                    
         - name: Endpoint analytics
           href: ../analytics/
 
@@ -1761,6 +1817,8 @@ items:
       - name: Known issues
         displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
+    - name: End-to-end macOS endpoint guide
+      href: ../solutions/end-to-end-guides/macos-endpoints-get-started.md
     - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
       displayName: admx, administrative template, windows, gpo

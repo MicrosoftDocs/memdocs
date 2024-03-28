@@ -6,12 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2023
+ms.date: 01/10/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 
 ms.reviewer: bryanke
@@ -22,6 +21,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Add
 ---
 
 # Add apps to Microsoft Intune
@@ -71,6 +71,7 @@ The following table lists the specific app types and how you can add them in the
 | [Cross platform web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [Android Enterprise system apps](../apps/apps-ae-system.md)  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | [Windows app (Win32)](../apps/apps-win32-add.md)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
+| [Enterprise App Catalog app (Win32)](../apps/apps-add-enterprise-app.md)  | LOB app  | Select **Enterprise App Catalog app (Win32)** as the **app type**, select the app from the **Enterprise App Catalog**, and then set the app information, installation commands, requirements, and detection rules.  |
 | [macOS LOB apps](../apps/lob-apps-macos.md) | LOB app  | Select **Line-of-business app** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
 | [macOS apps (DMG)](../apps/lob-apps-macos-dmg.md) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
 | [macOS apps (PKG)](../apps/macos-unmanaged-pkg.md) | LOB app  | Select **macOS app (PKG)** as the app type, select the **App package** file, and then select an installation file with the extension *.pkg*. This app type is used to add an unmanaged macOS PKG app to Intune.  |
@@ -256,3 +257,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)
 - [Win32 apps](apps-win32-app-management.md)
+- [Enterprise App Catalog app (Win32)](apps-add-enterprise-app.md)

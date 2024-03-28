@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 
 # optional metadata
@@ -30,6 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Deploy
 ---
 
 # Assign apps to groups with Microsoft Intune
@@ -149,7 +149,7 @@ The information in the following table can help you understand the resulting int
 > When conflicts occur in **Uninstall on device removal** setting, the app is not removed from the device when the device is no longer managed.
 
 > [!NOTE]
-> Apps deployed as Required to corporate-owned work profile devices cannot be uninstalled manually by the user.
+> Apps deployed as Required to corporate-owned work profile and corporate-owned fully managed devices cannot be uninstalled manually by the user.
 
 ## Managed Google Play app deployment to unmanaged devices
 

@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -189,4 +188,4 @@ The `.apks` output file is a ZIP archive containing a single universal APK file.
 
 - [Decide how to prepare apps for mobile application management with Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 
-- [Microsoft Intune App SDK for Android developer guide](/mem/intune/developer/app-sdk-android-phase1)
+- [Microsoft Intune App SDK for Android developer guide](../developer/app-sdk-android-phase1.md)

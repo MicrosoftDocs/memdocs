@@ -9,7 +9,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:
 
 #ROBOTS:
@@ -34,7 +33,7 @@ ms.collection:
 
 > [!NOTE]
 >
-> Consider reading the [Get Started with Microsoft Tunnel iOS SDK](/mem/intune/developer/tunnel-mam-ios-sdk) article, which explains how to prepare for integration on each supported platform.
+> Consider reading the [Get Started with Microsoft Tunnel iOS SDK](../developer/tunnel-mam-ios-sdk.md) article, which explains how to prepare for integration on each supported platform.
 
 ## Overview
 
@@ -60,7 +59,7 @@ __Mobile app platforms__:
 
 __Intune Mobile Application Management scenarios__:
 
-- Intune [MAM](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)
+- Intune [MAM](../apps/android-deployment-scenarios-app-protection-work-profiles.md)
 
 ## Prerequisites
 

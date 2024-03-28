@@ -37,9 +37,14 @@ The following sections describe the new features to try out in this version:
 <!--17667730,21659899,26419721-->
 
 
-<!--## General known issues-->
-<!--16822959-->
+## General known issues
 
+Upgrading from TP 2311 to 2401 may encounter a prereq check failure if the Resource Access slider is already in Intune. This regression is caused by the previous TP. To resolve this issue, follow these steps:
+
+   - Move any other slider (Apps/Endpoint) to Configuration Manager (CM) or Intune.
+   - Choose to apply the changes and click 'Ok.'
+   - Proceed with upgrading the site to TP 2401.
+   - Once the upgrade is complete, you can revert the (Apps/Endpoint) slider back to its old settings."
 
 <!--## Other Updates-->
 

@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2024
+ms.date: 03/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 
 # optional metadata
@@ -24,7 +23,7 @@ ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, contperf-fy21q1
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -129,6 +128,12 @@ For example:
   For example, you want to block untrusted ActiveX controls in your Office apps. You can create an [Administrative Template in Intune](administrative-templates-windows.md), configure this setting, and then assign this policy to a users group.
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
+
+### Azure Virtual Desktop multi-session
+
+You can use Intune to manage Windows multi-session remote desktops created with Azure Virtual Desktop, just like you manage any other shared Windows client device. When you assign policies to user groups or devices, Azure Virtual Desktop multi-session is a special scenario. When using these virtual machines, device CSPs must target device groups. User CSPs must target user groups.
+
+For more information, go to [Use Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ### Windows CSPs and their behavior
 

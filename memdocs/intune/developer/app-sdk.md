@@ -7,11 +7,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/04/2023
-ms.topic: overview
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 
 ms.reviewer: jamiesil
@@ -19,7 +18,7 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 

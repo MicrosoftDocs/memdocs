@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: Reference for Policy entities
-titleSuffix: Microsoft Intune 
+titleSuffix: Microsoft Intune
 description: Reference topic for the Policy category of entity collections in the Intune Data Warehouse API.
 keywords: Intune Data Warehouse
 author: Erikre
@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 #ROBOTS:
@@ -22,9 +21,8 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 

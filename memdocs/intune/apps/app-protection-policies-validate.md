@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 02/27/2024
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.technology:
 ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 
 # optional metadata

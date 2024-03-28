@@ -7,12 +7,11 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/13/2022
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:
 
 # optional metadata

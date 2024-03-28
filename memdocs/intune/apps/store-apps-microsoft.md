@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/03/2023
+ms.date: 02/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 
 # optional metadata
@@ -60,6 +59,9 @@ To use Microsoft Store apps, be sure the following criteria are met:
 ## Add and deploy a Microsoft Store app
 
 A Global administrator or Intune administrator can use the following steps to add and deploy a Microsoft Store app. 
+
+> [!NOTE]
+> To ensure the Company Portal app is successfully installed on your end user's device, you may need to set the **Install behavior** to **User** and the deployment Entra ID group as **Only devices**. 
 
 ### Step 1: Add an app from the Microsoft Store
 

@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 
 # optional metadata
@@ -26,7 +25,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: has-adal-ref
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -59,12 +58,16 @@ Before you start integrating the Intune App SDK into your iOS application, take 
   and where to find these features in the Microsoft Intune admin center.  
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Get Started with Intune App SDK Guide](app-sdk-get-started.md) explains how to prepare for integration on each supported platform.
-- [iOS app protection policy settings] describes each iOS setting in detail.
+- [iOS app protection policy settings] describe each iOS setting in detail.
   Your app will support these settings by integrating the SDK.
   During the SDK integration process, you'll also configure these settings in your own test tenant for validation.
 - (Optional) [Plan for mobile application management in Microsoft Intune - Training | Microsoft Learn] explains how to plan for mobile application management using Microsoft Intune, with a focus on adding apps to Intune, using app protection policies and app configuration policies, and troubleshooting app protection policy deployment.
 
 ## Key Decisions for SDK integration
+
+### Do I need to register my application with the Microsoft identity platform?
+ 
+Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 
 ### Do I have access to my application's source code?
 
@@ -74,8 +77,7 @@ See [App Wrapping Tool for iOS] for more details.
 
 ### Should my application integrate the Microsoft Authentication Library (MSAL)?
 
-Refer to [Overview of the Microsoft Authentication Library (MSAL)] to determine whether your application will need to integrate MSAL.
-Most applications must integrate MSAL before integrating the Intune SDK.
+Yes, you are required to integrate with MSAL before integrating the Intune SDK. Before integrating with MSAL, all apps are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 
 See [Stage 2: MSAL prerequisite and setup] for instructions on integrating MSAL and additional details on identity scenarios inside your application.
 
@@ -84,7 +86,7 @@ See [Stage 2: MSAL prerequisite and setup] for instructions on integrating MSAL 
 Without Intune App Protection Policy support, how does your application handle user authentication and accounts?
 
 - Does your application currently only allow a single account to be logged in?
-Does your application explicitly force the logged-in account to log out—and delete that previous account's data—before allowing another account to log-in?
+Does your application explicitly force the logged-in account to log out—and delete that previous account's data—before allowing another account to log in?
 If so, your application is **single-identity**.
 
 - Does your application currently allow a second account to log in, even if a different account is already logged in?
@@ -115,7 +117,7 @@ See [Manage data transfer between iOS apps in Microsoft Intune].
 
 ### Does my application have resources that should be protected by Conditional Access?
 
-[Conditional Access (CA)] is an [Microsoft Entra ID]
+[Conditional Access (CA)] is a [Microsoft Entra ID]
 feature that can be used to control access to Microsoft Entra resources.
 Intune administrators can define CA rules that allow resource access only from devices or apps that are managed by Intune.
 
@@ -176,7 +178,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 
 <!-- Other SDK Guide Markdown documentation -->
 [Stage 2: MSAL prerequisite and setup]:app-sdk-ios-phase2.md
-[Stage 5: Enable multi-identity]:app-sdk-ios-phase5.md#enable-multi-identity-optional
+[Stage 5: Enable multi-identity]:app-sdk-ios-phase5.md
 [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications]:app-sdk-ios-phase4.md
 [Manage data transfer between iOS apps in Microsoft Intune]:/mem/intune/apps/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
 [Stage 6: App Protection CA support]:app-sdk-ios-phase6.md#app-protection-ca-support-optional
@@ -202,3 +204,4 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Assign licenses]:/mem/intune/fundamentals/licenses-assign
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/develop/quickstart-register-app
