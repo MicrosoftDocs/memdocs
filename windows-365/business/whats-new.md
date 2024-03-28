@@ -53,6 +53,13 @@ Learn what new features are available in Windows 365 Business.
 ## Week of March 26, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Resize support for Windows 365 Business (public preview)<!--48540819-->
+
+You can now use the resize remote action for Windows 365 Business Cloud PCs. For more information, see [Remote management actions](remotely-manage-business-cloud-pcs.md#remote-management-actions).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
 #### Single sign-on (public preview)<1--48439644->
