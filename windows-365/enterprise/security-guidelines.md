@@ -46,8 +46,12 @@ To help improve security for your Cloud PCs, consider the following general guid
 6. Windows 365 integrates with Microsoft Defender for Endpoint. Security and endpoint admins can work together to manage their Cloud PC environment just like they manage a physical endpoint. If subscribed, Cloud PCs will:
     - Send data through to Microsoft 365 Secure Score.
     - Unhealthy PCs will show up on the Microsoft Defender for Endpoint Security Center and threat analysis dashboards.
-    - Cloud PCs will respond to remediation measures just like other managed devices.
-
+    - Respond to remediation measures just like other managed devices.
+    - Support tamper protection management using [Defender](/microsoft-365/security/defender-endpoint/manage-tamper-protection-microsoft-365-defender) or [Intune](/microsoft-365/security/defender-endpoint/manage-tamper-protection-intune)  
+7. Windows 365 integrates with Microsoft Purview. Onboarding to Defender for Endpoint includes [Purview Endpoint Data Loss Protection (DLP)](/purview/endpoint-dlp-getting-started). DLP detects when sensitive items are used and shared. This gives you the visibility and control you need to make sure that data is used and protected properly, and to help prevent risky behavior that might compromise them. [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings) to prevent data from getting:
+    - Copied from a Cloud PC clipboard/drive to unauthorized devices.
+    - Printed to unauthorized printers.
+    
 <!-- ########################## -->
 ## Next steps
 
