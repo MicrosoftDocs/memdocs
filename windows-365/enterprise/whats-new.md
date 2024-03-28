@@ -57,12 +57,12 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of March 26, 2024 (Service release 2402)
+## Week of March 26, 2024 (Service release 2403)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Concurrency buffer for Windows 365 Frontline Cloud PCs<1--48929001-->
+#### Concurrency buffer for Windows 365 Frontline Cloud PCs<!--48929001-->
 
 A new concurrency buffer lets you exceed the max concurrency count for a limited time under certain circumstances, like during shift changes. For more information, see [Exceeding the maximum concurrency limit](introduction-windows-365-frontline.md#exceeding-the-maximum-concurrency-limit).
 
@@ -77,7 +77,7 @@ You can now use bulk actions with the following remote actions: Restore, Restart
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Microsoft Purview Data Loss Prevention support for Windows 365 Enterprise<!==49070474-->
+#### Microsoft Purview Data Loss Prevention support for Windows 365 Enterprise<!--49070474-->
 
 Microsoft Purview Data Loss Prevention (DLP) now supports Windows 365 Enterprise. For more information, see [Endpoint DLP support for virtualized environments](/purview/endpoint-dlp-getting-started#endpoint-dlp-support-for-virtualized-environments).
 
