@@ -20,12 +20,14 @@ ms.collection:
 - highpri
 ---
 
-# Microsoft Intune for US Government High and DoD service description
+# Microsoft Intune for US Government GCC High and DoD service description
 
 > [!NOTE]
 > This article applies to Microsoft Intune features only. If you're looking for information on other features, then go to that specific documentation. For example, for Microsoft Teams devices, go to [Teams Rooms on Windows and Android](/microsoftteams/rooms/teams-devices-feature-comparison).
 
-The Intune U.S. government service description is as an overview of the service offering in the Government Community Cloud (GCC) High and U.S. Department of Defense (DoD) environments. It lists the feature differences compared to the commercial offering of Microsoft Intune.
+The Intune U.S. government service description is as an overview of the service offering in the Government Community Cloud (GCC) High and U.S. Department of Defense (DoD) environments.
+
+This article lists the feature differences compared to the commercial offering of Microsoft Intune.
 
 To learn more about Intune for GCC customers, go to [EMS offers for US Government and Microsoft 365 interoperability](/enterprise-mobility-security/solutions/ems-govt-service-description#ems-offers-for-us-government-and-microsoft-365-interoperability).
 
