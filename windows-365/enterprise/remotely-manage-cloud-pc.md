@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 03/27/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -37,22 +37,23 @@ Cloud PCs support the following remote management actions:
 
 | Remote action | Bulk action support? |
 | --- | :---: |
-| [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics) | No |
+| [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics) | Yes |
+| Create Cloud PC manual restore point | Yes |
 | Full Scan | No |
-| [Place Cloud PC Under Review](place-cloud-pc-under-review.md) | No |
-| Power Off | No |
-| Power On | No |
+| [Place Cloud PC Under Review](place-cloud-pc-under-review.md) | Yes |
+| Power Off (Windows 365 Frontline) (preview) | Yes |
+| Power On (Windows 365 Frontline) (preview) | Yes |
 | Quick Scan | No |
+| [Remove Cloud PCs from review](place-cloud-pc-under-review.md) | Yes |
 | Rename | No |
-| [Reprovisioning](provisioning.md#reprovisioning)\* | Yes |
-| [Resize](resize-cloud-pc.md)* | Yes |
+| [Reprovisioning](provisioning.md#reprovisioning) | Yes |
+| [Resize](resize-cloud-pc.md) | Yes |
 | Restart | Yes |
 | [Restore](restore-overview.md) | Yes|
-| Sync | No |
-| Troubleshoot | No |
+| Share Cloud PC restore point to storage | Yes |
+| Sync | Yes |
+| Troubleshoot | Yes |
 | Update Windows Defender | No |
-
-\*This remote action is specific to Cloud PC devices.
 
 You can run remote actions for up to 5,000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/mem/intune/remote-actions/bulk-device-actions).
 
