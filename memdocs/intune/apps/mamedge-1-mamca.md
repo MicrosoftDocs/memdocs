@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Understand Microsoft Entra conditional access with Microsoft Edge for Business
+title: Step 1. Understand Microsoft Entra conditional access with Microsoft Edge for Business
 titleSuffix:
-description: Understand Microsoft Entra conditional access with Microsoft Edge for Business.
+description: Step 1. Understand Microsoft Entra conditional access with Microsoft Edge for Business.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,7 +30,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Entra conditional access with Microsoft Edge for Business
+# Step 1. Microsoft Entra conditional access with Microsoft Edge for Business
 
 The modern security perimeter extends beyond an organization's network perimeter to include user and device identity. Organizations now use identity-driven signals as part of their access control decisions. Microsoft Entra conditional access brings signals together to help enforce organizational policies. It's Microsoft's Zero Trust policy engine that takes signals from various sources into account when enforcing policy decisions.
 
