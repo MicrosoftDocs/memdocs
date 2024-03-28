@@ -2384,6 +2384,11 @@
       "source_path": "memdocs/intune/protect/wandera-mtd-connector-integration.md",
       "redirect_url": "/mem/intune/protect/jamf-mtd-connector-integration",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/introduction-intune-education.md",
+      "redirect_url": "/mem/intune/industry/education/introduction-intune-education",
+      "redirect_document_id": false
+    } 
   ]
 }
