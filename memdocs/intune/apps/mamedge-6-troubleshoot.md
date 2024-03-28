@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Troubleshoot securing data with Microsoft Edge for Business
+title: Step 6. Troubleshoot Microsoft Edge for Business data security
 titleSuffix:
-description: Troubleshoot securing your corporate data in Microsoft Intune with Microsoft Edge for Business.
+description: Step 6. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,9 +30,9 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Troubleshooting Microsoft Edge for Business data security
+# Step 6. Troubleshoot Microsoft Edge for Business data security
 
-Troubleshooting app protection policies (APP) and app configuration policies (ACP) can involve several steps. 
+Troubleshooting app protection policies (APP) and app configuration policies (ACP) in Microsoft Intune can involve several steps. 
 
 The following list provides common issues and potential solutions:
 
