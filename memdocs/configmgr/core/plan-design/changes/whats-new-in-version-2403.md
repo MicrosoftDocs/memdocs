@@ -38,7 +38,7 @@ A new dashboard is added to the console under monitoring workspace, which shows 
 
 :::image type="content" source="media/17668422-troubleshooting-dash.png" alt-text="Screenshot of new troubleshooting dashboard in console.":::
 
-For more information, see [Software update health dashboard](../../clients/manage/client-health-dashboard.md)
+For more information, see [Software update health dashboard](../../clients/manage/software-update-health-dashboard.md)
 
 ### Introducing centralized search box: Effortlessly find what you need in the console!
 
