@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Integrate Mobile Threat Defense (MTD) for App Protection Policy
+title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
 titleSuffix:
-description: Integrate Microsoft Entra conditional access with Microsoft Edge for Business.
+description: Step 3. Integrate Microsoft Entra conditional access with Microsoft Edge for Business.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -31,7 +31,7 @@ ms.collection:
 ---
 
 
-# Integrate Mobile Threat Defense (MTD)
+# Step 3. Integrate Mobile Threat Defense
 
 The Microsoft Mobile Threat Defense (MTD) connector is a feature in Microsoft Intune that creates a channel of communication between Intune and your chosen MTD vendor, regardless of the device’s operating system. There are various supported MTD partners for both Windows and mobile devices. Intune integrates data from an MTD vendor as an information source for device compliance policies and device conditional access rules. The information provided by this communication channel can help protect corporate resources, such as Exchange and SharePoint data, by blocking access from compromised devices.
 
