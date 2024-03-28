@@ -88,15 +88,15 @@ Use the following steps to configure the MTD Connector.
 
 4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
    
->[!NOTE]
->In the following example we have selected Windows Security Center, however you can check the complete list of MTD Partners in the following link https://learn.microsoft.com/en-us/mem/intune/protect/mobile-threat-defense#connector-status
+    > [!NOTE]
+    > In this example, you have selected **Windows Security Center**. For the full list of MTD Partners, see [Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
 
     :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Add Connector - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
 
 5. >  select **Create** to create the connector.
 
 > [!IMPORTANT]
-> The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first App Protection Policy arrives to the user or the first MAM user is enrolled to your Intune tenant. You can read more about the different status on the following  https://learn.microsoft.com/en-us/mem/intune/protect/mobile-threat-defense#connector-status.
+> The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first App Protection Policy arrives to the user or the first MAM user is enrolled to your Intune tenant. For more information, see [Connector status](../protect/mobile-threat-defense.md#connector-status).
 
 ## Next step
 
