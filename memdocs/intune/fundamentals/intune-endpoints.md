@@ -191,7 +191,7 @@ Android Enterprise capabilities (see this [Google documentation](https://support
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
-| 186 | Microsoft Azure Attestation | Default<BR>Required | False | `intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net` | **TCP:** 443 |
+| 186 | Microsoft Azure Attestation | Default<BR>Required | False | `intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape6.neu.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net` | **TCP:** 443 |
 
 ### Authentication dependencies
 
