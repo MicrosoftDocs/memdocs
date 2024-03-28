@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, faq
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2024
+ms.date: 04/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice:
@@ -52,9 +52,13 @@ If you want access to Copilot in Intune, then contact the Copilot for Security w
 
 Yes. Access to Copilot for Security is managed using Copilot for Security and/or Microsoft Entra roles. For more information on the different roles, and what they can do, go to [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication).
 
-If you're an Intune admin and have the correct Copilot for Security or Microsoft Entra role assigned to you, then you can use Copilot for Security to get insights about your Intune data. But, we recommended you use Copilot in Intune, as its scope is only Intune data.
+If you're an Intune admin and have the correct Copilot for Security or Microsoft Entra role assigned to you, then you can use Copilot for Security to get insights about your Intune data.
 
-If you're a security admin, then you can use Copilot in Intune if you only want insights into your Intune data. Copilot for Security is scoped to all your embedded services.
+Copilot for Security is scoped to all your embedded services.
+
+If your an Intune admin or IT admin, and only want Intune data, then you should use [Copilot in Intune](copilot-intune-overview.md). Its scope is only Intune data and its capabilities are integrated in the relevant areas in the Intune admin center. 
+
+If you're a security admin, then you can use [Copilot in Intune](copilot-intune-overview.md) if you only want insights into your Intune data.
 
 ## Capabilities and cost
 
