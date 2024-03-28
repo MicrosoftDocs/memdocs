@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/27/2024
+ms.date: 04/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -62,7 +62,7 @@ To use Copilot in Intune, you should know the following information:
   - [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
   - [Manage capacity in Copilot for Security](/security-copilot/manage-capacity)
 
-- **Copilot configuration**: Microsoft Copilot for Security must be configured, and you must complete the first run tour in the Copilot for Security portal before you can use Copilot features in Intune. For the specific setup tasks, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
+- **Copilot configuration**: Before you can use the Copilot features in Intune, Microsoft Copilot for Security must be configured, and you must complete the first run tour in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the specific setup tasks, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
   You can check the status in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Copilot**.
 
@@ -74,7 +74,7 @@ To use Copilot in Intune, you should know the following information:
 
 - **Intune plug-in source**: To use Copilot in Intune, you need the Intune plug-in enabled in Copilot for Security. This plug-in allows you to access your Intune data and use Copilot in the Intune admin center.
 
-  Go to the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner):
+  Go to the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner):
 
   :::image type="content" source="./media/copilot-intune-overview/security-copilot-sources.png" alt-text="Screenshot that shows the plugin sources that are available, enabled, and disabled in Microsoft Copilot for Security.":::
 
