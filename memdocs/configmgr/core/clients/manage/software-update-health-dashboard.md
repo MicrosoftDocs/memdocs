@@ -24,21 +24,21 @@ The Troubleshooting dashboard gives you information about different scenarios wh
 
 In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Troubleshooting dashboard** node.
 
+:::image type="content" source="media/17668422-Troubleshooting-dashboard.png" alt-text="An example of the updated Troubleshooting Dashboard in version 2403 or later." lightbox="media/17668422-Troubleshooting-dashboard.png":::
+
 # Software update health dashboard
 
 You deploy software updates to help secure your environment, but these deployments only reach healthy error free clients. Configuration Manager update errors adversely effect overall compliance. Determining software update errors can be challenging depending upon the error details.
 
 Configuration Manager provides a dashboard with information about the software update deployment status health and common top errors which most of the devices have in their environment. View your overall software update errors, common errors. 
 
-In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Troubleshooting dashboard**, and select the **software udpate health** node.
+In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Troubleshooting dashboard**, and select the **software update health** node.
 
-:::image type="content" source="media/5728069-client-health-dashboard-small.png" alt-text="An example of the updated Client Health Dashboard in version 2111 or later." lightbox="media/5728069-client-health-dashboard.png":::
+:::image type="content" source="media/17668422-software-update-health.png" alt-text="An example of the updated Software update Health Dashboard in version 2403 or later." lightbox="media/17668422-software-update-health.png":::
 
 ## Overall software update health
 
 You can browse the **update group** in the dashboard:
-
-:::image type="content" source="media/client-health-dashboard-ribbon.png" alt-text="Browse the update group.":::
 
 When you set the update group, the total number of devices in the collection will be updated, active software update success percentage will be updated. This shows current percentage compliance for the update group at the run time.
 
@@ -73,10 +73,16 @@ The various top error details are covered in this dashboard, If the number is 0 
 | Unable to get content location -(87D00662)                                       | 1. Restart Windows Update Agent. 2. Restart SMS Agent. 3. Initiate the Update Evaluation Cycle. |
 | Update content not available on DP -(80004002, 87D00605)                         | 1.  Check whether the UpdatesHandler.log has the following entries. WSUS update (689c410a-44d7-45c7-ae51-9806fcb177f5) installation result = 0x80004002, Reboot State = NoReboot Update execution failed. 2. Check whether the WUAHandler.log has the following entries Failed to get final installation result of updates. Error = 0x80004002. Update 1 (<unique update ID>) finished installing (0x80004002). Update 2 (<unique update ID>) finished installing (0x80004002). Installation of updates completed. 3. Check whether the WUAHandler.log has "WARNING: WU client failed installing updates with error 0x80004002" 4. The WUA installation on the client might be missing files or be corrupt. Reinstall WUA (https://blogs.technet.microsoft.com/enterprisemobility/2014/07/14/how-to-install-the-windows-update-agent-on-client-computers/) 5. Restart the ConfigMgr Agent Service. 6. Start the Software Update Scan and Deployment Cycles.  |
 | Update files missing or corrupted -(8007000E)                                    | 1. Open Command prompt as administrator execute the commands on the given sequence. a. Net stop wuauserv b. Sc config wuauserv type= own c. Net start wuauser |
-| Applications with Multiple Versions -(8007066F)                                  | 1. Find the update getting failed and check the client has different versions of the application getting updated. 2. If the client has different versions of the application Open the Registry editor. 3. Navigate to the following registry keys HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders 4. The correct and default value for AppData should be: %USERPROFILE%\AppData\Roaming 5. Close the Registry editor, and try again Windows Update again. (A reboot should not be required.) 6. If the problem persists, repeat the steps 3 through 5 with the following registry keys: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\ HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\  Or, run http://support.microsoft.com/kb/886549in place of Step # 6. | 
+| Applications with Multiple Versions -(8007066F)                                  | 1. Find the update getting failed and check the client has different versions of the application getting updated. 2. If the client has different versions of the application Open the Registry editor. 3. Navigate to the following registry keys HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders 4. The correct and default value for AppData should be: %USERPROFILE%\AppData\Roaming 5. Close the Registry editor, and try again Windows Update again. (A reboot should not be required.) 6. If the problem persists, repeat the steps 3 through 5 with the following registry keys: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\ HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\  Or, run http://support.microsoft.com/kb/886549 in place of Step # 6. | 
 | Missing / Conflicting Boundary -(800705B4, 87D00200)                             | 1. Add Missing IP Subnets to Boundary |
 | WUA Not responding -(87D00600, 87D00662)                                         | 1. Restart Windows Update Agent. 2. Restart SMS Agent. 3. Initiate the Update Evaluation Cycle.' |
 | Disable Branch Cache -(87D00314, 87D0027C)                                       | 1. Restart BITS. 2. Disable Branch Cache(HKLM\Software\Policies\Microsoft\PeerDist\Service. 3. Start the Update Evaluation cycle' |
+
+In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Troubleshooting dashboard**, select the **software update health** node and select the **Software Distribution - File not Found -80070002, C80003F3**.
+
+:::image type="content" source="media/17668422-error-software-dist-file-error.png" alt-text="An example of the error devices in version 2403 or later." lightbox="media/17668422-error-software-dist-file-error.png":::
+
+You can export the devices or create collection to perform manual remediation to these devices.
 
 ## Next steps
 
