@@ -57,7 +57,34 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of March 26, 2024
+## Week of March 26, 2024 (Service release 2402)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cloud PC size recommendation report (preview)<!--45433311-->
+
+A new Intune admin center report recommends appropriate sizes for Cloud PCs to better fit your organization's needs. For more information, see [Cloud PC recommendations report](report-cloud-pc-recommendations.md).
+
+#### Improvements to Cloud PC connection quality report are now generally available<!--46738280-->
+
+Improvements to the Cloud PC connection quality report have moved out of preview and into general availability. These improvements include:
+
+- a more comprehensive view of the overall performance of their Cloud PCs.
+- a more detailed view of devices when they are in a state of poor performance due to high round trip times.
+- Tenant level visibility to most recent/current for:
+  - Round Trip Time.
+  - Bandwidth.
+  - Connection Time.
+  - UDP Utilization.
+- Connection specific detail on client IP and associated CPC Gateway.
+- Filters for all columns.
+
+For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
 
 #### Microsoft Graph APIs support for Windows 365 v1.0 workloads<!--47055302-->
 
@@ -66,6 +93,7 @@ In addition to Beta workloads, the Microsoft Graph APIs now support Windows 365 
 <!-- ########################## -->
 ## Week of March 11, 2024
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Documentation
 
 #### Updated documentation article: Forced browser sign-in setting for Cloud PC gallery images<!--49401955-->
