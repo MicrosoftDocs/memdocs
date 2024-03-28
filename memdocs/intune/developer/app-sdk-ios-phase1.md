@@ -77,8 +77,7 @@ See [App Wrapping Tool for iOS] for more details.
 
 ### Should my application integrate the Microsoft Authentication Library (MSAL)?
 
-Refer to [Overview of the Microsoft Authentication Library (MSAL)] to determine whether your application will need to integrate MSAL.
-Most applications must integrate MSAL before integrating the Intune SDK.
+Yes, you are required to integrate with MSAL before integrating the Intune SDK. Before integrating with MSAL, all apps are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 
 See [Stage 2: MSAL prerequisite and setup] for instructions on integrating MSAL and additional details on identity scenarios inside your application.
 
