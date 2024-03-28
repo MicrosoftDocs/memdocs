@@ -2,7 +2,7 @@
 # required metadata
 
 title: What is Intune for Education?
-description: Learn how Intune for Education differs from the full Intune management experience.
+description: Learn about Intune for Education and how it is different from the full Intune management experience.
 keywords: what is Intune
 author: lenewsad
 ms.author: lanewsad
