@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Understand Microsoft Edge for Business end user experience 
+title: Step 5. Understand Microsoft Edge for Business end user experience for Windows
 titleSuffix:
-description: Understand Microsoft Edge for Business end user experience.
+description: Step 5. Understand Microsoft Edge for Business end user experience Windows.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,7 +30,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Edge for Business end user experience for Windows
+# Step 5. Understand Microsoft Edge for Business end user experience for Windows
 
 Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a manage or unmanage device.
 
