@@ -1733,6 +1733,8 @@ items:
         href: ./industry/education/introduction-intune-education.md
       - name: Intune for Education docs
         href: /intune-education/
+      - name: "Tutorial: How to deploy and manage devices in a school"
+        href: ./industry/education/tutorial-school-deployment/introduction.md
     - name: Government
       items:
       - name: Intune US Government service description
