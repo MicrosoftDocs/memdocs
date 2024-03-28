@@ -9,7 +9,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/01/2024
 ms.topic: article
-ms.prod:
 ms.service: microsoft-intune
 ms.suite: ems
 
@@ -21,12 +20,12 @@ ms.collection:
 - highpri
 ---
 
-# Microsoft Intune for US Government GCC High and DoD service description
+# Microsoft Intune for US Government High and DoD service description
 
 > [!NOTE]
 > This article applies to Microsoft Intune features only. If you're looking for information on other features, then go to that specific documentation. For example, for Microsoft Teams devices, go to [Teams Rooms on Windows and Android](/microsoftteams/rooms/teams-devices-feature-comparison).
 
-The Intune U.S. government service description is as an overview of the service offering in the GCC High and DoD environments. It lists the feature differences compared to the commercial offering of Microsoft Intune.
+The Intune U.S. government service description is as an overview of the service offering in the Government Community Cloud (GCC) High and U.S. Department of Defense (DoD) environments. It lists the feature differences compared to the commercial offering of Microsoft Intune.
 
 To learn more about Intune for GCC customers, go to [EMS offers for US Government and Microsoft 365 interoperability](/enterprise-mobility-security/solutions/ems-govt-service-description#ems-offers-for-us-government-and-microsoft-365-interoperability).
 
@@ -56,7 +55,7 @@ These government instances are also known as **IL4** and **IL5**, where **IL** r
 
 - In the government cloud, the Intune service instance is shared with GCC High and DoD tenants. This architecture is slightly different than other services, such as Microsoft 365 and Azure.
 
-- Microsoft GCC is the same instance as Microsoft Intune in the commercial space. Other services, like Microsoft 365, have a separate GCC instance. Intune doesn't have a separate GCC instance.
+- GCC is the same instance as Microsoft Intune in the commercial space. Other services, like Microsoft 365, have a separate GCC instance. Intune doesn't have a separate GCC instance.
 
   So, when you see **GCC** in this Intune article, it refers to the commercial service. When you see **GCC High** or **DoD**, it refers to the government cloud.
 
@@ -73,7 +72,7 @@ The following features are available and supported in Microsoft GCC High and/or 
 | Standard MDM features | ✅ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✅ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the government environment can be used. When you sign in to a GCC-H tenant, you see the connectors enabled for those specific vendors. |
 | Platform support | ✅ <br/><br/> You can use the same operating systems - Android, AOSP, iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
-| Remote Help | ✅ <br/><br/> Remote Help is supported in Microsoft GCC (not GCC High nor DoD) on Android and Windows devices. <br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](../fundamentals/remote-help.md). |
+| Remote Help | ✅ <br/><br/> Remote Help is supported in GCC on Android and Windows devices. It's not supported in GCC High or DoD.<br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](../fundamentals/remote-help.md). |
 
 ### In the planning phase
 

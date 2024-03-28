@@ -73,25 +73,31 @@ The Remote Help app supports the following capabilities in general across the su
 
 ## Prerequisites
 
-The following general prerequisites apply to Remote Help.
+- The following general prerequisites apply to Remote Help:
 
-- [Intune subscription](../fundamentals/licenses.md)
-- [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
-- [Supported platforms and devices](#supported-platforms-and-devices)
+  - [Intune subscription](../fundamentals/licenses.md)
+  - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
+  - [Supported platforms and devices](#supported-platforms-and-devices)
 
-> [!NOTE]
-> For specific prerequisites based on the platform that you're using, go to:
->
-> - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
-> - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
-> - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#prerequisites-for-remote-help-on-macos)
+  For specific prerequisites based on the platform that you're using, go to:
 
-> [!NOTE]
-> Remote Help has the following limitations:  
->
-> - Remote Help is supported in GCC environments. It's not supported on GCC High or DoD Tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
-> - You cannot establish a Remote Help session from one tenant to a different tenant.
-> - May not be available in all markets or localizations.
+  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
+  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
+  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#prerequisites-for-remote-help-on-macos)
+
+- Remote Help has the following limitations:  
+
+  - Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
+
+    - Windows 10/11
+    - Windows 10/11 on ARM64 devices
+    - Windows 365
+    - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
+
+    Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
+
+  - You cannot establish a Remote Help session from one tenant to a different tenant.
+  - Remote Help might not be available in all markets or localizations.
 
 ## Supported platforms and devices
 
