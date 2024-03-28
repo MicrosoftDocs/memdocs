@@ -29,22 +29,25 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# What is Intune for Education?  
+# What is Intune for Education?
+
 **Applies to**:  
+
 * Windows 10
 * Windows 11
-* iOS/iPadOS 
+* iOS/iPadOS
 
-Enable productivity on school devices while protecting your school's data with Microsoft Intune for Education. *Intune for Education* is a cloud-based, mobile device management (MDM) service for schools. In the Intune for Education portal you can focus on school-related settings and devices that belong to staff and students, while also leveraging the capabilities of Microsoft Intune. Use Intune for Education by itself, together with [Microsoft Intune](what-is-intune.md), and with supported [Microsoft Education tools](https://microsoft.com/education).  
+Enable productivity on school devices while protecting your school's data with Microsoft Intune for Education. *Intune for Education* is a cloud-based, mobile device management (MDM) service for schools. In the Intune for Education portal you can focus on school-related settings and devices that belong to staff and students, while also leveraging the capabilities of Microsoft Intune. Use Intune for Education by itself, together with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), and with supported [Microsoft Education tools](https://microsoft.com/education).  
 
-With Intune for Education, you can:  
+With Intune for Education, you can:
+
 * Manage the mobile devices and apps your staff and students use for school.  
 * Protect school data by helping to control the way your users access and share it.  
 * Ensure devices and apps are compliant with security requirements.  
 
 For more information about Intune for Education, see [Overview of Intune for Education](/intune-education/what-is-intune-for-education).  
 
-> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]   
+> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
 
 ## Next steps
 * Ensure your organization meets [Microsoft Intune technical requirements and capabilities](/intune/supported-devices-browsers).  

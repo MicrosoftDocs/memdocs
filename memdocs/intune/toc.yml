@@ -1730,7 +1730,7 @@ items:
       items:
       - name: What is Intune for Education
         displayName: edu
-        href: ./fundamentals/introduction-intune-education.md
+        href: ./industry/education/introduction-intune-education.md
       - name: Intune for Education docs
         href: /intune-education/
     - name: Government
