@@ -126,6 +126,6 @@ In the previous steps, you created a conditional access policy to support app pr
 
 ## Next step
 
-[![Step 2 to create an app protection policy.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-end-user-experience.md)
+[![Step 2 to create an app protection policy.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-app.md)
 
 Continue with [Step 2](mamedge-2-app.md) to create an app protection policy.
