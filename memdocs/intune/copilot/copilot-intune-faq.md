@@ -52,7 +52,7 @@ If you want access to Copilot in Intune, then contact the Copilot for Security w
 
 Yes. Access to Copilot for Security is managed using Copilot for Security and/or Microsoft Entra roles. For more information on the different roles, and what they can do, go to [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication).
 
-If you're an Intune admin and have the correct Copilot for Security or Microsoft Entra role assigned to you, then you can use Copilot for Security to get insights about your Intune data. But, we recommended you use Copilot in Intune, as its scope is only Intune data.
+If you're an Intune admin and have the correct Copilot for Security or Microsoft Entra role assigned to you, then you can use Copilot for Security to get insights about your Intune data. Copilot in Intune is recommended for IT admins as its scope is only Intune data, and its capabilities are integrated in relevant areas in the Intune console. 
 
 If you're a security admin, then you can use Copilot in Intune if you only want insights into your Intune data. Copilot for Security is scoped to all your embedded services.
 
