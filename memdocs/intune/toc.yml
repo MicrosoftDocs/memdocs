@@ -1730,11 +1730,13 @@ items:
       items:
       - name: What is Intune for Education
         displayName: edu
-        href: ./industry/education/tutorial-school-deployment/introduction-intune-education.md
+        href: ./industry/education/introduction-intune-education.md
       - name: Intune for Education docs
         href: /intune-education/
+
+
       - name: "Tutorial: How to deploy and manage devices in a school"
-        href: ./industry/education/tutorial-school-deployment/tutorial-school-deployment/introduction.md
+        href: ./industry/education/tutorial-school-deployment/introduction.md
       - name: 1. Prepare your tenant
         items:
           - name: Set up Microsoft Entra ID
