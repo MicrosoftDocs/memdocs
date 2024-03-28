@@ -70,6 +70,42 @@ A new concurrency buffer lets you exceed the max concurrency count for a limited
 
 You can now set maintenance windows for running remote actions on Cloud PCs. This will notify users in-session about the impending remote action period. For more information, see [Cloud PC maintenance windows](cloud-pc-maintenance-windows.md).
 
+#### Bulk remote action support<!--49086004-->
+
+You can now use bulk actions with the following remote actions: Restore, Restart, Resize, and Reprovision. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Microsoft Purview Data Loss Prevention support for Windows 365 Enterprise<!==49070474-->
+
+Microsoft Purview Data Loss Prevention (DLP) now supports Windows 365 Enterprise. For more information, see [Endpoint DLP support for virtualized environments](/purview/endpoint-dlp-getting-started#endpoint-dlp-support-for-virtualized-environments).
+
+#### Windows 365 Boot shared mode supports FIDO<!--49080360-->
+
+Windows 365 Boot shared mode now supports FIDO. For more information, see [How-to: Password-less FIDO2 Security Key Sign-in to Windows 10 HAADJ Devices](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-password-less-fido2-security-key-sign-in-to-windows-10/ba-p/1434583).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Known issues<!--49423094-->
+
+We’ve updated the article [Known issues: Windows 365 Enterprise and Frontline](known-issues-enterprise.md#teams-isnt-enforcing-screen-capture-protection), add a known issue for Teams isn't enforcing screen capture.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Microsoft Graph APIs support for Windows 365 v1.0 workloads<!--47055302-->
+
+In addition to Beta workloads, the Microsoft Graph APIs now support Windows 365 as v1.0 workloads. For more information, see [Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph](permission-scopes.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Cloud PC utilization report creation date<!--49175145-->
+
+The Cloud PC utilization report now shows the Cloud PC creation date. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
 #### Cloud PC size recommendation report (public preview)<!--45433311-->
 
 A new Intune admin center report recommends appropriate sizes for Cloud PCs to better fit your organization's needs. For more information, see [Cloud PC recommendations report](report-cloud-pc-recommendations.md).
@@ -90,13 +126,12 @@ Improvements to the Cloud PC connection quality report have moved out of preview
 
 For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Documentation
+### Windows 365 Frontline
 
-#### Microsoft Graph APIs support for Windows 365 v1.0 workloads<!--47055302-->
+#### Windows 365 Frontline support for power on/off in bulk<!--49473730-->
 
-In addition to Beta workloads, the Microsoft Graph APIs now support Windows 365 as v1.0 workloads. For more information, see [Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph](permission-scopes.md).
+You can now use bulk actions to turn on/off Windows 365 Frontline Cloud PCs.
 
 <!-- ########################## -->
 ## Week of March 11, 2024
