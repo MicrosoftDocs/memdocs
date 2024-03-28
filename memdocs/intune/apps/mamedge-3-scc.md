@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Integrate Microsoft Entra conditional access with Microsoft Edge for Business
+title: Integrate Mobile Threat Defense (MTD) for App Protection Policy
 titleSuffix:
 description: Integrate Microsoft Entra conditional access with Microsoft Edge for Business.
 keywords:
@@ -31,7 +31,7 @@ ms.collection:
 ---
 
 
-# Microsoft Entra conditional access with Microsoft Edge for Business
+# Integrate Mobile Threat Defense (MTD)
 
 The Microsoft Mobile Threat Defense (MTD) connector is a feature in Microsoft Intune that creates a channel of communication between Intune and your chosen MTD vendor, regardless of the device’s operating system. There are various supported MTD partners for both Windows and mobile devices. Intune integrates data from an MTD vendor as an information source for device compliance policies and device conditional access rules. The information provided by this communication channel can help protect corporate resources, such as Exchange and SharePoint data, by blocking access from compromised devices.
 
@@ -87,12 +87,16 @@ Use the following steps to configure the MTD Connector.
 3. Select **Add** to display the **Add Connector** pane.
 
 4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
+   
+>[!NOTE]
+>In the following example we have selected Windows Security Center, however you can check the complete list of MTD Partners in the following link https://learn.microsoft.com/en-us/mem/intune/protect/mobile-threat-defense#connector-status
 
     :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Add Connector - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
 
 5. >  select **Create** to create the connector.
 
-The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first MAM policy arrives to the user or the first MAM user is enrolled to your Intune tenant.
+> [!IMPORTANT]
+> The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first App Protection Policy arrives to the user or the first MAM user is enrolled to your Intune tenant. You can read more about the different status on the following  https://learn.microsoft.com/en-us/mem/intune/protect/mobile-threat-defense#connector-status.
 
 ## Next step
 
