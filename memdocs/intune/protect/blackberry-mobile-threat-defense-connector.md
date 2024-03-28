@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: BlackBerry Protect Mobile connector for Intune
+title: BlackBerry Protect Mobile MTD and Intune
 titleSuffix: Intune on Azure
-description: Learn about the CylancePROTECT Mobile(BlackBerry) MTD connector, which enables you to control mobile device access to your corporate resources.
+description: How to set up CylancePROTECT Mobile (BlackBerry) with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns

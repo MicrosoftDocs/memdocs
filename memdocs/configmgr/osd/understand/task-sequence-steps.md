@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 04/11/2022
+ms.date: 03/28/2024
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
@@ -1537,6 +1537,9 @@ The following conditions affect the packages installed by the task sequence:
 
 This setting specifies that the step continues if an individual software package installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
 
+#### Retry this step if computer unexpectedly restarts
+
+If one of the package installations unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries. <!--24334765-->
 
 
 ## <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates

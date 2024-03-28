@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 3/6/2024
+ms.date: 3/27/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -55,6 +55,13 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of March 26, 2024
+
+#### Microsoft Graph APIs support for Windows 365 v1.0 workloads<!--47055302-->
+
+In addition to Beta workloads, the Microsoft Graph APIs now support Windows 365 as v1.0 workloads. For more information, see [Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph](permission-scopes.md).
 
 <!-- ########################## -->
 ## Week of March 11, 2024
@@ -120,9 +127,9 @@ For more information, see [Microsoft Purview Customer Lockbox](/purview/customer
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### New 15 minute Sign-in frequency option (preview)<!--48439987-->
+#### New faster sign-in frequency option (preview)<!--48439987-->
 
-When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option to provide a 15 minute re-authentication period. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+When single sign-on is enabled, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Boot

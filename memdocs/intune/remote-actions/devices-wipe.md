@@ -183,6 +183,9 @@ Removing company data from an Android personally owned work profile device remov
 |Email|Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows.|Not supported.|Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune.|
 |Microsoft Entra unjoin|No.|No.|The Microsoft Entra ID record is removed.|
 
+> [!IMPORTANT]
+> Windows devices that are not registered in the Windows Autopilot Service, upon being deleted or retired from Intune are removed from Microsoft Entra ID. Before performing these commands consider backing up the Bitlocker Recovery Key and/or a local administrator user account credentials. On the other hand, although Autopilot registered devices leave Microsoft Entra ID, their computer object is retained alongside their properties (e.g. Windows LAPS, Bitlocker Recovery Key, Entra ID groups memberships).
+
 > [!NOTE]
 > For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
 
@@ -200,13 +203,17 @@ Device owners can manually unenroll their devices as explained in the following 
 
 ## Delete devices from the Intune admin center
 
-If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the admin center.
+If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a Retire or Wipe action depending on the OS/Enrollment type. Not all enrollment types support the Retire action. 
+<!--Please update this statement to call out which enrollment types will receive a retire when a delete is issued, and which enrollment types will receive a wipe when a delete is issued.-->
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
 
 > [!IMPORTANT]
-> The delete action will trigger a BitLocker suspension when BitLocker encryption is managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
+> The **Delete** action triggers the following actions:
+> * Depending on the device platform, it may retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](../remote-actions/devices-wipe.md#retire) section for the expected behavior.
+> * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
+
 
 ### Automatically delete devices with cleanup rules
 
