@@ -205,4 +205,4 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Assign licenses]:/mem/intune/fundamentals/licenses-assign
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
-[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:https://learn.microsoft.com/entra/identity-platform/quickstart-register-app
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/develop/quickstart-register-app
