@@ -129,7 +129,7 @@ Managed software updates have precedence over other policies that configure soft
      
    - **Target Local Date Time**: Select the local date time value that specifies when to force the installation of the software update.
    
-     The **Target Local Date Time** setting schedules the update using the UTC timezone. For example, you configure an update to install at 2PM, which is 2PM UTC. Due to the time conversion, the update is scheduled for 9AM EST.
+     The **Target Local Date Time** setting schedules the update using the UTC timezone. For example, an Admin located in Eastern US configures an update to install at 2PM UTC. Due to time conversion, the deadline for the update is actually for 7PM EST.
 
      - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
      - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
@@ -146,6 +146,9 @@ Managed software updates have precedence over other policies that configure soft
 8. Select **Next**.
 
 9. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+  > [!IMPORTANT]
+  > Assignment filters are not supported for DDM-based policies.
 
 10. Select **Next**.
    

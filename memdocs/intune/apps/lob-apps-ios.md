@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 
 # optional metadata
@@ -30,6 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - iOS/iPadOS
+- FocusArea_Apps_LOB
 ---
 
 # Add an iOS/iPadOS line-of-business app to Microsoft Intune

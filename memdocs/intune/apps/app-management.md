@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/30/2023
+ms.date: 03/20/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 
 # optional metadata
@@ -31,6 +30,7 @@ ms.collection:
 - highpri
 - highseo
 - AIreviewed
+- FocusArea_Apps_AppManagement
 ---
 
 # What is Microsoft Intune app management?

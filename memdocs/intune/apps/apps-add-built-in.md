@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Add
 ---
 
 # Add built-in apps to Microsoft Intune

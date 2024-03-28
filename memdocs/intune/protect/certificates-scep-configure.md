@@ -31,6 +31,8 @@ ms.collection:
 
 # Configure infrastructure to support SCEP with Intune
 
+[!INCLUDE [azure_portal](../includes/strong-mapping-cert.md)]
+
 Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](certificates-configure.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices.
 
 The [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md) is required to use SCEP certificate profiles with Intune when you also use an Active Directory Certificate Services Certification Authority, also called a *Microsoft CA*. The connector isn't supported on the same server as your issuing Certification Authority (CA). The connector isn't required when using [Third-party Certification Authorities](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
