@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/21/2023
+ms.date: 04/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -89,7 +89,7 @@ The following general prerequisites apply to Remote Help.
 > [!NOTE]
 > Remote Help has the following limitations:  
 >
-> - Remote Help is not supported on GCC, GCC High or DoD Tenants.
+> - Remote Help is supported in GCC environments. It's not supported on GCC High or DoD Tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
 > - You cannot establish a Remote Help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
@@ -204,7 +204,7 @@ You can monitor the use of Remote Help from within the Microsoft Intune admin ce
    - The type of control session.
 
 > [!NOTE]
-> The Recipient ID and Recipient name display “--” for Android Enterprise Dedicated devices, as these devices do not have user affinity.
+> The Recipient ID and Recipient name display "--" for Android Enterprise Dedicated devices, as these devices do not have user affinity.
 
 ### Try an interactive demo
 
@@ -212,4 +212,4 @@ The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.
 
 ## Next steps
 
-[Get support in Microsoft Intune admin center](../../get-support.md)
+[Get support in Microsoft Intune admin center](../../get-support.md).
