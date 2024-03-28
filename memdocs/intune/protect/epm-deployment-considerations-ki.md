@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 03/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,6 +43,10 @@ Applies to:
 
 ## Deployment considerations for Endpoint Privilege Management
 
+### Windows 10 devices might not immediately receive confirmation of support approvals
+
+We are working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We are working with the owner to resolve this as quickly as possible. 
+
 ### Authoring files with a file name as one of the sole attributes for identification
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
@@ -73,10 +77,6 @@ Endpoint Privilege Management supports executing files that are locally stored o
 ### Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
 Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
-
-### Windows 10 devices may not immediately receive support approvals and their notifications. 
-
-We've identified a set of scenarios that prevent Windows 10 devices from immediately receiving the notification that a new approval is ready for their device. The approval will still be delivered and may be expedited by manually initiating a sync from the device.  We are working with the responsible teams to resolve this as quickly as possible.
 
 ## Frequently asked questions
 
