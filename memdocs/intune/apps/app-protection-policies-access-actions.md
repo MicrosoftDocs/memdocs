@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,7 @@ You can explicitly choose to wipe your company's corporate data from the end use
 2. Select **Apps** > **App protection Policies**.
 3. Select **Create policy** and select the platform of the device for your policy. 
 4. Select **Configure required settings** to see the list of settings available to be configured for the policy. 
-5. By scrolling down in the Settings pane, you view a section titled **Conditional launch** with an editable table.
+5. By scrolling down in the Settings pane, you'll see a section titled **Conditional launch** with an editable table.
 
     ![Screenshot of the Intune app protection access actions](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
 
@@ -85,7 +85,7 @@ Set one of the following actions:
 - Allow specified (Wipe nonspecified)
 
 **What happens if the IT admin inputs a different list of iOS/iPadOS model identifier(s) between policies targeted to the same apps for the same Intune user?**<br>
-When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app that's opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifier(s) in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "iPhone5,3". 
+When conflicts arise between two app protection policies for configured values, Intune typically takes the most restrictive approach. Thus, the resultant policy sent down to the targeted app opened by the targeted Intune user would be an intersection of the listed iOS/iPadOS model identifiers in *Policy A* and *Policy B* targeted to the same app/user combination. For example, *Policy A* specifies "iPhone5,2;iPhone5,3", while *Policy B* specifies "iPhone5,3", the resultant policy that the Intune user targeted by both *Policy A* and *Policy B* is "iPhone5,3". 
 
 ### Android policy settings
 
@@ -98,14 +98,14 @@ For Android, you're able to configure actions for the following settings using t
 - Min app version
 - Min patch version
 - Device manufacturer(s)
-- SafetyNet device attestation
+- Play integrity verdict
 - Require threat scan on apps
 - Min Company Portal version
 - Max allowed device threat level
 - Disabled account
 - Require device lock
 
-By using the **Min Company Portal version**, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to set values to **Block access**, **Wipe data**, and **Warn** as possible actions when each value isn't met. The possible formats for this value follow the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. Given that some end users may not prefer a forced update of apps on the spot, the 'warn' option may be ideal when configuring this setting. The Google Play Store does a good job of only sending the delta bytes for app updates, but this can still be a large amount of data that the user may not want to utilize if they are on data at the time of the update. Forcing an update and thereby downloading an updated app could result in unexpected data charges at the time of the update. The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting has no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app autoupdates on their device will likely not see any dialogs from this feature, given that they might be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices.
+By using the **Min Company Portal version**, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to set values to **Block access**, **Wipe data**, and **Warn** as possible actions when each value isn't met. The possible formats for this value follow the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. Given that some end users may not prefer a forced update of apps on the spot, the 'warn' option may be ideal when configuring this setting. The Google Play Store does a good job of only sending the delta bytes for app updates. However, this can still be a large amount of data that the user may not want to utilize if they are on data at the time of the update. Forcing an update and downloading an updated app could result in unexpected data charges at the time of the update. The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting has no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app autoupdates on their device will likely not see any dialogs from this feature, given that they'll likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices.
 
 To use the **Device manufacturer(s)** setting, input a semi-colon separated list of Android manufacturers. These values aren't case-sensitive. Besides Intune Reporting, you can find the Android manufacturer of a device under the device settings. <br>
 Example input: *Manufacturer A;Manufacturer B* 
@@ -136,7 +136,7 @@ In some cases, such as the **Min OS version** setting, you can configure the set
 
 ![Screenshot of app protection access actions - Min OS version](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions05.png)
 
-Once a setting is fully configured, the row appears in a read-only view and be available to be edited at any time. In addition, the row appears to have a dropdown available for selection in the **Setting** column. Settings that are already configured and don't allow multiple actions aren't available for selection in the dropdown.
+Once a setting is fully configured, the row appears in a read-only view and be available to be edited at any time. In addition, the row appears to have a dropdown available for selection in the **Setting** column. Configured settings that don't allow multiple actions aren't available for selection in the dropdown.
 
 ## Next steps
 

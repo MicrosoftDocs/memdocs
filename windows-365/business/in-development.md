@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/03/2023
+ms.date: 03/13/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -49,9 +49,16 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 -->
 
-<!--
-## End user experience
--->
+<!-- ***********************************************-->
+## Device management
+
+### Upgrade Cloud PCs to more storage, RAM, and CPU<!--48540819-->
+
+By using the upcoming Resize action, you'll be able to upgrade Cloud PCs to more storage, RAM, and CPU.
+
+### Resize support for Windows 365 Business<!--48540819-->
+
+You'll be able to use the resize remote action for Windows 365 Business Cloud PCs.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -59,6 +66,13 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+<!-- ***********************************************-->
+## Security
+
+### Single sign-on (public preview)
+
+Windows 365 Business will support single sign-on for new and existing Cloud PCs. You'll be able to turn on single sign-on in **Organizational settings**. When turned on, users no longer have to sign in to the operating system.
 
 ## Next steps
 

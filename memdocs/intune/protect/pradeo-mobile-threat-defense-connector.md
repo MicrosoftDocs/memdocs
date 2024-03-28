@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Pradeo Mobile Threat Defense connector with Intune
+title: Pradeo Mobile Threat Defense connector and Microsoft Intune
 titleSuffix: Intune on Azure
-description: Learn how to integrate Intune with Pradeo Mobile Threat Defense connector to control mobile device access to your corporate resources.
+description: How to set up the Pradeo Mobile Threat Protection with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns

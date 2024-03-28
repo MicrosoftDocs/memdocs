@@ -2,12 +2,12 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 09/18/2023
+ms.date: 03/25/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -197,6 +197,12 @@ During installation of the Configuration Manager site, enable the **Remote Regis
   - You can install a supported version of SQL Server.
 
   - You can choose to have Configuration Manager install SQL Server Express. Make sure that the server meets the requirements to run SQL Server Express.
+
+### SQL ODBC driver for the database server
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client for the site database server
 

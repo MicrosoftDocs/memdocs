@@ -29,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Add
 ---
 
 # Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune
