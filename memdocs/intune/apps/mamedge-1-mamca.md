@@ -50,9 +50,7 @@ Conditional access is enforced after initial authentication is completed. It isn
 
 ## Conditional access compliance
 
-Protecting your organizational data involves preventing data loss. Data Loss Prevention (DLP) is effective only when your organizational data can't be accessed from any unprotected system or device. App protection policies can be used with conditional access (CA) to ensure that these policies aren't only supported but also enforced in a client application before granting access to protected resources, such as organizational data. This approach allows end-users with personal Windows devices to use APP-managed applications, including Microsoft Edge for Business, to access Microsoft Entra resources without the need for full management of their personal device.
-
-This MAM service syncs compliance state per user, per app, and per device to the Microsoft Entra CA service. This includes the threat information received from the Mobile Threat Defense (MTD) vendors.
+Protecting your organizational data involves preventing data loss. Data Loss Prevention (DLP) is effective only when your organizational data can’t be accessed from any unprotected system or device. App protection policies can be used with conditional access (CA) to ensure that these policies aren’t only supported but also enforced in a client application before granting access to protected resources, such as organizational data. This approach allows end-users with personal devices, including Windows, Android, and iOS, to use APP-managed applications, including Microsoft Edge for Business, to access Microsoft Entra resources without the need for full management of their personal device.
 
 Secure your Microsoft Edge for Business with Microsoft Entra conditional access policies by using the following steps.
 
@@ -60,7 +58,7 @@ In this scenario, you'll create a conditional access policy using Microsoft Intu
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Conditional Access** > **Create a new Policy**.
+2. Select **Endpoint security** > **Conditional access** > **New policy**.
 
 3. On the **Conditional Access policy** pane, set the following details:
 
@@ -87,7 +85,7 @@ In the previous steps, you created a conditional access policy to support app pr
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Conditional Access** > **Create a new Policy**.
+2. Select **Endpoint security** > **Conditional access** > **New policy**.
 
 4. On this new policy, you'll restrict access from desktop apps to managed devices only. You'll select target resources and select apps once they select **Office 365**.
 
