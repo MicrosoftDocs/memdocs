@@ -74,6 +74,10 @@ Endpoint Privilege Management supports executing files that are locally stored o
 
 Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
+### Windows 10 devices may not immediately receive support approvals and their notifications. 
+
+We've identified a set of scenarios that prevent Windows 10 devices from immediately receiving the notification that a new approval is ready for their device. The approval will still be delivered and may be expedited by manually initiating a sync from the device.  We are working with the responsible teams to resolve this as quickly as possible.
+
 ## Frequently asked questions
 
 ### Why is my virtual device not onboarding to Endpoint Privilege Management?
