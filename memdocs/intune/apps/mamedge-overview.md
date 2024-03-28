@@ -106,7 +106,7 @@ Microsoft Edge for Business, built on the robust and secure foundation of Chromi
 
 In addition to the inherent security features of Chromium, Microsoft Edge for Business incorporates unique protection features and supports a range of Microsoft technologies:
 
-- **[Microsoft Defender](/microsoft-365/security/defender-endpoint/?view=o365-worldwide):** Provides comprehensive security solutions.
+- **[Microsoft Defender](/microsoft-365/security/defender-endpoint):** Provides comprehensive security solutions.
 - **[Microsoft Entra](/entra/):** Formerly known as Azure Active Directory, it offers identity and access management services.
 - **[Microsoft Intune](/mem/):** Offers mobile device and application management.
 - **[Microsoft Purview](/purview/):** Supports data governance across your hybrid data estate.
