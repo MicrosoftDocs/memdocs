@@ -58,6 +58,7 @@ This guide provides the following content:
 3. **Integrate Windows Security Center with Microsoft Edge for Business** - Enhance the overall security posture of your organization by using the secure enterprise browser to integrate with the Windows Security Center.
 4. **App configuration policies for Microsoft Edge for Business** - Understand Microsoft Edge for Business and Microsoft Application Management can be used to protect your organization from various cyber threats.
 5. **Microsoft Edge for Business end user experience** - Understand how security measures impact user interaction for Microsoft Edge for Business.
+6. **Troubleshooting Examples:** - A series of examples on how to troubleshoot App Protection Policies and a list of FAQ.
 
 For more information about Microsoft Edge Security content, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecuritywhitepaper).
 
