@@ -286,7 +286,7 @@ For more information, see:
 
 ### Device security
 
-## Updated security baseline for Windows version 23H2<!-- 25021947 -->
+#### Updated security baseline for Windows version 23H2<!-- 25021947 -->
 
 You can now deploy the Intune security baseline for Windows version 23H2. This new baseline is based on the **version 23H2** of the Group Policy security baseline found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and includes only the settings that are applicable to devices managed through Intune. Use of this updated baseline can help you maintain best-practice configurations for your Windows devices.
 
@@ -323,6 +323,16 @@ These changes apply to the Endpoint security and endpoint detection and response
 
 - Windows 10
 - Windows 11
+
+#### Windows quality updates will support expediting non-security updates<!-- 17614146 -->
+
+Windows quality updates now support expediting non-security updates for those times when a quality fix needs to be deployed faster than the normal quality update settings.
+
+Applies to:
+
+- Windows 11 devices
+
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md#create-and-assign-an-expedited-quality-update).
 
 ### Intune apps
 

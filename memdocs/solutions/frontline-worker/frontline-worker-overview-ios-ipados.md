@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using iOS and iPadOS d
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 03/28/2024
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -29,7 +29,7 @@ iPad devices are a popular device type for frontline workers (FLW). They're used
 
 For iPadOS FLW devices, you can use the **Shared iPad** feature in Intune or use **Microsoft Entra shared device mode** (SDM). For more information, go to [Shared iPad vs Microsoft Entra shared device mode](#shared-ipad-vs-microsoft-entra-shared-device-mode) (in this article).
 
-iOS devices can also be used for FLW, but it's not common. For iOS FLW devices, it's recommended to use [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and Intune together. In Intune, you enroll the device and create a device restrictions configuration profile. In the Intune profile, you can allow (or prohibit) specific apps, and can hide apps.
+iOS devices can also be used for FLW, but it's not common. For iOS FLW devices, we recommended you use [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and Intune together. In Intune, you enroll the device and create a device restrictions configuration profile. In the Intune profile, you can allow (or prohibit) specific apps, and can hide apps.
 
 The following diagram shows the iOS/iPadOS options for frontline worker devices in Intune:
 
@@ -119,7 +119,7 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
       When the user locks their profile, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
 
-      The number of users that can sign in also varies by the amount of storage on the device. So, it's recommended to plan accordingly and configure the enrollment profile to accommodate your needs.
+      The number of users that can sign in also varies by the amount of storage on the device. So, we recommended you plan accordingly and configure the enrollment profile to accommodate your needs.
 
 The following image shows a sample Shared iPad enrollment policy in Intune that enables guest access:
 
