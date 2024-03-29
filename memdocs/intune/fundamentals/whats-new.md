@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/27/2024
+ms.date: 04/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -94,7 +94,11 @@ Copilot for Intune is integrated in the Intune admin center, and can help you ge
 
 ✅ **Intune capabilities in Copilot for Security**
 
-Intune has capabilities available in the Copilot for Security portal. SOC Analysts and IT admins can use these capabilities to get more information on policies, devices, group membership, and more. You can get drill into a single device to get information unique to Intune, like compliance status, device type, and more. You can also ask Copilot to tell you about a user's devices and get a quick summary of critical information, including links to the user's devices in Intune, device ID, enrollment date, last check-in date, and compliance status. This data can be useful as a quick summary when reviewing a user as an IT admin. As a SOC analyst, information like enrollment date and last check-in can help inform decisions when investigating a suspicious or potentially compromised user or device.
+Intune has capabilities available in the Copilot for Security portal. SOC Analysts and IT admins can use these capabilities to get more information on policies, devices, group membership, and more. On a single device, you can get more specific information that's unique to Intune, like compliance status, device type, and more.
+
+You can also ask Copilot to tell you about a user's devices and get a quick summary of critical information, including links to the user's devices in Intune, device ID, enrollment date, last check-in date, and compliance status. If you're an IT admin and reviewing a user, then this data provides a quick summary.
+
+As a SOC analyst that's investigating a suspicious or potentially compromised user or device, information like enrollment date and last check-in can help you make informed decisions.
 
 For more information on these features, go to:
 
