@@ -61,6 +61,18 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Auto update available with Win32 app supersedence<!-- 17644510  -->
+
+Win32 app supersedence will provide the capability to supersede apps deployed as available with **auto-update** intent. For example, if you deploy a Win32 app (app A) as available and installed by users on their device, you will be able to create a new Win32 app (app B) to supersede app A using **auto-update**. All targeted devices and users with app A installed as available from the Company Portal will be superseded with app B. Also, only app B will show in the Company Portal. Currently, there was no **auto-update** option, superseding an available app only replaced app A in the Company Portal. You will be able to find the **auto-update** feature for available app supersedence as a toggle under the **Available assignment** in the **Assignments** tab.
+
+For more information about app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+
+### Migrated to .NET MAUI from Xamarin<!-- 27143739  -->
+
+Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) documentation.
+
+Xamarin support will end on May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. For Intune support on Android and iOS platforms, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
+
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -72,6 +84,44 @@ Intune Company Portal will now be automatically installed on all Android Enterpr
 <!-- *********************************************** -->
 
 ## Device configuration
+
+### Error message is shown when OEMConfig policy exceeds 500 KB on Android Enterprise devices<!-- 15326924  -->
+
+On Android Enterprise devices, you can use an OEMConfig device configuration profile to add, create and/or customize OEM specific settings.
+
+Currently, when you create and assign any OEMConfig policy that exceeds 500 KB, then these policies go into a pending state. Admins might not know about the policy size limit, as this information isn't shown.
+
+Now, when you create OEMConfig policy that exceeds 500 KB, then the following error is shown in the Intune admin center:
+
+`Profile is larger than 500KB. Adjust profile settings to decrease the size.`
+
+For more information on OEMConfig profiles, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+Applies to:
+
+- Android Enterprise
+
+### New settings available in the macOS settings catalog<!-- 26970197  -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the macOS Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+
+**Microsoft AutoUpdate (MAU)**:
+
+- Microsoft Teams (work or school)
+- Microsoft Teams classic
+
+**Microsoft Defender > Features**:
+
+- Use Data Loss Prevention
+- Use System Extensions
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+
+- macOS
 
 ### New BIOS device configuration profile for OEMs<!-- 9278502  -->
 
@@ -123,11 +173,35 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### Account-driven Apple User Enrollment to be generally available for iOS/iPadOS 15+ devices<!-- 10277062  -->
+
+Intune will support account-driven Apple User Enrollment, the new and improved version of Apple User Enrollment, for devices running iOS/iPadOS 15 and later. This new enrollment method utilizes just-in-time registration, removing the Company Portal app for iOS as an enrollment requirement. Device users will be able to initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. For more information, see [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md) on Microsoft Learn.
+
+If you prefer, you can continue to target iOS/iPadOS devices using the Apple User Enrollment method that requires Company Portal. Devices running iOS/iPadOS 14.8.1 and earlier will be unaffected by this update and can continue to use the method with Company Portal.
 
 <!-- *********************************************** -->
 
 ## Device management
+
+### GCC customers can use Remote Help for Windows and Android devices<!-- 10613615  -->
+
+The [Microsoft Intune Suite](intune-add-ons.md) includes advanced endpoint management and security features, including Remote Help.
+
+On Windows and enrolled Android Enterprise dedicated devices, you can use remote help on US Government GCC environments.
+
+For more information on these features, see:
+
+- [Microsoft Intune for US Government GCC service description](intune-govt-service-description.md)
+- [Use Remote Help with Microsoft Intune](remote-help.md)
+
+Applies to:
+
+- Windows 10/11
+- Windows 10/11 on ARM64 devices
+- Windows 365
+- Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
 
 ### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
 
@@ -151,9 +225,10 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-  Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
-  - Windows 10
-  - Windows 11
+Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
+
+- Windows 10
+- Windows 11
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
