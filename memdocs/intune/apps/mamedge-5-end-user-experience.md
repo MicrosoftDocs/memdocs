@@ -57,11 +57,11 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 3. Select the user icon to display your managed account details.
 4. Select **Sign in to sync data**.
 
-    :::image type="content" alt-text="Sign in to sync data  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business19.png":::
+    :::image type="content" alt-text="Sign in to sync data  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing-data-edge-for-business19.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business19.png":::
 
 5. Enter your **email address** for the tenant.
 
-    :::image type="content" alt-text="Let us get you signed in  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business20.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business20.png":::
+    :::image type="content" alt-text="Let us get you signed in  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing-data-edge-for-business20.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business20.png":::
 
 6. Enter your **password** for the account.
 
@@ -72,14 +72,14 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 
 7. Uncheck **Allow my organization to manage my device** and select **OK**.
 
-	:::image type="content" alt-text="Stay signed in to all your apps window  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing_data_edge_for_business22.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business22.png":::
+	:::image type="content" alt-text="Stay signed in to all your apps window  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png":::
 
     > [!IMPORTANT] 
     > You need to make sure the checkmark is unselected otherwise you will enroll the device into Intune, you should also not select the option **No, sign in the app only** as this will not enroll or ensure MAM is operational for the browser.
 
 8. Wait until you see the message, **You're all set!** Then, select **Done.**
 
-	:::image type="content" alt-text="You're all set  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business23.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business23.png":::
+	:::image type="content" alt-text="You're all set  -  Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business23.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business23.png":::
 
 9. Confirm that you're signed-in by clicking on the user icon again.
 
@@ -91,22 +91,22 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 Intune will notify you with various messages in the event of a failure. Here are the scenarios:
 
 - **App access blocked message:** This message appears when your applied app protection policy has failed any health check.
-    :::image type="content" alt-text="App Access Blocked - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business25.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business25.png":::
+    :::image type="content" alt-text="App Access Blocked - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png":::
 
 - **Your organization prevents you from copying content from this website:** This message appears when your applied Level 3 app protection policy has failed a protection check that prevents you from copying content.
-    :::image type="content" alt-text="Copying prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business26.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business26.png":::
+    :::image type="content" alt-text="Copying prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png":::
 
 - **Your organization prevents you from printing this website:** This message appears when your applied Level 3 app protection policy has failed the printing check.
-    :::image type="content" alt-text="Printing prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business27.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business27.png":::
+    :::image type="content" alt-text="Printing prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png":::
 
 - **Your organization prevents you from downloading this file:** This message appears when your applied Level 3 app protection policy has failed downloading apps check.
-    :::image type="content" alt-text="Download prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business28.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business28.png":::
+    :::image type="content" alt-text="Download prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png":::
 
 - **Offline Grace Period Expired:** This message appears when Intune determines that you have been logged in for an extended period without use.
-    :::image type="content" alt-text="Offline Grace Period Expired - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business29.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business29.png":::
+    :::image type="content" alt-text="Offline Grace Period Expired - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png":::
 
 ## Next step
 
-[![Step 6 to troubleshoot Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-06.png)](mamedge-6-troubleshoot.md)
+[![Step 6 to troubleshoot Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-06.png)](mamedge-6-troubleshoot.md)
 
 Continue with [Step 6](mamedge-6-troubleshoot.md) to troubleshoot Microsoft Edge for Business.

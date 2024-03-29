@@ -52,7 +52,7 @@ Intune app protection policies help secure organizational data and help ensure c
 - **Apps**: Select the apps that you want to target from app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Health Checks**: Under **Device conditions** you can select **Max allowed device threat level**.
 
-    :::image type="content" alt-text="Health Check - App protection policy for Windows." source="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business1.png":::
+    :::image type="content" alt-text="Health Check - App protection policy for Windows." source="./media/securing-data-edge-for-business/securing-data-edge-for-business1.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business1.png":::
 
 ### Options for the threat level
 
@@ -82,7 +82,7 @@ Use the following steps to configure the MTD Connector.
 
 2. Select **Tenant Administrator** > **Connectors and tokens** > **Mobile Threat Defense**.
 
-    :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business3.png":::
+    :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business3.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business3.png":::
 
 3. Select **Add** to display the **Add Connector** pane.
 
@@ -91,7 +91,7 @@ Use the following steps to configure the MTD Connector.
     > [!NOTE]
     > In this example, you have selected **Windows Security Center**. For the full list of MTD Partners, see [Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
 
-    :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Add Connector - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business4.png":::
+    :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Add Connector - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business4.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business4.png":::
 
 5. >  select **Create** to create the connector.
 
@@ -100,6 +100,6 @@ Use the following steps to configure the MTD Connector.
 
 ## Next step
 
-[![Step 4 to create app configuration policies for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-04.png)](mamedge-4-acp-edge.md)
+[![Step 4 to create app configuration policies for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-04.png)](mamedge-4-acp-edge.md)
 
 Continue with [Step 4](mamedge-4-acp-edge.md) to create app configuration policies for Microsoft Edge for Business.

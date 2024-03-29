@@ -44,7 +44,7 @@ Identity-driven signals may include:
 - Application
 - Real-time and calculated risk detection
 
-:::image type="content" alt-text="Conditional Access Policy Decision Making.." source="./media/securing-data-edge-for-business/securing_data_edge_for_businessCA.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_businessCA.png":::
+:::image type="content" alt-text="Conditional Access Policy Decision Making.." source="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png":::
 
 Conditional access is enforced after initial authentication is completed. It isn't intended to be an organization's frontline of defense for scenarios like denial-of-service (DoS) attacks, but it can use signals from these events to determine access.
 
@@ -89,41 +89,41 @@ In the previous steps, you created a conditional access policy to support app pr
 
 4. On this new policy, you'll restrict access from desktop apps to managed devices only. You'll select target resources and select apps once they select **Office 365**.
 
-    :::image type="content" alt-text="Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business57.png":::
+    :::image type="content" alt-text="Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business57.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business57.png":::
     
 5. Select the **device Platform** and select **Windows**.
 
-    :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft." source="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business58.png":::
+    :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft." source="./media/securing-data-edge-for-business/securing-data-edge-for-business58.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business58.png":::
 
 6. Select **Client Apps** and select **Mobile apps and desktop clients**.
 
     > [!NOTE]
     > For legacy authentication clients, maybe create a third CA to just block them. That's up to the customer. For this example, I will only affect Desktop apps. *
     
-    :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business59.png":::
+    :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png":::
     
 7. Select **Grant** and select **Require device to be market as compliant.**
 
-    :::image type="content" alt-text="Grant - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business60.png":::
+    :::image type="content" alt-text="Grant - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png":::
 
     > [!NOTE] 
     > Probably to this last control, customers should add also MFA or other options as well.*
 
 8. Select **Conditions** \> Client **apps** and select **Browser.**
 
-    :::image type="content" alt-text="Client apps - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business61.png":::
+    :::image type="content" alt-text="Client apps - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business61.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business61.png":::
 
     > [!NOTE] 
     > To filter out corporate devices is a bit complicated because the CA filters will be applied only to devices that are already registered (at least) in Entra ID. Entra recommends using negative operator if the rule is going to apply potentially to devices not registered yet, Maybe some companies will not need all these conditions and they can use Enrollment profile or other instead.
 
 9. Select **Conditions** \> Select **Filter for Devices.**
 
-    :::image type="content" alt-text="Filter for devices - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business62.png":::
+    :::image type="content" alt-text="Filter for devices - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business62.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business62.png":::
 
 10. Select **Done** \> select **Create** and complete the conditional access policy creation as you performed on the previous step.
 
 ## Next step
 
-[![Step 2 to create an app protection policy.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-02.png)](mamedge-2-app.md)
+[![Step 2 to create an app protection policy.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-02.png)](mamedge-2-app.md)
 
 Continue with [Step 2](mamedge-2-app.md) to create an app protection policy.

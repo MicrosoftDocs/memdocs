@@ -78,7 +78,7 @@ Use the following steps to configure the app:
     - **Description**: Microsoft Edge for Business ACP Configuration - Mobile
     - **Target Policy to**: Selected apps
 
-    :::image type="content" alt-text="Apps - App configuration policies - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business49.png":::
+    :::image type="content" alt-text="Apps - App configuration policies - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business49.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business49.png":::
 
 4. Click **Select public apps** to display the **Selected apps to target** pane.
 
@@ -95,7 +95,7 @@ Use the following steps to configure the app:
     
     For example, set **com.microsoft.intune.mam.managedbrowser.PasswordSSO** to `TRUE`.
 
-    :::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business50.png":::
+    :::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business50.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business50.png":::
     
 9. Review each value and select **Next**.
 
@@ -153,6 +153,6 @@ You have now created an App Configuration Policy for Windows and Microsoft Edge.
 
 ## Next step
 
-[![Step 5 to understand the end user experience for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-05.png)](mamedge-5-end-user-experience.md)
+[![Step 5 to understand the end user experience for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-05.png)](mamedge-5-end-user-experience.md)
 
 Continue with [Step 5](mamedge-5-end-user-experience.md) to understand the end user experience for Microsoft Edge for Business.

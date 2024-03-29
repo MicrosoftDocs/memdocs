@@ -47,11 +47,11 @@ The following list provides common issues and potential solutions:
 - **App configuration settings not applying correctly:** If none of your app configuration policy settings are applying correctly to the app based on the communication channel used (Managed Apps or Managed Devices), review the publisher’s documentation again for the string or settings used. You may want to try using the other option for device enrollment type of the policy.
 - **Sign in with your work account - Microsoft Edge for Business message:** If you encounter the ‘Sign in with your work account’ error message in Microsoft Edge for Business, it indicates that you have chosen an incorrect enrollment method, resulting in the App Protection Policy not being applied.
 
-    :::image type="content" alt-text="Sign in with your work account - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business63.png":::
+    :::image type="content" alt-text="Sign in with your work account - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png":::
 
 - If you encounter an error like the below, it could mean that you’ve selected the wrong enrollment method. You might have left a checkmark on ‘Select No, sign into this app only’. Redo the enrollment process without selecting this option. Otherwise, the App Protection Policy won’t be applied.
 
-    :::image type="content" alt-text="Enrollment Window - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business64.png":::
+    :::image type="content" alt-text="Enrollment Window - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business64.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business64.png":::
 
 Successful app protection policy deployment relies on proper configuration of settings and other dependencies. Always verify that you have met the prerequisites for deploying app protection policies.
 

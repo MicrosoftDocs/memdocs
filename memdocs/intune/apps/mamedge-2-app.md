@@ -88,7 +88,7 @@ Use the following steps to apply the data protection framework.
     - **Allow cut, copy, and paste for**: No destination or source
     - **Print org data**: Block
 
-    :::image type="content" alt-text="Apps - App protection policies - Create policy - Data Protection - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business11.png":::
+    :::image type="content" alt-text="Apps - App protection policies - Create policy - Data Protection - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business11.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business11.png":::
 
 10. Select **Next** to continue to the next step.
 
@@ -99,7 +99,7 @@ Use the following steps to apply the data protection framework.
     - **Max OS version**: 10.0.22631.2715, Block access
     - **Max allowed device threat level**: Secured, Block access
 
-    :::image type="content" alt-text="Apps - App protection policies - Create policy - Health Checks - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business12.png":::
+    :::image type="content" alt-text="Apps - App protection policies - Create policy - Health Checks - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business12.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business12.png":::
 
 12. Click **Next** to display the next step.
 
@@ -258,14 +258,14 @@ To create the app protection policy, follow these steps:
 
 15. Review the policy details in the **Review and Create** step.
 
-    :::image type="content" alt-text="Apps  -  App protection policies  -  Review + Create - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing_data_edge_for_business46.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business46.png":::
+    :::image type="content" alt-text="Apps  -  App protection policies  -  Review + Create - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business46.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business46.png":::
 
 16. Select **Create** and wait until the policy is created.
 
-    :::image type="content" alt-text="Apps - App protection policies - Policy successfully created - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png":::
+    :::image type="content" alt-text="Apps - App protection policies - Policy successfully created - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business47.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business47.png":::
 
 ## Next step
 
-[![Step 3 to integrate Mobile Threat Defense with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing_data_edge_for_business_steps-03.png)](mamedge-3-scc.md)
+[![Step 3 to integrate Mobile Threat Defense with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-03.png)](mamedge-3-scc.md)
 
 Continue with [Step 3](mamedge-3-scc.md) to integrate Mobile Threat Defense with Microsoft Edge for Business.
