@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Use app protection policies for Microsoft Edge for Business
+title: Step 2. Create app protection policies for Microsoft Edge for Business
 titleSuffix:
-description: Use app protection policies for Microsoft Edge for Business.
+description: Step 2. Create app protection policies for Microsoft Edge for Business.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,7 +30,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# App protection policies for Microsoft Edge for Business
+# Step 2. Create app protection policies for Microsoft Edge for Business
 
 App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the device user is using the app. A managed app is an app that has app protection policies applied to it and is managed by an enterprise management solution, such as Intune.
 
@@ -51,13 +51,13 @@ With any deployment of new software, features or settings, Microsoft recommends 
 
 For more information about Framework Settings, see [App protection framework](..\apps\app-protection-framework.md).
 
-### App protection policy for Microsoft Edge for Business (Windows)
+## App protection policy for Microsoft Edge for Business (Windows)
 
 The app protection policies for Windows provide secure and compliant access to work resources on personal computers by using Data Loss Prevention (DLP) controls.
 
 Having gained a comprehensive understanding of the app protection policy framework, you're now prepared to establish your initial app protection policy for Windows. In this instance, you are formulating a **Level 3** policy. As highlighted in this document, the framework allows for the creation of various levels to cater to your specific requirements. The following example may only be applicable to the **Level 3** policy that Microsoft recommends. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet your organization's distinct needs.
 
-#### Apply the data protection framework
+### Apply the data protection framework
 
 Use the following steps to apply the data protection framework.
 
@@ -116,7 +116,7 @@ For this example, select all VPN Users. However, when you assign this policy in 
 
 You have now created your first MAM for Windows Policy and it should be available within your Intune tenant.
 
-# Microsoft Edge for Business mobile
+## Microsoft Edge for Business mobile
 
 Incorporate Microsoft Edge for Business into your existing data security and management strategy. By securing the enterprise browser configuration for mobile devices, you can ensure safer and more efficient web browsing experiences.
 
@@ -125,7 +125,7 @@ Microsoft Edge for Business provide benefits for both management and security:
 - **Management**: Microsoft Edge for Business is the only mobile browser natively supported by Microsoft Intune with seamless integration. To secure productivity for your organization, App level management allows IT to configure the right balance between data protection and access.
 - **Security**: Data protection and leakage prevention are based on conditional access and user identities. Microsoft 365 security features extend to Microsoft Edge for Business mobile including Microsoft Entra Conditional Access, and Data Loss Prevention. For organizations utilizing VPN solutions, Microsoft Edge mobile offers support for identity-enlightened per-app VPN. This includes the integration of Microsoft Tunnel with Intune for a seamless and secure connection. Additionally, solutions that don't require a VPN are also available.
 
-## App protection policies for mobile
+### App protection policies for mobile
 
 App protection policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
 
@@ -263,8 +263,6 @@ To create the app protection policy, follow these steps:
 16. Select **Create** and wait until the policy is created.
 
     :::image type="content" alt-text="Apps - App protection policies - Policy successfully created - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png" lightbox="./media/securing-data-edge-for-business/securing_data_edge_for_business47.png":::
-
-
 
 ## Next step
 
