@@ -126,17 +126,17 @@ Use the following steps to configure the app:
 
 6. Select **Next** to display the **Settings catalog** step.
 7. Click **Add settings** to display the **Settings picker** pane.
-8. Expand Microsoft Edge or you can type the setting on the search menu > select **Password manager and protection** select the following options.
+8. Expand Microsoft Edge or you can type the setting on the search menu > select **Password manager and protection** select the following options:
    - **Allow users to be alerted if their passwords are found to be unsafe**
    - **Configure password protection warning trigger**
-9. Type on the **Search for a setting** the following **StartUp** and select **Microsoft Edge\StartUp, home page and new tab page** select the following options.
+9. Type on the **Search for a setting** the following **StartUp** and select **Microsoft Edge\StartUp, home page and new tab page** select the following options:
    - **Configure the home page URL**
    - **Configure the new tab page URL**
    - **Hide App Launcher on Microsoft Edge new tab page**
 10. Under Microsoft Edge, configure each item for this example by entering the following details:
     - **Hide App Launcher on Microsoft Edge new tab page:** Enabled
-    - **Configure the new tab url:** https://www.contoso.com
-    - **Configure the new tba page url:** https://www.contoso.com
+    - **Configure the new tab url:** *Add a URL, such as `https://www.contoso.com`.*
+    - **Configure the new tab page url:** *Add a URL, such as `https://www.contoso.com`.*
     - **Allow users to be alerted if their passwords are found to be unsafe:** Enabled
    -  **Configure password protection warning trigger:** Enabled
 11. Select **Next** to display the **Assignments** page.
