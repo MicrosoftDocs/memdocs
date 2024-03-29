@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Understand Microsoft Edge for Business end user experience 
+title: Step 5. Understand Microsoft Edge for Business end user experience for Windows
 titleSuffix:
-description: Understand Microsoft Edge for Business end user experience.
+description: Step 5. Understand Microsoft Edge for Business end user experience Windows.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -30,7 +30,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Edge for Business end user experience for Windows
+# Step 5. Understand Microsoft Edge for Business end user experience for Windows
 
 Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a manage or unmanage device.
 
@@ -38,7 +38,7 @@ The end user experience in Microsoft Edge for Business is designed to be product
 
 1. **Visually distinct work browsing experience**: Microsoft Edge for Business provides a visually distinct work browsing experience with refreshed visual treatment. This helps users easily distinguish between their work and personal browsing sessions.
 
-2. **Enterprise personal browsing experience**: Microsoft Edge for Business offers a lightly managed personal browsing experience that lets users access their favorite nonwork sites and services without compromising safety for the enterprise. It also automatically switches from work-related navigation into the work browser.
+2. **Enterprise personal browsing experience**: Microsoft Edge for Business offers a lightly managed personal browsing experience that lets users access their favorite nonwork sites and services without compromising safety for the enterprise. It also automatically switches from work-related navigation into the work browser.
 
 3. **Automatic switching**: This feature helps enforce context separation between work and personal browsing. It ensures that work-related content doesn't get intermingled with personal browsing, preventing users from accidentally sharing sensitive information with unintended audiences.
 
