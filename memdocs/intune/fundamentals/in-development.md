@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/04/2024
+ms.date: 04/03/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,10 @@ You can use RSS to be notified when this article is updated. For more informatio
 Win32 app supersedence will provide the capability to supersede apps deployed as available with **auto-update** intent. For example, if you deploy a Win32 app (app A) as available and installed by users on their device, you will be able to create a new Win32 app (app B) to supersede app A using **auto-update**. All targeted devices and users with app A installed as available from the Company Portal will be superseded with app B. Also, only app B will show in the Company Portal. Currently, there was no **auto-update** option, superseding an available app only replaced app A in the Company Portal. You will be able to find the **auto-update** feature for available app supersedence as a toggle under the **Available assignment** in the **Assignments** tab.
 
 For more information about app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+
+### Device IPv4 and IPv6 addresses available from Managed Home Screen<!-- 25994445  -->
+
+IPv4 and IPv6 addresses will both be available from the Device Information page of Managed Home Screen (MHS).
 
 ### Migrated to .NET MAUI from Xamarin<!-- 27143739  -->
 
