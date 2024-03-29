@@ -91,18 +91,23 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 Intune will notify you with various messages in the event of a failure. Here are the scenarios:
 
 - **App access blocked message:** This message appears when your applied app protection policy has failed any health check.
+
     :::image type="content" alt-text="App Access Blocked - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png":::
 
 - **Your organization prevents you from copying content from this website:** This message appears when your applied Level 3 app protection policy has failed a protection check that prevents you from copying content.
+
     :::image type="content" alt-text="Copying prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png":::
 
 - **Your organization prevents you from printing this website:** This message appears when your applied Level 3 app protection policy has failed the printing check.
+
     :::image type="content" alt-text="Printing prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png":::
 
 - **Your organization prevents you from downloading this file:** This message appears when your applied Level 3 app protection policy has failed downloading apps check.
+
     :::image type="content" alt-text="Download prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png":::
 
 - **Offline Grace Period Expired:** This message appears when Intune determines that you have been logged in for an extended period without use.
+
     :::image type="content" alt-text="Offline Grace Period Expired - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png":::
 
 ## Next step
