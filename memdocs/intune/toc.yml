@@ -413,7 +413,7 @@ items:
                   items:
                   - name: Enterprise App Management overview
                     href: ./apps/apps-enterprise-app-management.md
-                  - name: Add a Enterprise App Catalog app (Win32)
+                  - name: Add an Enterprise App Catalog app (Win32)
                     href: ./apps/apps-add-enterprise-app.md                
                 - name: macOS LOB apps
                   href: ./apps/lob-apps-macos.md
