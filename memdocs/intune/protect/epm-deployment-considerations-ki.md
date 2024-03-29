@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 03/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,6 +42,10 @@ Applies to:
 - Windows 11
 
 ## Deployment considerations for Endpoint Privilege Management
+
+### Windows 10 devices might not immediately receive confirmation of support approvals
+
+We are working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We are working with the owner to resolve this as quickly as possible. 
 
 ### Authoring files with a file name as one of the sole attributes for identification
 
