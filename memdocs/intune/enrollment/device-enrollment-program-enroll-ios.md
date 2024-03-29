@@ -378,7 +378,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Software Update** | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |  
 | **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
 | **Appearance** | Display the Appearance screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |  
-| **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. This feature isn't available for ADE devices running iOS 13 and later, so this screen won't appear on those devices.  
+| **Device to Device Migration** | Give the user the option to transfer data from an old device to this device. The option to transfer data directly from a device isn't available for ADE devices running iOS 13 or later.   
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
 | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
 | **Get Started**| Shows users the Get Started welcome screen.  
