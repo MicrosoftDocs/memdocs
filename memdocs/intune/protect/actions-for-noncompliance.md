@@ -39,7 +39,7 @@ As part of a [compliance policy](../protect/device-compliance-get-started.md) th
 
 ## Overview
 
-By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Microsoft Entra [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
+By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliant, Microsoft Entra [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
 
 By configuring  **Actions for noncompliance** you gain flexibility to decide what to do about noncompliant devices, and when to do it. For example, you might choose to not block the device immediately, and give the user a grace period to become compliant.
 
