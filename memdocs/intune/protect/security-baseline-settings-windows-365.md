@@ -1513,7 +1513,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccountsandshares)
 
-- **Network Access Restrict Anonymous Access To Named Pipes And Shares**
+- **Network Access Restrict Anonymous Access To Named Pipes And Shares**  
   Baseline default *Enable*
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess-restrictanonymousaccesstonamedpipesandshares)
 
@@ -1546,11 +1546,11 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   Baseline default: *Automatically deny elevation requests*  
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforstandardusers)
 
-- **User Account Control Detect Application Installations And Prompt For Elevation**
+- **User Account Control Detect Application Installations And Prompt For Elevation**  
   Baseline default: *Enable*
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
 
-- **User Account Control Only Elevate UI Access Applications That Are Installed In Secure Locations**
+- **User Account Control Only Elevate UI Access Applications That Are Installed In Secure Locations**  
   Baseline default: *Enabled: Application runs with UIAccess integrity only if it resides in secure location.*
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
 
@@ -2859,7 +2859,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 
 ## Remote Assistance
 
-- **Remote Assistance solicited**
+- **Remote Assistance solicited**  
    Baseline default: *Disable Remote Assistance*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067198)
 
