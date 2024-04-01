@@ -84,39 +84,7 @@ To remotely start a session:
 
 Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remoteassistance.support.services.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
 
-Both the helper and sharer must be able to reach these endpoints over port 443:
-
-| Domain/Name                       | Description                                           |
-|-----------------------------------|-------------------------------------------------------|
-|\*.aadcdn.msauth.net | Required for logging in to the application Microsoft Entra ID|
-|\*.aadcdn.msftauth.net | Required for logging in to the application Microsoft Entra ID|
-|*.akstat.io | |
-|\*.alcdn.msauth.net|Required to sign-in to the application Microsoft Azure Authentication Library|
-|\*.aria.microsoft.com | Accessible Rich Internet Applications (ARIA) service for providing accessible experiences to users|
-|\*.akamaihd.net | |
-|edge.microsoft.com | Microsoft Edge update service for WebView2 |
-|edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
-|\*.events.data.microsoft.com      | Microsoft Telemetry Service |
-|*.go-mpulse.net| |
-|graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
-|login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
-|mem.gfx.ms| |
-|\*.monitor.azure.com              | Required for telemetry and remote service initialization|
-|remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
-|remotehelp.microsoft.com  | Primary endpoint for the Remote Help application |
-|\*.support.services.microsoft.com | Primary endpoint used for the Remote Help application|
-|\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
-|\*.wcpstatic.microsoft.com| Used to confirm cookie compliance in accordance with various laws|
-|[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
-
-Endpoints needed for GCC customers (tenants):
-
-| Domain/Name                       | Description                                           |
-|-----------------------------------|-------------------------------------------------------|
-|gcc.remotehelp.microsoft.com|Primary endpoint for the Remote Help application|
-|gcc.relay.remotehelp.microsoft.com|Primary endpoint for the Remote Help application|
-|remoteassistanceweb.usgov.communication.azure.us|Used for Azure Communication Service for chat and connection between parties|
-|*.gov.teams.microsoft.us|Used for Azure Communication Service for chat and connection between parties|
+Both the helper and sharer must be able to reach these endpoints over port 443. Go to [Network endpoints for Remote Help](intune-endpoints.md#remote-help) for a list of endpoints needed for Remote Help.
 
 ## Remote Help modes available for Windows
 
