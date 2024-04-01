@@ -74,9 +74,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management
 
-#### Copilot for Intune is available in the Intune admin center (public preview)<!-- 24105429 26122887 24205474 24205510 24205460 26113632-->
+#### Copilot in Intune is available in the Intune admin center (public preview)<!-- 24105429 26122887 24205474 24205510 24205460 26113632-->
 
-Copilot for Intune is integrated in the Intune admin center, and can help you get information quickly. You can use Copilot in Intune for the following tasks:
+Copilot in Intune is integrated in the Intune admin center, and can help you get information quickly. You can use Copilot in Intune for the following tasks:
 
 ✅ **Copilot can help you manage your settings and policies**
 
@@ -88,9 +88,9 @@ Copilot for Intune is integrated in the Intune admin center, and can help you ge
 
 - **All about a device**: On a device, you can use Copilot to get key information about the device, including its properties, configuration, and status information.
 
-- **Device compare**: Use Copilot to compare the hardware properties and device configurations of two devices. This feature helps you determine what's different between two similar-looking devices, especially when troubleshooting configuration issues.
+- **Device compare**: Use Copilot to compare the hardware properties and device configurations of two devices. This feature helps you determine what's different between two devices with similar configurations, especially when troubleshooting.
 
-- **Error code analyzer**:  In Copilot in the device view, you can enter an error code. This feature helps you understand what the error means and provide a potential resolution.
+- **Error code analyzer**:  Use Copilot in the device view to analyze an error code. This feature helps you understand what the error means and provide a potential resolution.
 
 ✅ **Intune capabilities in Copilot for Security**
 
@@ -272,7 +272,7 @@ This feature applies to:
 
 #### New compliance setting lets you verify device integrity using hardware-backed security features<!-- 12391862 -->
 
-A new compliance setting called **Check strong integrity using hardware-backed security features** lets you verify device integrity using hardware-backed key attestation. If you configure this setting, strong integrity attestation is added to Google Play's integrity verdict evaluation. Devices must meet device integrity to remain compliant. Microsoft Intune marks devices that don’t support this type of integrity check as noncompliant.
+A new compliance setting called **Check strong integrity using hardware-backed security features** lets you verify device integrity using hardware-backed key attestation. If you configure this setting, strong integrity attestation is added to Google Play's integrity verdict evaluation. Devices must meet device integrity to remain compliant. Microsoft Intune marks devices that don't support this type of integrity check as noncompliant.
 
 This setting is available in profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile, under **Device Health** > **Google Play Protect**. It only becomes available when the Play integrity verdict policy in your profile is set to **Check basic integrity** or **Check basic integrity & device integrity**.
 
@@ -352,13 +352,13 @@ For more information about this Microsoft Tunnel install option, see [Use a root
 
 #### Improvements for Intune deployments of Microsoft Defender for Endpoint<!-- 26314441 -->
 
-We’ve improved and simplified the experience, workflow, and report details for onboarding devices to Microsoft Defender when using Intune’s endpoint detection and response (EDR) policy. These changes apply for Windows devices managed by Intune and by the tenant-attach scenario. These improvements include:
+We've improved and simplified the experience, workflow, and report details for onboarding devices to Microsoft Defender when using Intune's endpoint detection and response (EDR) policy. These changes apply for Windows devices managed by Intune and by the tenant-attach scenario. These improvements include:
 
 - Changes to the EDR node, dashboards, and reports to improve the visibility of your Defender EDR deployment numbers. See [About the endpoint detection and response node](../protect/endpoint-security-edr-policy.md#about-the-endpoint-detection-and-response-node).
 
 - A new tenant-wide option to deploy a preconfigured EDR policy that streamlines the deployment of Defender for Endpoint to applicable Windows devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
 
-- Changes to Intune’s the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+- Changes to Intune's the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
 
 These changes apply to the Endpoint security and endpoint detection and response nodes of the admin center, and the following device platforms:
 
