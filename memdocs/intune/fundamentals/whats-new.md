@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/27/2024
+ms.date: 04/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,65 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of April 1, 2024
+
+### Device management
+
+#### Copilot in Intune is available in the Intune admin center (public preview)<!-- 24105429 26122887 24205474 24205510 24205460 26113632-->
+
+Copilot in Intune is integrated in the Intune admin center, and can help you get information quickly. You can use Copilot in Intune for the following tasks:
+
+✅ **Copilot can help you manage your settings and policies**
+
+- **Copilot tooltip on settings**: When you add settings to a policy or review settings in an existing policy, there's a new Copilot tooltip. When you select the tooltip, you get AI generated guidance based on Microsoft content and recommendations. You can see what each setting does, how the setting works, any recommended values, if the setting is configured in another policy, and more.
+
+- **Policy summarizer**: On existing policies, you get a Copilot summary of the policy. The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the impact of a policy and its settings on your users and devices.
+
+✅ **Copilot shows device details and can help troubleshoot**
+
+- **All about a device**: On a device, you can use Copilot to get key information about the device, including its properties, configuration, and status information.
+
+- **Device compare**: Use Copilot to compare the hardware properties and device configurations of two devices. This feature helps you determine what's different between two devices with similar configurations, especially when troubleshooting.
+
+- **Error code analyzer**:  Use Copilot in the device view to analyze an error code. This feature helps you understand what the error means and provide a potential resolution.
+
+✅ **Intune capabilities in Copilot for Security**
+
+Intune has capabilities available in the Copilot for Security portal. SOC Analysts and IT admins can use these capabilities to get more information on policies, devices, group membership, and more. On a single device, you can get more specific information that's unique to Intune, like compliance status, device type, and more.
+
+You can also ask Copilot to tell you about a user's devices and get a quick summary of critical information, including links to the user's devices in Intune, device ID, enrollment date, last check-in date, and compliance status. If you're an IT admin and reviewing a user, then this data provides a quick summary.
+
+As a SOC analyst that's investigating a suspicious or potentially compromised user or device, information like enrollment date and last check-in can help you make informed decisions.
+
+For more information on these features, go to:
+
+- [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)
+- [Access your Microsoft Intune data in Copilot for Security](../copilot/security-copilot.md)
+
+Applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
+
+#### GCC customers can use Remote Help for Windows and Android devices<!-- 10613615 25825071-->
+
+The [Microsoft Intune Suite](intune-add-ons.md) includes advanced endpoint management and security features, including Remote Help.
+
+On Windows and enrolled Android Enterprise dedicated devices, you can use remote help on US Government GCC environments.
+
+For more information on these features, go to:
+
+- [Microsoft Intune for US Government GCC service description](intune-govt-service-description.md)
+- [Use Remote Help with Microsoft Intune](remote-help.md)
+
+Applies to:
+
+- Windows 10/11
+- Windows 10/11 on ARM64 devices
+- Windows 365
+- Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
 
 ## Week of March 25, 2024 (Service release 2403)
 
@@ -231,7 +290,7 @@ This feature applies to:
 
 #### New compliance setting lets you verify device integrity using hardware-backed security features<!-- 12391862 -->
 
-A new compliance setting called **Check strong integrity using hardware-backed security features** lets you verify device integrity using hardware-backed key attestation. If you configure this setting, strong integrity attestation is added to Google Play's integrity verdict evaluation. Devices must meet device integrity to remain compliant. Microsoft Intune marks devices that don’t support this type of integrity check as noncompliant.
+A new compliance setting called **Check strong integrity using hardware-backed security features** lets you verify device integrity using hardware-backed key attestation. If you configure this setting, strong integrity attestation is added to Google Play's integrity verdict evaluation. Devices must meet device integrity to remain compliant. Microsoft Intune marks devices that don't support this type of integrity check as noncompliant.
 
 This setting is available in profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile, under **Device Health** > **Google Play Protect**. It only becomes available when the Play integrity verdict policy in your profile is set to **Check basic integrity** or **Check basic integrity & device integrity**.
 
@@ -311,13 +370,13 @@ For more information about this Microsoft Tunnel install option, see [Use a root
 
 #### Improvements for Intune deployments of Microsoft Defender for Endpoint<!-- 26314441 -->
 
-We’ve improved and simplified the experience, workflow, and report details for onboarding devices to Microsoft Defender when using Intune’s endpoint detection and response (EDR) policy. These changes apply for Windows devices managed by Intune and by the tenant-attach scenario. These improvements include:
+We've improved and simplified the experience, workflow, and report details for onboarding devices to Microsoft Defender when using Intune's endpoint detection and response (EDR) policy. These changes apply for Windows devices managed by Intune and by the tenant-attach scenario. These improvements include:
 
 - Changes to the EDR node, dashboards, and reports to improve the visibility of your Defender EDR deployment numbers. See [About the endpoint detection and response node](../protect/endpoint-security-edr-policy.md#about-the-endpoint-detection-and-response-node).
 
 - A new tenant-wide option to deploy a preconfigured EDR policy that streamlines the deployment of Defender for Endpoint to applicable Windows devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
 
-- Changes to Intune’s the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+- Changes to Intune's the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
 
 These changes apply to the Endpoint security and endpoint detection and response nodes of the admin center, and the following device platforms:
 
