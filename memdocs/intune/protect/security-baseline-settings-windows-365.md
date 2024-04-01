@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+zone_pivot_groups: windows-365-versions
 ---
 
 <!-- Pivots for this baseline 
@@ -50,7 +51,7 @@ When a new version of a baseline becomes available, it replaces the previous ver
 To learn more about using security baselines, see:
 
 - [Use security baselines](security-baselines.md)
-- [Manage security baselines](/security-baselines-configure.md)
+- [Manage security baselines](security-baselines-configure.md)
 
 ::: zone pivot="win365-24h1"
 
