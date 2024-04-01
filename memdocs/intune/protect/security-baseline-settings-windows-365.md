@@ -13,7 +13,6 @@ ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.assetid:
-zone_pivot_groups: windows-365-baseline-versions
 
 # optional metadata
 #ROBOTS:
@@ -2036,10 +2035,8 @@ Audit settings configure the events that are generated for the conditions of the
 - **Block hardware device installation by setup classes**  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067048)
-
   - **Remove matching hardware devices**  
     Baseline default: *Yes*
-
   - **Block list**  
     *Not configured by default. Manually add one or more Identifiers.*
 
