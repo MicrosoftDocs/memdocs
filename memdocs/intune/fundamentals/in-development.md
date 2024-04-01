@@ -189,6 +189,14 @@ If you prefer, you can continue to target iOS/iPadOS devices using the Apple Use
 
 ## Device management
 
+### Optional feature updates<!--12769586  -->
+
+With the introduction of Optional Feature updates, Feature updates will be made available to end users as Optional updates. End users will see the update in the **Windows Update** settings page in the same way it is shown for consumer devices.
+
+End users can then easily opt-in to try out the next feature update and provide feedback. When it is time to roll out the feature as a **required** update, then admins will be able to change the setting on the policy, and update the rollout settings so that the update is deployed as a **required** update to devices that do not yet have it installed.
+
+For more information on Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md).
+
 ### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
 
 End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website, which allows end users see their recovery keys as well.
@@ -204,6 +212,19 @@ Access to BitLocker recovery keys by end-users can be prevented when not allowed
 Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
 For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
+
+### Updated security baseline for Windows 365 Cloud PC<!-- 26504698  -->
+
+We're working on an update to the Intune security baseline for **Windows 365 Cloud PC**.  The new baseline version will use the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
+
+Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
+
+As with all baselines, the default baseline will represent the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -221,6 +242,26 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
+
+### Windows update distribution report<!--16579592  -->
+
+The Windows update distribution report in Intune will provide a summarized report to show the number of devices that are on each quality update level and the % coverage for each update across the devices managed by Intune (including co-managed devices).
+
+You will be able to drill down further in the report for each quality update that aggregates devices based on the Windows 10/11 feature version and the update statuses.
+
+Finally, the admins will be able to get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
+
+For more information on Windows update reports, go to [Windows Update reports on Intune](../protect/windows-update-reports.md).
+
+### Remote Help supports full control of a macOS device<!--22985205  -->
+
+Remote Help will support helpdesk connecting to a users device and requesting full control of the macOS device.
+
+For more information on Remote Help, see [Remote Help on macOS](../fundamentals/remote-help-macos.md).
+
+Applies to:
+
+- macOS 11, 12, 13, and 14
 
 ### Intune support of Microsoft 365 remote application diagnostics<!-- 17409991  -->
 
