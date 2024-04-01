@@ -81,7 +81,7 @@ Copilot in Intune is included with Copilot for Security. Copilot for Security us
 For more information on SCUs, go to:
 
 - [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
-- [Manage capacity in Copilot for Security](/security-copilot/manage-capacity)
+- [Manage capacity in Copilot for Security](/security-copilot/manage-usage)
 
 ### Is there a limit on the prompt output?
 
