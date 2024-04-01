@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Copilot for Intune features overview
-description: Microsoft Copilot for Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues.
+title: Microsoft Copilot in Intune features overview
+description: Microsoft Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues.
 keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings catalog, policies, device details, troubleshooting
 author: MandiOhlinger
 ms.author: mandia
@@ -92,7 +92,7 @@ To use Copilot in Intune, you should know the following information:
 
 ## Start using Copilot in Intune
 
-To access Copilot for Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Home screen lists the ways to get started with Copilot:
+To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Home screen lists the ways to get started with Copilot:
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-home-page.png" alt-text="Screenshot that shows the Intune admin center homepage with Copilot features in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-home-page.png":::
 
