@@ -44,7 +44,7 @@ As part of the connection process, the Windows 365 service is granted the follow
 
 ## Requirements
 
-To create an ANC, you meet these requirements:
+To create an ANC, you must meet these requirements:
 
 - Have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
 - Have an Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (hybrid Microsoft entra join ANCs only).
