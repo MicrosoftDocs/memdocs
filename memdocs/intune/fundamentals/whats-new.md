@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/27/2024
+ms.date: 04/01/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,47 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of April 1, 2024
+
+### Device management
+
+#### Copilot for Intune is available in the Intune admin center (public preview)<!-- 24105429 26122887 24205474 24205510 24205460 26113632-->
+
+Copilot for Intune is integrated in the Intune admin center, and can help you get information quickly. You can use Copilot in Intune for the following tasks:
+
+✅ **Copilot can help you manage your settings and policies**
+
+- **Copilot tooltip on settings**: When you add settings to a policy or review settings in an existing policy, there's a new Copilot tooltip. When you select the tooltip, you get AI generated guidance based on Microsoft content and recommendations. You can see what each setting does, how the setting works, any recommended values, if the setting is configured in another policy, and more.
+
+- **Policy summarizer**: On existing policies, you get a Copilot summary of the policy. The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the impact of a policy and its settings on your users and devices.
+
+✅ **Copilot shows device details and can help troubleshoot**
+
+- **All about a device**: On a device, you can use Copilot to get key information about the device, including its properties, configuration, and status information.
+
+- **Device compare**: Use Copilot to compare the hardware properties and device configurations of two devices. This feature helps you determine what's different between two similar-looking devices, especially when troubleshooting configuration issues.
+
+- **Error code analyzer**:  In Copilot in the device view, you can enter an error code. This feature helps you understand what the error means and provide a potential resolution.
+
+✅ **Intune capabilities in Copilot for Security**
+
+Intune has capabilities available in the Copilot for Security portal. SOC Analysts and IT admins can use these capabilities to get more information on policies, devices, group membership, and more. On a single device, you can get more specific information that's unique to Intune, like compliance status, device type, and more.
+
+You can also ask Copilot to tell you about a user's devices and get a quick summary of critical information, including links to the user's devices in Intune, device ID, enrollment date, last check-in date, and compliance status. If you're an IT admin and reviewing a user, then this data provides a quick summary.
+
+As a SOC analyst that's investigating a suspicious or potentially compromised user or device, information like enrollment date and last check-in can help you make informed decisions.
+
+For more information on these features, go to:
+
+- [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)
+- [Access your Microsoft Intune data in Copilot for Security](../copilot/security-copilot.md)
+
+Applies to:
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows
 
 ## Week of March 25, 2024 (Service release 2403)
 
