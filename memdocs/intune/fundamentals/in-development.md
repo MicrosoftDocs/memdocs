@@ -189,24 +189,6 @@ If you prefer, you can continue to target iOS/iPadOS devices using the Apple Use
 
 ## Device management
 
-### GCC customers can use Remote Help for Windows and Android devices<!-- 10613615  -->
-
-The [Microsoft Intune Suite](intune-add-ons.md) includes advanced endpoint management and security features, including Remote Help.
-
-On Windows and enrolled Android Enterprise dedicated devices, you can use remote help on US Government GCC environments.
-
-For more information on these features, see:
-
-- [Microsoft Intune for US Government GCC service description](intune-govt-service-description.md)
-- [Use Remote Help with Microsoft Intune](remote-help.md)
-
-Applies to:
-
-- Windows 10/11
-- Windows 10/11 on ARM64 devices
-- Windows 365
-- Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
-
 ### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
 
 End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website, which allows end users see their recovery keys as well.
