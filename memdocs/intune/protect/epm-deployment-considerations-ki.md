@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/28/2024
+ms.date: 04/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,6 +46,14 @@ Applies to:
 ### Windows 10 devices might not immediately receive confirmation of support approvals
 
 We are working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We are working with the owner to resolve this as quickly as possible. 
+
+### Organizations use Application Control for Business may experience issues running Endpoint Privilege Management
+
+Application Control for Business policies that do not account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function.
+
+### Organizations restricting users who can log on interactively may see issues with Endpoint Privilege Management
+
+Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive logon session. Organizations who limit the ability for users to create interactive sessions will need to make changes for EPM to function properly.
 
 ### Authoring files with a file name as one of the sole attributes for identification
 
