@@ -31,7 +31,7 @@ ms.collection:
 
 <!-- Pivots for this baseline 
 - win365-24h1 > Version 24H1
-- win365-2110 > Version 2110
+- win365-nov21 > November 2021
 -->
 
 # List of the settings in the Windows 365 Cloud PC security baseline in Intune
@@ -1787,7 +1787,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 ::: zone-end
 
 ::: zone-end
-::: zone pivot="win365-2110"
+::: zone pivot="win365-nov21"
 
 **Windows 365 Cloud PC security baseline version 2110**:
 
