@@ -60,7 +60,7 @@ To use Copilot in Intune, you should know the following information:
   For more information on SCUs, go to:
 
   - [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
-  - [Manage capacity in Copilot for Security](/security-copilot/manage-capacity)
+  - [Manage capacity in Copilot for Security](/security-copilot/manage-usage)
 
 - **Copilot configuration**: Before you can use the Copilot features in Intune, Microsoft Copilot for Security must be configured, and you must complete the first run tour in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the specific setup tasks, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
