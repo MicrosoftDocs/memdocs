@@ -71,7 +71,7 @@ The prerequisites for Remote Help on Windows are:
 - Set up the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
 - The helper and sharer can be on an enrolled or unenrolled device.
 
-To remotely start a session: 
+To remotely start a session:
 - The helper can be on an enrolled or unenrolled device.
 - The sharer's device needs to be enrolled device with Intune management extension.
   - Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
@@ -108,7 +108,10 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
 |\*.wcpstatic.microsoft.com| Used to confirm cookie compliance in accordance with various laws|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
-
+|gcc.remotehelp.microsoft.com|Primary endpoint for the Remote Help application|
+|gcc.relay.remotehelp.microsoft.com|Primary endpoint for the Remote Help application|
+|remoteassistanceweb.usgov.communication.azure.us|Used for Azure Communication Service for chat and connection between parties|
+|*.gov.teams.microsoft.us|Used for Azure Communication Service for chat and connection between parties|
 
 ## Remote Help modes available for Windows
 
