@@ -54,7 +54,7 @@ To learn more about using security baselines, see:
 
 ::: zone pivot="win365-24h1"
 
-## **Windows 365 Cloud PC security baseline version 24H1**
+**Windows 365 Cloud PC security baseline version 24H1**:
 
 The settings in this baseline apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
 
@@ -1786,7 +1786,6 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 ::: zone-end
 
-::: zone-end
 ::: zone pivot="win365-nov21"
 
 **Windows 365 Cloud PC security baseline version 2110**:
