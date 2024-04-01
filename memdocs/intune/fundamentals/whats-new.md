@@ -112,6 +112,24 @@ Applies to:
 - macOS
 - Windows
 
+#### GCC customers can use Remote Help for Windows and Android devices<!-- 10613615 25825071-->
+
+The [Microsoft Intune Suite](intune-add-ons.md) includes advanced endpoint management and security features, including Remote Help.
+
+On Windows and enrolled Android Enterprise dedicated devices, you can use remote help on US Government GCC environments.
+
+For more information on these features, go to:
+
+- [Microsoft Intune for US Government GCC service description](intune-govt-service-description.md)
+- [Use Remote Help with Microsoft Intune](remote-help.md)
+
+Applies to:
+
+- Windows 10/11
+- Windows 10/11 on ARM64 devices
+- Windows 365
+- Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
+
 ## Week of March 25, 2024 (Service release 2403)
 
 ### Microsoft Intune Suite
