@@ -189,14 +189,6 @@ If you prefer, you can continue to target iOS/iPadOS devices using the Apple Use
 
 ## Device management
 
-### Optional feature updates<!--12769586  -->
-
-With the introduction of Optional Feature updates, Feature updates will be made available to end users as Optional updates. End users will see the update in the **Windows Update** settings page in the same way it is shown for consumer devices.
-
-End users can then easily opt-in to try out the next feature update and provide feedback. When it is time to roll out the feature as a **required** update, then admins will be able to change the setting on the policy, and update the rollout settings so that the update is deployed as a **required** update to devices that do not yet have it installed.
-
-For more information on Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md).
-
 ### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
 
 End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website, which allows end users see their recovery keys as well.
