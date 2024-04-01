@@ -108,6 +108,11 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
 |\*.wcpstatic.microsoft.com| Used to confirm cookie compliance in accordance with various laws|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
+
+Endpoints needed for GCC customers (tenants):
+
+| Domain/Name                       | Description                                           |
+|-----------------------------------|-------------------------------------------------------|
 |gcc.remotehelp.microsoft.com|Primary endpoint for the Remote Help application|
 |gcc.relay.remotehelp.microsoft.com|Primary endpoint for the Remote Help application|
 |remoteassistanceweb.usgov.communication.azure.us|Used for Azure Communication Service for chat and connection between parties|
