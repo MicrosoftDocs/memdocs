@@ -175,10 +175,10 @@ After your profile is deployed, you can check its status:
 
 3. You can also see if individual settings in a profile successfully applied. To see the per-setting status of an OEMConfig profile, select **Devices** > **All devices**, and choose a device from the list. Then, go to **App configuration**, and select your OEMConfig profile. Select an individual setting status to get more information.
 
-    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 500 KB aren't shown. To reduce the size below 500 KB, you can try one or more of the following ways:
+    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 500 KB aren't shown. To reduce the size below 500 KB, you can try the following options:
 
-    1. Reduce the number of settings configured in the profile.
-    2. In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
+    - Reduce the number of settings configured in the profile.
+    - In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
 
 > [!NOTE]
 > For Zebra devices, only a single setting row is shown. Selecting the row shows details for all settings in the policy.
