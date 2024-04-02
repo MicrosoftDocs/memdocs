@@ -95,12 +95,10 @@ Use this feature in the Microsoft Intune admin center to restrict certain device
 * Device platform restrictions: Restrict devices based on device platform, version, manufacturer, or ownership type.
 * Device limit restrictions: Restrict the number of devices a user can enroll in Intune. 
 
-Enrollment restrictions aren't available for Linux and some Windows enrollment scenarios. When you're setting up restrictions for Android Enterprise personal devices, we recommend leveraging our Android security configuration framework. It includes the device restrictions needed for basic security (level 1), which is the minimum security configuration we recommend having on personal devices, and high security (level 3), which is for devices used by specific users or groups who are uniquely high risk.   
+Enrollment restrictions aren't available for Linux and some Windows enrollment scenarios.For more information, see [What are enrollment restrictions?](../enrollment/enrollment-restrictions-set.md)  <!-- Removing until PM updates framework docs. When you're setting up restrictions for Android Enterprise personal devices, we recommend leveraging our Android security configuration framework. It includes the device restrictions needed for basic security (level 1), which is the minimum security configuration we recommend having on personal devices, and high security (level 3), which is for devices used by specific users or groups who are uniquely high risk. -->     
 
-For more information, see:  
 
-* [What are enrollment restrictions?](../enrollment/enrollment-restrictions-set.md) 
-* [Recommended device restrictions](../enrollment/device-enrollment-restrictions.md)
+
 
 ### Create terms and conditions policy    
 Use an Intune terms and conditions policy to disclose legal disclaimers and compliance requirements to device users before enrollment. This policy requires the devices user to accept your org's terms and conditions before they enroll their device or access protected resources. The terms and conditions are shown to targeted users in the Intune Company Portal app. 

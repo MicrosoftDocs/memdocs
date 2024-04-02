@@ -82,11 +82,7 @@ In your baseline, at a minimum, Microsoft recommends the following security poli
 
 This section lists the Intune and Microsoft services you can use to create these security policies.
 
-If you prefer a more granular list of settings and their recommended values, go to:
-
-- [Android Enterprise security configuration framework](../enrollment/android-configuration-framework.md)
-- [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
-- [Windows security baselines](../protect/security-baselines.md)
+For a more granular list of Windows settings and their recommended values, go to [Windows security baselines](../protect/security-baselines.md).  
 
 ### Antivirus and scanning
 
