@@ -148,10 +148,10 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
 11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
 
-    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. To reduce the size, you can try one or more of the following options:
+    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. To reduce the size, you can try the following options:
 
-    1. Reduce the number of settings configured in the profile.
-    2. In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
+    - Reduce the number of settings configured in the profile.
+    - In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
 
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
