@@ -87,8 +87,8 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 > [!TIP] 
 > OEMConfig apps are specific to the OEM. For example, a Sony OEMConfig app installed on a Zebra Technologies device doesn't do anything.
 
-1. Get the OEMConfig app from the Managed Google Play Store. [Add Managed Google Play apps to Android enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
-2. Some OEMs may ship devices with the OEMConfig app preinstalled. If the app isn't preinstalled, use Intune to [add and deploy the app to devices](../apps/apps-deploy.md).
+- Get the OEMConfig app from the Managed Google Play Store. [Add Managed Google Play apps to Android enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
+- Some OEMs may ship devices with the OEMConfig app preinstalled. If the app isn't preinstalled, use Intune to [add and deploy the app to devices](../apps/apps-deploy.md).
 
 ## Create an OEMConfig profile
 
