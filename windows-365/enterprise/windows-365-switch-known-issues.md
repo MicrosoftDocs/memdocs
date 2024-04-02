@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/12/2024
+ms.date: 04/02/2024
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -37,6 +37,17 @@ This page lists recent known issues with [Windows 365 Switch](windows-365-switch
 ## Support for only one Cloud PC
 
 Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. Using Switch, the user can choose which Cloud PC to sign in to by selecting the ellipses (...) > choose the Cloud PC > **Add to Task view**. Only one Cloud PC can be added to Task view at a time.
+
+## Remove or replace stale Cloud PC from task view
+
+If you added a Cloud PC to your task view but no longer have access to that Cloud PC or its tenant, you can remove or replace that Cloud PC in the task view.
+
+**Troubleshooting steps**:
+
+1. Uninstall [Windows App](/windows-app/overview).
+2. Reinstall Windows App.
+
+This removes the Cloud PC's icon from the task view. You can then use Windows App **Add to task view** button on the Cloud PC replacement.
 
 ## Limited gestures
 
@@ -73,6 +84,9 @@ If the local PC is missing from the Cloud PC's task view bar, the Azure Virtual 
 **Troubleshooting steps**:
 
 Uninstall and reinstall the Azure Virtual Desktop (HostApp) app from the [Microsoft Store](ms-windows-store://pdp/?productid=9NRNM1N926MN).
+
+
+
 
 <!-- ########################## -->
 ## Next steps
