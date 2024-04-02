@@ -32,7 +32,7 @@ ms.collection:
 
 # Use Azure Firewall to manage and secure Windows 365 environments
 
-This article explains how to simplify and protect your Windows 365 environment using Azure Firewall. The example architecture explained herein provides low maintenance and automated access to the required endpoints through a direct and optimized connection path. You can use Azure Firewall network rules and fully qualified domain name (FQDN) tags to replicate this architecture example in your environment.
+This article explains how to simplify and protect your Windows 365 environment using Azure Firewall. The example architecture explained here provides low maintenance and automated access to the required endpoints through a direct and optimized connection path. You can use Azure Firewall network rules and fully qualified domain name (FQDN) tags to replicate this architecture example in your environment.
 
 > [!NOTE]  
 > This article applies to customers who deploy Windows 365 with Azure network connections (ANC). This article doesn’t apply to environments that use Microsoft hosted networks. For more information about each, see [Windows 365 networking deployment options](deployment-options.md).
