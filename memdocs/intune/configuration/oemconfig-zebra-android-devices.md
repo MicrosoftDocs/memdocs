@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2023
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -54,13 +53,14 @@ To manage Zebra devices, there are two versions of the OEMConfig app:
 
 | OEMConfig app | Supported Android versions | Multiple profile support |
 | --- | --- | --- |
-| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards and only allows one profile on the device. Be sure to deploy one profile with all the required configuration settings. <br/><br/> If you try to deploy multiple profiles, then the profiles conflict and no settings are configured. |
+| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards. It's suggested to deploy one profile with all the required configuration settings.<br/><br/>A top parent group or bundle can only be configured in one profile. If you deploy multiple profiles, make sure the configured settings belong to different top parent groups or bundles. If you configure the same top parent or bundle settings in different OEMConfig profiles, then both the profiles go into a **Conflict** state. |
 | **Legacy Zebra OEMConfig** | - Android 11 and earlier | ✔️ You can split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device. |
 
 > [!NOTE]
 >
 > - Zebra devices don't support Android 12.
 > - For more information on the new **Zebra OEMConfig Powered by MX** app, go to [New Zebra OEMConfig app for Android](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730).
+> - It is suggested to deploy only one OEMConfig profile to any device to avoid the conflict stage. If multiple profiles are deployed to the device, the settings in these profile must belong to different top-parent group or bundles. If the top parent group settings are conflicting or same in two profiles, none of them will be successfully deployed and will lead to ‘Pending’ state.
 
 ## Multiple profiles using the Legacy Zebra OEMConfig app
 
