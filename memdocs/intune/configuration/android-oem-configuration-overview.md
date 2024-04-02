@@ -60,6 +60,11 @@ When the OEM adds and improves management features, the OEM also updates the app
 
 When using OEMConfig, be aware of the following information:
 
+- The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. To reduce the size, you can try one or more of the following options:
+
+  - Reduce the number of settings configured in the profile.
+  - In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
+
 - Intune exposes the OEMConfig app's schema so you can configure it. Intune doesn't validate or change the schema provided by the app. So if the schema is incorrect, or has inaccurate data, then this data is still sent to devices. If you find a problem that originates in the schema, contact the OEM for guidance.
 - Intune doesn't influence or control the content of the app schema. For example, Intune doesn't have any control over strings, language, the actions allowed, and so on. We recommend contacting the OEM for more information on managing their devices with OEMConfig.
 - At any time, OEMs can update their supported features and schemas, and upload a new app to Google Play. Intune always syncs the latest version of the OEMConfig app from Google Play. Intune doesn't maintain older versions of the schema or the app. If you run into version conflicts, we recommend contacting the OEM for more information.
@@ -170,9 +175,10 @@ After your profile is deployed, you can check its status:
 
 3. You can also see if individual settings in a profile successfully applied. To see the per-setting status of an OEMConfig profile, select **Devices** > **All devices**, and choose a device from the list. Then, go to **App configuration**, and select your OEMConfig profile. Select an individual setting status to get more information.
 
-    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 500KB aren't shown. To reduce the size below 500kb, you can try one or more of the following ways:
-> Reduce the number of settings configured in the profile
-> Reduce the size of the value entered for the keys in JSON editor
+    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 500 KB aren't shown. To reduce the size below 500 KB, you can try one or more of the following ways:
+
+    1. Reduce the number of settings configured in the profile.
+    2. In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
 
 > [!NOTE]
 > For Zebra devices, only a single setting row is shown. Selecting the row shows details for all settings in the policy.
