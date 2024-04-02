@@ -5,7 +5,7 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-ms.date: 03/28/2024
+ms.date: 04/05/2024
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
@@ -33,6 +33,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Planned end of support|
 |-------|---------------------------|----------------------|
+| **Office 365 Client Management dashboard add-in support statement**.<!-- 12454890 --> For more information, see [Office 365 Client Management dashboard](../../../../sum/deploy-use/office-365-dashboard.md). | April 2024 | The first release after April 1, 2025 |
 | [Windows Information Protection](../../../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md#windows-information-protection) <!-- MAXADO-6010051 --> | July 2022 | TBD |
 | The site system roles for on-premises MDM and macOS clients: **enrollment proxy point and enrollment point**.<!-- 12454901,12927803 --> | January 2022 | Mar 31, 2024 |
 | The **Microsoft Store for Business and Education**. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).<!-- 10884039 --> | November 2021 | The first release after March 1, 2023 |
