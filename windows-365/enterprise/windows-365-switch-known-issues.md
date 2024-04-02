@@ -40,14 +40,13 @@ Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The use
 
 ## Remove or replace stale Cloud PC from task view
 
-If you added a Cloud PC to your task view but no longer have access to that Cloud PC or its tenant, you can remove or replace that Cloud PC in the task view.
+If your task view has a Cloud PC that you can no longer have access, you can remove and replace that Cloud PC.
 
 **Troubleshooting steps**:
 
 1. Uninstall [Windows App](/windows-app/overview).
 2. Reinstall Windows App.
-
-This removes the Cloud PC's icon from the task view. You can then use Windows App **Add to task view** button on the Cloud PC replacement.
+3. Use Windows App **Add to task view** button on the Cloud PC you want to add.
 
 ## Limited gestures
 
@@ -75,7 +74,7 @@ After selecting a Cloud PC from the Task view, users might be prompted to sign i
 
 **Troubleshooting steps**:
 
-Select the Task view button for the Cloud PC again. The connection continues in the background. The user should be connected to their Cloud PC within a few minutes
+Select the Task view button for the Cloud PC again. The connection continues in the background. The user should be connected to their Cloud PC within a few minutes.
 
 ## Local PC missing from Cloud PC task view bar
 
