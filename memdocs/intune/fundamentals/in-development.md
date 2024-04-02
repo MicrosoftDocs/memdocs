@@ -271,6 +271,14 @@ The Microsoft 365 remote application diagnostics will allow Intune admins to req
 
 <!-- *********************************************** -->
 
+## Tenant administration
+
+### Customize your Intune admin center experience<!-- 24155584  -->
+
+You will be able to better customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the Intune admin center will be updated to support expanding and collapsing each subsection of the menu. In addition, you will be able to set admin center pages as favorites.
+
+By default, menu sections will be expanded and provide the same experience today. You will be able to choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, you can select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed or **Expanded** as the default portal option. Each menu section will retain the expanded or collapsed state that you choose.  Additionally, selecting the star icon next to a page on the left nav will add the page to a **Favorites** section near the top of the menu.
+
 <!-- *********************************************** -->
 
 ## Notices
