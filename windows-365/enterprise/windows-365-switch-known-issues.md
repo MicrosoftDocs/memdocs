@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/12/2024
+ms.date: 04/02/2024
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -38,6 +38,16 @@ This page lists recent known issues with [Windows 365 Switch](windows-365-switch
 
 Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. Using Switch, the user can choose which Cloud PC to sign in to by selecting the ellipses (...) > choose the Cloud PC > **Add to Task view**. Only one Cloud PC can be added to Task view at a time.
 
+## Remove or replace stale Cloud PC from task view
+
+If your task view has a Cloud PC that you can no longer have access, you can remove and replace that Cloud PC.
+
+**Troubleshooting steps**:
+
+1. Uninstall [Windows App](/windows-app/overview).
+2. Reinstall Windows App.
+3. Use Windows App **Add to task view** button on the Cloud PC you want to add.
+
 ## Limited gestures
 
 Some gestures aren't supported in the Cloud PC, like three finger gestures to change app or four finger gesture to bring up the Task view and show the desktop. These gestures instead get triggered on the physical device. Other than these gestures, all the usual Windows 11 gestures are supported.
@@ -64,7 +74,7 @@ After selecting a Cloud PC from the Task view, users might be prompted to sign i
 
 **Troubleshooting steps**:
 
-Select the Task view button for the Cloud PC again. The connection continues in the background. The user should be connected to their Cloud PC within a few minutes
+Select the Task view button for the Cloud PC again. The connection continues in the background. The user should be connected to their Cloud PC within a few minutes.
 
 ## Local PC missing from Cloud PC task view bar
 
@@ -73,6 +83,9 @@ If the local PC is missing from the Cloud PC's task view bar, the Azure Virtual 
 **Troubleshooting steps**:
 
 Uninstall and reinstall the Azure Virtual Desktop (HostApp) app from the [Microsoft Store](ms-windows-store://pdp/?productid=9NRNM1N926MN).
+
+
+
 
 <!-- ########################## -->
 ## Next steps
