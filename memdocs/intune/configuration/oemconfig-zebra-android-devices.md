@@ -54,13 +54,16 @@ To manage Zebra devices, there are two versions of the OEMConfig app:
 
 | OEMConfig app | Supported Android versions | Multiple profile support |
 | --- | --- | --- |
-| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards and only allows one profile on the device. Be sure to deploy one profile with all the required configuration settings. <br/><br/> If you try to deploy multiple profiles, then the profiles conflict and no settings are configured. |
+| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards . It is suggested to deploy one profile with all the required configuration settings.
+
+If you try to deploy multiple profiles, ensure the configured settings belong to different top-parent group or bundles. If the settings are conflicting in different OEMConfig profiles, both the profiles will go into 'Conflict' state.  |
 | **Legacy Zebra OEMConfig** | - Android 11 and earlier | ✔️ You can split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device. |
 
 > [!NOTE]
 >
 > - Zebra devices don't support Android 12.
 > - For more information on the new **Zebra OEMConfig Powered by MX** app, go to [New Zebra OEMConfig app for Android](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730).
+> - It is suggested to deploy only one OEMConfig profile to any device to avoid the conflict stage. If multiple profiles are deployed to the device, the settings in these profile must belong to different top-parent group or bundles. If the top parent group settings are conflicting or same in two profiles, none of them will be successfully deployed and will lead to ‘Pending’ state.
 
 ## Multiple profiles using the Legacy Zebra OEMConfig app
 
