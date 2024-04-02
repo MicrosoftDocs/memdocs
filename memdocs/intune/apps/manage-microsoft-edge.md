@@ -601,7 +601,7 @@ There may be scenarios where users are only allowed to view websites, without th
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://contoso.com/|http://contoso.com/|https://[*.]contoso.com|[*.]contoso.com`|
-|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://external.filesupload1.com/|http://external.filesupload2.com/|https://[*.]external.filesupload1.com|[*.].filesupload1.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://external.filesupload1.com/|http://external.filesupload2.com/|https://[*.]external.filesupload1.com|[*.]filesupload1.com`|
 
 The example to block all websites, including internal websites, from uploading files
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
