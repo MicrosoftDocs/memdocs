@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/04/2023
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -109,6 +109,7 @@ Azure Firewall doesn’t currently handle nonstandard ports in an FQDN tag. Wind
 | Registration | FQDN | hm-iot-in-3-prod-preu01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | UDP connectivity via TURN | IP | 20.202.0.0/16 | UDP | 3478 | Not recommended | Required |
 | TURN connectivity | IP | 20.202.0.0/16 | TCP | 443 | Not recommended | Required |
+| Registration | FQDN | hm-iot-in-4-prod-prna01.azure-devices.net | TCP | 443, 5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 
 <!-- ########################## -->
 ## Next steps
