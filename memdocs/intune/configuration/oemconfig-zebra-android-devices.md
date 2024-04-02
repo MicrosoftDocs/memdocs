@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2023
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -54,9 +53,7 @@ To manage Zebra devices, there are two versions of the OEMConfig app:
 
 | OEMConfig app | Supported Android versions | Multiple profile support |
 | --- | --- | --- |
-| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards . It is suggested to deploy one profile with all the required configuration settings.
-
-If you try to deploy multiple profiles, ensure the configured settings belong to different top-parent group or bundles. If the settings are conflicting in different OEMConfig profiles, both the profiles will go into 'Conflict' state.  |
+| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards. It's suggested to deploy one profile with all the required configuration settings.<br/><br/>A top parent group or bundle can only be configured in one profile. If you deploy multiple profiles, make sure the configured settings belong to different top parent groups or bundles. If you configure the same top parent or bundle settings in different OEMConfig profiles, then both the profiles go into a **Conflict** state. |
 | **Legacy Zebra OEMConfig** | - Android 11 and earlier | ✔️ You can split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device. |
 
 > [!NOTE]
