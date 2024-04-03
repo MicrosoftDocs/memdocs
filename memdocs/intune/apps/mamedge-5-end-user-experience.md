@@ -88,11 +88,11 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 
 Intune will notify you with various messages in the event of a failure. Here are the scenarios:
 
-- **App access blocked message:** This message appears when your applied app protection policy has failed the MDT threat level being exceeded.
+- **App access blocked message:** This message appears when your applied app protection policy has failed the MDT threat level check.
 
     :::image type="content" alt-text="App Access Blocked - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png":::
 
-- **Your organization prevents you from copying content from this website:** This message appears when you attempt to move data around in a way that is blocked by your DLP policy.
+- **Your organization prevents you from copying content from this website:** This message appears when you attempt to move data in a way that is blocked by your DLP policy.
 
     :::image type="content" alt-text="Copying prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png":::
 
