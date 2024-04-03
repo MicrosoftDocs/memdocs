@@ -32,7 +32,7 @@ ms.collection:
 
 # Step 5. Understand Microsoft Edge for Business end user experience for Windows
 
-Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a manage or unmanage device.
+Now that you've configured your Microsoft Entra conditional access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a managed or unmanaged device.
 
 The end user experience in Microsoft Edge for Business is designed to be productive, secure, and user-friendly. This secure enterprise browser experience includes the following features:
 
@@ -42,9 +42,7 @@ The end user experience in Microsoft Edge for Business is designed to be product
 
 3. **Automatic switching**: This feature helps enforce context separation between work and personal browsing. It ensures that work-related content doesn't get intermingled with personal browsing, preventing users from accidentally sharing sensitive information with unintended audiences.
 
-4. **Company branding**: This feature, which is coming soon, will increase familiarity and trust with company branding in the work browser window.
-
-5. **Security**: It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows.
+4. **Security**: It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows.
 
 Microsoft Edge for Business provides dedicated work browsing experience that is visually distinct, secure, and user-friendly. It separates work and personal browsing into dedicated browser windows with their own favorites, separate cache, and storage locations.
 
@@ -90,11 +88,11 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 
 Intune will notify you with various messages in the event of a failure. Here are the scenarios:
 
-- **App access blocked message:** This message appears when your applied app protection policy has failed any health check.
+- **App access blocked message:** This message appears when your applied app protection policy has failed the MDT threat level check.
 
     :::image type="content" alt-text="App Access Blocked - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png":::
 
-- **Your organization prevents you from copying content from this website:** This message appears when your applied Level 3 app protection policy has failed a protection check that prevents you from copying content.
+- **Your organization prevents you from copying content from this website:** This message appears when you attempt to move data in a way that is blocked by your DLP policy.
 
     :::image type="content" alt-text="Copying prevention by app protection policy - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png":::
 
