@@ -64,7 +64,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### Step-up licenses now support storage<!--48555915-->
 
-For Windows 365, step-up licenses now support storage. For more information, see [](resize-cloud-pc.md#resize-with-step-up-licenses).
+For Windows 365, step-up licenses now support storage. For more information, see [Resize with Step-up Licenses](resize-cloud-pc.md#resize-with-step-up-licenses).
 
 <!-- ########################## -->
 ## Week of March 26, 2024 (Service release 2403)
