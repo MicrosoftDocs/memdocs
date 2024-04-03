@@ -41,7 +41,7 @@ Third-party partners support one or more of the following platforms:
 
 By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Microsoft Entra ID and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through a Microsoft Entra user group.
 
-To enable use data from device compliance partners, complete the following tasks:
+To enable user data from device compliance partners, complete the following tasks:
 
 1. **Configure Intune to work with the device compliance partner**, and then configure groups of users whose devices are managed by that compliance partner.
 
