@@ -145,7 +145,7 @@ When you enable this action:
 
 > [!NOTE]
 > The following actions for noncompliance are not supported for devices that are managed by a [device compliance management partner](../protect/device-compliance-partners.md):  
-> - Send push notification to end user
+> - Send email to end user
 > - Remotely lock the noncompliant device
 > - Add device to retire list
 > - Send push notification to end user
