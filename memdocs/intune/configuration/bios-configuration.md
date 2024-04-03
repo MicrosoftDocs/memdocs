@@ -2,12 +2,12 @@
 # required metadata
 
 title: Update Windows BIOS using configuration MDM policy
-description: Learn more about the BIOS configuration and other settings profile to manage traditional BIOS settings in Microsoft Intune. You use an OEM tool to create a configuration file with the settings. You deploy an OEM Win32 app to the devices to read the configuration file and BIOS passwords. Then, you create a BIOS configuration policy in Intune to add the configuration file and assign the policy to your devices.
+description: Learn more about the BIOS configuration profile that can manage traditional BIOS settings in Microsoft Intune. You use an OEM tool to create a configuration file with the settings. You deploy an OEM Win32 app to the devices to read the configuration file and BIOS passwords. Then, you create a BIOS configuration policy in Intune to add the configuration file and assign the policy to your devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,49 +50,40 @@ This article includes more information on the configuration file and Win32 app, 
 
 - To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-- To read the BIOS passwords of devices, you can create a custom RBAC role with the **Read Bios Password** permission.
-
-  1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Roles** > **Create a new role**.
-  2. **Name** your role and select **Next**.
-  3. In **Permissions**, expand **Managed devices** > Set **Read Bios Password** to **Yes**.
-  4. Select **Next** > **Next** > **Create**.
-
 - This feature supports organization-owned devices that are MDM enrolled in Intune. Personal devices and devices not enrolled in Intune aren't supported.
 
-- Make sure the devices you want to manage don't have an existing BIOS password configured. This feature requires that Intune have the BIOS password. If Intune doesn't have the BIOS password of the device, then it can't update the BIOS configuration.
+- Make sure the devices don't have an existing BIOS password configured. This feature requires that Intune have the BIOS password. If Intune doesn't have the BIOS password of the device, then it can't update the BIOS configuration.
 
-## Step 1 - Create the configuration file
+## Step 1 - Create the configuration file and deploy the app
 
-Create the configuration file using the OEM tool. In the file, add and configure the features you want to configure. You can add any configuration settings that the OEM supports.
+1. Create the configuration file using the OEM tool. In the file, add and configure the features you want to configure. You can add any configuration settings that the OEM supports.
 
-- For Dell, you can use the [Dell Command tool](https://www.dell.com/support/kbdoc/000108963/how-to-use-and-troubleshoot-dell-command-update-to-update-all-drivers-bios-and-firmware-for-your-system) (opens Dell's website) to create the BIOS configuration file.
+    - For Dell, you can use the [Dell Command](https://www.dell.com/support/kbdoc/000214308/dell-command-endpoint-configure-for-microsoft-intune) (opens Dell's website) tool to create the BIOS configuration file.
+
+2. When you create the configuration file, there's a coordinating Win32 app provided by the OEM. Deploy the OEM Win32 app to the devices. This app:
+
+    - Acts as an agent that reads the configuration file you create, and reads the BIOS passwords of the devices.
+    - Must be installed on all devices before you assign the Intune BIOS configuration policy.
+
+    For Dell, you can download the [Dell Command](https://www.dell.com/support/kbdoc/000214308/dell-command-endpoint-configure-for-microsoft-intune) (opens Dell's web site) app.
+
+    To install this app on the devices, you can use Intune. You add the app to Intune and make it a required app. Then, assign the app to the group or assignment filter you create in [Step 2 - Create a group or use an assignment filter](#step-2---create-a-group-or-use-an-assignment-filter) (in this article).
+
+    For more information on Win32 apps in Intune, go to [Add, assign, and monitor a Win32 app in Microsoft Intune](../apps/apps-win32-add.md).
 
 ## Step 2 - Create a group or use an assignment filter
 
 It's recommended to focus this policy on a specific set of devices. Your options:
 
 - **Option 1** - Create a group that includes the devices. When you create the app policy and the BIOS configuration policy, you assign the policies to this group.
-- **Option 2** - Use an assignment filter based on the device manufacturer. When you create the filter, target the Dell devices. When you assign the app and BIOS configuration policies, add this filter.
+- **Option 2** - Use an assignment filter based on the device manufacturer. When you create the filter, target the OEM devices. When you assign the app and BIOS configuration policies, add this filter.
 
 For more information on these features, go to:
 
 - [Add groups to organize users and devices](../fundamentals/groups-add.md)
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md)
 
-## Step 3 - Deploy the app
-
-When you create the configuration file, there's a coordinating Win32 app provided by the OEM. This app:
-
-- Acts as an agent that reads the configuration file you create, and reads the BIOS passwords of the devices.
-- Must be installed on all devices before you assign the BIOS configuration policy.
-
-For Dell, you can download the app at [Dell Command | Endpoint Configure for Microsoft Intune](https://www.dell.com/support/home/product-support/product/command-endpoint-configure/docs) (opens Dell's web site).
-
-You can use Intune to install this app on the devices. You add the app to Intune and make it a required app. Then, assign the app to the group or assignment filter you created in [Step 2 - Create a group or use an assignment filter](#step-2---create-a-group-or-use-an-assignment-filter) (in this article).
-
-For the steps, go to [Add, assign, and monitor a Win32 app in Microsoft Intune](../apps/apps-win32-add.md).
-
-## Step 4 - Create the BIOS configuration policy in Intune
+## Step 3 - Create the BIOS configuration policy in Intune
 
 This policy is where you add the configuration file you created.
 
@@ -106,7 +97,7 @@ This policy is where you add the configuration file you created.
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows: Dell devices BIOS config password**.
+    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **BIOS config password**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
    Select **Next**.
@@ -118,25 +109,11 @@ This policy is where you add the configuration file you created.
     - **Disable per-device BIOS password protection**: This setting manages the password that protects the BIOS configuration on the device. Your options:
 
       - **No**: Intune generates a unique device password for each device. To access and update the BIOS configuration on the device, users must enter this password.
-      - **Yes**: There isn't a password protecting the BIOS. End users can access the BIOS and change the BIOS settings on the device.
-
-        To get the per-device passwords generated by Intune, you can use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get) to:
-
-        - Read all passwords - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordInfo`
-        - Retrieve a single device password - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordInfo('<deviceID>')`
-
-      > [!IMPORTANT]
-      > Make sure you back up all passwords outside of Intune.
-      >
-      > - If a device is removed from Intune management, then admins can still read BIOS passwords using the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get).
-      > - If the Intune subscription for your tenant ends, then there's no way to read or retrieve BIOS passwords. In this situation, your only option is to contact your OEM.
+      - **Yes**: There isn't a password protecting the BIOS. Any previous passwords are removed. End users can access the BIOS and change the BIOS settings on the device.
 
     - **Configuration file**: Upload the configuration file generated with your OEM tool.
 
-      For Dell, upload the Dell Client Configuration Tool Kit file (`.cctk`).
-
-      > [!IMPORTANT]
-      > The file size limit is 2 MB.
+      For Dell, upload the Dell Client Configuration Tool Kit file (`.cctk`). The file size limit is 2 MB.
 
     Select **Next**.
 
@@ -160,9 +137,48 @@ For more information, go to:
 - [Monitor device configuration policies in Microsoft Intune](device-profile-monitor.md)
 - [Intune reports](../fundamentals/reports.md)
 
-## Remove BIOS configuration settings
+## Retrieve the BIOS passwords
 
-To stop managing the BIOS of your devices or remove devices permanently from your tenant, then you must set the **Disable per-device BIOS password protection** setting to **Yes** in the BIOS configuration policy and deploy the policy. When the device [checks in with Intune](device-profile-troubleshoot.md#policy-refresh-intervals), then the policy applies. On the device, you can also manually sync the device with Intune to apply the policy.
+Intune stores the BIOS passwords for each device. You can get the BIOS passwords using Microsoft Graph. To test the Graph APIs, you can use [Microsoft Graph Explorer](/graph/graph-explorer/graph-explorer-overview).
+
+> [!IMPORTANT]
+> Make sure you back up all passwords outside of Intune.
+>
+> - If a device is removed from Intune management, then admins can still read BIOS passwords using the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get).
+> - If the Intune subscription for your tenant ends, then there's no way to read or retrieve BIOS passwords. In this situation, your only option is to contact your OEM.
+
+### Option 1 - Read the BIOS password one device at a time
+
+This option gets the BIOS passwords, one device at a time.
+
+1. Create a custom Intune RBAC role with the **Read Bios Password** permission:
+
+    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Roles** > **Create a new role**.
+    2. **Name** your role and select **Next**.
+    3. In **Permissions**, expand **Managed devices** > Set **Read Bios Password** to **Yes**.
+    4. Select **Next** > **Next** > **Create**.
+
+2. Sign in to your Graph tool with this custom RBAC role, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
+
+    - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordInfo('<deviceID>')`
+
+### Option 2 - Read the BIOS password of all devices
+
+This option gets a list of all the BIOS password of all devices.
+
+1. You need the **Intune Service Administrator** role or **Global Administrator** role in Microsoft Entra ID. These roles are Microsoft Entra roles, not Intune roles.
+
+2. Sign in to your Graph tool with one of these roles, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
+
+    - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordInfo`
+
+For more information on RBAC roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+## Remove BIOS configuration password
+
+If you're planning to stop managing the BIOS of your devices or remove devices permanently from your tenant, then you must remove the BIOS password.
+
+To remove the BIOS password, in your Intune BIOS configuration policy, set the **Disable per-device BIOS password protection** setting to **Yes**. Then, assign the policy. When the device [checks in with Intune](device-profile-troubleshoot.md#policy-refresh-intervals), then the policy applies. On the device, you can also manually sync the device with Intune to apply the policy.
 
 After the policy applies, reboot the device.
 
@@ -177,12 +193,11 @@ The following table compares these options.
 | **Feature** | **BIOS configuration and other settings** | **DFCI** |
 |---|---|---|
 | **Supported OEMs** | Dell <br/><br/>Possibly more in the future | Surface, Acer, Asus, Dynabook, Fujitsu, Panasonic <br/><br/>For more information, go to [Microsoft DFCI Scenarios](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/). |
-| **Supported configurations** | Any configurations available in the Dell Command tool | A set of settings to control security features, some hardware features, boot options, ports, and more |
-| **How settings are applied** | Intune delivers through sidecar. The Dell agent on the device applies the configuration. | Through UEFI CSP using the DFCI layer, which is isolated from the OS |
-| **Blocks access to BIOS menu** | Yes, via BIOS passwords | Yes, certificate based |
-| **Protects against malware** | No | Yes, due to extra DFCI layer |
-| **Configuration during Windows Autopilot** | No | Yes |
-| **Reporting** | Reports whether the config file applied. There isn't any granular report for the settings. | Granular report for each setting you configure. |
+| **Supported configurations** | Any configurations available in your OEM tool | A set of settings to control security features, some hardware features, boot options, ports, and more |
+| **How settings are applied** | Intune delivers the configuration file when the policy is assigned. The OEM agent on the device applies the configuration. | Through UEFI CSP using the DFCI layer, which is isolated from the OS |
+| **Blocks access to BIOS menu** | Yes, via BIOS passwords | Yes, via certificates |
+| **Configuration during Windows Autopilot** | In the Enrollment Status Page (ESP) settings, select the OEM Win32 app. | Intune automatically enrolls the device in DFCI mgmt. |
+| **Reporting** | Reports if the configuration file applied. | Granular report for each setting you configure. |
 | **Intune policy type** | **Devices** > **Configuration** > **Templates** > **BIOS configuration and other settings** | **Devices** > **Configuration** > **Templates** > **Device Firmware Configuration Interface** |
 
 For more information on DFCI, go to:
