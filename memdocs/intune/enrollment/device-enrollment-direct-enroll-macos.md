@@ -3,7 +3,7 @@
 
 title: Use direct enrollment for macOS devices
 titleSuffix: Microsoft Intune
-description: Enroll macOS devices using Direct Enrollment.
+description: Deploy and enroll macOS devices in Microsoft Intune using direct enrollment with Apple Configurator.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -28,20 +28,26 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Use Direct Enrollment for macOS devices
+# Use direct enrollment for macOS devices
 
-In places where Apple Business Manager isn't available or used, you can enroll corporate-owned Macs in Microsoft Intune via *direct enrollment* with [Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/intro-to-apple-configurator-cadf1802aed/mac). Specifically, you can prepare and deploy kiosk-style devices, which are userless devices commonly dedicated to specific business tasks, such as managing inventory or scanning items. 
+In places where Apple Business Manager isn't available or used, you can enroll corporate-owned Macs in Microsoft Intune via *direct enrollment* with Apple Configurator. Specifically, you can prepare and deploy kiosk-style devices. These types of devices are commonly used in businesses to scan items, print tickets, get digital signatures, or manage inventory, and aren't associated with a single user. 
 
-Direct enrollment is recommended for organizations that: 
+Mirosoft Intune supports direct enrollment on new and existing devices. This method doesn't wipe existing devices. It is intended for organizations that: 
 
-- Need a wired connection or have unreliable network availability.  
-- Don't want to set up and use Apple Business Manager or Apple School Manager.  
 - Are in a region/country that doesn't support Apple Business Manager or Apple School Manager. 
+- Don't want to use Apple Business Manager or Apple School Manager because they want to limit admin control over devices, or because they don't want to set up all of the requirements. 
+- Need a wired internet connection or have an unreliable internet connection.   
 
-You can use this method to enroll one or more Macs. If you have a lot of devices, it will take some time to enroll them because you must transfer and open the enrollment profile on each Mac you're enrolling. Mirosoft Intune supports direct enrollment on new and existing userless devices. This method doesn't wipe existing devices.      
+You can use this method to enroll one or more Macs. If you have a lot of devices, it will take some time to enroll them because you must transfer and open the enrollment profile on each Mac you're enrolling. 
+
+Devices are deployed without user affinity. If you need devices to have user affinity, enroll Macs in Intune via [Apple automated device enrollment](device-enrollment-program-macos.md).  
+
+See the following visual guide for a summary of all enrollment options and features available for macOS:    
+
+[![A visual representation of Intune enrollment options by platform](../fundamentals/media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)  
 
 ## Apps 
-Apps requiring user affinity, such as the Intune Company Portal app, aren't supported on Macs enrolled via direct enrollment. The Company Portal app isn't used, needed, or supported on enrollments without user affinity. Be sure device users don't install the Company Portal app from the Apple App Store on enrolled devices. 
+Apps requiring user affinity, such as the Intune Company Portal app, aren't supported on Macs enrolled via direct enrollment. The Company Portal app isn't used, needed, or supported for enrollments without user affinity. Be sure device users don't install the Company Portal app from the Apple App Store on enrolled devices. 
 
 ## Prerequisites
    
@@ -67,7 +73,7 @@ A device enrollment profile defines the settings applied during direct enrollmen
   > [!TIP] 
   > You can use the name field to create a dynamic membership rule for Microsoft Entra groups. The *enrollmentProfileName* parameter lets you quickly assign devices with this enrollment profile to the appropriate groups. For more information, see [Dynamic group rule syntax](/azure/active-directory/enterprise-users/groups-dynamic-membership#rules-for-devices).  
 
-5. For **User Affinity**, choose **Enroll without user affinity**. This configuration confirms that you're setting up devices without user association. Direct enrollment *with user affinity*, although available, isn't supported on Macs. If you require user affinity, enroll Macs in Intune via Apple automated device enrollment.  
+5. For **User Affinity**, choose **Enroll without user affinity**. This configuration confirms that you're setting up devices without user association. Direct enrollment *with user affinity*, although available, isn't supported on Macs.   
 
 6. Select **Create** to save the profile.  
 
@@ -82,7 +88,7 @@ In this step, you export the enrollment profile.
      > [!NOTE]
      > You can download as many enrollment profiles as you need. Downloading a new profile does not render the previous one invalid, however, it also doesn't extend the expiration date for the previously downloaded file. 
 
-## Step 4: Install enrollment profile    
+## Step 3: Install enrollment profile    
 In this step, you install the enrollment profile on the enrolling Mac. 
 
 1. Transfer the `.mobileconfig` file from your device to the Mac you want to enroll.   
@@ -99,4 +105,5 @@ Start managing enrolled devices in the Microsoft Intune admin center.
 
 - [Tutorial - Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)   
 - [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)     
-- [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md.md)   
+- [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md.md)  
+
