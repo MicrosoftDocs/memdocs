@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 3/27/2024
+ms.date: 04/03/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -55,6 +55,16 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of April 1, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Step-up licenses now support storage<!--48555915-->
+
+For Windows 365, step-up licenses now support storage. For more information, see [](resize-cloud-pc.md#resize-with-step-up-licenses).
 
 <!-- ########################## -->
 ## Week of March 26, 2024 (Service release 2403)
