@@ -49,7 +49,7 @@ The following list provides common issues and potential solutions:
 
     :::image type="content" alt-text="Sign in with your work account - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png":::
 
-- If you encounter an error like the below, it could mean that you’ve selected the wrong enrollment method. You might have left a checkmark on ‘Select No, sign into this app only’. Redo the enrollment process without selecting this option. Otherwise, the App Protection Policy won’t be applied.
+- If you encounter an error like the above, it could mean that you’ve selected the wrong enrollment method. You might have left a checkmark on ‘Select No, sign into this app only’. Redo the enrollment process without selecting this option. Otherwise, the App Protection Policy won’t be applied.
 
     :::image type="content" alt-text="Enrollment Window - Microsoft Edge for Business." source="./media/securing-data-edge-for-business/securing-data-edge-for-business64.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business64.png":::
 
