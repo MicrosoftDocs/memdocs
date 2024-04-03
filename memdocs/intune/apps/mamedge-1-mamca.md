@@ -81,7 +81,7 @@ In this scenario, you'll create a conditional access policy using Microsoft Intu
 
 In an era where Bring Your Own Device (BYOD) has become the norm, implementing conditional access policies specifically for browser-only access is critical towards securing your digital boundaries and ensuring seamless user experience.
 
-In the previous steps, you created a conditional access policy to require app protection policies. In the following steps, you'll configure a policy to ensure that same resources (O365 in this example) are not accessed from Desktop apps. A similar approach could be taken for mobile apps. However, mobile apps also support app protection policies so we encourage to take a look at that scenario rather than blocking access from mobile apps and allowing browser access only.
+In the previous steps, you implemented conditional access as a required app protection policy. In the following steps, you'll configure a policy to ensure that same resources (O365 in this example) are not accessed from desktop apps. A similar approach could be taken for mobile apps. However, mobile apps also support app protection policies, so it is important look at the scenario rather than block access from mobile apps and allow browser access only.
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
