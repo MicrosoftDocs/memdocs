@@ -1,6 +1,12 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/fundamentals/security-copilot.md",
+      "redirect_url": "/mem/intune/copilot/security-copilot",
+      "redirect_document_id": true 
+    },
+
+    {
       "source_path": "memdocs/intune/user-help/allow-wi-fi-control-android.md",
       "redirect_url": "/mem/intune/user-help/update-device-settings-android",
       "redirect_document_id": false 
@@ -2358,11 +2364,6 @@
     {
       "source_path": "memdocs/configmgr/core/misc/mms2019docathon.md",
       "redirect_url": "/mem/configmgr/",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "memdocs/intune/remote-actions/pause-config-refresh.md",
-      "redirect_url": "/mem/intune/remote-actions/device-management",
       "redirect_document_id": false
     },
     {
