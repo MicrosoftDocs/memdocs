@@ -38,11 +38,10 @@ The configuration file typically includes settings that secure the device and se
 
 For example, you want to prevent end users from reimaging the device and getting out of Intune management. For this task, you create a BIOS configuration file that disables booting from USB. Then, you add this file to the Intune policy and enable a BIOS password. These steps make sure the configuration isn't overwritten.
 
-Currently, you can use this feature on Dell devices.
-
 This feature applies to:
 
 - Windows 10 and later
+- Dell devices
 
 This article includes more information on the configuration file and Win32 app, and shows you how to create the **BIOS configuration and other settings** policy in Intune.
 
@@ -55,6 +54,8 @@ This article includes more information on the configuration file and Win32 app, 
 - Make sure the devices don't have an existing BIOS password configured. This feature requires that Intune have the BIOS password. If Intune doesn't have the BIOS password of the device, then it can't update the BIOS configuration.
 
 ## Step 1 - Create the configuration file and deploy the app
+
+This section focuses on using the OEM tool to create the configuration file, and deploying the OEM Win32 app to the devices.
 
 1. Create the configuration file using the OEM tool. In the file, add and configure the features you want to configure. You can add any configuration settings that the OEM supports.
 
@@ -164,7 +165,7 @@ This option gets the BIOS passwords, one device at a time.
 
 ### Option 2 - Read the BIOS password of all devices
 
-This option gets a list of all the BIOS password of all devices.
+This option gets a list of all the BIOS passwords of all devices.
 
 1. You need the **Intune Service Administrator** role or **Global Administrator** role in Microsoft Entra ID. These roles are Microsoft Entra roles, not Intune roles.
 
@@ -178,7 +179,7 @@ For more information on RBAC roles, go to [Role-based access control (RBAC) with
 
 If you're planning to stop managing the BIOS of your devices or remove devices permanently from your tenant, then you must remove the BIOS password.
 
-To remove the BIOS password, in your Intune BIOS configuration policy, set the **Disable per-device BIOS password protection** setting to **Yes**. Then, assign the policy. When the device [checks in with Intune](device-profile-troubleshoot.md#policy-refresh-intervals), then the policy applies. On the device, you can also manually sync the device with Intune to apply the policy.
+To remove the BIOS password, in your Intune BIOS configuration policy, set the **Disable per-device BIOS password protection** setting to **Yes**. Then, assign the policy. When the device [checks in with Intune](device-profile-troubleshoot.md#policy-refresh-intervals), the policy applies. On the device, you can also manually sync the device with Intune to apply the policy.
 
 After the policy applies, reboot the device.
 
