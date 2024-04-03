@@ -32,15 +32,15 @@ ms.collection:
 
 # Windows 365 Boot physical device setup and requirements
 
+Follow these steps and requirements to set up shared physical devices for Windows 365 Boot.
+
+## Operating system requirements
+
 Each physical device (and Cloud PC) must be running one of the following, version 22621.2361 or later:
 
 - Windows 11 Enterprise
 - Windows 11 Professional
 - Windows IoT Enterprise
-
-## Operating system requirements
-
-Each physical device (and Cloud PC) must be running Windows 11 Enterprise or Professional, version 22H2 build 22621.3235, or 23H2 build 22631.3235, or later.
 
 ## Configure the physical device
 
