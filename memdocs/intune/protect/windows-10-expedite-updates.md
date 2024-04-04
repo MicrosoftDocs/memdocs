@@ -12,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.subservice: protect
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:

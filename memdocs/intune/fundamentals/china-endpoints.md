@@ -13,7 +13,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
