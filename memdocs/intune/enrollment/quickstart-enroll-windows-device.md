@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
 
 # optional metadata

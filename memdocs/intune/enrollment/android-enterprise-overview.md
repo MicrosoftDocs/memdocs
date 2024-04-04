@@ -13,7 +13,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 2cc3c960-1fdd-47ca-a693-420d47b403de
 
 # optional metadata

@@ -13,7 +13,6 @@ ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
