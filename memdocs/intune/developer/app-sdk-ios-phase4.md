@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 04/04/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -91,14 +91,14 @@ IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class expo
 
 Intune lets IT admins specify which accounts can be logged into by the user. Apps can query the Intune App SDK for the specified list of allowed accounts and then ensure only allowed accounts are signed into the device.
 
-To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified. MSAL/OneAuth enabled applications should use `allowedAccountIds` property on the `IntuneMAMEnrollmentManager` to query OID.
+To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified. MSAL/OneAuth enabled applications should use the `allowedAccountIds` property on the `IntuneMAMEnrollmentManager` instance to query OID.
 
 Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
 
-Belows are the requirements when using allowed accounts APIs: 
+The following requirements are needed when using APIs for allowed accounts: 
 - Identity comparison must be case insensitive for UPN and OID.
 - Identity comparison must support both UPN and OID.
-- Application must have logging to diagnosis any mismatch between admin-specified account and user-entered account.
+- Application must have logging to diagnosis any mismatch between the admin-specified account and user-entered account.
 
 ## Implement File Encryption Required
 
