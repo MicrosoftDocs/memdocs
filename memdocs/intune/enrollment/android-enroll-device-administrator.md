@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -57,8 +57,7 @@ After a user has enrolled, you can begin managing their devices in Intune, inclu
 
 For information about other user tasks, see these articles:
 - [Resources about the end-user experience with Microsoft Intune](/mem/intune/fundamentals/intune-planning-guide)
-- [Using your Android device with Intune](../user-help/why-enroll-android-device.md)
-
+- [Using your Android device with Intune](../user-help/why-enroll-android-device.md)  
 
 ## Block device administrator enrollment
 To block Android device administrator devices, or to block only personally owned Android device administrator devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
@@ -67,11 +66,7 @@ To block Android device administrator devices, or to block only personally owned
 
 [Microsoft Teams certified Android devices](/microsoftteams/devices/teams-ip-phones) should continue being managed with device administrator management until [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management becomes available for these devices.  
 
-These devices can still be used without enrolling in Android device administrator. 
-
-To unenroll a Microsoft Teams certified Android device that is enrolled in Android device administrator, go to the Microsoft Admin Center and uncheck the Intune license from the Teams Android device account. The device will have to sign in again after this step to avoid device administrator enrollment.
- 
-Note: there is a 30 day grace period after removing an Intune license where it will still function.
+To unenroll a Microsoft Teams certified Android device that's enrolled in Android device administrator, go to the Microsoft Entra admin center and deselect the Intune license from the Teams account for the Android device. The device will have to sign in again after this step to avoid enrolling in Intune under device administrator mangement again. After you remove an Intune license, there is a 30 day grace period in which the device still functions. 
 
 ## Next steps
 - [Assign compliance policies](../protect/compliance-policy-create-android.md)
