@@ -8,11 +8,9 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 08/03/2023
 ms.topic: end-user-help
-ms.prod:
 ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
 searchScope:
  - User help

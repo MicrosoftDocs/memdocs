@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:
 
 # optional metadata
