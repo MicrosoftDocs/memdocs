@@ -37,7 +37,7 @@ Direct enrollment lets you enroll the device prior to distribution, and doesn't 
 We recommend direct enrollment if you: 
 
 - Are in a region/country that doesn't support Apple Business Manager or Apple School Manager. 
-- Don't want to use Apple Business Manager or Apple School Manager because they want to limit admin control over devices, or because they don't want to set up all of the requirements. 
+- Don't want to use Apple Business Manager or Apple School Manager because you want to limit admin control over devices, or because you don't want to set up all of the requirements. 
 - Need a wired internet connection to enroll devices, or have an unreliable internet connection.   
 
 You can use this method to enroll one or more Macs. If you have many devices, it will take some time to enroll them because you must transfer and open the enrollment profile on each Mac you're enrolling. 
