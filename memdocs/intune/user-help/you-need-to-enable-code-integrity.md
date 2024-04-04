@@ -12,7 +12,6 @@ ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 84892bbc-f888-417b-bbeb-978cc7e10028
 searchScope:
  - User help

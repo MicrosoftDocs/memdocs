@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 3a730a5d-2a90-42b0-aa28-aadfc7a18788
 
 # optional metadata

@@ -13,7 +13,6 @@ ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 6515f4c4-3821-49b0-9bfe-abdf8143c8d1
 
 searchScope:
