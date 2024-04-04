@@ -32,7 +32,7 @@ ms.collection:
 
 # Set up HP Anyware for Windows 365 Enterprise (preview)
 
-HP Anyware for Windows 365 is a cloud-based service that lets you deliver Windows 365 Enterprise desktops on HP Anyware’s management and PCoIP protocol. With HP Anyware, you can use the power and security of Windows 365 Enterprise, while taking advantage of HP Anyware infrastructure and its protocol that excels in low bandwidth environments and graphic intensive workloads.
+HP Anyware for Windows 365 is a cloud-based service that lets you deliver Windows 365 Enterprise desktops on HP Anyware’s management and PCoIP protocol. HP Anyware's infrastructure and protocol excel in low bandwidth environments and intensive workloads.
 
 HP Anyware for Windows 365 is in [public preview](../public-preview.md) in selected regions. To submit a request to join this preview, see [https://aka.ms/HPAnywarePublicPreviewSignUp](https://aka.ms/HPAnywarePublicPreviewSignUp).
 
@@ -69,4 +69,4 @@ During the public preview, the following limitations exist:
 <!-- ########################## -->
 ## Next steps
 
-Proceed to the HP Anyare Manager to complete the integration. For more information about HP Anyware set up, see [https://aka.ms/HPAnywareDocConnectEntraIDtoHP](https://aka.ms/HPAnywareDocConnectEntraIDtoHP).
+To complete the integration, proceed to the HP Anyare Manager. For more information about HP Anyware set up, see [https://aka.ms/HPAnywareDocConnectEntraIDtoHP](https://aka.ms/HPAnywareDocConnectEntraIDtoHP).

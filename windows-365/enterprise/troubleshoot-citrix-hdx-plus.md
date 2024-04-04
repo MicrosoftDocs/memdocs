@@ -36,7 +36,7 @@ When you turn on a partner connector (Citrix HDX Plus, VMware, or HP Anyware) fo
 
 If the partner agent installation fails, the user can still connect to their Cloud PC by using Remote Desktop.
 
-While troubleshooting errors, make sure that the following steps have all been successful:
+While troubleshooting errors, make sure that the following steps were successful:
 
 - The users license state is synchronized from the partner service to Microsoft Intune, including the users Microsoft Entra user ID.
   - The prerequisites have been met.
