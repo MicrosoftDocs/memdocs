@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/03/2024
+ms.date: 04/04/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -136,29 +136,6 @@ For example, admins can use the [Dell Command tool](https://www.dell.com/support
 Applies to
 
 - Windows 10 and later
-
-#### iOS/iPadOS
-
-**Declarative Device Management (DDM) > Passcode**:
-
-- Maximum Passcode Age In Days
-- Minimum Complex Characters
-- Require Alphanumeric Passcode
-
-**Restrictions**:
-
-- Allow Marketplace App Installation
-
-#### macOS
-
-**Declarative Device Management (DDM) > Passcode**:
-
-- Change At Next Auth
-- Custom Regex
-- Failed Attempts Reset In Minutes
-- Maximum Passcode Age In Days
-- Minimum Complex Characters
-- Require Alphanumeric Passcode
 
 ### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->
 
