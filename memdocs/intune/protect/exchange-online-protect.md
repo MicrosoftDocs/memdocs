@@ -13,7 +13,6 @@ ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.topic: archived
-ms.technology:
 ms.assetid: 88a0d3b9-2622-403b-8374-1396afd8066e
 
 # optional metadata
