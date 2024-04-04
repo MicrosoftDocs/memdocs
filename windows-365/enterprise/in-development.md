@@ -93,7 +93,7 @@ A new alert rule will be available to notify you when Cloud PCs aren't available
 
 ### Remoting connections report will move to under Reports<!--48541308-->
 
-In a future update, the Remoting connection report will no longer be available under **Reports** > **Endpoint analytics**. Instead, you'll find it under **Reports** > **Clolud PC Overview**.
+In a future update, the Remoting connection report will no longer be available under **Reports** > **Endpoint analytics**. Instead, you'll find it under **Reports** > **Cloud PC Overview**.
 
 <!-- ***********************************************-->
 ## Provisioning
