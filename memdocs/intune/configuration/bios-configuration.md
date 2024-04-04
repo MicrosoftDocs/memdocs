@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 04/04/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,6 +44,9 @@ This feature applies to:
 - Dell devices
 
 This article includes more information on the configuration file and Win32 app, and shows you how to create the **BIOS configuration and other settings** policy in Intune.
+
+> [!IMPORTANT]
+> BIOS configuration changes can impact device functionality and operability, including the ability to boot or access Bitlocker encrypted drives. This feature allows Intune administrators to easily update BIOS configurations on their devices. When you make changes, test and deploy in phases to minimize the impact of any unexpected configurations.
 
 ## Prerequisites
 
@@ -167,7 +170,7 @@ This option gets the BIOS passwords, one device at a time.
 
 This option gets a list of all the BIOS passwords of all devices.
 
-1. You need the **Intune Service Administrator** role or **Global Administrator** role in Microsoft Entra ID. These roles are Microsoft Entra roles, not Intune roles.
+1. You need the **Intune Service Administrator** role or **Global Administrator** role in Microsoft Entra ID.
 
 2. Sign in to your Graph tool with one of these roles, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
 
