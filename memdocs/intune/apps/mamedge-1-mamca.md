@@ -77,17 +77,17 @@ In this scenario, you'll create a conditional access policy using Microsoft Intu
 
 4. Select **Create** to enable the policy. 
 
-## Conditional access policies for BYOD
+## Browser only access for Windows BYOD
 
 In an era where Bring Your Own Device (BYOD) has become the norm, implementing conditional access policies specifically for browser-only access is critical towards securing your digital boundaries and ensuring seamless user experience.
 
-In the previous steps, you created a conditional access policy to support app protection policies. In the following steps, you'll configure a policy for browser only access.
+In the previous steps, you implemented conditional access as a required app protection policy. In the following steps, you'll configure a policy to ensure that same resources (O365 in this example) are not accessed from desktop apps. A similar approach could be taken for mobile apps. However, mobile apps also support app protection policies, so it is important look at the scenario rather than block access from mobile apps and allow browser access only.
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional access** > **New policy**.
 
-4. On this new policy, you'll restrict access from desktop apps to managed devices only. You'll select target resources and select apps once they select **Office 365**.
+4. On this new policy, you'll restrict access from desktop apps to managed devices only. You'll select target resources and select apps once they select **Office 365** to follow the example in this page.
 
     :::image type="content" alt-text="Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business57.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business57.png":::
     
@@ -102,25 +102,15 @@ In the previous steps, you created a conditional access policy to support app pr
     
     :::image type="content" alt-text="Device Platform - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png":::
     
-7. Select **Grant** and select **Require device to be market as compliant.**
+7. Select **Grant** and select **Require device to be market as compliant.** This will provide access through desktop apps only for enrolled and compliant devices.
 
     :::image type="content" alt-text="Grant - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png":::
 
     > [!NOTE] 
     > Probably to this last control, customers should add also MFA or other options as well.*
 
-8. Select **Conditions** \> Client **apps** and select **Browser.**
 
-    :::image type="content" alt-text="Client apps - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business61.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business61.png":::
-
-    > [!NOTE] 
-    > To filter out corporate devices is a bit complicated because the CA filters will be applied only to devices that are already registered (at least) in Entra ID. Entra recommends using negative operator if the rule is going to apply potentially to devices not registered yet, Maybe some companies will not need all these conditions and they can use Enrollment profile or other instead.
-
-9. Select **Conditions** \> Select **Filter for Devices.**
-
-    :::image type="content" alt-text="Filter for devices - Conditional Access policy - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business62.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business62.png":::
-
-10. Select **Done** \> select **Create** and complete the conditional access policy creation as you performed on the previous step.
+8. Select **Done** \> select **Create** and complete the conditional access policy creation as you performed on the previous step.
 
 ## Next step
 
