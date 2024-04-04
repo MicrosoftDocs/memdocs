@@ -45,7 +45,7 @@ This feature applies to:
 
 This article includes more information on the configuration file and Win32 app, and shows you how to create the **BIOS configuration and other settings** policy in Intune.
 
-> [!IMPORTANT]
+> [!WARNING]
 > BIOS configuration changes can impact device functionality and operability, including the ability to boot or access Bitlocker encrypted drives. This feature allows Intune administrators to easily update BIOS configurations on their devices. When you make changes, test and deploy in phases to minimize the impact of any unexpected configurations.
 
 ## Prerequisites
