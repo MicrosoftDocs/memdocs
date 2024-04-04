@@ -13,8 +13,6 @@ ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS: 
