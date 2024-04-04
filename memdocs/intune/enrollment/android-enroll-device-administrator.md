@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 04/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -35,11 +34,11 @@ ms.collection:
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
-Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). In an effort to move to modern, richer, and more secure device management, Google deprecated Android device administrator management in 2020 and Intune will be ending support for device administrator devices with access to Google Mobile Services in August 2024.
+Android device administrator (sometimes referred to *legacy* Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). In an effort to move to modern, richer, and more secure device management, Google deprecated Android device administrator management in 2020 and Intune will be ending support for device administrator devices with access to Google Mobile Services in August 2024.
 
 Therefore, we advise against enrolling new devices using the device administrator process described here and we also recommend that you migrate devices off of device administrator management.
 
-For information about using DA when Google Mobile Services are unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md). 
+For information about using device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md). 
 
 If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.
 
@@ -66,7 +65,7 @@ To block Android device administrator devices, or to block only personally owned
 
 [Microsoft Teams certified Android devices](/microsoftteams/devices/teams-ip-phones) should continue being managed with device administrator management until [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management becomes available for these devices.  
 
-To unenroll a Microsoft Teams certified Android device that's enrolled in Android device administrator, go to the Microsoft Entra admin center and deselect the Intune license from the Teams account for the Android device. The device will have to sign in again after this step to avoid enrolling in Intune under device administrator mangement again. After you remove an Intune license, there is a 30 day grace period in which the device still functions. 
+To unenroll a Microsoft Teams certified Android device that's enrolled in Android device administrator, go to the Microsoft Entra admin center and deselect the Intune license from the Teams account for the Android device. The device will have to sign in again after this step to avoid enrolling in Intune under device administrator management again. After you remove an Intune license, there is a 30 day grace period in which the device still functions. 
 
 ## Next steps
 - [Assign compliance policies](../protect/compliance-policy-create-android.md)
