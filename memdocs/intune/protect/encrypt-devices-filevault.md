@@ -124,7 +124,7 @@ Select **Next**.
 - **Profile**: FileVault
 
    ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-   
+  
 4. On the **Configuration settings** page:
    1. Set *Enable FileVault* to **Yes**.
    2. For *Recovery key type*, only **Personal Recovery Key** is supported.
@@ -189,12 +189,17 @@ For devices that run macOS 14 and later, your settings catalog policy can also e
 
 - When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile
 
-  - FileVault > **Force Enable in Setup Assistant** – Set to **Enabled**.
+- FileVault > **Force Enable in Setup Assistant** – Set to **Enabled**.
   
    The following image shows the settings catalog profile configured with the core settings to enable FileVault and use the Setup Assistant to enforce encryption. In this example, the Location setting uses the simple name of our domain, *Contoso*:
 
-    :::image type="content" source="./media/encrypt-devices-filevault/force-enable-in-setup-assistant.png" alt-text="Screen capture of the basic settings catalog profile to enable FileVault with the addition of the Force Enable in Setup Assistant setting.":::
-
+    
+  
+  > [!IMPORTANT]
+  > The **Defer** setting must be configured to **Enabled** to successfully enable FileVault in Setup Assistant for devices running macOS 14.4. 
+  
+  ![Core settings needed to enable File Vault in Setup Assistant.](media/encrypt-devices-filevault/screenshot-2024-04-04-at-10.38.36 am.png)
+  
 ## Manage FileVault
 
 To view information about devices that receive FileVault policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
