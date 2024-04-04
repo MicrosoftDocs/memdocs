@@ -7,7 +7,6 @@ author: [GITHUB USERNAME]
 manager: [ALIAS]
 ms.date: 04/28/2016
 ms.topic: conceptual #reference troubleshooting how-to end-user-help overview
-ms.prod:
 ms.service:
 ms.localizationpriority: medium #high null
 

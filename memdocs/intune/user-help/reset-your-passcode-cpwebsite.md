@@ -9,7 +9,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86

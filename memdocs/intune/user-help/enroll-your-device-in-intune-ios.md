@@ -9,7 +9,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 11/21/2023
 ms.topic: end-user-help
-ms.prod:
 ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
