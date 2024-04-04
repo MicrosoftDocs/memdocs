@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 3/1/2023
+ms.date: 4/3/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
