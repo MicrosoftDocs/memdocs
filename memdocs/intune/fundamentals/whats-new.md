@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -129,6 +129,20 @@ Applies to:
 - Windows 10/11 on ARM64 devices
 - Windows 365
 - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
+
+### Device configuration
+
+#### New BIOS device configuration profile for OEMs<!-- 9278502  -->
+
+There is a new **BIOS configuration and other settings** device configuration policy for OEMs. Admins can use this new policy to enable or disable different BIOS features that secure device. In the Intune device configuration policy, you add the BIOS configuration file, deploy a Win32 app, and then assign the policy to your devices.
+
+For example, admins can use the [Dell Command tool](https://www.dell.com/support/kbdoc/000108963/how-to-use-and-troubleshoot-dell-command-update-to-update-all-drivers-bios-and-firmware-for-your-system) (opens Dell's website) to create the BIOS configuration file. Then, they add this file to the new Intune policy.
+
+For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../configuration/bios-configuration.md).
+
+Applies to
+
+- Windows 10 and later
 
 ## Week of March 25, 2024 (Service release 2403)
 
