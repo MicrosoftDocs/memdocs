@@ -54,7 +54,7 @@ To manage Zebra devices, there are two versions of the OEMConfig app:
 
 | OEMConfig app | Supported Android versions | Multiple profile support |
 | --- | --- | --- |
-| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards. It's suggested to deploy one profile with all the required configuration settings.<br/><br/>If you use multiple OEMConfig profiles, then don't configure the same top parent group or bundle in multiple profiles. It can prevent conflicts. For more important information, go to [OEMConfig overview - Before you begin](android-oem-configuration-overview.md#before-you-begin) <br/><br/>For more information on the new **Zebra OEMConfig Powered by MX** app, go to [New Zebra OEMConfig app for Android](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730). |
+| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards. It's suggested to deploy one profile with all the required configuration settings.<br/><br/>If you use multiple OEMConfig profiles, then don't configure the same top parent group or bundle in multiple profiles. It can cause conflicts. For more important information, go to [OEMConfig overview - Before you begin](android-oem-configuration-overview.md#before-you-begin) <br/><br/>For more information on the new **Zebra OEMConfig Powered by MX** app, go to [New Zebra OEMConfig app for Android](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730). |
 | **Legacy Zebra OEMConfig** | - Android 11 and earlier | ✔️ You can split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device. |
 
 ## Multiple profiles using the Legacy Zebra OEMConfig app
@@ -102,7 +102,7 @@ In the Intune admin center, you can view the status of deployed OEMConfig profil
 
     Select a failed row. Details are shown that have more information on why it failed.
 
-## Next steps
+## Related articles
 
 - Learn more about [OEMConfig configuration profiles](android-oem-configuration-overview.md).
 - On Android device administrator, configure [Mobility Extensions (MX)](android-zebra-mx-overview.md).

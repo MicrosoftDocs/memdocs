@@ -269,6 +269,7 @@ If you represent an OEM, and an OEMConfig application exists for your devices, b
 >
 > If you experience settings within an OEMConfig app behaving incorrectly, then contact the developers of the OEMConfig app. Intune isn't responsible for technical issues with the individual OEMConfig apps.
 
-## Next steps
+## Related articles
 
-[Monitor the profile status](device-profile-monitor.md).
+- [Monitor the profile status](device-profile-monitor.md)
+- [Deploy OEMConfig profiles to Zebra devices in Intune](oemconfig-zebra-android-devices.md)
