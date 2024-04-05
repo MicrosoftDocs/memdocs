@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2023
+ms.date: 03/27/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -30,13 +29,13 @@ ms.collection:
 - tier2
 ---
 
-# Cloud PC connection quality report (preview)
+# Cloud PC connection quality report
 
 The **Connection quality report** helps Windows 365 administrators identify devices that might be performing below expectations. Connection quality is a subjective concept with many variables defining what is acceptable in any given circumstance. Admins should use the objective data provided by this report, feed it into their own subjective performance criteria, to determine their organization's policies and remediations.
 
 ## Use the Cloud PC connection quality report
 
-To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance (preview)** > **View report** (under **Connection quality (preview)**).
+To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance** > **View report** (under **Connection quality**).
 
 ![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-pc-connection-quality/view-report-connection-quality.png)
 

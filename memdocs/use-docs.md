@@ -76,7 +76,7 @@ With many modern web browsers, you can create a custom search engine. Use this f
     - **Keyword**: Specify a short term to use in the address bar to activate this search engine. For example, `memdocs`.
     - **URL with `%s` in place of query**: For example,
 
-        ```url
+        ```https
         https://learn.microsoft.com/search/index?search=%s&scope=ConfigMgr
         ```
 
@@ -134,7 +134,7 @@ To receive notifications when content changes in the documentation library, use 
 
         This example results in the following RSS link:
 
-        ```url
+        ```https
         https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%22%2B%22learn+what%27s+new%22&locale=en-us&facet=&%24filter=scopes%2Fany%28t%3A+t+eq+%27Intune%27%29
         ```
 

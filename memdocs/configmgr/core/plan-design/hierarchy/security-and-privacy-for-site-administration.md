@@ -2,12 +2,12 @@
 title: Site administration security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
-ms.date: 04/05/2021
+ms.date: 04/05/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -176,6 +176,10 @@ The security of Active Directory domain controllers can be improved by configuri
 ## <a name="BKMK_Security_SiteServer"></a> Security guidance for the site server
 
 Use the following guidance to help you secure the Configuration Manager site server.  
+
+> [!WARNING]  
+> Network access account - Don't grant interactive sign-in rights to this account on SQL Servers.
+Don't grant this account the right to join computers to the domain. If you must join computers to the domain during a task sequence, use the Task sequence domain join account..
 
 ### Install Configuration Manager on a member server instead of a domain controller
 

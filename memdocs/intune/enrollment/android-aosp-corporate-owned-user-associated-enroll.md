@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -77,6 +76,7 @@ Create an enrollment profile to enable enrollment on devices.
         If you select **WEP Pre-shared key** or **WPA Pre-shared key**, also enter:  
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
+    - **For Microsoft Teams devices (preview)**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones). 
 
 7. Select **Next** and optionally, select scope tags. 
 8. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  

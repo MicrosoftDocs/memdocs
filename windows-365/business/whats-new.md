@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2023
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -48,6 +47,24 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of March 26, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Resize support for Windows 365 Business (public preview)<!--48540819-->
+
+You can now use the resize remote action for Windows 365 Business Cloud PCs. For more information, see [Remote management actions](remotely-manage-business-cloud-pcs.md#remote-management-actions).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on (public preview)<!--48439644-->
+
+Windows 365 Business now supports single sign-on for new and existing Cloud PCs. You can turn on single sign-on in **Organizational settings**. When turned on, users no longer have to sign in to the operating system. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md). 
+
 
 <!-- ########################## -->
 ## Week of December 4, 2023

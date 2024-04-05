@@ -2,12 +2,12 @@
 title: Cloud distribution point
 titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 04/05/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -149,6 +149,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
     > [!Important]  
     > - While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.
+    > - If the software update is distributed to cloud distribution point, it still uses local distribution point for content download when the clients are on Intranet. 
     > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 - Configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](use-a-pull-distribution-point.md#about-source-distribution-points).<!--1321554-->  
@@ -219,7 +220,7 @@ A cloud distribution point uses the following Azure components, which incur char
 
 - For more information, see [Monitor cloud distribution points](../../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md#bkmk_monitor).  
 
-- See the [Azure bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/) to help determine potential costs. Pricing for data transfer is tiered. The more you use, the less you pay per gigabyte.  
+- See the [Azure bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/) to help determine potential costs. Pricing for data transfer is tiered. The more you use, the less you pay per gigabyte.
 
 #### Content storage
 

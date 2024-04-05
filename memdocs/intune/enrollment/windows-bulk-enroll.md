@@ -6,12 +6,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/02/2022
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 
 # optional metadata
@@ -37,21 +36,24 @@ ms.collection:
 
 Join new Windows devices to Microsoft Entra ID and Intune. To bulk enroll devices for your Microsoft Entra tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Microsoft Entra tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Microsoft Entra users to sign in.
 
-> [!NOTE]
-> To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:  
-> - Global Administrator
-> - Cloud Device Administrator
-> - Intune Administrator
-> - Password Administrator  
->
-> You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Users**. For more details, see [Give admin permissions in Microsoft Intune admin center](../fundamentals/users-add.md#give-admin-permissions-in-microsoft-intune-admin-center).   
-
 Microsoft Entra users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
 
-## Prerequisites for Windows devices bulk enrollment
+## Roles and permissions    
 
-- Devices running Windows 11 or Windows 10 Creator update (build 1709) or later  
-- [Windows automatic enrollment](windows-enroll.md#enable-windows-automatic-enrollment)
+To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:  
+- Global Administrator  
+- Cloud Device Administrator  
+- Intune Administrator  
+- Password Administrator  
+
+You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Users**. For more information, see [Give admin permissions in Microsoft Intune admin center](../fundamentals/users-add.md#give-admin-permissions-in-microsoft-intune-admin-center).  
+
+## Prerequisites 
+
+- Devices must be running Windows 11 or Windows 10 Creator update (build 1709) or later.   
+- Enable [Windows automatic enrollment](windows-enroll.md#enable-windows-automatic-enrollment).  
+
+Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-AzureADServicePrincipal` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error. 
 
 ## Create a provisioning package
 
