@@ -32,9 +32,9 @@ ms.collection:
 
 # Android Enterprise work profile management overview  
 
-Microsoft Intune supports work profile management, an Android Enterprise management option that enables platform-level separation of work apps and data on enrolled devices. When an employee or student enrolls their device in Intune, they enable the creation of a *work profile*. The work profile creates a seperate place on the device so that the user can switch between their personal apps and work apps easily and securely. When they leave the work profile, they return to the personal side of their device, where their personal apps and data are unaffected by Intune policies.  
+Microsoft Intune supports work profile management, an Android Enterprise management option that enables platform-level separation of work apps and data on enrolled devices. When an employee or student enrolls their device in Intune, they enable the creation of a *work profile*. The work profile creates a separate partition on the device for the user's work account, so that the user can switch between their personal apps and work apps easily and securely. When they leave the work profile, they return to the personal side of their device, where their personal apps and data are unaffected by Intune policies.  
 
-Device users enrolling personal devices in BYOD scenarios must enroll through the Intune Company Portal app, while users on corporate-owned devices must enroll through the Microsoft Intune app.  
+Device users enrolling personal devices must enroll through the Intune Company Portal app, while users on corporate-owned devices must enroll through the Microsoft Intune app.  
 
 This article provides an overview of the Android Enterprise work profile management options supported by Microsoft Intune, which include:  
 
