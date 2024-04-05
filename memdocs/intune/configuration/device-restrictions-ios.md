@@ -474,7 +474,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Kiosk
 
-[Single App Mode](https://support.apple.com/guide/mdm/mdm80a981/web) (opens Apple's web site) is referred to as Kiosk mode in Intune.
+[App Lock](https://support.apple.com/guide/deployment/app-lock-payload-settings-dep80a981/1/web/1.0) (opens Apple's web site) is referred to as Kiosk mode in Intune.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
