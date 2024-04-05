@@ -1149,9 +1149,14 @@ items:
           - name: Restrict USB devices using ADMX
             displayName: gpo, windows
             href: ./configuration/administrative-templates-restrict-usb.md
-        - name: UEFI BIOS settings on Windows
-          href: ./configuration/device-firmware-configuration-interface-windows.md
-          displayName: dfci, firmware
+        - name: BIOS & DFCI on Windows
+          items:
+          - name: BIOS configuration
+            displayName: bios, firmware, windows, dell
+            href: ./configuration/bios-configuration.md
+          - name: DFCI settings for UEFI
+            href: ./configuration/device-firmware-configuration-interface-windows.md
+            displayName: dfci, firmware, uefi, surface
         - name: Domain Join on Windows
           href: ./configuration/domain-join-configure.md
           displayName: enrollment, active directory, azure ad joined, join domain
