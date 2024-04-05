@@ -7,9 +7,7 @@ author: [GITHUB USERNAME]
 manager: [ALIAS]
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
 ms.service:
-ms.technology:
 ms.assetid: [GET ONE FROM guidgenerator.com]
 
 # optional metadata
