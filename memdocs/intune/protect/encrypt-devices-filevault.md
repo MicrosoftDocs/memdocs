@@ -198,8 +198,8 @@ For devices that run macOS 14 and later, your settings catalog policy can also e
   > [!IMPORTANT]
   > The **Defer** setting must be configured to **Enabled** to successfully enable FileVault in Setup Assistant for devices running macOS 14.4. 
   
-  ![Core settings needed to enable File Vault in Setup Assistant.](media/encrypt-devices-filevault/screenshot-2024-04-04-at-10.38.36 am.png)
-  
+  :::image type="content" source="./media/encrypt-devices-filevault/filevault-setup-assistant-configuration.png" alt-text="Screenshot of the settings needed to enable File Vault in Setup Assistant.":::
+
 ## Manage FileVault
 
 To view information about devices that receive FileVault policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
