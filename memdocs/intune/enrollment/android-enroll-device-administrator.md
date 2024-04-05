@@ -65,7 +65,7 @@ To block Android device administrator devices, or to block only personally owned
 
 [Microsoft Teams certified Android devices](/microsoftteams/devices/teams-ip-phones) should continue being managed with device administrator management until [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management becomes available for these devices.  
 
-To unenroll a Microsoft Teams certified Android device that's enrolled in Android device administrator, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/)and deselect the Intune license from the Teams account for the Android device. After you remove an Intune license, there is a 30 day grace period in which the device still functions. The device will have to sign in again after this step to avoid enrolling in Intune under device administrator management again. 
+To unenroll a Microsoft Teams certified Android device that's enrolled in Android device administrator, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and deselect the Intune license from the Teams account for the Android device. After you remove an Intune license, there is a 30 day grace period in which the device still functions. The device will have to sign in again after this step to avoid enrolling in Intune under device administrator management again. 
 
 ## Next steps
 - [Assign compliance policies](../protect/compliance-policy-create-android.md)
