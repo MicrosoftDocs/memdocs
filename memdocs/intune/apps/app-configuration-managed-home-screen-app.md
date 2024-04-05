@@ -123,10 +123,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 > For more information on how to enable Android system apps, go to: [Manage Android Enterprise system apps](apps-ae-system.md#enable-a-system-app-in-intune)
 
 > [!NOTE]
-> The virtual home button requires granting overlay permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant overlay permission to prevent possible breakout scenarios from the Settings application.
-
-> [!NOTE]
-> The notification badge functionality requires granting notification permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant notification permission to prevent possible breakout scenarios from the Settings application.
+> The virtual home button requires granting overlay permission to MHS. The notification badge functionality requires granting notification permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant these permissions to prevent possible breakout scenarios from the Settings application.
 
 **Configurations for a custom screensaver**: 
 
