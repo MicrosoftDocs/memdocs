@@ -1201,7 +1201,7 @@ items:
             href: ./configuration/android-zebra-mx-logs-troubleshoot.md
         - name: OEMConfig on Android Enterprise
           items:
-          - name: Get started
+          - name: Overview & Get started
             displayName: original equipment manufacturers, oem, oemconfig, schema, zebra, android
             href: ./configuration/android-oem-configuration-overview.md
           - name: Profiles on Zebra devices
