@@ -2,7 +2,7 @@
 title: What's new in version 2403
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2403 of Configuration Manager current branch.
-ms.date: 03/28/2024
+ms.date: 04/05/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2403. This article summarizes the changes and new features in Configuration Manager, version 2403.
+Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2403.
                                                                                                                                                                                                                                                                                                                           
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2403.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2403.md#post-update-checklist).
 
@@ -38,6 +38,7 @@ A new dashboard is added to the console under monitoring workspace, which shows 
 
 :::image type="content" source="media/17668422-troubleshooting-dash.png" alt-text="Screenshot of new troubleshooting dashboard in console.":::
 
+For more information, see [Software update health dashboard.](../../clients/manage/software-update-health-dashboard.md)
 
 ### Introducing centralized search box: Effortlessly find what you need in the console!
 
@@ -76,9 +77,9 @@ For more information, see [FAQ](../../../../configmgr/protect/plan-design/resour
 
 ## Software updates
 
-### New parameter SoftwareUpdateO 365Language is added to Save-CMSoftwareUpdate cmdlet
+### New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet
 
-A new parameter **SoftwareUpdateO 365Language** is now added to PowerShell  Save-CMSoftwareUpdate cmdlet. Customers now don't have to check a specific language in the SUP Properties (causing a metadata download for that language for all updates). 
+A new parameter **SoftwareUpdateO365Language** is now added to PowerShell  Save-CMSoftwareUpdate cmdlet. Customers now don't have to check a specific language in the SUP Properties (causing a metadata download for that language for all updates). 
 
 
 PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language <language name> (<region name>)" ```
