@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/28/2024
+ms.date: 04/04/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -90,6 +90,10 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 ### New alert rule: Cloud PCs that aren't available<!--47321010-->
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
+
+### Remoting connections report will move to under Reports<!--48541308-->
+
+In a future update, the Remoting connection report will no longer be available under **Reports** > **Endpoint analytics**. Instead, you'll find it under **Reports** > **Cloud PC Overview**.
 
 <!-- ***********************************************-->
 ## Provisioning
