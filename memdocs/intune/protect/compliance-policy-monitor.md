@@ -63,7 +63,7 @@ When viewing compliance status details and reports, be aware of the following im
 
 - Devices must be enrolled into Intune to receive device compliance policies.
 
-- The tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. This default configuration in the admin center marks devices without an assigned compliance policy as *Compliant*. We recommend turning this setting on so that devices are marked as noncompliant. Then you can monitor affected devices in the [Devices without compliance policy organization report](../fundamentals/reports.md#devices-without-compliance-policy-organizational).  
+- The tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can easily identify and monitor the noncompliant devices in the [Devices without compliance policy organization report](../fundamentals/reports.md#devices-without-compliance-policy-organizational).  
 
 - If the system account shows up as the user principal name in a compliance report, it's because a policy is assigned to a device group, and no user is signed in when compliance was last evaluated. 
 
