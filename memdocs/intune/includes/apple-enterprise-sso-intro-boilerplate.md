@@ -20,5 +20,5 @@ For example, to allow a Microsoft app that doesn't support MSAL, add `com.micros
 For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - apps that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#applications-that-dont-use-msal).
 
 > [!NOTE]
-> Announced in March 2024, Microsoft Entra ID will be moving away from Apple’s Keychain for storing device identity keys. Starting in Q3 2026, all new device registrations will use Apple’s Secure Enclave by default. For more information see /entra/identity-platform/apple-sso-plugin#upcoming-changes-to-device-identity-key-storage. 
+> Announced in March 2024, Microsoft Entra ID will be moving away from Apple’s Keychain for storing device identity keys. Starting in Q3 2026, all new device registrations will use Apple’s Secure Enclave by default. For more information see [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin#upcoming-changes-to-device-identity-key-storage). 
 
