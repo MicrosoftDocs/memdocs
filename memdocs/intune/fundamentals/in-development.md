@@ -1,4 +1,4 @@
----
+f---
 # required metadata
 
 title: In development - Microsoft Intune
@@ -218,7 +218,7 @@ For more information on Windows update reports, go to [Windows Update reports on
 
 ### Remote Help supports full control of a macOS device<!--22985205  -->
 
-Remote Help will support helpdesk connecting to a users device and requesting full control of the macOS device.
+Remote Help will support helpdesk connecting to a user's device and requesting full control of the macOS device.
 
 For more information on Remote Help, see [Remote Help on macOS](../fundamentals/remote-help-macos.md).
 
