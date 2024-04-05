@@ -159,7 +159,7 @@ GO
  ```log
     The SELECT permission was denied on the object 'vSMS_DefaultBoundaryGroup', database 'CM_xxx', schema 'dbo'.
  ```
- To workaround the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
+ To work around the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
 
 ```sql
     GRANT SELECT ON vSMS_DefaultBoundaryGroup To smsdbrole_MP
