@@ -499,7 +499,7 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
     For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-- **Use Windows Local Administrator Password Solution (LAPS) policy** to manage and backup the built-in local administrator account on your Windows devices. Because the local admin account can’t be deleted and has full permissions to the device, management of the built-in Windows administrator account is an important step in securing your organization. Intune policy for Windows LAPS uses the capabilities that are available for Windows devices that run version 21h2 or later.
+- **Use Windows Local Administrator Password Solution (LAPS) policy** to manage and back up the built-in local administrator account on your Windows devices. Because the local admin account can’t be deleted and has full permissions to the device, management of the built-in Windows administrator account is an important step in securing your organization. Intune policy for Windows LAPS uses the capabilities that are available for Windows devices that run version 21h2 or later.
 
   For more information, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
 
