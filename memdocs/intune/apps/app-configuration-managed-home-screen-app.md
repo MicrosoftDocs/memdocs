@@ -52,13 +52,13 @@ There are two methods that you can use to define configuration settings for Mana
 
 If you add properties with Configuration Designer, you can automatically convert these properties to JSON by selecting **Enter JSON data** from the **Configuration settings format** dropdown.
 
-![Screenshot of Configuration setting format options](./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_01.png)
+:::image type="content" alt-text="Screenshot of Configuration setting format options" source="./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_01.png":::
 
 ## Using Configuration Designer
 
 Configuration designer allows you to select pre-populated settings and their associated values. 
 
-![Screenshot of added configuration settings](./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_02.png)
+:::image type="content" alt-text="Screenshot of added configuration settings" source="./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_02.png":::
 
 The following table lists the Managed Home Screen available configuration keys, value types, default values, and descriptions. The description provides the expected device behavior based on selected values. Configuration keys of type `BundleArray` are disabled in the Configuration Designer and are further described in the **Enter JSON Data** section of this document.
 
@@ -197,7 +197,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 Enter JSON data to configure all available settings for Managed Home Screen, and the settings disabled in **Configuration Designer**.
 
-![Screenshot of added JSON data](./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_03.png)
+:::image type="content" alt-text="Screenshot of added JSON data" source="./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_03.png":::
 
 In addition to the list of configurable settings listed in the **Configuration Designer** table (above), the following table provides the configuration keys you can only configure via JSON data.
 
