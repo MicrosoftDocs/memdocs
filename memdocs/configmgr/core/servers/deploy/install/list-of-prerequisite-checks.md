@@ -331,7 +331,7 @@ For more information, see [Installing SQL Server on a domain controller](/sql/sq
 
 _Applies to: CAS, primary site_
  
-Starting in version 2403, resource access policies workspace is removed and are no longer supported. The co-management resource access workload is defaulted to Intune. 
+Starting in version 2403, resource access policies workspace is removed and is no longer supported. The co-management resource access workload is defaulted to Intune. 
 
 Remove the certificate registration point site system role and all policies for company resource access features:
 
