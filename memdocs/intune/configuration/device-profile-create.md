@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 03/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -85,11 +85,12 @@ When you create a profile (**Configuration** > **Create**), choose your platform
 Then, choose the profile. Depending on the platform you choose, the settings you can configure are different. The following articles describe the different profiles:
 
 - [Administrative templates (Windows)](administrative-templates-windows.md)
+- [BIOS configuration and other settings](bios-configuration.md)
 - [Custom](custom-settings-configure.md)
 - [Delivery Optimization (Windows)](delivery-optimization-windows.md)
 - [Derived credential (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Device features (macOS, iOS, iPadOS)](device-features-configure.md)
-- [Device firmware (Windows)](device-firmware-configuration-interface-windows.md)
+- [Device firmware configuration interface (DFCI) (Windows)](device-firmware-configuration-interface-windows.md)
 - [Device restrictions](device-restrictions-configure.md)
 - [Domain join (Windows)](domain-join-configure.md)
 - [Edition upgrade and mode switch (Windows)](edition-upgrade-configure-windows-10.md)
