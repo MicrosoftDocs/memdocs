@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 3/1/2023
+ms.date: 4/3/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -95,15 +95,10 @@ Use this feature in the Microsoft Intune admin center to restrict certain device
 * Device platform restrictions: Restrict devices based on device platform, version, manufacturer, or ownership type.
 * Device limit restrictions: Restrict the number of devices a user can enroll in Intune. 
 
-Enrollment restrictions aren't available for Linux and some Windows enrollment scenarios. When you're setting up restrictions for Android Enterprise personal devices, we recommend leveraging our Android security configuration framework. It includes the device restrictions needed for basic security (level 1), which is the minimum security configuration we recommend having on personal devices, and high security (level 3), which is for devices used by specific users or groups who are uniquely high risk.   
-
-For more information, see:  
-
-* [What are enrollment restrictions?](../enrollment/enrollment-restrictions-set.md) 
-* [Recommended device restrictions](../enrollment/device-enrollment-restrictions.md)
+Enrollment restrictions aren't available for Linux and some Windows enrollment scenarios. For more information, see [Overview of enrollment restrictions ](../enrollment/enrollment-restrictions-set.md).  <!-- Removing until PM updates framework docs. When you're setting up restrictions for Android Enterprise personal devices, we recommend leveraging our Android security configuration framework. It includes the device restrictions needed for basic security (level 1), which is the minimum security configuration we recommend having on personal devices, and high security (level 3), which is for devices used by specific users or groups who are uniquely high risk. -->     
 
 ### Create terms and conditions policy    
-Use an Intune terms and conditions policy to disclose legal disclaimers and compliance requirements to device users before enrollment. This policy requires the devices user to accept your org's terms and conditions before they enroll their device or access protected resources. The terms and conditions are shown to targeted users in the Intune Company Portal app. 
+You can use an Intune terms and conditions policy to disclose legal disclaimers and compliance requirements to device users before enrollment. This policy requires the devices user to accept your org's terms and conditions before they enroll their device or access protected resources. The terms and conditions are shown to targeted users in the Intune Company Portal app. 
 
 If you're looking for more control, including where the terms appear, consider configuring *Microsoft Entra terms of use*. Microsoft Entra terms are shown to users when they sign in to targeted apps and resources and offer more granular settings than Intune terms and conditions.   
 
@@ -133,7 +128,7 @@ You can enroll personal or corporate-owned Android devices in Intune. We recomme
 
 ### Android enrollment methods  
 
-The following tabs describe the Intune-supported Android and AOSP enrollment options.
+The following tabs describe the Intune-supported Android and AOSP enrollment options.  
 
 # [Corporate owned](#tab/work-profile)  
 

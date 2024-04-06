@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 03/19/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -141,14 +141,16 @@ This feature supports:
 - iOS/iPadOS
 - macOS
 
-## Device firmware configuration interface
+## BIOS configuration and DFCI
+
+With [BIOS configuration](bios-configuration.md), administrators can password-protect access to the BIOS and create a configuration file using an OEM tool with the BIOS settings they want. Then, they add this configuration file to the Intune policy.
 
 [Device firmware configuration interface](device-firmware-configuration-interface-windows.md) (DFCI) allows administrators to enable or disable UEFI (BIOS) settings using Intune. Use these settings to enhance security at the firmware-level, which is typically more resilient to malicious attacks.
 
 This feature supports:
 
-- Windows 11 on supported firmware
-- Windows 10 1809 and newer on supported firmware
+- Windows 11
+- Windows 10
 
 ## Device restrictions
 
