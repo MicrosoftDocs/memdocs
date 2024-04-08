@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/04/2024
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -60,7 +60,11 @@ When the OEM adds and improves management features, the OEM also updates the app
 
 When using OEMConfig, be familiar with the following information:
 
-- The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. To reduce the size, you can try one or more of the following options:
+- The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. When you try to create a new profile that exceeds 500 KB in the Intune admin center, then the following error is shown:
+
+  `Profile is larger than 500KB. Adjust profile settings to decrease the size.`
+
+  To reduce the size, you can try one or more of the following options:
 
   - Reduce the number of settings configured in the profile.
   - In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
