@@ -1,6 +1,6 @@
 ---
-title: include file
-description: include file
+title: Include file
+description: Include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
@@ -21,8 +21,8 @@ Manage [attack surface reduction settings for Configuration Manager devices](../
 
 **Profiles**:
 
-- App and Browser Isolation( ConfigMgr)
-- Attack Surface Reduction Rules (ConfigMgr)
+- App and Browser Isolation(ConfigMgr)
+- Attack Surface Reduction Rules(ConfigMgr)
 - Exploit Protection(ConfigMgr)(preview)
 - Web Protection (ConfigMgr)(preview)
 
