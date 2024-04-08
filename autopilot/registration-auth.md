@@ -47,11 +47,11 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
     1. Select the **Request a reseller relationship** link:
 
-       ![Request a reseller relationship.](images/csp1.png)
+        :::image type="content" source="images/csp1.png" alt-text="Request a reseller relationship.":::
 
     1. Select the checkbox indicating if you want delegated admin rights:
 
-       ![Delegated rights.](images/csp2.png)
+        :::image type="content" source="images/csp2.png" alt-text="Delegated rights.":::
 
         > [!NOTE]
         >
@@ -61,23 +61,23 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
 1. Customer with Microsoft Admin Center global administrator privileges selects the link in email. The link takes them to the following Microsoft 365 admin center page:
 
-    ![Screenshot of Accept agreement and authorize partner page - delegated admin rights.](images/csp3a.png)
+    :::image type="content" source="images/csp3a.png" alt-text="Screenshot of Accept agreement and authorize partner page - delegated admin rights.":::
 
     The above image is what the customer sees if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
 
-    ![Screenshot of Accept agreement and authorize partner page.](images/csp3b.png)
+    :::image type="content" source="images/csp3b.png" alt-text="Screenshot of Accept agreement and authorize partner page.":::
 
     > [!NOTE]
     >
     > A user without global admin privileges who selects the link sees a message similar to the following message:
 
-   ![Screenshot of permission page.](images/csp4.png)
+    :::image type="content" source="images/csp4.png" alt-text="Screenshot of permission page.":::
 
 1. Customer selects the **Yes** checkbox, followed by the **Accept** button. Authorization happens instantaneously.
 
 1. To check that the authorization request is complete, the CSP can check the **Customers** list in their Microsoft Partner Center account. If the customer is in the list, the request is complete. For example:
 
-    ![Customers.](images/csp5.png)
+    :::image type="content" source="images/csp5.png" alt-text="Customers.":::
 
 ## OEM authorization
 
@@ -91,13 +91,13 @@ OEMs who are eligible of using Direct API solution have a unique link to provide
 
 1. Customer selects the link in the email, which takes them directly to the following page:
 
-    ![Screenshot of Accept partner invitation page.](images/csp6.png)
+    :::image type="content" source="images/csp6.png" alt-text="Screenshot of Accept partner invitation page.":::
 
     > [!NOTE]
     >
     > A user without global admin privileges who selects the link sees a message similar to the following message:
 
-    ![Screenshot of MSfB permission required page.](images/csp7.png)
+    :::image type="content" source="images/csp7.png" alt-text="Screenshot of MSfB permission required page.":::
 
 1. Customer selects the **Yes** checkbox, followed by the **Accept** button, and they're done. Authorization happens instantaneously.
 
