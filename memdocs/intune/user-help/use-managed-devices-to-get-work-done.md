@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/03/2023
+ms.date: 04/08/2024
 ms.topic: end-user-help
 ms.localizationpriority: high
 ms.service: microsoft-intune
@@ -36,7 +36,8 @@ ms.collection:
 - Linux  
 - macOS
 - Windows 10  
-- Windows 11  
+- Windows 11
+
 
 Device enrollment enables you to access your work or school's internal resources (such as apps, Wi-Fi, and email) from your mobile device.  During device enrollment:
 
