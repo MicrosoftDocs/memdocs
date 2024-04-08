@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 04/05/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,7 @@ Compliance reports help you understand when devices fail to meet your [complianc
 This article applies to:
 
 - Android device administrator
-- Android (AOSP) (*preview*)
+- Android opens source project (AOSP)  
 - Android Enterprise
 - iOS/iPadOS
 - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
@@ -63,20 +63,11 @@ When viewing compliance status details and reports, be aware of the following im
 
 - Devices must be enrolled into Intune to receive device compliance policies.
 
-- Intune follows the device check-in schedule for all compliance evaluations on the device. [Learn more about the device check-in schedule](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+- The tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can easily identify and monitor the noncompliant devices in the [Devices without compliance policy organization report](../fundamentals/reports.md#devices-without-compliance-policy-organizational).  
 
-- The tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. By default, this setting marks the devices that haven't been assigned a compliance policy as *Compliant*. If it's important for your organization to identify devices that aren't assigned a compliance policy, consider editing this setting.
+- If the system account shows up as the user principal name in a compliance report, it's because a policy is assigned to a device group, and no user is signed in when compliance was last evaluated. 
 
-- At times a device might send a compliance report back to Intune that shows **System Account** as the user principal name. This result can happen when a compliance policy targets a group of users or devices and is evaluated at a time when there's no user is signed into the device.
-
-- Similarly, when a compliance policy is assigned to a *device* group and evaluated while a user is signed in, there are two compliance evaluations: one for the user and the one for the devices System account. In this scenario, the *System Account* evaluation can fail, causing the device to be **Not compliant**. To prevent this behavior:
-
-  - For devices with a user signed in - assign the compliance policy to a User group.
-  - For devices without a user signed in - assign the compliance policy to a Device group.
-
-- When there are multiple users signed into the same device, and that device is assigned a compliance policy that is scoped to all users that are currently signed in the device, compliance runs for each of those users. This can result in compliance reports showing multiple entries for the device where each entry indicates a different user name.
-
-- Users of a device type who are assigned a compliance policy for a different device type than they use aren't shown in reports. For example, if you've assigned a Windows compliance policy to a user with an Android device, that compliance policy doesn't run on the user's Android device and the devices previous compliance state remains unchanged.
+- Compliance reports show the compliance status for the last user on the device. For device-targeted policies, the *system account* appears as the user principal name in the report if no user is signed in during the device's last compliance check. 
 
 ## Device compliance dashboard
 
@@ -89,7 +80,7 @@ You can access the device compliance dashboard in the [Microsoft Intune admin ce
 - [Policy compliance](../fundamentals/reports.md#policy-compliance-report-organizational) (Link opens the *Intune reports* article)
 - [Setting compliance](../fundamentals/reports.md#settings-compliance--organizational) (Link opens the *Intune reports* article)
 
-:::image type="content" source="./media/compliance-policy-monitor/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab.":::
+<!-- outdated image, need to replace. :::image type="content" source="./media/compliance-policy-monitor/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab."::: -->
 
 ### Device compliance status
 
@@ -161,7 +152,7 @@ When you select the *View report* button on the device status view of a policy, 
 
 :::image type="content" source="./media/compliance-policy-monitor/view-report-for-compliance-policy.png" alt-text="View of the detailed device status report, after selecting the View report button in the Intune admin center.":::
 
-By default, the report view displays details for the following, though you can add more columns of detail can to the view:
+By default, the report view displays details for the following, though you can add more columns of detail to the view:  
 
 - **Device name** - The name of the device as it appears when viewing Devices and creating groups.
 - **Logged in user**
