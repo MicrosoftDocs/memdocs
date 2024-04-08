@@ -40,7 +40,7 @@ When you edit the settings in a reusable group, the changes you make automatical
 The following profiles support reusable groups:
 
 - [**Device control**](#add-reusable-groups-to-a-device-control-profile), available through endpoint security [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) policy.
-- [**Windows Firewall Rules**](#add-reusable-groups-to-a-microsoft-windows-rule-profile), available through endpoint security [Firewall](../protect/endpoint-security-firewall-policy.md#firewall-profiles) policy.
+- [**Windows Firewall Rules**](#add-reusable-groups-to-a-windows-firewall-rule-profile), available through endpoint security [Firewall](../protect/endpoint-security-firewall-policy.md#firewall-profiles) policy.
 
 ## Overview of reusable settings groups
 
@@ -111,7 +111,7 @@ When you edit the configuration of a reusable group, each profile that uses that
 
 3. On the *Basics* page you can rename the group, and on the *Configuration settings* page you can reconfigure settings. On the last page, select **Save** to save your configuration and update the profiles that use the settings group.
 
-## Add reusable groups to a Microsoft Windows rule profile
+## Add reusable groups to a Windows firewall rule profile
 
 Add reusable settings groups to profiles while editing or creating the profile. On the profiles Configuration settings page, use an option that supports adding one or more previously created groups.
 
