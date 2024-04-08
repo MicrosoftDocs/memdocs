@@ -167,7 +167,7 @@ For more information on this new capability, see [Support approved elevation req
 
 ### App management
 
-#### Extended capabilities for Managed Google Play apps on personally-owned Android devices with a work profile<!-- 26554642 -->
+#### Extended capabilities for Managed Google Play apps on personally owned Android devices with a work profile<!-- 26554642 -->
 
 There are new capabilities extended to work profile devices. The following capabilities were previously available only on corporate-owned devices:
 
@@ -316,7 +316,7 @@ For more information, see [Device compliance - Google Play Protect](../protect/c
 
 #### New compliance settings for Android work profile, personal devices<!-- 24743927 -->
 
-Now you can add compliance requirements for work profile passwords without impacting device passwords. All new Microsoft Intune settings are available in compliance profiles for Android Enterprise personally-owned work profiles under **System Security** > **Work Profile Security**, and include:
+Now you can add compliance requirements for work profile passwords without impacting device passwords. All new Microsoft Intune settings are available in compliance profiles for Android Enterprise personally owned work profiles under **System Security** > **Work Profile Security**, and include:
 
 - Require a password to unlock work profile
 - Number of days until password expires
@@ -346,7 +346,7 @@ For more information about installing an expedited update, see [Expedite Windows
 
 #### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
 
-In the Windows Settings Catalog, you can configure **Configuration Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
+In the Windows Settings Catalog, you can configure **Configuration Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
 To support this feature, a remote action will be added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
 
@@ -682,7 +682,7 @@ For more information, see [Bulk driver updates](../protect/windows-driver-update
 
 #### App Control for Business policy limitation is resolved<!-- 19548950  -->
 
-A previously documented limitation for App Control for Business policy (WDAC), that limited the number of active polices per device to 32, has been resolved by Windows. The issue involves a potential [Boot stop failure when more than 32 policies are active](/windows/security/application-security/application-control/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active) on a device.
+A previously documented limitation for App Control for Business policy (WDAC), that limited the number of active policies per device to 32, has been resolved by Windows. The issue involves a potential [Boot stop failure when more than 32 policies are active](/windows/security/application-security/application-control/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active) on a device.
 
 This issue is resolved for devices that run Windows 10 1903 or later with a Windows security update released on or after March 12, 2024. Older versions of Windows are expected receive this fix in future Windows security updates.
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 04/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,11 +47,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
-
-- When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
-
-  - [Android Enterprise fully managed, dedicated, and corporate-owned work profile security settings](../enrollment/android-fully-managed-security-settings.md)
+Create an [Android device restrictions configuration profile](device-restrictions-configure.md).  
 
 ## Fully managed, dedicated, and corporate-owned work profile
 
@@ -175,7 +171,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer
 
-- **End-user access to device settings**: **Block** prevents users from accessing the Settings app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings app.
+- **End-user access to device settings**: **Block** prevents users from accessing the Settings app and prevents other apps in kiosk mode from opening the Settings app. If the device is a kiosk, then set this setting to **Block**.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings and allow apps in Kiosk mode to open the Settings app.
 
   This setting applies to:
 
@@ -252,6 +250,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     > To use dialer & phone applications, or for your users to receive push notifications in kiosk mode, use the [Dedicated devices](#dedicated-devices) > **Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings (in this article). These features are available on Android devices running 9.0 and newer.
     >
     > On OS 9 and newer, the [Device password](#device-password) > **Disable lock screen** (in this article) setting manages the device's lock screen behavior.
+
+    >[!NOTE]
+    > Kiosk mode does not prevent the kiosk application from being able to launch other applications which are installed on the device, including the device Settings application. Admins should ensure that all applications enabled in kiosk mode do not launch other applications which users should not have access to and uninstall any applications which are not necessary on the device. 
   
     Your kiosk mode options:
 
@@ -296,6 +297,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         > [!IMPORTANT]
         > When using multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices can lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
+   
+        >[!NOTE]
+        >Applications added within MHS are not prevented from launching other applications installed on the device. Admins should ensure that all applications allowed within MHS do not launch other applications users should not have access to and uninstall any applications which are not necessary on the device. 
 
       - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
