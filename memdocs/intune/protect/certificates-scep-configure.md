@@ -331,7 +331,7 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
       - **Management Tools** > **IIS 6 Management Compatibility** > **IIS 6 WMI Compatibility**
       - On the server, add the NDES service account as a member of the local **IIS_IUSR** group.
 
-2. Configure a service principal name (SPN) in Active Directory, if neccessary. For information about how to set the SPN, see [Verify if it's necessary to set a service principal name for NDES](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account).  
+2. Configure a service principal name (SPN) in Active Directory, if necessary. For information about how to set the SPN, see [Verify if it's necessary to set a service principal name for NDES](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account).  
 
 ### Configure the NDES service  
 
