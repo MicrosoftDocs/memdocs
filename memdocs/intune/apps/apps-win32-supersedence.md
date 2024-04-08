@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 04/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -44,6 +44,9 @@ This Win32 app supersedence permission has been added to the following built-in 
 
 - Application Manager
 - School administrator
+
+> [!NOTE]
+> To use auto-update to automatically update a superseded app, see [Use auto-update with app supersedence](#use-auto-update-with-app-supersedence).
 
 ## Create a Supersedence relationship in Intune
 
@@ -165,6 +168,57 @@ In the following Supersedence diagram, there are five nodes in total. Hence, fiv
 Additional supersedence limitations:
 - Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
 - Only apps that are targeted will show install statuses in Microsoft Intune admin center.
+
+## Use auto-update with app supersedence
+
+You can automatically update Win32 applications on an enrolled end user's device that have been deployed from the Company Portal. These Win32 apps that have been deployed as *available* can automatically be updated by setting both a supersedence relationship for the app and selecting **Auto-update** when setting the assignment. Additionally, the assignment type must be **Available for enrolled devices**. 
+
+Users who had the superseded app installed from the Company Portal will automatically receive the superseding app. The supersedence auto-update only applies for *available* assignments, meaning users who have the superseded app through *required* intent will not receive the superseding app.
+
+The following steps help you create an auto-update supersedence relationship between apps:
+
+1. Add a Win32 app to supersede another Win32 app using the following steps:
+   [Create a Supersedence relationship in Intune](#create-a-supersedence-relationship-in-intune)
+2. On the **Supersedence** step, add the app that will be updated.
+
+   :::image type="content" alt-text="Screenshot of the Add Apps pane when superseding an app" source="./media/apps-win32-supersedence/apps-win32-supersedence-06.png" :::
+
+3. On the **Assignments** step, add a group of users or devices under the **Available for enrolled devices** section.
+4. Select the current setting for the group in the **Auto-update** column. The **Edit assignment** pane will be displayed.
+
+   :::image type="content" alt-text="Screenshot of the Edit assignment pane when setting auto-update" source="./media/apps-win32-supersedence/apps-win32-supersedence-07.png" :::
+
+5. Select the **Auto-update** option.
+6. Select **OK** to close the pane.
+7. Select **Next** > **Create** to create your supersedence relationship to auto-update your Win32 app.
+
+### Auto-update performance
+
+In order for the user to receive the auto-update for the superseding app, two device check-ins for available apps are required.  
+
+The first available check-in will commonly happen between 1-8 hours after the assignment is created. The second available check-in will commonly happen 8 hours after the first check-in. The total time to receive the superseding app will be 8-16 hours. In the best case scenario, auto-update performance will be significantly quicker.
+
+### Auto-update limitations
+
+The maximum number of superseding apps a Win32 app can have is 10. User must be logged in to the device to receive the superseding app.
+
+### Auto-update retry behavior
+
+If the superseding app failed to auto-update and install for any reason, Intune will retry indefinitely until the user requests an install of the app from the Company Portal. When the user requests to install the app, Intune will change the request type in the backend to reflect that the user installed and stop installation retries from continuing. 
+
+### Auto-update scenarios
+
+Below are specific cases where app B has been created to supersede app A.
+
+| Case | Scenario | Result |
+|---|---|---|
+| Effective   group | The upgrade is already triggered   after the first available check-in, but before app B gets upgraded on the   device, the user’s effective group changes and the new group does not have   the assignment setting **Auto-update** enabled.   | During the second available   check-in, app B will be sent down to the device and app A will be upgraded   with app B on the device.  |
+| App A   is still present on the device. | The upgrade is already triggered   after first available check-in, but before app B gets installed on the   device, the admin removes the relationship between app A and app B, making   them independent apps.  | During the second available   check-in, both apps will be sent down to the device and app B will be   installed as an independent app.   |
+| Auto   update setting changes  | The upgrade is already triggered   after first available check-in, but before app B gets installed on the   device, the admin changes the auto-update setting for app B to false.  | During the second available   check-in, app B will be sent down to the device and app A will be upgraded   with app B on the device. |
+| Uninstall   superseded app after superseding app entities created  | The upgrade is already triggered   after first available check-in, but before app B gets installed on the   device, the user requests an uninstall of app A and app A is removed from the   device. | During the second available   check-in, app B will be sent down to the device and app A will be upgraded   with app B on the device.  |
+| Uninstall   after supersedence update | App A was auto-updated to app B,   but app A was not removed from the device. Later, the user requests an   uninstall of app B from the device and app B is uninstalled successfully. | App A is still present on the   device. |
+| Upgrade   failure  | Intune attempt to auto-update   app A to app B but the installation of app B failed and app A was already   removed from the device. | Users will not be able to   re-install app A from the Company Portal as it’s superseded by app B, but are   able to try to re-install app B from the Company Portal. |
+
 
 ## Next steps
 
