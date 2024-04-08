@@ -116,7 +116,7 @@ Available profiles for this platform include:
 
   Intune profiles for device control support:
   - [Policy merge](#policy-merge-for-settings) for USB device IDs.
-  - [Reusable settings](#add-reusable-settings-groups-to-profiles-for-device-control)
+  - [Reusable settings](#reusable-settings-groups-for-device-control-profiles)
 
   To learn more about Microsoft Defender for Endpoint  device control, see the following articles in the Defender documentation:
   - [Overview of device control](/microsoft-365/security/defender-endpoint/device-control-overview)

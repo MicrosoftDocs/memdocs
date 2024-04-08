@@ -2986,7 +2986,7 @@ Applies to:
 ### Device security
 
 #### Reusable groups of settings for removable storage in Device Control profiles (preview) <!-- 7351534 -->  
-In public preview, you can use [reusable groups of settings](../protect/reusable-settings-groups.md) with [device control profiles](../protect/endpoint-security-asr-policy.md#add-reusable-settings-groups-to-profiles-for-device-control) in your attack surface reduction policies.
+In public preview, you can use [reusable groups of settings](../protect/reusable-settings-groups.md) with [device control profiles](../protect/endpoint-security-asr-policy.md#reusable-settings-groups-for-device-control-profiles) in your attack surface reduction policies.
 
 The reusable groups for device control profiles include a collection of settings that support managing *read*, *write*, and *execute* access for removable storage. Examples of common scenarios include:
 
