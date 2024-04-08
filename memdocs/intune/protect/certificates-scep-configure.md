@@ -331,17 +331,9 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
       - **Management Tools** > **IIS 6 Management Compatibility** > **IIS 6 WMI Compatibility**
       - On the server, add the NDES service account as a member of the local **IIS_IUSR** group.
 
-2. You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section, learn how to determine whether it's necessary to set an SPN in Active Directory.
+2. Configure a service principal name (SPN) in Active Directory, if neccessary. For information about how to set the SPN, see [Verify if it's necessary to set a service principal name for NDES](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account).  
 
-   If you're using a single NDES server and its actual hostname (most common scenario), the account doesn't need an SPN registered. The computer accounts default SPNs for HOST/computerFQDN cover this case. If you're using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
-
-   If you're using a custom A record as a hostname, or load balancing with a Virtual IP, an SPN needs to be registered against the NDES service account (SCEPSvc). To register an SPN against the NDES service account:
-   - Use the Setspn command with the syntax: `setspn -s http/<DNS name of the computer that hosts the NDES service> <Domain name>\<NDES Service account name>` when entering your commands. For example, if the computer that hosts the NDES service is named **Server01**, your domain is **Contoso.com**, and the service account is **NDESService**, use:
-
-     setspn –s http/Server01.contoso.com contoso\NDESService
-   - Then disable IIS Kernel-mode Authentication for the site.
-
-### Configure the NDES service
+### Configure the NDES service  
 
 To configure the NDES service, use an account that is an *Enterprise Administrator*.
  
