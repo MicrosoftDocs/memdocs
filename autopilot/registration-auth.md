@@ -43,42 +43,44 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
     1. CSP logs into Microsoft Partner Center.
     2. Select **Dashboard** on the top menu.
     3. Select **Customer** on the side menu.
-    4. Select the **Request a reseller relationship** link:
-
-        ![Request a reseller relationship.](images/csp1.png)
-
-    5. Select the checkbox indicating if you want delegated admin rights:
-
-        ![Delegated rights.](images/csp2.png)
-
-        > [!NOTE]
+   1. Select the **Request a reseller relationship** link:
+   
+       ![Request a reseller relationship.](images/csp1.png)
+      
+   1. Select the checkbox indicating if you want delegated admin rights:
+   
+       ![Delegated rights.](images/csp2.png)
+      
+              > [!NOTE]
         >
         > Depending on your partner, they might request Delegated Admin Permissions (DAP) when requesting this consent. If possible, it's better to use the newer DAP-free process (shown in this document). If not, you can easily remove their DAP status either from Microsoft Admin Center or the Microsoft 365 admin portal. For more information, see [Obtain permissions to manage a customer's service or subscription](/partner-center/customers_revoke_admin_privileges).
 
     6. Send the template in the previous step to the customer via email.
 
-2. Customer with Microsoft Admin Center global administrator privileges selects the link in email. The link takes them to the following Microsoft 365 admin center page:
+1. Customer with Microsoft Admin Center global administrator privileges selects the link in email. The link takes them to the following Microsoft 365 admin center page:
 
     ![Screenshot of Accept agreement and authorize partner page - delegated admin rights.](images/csp3a.png)
-
-    The above image is what the customer sees if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
+   
+       The above image is what the customer sees if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
 
     ![Screenshot of Accept agreement and authorize partner page.](images/csp3b.png)
-
-    > [!NOTE]
+   
+       > [!NOTE]
     >
     > A user without global admin privileges who selects the link sees a message similar to the following message:
 
-    ![Screenshot of permission page.](images/csp4.png)
-
+   ![Screenshot of permission page.](images/csp4.png)
+   
 3. Customer selects the **Yes** checkbox, followed by the **Accept** button. Authorization happens instantaneously.
-4. To check that the authorization request is complete, the CSP can check the **Customers** list in their MPC account. If the customer is in the list, the request is complete. For example:
+1. To check that the authorization request is complete, the CSP can check the **Customers** list in their MPC account. If the customer is in the list, the request is complete. For example:
 
     ![Customers.](images/csp5.png)
-
+   
 ## OEM authorization
 
-Each OEM has a unique link to provide to their respective customers, which the OEM can request from Microsoft via <msoemops@microsoft.com>.
+This OEM authorization is only available for those OEMs who are eligible to use OEM Direct API for Windows Autopilot registration and deregistration.
+
+Each OEM who are eligible of using Direct API solution has a unique link to provide to their respective customers, which the OEM can request from Microsoft via "msoemops support" alias.  Please contact your account manager to get this support alias.
 
 1. OEM emails link to their customer.
 2. Customer signs into [Microsoft 365 admin center](https://portal.office.com/adminportal) using a cloud-native account (for example, [domain].onmicrosoft.com) with global administrator privileges.
