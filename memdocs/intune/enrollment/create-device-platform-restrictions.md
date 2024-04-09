@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 04/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -47,6 +47,12 @@ Create a device platform enrollment restriction policy to restrict devices from 
  You can create a new device platform restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
 
 This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.  
+
+## Role-based access control  
+
+You must be an Intune Service Administrator to create or edit a Windows device platform restriction. All other Intune roles have read-only access. 
+
+For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
 
 ## Default policy 
 Microsoft Intune provides one default policy for device platform restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
