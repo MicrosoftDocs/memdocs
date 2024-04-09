@@ -9,13 +9,11 @@ ms.author: scbree
 
 # Common Education Windows Update configuration
 
-## Windows Updates Summary
-
 Create update rings that specify how and when Windows as a Service updates your Windows 10/11 devices with feature and quality updates.
 
 In this article you will find Windows Update ring configuration that is commonly used for 1:1 student and teacher devices.
 
-### Update rings for Windows 10 and later
+## Update rings for Windows 10 and later
 
 Additional information:
 
@@ -47,7 +45,7 @@ Additional information:
 | Grace period | 2   |     | [ConfigureDeadlineGracePeriod](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)<br><br>[ConfigureDeadlineGracePeriodForFeatureUpdates](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiodforfeatureupdates) |
 | Auto reboot before deadline | Yes |     | [ConfigureDeadlineNoAutoReboot](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
 
-### Settings Catalog
+## Settings Catalog
 
 Settings described in this section are not shown in an Update ring policy and should be configured as a Settings Catalog type Configuration Profile.
 
@@ -59,7 +57,7 @@ Additional information:
 | --- | --- | --- | --- |
 | No update notifications during active hours | Enabled |     | [NoUpdateNotificationsDuringActiveHours](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
 
-### Windows Update Feature Control
+## Windows Update Feature Control
 
 Windows feature updates contain new Windows features to improve the user experience. Windows feature versions are supported differently depending on the edition. It is important to ensure that the Windows version installed remains supported so that it can receive the latest security updates and support required applications such as testing apps.
 
@@ -77,11 +75,11 @@ There are 2 ways to control how and when Windows feature updates are installed o
 | Automatically keep up to date (recommended) | Use only **Update ring policies** and set a feature update deferral to 30 or more days | Devices are always kept up to date and receive access to the latest Windows features | Users may not have had training on new features and some apps may not be compatible with the new feature version |
 | Control feature version | Use **feature update policies** to keep devices at a particular version of Windows | Devices are kept at a particular Windows version until the policy is changed | The policy must be reviewed and changed periodically to ensure Windows remains supported |
 
-#### Automatically keep Windows up to date
+### Automatically keep Windows up to date
 
 Using the **update ring** you configured earlier, set the **Feature update deferral period (days)** to **30** days. The deferral period can be increased or decreased based on the needs of the based on school needs.
 
-#### Control feature version
+### Control feature version
 
 A [Feature update policy](https://learn.microsoft.com/mem/intune/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. If the devices targeted are running an older version they will update to the specified version. If devices are running the specified version or newer, they will not perform any feature updates.
 
