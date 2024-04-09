@@ -24,26 +24,26 @@ Additional information:
 
 | **Update settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| Microsoft product updates | Allow | Do not set to Block. In order to revert the configuration, a PowerShell commands will have to be run on each device. | [AllowMUUpdateService](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
-| Windows drivers | Allow |     | [ExcludeWUDriversInQualityUpdate](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate) |
-| Quality update deferral period (days) | 7   |     | [DeferQualityUpdatesPeriodInDays](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays) |
-| Feature update deferral period (days) | 30  | Select 0 if using a [**Feature update policy**](#windows-update-feature-control) otherwise select 30 days. | [DeferFeatureUpdatesPeriodInDays](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays) |
-| Upgrade Windows 10 devices to Latest Windows 11 release | No  |     | [ProductVersion](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#productversion) |
-| Set feature update uninstall period (2 - 60 days) | 14  |     | [ConfigureFeatureUpdateUninstallPeriod](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod) |
-| Enable pre-release builds | Not configured |     | [ManagePreviewBuilds](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#managepreviewbuilds) |
+| Microsoft product updates | Allow | Do not set to Block. In order to revert the configuration, a PowerShell commands will have to be run on each device. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
+| Windows drivers | Allow |     | [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate) |
+| Quality update deferral period (days) | 7   |     | [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays) |
+| Feature update deferral period (days) | 30  | Select 0 if using a [**Feature update policy**](#windows-update-feature-control) otherwise select 30 days. | [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays) |
+| Upgrade Windows 10 devices to Latest Windows 11 release | No  |     | [ProductVersion](/windows/client-management/mdm/policy-csp-update#productversion) |
+| Set feature update uninstall period (2 - 60 days) | 14  |     | [ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod) |
+| Enable pre-release builds | Not configured |     | [ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#managepreviewbuilds) |
 
 | **User experience settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| Automatic update behavior | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#allowautoupdate)[AllowAutoUpdate](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
-| Restart checks (EDU Restart) | Allow | Must not be disable for future compatibility. | [SetEDURestart](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#setedurestart) |
-| Option to pause Windows updates | Disable |     | [SetDisablePauseUXAccess](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
-| Option to check for Windows updates | Disable |     | [SetDisableUXWUAccess](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
-| Change notification update level | Turn off all notifications, excluding restart warnings |     | [UpdateNotificationLevel](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#updatenotificationlevel) |
+| Automatic update behavior | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [](/windows/client-management/mdm/policy-csp-update#allowautoupdate)[AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
+| Restart checks (EDU Restart) | Allow | Must not be disable for future compatibility. | [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart) |
+| Option to pause Windows updates | Disable |     | [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
+| Option to check for Windows updates | Disable |     | [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
+| Change notification update level | Turn off all notifications, excluding restart warnings |     | [UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel) |
 | Use deadline settings | Allow | Only enables the setting configuration. |     |
-| Deadline for feature updates | 7   |     | [ConfigureDeadlineForFeatureUpdates](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates) |
-| Deadline for quality updates | 3   |     | [ConfigureDeadlineForQualityUpdates](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates) |
-| Grace period | 2   |     | [ConfigureDeadlineGracePeriod](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)<br><br>[ConfigureDeadlineGracePeriodForFeatureUpdates](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiodforfeatureupdates) |
-| Auto reboot before deadline | Yes |     | [ConfigureDeadlineNoAutoReboot](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
+| Deadline for feature updates | 7   |     | [ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates) |
+| Deadline for quality updates | 3   |     | [ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates) |
+| Grace period | 2   |     | [ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)<br><br>[ConfigureDeadlineGracePeriodForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiodforfeatureupdates) |
+| Auto reboot before deadline | Yes |     | [ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
 
 ## Settings Catalog
 
@@ -55,7 +55,7 @@ Additional information:
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| No update notifications during active hours | Enabled |     | [NoUpdateNotificationsDuringActiveHours](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
+| No update notifications during active hours | Enabled |     | [NoUpdateNotificationsDuringActiveHours](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
 
 ## Windows Update Feature Control
 
