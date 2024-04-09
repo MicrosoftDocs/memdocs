@@ -58,4 +58,4 @@ HP Anyware for Windows 365 supports integrating with Windows 365 deployments for
 <!-- ########################## -->
 ## Next steps
 
-[Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
+[Set up HP AnyWare for Windows 365 Enterprise](hp-anyware-set-up.md).
