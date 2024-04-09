@@ -34,7 +34,7 @@ ms.collection:
 > [!IMPORTANT]
 > This article is a final draft and ready for PM review. It will go live when Platform SSO goes live. **Delete this note before publishing**.
 
-On your macOS devices, you can configure Platform SSO to enable single sign-on (SSO) using a Microsoft Entra ID. Platform SSO signs users into the device using their Microsoft Entra ID.
+On your macOS devices, you can configure Platform SSO to enable single sign-on (SSO) using passwordless authentication, Microsoft Entra ID password or smart card. Platform SSO is an enhancement to the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) and the [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md). Platform SSO signs users into their managed Mac using their Microsoft Entra ID password and Touch ID.
 
 This article applies to:
 
@@ -42,20 +42,26 @@ This article applies to:
 
 On macOS devices, users sign in with a local account. Then, they sign into apps and websites with their Microsoft Entra ID.
 
-When Platform SSO is configured, users sign into the device with their Microsoft Entra ID instead of their local account. When they sign into the device with their Microsoft Entra ID, then they get access to device features that use Microsoft Entra ID for authentication.
+When Platform SSO is configured with "Secure Enclave" as the authentication method, the SSO plug-in uses hardware-bound crytpographic keys instead of the Microsoft Entra ID password to authenticate the user to apps and websites. The local account password remains unchanged and does not sync with the Microsoft Entra ID password. This also enables the creation and usage of Microsoft Entra ID passkeys. 
+
+When Platform SSO is configured with "password" as the authentication method, users log in on the Mac with their Microsoft Entra ID password instead of their local account password. The Microsoft Entra SSO plug-in keeps the user's Microsoft Entra ID password in sync on the device and allows the use of Touch ID to log in on the Mac. 
+
+When Platform SSO is configured with "smart card" as the authentication method, users can use the smart card certificate and the associated PIN to log in on the Mac and authenticate to apps and websites.
+
+Microsoft recommends using "Secure Enclave" as the authentication method when configuring Platform SSO. This passwordless authentication mechanism meets phishing-resistant MFA requirements that is similar to the authentication method in Windows Hello for Business.
 
 The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra includes two SSO features - **Platform SSO** and the **SSO app extension**.
 
-When you use configure Platform SSO, you also need to configure the [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md). Platform SSO and the SSO app extension work together. Platform SSO handles the initial device sign-in, and the SSO app extension handles the sign-in for apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
-
 Some benefits of Platform SSO include:
 
+- Go passwordless with phishing-resistant credentials that are hardware-bound to the Mac.
+- Similar experience to signing into a Windows device with a work or school account, like users do with Windows Hello for Business.
 - Helps minimize the number of times users need to enter their Microsoft Entra credentials.
 - Helps reduce the number of passwords users need to remember.
-- Similar experience to signing into a Windows device with a work account, like users do with Windows Hello for Business.
-- Get the benefits of Microsoft Entra ID join, which allows any organization user to sign into the device.
+- Get the benefits of Microsoft Entra ID Join, which allows any organization user to sign into the device.
+- Included with all Microsoft Intune plans.
 
-Platform SSO uses the Microsoft Intune [settings catalog](settings-catalog.md) to configure the policy. When the policy is ready, you assign the policy to your users or devices. Microsoft recommends you assign the policy when the device enrolls in Intune. But, it can be assigned at any time, including on existing devices.
+Platform SSO uses the Microsoft Intune [settings catalog](settings-catalog.md) to configure the policy. When the policy is ready, you assign the policy to your users or devices. Microsoft recommends you assign the policy when the device enrolls in Intune. But, it can be assigned at any time, including on existing devices. 
 
 This article shows you how to configure Platform SSO for macOS devices in Intune.
 
@@ -66,19 +72,15 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
   - Microsoft Edge
   - Safari
 
-  When macOS client devices join a Microsoft Entra tenant, the devices get a workplace join (WPJ) certificate. To access protected resources, web browsers need this WPJ certificate. With Platform SSO, the SSO app extension uses the WPJ certificate to act as a broker between the devices and Apple. Only the SSO extension can access the WPJ cert.
+    When Macs join a Microsoft Entra tenant, the devices get a workplace join (WPJ) certificate that is hardware-bound and only accessible by the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin). To access resources protected using Conditional Access, apps and web browsers need this WPJ certificate. With Platform SSO configured, the SSO app extension acts as the broker for Microsoft Entra ID authentication and Conditional Access.
 
-  These browsers are broker-aware and allow the SSO app extension to use the WPJ certificate.
+    These browsers are broker-aware and can redirect to the SSO app extension for Microsoft Entra ID authentication or Conditional Access check.
 
 - To create the Intune policy, at a minimum, sign in with an account that has the **Policy and Profile Manager** Intune RBAC role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-## Step 1 - Configure the SSO app extension policy in Intune
-
-Platform SSO requires the SSO app extension be configured for your apps using a Microsoft Intune policy. Platform SSO is only available with Microsoft Intune. So, make sure you follow the Intune steps when creating the SSO app extension policy.
-
-For the specific steps and SSO app extension requirements, go to [Use the Microsoft Enterprise SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md).
-
-## Step 2 - Create the Platform SSO policy in Intune
+## Step 1 - Create the Platform SSO policy in Intune
+> [!IMPORTANT]
+>  Platform SSO configurations already include the SSO app extension configurations. So, if you have previously configured [the Microsoft Enterprise SSO app extension for macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md) in Intune using templates, it is recommended that you create the same profile in settings catalog with Platform SSO configurations and assign it to your users or devices and unassign the template-based SSO app extension profile.
 
 To configure the Platform SSO policy, use the following steps to create an [Intune settings catalog](settings-catalog.md) policy.
 
@@ -223,7 +225,7 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
 The next time the device checks for configuration updates, the settings you configured are applied.
 
-## Step 3 - Deploy the Company Portal app for macOS
+## Step 2 - Deploy the Company Portal app for macOS
 
 The Company Portal app for macOS deploys and installs the Microsoft Enterprise SSO plug-in. This plug-in enables Platform SSO.
 
@@ -236,7 +238,7 @@ Using Intune policies, you add the Company Portal app, make it a required app, a
 
 For information on the end user experience, go to [Join a Mac device with Microsoft Entra ID during the out of box experience with macOS Platform SSO](/entra/identity/devices/device-join-macos-platform-single-sign-on).
 
-## Step 4 - Enroll the devices and apply the policies
+## Step 3 - Enroll the devices and apply the policies
 
 To use Platform SSO, the devices must be MDM enrolled in Intune using one of the following methods:
 
@@ -247,11 +249,18 @@ For **new devices**, we recommend you precreate and configure all the necessary 
 
 For **existing devices**, assign the policies to the devices. The next time the devices sync or check-in with the Intune services, they receive the Platform SSO policy settings you create.
 
+On an enrolled device, you can also go to **Settings** > **Privacy and security** > **Profiles**. Your Platform SSO profile should be listed under "com.apple.extensiblesso Profile". Select the profile to see the settings you configured, including the URLs.
+
+## Step 4 - Register the device
+
+To finish setting up Platform SSO, the user needs to click on the "Registration required" notification that pops up or appears in Notification Center when the Platform SSO policy applies. 
+
+Clicking the notification will prompt the user to sign in to the Microsoft Entra ID plug-in using their work or school credentials and perform MFA. Once successfully authenticated, the device is Microsoft Entra-Joined to the organization and the WPJ certificate is bound to the device.
+
 ## Step 5 - Confirm the settings on the device
 
-When the enrollment completes and the policies are applied, you can confirm that Platform SSO is configured. For the steps, go to [Microsoft Entra ID - Check your device registration status](/entra/identity/devices/device-join-macos-platform-single-sign-on#check-your-device-registration-status).
+Once Platform SSO registration completes, you can confirm that Platform SSO is configured. For the steps, go to [Microsoft Entra ID - Check your device registration status](/entra/identity/devices/device-join-macos-platform-single-sign-on#check-your-device-registration-status).
 
-On an enrolled device, you can also go to **Settings** > **Privacy and security** > **Profiles**. Your Platform SSO profile should be listed. Select the profile to see the settings you configured, including the URLs.
 
 ## Related content
 
