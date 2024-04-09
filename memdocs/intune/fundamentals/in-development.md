@@ -152,9 +152,9 @@ Intune will support account-driven Apple User Enrollment, the new and improved v
 
 If you prefer, you can continue to target iOS/iPadOS devices using the Apple User Enrollment method that requires Company Portal. Devices running iOS/iPadOS 14.8.1 and earlier will be unaffected by this update and can continue to use the method with Company Portal.
 
-#### RBAC changes coming to enrollment platform restrictions for Windows<!-- 25036419  -->
+#### RBAC changes coming to enrollment platform restrictions <!-- 25036419  -->
 
-We're updating RBAC for Windows enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will  be able to create and edit enrollment platform restrictions.
+We're updating RBAC for enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to create and edit enrollment platform restrictions.
 
 <!-- *********************************************** -->
 
