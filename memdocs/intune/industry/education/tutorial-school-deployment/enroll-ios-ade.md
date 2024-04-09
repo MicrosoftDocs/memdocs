@@ -18,13 +18,21 @@ There are two types of enrollment:
 - **User affinity**. This enrollment type is designed for devices that have only one user. In this scenario, the user is prompted for credentials during enrollment.
 - **No user affinity**. This enrollment type is designed for shared devices and is common in lower grades. In this scenario, no credentials are required to enroll the device. For iPad devices, a configuration called Shared iPad can be applied that allows users to log in with their Managed Apple ID or use a temporary session.
 
-For more information on configuring Automated Device Enrollment, see [Set up automated device enrollment in Intune](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
+For more information on configuring Automated Device Enrollment, see:
+
+# [Intune For Education](#tab/intune-for-education)
+
+[Set up iOS device management](/intune-education/setup-ios-device-management)
+
+# [Intune](#tab/intune)
+
+[Set up automated device enrollment in Intune](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
 
 ---
 
 ## Next steps
 
-With the devices joined to managed by Intune, you can use Intune to maintain them and report on their status.
+With the devices managed by Intune, you can use Intune to maintain them and report on their status.
 
 > [!div class="nextstepaction"]
 > [Next: Manage devices >](manage-overview.md)

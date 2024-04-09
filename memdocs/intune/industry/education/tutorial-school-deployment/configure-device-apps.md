@@ -38,7 +38,13 @@ Intune for Education supports the deployment of two types of Windows application
 
 ### Desktop apps
 
-The addition of desktop applications to Intune should be carried out by repackaging the apps, and defining the commands to silently install them. The process is described in the article [Add, assign, and monitor a Win32 app in Microsoft Intune][MEM-1].
+Intune for Education supports:
+
+ - **Single file MSI** - Single file MSI files can be uploaded directly to Intune for Education. For more information, see [Add desktop apps in Intune for Education](/intune-education/add-desktop-apps-edu).
+ - **Win32 apps** - The addition of desktop applications to Intune should be carried out by repackaging the apps, and defining the commands to silently install them. The process is described in the article [Add, assign, and monitor a Win32 app in Microsoft Intune][MEM-1].
+
+> [!NOTE]
+> For consistency, it is recommended that you choose to use only one of the desktop app installation methods. For example, if you have any applications that require the use of the Win32 app capability, then package and deploy all apps using the Win32 apps capability and don't use the single file MSI (LOB) option.
 
 ### Web apps
 
@@ -51,6 +57,21 @@ To create web applications in Intune for Education:
 1. Select **Save**
 
 For more information, see [Add web apps][INT-2].
+
+### Microsoft Store app (new)
+
+To create Microsoft Store apps in Intune for Education:
+
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Select **Apps**
+1. Select **New app** > **New Microsoft Store app (new)**
+1. Search for and select the app
+1. Review and change settings as required
+    > [!NOTE]
+    > Most customers choose to deploy store apps in the **system** context on education deivces for the fastest installation to all users of a device.
+1. Select **Save**
+
+For more information, see [Add Microsoft Store apps](/mem/intune/apps/store-apps-microsoft).
 
 # [Intune](#tab/intune)
 
@@ -68,6 +89,22 @@ For more infomration, see [Enterprise Application Management](/mem/intune/apps/a
 ### Win32 apps (MSI, exe)
 
 The addition of desktop applications to Intune should be carried out by repackaging the apps, and defining the commands to silently install them. The process is described in the article [Add, assign, and monitor a Win32 app in Microsoft Intune][MEM-1].
+
+### Microsoft Store app (new)
+
+To create Microsoft Store apps in Intune:
+
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+1. Select **Apps**
+1. Select **All apps**
+1. Select **New app** > **Windows web link**
+1. Search for and select the app
+1. Review and change settings as required
+    > [!NOTE]
+    > Most customers choose to deploy store apps in the **system** context on education deivces for the fastest installation to all users of a device.
+1. Select **Save**
+
+For more information, see [Add Microsoft Store apps](/mem/intune/apps/store-apps-microsoft).
 
 ### Web apps
 
@@ -104,6 +141,9 @@ To add apps to iOS devices without using VPP in Intune:
 1. Search the app store by entering the app name and selecting the country
 1. Select the app in the list
 1. Click **Add to Intune**
+
+> [!NOTE]
+> Apps installed with this method will require the user of the device to sign in using an Apple ID to install the application. To avoid prompting the user for an Apple ID, use VPP apps.
 
 ### Web apps
 
@@ -187,7 +227,7 @@ To assign applications to a group of users or devices:
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
 1. Select **Groups** > Pick a group to manage
 1. Select **Apps**
-1. Select either **Free iOS apps** or **iOS volume purchase apps**
+1. Select either **Web apps** or **iOS apps**
 1. Select the apps you want to assign to the group > Save
 
 # [Intune](#tab/intune)

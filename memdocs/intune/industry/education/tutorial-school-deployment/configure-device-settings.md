@@ -40,7 +40,7 @@ There are two ways to manage settings in Intune for Education:
 - **Group settings.** This option is used to configure all settings offered by Intune for Education
 
 > [!NOTE]
-> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. It is recommended to use Express Configuration to initially set up your Windows devices.
+> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs.
 
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
@@ -75,7 +75,7 @@ There are two ways to manage settings in Intune for Education:
 - **Group settings.** This option is used to configure all settings that are offered by Intune for Education
 
 > [!NOTE]
-> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. It is recommended to use Express Configuration to initially set up your iOS devices.
+> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. 
 
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
@@ -119,6 +119,9 @@ Settings that are commonly configured for student devices include:
 
 For more information, see [Windows device settings in Intune for Education][INT-3].
 
+> [!NOTE]
+> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
+
 # [Intune](#tab/intune)
 
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
@@ -127,7 +130,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 - Go to **Devices** > **Configuration profiles** > **+ Create profile**.
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
-  - For general settings, select **Settings Catalog**.
+  - For general settings, select [**Settings Catalog**](/mem/intune/configuration/settings-catalog).
   - For templates including certificates, Wi-Fi, and VPN, select **Templates** and     then choose the required template.
 - Follow the steps to create and configure the profile as necessary.
 
@@ -151,6 +154,9 @@ Settings that are commonly configured for student devices include:
 
 For more information, see [iOS device settings in Intune for Education](/intune-education/all-edu-settings-ios).
 
+> [!NOTE]
+> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
+
 # [Intune](#tab/intune)
 
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
@@ -167,7 +173,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 
 ## Update policies
 
-✅ Configure updates policies and assign to devices
+✅ Configure update policies and assign to devices
 
 ::: zone pivot="windows"
 
@@ -202,7 +208,7 @@ It is important to keep Windows devices up to date with the latest security upda
 
 # [Intune For Education](#tab/intune-for-education)
 
-It is important to keep iOS devices up to date with the latest security updates. You can create control when Intune triggers iOS devices to update using Intune for Education.
+It is important to keep iOS devices up to date with the latest security updates. You can control when Intune triggers iOS devices to update using Intune for Education.
 
 To create a iOS update restrictions policy:
 
@@ -226,7 +232,8 @@ At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restr
 - **Defer software updates**: Yes/No
 - **Delay default visibility of software updates**: 0-90
 
-The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/mem/intune/protect/managed-software-updates-ios-macos).
+> [!TIP]
+> The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/mem/intune/protect/managed-software-updates-ios-macos).
 
 For more information, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/mem/intune/protect/software-updates-guide-ios-ipados).
 
@@ -295,6 +302,9 @@ Common areas for security include:
 
 - Device restrictions
 - Passcode, Touch ID, and Face ID
+
+> [!NOTE]
+> If you require more sophisticated security settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
 
 # [Intune](#tab/intune)
 

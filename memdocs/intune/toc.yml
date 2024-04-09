@@ -1799,10 +1799,12 @@ items:
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
         - name: 5. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
-        - name: 6. Simplified configuration
+        - name: 6. Common configuration
           items: 
           - name: Overview
-            href: ./industry/education/tutorial-school-deployment/config-overview.md
+            href: ./industry/education/tutorial-school-deployment/common-config-overview.md
+          - name: Windows Update configuration
+            href: ./industry/education/tutorial-school-deployment/common-config-windows-updates.md
       - name: Intune for Education docs
         href: /intune-education/
 

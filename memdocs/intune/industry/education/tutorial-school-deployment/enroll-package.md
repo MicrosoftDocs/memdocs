@@ -15,7 +15,18 @@ Enrolling devices with provisioning packages is an efficient way to deploy a lar
 - Devices don't need to be registered in advance
 - Enrollment is a simple task: just open a provisioning package and the process is automated
 
-You can create provisioning packages using either **Set Up School PCs** or **Windows Configuration Designer** applications, which are described in the following sections.
+You can create provisioning packages using either **Windows Configuration Designer** or **Set Up School PCs** applications, which are described in the following sections.
+
+> [!IMPORTANT]
+> To create a bulk enrollment token, which is used to join Entra, you must have a supported Microsoft Entra role assignment. For more information, see [Roles and permissions](/mem/intune/enrollment/windows-bulk-enroll#roles-and-permissions).
+
+## Windows Configuration Designer
+
+Windows Configuration Designer is especially useful in scenarios where a school needs to provision packages for both bring-you-own devices and school-owned devices. Windows Configuration Designer allows granular customizations, including the possibility to embed scripts in the package.
+
+:::image type="content" source="./images/wcd.png" alt-text="Set up device page in Windows Configuration Designer" border="false":::
+
+For more information, see [Install Windows Configuration Designer][WIN-1], which provides details about the app, its provisioning process, and considerations for its use.
 
 ## Set up School PCs
 
@@ -36,19 +47,15 @@ For more information on prerequisites, configuration, and recommendations, see [
 
 > [!TIP]
 > To learn more and practice with Set up School PCs, try the <a href="https://www.microsoft.com/en-us/education/interactive-demos/enroll-devices-at-scale" target="_blank"><u>Set Up School PCs demo</u></a>, which provides detailed steps to create a provisioning package and deploy a device.
-## Windows Configuration Designer
-
-Windows Configuration Designer is especially useful in scenarios where a school needs to provision packages for both bring-you-own devices and school-owned devices. Differently from Set Up School PCs, Windows Configuration Designer doesn't offer a guided experience, and allows granular customizations, including the possibility to embed scripts in the package.
-
-:::image type="content" source="./images/wcd.png" alt-text="Set up device page in Windows Configuration Designer" border="false":::
-
-For more information, see [Install Windows Configuration Designer][WIN-1], which provides details about the app, its provisioning process, and considerations for its use.
 
 ## Enroll devices with the provisioning package
 
 To provision Windows devices with provisioning packages, insert the USB stick containing the package during the out-of-box experience. The devices will read the content of the package, join Microsoft Entra ID and automatically enroll in Intune.
 
 All settings defined in the package and in Intune will be applied to the device, and the device will be ready to use.
+
+> [!NOTE]
+> After the device arrives at the logon screen Intune will continue to apply poicies and install applications in the background.
 
 :::image type="content" source="./images/win11-oobe-ppkg.gif" alt-text="Windows 11 OOBE - enrollment with provisioning package animation." border="false":::
 

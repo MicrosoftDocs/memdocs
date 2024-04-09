@@ -30,14 +30,14 @@ When Surface devices are enrolled in cloud management and users sign in for the 
 To access and use the Surface Management Portal:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-1. Select **All services** > **Surface Management Portal**
+1. Select **Devices** > **Partner Portals** > **Surface Management Portal**
     :::image type="content" source="./images/surface-management-portal.png" alt-text="Surface Management Portal within Microsoft Intune" lightbox="./images/surface-management-portal-expanded.png" border="true":::
-1. To obtain insights for all your Surface devices, select **Monitor**
+1. See an **Overview** of your Surface devices
     - Devices that are out of compliance or not registered, have critically low storage, require updates, or are currently inactive, are listed here
-1. To obtain details on each insights category, select **View report**
+1. To obtain details on each insights category, select **Insights**
     - This dashboard displays diagnostic information that you can customize and export
-1. To obtain the device's warranty information, select **Device warranty and coverage**
-1. To review a list of support requests and their status, select **Support requests**
+1. To obtain the device's warranty information, select **Insights**
+1. To review a list of support requests and their status, select **Support**
 
 <!-- Reference links in article -->
 
