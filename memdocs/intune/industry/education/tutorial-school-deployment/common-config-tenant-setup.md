@@ -11,7 +11,7 @@ ms.author: scbree
 
 This article describes organization-wide settings within Microsoft Entra ID and Microsoft Intune that affect device management. Microsoft Intune relies on Microsoft Entra ID for identity, license assignment and for devices and users grouping.
 
-## Network prerequisites
+## Network pre-requisites
 
 Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints) for a list of endpoints.
 
@@ -90,10 +90,10 @@ Below are examples of queries commonly used for dynamic security groups.
 
 Additional information:
 
-- Learn about groups and access rights in Microsoft Entra ID
-- Create or update a dynamic group in Microsoft Entra ID
-- Dynamic membership rules for groups in Microsoft Entra ID
-- Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID
+- [Learn about groups and access rights in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 
 | Name | Type | Query |
 | --- | --- | --- |
@@ -109,43 +109,23 @@ Settings described in this section are located in the Microsoft Intune admin cen
 
 | Configuration group | Setting | Value |
 | --- | --- | --- |
-| Customization | Customize branding according to organization policies. | |
-
-Additional information:
-
-- How to configure the Intune Company Portal apps, Company Portal website, and Intune app
-
-| Remote Help | Settings\\Configure | Enable Remote Help | Enabled |
-| Remote Help | Settings\\Configure | Allow Remote Help to unenrolled devices | Not allowed |
-
-### Device diagnostics
-
-Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name
-
-| Device diagnostics | Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
-
-### Terms and conditions
-
-Create Terms and conditions according to organization policies.
-
-Additional information:
-
-- Terms and conditions for user access
-- Choosing the right Terms solution for your organization
+| Customization | Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](https://learn.microsoft.com/mem/intune/apps/company-portal-app) | |
+| [Remote Help](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/remote)\ Settings\Configure | Enable Remote Help | Enabled |
+| [Remote Help](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/remote)\ Settings\Configure | Allow Remote Help to unenrolled devices | Not allowed |
+| [Device diagnostics](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/termsAndConditions) | Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name | Enabled |
+| [Device diagnostics](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/termsAndConditions) | Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
+| [Terms and conditions](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/termsAndConditions) | Create Terms and conditions according to organization policies. For more information, see ]Terms and conditions for user access](/mem/intune/enrollment/terms-and-conditions-create) | |
 
 ### Devices enrollment settings
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |
-| Enrollment device platform restriction | Android restrictions\\Device type restrictions | Default\\Android Enterprise (work profile) | Personally owned: Block |
-| Enrollment device platform restriction | Android restrictions\\Device type restrictions | Default\\Android device administrator | Platform: Block |
-| Enrollment device platform restriction | iOS restriction\\Device type restrictions | Default\\iOS/iPadOS | Personally owned: Block |
-| Enrollment device platform restriction | macOS restriction\\Device type restrictions | Default\\macOS | Personally owned: Block |
-| Enrollment device platform restriction | Windows restriction\\Device type restrictions | Default\\Windows (MDM) | Personally owned: Block |
-
-### Windows enrollment
-
-| General | Windows Hello for Business | Configure Windows Hello for Business | Disabled |
+| [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | Android restrictions\\Device type restrictions | Default\\Android Enterprise (work profile) | Personally owned: Block |
+| [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | Android restrictions\\Device type restrictions | Default\\Android device administrator | Platform: Block |
+| [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | iOS restriction\\Device type restrictions | Default\\iOS/iPadOS | Personally owned: Block |
+| [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | macOS restriction\\Device type restrictions | Default\\macOS | Personally owned: Block |
+| [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | Windows restriction\\Device type restrictions | Default\\Windows (MDM) | Personally owned: Block |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General | Windows Hello for Business | Configure Windows Hello for Business | Disabled |
 
 ### Intune data collection policy
 
