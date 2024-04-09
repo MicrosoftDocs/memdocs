@@ -1,6 +1,6 @@
 ---
 title: Device enrollment overview
-description: Learn about the different options to enroll Windows devices in Microsoft Intune
+description: Learn about the different options to enroll Windows devices in Microsoft Intune.
 ms.date: 11/09/2023
 ms.topic: overview
 zone_pivot_groups: platforms-windows-ios
@@ -16,7 +16,7 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 
 - **Automatic Intune enrollment via Microsoft Entra join** happens when a user first turns on a device that is in out-of-box experience (OOBE), and selects the option to join Microsoft Entra ID. In this scenario, the user can customize certain Windows functionalities before reaching the desktop, and becomes a local administrator of the device. This option isn't an ideal enrollment method for education devices
 - **Bulk enrollment with provisioning packages.** Provisioning packages are files that can be used to set up Windows devices, and can include information to connect to Wi-Fi networks and to join a Microsoft Entra tenant. Provisioning packages can be created using either **Set Up School PCs** or **Windows Configuration Designer** applications. These files can be applied during or after the out-of-box experience
-- **Enrollment via Windows Autopilot.** Windows Autopilot is a collection of cloud services to configure the out-of-box experience, enabling light-touch or zero-touch deployment scenarios. Windows Autopilot simplifies the Windows device lifecycle, from initial deployment to end of life, for OEMs, resellers, IT administrators and end users
+- **Automatic Intune enrollment with Windows Autopilot.** Windows Autopilot is a collection of cloud services to configure the out-of-box experience, enabling light-touch or zero-touch deployment scenarios. Windows Autopilot simplifies the Windows device lifecycle, from initial deployment to end of life, for OEMs, resellers, IT administrators, and end users
 
 ::: zone-end
 
@@ -24,9 +24,9 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 
 There are three main methods for joining iOS devices to Microsoft Entra ID and getting them enrolled and managed by Intune:
 
-- **Enroll with Company Portal.** Enrollment is performed by the user by downloading and installing the Company Portal app from the App store and following the instructions to enroll the device. The device is enrolled with personal ownership. This option isn't an ideal enrollment method for education devices
-- **Enroll devices with Automated Device Enrollment.** Automated Device Enrollment applies your organization's settings from Apple School Manager and enrolls devices without IT needing to physically interact with the device. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Devices can be configured with user affinity for use with one user or no user affinity for shared device scenarios.
-- **Bulk enrollment with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when devices aren't regsitered in Apple School Manager (for example - donated devices) or IT doesn't have physical access to the devices.
+- **Company Portal.** Enrollment is performed manually by the user. The user downloads and installs the Company Portal app from the App store, then opens Company Portal and follows the instructions to enroll the device. The device is enrolled with personal ownership. This option isn't an ideal enrollment method for education devices.
+- **Automated Device Enrollment.** Automated Device Enrollment applies your organization's settings from Apple School Manager and enrolls devices without IT needing to physically interact with the device. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Devices can be configured with user affinity for use with one user or no user affinity for shared device scenarios.
+- **Bulk enrollment with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when devices aren't registered in Apple School Manager (for example - donated devices) or IT doesn't have physical access to the devices.
 
 ::: zone-end
 
@@ -43,7 +43,7 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 
 ::: zone pivot="ios"
 
-**Automated Device Enrollment** is usually the most efficient option for school environmments.
+**Automated Device Enrollment** is usually the most efficient option for school environments.
 
 ::: zone-end
 
