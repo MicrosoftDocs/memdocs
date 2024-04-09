@@ -1,6 +1,6 @@
 ---
-title: Common configuration overview
-description: Learn about common configuration used by Eduation organizations in Intune
+title: Common Education Windows Update configuration
+description: Learn about common Windows Update configuration used by Eduation organizations in Intune
 ms.date: 11/09/2023
 ms.topic: overview
 author: scottbreenmsft
