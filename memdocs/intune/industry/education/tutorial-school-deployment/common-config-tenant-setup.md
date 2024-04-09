@@ -46,7 +46,7 @@ Additional information:
 | Settings | Mobility | Microsoft Intune\\MDM user scope | All |
 | Settings | Mobility | Microsoft Intune\\MAM user scope | None |
 | Settings | Domain names | custom domain | Set your custom domain as the default. |
-| User experiences | Company branding | Configure according to organization policies. | Company branding is a prerequisite for several Intune workflows, e.g. Windows Autopilot. <br> [Configure your company branding](https://learn.microsoft.com/entra/fundamentals/how-to-customize-branding) |
+| User experiences | Company branding | Configure according to organization policies. | Company branding is a prerequisite for several Intune workflows, e.g. Windows Autopilot. <br> [Configure your company branding](/entra/fundamentals/how-to-customize-branding) |
 | [Overview](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView) | Properties | Security defaults | Review Security defaults and adjust if necessary |
 
 ### Users
@@ -103,13 +103,13 @@ Additional information:
 
 ## Microsoft Intune admin center
 
-Settings described in this section are located in the Microsoft Intune admin center: https://intune.microsoft.com
+Settings described in this section are located in the Microsoft Intune admin center: <a href="https://intune.microsoft.com/" target="_blank"><b>https://intune.microsoft.com</b></a>
 
 ### Tenant administration
 
 | Configuration group | Setting | Value |
 | --- | --- | --- |
-| Customization | Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](https://learn.microsoft.com/mem/intune/apps/company-portal-app) | |
+| Customization | Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune/apps/company-portal-app) | |
 | [Remote Help](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/remote)\ Settings\Configure | Enable Remote Help | Enabled |
 | [Remote Help](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/remote)\ Settings\Configure | Allow Remote Help to unenrolled devices | Not allowed |
 | [Device diagnostics](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/termsAndConditions) | Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name | Enabled |
@@ -125,11 +125,9 @@ Settings described in this section are located in the Microsoft Intune admin cen
 | [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | iOS restriction\\Device type restrictions | Default\\iOS/iPadOS | Personally owned: Block |
 | [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | macOS restriction\\Device type restrictions | Default\\macOS | Personally owned: Block |
 | [Enrollment device platform restriction](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/deviceTypeEnrollmentRestrictions) | Windows restriction\\Device type restrictions | Default\\Windows (MDM) | Personally owned: Block |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General | Windows Hello for Business | Configure Windows Hello for Business | Disabled |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\Windows Hello for Business | Configure Windows Hello for Business | Disabled |
 
 ### Intune data collection policy
-
-{description}
 
 | Policy type | Setting | Value |
 | --- | --- | --- |

@@ -17,7 +17,7 @@ In this article you will find Windows Update ring configuration that is commonly
 
 Additional information:
 
-- [Update rings for Windows 10 and later policy in Intune](https://learn.microsoft.com/mem/intune/protect/windows-10-update-rings)
+- [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings)
 - [The Windows Update policies you should set and why](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-windows-update-policies-you-should-set-and-why/ba-p/3270914)
 - [教育機関向け Microsoft Intune を使った Windows Update 管理](https://youtu.be/o6_eGOyv-_g)
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
@@ -34,7 +34,7 @@ Additional information:
 
 | **User experience settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| Automatic update behavior | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [](/windows/client-management/mdm/policy-csp-update#allowautoupdate)[AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
+| Automatic update behavior | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
 | Restart checks (EDU Restart) | Allow | Must not be disable for future compatibility. | [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart) |
 | Option to pause Windows updates | Disable |     | [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
 | Option to check for Windows updates | Disable |     | [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
@@ -51,7 +51,7 @@ Settings described in this section are not shown in an Update ring policy and sh
 
 Additional information:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](https://learn.microsoft.com/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
@@ -63,10 +63,10 @@ Windows feature updates contain new Windows features to improve the user experie
 
 Below is a list of the support lifecycle websites by Windows operating system version and edition:
 
-- [Windows 10 Home, Pro and Pro Education](https://learn.microsoft.com/lifecycle/products/windows-10-home-and-pro);
-- [Windows 10 Enterprise and Education](https://learn.microsoft.com/lifecycle/products/windows-10-enterprise-and-education);
-- [Windows 11 Home, Pro and Pro Education](https://learn.microsoft.com/lifecycle/products/windows-11-home-and-pro);
-- [Windows 11 Enterprise and Education](https://learn.microsoft.com/lifecycle/products/windows-11-enterprise-and-education).
+- [Windows 10 Home, Pro and Pro Education](/lifecycle/products/windows-10-home-and-pro);
+- [Windows 10 Enterprise and Education](/lifecycle/products/windows-10-enterprise-and-education);
+- [Windows 11 Home, Pro and Pro Education](/lifecycle/products/windows-11-home-and-pro);
+- [Windows 11 Enterprise and Education](/lifecycle/products/windows-11-enterprise-and-education).
 
 There are 2 ways to control how and when Windows feature updates are installed on Windows. The table below gives an overview of the advantages and disadvantages of each option.
 
@@ -81,7 +81,7 @@ Using the **update ring** you configured earlier, set the **Feature update defer
 
 ### Control feature version
 
-A [Feature update policy](https://learn.microsoft.com/mem/intune/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. If the devices targeted are running an older version they will update to the specified version. If devices are running the specified version or newer, they will not perform any feature updates.
+A [Feature update policy](/mem/intune/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. If the devices targeted are running an older version they will update to the specified version. If devices are running the specified version or newer, they will not perform any feature updates.
 
 To set a feature update policy:
 
