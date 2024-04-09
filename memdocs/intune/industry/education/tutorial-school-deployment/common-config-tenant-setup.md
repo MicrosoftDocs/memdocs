@@ -131,9 +131,34 @@ Settings described in this section are located in the Microsoft Intune admin cen
 
 | Policy type | Setting | Value |
 | --- | --- | --- |
-| Windows Configuration profiles | Windows health monitoring | Health monitoring | Enable |
-| Windows Configuration profiles | Scope | Windows updates | Endpoint analytics |
+| Windows health monitoring | Health monitoring | Enable |
+| Windows health monitoring | Scope | Windows updates, Endpoint analytics |
 
-### (Optional) Enrollment Status Page
+#### (Optional) Enrollment Status Page
 
 Consider enabling the Enrollment Status Page if planning to use Windows Autopilot to enroll Windows devices in Intune.
+
+The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process.
+
+Additional information:
+
+- [Windows Autopilot Enrollment Status Page](/autopilot/enrollment-status)
+- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
+
+| **Blade** | **Configuration group** | **Setting** | **Value** |
+| --- | --- | --- | --- |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show app and profile configuration progress | Yes |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show an error when installation takes longer than specified number of minutes | 120 |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show custom message when time limit or error occurs | Yes |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Turn on log collection and diagnostics page for end users | Yes |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until all apps and profiles are installed | Yes |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | Windows Autopilot Deployment Program\\Deployment Profiles | Create Windows Autopilot deployment profiles according to organization policies |     |
+
+Additional information:
+
+- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+- [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
+- [Manually register devices with Windows Autopilot](/autopilot/add-devices)
+- [Configure Autopilot profiles](/autopilot/profiles)
+- [YouTube: Windows Autopilot Fundamentals](https://www.youtube.com/watch?v=wNmLvqZ21AE&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=7)
