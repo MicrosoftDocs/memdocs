@@ -1,7 +1,7 @@
 ---
 title: Common Education configuration overview
 description: Learn about common configuration used by Eduation organizations in Intune
-ms.date: 11/09/2023
+ms.date: 04/09/2024
 ms.topic: overview
 author: scottbreenmsft
 ms.author: scbree
@@ -14,3 +14,17 @@ Microsoft Intune is a cloud-based service that enables organizations to manage a
 This article contains a summary of settings that are commonly used by education organizations all over the world. The summary can be used for setting up a new tenant or as a reference.
 
 Please note that adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies.
+
+## Next steps:
+
+- Initial Tenant Configuration
+- Update policies
+- Device restrictions
+- Organization-specific settings
+- General restrictions
+- Microsoft Edge
+- Delivery Optimization (Windows only)
+- Optional (Windows only)
+- Privacy
+- Start menu customization
+- OneDrive Known Folder Move
