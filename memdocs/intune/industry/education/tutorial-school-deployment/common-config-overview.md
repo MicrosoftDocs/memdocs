@@ -16,8 +16,8 @@ To accelerate the configuration of tenants, some common configurations based on 
 
 ## Configuration sections
 
-- Initial Tenant Configuration
-- Update policies
+- [Initial Tenant Configuration](/mem/intune/industry/education/tutorial-school-deployment/common-config-tenant-setup)
+- [Update policies](/mem/intune/industry/education/tutorial-school-deployment/common-config-windows-updates)
 - Device restrictions
 - Organization-specific settings
 - General restrictions
