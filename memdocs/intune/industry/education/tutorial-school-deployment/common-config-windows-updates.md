@@ -11,7 +11,7 @@ ms.author: scbree
 
 Create update rings that specify how and when Windows as a Service updates your Windows 10/11 devices with feature and quality updates.
 
-In this article you will find Windows Update ring configuration that is commonly used for 1:1 student and teacher devices.
+This document contains Windows Update ring configuration that is commonly used for 1:1 student and teacher devices.
 
 ## Update rings for Windows 10 and later
 
@@ -24,7 +24,7 @@ Additional information:
 
 | **Update settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| Microsoft product updates | Allow | Do not set to Block. In order to revert the configuration, a PowerShell commands will have to be run on each device. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
+| Microsoft product updates | Allow | Do not set to Block. In order to revert the configuration, PowerShell commands have to be run on each device. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
 | Windows drivers | Allow |     | [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate) |
 | Quality update deferral period (days) | 7   |     | [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays) |
 | Feature update deferral period (days) | 30  | Select 0 if using a [**Feature update policy**](#windows-update-feature-control) otherwise select 30 days. | [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays) |
@@ -61,18 +61,18 @@ Additional information:
 
 Windows feature updates contain new Windows features to improve the user experience. Windows feature versions are supported differently depending on the edition. It is important to ensure that the Windows version installed remains supported so that it can receive the latest security updates and support required applications such as testing apps.
 
-Below is a list of the support lifecycle websites by Windows operating system version and edition:
+Use the support lifecycle websites for each Windows operating system version and edition:
 
 - [Windows 10 Home, Pro and Pro Education](/lifecycle/products/windows-10-home-and-pro);
 - [Windows 10 Enterprise and Education](/lifecycle/products/windows-10-enterprise-and-education);
 - [Windows 11 Home, Pro and Pro Education](/lifecycle/products/windows-11-home-and-pro);
 - [Windows 11 Enterprise and Education](/lifecycle/products/windows-11-enterprise-and-education).
 
-There are 2 ways to control how and when Windows feature updates are installed on Windows. The table below gives an overview of the advantages and disadvantages of each option.
+There are 2 ways to control how and when Windows feature updates are installed on Windows. 
 
 | Feature update control type | Configuration | Advantages | Disadvantages |
 | --- | --- | --- | --- |
-| Automatically keep up to date (recommended) | Use only **Update ring policies** and set a feature update deferral to 30 or more days | Devices are always kept up to date and receive access to the latest Windows features | Users may not have had training on new features and some apps may not be compatible with the new feature version |
+| Automatically keep up to date (recommended) | Use only **Update ring policies** and set a feature update deferral to 30 or more days | Devices are always kept up to date and receive access to the latest Windows features | Users may not have had training on new features, and some apps may not be compatible with the new feature version |
 | Control feature version | Use **feature update policies** to keep devices at a particular version of Windows | Devices are kept at a particular Windows version until the policy is changed | The policy must be reviewed and changed periodically to ensure Windows remains supported |
 
 ### Automatically keep Windows up to date
@@ -81,7 +81,7 @@ Using the **update ring** you configured earlier, set the **Feature update defer
 
 ### Control feature version
 
-A [Feature update policy](/mem/intune/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. If the devices targeted are running an older version they will update to the specified version. If devices are running the specified version or newer, they will not perform any feature updates.
+A [Feature update policy](/mem/intune/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. Devices running older versions of Windows will update to the specified version. Devices with newer versions of Windows won't perform any feature updates.
 
 To set a feature update policy:
 
