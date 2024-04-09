@@ -1,6 +1,6 @@
 ---
 title: Common Education Windows Update configuration
-description: Learn about common Windows Update configuration used by Eduation organizations in Intune
+description: Learn about common Windows Update configuration used by Education organizations in Intune.
 ms.date: 11/09/2023
 ms.topic: overview
 author: scottbreenmsft
@@ -24,7 +24,7 @@ Additional information:
 
 | **Update settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| Microsoft product updates | Allow | Do not set to Block. In order to revert the configuration, PowerShell commands have to be run on each device. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
+| Microsoft product updates | Allow | Don't set to Block. In order to revert the configuration, PowerShell commands have to be run on each device. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
 | Windows drivers | Allow |     | [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate) |
 | Quality update deferral period (days) | 7   |     | [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays) |
 | Feature update deferral period (days) | 30  | Select 0 if using a [**Feature update policy**](#windows-update-feature-control) otherwise select 30 days. | [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays) |
@@ -47,11 +47,11 @@ Additional information:
 
 ## Settings Catalog
 
-Settings described in this section are not shown in an Update ring policy and should be configured as a Settings Catalog type Configuration Profile.
+Settings described in this section aren't shown in an Update ring policy and should be configured as a Settings Catalog type Configuration Profile.
 
 Additional information:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
@@ -59,16 +59,16 @@ Additional information:
 
 ## Windows Update Feature Control
 
-Windows feature updates contain new Windows features to improve the user experience. Windows feature versions are supported differently depending on the edition. It is important to ensure that the Windows version installed remains supported so that it can receive the latest security updates and support required applications such as testing apps.
+Windows feature updates contain new Windows features to improve the user experience. Windows feature versions are supported differently depending on the edition. It's important to ensure that the Windows version installed remains supported so that it can receive the latest security updates and support required applications such as testing apps.
 
 Use the support lifecycle websites for each Windows operating system version and edition:
 
-- [Windows 10 Home, Pro and Pro Education](/lifecycle/products/windows-10-home-and-pro);
+- [Windows 10 Home, Pro, and Pro Education](/lifecycle/products/windows-10-home-and-pro);
 - [Windows 10 Enterprise and Education](/lifecycle/products/windows-10-enterprise-and-education);
-- [Windows 11 Home, Pro and Pro Education](/lifecycle/products/windows-11-home-and-pro);
+- [Windows 11 Home, Pro, and Pro Education](/lifecycle/products/windows-11-home-and-pro);
 - [Windows 11 Enterprise and Education](/lifecycle/products/windows-11-enterprise-and-education).
 
-There are 2 ways to control how and when Windows feature updates are installed on Windows. 
+There are two ways to control how and when Windows feature updates are installed on Windows.
 
 | Feature update control type | Configuration | Advantages | Disadvantages |
 | --- | --- | --- | --- |
