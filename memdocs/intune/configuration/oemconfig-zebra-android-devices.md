@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/04/2024
+ms.date: 04/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,7 +45,7 @@ This article describes deploying OEMConfig multiple profiles to Zebra devices, d
 
 ## Prerequisites
 
-- Create an [OEMConfig configuration profile](android-oem-configuration-overview.md). Be sure to review the [Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information.
+- Create an [OEMConfig configuration profile](android-oem-configuration-overview.md). Review the [Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500 KB file size limit and other important information.
 - Zebra devices don't support Android 12.
 
 ## OEMConfig apps for Zebra devices
