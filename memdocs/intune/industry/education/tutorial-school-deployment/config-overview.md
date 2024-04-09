@@ -1,12 +1,12 @@
 ---
-title: Simplified configuration overview
-description: Learn about to apply simplfiied configuration in Intune
+title: Common configuration overview
+description: Learn about common configuration used by Eduation organizations in Intune
 ms.date: 11/09/2023
 ms.topic: overview
 author: scottbreenmsft
 ms.author: scbree
 ---
 
-# Simplified configuration overview
+# Common configuration overview
 
 Placeholder
