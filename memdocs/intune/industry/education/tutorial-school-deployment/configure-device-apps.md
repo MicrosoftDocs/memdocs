@@ -52,6 +52,21 @@ To create web applications in Intune for Education:
 
 For more information, see [Add web apps][INT-2].
 
+### Microsoft Store app (new)
+
+To create Microsoft Store apps in Intune for Education:
+
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Select **Apps**
+1. Select **New app** > **New Microsoft Store app (new)**
+1. Search for and select the app
+1. Review and change settings as required
+    > [!NOTE]
+    > Most customers choose to deploy store apps in the **system** context on education deivces for the fastest installation to all users of a device.
+1. Select **Save**
+
+For more information, see [Add Microsoft Store apps](/mem/intune/apps/store-apps-microsoft).
+
 # [Intune](#tab/intune)
 
 Intune supports the deployment several application types including desktop apps (msi, exe), Microsoft Store apps, web apps, appxbundle and MSIX.
@@ -68,6 +83,22 @@ For more infomration, see [Enterprise Application Management](/mem/intune/apps/a
 ### Win32 apps (MSI, exe)
 
 The addition of desktop applications to Intune should be carried out by repackaging the apps, and defining the commands to silently install them. The process is described in the article [Add, assign, and monitor a Win32 app in Microsoft Intune][MEM-1].
+
+### Microsoft Store app (new)
+
+To create Microsoft Store apps in Intune:
+
+1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+1. Select **Apps**
+1. Select **All apps**
+1. Select **New app** > **Windows web link**
+1. Search for and select the app
+1. Review and change settings as required
+    > [!NOTE]
+    > Most customers choose to deploy store apps in the **system** context on education deivces for the fastest installation to all users of a device.
+1. Select **Save**
+
+For more information, see [Add Microsoft Store apps](/mem/intune/apps/store-apps-microsoft).
 
 ### Web apps
 
@@ -187,7 +218,7 @@ To assign applications to a group of users or devices:
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
 1. Select **Groups** > Pick a group to manage
 1. Select **Apps**
-1. Select either **Free iOS apps** or **iOS volume purchase apps**
+1. Select either **Web apps** or **iOS apps**
 1. Select the apps you want to assign to the group > Save
 
 # [Intune](#tab/intune)

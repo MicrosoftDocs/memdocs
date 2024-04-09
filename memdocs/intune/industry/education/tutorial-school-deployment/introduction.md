@@ -21,7 +21,7 @@ This tutorial is intended for education professionals responsible for deploying 
 - Teachers
 - Microsoft partners
 
-This content provides a comprehensive path for schools to deploy and manage new devices with Microsoft Intune. It includes step-by-step information how to manage devices throughout their lifecycle, and specific guidance for **Windows 11 SE** and **Surface devices**.
+This content provides a comprehensive path for schools to deploy and manage new devices with Microsoft Intune. It includes step-by-step information how to manage devices throughout their lifecycle.
 
 > [!NOTE]
 > Depending on your school setup scenario, you may not need to implement all steps.
@@ -45,7 +45,7 @@ These services are part of the Microsoft 365 stack to help secure access, protec
 
 Devices can be managed with Intune, enabling simplified management of multiple devices from a single point.
 
-From enrollment, through configuration and protection, to resetting, Intune for Education helps school IT administrators manage and optimize the devices throughout their lifecycle:
+From enrollment, through configuration and protection, to resetting, Intune helps school IT administrators manage and optimize the devices throughout their lifecycle:
 
 :::image type="content" source="./images/device-lifecycle.png" alt-text="The device lifecycle for Intune-managed devices" border="false":::
 
@@ -59,7 +59,7 @@ From enrollment, through configuration and protection, to resetting, Intune for 
 In the remainder of this document, we'll discuss the key concepts and benefits of modern device management with Microsoft 365 solutions for education. The guidance is organized around the four main pillars of modern device management:
 
 - **Identity management:** setting up and configuring the identity system, with Microsoft 365 Education and Microsoft Entra ID, as the foundation for user identity and authentication
-- **Initial setup:** setting up the Intune for Education environment for managing devices, including configuring settings, deploying applications, and defining updates cadence  
+- **Initial setup:** setting up the Intune environment for managing devices, including configuring settings, deploying applications, and defining updates cadence  
 - **Device enrollment:** Setting up devices for deployment and enrolling them in Intune for Education
 - **Device reset:** Resetting managed devices with Intune
 

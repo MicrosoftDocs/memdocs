@@ -75,7 +75,7 @@ There are two ways to manage settings in Intune for Education:
 - **Group settings.** This option is used to configure all settings that are offered by Intune for Education
 
 > [!NOTE]
-> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. It is recommended to use Express Configuration to initially set up your iOS devices.
+> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. It is recommended to use Express Configuration to initially set up your iPadOS devices.
 
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
@@ -167,7 +167,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 
 ## Update policies
 
-✅ Configure updates policies and assign to devices
+✅ Configure update policies and assign to devices
 
 ::: zone pivot="windows"
 
@@ -202,7 +202,7 @@ It is important to keep Windows devices up to date with the latest security upda
 
 # [Intune For Education](#tab/intune-for-education)
 
-It is important to keep iOS devices up to date with the latest security updates. You can create control when Intune triggers iOS devices to update using Intune for Education.
+It is important to keep iOS devices up to date with the latest security updates. You can control when Intune triggers iOS devices to update using Intune for Education.
 
 To create a iOS update restrictions policy:
 

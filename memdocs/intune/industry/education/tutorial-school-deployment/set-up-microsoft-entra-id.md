@@ -9,7 +9,7 @@ ms.author: scbree
 
 # Set up Microsoft Entra ID
 
-The Microsoft platform for education simplifies the management of Windows devices with Intune for Education and Microsoft 365 Education. The first, fundamental step, is to configure the identity infrastructure to manage user access and permissions for your school.
+The Microsoft platform for education simplifies the management of Windows devices with Intune and Microsoft 365 Education. The first, fundamental step, is to configure the identity infrastructure to manage user access and permissions for your school.
 
 Microsoft Entra ID, which is included with the Microsoft 365 Education subscription, provides authentication and authorization to any Microsoft cloud services. Identity objects are defined in Microsoft Entra ID for human identities, like students and teachers, as well as non-human identities, like devices, services, and applications. Once users get Microsoft 365 licenses assigned, they'll be able to consume services and access resources within the tenant. With Microsoft 365 Education, you can manage identities for your teachers and students, assign licenses to devices and users, and create groups for the classrooms.
 
@@ -31,7 +31,7 @@ For more information, see [Create your Office 365 tenant account][M365-1]
 > To learn more, and practice how to configure the Microsoft 365 tenant for your school, try <a href="https://www.microsoft.com/en-us/education/interactive-demos/set-up-Microsoft-365" target="_blank"><u>this interactive demo</u></a>.
 ### Explore the Microsoft 365 admin center
 
-The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the <a href="https://entra.microsoft.com" target="_blank"><u>Microsoft Entra admin center</u></a>, sign in with the same global administrator account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
+The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the <a href="https://admin.microsoft.com" target="_blank"><u>Microsoft 365 admin center</u></a>, sign in with the same global administrator account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
 
 From the Microsoft 365 admin center, you can access different administrative dashboards: Microsoft Entra ID, Microsoft Intune, Intune for Education, and others:
 
@@ -134,7 +134,7 @@ For more information, see [Add branding to your directory][AAD-5].
 
 ## Enable bulk enrollment
 
-If you decide to enroll Windows devices using provisioning packages instead of Windows Autopilot, you must ensure that the provisioning packages can join Windows devices to the Microsoft Entra tenant.
+If you decide to enroll Windows devices using provisioning packages instead of Windows Autopilot, you must ensure that the provisioning packages can join Windows devices to the Microsoft Entra tenant and admins creating the packages have the correct permissions to create packages.
 
 To allow provisioning packages to complete the Microsoft Entra join process:
 
@@ -145,6 +145,15 @@ To allow provisioning packages to complete the Microsoft Entra join process:
     > If it is required that only specific users can join devices to Microsoft Entra ID, select **Selected**. Ensure that the user account that will create provisioning packages is included in the list of users.
 1. Select Save
     :::image type="content" source="images/entra-device-settings.png" alt-text="Configure device settings from Microsoft Entra admin center." lightbox="images/entra-device-settings.png":::
+
+To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:
+
+- Global Administrator
+- Cloud Device Administrator
+- Intune Administrator
+- Password Administrator
+
+For more information, see [Give admin permissions in Microsoft Intune admin center](/mem/intune/fundamentals/users-add#give-admin-permissions-in-microsoft-intune-admin-center).
 
 ---
 

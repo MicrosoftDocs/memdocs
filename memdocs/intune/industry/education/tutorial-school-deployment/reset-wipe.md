@@ -22,7 +22,7 @@ There are different scenarios that require a device to be reset, for example:
 
 :::image type="content" source="./images/retire.png" alt-text="The device lifecycle for Intune-managed devices - retirement" border="false":::
 
-Intune provides two device reset functionalities that enable IT administrators to remotely execute them:
+Intune provides reset functionalities that enable IT administrators to remotely execute them:
 ::: zone pivot="windows"
 
 - **Factory reset** (also known as **wipe**) is used to wipe all data and settings from the device, returning it to the default factory settings
@@ -40,12 +40,12 @@ Intune provides two device reset functionalities that enable IT administrators t
 
 ✅ Return a device to original settings
 
-A factory reset, or a wipe, reverts a device to the original settings when it was purchased. All settings, applications and data installed on the device after purchase are removed. The device is also removed from Intune management.
+A factory reset, or a wipe, reverts a device to the original settings when it was purchased. All settings, applications and data installed on the device after purchase are removed. By default, the device is also removed from Intune management.
 
 Once the wipe is completed, the device will be in out-of-box experience.
 
 # [Intune For Education](#tab/intune-for-education)
-Here are the steps to perform a factory reset from Intune for Education: 
+Here are the steps to perform a factory reset from Intune for Education:
 
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
 1. Select **Devices**
@@ -53,9 +53,13 @@ Here are the steps to perform a factory reset from Intune for Education:
 1. Select **Factory reset** to confirm the action
 
 # [Intune](#tab/intune)
-Here are the steps to perform a factory reset from Intune: 
+Here are the steps to perform a factory reset from Intune:
 
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+1. Select **Devices** > **All devices**
+1. Select the device you want to reset
+1. Select **Wipe** and follow the instructions
+1. Select **Wipe** to confirm the action
 
 ---
 
@@ -65,7 +69,7 @@ Here are the steps to perform a factory reset from Intune:
 
 Consider using factory reset in the following example scenarios:
 
-- The device isn't working properly, and you want to reset it without reimaging it
+- The device isn't working properly
 - It's the end of school year and you want to prepare the device for a new school year
 - You need to reassign the device to a different student, and you want to reset the device to its original settings
 - You're returning a device to the service center, and you want to remove all data and settings from the device
@@ -92,9 +96,13 @@ Here are the steps to perform an Autopilot reset from Intune for Education:
 1. Select **Autopilot reset** to confirm the action
 
 # [Intune](#tab/intune)
-Here are the steps to perform a factory reset from Intune:
+Here are the steps to perform an Autopilot reset from Intune:
 
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
+1. Select **Devices** > **All devices**
+1. Select the device you want to reset
+1. Select **Autopilot Reset** and follow the instructions
+1. Select **Yes** to confirm the action
 
 :::image type="content" source="./images/win11-autopilot-reset.png" alt-text="Three screenshots showing the device being wiped, ending up in the login screen" border="false":::
 
@@ -115,9 +123,9 @@ Consider using Autopilot reset in the following example scenarios:
 
 There are scenarios that require a device to be deleted from your tenant, for example:
 
-- The device is lost or stolen
+- The device is lost or stolen (for iOS devices, you may consider using [Lost Mode](/mem/intune/remote-actions/device-lost-mode) instead)
 - It's the end of the life of the device
-- The device has been replaced with a new device or has its motherboard replaced
+- The device has been replaced with a new device or has had a significant hardware change
 
 > [!IMPORTANT]
 > The following actions should only be performed for devices that are no longer going to be used in your tenant.
@@ -133,32 +141,6 @@ There are scenarios that require a device to be deleted from your tenant, for ex
 ::: zone pivot="ios"
 1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1]
 1. Delete the device from Microsoft Entra ID using [these steps][MEM-3]
-::: zone-end
-
-## Considerations
-
-::: zone pivot="windows"
-### Autopilot considerations for a motherboard replacement scenario
-
-Repairing Autopilot-enrolled devices can be complex, as OEM requirements must be balanced with Autopilot requirements. If a motherboard replacement is needed on an Autopilot device, it's suggested the following process:
-
-1. Deregister the device from Autopilot
-1. Replace the motherboard
-1. Capture a new device ID (4K HH)
-1. Re-register the device with Autopilot
-    > [!IMPORTANT]
-    > For DFCI management, the device must be re-registered by a partner or OEM. Self-registration of devices is not supported with DFCI management.
-1. Reset the device
-1. Return the device
-
-For more information, see [Autopilot motherboard replacement scenario guidance][MEM-4].
-
-::: zone-end
-
-::: zone pivot="ios"
-
-Anyone thing of any iOS considerations?
-
 ::: zone-end
 
 <!-- Reference links in article -->

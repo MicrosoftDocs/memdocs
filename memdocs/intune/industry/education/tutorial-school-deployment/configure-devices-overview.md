@@ -27,6 +27,7 @@ Microsoft Intune uses Microsoft Entra groups to assign policies and applications
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
 By default, Intune creates two default groups: *All devices* and *All users*.
+
 Two additional groups are pre-created if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
 Beyond the defaults, groups can be customized to suit various needs. For example, if you have both *Windows 10* and *Windows 11 SE* devices in your school, you can create groups, such as *Windows 10 devices* and *Windows 11 SE devices*, to assign different policies and applications to.
@@ -38,7 +39,8 @@ Two group types can be created:
 
 > [!TIP]
 > **For Windows devices:**
-> - If you target applications and policies to a *device dynamic group* based on Group Tag, they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+> - If you target applications and policies to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+> - applications and policies to a *device dynamic group* based on other attributes, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 > 
 > **For iOS devices:**
 > - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.

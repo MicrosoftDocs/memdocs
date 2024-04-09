@@ -31,7 +31,7 @@ To learn more about remote actions in Intune for Education, see [Remote actions]
 
 ### [Intune](#tab/intune)
 
-With bulk actions, remote actions can be performed on multiple devices at once.
+Remote actions can be performed on one or multiple devices at once.
 
 To learn more about remote actions in Intune, see [Remote actions](/mem/intune/remote-actions/device-management).
 
@@ -47,7 +47,7 @@ For more information, see [Remote assistance for managed devices - Intune for Ed
 
 ## Device inventory and reporting
 
-✅ See device information and reporting
+✅ View device information and reporting
 
 With Intune, it's possible view and report on current devices, applications, settings, and overall health. You can also download reports to review or share offline.
 

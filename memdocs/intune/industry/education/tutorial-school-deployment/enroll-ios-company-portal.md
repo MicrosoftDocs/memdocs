@@ -20,7 +20,7 @@ With this process, no advance preparation is needed. See [Set up personal iOS de
 
 ## Next steps
 
-With the devices joined to managed by Intune, you can use Intune to maintain them and report on their status.
+With the devices managed by Intune, you can use Intune to maintain them and report on their status.
 
 > [!div class="nextstepaction"]
 > [Next: Manage devices >](manage-overview.md)

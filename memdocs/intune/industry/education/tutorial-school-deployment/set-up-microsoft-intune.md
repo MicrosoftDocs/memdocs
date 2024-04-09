@@ -19,7 +19,7 @@ The Microsoft Intune service can be managed in different ways, and one of them i
 **Intune for Education** supports the entire device lifecycle, from the enrollment phase through retirement. IT administrators can start managing classroom devices with bulk enrollment options and a streamlined deployment. At the end of the school year, IT admins can reset devices, ensuring they're ready for the next year.
 
 > [!TIP]
-> **Intune** and **Intune for Education** both configure the **Intune** service. Changes made in one console will be reflected in the other. However, **Intune for Education** only supports a subset of policies and apps curated to suit simple K-12 scenarios.
+> **Intune** and **Intune for Education** both configure the **Intune** service. Changes made in one console will be reflected in the other. However, **Intune for Education** only supports a subset of policies and apps curated to suit simple K-12 scenarios on Windows and iPadOS.
 
 For more information, see [Intune for Education documentation][INT-1].
 
@@ -39,7 +39,7 @@ Before configuring settings with Intune, consider the following prerequisites:
   - As a standalone service
   - As part of [Enterprise Mobility + Security][MSFT-1]
   - As part of a [Microsoft 365 Education subscription][MSFT-2]
-- **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, iOS, and iPad OS
+- **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, and iPadOS
 - **Intune device platforms.** Intune can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, iOS, iPadOS, macOS, Android and Linux
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
@@ -50,7 +50,7 @@ The Intune service can be configured in different ways, depending on the needs o
 
 ### Configure enrollment restrictions
 
-✅ Restrict what devices can be managed
+✅ Restrict which devices can be managed
 
 With enrollment restrictions, you can prevent certain types of devices from being enrolled and therefore managed by Intune. For example, you can prevent the enrollment of devices that are not owned by the school.
 
@@ -71,7 +71,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 ### Disable Windows Hello for Business
 
-✅ Diable functionality typically inaccessible to students
+✅ Disable functionality typically inaccessible to students
 
 Windows Hello for Business is a biometric authentication feature that allows users to sign in to their devices using a PIN, password, or fingerprint. Windows Hello for Business is enabled by default on Windows devices, and to set it up, users must perform for multi-factor authentication (MFA). As a result, this feature may not be ideal for students, who may not have MFA enabled.
 
