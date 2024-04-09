@@ -32,16 +32,16 @@ ms.collection:
 
 # Collect diagnostics from an Intune managed device
 
-The **Collect diagnostics** remote action lets you collect and download managed device logs without interrupting the user. Only non-user locations and file types are accessed.
+The **Collect diagnostics** remote action lets you collect and download managed device logs without interrupting the user. Only nonuser locations and file types are accessed.
 
 > [!NOTE]
 >  Intune App Protection logs are available to download from the diagnostics tab in the **Troubleshooting** pane. However, M365 remote application logs are only available to their specific support engineers.
 > 
 > The data is stored in Microsoft support systems and isn't subject to Intune data management policies or protections. Some applications might collect and store data using systems other than Intune.
 
-## Collet diagnostics for M365 remote applications
+## Collet diagnostics for Microsoft 365 remote applications
 
-The M365 remote application diagnostics allows Intune admins to request Intune app protection logs and M365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. 
+The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. 
 
 > [!IMPORTANT]
 > For Android devices, if the Managed Home Screen isn't signed in by the user, logs will not be available for download in the Intune portal. 
@@ -51,7 +51,7 @@ Diagnostics take approximately 30 minutes to be delivered from an end user's dev
 ## Collect diagnostics from a Windows device
 
 <!--1895390-->
-The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon an Autopilot failure on a device. When an Autopilot failure occurs, logs will be processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
+The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon an Autopilot failure on a device. When an Autopilot failure occurs, logs are processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
@@ -81,7 +81,7 @@ The *Collect diagnostics* remote action is supported for:
 > `lgmsapeind.blob.core.windows.net`
 
 
-### Collect diagnostics for Windows devices
+### Collect diagnostics
 
 To use the *Collect diagnostics* action:
 
@@ -95,7 +95,7 @@ To use the *Collect diagnostics* action:
 ### Diagnostics collection on Autopilot failure
 <!--1895390-->
 
- For Autopilot diagnostics collection, no additional action is required. Autopilot diagnostics will be automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
+ For Autopilot diagnostics collection, no additional action is required. Autopilot diagnostics are automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
 
 To view the diagnostics collected after an Autopilot failure:
 
