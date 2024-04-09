@@ -15,7 +15,7 @@ This article contains a summary of settings that are commonly used by education 
 
 Please note that adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies.
 
-## Next steps:
+## Next steps
 
 - Initial Tenant Configuration
 - Update policies
