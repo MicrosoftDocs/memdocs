@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 04/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -171,15 +171,13 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer
 
-- **End-user access to device settings**: **Block** prevents users from accessing the Settings app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings app.
+- **End-user access to device settings**: **Block** prevents users from accessing the Settings app and prevents other apps in kiosk mode from opening the Settings app. If the device is a kiosk, then set this setting to **Block**.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings and allow apps in Kiosk mode to open the Settings app.
 
   This setting applies to:
 
-  - Android 9.0 and newer
- 
-  >[!NOTE]
-  > When set to **Not configured**, applications in Kiosk mode will be able to launch the Settings application. This may expose users to unwanted actions within the Settings app. To ensure the Settings application cannot be launched by other applications in kiosk mode, it is recommended that admins should set to **Blocked**.
-  
+  - Android 9.0 and newer  
 
 - **Locate device**: **Block** prevents admins from locating lost or stolen devices using a remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow locating devices using geolocation.
 
