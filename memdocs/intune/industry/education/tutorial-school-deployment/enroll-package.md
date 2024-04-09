@@ -54,6 +54,9 @@ To provision Windows devices with provisioning packages, insert the USB stick co
 
 All settings defined in the package and in Intune will be applied to the device, and the device will be ready to use.
 
+> [!NOTE]
+> After the device arrives at the logon screen Intune will continue to apply poicies and install applications in the background.
+
 :::image type="content" source="./images/win11-oobe-ppkg.gif" alt-text="Windows 11 OOBE - enrollment with provisioning package animation." border="false":::
 
 ---

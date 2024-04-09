@@ -36,7 +36,8 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 
 **Windows Autopilot** and **provisioning packages** are usually the most efficient options for school environments.
 
-This [table][INT-1] describes the ideal scenarios for using either option. It's recommended to review the table when planning your enrollment and deployment strategies.
+> [!TIP]
+> See [Enroll Windows devices](/intune-education/add-devices-windows) for a comparison between the two enrollment methods which describes the ideal scenarios for using either option. It's recommended to review the table when planning your enrollment and deployment strategies.
 
 ::: zone-end
 
@@ -61,7 +62,3 @@ Select one of the following options to learn the next steps about the enrollment
 - [Enroll devices with Automated Device Enrollment](enroll-ios-ade.md)
 - [Bulk enrollment with Apple Configurator](enroll-ios-apple-configurator.md)
 ::: zone-end
-
-<!-- Reference links in article -->
-
-[INT-1]: /intune-education/add-devices-windows#when-to-use-set-up-school-pcs-vs-windows-autopilot

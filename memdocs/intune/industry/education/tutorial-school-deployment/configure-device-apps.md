@@ -142,6 +142,9 @@ To add apps to iOS devices without using VPP in Intune:
 1. Select the app in the list
 1. Click **Add to Intune**
 
+> [!NOTE]
+> Apps installed with this method will require the user of the device to sign in using an Apple ID to install the application. To avoid prompting the user for an Apple ID, use VPP apps.
+
 ### Web apps
 
 To create web applications in Intune for Education:

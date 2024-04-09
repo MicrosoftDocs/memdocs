@@ -36,7 +36,7 @@ Before deployment, devices must be registered in the Windows Autopilot service. 
 - **Cloud Solution Provider (CSP) registration process.** As with OEMs, CSP partners must be granted permission to register devices for a school. For more information, see [Partner registration][MEM-5]
     > [!TIP]
     > Try the <a href="https://cloudpartners.transform.microsoft.com/resources/autopilot-in-edu-setup-english" target="_blank"><u>Microsoft Partner Center clickable demo</u></a>, which provides detailed steps to establish a partner relationship and register devices.
-- **Manual registration.** To manually register a device, you must first capture its hardware hash. Once this process has been completed, the hardware hash can be uploaded to the Windows Autopilot service using [Microsoft Intune][MEM-6]
+- **Manual registration.** To manually register a device, you must first capture its hardware hash. Once this process has been completed, the hardware hash can be uploaded to the Windows Autopilot service using Microsoft Intune. For steps, see [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices).
     > [!IMPORTANT]
     > **Windows 11 SE** devices do not support the use of Windows PowerShell or Microsoft Configuration Manager to capture hardware hashes. We recommend working with an OEM, partner, or device reseller to register devices.
 
@@ -151,7 +151,6 @@ With the devices joined to Microsoft Entra tenant and managed by Intune, you can
 [MEM-3]: /mem/autopilot/enrollment-autopilot#create-an-autopilot-device-group-using-intune
 [MEM-4]: /mem/autopilot/profiles
 [MEM-5]: /mem/autopilot/partner-registration
-[MEM-6]: /mem/autopilot/add-devices
 
 [WIN-1]: /windows/deployment/windows-autopilot/windows-autopilot-requirements
 
