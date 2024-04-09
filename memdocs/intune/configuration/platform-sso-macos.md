@@ -68,6 +68,7 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
 ## Prerequisites
 
 - Devices must be macOS 13.0 and newer devices.
+- Microsoft Intune [Company Portal app](/mem/intune/apps/apps-company-portal-macos) version 5.2401.2 or later installed.
 - Supported web browsers include:
   - Microsoft Edge
   - Safari
@@ -106,7 +107,7 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
     - **Authentication Method (Deprecated)** (macOS 13 only)
     - **Extension Identifier**
-    - Expand **Platform SSO** > select **Authentication Method** (macOS 14+)
+    - Expand **Platform SSO** > select **Authentication Method** (macOS 14+), **Use Shared Device Keys**
     - **Registration Token**
     - **Screen Locked Behavior**
     - **Team Identifier**
@@ -206,6 +207,8 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
         This option doesn't completely remove the local account machine password. This behavior is by design due to Apple's FileVault disk encryption, which uses the local password as the unlock key.
 
+    - **Platform SSO** > **Use Shared Device Keys** (macOS 14+): Select **Enabled**. When enabled, Platform SSO will use the same signing and encryption keys for all users on the same device. End-users will see a prompt to register the device again if you enable this setting after a user has completed Platform SSO registration or a Platform SSO user upgrades from macOS 13.x to macOS 14.x after registration.
+      
     - **Extension Identifier**: Enter `com.microsoft.CompanyPortalMac.ssoextension`. This ID is the SSO app extension that the profile needs for SSO to work.
 
       The **Extension Identifier** and **Team Identifier** values work together.
@@ -226,6 +229,9 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 The next time the device checks for configuration updates, the settings you configured are applied.
 
 ## Step 2 - Deploy the Company Portal app for macOS
+
+> [!IMPORTANT]
+> Microsoft Intune [Company Portal app](/mem/intune/apps/apps-company-portal-macos) version 5.2401.2 or later is required for Platform SSO. 
 
 The Company Portal app for macOS deploys and installs the Microsoft Enterprise SSO plug-in. This plug-in enables Platform SSO.
 
@@ -255,11 +261,24 @@ On an enrolled device, you can also go to **Settings** > **Privacy and security*
 
 To finish setting up Platform SSO, the user needs to click on the "Registration required" notification that pops up or appears in Notification Center when the Platform SSO policy applies. 
 
-Clicking the notification will prompt the user to sign in to the Microsoft Entra ID plug-in using their work or school credentials and perform MFA. Once successfully authenticated, the device is Microsoft Entra-Joined to the organization and the WPJ certificate is bound to the device.
+Clicking the notification will prompt the user to sign in to the Microsoft Entra ID plug-in using their work or school credentials and perform MFA. Once successfully authenticated, the device is Microsoft Entra-Joined to the organization and the WPJ certificate is bound to the device. To learn more about the different end-user experiences for device registration, go to [Join a Mac device with Microsoft Entra ID](/entra-docs-pr/blob/release-macos-platform-sso/docs/identity/devices/device-join-microsoft-entra-company-portal.md).
 
 ## Step 5 - Confirm the settings on the device
 
 Once Platform SSO registration completes, you can confirm that Platform SSO is configured. For the steps, go to [Microsoft Entra ID - Check your device registration status](/entra/identity/devices/device-join-macos-platform-single-sign-on#check-your-device-registration-status).
+
+To troubleshoot Platform SSO, go to [macOS Platform single sign-on known issues and troubleshooting](/entra-docs-pr/blob/release-macos-platform-sso/docs/identity/devices/troubleshoot-macos-platform-single-sign-on-extension.md).
+
+## Additional Platform SSO settings
+
+The following additional Platform SSO settings are available to provide organizations greater flexibility to customize the end-user experience and more granular control on user privileges. You can select these settings in the **Settings Catalog** under **Authentication** > **Extensible Single Sign On (SSO)** > **Platform SSO**. Any undocumented Platform SSO settings are not supported.
+
+| Platform SSO settings       | Possible values                          | Usage                                                                                                                                                                  |
+| --------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Account Display Name        | Any string value.                        | Customize the organization name the end-user sees in Platform SSO notifications.                                                                                       |
+| Enable Create User At Login | **Enable** or **Disable**.               | Allow any organizational user to log in on the Mac using their Microsoft Entra ID credentials.                                                                         |
+| New User Authorization Mode | **Standard** or **Admin** or **Groups**. | One-time permissions the user has at login time when the account is created using Platform SSO. Only **Standard** and **Admin** values are currently supported. At least one admin user is required on a Mac before standard mode can be used.|
+| User Authorization Mode     | **Standard** or **Admin** or **Groups**. | Persistent permissions the user has at login time each time the user authenticates using Platform SSO. Only **Standard** and **Admin** values are currently supported. At least one admin user is required on a Mac before standard mode can be used.|
 
 
 ## Related content
@@ -267,3 +286,4 @@ Once Platform SSO registration completes, you can confirm that Platform SSO is c
 - [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin)
 - [Use the Microsoft Enterprise SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)
 - [What is a Primary Refresh Token (PRT)?](/entra/identity/devices/concept-primary-refresh-token)
+- [macOS Platform single sign-on known issues and troubleshooting](/entra-docs-pr/blob/release-macos-platform-sso/docs/identity/devices/troubleshoot-macos-platform-single-sign-on-extension.md)
