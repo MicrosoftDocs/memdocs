@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/09/2024
+ms.date: 04/10/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -38,7 +38,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 > [!TIP]
 >
-> Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+> Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Autopilot service.
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 - The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
 
-- Permission for enrollment of personal devices.
+- Permission for enrollment of personal devices. <!-- INADO-27343099 -->
 
     > [!IMPORTANT]
     >
