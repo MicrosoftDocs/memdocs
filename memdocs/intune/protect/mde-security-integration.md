@@ -509,6 +509,8 @@ Security settings management doesn't support Server core installations due to Se
 
 ### PowerShell restrict mode
 
+Powershell needs to be enabled.
+
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
 ### Managing security through MDE if you were previously using a 3rd party security tool

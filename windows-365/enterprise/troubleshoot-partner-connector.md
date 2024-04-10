@@ -31,11 +31,11 @@ ms.collection:
 
 # Troubleshoot partner connectors for Windows 365
 
-When you turn on Citrix HDX Plus or VMware connector for a user, the partner agent is automatically installed on that user's Cloud PCs. The agent enables the HDX protocol. If this installation runs into a problem, you get an error message in the All Cloud PC list. The description of the error includes advice on how to troubleshoot the error.
+When you turn on a partner connector (Citrix HDX Plus, VMware, or HP Anyware) for a user, the partner agent is automatically installed on that user's Cloud PCs. The agent enables the corresponding third party protocol. If this installation runs into a problem, you get an error message in the All Cloud PC list. The description of the error includes advice on how to troubleshoot the error.
 
 If the partner agent installation fails, the user can still connect to their Cloud PC by using Remote Desktop.
 
-While troubleshooting errors, make sure that the following steps have all been successful:
+While troubleshooting errors, make sure that the following steps were successful:
 
 - The users license state is synchronized from the partner service to Microsoft Intune, including the users Microsoft Entra user ID.
   - The prerequisites have been met.
@@ -53,6 +53,9 @@ While troubleshooting errors, make sure that the following steps have all been s
     - VMware:
       - For installation issues: C:\Windows\Temp\VMware_Horizon_Agents_Installer_**.log
       - Run this script for collecting the logs for post installation issues: C:\Program Files\VMware\Horizon Agents\Horizon Agent\DCT\support.bat
+    - HP Anyware:
+      - C:\Teradici\provisioning.log 
+      - Or on the client side, select **Generate support bundle**. 
 - The Cloud PC is registered into the partner cloud tenant.
   - Check the Cloud PC registration status in the partner configuration console.
   - If the Cloud PC is unregistered, check the Application sign-in Windows event viewer (eventvwr.msc) for partner service errors and warnings.
@@ -82,3 +85,5 @@ You can now test the connectivity by using RDP, and raise a support case with th
 ## Next steps
 
 [Learn about Citrix HDX Plus for Windows 365](set-up-citrix.md).
+[Learn about HP Anyware for Windows 365](hp-anyware-set-up.md).
+[Learn about VMware Horizon for Windows 365](set-up-vmware-horizon.md).
