@@ -99,6 +99,8 @@ Policy sets, new to 1910, have the following known issues.
   - Android line-of-business app
   - Managed Android line-of-business app
   - Microsoft 365 Apps (Windows 10)
+  - Microsoft Edge (Windows 10 and later)
+  - Windows MSI line-of-business app
   - Web link
   - Built-in iOS/iPadOS app
   - Built-in Android app
