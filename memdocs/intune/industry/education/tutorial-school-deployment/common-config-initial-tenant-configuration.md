@@ -1,14 +1,18 @@
 ---
-author: Yusuke Shinoki (HE/HIM)
-ms.date: 04/10/2024
+title: Common Education tenant configuration
+description: Learn about common tenant configuration used by Education organizations in Intune.
+ms.date: 4/9/2024
+ms.topic: tenantconfig
+author: yegor-a
+ms.author: egorabr
 ---
-## Initial Tenant Configuration
+# Initial Tenant Configuration
 
 This article describes organization-wide settings within Microsoft Entra ID and Microsoft Intune that affect device management. Microsoft Intune relies on Microsoft Entra ID for identity, license assignment and for devices and users grouping.
 
 ### Network prerequisites
 
-Confirm all required network endpoint can access without SSL inspection or any type of filtering - <https://learn.microsoft.com/mem/intune/fundamentals/intune-endpoints>
+Confirm all required network endpoint can access without SSL inspection or any type of filtering - </mem/intune/fundamentals/intune-endpoints>
 
 ### Microsoft 365 admin center
 
@@ -30,9 +34,9 @@ Make sure all of your users are properly assigned with Microsoft Entra ID and Mi
 
 Additional information:
 
-- [Assign or remove licenses in the Azure portal](https://learn.microsoft.com/entra/fundamentals/license-users-groups)
-- [Assign licenses to users by group membership using the Microsoft 365 admin center](https://learn.microsoft.com/entra/identity/users/licensing-admin-center)
-- [Assign licenses to users by group membership in Microsoft Entra ID](https://learn.microsoft.com/entra/identity/users/licensing-groups-assign)
+- [Assign or remove licenses in the Azure portal](/entra/fundamentals/license-users-groups)
+- [Assign licenses to users by group membership using the Microsoft 365 admin center](/entra/identity/users/licensing-admin-center)
+- [Assign licenses to users by group membership in Microsoft Entra ID](/entra/identity/users/licensing-groups-assign)
 
 #### Tenant settings
 
@@ -41,7 +45,7 @@ Additional information:
 | **Settings** | [Mobility](https://entra.microsoft.com/) | Microsoft Intune\MDM user scope | All |
 | **Settings** | [Mobility](https://entra.microsoft.com/) | Microsoft Intune\MAM user scope | None |
 | **Settings** | [Domain names](https://entra.microsoft.com/) | _custom domain_ | Set your custom domain as the default. |
-| **User experiences** | [Company branding](https://entra.microsoft.com/) | | Configure according to organization policies.Company branding is a prerequisite for several Intune workflows, for example, Windows Autopilot.[Configure your company branding](https://learn.microsoft.com/entra/fundamentals/how-to-customize-branding). |
+| **User experiences** | [Company branding](https://entra.microsoft.com/) | | Configure according to organization policies.Company branding is a prerequisite for several Intune workflows, for example, Windows Autopilot.[Configure your company branding](/entra/fundamentals/how-to-customize-branding). |
 | [**Overview**](https://entra.microsoft.com/) | Properties | Security defaults | Review Security defaults and adjust if necessary |
 
 #### Users
@@ -85,10 +89,10 @@ Below are examples of queries commonly used for dynamic security groups.
 
 Additional information:
 
-- [Learn about groups and access rights in Microsoft Entra ID](https://learn.microsoft.com/entra/fundamentals/concept-learn-about-groups)
-- [Create or update a dynamic group in Microsoft Entra ID](https://learn.microsoft.com/entra/identity/users/groups-create-rule)
-- [Dynamic membership rules for groups in Microsoft Entra ID](https://learn.microsoft.com/entra/identity/users/groups-dynamic-membership)
-- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](https://learn.microsoft.com/entra/identity/users/groups-dynamic-rule-more-efficient)
+- [Learn about groups and access rights in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Create or update a dynamic group in Microsoft Entra ID](/entra/identity/users/groups-create-rule)
+- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership)
+- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-rule-more-efficient)
 
   | **Name** | **Type** | **Query** |
   |---|---|---|
@@ -111,9 +115,9 @@ Settings described in this section are located in the Microsoft Intune admin cen
 | [**Device diagnostics**](https://intune.microsoft.com/) | Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
 | [**Terms and conditions**](https://intune.microsoft.com/) | Create Terms and conditions according to organization policies.Additional information: | |
 
-- [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](https://learn.microsoft.com/mem/intune/apps/company-portal-app)
+- [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune/apps/company-portal-app)
 
-- [Terms and conditions for user access](https://learn.microsoft.com/mem/intune/enrollment/terms-and-conditions-create)
+- [Terms and conditions for user access](/mem/intune/enrollment/terms-and-conditions-create)
 - [Choosing the right Terms solution for your organization](https://aka.ms/intune/TOU/AadToulearnMore)
 
 #### [Devices enrollment settings](https://intune.microsoft.com/)
@@ -145,8 +149,8 @@ The enrollment status page (ESP) displays the provisioning status to people enro
 
 Additional information:
 
-- [Windows Autopilot Enrollment Status Page](https://learn.microsoft.com/autopilot/enrollment-status)
-- [Set up the Enrollment Status Page](https://learn.microsoft.com/mem/intune/enrollment/windows-enrollment-status)
+- [Windows Autopilot Enrollment Status Page](/autopilot/enrollment-status)
+- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
 
   | **Blade** | **Configuration group** | **Setting** | **Value** |
   |---|---|---|---|
@@ -156,11 +160,12 @@ Additional information:
   | [**Windows enrollment**](https://intune.microsoft.com/) | General\Enrollment Status Page | Default\Turn on log collection and diagnostics page for end users | Yes |
   | [**Windows enrollment**](https://intune.microsoft.com/) | General\Enrollment Status Page | Default\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
   | [**Windows enrollment**](https://intune.microsoft.com/) | General\Enrollment Status Page | Enrollment Status Page\Default\Block device use until all apps and profiles are installed | Yes |
-  | [**Windows enrollment**](https://intune.microsoft.com/) | Windows Autopilot Deployment Program\Deployment Profiles | Create Windows Autopilot deployment profiles according to organization policies.Additional information: | |
+  | [**Windows enrollment**](https://intune.microsoft.com/) | Windows Autopilot Deployment Program\Deployment Profiles | Create Windows Autopilot deployment profiles according to organization policies. | |
 
-- [Overview of Windows Autopilot](https://learn.microsoft.com/autopilot/windows-autopilot)
-- [Windows Autopilot scenarios and capabilities](https://learn.microsoft.com/autopilot/windows-autopilot-scenarios)
-- [Manually register devices with Windows Autopilot](https://learn.microsoft.com/autopilot/add-devices)
-- [Configure Autopilot profiles](https://learn.microsoft.com/autopilot/profiles)
+#### Additional information:
+- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+- [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
+- [Manually register devices with Windows Autopilot](/autopilot/add-devices)
+- [Configure Autopilot profiles](/autopilot/profiles)
 - [YouTube: Windows Autopilot Fundamentals](https://www.youtube.com/watch?v=wNmLvqZ21AE&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=7)
 

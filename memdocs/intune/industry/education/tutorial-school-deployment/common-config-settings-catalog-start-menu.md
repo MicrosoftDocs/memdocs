@@ -1,6 +1,6 @@
 ---
-title: Common Education device restrictions configuration
-description: Learn about common device restrictions configuration used by Education organizations in Intune.
+title: Common Education Start Menu configuration
+description: Learn about common Start Menu configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
 ms.topic: windows-start
 author: yegor-a
