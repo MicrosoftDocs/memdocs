@@ -125,6 +125,10 @@ items:
           href: requirements-vmware-horizon.md
         - name: Set up VMware Horizon for Windows 365
           href: set-up-vmware-horizon.md
+        - name: HP Anyware requirements
+          href: hp-anyware-requirements.md
+        - name: Set up HP Anyware for Windows 365
+          href: hp-anyware-set-up.md  
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
