@@ -52,13 +52,11 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 - The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
 
-- Permission for enrollment of personal devices. If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
+- Permission for enrollment of personal devices. <!-- INADO-27343099 -->
 
-> [!NOTE]
->
-> Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if that the online profile times out.
-
-
+    > [!IMPORTANT]
+    >
+    > If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
 
 ## Configure the Enrollment Status Page (optional)
 
@@ -387,6 +385,10 @@ Devices provisioned with Autopilot only receive the guided OOBE Autopilot experi
 After Windows is updated on an existing device, make sure to register the device so it has the Autopilot experience when the PC resets. Automatic registration can be enabled for a device by using the **Convert all targeted devices to Autopilot** setting in the Autopilot profile that is assigned to a group that the device is a member of. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
+
+> [!NOTE]
+>
+> Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
 
 ## How to speed up the deployment process
 
