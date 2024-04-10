@@ -294,7 +294,7 @@ items:
     - name: Provisioning errors
       href: provisioning-errors.md
     - name: Partner connectors
-      href: troubleshoot-citrix-hdx-plus.md
+      href: troubleshoot-partner-connector.md
     - name: Windows 365 app
       href: troubleshoot-windows-365-app.md
     - name: Windows 365 Boot
