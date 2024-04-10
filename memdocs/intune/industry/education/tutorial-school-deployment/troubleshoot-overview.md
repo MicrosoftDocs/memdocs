@@ -31,6 +31,7 @@ Here's a collection of resources to help you troubleshoot Windows devices manage
 
 ::: zone pivot="ios"
 Here's a collection of resources to help you troubleshoot iOS devices managed by Intune:
+
 - [iOS or iPadOS devices aren't checking in with the Intune service](/troubleshoot/mem/intune/device-enrollment/ios-devices-inactive)
 - [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors)
 - [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment)
