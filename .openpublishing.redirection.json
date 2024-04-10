@@ -2417,8 +2417,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "windows-365/troubleshoot-citrix-hdx-plus.md",
-      "redirect_url": "/windows-365/troubleshoot-partner-connector",
+      "source_path": "windows-365/enterprise/troubleshoot-citrix-hdx-plus.md",
+      "redirect_url": "/windows-365/enterprise/troubleshoot-partner-connector",
       "redirect_document_id": false
     }
   ]
