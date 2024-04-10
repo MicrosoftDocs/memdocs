@@ -1149,9 +1149,14 @@ items:
           - name: Restrict USB devices using ADMX
             displayName: gpo, windows
             href: ./configuration/administrative-templates-restrict-usb.md
-        - name: UEFI BIOS settings on Windows
-          href: ./configuration/device-firmware-configuration-interface-windows.md
-          displayName: dfci, firmware
+        - name: BIOS & DFCI on Windows
+          items:
+          - name: BIOS configuration
+            displayName: bios, firmware, windows, dell
+            href: ./configuration/bios-configuration.md
+          - name: DFCI settings for UEFI
+            href: ./configuration/device-firmware-configuration-interface-windows.md
+            displayName: dfci, firmware, uefi, surface
         - name: Domain Join on Windows
           href: ./configuration/domain-join-configure.md
           displayName: enrollment, active directory, azure ad joined, join domain
@@ -1518,10 +1523,14 @@ items:
           items:
           - name: Prerequisite - Connect Intune to Android Enterprise 
             href: ./enrollment/connect-intune-android-enterprise.md
-          - name: Set up Android work profile for personal devices 
-            href: ./enrollment/android-work-profile-enroll.md
-          - name: Set up work profile for corporate owned devices
-            href: ./enrollment/android-corporate-owned-work-profile-enroll.md 
+          - name: Set up work profile management
+            items: 
+            - name: Overview  
+              href: ./enrollment/android-enterprise-overview.md
+            - name: Work profile for personal devices 
+              href: ./enrollment/android-work-profile-enroll.md
+            - name: Work profile for corporate-owned devices  
+              href: ./enrollment/android-corporate-owned-work-profile-enroll.md 
           - name: Set up enrollment for dedicated devices
             href: ./enrollment/android-kiosk-enroll.md
           - name: Set up enrollment for fully managed devices  
@@ -1546,20 +1555,7 @@ items:
           items: 
           - name: Use Samsung Knox Mobile Enrollment 
             href: ./enrollment/android-samsung-knox-mobile-enroll.md  
-        - name: Enrollment configurations    
-          items:        
-          - name: Security configuration framework for Android Enterprise  
-            items:
-            - name: Overview 
-              href: ./enrollment/android-configuration-framework.md
-            - name: 1 - Configure device enrollment restrictions  
-              href: ./enrollment/device-enrollment-restrictions.md
-            - name: 2 - Configure app configuration policies
-              href: ./enrollment/android-app-configuration-policies.md
-            - name: 3 - Configure security settings for personal devices   
-              href: ./enrollment/android-work-profile-security-settings.md
-            - name: 4 - Configure security settings for fully managed devices 
-              href: ./enrollment/android-fully-managed-security-settings.md         
+
       - name: Set up iOS/iPadOS enrollment
         items:
         - name: Get started with iOS/iPadOS enrollment 

@@ -45,11 +45,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
-
-- When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
-
-  - [Android Enterprise personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+Create an [Android device restrictions configuration profile](device-restrictions-configure.md).  
 
 ## Work profile settings
 

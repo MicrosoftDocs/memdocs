@@ -64,13 +64,13 @@ Find the endpoint security policies for Account protection under *Manage* in the
   - Learn about [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
   - [Manage LAPS policy](../protect/windows-laps-policy.md)
 
-- **Local user group membership (preview)** – Use this profile to add, remove, or replace members of the built-in local groups on Windows devices. For example, the Administrators local group has broad rights. You can use this policy to edit the Admin group's membership to lock it down to a set of exclusively defined members.
+- **Local user group membership** – Use this profile to add, remove, or replace members of the built-in local groups on Windows devices. For example, the Administrators local group has broad rights. You can use this policy to edit the Admin group's membership to lock it down to a set of exclusively defined members.
 
   Use of this profile is detailed in the following section, [Manage local groups on Windows devices](#manage-local-groups-on-windows-devices).
 
 ## Manage local groups on Windows devices
 
-Use the *Local user group membership (preview)* profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
+Use the *Local user group membership* profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
 
 > [!TIP]
 > To learn more about support for managing administrator privileges using Microsoft Entra groups, see [Manage administrator privileges using Microsoft Entra groups](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) in the Microsoft Entra documentation.
