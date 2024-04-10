@@ -18,14 +18,6 @@ Settings can be assigned to groups:
 - If you target settings to a **group of users**, those settings apply, regardless of what managed devices the targeted users sign in to
 - If you target settings to a **group of devices**, those settings apply regardless of who is using the devices
 
-> [!div class="checklist"]
->In this section you will:
->
-> - Get started with settings
-> - Configure device settings
-> - Configure update policies
-> - Configure security policies
-
 ## Introduction
 
 ✅ Learn about the different types of settings

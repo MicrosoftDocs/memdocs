@@ -17,12 +17,6 @@ Applications can be assigned to groups:
 - If you target apps to a **group of users**, the apps will be installed on any managed devices that the users sign into
 - If you target apps to a **group of devices**, the apps will be installed on those devices and available to any user who signs in
 
-> [!div class="checklist"]
->In this section you will:
->
-> - Add apps
-> - Assign apps
-
 ## Add apps
 
 ✅ Add applications to your inventory

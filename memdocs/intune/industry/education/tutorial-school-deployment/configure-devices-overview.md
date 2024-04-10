@@ -12,6 +12,8 @@ ms.author: scbree
 
 Before distributing devices to your users, you must ensure that the devices will be configured with the required policies, settings, and applications as they get enrolled in Intune.
 
+:::image type="content" source="./images/configure.png" alt-text="The device lifecycle for Intune-managed devices" border="false":::
+
 Microsoft Intune uses Microsoft Entra groups to assign policies and applications to devices.
 
 > [!div class="checklist"]
