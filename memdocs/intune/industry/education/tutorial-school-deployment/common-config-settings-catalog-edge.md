@@ -60,7 +60,7 @@ Microsoft Edge supports mandatory and recommended policies. Mandatory policies o
   | **Enable Drop feature in Microsoft Edge** | Disabled | Drop lets users send messages or files to themselves. | [EdgeEDropEnabled](/deployedge/microsoft-edge-policies#EdgeEDropEnabled) |
   | **Enable full-tab promotional content** | Disabled | This setting controls the presentation of welcome pages that help users sign into Microsoft Edge, choose their default browser, or learn about product features. | [PromotionalTabsEnabled](/deployedge/microsoft-edge-policies#PromotionalTabsEnabled) |
   | **Enable Microsoft Search in Bing suggestions in the address bar** | Enabled | Enables the display of relevant Microsoft Search in Bing suggestions in the address bar's suggestion list when the user types a search string in the address bar. | [AddressBarMicrosoftSearchInBingProviderEnabled](/deployedge/microsoft-edge-policies#AddressBarMicrosoftSearchInBingProviderEnabled) |
-  | **Enable profile creation from the Identity flyout menu or the Settings page** | Disabled | Users cannot add new profiles from the Identity flyout menu or the Settings page. | [BrowserAddProfileEnabled](/deployedge/microsoft-edge-policies#BrowserAddProfileEnabled) |
+  | **Enable profile creation from the Identity flyout menu or the Settings page** | Disabled | Users can't add new profiles from the Identity flyout menu or the Settings page. | [BrowserAddProfileEnabled](/deployedge/microsoft-edge-policies#BrowserAddProfileEnabled) |
   | **Enable search suggestions** | Enabled | Enables web search suggestions in Microsoft Edge's Address Bar and Auto-Suggest List. | [SearchSuggestEnabled](/deployedge/microsoft-edge-policies#SearchSuggestEnabled) |
   | **Enforce Bing** **SafeSearch** | Enabled | Only enables the setting configuration. | [ForceBingSafeSearch](/deployedge/microsoft-edge-policies#ForceBingSafeSearch) |
   | **Enforce Bing** **SafeSearch (Device)** | Configure strict search restrictions in Bing | | [ForceBingSafeSearch](/deployedge/microsoft-edge-policies#ForceBingSafeSearch) |
@@ -73,7 +73,7 @@ Microsoft Edge supports mandatory and recommended policies. Mandatory policies o
   | **Microsoft Edge Insider Promotion Enabled** | Disabled | The Microsoft Edge Insider promotion content won't be shown on the About Microsoft Edge page. | [MicrosoftEdgeInsiderPromotionEnabled](/deployedge/microsoft-edge-policies#MicrosoftEdgeInsiderPromotionEnabled) |
   | **Save and fill memberships** | Disabled | Users can't have their membership info automatically saved and used to fill form fields while using Microsoft Edge. | [AutofillMembershipsEnabled](/deployedge/microsoft-edge-policies#AutofillMembershipsEnabled) |
   | **Send all intranet sites to Internet Explorer** | Disabled | | [SendIntranetToInternetExplorer](/deployedge/microsoft-edge-policies#SendIntranetToInternetExplorer) |
-  | **Shopping in Microsoft Edge Enabled** | Disabled | Shopping features such as price comparison, coupons, rebates and express checkout won't be automatically found for retail domains. | [EdgeShoppingAssistantEnabled](/deployedge/microsoft-edge-policies#EdgeShoppingAssistantEnabled) |
+  | **Shopping in Microsoft Edge Enabled** | Disabled | Shopping features such as price comparison, coupons, rebates, and express checkout won't be automatically found for retail domains. | [EdgeShoppingAssistantEnabled](/deployedge/microsoft-edge-policies#EdgeShoppingAssistantEnabled) |
   | **Show Hubs Sidebar** | Disabled | The Sidebar will never be shown. | [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#HubsSidebarEnabled) |
   | **Show Microsoft Rewards experiences** | Disabled | | [ShowMicrosoftRewards](/deployedge/microsoft-edge-policies#ShowMicrosoftRewards) |
   | **Update policy override default** | Enabled | Only enables the setting configuration. | [UpdateDefault](/deployedge/microsoft-edge-update-policies#UpdateDefault) |
@@ -86,7 +86,7 @@ Microsoft Edge supports mandatory and recommended policies. Mandatory policies o
   | **Control which extensions cannot be installed** | Disabled | The user can install any extension in Microsoft Edge. | [ExtensionInstallBlocklist](/deployedge/microsoft-edge-policies#ExtensionInstallBlocklist) |
   | **Enable implicit sign-in** | Enabled | Edge will attempt to sign the user into their profile based on what and how they sign in to their OS. | [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#ImplicitSignInEnabled) |
   | **Enable printing** | Enabled | | [PrintingEnabled](/deployedge/microsoft-edge-policies#PrintingEnabled) |
-  | **Prevent bypassing Microsoft Defender SmartScreen prompts for sites** | Enabled | Users can't ignore Microsoft Defender SmartScreen warnings and they are blocked from continuing to the site. | [PreventSmartScreenPromptOverride](/deployedge/microsoft-edge-policies#PreventSmartScreenPromptOverride) |
+  | **Prevent bypassing Microsoft Defender SmartScreen prompts for sites** | Enabled | Users can't ignore Microsoft Defender SmartScreen warnings and they're blocked from continuing to the site. | [PreventSmartScreenPromptOverride](/deployedge/microsoft-edge-policies#PreventSmartScreenPromptOverride) |
   | **Allow Microsoft News content on the new tab page** | Disabled | Microsoft Edge does not display Microsoft News content on the new tab page, the Content control in the NTP settings flyout is disabled and set to 'Content off'. | [NewTabPageContentEnabled](/deployedge/microsoft-edge-policies#NewTabPageContentEnabled) |
   | **Hide the default top sites from the new tab page** | Enabled | The default top site tiles are hidden. | [NewTabPageHideDefaultTopSites](/deployedge/microsoft-edge-policies#NewTabPageHideDefaultTopSites) |
 
@@ -95,14 +95,14 @@ Microsoft Edge supports mandatory and recommended policies. Mandatory policies o
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 | **Action to take on startup** | ***custom*** | Specify how Microsoft Edge behaves when it starts. | [RestoreOnStartup](/deployedge/microsoft-edge-policies#RestoreOnStartup) |
-| **Configure the home page URL** | Enabled | Configures the default home page URL in Microsoft Edge.The home page is the page opened by the Home button. | [HomepageLocation](/deployedge/microsoft-edge-policies#HomepageLocation) |
+| **Configure the home page URL** | Enabled | Configures the default home page URL in Microsoft Edge. The home page is the page opened by the Home button. | [HomepageLocation](/deployedge/microsoft-edge-policies#HomepageLocation) |
 | **Home page URL (Device)** | _custom_ _url_ | | [HomepageLocation](/deployedge/microsoft-edge-policies#HomepageLocation) |
 | **Configure the new tab page URL** | Disabled | This policy determines the page that's opened when new tabs are created (including when new windows are opened). It also affects the startup page if that's set to open to the new tab page. | [NewTabPageLocation](/deployedge/microsoft-edge-policies#NewTabPageLocation) |
 | **New tab page URL (Device)** | _custom_ _url_ | | [NewTabPageLocation](/deployedge/microsoft-edge-policies#NewTabPageLocation) |
 
 ## (Optional) Content settings in Microsoft 365 admin center
 
-If you leave the default configuration, when users open a new tab page they will see a combination of the Microsoft 365 feed and news. You can control the visibility of news from the Microsoft 365 admin center.
+If you leave the default configuration, when users open a new tab page they'll see a combination of the Microsoft 365 feed and news. You can control the visibility of news from the Microsoft 365 admin center.
 
 1. In the Microsoft 365 admin center (<https://admin.microsoft.com>), go to **Settings** > **Org settings** > **Services** > [News](https://admin.microsoft.com/adminportal/home?).
 2. In the **News** panel, click **Microsoft Edge new tab page**.
