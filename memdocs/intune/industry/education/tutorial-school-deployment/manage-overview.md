@@ -31,6 +31,8 @@ To learn more about remote actions in Intune for Education, see [Remote actions]
 
 ### [Intune](#tab/intune)
 
+:::image type="content" source="./images/intune-remote-actions-windows.png" alt-text="Remote actions available in Intune for Education when selecting a Windows device" lightbox="./images/remote-actions.png" border="true":::
+
 Remote actions can be performed on one or multiple devices at once.
 
 To learn more about remote actions in Intune, see [Remote actions](/mem/intune/remote-actions/device-management).
