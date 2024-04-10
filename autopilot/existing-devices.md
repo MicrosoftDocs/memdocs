@@ -8,8 +8,8 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 01/18/2024
-ms.collection: 
+ms.date: 04/09/2024
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
@@ -21,7 +21,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices
 
-Modern desktop deployment with Windows Autopilot helps easily deploy the latest version of Windows to existing devices. Apps used by the organization can be automatically installed. If Windows user data is managed with OneDrive for Business, data is synchronized, so users can resume working right away.
+Modern desktop deployment with Windows Autopilot helps easily deploy the latest version of Windows to existing devices. Apps used by the organization can be automatically installed. If Windows user data is managed with OneDrive for work or school, data is synchronized, so users can resume working right away.
 
 **Windows Autopilot for existing devices** allows reimaging and provisioning a Windows device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows device joined to either Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).
 
@@ -43,14 +43,26 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 ## Prerequisites
 
 - A currently supported version of Microsoft Configuration Manager current branch.
+
 - Assigned Microsoft Intune licenses.
+
 - Microsoft Entra ID P1 or P2.
+
 - A supported version of Windows imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
+
 - The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
+
+- Permission for enrollment of personal devices.
+
+    > [!IMPORTANT]
+    >
+    > If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used.
 
 > [!NOTE]
 >
 > Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if that the online profile times out.
+
+
 
 ## Configure the Enrollment Status Page (optional)
 
@@ -146,7 +158,7 @@ Each profile is encapsulated within braces (`{ }`). The previous example display
 
 ## Create the JSON file
 
-Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. If redirecting output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format. The Autopilot profile(s) appears in a subfolder under the folder specified by the `$targetDirectory` variable. By default, the `$targetDirectory` variable is `C:\AutoPilot`, but it can be changed to another location if desired. The subfolder has the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**
+Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. If redirecting output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format. The Autopilot profiles appear in a subfolder under the folder specified by the `$targetDirectory` variable. By default, the `$targetDirectory` variable is `C:\AutoPilot`, but it can be changed to another location if desired. The subfolder has the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**
 
 ```powershell
 Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
@@ -272,7 +284,7 @@ For more information, see [How to create collections in Configuration Manager](/
 
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
-1. On the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.  
+1. On the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
 
 1. On the **System Preparation** page, select the package that includes the Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. The option to **Shutdown computer after this task sequence completes** can also be selected. This option allows preparation of a device and then delivery to a user for a consistent Autopilot experience.
 
@@ -294,7 +306,7 @@ For more information on editing the task sequence, see [Use the task sequence ed
 >
 > The **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
 
-To make sure the user's data is backed up before the Windows upgrade, use OneDrive for Business [known folder move](/onedrive/redirect-known-folders).
+To make sure the user's data is backed up before the Windows upgrade, use OneDrive for work or school [known folder move](/onedrive/redirect-known-folders).
 
 ## Distribute content to distribution points
 
