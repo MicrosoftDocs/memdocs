@@ -9,7 +9,7 @@ ms.author: egorabr
 
 # Device Restrictions
 
-Tables below represent a list of device restrictions and configurations as used commonly by education organizations throughout the world.
+Tables in this article represent a list of device restrictions and configurations as used commonly by education organizations throughout the world.
 
 ## Organization-specific settings
 
@@ -17,7 +17,7 @@ Configure these settings to personalize user experience and simplify the Windows
 
 #### Additional information:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
 
   | **Settings Catalog** | **Value** | **Notes** | **CSP** |
   |---|---|---|---|
@@ -32,7 +32,7 @@ These restrictions are commonly applied to most devices in many educational orga
 
 #### Additional information:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
 
   | **Settings Catalog** | **Value** | **Notes** | **CSP** |
   |---|---|---|---|

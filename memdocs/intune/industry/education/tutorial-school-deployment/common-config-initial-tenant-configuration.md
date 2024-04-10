@@ -26,7 +26,7 @@ Settings described in this section are located in the Microsoft Entra admin cent
 
 #### Licenses assignment
 
-Please make sure all of your users are properly assigned with Microsoft Entra ID and Microsoft Intune licenses to be able to fully utilize Microsoft cloud services.
+Make sure all of your users are properly assigned with Microsoft Entra ID and Microsoft Intune licenses to be able to fully utilize Microsoft cloud services.
 
 Additional information:
 
@@ -41,7 +41,7 @@ Additional information:
 | **Settings** | [Mobility](https://entra.microsoft.com/) | Microsoft Intune\MDM user scope | All |
 | **Settings** | [Mobility](https://entra.microsoft.com/) | Microsoft Intune\MAM user scope | None |
 | **Settings** | [Domain names](https://entra.microsoft.com/) | _custom domain_ | Set your custom domain as the default. |
-| **User experiences** | [Company branding](https://entra.microsoft.com/) | | Configure according to organization policies.Company branding is a prerequisite for several Intune workflows, e.g. Windows Autopilot.[Configure your company branding](https://learn.microsoft.com/entra/fundamentals/how-to-customize-branding). |
+| **User experiences** | [Company branding](https://entra.microsoft.com/) | | Configure according to organization policies.Company branding is a prerequisite for several Intune workflows, for example, Windows Autopilot.[Configure your company branding](https://learn.microsoft.com/entra/fundamentals/how-to-customize-branding). |
 | [**Overview**](https://entra.microsoft.com/) | Properties | Security defaults | Review Security defaults and adjust if necessary |
 
 #### Users
@@ -66,8 +66,8 @@ A set of settings to limit users’ ability to create groups.
 |---|---|---|---|
 | [**Group settings**](https://entra.microsoft.com/) | General\Self Service Group Management | Owners can manage group membership requests in My Groups | Yes |
 | [**Group settings**](https://entra.microsoft.com/) | General\Self Service Group Management | Restrict user ability to access groups features in My Groups | Yes |
-| [**Group settings**](https://entra.microsoft.com/) | General\Security Groups | Users can create security groups in Azure portals, API or PowerShell | No |
-| [**Group settings**](https://entra.microsoft.com/) | General\Microsoft 365 Groups | Users can create Microsoft 365 groups in Azure portals, API or PowerShell | No |
+| [**Group settings**](https://entra.microsoft.com/) | General\Security Groups | Users can create security groups in Azure portals, API, or PowerShell | No |
+| [**Group settings**](https://entra.microsoft.com/) | General\Microsoft 365 Groups | Users can create Microsoft 365 groups in Azure portals, API, or PowerShell | No |
 
 #### Devices
 
@@ -76,7 +76,7 @@ A set of settings to limit users’ ability to create groups.
 | [**All devices\Device settings**](https://entra.microsoft.com/) | Microsoft Entra join and registration settings | Users may join devices to Microsoft Entra | All |
 | [**All devices\Device settings**](https://entra.microsoft.com/) | Microsoft Entra join and registration settings | Max number of devices per user | Unlimited |
 | [**All devices\Device settings**](https://entra.microsoft.com/) | Local administrator settings | Enable Microsoft Entra Local Administrator Password Solution (LAPS) (Preview) | Yes |
-| [**All devices\Device settings**](https://entra.microsoft.com/) | Other settings | Restrict users from recovering the BitLocker key(s) for their owned devices | No |
+| [**All devices\Device settings**](https://entra.microsoft.com/) | Other settings | Restrict users from recovering the BitLocker keys for their owned devices | No |
 | [**All devices\Enterprise State Roaming**](https://entra.microsoft.com/) | Users may sync settings and app data across devices | Users may sync settings and app data across devices | None |
 
 ### Dynamic security groups examples
