@@ -2415,6 +2415,11 @@
       "source_path": "memdocs/intune/protect/wandera-mtd-connector-integration.md",
       "redirect_url": "/mem/intune/protect/jamf-mtd-connector-integration",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/troubleshoot-citrix-hdx-plus.md",
+      "redirect_url": "/windows-365/troubleshoot-partner-connector",
+      "redirect_document_id": false
     }
   ]
 }
