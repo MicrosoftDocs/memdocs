@@ -44,6 +44,10 @@ After configuring the prerequisites, we recommend you run the [readiness tool](#
 
 The following sections detail the prerequisites for the Microsoft Tunnel, and provide guidance on using the readiness tool.
 
+> [!NOTE]
+> Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
+
+
 ## Linux server
 
 Set up a Linux based virtual machine or a physical server on which to install the Microsoft Tunnel Gateway.
