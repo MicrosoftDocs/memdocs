@@ -61,6 +61,10 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 - [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
 
+---
+
+For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations)
+
 ________________________________________________________
 
 ## Next steps

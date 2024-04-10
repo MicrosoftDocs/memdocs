@@ -22,7 +22,6 @@ Applications can be assigned to groups:
 >
 > - Add apps
 > - Assign apps
-> - Considerations
 
 ## Add apps
 
@@ -123,6 +122,9 @@ For more information, see [Add web apps](/mem/intune/apps/web-app).
 
 ::: zone pivot="ios"
 
+> [!TIP]
+> The best user experience for receving apps on a device is for apps to be assigned using Apple School Manager and the Volume Purchase Program (VPP) with device licensing. When device-licensed VPP apps are assigned to devices or users, the app can be installed without user interaction. For iOS apps without VPP, the user is prompted to sign in to the App Store with an Apple ID.
+
 # [Intune For Education](#tab/intune-for-education)
 
 ### Volume purchase program (VPP) apps
@@ -175,6 +177,9 @@ To add apps to iOS devices without using VPP in Intune for Education:
 1. Select the app in the list
 1. Follow the steps in the wizard
 
+> [!NOTE]
+> Apps installed with this method will require the user of the device to sign in using an Apple ID to install the application. To avoid prompting the user for an Apple ID, use VPP apps.
+
 ### Web apps
 
 To create web applications:
@@ -182,11 +187,17 @@ To create web applications:
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 1. Select **Apps**
 1. Select **All apps**
-1. Select **New app** > **iOS web link**
+1. Select **New app** > **iOS/iPadOS web clip**
 1. Provide a URL for the web app, a name and, optionally, an icon and description
 1. Select **Save**
 
 For more information, see [Add web apps](/mem/intune/apps/web-app).
+
+---
+
+### Other apps
+
+Intune also supports deploying **[iOS/iPadOS LOB apps](/mem/intune/apps/lob-apps-ios)** from the Intune admin center. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file.
 
 ::: zone-end
 
@@ -241,25 +252,6 @@ To assign applications to a group of users or devices:
 1. Next to assignments, select **Edit**
 1. Add the groups you want to target the application at
 1. Select **Save**
-
-::: zone-end
-
-## Considerations
-
-✅ Some things to consider when deploying apps
-
-::: zone pivot="windows"
-
-Windows 11 SE prevents the installation and execution of third party applications with a technology called **Windows Defender Application Control** (WDAC).
-WDAC applies an *allowlist* policy, which ensures that unwanted apps don't run or get installed. However, it also prevents IT admins from deploying apps to Windows 11 SE devices, unless they're included in the E Mode policy.
-
-To learn more about which apps are supported in Windows 11 SE, and how to deploy them, see the tutorial [Deploy applications to Windows 11 SE with Intune][EDU-1].
-
-::: zone-end
-
-::: zone pivot="ios"
-
-The best user experience for receving apps on a device is for apps to be assigned using Apple School Manager and the Volume Purchase Program (VPP) with device licensing. When device-licensed VPP apps are assigned to devices or users, the app can be installed without user interaction. For iOS apps without VPP, the user is prompted to sign in to the App Store with an Apple ID.
 
 ::: zone-end
 
