@@ -35,7 +35,7 @@ Here's a collection of resources to help you troubleshoot iOS devices managed by
 - [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/)troubleshoot-ios-enrollment-errors
 - [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment)
 - [Troubleshooting profile installation failed error on iOS or iPadOS devices](/troubleshoot/mem/intune/device-enrollment/profile-installation-failed)
-- [Intune enrollment process doesn't start on Apple ADE devices](/troubleshoot/mem/intune/device-enrollment/)apple-dep-device-fails-auto-enrollment
+- [Intune enrollment process doesn't start on Apple ADE devices](/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment)
 - [ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'](/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error)
 - [You cannot access company resources on an Intune-enrolled ADE device](/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep)
 ::: zone-end
