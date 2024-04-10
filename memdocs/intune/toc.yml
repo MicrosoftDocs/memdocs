@@ -1803,8 +1803,23 @@ items:
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/common-config-overview.md
-          - name: Windows Update configuration
+          - name: Initial Tenant Configuration
+            href: ./industry/education/tutorial-school-deployment/common-config-tenant-setup.md
+          - name: Device restrictions
+            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-intro-and-general.md
+          - name: Windows Update policies
             href: ./industry/education/tutorial-school-deployment/common-config-windows-updates.md
+          - name: Microsoft Edge
+            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md
+          - name: Windows Delivery Optimization
+            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
+          - name: Windows Privacy policies
+            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy.md
+          - name: Start menu customization
+            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
+          - name: OneDrive Known Folder Move
+            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md
+
       - name: Intune for Education docs
         href: /intune-education/
 

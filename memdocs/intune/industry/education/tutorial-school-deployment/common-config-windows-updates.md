@@ -1,10 +1,10 @@
 ---
 title: Common Education Windows Update configuration
 description: Learn about common Windows Update configuration used by Education organizations in Intune.
-ms.date: 11/09/2023
-ms.topic: overview
-author: scottbreenmsft
-ms.author: scbree
+ms.date: 4/9/2024
+ms.topic: windows-updates
+author: yegor-a
+ms.author: egorabr
 ---
 
 # Common Education Windows Update configuration
@@ -15,11 +15,11 @@ This document contains Windows Update ring configuration that is commonly used f
 
 ## Update rings for Windows 10 and later
 
-Additional information:
+#### Additional information:
 
 - [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings)
 - [The Windows Update policies you should set and why](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-windows-update-policies-you-should-set-and-why/ba-p/3270914)
-- [教育機関向け Microsoft Intune を使った Windows Update 管理](https://youtu.be/o6_eGOyv-_g)
+- [YouTube: 教育機関向け Microsoft Intune を使った Windows Update 管理](https://youtu.be/o6_eGOyv-_g)
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
 
 | **Update settings** | **Value** | **Notes** | **CSP** |

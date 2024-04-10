@@ -1,10 +1,10 @@
 ---
 title: Common Education tenant configuration
 description: Learn about common tenant configuration used by Eduation organizations in Intune
-ms.date: 04/09/2024
-ms.topic: overview
-author: scottbreenmsft
-ms.author: scbree
+ms.date: 4/9/2024
+ms.topic: windows-start
+author: yegor-a
+ms.author: egorabr
 ---
 
 # Initial Tenant Configuration

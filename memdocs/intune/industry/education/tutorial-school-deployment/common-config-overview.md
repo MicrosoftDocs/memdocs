@@ -1,10 +1,10 @@
 ---
 title: Common Education configuration overview
 description: Learn about common configuration used by Education organizations in Intune.
-ms.date: 04/09/2024
+ms.date: 4/9/2024
 ms.topic: overview
-author: scottbreenmsft
-ms.author: scbree
+author: yegor-a
+ms.author: egorabr
 ---
 
 # Common Education configuration overview
@@ -14,16 +14,15 @@ To accelerate the configuration of tenants, some common configurations based on 
 > [!NOTE]
 > Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies.
 
-## Configuration sections
+### Configuration sections
 
 - [Initial Tenant Configuration](/mem/intune/industry/education/tutorial-school-deployment/common-config-tenant-setup)
-- [Update policies](/mem/intune/industry/education/tutorial-school-deployment/common-config-windows-updates)
-- Device restrictions
-- Organization-specific settings
-- General restrictions
-- Microsoft Edge
-- Delivery Optimization (Windows only)
-- Optional (Windows only)
-- Privacy
-- Start menu customization
-- OneDrive Known Folder Move
+- [Device restrictions](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-general)
+- [Windows Update policies](/mem/intune/industry/education/tutorial-school-deployment/common-config-windows-updates)
+- [Microsoft Edge](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge)
+- [Windows Delivery Optimization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
+
+#### Optional (Windows only)
+- [Windows Privacy](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy)
+- [Start menu customization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu)
+- [OneDrive Known Folder Move](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove)
