@@ -41,7 +41,7 @@ Compliance reports help you understand when devices fail to meet your [complianc
 This article applies to:
 
 - Android device administrator
-- Android opens source platform (AOSP)   
+- Android open source platform (AOSP)   
 - Android Enterprise
 - iOS/iPadOS
 - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
