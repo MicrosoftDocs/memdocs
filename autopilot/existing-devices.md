@@ -52,11 +52,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 - The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
 
-- Permission for enrollment of personal devices. <!-- INADO-27343099 -->
-
-    > [!IMPORTANT]
-    >
-    > If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used.
+- Permission for enrollment of personal devices. If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
 
 > [!NOTE]
 >
