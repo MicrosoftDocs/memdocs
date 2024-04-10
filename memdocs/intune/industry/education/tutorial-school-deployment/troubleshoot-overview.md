@@ -1,27 +1,44 @@
 ---
 title: Troubleshoot Windows devices
 description: Learn how to troubleshoot Windows devices from Intune and contact Microsoft Support for issues related to Intune and other services.
-ms.date: 11/09/2023
+ms.date: 04/10/2024
+zone_pivot_groups: platforms-windows-ios
 ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
 ---
 
-# Troubleshoot Windows devices
+# Troubleshoot devices
 
-Microsoft Intune provides many tools that can help you troubleshoot Windows devices.
-Here's a collection of resources to help you troubleshoot Windows devices managed by Intune:
+Microsoft Intune provides many tools that can help you troubleshoot devices.
 
 - [Troubleshooting device enrollment in Intune][MEM-2]
+- [Troubleshooting policies and profiles in Microsoft Intune][MEM-5]
+- [Troubleshooting device actions in Intune][MEM-3]
+
+::: zone pivot="windows"
+Here's a collection of resources to help you troubleshoot Windows devices managed by Intune:
+
 - [Troubleshooting Windows Autopilot][MEM-9]
 - [Troubleshoot Windows Wi-Fi profiles][MEM-6]
-- [Troubleshooting policies and profiles in Microsoft Intune][MEM-5]
 - [Troubleshooting BitLocker with the Intune encryption report][MEM-4]
 - [Troubleshooting CSP custom settings][MEM-8]
 - [Troubleshooting Win32 app installations with Intune][MEM-7]
-- [Troubleshooting device actions in Intune][MEM-3]
 - [**Collect diagnostics**][MEM-10] is a remote action that lets you collect and download Windows device logs without interrupting the user
   :::image type="content" source="./images/intune-diagnostics.png" alt-text="Intune for Education dashboard" lightbox="./images/intune-diagnostics.png" border="true":::
+
+::: zone-end
+
+::: zone pivot="ios"
+Here's a collection of resources to help you troubleshoot iOS devices managed by Intune:
+- [iOS or iPadOS devices aren't checking in with the Intune service](/troubleshoot/mem/intune/device-enrollment/ios-devices-inactive)
+- [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-enrollment/)troubleshoot-ios-enrollment-errors
+- [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment)
+- [Troubleshooting profile installation failed error on iOS or iPadOS devices](/troubleshoot/mem/intune/device-enrollment/profile-installation-failed)
+- [Intune enrollment process doesn't start on Apple ADE devices](/troubleshoot/mem/intune/device-enrollment/)apple-dep-device-fails-auto-enrollment
+- [ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'](/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error)
+- [You cannot access company resources on an Intune-enrolled ADE device](h/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep)
+::: zone-end
 
 ## How to contact Microsoft Support
 

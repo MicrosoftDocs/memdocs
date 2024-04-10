@@ -104,6 +104,8 @@ Here are the steps to perform an Autopilot reset from Intune:
 1. Select **Autopilot Reset** and follow the instructions
 1. Select **Yes** to confirm the action
 
+---
+
 :::image type="content" source="./images/win11-autopilot-reset.png" alt-text="Three screenshots showing the device being wiped, ending up in the login screen" border="false":::
 
 Consider using Autopilot reset in the following example scenarios:
