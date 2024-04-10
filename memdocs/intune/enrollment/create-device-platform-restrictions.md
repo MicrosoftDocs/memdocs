@@ -50,9 +50,7 @@ This article describes the device platform restrictions supported in Microsoft I
 
 ## Role-based access control  
 
-You must be an Intune Service Administrator to create or edit a Windows device platform restriction. All other Intune roles have read-only access. 
-
-For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
+You must be an Intune Service Administrator to create or edit a device platform restriction. All other Intune roles have read-only access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
 
 ## Default policy 
 Microsoft Intune provides one default policy for device platform restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
