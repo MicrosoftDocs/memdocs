@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -50,7 +50,7 @@ Make sure your tenant is set up to support organizational messages.
 ### Confirm license requirements  
 Confirm that your tenant has the license required to support organizational messages. This step only has to be done once. You must be assigned the [Organization/Update permission](../fundamentals/create-custom-role.md#custom-role-permissions) or be a global administrator to complete this step.      
 1. Go to the **Message** tab.  
-2. Review licensing requirements and verify that your tenant meets the requirements. Then select **I confirm that my organization owns the appropriate license and I undestand the Windows device requirements.** 
+2. Review and verify that your tenant meets all licensing requirements. Select **I confirm that my organization owns the appropriate license and I understand the Windows device requirements.**  
 3. Select **Confirm**.  
 
 ## Step 1: Create a message  
