@@ -204,14 +204,6 @@ This table provides the settings most commonly set by customers, but can be cust
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until all apps and profiles are installed | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | Windows Autopilot Deployment Program\\Deployment Profiles | Create Windows Autopilot deployment profiles according to organization policies |     |
 
-Additional information:
-
-- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
-- [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
-- [Manually register devices with Windows Autopilot](/autopilot/add-devices)
-- [Configure Autopilot profiles](/autopilot/profiles)
-- [YouTube: Windows Autopilot Fundamentals](https://www.youtube.com/watch?v=wNmLvqZ21AE&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=7)
-
 ---
 
 ## Next steps
