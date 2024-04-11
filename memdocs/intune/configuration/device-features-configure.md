@@ -188,7 +188,9 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
   - macOS 13.0 and newer
 
-  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra. It enables single sign-on (SSO) using passwordless authentication, Microsoft Entra ID users account or smart card. It also allows users to sign into their macOS devices using their Microsoft Entra ID, instead of a local account. In Intune, you create a settings catalog policy that configures the Platform SSO settings.
+  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra. It enables single sign-on (SSO) using passwordless authentication, Microsoft Entra ID user accounts, and smart cards. Users can also manually sign into their macOS devices using their Microsoft Entra ID, instead of a local account.
+
+  In Intune, you create a settings catalog policy that configures the Platform SSO settings.
 
   **Platform SSO** includes the **SSO app extension**. The SSO app extension enables single sign-on to apps and websites. Platform SSO extends these features. It gives you more granular control over authentication methods, the ability to create new organizational users at sign in, and assign authorization modes for users.
 
