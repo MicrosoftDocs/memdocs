@@ -174,7 +174,7 @@ For more information, see [Enable use of Windows diagnostic data by Intune](/mem
     | Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name | Enabled |
     | Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
 
-For more information, see [Collect diagnostics from a Windows device](/intune/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 ### (Optional) Enrollment Status Page
 
