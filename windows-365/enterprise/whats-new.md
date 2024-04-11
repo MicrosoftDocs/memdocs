@@ -61,9 +61,9 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Partners
 
-#### Use HP Anyware with Windows 365 Enterprise (preview)<!--48782170-->
+#### Use HP Anyware for Windows 365 Enterprise (preview)<!--48782170-->
 
-You can now use HP Anyware with Windows 365 Enterprise Cloud PCs. For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md).
+You can now use HP Anyware for Windows 365 Enterprise Cloud PCs. For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md).
 
 <!-- ########################## -->
 ## Week of April 1, 2024
