@@ -1,7 +1,7 @@
 ---
 title: Common Education configuration overview
 description: Learn about common configuration used by Education organizations in Intune.
-zone_pivot_groups: platforms-windows-ios-android
+zone_pivot_groups: platforms-windows-ios
 ms.date: 4/9/2024
 ms.topic: overview
 author: yegor-a
