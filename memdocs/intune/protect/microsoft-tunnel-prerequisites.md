@@ -53,7 +53,7 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 Set up a Linux based virtual machine or a physical server on which to install the Microsoft Tunnel Gateway.
 
 > [!NOTE]
-> Only the operating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list.
+> Only the operating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list. Keep OS up to date with security updates as well.
 
 - **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require:
 
