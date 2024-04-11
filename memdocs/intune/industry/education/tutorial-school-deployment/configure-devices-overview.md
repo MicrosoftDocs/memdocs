@@ -35,12 +35,12 @@ Intune has two main targeting methods:
   - **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
   - **Assigned groups** are used when you want to manually add users or devices to a group.
   - **Dynamic groups** reference rules that you create to assign students or devices to groups, which automate the membership's maintenance of those groups.
-- [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluted dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
+- [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
 
 > [!NOTE]
 > Filters are not accesible in Intune for Education.
 
-Two additional groups are pre-created if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
+Two extra groups are precreated if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
 Beyond the defaults, groups can be customized to suit various needs. For example, if you have both *Windows 10* and *Windows 11* devices in your school, you can create groups, such as *Windows 10 devices* and *Windows 11 devices*, to assign different policies and applications to.
 
@@ -65,7 +65,7 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 ---
 
-For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations)
+For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
 
 ________________________________________________________
 
