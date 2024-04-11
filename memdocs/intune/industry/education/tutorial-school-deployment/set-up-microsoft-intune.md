@@ -84,6 +84,16 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 These steps are only required if you plan to manage Windows devices in your school.
 
+> [!div class="checklist"]
+>In this section you will:
+>
+> - Configure Windows enrollment
+> - Disable Windows Hello for Business
+> - Intune data collection policy
+> - Configure Windows data
+> - Configure Windows device diagnostics
+> - (Optional) Configure the Enrollment Status Page
+
 ### Configure Windows enrollment
 
 ✅ Configure which users can enroll Windows devices
@@ -119,7 +129,7 @@ To disable Windows Hello for Business at the tenant level:
 
 For more information how to enable Windows Hello for Business on specific devices, see [Create a Windows Hello for Business policy][MEM-4].
 
-### Intune data collection policy
+### Configure Intune data collection policy
 
 ✅ Configure Windows data collection settings
 
@@ -171,7 +181,7 @@ For more information, see [Enable use of Windows diagnostic data by Intune](/mem
 
 For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
-### (Optional) Enrollment Status Page
+### (Optional) Configure the Enrollment Status Page
 
 Consider enabling the Enrollment Status Page if planning to use Windows Autopilot to enroll Windows devices in Intune.
 

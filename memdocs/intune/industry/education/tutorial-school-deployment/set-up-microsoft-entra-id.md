@@ -13,14 +13,6 @@ The Microsoft platform for education simplifies the management of Windows device
 
 Microsoft Entra ID, which is included with the Microsoft 365 Education subscription, provides authentication and authorization to any Microsoft cloud services. Identity objects are defined in Microsoft Entra ID for human identities, like students and teachers, as well as non-human identities, like devices, services, and applications. Withn Microsoft 365 licenses, users can consume services and access resources within the tenant. With Microsoft 365 Education, you can manage identities for your teachers and students, assign licenses to devices and users, and create groups for the classrooms.
 
-> [!div class="checklist"]
->In this section you will:
->
-> - Set up a Microsoft 365 Education tenant
-> - Add users, create groups, and assign licenses
-> - Configure school branding
-> - Enable bulk enrollment
-
 ## Create a Microsoft 365 tenant
 
 If you don't already have a Microsoft 365 tenant, you need to create one.
