@@ -217,7 +217,7 @@ Below are specific cases where app B has been created to supersede app A.
 | Auto   update setting changes  | The upgrade is already triggered   after first available check-in, but before app B gets installed on the   device, the admin changes the auto-update setting for app B to false.  | During the second available   check-in, app B is sent down to the device and app A will be upgraded   with app B on the device. |
 | Uninstall   superseded app after superseding app entities created  | The upgrade is already triggered   after first available check-in, but before app B gets installed on the   device, the user requests an uninstall of app A and app A is removed from the   device. | During the second available   check-in, app B will be sent down to the device and app A will be upgraded   with app B on the device.  |
 | Uninstall   after supersedence update | App A was auto-updated to app B,   but app A wasn't removed from the device. Later, the user requests an   uninstall of app B from the device and app B is uninstalled successfully. | App A is still present on the   device. |
-| Upgrade   failure  | Intune attempt to auto-update   app A to app B but the installation of app B failed and app A was already   removed from the device. | Users won't be able to   reinstall app A from the Company Portal as it’s superseded by app B, but are   able to try to reinstall app B from the Company Portal. |
+| Upgrade   failure  | Intune attempts to auto-update   app A to app B but the installation of app B failed and app A was already   removed from the device. | Users won't be able to   reinstall app A from the Company Portal as it’s superseded by app B, but are   able to try to reinstall app B from the Company Portal. |
 
 
 ## Next steps
