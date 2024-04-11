@@ -52,16 +52,16 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 > **For iOS devices:**
 > - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
+### [Intune](#tab/intune)
+
+- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
+
 ### [Intune for Education](#tab/intune-for-education)
 
 - [Create groups in Intune for Education][EDU-1]
 - [Manually add or remove users and devices to an existing assigned group][EDU-2]
 - [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
-
-### [Intune](#tab/intune)
-
-- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
 
 ---
 
