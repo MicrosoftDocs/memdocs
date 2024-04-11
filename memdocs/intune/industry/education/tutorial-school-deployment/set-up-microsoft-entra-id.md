@@ -11,13 +11,13 @@ ms.author: scbree
 
 The Microsoft platform for education simplifies the management of Windows devices with Intune and Microsoft 365 Education. The first, fundamental step, is to configure the identity infrastructure to manage user access and permissions for your school.
 
-Microsoft Entra ID, which is included with the Microsoft 365 Education subscription, provides authentication and authorization to any Microsoft cloud services. Identity objects are defined in Microsoft Entra ID for human identities, like students and teachers, as well as non-human identities, like devices, services, and applications. Withn Microsoft 365 licenses, users can consume services and access resources within the tenant. With Microsoft 365 Education, you can manage identities for your teachers and students, assign licenses to devices and users, and create groups for the classrooms.
+Microsoft Entra ID, which is included with the Microsoft 365 Education subscription, provides authentication and authorization to any Microsoft cloud services. Identity objects are defined in Microsoft Entra ID for human identities, like students and teachers, as well as non-human identities, like devices, services, and applications. With Microsoft 365 licenses, users can consume services and access resources within the tenant. With Microsoft 365 Education, you can manage identities for your teachers and students, assign licenses to devices and users, and create groups for the classrooms.
 
 ## Create a Microsoft 365 tenant
 
 If you don't already have a Microsoft 365 tenant, you need to create one.
 
-For more information, see [Create your Office 365 tenant account][M365-1]
+For more information, see [Create your Office 365 tenant][M365-1]
 
 > [!TIP]
 > To learn more, and practice how to configure the Microsoft 365 tenant for your school, try <a href="https://www.microsoft.com/en-us/education/interactive-demos/set-up-Microsoft-365" target="_blank"><u>this interactive demo</u></a>.
@@ -145,7 +145,7 @@ For more information, see [Add branding to your directory][AAD-5].
 
 ## Configure device settings
 
-In this section you will configure Microsoft Entra device settings.
+In this section, you configure Microsoft Entra device settings.
 
 ### Enable Microsoft Entra join
 
@@ -158,7 +158,7 @@ To allow Microsoft Entra join:
 1. Under **Users may join devices to Microsoft Entra ID**, select **All**
     > [!NOTE]
     > If it is required that only specific users can join devices to Microsoft Entra ID, select **Selected**. If using provisioning packages, ensure that the user account that will create provisioning packages is included in the list of users.
-1. You may also want to review the **Maximum number of devices per user** value on this page. Education customers commonly set this to **Unlimited**.
+1. You may also want to review the **Maximum number of devices per user** value on this page, which Education customers commonly set to **Unlimited**.
 1. Select Save
     :::image type="content" source="images/entra-device-settings.png" alt-text="Configure device settings from Microsoft Entra admin center." lightbox="images/entra-device-settings.png":::
 
@@ -176,7 +176,7 @@ To allow Microsoft Entra join:
 
 ✅ Enable Microsoft Entra to store local administrator passwords
 
-Microsoft Entra can store the local administrator passwords for devices. Devices must be configured through Intune to store the password in Entra, this section just allows Entra to accept the password. 
+Microsoft Entra can store the local administrator passwords for devices. Devices must be configured through Intune to store the password in Entra, this allows Entra to accept the password from devices.
 
 To allow Entra to store the local administrator password:
 
@@ -201,14 +201,14 @@ For more information, see [Enable Enterprise State Roaming in Microsoft Entra ID
 
 ✅ Configure your tenant to reduce user access
 
-Microsoft Entra has seveval controls which allow you to limit administrative functionality for users with no administrative role in Microsoft Entra.
+Microsoft Entra has several controls that allow you to limit administrative functionality for users with no administrative role in Microsoft Entra.
 
-This table contains a list of commonly configured settings, but remember to configure these based on your organization requirements.
+This table contains a list of commonly configured settings.
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |
 | [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Default user role permissions | Users can register applications | No |
-| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Default user role permissions | Restrict non-admin users from creating tenants | Yes |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Default user role permissions | Restrict nonadmin users from creating tenants | Yes |
 | [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Default user role permissions | Users can create security groups | No |
 | [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Guest user access | Guest user access restrictions | Guest user access is restricted to properties and memberships of their own directory objects (most restrictive) |
 | [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Administration portal | Restrict access to Microsoft Entra ID administration portal | Yes |
@@ -225,9 +225,9 @@ You can apply additional controls to manage access to your directory with these 
 
 ✅ Configure your tenant to reduce group management capabilities
 
-Microsoft Entra has seveval controls which allow you to limit group functionality for users.
+Microsoft Entra has several controls that allow you to limit group functionality for users.
 
-This table contains a list of commonly configured settings, but remember to configure these based on your organization requirements.
+This table contains a list of commonly configured settings.
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |

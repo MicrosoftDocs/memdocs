@@ -115,7 +115,7 @@ For more information, see [Enable Windows automatic enrollment](/mem/intune/enro
 
 Windows Hello for Business is a biometric authentication feature that allows users to sign in to their devices using a PIN, password, or fingerprint. Windows Hello for Business is enabled by default on Windows devices, and to set it up, users must perform for multifactor authentication (MFA). As a result, this feature may not be ideal for students, who may not have MFA enabled.
 
-It's common for Windows Hello for Business to be disabled at the tenant level. Then, a policy can be targed at users or devices that need it. For example, staff and teachers.
+It's common for Windows Hello for Business to be disabled at the tenant level. Then, a policy can be targted at users or devices that need it. For example, staff and teachers.
 
 To disable Windows Hello for Business at the tenant level:
 
@@ -149,7 +149,7 @@ To enable data collection:
 1. Select **Review + Save**
 1. Select **Save**
 
-For more information on data collection, see [Endpoint analytics data collection](/mem/analytics/data-collection)
+For more information on data collection, see [Endpoint analytics data collection](/mem/analytics/data-collection).
 
 ### Configure Windows data
 
