@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/29/2024
+ms.date: 04/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -61,7 +61,11 @@ The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin
 
 On macOS devices, users normally sign in with a local account. Then, they sign into apps and websites with their Microsoft Entra ID.
 
-With Platform SSO, organizations can support superior user experiences and security by utilizing the Microsoft Entra ID integration with macOS enabled using the Microsoft Enterprise SSO plug-in. Organizations can choose from a variety of authentication methods such passwordless authentication or Microsoft Entra ID password sync or smart card authentication to meet their business needs. In addition, Platform SSO enhances the single sign-on experience available with the SSO app extension by allowing the use of Touch ID and passkeys with Microsoft Entra ID. 
+With Platform SSO:
+
+- End users get a better and more security experience by using Microsoft Entra ID integration with the Microsoft Enterprise SSO plug-in.
+- Organization choose the authentication method that meets their business need, including passwordless authentication, Microsoft Entra user account sync, or smart card authentication.
+- End users get a single sign-on experience with the SSO app extension by allowing the use of Touch ID and passkeys with Microsoft Entra ID. 
 
 For more information on Platform SSO, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
