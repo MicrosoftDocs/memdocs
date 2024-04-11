@@ -52,7 +52,7 @@ Access your Apple MDM push certificate settings in Microsoft Intune.
 4. Select **Apple MDM Push Certificate**. Your MDM push certificate settings open.   
 
 ### Step 1: Grant Microsoft permission to send user and device information to Apple
-Select **I agree.** to give Microsoft permission to send data to Apple.
+Select **I agree** to give Microsoft permission to send data to Apple.  
 
 :::image type="content" source="./media/apple-mdm-push-certificate-get/create-mdm-push-certificate.png" alt-text="Screenshot of the Configure MDM Push Certificate screen with MDM Push not set up.":::
 
