@@ -155,6 +155,41 @@ To create a bulk enrollment token, you must have a supported Microsoft Entra rol
 
 For more information, see [Give admin permissions in Microsoft Intune admin center](/mem/intune/fundamentals/users-add#give-admin-permissions-in-microsoft-intune-admin-center).
 
+## Restrict access to administrative actions
+
+Basic set of settings to restrict users' access to administrative actions.
+
+| Blade | Configuration group | Setting | Value |
+| --- | --- | --- | --- |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Default user role permissions | Users can register applications | No |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Default user role permissions | Restrict non-admin users from creating tenants | Yes |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Default user role permissions | Users can create security groups | No |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Guest user access | Guest user access restrictions | Guest user access is restricted to properties and memberships of their own directory objects (most restrictive) |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Administration portal | Restrict access to Microsoft Entra ID administration portal | Yes |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | LinkedIn account connections | Allow users to connect their work or school account with LinkedIn | No |
+| [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Show keep user signed in | Show keep user signed in | Yes |
+
+## Restrict access to Groups
+
+A set of settings to limit users' ability to create groups.
+
+| Blade | Configuration group | Setting | Value |
+| --- | --- | --- | --- |
+| [Group settings](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/General/menuId/General) | General\\Self Service Group Management | Owners can manage group membership requests in My Groups | Yes |
+| [Group settings](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/General/menuId/General) | General\\Self Service Group Management | Restrict user ability to access groups features in My Groups | Yes |
+| [Group settings](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/General/menuId/General) | General\\Security Groups | Users can create security groups in Azure portals, API or PowerShell | No |
+| [Group settings](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/General/menuId/General) | General\\Microsoft 365 Groups | Users can create Microsoft 365 groups in Azure portals, API or PowerShell | No |
+
+### Devices
+
+| Blade | Configuration group | Setting | Value |
+| --- | --- | --- | --- |
+| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Microsoft Entra join and registration settings | Users may join devices to Microsoft Entra | All |
+| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Microsoft Entra join and registration settings | Max number of devices per user | Unlimited |
+| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Local administrator settings | Enable Microsoft Entra Local Administrator Password Solution (LAPS) (Preview) | Yes |
+| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Other settings | Restrict users from recovering the BitLocker key(s) for their owned devices | No |
+| [All devices\Enterprise State Roaming](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/RoamingSettings/menuId/Devices) | Users may sync settings and app data across devices | Users may sync settings and app data across devices | None |
+
 ---
 
 ## Next steps
