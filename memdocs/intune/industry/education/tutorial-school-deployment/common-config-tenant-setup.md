@@ -1,6 +1,6 @@
 ---
 title: Common Education tenant configuration
-description: Learn about common tenant configuration used by Eduation organizations in Intune
+description: Learn about common tenant configuration used by Education organizations in Intune.
 ms.date: 04/09/2024
 ms.topic: overview
 author: scottbreenmsft
@@ -17,7 +17,7 @@ Custom domain should be configured and validated to be able to create users and 
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |
-| [Setup](https://admin.microsoft.com/#/featureexplorer) | Sign-in and security | Get your custom domain set up | Follow the configuration wizard |
+| [Setup](https://admin.microsoft.com/#/featureexplorer) | Sign-in and security | Get your custom domain setup | Follow the configuration wizard |
 
 Entra:
 ## Tenant settings (review)
@@ -32,7 +32,7 @@ Settings described in this section are located in the Microsoft Entra admin cent
 
 ### Dynamic security groups examples
 
-Below are examples of queries commonly used for dynamic security groups.
+Here are examples of queries commonly used for dynamic security groups.
 
 Additional information:
 
