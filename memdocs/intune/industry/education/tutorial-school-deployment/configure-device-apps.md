@@ -47,7 +47,7 @@ To create Microsoft Store apps in Intune:
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 1. Select **Apps**
 1. Select **All apps**
-1. Select **New app** > **Windows web link**
+1. Select **Add** > **Microsoft Store app (new)**
 1. Search for and select the app
 1. Review and change settings as required
     > [!NOTE]
@@ -63,7 +63,7 @@ To create web applications in Intune:
 1. Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>
 1. Select **Apps**
 1. Select **All apps**
-1. Select **New app** > **Windows web link**
+1. Select **Add** > **Windows web link**
 1. Provide a URL for the web app, a name and, optionally, an icon and description
 1. Select **Save**
 

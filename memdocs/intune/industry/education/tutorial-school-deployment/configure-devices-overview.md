@@ -47,7 +47,7 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 > [!TIP]
 > **For Windows devices:**
 > - If you target applications and policies to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
-> - applications and policies to a *device dynamic group* based on other attributes, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+> - Applications and policies to a *device dynamic group* based on other attributes, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 > 
 > **For iOS devices:**
 > - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.

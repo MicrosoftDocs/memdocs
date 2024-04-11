@@ -40,6 +40,8 @@ Device profiles allow you to add and configure settings, and then push these set
 
   For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles).
 
+> [!TIP]
+> You can find a list of common configurations used in K-12 organizations at [Common Education configuration overview](/mem/intune/industry/education/tutorial-school-deployment/common-config-overview).
 
 ### [Intune For Education](#tab/intune-for-education)
 
