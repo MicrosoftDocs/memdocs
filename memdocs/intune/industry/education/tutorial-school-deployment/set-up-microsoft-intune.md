@@ -131,9 +131,9 @@ For more information how to enable Windows Hello for Business on specific device
 
 ### Configure Intune data collection policy
 
-✅ Configure Windows data collection settings
+✅ Configure Endpoint analytics
 
-Intune needs permission to collect certain data for Endpoint analytics and Windows update reports on Windows devices.
+Intune needs permission to collect data for Endpoint analytics on Windows devices.
 
 To enable data collection:
 
@@ -144,7 +144,7 @@ To enable data collection:
 1. Select **Properties**
 1. Under **Configuration settings** select **Edit**
 1. Set **Health Monitoring** to **Enable**
-1. Select **Scope** and tick **Windows update** and **Endpoint analytics**
+1. Select **Scope** and tick **Endpoint analytics**
     :::image type="content" source="./images/intune-data-collection-policy-settings.png" alt-text="A screenshot showing the configuration of the Intune data collection policy." lightbox="./images/intune-data-collection-policy-settings.png":::
 1. Select **Review + Save**
 1. Select **Save**
