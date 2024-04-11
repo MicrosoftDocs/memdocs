@@ -1799,26 +1799,26 @@ items:
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
         - name: 5. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
-        - name: 6. Common configuration
+        - name: 6. Common Education configuration
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/common-config-overview.md
-          - name: Initial Tenant Configuration
-            href: ./industry/education/tutorial-school-deployment/common-config-tenant-setup.md
-          - name: Device restrictions
-            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-general.md
-          - name: Windows Update policies
-            href: ./industry/education/tutorial-school-deployment/common-config-windows-updates.md
-          - name: Microsoft Edge
-            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md
-          - name: Windows Delivery Optimization
-            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
-          - name: Windows Privacy policies
-            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy.md
-          - name: Start menu customization
-            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
-          - name: OneDrive Known Folder Move
-            href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md
+          - name: Intune Policies for Windows in Education
+            items:
+            - name: Device restrictions
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-devicerestrictions.md
+            - name: Windows Update policies
+              href: ./industry/education/tutorial-school-deployment/common-config-windows-updates.md
+            - name: Microsoft Edge
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md
+            - name: Delivery Optimization
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
+            - name: Privacy policies
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy.md
+            - name: Start Menu customization
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
+            - name: OneDrive Known Folder Move
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md
 
       - name: Intune for Education docs
         href: /intune-education/

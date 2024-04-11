@@ -1,6 +1,7 @@
 ---
 title: Common Education configuration overview
 description: Learn about common configuration used by Education organizations in Intune.
+zone_pivot_groups: platforms-windows-ios-android
 ms.date: 4/9/2024
 ms.topic: overview
 author: yegor-a
@@ -14,15 +15,19 @@ To accelerate the configuration of tenants, some common configurations based on 
 > [!NOTE]
 > Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies.
 
-### Configuration sections
+::: zone pivot="windows"
 
-- [Initial Tenant Configuration](/mem/intune/industry/education/tutorial-school-deployment/common-config-tenant-setup)
-- [Device restrictions](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-general)
+## Configuration sections
+
+- [Device restrictions](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-devicerestrictions)
 - [Windows Update policies](/mem/intune/industry/education/tutorial-school-deployment/common-config-windows-updates)
 - [Microsoft Edge](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge)
 - [Windows Delivery Optimization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
 
-#### Optional (Windows only)
+### Optional
+
 - [Windows Privacy](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy)
 - [Start menu customization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu)
 - [OneDrive Known Folder Move](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove)
+
+::: zone-end

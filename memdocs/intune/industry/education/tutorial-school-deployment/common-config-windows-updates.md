@@ -49,7 +49,7 @@ This document contains Windows Update ring configuration that is commonly used f
 
 Settings described in this section aren't shown in an Update ring policy and should be configured as a Settings Catalog type Configuration Profile.
 
-Additional information:
+#### Additional information:
 
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
 
