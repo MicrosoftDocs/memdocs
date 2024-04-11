@@ -166,7 +166,7 @@ For more information, see [Enable use of Windows diagnostic data by Intune](/mem
 ✅ Allow remote retrieval of diagnostic information
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select [**Tenant administration** > **Device diagnostics**]((https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/logCollection)
+1. Select **Tenant administration** > **Device diagnostics**
 1. Configure settings as per your requirements
 
     | Setting | Common configuration |
