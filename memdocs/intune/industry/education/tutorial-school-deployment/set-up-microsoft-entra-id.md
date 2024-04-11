@@ -34,6 +34,13 @@ For more information, see [Overview of the Microsoft 365 admin center][M365-2].
 > [!NOTE]
 > Setting up your school's basic cloud infrastructure does not require you to complete the rest of the Microsoft 365 setup. For this reason, we will skip directly to adding students and teachers as users in the Microsoft 365 tenant.
 
+### Set up your domain
+
+Custom domain should be configured and validated to be able to create users and groups with organization-specific email. For more information, use these links:
+
+- [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain)
+- Set your default domain name under **Settings** > **Domain names** > **custom domain**
+
 ## Add users, create groups, and assign licenses
 
 With the Microsoft 365 tenant in place, it's time to add users, create groups, and assign licenses. All students and teachers need a user account before they can sign in and access the different Microsoft 365 services. There are multiple ways to do this, including using School Data Sync (SDS), synchronizing an on-premises Active Directory, manually, or both.
@@ -136,32 +143,65 @@ To configure your school's branding:
 
 For more information, see [Add branding to your directory][AAD-5].
 
-## Enable bulk enrollment
+## Configure device settings
 
-✅ Enable the use of provisioning packages
+In this section you will configure Microsoft Entra device settings.
 
-To allow provisioning packages to complete the Microsoft Entra join process:
+### Enable Microsoft Entra join
+
+✅ Enable Microsoft Entra join and device limits
+
+To allow Microsoft Entra join:
 
 1. Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
 1. Select **Microsoft Entra ID** > **Devices** > **Device Settings**
 1. Under **Users may join devices to Microsoft Entra ID**, select **All**
     > [!NOTE]
-    > If it is required that only specific users can join devices to Microsoft Entra ID, select **Selected**. Ensure that the user account that will create provisioning packages is included in the list of users.
+    > If it is required that only specific users can join devices to Microsoft Entra ID, select **Selected**. If using provisioning packages, ensure that the user account that will create provisioning packages is included in the list of users.
+1. You may also want to review the **Maximum number of devices per user** value on this page. Education customers commonly set this to **Unlimited**.
 1. Select Save
     :::image type="content" source="images/entra-device-settings.png" alt-text="Configure device settings from Microsoft Entra admin center." lightbox="images/entra-device-settings.png":::
 
-To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:
+> [!NOTE]
+> To create a bulk enrollment token (used by a provisioning package to perform Entra join), you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:
+>
+> - Global Administrator
+> - Cloud Device Administrator
+> - Intune Administrator
+> - Password Administrator
+>
+> For more information, see [Give admin permissions in Microsoft Intune admin center](/mem/intune/fundamentals/users-add#give-admin-permissions-in-microsoft-intune-admin-center).
 
-- Global Administrator
-- Cloud Device Administrator
-- Intune Administrator
-- Password Administrator
+### Enable storage of local administrator passwords (optional)
 
-For more information, see [Give admin permissions in Microsoft Intune admin center](/mem/intune/fundamentals/users-add#give-admin-permissions-in-microsoft-intune-admin-center).
+✅ Enable Microsoft Entra to store local administrator passwords
 
-## Restrict access to administrative actions
+Microsoft Entra can store the local administrator passwords for devices. Devices must be configured through Intune to store the password in Entra, this section just allows Entra to accept the password. To allow Entra to store the local administrator password:
 
-Basic set of settings to restrict users' access to administrative actions.
+| Blade | Configuration group | Setting | Value |
+| --- | --- | --- | --- |
+| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Local administrator settings | Enable Microsoft Entra Local Administrator Password Solution (LAPS) (Preview) | Yes |
+| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Other settings | Restrict users from recovering the BitLocker key(s) for their owned devices | No |
+
+For more information, see [Windows Local Administrator Password Solution in Microsoft Entra ID](/entra/identity/devices/howto-manage-local-admin-passwords).
+
+### Configure Enterprise State Roaming (optional)
+
+✅ Disable Enterprise State Roaming
+
+| Blade | Configuration group | Setting | Value |
+| --- | --- | --- | --- |
+| [All devices\Enterprise State Roaming](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/RoamingSettings/menuId/Devices) | Users may sync settings and app data across devices | Users may sync settings and app data across devices | None |
+
+For more information, see [Enable Enterprise State Roaming in Microsoft Entra ID](/entra/identity/devices/enterprise-state-roaming-enable).
+
+## Restrict access to administrative actions (optional)
+
+✅ Configure your tenant to reduce user access
+
+Microsoft Entra has seveval controls which allow you to limit administrative functionality for users with no administrative role in Microsoft Entra.
+
+This table contains a list of commonly configured settings, but remember to configure these based on your organization requirements.
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |
@@ -173,9 +213,19 @@ Basic set of settings to restrict users' access to administrative actions.
 | [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | LinkedIn account connections | Allow users to connect their work or school account with LinkedIn | No |
 | [User settings](https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/UserSettings/menuId/UserSettings) | Show keep user signed in | Show keep user signed in | Yes |
 
-## Restrict access to Groups
+You can apply additional controls to manage access to your directory with these articles:
 
-A set of settings to limit users' ability to create groups.
+- [Restrict member users' default permissions](/entra/fundamentals/users-default-permissions#restrict-member-users-default-permissions)
+- [Managing Directory Access](/schooldatasync/sds-and-managing-directory-access)
+- [Blocking PowerShell for EDU Tenants](/schooldatasync/blocking-powershell-for-edu)
+
+## Restrict access to Groups (optional)
+
+✅ Configure your tenant to reduce group management capabilities
+
+Microsoft Entra has seveval controls which allow you to limit group functionality for users.
+
+This table contains a list of commonly configured settings, but remember to configure these based on your organization requirements.
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |
@@ -184,15 +234,7 @@ A set of settings to limit users' ability to create groups.
 | [Group settings](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/General/menuId/General) | General\\Security Groups | Users can create security groups in Azure portals, API or PowerShell | No |
 | [Group settings](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/General/menuId/General) | General\\Microsoft 365 Groups | Users can create Microsoft 365 groups in Azure portals, API or PowerShell | No |
 
-### Devices
-
-| Blade | Configuration group | Setting | Value |
-| --- | --- | --- | --- |
-| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Microsoft Entra join and registration settings | Users may join devices to Microsoft Entra | All |
-| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Microsoft Entra join and registration settings | Max number of devices per user | Unlimited |
-| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Local administrator settings | Enable Microsoft Entra Local Administrator Password Solution (LAPS) (Preview) | Yes |
-| [All devices\Device settings](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/DeviceSettings/menuId/Devices) | Other settings | Restrict users from recovering the BitLocker key(s) for their owned devices | No |
-| [All devices\Enterprise State Roaming](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/RoamingSettings/menuId/Devices) | Users may sync settings and app data across devices | Users may sync settings and app data across devices | None |
+For more information, see [Learn about groups and access rights in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups).
 
 ---
 

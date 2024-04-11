@@ -56,6 +56,17 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 - [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
+- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+
+Here are examples of queries commonly used for dynamic security groups.
+
+| Name | Type | Query |
+| --- | --- | --- |
+| All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
+| All Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
+| All non-Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
 
 ### [Intune for Education](#tab/intune-for-education)
 
