@@ -36,7 +36,7 @@ For more information, see [Overview of the Microsoft 365 admin center][M365-2].
 
 ### Set up your domain
 
-Custom domain should be configured and validated to be able to create users and groups with organization-specific email. For more information, use these links:
+You can configure a custom domain so that you can create users and groups with an organization-specific email. For more information, use these links:
 
 - [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain)
 - Set your default domain name under **Settings** > **Domain names** > **custom domain**
@@ -176,7 +176,9 @@ To allow Microsoft Entra join:
 
 ✅ Enable Microsoft Entra to store local administrator passwords
 
-Microsoft Entra can store the local administrator passwords for devices. Devices must be configured through Intune to store the password in Entra, this section just allows Entra to accept the password. To allow Entra to store the local administrator password:
+Microsoft Entra can store the local administrator passwords for devices. Devices must be configured through Intune to store the password in Entra, this section just allows Entra to accept the password. 
+
+To allow Entra to store the local administrator password:
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |
