@@ -48,22 +48,6 @@ Before configuring settings with Intune, consider the following prerequisites:
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
 
-### (Optional) Branding
-
-✅ Configure Company portal branding
-
-Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune/apps/company-portal-app).
-
-### (Optional) Terms and conditions
-
-✅ Configure Terms and conditions
-
-Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](/mem/intune/enrollment/terms-and-conditions-create).
-
-## Configure the Intune service for education devices
-
-The Intune service can be configured in different ways, depending on the needs of your school. In this section, you configure the Intune service using settings commonly implemented by K-12 school districts.
-
 ### Configure enrollment restrictions
 
 ✅ Restrict which devices can be managed
@@ -84,6 +68,22 @@ To block personally owned devices from enrolling:
 1. On the **Review + create** page, select **Create** to save the restriction
 
 For more information, see [Create a device platform restriction][MEM-2].
+
+### (Optional) Branding
+
+✅ Configure Company portal branding
+
+Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune/apps/company-portal-app).
+
+### (Optional) Terms and conditions
+
+✅ Configure Terms and conditions
+
+Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](/mem/intune/enrollment/terms-and-conditions-create).
+
+## Configure the Intune service for education devices
+
+The Intune service can be configured in different ways, depending on the needs of your school. In this section, you configure the Intune service using settings commonly implemented by K-12 school districts.
 
 ## Configure the Intune service for Windows education devices
 
