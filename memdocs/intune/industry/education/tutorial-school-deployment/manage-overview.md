@@ -21,14 +21,6 @@ With Intune, there are several ways to manage students' devices. Groups can be c
 
 Intune allows you to perform actions on devices without having to sign in to the devices. For example, you can send a command to a device to restart or to turn off, or you can locate a device.
 
-### [Intune For Education](#tab/intune-for-education)
-
-:::image type="content" source="./images/remote-actions.png" alt-text="Remote actions available in Intune for Education when selecting a Windows device" lightbox="./images/remote-actions.png" border="true":::
-
-With bulk actions, remote actions can be performed on multiple devices at once.
-
-To learn more about remote actions in Intune for Education, see [Remote actions][EDU-1].
-
 ### [Intune](#tab/intune)
 
 :::image type="content" source="./images/intune-remote-actions-windows.png" alt-text="Remote actions available in Intune for Education when selecting a Windows device" lightbox="./images/intune-remote-actions-windows.png" border="true":::
@@ -36,6 +28,14 @@ To learn more about remote actions in Intune for Education, see [Remote actions]
 Remote actions can be performed on one or multiple devices at once.
 
 To learn more about remote actions in Intune, see [Remote actions](/mem/intune/remote-actions/device-management).
+
+### [Intune For Education](#tab/intune-for-education)
+
+:::image type="content" source="./images/remote-actions.png" alt-text="Remote actions available in Intune for Education when selecting a Windows device" lightbox="./images/remote-actions.png" border="true":::
+
+With bulk actions, remote actions can be performed on multiple devices at once.
+
+To learn more about remote actions in Intune for Education, see [Remote actions][EDU-1].
 
 ---
 
@@ -52,6 +52,19 @@ For more information, see [Remote assistance for managed devices - Intune for Ed
 ✅ View device information and reporting
 
 With Intune, it's possible view and report on current devices, applications, settings, and overall health. You can also download reports to review or share offline.
+
+### [Intune](#tab/intune)
+
+Here are some examples of the reports available in Intune:
+
+- Device compliance reports
+- Device configuration reports
+- Device enrollment reports
+- Update reports
+- Security reports
+- Application reports
+
+To learn more about reports in Intune, see [Reports in Intune](/mem/intune/fundamentals/reports).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -71,19 +84,6 @@ Here are the steps for generating reports in Intune for Education:
     :::image type="content" source="./images/inventory-reporting.png" alt-text="Reporting options available in Intune for Education when selecting the reports blade" border="true":::
 
 To learn more about reports in Intune for Education, see [Reports in Intune for Education][EDU-3].
-
-### [Intune](#tab/intune)
-
-Here are some examples of the reports available in Intune:
-
-- Device compliance reports
-- Device configuration reports
-- Device enrollment reports
-- Update reports
-- Security reports
-- Application reports
-
-To learn more about reports in Intune, see [Reports in Intune](/mem/intune/fundamentals/reports).
 
 ---
 

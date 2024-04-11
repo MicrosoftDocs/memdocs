@@ -20,13 +20,13 @@ There are two types of enrollment:
 
 For more information on configuring Automated Device Enrollment, see:
 
-# [Intune For Education](#tab/intune-for-education)
-
-[Set up iOS device management](/intune-education/setup-ios-device-management)
-
-# [Intune](#tab/intune)
+## [Intune](#tab/intune)
 
 [Set up automated device enrollment in Intune](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
+
+## [Intune For Education](#tab/intune-for-education)
+
+[Set up iOS device management](/intune-education/setup-ios-device-management)
 
 ---
 
