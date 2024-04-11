@@ -1,7 +1,7 @@
 ---
 title: Common Education configuration overview
 description: Learn about common configuration used by Education organizations in Intune.
-zone_pivot_groups: platforms-windows-ios
+#zone_pivot_groups: platforms-windows-ios
 ms.date: 4/9/2024
 ms.topic: overview
 author: yegor-a
@@ -15,8 +15,6 @@ To accelerate the configuration of tenants, some common configurations based on 
 > [!NOTE]
 > Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies.
 
-::: zone pivot="windows"
-
 ## Configuration sections
 
 - [Device restrictions](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-devicerestrictions)
@@ -29,5 +27,3 @@ To accelerate the configuration of tenants, some common configurations based on 
 - [Windows Privacy](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy)
 - [Start menu customization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu)
 - [OneDrive Known Folder Move](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove)
-
-::: zone-end
