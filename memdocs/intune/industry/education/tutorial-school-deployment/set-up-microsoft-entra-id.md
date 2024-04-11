@@ -11,7 +11,7 @@ ms.author: scbree
 
 The Microsoft platform for education simplifies the management of Windows devices with Intune and Microsoft 365 Education. The first, fundamental step, is to configure the identity infrastructure to manage user access and permissions for your school.
 
-Microsoft Entra ID, which is included with the Microsoft 365 Education subscription, provides authentication and authorization to any Microsoft cloud services. Identity objects are defined in Microsoft Entra ID for human identities, like students and teachers, as well as non-human identities, like devices, services, and applications. Once users get Microsoft 365 licenses assigned, they'll be able to consume services and access resources within the tenant. With Microsoft 365 Education, you can manage identities for your teachers and students, assign licenses to devices and users, and create groups for the classrooms.
+Microsoft Entra ID, which is included with the Microsoft 365 Education subscription, provides authentication and authorization to any Microsoft cloud services. Identity objects are defined in Microsoft Entra ID for human identities, like students and teachers, as well as non-human identities, like devices, services, and applications. Withn Microsoft 365 licenses, users can consume services and access resources within the tenant. With Microsoft 365 Education, you can manage identities for your teachers and students, assign licenses to devices and users, and create groups for the classrooms.
 
 > [!div class="checklist"]
 >In this section you will:
@@ -23,7 +23,7 @@ Microsoft Entra ID, which is included with the Microsoft 365 Education subscript
 
 ## Create a Microsoft 365 tenant
 
-If you don't already have a Microsoft 365 tenant, you'll need to create one.
+If you don't already have a Microsoft 365 tenant, you need to create one.
 
 For more information, see [Create your Office 365 tenant account][M365-1]
 
@@ -44,12 +44,14 @@ For more information, see [Overview of the Microsoft 365 admin center][M365-2].
 
 ## Add users, create groups, and assign licenses
 
-With the Microsoft 365 tenant in place, it's time to add users, create groups, and assign licenses. All students and teachers need a user account before they can sign in and access the different Microsoft 365 services. There are multiple ways to do this, including using School Data Sync (SDS), synchronizing an on-premises Active Directory, manually, or a combination of the above.
+With the Microsoft 365 tenant in place, it's time to add users, create groups, and assign licenses. All students and teachers need a user account before they can sign in and access the different Microsoft 365 services. There are multiple ways to do this, including using School Data Sync (SDS), synchronizing an on-premises Active Directory, manually, or both.
 
 > [!NOTE]
-> Synchronizing your Student Information System (SIS) with School Data Sync is the preferred way to create students and teachers as users in a Microsoft 365 Education tenant. However, if you want to integrate an on-premises directory and synchronize accounts to the cloud, skip to [Microsoft Entra Connect Sync](#microsoft-entra-connect-sync) below.
+> Synchronizing your Student Information System (SIS) with School Data Sync is the preferred way to create students and teachers as users in a Microsoft 365 Education tenant. However, if you want to integrate an on-premises directory and synchronize accounts to the cloud, skip to [Microsoft Entra Connect Sync](#microsoft-entra-connect-sync).
 
 ### School Data Sync
+
+✅ Provision users and groups using your School Information System data
 
 School Data Sync (SDS) imports and synchronizes SIS data to create classes in Microsoft 365, such as Microsoft 365 groups and class teams in Microsoft Teams. SDS can be used to create new, cloud-only, identities or to evolve existing identities. Users evolve into *students* or *teachers* and are associated with a *grade*, *school*, and other education-specific attributes.
 
@@ -65,6 +67,8 @@ For more information, see [Overview of School Data Sync][SDS-1].
 
 ### Microsoft Entra Connect Sync
 
+✅ Configure sync between Active Directory and Microsoft Entra ID
+
 To integrate an on-premises directory with Microsoft Entra ID, you can use **Microsoft Entra Connect** to synchronize users, groups, and other objects. Microsoft Entra Connect lets you configure the authentication method appropriate for your school, including:
 
 - [Password hash synchronization][AAD-1]
@@ -74,6 +78,8 @@ To integrate an on-premises directory with Microsoft Entra ID, you can use **Mic
 For more information, see [Set up directory synchronization for Microsoft 365][O365-1].
 
 ### Create users manually
+
+✅ Create users one by one
 
 In addition to the above methods, you can manually add users and groups, and assign licenses through the Microsoft 365 admin center.
 
@@ -91,6 +97,8 @@ For more information, see [Add multiple users in the Microsoft 365 admin center]
 
 ### Create groups
 
+✅ Organize your users and devices
+
 Creating groups is important to simplify multiple tasks, like assigning licenses, delegating administration, deploy settings, applications or to distribute assignments to students. To create groups:
 
 1. Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
@@ -102,6 +110,8 @@ Creating groups is important to simplify multiple tasks, like assigning licenses
 For more information, see [Create a group in the Microsoft 365 admin center][M365-5].
 
 ### Assign licenses
+
+✅ Assign licenses to users
 
 The recommended way to assign licenses is through group-based licensing. With this method, Microsoft Entra ID ensures that licenses are assigned to all members of the group. Any new members who join the group are assigned the appropriate licenses, and when members leave, their licenses are removed.
 
@@ -118,7 +128,9 @@ For more information, see [Group-based licensing using Microsoft Entra admin cen
 
 ## Configure school branding
 
-Configuring your school branding enables a more familiar Autopilot experience to students and teachers. With a custom school branding, you can define a custom logo and a welcome message, which will appear during the Windows out-of-box experience.
+✅ Customize your tenant branding
+
+Configuring your school branding enables a more familiar Autopilot experience to students and teachers. With a custom school branding, you can define a custom logo and a welcome message, which is visible during the Windows out-of-box experience (OOBE).
 
 To configure your school's branding:
 
@@ -134,7 +146,7 @@ For more information, see [Add branding to your directory][AAD-5].
 
 ## Enable bulk enrollment
 
-If you decide to enroll Windows devices using provisioning packages instead of Windows Autopilot, you must ensure that the provisioning packages can join Windows devices to the Microsoft Entra tenant and admins creating the packages have the correct permissions to create packages.
+✅ Enable the use of provisioning packages
 
 To allow provisioning packages to complete the Microsoft Entra join process:
 
