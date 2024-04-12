@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 
 # optional metadata
@@ -127,6 +126,7 @@ As the Microsoft Intune administrator, you can control which work or school acco
 
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:
+   > - Copilot for iOS (28.1.420324001 and later)
    > - Edge for iOS (44.8.7 and later)
    > - Office, Word, Excel, PowerPoint for iOS (2.41 and later)
    > - OneDrive for iOS (10.34 and later)

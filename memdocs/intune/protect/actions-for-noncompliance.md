@@ -39,7 +39,7 @@ As part of a [compliance policy](../protect/device-compliance-get-started.md) th
 
 ## Overview
 
-By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Microsoft Entra [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
+By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliant, Microsoft Entra [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
 
 By configuring  **Actions for noncompliance** you gain flexibility to decide what to do about noncompliant devices, and when to do it. For example, you might choose to not block the device immediately, and give the user a grace period to become compliant.
 
@@ -145,7 +145,7 @@ When you enable this action:
 
 > [!NOTE]
 > The following actions for noncompliance are not supported for devices that are managed by a [device compliance management partner](../protect/device-compliance-partners.md):  
-> - Send push notification to end user
+> - Send email to end user
 > - Remotely lock the noncompliant device
 > - Add device to retire list
 > - Send push notification to end user
@@ -210,10 +210,14 @@ Add variables to the message to create a personalized email with dynamic content
 
       
    >[!IMPORTANT]
-   >  Be sure to only use Intune-supported HTML tags and attributes in the message body. Intune won't send a message that has other types of tags, elements, or styling, including: 
+   >  Be sure to only use Intune-supported HTML tags and attributes in the message body. Intune will send messages that contain other types of tags, elements, or styling as plaintext instead of HTML format. This includes messages that contain: 
    > - CSS  
    > - Tags and attributes not listed in this article 
-    
+
+
+   >[!NOTE]
+   > Intune converts Windows-style new line characters to `<br>` HTML tags but ignores all other types of new line characters, including those for macOS and Linux. To ensure line breaks render properly in templates, we recommend using the `<br>` tag to indicate the end of a line.
+
 
 5. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
 
@@ -232,6 +236,9 @@ Notifications that have been created are available in the *Compliance policies* 
 
   To successfully send the preview email, your account must have permissions equal to those of the following Microsoft Entra groups or Intune roles: *Microsoft Entra Global Administrator*, Intune *Administrator* (Intune Microsoft Entra Intune Service Administrator), or  Intune *Policy and Profile Manager*.
 - Select **Edit** for *Basics* or *Scope tags* to make a change.
+
+> [!NOTE]
+> The preview email doesn't contain the device variables that are specified in the notification message template. 
 
 ## Add actions for noncompliance
 

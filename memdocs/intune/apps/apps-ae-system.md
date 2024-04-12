@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - Android
+- FocusArea_Apps_Add
 ms.custom: intune-azure
 ---
 

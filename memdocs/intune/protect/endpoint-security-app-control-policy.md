@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 03/13/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -36,7 +34,7 @@ ms.reviewer: aanavath
 
 Every day new malicious files and apps appear in the wild. When run on devices in your organization they present a risk, which can be hard to manage or prevent. To help prevent undesired apps from running on your managed Windows devices, you can use Microsoft Intune *App Control for Business policies*.
 
-Intune's App Control for Business policies are part of endpoint security and use the Windows ApplicationControl CSP to manage allowed apps on Windows devices. 
+Intune's App Control for Business policies are part of endpoint security and use the Windows ApplicationControl CSP to manage allowed apps on Windows devices.
 
 Also available through App Control for Business policy, managed installer policy adds the *Intune Management Extension* to your Tenant as a managed installer. With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps can be identified by your  App Control for Business policies as safe apps that can be allowed to run on your devices.
 
@@ -438,13 +436,9 @@ You may have noticed instances of the Application Control policy in the Intune U
 
 ### What if I have multiple base or supplemental policies on the same device?
 
-From the Windows App Control for Business Docs, prior to Windows 10 1903, App Control for Business only supported a single active on a system at any given time. This significantly limits customers in situations where multiple policies with different intents would be useful.
+From the Windows App Control for Business Docs, prior to Windows 10 1903, App Control for Business only supported a single active policy on a system at any given time. This significantly limits customers in situations where multiple policies with different intents would be useful.
 
-Beginning with Windows 10 version 1903, WDAC supports **only** up to 32 active policies on a device before running into boot issues. [Learn more about the Known Issue here](/windows/security/threat-protection/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active). To avoid unintended device impact as a result of more than 32 active policies, you can:
-
-1. Use [CITool.exe](/windows/security/threat-protection/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting#1---gather-wdac-diagnostic-data) on the device to inventory policy count prior to deploying any new WDAC policies to that device.
-2. Consider [merging multiple WDAC policies](/windows/security/threat-protection/windows-defender-application-control/merge-windows-defender-application-control-policies#merge-multiple-wdac-policy-xml-files-together) prior to deployment if that meets your organization's needs.
-3. Redesign the WDAC policy plan for your organization to reduce the number of policies needed to ensure security and productivity.
+This issue is resolved for devices that run Windows 10 1903 or later with a Windows security update released on or after March 12, 2024. Older versions of Windows are expected receive this fix in future Windows security updates.
 
 ### Does the Managed Installer opt-in capability for my tenant set apps installed from Configuration Manager with the appropriate tag?
 
@@ -455,4 +449,3 @@ If setting Configuration Manager as the Managed Installer is desired, you can al
 ## Next Steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
-

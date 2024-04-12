@@ -19,6 +19,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Win32
 ---
 
 # Win32 app management in Microsoft Intune

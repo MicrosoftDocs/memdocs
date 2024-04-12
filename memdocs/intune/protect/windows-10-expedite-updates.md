@@ -7,13 +7,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/25/2023
+ms.date: 03/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.subservice: protect
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -100,7 +98,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 **Devices must**:
 
-- Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
+- Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM.
 
 - Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
 
@@ -193,8 +191,18 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    - When the update deploys, Windows Update ensures that each device that receives the policy installs a version of the update that applies to that devices architecture and its current Windows version, like version 1809, 2004, and so on.
 
-   > [!TIP]
-   > For more information, see the blog [Windows 10 update servicing cadence - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-update-servicing-cadence/ba-p/222376).
+   **Non-Security Expedite Updates**: includes quality fixes after the previous B / Security release. Admins can expedite installation of the latest applicable quality update on devices, without waiting for the deferral period.
+
+   - Updates without the word **SecurityUpdate** indicate that it is not a security update. Updates that include the letter **D** in their name identify updates that are released since the latest *patch Tuesday* security week. You might also see 2024.01 OOB Update (*out-of-band* patch releases). [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544)
+
+   - Non-security updates are only shown when it is the most recent release. The drop-down list is updated to display the most recent two security updates, including if one is an out-of-band update. If the most recent non-security update is newer than the newest security update, then the non-security update is also included in the drop-down list. As a result, sometimes two updates are shown, and at other times, three updates are shown.
+
+     > [!TIP]
+     > For more information, see the blog [Windows 10 update servicing cadence - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-update-servicing-cadence/ba-p/222376).
+
+   - The non-security expedite updates apply to Windows 11 devices. If Windows 10 devices are assigned to an Expedite policy that sets a **D** release, then those devices are not expedited and show an alert in the following reports.
+     - **Reports** > **Windows Updates** > **Reports** Tab > **Windows Expedited Update Report**
+     - **Devices** > **Windows 10 and later updates** > **Monitor** Tab > **Expedited quality update policies** with alerts tile, and click the title.
 
 5. In **Settings**, configure **Number of days to wait before forced reboot**. For this setting, select how soon after installing the update a device will automatically restart to complete the update installation. You can select from zero to two days. The automatic restart is canceled if a device manually restarts before the deadline. If an update doesn’t require a restart, this setting isn’t enforced.
 

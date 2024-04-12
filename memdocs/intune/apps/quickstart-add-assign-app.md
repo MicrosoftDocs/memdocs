@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- FocusArea_Apps_Add
 ---
 
 # Step 8: Add and assign an app

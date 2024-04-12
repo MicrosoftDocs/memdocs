@@ -8,12 +8,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/21/2023
+ms.date: 04/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -66,6 +65,9 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 The prerequisites for Remote Help on macOS are listed under [Supported devices](#supported-devices).
 
 If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help.
+
+> [!NOTE]
+> Remote Help for macOS is not supported on Microsoft Government Community Cloud (GCC) tenants.
 
 ## Supported devices
 

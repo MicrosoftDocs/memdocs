@@ -7,12 +7,11 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/13/2022
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:
 
 # optional metadata
@@ -80,7 +79,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Only the settings that aren't in conflict are merged. Settings that are in conflict are not added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
 
-Attack surface reduction rule merge behavior is as follows:  
+Attack surface reduction rule merge behavior is as follows:
 
 - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:  
   - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
@@ -148,9 +147,9 @@ To learn more, see [Attack surface reduction rules](/windows/security/threat-pro
 
 ## Application Guard
 
-For more information, see [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
+For more information, see [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.
 
-When you use Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.  
+When you use Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.
 
 - **Turn on Application Guard for Edge (Options)**  
   Baseline default: *Enabled for Edge*  

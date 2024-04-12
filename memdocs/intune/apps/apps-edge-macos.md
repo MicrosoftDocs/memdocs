@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.collection:
 - tier3
 - M365-identity-device-management
 - macOS
+- FocusArea_Apps_Add
 ---
 
 # Add Microsoft Edge to macOS devices using Microsoft Intune

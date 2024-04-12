@@ -43,23 +43,23 @@ Install your organization's preferred mobile threat defense (MTD) app on your de
 
 * [ActiveShield](https://apps.apple.com/app/activeshield/id980234260)
 * [Microsoft Defender for Endpoint](https://apps.apple.com/app/microsoft-defender-atp/id1526737990)
+* [Jamf](https://apps.apple.com)
 * [Lookout for Work](https://apps.apple.com/app/lookout-for-work/id997193468)
-* [Pradeo Security](https://apps.apple.com) 
+* [Pradeo Security](https://apps.apple.com)
 * [Harmony Mobile Protect](https://apps.apple.com/app/sandblast-mobile-protect/id1006390797)
 * [SEP Mobile](https://apps.apple.com/app/sep-mobile/id695620821)
 * [Sophos Intercept X for Mobile](https://apps.apple.com/app/sophos-mobile-security/id1086924662)
-* [Wandera](https://apps.apple.com)  
 * [Zimperium MTD](https://apps.apple.com/app/zimperium-zips/id1030924459)  
 
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
 
 * [Microsoft Defender for Endpoint](https://play.google.com/store/apps/details?id=com.microsoft.scmx)
+* [Jamf Trust](https://play.google.com/store/apps/details?id=com.wandera.android)
 * [Lookout for Work](https://play.google.com/store/apps/details?id=com.lookout.enterprise&hl)
 * [Pradeo Security](https://play.google.com/store/apps/details?id=net.pradeo.service)
 * [Harmony Mobile Protect](https://play.google.com/store/apps/details?id=com.lacoon.security.fox)
 * [SEP Mobile](https://play.google.com/store/apps/details?id=com.skycure.skycure)
 * [Sophos Intercept X for Mobile](https://play.google.com/store/apps/details?id=com.sophos.smsec)
-* [Jamf Trust](https://play.google.com/store/apps/details?id=com.wandera.android)
 * [Zimperium MTD](https://play.google.com/store/apps/details?id=com.zimperium.zips)
 
 ## Step 2: Activate MTD app 

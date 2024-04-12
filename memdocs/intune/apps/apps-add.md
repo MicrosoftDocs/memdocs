@@ -11,7 +11,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 
 ms.reviewer: bryanke
@@ -22,6 +21,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Add
 ---
 
 # Add apps to Microsoft Intune

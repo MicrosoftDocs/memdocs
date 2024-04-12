@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 
 # optional metadata

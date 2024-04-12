@@ -8,13 +8,11 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/13/2022
+ms.date: 04/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -65,9 +63,6 @@ A SCEP certificate is revoked *and* removed when:
 - An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
 - The device is removed from a Microsoft Entra group.
-
-A SCEP certificate is removed when:
-
 - A certificate profile is removed from the group assignment.
 
 A SCEP certificate is revoked when:

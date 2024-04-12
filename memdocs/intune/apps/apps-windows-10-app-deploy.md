@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 
 # optional metadata
@@ -31,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Deploy
 ---
 
 # Windows app deployment by using Microsoft Intune

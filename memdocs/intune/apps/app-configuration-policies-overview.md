@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
 
 # optional metadata 
@@ -30,6 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Configure
 ---
 
 # App configuration policies for Microsoft Intune

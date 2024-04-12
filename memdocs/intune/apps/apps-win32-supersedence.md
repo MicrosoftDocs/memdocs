@@ -11,7 +11,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 ms.reviewer: bryanke
@@ -21,6 +20,7 @@ ms.custom:
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Win32
 ---
 
 # Add Win32 app supersedence

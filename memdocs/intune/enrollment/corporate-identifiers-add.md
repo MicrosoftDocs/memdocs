@@ -42,7 +42,9 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 - [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS/iPadOS and Android).    
 - Enrolled as [Android Enterprise corporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
 - Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md).   
-- Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md).   
+- Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md).
+- Enrolled as [Android Open Source Project (AOSP) corporate-owned user-associated devices](./android-aosp-corporate-owned-user-associated-enroll.md)
+- Enrolled as [Android Open Source Project (AOSP) corporate-owned userless devices](./android-aosp-corporate-owned-userless-enroll.md)
 - Joined to Microsoft Entra with work or school credentials. [Devices that are Microsoft Entra registered](/entra/identity/devices/concept-device-registration) will be marked as personal.    
 - Set as corporate in the [device's properties list](#change-device-ownership).  
 
@@ -66,6 +68,8 @@ This feature is supported for the following platforms:
 | Android Enterprise corporate-owned work profile | Not supported | Not supported |
 | Android Enterprise fully managed | Not supported | Not supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
+| Android Open Source Project (AOSP) corporate-owned userless devices  |   Not supported | Not supported |
+| Android Open Source Project (AOSP) corporate-owned user-associated devices  |   Not supported | Not supported |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
