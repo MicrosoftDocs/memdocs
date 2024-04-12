@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/08/2024
+ms.date: 04/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -152,7 +152,7 @@ Group Policy settings override mobile device management policies, and the follow
 
 **Enable Windows Health Monitoring**:
 
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable [Windows Health Monitoring](../configuration/windows-health-monitoring.md). While configuring Windows Health Monitoring, be sure to set the **Scope** to **Windows updates**.
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting).
 
 ### Limitations for Workplace Joined devices
 

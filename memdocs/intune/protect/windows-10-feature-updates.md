@@ -98,6 +98,8 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
     - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
     - Windows Update for Business deployment service
 
+- Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
+
 - Feature updates are supported for the following Windows 10/11 editions:  
   - Pro
   - Enterprise
