@@ -65,43 +65,39 @@ To assign an app to groups by using the include and exclude assignment:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**. The list of added apps is shown.
 3. Select the app that you want to assign. A dashboard displays information about the app.
-4. In the **Manage** section of the menu, select **Assignments**.
+4. In the **Manage** section of the menu, select **Properties**.
 
-    ![Include app assignments when assigning apps](./media/apps-inc-exl-assignments/apps-inc-exl-01.png)
+    ![Include app assignments when assigning apps](https://github.com/MicrosoftDocs/memdocs/assets/114827544/231b18c4-31a2-468b-8747-b1800d2e6be5)
 
-5. Select **Add group** to add the groups of users who are assigned the app.
-6. In the **Add group** pane, select an **Assignment type** from the available assignment types.
-7. For the assignment type, select **Available with or without enrollment**.
+5. Select **Edit** next to **Assignments**.
+6. Select **Add all users** below **Available with or without enrollment** to assign this app to all users.
 
-    ![Intune app assignments - Add group](./media/apps-inc-exl-assignments/apps-inc-exl-02.png)
-8. Select **Included Groups** to select the group of users that you want to make this app available to.
+    ![Intune app assignments - Add all users](https://github.com/MicrosoftDocs/memdocs/assets/114827544/9ed306f6-77f3-4e08-9cee-b6eee6ac114c)
 
-    > [!NOTE]
-    > When you add a group, if any other group has already been included for a specific assignment type, the app is preselected and can't be modified for other include assignment types. The group that has been used can't be used as an included group.
+9. Select **Add group** below **Available with or without enrollment**.
+10. Select the **group** of **users** that you wish to exclude.
 
-9. Select **Yes** to make this app available to all users.
+    ![Intune app assignements - Select group](https://github.com/MicrosoftDocs/memdocs/assets/114827544/93353297-a313-46c0-9633-635cd4f16c0d)
 
-    ![Intune app assignments - Include groups](./media/apps-inc-exl-assignments/apps-inc-exl-03.png)
-10. Select **OK** to set the group to include.
-11. Select **Excluded Groups** to select the groups of users that you want to make this app unavailable to.
-12. Select the groups to exclude. This makes this app unavailable to those groups.
-
-    ![Intune app assignments - Exclude groups](./media/apps-inc-exl-assignments/apps-inc-exl-04.png)
 13. Select **Select** to complete your group selection.
-14. In the **Add group** pane, select **OK**. The app **Assignments** list appears.
-15. Click **Save** to make your group assignments active for the app.
 
-When you make group assignments, groups that have already been assigned aren't available to be modified. If you want to select a group that currently isn't available, first remove the app from the app's assigned list.
+    ![Intune app assignements - Included groups](https://github.com/MicrosoftDocs/memdocs/assets/114827544/02159d59-0bd3-4e0c-a42d-7d544c43b5fb)
+    
+    > [NOTE]
+    > By default, the groups you select are assigned in included mode.
+
+15. Select **Included** on the group line you have just assigned to define the group as excluded.
+
+    ![Intune assignements - Exclud group](https://github.com/MicrosoftDocs/memdocs/assets/114827544/1ec738e3-b1d4-4fd9-bf6c-91e5a56642a4)
+
+18. Select **OK** to set the group to be excluded.
+20. Select **Review + save** to complete your assignements.
+21. Review the summary of your modification and select **Save** to finish.
 
 To edit assignments, in the app **Assignments** list, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**.
 
 > [!NOTE]
 > Removing a group assignment does not remove the related app except on Android Enterprise dedicated, fully managed, and corporate-owned work profile devices. The installed app will remain on the device.  
-
-To change the view of the **Assignments** list, group by **Assignment type** or by **Included/Excluded**.
-
-![Intune app assignments - Complete](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
-
 ## Next steps
 
 - For more information about including and excluding group assignments for apps, see the [Microsoft Intune blog](https://aka.ms/new_app_assignment_process).
