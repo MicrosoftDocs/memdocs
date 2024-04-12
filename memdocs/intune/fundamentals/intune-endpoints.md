@@ -104,9 +104,9 @@ ID |Desc |Category |ER |Addresses |Ports
 
 ID |Desc |Category |ER |Addresses |Ports|
 -- |-- |-----|--- |--------------|--------------------------------|
-164 | Autopilot - Windows Update| Default<BR>Required | False | `*.download.windowsupdate.com`<BR>`*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`au.download.windowsupdate.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`download.windowsupdate.com`<BR>`dl.delivery.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`catalog.update.microsoft.com`<BR> | **TCP:** 80, 443|
-165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com`<BR>`www.msftncsi.com`<BR>`www.msftconnecttest.com` |**UDP:** 123, **TCP:** 80|
-169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`www.msftncsi.com`<BR>`c.s-microsoft.com` | **TCP:** 80, 443 |
+164 | Autopilot - Windows Update| Default<BR>Required | False | `*.download.windowsupdate.com`<BR>`*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`emdl.ws.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`au.download.windowsupdate.com`<BR>`2.dl.delivery.mp.microsoft.com`<BR>`download.windowsupdate.com`<BR>`dl.delivery.mp.microsoft.com`<BR>`geo.prod.do.dsp.mp.microsoft.com`<BR>`catalog.update.microsoft.com`<BR> | **TCP:** 443|
+165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com`<BR>`www.msftncsi.com`<BR>`www.msftconnecttest.com` |**UDP:** 123|
+169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`www.msftncsi.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 173 | Autopilot - 3rd party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
 182 | Autopilot - Diagnostics upload| Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR> | **TCP:** 443|
 
