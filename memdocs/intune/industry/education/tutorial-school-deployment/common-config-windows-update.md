@@ -2,16 +2,16 @@
 title: Common Education Windows Update configuration
 description: Learn about common Windows Update configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
-ms.topic: windows-updates
+ms.topic: windows-update
 author: yegor-a
 ms.author: egorabr
 ---
 
-# Common Education Windows Update configuration
+# Windows Update
 
 Create update rings that specify how and when Windows as a Service updates your Windows 10/11 devices with feature and quality updates.
 
-This document contains Windows Update ring configuration that is commonly used for 1:1 student and teacher devices.
+This document contains Windows Update ring configuration that is commonly used for student and teacher devices.
 
 ## Update rings for Windows 10 and later
 
@@ -19,8 +19,9 @@ This document contains Windows Update ring configuration that is commonly used f
 
 - [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings)
 - [The Windows Update policies you should set and why](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-windows-update-policies-you-should-set-and-why/ba-p/3270914)
-- [YouTube: 教育機関向け Microsoft Intune を使った Windows Update 管理](https://youtu.be/o6_eGOyv-_g)
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
+- [YouTube: Windows Update for Business Fundamentals (Japanese)](https://youtu.be/o6_eGOyv-_g)
+
 
 | **Update settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
@@ -35,7 +36,7 @@ This document contains Windows Update ring configuration that is commonly used f
 | **User experience settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
 | Automatic update behavior | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
-| Restart checks (EDU Restart) | Allow | Must not be disable for future compatibility. | [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart) |
+| Restart checks (EDU Restart) | Allow | Must not be disabled in existing Windows Update Rings. This setting is no longer available when creating a new Windows Update Ring policy.  | [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart) |
 | Option to pause Windows updates | Disable |     | [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
 | Option to check for Windows updates | Disable |     | [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
 | Change notification update level | Turn off all notifications, excluding restart warnings |     | [UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel) |
@@ -47,7 +48,7 @@ This document contains Windows Update ring configuration that is commonly used f
 
 ## Settings Catalog
 
-Settings described in this section aren't shown in an Update ring policy and should be configured as a Settings Catalog type Configuration Profile.
+Settings described in this section aren't available in an Update ring policy and should be configured using a Settings Catalog type Configuration Profile.
 
 #### Additional information:
 
@@ -77,7 +78,7 @@ There are two ways to control how and when Windows feature updates are installed
 
 ### Automatically keep Windows up to date
 
-Using the **update ring** you configured earlier, set the **Feature update deferral period (days)** to **30** days. The deferral period can be increased or decreased based on the needs of the based on school needs.
+Using the **update ring** you configured earlier, set the **Feature update deferral period (days)** to **30** days. The deferral period can be increased or decreased based on the school needs.
 
 ### Control feature version
 
@@ -94,4 +95,4 @@ To set a feature update policy:
 5. Under **Review + create**, review the settings. When ready to save the Feature updates policy, select **Create**.
 
 > [!WARNING]
-> If you don’t review the feature update version at least every 18 months, your Windows devices may no longer receive security updates. Ensure you review and update the feature version to stay supported. |
+> If you don’t review the feature update version at least every 18 months, your Windows devices may no longer receive security updates. Ensure you review and update the feature version to stay supported.
