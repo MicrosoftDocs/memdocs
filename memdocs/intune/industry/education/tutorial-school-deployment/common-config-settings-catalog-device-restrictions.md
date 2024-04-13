@@ -13,7 +13,7 @@ Tables in this article represent a list of device restrictions and configuration
 
 ## Organization-specific settings
 
-Configure these settings to personalize user experience and simplify the Windows sign-in process. Values for these settings should be defined by an Intune administrator according to the environment.
+Configure these settings to personalize user experience and simplify the Windows sign-in process. Values for these settings should be defined according to the environment.
 
 #### Additional information:
 
@@ -28,7 +28,7 @@ Configure these settings to personalize user experience and simplify the Windows
 
 ## General restrictions
 
-These are commonly applied device restrictions in education.
+Commonly applied device restrictions in education.
 
 #### Additional information:
 
