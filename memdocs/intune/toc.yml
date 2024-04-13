@@ -1805,16 +1805,16 @@ items:
             href: ./industry/education/tutorial-school-deployment/common-config-overview.md
           - name: Intune Policies for Windows in Education
             items:
-            - name: Device restrictions
-              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-devicerestrictions.md
-            - name: Windows Update policies
-              href: ./industry/education/tutorial-school-deployment/common-config-windows-updates.md
+            - name: Device Restrictions
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md
+            - name: Windows Update
+              href: ./industry/education/tutorial-school-deployment/common-config-windows-update.md
             - name: Microsoft Edge
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md
             - name: Delivery Optimization
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
-            - name: Privacy policies
-              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy.md
+            - name: Windows Privacy
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy.md
             - name: Start Menu customization
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
             - name: OneDrive Known Folder Move
