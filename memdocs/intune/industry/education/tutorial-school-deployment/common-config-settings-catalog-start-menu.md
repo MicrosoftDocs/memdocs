@@ -11,7 +11,7 @@ ms.author: egorabr
 
 To create a unified user experience, an Intune administrator can deploy a customized Start and taskbar layout to managed Windows 10 and later devices.
 
-[!NOTE]
+> [!NOTE]
 > This is an optional policy
 
 #### Additional information:

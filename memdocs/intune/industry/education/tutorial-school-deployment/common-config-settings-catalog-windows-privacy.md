@@ -11,7 +11,7 @@ ms.author: egorabr
 
 Settings described in this article should only be deployed after careful consideration as they're affecting users’ privacy.
 
-[!NOTE]
+> [!NOTE]
 > This is an optional policy
 
 #### Additional information:

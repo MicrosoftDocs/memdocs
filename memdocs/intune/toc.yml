@@ -1815,7 +1815,7 @@ items:
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
             - name: Windows Privacy
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy.md
-            - name: Start Menu customization
+            - name: Start Menu Customization
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
             - name: OneDrive Known Folder Move
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md

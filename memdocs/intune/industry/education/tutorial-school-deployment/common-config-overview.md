@@ -20,7 +20,7 @@ Intune is a powerful tool that can help Education organizations manage their dev
 - [Device Restrictions](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions)
 - [Windows Update](/mem/intune/industry/education/tutorial-school-deployment/common-config-windows-update)
 - [Microsoft Edge](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge)
-- [Windows Delivery Optimization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
+- [Delivery Optimization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
 
 ### Optional
 

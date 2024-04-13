@@ -11,7 +11,7 @@ ms.author: egorabr
 
 For devices used by the same user all the time (1:1 scenario) it is common to enable OneDrive Known Folder Move to redirect user’s Documents, Desktop and Pictures folders to OneDrive to prevent data loss.
 
-[!NOTE]
+> [!NOTE]
 > This is an optional policy
 
 #### Additional information:
@@ -42,4 +42,4 @@ For devices used by the same user all the time (1:1 scenario) it is common to en
 | **Silently sign in users to the OneDrive sync app with their Windows credentials** | Enabled | Users who are signed in on a PC that's joined to Microsoft Entra ID can set up the sync app without entering their account credentials. | [SilentAccountConfig](/sharepoint/use-group-policy#silently-sign-in-users-to-the-onedrive-sync-app-with-their-windows-credentials) |
 | **Use OneDrive Files On-Demand** | Enabled | New users who set up the sync app see online-only files in File Explorer, by default. | [FilesOnDemandEnabled](/sharepoint/use-group-policy#use-onedrive-files-on-demand) |
 | **Warn users who are low on disk space** | Enabled | Only enables the setting configuration. | [WarningMinDiskSpaceLimitInMB](/sharepoint/use-group-policy#warn-users-who-are-low-on-disk-space) |
-| **Warn users who are low on disk space\Minimum available disk space: (Device)** | 2048 | | [WarningMinDiskSpaceLimitInMB](/sharepoint/use-group-policy#warn-users-who-are-low-on-disk-space) |
+| **Warn users who are low on disk space\Minimum available disk space: (Device)** | 2048 |  Specify a miminimum amount of available disk space in MB, and warn users when the OneDrive sync app (OneDrive.exe) downloads a file that causes them to have less than this amount. | [WarningMinDiskSpaceLimitInMB](/sharepoint/use-group-policy#warn-users-who-are-low-on-disk-space) |
