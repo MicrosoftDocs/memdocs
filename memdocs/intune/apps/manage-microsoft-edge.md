@@ -678,7 +678,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled	| DefaultSearchProviderEnabled|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
-|com.microsoft.intune.mam.managedbrowser.Chat | EdgeChat|
+|com.microsoft.intune.mam.managedbrowser.Chat | EdgeCopilotEnabled |
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
 
 ## Deploy app configuration scenarios with Microsoft Intune
