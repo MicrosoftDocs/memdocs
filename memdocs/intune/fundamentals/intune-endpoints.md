@@ -78,17 +78,17 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 
 The data columns shown in the tables are:
 
-**ID**: The ID number of the row, also known as an endpoint set. This ID is the same as is returned by the web service for the endpoint set.
+- **ID**: The ID number of the row, also known as an endpoint set. This ID is the same as is returned by the web service for the endpoint set.
 
-**Category**: Shows whether the endpoint set is categorized as **Optimize**, **Allow**, or **Default**. This column also lists which endpoint sets are required to have network connectivity. For endpoint sets that aren't required to have network connectivity, we provide notes in this field to indicate what functionality would be missing if the endpoint set is blocked. If you're excluding an entire service area, the endpoint sets listed as required don't require connectivity.
+- **Category**: Shows whether the endpoint set is categorized as **Optimize**, **Allow**, or **Default**. This column also lists which endpoint sets are required to have network connectivity. For endpoint sets that aren't required to have network connectivity, we provide notes in this field to indicate what functionality would be missing if the endpoint set is blocked. If you're excluding an entire service area, the endpoint sets listed as required don't require connectivity.
 
-You can read about these categories and guidance for their management in [New Microsoft 365 endpoint categories](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?#new-office-365-endpoint-categories).
+  You can read about these categories and guidance for their management in [New Microsoft 365 endpoint categories](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?#new-office-365-endpoint-categories).
 
-**ER**: This is Yes/True if the endpoint set is supported over Azure ExpressRoute with Microsoft 365 route prefixes. The BGP community that includes the route prefixes shown aligns with the service area listed. When ER is No / False, then ExpressRoute isn't supported for this endpoint set.
+- **ER**: This is Yes/True if the endpoint set is supported over Azure ExpressRoute with Microsoft 365 route prefixes. The BGP community that includes the route prefixes shown aligns with the service area listed. When ER is No / False, then ExpressRoute isn't supported for this endpoint set.
 
-**Addresses**: Lists the FQDNs or wildcard domain names and IP address ranges for the endpoint set. Note that an IP address range is in CIDR format and may include many individual IP addresses in the specified network.
+- **Addresses**: Lists the FQDNs or wildcard domain names and IP address ranges for the endpoint set. Note that an IP address range is in CIDR format and may include many individual IP addresses in the specified network.
 
-**Ports**: Lists the TCP or UDP ports that are combined with listed IP addresses to form the network endpoint. You may notice some duplication in IP address ranges where there are different ports listed.
+- **Ports**: Lists the TCP or UDP ports that are combined with listed IP addresses to form the network endpoint. You may notice some duplication in IP address ranges where there are different ports listed.
 
 ### Intune core service
 
@@ -169,7 +169,11 @@ For Delivery Optimization metadata:
 | --- | ---- | -------- | ----- | --------- | ----- |
 | 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`5-courier.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> |**TCP:** 80, 443, 5223|
 
-For more information, see [Use Apple products on enterprise networks](https://support.apple.com/HT210060), [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).
+For more information, see the following resources:
+- [Use Apple products on enterprise networks](https://support.apple.com/HT210060)
+- [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
+- [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999)
+- [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609)
 
 #### Android AOSP dependencies
 
@@ -179,7 +183,7 @@ For more information, see [Use Apple products on enterprise networks](https://su
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
-Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
+Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
 **Android port information** - Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android).
 
@@ -203,7 +207,7 @@ ID |Desc |Category |ER |Addresses |Ports|
 150 | Office Customization Service provides Office 365 ProPlus deployment configuration, application settings, and cloud based policy management. | Default | False |`*.officeconfig.msocdn.com`<BR>`config.office.com`| **TCP:** 443|
 59 | Identity supporting services & CDNs. | Default<BR>Required | False |`enterpriseregistration.windows.net`<BR>| **TCP:** 80, 443|
 
-For More information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
+For more information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).
 
 <!-- Older table. Will be removed soon after all the other new tables are finalized. This may take until April 2024
 You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to. When you run the script, the URL list in the script output can be different then the URLs in the following table. At a minimum, make sure you include the URLs in the following table.
@@ -296,7 +300,7 @@ The following tables list the ports and services that the Intune client accesses
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
+To find your tenant location (or Azure Scale Unit (ASU), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
 
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
@@ -400,7 +404,7 @@ For more information on the required endpoints for Endpoint analytics, see [Endp
 
 ## Microsoft Defender for Endpoint
 
-For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements)
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements).
 
 Allow the following hostnames through your firewall to support Defender for Endpoint security settings management.
 For communication between clients and the cloud service:
@@ -422,7 +426,7 @@ For communication between clients and the cloud service:
   > [!IMPORTANT]
   > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
-For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
+For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
 
 ## Related topics
 
