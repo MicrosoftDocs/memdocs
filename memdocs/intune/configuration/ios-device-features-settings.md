@@ -83,11 +83,11 @@ To add AirPrint servers, you can:
 To add AirPrinter servers, you need the IP address of the printer, the resource path, and the port. The following steps show you how to get this information.
 
 1. On a Mac that connects to the same local network (subnet) as the AirPrint printers, open the **Terminal** app (from **/Applications/Utilities**).
-2. In the Terminal, type `ippfind`, and select enter.
+2. In the Terminal app, enter `ippfind`, and select enter.
 
     Note the printer information. For example, it can return something like `ipp://myprinter.local.:631/ipp/port1`. The first part is the name of the printer. The last part (`ipp/port1`) is the resource path.
 
-3. In the Terminal app, type `ping myprinter.local`, and select enter.
+3. In the Terminal app, enter `ping myprinter.local`, and select enter.
 
    Note the IP address. For example, it can return something like `PING myprinter.local (10.50.25.21)`.
 
@@ -388,8 +388,8 @@ This feature applies to:
 
 - **Set as default realm** (Kerberos only): **Yes** sets the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
-  - If you're configuring multiple Kerberos SSO app extensions in your organization, select **Yes**.
-  - If you're using multiple realms, select **Yes**. It sets the **Realm** value you entered as the default realm.
+  - If you're configuring multiple Kerberos SSO app extensions in your organization, then select **Yes**.
+  - If you're using multiple realms, then select **Yes**. It sets the **Realm** value you entered as the default realm.
   - If you only have one realm, select **Not configured** (default).
 
 - **Block Autodiscover** (Kerberos only): **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name. When set to **Not configured** (default), Intune doesn't change or update this setting.
