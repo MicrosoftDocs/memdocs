@@ -432,6 +432,6 @@ This setting applies to:
 
 ## Related articles
 
--[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 - Configure device features on [iOS/iPadOS](ios-device-features-settings.md).
