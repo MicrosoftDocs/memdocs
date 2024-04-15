@@ -44,8 +44,8 @@ Set up enrollment notifications in Microsoft Intune to notify employees of newly
 Enrollment notifications are supported on these devices:   
 
 * Android devices in bring-your-own-device (BYOD) scenarios    
-* iOS/iPadOS devices in BYOD scenarios      
-* Macs   
+* iOS/iPadOS devices in BYOD scenarios, which includes device enrollment. This does not include user enrollment at this time. 
+* macOS devices in BYOD scenarios, which includes device enrollment.    
 * Devices running Windows 10/11, excluding Microsoft Entra hybrid joined devices
 * Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment    
 
@@ -78,7 +78,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 4. Apple and Android notifications are supported on iOS, macOS, Android Enterprise, and Android device administrator, respectively. Select the tab that corresponds to the OS you're managing.  
 
     Your options for Apple enrollment are:  
-      * **iOS Notifications**  
+      * **iOS/iPadOS Notifications**  
       * **macOS Notifications**  
 
    Your options for Android enrollment are:  
