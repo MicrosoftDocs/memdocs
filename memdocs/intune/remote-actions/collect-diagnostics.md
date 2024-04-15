@@ -44,9 +44,12 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application. 
 
 > [!IMPORTANT]
-> For Android devices, if the Managed Home Screen isn't signed in by the user, logs will not be available for download in the Intune portal. 
+> For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. 
 
-Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user must also close and reopen the application for the request to display.
+Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user may be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
+
+> [!NOTE]
+> Currently, the Intune app protection logs for iOS will be unavailable for you to download. However, Intune support teams will have access to these the logs. 
 
 ## Collect diagnostics from a Windows device
 
