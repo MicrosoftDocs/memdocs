@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/27/2024
+ms.date: 04/15/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -128,6 +128,7 @@ The following features aren't yet supported for Windows 365 Frontline.
 
 - GPU Cloud PCs
 - Resize a Cloud PC remote action
+- [Move a Cloud PC](move-cloud-pc.md)
 
 ## Next steps
 
