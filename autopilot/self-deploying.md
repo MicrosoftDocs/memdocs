@@ -61,7 +61,7 @@ Optionally, you can use a [device-only subscription](https://techcommunity.micro
 
 > [!NOTE]
 >
-> Self-deploying mode doesn't presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Microsoft Entra ID and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
+> Intune does not automatically configure a primary user when you use self-deploying mode in Autopilot to provision a Windows device. Some Intune capabilities rely on a primary user being set on a device (which you can [manually do in the Intune admin center](../mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user) after device provisioning if desired). These features include BitLocker user self-service recovery key retrieval and using the Company Portal to install software. Using self-provisioning mode for Autopilot does not preclude a licensed user from logging into the device and using features entitled to licensed users such as conditional access. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).
 
 ## Requirements
 
