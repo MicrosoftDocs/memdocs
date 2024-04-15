@@ -55,9 +55,6 @@ There are two ways to manage settings in Intune for Education:
 
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
-> [!TIP]
-> To learn more, and practice step-by-step Express Configuration in Intune for Education, try [this interactive demo](https://www.microsoft.com/education/interactive-demos/deploy-apps-and-policies).
-
 ::: zone-end
 
 ::: zone pivot="ios"

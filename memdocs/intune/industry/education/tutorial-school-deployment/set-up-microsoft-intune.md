@@ -48,7 +48,7 @@ Before configuring settings with Intune, consider the following prerequisites:
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
 
-## Configure the Intune service for education devices
+## Configure the Intune service for Education devices
 
 The Intune service can be configured in different ways, depending on the needs of your school. In this section, you configure the Intune service using settings commonly implemented by K-12 school districts.
 
@@ -80,7 +80,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 - Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune/apps/company-portal-app).
 - Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](/mem/intune/enrollment/terms-and-conditions-create).
 
-## Configure the Intune service for Windows education devices
+## Configure the Intune service for Windows Education devices
 
 These steps are only required if you plan to manage Windows devices in your school.
 
@@ -174,10 +174,12 @@ For more information, see [Enable use of Windows diagnostic data by Intune](/mem
 1. Select **Tenant administration** > **Device diagnostics**
 1. Configure settings as per your requirements
 
-    | Setting | Common configuration |
-    | --- | --- |
-    | Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name | Enabled |
-    | Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
+This table provides the settings most commonly set by customers, but can be customized to suit your schools needs.
+
+| Setting | Common configuration |
+| --- | --- |
+| Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name | Enabled |
+| Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
 
 For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
@@ -201,8 +203,7 @@ This table provides the settings most commonly set by customers, but can be cust
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show custom message when time limit or error occurs | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Turn on log collection and diagnostics page for end users | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until all apps and profiles are installed | Yes |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | Windows Autopilot Deployment Program\\Deployment Profiles | Create Windows Autopilot deployment profiles according to organization policies |     |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until required apps are installed if they are assigned to the user/device | *All* or *Selected* with the minimum apps required. <br><br>For example, Microsoft 365 apps or web content filtering softtware |
 
 ---
 
