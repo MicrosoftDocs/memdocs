@@ -87,13 +87,13 @@ For more information about device IDs, see the following articles:
 
 ## Windows Autopilot devices
 
-Devices that have been registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**:
+Devices that have been registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**:
 
-![Autopilot devices](images/ap-devices.png)
+![Autopilot Devices](https://github.com/MicrosoftDocs/memdocs/assets/114827544/ed7b903d-ab26-41ff-a249-292c0f600406)
 
 > [!NOTE]
 >
-> Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
+> Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
 
 > - The Autopilot registration process is successful.
 > - A [licensed](licensing-requirements.md) user has signed in on the device.
