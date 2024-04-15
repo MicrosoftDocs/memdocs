@@ -138,7 +138,7 @@ Intune needs permission to collect data for Endpoint analytics on Windows device
 To enable data collection:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Reports* > **Endpoint analytics** > **Settings**
+1. Select **Reports** > **Endpoint analytics** > **Settings**
 1. Under **Intune data collection policy**, select **Intune data collection policy**
     :::image type="content" source="./images/intune-data-collection-policy.png" alt-text="Selecting the Intune data collection policy." lightbox="./images/intune-data-collection-policy.png":::
 1. Select **Properties**
