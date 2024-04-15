@@ -10,20 +10,20 @@ ms.author: egorabr
 
 # Common Education configuration overview
 
-To accelerate the configuration of tenants, some common configurations based on customer engagements and collated into this common configuration reference. These settings could help ensure the security and compliance of your devices and data, while optimizing the user experience for your students and staff. These settings can be used for configuring a new tenant or as a reference.
+Intune is a powerful tool that can help Education organizations manage their devices and data efficiently. However, configuring the right settings can be a time-consuming task, especially for those new to the platform. To help accelerate the process, we have assembled common configurations based on customer engagements into this reference document. These settings can help ensure the security and compliance of your devices and data, while maximizing the user experience for your students and staff. Whether you're setting up a new tenant or need a quick reference guide, this document is a valuable resource for any Education organization looking to optimize their use of Intune.
 
 > [!NOTE]
 > Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies.
 
 ## Configuration sections
 
-- [Device restrictions](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-devicerestrictions)
-- [Windows Update policies](/mem/intune/industry/education/tutorial-school-deployment/common-config-windows-updates)
+- [Device Restrictions](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions)
+- [Windows Update](/mem/intune/industry/education/tutorial-school-deployment/common-config-windows-update)
 - [Microsoft Edge](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge)
-- [Windows Delivery Optimization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
+- [Delivery Optimization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
 
 ### Optional
 
-- [Windows Privacy](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-privacy)
-- [Start menu customization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu)
+- [Windows Privacy](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy)
+- [Start Menu Customization](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu)
 - [OneDrive Known Folder Move](/mem/intune/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove)

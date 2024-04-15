@@ -9,9 +9,11 @@ ms.author: egorabr
 
 # Delivery Optimization
 
-Windows updates, upgrades, and applications can contain packages with large files. Downloading and distributing updates can consume quite a bit of network resources on the devices receiving them.
+Windows Delivery Optimization helps you get Windows updates and Microsoft Store apps more quickly and reliably.
 
-Delivery Optimization is a reliable HTTP downloader with a cloud-managed solution that allows Windows devices to download those packages from peers on the same network.
+Delivery Optimization works by letting you get Windows updates and Microsoft Store apps from sources in addition to Microsoft, like other PCs on your local network, or PCs on the internet that are downloading the same files. Delivery Optimization also sends updates and apps from your PC to other PCs on your local network or PCs on the internet, based on your settings. Sharing this data between PCs helps reduce the internet bandwidth that’s needed to keep more than one device up to date or can make downloads more successful if you have a limited or unreliable Internet connection.
+
+Delivery Optimization creates a local cache, and stores files that it has downloaded in that cache for a short period of time.
 
 #### Additional information
 
@@ -20,12 +22,12 @@ Delivery Optimization is a reliable HTTP downloader with a cloud-managed solutio
 
 ## Settings Catalog Policies
 
-  | **Settings Catalog** | **Value** | **Notes** | **CSP** |
-  |---|---|---|---|
-  | **DO Delay Background Download From Http** | 3600 | After the max delay has reached, the download will resume using HTTP, either downloading the entire payload or complementing the bytes that couldn't be downloaded from Peers. | [DODelayBackgroundDownloadFromHttp](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodelaybackgrounddownloadfromhttp) |
-  | **DO Download Mode** | HTTP blended with peering behind the same NAT. | | [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) |
-  | **DO Max Cache Age** | 1209600 | 14 days in seconds | [DOMaxCacheAge](/windows/client-management/mdm/policy-csp-deliveryoptimization#domaxcacheage) |
-  | **DO Min Disk Size Allowed To Peer** | 100 | Specifies the required minimum disk size (capacity in GB) for the device to use Peer Caching. Recommended values: 64 GB to 256 GB.Adjust as necessary according to your hardware. | [DOMinDiskSizeAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#domindisksizeallowedtopeer) |
-  | **DO Min File Size To Cache** | 5 | | [DOMinFileSizeToCache](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominfilesizetocache) |
-  | **DO Min RAM Allowed To Peer** | 2 | | [DOMinRAMAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominramallowedtopeer) |
-  | **DO Restrict Peer selection By** | Subnet mask | | [DORestrictPeerSelectionBy](/windows/client-management/mdm/policy-csp-deliveryoptimization#dorestrictpeerselectionby) |
+| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+|---|---|---|---|
+| **DO Delay Background Download From Http** | 3600 | 1 hour in seconds. After the max delay has reached, the download will resume using HTTP, either downloading the entire payload or complementing the bytes that couldn't be downloaded from Peers. | [DODelayBackgroundDownloadFromHttp](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodelaybackgrounddownloadfromhttp) |
+| **DO Download Mode** | HTTP blended with peering behind the same NAT. | | [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) |
+| **DO Max Cache Age** | 1209600 | 14 days in seconds. Specifies the maximum time in seconds that each file is held in the Delivery Optimization cache after downloading successfully. | [DOMaxCacheAge](/windows/client-management/mdm/policy-csp-deliveryoptimization#domaxcacheage) |
+| **DO Min Disk Size Allowed To Peer** | 100 | Specifies the required minimum disk size (capacity in GB) for the device to use Peer Caching. Recommended values: 64 GB to 256 GB.Adjust as necessary according to your hardware. | [DOMinDiskSizeAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#domindisksizeallowedtopeer) |
+| **DO Min File Size To Cache** | 5 | Specifies the minimum content file size in MB enabled to use Peer Caching. | [DOMinFileSizeToCache](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominfilesizetocache) |
+| **DO Min RAM Allowed To Peer** | 2 | Specifies the minimum RAM size in GB required to use Peer Caching. | [DOMinRAMAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominramallowedtopeer) |
+| **DO Restrict Peer selection By** | Subnet mask | Set this policy to restrict peer selection | [DORestrictPeerSelectionBy](/windows/client-management/mdm/policy-csp-deliveryoptimization#dorestrictpeerselectionby) |
