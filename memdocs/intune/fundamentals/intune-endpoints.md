@@ -404,7 +404,7 @@ For more information on the required endpoints for Endpoint analytics, see [Endp
 
 ## Microsoft Defender for Endpoint
 
-For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements)
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements).
 
 Allow the following hostnames through your firewall to support Defender for Endpoint security settings management.
 For communication between clients and the cloud service:
@@ -426,7 +426,7 @@ For communication between clients and the cloud service:
   > [!IMPORTANT]
   > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
-For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
+For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
 
 ## Related topics
 
