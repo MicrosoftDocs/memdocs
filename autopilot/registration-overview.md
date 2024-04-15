@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/25/2023
+ms.date: 04/15/2024
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -88,8 +88,6 @@ For more information about device IDs, see the following articles:
 ## Windows Autopilot devices
 
 Devices that have been registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**:
-
-![Autopilot Devices](https://github.com/MicrosoftDocs/memdocs/assets/114827544/ed7b903d-ab26-41ff-a249-292c0f600406)
 
 > [!NOTE]
 >
