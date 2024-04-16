@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure macOS Enterprise SSO plug-in with MDM
-description: Learn more about the Microsoft Enterprise SSO plug-in. Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro, and other MDM solution providers.
+title: Configure macOS Enterprise SSO app extension with MDMs
+description: Learn more about the Microsoft Enterprise SSO plug-in. Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,13 +29,20 @@ ms.collection:
 
 # Use the Microsoft Enterprise SSO plug-in on macOS devices
 
+> [!IMPORTANT]
+> This article is a final draft and ready for PM review. It will go live when platform SSO goes live. **Delete this note before publishing**.
+
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
 This article applies to:
 
 - macOS
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in for macOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
+This article shows how to create an SSO app extension configuration policy for macOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
+
+## App support
+
+[!INCLUDE [Apple SSO app support](../includes/apple-enterpsie-sso-app-support.md)]
 
 ## Prerequisites
 
@@ -47,6 +54,7 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 - The device must support the plug-in:
   - macOS 10.15 and newer
 - The Microsoft Company Portal app must be installed and configured on the device.
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#requirements).
 
 # [Jamf Pro](#tab/prereq-jamf-pro)
 
@@ -55,10 +63,12 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
   - macOS 10.15 and newer
 - The Microsoft Company Portal app must be installed on the device.
 
-  The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, go to [Package Management - Adding a Package to Jamf Admin](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Package_Management.html#ariaid-title4) (opens Jamf Pro's web site).
+  Users can install the Company Portal app manually. Or, admins can deploy the app using Jamf Pro. For a list of options on how to install the Company Portal app, go to [Package Management - Adding a Package to Jamf Admin](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Package_Management.html#ariaid-title4) (opens Jamf Pro's web site).
 
-> [!NOTE]
-> On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+  > [!NOTE]
+  > On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#requirements).
 
 # [Other MDMs](#tab/prereq-other-mdm)
 
@@ -68,18 +78,26 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
   - macOS 10.15 and newer
 - The Microsoft Company Portal app must be installed on the device.
 
-  The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM policy. You can [download the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
+  Users can install the Company Portal app manually. Or, admins can deploy the app using an MDM policy. You can [download the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
 
-> [!NOTE]
-> On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+  > [!NOTE]
+  > On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
 
---- 
+- The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#requirements).
+
+---
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
-For more information on the single sign-on extension, go to [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
+For more information on the SSO app extension, go to [SSO overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md).
 
-## Create a single sign-on app extension configuration profile
+## Create a single sign-on app extension configuration policy
+
+The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra includes two SSO features - **platform SSO** and the **SSO app extension**.
+
+Platform SSO and the SSO app extension work together. Platform SSO handles the initial device sign-in, and the SSO app extension handles the sign-in for apps and websites that use Microsoft Entra ID for authentication.
+
+This section shows how to create an SSO app extension policy. For information on platform SSO, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
 # [Intune](#tab/create-profile-intune)
 
@@ -98,7 +116,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Microsoft Enterprise SSO plug-in**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: SSO app extension**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -116,17 +134,17 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       When you're done configuring the recommended settings, the settings look similar to the following values in your Intune configuration profile:
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO plug-in on macOS devices in Intune.":::
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO app extension plug-in on macOS devices in Intune.":::
 
 8. Continue creating the profile, and assign the profile to the users or groups that will receive these settings. For the specific steps, go to [Create the profile](device-features-configure.md#create-the-profile).
 
     For guidance on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
-When the device checks in with the Intune service, it will receive this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
+When the policy is ready, you assign the policy to your users. Microsoft recommends you assign the policy when the device enrolls in Intune. But, it can be assigned at any time, including on existing devices. When the device checks in with the Intune service, it will receive this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
 
 To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Configuration** > select the profile you created and generate a report:
 
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the macOS device configuration profile deployment report in Intune.":::
+:::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the macOS device configuration profile deployment report in Microsoft Intune.":::
 
 # [Jamf Pro](#tab/create-profile-jamf-pro)
 
@@ -200,7 +218,7 @@ In the MDM portal, create a device configuration profile. This profile include
 
 1. Sign in to the MDM portal.
 2. Create a new device configuration profile.
-3. Select an option called **Single Sign-On Extensions** or **SSO extension**. The name may vary depending on your MDM of choice.
+3. Select an option called **Single Sign-On Extensions** or **SSO extension**. The name can vary depending on your MDM of choice.
 4. Enter the following properties:
 
     | **Key** | **Value** |
