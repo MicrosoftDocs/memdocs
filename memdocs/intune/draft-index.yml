@@ -16,18 +16,25 @@ metadata:
 
 highlightedContent:
   items:
-    - title: Get to know Microsoft Intune
+    - title: What is Intune?
+      itemType: overview
+      url: ./intune/fundamentals/what-is-intune.md
+    - title: What's new in Intune
+      itemType: overview
+      url: ./intune/fundamentals/whats-new.md
+    - title: Features in development
+      itemType: overview
+      url: ./intune/fundamentals/in-development.md
+    - title: Microsoft Intune Suite add-ons
+      itemType: overview
+      url: ./intune/fundamentals/intune-add-ons.md
+    - title: Get to know Intune capabilities
       itemType: overview
       url: /mem/draft-hub#additional-in-depth-resources
     - title: Plan a move to Intune
       itemType: overview
       url: /mem/draft-hub#additional-in-depth-resources
-    - title: Intune news
-      itemType: overview
-      url: /mem/draft-hub#intune-news
-    - title: Microsoft Intune Suite add-ons
-      itemType: overview
-      url: ./intune/fundamentals/intune-add-ons.md
+
 
 # productDirectory section (optional)
 productDirectory:
@@ -38,10 +45,8 @@ productDirectory:
     - title: Multifactor Authentication
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - text: test
-          url: https://1
-        - text: test2
-          url: https://2
+        - url: 
+
     # Card
     - title: Help secure devices
       imageSrc: ./media/microsoft-intune.svg
@@ -84,15 +89,12 @@ conceptualContent:
   - title: Additional in-depth resources
     summary: "Go beyond the documentation with videos, blogs, training guides, communities and more from Microsoft Experts and partners"
     items:
-      - title: Get to know Intune
-        summary: Resources to see Intune capabilities, get to know the admin center, and then set up a trial environment
+      - title: Get to know Intune capabilities
+        summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment
         links:
-        - url: ./intune/fundamentals/what-is-intune.md
-          itemType: overview
-          text: What is Intune?
         - url: ./intune/fundamentals/account-sign-up.md
           itemType: how-to-guide
-          text: Interactive Guided Tour of Intune <need link>
+          text: Interactive Guided Tour of Intune
         - url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md  
           itemType: how-to-guide
           text: Walkthrough the Intune Admin Center
@@ -104,9 +106,9 @@ conceptualContent:
           text: Create a Microsoft 365 Developer tenant for a longer trial
         - url: https://youtu.be/4x7NDxdEo94?feature=shared
           itemType: how-to-guide
-          text: Watch a tutorial to set up Intune on Developer (community)
+          text: Watch a tutorial to set up Intune on Developer 
 
-      - title: Plan a move to Intune
+      - title: Learn how to migrate to Intune
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune
         links:
         - text: Set up or move to Intune
@@ -164,35 +166,31 @@ conceptualContent:
           itemType: how-to-guide
           url: /training/paths/endpoint-manager-fundamentals/
 
-      - title: Intune news
-        summary: <revise> Checkout Intune community resources for blogs, announcements, discussions, and more 
+      - title: Intune community resources
+        summary: Checkout Intune community resources for blogs, announcements, discussions, and more 
         links:
-          - url: ./intune/fundamentals/whats-new.md
-            itemType: overview
-            text: What's new in Intune
-          - url: ./intune/fundamentals/in-development.md
-            itemType: overview
-            text: Features in development
-          - url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
-            itemType: how-to-guide
-            text: Microsoft Intune Tech Community blog
-          - text: Intune Customer Success
-            itemType: how-to-guide
-            url: https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess
-          - text: "#MSIntune on X (formerly Twitter)"
-            itemType: overview
-            url: https://twitter.com/hashtag/msintune
-          - text: Feedback for Intune
-            itemType: overview
-            url: https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472
-          - text: Microsoft Q & A - Microsoft Intune
-            itemType: overview
-            url: https://learn.microsoft.com/answers/tags/415/intune
-          - text: Intune training video series (Community)
-            itemType: how-to-guide
-            url: https://www.youtube.com/@IntuneTraining
+        - text: Intune Customer Success
+          itemType: how-to-guide
+          url: https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess
+        - text: "#MSIntune on X (formerly Twitter)"
+          itemType: how-to-guide
+          url: https://twitter.com/hashtag/msintune
+        - text: Feedback for Intune
+          itemType: how-to-guide
+          url: https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472
+        - text: Intune Tech Community discussions
+          itemType: how-to-guide
+          url: https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager/ct-p/microsoft-endpoint-manager
+        - text: Microsoft Q & A - Microsoft Intune
+          itemType: how-to-guide
+          url: https://learn.microsoft.com/answers/tags/415/intune
 
-
+      - title: Content from Microsoft MVPs
+        summary: Videos, blogs, and more to help you skill up and explore edge-case scenarios
+        links:
+        - text: Intune training video series
+          itemType: how-to-guide
+          url: https://www.youtube.com/@IntuneTraining
 
   - title: How-to documentation
     items:
