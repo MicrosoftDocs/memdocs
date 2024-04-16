@@ -230,10 +230,10 @@ Remote Help is supported in the following languages:
 
 ## Known Issues
 
-If the sharer exits from a Remote Help session early, the helper may not be notified for 60+ seconds.  
+- If the sharer exits from a Remote Help session early, the helper may not be notified for 60+ seconds.  
 
-If using Edge, it may require the sharer to sign in to Edge before starting a session or the device will report as Unenrolled.
+- If using Edge, it may require the sharer to sign in to Edge before starting a session or the device will report as Unenrolled.
 
-Verify that your browser is up to date.
+- Verify that your browser is up to date.
 
-If you are screensharing using another application like Teams or recording during the session, it might take longer for the session to connect.
+- If you are screen sharing using another application like Teams or recording during the session, it might take longer for the session to connect.
