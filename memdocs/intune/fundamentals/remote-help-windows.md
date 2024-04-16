@@ -48,7 +48,7 @@ The Remote Help app is available from Microsoft to install on both devices enrol
 
 The Remote Help app supports the following capabilities on Windows:
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](#set-up-conditional-access-for-remote-help)
+- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Setup Conditional Access for Remote Help](#setup-conditional-access-for-remote-help)
 
 - **Compliance Warnings**: Before a helper can connect to a user's device, the helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
@@ -207,9 +207,11 @@ As a helper, after receiving a request from a user who wants assistance by using
    1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
    2. From the remote actions bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
+
 > [!NOTE]
 > If you are launching the session from the Intune, login with the same credentials to the Remote Help app for a successful
-> connection. 
+> connection.
+
 2. A notification is sent to the sharer's device, and you'll see an update that the notification was successfully sent. Select **Launch Remote Help** to join the session.  
 
    a. If the notification is sent but not received by the user, you can resend the notification by selecting **Retry**.
@@ -268,7 +270,7 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
-## Set up Conditional Access for Remote Help
+## Setup Conditional Access for Remote Help
 
 This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
 
@@ -276,18 +278,22 @@ This section outlines the steps for provisioning the Remote Help service on the 
     - It may be necessary to install [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation)  
 2. Within PowerShell enter the following commands:
 
-#### Installation
+### Installation
+
 ```powershell
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
-#### Sign in
+
+### Sign in
 
 Use the `Connect-MgGraph` command to sign in with the required scopes. You'll need to sign in with an admin account to consent to the required scopes.
 ```powershell
+
 Connect-MgGraph -Scopes "Application.ReadWrite.All"
 ```
 
-#### Create the Service Principal
+### Create the Service Principal
+
 Create a Service Principal using the `Remote Assistance Service` AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2".
 ```powershell
 New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
@@ -305,7 +311,7 @@ The ID corresponds to the app ID for the Remote Assistance Service
 
 The display name is **Remote Assistance Service**, which is the backend service for Remote Help  
 
-#### Sign out
+### Sign out
 
 Use the `Disconnect-MgGraph` command to sign out.
 
