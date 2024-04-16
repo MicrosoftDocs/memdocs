@@ -61,7 +61,7 @@ Optionally, you can use a [device-only subscription](https://techcommunity.micro
 
 > [!NOTE]
 >
-> Intune doesn't automatically configure a primary user when you use self-deploying mode in Autopilot to provision a Windows device. Some Intune capabilities rely on a primary user being set on a device (which you can [manually do in the Intune admin center](../mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user) after device provisioning if desired). These features include user self-service BitLocker recovery key retrieval and using the Company Portal to install software. Using self-provisioning mode for Autopilot doesn't preclude a licensed user from logging into the device and using features entitled to that user such as conditional access. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).
+> Intune doesn't automatically configure a primary user when you use self-deploying mode in Autopilot to provision a Windows device. Some Intune capabilities rely on a primary user being set on a device (which you can [manually do in the Intune admin center](/mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user) after device provisioning if desired). These features include user self-service BitLocker recovery key retrieval and using the Company Portal to install software. Using self-provisioning mode for Autopilot doesn't preclude a licensed user from logging into the device and using features entitled to that user such as conditional access. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).
 
 ## Requirements
 
