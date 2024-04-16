@@ -53,7 +53,7 @@ This article describes all the email settings available for devices running iOS/
 - **Account name**: Enter the display name for the email account. This name is shown to users on their devices.
 - **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that this profile uses. Your options:
   - **User Principal Name**: Gets the name, like `user1` or `user1@contoso.com`
-  - **Primary SMTP address**: Gets the simple mail transport protocol (SMTP) name in email address format, like `user1@contoso.com`
+  - **Primary SMTP address**: Gets the Simple Mail Transfer Protocol (SMTP) name in email address format, like `user1@contoso.com`
   - **sAM Account Name**: Requires the domain, like `domain\user1`. Also enter:  
     - **User domain name source**: Select **Microsoft Entra ID** or **Custom**:
       - **Microsoft Entra ID**: Get the attributes from Microsoft Entra ID. Also enter:
