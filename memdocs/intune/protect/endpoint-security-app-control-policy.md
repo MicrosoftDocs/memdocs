@@ -58,7 +58,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-## Prerequisites
+## Prerequisites (only applies to Application Control for Business Policies)
 
 ### Devices
 
@@ -174,6 +174,8 @@ For more information, see [Allow apps installed by a managed installer](/windows
 > This can cause unexpected problems such as applications failing to start, and failing to boot or logon into Windows.
 > To avoid this issue, we recommend removing any RuleCollection defined as **NotConfigured** with an empty rule set from your existing AppLocker policy if it is currently in place.
 
+- Managed Installer can enable stopped or disabled App-Locker Policies (on targeted PCs) enforced from GPO.
+  
 ### Remove the Intune Management Extension as a managed installer
 
 Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
