@@ -40,7 +40,7 @@ This list applies to:
 
 This article lists the Graph entities and their matching Windows 10 CSPs and offset URIs.
 
-This information is useful for a variety of scenarios. For example, see what's used by Intune, see settings to include in custom OMA-URI configurations, and so on. 
+This information is useful for various scenarios. For example, see what's used by Intune, see settings to include in custom OMA-URI configurations, and so on. 
 
 ## Windows 10 CSPs
 
@@ -48,7 +48,7 @@ For more information on Windows 10 configuration service providers, see the [con
 
 ## Graph API properties to CSP mapping
 
-The following list shows the majority of Graph API entities used by Microsoft Intune for Windows 10 device configuration. It also shows the corresponding Windows 10 CSP and offset URI.
+The following list shows most of Graph API entities used by Microsoft Intune for Windows 10 device configuration. It also shows the corresponding Windows 10 CSP and offset URI.
 
 To see the Windows 10 versions the following APIs apply, use the Windows 10 [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
 
