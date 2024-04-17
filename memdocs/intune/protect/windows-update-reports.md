@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/12/2024
+ms.date: 04/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,6 +47,7 @@ Intune supports the following report options:
   - **Windows 10 update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
   - **Windows 10 feature updates** – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
   - **Windows Driver updates** – Use the [built-in reports](#reports-for-windows-driver-updates-policy) to understand which driver updates are applicable to your devices and which of those updates have been approved, installed, or paused.
+  - **Windows update distribution** – Use the [three built-in reports](#windows-update-distribution-report) to understand the number of devices that are on each quality update level and the percentage coverage for each update across devices managed by Intune (including co-managed devices). The three distinct organizational reports function sequentially to provide insights on devices and their corresponding Windows update versions.
 
 - **Windows Update for Business reports**:
 
@@ -62,6 +63,9 @@ To support reporting, you must configure the following data collection settings:
 
 - Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
 - At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
+
+>[!NOTE]
+> The [Windows update distribution reports](#windows-update-distribution-report) don’t require any additional configuration for client data reporting.
 
 ## Reports for Update rings for Windows 10 and later policy
 
