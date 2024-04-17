@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/11/2024
+ms.date: 04/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,9 +28,6 @@ ms.collection:
 ---
 
 # Add iOS, iPadOS, or macOS device feature settings in Intune
-
-> [!IMPORTANT]
-> This article is a final draft and ready for PM review. It will go live when Platform SSO goes live. **Delete this note before publishing**.
 
 Intune includes many features and settings that help administrators control iOS, iPadOS, and macOS devices. For example, administrators can:
 

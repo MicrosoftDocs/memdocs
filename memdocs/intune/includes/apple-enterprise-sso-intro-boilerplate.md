@@ -1,15 +1,16 @@
 ---
 title: include file
 description: include file
-author: miepping
+author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 02/29/2024
-ms.author: miepping
+ms.date: 04/16/2024
+ms.author: mandia
 ms.custom: include file
+ms.reviewer: miepping
 ---
 
-<!-- This include file is used in the Apple Enterprise SSO deployment guide docs. 4.10.2023 (mandia): Removed 'preview'. -->
+<!-- This include file is used in the Apple Enterprise SSO deployment guide docs. 4.10.2023 (mandia): Removed 'preview'. 4.16.2024 (mandia) Updated for platform SSO.-->
 
 The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) is a feature in Microsoft Entra ID that provides single sign-on (SSO) features for Apple devices. This plug-in uses the Apple single sign-on app extension framework.
 
