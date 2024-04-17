@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/08/2024
+ms.date: 04/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -581,20 +581,17 @@ End of comment -->
 
 - **Allow access to all apps in Google Play store**: When set to **Allow**:
 
-  - Users get access to all apps in the Google Play store in addition to any Private apps added to the organization's Manage Google Play Account.
-  - Any app (Private or Public) that should not be findable nor installed from the Managed Google Playe Store by the user, has to be explicitly targeted with uninstall intent.
-  - Users can't use apps that are added to a blocklist (Assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
+  - Users get access to all apps in the Google Play store and any private apps added to your organization's Managed Google Play account.
+  - Make sure you target any app (private or public) with the uninstall intent that shouldn't be findable or installed by users from the Managed Google Play Store.
+  - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
 
-- When set to **Not configured**:
+  For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
 
-  -  Only apps that are assigned to the user will be available in the Managed Google Playe Store and any app not in the policy will be automatically uninstalled from the device (In the event that the setting was changed from **Allow** to **not configured**).
-
-  For more information on excluding users and groups from specific apps, see [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
-
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
   
-  - Only show apps in the Managed Google Play store that are approved, or apps that are required.
-  - Uninstall apps that were installed outside of the Managed Google Play store.
+  - Only shows apps in the Managed Google Play store that are approved, apps that are required, or apps that are assigned to the user.
+  - Uninstalls apps that were installed outside of the Managed Google Play store.
+  - If you change this setting from **Allow** to **Not configured**, then any app not in the policy is automatically uninstalled from the device.
 
 - The following settings are part of the Google's delegated scope feature:
 
