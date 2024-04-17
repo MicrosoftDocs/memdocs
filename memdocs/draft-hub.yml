@@ -39,7 +39,7 @@ productDirectory:
       imageSrc: ./media/microsoft-intune.svg
       links:
         - text: test
-          url: https://1
+          url: https://11
         - text: Configure multifactor athentication (prescriptive guidance)
           url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
 
