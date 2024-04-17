@@ -17,16 +17,16 @@ metadata:
 highlightedContent:
   items:
     - title: Get to know Microsoft Intune
-      itemType: overview
+      itemType: get-started
       url: /mem/draft-hub#additional-in-depth-resources
     - title: Plan a move to Intune
-      itemType: overview
+      itemType: deploy
       url: /mem/draft-hub#additional-in-depth-resources
     - title: Intune news
-      itemType: overview
+      itemType: whats-new
       url: /mem/draft-hub#intune-news
-    - title: Microsoft Intune Suite add-ons
-      itemType: overview
+    - title: Microsoft Intune Suite add-ons <rename>
+      itemType: deploy
       url: ./intune/fundamentals/intune-add-ons.md
 
 # productDirectory section (optional)
@@ -43,15 +43,56 @@ productDirectory:
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
           text: Configure multifactor athentication (prescriptive guidance)
     # Card
-    - title: Application protection policies
+    - title: App protection policies
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: https://11
-          text: test
+        - url: ./intune/apps/app-protection-policy
+          text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
-          text: Configure multifactor athentication (prescriptive guidance)
-  
-    
+          text: View the prescriptive guidance <verify name>
+     # Card
+    - title: Secure your devices
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+        - url: ./intune/fundamentals/manage-devices#secure-your-devices
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/4/0
+          text: View the prescriptive guidance <verify name> 
+    - title: Conditional Access and Intune
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+        - url: ./intune/protect/conditional-access
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/9/0
+          text: View the prescriptive guidance <verify name> 
+    - title: Windows Autopilot
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+        - url: ./autopilot/windows-autopilot
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
+          text: View the prescriptive guidance <verify name> 
+    - title: Manage apps
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+        - url: ./intune/apps/app-management
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2901/prescriptive-guidance-intune-application-deployment/index.html#/0/0
+          text: View the prescriptive guidance <verify name> 
+    - title: Update Windows with Intune
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+        - url: ./intune/protect/windows-update-for-business-configure
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
+          text: View the prescriptive guidance <verify name>
+    - title: Manage macOS devices
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+        - url: ./solutions/end-to-end-guides/macos-endpoints-get-started
+          text: Read the documentation
+        
+
 # additionalContent section (optional)
 # Card with summary style
 conceptualContent:
@@ -101,45 +142,6 @@ conceptualContent:
         - text: Follow step-by-step guidance to deploy Intune
           itemType: how-to-guide
           url: ./intune/fundamentals/get-started-with-intune.md
-                        
-      - title: Move workloads from Configuration Manager
-        summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology
-        links:
-        - text: Get Intune benefits without changing management policies
-          itemType: how-to-guide
-          url: ./configmgr/tenant-attach/index.yml
-        - text: Add Intune security benefits for Windows devices
-          itemType: how-to-guide
-          url: ./intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md
-        - text: Analyze endpoint performance with Intune cloud attachment
-          itemType: how-to-guide
-          url: ./analytics/enroll-configmgr.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json#bkmk_prereq
-        - text: Follow the interactive guide to co-managing workloads
-          itemType: how-to-guide
-          url: https://www.microsoft.com/modern-desktop-productivity/endpoint-management/#/SystemConfig?slide=15
-        - text: Read the tutorial for enabling co-management
-          itemType: how-to-guide
-          url: ./configmgr/comanage/tutorial-co-manage-clients.md
-  
-      - title: Configure Zero Trust with Intune
-        summary: A core component of enterprise-level security includes managing and protecting devices. This guidance walks through Microsoft's recommendations using Microsoft Intune.
-        links:
-        - text: Read Intune device management Zero Trust documentation 
-          itemType: how-to-guide
-          url: ./intune/fundamentals/zero-trust-with-microsoft-intune.md
-        - text: "Zero Trust: Manage devices with Intune"
-          itemType: how-to-guide
-          url: /microsoft-365/solutions/manage-devices-with-intune-overview?view=o365-worldwide
-          
-      - title: Microsoft learning paths and modules
-        summary: Explore resources to learn concepts and get hands-on practice
-        links:
-        - text: Microsoft Intune training (learning paths and modules)
-          itemType: how-to-guide
-          url: https://learn.microsoft.com/training/browse/?products=intune
-        - text: Microsoft Intune fundamentals (learning path)
-          itemType: how-to-guide
-          url: /training/paths/endpoint-manager-fundamentals/
 
       - title: Intune news
         summary: <revise> Checkout Intune community resources for blogs, announcements, discussions, and more 
@@ -168,3 +170,22 @@ conceptualContent:
           - text: Intune training video series (Community)
             itemType: how-to-guide
             url: https://www.youtube.com/@IntuneTraining
+
+      - title: Co-manage devices with Intune and Configuration Manager
+        summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology
+        links:
+        - text: Get Intune benefits without changing management policies
+          itemType: how-to-guide
+          url: ./configmgr/tenant-attach/index.yml
+        - text: Add Intune security benefits for Windows devices
+          itemType: how-to-guide
+          url: ./intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md
+        - text: Analyze endpoint performance with Intune cloud attachment
+          itemType: how-to-guide
+          url: ./analytics/enroll-configmgr.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json#bkmk_prereq
+        - text: Follow the interactive guide to co-managing workloads
+          itemType: how-to-guide
+          url: https://www.microsoft.com/modern-desktop-productivity/endpoint-management/#/SystemConfig?slide=15
+        - text: Read the tutorial for enabling co-management
+          itemType: how-to-guide
+          url: ./configmgr/comanage/tutorial-co-manage-clients.md
