@@ -7,7 +7,7 @@ keywords: Enterprise SSO plug-in, Microsoft Intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/27/2024
+ms.date: 04/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -238,7 +238,7 @@ When the device checks in with the MDM service, it receives this profile.
 > [!TIP]
 > Learn more about how the SSO plug-in works and how to troubleshoot the Microsoft Enterprise SSO Extension with the [SSO troubleshooting guide for Apple devices](/entra/identity/devices/troubleshoot-mac-sso-extension-plugin).
 
-## Next steps
+## Related articles
 
 - For information about the Microsoft Enterprise SSO plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
 
