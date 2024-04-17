@@ -18,13 +18,13 @@ highlightedContent:
   items:
     - title: Get to know Microsoft Intune
       itemType: get-started
-      url: /mem/draft-hub#get-to-know-intune
+      url: /mem/draft-hub#additional-resources
     - title: Plan a move to Intune
       itemType: deploy
-      url: /mem/draft-hub#plan-a-move-to-intune
+      url: /mem/draft-hub#additional-resources
     - title: Intune news
       itemType: whats-new
-      url: /mem/draft-hub#intune-news
+      url: /mem/draft-hub#additional-resources
     - title: Microsoft Intune Suite add-ons <rename>
       itemType: deploy
       url: ./intune/fundamentals/intune-add-ons.md
@@ -46,7 +46,7 @@ productDirectory:
     - title: App protection policies
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: ./intune/apps/app-protection-policy
+        - url: ./intune/apps/app-protection-policy.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
           text: View the prescriptive guidance <verify name>
@@ -99,7 +99,7 @@ conceptualContent:
   # Supports up to 4 subsections
   sections:
 
-  - title: Additional in-depth resources
+  - title: Additional resources
     summary: "Go beyond the documentation with videos, blogs, training guides, communities and more from Microsoft Experts and partners"
     items:
       - title: Get to know Intune
