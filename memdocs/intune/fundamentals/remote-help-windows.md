@@ -64,7 +64,7 @@ The Remote Help app supports the following capabilities on Windows:
 
 ## Prerequisites for Remote Help on Windows
 
-General prerequisites for Remote Help, are listed [here](remote-help.md#prerequisites).
+General prerequisites for Remote Help are listed [here](remote-help.md#prerequisites).
 
 The prerequisites for Remote Help on Windows are:
 
@@ -119,7 +119,7 @@ The most recent version of Remote Help is **5.1.1214.0**
 
 ### Deploy Remote Help as a Win32 app
 
-To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed.  Before you can add Remote Help as a Win32 app, you must repackage *remotehelpinstaller.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
+To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed. Before you can add Remote Help as a Win32 app, you must repackage *remotehelpinstaller.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
 
 After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
 
@@ -160,7 +160,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 ## How to use Remote Help
 
-The use of Remote Help depends on whether you're requesting help or providing help. In this section we'll cover both scenarios.
+The use of Remote Help depends on whether you're requesting help or providing help. In this section, both scenarios are covered.
 
 ### Request help
 
@@ -184,7 +184,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 #### Request help on an unenrolled device
 
-The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you are trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
+The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
@@ -196,7 +196,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 4. At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to **Allow full control** or choose to **Decline the request**. Full control must be established before the help session starts.
 
-5. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist in resolving any issues on the device.  
+5. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now help resolving any issues on the device.  
 
 ### Provide help
 
@@ -216,9 +216,9 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    a. If the notification is sent but not received by the user, you can resend the notification by selecting **Retry**.
 
-   b. If the sharer's device is not online or not connected to the internet, an error message is  displayed.
+   b. If the sharer's device isn't online or not connected to the internet, an error message is  displayed.
 
-   c. If the device that you are trying to connect to is noncompliant, a warning banner is displayed.
+   c. If the device that you're trying to connect to is noncompliant, a warning banner is displayed.
 
 2. When Remote Help opens, you must sign in to authenticate to your organization.
 
@@ -234,7 +234,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 #### Provide help on an unenrolled device
 
-If the device that you are trying to help is not enrolled in Intune, you'll have to follow the process described in this section to give help:
+If the device that you're trying to help isn't enrolled in Intune, you must follow the process described in this section to give help:
 
 1. Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you'll need to sign in to authenticate your organization.
 
@@ -307,9 +307,9 @@ RemoteAssistanceService                           3d5ff82b-a5f2-483a-xxxx-9514ed
 
 This output has been shortened for readability.
 
-The ID corresponds to the app ID for the Remote Assistance Service
+The ID corresponds to the app ID for the Remote Assistance Service.
 
-The display name is **Remote Assistance Service**, which is the backend service for Remote Help  
+The display name is **Remote Assistance Service**, which is the backend service for Remote Help.  
 
 ### Sign out
 
@@ -363,9 +363,9 @@ Remote Help is supported in the following languages:
 When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session isn't established.
 If a conditional access policy is configured as described earlier and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant can't use Remote Help.
 
-For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service is not running.
-After the user's device is restarted, there is a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
-For newly enrolled devices, there is a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
+For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
+After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
+For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
 
 ## What's New for Remote Help
@@ -379,14 +379,14 @@ Version: 5.1.1214.0
 - Changed the primary endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com.
   > [!NOTE]
   > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall.
-- Resolved various bugs including an issue with Conditional Access. If a tenant had a Terms of Use policy enabled for Office 365, Remote Help would not know how to respond and would instead present an authentication error message to the user.
+- Resolved various bugs including an issue with Conditional Access. If a tenant had a **Terms of Use** policy enabled for Office 365, Remote Help wouldn't know how to respond and would instead present an authentication error message to the user.
 - Enabled a shortcut to open context menus with the keyboard shortcut 'Alt + Space'
 
 ### October 25, 2023
 
 Version: 5.0.1311.0
 
-- Disabled the relaying of system audio from the Sharer device to the Helper device which caused an echo when both users were using another app to communicate (such as Teams).
+- Disabled the relaying of system audio from the Sharer device to the Helper device, which caused an echo when both users were using another app to communicate (such as Teams).
 - Added the capability for Helpers that have elevation permissions to also be able to elevate apps on devices where the Sharer is an Administrator.
 
 ### September 7, 2023
@@ -444,7 +444,7 @@ Version: 4.0.1.13 - Changes in this release:
 
 Fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
+For more information, go to [Use Remote Help with Intune.](/mem/intune/fundamentals/remote-help)
 
 ### July 26, 2022
 
@@ -462,4 +462,4 @@ Version 4.0.0.0 - GA release
 
 ## Next steps
 
-[Get support in Microsoft Intune admin center](../../get-support.md)
+[Get support in Microsoft Intune admin center.](../../get-support.md)

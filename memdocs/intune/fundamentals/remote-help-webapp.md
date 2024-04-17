@@ -49,7 +49,7 @@ Use Remote Help with unenrolled devices: Disabled by default, you can choose to 
 
 **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.  
 
-If the user’s device that they are trying to connect to is not enrolled, the helper sees a prompt that the user’s device is unenrolled.
+If the user’s device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user’s device is unenrolled.
 
 **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-windows.md#languages-supported).
 
@@ -61,9 +61,9 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 ## Prerequisites and supported devices for Remote Help Web App
 
-In addition to the [general prerequisites for Remote Help](remote-help.md#prerequisites), there are additional prerequisites for the Remote Help web app.
+In addition to the [general prerequisites for Remote Help](remote-help.md#prerequisites), there are other prerequisites for the Remote Help web app.
 
-- [SSO (Single-Sign-On)](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune?tabs=prereq-intune%2Ccreate-profile-intune#prerequisites)
+- [SSO(Single-Sign-On)](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md#prerequisites)
 
 - For sessions with unenrolled devices
 
@@ -91,7 +91,7 @@ Device support is dependent on both the users operating system, and their web br
 
 ### Linux Versions
 
-Linux is not officially supported by Intune or Remote Help; however, the Remote Help Web App may function for most Linux device that are using a supported browser.
+Linux isn't officially supported by Intune or Remote Help; however, the Remote Help Web App might function for most Linux devices that are using a supported browser.
 
 ## Browser Versions
 
@@ -127,15 +127,15 @@ During a session there are two roles, a Helper, and a Sharer. The Helper obtains
 
 - If the Sharer is also using the web app:  
 
- - Copy and share the session link with the user (this is limited to View Only) Example: https://aka.ms/rh?passcode=4060r0gx). The link opens in the user's web browser. You can only request a screen sharing session of the device.
+ - Copy and share the session link with the user (the link is limited to View Only) (Example: https://aka.ms/rh?passcode=4060r0gx). The link opens in the user's web browser. You can only request a screen sharing session of the device.
 
 - If the Sharer is using the macOS application:
 
  - Share the 8-character security code with the user. You can request a screen sharing session (view only, and full control are supported)
 
-3. After the Sharer either clicks the link or enters the code into Remote Help for macOS, they are joined to the session.  
+3. After the Sharer either selects the link or enters the code into Remote Help for macOS, they're joined to the session.  
 
-- If the user is not already logged in to the application, they are prompted to do so.
+- If the user isn't already logged in to the application, they're prompted to do so.
 
 4. At the start of the session, the trust screen is displayed which shows the other person’s full name, job title, company, profile picture, and verified domain.
 
@@ -143,13 +143,13 @@ During a session there are two roles, a Helper, and a Sharer. The Helper obtains
 
 - Sharer can see information about the Helper.
 
-5. After viewing the trust screen, the sharer can choose to *Allow* or to *Decline* the request.
+5. The sharer can choose to *Allow* or to *Decline* the request, after viewing the trust screen.
 
-6. If the Sharers device is not compliant with your organizations policies, Remote Help displays a *Compliance Warning* that encourages the Helper to be cautious.
+6. If the Sharers device isn't compliant with your organizations policies, Remote Help displays a *Compliance Warning* that encourages the Helper to be cautious.
 
 ### Unenrolled device
 
-If the device that you are trying to help is not enrolled in Intune, follow the process described in this section to provide help:  
+If the device that you're trying to help isn't enrolled in Intune, follow the process described in this section to provide help:  
 
 1. Helper navigates to https://aka.ms/rhh in their web browser, then signs in to authenticate with their organization.
 
@@ -161,9 +161,9 @@ If the device that you are trying to help is not enrolled in Intune, follow the 
 
 5. After the Sharer enters the code, and both users accept the prompts, the sessions begin.
 
-Remote Help displays a warning if the sharer’s device is not enrolled in Microsoft Intune. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+Remote Help displays a warning if the sharer’s device isn't enrolled in Microsoft Intune. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-Additional details are outlined in [Provide help](#establishing-a-session).
+More details are outlined in [Provide help](#establishing-a-session).
 
 ## Known Issues
 

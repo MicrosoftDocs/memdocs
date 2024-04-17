@@ -43,12 +43,12 @@ Remote Help is available for macOS as both a native application that can be down
 
 ## Remote Help Native macOS App
 
-Most organizations will install the Remote Help application for macOS on their users’ devices. This makes the application readily available to users when they need to initiate a support session. Remote Help for macOS provides the Helper with view only and full control capabilities where they can control the Sharer’s mouse and keyboard.
+Most organizations install the Remote Help application for macOS on their users’ devices. This makes the application readily available to users when they need to initiate a support session. Remote Help for macOS provides the Helper with view only and full control capabilities where they can control the Sharer’s mouse and keyboard.
 
 ## Remote Help Web App
 
 In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a Helper. This web app provides view only capabilities to the Helper, which allows them to guide the user through resolving whichever issue they have encountered.
-Helpers always use the Remote Help Web App to provide support to a Sharer that is on macOS. This provides them with a consistent and friendly experience accessible through the Intune portal. For additional details go to [Remote Help Web app](remote-help-webapp.md).
+Helpers always use the Remote Help Web App to provide support to a Sharer that is on macOS. This provides them with a consistent and friendly experience accessible through the Intune portal. For more details, go to [Remote Help Web app](remote-help-webapp.md).
 
 ## Authentication and Permissions
 
@@ -56,7 +56,7 @@ Both helpers and sharers sign in to your organization using Microsoft Entra ID, 
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-For details about configuring and setting up of permissions go to [Using Remote Help](remote-help.md#task-2-configure-permissions-for-remote-help).
+For details about configuring and setting up of permissions, go to [Using Remote Help](remote-help.md#task-2-configure-permissions-for-remote-help).
 
 ## Remote Help capabilities and requirements on macOS
 
@@ -78,7 +78,7 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 
 The prerequisites for Remote Help on macOS are listed under [Supported devices](#supported-devices).
 
-If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help. You can learn more about this prerequisite [here](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune)
+If your organization, by default, restricts remote assistance to enrolled devices only, single sign-on (SSO) is a prerequisite for accessing Remote Help. You can learn more about this prerequisite [here.](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune)
 
 ## Supported devices
 
@@ -116,7 +116,7 @@ Remote Help offers different session modes for macOS.
 
 ## Install and update Remote Help
 
-Remote Help is available to download from Microsoft and must be installed on the device you are trying to help before that device can be used to participate in a Remote Help session. Remote Help will receive the latest versions through the Microsoft AutoUpdate (MAU) application. Users can opt in for automatic updates to ensure Remote Help is up to date.
+Remote Help is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session. Remote Help receives the latest versions through the Microsoft AutoUpdate (MAU) application. Users can opt in for automatic updates to ensure Remote Help is up to date.
 
 ## Download Remote Help
 
@@ -137,7 +137,7 @@ The web app allows support teams to view the sharer's device during a connected 
 
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session.
 
-When you the sharer and your helper are ready to begin the session:
+When you as the sharer and your helper are ready to begin the session:
 
 1. Open Remote Help app on the device **Finder** > **Applications** > **Microsoft Remote Help**.
 
@@ -147,22 +147,22 @@ When you the sharer and your helper are ready to begin the session:
 
 1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to *Allow* or to *Decline* the request.
 
-3. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission is not needed for screen sharing.
+3. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
 
 4. Select **Share screen** to continue.
 
 1. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 
-1. A dialogue menu is shown by macOS in the top right corner. This is shown as one of two options:
+1. macOS displays a dialogue menu in the top right corner as one of two options:
 
   - Green camera icon: Choose **Screen**, and then move your mouse to select the screen share.
-  - Yellow microphone icon: Click the microphone icon, then to the right of the application name Microsoft Remote Help, click the grey icon, and then Screen. Move your cursor to the screen you want to share and select **Share this screen**.
+  - Yellow microphone icon: Select the microphone icon, then to the right of the application name Microsoft Remote Help, select the grey icon, and then Screen. Move your cursor to the screen you want to share and select **Share this screen**.
 
 5. After the session is established, the helper can then help in resolving any issues on the device.
 
 #### Request help on an unenrolled device
 
-Your device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you are trying to receive help, follow the rest of the steps outlined in [Request help](#request-help) to be in a connected session.
+Your device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, follow the rest of the steps outlined in [Request help](#request-help) to be in a connected session.
 
 ### Provide help
 
@@ -188,7 +188,7 @@ If the device that you're trying to help isn't enrolled in Intune, you must foll
 
 1. Navigate to https://aka.ms/rhh on your browser and sign in to authenticate to your organization.
 
-2. The helper must sign in, copy and then share the 8-digit security code with the person you are trying to help.
+2. The helper must sign in, copy and then share the 8-digit security code with the person you're trying to help.
 
 Remote Help displays a warning if the sharer's device isn't enrolled in Microsoft Intune. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
@@ -196,7 +196,7 @@ Follow the rest of the steps outlined in [Provide help](#provide-help) to be in 
 
 ## Setup Conditional Access for Remote Help
 
-Remote Help for macOS supports conditional access. For more details go to [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
+Remote Help for macOS supports conditional access. For more details, go to [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
 
 ## Languages Supported
 
@@ -239,10 +239,10 @@ Remote Help is supported in the following languages:
 
 ## Known Issues
 
-- If the sharer exits from a Remote Help session early, the helper may not be notified for 60+ seconds.  
+- If the sharer exits from a Remote Help session early, the helper might not be notified for 60+ seconds.  
 
-- If using Edge, it may require the sharer to sign in to Edge before starting a session or the device will report as Unenrolled.
+- If using Edge, the sharer might have to sign in to Edge before starting a session or the device reports as Unenrolled.
 
 - Verify that your browser is up to date.
 
-- If you are screen sharing using another application like Teams or recording during the session, it might take longer for the session to connect.
+- If you're screen sharing using another application like Teams or recording during the session, it might take longer for the session to connect.

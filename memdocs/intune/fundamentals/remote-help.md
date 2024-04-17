@@ -150,7 +150,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 > When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours).
 > When you try to create a Remote Help session you may continue to see messages indicating that Remote Help isn't enabled for the tenant even if you enabled Remote Help in the tenant after activation.
 
-### Task 2:  Configure permissions for Remote Help
+### Task 2: Configure permissions for Remote Help
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
