@@ -32,7 +32,7 @@ highlightedContent:
 # productDirectory section (optional)
 productDirectory:
   title: Learn how Intune can support more secure productivity
-  summary: Read the documenation and follow the interactive guides to configure Intune with settings that are "best for most" and aligned with Zero Trust pricipals
+  summary: Read the documentation and follow the interactive guides to configure Intune with settings that are "best for most" and aligned with Zero Trust pricipals
   items:
     # Card
     - title: Multifactor Authentication
@@ -40,12 +40,9 @@ productDirectory:
       links:
         - text: test
           url: https://1
-        - text: test2
-          url: https://2
-    # Card
-    - title: Help secure devices
-      imageSrc: ./media/microsoft-intune.svg
-      url: /#get-to-know-intune-capabilities
+        - text: Configure multifactor athentication (prescriptive guidance)
+          url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
+ 
     # Card
     - title: Install and manage applications
       imageSrc: ./media/configmgr.svg
