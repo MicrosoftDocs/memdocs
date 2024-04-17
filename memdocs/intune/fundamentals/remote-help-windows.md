@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/31/2023
+ms.date: 04/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -71,7 +71,7 @@ The prerequisites for Remote Help on Windows are:
 - Set up the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
 - The helper and sharer can be on an enrolled or unenrolled device.
 
-To remotely start a session: 
+To remotely start a session:
 - The helper can be on an enrolled or unenrolled device.
 - The sharer's device needs to be enrolled device with Intune management extension.
   - Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
@@ -84,31 +84,7 @@ To remotely start a session:
 
 Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remoteassistance.support.services.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
 
-Both the helper and sharer must be able to reach these endpoints over port 443:
-
-| Domain/Name                       | Description                                           |
-|-----------------------------------|-------------------------------------------------------|
-|\*.aadcdn.msauth.net | Required for logging in to the application Microsoft Entra ID|
-|\*.aadcdn.msftauth.net | Required for logging in to the application Microsoft Entra ID|
-|*.akstat.io | |
-|\*.alcdn.msauth.net|Required to sign-in to the application Microsoft Azure Authentication Library|
-|\*.aria.microsoft.com | Accessible Rich Internet Applications (ARIA) service for providing accessible experiences to users|
-|\*.akamaihd.net | |
-|edge.microsoft.com | Microsoft Edge update service for WebView2 |
-|edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
-|\*.events.data.microsoft.com      | Microsoft Telemetry Service |
-|*.go-mpulse.net| |
-|graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
-|login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
-|mem.gfx.ms| |
-|\*.monitor.azure.com              | Required for telemetry and remote service initialization|
-|remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
-|remotehelp.microsoft.com  | Primary endpoint for the Remote Help application |
-|\*.support.services.microsoft.com | Primary endpoint used for the Remote Help application|
-|\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
-|\*.wcpstatic.microsoft.com| Used to confirm cookie compliance in accordance with various laws|
-|[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
-
+Both the helper and sharer must be able to reach these endpoints over port 443. Go to [Network endpoints for Remote Help](intune-endpoints.md#remote-help) for a list of endpoints needed for Remote Help.
 
 ## Remote Help modes available for Windows
 
@@ -139,7 +115,7 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **5.0.1311.0**
+The most recent version of Remote Help is **5.1.1214.0**
 
 ### Deploy Remote Help as a Win32 app
 

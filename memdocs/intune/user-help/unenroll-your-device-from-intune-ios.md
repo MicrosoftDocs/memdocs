@@ -10,10 +10,8 @@ manager: dougeby
 
 ms.date: 01/07/2020
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 28914db1-3e62-45f5-9632-b0d2a808a44d
 searchScope:
  - User help

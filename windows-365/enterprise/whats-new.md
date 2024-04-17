@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 3/27/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -55,6 +54,26 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of April 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use HP Anyware for Windows 365 Enterprise (preview)<!--48782170-->
+
+You can now use HP Anyware for Windows 365 Enterprise Cloud PCs. For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md).
+
+<!-- ########################## -->
+## Week of April 1, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Step-up licenses now support storage<!--48555915-->
+
+For Windows 365, step-up licenses now support storage. For more information, see [Resize with Step-up Licenses](resize-cloud-pc.md#resize-with-step-up-licenses).
 
 <!-- ########################## -->
 ## Week of March 26, 2024 (Service release 2403)

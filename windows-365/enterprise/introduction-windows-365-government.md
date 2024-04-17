@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 04/10/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -65,6 +64,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Boot (available for GCC, not available for GCCH)
 - Microsoft Purview Customer Lockbox
 - Windows App
+- Cloud PC Reports
 
 ## Next steps
 
