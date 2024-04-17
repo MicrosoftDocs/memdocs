@@ -42,12 +42,6 @@ productDirectory:
   summary: Read the documenation and follow the interactive guides to configure Intune with settings that are "best for most" and aligned with Zero Trust pricipals
   items:
     # Card
-    - title: Multifactor Authentication
-      imageSrc: ./media/microsoft-intune.svg
-      links:
-        - url: 
-
-    # Card
     - title: Help secure devices
       imageSrc: ./media/microsoft-intune.svg
       url: /#get-to-know-intune-capabilities
