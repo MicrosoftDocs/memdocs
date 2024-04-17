@@ -581,9 +581,13 @@ End of comment -->
 
 - **Allow access to all apps in Google Play store**: When set to **Allow**:
 
-  - Users get access to all apps in the Google Play store.
-  - Users can't use apps that are explicitly targeted with uninstall.
-  - Users can't use apps that are added to a blocklist on the personal profile of corporate-owned devices with a work profile. 
+  - Users get access to all apps in the Google Play store in addition to any Private apps added to the organization's Manage Google Play Account.
+  - Any app (Private or Public) that should not be findable nor installed from the Managed Google Playe Store by the user, has to be explicitly targeted with uninstall intent.
+  - Users can't use apps that are added to a blocklist (Assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
+
+- When set to **Not configured**:
+
+  -  Only apps that are assigned to the user will be available in the Managed Google Playe Store and any app not in the policy will be automatically uninstalled from the device (In the event that the setting was changed from **Allow** to **not configured**).
 
   For more information on excluding users and groups from specific apps, see [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
 
