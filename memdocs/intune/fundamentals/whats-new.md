@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/05/2024
+ms.date: 04/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of April 15, 2024
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 26740168 -->
+
+The following protected app is now available for Microsoft Intune:
+
+- Atom Edge by Arlanto Apps
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ## Week of April 1, 2024
 
 ### Device management
