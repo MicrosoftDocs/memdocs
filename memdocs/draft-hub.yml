@@ -38,12 +38,18 @@ productDirectory:
     - title: Multifactor Authentication
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - text: test
-          url: https://11
-        - text: Configure multifactor athentication (prescriptive guidance)
-          url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
-
-
+        - url: https://11
+          text: test
+        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
+          text: Configure multifactor athentication (prescriptive guidance)
+    # Card
+    - title: Application protection policies
+      imageSrc: ./media/microsoft-intune.svg
+      links:
+        - url: https://11
+          text: test
+        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
+          text: Configure multifactor athentication (prescriptive guidance)
   
     
 # additionalContent section (optional)
