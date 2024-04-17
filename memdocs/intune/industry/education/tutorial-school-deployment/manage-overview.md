@@ -70,8 +70,8 @@ To learn more about reports in Intune, see [Reports in Intune](/mem/intune/funda
 
 Here are the steps for generating reports in Intune for Education:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
-1. Select **Reports**
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Select **Reports**.
 1. Select between one of the report types:
     - Device inventory
     - Device actions
@@ -79,7 +79,7 @@ Here are the steps for generating reports in Intune for Education:
     - Settings errors
     - Windows Defender
     - Autopilot deployment
-1. If needed, use the search box to find specific devices, applications, and settings
+1. If needed, use the search box to find specific devices, applications, and settings.
 1. To download a report, select **Download**. The report will download as a comma-separated value (CSV) file, which you can view and modify in a spreadsheet app like Microsoft Excel.
     :::image type="content" source="./images/inventory-reporting.png" alt-text="Reporting options available in Intune for Education when selecting the reports blade" border="true":::
 

@@ -11,9 +11,9 @@ ms.author: scbree
 
 Enrolling devices with provisioning packages is an efficient way to deploy a large number of Windows devices. Some of the benefits of provisioning packages are:
 
-- There are no particular hardware dependencies on the devices to complete the enrollment process
-- Devices don't need to be registered in advance
-- Enrollment is a simple task: just open a provisioning package and the process is automated
+- There are no particular hardware dependencies on the devices to complete the enrollment process.
+- Devices don't need to be registered in advance.
+- Enrollment is a simple task: just open a provisioning package and the process is automated.
 
 You can create provisioning packages using either **Windows Configuration Designer** or **Set Up School PCs** applications, which are described in the following sections.
 
