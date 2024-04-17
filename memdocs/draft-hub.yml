@@ -42,35 +42,9 @@ productDirectory:
           url: https://1
         - text: Configure multifactor athentication (prescriptive guidance)
           url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
- 
-    # Card
-    - title: Install and manage applications
-      imageSrc: ./media/configmgr.svg
-      url: ./
-    # Card
-    - title: Schedule and manage Windows Updates
-      imageSrc: ./media/autopilot.svg
-      url: /#learn-how-to-migrate-to-intune-successfully
-    # Card
-    - title: Provision devices with Autopilot
-      imageSrc: ./media/endpoint-analytics.svg
-      url: /#take-advantage-of-intune-cloud-capabilities
-    # Card
-    - title: Manage macOS devices
-      imageSrc: ./media/endpoint-analytics.svg
-      url: ./intune/fundamentals/get-started-with-intune.md
-    # Card
-    - title: Manage mobile devices
-      imageSrc: ./intune/media/icons/deploy.svg
-      url: ./intune/fundamentals/deployment-guide-enrollment.md
-    # Card
-    - title: Manage Linux devices
-      imageSrc: ./intune/media/icons/deploy.svg
-      url: ./intune/fundamentals/deployment-guide-enrollment-linux.md
-    # Card
-    - title: Set up Universal Print on devices
-      imageSrc: ./intune/media/icons/deploy.svg
-      url: ./intune/configuration/settings-catalog-printer-provisioning.md
+
+
+  
     
 # additionalContent section (optional)
 # Card with summary style
