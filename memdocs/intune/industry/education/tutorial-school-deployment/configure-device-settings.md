@@ -75,11 +75,11 @@ Device profiles allow you to add and configure settings, and then push these set
 
 There are two ways to manage settings in Intune for Education:
 
-- **Express Configuration.** This option is used to configure a selection of settings that are commonly used in school environments
-- **Group settings.** This option is used to configure all settings that are offered by Intune for Education
+- **Express Configuration.** This option is used to configure a selection of settings that are commonly used in school environments.
+- **Group settings.** This option is used to configure all settings that are offered by Intune for Education.
 
 > [!NOTE]
-> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs. 
+> Express Configuration is ideal when you are getting started. Settings are pre-configured to Microsoft-recommended values, but can be changed to fit your school's needs.
 
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
@@ -110,16 +110,16 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 
 Groups are used to manage users and devices with similar management needs, allowing you to apply changes to many devices or users at once. To review the available group settings:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
-1. Select **Groups** > Pick a group to manage
-1. Select **Windows device settings**
-1. Expand the different categories and review information about individual settings
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Select **Groups** > Pick a group to manage.
+1. Select **Windows device settings**.
+1. Expand the different categories and review information about individual settings.
 
 Settings that are commonly configured for student devices include:
 
-- Wallpaper and lock screen background. See: [Lock screen and desktop][INT-7]
-- Wi-Fi connections. See: [Add Wi-Fi profiles][INT-8]
-- Enablement of the integrated testing and assessment solution *Take a Test*. See: [Add Take a Test profile][INT-9]
+- Wallpaper and lock screen background. See [Lock screen and desktop][INT-7].
+- Wi-Fi connections. See [Add Wi-Fi profiles][INT-8].
+- Enablement of the integrated testing and assessment solution *Take a Test*. See [Add Take a Test profile][INT-9].
 
 For more information, see [Windows device settings in Intune for Education][INT-3].
 
@@ -146,15 +146,15 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 
 Groups are used to manage users and devices with similar management needs, allowing you to apply changes to many devices or users at once. To review the available group settings:
 
-1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com/)
-1. Select **Groups** > Pick a group to manage
-1. Select **iOS device settings**
-1. Expand the different categories and review information about individual settings
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com/).
+1. Select **Groups** > Pick a group to manage.
+1. Select **iOS device settings**.
+1. Expand the different categories and review information about individual settings.
 
 Settings that are commonly configured for student devices include:
 
-- Lock screen and wallpaper. See: [Lock screen and wallpaper](/intune-education/all-edu-settings-ios#lock-screen-and-wallpaper)
-- Wi-Fi connections. See: [Add Wi-Fi profiles][INT-8]
+- Lock screen and wallpaper. See [Lock screen and wallpaper](/intune-education/all-edu-settings-ios#lock-screen-and-wallpaper).
+- Wi-Fi connections. See [Add Wi-Fi profiles][INT-8].
 
 For more information, see [iOS device settings in Intune for Education](/intune-education/all-edu-settings-ios).
 
@@ -182,10 +182,10 @@ It is important to keep Windows devices up to date with the latest security upda
 
 To create a Windows Update policy:
 
-1. Select **Groups** > Pick a group to manage
-1. Select **Windows device settings**
-1. Expand the category **Update and upgrade**
-1. Configure the required settings as needed
+1. Select **Groups** > Pick a group to manage.
+1. Select **Windows device settings**.
+1. Expand the category **Update and upgrade**.
+1. Configure the required settings as needed.
 
 For more information, see [Updates and upgrade][INT-6].
 
@@ -222,10 +222,10 @@ It is important to keep iOS devices up to date with the latest security updates.
 
 To create a iOS update restrictions policy:
 
-1. Select **Groups** > Pick a group to manage
-1. Select **iOS device settings**
-1. Expand the category **Update restrictions**
-1. Configure the required settings as needed
+1. Select **Groups** > Pick a group to manage.
+1. Select **iOS device settings**.
+1. Expand the category **Update restrictions**.
+1. Configure the required settings as needed.
 
 For more information about the other update options in the Intune console, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/mem/intune/protect/software-updates-guide-ios-ipados).
 
@@ -257,10 +257,10 @@ Intune for Education provides different settings to secure devices.
 
 To create a security policy:
 
-1. Select **Groups** > Pick a group to manage
-1. Select **Windows device settings**
-1. Expand the category **Security**
-1. Configure the required settings as needed, including
+1. Select **Groups** > Pick a group to manage.
+1. Select **Windows device settings**.
+1. Expand the category **Security**.
+1. Configure the required settings as needed, including:
     - Windows Defender
     - Windows Encryption
     - Windows SmartScreen
@@ -268,7 +268,7 @@ To create a security policy:
 For more information, see [Security][INT-4].
 
 > [!NOTE]
-> If you require more sophisticated security policies, you can create them in Microsoft Intune. For more information:
+> If you require more sophisticated security policies, you can create them in Microsoft Intune. For more information, see:
 > - [Antivirus][MEM-2]
 > - [Disk encryption][MEM-3]
 > - [Firewall][MEM-4]
@@ -304,9 +304,9 @@ Common areas for security include:
 
 In Intune for Education, you can configure iOS security settings using Groups.
 
-1. Select **Groups** > Pick a group to manage
-1. Select **iOS device settings**
-1. Configure the required settings as needed
+1. Select **Groups** > Pick a group to manage.
+1. Select **iOS device settings**.
+1. Configure the required settings as needed.
 
 Common areas for security include:
 

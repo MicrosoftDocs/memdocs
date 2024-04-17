@@ -47,21 +47,21 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 Follow these steps to obtain support in Microsoft Intune provides many tools that can help you troubleshoot Windows devices:
 
-- Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-- Select **Troubleshooting + support** > **Help and support**
+- Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Select **Troubleshooting + support** > **Help and support**.
     :::image type="content" source="images/advanced-support.png" alt-text="Screenshot that shows how to obtain support from Microsoft Intune." lightbox="images/advanced-support.png":::
-- Select the required support scenario: Configuration Manager, Intune, Co-management, or Windows 365
-- Above **How can we help?**, select one of three icons to open different panes: *Find solutions*, *Contact support*, or *Service requests*
+- Select the required support scenario: Configuration Manager, Intune, Co-management, or Windows 365.
+- Above **How can we help?**, select one of three icons to open different panes: *Find solutions*, *Contact support*, or *Service requests*.
 - In the **Find solutions** pane, use the text box to specify a few details about your issue. The console may offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console provides help like:
-  - Run diagnostics: start automated tests and investigations of your tenant from the console to reveal known issues. When you run a diagnostic, you may receive mitigation steps to help with resolution
-  - View insights: find links to documentation that provides context and background specific to the product area or actions you've described
-  - Recommended articles: browse suggested troubleshooting topics and other content related to your issue
-- If needed, use the *Contact support* pane to file an online support ticket
+  - Run diagnostics: start automated tests and investigations of your tenant from the console to reveal known issues. When you run a diagnostic, you may receive mitigation steps to help with resolution.
+  - View insights: find links to documentation that provides context and background specific to the product area or actions you've described.
+  - Recommended articles: browse suggested troubleshooting topics and other content related to your issue.
+- If needed, use the *Contact support* pane to file an online support ticket.
   > [!IMPORTANT]
   > When opening a case, be sure to include as many details as possible in the *Description* field. Such information includes: timestamp and date, device ID, device model, serial number, OS version, and any other details relevant to the issue.
-- To review your case history, select the **Service requests** pane. Active cases are at the top of the list, with closed issues also available for review
+- To review your case history, select the **Service requests** pane. Active cases are at the top of the list, with closed issues also available for review.
 
-For more information, see [Microsoft Intune support page][MEM-1]
+For more information, see [Microsoft Intune support page][MEM-1].
 
 <!-- Reference links in article -->
 [MEM-1]: /mem/get-support

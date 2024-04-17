@@ -37,7 +37,7 @@ Microsoft Intune services include:
 - [Microsoft Intune][MEM-1]
 - [Microsoft Intune for Education][INT-1]
 - [Windows Autopilot][MEM-4]
-- [Surface Management Portal][MEM-5]
+- [Microsoft Surface Management Portal][MEM-5]
 
 These services are part of the Microsoft 365 stack to help secure access, protect data, and manage risk.
 
@@ -78,6 +78,6 @@ Let's begin with the creation and configuration of your Microsoft Entra tenant a
 [MEM-2]: /mem/configmgr/core/understand/introduction
 [MEM-3]: /mem/configmgr/desktop-analytics/overview
 [MEM-4]: /mem/autopilot/windows-autopilot
-[MEM-5]: /mem/autopilot/dfci-management
+[MEM-5]: /mem/intune/fundamentals/surface-management-portal
 
 [INT-1]: /intune-education/what-is-intune-for-education

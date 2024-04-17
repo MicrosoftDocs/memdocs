@@ -19,9 +19,9 @@ From the user's perspective, it only takes a few simple operations to make their
 
 Before setting up Windows Autopilot, consider these prerequisites:
 
-- **Software requirements.** Ensure your school and devices meet the [software, networking, licensing, and configuration requirements][WIN-1] for Windows Autopilot
-- **Devices ordered and registered.** Ensure your school IT administrator or Microsoft partner has ordered the devices from an original equipment manufacturer (OEM) and registered them for the Autopilot deployment service. To connect with a partner, you can use the [Microsoft Partner Center][MSFT-1] and work with them to register your devices
-- **Networking requirements.** Ensure students know to connect to the school network during OOBE setup. For more information on managing devices behind firewalls and proxy servers, see [Network endpoints for Microsoft Intune][MEM-1]
+- **Software requirements.** Ensure your school and devices meet the [software, networking, licensing, and configuration requirements][WIN-1] for Windows Autopilot.
+- **Devices ordered and registered.** Ensure your school IT administrator or Microsoft partner has ordered the devices from an original equipment manufacturer (OEM) and registered them for the Autopilot deployment service. To connect with a partner, you can use the [Microsoft Partner Center][MSFT-1] and work with them to register your devices.
+- **Networking requirements.** Ensure students know to connect to the school network during OOBE setup. For more information on managing devices behind firewalls and proxy servers, see [Network endpoints for Microsoft Intune][MEM-1].
 
 > [!NOTE]
 > Where not explicitly specified, both HTTPS (443) and HTTP (80) must be accessible. If you are auto-enrolling your devices into Microsoft Intune or deploying Microsoft Office, follow the networking guidelines for [<u>Microsoft Intune</u>][INT-1] and [<u>Microsoft 365</u>][M365-1].
@@ -33,7 +33,7 @@ Before deployment, devices must be registered in the Windows Autopilot service. 
 - **OEM registration process.** When you purchase devices from an OEM or Reseller, that company can automatically register devices to Windows Autopilot and associate them to your tenant. Before this registration can happen, a *Global Administrator* must grant the OEM/Reseller permissions to register devices. For more information, see [OEM registration][MEM-2]
     > [!NOTE]
     > For **Microsoft Surface registration**, collect the details shown in this [<u>documentation table</u>][SURF-1] and follow the instruction to submit the request form to Microsoft Support.
-- **Cloud Solution Provider (CSP) registration process.** As with OEMs, CSP partners must be granted permission to register devices for a school. For more information, see [Partner registration][MEM-5]
+- **Cloud Solution Provider (CSP) registration process.** As with OEMs, CSP partners must be granted permission to register devices for a school. For more information, see [Partner registration][MEM-5].
     > [!TIP]
     > Try the <a href="https://cloudpartners.transform.microsoft.com/resources/autopilot-in-edu-setup-english" target="_blank"><u>Microsoft Partner Center clickable demo</u></a>, which provides detailed steps to establish a partner relationship and register devices.
 - **Manual registration.** To manually register a device, you must first capture its hardware hash. Once this process has been completed, the hardware hash can be uploaded to the Windows Autopilot service using Microsoft Intune. For steps, see [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices).
@@ -50,11 +50,11 @@ Here are the steps for creating a dynamic group for the devices that have an ass
 
 # [Intune For Education](#tab/intune-for-education)
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
-1. Select **Groups** > **Create group**
-1. Specify a **Group name** and select **Dynamic**
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Select **Groups** > **Create group**.
+1. Specify a **Group name** and select **Dynamic**.
 1. Under **Rules**, select **I want to manage: Devices** and use the clause **Where: Device group tag starts with**, specifying the required tag value
-1. Select **Create group**
+1. Select **Create group**.
     :::image type="content" source="./images/intune-education-autopilot-group.png" alt-text="Intune for Education - creation of a dynamic group for Autopilot devices" border="true":::
 
 More advanced dynamic membership rules can be created from Microsoft Intune admin center. For more information, see [Create an Autopilot device group using Intune][MEM-3].
@@ -73,20 +73,20 @@ For more information, see [Create an Autopilot device group using Intune][MEM-3]
 For Autopilot devices to offer a customized OOBE experience, you must create **Windows Autopilot deployment profiles** and assign them to a group containing the devices.
 A deployment profile is a collection of settings that determine the behavior of the device during OOBE. Among other settings, a deployment profile specifies a **deployment mode**, which can either be:
 
-1. **User-driven:** devices with this profile are associated with the user enrolling the device. User credentials are required to complete the Microsoft Entra join process during OOBE
-1. **Self-deploying:** devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to complete the Microsoft Entra join process. Rather, the device is joined automatically and, for this reason, specific hardware requirements must be met to use this mode
+1. **User-driven:** devices with this profile are associated with the user enrolling the device. User credentials are required to complete the Microsoft Entra join process during OOBE.
+1. **Self-deploying:** devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to complete the Microsoft Entra join process. Rather, the device is joined automatically and, for this reason, specific hardware requirements must be met to use this mode.
 
 To create an Autopilot deployment profile:
 
 # [Intune For Education](#tab/intune-for-education)
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
-1. Select **Groups** > Select a group from the list
-1. Select **Windows device settings**
-1. Expand the **Enrolment** category
-1. From **Configure Autopilot deployment profile for device** select **User-driven**
-1. Ensure that **User account type** is configured as **Standard**
-1. Select **Save**
+1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Select **Groups** > Select a group from the list.
+1. Select **Windows device settings**.
+1. Expand the **Enrolment** category.
+1. From **Configure Autopilot deployment profile for device** select **User-driven**.
+1. Ensure that **User account type** is configured as **Standard**.
+1. Select **Save**.
 
 While Intune for Education offers simple options for Autopilot configurations, more advanced deployment profiles can be created from Microsoft Intune admin center. For more information, see [Windows Autopilot deployment profiles][MEM-4].
 
@@ -107,8 +107,9 @@ To deploy the ESP to devices, you need to create an ESP profile in Microsoft Int
 
 > [!TIP]
 > While testing the deployment process, you can configure the ESP to:
-> - allow the reset of the devices in case the installation fails
-> - allow the use of the  device if installation error occurs
+>
+> - Allow the reset of the devices in case the installation fails
+> - Allow the use of the  device if installation error occurs
 >
 > This enables you to troubleshoot the installation process in case any issues arise and to easily reset the OS. You can turn these settings off once you are done testing.
 
@@ -123,13 +124,13 @@ Once configuration is complete and devices are distributed, students and teacher
 
 When a Windows device is turned on for the first time, the end-user experience with Windows Autopilot is as follows:
 
-1. Identify the language and region
-1. Select the keyboard layout and decide on the option for a second keyboard layout
-1. Connect to the internet: if connecting through Wi-Fi, the user will be prompted to connect to a wireless network. If the device is connected through an ethernet cable, Windows will skip this step
-1. Apply updates: the device will look for and apply required updates
-1. Windows will detect if the device has an Autopilot profile assigned to it. If so, it will proceed with the customized OOBE experience. If the Autopilot profile specifies a naming convention for the device, the device will be renamed, and a reboot will occur
-1. The user authenticates to Microsoft Entra ID, using the school account
-1. The device joins Microsoft Entra ID, enrolls in Intune and all the settings and applications are configured
+1. Identify the language and region.
+1. Select the keyboard layout and decide on the option for a second keyboard layout.
+1. Connect to the internet: if connecting through Wi-Fi, the user will be prompted to connect to a wireless network. If the device is connected through an ethernet cable, Windows will skip this step.
+1. Apply updates: the device will look for and apply required updates.
+1. Windows will detect if the device has an Autopilot profile assigned to it. If so, it will proceed with the customized OOBE experience. If the Autopilot profile specifies a naming convention for the device, the device will be renamed, and a reboot will occur.
+1. The user authenticates to Microsoft Entra ID, using the school account.
+1. The device joins Microsoft Entra ID, enrolls in Intune and all the settings and applications are configured.
 
 > [!NOTE]
 > Some of these steps may be skipped, depending on the Autopilot profile configuration and if the device is using a wired connection.
