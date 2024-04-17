@@ -579,19 +579,21 @@ End of comment -->
   - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
   - **Always**: Updates are installed when they're available.
 
-- **Allow access to all apps in Google Play store**: When set to **Allow**:
+- **Allow access to all apps in Google Play store**:
 
-  - Users get access to all apps in the Google Play store and any private apps added to your organization's Managed Google Play account.
-  - Make sure you target any app (private or public) with the uninstall intent that shouldn't be findable or installed by users from the Managed Google Play Store.
-  - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
+  - When set to **Allow**:
 
-  For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+    - Users get access to all apps in the Google Play store and any private apps added to your organization's Managed Google Play account.
+    - Make sure you target any app (private or public) with the uninstall intent that shouldn't be findable or apps installed by users from the Managed Google Play Store.
+    - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
+    For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+
+  - When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
   
-  - Only shows apps in the Managed Google Play store that are approved, apps that are required, or apps that are assigned to the user.
-  - Uninstalls apps that were installed outside of the Managed Google Play store.
-  - If you change this setting from **Allow** to **Not configured**, then any app not in the policy is automatically uninstalled from the device.
+    - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
+    - Uninstalls apps that were installed outside of the Managed Google Play store.
+    - If you change this setting from **Allow** to **Not configured**, then any app not in the policy is automatically uninstalled from the device.
 
 - The following settings are part of the Google's delegated scope feature:
 
