@@ -18,10 +18,10 @@ highlightedContent:
   items:
     - title: Get to know Microsoft Intune
       itemType: get-started
-      url: /mem/draft-hub#additional-in-depth-resources
+      url: /mem/draft-hub#get-to-know-intune
     - title: Plan a move to Intune
       itemType: deploy
-      url: /mem/draft-hub#additional-in-depth-resources
+      url: /mem/draft-hub#plan-a-move-to-intune
     - title: Intune news
       itemType: whats-new
       url: /mem/draft-hub#intune-news
@@ -39,9 +39,9 @@ productDirectory:
       imageSrc: ./media/microsoft-intune.svg
       links:
         - url: https://11
-          text: test
+          text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
-          text: Configure multifactor athentication (prescriptive guidance)
+          text: View the prescriptive guidance <verify name>
     # Card
     - title: App protection policies
       imageSrc: ./media/microsoft-intune.svg
@@ -54,42 +54,42 @@ productDirectory:
     - title: Secure your devices
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: ./intune/fundamentals/manage-devices#secure-your-devices
+        - url: ./intune/fundamentals/manage-devices.md#secure-your-devices
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/4/0
           text: View the prescriptive guidance <verify name> 
     - title: Conditional Access and Intune
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: ./intune/protect/conditional-access
+        - url: ./intune/protect/conditional-access.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/9/0
           text: View the prescriptive guidance <verify name> 
     - title: Windows Autopilot
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: ./autopilot/windows-autopilot
+        - url: /mem/autopilot/windows-autopilot
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
           text: View the prescriptive guidance <verify name> 
     - title: Manage apps
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: ./intune/apps/app-management
+        - url: ./intune/apps/app-management.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2901/prescriptive-guidance-intune-application-deployment/index.html#/0/0
           text: View the prescriptive guidance <verify name> 
     - title: Update Windows with Intune
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: ./intune/protect/windows-update-for-business-configure
+        - url: ./intune/protect/windows-update-for-business-configure.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
           text: View the prescriptive guidance <verify name>
     - title: Manage macOS devices
       imageSrc: ./media/microsoft-intune.svg
       links:
-        - url: ./solutions/end-to-end-guides/macos-endpoints-get-started
+        - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
           text: Read the documentation
         
 
