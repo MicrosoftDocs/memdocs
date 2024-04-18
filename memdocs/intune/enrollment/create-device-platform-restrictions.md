@@ -50,7 +50,7 @@ This article describes the device platform restrictions supported in Microsoft I
 
 ## Role-based access control  
 
-Global Administrator and Intune Service Administrator roles are permitted to:  
+To manage device platform restrictions in the admin center, you must be a Global Administrator or Intune Service Administrator. These roles can:  
 
 - Create device platform restrictions  
   
@@ -60,7 +60,7 @@ Global Administrator and Intune Service Administrator roles are permitted to:
   
 - Reprioritize device platform restrictions   
 
-All other built-in Intune roles have read-only access to device platform restrictions in the admin center. You can apply scope tags to a device platform restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).   
+All other built-in Intune roles have read-only access. You can apply scope tags to a device platform restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).   
 
 ## Default policy 
 Microsoft Intune provides one default policy for device platform restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
