@@ -9,19 +9,20 @@ ms.author: egorabr
 
 # Windows Update
 
-Create update rings that specify how and when Windows as a Service updates your Windows 10/11 devices with feature and quality updates.
+Microsoft Intune and Intune for Education can configure many Windows Update configuration settings. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
-This document contains Windows Update ring configuration that is commonly used for student and teacher devices.
+Use Microsoft Intune or Intune for Education to manage the install of Windows 10/11 software updates from Windows Update for Business. You can configure update settings on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
 ## Update rings for Windows 10 and later
 
-#### Additional information:
+Update ring policies are a collection of settings that configure when devices that run Windows 10 and Windows 11 updates get installed.
+
+To learn more, see:
 
 - [Update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings)
 - [The Windows Update policies you should set and why](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-windows-update-policies-you-should-set-and-why/ba-p/3270914)
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
 - [YouTube: Windows Update for Business Fundamentals (Japanese)](https://youtu.be/o6_eGOyv-_g)
-
 
 | **Update settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
@@ -50,9 +51,7 @@ This document contains Windows Update ring configuration that is commonly used f
 
 Settings described in this section aren't available in an Update ring policy and should be configured using a Settings Catalog type Configuration Profile.
 
-#### Additional information:
-
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |

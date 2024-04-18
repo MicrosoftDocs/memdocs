@@ -2,20 +2,19 @@
 title: Common Education Windows Delivery Optimization configuration
 description: Learn about common Windows Delivery Optimization configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
-ms.topic: windows-deliveryoptimization
+ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
+ms.manager: dougeby
 ---
 
 # Delivery Optimization
 
-Windows Delivery Optimization helps you get Windows updates and Microsoft Store apps more quickly and reliably.
+There are many configuration options you can set in Delivery Optimization to customize the content delivery experience specific to your environment needs. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
-Delivery Optimization works by letting you get Windows updates and Microsoft Store apps from sources in addition to Microsoft, like other PCs on your local network, or PCs on the internet that are downloading the same files. Delivery Optimization also sends updates and apps from your PC to other PCs on your local network or PCs on the internet, based on your settings. Sharing this data between PCs helps reduce the internet bandwidth that’s needed to keep more than one device up to date or can make downloads more successful if you have a limited or unreliable Internet connection.
+Windows Delivery Optimization helps you get Windows updates and Microsoft Store apps more quickly and reliably. It works by letting you get Windows updates and Microsoft Store apps from sources in addition to Microsoft, like other PCs on your local network, or PCs on the internet that are downloading the same files. Delivery Optimization also sends updates and apps from your PC to other PCs on your local network or PCs on the internet, based on your settings. Sharing this data between PCs helps reduce the internet bandwidth that’s needed to keep more than one device up to date or can make downloads more successful if you have a limited or unreliable internet connection. Delivery Optimization creates a local cache, and stores files that it has downloaded in that cache for a short period of time.
 
-Delivery Optimization creates a local cache, and stores files that it has downloaded in that cache for a short period of time.
-
-#### Additional information
+To learn more, see:
 
 - [Delivery Optimization reference](/windows/deployment/do/waas-delivery-optimization-reference)
 - [YouTube: Delivery Optimization](https://www.youtube.com/playlist?list=PLMuDtq95SdKtN9lntgTcuhsYCsSQR4Dyl)
@@ -24,8 +23,8 @@ Delivery Optimization creates a local cache, and stores files that it has downlo
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
-| **DO Delay Background Download From Http** | 3600 | 1 hour in seconds. After the max delay has reached, the download will resume using HTTP, either downloading the entire payload or complementing the bytes that couldn't be downloaded from Peers. | [DODelayBackgroundDownloadFromHttp](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodelaybackgrounddownloadfromhttp) |
-| **DO Download Mode** | HTTP blended with peering behind the same NAT. | | [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) |
+| **DO Delay Background Download From Http** | 3600 | 1 hour in seconds. After the max delay is reached, the download will resume using HTTP, either downloading the entire payload or complementing the bytes that couldn't be downloaded from Peers. | [DODelayBackgroundDownloadFromHttp](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodelaybackgrounddownloadfromhttp) |
+| **DO Download Mode** | **value** | HTTP blended with peering behind the same NAT. | [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) |
 | **DO Max Cache Age** | 1209600 | 14 days in seconds. Specifies the maximum time in seconds that each file is held in the Delivery Optimization cache after downloading successfully. | [DOMaxCacheAge](/windows/client-management/mdm/policy-csp-deliveryoptimization#domaxcacheage) |
 | **DO Min Disk Size Allowed To Peer** | 100 | Specifies the required minimum disk size (capacity in GB) for the device to use Peer Caching. Recommended values: 64 GB to 256 GB.Adjust as necessary according to your hardware. | [DOMinDiskSizeAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#domindisksizeallowedtopeer) |
 | **DO Min File Size To Cache** | 5 | Specifies the minimum content file size in MB enabled to use Peer Caching. | [DOMinFileSizeToCache](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominfilesizetocache) |
