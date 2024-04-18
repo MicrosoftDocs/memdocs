@@ -162,16 +162,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Monitor and troubleshoot
 
-### Windows update distribution report<!--16579592  -->
-
-The Windows update distribution report in Intune will provide a summarized report to show the number of devices that are on each quality update level and the % coverage for each update across the devices managed by Intune (including co-managed devices).
-
-You will be able to drill down further in the report for each quality update that aggregates devices based on the Windows 10/11 feature version and the update statuses.
-
-Finally, the admins will be able to get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
-
-For more information on Windows update reports, go to [Windows Update reports on Intune](../protect/windows-update-reports.md).
-
 ### Remote Help supports full control of a macOS device<!--22985205  -->
 
 Remote Help will support helpdesk connecting to a user's device and requesting full control of the macOS device.

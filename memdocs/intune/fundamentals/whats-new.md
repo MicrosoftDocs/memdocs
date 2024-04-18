@@ -75,7 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### Auto update available with Win32 app supersedence<!-- 17644510  -->
+#### Auto update available with Win32 app supersedence<!-- 17644510 -->
 
 Win32 app supersedence provides the capability to supersede apps deployed as available with **auto-update** intent. For example, if you deploy a Win32 app (app A) as available and installed by users on their device, you can create a new Win32 app (app B) to supersede app A using **auto-update**. All targeted devices and users with app A installed as available from the Company Portal are superseded with app B. Also, only app B shows in the Company Portal. You can find the **auto-update** feature for available app supersedence as a toggle under the **Available assignment** in the **Assignments** tab.
 
@@ -99,7 +99,7 @@ Applies to:
 
 - Android Enterprise
 
-#### New settings available in the macOS settings catalog<!-- 26970197  -->
+#### New settings available in the macOS settings catalog<!-- 26970197 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
@@ -123,7 +123,7 @@ Applies to:
 
 ### Intune apps
 
-#### Newly available protected apps for Intune<!-- 26825160, 26954999, 26891466, 27184602  -->
+#### Newly available protected apps for Intune<!-- 26825160, 26954999, 26891466, 27184602 -->
 
 The following protected apps are now available for Microsoft Intune:
 
@@ -133,6 +133,16 @@ The following protected apps are now available for Microsoft Intune:
 - Remote Desktop by Microsoft Corporation
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+## Windows update distribution report<!--16579592 -->
+
+The Windows update distribution report in Intune provides a summarized report to show the number of devices that are on each quality update level and the percentage of coverage for each update across the devices that are managed by Intune (including co-managed devices).
+
+You can drill down further in the report for each quality update that aggregates devices based on the Windows 10/11 feature version and the update statuses.
+
+Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
+
+For more information on Windows update distribution reports, see [Windows Update reports on Intune](../protect/windows-update-reports.md).
 
 ## Week of April 15, 2024
 
@@ -166,7 +176,7 @@ Copilot in Intune is integrated in the Intune admin center, and can help you get
 
 - **Device compare**: Use Copilot to compare the hardware properties and device configurations of two devices. This feature helps you determine what's different between two devices with similar configurations, especially when troubleshooting.
 
-- **Error code analyzer**:  Use Copilot in the device view to analyze an error code. This feature helps you understand what the error means and provides a potential resolution.
+- **Error code analyzer**: Use Copilot in the device view to analyze an error code. This feature helps you understand what the error means and provides a potential resolution.
 
 ✅ **Intune capabilities in Copilot for Security**
 
@@ -208,7 +218,7 @@ Applies to:
 
 ### Device configuration
 
-#### New BIOS device configuration profile for OEMs<!-- 9278502  -->
+#### New BIOS device configuration profile for OEMs<!-- 9278502 -->
 
 There is a new **BIOS configuration and other settings** device configuration policy for OEMs. Admins can use this new policy to enable or disable different BIOS features that secure device. In the Intune device configuration policy, you add the BIOS configuration file, deploy a Win32 app, and then assign the policy to your devices.
 
