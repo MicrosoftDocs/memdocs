@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/04/2024
+ms.date: 04/18/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -104,6 +104,10 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 ### FQDN requirement changes<!--46731885-->
 
 In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
+
+### New settings for Windows 365 security baselines<!--49685126-->
+
+New configuration settings will be introduced for the Windows 365 security baseline.
 
 ### New 15-minute Sign-in frequency option<!--48439987-->
 
