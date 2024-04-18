@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -30,6 +29,9 @@ ms.collection:
 ---
 
 # Configure Platform SSO for macOS devices in Microsoft Intune
+
+> [!NOTE]
+> This article is in draft and pending PM input.
 
 On your macOS devices, you can configure Platform SSO to enable single sign-on (SSO) using passwordless authentication, Microsoft Entra user accounts, or smart cards. Platform SSO is an enhancement to the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) and the [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md). Platform SSO can sign users into their managed Mac devices using their Microsoft Entra user account and Touch ID.
 
@@ -76,7 +78,7 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
 
 When you create the platform SSO policy in Intune, you need to decide the authentication method you want to use.
 
-??The SSO app extension must also support the method you choose. The SSO app extension must also support the method. In the policy, we enter a set list of URLs. How do we know which auth methods they support? ??
+??The SSO app extension must also support the method you choose. The SSO app extension must also support the method. In the policy, we enter a set list of URLs. Are these URLs the SSO app extensions? How do we know which auth methods they support? ??
 
 The Platform SSO policy and the authentication method you use changes how users sign in to the devices.
 
@@ -101,7 +103,7 @@ Your authentication options:
   - Its setup can be bootstrapped with an authentication app for MFA authentication or Microsoft [Temporary Access Pass (TAP)](/entra/identity/authentication/howto-authentication-temporary-access-pass).
   - Enables the creation and usage of Microsoft Entra ID passkeys.
 
-- **Password**: When you configure Platform SSO with the **Password** authentication method, users sign in on the Mac with their Microsoft Entra ID user account instead of their local account password.
+- **Password**: When you configure Platform SSO with the **Password** authentication method, users sign in to the device with their Microsoft Entra ID user account instead of their local account password.
 
   With the **Password** authentication method:
 
@@ -109,7 +111,7 @@ Your authentication options:
 
     The local account machine password isn't completely removed from the device. This behavior is by design due to Apple's FileVault disk encryption, which uses the local password as the unlock key.
 
-  - The local account username isn't changed and is left as-is.
+  - The local account username isn't changed and stays as-is.
   - End users can use Touch ID to sign in to the device.
   - There are fewer passwords for users and admins to remember and manage.​
   - Users must enter their Microsoft Entra password after a device reboots. After this initial machine unlock​, Touch ID can unlock the device.
@@ -148,7 +150,9 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
     - **Authentication Method (Deprecated)** (macOS 13 only)
     - **Extension Identifier**
-    - Expand **Platform SSO** > select **Authentication Method** (macOS 14+) and **Use Shared Device Keys**
+    - Expand **Platform SSO**:
+      - Select **Authentication Method** (macOS 14+)
+      - Select **Use Shared Device Keys**
     - **Registration Token**
     - **Screen Locked Behavior**
     - **Team Identifier**
@@ -157,7 +161,10 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
     Close the settings picker.
 
-8. Configure the following settings:
+    > [!TIP]
+    > There are more optional Platform SSO settings you can configure in the policy. For a list, go to [More Platform SSO settings you can configure](#more-platform-sso-settings-you-can-configure) (in this article).
+
+8. Configure the following required settings:
 
     - **URLs**: Enter the following array of URL prefixes. These URL prefixes are the identity providers that do SSO app extensions. The URLs are required for **redirect** payloads and are ignored for **credential** payloads.
 
@@ -187,11 +194,11 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
       This setting requires that you also configure the `AuthenticationMethod` setting.
 
-      - If you use macOS 13 devices, then configure the **Authentication Method (Deprecated)** setting.
-      - If you use macOS 14+ devices, then configure the **Platform SSO** > **Authentication Method** setting.
+      - If you use only macOS 13 devices, then configure the **Authentication Method (Deprecated)** setting.
+      - If you use only macOS 14+ devices, then configure the **Platform SSO** > **Authentication Method** setting.
       - If you have a mix of macOS 13 and macOS 14+ devices, then configure both authentication settings in the same profile.
 
-    - **Platform SSO** > **Authentication Method** (macOS 14+): Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). Make sure you choose the same authentication method that the app extension supports and uses.
+    - **Platform SSO** > **Authentication Method** (macOS 14+): Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). ??Make sure you choose the same authentication method that the app extension supports and uses.??
 
       This setting applies to macOS 14 and later. For macOS 13, use the **Authentication Method (Deprecated)** setting.
 
@@ -277,7 +284,7 @@ On enrolled devices, you can also go to **Settings** > **Privacy and security** 
 
 ## Step 5 - Register the device
 
-When the device receives the policy, there's a **Registration required** notification that pops up or appears in the Notification Center.
+When the device receives the policy, there's a **Registration required** notification that shows in the Notification Center.
 
 End users select this notification, sign in to the Microsoft Entra ID plug-in with their organization account, and complete multifactor authentication (MFA).
 
@@ -299,7 +306,7 @@ Both policies can coexist as you test the settings catalog policy. But, when tes
 
 ## More Platform SSO settings you can configure
 
-When you create the settings catalog profile in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune), there are more settings that you can configure.
+When you create the settings catalog profile in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune), there are more optional settings that you can configure.
 
 The following settings let you customize the end-user experience and give more granular control on user privileges.
 
