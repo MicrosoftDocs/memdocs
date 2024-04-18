@@ -133,13 +133,13 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      > - =
 
      > [!NOTE]
-     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
      >
      > - Serial number
      > - IMEI
      > - MEID
      >
-     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
      >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
@@ -220,13 +220,13 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      Variables available for the SAN value depend on the Certificate type you selected; either **User** or **Device**.
 
      > [!NOTE]
-     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
      >
      > - Serial number
      > - IMEI
      > - MEID
      >
-     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
      >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
@@ -334,9 +334,9 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - Android device administrator
      - Android Enterprise device owner
      - Android Enterprise corporate-owned work profile
-     - Android Enterprise personally-owned work profile
+     - Android Enterprise personally owned work profile
 
-     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs its possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.
+     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs, it's possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.  
 
      The behavior for managing the NDES server URL is specific to each device platform:
 
