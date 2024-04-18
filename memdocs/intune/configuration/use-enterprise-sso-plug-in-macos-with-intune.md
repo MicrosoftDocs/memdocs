@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2024
+ms.date: 04/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,19 +31,21 @@ ms.collection:
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
-On macOS devices, you can configure SSO app extension settings in two places in Intune:
-
-- **Device features template** (this article) - This option configures only the SSO app extension and uses your MDM provider, like Intune, to deploy the settings to devices.
-
-  Use this article if you want to configure the SSO app extension settings without configuring the Platform SSO settings.
-
-- **Settings Catalog** - This option configures Platform SSO and the SSO app extension together. You use Intune to deploy the settings to your devices.
-
-  Use the settings catalog settings if you want to configure both the Platform SSO and SSO app extension settings. For more information, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
-
 This article applies to:
 
 - macOS
+
+On macOS devices, you can configure SSO app extension settings in two places in Intune:
+
+- **Device features template** (**this article**) - This option configures only the SSO app extension and uses your MDM provider, like Intune, to deploy the settings to devices.
+
+  Use this article if you only want to configure the SSO app extension settings and don't want to also configure Platform SSO.
+
+- **[Settings Catalog](platform-sso-macos.md)** - This option configures Platform SSO and the SSO app extension together. You use Intune to deploy the settings to your devices.
+
+  Use the settings catalog settings if you want to configure both the Platform SSO and SSO app extension settings. For more information, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+
+For an overview of your SSO options on Apple devices, go to [SSO overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md).
 
 This article shows how to create an SSO app extension configuration policy for macOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
 
