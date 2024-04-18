@@ -325,4 +325,4 @@ The following settings let you customize the end-user experience and give more g
 - [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin)
 - [Use the Microsoft Enterprise SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)
 - [What is a Primary Refresh Token (PRT)?](/entra/identity/devices/concept-primary-refresh-token)
-- [macOS Platform single sign-on known issues and troubleshooting](/entra-docs-pr/blob/release-macos-platform-sso/docs/identity/devices/troubleshoot-macos-platform-single-sign-on-extension.md)
+- [macOS Platform single sign-on known issues and troubleshooting](/entra/identity/devices/troubleshoot-macos-platform-single-sign-on-extension)
