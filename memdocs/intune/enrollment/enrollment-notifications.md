@@ -111,8 +111,8 @@ Email notifications appear in the user's inbox. Push notifications appear in the
          * OS  
          * OS version  
          * Serial number
- > [!NOTE]
-> Device name does not always reflect the most recent device name in a tenant. Some devices have a pre-configured device name from Intune that changes once enrolled and given timing, this pre-configured name can sometimes show in the Device details of the message. The Company portal website link will always show the most recent and accurate device name.
+    > [!NOTE]
+    > Device name does not always reflect the most recent device name in a tenant. Some devices have a pre-configured device name from Intune that changes once enrolled and given timing, this pre-configured name can sometimes show in the Device details of the message. The Company portal website link will always show the most recent and accurate device name.
 
 * **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
     * **Show contact information**: Flip the switch **On** to show your organization's contact information. The tenant value is automatically populated.  
