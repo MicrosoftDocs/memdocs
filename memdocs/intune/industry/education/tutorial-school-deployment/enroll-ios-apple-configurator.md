@@ -5,6 +5,7 @@ ms.date: 11/09/2023
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
+ms.manager: dougeby
 ---
 
 # Bulk enrollment with Apple Configurator

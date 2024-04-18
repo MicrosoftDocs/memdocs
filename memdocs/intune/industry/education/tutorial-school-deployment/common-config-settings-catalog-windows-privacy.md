@@ -5,6 +5,7 @@ ms.date: 4/9/2024
 ms.topic: windows-privacy
 author: yegor-a
 ms.author: egorabr
+ms.manager: dougeby
 ---
 
 # Windows Privacy

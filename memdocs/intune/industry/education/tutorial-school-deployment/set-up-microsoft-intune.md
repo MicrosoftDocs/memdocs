@@ -6,6 +6,7 @@ ms.topic: tutorial
 appliesto:
 ms.author: scbree
 author: scottbreenmsft
+ms.manager: dougeby
 ---
 
 # Set up Microsoft Intune
