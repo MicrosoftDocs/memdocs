@@ -8,7 +8,7 @@ ms.author: scbree
 author: scottbreenmsft
 ---
 
-## Plan grouping and targeting
+# Plan grouping and targeting
 
 ✅ Organize devices and users
 
