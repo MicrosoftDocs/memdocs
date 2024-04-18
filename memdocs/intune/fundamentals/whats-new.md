@@ -121,6 +121,26 @@ Applies to:
 
 - macOS
 
+### Device security
+
+#### Windows Firewall CSP changes for processing Firewall Rules<!-- 10734904 -->
+
+Windows has changed how the Firewall configuration service provider (CSP) enforces rules from Atomic blocks of firewall rules. The Windows Firewall CSP on a device implements the firewall rule settings from your [Intune endpoint security Firewall policies](../protect/endpoint-security-firewall-policy.md). The change of CSP behavior now enforces an all-or-nothing application of firewall rules from each Atomic block of rules.
+
+- Previously, the CSP on a device would go through the firewall rules in an Atomic block of rules, one rule (or setting) at a time with the goal of applying all the rules in that Atomic block, or none of them. If the CSP encountered any issue with applying any rule from the block to the device, the CSP would not only stop that rule, but also cease to process  subsequent rules without trying to apply them. However, rules that applied successfully before a rule failed, would remain applied to the device. This behavior can lead to a partial deployment of firewall rules on a device, since the rules that were applied before a rule failed to apply are not reversed.
+
+- With the change to the Firewall CSP, when any rule in the block is unsuccessful in applying to the device, all the rules from that same Atomic block that were applied successfully are rolled back. This ensures the desired all-or-nothing behavior is implemented and prevents a partial deployment of firewall rules from that block. For example, if a device receives an Atomic block of firewall rules that has a misconfigured rule that cannot apply, or has a rule that is not compatible with the devices operating system, the CSP fails all the rules from that block, rolling back any rules that might have already been applied to that device.
+
+This change of Firewall CSP behavior is available on devices that run the following Windows versions or later:
+
+- Windows 11 21H2
+- Windows 11 22H2
+- Windows 10 21H2
+
+For more information on the subject of how the Windows Firewall CSP uses Atomic blocks to contain firewall rules, see the note near the top of [Firewall CSP](/windows/client-management/mdm/firewall-csp) in the Windows documentation.
+
+For troubleshooting guidance, see the Intune support blog [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452).
+
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 26825160, 26954999, 26891466, 27184602 -->
