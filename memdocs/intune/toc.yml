@@ -1755,13 +1755,19 @@ items:
         items:
         - name: Introduction
           href: ./industry/education/tutorial-school-deployment/introduction.md
-        - name: 1. Prepare your tenant
+        - name: 1. Plan your deployment
+          items:
+          - name: Plan enrollment
+            href: ./industry/education/tutorial-school-deployment/plan-enrollment.md
+          - name: Plan grouping
+            href: ./industry/education/tutorial-school-deployment/plan-grouping.md
+        - name: 2. Prepare your tenant
           items:
           - name: Set up Microsoft Entra ID
             href: ./industry/education/tutorial-school-deployment/set-up-microsoft-entra-id.md
           - name: Set up Microsoft Intune
             href: ./industry/education/tutorial-school-deployment/set-up-microsoft-intune.md
-        - name: 2. Configure settings and applications
+        - name: 3. Configure settings and applications
           items:
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/configure-devices-overview.md
@@ -1769,7 +1775,7 @@ items:
             href: ./industry/education/tutorial-school-deployment/configure-device-settings.md
           - name: Configure applications
             href: ./industry/education/tutorial-school-deployment/configure-device-apps.md        
-        - name: 3. Deploy devices
+        - name: 4. Deploy devices
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/enroll-overview.md
@@ -1789,7 +1795,7 @@ items:
               href: ./industry/education/tutorial-school-deployment/enroll-ios-ade.md
             - name: Bulk enrollment with Apple Configurator
               href: ./industry/education/tutorial-school-deployment/enroll-ios-apple-configurator.md
-        - name: 4. Manage devices
+        - name: 5. Manage devices
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/manage-overview.md
@@ -1797,9 +1803,9 @@ items:
             href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
           - name: Reset and wipe devices
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
-        - name: 5. Troubleshoot and get help
+        - name: 6. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
-        - name: 6. Common Education configuration
+        - name: 7. Common Education configuration
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/common-config-overview.md
