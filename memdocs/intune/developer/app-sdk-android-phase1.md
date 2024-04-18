@@ -62,6 +62,10 @@ Before you start integrating the Intune App SDK into your Android application, t
 
 ## Key Decisions for SDK integration
 
+### Do I need to register my application with the Microsoft identity platform?
+
+Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
+
 ### Do I have access to my application's source code?
 
 If you don't have access to your application's source code and only have access to the compiled application in either .apk or .aab format, you won't be able to integrate the SDK into your application.
@@ -277,6 +281,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Assign licenses]:/mem/intune/fundamentals/licenses-assign
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration
 
 <!-- Other Microsoft links -->
 [Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
