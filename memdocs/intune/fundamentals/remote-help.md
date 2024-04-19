@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 04/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -75,9 +75,9 @@ The Remote Help app supports the following capabilities in general across the su
 
 General prerequisites that apply to Remote Help:
 
-- [Intune subscription](../fundamentals/licenses.md)
-- [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
-- [Supported platforms and devices](#supported-platforms-and-devices)
+  - [Intune subscription](../fundamentals/licenses.md)
+  - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
+  - [Supported platforms and devices](#supported-platforms-and-devices)
 
 For specific prerequisites based on the platform that you're using, go to:
 
@@ -108,7 +108,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
-- macOS 11, 12, 13 and 14
+- macOS 12, 13 and 14
 
 ## Data and privacy
 

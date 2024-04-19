@@ -43,11 +43,11 @@ Remote Help is available for macOS as both a native application that can be down
 
 ## Remote Help Native macOS App
 
-Most organizations install the Remote Help application for macOS on their users’ devices. This makes the application readily available to users when they need to initiate a support session. Remote Help for macOS provides the Helper with view only and full control capabilities where they can control the Sharer’s mouse and keyboard.
+Most organizations install the Remote Help application for macOS on their users’ devices. This makes the application readily available to users when they need to initiate a support session. Remote Help for macOS provides the helper with view only and full control capabilities where they can control the Sharer’s mouse and keyboard.
 
 ## Remote Help Web App
 
-In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a Helper. This web app provides view only capabilities to the Helper, which allows them to guide the user through resolving whichever issue they have encountered.
+In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, which allows them to guide the user through resolving whichever issue they have encountered.
 Helpers always use the Remote Help Web App to provide support to a Sharer that is on macOS. This provides them with a consistent and friendly experience accessible through the Intune portal. For more details, go to [Remote Help Web app](remote-help-webapp.md).
 
 ## Authentication and Permissions
@@ -141,24 +141,24 @@ When you as the sharer and your helper are ready to begin the session:
 
 1. Open Remote Help app on the device **Finder** > **Applications** > **Microsoft Remote Help**.
 
-1. If prompted, sign in with your organization credentials to authenticate. to your organization.
+2. If prompted, sign in with your organization credentials to authenticate. to your organization.
 
-1. Your Helper will provide you with an 8-digit security code. After entering the code, select **Share screen** to continue.
+3. Your helper will provide you with an 8-digit security code. After entering the code, select **Share screen** to continue.
 
-1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to *Allow* or to *Decline* the request.
+4. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to *Allow* or to *Decline* the request.
 
-3. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
+5. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
 
-4. Select **Share screen** to continue.
+6. Select **Share screen** to continue.
 
-1. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
+7. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 
-1. macOS displays a dialogue menu in the top right corner as one of two options:
+8. macOS displays a dialogue menu in the top right corner as one of two options:
 
   - Green camera icon: Choose **Screen**, and then move your mouse to select the screen share.
   - Yellow microphone icon: Select the microphone icon, then to the right of the application name Microsoft Remote Help, select the grey icon, and then Screen. Move your cursor to the screen you want to share and select **Share this screen**.
 
-5. After the session is established, the helper can then help in resolving any issues on the device.
+9. After the session is established, the helper can then help in resolving any issues on the device.
 
 #### Request help on an unenrolled device
 
