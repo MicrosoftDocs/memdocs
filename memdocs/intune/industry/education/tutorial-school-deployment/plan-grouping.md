@@ -53,7 +53,9 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 ## Choose grouping methods
 
-✅ Check out tips and tricks for grouping
+✅ Select the best option for grouping
+
+The way you target configuration and apps may depend on many factors and the enrollment type.
 
 ::: zone pivot="windows"
 
@@ -71,7 +73,7 @@ The following table provides guidance about which Windows device grouping option
 | --- | --- | --- |
 | Autopilot | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
 | Autopilot userdriven | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
-| All enrollment types | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
+| All enrollment types | Fastest application during enrollment | ✔️ *All devices* group</br>✔️ *All devices* group with a filter |
 | All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes |
 
 ::: zone-end
@@ -87,15 +89,15 @@ The following table provides guidance about which iOS device grouping options to
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
-| Automated device enrollment | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
+| Automated device enrollment | Fastest application during enrollment | ✔️ *All devices* group</br>✔️ *All devices* group with a filter |
 | Automated device enrollment with user affinity | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
-| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes</br>✔️ Assigned device groups |
+| Company portal | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
+| All enrollment types | Applies after enrollment | ✔️ Device dynamic group</br>✔️ Assigned device groups |
 
 ::: zone-end
 
 > [!TIP]
 > For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
-
 
 ## Create groups and filters
 
@@ -122,7 +124,7 @@ The following table provides guidance about which iOS device grouping options to
 
 ✅ See examples of common grouping by enrollment type
 
-The way you target configuration and apps may depend on many factors and the enrollment type. This section includes targeting methods commonly seen amongst Education organizations.
+This section includes targeting methods commonly seen amongst Education organizations.
 
 ::: zone pivot="windows"
 
