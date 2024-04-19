@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2023
+ms.date: 04/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -30,9 +30,6 @@ ms.collection:
 ---
 
 # Overview of Apple User Enrollment in Microsoft Intune 
-
-> [!IMPORTANT]
-> The account driven user enrollment feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
 You can utilize Apple User Enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune. *Apple User Enrollment* is an enrollment solution specifically for bring-your-own-device (BYOD) scenarios. It sets up the personal device so that work data is stored on a separate volume and in managed apps, away from the user's personal data and apps. Supervised mode isn't available with this enrollment type. As the admin, you get access to a limited but appropriate subset of Intune management options and restrictions to ensure that your organization's data stays safe.  
 
