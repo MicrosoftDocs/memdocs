@@ -15,6 +15,8 @@ zone_pivot_groups: platforms-windows-ios
 
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
+## Option 1 for group summary
+
 Intune has three main targeting methods:
 
 - **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
@@ -26,8 +28,21 @@ Intune has three main targeting methods:
 
 - [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. <br><br>For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
 
+## Option 2 for group summary
+
+Intune has four main targeting methods:
+
+| Grouping type | Description | Benefits | Disadvantages |
+| --- | --- | --- | --- |
+| Virtual groups | Created by Intune and allow you to target *All devices* and *All users* | Always up to date automatically | Can only be scoped using filters |
+| Assigned groups | Used when you want to manually add users or devices to a group. | Easily manage unique group memeberships | Membership are manually maintained |
+| Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
+| Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned or dynamic groups |
+
+Organizations typically used a combination of these grouping types in their envrironments.
+
 > [!NOTE]
-> Filters are not accessible in Intune for Education.
+> Filters are not accessible in the Intune for Education admin console but can be accessed in the Intune admin console.
 
 Two extra groups are precreated if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
