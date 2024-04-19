@@ -103,6 +103,25 @@ The following table provides guidance about which iOS device grouping options to
 
 ✅ Create your organization groups
 
+After you've chosen your enrollment method and grouping option, you can create your groups.
+
+::: zone pivot="windows"
+
+> [!NOTE]
+> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+
+> [!NOTE]
+> If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
+
+::: zone-end
+
+::: zone pivot="ios"
+
+> [!NOTE]
+> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+
+::: zone-end
+
 ### [Intune](#tab/intune)
 
 - [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)

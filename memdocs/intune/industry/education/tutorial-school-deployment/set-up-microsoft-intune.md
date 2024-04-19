@@ -199,11 +199,52 @@ This table provides the settings most commonly set by customers, but can be cust
 
 ::: zone pivot="ios"
 
-### Configure Automated Device Enrollment
+### Set up Apple MDM Certificate
 
-If you plan to integrated Apple School Manager and use Automated Device Enrollment follow these steps.
+#### [Intune](#tab/intune)
 
-> insert link and instructions here.
+To set up an Apple MDM certificate, see [Get an Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#steps-to-get-your-certificate).
+
+#### [Intune for Education](#tab/intune-for-education)
+
+To set up an Apple MDM certificate in Intune for Education, see [Add an MDM push certificate](/intune-education/setup-ios-device-management)
+
+---
+
+> [!IMPORTANT]
+> The Apple MDM certificate needs to be renewed yearly. Make a note in your calendar to renew the certificate in just under a year from when you add the certificate. You can can view the expiry date in the console at any time.
+
+### Configure Volume Purchase Program (VPP)
+
+#### [Intune](#tab/intune)
+
+To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](/mem/intune/apps/vpp-apps-ios).
+
+#### [Intune for Education](#tab/intune-for-education)
+
+To set up an Apple VPP in Intune for Education, see [Configure VPP tokens](/intune-education/setup-ios-device-management#configure-vpp-tokens).
+
+---
+
+> [!IMPORTANT]
+> The Apple VPP token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can can view the expiry date in the console at any time.
+
+### Configure Automated Device Enrollment (ADE)
+
+If you plan to integrate Apple School Manager and use Automated Device Enrollment follow these steps.
+
+#### [Intune](#tab/intune)
+
+To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
+
+#### [Intune for Education](#tab/intune-for-education)
+
+To set up an Apple ADE in Intune for Education, see [Configure enrollment program token](/intune-education/setup-ios-device-management#configure-enrollment-program-token).
+
+---
+
+> [!IMPORTANT]
+> The Apple ADE token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can can view the expiry date in the console at any time.
 
 ::: zone-end
 
