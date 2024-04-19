@@ -2,19 +2,22 @@
 title: Common Education Start Menu configuration
 description: Learn about common Start Menu configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
-ms.topic: windows-start
+ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
+ms.manager: dougeby
 ---
 
 # Start Menu Customization
 
-To create a unified user experience, an Intune administrator can deploy a customized Start and taskbar layout to managed Windows 10 and later devices.
+Microsoft Intune and Intune for Education can configure settings for a customized Start menu for Windows 10 and later. This article summarizes the configurations that are most commonly used for student and teacher devices.
+
+Students can benefit from a Start menu that is customized to provide access to educational tools and resources while restricting distractions. By configuring policy settings, educational institutions can create a focused and conducive learning environment.
 
 > [!NOTE]
 > This is an optional policy
 
-#### Additional information:
+To learn more, see:
 
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
 - [Customize the Start menu and taskbar layout on Windows 10 and later devices](/windows/configuration/start/windows-10-start-layout-options-and-policies)

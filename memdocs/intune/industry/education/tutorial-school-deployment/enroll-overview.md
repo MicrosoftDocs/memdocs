@@ -6,6 +6,7 @@ ms.topic: overview
 zone_pivot_groups: platforms-windows-ios
 author: scottbreenmsft
 ms.author: scbree
+ms.manager: dougeby
 ---
 
 # Device enrollment overview

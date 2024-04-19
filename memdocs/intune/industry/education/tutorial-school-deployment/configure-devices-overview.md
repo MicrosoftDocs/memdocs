@@ -6,6 +6,7 @@ ms.topic: tutorial
 ms.collection: essentials-manage
 author: scottbreenmsft
 ms.author: scbree
+ms.manager: dougeby
 ---
 
 # Configure settings and applications with Microsoft Intune
