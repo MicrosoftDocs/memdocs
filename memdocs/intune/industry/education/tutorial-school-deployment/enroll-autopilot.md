@@ -47,7 +47,11 @@ Before deployment, devices must be registered in the Windows Autopilot service. 
 
 For this task, it's recommended to create dynamic device groups using Autopilot attributes.
 
-Here are the steps for creating a dynamic group for the devices that have an assigned Autopilot group tag:
+If you didn't already create groups in [Plan grouping](plan-grouping.md) earlier, here are the steps for creating a dynamic group for the devices that have an assigned Autopilot group tag:
+
+# [Intune](#tab/intune)
+
+For more information, see [Create an Autopilot device group using Intune][MEM-3].
 
 # [Intune For Education](#tab/intune-for-education)
 
@@ -59,10 +63,6 @@ Here are the steps for creating a dynamic group for the devices that have an ass
     :::image type="content" source="./images/intune-education-autopilot-group.png" alt-text="Intune for Education - creation of a dynamic group for Autopilot devices" border="true":::
 
 More advanced dynamic membership rules can be created from Microsoft Intune admin center. For more information, see [Create an Autopilot device group using Intune][MEM-3].
-
-# [Intune](#tab/intune)
-
-For more information, see [Create an Autopilot device group using Intune][MEM-3].
 
 ---
 
@@ -79,6 +79,10 @@ A deployment profile is a collection of settings that determine the behavior of 
 
 To create an Autopilot deployment profile:
 
+# [Intune](#tab/intune)
+
+For more information, see [Windows Autopilot deployment profiles][MEM-4].
+
 # [Intune For Education](#tab/intune-for-education)
 
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
@@ -91,9 +95,7 @@ To create an Autopilot deployment profile:
 
 While Intune for Education offers simple options for Autopilot configurations, more advanced deployment profiles can be created from Microsoft Intune admin center. For more information, see [Windows Autopilot deployment profiles][MEM-4].
 
-# [Intune](#tab/intune)
-
-For more information, see [Windows Autopilot deployment profiles][MEM-4].
+---
 
 ### Configure an Enrollment Status Page
 
