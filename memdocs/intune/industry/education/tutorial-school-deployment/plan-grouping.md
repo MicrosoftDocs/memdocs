@@ -74,7 +74,7 @@ For more information on grouping and targeting options, see [Performance recomme
 ________________________________________________________
 
 > [!div class="nextstepaction"]
-> [Next: Configure devices >](configure-devices-overview.md)
+> [Next: Set up Microsoft Entra ID >](set-up-microsoft-entra-id.md)
 
 <!-- Reference links in article -->
 

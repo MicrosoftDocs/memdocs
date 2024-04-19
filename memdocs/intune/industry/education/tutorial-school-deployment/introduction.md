@@ -70,7 +70,7 @@ In the remainder of this document, we'll discuss the key concepts and benefits o
 Let's begin with the creation and configuration of your Microsoft Entra tenant and Intune environment.
 
 > [!div class="nextstepaction"]
-> [Next: Set up Microsoft Entra ID >](set-up-microsoft-entra-id.md)
+> [Next: Plan >](set-up-microsoft-entra-id.md)
 
 <!-- Reference links in article -->
 
