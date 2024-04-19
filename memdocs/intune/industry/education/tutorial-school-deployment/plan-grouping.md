@@ -96,7 +96,9 @@ On Windows apps and policies can also be targeted at user groups. Many apps and 
 ::: zone pivot="windows"
 
 For Windows devices:
-- Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.<br><br>This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+- Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.
+  This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+
 - Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
 ::: zone-end
