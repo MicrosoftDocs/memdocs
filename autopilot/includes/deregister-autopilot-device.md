@@ -40,9 +40,9 @@ Before a device is deregistered from Autopilot, it first has to be deleted from 
 
 ### Deregister from Autopilot using Intune
 
-Once the device has been deregistered from Intune, it can then be deregistered from Autopilot. To deregister a device from Autopilot:
+Once the device has been deleted from Intune, it can then be deregistered from Autopilot. To deregister a device from Autopilot:
 
-1. Make sure the device has been deregistered from Intune as described in the [Deregister from Intune](#deregister-from-intune) section.
+1. Make sure the device has been deleted from Intune as described in the [Delete from Intune](#delete-from-intune) section.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -54,7 +54,7 @@ Once the device has been deregistered from Intune, it can then be deregistered f
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-1. In the **Windows Autopilot devices** screen that opens, under **Serial number**, find the device that needs to be deregistered by its serial number as determined in the [Deregister from Intune](#deregister-from-intune) section. If necessary, use the **Search by serial number** box.
+1. In the **Windows Autopilot devices** screen that opens, under **Serial number**, find the device that needs to be deregistered by its serial number as determined in the [Delete from Intune](#delete-from-intune) section. If necessary, use the **Search by serial number** box.
 
 1. Select the device by selecting the checkbox next to the device.
 
