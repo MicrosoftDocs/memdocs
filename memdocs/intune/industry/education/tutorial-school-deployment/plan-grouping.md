@@ -51,7 +51,74 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 > [!TIP]
 > For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
 
-## Examples
+## Choose grouping methods
+
+✅ Check out tips and tricks for grouping
+
+::: zone pivot="windows"
+
+For Windows devices:
+- Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.
+  This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+
+- Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+
+ > **alternative display option below**
+
+The following table provides guidance about which Windows device grouping options to use based on the enrollment method and desired behavior.
+
+| Enrollment type | Behavior | Best grouping options |
+| --- | --- | --- |
+| Autopilot | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
+| Autopilot userdriven | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
+| All enrollment types | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
+| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes |
+
+::: zone-end
+
+::: zone pivot="ios"
+
+For iOS devices:
+- If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+
+ > **alternative display option below**
+
+The following table provides guidance about which iOS device grouping options to use based on the enrollment method and desired behavior.
+
+| Enrollment type | Behavior | Best grouping options |
+| --- | --- | --- |
+| Automated device enrollment | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
+| Automated device enrollment with user affinity | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
+| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes</br>✔️ Assigned device groups |
+
+::: zone-end
+
+> [!TIP]
+> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
+
+
+## Create groups and filters
+
+✅ Create your organization groups
+
+### [Intune](#tab/intune)
+
+- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
+- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+
+### [Intune for Education](#tab/intune-for-education)
+
+- [Create groups in Intune for Education][EDU-1]
+- [Manually add or remove users and devices to an existing assigned group][EDU-2]
+- [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
+- [Create Filters](/mem/intune/fundamentals/filters)
+
+---
+
+## Example groups
 
 ✅ See examples of common grouping by enrollment type
 
@@ -109,71 +176,6 @@ To apply settings as quickly as possible during enrollment without waiting for d
 
 ::: zone-end
 
-## Tips
-
-✅ Check out tips and tricks for grouping
-
-::: zone pivot="windows"
-
-For Windows devices:
-- Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.
-  This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
-
-- Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
-
- > **alternative display option below**
-
-The following table provides guidance about which Windows device grouping options to use based on the enrollment method and desired behavior.
-
-| Enrollment type | Behavior | Best grouping options |
-| --- | --- | --- |
-| Autopilot | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
-| Autopilot userdriven | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
-| All enrollment types | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
-| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes |
-
-::: zone-end
-
-::: zone pivot="ios"
-
-For iOS devices:
-- If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
-
- > **alternative display option below**
-
-The following table provides guidance about which iOS device grouping options to use based on the enrollment method and desired behavior.
-
-| Enrollment type | Behavior | Best grouping options |
-| --- | --- | --- |
-| Automated device enrollment | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
-| Automated device enrollment with user affinity | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
-| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes</br>✔️ Assigned device groups |
-
-::: zone-end
-
-> [!TIP]
-> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
-
-## Create groups and filters
-
-✅ Create your organization groups
-
-### [Intune](#tab/intune)
-
-- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
-- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-
-### [Intune for Education](#tab/intune-for-education)
-
-- [Create groups in Intune for Education][EDU-1]
-- [Manually add or remove users and devices to an existing assigned group][EDU-2]
-- [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
-- [Create Filters](/mem/intune/fundamentals/filters)
-
----
 ________________________________________________________
 
 > [!div class="nextstepaction"]
