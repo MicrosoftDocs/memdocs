@@ -202,6 +202,8 @@ This table provides the settings most commonly set by customers, but can be cust
 
 If you plan to integrated Apple School Manager and use Automated Device Enrollment follow these steps.
 
+> insert link and instructions here.
+
 ::: zone-end
 
 ---
