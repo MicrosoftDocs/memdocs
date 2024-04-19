@@ -39,15 +39,19 @@ ms.collection:
 - macOS
 - Linux 
 
-Your organization can't see your personal information when you enroll a device in Microsoft Intune. Enrolling your device makes certain information, such as device model and serial number, visible to IT administrators and support people with administrator access. 
-
-This article describes the information that your organization can and can't see on these devices, and explains why certain data is made visible. There are two types of devices discussed in this article:    
-
-* Personal devices  
-* Devices configured by your organization  
+Your organization can't see your personal information when you enroll a device in Microsoft Intune, but enrolling your device makes other information, such as device model and serial number, visible to IT administrators and support people with administrator access. This article describes the information that your organization can and can't see on enrolled devices, and explains why certain data is made visible. 
 
 > [!NOTE]
 > A support person is the person or department at your organization that you're supposed to contact if you're having problems with your device. They provide technical support for device setup, enrollment, and access. An IT administrator, or *IT admin* for short, is the person or team of people that configure the Microsoft Intune device management and enrollment settings for your organization. Some IT admins also provide technical support.  
+
+## Device ownership  
+
+There are two types of devices we refer to in this article:    
+
+* Personal devices: You own the device.   
+* Devices configured by your organization: Your organization owns the device.  
+
+To view the ownership type for an enrolled device, sign in to the Intune Company Portal app or website and go to **Device Details**.  
 
 ## Things your organization can never see
 
@@ -93,10 +97,7 @@ Your organization can see and access certain aspects of your device when assisti
 ### Phone number  
 Your organization can see the full phone number of all devices configured by them, except for Android devices with a work profile.   
 
-For a personal device, your organization see the last four digits of your phone number.     
-
- > [!TIP]
- > You can view the ownership type for your device on the Intune Company Portal > **Device Details** page.  
+Your organization can see the last four digits of a phone number for a personal device.     
 
 ### Device storage space   
 If you have trouble installing a required app, your support person may look at your storage size to find out if low space is the cause.   
