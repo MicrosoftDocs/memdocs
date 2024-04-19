@@ -137,7 +137,7 @@ These are the common groups used for devices that are enrolled using Autopilot.
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
 | All Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
 | All non-Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
-| All *use case* devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*use case*\")) |
+| All Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*Student*\")) |
 
 ### Provisioning packages
 These are the common groups used for devices that are enrolled using provisioning packages.
@@ -145,7 +145,7 @@ These are the common groups used for devices that are enrolled using provisionin
 | Name | Type | Query |
 | --- | --- | --- |
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
-| All *use case* devices | Dynamic membership rules | (device.displayName -startsWith \"*use case*\") |
+| All Student devices | Dynamic membership rules | (device.displayName -startsWith \"*STU-*\") |
 
 ### All enrollment types
 Filters can be used to further include or exclude devices from groups. For example:

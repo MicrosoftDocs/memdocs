@@ -6,6 +6,7 @@ ms.topic: tutorial
 appliesto:
 ms.author: scbree
 author: scottbreenmsft
+zone_pivot_groups: platforms-windows-ios
 ---
 
 # Set up Microsoft Intune
@@ -80,19 +81,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 - Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune/apps/company-portal-app).
 - Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](/mem/intune/enrollment/terms-and-conditions-create).
 
-## Configure the Intune service for Windows Education devices
-
-These steps are only required if you plan to manage Windows devices in your school.
-
-> [!div class="checklist"]
->In this section you will:
->
-> - Configure Windows enrollment
-> - Disable Windows Hello for Business
-> - Intune data collection policy
-> - Configure Windows data
-> - Configure Windows device diagnostics
-> - (Optional) Configure the Enrollment Status Page
+::: zone pivot="windows"
 
 ### Configure Windows enrollment
 
@@ -204,6 +193,16 @@ This table provides the settings most commonly set by customers, but can be cust
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Turn on log collection and diagnostics page for end users | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until required apps are installed if they are assigned to the user/device | *All* or *Selected* with the minimum apps required. <br><br>For example, Microsoft 365 apps or web content filtering softtware |
+
+::: zone-end
+
+::: zone pivot="ios"
+
+### Configure Automated Device Enrollment
+
+If you plan to integrated Apple School Manager and use Automated Device Enrollment follow these steps.
+
+::: zone-end
 
 ---
 
