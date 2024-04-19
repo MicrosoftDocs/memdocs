@@ -6,6 +6,7 @@ ms.topic: tutorial
 appliesto:
 ms.author: scbree
 author: scottbreenmsft
+zone_pivot_groups: platforms-windows-ios
 ---
 
 # Plan grouping and targeting
@@ -33,25 +34,21 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 The way you target configuration and apps may depend on many factors.
 
+::: zone pivot="windows"
 
+### Autopilot
+When devices are imported into Autopilot they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use this to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
+These are the common groups used for devices that are enrolled using Autopilot.
 
-## Tips
+- All devices
+- All Autopilot devices (based on ZTDID)
+- All <use case> devices (based on group tag)
+- All <location> <use case> devices (based on group tag)
 
-> [!TIP]
-> **For Windows devices:**
-> - Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.<br><br>This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
-> - Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
-> 
-> **For iOS devices:**
-> - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+Filters are also sometimes used to target particular device scenarios. For example:
 
-### [Intune](#tab/intune)
-
-- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
-- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- Devices running Windows 10 (OS version = 10.0.1)
+- Devices running Windows 11 (OS version = 10.0.?)
 
 Here are examples of queries commonly used for dynamic security groups.
 
@@ -60,6 +57,44 @@ Here are examples of queries commonly used for dynamic security groups.
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
 | All Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
 | All non-Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
+
+### Provisioning packages
+These are the common groups used for devices that are enrolled using provisioning packages.
+- All devices
+- All *use case* devices (based on device name set in the provisioning package)
+
+On Windows apps and policies can also be targeted at user groups. Many apps and policies on Windows are "device" targeted, so even if targeted at a user group, will apply to all subsequent users of that device.
+
+::: zone-end
+
+::: zone pivot="ios"
+
+::: zone-end
+
+## Tips
+
+::: zone pivot="windows"
+
+For Windows devices:
+- Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.<br><br>This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+- Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+
+::: zone-end
+
+::: zone pivot="ios"
+
+For iOS devices:
+- If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+
+::: zone-end
+
+### [Intune](#tab/intune)
+
+- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
+- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 
 ### [Intune for Education](#tab/intune-for-education)
 
