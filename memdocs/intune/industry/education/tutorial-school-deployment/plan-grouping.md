@@ -31,6 +31,7 @@ Intune has three main targeting methods:
 ## Option 2 for group summary
 
 Intune has four main targeting methods:
+
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
 | Virtual groups | Created by Intune and allow you to target *All devices* and *All users* | Always up to date automatically | Can only be scoped using filters |
