@@ -15,8 +15,6 @@ zone_pivot_groups: platforms-windows-ios
 
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
-## Option 1 for group summary
-
 Intune has three main targeting methods:
 
 - **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
@@ -28,7 +26,7 @@ Intune has three main targeting methods:
 
 - [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. <br><br>For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
 
-## Option 2 for group summary
+ > **alternative display option below**
 
 Intune has four main targeting methods:
 
@@ -63,13 +61,6 @@ The way you target configuration and apps may depend on many factors and the enr
 When devices are imported into Autopilot they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use this to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
 These are the common groups used for devices that are enrolled using Autopilot.
 
-- All devices
-- All Autopilot devices (based on ZTDID)
-- All *use case* devices (based on group tag)
-- All *location use case* devices (based on group tag)
-
-Here are examples of queries commonly used for dynamic security groups.
-
 | Name | Type | Query |
 | --- | --- | --- |
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
@@ -79,9 +70,6 @@ Here are examples of queries commonly used for dynamic security groups.
 
 ### Provisioning packages
 These are the common groups used for devices that are enrolled using provisioning packages.
-
-- All devices
-- All *use case* devices (based on device name set in the provisioning package)
 
 | Name | Type | Query |
 | --- | --- | --- |
@@ -102,11 +90,6 @@ On Windows apps and policies can also be targeted at user groups. Many apps and 
 
 ### Automated Device Enrollment
 When devices are enrolled with Automated Device Enrollment, the devices are stamped with the enrollment profile name used during enrollment. Devices can be associated with different enrollment profiles in the Automated Device Enrollment token section under enrollment. Some customers use this to create groups or filters for different enrollment settings, to target different apps or profiles and also for assigning scope tags for role-based access control.
-
-These are the common groups used for devices that are enrolled using Automated Device Enrollment.
-
-- All devices
-- All *'use case'* devices (based on enrollmentProfileName)
 
 Here are examples of queries commonly used for dynamic security groups.
 
@@ -136,7 +119,7 @@ For Windows devices:
 
 - Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
- > alternative display option below
+ > **alternative display option below**
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
@@ -152,7 +135,7 @@ For Windows devices:
 For iOS devices:
 - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
- > alternative display option below
+ > **alternative display option below**
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
