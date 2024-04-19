@@ -7,6 +7,7 @@ appliesto:
 ms.author: scbree
 author: scottbreenmsft
 zone_pivot_groups: platforms-windows-ios
+ms.manager: dougeby
 ---
 
 # Set up Microsoft Intune
