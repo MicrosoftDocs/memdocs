@@ -14,13 +14,13 @@ author: scottbreenmsft
 
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
-Intune has two main targeting methods:
+Intune has three main targeting methods:
 
+- **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
 - **Groups** are created and managed in Entra and can contain users or devices.
-  - **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
   - **Assigned groups** are used when you want to manually add users or devices to a group.
   - **Dynamic groups** reference rules that you create to assign students or devices to groups, which automate the membership's maintenance of those groups.
-- [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
+- [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. <br><br>For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
 
 > [!NOTE]
 > Filters are not accessible in Intune for Education.
@@ -29,10 +29,18 @@ Two extra groups are precreated if you use **Microsoft School Data Sync (SDS)**:
 
 Beyond the defaults, groups can be customized to suit various needs. For example, if you have both *Windows 10* and *Windows 11* devices in your school, you can create groups, such as *Windows 10 devices* and *Windows 11 devices*, to assign different policies and applications to.
 
+## Examples
+
+The way you target configuration and apps may depend on many factors.
+
+
+
+## Tips
+
 > [!TIP]
 > **For Windows devices:**
-> - If you target applications and policies to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), they will be applied to the devices as soon as they are enrolled in Intune, before users signs in. This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
-> - Applications and policies to a *device dynamic group* based on other attributes, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+> - Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.<br><br>This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
+> - Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 > 
 > **For iOS devices:**
 > - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
