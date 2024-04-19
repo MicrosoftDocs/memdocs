@@ -18,9 +18,12 @@ By organizing devices, students, classrooms, or learning curricula into groups, 
 Intune has three main targeting methods:
 
 - **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
+
 - **Groups** are created and managed in Entra and can contain users or devices.
   - **Assigned groups** are used when you want to manually add users or devices to a group.
+
   - **Dynamic groups** reference rules that you create to assign students or devices to groups, which automate the membership's maintenance of those groups.
+
 - [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. <br><br>For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
 
 > [!NOTE]
@@ -61,8 +64,8 @@ These are the common groups used for devices that are enrolled using Autopilot.
 
 - All devices
 - All Autopilot devices (based on ZTDID)
-- All <use case> devices (based on group tag)
-- All <location> <use case> devices (based on group tag)
+- All *use case* devices (based on group tag)
+- All *location use case* devices (based on group tag)
 
 Here are examples of queries commonly used for dynamic security groups.
 
@@ -71,11 +74,18 @@ Here are examples of queries commonly used for dynamic security groups.
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
 | All Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
 | All non-Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
+| All *use case* devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*use case*\")) |
 
 ### Provisioning packages
 These are the common groups used for devices that are enrolled using provisioning packages.
+
 - All devices
 - All *use case* devices (based on device name set in the provisioning package)
+
+| Name | Type | Query |
+| --- | --- | --- |
+| All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
+| All *use case* devices | Dynamic membership rules | (device.displayName -startsWith \"*use case*\") |
 
 ### All enrollment types
 Filters can be used to further include or exclude devices from groups. For example:
@@ -88,6 +98,25 @@ On Windows apps and policies can also be targeted at user groups. Many apps and 
 ::: zone-end
 
 ::: zone pivot="ios"
+
+### Automated Device Enrollment
+When devices are enrolled with Automated Device Enrollment, the devices are stamped with the enrollment profile name used during enrollment. Devices can be associated with different enrollment profiles in the Automated Device Enrollment token section under enrollment. Some customers use this to create groups or filters for different enrollment settings, to target different apps or profiles and also for assigning scope tags for role-based access control.
+
+These are the common groups used for devices that are enrolled using Automated Device Enrollment.
+
+- All devices
+- All *'use case'* devices (based on enrollmentProfileName)
+
+Here are examples of queries commonly used for dynamic security groups.
+
+| Name | Type | Query |
+| --- | --- | --- |
+| All iOS devices | Dynamic membership rules | (device.deviceOSType -startsWith \"iOS\") |
+| All *'use case'* devices | Dynamic membership rules | (device.enrollmentProfileName -eq \"'*use case*'\") |
+
+To apply settings as quickly as possible during enrollment without waiting for dynamic group updates, some customers use a filter based on enrollmentProfileName and target configuration at the *All Devices* virutal group.
+
+- Devices with a specific enrollmentProfileName (enrollmentProfileName *equals* *'use case*')
 
 ::: zone-end
 
