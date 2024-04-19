@@ -436,7 +436,7 @@ You may have noticed instances of the Application Control policy in the Intune U
 
 ### What if I have multiple base or supplemental policies on the same device?
 
-Prior to Windows 10 1903, App Control for Business only supported a single active policy on a system at any given time. This significantly limits customers in situations where multiple policies with different intents would be useful. Today, multiple base and supplemental policies are supported on the same device. Learn more about [deploying multiple App Control for Business policies](https://learn.microsoft.com/windows/security/application-security/application-control/windows-defender-application-control/design/deploy-multiple-wdac-policies).
+Prior to Windows 10 1903, App Control for Business only supported a single active policy on a system at any given time. This significantly limits customers in situations where multiple policies with different intents would be useful. Today, multiple base and supplemental policies are supported on the same device. Learn more about [deploying multiple App Control for Business policies](/windows/security/application-security/application-control/windows-defender-application-control/design/deploy-multiple-wdac-policies).
 
 On a related note, there is no longer a limitation of 32 policies active on the same device for App Control for Business. This issue is resolved for devices that run Windows 10 1903 or later with a Windows security update released on or after March 12, 2024. Older versions of Windows are expected receive this fix in future Windows security updates.
 
