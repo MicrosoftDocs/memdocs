@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 05/25/2023
+ms.date: 04/19/2024
 ms.localizationpriority: medium
 ---
 
@@ -20,9 +20,9 @@ Whenever a device permanently leaves an organization, whether it's for a repair 
 
 Below we describe the steps an admin would go through to deregister a device from Intune and Autopilot.
 
-### Deregister from Intune
+### Delete from Intune
 
-Before a device is deregistered from Autopilot, it first has to be deregistered from Intune. To deregister an Autopilot device from Intune:
+Before a device is deregistered from Autopilot, it first has to be deleted from Intune. To delete an Autopilot device from Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -30,7 +30,7 @@ Before a device is deregistered from Autopilot, it first has to be deregistered 
 
 3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. Under **Device name**, find the device that needs to be deregistered and then select the device. If necessary, use the **Search** box.
+4. Under **Device name**, find the device that needs to be deleted and then select the device. If necessary, use the **Search** box.
 
 5. In the properties screen for the device, make a note of the serial number listed under **Serial number**.
 
