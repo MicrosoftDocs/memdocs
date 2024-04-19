@@ -51,7 +51,7 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 ## Examples
 
-The way you target configuration and apps may depend on many factors.
+The way you target configuration and apps may depend on many factors and the enrollment type. This section includes targeting methods commonly seen amongst Education organizations.
 
 ::: zone pivot="windows"
 
@@ -63,11 +63,6 @@ These are the common groups used for devices that are enrolled using Autopilot.
 - All Autopilot devices (based on ZTDID)
 - All <use case> devices (based on group tag)
 - All <location> <use case> devices (based on group tag)
-
-Filters are also sometimes used to target particular device scenarios. For example:
-
-- Devices running Windows 10 (OS version = 10.0.1)
-- Devices running Windows 11 (OS version = 10.0.?)
 
 Here are examples of queries commonly used for dynamic security groups.
 
@@ -81,6 +76,12 @@ Here are examples of queries commonly used for dynamic security groups.
 These are the common groups used for devices that are enrolled using provisioning packages.
 - All devices
 - All *use case* devices (based on device name set in the provisioning package)
+
+### All enrollment types
+Filters can be used to further include or exclude devices from groups. For example:
+
+- Devices running Windows 10 (osVersion *starts with* 10.0.1)
+- Devices running Windows 11 (osVersion *starts with* 10.0.2)
 
 On Windows apps and policies can also be targeted at user groups. Many apps and policies on Windows are "device" targeted, so even if targeted at a user group, will apply to all subsequent users of that device.
 
