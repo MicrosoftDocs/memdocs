@@ -15,6 +15,8 @@ zone_pivot_groups: platforms-windows-ios
 
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
+## Grouping and targeting overview
+
 Intune has three main targeting methods:
 
 - **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
