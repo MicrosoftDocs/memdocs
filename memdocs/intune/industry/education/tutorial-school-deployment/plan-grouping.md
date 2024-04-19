@@ -121,6 +121,8 @@ For Windows devices:
 
  > **alternative display option below**
 
+The following table provides guidance about which Windows device grouping options to use based on the enrollment method and desired behavior.
+
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
 | Autopilot | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
@@ -136,6 +138,8 @@ For iOS devices:
 - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
  > **alternative display option below**
+
+The following table provides guidance about which iOS device grouping options to use based on the enrollment method and desired behavior.
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |

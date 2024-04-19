@@ -70,7 +70,7 @@ In the remainder of this document, we'll discuss the key concepts and benefits o
 Let's begin with the creation and configuration of your Microsoft Entra tenant and Intune environment.
 
 > [!div class="nextstepaction"]
-> [Next: Plan Enrollment >](plan-enrollment.md)
+> [Next: Plan enrollment >](plan-enrollment.md)
 
 <!-- Reference links in article -->
 
