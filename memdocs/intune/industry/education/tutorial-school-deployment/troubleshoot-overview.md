@@ -6,6 +6,7 @@ zone_pivot_groups: platforms-windows-ios
 ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
+ms.manager: dougeby
 ---
 
 # Troubleshoot devices

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/04/2024
+ms.date: 04/18/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -91,10 +91,6 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
 
-### Remoting connections report will move to under Reports<!--48541308-->
-
-In a future update, the Remoting connection report will no longer be available under **Reports** > **Endpoint analytics**. Instead, you'll find it under **Reports** > **Cloud PC Overview**.
-
 <!-- ***********************************************-->
 ## Provisioning
 
@@ -108,6 +104,10 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 ### FQDN requirement changes<!--46731885-->
 
 In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
+
+### New settings for Windows 365 security baselines<!--49685126-->
+
+New configuration settings will be introduced for the Windows 365 security baseline.
 
 ### New 15-minute Sign-in frequency option<!--48439987-->
 

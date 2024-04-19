@@ -2,22 +2,23 @@
 title: Common Education device restrictions configuration
 description: Learn about common device restrictions configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
-ms.topic: devicerestrictions
+ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
+ms.manager: dougeby
 ---
 
 # Device Restrictions
 
-Tables in this article represent a list of device restrictions and configurations as used commonly by education organizations throughout the world.
+There are many device restriction settings and configuration options you have available. This article summarizes the configurations that are most commonly used for student and teacher devices.
+
+Intune and Intune for Education includes device restriction policies that help administrators control a wide range of settings and features on Android, iOS/iPadOS, macOS, and Windows devices to protect your organization's resources.
 
 ## Organization-specific settings
 
 Configure these settings to personalize user experience and simplify the Windows sign-in process. Values for these settings should be defined according to the environment.
 
-#### Additional information:
-
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
@@ -30,9 +31,7 @@ Configure these settings to personalize user experience and simplify the Windows
 
 Commonly applied device restrictions in education.
 
-#### Additional information:
-
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
