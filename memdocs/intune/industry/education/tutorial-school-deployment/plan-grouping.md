@@ -33,22 +33,6 @@ Two extra groups are precreated if you use **Microsoft School Data Sync (SDS)**:
 
 Beyond the defaults, groups can be customized to suit various needs. For example, if you have both *Windows 10* and *Windows 11* devices in your school, you can create groups, such as *Windows 10 devices* and *Windows 11 devices*, to assign different policies and applications to.
 
-### [Intune](#tab/intune)
-
-- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
-- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
-
-### [Intune for Education](#tab/intune-for-education)
-
-- [Create groups in Intune for Education][EDU-1]
-- [Manually add or remove users and devices to an existing assigned group][EDU-2]
-- [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
-
----
-
 > [!TIP]
 > For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
 
@@ -138,6 +122,24 @@ For iOS devices:
 - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
 ::: zone-end
+
+## Create groups and filters
+
+### [Intune](#tab/intune)
+
+- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters)
+- [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+- [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
+
+### [Intune for Education](#tab/intune-for-education)
+
+- [Create groups in Intune for Education][EDU-1]
+- [Manually add or remove users and devices to an existing assigned group][EDU-2]
+- [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
+
+---
 ________________________________________________________
 
 > [!div class="nextstepaction"]
