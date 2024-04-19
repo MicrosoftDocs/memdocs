@@ -2,21 +2,20 @@
 title: Common Education OneDrive Known Folder Move configuration
 description: Learn about common OneDrive Known Folder Move configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
-ms.topic: onedrive-kfm
+ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
+ms.manager: dougeby
 ---
 
 # OneDrive Known Folder Move
 
-For devices used by the same user all the time (1:1 scenario) it is common to enable OneDrive Known Folder Move to redirect user’s Documents, Desktop and Pictures folders to OneDrive to prevent data loss.
+Microsoft Intune and Intune for Education can configure the settings to redirect and move Windows known folders to OneDrive. This article summarizes the configurations that are most commonly used for student and teacher devices to enable OneDrive Known Folder Move to redirect the user’s Documents, Desktop, and Pictures folders to OneDrive to prevent data loss.
 
 > [!NOTE]
 > This is an optional policy
 
-#### Additional information:
-
-- [Redirect and move Windows known folders to OneDrive](/sharepoint/redirect-known-folders)
+To learn more, see [Redirect and move Windows known folders to OneDrive](/sharepoint/redirect-known-folders).
 
 ## Settings Catalog Policies
 

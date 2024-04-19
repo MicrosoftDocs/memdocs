@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/22/2023
+ms.date: 04/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,9 @@ With Intune, you can deploy updates to Windows 10/11 devices by using policies f
 - [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
 - [Windows Driver updates for Windows 10 and later](../protect/windows-driver-updates-overview.md)
 
-Reports for these policy types are available to help you monitor and troubleshoot update deployments, Intune supports the following report options:
+Reports for these policy types are available to help you monitor and troubleshoot update deployments. To support reporting, you must configure [Data collection settings](#configuring-for-client-data-reporting).  
+
+Intune supports the following report options:
 
 - **Reports in Intune**:
   - **Windows 10 update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
@@ -51,6 +53,15 @@ Reports for these policy types are available to help you monitor and troubleshoo
   [Use Windows Update for Business reports with Intune](#use-windows-update-for-business-reports) to monitor Windows update rollouts. Windows Update for Business reports is a free service built on Azure Monitor and Log Analytics.
 
 For more information, see [Monitor Windows Updates with Windows Update for Business reports](/windows/deployment/update/wufb-reports-overview) in the Windows documentation.
+
+## Configuring for client data reporting
+
+This method of configuring data collection using Windows diagnostic data in Intune is shared across all the reports, including drivers, feature updates, and expedite updates.
+
+To support reporting, you must configure the following data collection settings:
+
+- Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
+- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 ## Reports for Update rings for Windows 10 and later policy
 
@@ -101,6 +112,7 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 The data in the Intune reports for Feature updates for Windows 10 and later policy is used only for these reports and doesn't surface in other Intune reports.
 
 - [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report)- This report provides an overall view of compliance for devices on a per-policy basis.
+
 - [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
@@ -109,7 +121,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 - **Data collection**:
 
-  Before a device can send the reporting data that's used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configure-data-collection):
+  Before a device can send the reporting data that's used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configuring-for-client-data-reporting):
 
   - Service-based data is collected for all feature update versions and doesn't require you to configure data collection.
   - Client-based data is collected from devices only after data collection is configured.
@@ -124,7 +136,7 @@ Before you can use the feature updates policy reports, you must configure prereq
   - Be Microsoft Entra joined, or Microsoft Entra hybrid joined to support submitting of data for reporting.
   - Run Windows 10 1903 or later, or Windows 11. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
 
-### Configure data collection
+<!-- ### Configure data collection
 
 The data that powers Intune's Windows feature updates reports isn't collected by the typical device sync with Intune. Instead, it's collected through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10/11 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
 
@@ -151,6 +163,7 @@ It can take up to 24 hours after setting up Windows health monitoring with Windo
 
 > [!TIP]
 > If you use [Endpoint Analytics](../../analytics/overview.md), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
+This section is now obsolete -->
 
 ### About reporting data latency
 
@@ -158,14 +171,14 @@ The data for these reports is generated at different times, which depend on the 
 
 - **Service-based data from Windows Update** – This data typically arrives in less than an hour after an event happens in the service. Events include Alerts for a device that can't register with Windows Update (which is viewable in the *Feature update failures report*), to status updates about when Windows Update began offering an update to clients. This data is available without configuring data collection.
 
-- **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
+- **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you [configure data collection](#configuring-for-client-data-reporting). The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
 
 ### Use the Windows 10 feature updates (Organizational) report
 
 The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](../protect/windows-10-feature-updates.md) policy.
 
 > [!IMPORTANT]
-> Before this report can show data, you must [configure data collection](#configure-data-collection) for the Windows feature updates reports.
+> Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
 
 This report provides you update installation status that's based on the update state from device and device-specific update details. The data in this report is timely, calls out the device name and state, and other update-related details. This report also supports filtering, searching, paging, and sorting.
 
@@ -253,7 +266,7 @@ To use the report:
 The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
 > [!IMPORTANT]  
-> Before this report can show data, you must [configure data collection](#configure-data-collection) for the Windows feature updates reports.
+> Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
 
 This report provides insights to update installation status, including the number of devices with errors. It also supports drilling in for more details to help you troubleshoot issues with the installation. This report supports filtering, searching, paging, and sorting.
 

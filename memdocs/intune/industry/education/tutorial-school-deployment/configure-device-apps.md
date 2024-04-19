@@ -5,6 +5,7 @@ zone_pivot_groups: platforms-windows-ios
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
+ms.manager: dougeby
 ms.date: 03/05/2024
 ---
 

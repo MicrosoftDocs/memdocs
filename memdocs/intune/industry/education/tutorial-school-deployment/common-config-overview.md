@@ -6,6 +6,7 @@ ms.date: 4/9/2024
 ms.topic: overview
 author: yegor-a
 ms.author: egorabr
+ms.manager: dougeby
 ---
 
 # Common Education configuration overview
@@ -13,7 +14,7 @@ ms.author: egorabr
 Intune is a powerful tool that can help Education organizations manage their devices and data efficiently. However, configuring the right settings can be a time-consuming task, especially for those new to the platform. To help accelerate the process, we have assembled common configurations based on customer engagements into this reference document. These settings can help ensure the security and compliance of your devices and data, while maximizing the user experience for your students and staff. Whether you're setting up a new tenant or need a quick reference guide, this document is a valuable resource for any Education organization looking to optimize their use of Intune.
 
 > [!NOTE]
-> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies.
+> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies. For more information, see [Compliance and device configuration policies that conflict](/mem/intune/configuration/device-profile-troubleshoot#conflicts).
 
 ## Configuration sections
 
