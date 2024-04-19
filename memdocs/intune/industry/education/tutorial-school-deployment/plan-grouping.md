@@ -42,7 +42,7 @@ Intune has four main targeting methods:
 Organizations typically use a combination of these grouping types in their envrironments.
 
 > [!NOTE]
-> Filters are not accessible in the Intune for Education admin console but can be accessed in the Intune admin console.
+> Filters aren't accessible in the Intune for Education admin console but are accessible in the Intune admin console.
 
 Two extra groups are precreated if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
