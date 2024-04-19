@@ -118,6 +118,9 @@ To apply settings as quickly as possible during enrollment without waiting for d
 
 - Devices with a specific enrollmentProfileName (enrollmentProfileName *equals* *'use case*')
 
+> [!WARNING]
+> Each time an iOS device enrolls it creates a new Entra device object, so *assigned group* memberships aren't maintained afer a device is reset.
+
 ::: zone-end
 
 ## Tips
@@ -132,12 +135,29 @@ For Windows devices:
 
 - Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
 
+ > alternative display option below
+
+| Enrollment type | Behavior | Best grouping options |
+| --- | --- | --- |
+| Autopilot | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
+| Autopilot userdriven | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
+| All enrollment types | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
+| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes |
+
 ::: zone-end
 
 ::: zone pivot="ios"
 
 For iOS devices:
 - If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
+
+ > alternative display option below
+
+| Enrollment type | Behavior | Best grouping options |
+| --- | --- | --- |
+| Automated device enrollment | Fastest application during enrollment | ✔️ All devices group</br>✔️ All devices group with a filter |
+| Automated device enrollment with user affinity | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
+| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes</br>✔️ Assigned device groups |
 
 ::: zone-end
 
