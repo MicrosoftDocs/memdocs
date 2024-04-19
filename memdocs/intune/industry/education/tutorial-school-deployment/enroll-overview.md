@@ -11,6 +11,8 @@ ms.manager: dougeby
 
 # Device enrollment overview
 
+:::image type="content" source="./images/enroll.png" alt-text="The device lifecycle for Intune-managed devices - enrollment" border="false":::
+
 ::: zone pivot="windows"
 
 There are three main methods for joining Windows devices to Microsoft Entra ID and getting them enrolled and managed by Intune:
@@ -37,9 +39,6 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 
 **Windows Autopilot** and **provisioning packages** are usually the most efficient Windows enrollment methods for school environments.
 
-> [!TIP]
-> See [Enroll Windows devices](/intune-education/add-devices-windows) for a comparison between the two enrollment methods which describes the ideal scenarios for using either option. It's recommended to review the table when planning your enrollment and deployment strategies.
-
 ::: zone-end
 
 ::: zone pivot="ios"
@@ -49,7 +48,8 @@ for school environments.
 
 ::: zone-end
 
-:::image type="content" source="./images/enroll.png" alt-text="The device lifecycle for Intune-managed devices - enrollment" border="false":::
+> [!TIP]
+> See [Plan enrollment](plan-enrollment.md) for a comparison between the two enrollment methods which describes the ideal scenarios for using either option. It's recommended to review the table when planning your enrollment and deployment strategies.
 
 Select one of the following options to learn the next steps about the enrollment method you chose:
 
