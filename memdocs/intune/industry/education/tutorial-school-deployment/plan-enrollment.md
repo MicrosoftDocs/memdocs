@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Plan device enrollment
+title: Plan Education device enrollment
 titleSuffix: Intune for Education
 description: Plan enrollment for Edcuation devices in Intune.  
 keywords:
@@ -29,9 +29,11 @@ zone_pivot_groups: platforms-windows-ios
 
 ---
 
-# Enroll Education devices
+# Plan Education device enrollment
 
 After you set up Intune with your information (such as student records, apps, and settings for devices), you can add school devices. New devices connect with and enroll in Intune during initial device setup.
+
+## Overview of enrollment types
 
 ::: zone pivot="windows"
 
@@ -49,11 +51,11 @@ A provisioning package (.ppkg) is a file that contains configuration settings, a
 
 You can use Windows Configuration Designer or the Set up School PCs app to create provisioning packages. Both tools guide you through how-to to create the package. For more information, see:
 
-* [What is Set up School PCs?](/education/windows/use-set-up-school-pcs-app)
+- [What is Set up School PCs?](/education/windows/use-set-up-school-pcs-app)
   
-* [Windows Configuration Designer](/windows/configuration/provisioning-packages/provisioning-install-icd)
+- [Windows Configuration Designer](/windows/configuration/provisioning-packages/provisioning-install-icd)
   
-* [Bulk enrollment for Windows devices](/mem/intune/enrollment/windows-bulk-enroll)  
+- [Bulk enrollment for Windows devices](/mem/intune/enrollment/windows-bulk-enroll)  
 
 Devices continue to sync in the background after provisioning. Track provisioning progress on the Enrollment Status Page to ensure all required mobile device management policies and apps are delivered before student use. See the following table for more best practices.  
 
