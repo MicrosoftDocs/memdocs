@@ -31,7 +31,6 @@ Intune has three main targeting methods:
 ## Option 2 for group summary
 
 Intune has four main targeting methods:
-
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
 | Virtual groups | Created by Intune and allow you to target *All devices* and *All users* | Always up to date automatically | Can only be scoped using filters |
@@ -39,7 +38,7 @@ Intune has four main targeting methods:
 | Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
 | Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned or dynamic groups |
 
-Organizations typically used a combination of these grouping types in their envrironments.
+Organizations typically use a combination of these grouping types in their envrironments.
 
 > [!NOTE]
 > Filters are not accessible in the Intune for Education admin console but can be accessed in the Intune admin console.
@@ -52,6 +51,8 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 > For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
 
 ## Examples
+
+✅ See examples of common grouping by enrollment type
 
 The way you target configuration and apps may depend on many factors and the enrollment type. This section includes targeting methods commonly seen amongst Education organizations.
 
@@ -121,6 +122,8 @@ To apply settings as quickly as possible during enrollment without waiting for d
 
 ## Tips
 
+✅ Check out tips and tricks for grouping
+
 ::: zone pivot="windows"
 
 For Windows devices:
@@ -138,7 +141,12 @@ For iOS devices:
 
 ::: zone-end
 
+> [!TIP]
+> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune/fundamentals/filters-performance-recommendations).
+
 ## Create groups and filters
+
+✅ Create your organization groups
 
 ### [Intune](#tab/intune)
 
