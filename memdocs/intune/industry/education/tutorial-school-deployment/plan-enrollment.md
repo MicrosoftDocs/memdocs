@@ -82,7 +82,7 @@ See the following table for more best practices.
 |You want to provision more than one device at a time. | Make sure you have a reliable internet connection at your enrollment site while using Windows Autopilot, especially if you're enrolling more than one device at the same time. |
 |You want to pre-provision devices. | Make sure you have ethernet connectivity, a prerequisite for Autopilot pre-provisioned deployments. For more information about prerequisites, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites).  |
 
-> [!IMPORTANT]
+> [!CAUTION]
 > This document is actually quite good.. do we replicate it... or refer to it? [Enrollment guide: Enroll Windows client devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-windows)
 
 ::: zone-end
@@ -95,7 +95,7 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 - **Automated Device Enrollment.** Automated Device Enrollment applies your organization's settings from Apple School Manager and enrolls devices without IT needing to physically interact with the device. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Devices can be configured with user affinity for use with one user or no user affinity for shared device scenarios.
 - **Bulk enrollment with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when devices aren't registered in Apple School Manager (for example - donated devices) or IT doesn't have physical access to the devices.
 
-> [!IMPORTANT]
+> [!CAUTION]
 > This document is actually quite good.. do we replicate it... or refer to it? [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados)
 
 ::: zone-end
