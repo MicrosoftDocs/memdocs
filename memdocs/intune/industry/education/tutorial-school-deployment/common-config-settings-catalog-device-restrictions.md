@@ -1,4 +1,4 @@
----**:::no-loc text="
+---
 title: Common Education device restrictions configuration
 description: Learn about common device restrictions configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
