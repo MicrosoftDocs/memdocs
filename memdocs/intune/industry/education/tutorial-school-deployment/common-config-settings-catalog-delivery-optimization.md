@@ -6,6 +6,7 @@ ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
+no-loc: [Microsoft, Windows]
 ---
 
 # Delivery Optimization
@@ -23,10 +24,10 @@ To learn more, see:
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
-| **DO Delay Background Download From Http** | 3600 | 1 hour in seconds. After the max delay is reached, the download will resume using HTTP, either downloading the entire payload or complementing the bytes that couldn't be downloaded from Peers. | [DODelayBackgroundDownloadFromHttp](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodelaybackgrounddownloadfromhttp) |
-| **DO Download Mode** | HTTP blended with peering behind the same NAT. | Delivery Optimization enables peer sharing on the same network between clients that connect to the Internet using the same public IP.  | [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) |
-| **DO Max Cache Age** | 1209600 | 14 days in seconds. Specifies the maximum time in seconds that each file is held in the Delivery Optimization cache after downloading successfully. | [DOMaxCacheAge](/windows/client-management/mdm/policy-csp-deliveryoptimization#domaxcacheage) |
-| **DO Min Disk Size Allowed To Peer** | 100 | Specifies the required minimum disk size (capacity in GB) for the device to use Peer Caching. Recommended values: 64 GB to 256 GB.Adjust as necessary according to your hardware. | [DOMinDiskSizeAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#domindisksizeallowedtopeer) |
-| **DO Min File Size To Cache** | 5 | Specifies the minimum content file size in MB enabled to use Peer Caching. | [DOMinFileSizeToCache](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominfilesizetocache) |
-| **DO Min RAM Allowed To Peer** | 2 | Specifies the minimum RAM size in GB required to use Peer Caching. | [DOMinRAMAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominramallowedtopeer) |
-| **DO Restrict Peer selection By** | Subnet mask | Set this policy to restrict peer selection | [DORestrictPeerSelectionBy](/windows/client-management/mdm/policy-csp-deliveryoptimization#dorestrictpeerselectionby) |
+| **:::no-loc text="DO Delay Background Download From Http":::** | 3600 | 1 hour in seconds. After the max delay is reached, the download will resume using HTTP, either downloading the entire payload or complementing the bytes that couldn't be downloaded from Peers. | [DODelayBackgroundDownloadFromHttp](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodelaybackgrounddownloadfromhttp) |
+| **:::no-loc text="DO Download Mode":::** | HTTP blended with peering behind the same NAT. | Delivery Optimization enables peer sharing on the same network between clients that connect to the Internet using the same public IP.  | [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) |
+| **:::no-loc text="DO Max Cache Age":::** | 1209600 | 14 days in seconds. Specifies the maximum time in seconds that each file is held in the Delivery Optimization cache after downloading successfully. | [DOMaxCacheAge](/windows/client-management/mdm/policy-csp-deliveryoptimization#domaxcacheage) |
+| **:::no-loc text="DO Min Disk Size Allowed To Peer":::** | 100 | Specifies the required minimum disk size (capacity in GB) for the device to use Peer Caching. Recommended values: 64 GB to 256 GB.Adjust as necessary according to your hardware. | [DOMinDiskSizeAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#domindisksizeallowedtopeer) |
+| **:::no-loc text="DO Min File Size To Cache":::** | 5 | Specifies the minimum content file size in MB enabled to use Peer Caching. | [DOMinFileSizeToCache](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominfilesizetocache) |
+| **:::no-loc text="DO Min RAM Allowed To Peer":::** | 2 | Specifies the minimum RAM size in GB required to use Peer Caching. | [DOMinRAMAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#dominramallowedtopeer) |
+| **:::no-loc text="DO Restrict Peer selection By":::** | Subnet mask | Set this policy to restrict peer selection | [DORestrictPeerSelectionBy](/windows/client-management/mdm/policy-csp-deliveryoptimization#dorestrictpeerselectionby) |

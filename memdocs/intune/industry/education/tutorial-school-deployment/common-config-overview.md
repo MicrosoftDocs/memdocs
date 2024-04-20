@@ -7,6 +7,7 @@ ms.topic: overview
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
+no-loc: [Microsoft, Windows]
 ---
 
 # Common Education configuration overview

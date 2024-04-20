@@ -6,6 +6,7 @@ ms.topic: windows-update
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
+no-loc: [Microsoft, Windows]
 ---
 
 # Windows Update
@@ -27,26 +28,26 @@ To learn more, see:
 
 | **Update settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| Microsoft product updates | Allow | Don't set to Block. In order to revert the configuration, PowerShell commands have to be run on each device. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
-| Windows drivers | Allow |     | [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate) |
-| Quality update deferral period (days) | 7   |     | [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays) |
-| Feature update deferral period (days) | 30  | Select 0 if using a [**Feature update policy**](#windows-update-feature-control) otherwise select 30 days. | [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays) |
-| Upgrade Windows 10 devices to Latest Windows 11 release | No  |     | [ProductVersion](/windows/client-management/mdm/policy-csp-update#productversion) |
-| Set feature update uninstall period (2 - 60 days) | 14  |     | [ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod) |
-| Enable pre-release builds | Not configured |     | [ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#managepreviewbuilds) |
+| **Microsoft product updates** | Allow | Don't set to Block. In order to revert the configuration, PowerShell commands have to be run on each device. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice) |
+| **Windows drivers** | Allow |     | [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate) |
+| **Quality update deferral period (days)** | 7   |     | [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays) |
+| **Feature update deferral period (days)** | 30  | Select 0 if using a [**Feature update policy**](#windows-update-feature-control) otherwise select 30 days. | [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays) |
+| **Upgrade Windows 10 devices to Latest Windows 11 release** | No  |     | [ProductVersion](/windows/client-management/mdm/policy-csp-update#productversion) |
+| **Set feature update uninstall period** (2 - 60 days) | 14  |     | [ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod) |
+| **Enable pre-release builds** | Not configured |     | [ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#managepreviewbuilds) |
 
 | **User experience settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| Automatic update behavior | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
-| Restart checks (EDU Restart) | Allow | Must not be disabled in existing Windows Update Rings. This setting is no longer available when creating a new Windows Update Ring policy.  | [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart) |
-| Option to pause Windows updates | Disable |     | [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
-| Option to check for Windows updates | Disable |     | [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
-| Change notification update level | Turn off all notifications, excluding restart warnings |     | [UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel) |
-| Use deadline settings | Allow | Only enables the setting configuration. |     |
-| Deadline for feature updates | 7   |     | [ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates) |
-| Deadline for quality updates | 3   |     | [ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates) |
-| Grace period | 2   |     | [ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)<br><br>[ConfigureDeadlineGracePeriodForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiodforfeatureupdates) |
-| Auto reboot before deadline | Yes |     | [ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
+| **Automatic update behavior** | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
+| **Restart checks (EDU Restart)** | Allow | Must not be disabled in existing Windows Update Rings. This setting is no longer available when creating a new Windows Update Ring policy.  | [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart) |
+| **Option to pause Windows updates** | Disable |     | [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
+| **Option to check for Windows updates** | Disable |     | [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
+| **Change notification update level** | Turn off all notifications, excluding restart warnings |     | [UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel) |
+| **Use deadline settings** | Allow | Only enables the setting configuration. |     |
+| **Deadline for feature updates** | 7   |     | [ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates) |
+| **Deadline for quality updates** | 3   |     | [ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates) |
+| **Grace period** | 2   |     | [ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)<br><br>[ConfigureDeadlineGracePeriodForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiodforfeatureupdates) |
+| **Auto reboot before deadline** | Yes |     | [ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
 
 ## Settings Catalog
 
@@ -56,7 +57,7 @@ To learn more, see [Use the settings catalog to configure settings on Windows, i
 
 | **Settings Catalog** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| No update notifications during active hours | Enabled |     | [NoUpdateNotificationsDuringActiveHours](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
+| **:::no-loc text="No update notifications during active hours":::** | Enabled |     | [NoUpdateNotificationsDuringActiveHours](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
 
 ## Windows Update Feature Control
 
@@ -71,10 +72,10 @@ Use the support lifecycle websites for each Windows operating system version and
 
 There are two ways to control how and when Windows feature updates are installed on Windows.
 
-| Feature update control type | Configuration | Advantages | Disadvantages |
+| **Feature update control type** | **Configuration** | **Advantages** | **Disadvantages** |
 | --- | --- | --- | --- |
-| Automatically keep up to date (recommended) | Use only **Update ring policies** and set a feature update deferral to 30 or more days | Devices are always kept up to date and receive access to the latest Windows features | Users may not have had training on new features, and some apps may not be compatible with the new feature version |
-| Control feature version | Use **feature update policies** to keep devices at a particular version of Windows | Devices are kept at a particular Windows version until the policy is changed | The policy must be reviewed and changed periodically to ensure Windows remains supported |
+| **Automatically keep up to date (recommended)** | Use only **Update ring policies** and set a feature update deferral to 30 or more days | Devices are always kept up to date and receive access to the latest Windows features | Users may not have had training on new features, and some apps may not be compatible with the new feature version |
+| **Control feature version** | Use **feature update policies** to keep devices at a particular version of Windows | Devices are kept at a particular Windows version until the policy is changed | The policy must be reviewed and changed periodically to ensure Windows remains supported |
 
 ### Automatically keep Windows up to date
 
