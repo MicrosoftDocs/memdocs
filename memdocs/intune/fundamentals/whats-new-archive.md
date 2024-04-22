@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/21/2024
+ms.date: 04/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -1426,7 +1426,7 @@ Administrators can now utilize conditional access capability when setting up pol
 For more information, see:
 
 - [Conditional access](../protect/conditional-access.md)
-- [Remote Help](../fundamentals/remote-help-windows.md#set-up-conditional-access-for-remote-help)
+- [Remote Help](../fundamentals/remote-help-windows.md#setup-conditional-access-for-remote-help)
 
 ### Device security
 
@@ -7910,7 +7910,7 @@ With the Microsoft Enterprise SSO plug-in release, you can configure the SSO ext
 
 To get SSO with the Microsoft Entra SSO app extension type, users need to install and sign in to the Company Portal app on their macOS devices.
 
-For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
+For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-sso).
 
 Applies to:
 - macOS 10.15 and newer
@@ -9330,7 +9330,7 @@ On iOS/iPadOS devices, you can:
 Applies to:
 - iOS/iPadOS 13.0+
 
-For more information on using single sign-on on iOS/iPadOS devices, see [Single sign-on app extension overview](../configuration/device-features-configure.md#single-sign-on-app-extension) and [Single sign-on settings list](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+For more information on using single sign-on on iOS/iPadOS devices, see [Single sign-on app extension overview](../configuration/device-features-configure.md#single-sign-on-sso) and [Single sign-on settings list](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
 
 #### New shell script settings for macOS devices<!-- 6884363 -->
 When configuring shell scripts for macOS devices, you can now configure the following new settings: 
@@ -9481,7 +9481,7 @@ Applies to:
 - iOS 13.0 and newer
 - iPadOS 13.0 and newer
 
-For more information about iOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
+For more information about iOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-sso).
 
 #### Enterprise app trust settings modification setting is removed from iOS/iPadOS device restriction profiles<!-- 6225131   -->
 On iOS/iPadOS devices, you create a device restrictions profile (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** for platform > **Device restrictions** for profile type). The **Enterprise app trust settings modification** setting is removed by Apple, and is removed from Intune. If you currently use this setting in a profile, it has no impact, and is removed from existing profiles. This setting is also removed from any reporting in Intune.
