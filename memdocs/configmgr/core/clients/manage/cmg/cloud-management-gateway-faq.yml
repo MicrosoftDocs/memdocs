@@ -3,10 +3,10 @@ metadata:
   title: CMG FAQ
   titleSuffix: Configuration Manager
   description: Use this article to answer frequently asked questions about the cloud management gateway (CMG).
-  author: banreet
-  ms.author: banreetkaur
+  author: baladelli  
+  ms.author: baladell
   manager: apoorvseth
-  ms.date: 04/08/2022
+  ms.date: 20/04/2024
   ms.topic: faq
   ms.subservice: client-mgt
   ms.service: configuration-manager
@@ -48,6 +48,11 @@ sections:
           No. The CMG is a software as a service (SaaS) solution that extends your Configuration Manager environment into the cloud. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure PaaS secures and updates the VMs. You don't need to monitor these VMs. The Azure VMs for CMG aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). For more security specific information on the underlying PaaS solution that the CMG is built on, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
 
           Since the CMG acts as a proxy for client communication, it doesn't process, keep, or store any client data. The communication path over the internet always uses HTTPS. For greater security, configure the management point for HTTPS. Also configure the site option for clients to encrypt inventory and status messages. For more information, see [Plan for security: Signing and encryption](../../../plan-design/security/plan-for-security.md#signing-and-encryption).
+
+      - question: |
+          Do I need to update the Virtual machine if the image is deprecated?
+        answer: |
+          No. The CMG VM's are deployed using template and IIS are configured, this will be broken if you manually update the VM's. Product group will fix the issue through update or the current branch releases. 
           
       - question: |
           How can I ensure service continuity during service updates?
