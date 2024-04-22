@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 04/22/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -66,6 +66,10 @@ In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for
 ### Intune scope tags<!--48907552-->
 
 In a future update, Windows 365 will support [Intune scope tags](/mem/intune/fundamentals/scope-tags).
+
+### Manage redirections for Cloud PCs on iOS/iPadOS devices<!--49090121-->
+
+In a future update, you'll be able use the Intune admin center to manage redirections for iOS/iPadOS users who access their Cloud PCs using Microsoft Remote Desktop and Windows App.
 
 <!-- ***********************************************-->
 <!--## Device provisioning-->
