@@ -71,6 +71,10 @@ In a future update, Windows 365 will support [Intune scope tags](/mem/intune/fun
 
 In a future update, you'll be able use the Intune admin center to manage redirections for iOS/iPadOS users who access their Cloud PCs using Microsoft Remote Desktop and Windows App.
 
+### Manage redirections for Cloud PCs on Android devices<!--49090100-->
+
+In a future update, you'll be able use the Intune admin center to manage redirections for Android users who access their Cloud PCs using Microsoft Remote Desktop.
+
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
