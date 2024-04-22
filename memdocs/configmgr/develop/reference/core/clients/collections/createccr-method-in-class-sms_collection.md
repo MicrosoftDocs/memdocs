@@ -3,14 +3,14 @@ description: Learn how to create a client configuration request (CCR) for a part
 title: CreateCCR Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2127929c-6a20-457d-a351-5c3262363430
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -58,7 +58,7 @@ SInt32 CreateCCR(
 
  Qualifiers: [in, optional]  
 
- `true` to force installation. This defaults to `false`, if not specified. This is used for force reinstallation, even if the client is already installed. If set to `true`, the operating system will be ignored.  
+ `true` to force installation. This defaults to `false`, if not specified. This is used for force reinstallation, even if the client is already installed. If set to `true`, the operating system is ignored.  
 
  `ForceReinstall`  
  Data type: `Boolean`  
@@ -86,14 +86,14 @@ SInt32 CreateCCR(
 
  Qualifiers: [in, optional]  
 
- `SpecifySiteCode` is used to control whether the `PushSiteCode` parameter is used. If `SpecificySiteCode` is set to `true`, `PushSiteCode` will be used. If `SpecificySiteCode` is not set to `true`, `PushSiteCode` will not be used.  
+ `SpecifySiteCode` is used to control whether the `PushSiteCode` parameter is used. If `SpecificySiteCode` is set to `true`, `PushSiteCode` is used. If `SpecificySiteCode` isn't set to `true`, `PushSiteCode` won't be used.  
 
  `PushSiteCode`  
  Data type: `Boolean`  
 
  Qualifiers: [in, optional]  
 
- `PushSiteCode` defines which site will initiate the actual push. The specified site will push its client files to the client and do the actual installation.  
+ `PushSiteCode` defines which site initiates the actual push. The specified site pushes its client files to the client and do the actual installation.  
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

@@ -3,14 +3,14 @@ title: SMS_ConfigurationBaselineInfo Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a baseline configuration item.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e9332972-2d65-4d11-8ad0-b4456d7f33f4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

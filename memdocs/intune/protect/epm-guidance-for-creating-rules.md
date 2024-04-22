@@ -5,12 +5,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 02/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -33,9 +32,7 @@ ms.collection:
 
 ## Overview
 
-Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
-
-Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
@@ -70,6 +67,44 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
+
+### Rules based on attributes gathered by PowerShell
+
+To help you build more accurate file detection rules, you can use the **Get-FileAttributes** PowerShell cmdlet. Available from the EpmTools PowerShell module, *Get-FileAttributes* can retrieve file attributes and the certificate chain material for a file and you can use the output to populate elevation rule properties for a particular application.
+
+Example module import steps and output from Get-FileAttributes run against msinfo32.exe on Windows 11 version 10.0.22621.2506:
+
+```powershell
+PS C:\Windows\system32> Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
+PS C:\Windows\system32> Get-FileAttributes -FilePath C:\Windows\System32\msinfo32.exe -CertOutputPath C:\CertsForMsInfo\
+
+
+FileName      : msinfo32.exe
+FilePath      : C:\Windows\System32
+FileHash      : 18C8442887C36F7DB61E77013AAA5A1A6CDAF73D4648B2210F2D51D8B405191D
+HashAlgorithm : Sha256
+ProductName   : Microsoft® Windows® Operating System
+InternalName  : msinfo.dll
+Version       : 10.0.22621.2506
+Description   : System Information
+CompanyName   : Microsoft Corporation
+
+```
+
+> [!NOTE]
+> The certificate chain for msinfo32.exe is output to the C:\CertsForMsInfo directory listed in the command above.
+
+For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
+
+### Controlling child process behavior
+
+Child process behavior allows you to control the context when a child process is created by a process elevated with EPM. This behavior allows you to further restrict processes which normally would be automatically delegated the context of it's parent process.
+
+Windows automatically delegates the context of a parent to a child, so take special care in controlling the behavior for your allowed applications. Ensure you evaluate what is needed when you create elevation rules, and implement the principle of least privilege.
+
+> [!NOTE]
+>
+> Changing the child process behavior may have compatiability issues with certain applications that expect the default Windows behavior. Make sure you thoroughly test applications when manipulating the child process behavior.
 
 ## Deploying rules created with Endpoint Privilege Management
 

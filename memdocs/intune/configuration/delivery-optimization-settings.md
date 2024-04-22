@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 08/08/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: kerimh
+ms.reviewer: davguy
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

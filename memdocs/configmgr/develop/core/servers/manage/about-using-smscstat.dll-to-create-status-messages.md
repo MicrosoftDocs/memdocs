@@ -3,14 +3,14 @@ title: Use SMSCSTAT.DLL to Create Status Messages
 titleSuffix: Configuration Manager
 description: Smscstat.dll is a library of 32-bit C APIs for reporting Configuration Manager status messages from an application that is running on either client computer.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 4149481d-d78d-422a-b342-cf7ddcf2962c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -42,7 +42,7 @@ Smscstat.dll is a library of 32-bit C APIs for reporting Configuration Manager s
 
   `GetProcAddress()` returns a pointer of type `FARPROC`. For convenience, `Smscstat.h` (provided with the SMS 2003 SDK) defines C function prototypes for the status message APIs. The application should cast the pointer returned by`GetProcAddress()` to the appropriate prototype and then call the function through the pointer.  
 
-  If Smscstat.dll does not exist, as in the case of SMS 2.0 Legacy Clients that do not have Service Pack 1 or a later service pack installed, `LoadLibrary()` fails. A subsequent call to the Win32 API `GetLastError()` returns an error code indicating that the file does not exist. Most likely this will be error 126: "The specified module could not be found."  
+  If Smscstat.dll doesn't exist, as in the case of SMS 2.0 Legacy Clients that don't have Service Pack 1 or a later service pack installed, `LoadLibrary()` fails. A subsequent call to the Win32 API `GetLastError()` returns an error code indicating that the file doesn't exist. Most likely this will be error 126: "The specified module couldn't be found."  
 
   The Win32 API `FreeLibrary` should be called when access to the functions is no longer need.  
 
@@ -51,6 +51,6 @@ Smscstat.dll is a library of 32-bit C APIs for reporting Configuration Manager s
 
 1.  Create a status message object by calling the `CreateSMSStatusMessage()` function. This function allocates an object and returns a handle to the caller.  
 
-2.  Add any needed status message attributes to the object by using the `AddAttributeToSMSStatusMessage()` function. Status message attributes are optional and are required only if the application needs to integrate with a particular Configuration Manager feature. Most applications will not do this.  
+2.  Add any needed status message attributes to the object by using the `AddAttributeToSMSStatusMessage()` function. Status message attributes are optional and are required only if the application needs to integrate with a particular Configuration Manager feature. Most applications won't do this.  
 
 3.  Call `ReportSMSStatusMessage` to submit the status message to the Configuration Manager status system and deallocate the object.

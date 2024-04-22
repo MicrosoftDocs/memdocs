@@ -1,13 +1,12 @@
 ---
 # required metadata
 title: iOS/iPadOS device settings in Microsoft Intune | Microsoft Docs
-titleSuffix:
 description: Add, configure, or create settings on iOS/iPadOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/29/2023
+ms.date: 04/08/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -22,7 +21,7 @@ ms.reviewer: beflamm, jayeren
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -48,14 +47,10 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS device restriction policies.
+When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. <!-- removing while iOS security framework docs are pending freshness update. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS device restriction policies. The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by device type:-->
 
-The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level.
-
-The available levels and settings in each level vary by device type:
-
-- For personal devices, see [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
-- For supervised devices, see [iOS/iPadOS supervised device security configurations](../enrollment/ios-ipados-supervised-device-security-configurations.md)
+<!--- For personal devices, see [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
+- For supervised devices, see [iOS/iPadOS supervised device security configurations](../enrollment/ios-ipados-supervised-device-security-configurations.md)-->     
 
 When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
@@ -479,7 +474,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Kiosk
 
-[Single App Mode](https://support.apple.com/guide/mdm/mdm80a981/web) (opens Apple's web site) is referred to as Kiosk mode in Intune.
+[App Lock](https://support.apple.com/guide/deployment/app-lock-payload-settings-dep80a981) (opens Apple's web site) is referred to as Kiosk mode in Intune.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -573,8 +568,8 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Number of sign-in failures before wiping device**: Enter the number of failed sign-ins before the device is wiped, from 2-11. It's not recommended to set this value to `2` or `3`. It's common to enter the wrong password. Wiping the device after two or three incorrect password attempts happens often. It's recommended to set this value to at least `4`.
   
-  iOS/iPadOS has built-in security that can impact this setting. For example, iOS/iPadOS may delay triggering the policy depending on the number of sign-in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS/iPadOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes. 
-  
+  iOS/iPadOS has built-in security that can impact this setting. For example, iOS/iPadOS may delay triggering the policy depending on the number of sign-in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS/iPadOS security guide](https://support.apple.com/guide/security/passcodes-and-passwords-sec20230a10d/web) (opens Apple's web site) is a good resource, and provides more specific details on passcodes.
+
 - **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long devices stay idle before users must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter.
 
   This feature applies to:  
@@ -711,7 +706,7 @@ This feature applies to:
 
 - **App URL**: Enter the store app URL of the app you want to show or hide. For example:
 
-  - To add the Microsoft Work Folders app, enter `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` or `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
+  - To add the Microsoft Work Folders app, enter `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` or `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`.
 
   - To add the Microsoft Word app, enter `https://itunes.apple.com/de/app/microsoft-word/id586447913` or `https://apps.apple.com/de/app/microsoft-word/id586447913`.
 
@@ -776,12 +771,11 @@ You can also:
 
 - **Require joining Wi-Fi networks only using configuration profiles**: **Yes** forces devices to use only Wi-Fi networks set up through Intune configuration profiles. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow devices to use other Wi-Fi networks.
 
-  - This setting is available for iOS/iPadOS 14.4 and older devices. On iOS/iPadOS 14.5 and newer devices, use the **Require devices to use Wi-Fi networks set up via configuration profiles** setting.  
+  - This setting is available for iOS/iPadOS 14.4 and older devices. On iOS/iPadOS 14.5 and newer devices, use the **Require devices to use Wi-Fi networks set up via configuration profiles** setting.
 
-  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.  
+  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.
 
-  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.  
-
+  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
 
     This feature applies to:  
     - iOS/iPadOS 14.4 and older  
@@ -796,62 +790,14 @@ You can also:
 
 - **Require devices to use Wi-Fi networks set up via configuration profiles**: **Yes** forces the device to use Wi-Fi networks set up through configuration profiles. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow devices to use other Wi-Fi networks.
 
-  - On iOS/iPadOS 14.5 and newer devices, use this setting. Don't use the **Require joining Wi-Fi networks only using configuration profiles** setting.  
+  - On iOS/iPadOS 14.5 and newer devices, use this setting. Don't use the **Require joining Wi-Fi networks only using configuration profiles** setting.
 
-  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.  
+  - When set to **Yes**, be sure the device has a Wi-Fi profile. If you don't assign a Wi-Fi profile, then this setting can prevent devices from connecting to the internet. For example, if this device restrictions profile is assigned before a Wi-Fi profile, then the device might be blocked from connecting to the internet.
 
-  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.  
-
+  - If the device can't connect, then unenroll the device, and re-enroll with a Wi-Fi profile. Then, set this setting to **Yes** in a device restrictions profile, and assign the profile to the device.
 
     This feature applies to:  
-    - iOS/iPadOS 14.5 and newer  
-
-## Settings that require supervised mode
-
-iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
-
-- Kiosk Mode (Single App Mode): Referred to as "app lock" in the [Apple developer documentation](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
-- Disable Activation Lock
-- Autonomous Single App Mode
-- Web Content Filter
-- Set background and lock screen
-- Silent App Push
-- Always-On VPN
-- Allow managed app installation exclusively
-- iBookstore
-- iMessages
-- Game Center
-- AirDrop
-- AirPlay
-- Host pairing
-- Cloud Sync
-- Spotlight search
-- Handoff
-- Erase device
-- Restrictions UI
-- Installation of configuration profiles by UI
-- News
-- Keyboard shortcuts
-- Passcode modifications
-- Device name changes
-- Automatic app downloads
-- Apple Music
-- Mail Drop
-- Pair with Apple Watch
-
-> [!NOTE]
-> Apple confirmed that certain settings move to supervised-only in 2019. We recommend taking this into consideration when using these settings, instead of waiting for Apple to migrate them to supervised-only:
->
-> - App installation by end users
-> - App removal
-> - FaceTime
-> - Safari
-> - iTunes
-> - Explicit content
-> - iCloud documents and data
-> - Multiplayer gaming
-> - Add Game Center friends
-> - Siri
+    - iOS/iPadOS 14.5 and newer
 
 ## Next steps
 

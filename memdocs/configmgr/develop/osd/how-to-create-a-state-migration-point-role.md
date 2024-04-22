@@ -3,14 +3,14 @@ title: Create a State Migration Point Role
 description: You create the state migration point role, in Configuration Manager, by creating an instance of SMS_SCI_SysResUse Server WMI Class and providing the property values in the following table.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: dd3b2d67-edcb-44fb-9efc-72afef3896c9
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

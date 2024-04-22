@@ -3,14 +3,14 @@ description: Learn how to enhance the functionality of InstallStatusMIF in Confi
 title: InstallStatusMIFEx Function
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c7f89ba4-eaf4-4755-bc4d-90064d1ad918
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -65,15 +65,15 @@ DWORD InstallStatusMIFEx(
  A non-zero value to indicate success.  
 
 ## Remarks  
- `InstallStatusMIFEx` is functionally equivalent to `InstallStatusMIF`, except for the addition of the `bProgramReboot`parameter. Using `bProgramReboot`is the most reliable way of passing this information to Configuration Manager, because during reboot Configuration Manager might not be able to get the correct exit code from the process. If, after completing program execution, the program sets this flag in the MIF file and a reboot has not happened, Configuration Manager waits for one minute before launching any other program. This allows enough time for the reboot to finish. This flag also enables Configuration Manager to send a preliminary success status message for the program and then a final success status message after the reboot has occurred.  
+ `InstallStatusMIFEx` is functionally equivalent to `InstallStatusMIF`, except for the addition of the `bProgramReboot`parameter. Using `bProgramReboot`is the most reliable way of passing this information to Configuration Manager, because during reboot Configuration Manager might not be able to get the correct exit code from the process. If, after completing program execution, the program sets this flag in the MIF file and a reboot hasn't happened, Configuration Manager waits for one minute before launching any other program. This allows enough time for the reboot to finish. This flag also enables Configuration Manager to send a preliminary success status message for the program and then a final success status message after the reboot has occurred.  
 
  Your installation (setup) application must create only one install status MIF file for the package. The file name that you specify must be unique.  
 
  Installations that run on localized versions of Configuration Manager must specify values in the appropriate format: ANSI format for European languages; DBCS format for East Asia languages.  
 
- Your application must call `InstallStatusMIFEx` before the installation exits. The MIF file is not reported to Configuration Manager if the installation creates another process that calls `InstallStatusMIFEx`.  
+ Your application must call `InstallStatusMIFEx` before the installation exits. The MIF file isn't reported to Configuration Manager if the installation creates another process that calls `InstallStatusMIFEx`.  
 
- Note that the parameters `pszFilename`, `pszCompany`, `pszProduct`, and `pszVersion` are directly related to the [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) properties `MIFFileName`, `MIFPublisher`, `MIFName`, and `MIFVersion`, respectively. These parameters and properties must contain the same values.  
+ The parameters `pszFilename`, `pszCompany`, `pszProduct`, and `pszVersion` are directly related to the [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) properties `MIFFileName`, `MIFPublisher`, `MIFName`, and `MIFVersion`, respectively. These parameters and properties must contain the same values.  
 
 ## Requirements  
  **Windows NT/2000**: Requires Windows 2000 or later.  

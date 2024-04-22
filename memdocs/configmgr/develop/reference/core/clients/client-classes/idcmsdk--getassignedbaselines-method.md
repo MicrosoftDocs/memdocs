@@ -3,14 +3,14 @@ title: "IDCMSDK::GetAssignedBaselines"
 titleSuffix: Configuration Manager
 description: "In Configuration Manager, the IDCMSDK::GetAssignedBaselines method enumerates assigned baseline configuration items."
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 89d3dda9-be5d-43fc-a20d-9267531a4ddd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

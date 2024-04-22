@@ -3,14 +3,14 @@ title: Remove an Object Association with a Security Scope
 titleSuffix: Configuration Manager
 description: Remove a security scope from an object by using an SMS_SecuredCategoryMembership class instance.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b6be1a0c-58ba-4949-a78a-d09ab322293c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

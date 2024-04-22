@@ -8,20 +8,19 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,6 +29,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - Windows
+- FocusArea_Apps_Protect
 ---
 
 # Create and deploy Windows Information Protection (WIP) policy with Intune
@@ -53,7 +53,7 @@ You must understand a few concepts when adding a WIP policy:
 
 ### Types of apps
 
-- **Recommended apps:** A pre-populated list of (mostly Microsoft Office) apps that allow you to easily import into the policy.
+- **Recommended apps:** A pre-populated list of (mostly Microsoft 365 (Office)) apps that allow you to easily import into the policy.
 - **Store apps:** You can add any app from the Windows store to the policy.
 - **Windows desktop apps:** You can add any traditional Windows desktop apps to the policy (for example, .exe, .dll)
 
@@ -66,7 +66,7 @@ You must configure the MAM provider before you can create a WIP policy. Learn mo
 
 Additionally, you need to have the following license and update:
 
-- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) license
+- [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) license
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 ## To add a WIP policy
@@ -172,6 +172,8 @@ When the policy is enabled, WIP protected items are indexed and the metadata abo
 
 When the policy is disabled, the WIP protected items are not indexed and do not show up in the results in Cortana or file explorer. There may also be a performance impact on photos and Groove apps if there are many WIP protected media files on the device.
 
+[!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
+
 ## Add encrypted file extensions
 
 In addition to setting the **Allow Windows Search Indexer to search encrypted items** option, you can specify a list of file extensions. Files with these extensions are encrypted when copying from a Server Message Block (SMB) share within the corporate boundary as defined in the network location list. When this policy is not specified, the existing auto-encryption behavior is applied. When this policy is configured, only files with the extensions in the list will be encrypted.
@@ -185,7 +187,7 @@ After you created your WIP app protection policy, you need to deploy it to your 
 
 1. On the **App policy** pane, choose your newly created app protection policy, choose **User groups** > **Add user group**.
 
-    A list of user groups, made up of all the security groups in your Azure Active Directory, opens in the **Add user group** pane.
+    A list of user groups, made up of all the security groups in your Microsoft Entra ID, opens in the **Add user group** pane.
 
 2. Choose the group you want your policy to apply to, then choose **Select** to deploy the policy.
 

@@ -3,8 +3,8 @@ title: Conditional Access with co-management
 titleSuffix: Configuration Manager
 description: Control user access to organizational resources based on compliance rules from Intune
 ms.date: 11/08/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -87,9 +87,9 @@ With Conditional Access and ATP integration, you're fortifying a fundamental com
 
 In more than 63% of all data breaches, the attackers gain access to the organization's network through weak, defaulted, or stolen user credentials. Because Conditional Access focuses on securing the user identity, it restricts credential theft. Conditional Access manages and protects your identities, whether privileged or non-privileged. There's no better way to protect the devices and the data on them.
 
-Since Conditional Access is a core component of Enterprise Mobility + Security (EMS), there's no on-premises setup or architecture required. With Intune and Azure Active Directory (Azure AD), you can quickly configure Conditional Access in the cloud. If you're currently using Configuration Manager, you can easily extend your environment to the cloud with co-management and begin using it right now.
+Since Conditional Access is a core component of Enterprise Mobility + Security (EMS), there's no on-premises setup or architecture required. With Intune and Microsoft Entra ID, you can quickly configure Conditional Access in the cloud. If you're currently using Configuration Manager, you can easily extend your environment to the cloud with co-management and begin using it right now.
 
-For more information about the ATP integration, see this blog post [Microsoft Defender for Endpoint device risk score exposes new cyberattack, drives Conditional Access to protect networks](https://www.microsoft.com/security/blog/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/). It details how an advanced hacker group used never before seen tools. The Microsoft cloud detected and stopped them because the targeted users had Conditional Access. The intrusion activated the device's risk-based Conditional Access policy. Although the attacker already established a foothold in the network, the exploited machines were automatically restricted from access to organizational services and data managed by Azure AD.
+For more information about the ATP integration, see this blog post [Microsoft Defender for Endpoint device risk score exposes new cyberattack, drives Conditional Access to protect networks](https://www.microsoft.com/security/blog/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/). It details how an advanced hacker group used never before seen tools. The Microsoft cloud detected and stopped them because the targeted users had Conditional Access. The intrusion activated the device's risk-based Conditional Access policy. Although the attacker already established a foothold in the network, the exploited machines were automatically restricted from access to organizational services and data managed by Microsoft Entra ID.
 
 ## Configure
 
@@ -97,11 +97,11 @@ Conditional Access is easy to use when you [enable co-management](how-to-enable.
 
 For more information about using Conditional Access, see the following articles:
 
-- [Conditional Access in Azure AD](/azure/active-directory/conditional-access/overview)
+- [Conditional Access in Microsoft Entra ID](/azure/active-directory/conditional-access/overview)
 
 - [Use compliance policies to set rules for devices you manage with Intune](../../intune/protect/device-compliance-get-started.md)
 
 - [App-based Conditional Access with Intune](../../intune/protect/app-based-conditional-access-intune.md)
 
 > [!NOTE]
-> Conditional Access features become available immediately for hybrid Azure AD-joined devices. These features include multi-factor authentication and hybrid Azure AD join access control. This behavior is because they're based on Azure AD properties. To leverage configuration-based assessment from Intune and Configuration Manager, enable co-management. This configuration gives you access control directly from Intune for compliant devices. It also gives you Intune's compliance policies evaluation feature.
+> Conditional Access features become available immediately for Microsoft Entra hybrid joined devices. These features include multi-factor authentication and Microsoft Entra hybrid join access control. This behavior is because they're based on Microsoft Entra properties. To leverage configuration-based assessment from Intune and Configuration Manager, enable co-management. This configuration gives you access control directly from Intune for compliant devices. It also gives you Intune's compliance policies evaluation feature.

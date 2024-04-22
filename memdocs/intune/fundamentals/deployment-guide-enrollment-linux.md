@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2022
+ms.date: 09/11/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -39,7 +39,7 @@ This article includes an overview of the administrator and user tasks required t
 
 ## Before you begin
 
-For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, see [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md). 
+For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
 
 ## Linux enrollment
 
@@ -49,11 +49,11 @@ Use for personal/BYOD and organization-owned devices running Linux.
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You use Ubuntu Desktop (20.04 or 22.04 LTS on x86/64). | ✔️ |
-| You use Ubuntu Server. | ❌  |
+| You use Ubuntu Server. | ❌ |
 | Devices are owned by the organization or school. | ✔️ |
 | Devices are personal or BYOD. | ✔️  |
 | You have new or existing devices. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Bulk enrollment is not supported today. Each device needs to be enrolled using the Microsoft Intune App |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Bulk enrollment isn't supported. Each device needs to be enrolled using the Microsoft Intune App. |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/> The enrollment requires a user to sign in with an organization account. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> It might be possible to enroll Linux devices in Intune that are already enrolled in another MDM provider. This scenario hasn't been tested by Microsoft. |
@@ -80,7 +80,7 @@ The following steps provide an overview. For the specific steps, go to [Enroll a
 3. Users open the Intune app, and sign in with their organization account (`user@contoso.com`). After they sign in, the enrollment process starts. It's possible users may be prompted to configure other settings based on your compliance policies.
 4. Users open Microsoft Edge and sign in with their organization account (`user@contoso.com`). After they sign in, they can access your organization's resources, like internal websites and Microsoft 365 apps.
 
-## Next steps
+## Related content
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)

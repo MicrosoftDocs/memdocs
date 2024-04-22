@@ -3,8 +3,8 @@ title: Capture and restore user state
 titleSuffix: Configuration Manager
 description: Use Configuration Manager task sequences to capture and restore the user state data in OS deployment scenarios.
 ms.date: 08/17/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

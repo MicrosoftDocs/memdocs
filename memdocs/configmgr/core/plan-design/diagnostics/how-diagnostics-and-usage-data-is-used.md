@@ -3,8 +3,8 @@ title: Use of diagnostics data
 titleSuffix: Configuration Manager
 description: Learn about how Microsoft uses the diagnostics and usage data that Configuration Manager collects.
 ms.date: 08/10/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

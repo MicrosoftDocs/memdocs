@@ -2,10 +2,10 @@
 title: Use SCEP certificate profiles with Microsoft Intune
 description: Create and assign Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 01/30/2023
+ms.date: 08/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,15 +25,21 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- certificates
 ---
 
 # Create and assign SCEP certificate profiles in Intune
+
+[!INCLUDE [azure_portal](../includes/strong-mapping-cert.md)]
 
 After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
 For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
 
 Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../protect/certificates-scep-configure.md#pin-requirement-for-android-enterprise).
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
@@ -48,7 +54,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices.
@@ -127,13 +133,13 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      > - =
 
      > [!NOTE]
-     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
      >
      > - Serial number
      > - IMEI
      > - MEID
      >
-     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
      >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
@@ -147,7 +153,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
        - **CN={{UserName}}**: The user name of the user, such as janedoe. 
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
-       - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
+       - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Microsoft Entra ID. This ID is typically used to authenticate with Microsoft Entra ID.
        - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
         > [!NOTE]
          > Avoid using {{DeviceId}} for subject name on Windows devices. In certain instances, certificate generated with this subject name causes sync with Intune to fail.
@@ -156,12 +162,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
          To use the *{{OnPrem_Distinguished_Name}}* variable:
-         - Be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+         - Be sure to sync the *onpremisesdistinguishedname* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
          - If the CN value contains a comma, the Subject name format must be in quotes. For example: **CN="{{OnPrem_Distinguished_Name}}"**
         
-       - **CN={{OnPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
+       - **CN={{OnPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Microsoft Entra ID using Microsoft Entra Connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
-         To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+         To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
 
        All device variables listed in the following *Device certificate type* section can also be used in user certificate subject names.
 
@@ -175,7 +181,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
        Format options for the Subject name format include the following variables:
 
-       - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
+       - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Microsoft Entra ID.
        - **{{DeviceId}}** - The Intune device ID
        - **{{Device_Serial}}**
        - **{{Device_IMEI}}**
@@ -214,13 +220,13 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      Variables available for the SAN value depend on the Certificate type you selected; either **User** or **Device**.
 
      > [!NOTE]
-     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally-owned work profile* devices:
+     > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
      >
      > - Serial number
      > - IMEI
      > - MEID
      >
-     > Intune certificate profiles for personally-owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
+     > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
      >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
@@ -280,7 +286,18 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - Not configured
      - 1024
      - 2048
-     - 4096 *(supported with iOS/iPadOS 14 and later, and macOS 11 and later)*
+     - 4096 - A Key size of 4096 is supported for the following platforms:
+       - Android (all)
+       - iOS/iPadOS 14 and later
+       - macOS 11 and later
+       - Windows (all)
+
+       > [!NOTE]
+       >
+       > For Windows devices, 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+       >
+       > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
+       > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
 
    - **Hash algorithm**:
 
@@ -317,9 +334,9 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - Android device administrator
      - Android Enterprise device owner
      - Android Enterprise corporate-owned work profile
-     - Android Enterprise personally-owned work profile
+     - Android Enterprise personally owned work profile
 
-     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs its possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.
+     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs, it's possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.  
 
      The behavior for managing the NDES server URL is specific to each device platform:
 
@@ -406,10 +423,9 @@ Consider the following before you continue:
 - If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10/11 clients to start the process of requesting the certificate.
 
 > [!NOTE]
-> - On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request.
->
->   Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
-> - On iOS 13 and macOS 10.15, there are some [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
+> - On iOS/iPadOS and macOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the device having multiple certificates delivered by the SCEP or PKCS certificate request.
+> - Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
+> - On iOS 13 and macOS 10.15, there are [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
 
 ## Next steps
 

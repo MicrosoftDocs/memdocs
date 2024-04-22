@@ -1,21 +1,21 @@
 ---
-description: Learn how to use SMS_Operation class in Configuration Manager, which is embedded by SMS_RbacSecuredObject and describes the various operations.
+description: Learn how to use SMS_Operation class in Configuration Manager, which SMS_RbacSecuredObject embeds. This class describes the various operations.
 title: SMS_Operation Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ea1053c7-f7e8-4641-8328-2e4c4d6bb93c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Operation Server WMI Class
-The `SMS_Operation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by `SMS_RbacSecuredObject` and describes the various operations.  
+The `SMS_Operation` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that is embedded by `SMS_RbacSecuredObject` and describes the various operations.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -32,7 +32,7 @@ Class SMS_Operation :
 ```  
 
 ## Methods  
- The `SMS_Operation` class does not define any methods.  
+ The `SMS_Operation` class doesn't define any methods.  
 
 ## Properties  
  `BitFlag`  
@@ -86,7 +86,7 @@ Class SMS_Operation :
 
  `true`, if the operation is type wide.  
 
- If the operation is type wide, the user will have the permission against all objects of this type, if the user has this operation against any RBA security category. If the operation is not type wide, then user will have the permission against the objects which are assigned to the related RBA security category.  
+ If the operation is type wide, the user has the permission against all objects of this type, if the user has this operation against any RBA security category. If the operation isn't type wide, then user has the permission against the objects that are assigned to the related RBA security category.  
 
  `ObjectTypeID`  
  Data type: `UInt32`  

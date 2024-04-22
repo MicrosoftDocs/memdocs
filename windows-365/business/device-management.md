@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -28,11 +27,12 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - M365-identity-device-management
 - tier2
+- essentials-manage
 ---
 
 # Manage Cloud PCs
 
-You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 365 admin center or windows365.microsoft.com. Each supports several remote management actions. However, to use these remote actions, you must have either of the following Azure Active Directory (Azure AD) role-based access roles:
+You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 365 admin center or windows365.microsoft.com. Each supports several remote management actions. However, to use these remote actions, you must have either of the following Microsoft Entra role-based access roles:
 
    - Global administrator
    - Windows 365 administrator

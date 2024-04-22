@@ -3,14 +3,14 @@ title: SMS_TaskSequence_PartitionDiskAction class
 titleSuffix: Configuration Manager
 description: The SMS_TaskSequence_PartitionDiskAction WMI class is an SMS Provider server class in Configuration Manager.
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 17c5d9c3-b561-432c-bd69-7277c94f347c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

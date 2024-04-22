@@ -1,10 +1,10 @@
 ---
 author: banreet
 ms.author: banreetkaur
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: include
-ms.date: 10/11/2021
+ms.date: 11/15/2021
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 <!-- 11307733 -->
 
-Applies to: _Windows ADK for Windows 11_
+Applies to: _Windows ADK for Windows 11 (version 10.1.22000)_
 
 When you use a Windows 11-based boot image with an OS deployment task sequence that includes the [Pre-provision BitLocker](../../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker) step, the step might fail. You'll see errors similar to the following strings in the smsts.log:
 

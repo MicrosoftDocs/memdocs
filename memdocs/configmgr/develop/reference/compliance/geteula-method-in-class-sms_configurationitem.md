@@ -3,14 +3,14 @@ description: Learn how to get the localized Microsoft Software License Terms tex
 title: GetEULA Method in Class SMS_ConfigurationItem
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: eb3ef26f-909a-4530-aafe-54d5b5a74b99
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

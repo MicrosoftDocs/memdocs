@@ -3,14 +3,14 @@ title: "ICIINFO::GetProperty"
 description: Learn how the ICIINFO::GetProperty method, in Configuration Manager, gets a named property value from the configuration item.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a8812aaa-31e5-46f6-bdae-cea5c24da9ed
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -34,7 +34,7 @@ HRESULT GetProperty(
 
  Qualifiers: [in, out]  
 
- Pointer to the language ID that is used to obtain the property. If there is no localized name for this ID, the method attempts to obtain the language-independent version of the property. If this does not exist, the method returns an error. On successful return from the method, this parameter indicates the language ID for the property retrieved.  
+ Pointer to the language ID that is used to obtain the property. If there's no localized name for this ID, the method attempts to obtain the language-independent version of the property. If this doesn't exist, the method returns an error. On successful return from the method, this parameter indicates the language ID for the property retrieved.  
 
  `pszPropName`  
  Data type: `LPCWSTR`  
@@ -51,7 +51,7 @@ HRESULT GetProperty(
  Pointer to a null-terminated string specifying the property value.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  

@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Better Mobile Threat Defense connector with Intune
-titleSuffix: Intune on Azure
-description: Set up Better Mobile Threat Defense connector with Intune.
+title: Better Mobile Threat Defense with Intune
+description: How to set up the Better Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 09/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -59,7 +57,7 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 

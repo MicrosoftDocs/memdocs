@@ -9,12 +9,11 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 01/09/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -37,7 +36,7 @@ ms.collection:
 
 When using or moving on-premises device management to cloud-native endpoints, there are some scenarios you need to know. This article lists and describes some changed behaviors, limitations, and resolutions.
 
-Cloud-native endpoints are devices that are joined to Azure AD. In many cases, they don't require a direct connection to any on-premises resources for usability or management. For more specific information, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+Cloud-native endpoints are devices that are joined to Microsoft Entra. In many cases, they don't require a direct connection to any on-premises resources for usability or management. For more specific information, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
 
 This feature applies to:
 
@@ -54,7 +53,7 @@ Machine authentication happens when:
 - On-premises resources, like file shares, printers, applications, and web sites, are accessed using on-premises AD computer accounts instead of user accounts.
 - Administrators or application developers configure on-premises resource access using machine accounts instead of users or user groups.
 
-Cloud-native endpoints are joined to Azure AD, and don't exist in on-premises AD. Cloud-native endpoints don't support on-premises AD machine authentication. Configuring access to on-premises file shares, applications, or services using only on-premises AD machine accounts will fail on cloud-native endpoints.
+Cloud-native endpoints are joined to Microsoft Entra, and don't exist in on-premises AD. Cloud-native endpoints don't support on-premises AD machine authentication. Configuring access to on-premises file shares, applications, or services using only on-premises AD machine accounts will fail on cloud-native endpoints.
 
 ### Switch to user-based authentication
 
@@ -62,11 +61,11 @@ Cloud-native endpoints are joined to Azure AD, and don't exist in on-premises AD
 - Review your environment and identify any applications and services that currently use machine authentication. Then, change the access to user-based authentication or service account-based authentication.
 
 > [!IMPORTANT]
-> The Azure AD Connect device writeback feature tracks devices that are registered in Azure AD. These devices are shown in on-premises AD as registered devices.
+> The Microsoft Entra Connect device writeback feature tracks devices that are registered in Microsoft Entra. These devices are shown in on-premises AD as registered devices.
 >
-> Azure AD Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication.
+> Microsoft Entra Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication.
 >  
-> For information on scenarios supported with device writeback, go to [Azure AD Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
+> For information on scenarios supported with device writeback, go to [Microsoft Entra Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
 
 ### Common services that use machine accounts
 
@@ -76,19 +75,19 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**:
 
-  - **Server and workstation file shares**: Update permissions to use user account-based security. When you do, use [Azure AD single sign-on (SSO)](/azure/active-directory/devices/azuread-join-sso) to access resources that use Windows integrated authentication.
+  - **Server and workstation file shares**: Update permissions to use user account-based security. When you do, use [Microsoft Entra single sign-on (SSO)](/azure/active-directory/devices/azuread-join-sso) to access resources that use Windows integrated authentication.
 
     Move file share content to SharePoint Online or OneDrive. For more specific information, go to [Migrate file shares to SharePoint and OneDrive](/sharepointmigration/fileshare-to-odsp-migration-guide).
 
   - **Network File System (NFS) root access**: Direct users to access specific folders, not the root. If you can, move content from an NFS to SharePoint Online or OneDrive.
 
-- **Win32 apps** on Azure AD joined Windows endpoints:
+- **Win32 apps** on Microsoft Entra joined Windows endpoints:
 
   - Won't work if the apps use machine account authentication.
   - Won't work if the apps access resources that are secured with groups that include only machine accounts.
 
   **Recommendation**:
-  - If your Win32 apps use machine authentication, then update the app to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
+  - If your Win32 apps use machine authentication, then update the app to use Microsoft Entra authentication. For more information, go to [Migrate application authentication to Microsoft Entra](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
   - Check the authentication and identities of your applications and kiosk devices. Update the authentication and identities to use user account-based security.
 
   For more information, go to [Authentication and Win32 apps](/windows/win32/secauthn/authentication-portal).
@@ -97,14 +96,14 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**:
   - On your web sites, enable Negotiate authentication.
-  - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
+  - Update your web server apps to use Microsoft Entra authentication. For more information, go to [Migrate application authentication to Microsoft Entra](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
   
   More resources:
 
   - [IIS Authentication `<windowsAuthentication>`](/iis/configuration/system.webserver/security/authentication/windowsauthentication/)
   - [IIS Security Authorization `<authorization>`](/iis/configuration/system.webserver/security/authorization/)
 
-- Standard **print management and discovery** depends on machine authentication. On Azure AD joined Windows endpoints, users can't print using standard print.
+- Standard **print management and discovery** depends on machine authentication. On Microsoft Entra joined Windows endpoints, users can't print using standard print.
 
   **Recommendation**: Use Universal Print. For more specific information, go to [What is Universal Print](/universal-print/fundamentals/universal-print-whatis).
 
@@ -123,13 +122,13 @@ The following list includes common features and services that might use machine 
   - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](../../intune/apps/intune-management-extension.md)
   - [Introduction to OneDrive in Microsoft 365](/training/modules/m365-onedrive-collaboration-use/)
 
-## Group policy objects might not apply
+## Group Policy Objects might not apply
 
 It's possible some of your older policies aren't available, or don't apply to cloud-native endpoints.
 
 **Resolution**:
 
-- Using [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md) in Intune, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
+- Using [Group Policy analytics](../../intune/configuration/group-policy-analytics.md) in Intune, you can evaluate your existing Group Policy Objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
   For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](../../intune/configuration/device-profile-assign.md).
@@ -148,21 +147,21 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 ## Synchronized user accounts can't complete first sign-in
 
-Synchronized user accounts are on-premises AD domain users that are synchronized to Azure AD using Azure AD Connect.
+Synchronized user accounts are on-premises AD domain users that are synchronized to Microsoft Entra using Microsoft Entra Connect.
 
 Currently, synchronized user accounts with passwords that have **User must change password at next logon** configured can't complete a first-time sign-in to a cloud-native endpoint.
 
 **Resolution**:
 
-Use Password Hash Sync and Azure AD connect, which forces the **force password change at logon** attribute to sync.
+Use Password Hash Sync and Microsoft Entra connect, which forces the **force password change at logon** attribute to sync.
 
-For more specific information, go to [Implement password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
+For more specific information, go to [Implement password hash synchronization with Microsoft Entra Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
 
 ## Follow the cloud-native endpoints guidance
 
 1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
 2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
-3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
 6. 🡺 **Known issues and important information** (*You are here*)

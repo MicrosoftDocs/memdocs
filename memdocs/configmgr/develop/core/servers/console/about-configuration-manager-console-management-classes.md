@@ -2,14 +2,14 @@
 title: Configuration Manager Console Management Classes
 ms.date: 09/20/2016
 description: Configuration Manager uses XML to define management classes whose instances contain data that can be viewed from within the Configuration Manager console.
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 571b9272-01b5-412b-8adb-ccad96dabff4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

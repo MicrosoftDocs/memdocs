@@ -3,8 +3,8 @@ title: Create an OS upgrade task sequence
 titleSuffix: Configuration Manager
 description: Use a task sequence to automatically upgrade Windows to a later version
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

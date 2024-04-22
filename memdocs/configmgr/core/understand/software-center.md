@@ -7,8 +7,8 @@ author: BalaDelli
 manager: apoorvseth
 ms.date: 06/10/2020
 ms.topic: end-user-help
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 

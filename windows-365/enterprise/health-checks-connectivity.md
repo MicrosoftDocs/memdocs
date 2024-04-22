@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 01/31/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -79,8 +78,8 @@ The user connectivity history report shows when a user started a connection and 
 
 ### View Connectivity history report
 
-1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
-2. Select a connection in the list > **Overview** > **Performance (preview)** > **View connectivity history**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **All Cloud PCs**.
+2. Select a Cloud PC in the list > **Overview** > **Performance (preview)** > **View report** under **Connectivity status**.
 
 ### Activities
 

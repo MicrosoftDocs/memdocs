@@ -3,8 +3,8 @@ title: CMG server authentication certificate
 titleSuffix: Configuration Manager
 description: The CMG uses HTTPS for secure client communication over the public internet. You can get a certificate from a public provider, or issue one from your public key infrastructure (PKI).
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
@@ -175,7 +175,7 @@ The Configuration Manager client policy includes the CMG service name, `GraniteF
 
 ## Next steps
 
-Continue your CMG setup by configuring Azure Active Directory (Azure AD):
+Continue your CMG setup by configuring Microsoft Entra ID:
   
 > [!div class="nextstepaction"]
-> [Configure Azure AD](configure-azure-ad.md)
+> [Configure Microsoft Entra ID](configure-azure-ad.md)

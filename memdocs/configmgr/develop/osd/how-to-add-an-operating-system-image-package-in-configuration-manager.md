@@ -3,14 +3,14 @@ title: Add an OS Image Package
 titleSuffix: Configuration Manager
 description: Add an operating system image package by creating an instance of the SMS_ImagePackage class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: faa80d51-ac31-4802-b778-c26bc003ddb3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

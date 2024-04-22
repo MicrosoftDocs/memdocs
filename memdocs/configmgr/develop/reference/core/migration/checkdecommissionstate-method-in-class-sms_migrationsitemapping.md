@@ -3,14 +3,14 @@ description: Learn how to check to see if site mapping can be decommissioned usi
 title: "CheckDecommissionState Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a85dc34d-ddf7-4ac2-bbf5-0529406b568d
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

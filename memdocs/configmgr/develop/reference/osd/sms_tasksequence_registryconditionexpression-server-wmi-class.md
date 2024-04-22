@@ -3,14 +3,14 @@ description: Learn how to represent a condition expression to check for the exis
 title: SMS_TaskSequence_RegistryConditionExpression Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3229c0e7-f7cd-4105-957a-11ba2339f25d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -33,7 +33,7 @@ Class SMS_TaskSequence_RegistryConditionExpression : SMS_TaskSequence_ConditionE
 ```  
 
 ## Methods  
- The `SMS_TaskSequence_RegistryConditionExpression` class does not define any methods.  
+ The `SMS_TaskSequence_RegistryConditionExpression` class doesn't define any methods.  
 
 ## Properties  
  `Data`  
@@ -116,9 +116,9 @@ Class SMS_TaskSequence_RegistryConditionExpression : SMS_TaskSequence_ConditionE
 
  You use `SMS_TaskSequence_RegistryConditionExpression` to check for the existence of a registry key, or alternatively to check for a registry key value. For example, if you have the registry key "HKEY_LOCAL_MACHINE\SYSTEM\Select" and the DWORD value set to 'Current' under it, then, `KeyPath` would be "HKEY...\Select", `Operator` would be 'Equals' (or 'NotEquals', and so on), `Type` would be REG_DWORD, `Value` would be 'Select', and `Data` would be the numeric value to compare against the value of the registry key ('Select').  
 
- `Type` applies only when checking for the existence of a registry value specified in `Value`; when comparing values, `Type` is not used. This means that if 'Exists' is the `Operator` and REG_SZ is the `Type`, the result will evaluate to `False` because 'Select' is a REG_DWORD.  
+ `Type` applies only when checking for the existence of a registry value specified in `Value`; when comparing values, `Type` isn't used. This means that if 'Exists' is the `Operator` and REG_SZ is the `Type`, the result will evaluate to `False` because 'Select' is a REG_DWORD.  
 
- However, when comparing values ('Equals', 'Greater', and so on), then `Type` is not used. Instead the value of `Data` is compared against `Value` regardless of the actual registry type and `Type`.  
+ However, when comparing values ('Equals', 'Greater', and so on), then `Type` isn't used. Instead the value of `Data` is compared against `Value` regardless of the actual registry type and `Type`.  
 
 ## Requirements  
 

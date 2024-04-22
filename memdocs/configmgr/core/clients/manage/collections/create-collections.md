@@ -3,8 +3,8 @@ title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -214,12 +214,12 @@ You can use PowerShell to create and import collections. For more information, s
 
 - [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
 
-## <a name="bkmk_aadcollsync"></a> Synchronize members to Azure AD groups
+## <a name="bkmk_aadcollsync"></a> Synchronize members to Microsoft Entra groups
 
-[Synchronize collection members to Azure AD groups](synchronize-collections-aad-group.md)
+[Synchronize collection members to Microsoft Entra groups](synchronize-collections-aad-group.md)
 
 ## Next steps
 
 [Manage collections](manage-collections.md)
 
-[Synchronize collection members to Azure AD groups](synchronize-collections-aad-group.md)
+[Synchronize collection members to Microsoft Entra groups](synchronize-collections-aad-group.md)

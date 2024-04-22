@@ -3,19 +3,19 @@ title: SMS_CHAlert Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents client status alerts.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 8f534910-a91f-4c04-83e5-c6ae1f8dbed2
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CHAlert Server WMI Class
-The `SMS_CHAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client status alerts.  
+The `SMS_CHAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents client status alerts.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -153,7 +153,7 @@ Class SMS_CHAlert : SMS_AlertBase
 
  Qualifiers: none  
 
- `true` if this alert is enabled. When the alert is not enabled, the condition is not evaluated.  
+ `true` if this alert is enabled. When the alert isn't enabled, the condition isn't evaluated.  
 
  `FeatureArea`  
  Data type: `UInt32`  
@@ -280,7 +280,7 @@ Class SMS_CHAlert : SMS_AlertBase
 
  Qualifiers: [read]  
 
- The number of times this alert has been activated.  
+ The number of times this alert was activated.  
 
  `ParameterValues`  
  Data type: `String`  
@@ -337,7 +337,7 @@ Class SMS_CHAlert : SMS_AlertBase
 
  Qualifiers: none  
 
- The evaluation will not start until the specified time.  
+ The evaluation won't start until the specified time.  
 
  `SourceSiteCode`  
  Data type: `String`  

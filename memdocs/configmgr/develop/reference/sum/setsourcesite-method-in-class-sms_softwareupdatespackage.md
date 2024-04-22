@@ -3,14 +3,14 @@ description: Learn how to set the source site for the software updates package u
 title: SetSourceSite method in class SMS_SoftwareUpdatesPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9eb8190b-8999-4dce-a337-4ea9dc5d6310
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

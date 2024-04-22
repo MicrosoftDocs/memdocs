@@ -3,14 +3,14 @@ title: SMS_G_System_SoftwareFile Class
 description: The SMS_G_System_SoftwareFile class is an SMS Provider server class that contains information about all software files that were inventoried on the client computer.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2b64ccf4-9ab2-498a-a4be-dbcecadb1886
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -40,7 +40,7 @@ Class SMS_G_System_SoftwareFile : SMS_G_System
 ```  
 
 ## Methods  
- The `SMS_G_System_SoftwareFile` class does not define any methods.  
+ The `SMS_G_System_SoftwareFile` class doesn't define any methods.  
 
 ## Properties  
  `CreationDate`  
@@ -142,7 +142,7 @@ Class SMS_G_System_SoftwareFile : SMS_G_System
 
  Qualifiers: None  
 
- Value that associates the software file with a software product represented by an [SMS_G_System_SoftwareProduct Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_softwareproduct-server-wmi-class.md) object. A value of 0 indicates that the software file is not associated with a known software product, that is, it is an unknown file. Files with a `ProductId` value is 0 are identical to [SMS_G_System_UnknownFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_unknownfile-server-wmi-class.md) objects.  
+ Value that associates the software file with a software product represented by an [SMS_G_System_SoftwareProduct Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_softwareproduct-server-wmi-class.md) object. A value of 0 indicates that the software file isn't associated with a known software product, that is, it's an unknown file. Files with a `ProductId` value is 0 are identical to [SMS_G_System_UnknownFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_unknownfile-server-wmi-class.md) objects.  
 
  `ResourceID`  
  Data type: **UInt32**  
@@ -156,9 +156,9 @@ Class SMS_G_System_SoftwareFile : SMS_G_System
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
- This class represents both known product files and unknown product files. Known product files contain company and product resource information or are related to known product files. Although you can use this class for queries involving inventoried files, it is preferred to use [SMS_ProductFileInfo Server WMI Class](../../../../../develop/reference/apps/sms_productfileinfo-server-wmi-class.md).  
+ This class represents both known product files and unknown product files. Known product files contain company and product resource information or are related to known product files. Although you can use this class for queries involving inventoried files, it's preferred to use [SMS_ProductFileInfo Server WMI Class](../../../../../develop/reference/apps/sms_productfileinfo-server-wmi-class.md).  
 
- Although [SMS_G_System_UnknownFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_unknownfile-server-wmi-class.md) defines the same unknown file information that is found in this class, there is no advantage to querying against `SMS_G_System_UnknownFile` for unknown product files. The following query returns all unknown product files from `SMS_G_System_SoftwareFile`.  
+ Although [SMS_G_System_UnknownFile Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_unknownfile-server-wmi-class.md) defines the same unknown file information that is found in this class, there's no advantage to querying against `SMS_G_System_UnknownFile` for unknown product files. The following query returns all unknown product files from `SMS_G_System_SoftwareFile`.  
 
 ```  
 SELECT * FROM SMS_G_System_SoftwareFile  
@@ -182,8 +182,8 @@ AND swf.ResourceID = swp.ResourceID
     |Reporting option|Description|  
     |----------------------|-----------------|  
     |Product version information. Bit 0.|Inventories products that contain company and product resource information.|  
-    |Files associated with known products. Bit 1.|Inventories files associated with products that contain company and product resource information. For example, Wwintl32.dll is inventoried because it is associated with Microsoft Word.<br /><br /> Set this bit only if the product version information reporting option is selected.|  
-    |Files not associated with known products. Bit 2.|Inventories files that do not include company and product resource information (unknown files).|  
+    |Files associated with known products. Bit 1.|Inventories files associated with products that contain company and product resource information. For example, Wwintl32.dll is inventoried because it's associated with Microsoft Word.<br /><br /> Set this bit only if the product version information reporting option is selected.|  
+    |Files not associated with known products. Bit 2.|Inventories files that don't include company and product resource information (unknown files).|  
 
 3.  For newly added inventory types, adds entries to the following `Path`, `Subdirectories`, and `Exclude` embedded property lists.  
 

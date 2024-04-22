@@ -3,14 +3,14 @@ description: Learn how to stop clients from connecting to the client notificatio
 title: SMS_BigGreenButtonConfig Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3fd7c3a1-bab9-4970-93a4-0b6e978fd3eb
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -30,7 +30,7 @@ Class SMS_BigGreenButtonConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_BigGreenButtonConfig` class does not define any methods.  
+ The `SMS_BigGreenButtonConfig` class doesn't define any methods.  
 
 ## Properties  
  `AgentID`  
@@ -49,7 +49,7 @@ Class SMS_BigGreenButtonConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- `false` to stop clients from connecting to the client notification server (a hidden role, co-located with management point). No active connections will be established between the clients and the client notification server. The default value is `true`.  
+ `false` to stop clients from connecting to the client notification server (a hidden role, co-located with management point). No active connections are established between the clients and the client notification server. The default value is `true`.  
 
  This setting is part of the client infrastructure and turned on by default. This value would likely only be changed to troubleshoot a significant performance issue.  
 

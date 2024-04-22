@@ -3,14 +3,14 @@ title: Set the PXE Service Point Response to PXE Requests
 description: In Configuration Manager, you set the distribution point response to incoming PXE requests by setting the IsActive embedded property.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 27015eb9-af08-4882-aa3a-53dac2d6ec24
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

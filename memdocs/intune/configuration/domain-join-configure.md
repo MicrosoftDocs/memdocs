@@ -2,18 +2,16 @@
 # required metadata
 
 title: Domain join profile settings for Windows 10/11 in Microsoft Intune
-description: Create a domain join device configuration profile for hybrid Azure AD joined devices. Use this profile to deploy on-premises Active Directory domain information to devices provisioned with Windows Autopilot and Microsoft Intune.
+description: Create a domain join device configuration profile for Microsoft Entra hybrid joined devices. Use this profile to deploy on-premises Active Directory domain information to devices provisioned with Windows Autopilot and Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/17/2023
+ms.date: 11/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -29,9 +27,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Configuration Domain Join settings for hybrid Azure AD joined devices in Microsoft Intune
+# Configuration Domain Join settings for Microsoft Entra hybrid joined devices in Microsoft Intune
 
-Many environments use on-premises Active Directory (AD). When AD domain-joined devices are also joined to Azure AD, they're called hybrid Azure AD joined devices. Using Windows Autopilot, you can [enroll hybrid Azure AD joined devices](../../autopilot/windows-autopilot-hybrid.md) in Intune. To enroll, you also need a **Domain Join** configuration profile.
+Many environments use on-premises Active Directory (AD). When AD domain-joined devices are also joined to Microsoft Entra ID, they're called Microsoft Entra hybrid joined devices. Using Windows Autopilot, you can [enroll Microsoft Entra hybrid joined devices](/autopilot/windows-autopilot-hybrid) in Intune. To enroll, you also need a **Domain Join** configuration profile.
 
 A **Domain Join** configuration profile includes on-premises Active Directory domain information. When devices are provisioning (and typically offline), this profile deploys the AD domain details so devices know which on-premises domain to join. If you don't create a domain join profile, these devices might fail to deploy.
 
@@ -39,7 +37,7 @@ This feature applies to:
 
 - Windows 11
 - Windows 10
-- Hybrid Azure AD joined devices
+- Microsoft Entra hybrid joined devices
 - Hybrid deployment with Autopilot + Intune
 
 This article shows you how to create a domain join profile for a hybrid Autopilot deployment. You can also see the available settings.
@@ -47,11 +45,11 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Domain Join**.
+    - **Profile type**: Select **Templates** > **Domain Join**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -66,7 +64,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
     - **Domain name**: Enter the Fully Qualified Domain Name (FQDN) the devices are to join. For example, enter `americas.corp.contoso.com.`
     - **Organizational unit** (optional): Enter the full path ([distinguished name](/windows/win32/ad/object-names-and-identities#distinguished-name)) to the organizational unit (OU) the computer accounts are to be created. For example, enter `OU=Mine,DC=Contoso,DC=com`. Don't enter quotation marks. To use the well-known computer object container (CN=Computers, DC=Contoso, DC=Com), leave this property blank.
 
-      For more information and advice on this setting, go to [Deploy hybrid Azure AD-joined devices](../../autopilot/windows-autopilot-hybrid.md).
+      For more information and advice on this setting, go to [Deploy Microsoft Entra hybrid joined devices](/autopilot/windows-autopilot-hybrid).
 
 8. Select **Next**.
 
@@ -80,12 +78,16 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
     Select **Next**.
 
-11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+11. In **Applicability rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. For more information on applicability rules, go to [Applicability rules](device-profile-create.md#applicability-rules).
 
-It's now ready for you to [deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+    Select **Next**.
+
+12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+It's now ready for you to [deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
 ## Next steps
 
 After the profile is [assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
-[Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+[Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).

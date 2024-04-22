@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Set up Check Point Harmony Mobile MTD connector with Intune
+title: Check Point Harmony Mobile Mobile Threat Defense Intune
 titleSuffix: Microsoft Intune
-description: Learn about integrating Intune with Check Point Harmony Mobile Threat Defense to control mobile device access to your corporate resources.
+description: How to set up Check Point Harmony Mobile Threat Defense with Microsoft Intune control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/15/2023
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
@@ -43,9 +42,9 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 - **iOS 12 and later**
 
-## Pre-requisites
+## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 
@@ -77,6 +76,7 @@ When malicious apps such as malware are detected on devices, you can block devic
 *Access granted on remediation:*
 
 :::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+
 ### Control access based on threat to network
 
 Detect threats like **Man-in-the-middle** in network, and protect access to Wi-Fi networks based on the device risk.

@@ -3,14 +3,16 @@ title: Maintenance tasks
 titleSuffix: Configuration Manager
 description: Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies and when to perform them.
 ms.date: 08/02/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+    - tier3
+    - essentials-manage
 ms.reviewer: mstewart,aaroncz 
 ---
 # Maintenance tasks for Configuration Manager

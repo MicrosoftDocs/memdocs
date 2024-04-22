@@ -3,8 +3,8 @@ title: Common compliance management tasks
 titleSuffix: Configuration Manager
 description: Learn about Configuration Manager compliance settings by working through some common scenarios.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth

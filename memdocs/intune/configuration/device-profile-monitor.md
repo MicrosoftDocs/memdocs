@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: See device profiles with Microsoft Intune
-description: See and manage the device configuration profile details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a profile, and see which devices have profiles assigned or deployed. Can also troubleshoot profiles that have conflict settings. 
+title: See device configuration policies with Microsoft Intune
+description: See and manage the device configuration policy details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a policy, and see which devices have policies assigned or deployed. Can also troubleshoot policies that have conflict settings. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2022
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 
 # optional metadata
@@ -30,94 +29,98 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Monitor device configuration profiles in Microsoft Intune
+# Monitor device configuration policies in Microsoft Intune
 
-Intune includes some features to help monitor and manage your device configuration profiles. For example, you can check the status of a profile, see which devices are assigned, and update the properties of a profile.
+Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, go to the devices are assigned to the policy, and update the properties of an existing policy.
 
-## View existing profiles
+This article shows you how to view existing device configuration policies for assignment status, making changes, and how to troubleshoot any conflicts.
+
+## View existing policies
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles**.
+2. Select **Devices** > **Configuration** > **Policies** tab.
 
-All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
+All of your policies are shown. You also see the platform, the type of policy, and if the policy is assigned.
 
 > [!NOTE]
-> For additional reporting information about device configuration profiles, see [Intune reports](../fundamentals/reports.md).
+> For more in-depth reporting information about device configuration policies, go to [Intune reports](../fundamentals/reports.md).
 
-## View details on a profile
+## View details on a policy
 
-After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
+After you create your device configuration policy, Intune provides reporting data. These reports show the status of a policy, such as it being successfully assigned to devices, or if the policy shows a conflict.
 
-1. In **Devices** > **Configuration profiles**, select an existing profile. For example, select a macOS profile.
-2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:
+1. In **Devices** > **Configuration** > **Policies** tab, select an existing policy.
 
-    - **Succeeded**: Policy is applied successfully.
+2. The **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks in with Intune, they receive the settings in your policy.
+
+    The following statuses are shown:
+
+    - **Succeeded**: The policy is applied successfully.
     - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
     - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
     - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
     - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10.
 
-3. The top graphical chart shows the number of devices assigned to the device profile. For example, if the configuration device profile applies to macOS devices, the chart lists the count of the macOS devices.
+3. **Device assignment status** shows information for the user that last checked-in. Select **Generate report** to see the latest policy assignment states for the devices that received the policy. You can also filter the assignment status to see only errors, conflicts, and more.
 
-    When you monitor a Windows profile, the count in the **Profile assignment status** is per device per user. So, if two users sign in to the same device, then that device is counted twice.
+    It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different.
 
-4. Select the top graphical chart. Or, select **Device status**. **Device status** opens.
+4. **Per setting status** shows the individual settings in the policy, and their status.
 
-    The devices assigned to the profile are listed, and it shows the deployment status. Also note that it only lists the devices with the specific platform (for example, macOS).
+5. Back in **Device and user check-in status**, select **View report**:
 
-    Close the **Device status** details.
+    :::image type="content" source="./media/device-profile-monitor/device-user-check-in-status-view-report.png" alt-text="Screenshot that shows to select view report on a device configuration policy to get the device and user check-in status in Microsoft Intune and Intune admin center.":::
 
-5. Select the circle in the bottom graphical chart. Or, select **User status**. **User status** opens.
+    **View report** shows more information on the devices assigned to that specific device configuration policy, including:
 
-    The users assigned to the profile are listed, and it shows the deployment status. Also note that it only lists the users with the specific platform (for example, macOS).
+    - The devices that received the policy
+    - The user names with devices that received the policy
+    - The check-in status and the last time the user/device checked in with the policy
 
-    Close the **User status** details.
+    You can also select a specific device to get more details and use the filter column to see the assignment filter options.
 
-6. Back in the **Profiles** list, select a specific profile.
+6. Back in **Device and user check-in status**, the following property information for the specific policy is available for you to view and edit:
 
-    - **Properties**: Change the policy name, or update any existing configuration settings. You can also update:
+    - **Basics**: See the policy name and description.
+    - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy.
+    - **Scope tags**: See any existing [scope tags](../fundamentals/scope-tags.md) used in the policy.
+    - **Configuration settings**: See the settings you configured in the policy.
+    - **Applicability Rules**: On your Windows devices, go to the [applicability rules](device-profile-create.md#applicability-rules) used in the policy.
 
-      - **Scope tags**: See any existing [scope tags](../fundamentals/scope-tags.md) used in the policy. Select **Edit** to add or remove a scope tag.
-      - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy. Select **Edit** to update the policy assignment, and add or remove a filter.
-      - **Applicability Rules**: On your Windows devices, see the [applicability rules](device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
+## View details on all device configuration policies
 
-    - **Device and user check-in status**: Shows the number of **all** users or devices that checked-in with the profile. If one device has multiple users, this report shows the status for each user. When the user or devices check-in, they receive the settings in your profile.
+1. Go to **Devices** > **Configuration** > **Monitor** tab:
 
-      Select **View report** to see the following information:
-      
-      - The devices that received the profile
-      - The user names with devices that received the profile
-      - The check-in status and the last time the user/device checked in with the profile
+    :::image type="content" source="./media/device-profile-monitor/device-configuration-monitor-tab.png" alt-text="Screenshot that shows to select the monitor tab in device configuration profiles in Microsoft Intune and Intune admin center.":::
 
-      You can also select a specific device to get more details and use the filter column to see the assignment filter options.
+2. In this area, you have access to the **Configuration policy assignment failures** report. This report helps troubleshoot errors and conflicts for configuration policies that are assigned.
 
-    - **Device assignment status**: Shows information for the user that last checked-in. Select **Generate report** to see the latest profile assignment states for the devices that received the profile. You can also filter the assignment status to see only errors, conflicts, and more.
+    This area also provides quick access to the following reports:
 
-      It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different. 
-
-    - **Per setting status**: Shows the individual settings in the profile, and their status.
+    - Devices with restricted apps
+    - Device encryption status
+    - Certificates
 
 > [!TIP]
-> [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.
+> In **Devices**, select **Monitor**. This area lists all reports you can use, including reports for device configuration, compliance, enrollment, and software updates. For more information on all the Intune reports, go to [Intune reports](../fundamentals/reports.md).
 
 ## View conflicts
 
-In **Devices** > **All devices**, you can see any settings that are causing a conflict. When there's a conflict, you also see all the configuration profiles that contain this setting. Administrators can use this feature to help troubleshoot, and fix any discrepancies with the profiles.
+In **Devices** > **All devices**, you can see any settings that are causing a conflict. When there's a conflict, you also see all the configuration policies that contain this setting.
+
+Administrators can use this feature to help troubleshoot, and fix any discrepancies with the policies.
 
 1. In Intune, select **Devices** > **All Devices** > select an existing device in the list. An end user can get the device name from their Company Portal app.
 2. Select **Device configuration**. All configuration policies that apply to the device are listed.
-3. Select the policy. It shows you all the settings in that policy that apply to the device. If a device has a **Conflict** state, select that row. In the new window, you see all the profiles, and the profile names that have the setting causing the conflict.
+3. Select the policy. It shows you all the settings in that policy that apply to the device. If a device has a **Conflict** state, select that row. In the new window, you see all the policies, and the profile names that have the setting causing the conflict.
 
 Now that you know the conflicting setting, and the policies that include that setting, it should be easier to resolve the conflict.
 
-> [!TIP]
-> In **Devices** > **Monitor**, a list of all policies are shown. The **Assignment failures (preview)** report helps troubleshoot errors and conflicts for configuration profiles that are assigned. For more information on the available reporting data, see [Intune reports](../fundamentals/reports.md).
+## Device Firmware Configuration Interface (DFCI) profile reporting
 
-## Device Firmware Configuration Interface profile reporting
+DFCI policies are reported on a per-setting basis, just like other device configuration policies. Depending on the manufacturer's support of DFCI, some settings might not apply.
 
-DFCI profiles are reported on a per-setting basis, just like other device configuration profiles. Depending on the manufacturer's support of DFCI, some settings may not apply.
-
-With your DFCI profile settings, you may see the following states:
+With your DFCI profile settings, you might see the following states:
 
 - **Compliant**: This state shows when a setting value in the profile matches the setting on the device. This state can happen in the following scenarios:
 
@@ -135,9 +138,9 @@ With your DFCI profile settings, you may see the following states:
   - The device doesn't have the latest DFCI firmware version.
   - DFCI was disabled before being enrolled in Intune using a local "opt-out" control in the UEFI menu.
   - The device was enrolled to Intune outside of Autopilot enrollment.
-  - The device wasn't registered to Autopilot by a Microsoft CSP, or registered directly by the OEM.
+  - The device isn't registered to Windows Autopilot by a Microsoft CSP, or registered directly by the OEM.
 
-## Next steps
+## Related content
 
-[Common questions, issues, and resolutions with device profiles](device-profile-troubleshoot.md)  
-[Troubleshoot policies and profiles and in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Common questions, issues, and resolutions with device configuration policies](device-profile-troubleshoot.md)
+- [Troubleshoot device configuration policies in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

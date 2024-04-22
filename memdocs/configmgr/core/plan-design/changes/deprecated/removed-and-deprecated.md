@@ -3,8 +3,8 @@ title: Deprecated items
 titleSuffix: Configuration Manager
 description: Learn about the features, products, and operating systems that Configuration Manager no longer supports.
 ms.date: 11/03/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

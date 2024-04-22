@@ -3,14 +3,14 @@ title: Enable or Disable a Software Metering Rule
 titleSuffix: Configuration Manager
 description: Enable or disable a software metering rule, in Configuration Manager, by loading an instance of the software metering rule.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 13812f78-4627-4427-a32c-7c8bfe64a307
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

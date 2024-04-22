@@ -3,14 +3,14 @@ title: Obsolete classes
 titleSuffix: Configuration Manager
 description: Obsolete WMI classes in Configuration Manager.
 ms.date: 08/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ff0b9310-3d04-48e9-8118-94c73541b5eb
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

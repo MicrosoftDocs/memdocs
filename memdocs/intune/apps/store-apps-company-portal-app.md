@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,7 +36,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store. If your business needs require that you assign the Company Portal app to them, however, you can assign the Windows 10 Company Portal app directly from Intune. You can do so even if you haven't integrated Intune with the Microsoft Store for Business.
+To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store or download it from the [Microsoft Intune Company Portal for Windows](../apps/store-apps-company-portal-app.md#download-the-offline-company-portal-app). If your business needs require that you assign the Company Portal app to them, however, you can assign the Windows 10 Company Portal app directly from Intune. You can do so even if you haven't integrated Intune with the Microsoft Store for Business.
 
  > [!IMPORTANT]
  > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](store-apps-company-portal-autopilot.md).

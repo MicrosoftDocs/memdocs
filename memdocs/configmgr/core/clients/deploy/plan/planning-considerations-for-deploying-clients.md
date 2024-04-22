@@ -3,8 +3,8 @@ title: Client deployment planning
 titleSuffix: Configuration Manager
 description: Plan to deploy clients and prepare the infrastructure in Configuration Manager.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

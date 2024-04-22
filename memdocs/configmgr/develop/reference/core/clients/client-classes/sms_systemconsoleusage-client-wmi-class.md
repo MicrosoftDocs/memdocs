@@ -3,14 +3,14 @@ description: Learn how to use the SMS_SystemConsoleUsage class to define usage d
 title: SMS_SystemConsoleUsage Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: eae81dae-8af9-4e82-8b1f-9b13d01581b7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

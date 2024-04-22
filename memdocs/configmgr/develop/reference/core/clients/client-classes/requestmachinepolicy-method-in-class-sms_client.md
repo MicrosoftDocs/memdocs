@@ -3,14 +3,14 @@ title: RequestMachinePolicy Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the RequestMachinePolicy method initiates a request for machine policy.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3a2d4d06-074f-4174-9398-e3df3d230414
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -38,7 +38,7 @@ UInt32 RequestMachinePolicy(
 | Value | Description |
 | ----- | ----------- |
 |0|A machine policy retrieval cycle is initiated.|  
-|1|A machine policy validation cycle is initiated, and the server and client cyclical redundancy checks (CRCs) are compared to verify that the policies are in agreement. If the policies are not in agreement, then a resynchronization is initiated.|  
+|1|A machine policy validation cycle is initiated, and the server and client cyclical redundancy checks (CRCs) are compared to verify that the policies are in agreement. If the policies aren't in agreement, then a resynchronization is initiated.|  
 
 ## Return Values  
  A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

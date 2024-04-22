@@ -3,14 +3,14 @@ title: Hardware inventory views
 titleSuffix: Configuration Manager
 description: Information about the computer hardware scanned on Configuration Manager client computers.
 ms.date: 06/03/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

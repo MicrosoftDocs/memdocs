@@ -4,16 +4,14 @@
 title: Configure Endpoint protection settings in Microsoft Intune
 description: Create Endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 09/16/2021
+ms.date: 11/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -26,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- endpoint-protection
 ms.reviewer: mattcall
 ---
 
@@ -49,7 +48,7 @@ Before you create a profile, review the following articles that detail the Endpo
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 
@@ -88,7 +87,7 @@ Before you create a profile, review the following articles that detail the Endpo
 
 ## Add custom Firewall rules for Windows 10/11 devices
 
-When you configure the Microsoft Defender Firewall as part of a profile that includes endpoint protection rules for Windows 10/11, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows devices.
+When you configure the Windows Firewall as part of a profile that includes endpoint protection rules for Windows 10/11, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows devices.
 
 When you plan for profiles with custom Firewall rules, consider the following information, which could affect how you choose to group firewall rules in your profiles:
 
@@ -104,7 +103,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create Profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 
@@ -121,11 +120,11 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
    Select **Next**.
 
-6. In **Configuration settings**, expand **Microsoft Defender Firewall**. Next, for *Firewall rules*, select **Add** to open the **Create Rule** page.
+6. In **Configuration settings**, expand **Windows Firewall**. Next, for *Firewall rules*, select **Add** to open the **Create Rule** page.
 
 7. Specify settings for the Firewall rule, and then select **Save** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 
-    1. The rule appears on the *Microsoft Defender Firewall* page in the list of rules.
+    1. The rule appears on the *Windows Firewall* page in the list of rules.
     2. To modify a rule, select the rule from the list, to open the **Edit Rule** page.
     3. To delete a rule from a profile, select the ellipsis **(…)** for the rule, and then select **Delete**.
     4. To change the order in which rules display, select the *up arrow, down arrow* icon at the top of the rule list.

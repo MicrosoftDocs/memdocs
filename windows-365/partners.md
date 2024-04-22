@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -90,7 +89,7 @@ For more information, visit the [Nerdio website](https://getnerdio.com/windows-3
 
 Spot by NetApp delivers fully managed, continuously optimized cloud desktops as a service.
 
-For more information, read about Spot on the [NetApp website](https://spot.io/products/spotpc/).
+For more information, read about Spot on the [NetApp website](https://spot.io/product/spot-security/).
 
 ## Rimo3
 

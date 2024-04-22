@@ -3,14 +3,14 @@ description: Learn how to use the SMS_Advertisement class to assign an advertise
 title: Assign an Advertisement to a Collection of Computers
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: fc94ef17-5ecf-44a9-9805-585ce5b8f402
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

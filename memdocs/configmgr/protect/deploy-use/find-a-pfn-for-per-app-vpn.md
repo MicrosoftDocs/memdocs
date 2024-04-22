@@ -3,8 +3,8 @@ title: Find a package family name (PFN) for per-app VPN
 titleSuffix: Configuration Manager
 description: Learn about the two ways to find a package family name so that you can configure a per-app VPN.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -24,7 +24,7 @@ There are two ways to find a PFN so that you can configure a per-app VPN.
 
 ## Find a PFN for an app that's installed on a Windows 10 computer
 
-If the app you are working with is already installed on a Windows 10 computer, you can use the [Get-AppxPackage](/powershell/module/appx/get-appxpackage) PowerShell cmdlet to get the PFN.
+If the app you're working with is already installed on a Windows 10 computer, you can use the [Get-AppxPackage](/powershell/module/appx/get-appxpackage) PowerShell cmdlet to get the PFN.
 
 The syntax for Get-AppxPackage is:
 
@@ -40,7 +40,7 @@ For example, to get info on all the universal apps installed on the computer use
 To get info on an app you know the name of, or part of the name of, use `Get-AppxPackage *<app_name>`. Note the use of the wildcard character, particularly helpful if you're not sure of the full name of the app. For example to get the info for OneNote, use `Get-AppxPackage *OneNote`.
 
 
-Here is the information retrieved for OneNote:
+Here's the information retrieved for OneNote:
 
 `Name                   : Microsoft.Office.OneNote`
 
@@ -70,11 +70,11 @@ Here is the information retrieved for OneNote:
 
 1. Go to https://www.microsoft.com/store/apps
 2. Enter the name of the app in the search bar. In our example, search for OneNote.
-3. Click the link to the app. Note that the URL that you access has a series of letters at the end. In our example, the URL looks like this:
+3. Click the link to the app. The URL that you access has a series of letters at the end. In our example, the URL looks like this:
 `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`
-4. In a different tab, paste the following URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`,  replacing `<app id>` with the app id you obtained from https://www.microsoft.com/store/apps - that series of letters at the end of the URL in step 3. In our example, example of OneNote, you'd paste: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+4. In a different tab, paste the following URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`,  replacing `<app id>` with the app ID you obtained from https://www.microsoft.com/store/apps - that series of letters at the end of the URL in step 3. In our example, example of OneNote, you'd paste: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
-In Edge, the information you want is displayed; in Internet Explorer, click **Open** to see the information. The PFN value is given on the first line. Here's how the results look for our example:
+In Microsoft Edge, the information you want is displayed; in Internet Explorer, click **Open** to see the information. The PFN value is given on the first line. Here's how the results look for our example:
 
 ``` JSON
 {

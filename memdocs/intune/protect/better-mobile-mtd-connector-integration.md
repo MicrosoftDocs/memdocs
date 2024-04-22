@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Set up the Better Mobile integration with Intune
-titleSuffix: Intune on Azure
-description: "Better Mobile connector integration with Intune"
+title: Set up Better Mobile integration with Intune
+description: How to set  up the Better Mobile solution with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 09/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -43,7 +41,7 @@ Before starting the process of integrating Better Mobile with Intune, make sure 
 
 - Microsoft Intune Plan 1 subscription
 
-- Azure Active Directory admin credentials to grant the following permissions:
+- Microsoft Entra admin credentials to grant the following permissions:
 
   - Sign in and read user profile
 
@@ -61,11 +59,11 @@ The Better Mobile app authorization process follows:
 
 - Allow the Better Mobile service to communicate information related to device health state back to Intune.
 
-- Better Mobile syncs with Azure AD Enrollment Group membership to populate its device's database.
+- Better Mobile syncs with Microsoft Entra Enrollment Group membership to populate its device's database.
 
-- Allow the Better Mobile admin console to use Azure AD Single Sign On (SSO).
+- Allow the Better Mobile admin console to use Microsoft Entra single sign-on (SSO).
 
-- Allow the Better Mobile app to sign in using Azure AD SSO.
+- Allow the Better Mobile app to sign in using Microsoft Entra SSO.
 
 ## To set up Better Mobile integration
 
@@ -78,7 +76,7 @@ The Better Mobile app authorization process follows:
 4. Next to **ACCOUNT NAME**, type a descriptor.
 5. In the **Microsoft Sign in** window, enter your Intune credentials.
 6. In the **Permissions requested** window, choose **Accept**.
-7. Search for the Azure AD Security groups that you want Better Mobile to sync devices from, and select them in the list. Then select **Continue**.
+7. Search for the Microsoft Entra security groups that you want Better Mobile to sync devices from, and select them in the list. Then select **Continue**.
 8. Select **Done**.
 9. The **Add account** page reappears. Close the page.
 

@@ -5,15 +5,14 @@ title: Set up app-based Conditional Access policies with Intune
 titleSuffix: Microsoft Intune
 description: Create Conditional Access policies that work with Intune app protection policies
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Set up app-based Conditional Access policies with Intune
@@ -42,9 +42,9 @@ Before you can use app-based Conditional Access policies, you need to have [Intu
 
 ## Create app-based Conditional Access policies
 
-Conditional Access is an Azure Active Directory (Azure AD) technology. The Conditional Access node you access from *Intune* is the same node that you access from *Azure AD*. Because it's the same node, you don't need to switch between Intune and Azure AD to configure policies.
+Conditional Access is a Microsoft Entra technology. The Conditional Access node you access from *Intune* is the same node that you access from *Microsoft Entra ID*. Because it's the same node, you don't need to switch between Intune and Microsoft Entra ID to configure policies.
 
-Before you can create Conditional Access policies from the Microsoft Intune admin center, you must have an Azure AD Premium license.
+Before you can create Conditional Access policies from the Microsoft Intune admin center, you must have a Microsoft Entra ID P1 or P2 license.
 
 ### To create an app-based Conditional Access policy
 
@@ -66,4 +66,4 @@ Before you can create Conditional Access policies from the Microsoft Intune admi
 
 - [Block apps that don't have modern authentication](app-modern-authentication-block.md)
 - [Protect app data with app protection policies](../apps/app-protection-policies.md)
-- Learn about [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
+- Learn about [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access)

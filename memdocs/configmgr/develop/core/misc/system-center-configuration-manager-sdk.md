@@ -3,14 +3,14 @@ title: Software development kit
 titleSuffix: Configuration Manager
 description: Landing page for the Configuration Manager software development kit (SDK)
 ms.date: 08/02/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 7fa4f2f4-6816-43e9-976b-d3a48abebdbc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

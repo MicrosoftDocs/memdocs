@@ -7,11 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/26/2023
+ms.date: 08/01/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: d98d9bbe-98fa-48a9-8808-110435eac9e4
 searchScope:
  - User help

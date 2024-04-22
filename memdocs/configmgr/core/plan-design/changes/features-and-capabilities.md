@@ -3,8 +3,8 @@ title: Features and capabilities
 titleSuffix: Configuration Manager
 description: Learn about the primary management capabilities of Configuration Manager.
 ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: Banreet
 ms.author: banreetkaur
@@ -30,12 +30,12 @@ Desktop Analytics is a cloud-based service that integrates with Configuration Ma
 
 ## Cloud-attached management
 
-Use features like the cloud management gateway and Azure Active Directory to manage internet-based clients.
+Use features like the cloud management gateway and Microsoft Entra ID to manage internet-based clients.
 
 For more information, see the following articles:
 
 - [Cloud management gateway overview](../../clients/manage/cmg/overview.md)
-- [Plan for Azure AD](../security/plan-for-security.md#azure-active-directory)
+- [Plan for Microsoft Entra ID](../security/plan-for-security.md#azure-active-directory)
 - [Azure services](../../servers/deploy/configure/azure-services-wizard.md)
 
 ## Real-time management

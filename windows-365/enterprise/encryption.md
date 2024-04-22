@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 12/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -32,7 +31,7 @@ ms.collection:
 
 # Data encryption in Windows 365
 
-Windows 365 encrypts data at rest and in transit as explained below.
+Windows 365 encrypts data at rest and in transit as explained in this article.
 
 ## Encryption of data at rest
 
@@ -40,7 +39,7 @@ To help you protect your organization's data, Windows 365 Enterprise and Busines
 
 This storage layer encryption provides the following benefits:
 
-- When persisting data to the cloud, data at rest on your Microsoft-hosted Cloud PC's disk is automatically encrypted.
+- When data is persisted to the cloud, data at rest on your Microsoft-hosted Cloud PC's disk is automatically encrypted.
 - Windows 365 Cloud PC disks are encrypted transparently using 256-bit Advanced Encryption Standard (AES) encryption, a modern block cipher, and is FIPS 140-2 compliant. The encryption at this layer doesn't affect Cloud PC performance.
 - The encryption is applied to every Cloud PC in every region at no extra cost.
 
@@ -49,6 +48,8 @@ The following Windows 365 Enterprise and Business objects are automatically encr
 - Disks
 - Snapshots
 - Images
+
+When Windows 365 Enterprise customers use Microsoft Purview Customer Key, these objects are instead encrypted-at-rest with customer-managed keys. By default, new Cloud PC disks, snapshots, and images are encrypted using this method after Customer Key is set up. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
 
 Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
 

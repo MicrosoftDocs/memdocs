@@ -5,15 +5,14 @@ title: Get support in the Microsoft Intune admin center
 titleSuffix: Microsoft Intune
 description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/31/2022
+ms.date: 01/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -27,6 +26,7 @@ ms.custom:
 ms.collection:
   - M365-identity-device-management
   - tier1
+  - help-support
 ---
  
 # How to get support in the Microsoft Intune admin center
@@ -60,7 +60,7 @@ To access help and support in the admin center, you have some options:
 
 ### Choose the right support scenario
 
-In **Help and support**, select any available option to focus support on your scenario. You’ll only see tiles for the services that you have subscriptions to use.
+In **Help and support**, select any available option to focus support on your scenario. You can only see tiles for the services that you have subscriptions to use.
 
 In the following example, you see the different services available in this subscription:
 
@@ -89,7 +89,7 @@ The following information can help you choose the correct focus:
   - Change requests to the configuration of Microsoft Managed Desktop devices
   - Reporting an incident or outage
 
-  If you're a Microsoft Managed Desktop customer, selecting that tile for Microsoft Managed Desktop related issues will take you to the Service Requests page. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
+  If you're a Microsoft Managed Desktop customer, then select the tile for Microsoft Managed Desktop related issues and the Service Requests page is displayed. For more information on Service Requests, see [Admin support for Microsoft Managed Desktop](/microsoft-365/managed-desktop/working-with-managed-desktop/admin-support?view=o365-worldwide&preserve-view=true).
 
 - **Windows 365**:
   - When you have a subscription for Windows 365, this tile opens Help and support for Windows 365.
@@ -105,14 +105,14 @@ The following information can help you choose the correct focus:
 
 ## Review your support options
 
-After you select a support scenario, the admin center presents the Help and Support page where the support scenario you’ve selected appears at the top **(1)**. If the wrong support scenario was selected, you’ll need to go back to make a different selection.
+When you select a support scenario, the admin center displays the Help and Support page with the support scenario that you selected displayed at the top **(1)**. If the wrong support scenario is selected, you need to go back to make a different selection.
 
 > [!NOTE]
 > To access support scenarios in the Intune admin center, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**.
 
 :::image type="content" source="./media/get-support/confirm-management-selection.png" alt-text="Screenshot that shows the How can we help window in the Intune admin center.":::
 
-Above the *How can we help?* title, there are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. The pane you’re viewing is identified by which icon is underlined. By default, the Help and support page opens to the *Find solutions* pane.
+Above the *How can we help?* title, there are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. An underlined icon indicates the active pane you’re viewing. By default, the Help and support page opens to the *Find solutions* pane.
 
 > [!TIP]  
 > Customers with a **Premier** or **Unified** support contract have [additional options](#premier-and-unified-support-options) for support. If you've a Premier or Unified support contract, you'll see a banner similar to the following image:
@@ -123,7 +123,7 @@ Above the *How can we help?* title, there are three icons that you can select to
 
 :::image type="content" source="./media/get-support/find-solutions.png" alt-text="Screenshot that shows how to search for solutions in the Intune admin center.":::
 
-On the *Search for solutions* pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences depending on what is available for the product you selected: the traditional support experience and the updated support experience.
+On the *Search for solutions* pane, specify a few details about an issue in the provided text box. The console might offer suggestions based on the details that you enter. Depending on the presence of specific keywords, the console offers one of two support experiences depending on what is available for the product you selected: the traditional support experience and the updated support experience.
 
 #### Traditional experience
 
@@ -145,7 +145,7 @@ Running the diagnostics can identify issues for that account in Azure AD. In thi
 
 *This support experience is currently available for Intune and Co-management.*
 
-Some keywords will lead to an enhanced experience that helps you drill down to more scenario-specific support. For example, you're using Microsoft Intune and enter a generic search for *Need help with Intune*. You'll see several more focused scenarios you can select to clarify the problem and find more focused results.
+Some keywords lead to an enhanced experience that helps you drill down to more scenario-specific support. For example, you're using Microsoft Intune and enter a generic search for *Need help with Intune*. You can see several more focused scenarios and you can select to clarify the problem and find more focused results.
 
 :::image type="content" source="./media/get-support/scenarios-example.png" alt-text="Screenshot that shows scenario options in the Intune admin center.":::
 
@@ -178,7 +178,7 @@ The *Service requests* pane displays your case history. Active cases are at the 
 
 If you have an active support case number, you can enter it here to go to that issue. Or, you can select any incident from the list of active and closed incidents to view more information about it.
 
-When you're done viewing details for an incident, select the left arrow that appears at the top of the service request window just above the icons for the **How can we help?** pane icons. The back arrow returns the display to the list of support incidents you've opened.
+When you're done viewing details for an incident, select the left arrow that appears at the top of the service request window just above the icons for the **How can we help?** pane icons. The back arrow returns the display to the list of opened support incidents.
 
 ## Premier and Unified support options
 

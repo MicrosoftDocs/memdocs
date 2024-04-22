@@ -3,14 +3,14 @@ title: Create a Data Discovery Record
 titleSuffix: Configuration Manager
 description: Specify the resource type, the discovery process, the site that discovered the resource, and the resource properties.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: aab98600-7a43-4a03-ba05-3fcb828e6c82
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: "SMS_SoftwareUpdatesPackage Class"
 titleSuffix: "Configuration Manager"
 description: "The SMS_SoftwareUpdatesPackage WMI class is an SMS Provider server class represents the package that is the unit of distribution of program binaries with which the software update is associated."
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 33412722-ac49-4587-860e-6504870e76d7
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

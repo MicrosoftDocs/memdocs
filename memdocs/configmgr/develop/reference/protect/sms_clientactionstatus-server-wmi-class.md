@@ -3,14 +3,14 @@ title: SMS_ClientActionStatus Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that summarize the status of a client action.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ecd42432-ceb8-4d0d-9445-3fc6752eedef
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

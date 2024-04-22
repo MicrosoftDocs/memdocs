@@ -3,14 +3,14 @@ title: Date and Time Formats
 titleSuffix: Configuration Manager
 description: When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 3c397b79-1209-4fe3-8c48-b3a4970faba7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

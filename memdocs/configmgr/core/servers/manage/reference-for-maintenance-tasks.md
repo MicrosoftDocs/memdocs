@@ -3,8 +3,8 @@ title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
 ms.date: 04/27/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: banreet
 ms.author: banreetkaur
@@ -397,6 +397,16 @@ Use this task to delete information about unknown computers from the site databa
 ### Delete Aged User Device Affinity Data
 
 Use this task to delete aged User Device Affinity data from the database. For more information, see [Link users and devices with user device affinity](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
+
+| Site type | Status |
+| --------- | ------ |
+|Central administration site|Not available|
+|**Primary site**|Enabled|
+|Secondary site|Not available|
+
+### Delete Aged Task Execution Status Messages
+
+Use this task to delete added task execution status messages on primary site servers. By default, it has been set to run on Saturday and delete the data older than 30 days. It does so by cleaning up [dbo].TaskExecutionStatus table.
 
 | Site type | Status |
 | --------- | ------ |

@@ -3,14 +3,14 @@ description: Learn how to add one or more boundaries to a default boundary group
 title: AddBoundary method in class SMS_DefaultBoundaryGroup
 titleSuffix: Configuration Manager
 ms.date: 03/13/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: aae63f60-858e-4467-9c70-f6d94ce53d57
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

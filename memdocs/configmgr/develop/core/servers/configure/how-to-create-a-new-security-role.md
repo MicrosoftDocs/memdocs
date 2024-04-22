@@ -3,14 +3,14 @@ title: Create a New Security Role
 description: Learn how the administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: a97841c0-5cab-4a84-a480-3a2eb60d706a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

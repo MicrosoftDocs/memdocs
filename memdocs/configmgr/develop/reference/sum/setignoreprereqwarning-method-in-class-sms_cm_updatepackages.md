@@ -1,23 +1,23 @@
 ---
-description: The SetIgnorePrereqWarning Windows Management Instrumentation class method, in Configuration Manager, updates the ignore pre-requisites warning flag of the update packages.
+description: The SetIgnorePrereqWarning Windows Management Instrumentation class method, in Configuration Manager, updates the ignore prerequisites warning flag of the update packages.
 title: SetIgnorePrereqWarning Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 843a2227-7adb-4472-a907-e4f02fb13bf2
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SetIgnorePrereqWarning Method in Class SMS_CM_UpdatePackages
-The `SetIgnorePrereqWarning` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the ignore pre-requisites  warning flag of the update packages.  
+The `SetIgnorePrereqWarning` Windows Management Instrumentation (WMI) class method in Configuration Manager updates the ignore prerequisites  warning flag of the update packages.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method:  
 
 ## Syntax  
 
@@ -34,16 +34,16 @@ SInt32 SetIgnorePrereqWarning(
 
  Qualifiers: [in]  
 
- Flag to ignore the  pre-requisites  warning flag of the update packages. Possible values are:  
+ Flag to ignore the  prerequisites  warning flag of the update packages. Possible values are:  
 
 | Value | Flag |  
 | ----- | ---- |  
-|0|NOT_CONTINUE_ON_PREREQ_WARNING. During installation, stop the upgrade if there is a prerequisite warning.|  
+|0|NOT_CONTINUE_ON_PREREQ_WARNING. During installation, stop the upgrade if there's a prerequisite warning.|  
 |1|PREREQ_ONLY. Run only the prerequisite.|  
 |2|CONTINUE_ON_PREREQ_WARNING. During installation, ignore the prerequisite warning.|  
 
 ## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+ An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure.  
 
  For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 

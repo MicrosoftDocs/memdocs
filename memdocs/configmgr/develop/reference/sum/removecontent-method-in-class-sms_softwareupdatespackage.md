@@ -3,14 +3,14 @@ title: RemoveContent method in class SMS_SoftwareUpdatesPackage
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the RemoveContent Windows Management Instrumentation class method removes old or unnecessary content from the software updates package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 36e102e8-7a1f-49c1-9ea8-89e5fc81ef97
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

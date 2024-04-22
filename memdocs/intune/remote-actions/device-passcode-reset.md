@@ -7,12 +7,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/13/2022
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 #ROBOTS:
 #audience:
 
-ms.reviewer: coferro
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -52,6 +51,9 @@ This document discusses both device level passcode reset and work profile passco
 
 For Android devices, device level passcode reset is only supported on devices running 6.x or earlier, or on Android enterprise devices running in Kiosk mode. This restriction is because Google removed support for resetting an Android 7 device's passcode/password from within a Device Administrator granted app and applies to all MDM vendors.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Supported platforms for Android enterprise work profile passcode reset
 
 | Platform | Supported? |
@@ -65,9 +67,13 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 
 ## Reset a passcode
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin (also known as Intune Administrator), Helpdesk Operator, or Role Administrator.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Microsoft Entra Global Admin, Microsoft Entra Intune Service Admin (also known as Intune Administrator), Helpdesk Operator, or Role Administrator.
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a device, and choose **Reset passcode**.
+
+> [!NOTE]
+> To successfully reset a passcode for the Work Profile of an Android device you must configure the device passcode within device restrictions. Any attempts to reset the passcode without configuration will fail.
+
 
 ## Reset Android work profile and Device Owner passcodes
 

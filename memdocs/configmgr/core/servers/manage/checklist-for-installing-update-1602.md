@@ -3,8 +3,8 @@ title: Checklist for 1602
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating from Configuration Manager version 1511 to version 1602.
 ms.date: 02/7/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

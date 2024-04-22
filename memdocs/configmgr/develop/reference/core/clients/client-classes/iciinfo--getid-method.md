@@ -1,16 +1,16 @@
 ---
 title: "ICIINFO::GetId"
 titleSuffix: Configuration Manager
-description: "In Configuration Manager,the ICIINFO::GetId method gets the ID of the configuration item."
+description: "In Configuration Manager, the ICIINFO::GetId method gets the ID of the configuration item."
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 03754f1a-0146-4ff3-8d18-bee4fed9a932
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -35,7 +35,7 @@ HRESULT GetId(
  Pointer to the ID of the configuration item.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  

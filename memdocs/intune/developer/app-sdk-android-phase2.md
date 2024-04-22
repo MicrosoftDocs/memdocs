@@ -7,12 +7,11 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -36,40 +35,40 @@ ms.custom: intune-classic
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
-> This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
+> This guide is divided into several distinct stages. Start by reviewing [Stage 1: Plan the Integration].
 
 ## Stage 2: The MSAL Prerequisite
 
 ## Stage Goals
 
-- Register your application with Azure Active Directory (AAD).
+- Register your application with Microsoft Entra ID.
 - Integrate MSAL into your Android application.
 - Verify that your application can obtain a token that grants access to protected resources.
 
 ## Background
 
-The [Microsoft Authentication Library (MSAL)] gives your application the ability to use the Microsoft Cloud by supporting [Microsoft Azure Active Directory (AAD)] and [Microsoft accounts].  
+The [Microsoft Authentication Library (MSAL)] gives your application the ability to use the Microsoft Cloud by supporting [Microsoft Entra ID] and [Microsoft accounts].  
 
 MSAL *isn't* specific to Intune.
-Intune has a dependency on AAD; all Intune user accounts are AAD accounts.
+Intune has a dependency on Microsoft Entra ID; all Intune user accounts are Microsoft Entra accounts.
 **As a result, the vast majority of Android applications that integrate the Intune App SDK will need to integrate MSAL as a prerequisite.**
 
 This stage of the SDK guide overviews the MSAL integration process as it relates to Intune; **follow the linked MSAL guides in their entirety**.
 
 To simplify the Intune App SDK integration process, **Android app developers are strongly encouraged to fully integrate and test MSAL before downloading the Intune App SDK.**
 The Intune App SDK integration process *does* require code changes around MSAL token acquisition.
-It will be significantly easier to test the Intune-specific token acquisition changes if you have already confirmed your app's original token acquisition implementation works as expected.
+It will be easier to test the Intune-specific token acquisition changes if you have already confirmed your app's original token acquisition implementation works as expected.
 
-To learn more about AAD, see [What is Azure Active Directory?]
+To learn more about Microsoft Entra ID, see [What is Microsoft Entra ID?]
 
 To learn more about MSAL, see the [MSAL Wiki] and [list of MSAL libraries].
 
-## Register your Application with AAD
+## Register your Application with Microsoft Entra ID
 
-Before integrating MSAL into your Android application, follow the instructions to [register your application with Azure Active Directory].
-This will generate a **Client ID** for your application.
+Before integrating MSAL into your Android application, all apps are required to register with the Microsoft identity platform. Follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
+This generates a **Client ID** for your application.
 
-Next, follow the instructions to [give your app access to the Intune app protection service].
+Next, follow the instructions to [give your app access to the Intune Mobile App Management service].
 
 ## Configure Microsoft Authentication Library (MSAL)
 
@@ -93,37 +92,22 @@ This guide assumes that you're enabling brokered authentication within your appl
 
 **If you are not enabling brokered authentication in your application, pay extra attention to [Intune-specific MSAL configuration]**.
 
-### Intune-specific MSAL configuration
+### Intune-specific MSAL environment configuration
 
-Intune has up to four settings you may need to add to your application's `AndroidManifest.xml`.
-These settings help ensure that Intune's authentication policy can be properly enforced and prevent unnecessary authentication prompts for end users.
-
-These settings include:
+By default, Intune will request tokens from the Microsoft Entra public environment. If your application requires a non-default environment,
+such as a Sovereign cloud, the following setting must be added to your application's `AndroidManifest.xml`.
+When set, the Microsoft Entra authority entered will issue the tokens for your application.
+This ensures Intune's authentication policy is properly enforced.
 
 ```xml
 <meta-data
-    android:name="com.microsoft.intune.mam.aad.ClientID"
-    android:value="your-client-ID-GUID" />
-<meta-data
     android:name="com.microsoft.intune.mam.aad.Authority"
     android:value="https://AAD authority/" />
-<meta-data
-    android:name="com.microsoft.intune.mam.aad.SkipBroker"
-    android:value="[true | false]" />
-<meta-data
-    android:name="com.microsoft.intune.mam.aad.NonBrokerRedirectURI"
-    android:value="your-redirect-URI" />
 ```
 
-| Setting | Description | Required for MSAL? | Required by Intune? |
-| - | - | - | - |
-| `ClientID`             | The AAD ClientID (also known as the "Application ID") for your app. <br> There's no default `ClientID`. Use the `ClientID` from [Register your Application with AAD] for your app. |  Yes | No |
-| `Authority`            | The AAD authority to issue a token. <br> By default, this value is the AAD public environment. If overridden, the AAD authority entered will issue the token for your application, which allows authentication to nondefault environments, such as Sovereign clouds. | No | If your application requires a nondefault authority, yes. **Most apps should not set the Authority parameter.** |
-| `SkipBroker`           | Boolean value for altering the default MSAL SSO behavior. <br> By default, this value is "false". | No | If your app doesn't support brokered authentication/device-wide SSO, yes and set `SkipBroker` to "true". **Most apps should not set the SkipBroker parameter.** |
-| `NonBrokerRedirectURI` | [AAD redirect URI] to use in broker-less cases. By default, this value isn't present. | No | If the `SkipBroker` setting is set to "true" and your app requires a redirect URI, yes. **Most apps should not set the NonBrokerRedirectURI parameter.** |
-
 > [!CAUTION]
-> Applications that do not integrate MSAL **must not** include any of these 4 properties in the manifest.
+> **Most apps should not set the Authority parameter.** Additionally, applications that do not integrate MSAL **must not** include
+> this property in the manifest.
 
 For more detail on non-Intune-specific MSAL configuration options, see [Android Microsoft Authentication Library configuration file].
 
@@ -154,19 +138,18 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 
 <!-- Stage 2 links -->
 <!-- internal links -->
-[Register your Application with AAD]:#register-your-application-with-aad
-[Intune-specific MSAL configuration]:#intune-specific-msal-configuration
+[Intune-specific MSAL configuration]:#intune-specific-msal-environment-configuration
 [Exit Criteria]:#exit-criteria
 
 <!-- Other SDK Guide Markdown documentation -->
-[Stage 1: Planning the Integration]:app-sdk-android-phase1.md
+[Stage 1: Plan the Integration]:app-sdk-android-phase1.md
 [Stage 3: Getting Started with MAM]:app-sdk-android-phase3.md
 
 <!-- Microsoft Learn documentation: AAD -->
-[Microsoft Azure Active Directory (AAD)]:https://azure.microsoft.com/services/active-directory/
+[Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [Microsoft accounts]:https://account.microsoft.com/
-[What is Azure Active Directory?]:/azure/active-directory/fundamentals/active-directory-whatis
-[register your application with Azure Active Directory]:/azure/active-directory/active-directory-app-registration
+[What is Microsoft Entra ID?]:/azure/active-directory/fundamentals/active-directory-whatis
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration
 
 <!-- Microsoft Learn documentation: MSAL-->
 [Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
@@ -176,8 +159,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [Enable cross-app SSO on Android using MSAL]:/azure/active-directory/develop/msal-android-single-sign-on
 [Generate a redirect URI for a broker]:/azure/active-directory/develop/msal-android-single-sign-on#generate-a-redirect-uri-for-a-broker
 [Configure MSAL to use a broker]:/azure/active-directory/develop/brokered-auth#configure-msal-to-use-a-broker
-[Verify broker integration]:/azure/active-directory/develop/msal-android-single-sign-on#verify-broker-integration 
-[AAD redirect URI]:/azure/active-directory/develop/msal-client-application-configuration#redirect-uri
+[Verify broker integration]:/azure/active-directory/develop/msal-android-single-sign-on#verify-broker-integration
 [Use MSAL in a national cloud environment]:/azure/active-directory/develop/msal-national-cloud
 [Android Microsoft Authentication Library configuration file]:/azure/active-directory/develop/msal-configuration
 [MSAL repository on GitHub]: https://github.com/AzureAD/microsoft-authentication-library-for-android
@@ -190,14 +172,5 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [Migrate Android ADAL to MSAL]:/azure/active-directory/develop/migrate-android-adal-msal
 [Differences between ADAL and MSAL]:/azure/active-directory/develop/msal-overview#differences-between-adal-and-msal
 
-<!-- Microsoft Learn documentation: CA -->
-[Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
-[device-based CA]:/mem/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access
-[app-based CA]:/mem/intune/conditional-access-intune-common-ways-use#app-based-conditional-access
-[configuring app-based CA]:/mem/intune/protect/app-based-conditional-access-intune-create
-
 <!-- Microsoft Learn documentation -->
-[give your app access to the Intune app protection service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
-
-<!-- Other Microsoft links -->
-[Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
+[give your app access to the Intune Mobile App Management service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-mobile-app-management-service

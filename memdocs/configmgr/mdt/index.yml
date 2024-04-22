@@ -6,14 +6,14 @@ summary: Microsoft Deployment Toolkit (MDT) provides a unified collection of too
 metadata:
   title: Microsoft Deployment Toolkit documentation
   description: Microsoft Deployment Toolkit (MDT) provides a unified collection of tools, processes, and guidance for automating desktop and server deployments.
-  ms.prod: configuration-manager
-  ms.technology: configmgr-mdt
+  ms.subservice: mdt
+  ms.service: configuration-manager
   ms.topic: landing-page
   author: BalaDelli
   ms.author: baladell
   manager: apoorvseth
   ms.date: 09/23/2021
-  ms.localizationpriority: null
+  ms.localizationpriority: low
   ms.collection: openauth
 
 landingContent:
@@ -47,7 +47,7 @@ landingContent:
           - text: User-driven (UDI)
             url: user-driven-installation-guide.md
 
-  - title: References
+  - title: MDT References
     linkLists:
       - linkListType: reference
         links:
@@ -55,5 +55,28 @@ landingContent:
             url: toolkit-reference.md
           - text: Troubleshoot MDT
             url: /troubleshoot/mem/configmgr/troubleshooting-reference
+          - text: Task Sequence Steps
+            url: task-sequence-steps.md
+          - text: Properties
+            url: properties.md
+          - text: Scripts
+            url: scripts.md
+          - text: Support Files
+            url: support-files.md
+          - text: Utilities
+            url: utilities.md
+          - text: MDT Windows PowerShell Cmdlets
+            url: mdt-windows-powershell-cmdlets.md
+          - text: Tables and Views in the MDT DB
+            url: tables-views-mdt-db.md
+          - text: Windows 7 Feature Dependency Reference
+            url: windows-7-feature-dependency.md
+
+  - title: UDI References
+    linkLists:
+      - linkListType: reference
+        links:
           - text: UDI developer's guide
             url: user-driven-installation-developers-guide.md
+          - text: UDI Reference
+            url: udi-reference.md

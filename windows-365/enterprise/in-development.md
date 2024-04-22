@@ -2,17 +2,14 @@
 # required metadata
 
 title: In development - Windows 365 Enterprise
-titleSuffix: 
 description: Windows 365 Enterprise features in development
 keywords:
-author: ErikjeMS 
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 04/18/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice: 
-ms.assetid: 
 
 # optional metadata
 
@@ -22,7 +19,7 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18, references_regions
+ms.custom: references_regions
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -32,10 +29,10 @@ ms.collection:
 
 To help in your readiness and planning, this page lists Windows 365 updates and features that are in development but not yet released. In addition to the information on this page:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
-- When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
+- If we anticipate that you need to take action before a change, we publish a complementary post in Office message center.
+- When a feature enters production, the feature description moves from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
-- Similar features may be announced at different times for Windows 365 Business.
+- Similar features might be announced at different times for Windows 365 Business.
 
 > [!NOTE]
 > This page reflects our current expectations about Windows 365 capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
@@ -62,26 +59,26 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
+### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
+
+In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for seven days will be automatically turned on and synced with Windows Update for Business Policies.
+
+### Intune scope tags<!--48907552-->
+
+In a future update, Windows 365 will support [Intune scope tags](/mem/intune/fundamentals/scope-tags).
+
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-## End user experience
-
-### Windows 365 web client keyboard shortcut redirection<!--43951825-->
-
-Windows 365 web client users will be able to use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC.
+<!-- ## End user experience -->
 
 <!-- ***********************************************-->
 ## Miscellaneous
 
-### Windows 365 Government setup tool<!--43461105-->
+### Intune admin center user interface change<!--48653379-->
 
-A new Windows 365 Government setup tool will replace the current PowerShell scripts that are used to setup tenant mapping and permissions.
-
-### Single sign on option per tenant (preview)<!--43751308-->
-
-Each tenant will be able to decide if you want to turn on Single Sign On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign on.
+The current **Devices** navigation list will change from **Provisioning** >  **Windows 365** to **Device onboarding** > **Cloud PC creation**.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -89,6 +86,10 @@ Each tenant will be able to decide if you want to turn on Single Sign On. We'll 
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### New alert rule: Cloud PCs that aren't available<!--47321010-->
+
+A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
 
 <!-- ***********************************************-->
 ## Provisioning
@@ -100,12 +101,23 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 <!-- ***********************************************-->
 ## Security
 
-### Azure network connection least privilege update<!--44876259-->
+### FQDN requirement changes<!--46731885-->
 
-A new, more secure least privilege  will be implemented in a future update. When the update is released, customers must manually remove the old network contributor role from the resources where the ANC was created.
+In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
+
+### New settings for Windows 365 security baselines<!--49685126-->
+
+New configuration settings will be introduced for the Windows 365 security baseline.
+
+### New 15-minute Sign-in frequency option<!--48439987-->
+
+When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option will provide a 15-minute reauthentication period.
 
 <!-- ***********************************************
 ## Windows 365 app-->
+
+<!-- ***********************************************-->
+<!--## Windows 365 Frontline-->
 
 
 ## Next steps

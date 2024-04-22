@@ -3,14 +3,14 @@ title: SMS_ApplicationCondition Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents relationships between global conditions and applications.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4d92732b-9f97-42fe-a441-559a87f05588
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

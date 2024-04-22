@@ -3,8 +3,8 @@ title: Sample queries for status and alerts
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join some of the most commonly used status message views to other views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: 61c9b4be-4656-413a-8fb1-c6e72d89fbaa
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

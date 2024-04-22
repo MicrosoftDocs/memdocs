@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 04/10/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: tcheck
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,26 +39,32 @@ For GCC environments, users that access Windows 365 Government Cloud PCs have an
 
 Windows 365 Government supports this scenario in a secure, scalable, and transparent manner. It provides flexibility to administrators to manage users in the public cloud, resources in the government cloud, and the dynamic relationship between the two.
 
-Windows 365 Government is available for GCC and GCC High customers in the US, as well as contractors (in US entities) holding or processing data on behalf of US government agencies.
+Windows 365 Government is available for GCC and GCC High customers in the US, and contractors (in US entities) holding or processing data on behalf of US government agencies.
 
-For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Windows 365 Government](https://aka.ms/win365).
+For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Windows 365 Government](/office365/servicedescriptions/windows-365-service-description/windows-365-government-how-to-buy).
 
 ## Features not yet supported Windows 365 Government
 
-The following features are not yet supported for Windows 365 GCC or GCCH.
+The following features aren't yet supported for Windows 365 GCC or GCCH.
 
 - Unified dashboard
-- Endpoint analytics support (this is supported in GCC)
 - Windows 365 Security baseline
 - RDP Shortpath for public networks
 - Windows 365 System based alerting on Microsoft Intune for Cloud PCs
 - User initiated feedback in End User Portal and Windows 365 Web Client
-- Resize VM
 - Citrix HDX Plus for Windows 365
 - Multimedia redirection for improved video playback
 - Microsoft Dev Box
-- Convert Windows 365 licenses to higher level licenses
+- Windows 365 Frontline
+- Admin feedback
 - System alerts and email notifications
+- GPU Cloud PCs
+- Audit logs support in Azure Log Analytics
+- [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
+- Windows 365 Boot (available for GCC, not available for GCCH)
+- Microsoft Purview Customer Lockbox
+- Windows App
+- Cloud PC Reports
 
 ## Next steps
 

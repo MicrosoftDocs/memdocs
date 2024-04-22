@@ -3,8 +3,8 @@ title: Installation scenarios
 titleSuffix: Configuration Manager
 description: Learn techniques for installing a new Configuration Manager hierarchy when you update or upgrade a site.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
 ms.author: sheetg

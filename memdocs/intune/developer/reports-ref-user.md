@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 
 # optional metadata
@@ -25,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -35,7 +34,7 @@ The **Users** category contains the **user** entity that defines user properties
 
 ## users
 
-The **user** entity lists all the Azure Active Directory (Azure AD) users with assigned licenses in your enterprise.
+The **user** entity lists all the Microsoft Entra users with assigned licenses in your enterprise.
 
 The **user** entity collection contains user data. These records include user states during the data collection period, even if the user has been removed. For example, a user may be added to Intune and then removed during the course of the last month. While this user is not present at the time of the report, the user and state are present in the data from the prior month. You could create a report that would show the duration of the user's historic presence in your data.
 

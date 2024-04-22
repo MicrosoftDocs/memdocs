@@ -3,14 +3,14 @@ title: SMS_TaskSequence_DownloadPackageContentAction Class
 titleSuffix: Configuration Manager
 description: Represents a task sequence action that downloads the contents of a package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 59c5be42-51d9-45dc-a896-ad177a58f9b9
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

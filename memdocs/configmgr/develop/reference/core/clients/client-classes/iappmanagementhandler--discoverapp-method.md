@@ -3,14 +3,14 @@ description: "Learn how to run a synchronous discovery operation for the provide
 title: "IAppManagementHandler::DiscoverApp"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 818e9387-2599-405e-913a-642e96c97fd2
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -35,7 +35,7 @@ HRESULT DiscoverApp(
 
  Qualifiers: [in]  
 
- The user token. If it is null, the action is for computer. If it is not NULL, the action is for the user.  
+ The user token. If it's null, the action is for computer. If it isn't NULL, the action is for the user.  
 
  `szDeploymentTypeId`  
  Data type: `DWORD`  
@@ -59,7 +59,7 @@ HRESULT DiscoverApp(
  .   
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully.  All other return values indicate failure.  

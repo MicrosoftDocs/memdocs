@@ -6,13 +6,12 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 2/12/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -33,6 +32,20 @@ ms.collection:
 # Known issues: Windows 365 Enterprise and Frontline
 
 The following items are known issues for Windows 365 Enterprise.
+
+## First-time Cloud PC sign-in triggers Impossible Travel Location alert
+
+When using Conditional Access, a user who signs in to a Cloud PC for the first time might trigger an impossible travel location alert.
+
+**Troubleshooting steps**: [Follow these steps to investigate risk](/entra/id-protection/howto-identity-protection-investigate-risk) to verify that the activity matches the expected behavior for the user, based on their physical location and the location of the Cloud PC.
+
+## Watermarking support in Windows 365
+
+Watermarking support is configured on session hosts and enforced by the Remote Desktop client. The settings for Watermarking support can be configured via Group Policy (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting doesn't allow administrators to look up device information from leaked images for Cloud PCs.  
+
+**Troubleshooting steps**: Ensure that the QR code embedded content setting is configured to **Device ID** either in the GPO or in the Intune Settings Catalog for the Intune Configuration profile used to configure Watermarking support.
+
+For more information, see [Administrative template for Azure Virtual Desktop](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 
@@ -80,27 +93,36 @@ The following device compliance settings may report as **Not Compliant** when be
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When using single sign-on, you're currently be prompted to authenticate to Azure AD and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When enabling single sign-on, you're prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
-## Single sign-on user connections are being denied through Azure AD Conditional Access <!--42317382-->
+To prevent this dialog from being shown, you can create a pre-consented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
 
-**Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Azure AD which may be the cause of the failed connection.
+<a name='single-sign-on-user-connections-are-being-denied-through-azure-ad-conditional-access---42317382--'></a>
+
+## Single sign-on user connections are being denied through Microsoft Entra Conditional Access <!--42317382-->
+
+**Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which may be the cause of the failed connection.
 
 **Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
-When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can relaunch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
+When single sign-on isn't used, users can opt see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
 
-## Single sign-on users aren't asked to reauthenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
+1. Users can use passwordless authentication to unlock their Cloud PC.
+2. Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
 
-When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Azure AD.
+<a name='single-sign-on-users-arent-asked-to-reauthenticate-to-azure-ad-when-connecting-from-an-unmanaged-device---35593334--'></a>
 
-**Troubleshooting**: To enforce periodic reauthentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
+## Single sign-on users aren't asked to reauthenticate to Microsoft Entra ID when connecting from an unmanaged device <!--35593334-->
+
+When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Microsoft Entra ID.
+
+**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](set-conditional-access-policies.md#configure-sign-in-frequency).
 
 ## I don’t see the Cloud PC reports on the Intune admin center Devices > Overview page
 
-If you’ve turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report won’t be on the **Overview** page.
+If you turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report aren't on the **Overview** page.
 
 **Troubleshooting steps**: Turn off the **Use Devices preview** toggle in the upper right corner of the **Devices** > **Overview** page.
 
@@ -111,7 +133,7 @@ If you’ve turned on the **Use Devices preview** setting in the Intune admin ce
 - MSFT Attack Surface Reduction rules (for example, Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Learn), or
 - Third party solutions that block the install language script execution during the post-provisioning process.  
 
-Cloud PCs provisioned after July 2022 won’t encounter this issue.
+Cloud PCs provisioned after July 2022 don’t encounter this issue.
 
 **Troubleshooting steps**: Determine the root cause:
 
@@ -133,6 +155,50 @@ Cloud PCs provisioned after July 2022 won’t encounter this issue.
 - In an elevated command window, run the following command to reboot the job:
 
     `Remove-DSCConfiguration -Stage Pending,Current,Previous -Verbose`
+
+## Cloud PC connection issues for GCC High government customers<!--47633105-->
+
+Some GCC High government customers whose resources are deployed to `microsoft.us`` environments may encounter issues connecting to their Cloud PC using web clients or the Safari browser.
+
+**Possible cause**: The issue occurs when the web client or the Safari browser blocks third-party cookies. Third-party cookies are cookies set by a domain other than the one you're visiting.  
+
+For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC’s domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
+
+- being stored.
+- used for authentication and authorization.
+
+As a result, you can’t connect to your Cloud PC session.
+
+**Troubleshooting steps**: Allow third-party cookies from `microsoft.us` in your:
+
+- Web client or Safari browser settings, or
+- Group Policy.
+
+This change lets the web client/Safari browser store and use the `microsoft.us` cookies for connecting to your Cloud PC session.  
+
+## Windows Security reports Memory Integrity is off. Your device may be vulnerable.<!--48643259-->
+
+Windows Security reports *Memory Integrity is off. Your device may be vulnerable.* 
+
+In the Cloud PC's Windows Systems Information, you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
+
+This issue can be caused when the Intune tenant configuration requires Direct Memory Access (DMA), which Cloud PCs don’t support. Currently, if DMA is required in a VBS policy used by a Cloud PC, the VBS policy won’t run.
+
+**Troubleshooting steps**: In the Intune policies used by the Cloud PC, remove the DMA requirement from **Virtualization-based security BS Required Security Properties**. Make sure your VBS configurations still provide your desired security.
+
+## Teams isn’t enforcing screen capture protection<!-- 49423094 -->
+
+When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn’t enforcing screen capture protection.
+
+**Troubleshooting steps**:
+
+- Confirm that the WebRTC version is up-to-date.
+- Confirm that the screen capture protection policy is configured correctly to have client and server selected:
+
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > choose the policy.
+  2. Under  **Configuration settings**, make sure the following is chosen: **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**:
+      - **Enable screen capture protection** = Enable
+      - **Screen Capture Protection Options** = Block screen capture on client and server
 
 ## Next steps
 

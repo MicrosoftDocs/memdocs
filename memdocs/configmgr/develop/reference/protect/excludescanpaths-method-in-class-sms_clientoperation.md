@@ -3,19 +3,19 @@ description: Learn how to exclude scan paths from all members in a specified col
 title: ExcludeScanPaths Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e45972d2-c41a-4532-ad84-b09c9aa17945
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # ExcludeScanPaths Method in Class SMS_ClientOperation
-The `ExcludeScanPaths` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that excludes scan paths from all members in specified collection.   
+The `ExcludeScanPaths` Windows Management Instrumentation (WMI) class method in Configuration Manager that excludes scan paths from all members in specified collection.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

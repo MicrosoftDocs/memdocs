@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 01/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -31,6 +30,8 @@ ms.collection:
 - M365-identity-device-management
 - macOS
 - highpri
+- FocusArea_Apps_LOB
+- FocusArea_Apps_MacOS
 ---
 
 # Add a macOS DMG app to Microsoft Intune
@@ -45,8 +46,11 @@ Use the information in this article to help you add a macOS DMG app to Microsoft
 The following prerequisites must be met before a macOS DMG app is installed on macOS devices.
 
 - Devices are managed by Intune.
-- DMG app is smaller than 2GB in size.
+- DMG app is smaller than 8 GB in size.
 - The [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md) is installed.
+
+> [!NOTE]
+> The full disk access permission is required to update or delete DMG apps. Intune automatically requests the permission when a DMG app policy is assigned on macOS 13 and higher.
 
 ## Important considerations for deploying DMG apps
 

@@ -3,14 +3,14 @@ title: SMS_ConfigurationItemSettingReference Class
 titleSuffix: Configuration Manager
 description: Provides the rule relationship to the settings that are referenced from different configuration items.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a44098ad-7baf-4bee-ad5e-240dca2e95bf
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

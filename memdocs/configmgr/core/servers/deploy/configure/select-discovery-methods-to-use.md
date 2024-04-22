@@ -3,8 +3,8 @@ title: Select discovery methods
 titleSuffix: Configuration Manager
 description: Review considerations for which methods to use and at which sites to run them.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

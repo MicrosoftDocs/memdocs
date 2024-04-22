@@ -3,14 +3,14 @@ title: Architectural overview
 titleSuffix: Configuration Manager
 description: A description of Configuration Manager server and client architectures.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 73b6a9b7-6d9b-4ca2-87bc-1e9c898a3fef
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

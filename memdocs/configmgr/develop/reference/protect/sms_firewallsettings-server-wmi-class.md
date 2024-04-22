@@ -3,14 +3,14 @@ title: SMS_FirewallSettings Class
 description: The SMS_FirewallSettings class is an SMS Provider server class that represents the firewall configuration setting definitions used to define configuration rules.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bee70974-26a3-4285-af09-d23c1e99d116
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -7,12 +7,10 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 11/20/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 3bb659cc-9b57-4d19-8631-2c26749fa71c
 searchScope:
  - User help

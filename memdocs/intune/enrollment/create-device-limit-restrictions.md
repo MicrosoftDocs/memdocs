@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2022
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: 
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -63,7 +62,10 @@ Microsoft Intune provides one default policy for device limit restrictions that 
 ## Create a device limit restriction  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.  
+2. Go to **Devices** > **Enrollment**. 
+3. Select the **Windows**, **Apple**, or **Android** tab.     
+3. Select **Device limit restriction**.  
+4. Choose **Create restriction**.  
 3. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 4. Choose **Next** to go to the **Device limit** page.
 5. For **Device limit**, select the maximum number of devices that a user can enroll.
@@ -80,8 +82,8 @@ Microsoft Intune provides one default policy for device limit restrictions that 
 
 Edits are applied to new enrollments and don't affect devices that are already enrolled.  
 
-1. Go to **Enrollment device limit restrictions** to bring up the list of your policies. 
-2. Select the name of the policy you want to change.
+1. Go to **Device limit restrictions** to see the list of your restrictions.  
+2. Select the name of the restriction you want to change.
 3. Select **Properties**.  
 4. Select **Edit**. 
 5. Make your changes and select **Review + save**. 
@@ -98,7 +100,7 @@ When a group is assigned multiple restrictions, the priority level determines wh
 
 When you create a restriction, it's added to the list just above the default. You can change the priority of non-default restrictions.  
 
-1. Go to **Enrollment device limit restrictions**.
+1. Go to **Device limit restrictions**.
 2. Select **Device limit restrictions** to bring up the list of your policies.               
 3. Hover over the policy in the **Priority** column,and then select and drag the priority to the desired position in the list.   
 

@@ -3,8 +3,8 @@ title: Troubleshoot software updates for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: Troubleshooting software updates for Intune tenant attach
 ms.date: 07/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 author: Banreet
 ms.author: banreetkaur
 ms.manager: apoorvseth
@@ -36,7 +36,7 @@ When reviewing software updates in the admin center, you may run across some com
 1. Verify that Configuration Manager's [role based access control](../../configmgr/core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
 1. Verify the machine account of the [SMS Provider role](../../configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider.md) for the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
 
-**Error message 2:** Unable to get software updates information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message 2:** Unable to get software updates information. Make sure Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes for Configuration Manager versions 2103 and later:**
 
@@ -49,11 +49,11 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
 1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
 
-    - **Azure Active Directory Tenant ID:** This value should be a GUID for the Azure AD tenant.
-    - **Azure Active Directory User ID:** This value should be a GUID for this account in Azure AD.
+    - **Microsoft Entra tenant ID:** This value should be a GUID for the Microsoft Entra tenant.
+    - **Microsoft Entra user ID:** This value should be a GUID for this account in Microsoft Entra ID.
     - **User Principal Name:** The format of this value is user@domain. For example, jqpublic@contoso.com.
 
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../../configmgr/core/servers/deploy/configure/about-discovery-methods.md).
+    If the Microsoft Entra properties are empty, check the configuration of the site's [Microsoft Entra user discovery](../../configmgr/core/servers/deploy/configure/about-discovery-methods.md).
 
 ### Error loading your content
 

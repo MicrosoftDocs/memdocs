@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
-ms.topic: overview
+ms.date: 12/04/2023
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 701D6CE9-43F6-4A29-8E84-E2B59931C635
 
 # optional metadata
@@ -25,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -50,16 +49,16 @@ This reference section provides an overview of endpoints, supported HTTP methods
 
 ## OData custom client
 
-You can access the Intune Data Warehouse data model through RESTful endpoints. To gain access to your data, your client must authorize with Azure Active Directory (Azure AD) using OAuth 2.0. You first set up a web app and a client app in Azure, grant permissions to the client. Your local client gets authorization and can then communicate with the Data Warehouse endpoints.
+You can access the Intune Data Warehouse data model through RESTful endpoints. To gain access to your data, your client must authorize with Microsoft Entra ID using OAuth 2.0. You first set up a web app and a client app in Azure, grant permissions to the client. Your local client gets authorization and can then communicate with the Data Warehouse endpoints.
 
-For more information, see [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md)
+For more information, see [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md).
 
 > [!Note]  
 > You can access the [GitHub Intune Data Warehouse repo](https://github.com/Microsoft/Intune-Data-Warehouse) on Github for code samples.
 
 ## Interacting with the API
 
-The API requires authorization with Azure AD. Azure AD uses OAuth 2.0. Once authorized, you can get data from the API using an HTTP GET verb and contacting the exposed entity collections. For details see:
+The API requires authorization with Microsoft Entra ID. Microsoft Entra ID uses OAuth 2.0. Once authorized, you can get data from the API using an HTTP GET verb and contacting the exposed entity collections. For details see:
 
 - [Authorization](reports-api-url.md#authorization)
 - [API URL Structure](reports-api-url.md#api-url-structure)
@@ -70,9 +69,8 @@ OData defines an abstract data model and a protocol that let any client access i
 
 ## Next steps
 
-Learn more about working with Azure AD by reading the [Authentication Scenarios for Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
+Learn more about working with Microsoft Entra ID by reading the [Authentication Scenarios for Microsoft Entra ID](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 Find OData resources at [odata.org](https://www.odata.org).
   
-Review the OData Version 4.0 standard at [OData Version 4.0]
-(https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
+Review the OData Version 4.0 standard at [OData Version 4.0](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html).

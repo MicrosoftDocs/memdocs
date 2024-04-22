@@ -3,19 +3,19 @@ description: Learn how to represent System Center Endpoint Protection alerts usi
 title: SMS_EPAlert Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 00fc69cf-c419-4b68-bfe3-737fd5c957f6
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_EPAlert Server WMI Class
-The `SMS_EPAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents System Center Endpoint Protection alerts.  
+The `SMS_EPAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents System Center Endpoint Protection alerts.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -153,7 +153,7 @@ Class SMS_EPAlert : SMS_AlertBase
 
  Qualifiers: none  
 
- `true` if this alert is enabled. When the alert is not enabled, the condition is not evaluated.  
+ `true` if this alert is enabled. When the alert isn't enabled, the condition isn't evaluated.  
 
  `FeatureArea`  
  Data type: `UInt32`  
@@ -224,7 +224,7 @@ Class SMS_EPAlert : SMS_AlertBase
 
  Qualifiers: [read]  
 
- Whether this alert is ignored by the current user.  
+ Whether the current user ignores this alert.  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -244,7 +244,7 @@ Class SMS_EPAlert : SMS_AlertBase
 
  Qualifiers: none  
 
- Whether this alert is monitored by Operations Manager.  
+ Whether the Operations Manager monitors this alert.  
 
  `Name`  
  Data type: `String`  
@@ -337,7 +337,7 @@ Class SMS_EPAlert : SMS_AlertBase
 
  Qualifiers: none  
 
- The evaluation will not start until the specified time.  
+ The evaluation isn't starting until the specified time.  
 
  `SourceSiteCode`  
  Data type: `String`  

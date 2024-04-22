@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +32,7 @@ ms.collection:
 
 # Policies for Office apps
 
-Intune provides policies specifically for Microsoft Office apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. There are many policies for Office apps that you can add to Microsoft Intune and apply to groups of end users.
+Intune provides policies specifically for Microsoft 365 (Office) apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. There are many policies for Office apps that you can add to Microsoft Intune and apply to groups of end users.
 
 Examples of just a few of the Office app policies include the following:
 - Microsoft Word: *Turn off Protected View for attachments opened from Outlook*
@@ -43,7 +42,7 @@ Examples of just a few of the Office app policies include the following:
 - Microsoft PowerPoint: *Turn off Protected View for attachments opened from Outlook*
 
 > [!NOTE]
-> When you select to configure each specific app policy, additional policy details are provided. You can filter the Office policy list to quickly select the recommended **Security Baseline** policies.
+> When you select to configure each specific app policy, additional policy details are provided. You can filter the Office policy list to quickly select the recommended **security baseline** policies.
 
 You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, you must meet the requirements for using the Office cloud policy service. App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services. For related information, see [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](/deployoffice/overview-office-cloud-policy-service).
 

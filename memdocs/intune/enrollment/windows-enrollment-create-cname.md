@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Enable auto-discovery of Intune enrollment server
+title: Enable autodiscovery of Intune enrollment server
 titleSuffix:
 description: Simplify enrollment for users by enabling automatic discovery of the Intune enrollment server. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 
 # optional metadata
@@ -34,9 +33,7 @@ ms.collection:
 
 # Enable auto-discovery of Intune enrollment server
 
-*Applies to Windows 10, Windows 11*
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]  
+*Applies to Windows 10, Windows 11*  
 
 If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias, called a *CNAME* record type, for your MDM servers. The CNAME redirects enrollment requests to Intune servers so that device users don't have to enter the server address during device enrollment. Although the CNAME configuration is optional, it makes enrollment easier for users by enabling automatic discovery of the Intune enrollment server and reducing the amount of user interaction required.  
 
@@ -50,8 +47,8 @@ If no enrollment CNAME record is found, users are prompted to manually enter the
 
 | Type | Host name | Points to | TTL |
 |----------|---------------|---------------|---|
-| CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+| CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
+| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | One hour |
 
 If your organization uses more than one UPN suffix, create one CNAME for each domain name and point each one to *EnterpriseEnrollment-s.manage.microsoft.com*. 
 
@@ -66,9 +63,9 @@ For example:
 
    | Type | Host name | Points to | TTL |  
    |----------|---------------|---------------|---|
-   | CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-   | CNAME | EnterpriseEnrollment.us.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-   | CNAME | EnterpriseEnrollment.eu.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
+   | CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
+   | CNAME | EnterpriseEnrollment.us.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
+   | CNAME | EnterpriseEnrollment.eu.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – Supports a redirect to the Intune service with domain recognition from the email's domain name
 
@@ -76,23 +73,25 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 
 ## Step 2: Verify CNAME 
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
-2. Select **CNAME Validation**.  
-2. For **Domain**, enter the company website, and then choose **Test**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to **Devices** > **Enrollment**.  
+1. Select the **Windows** tab.  
+1. Under **Enrollment options**, select **CNAME Validation**.  
+4. For **Domain**, enter the company website, and then choose **Test**.  
 
 ## Best practices and recommendations    
 
-*EnterpriseEnrollment-s.manage.microsoft.com* is the preferred FQDN for enrollment. *EnterpriseEnrollment.manage.microsoft.com* (without the *-s*) and *manage.microsoft.com* both work as the target for the auto-discovery server, but require users to acknowledge a confirmation message. We recommend using *EnterpriseEnrollment-s.manage.microsoft.com* because there is no confirmation required, which means one less step for the device user.  
+*EnterpriseEnrollment-s.manage.microsoft.com* is the preferred FQDN for enrollment. *EnterpriseEnrollment.manage.microsoft.com* (without the *-s*) and *manage.microsoft.com* both work as the target for the autodiscovery server, but require users to acknowledge a confirmation message. We recommend using *EnterpriseEnrollment-s.manage.microsoft.com* because there is no confirmation required, which means one less step for the device user.  
 
 Alternate redirection methods aren't supported with Intune. For example, you can't use a proxy server to redirect *enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc* to *enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc* or *manage.microsoft.com/EnrollmentServer/Discovery.svc*.  
 
 ## Registration CNAME  
 
-Azure Active Directory uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered to Azure AD (also called *workplace joined*). If you plan to use conditional access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
+Microsoft Entra ID uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered to Microsoft Entra ID (also called *workplace joined*). If you plan to use conditional access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+| CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | One hour |
 
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
@@ -105,11 +104,7 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-|CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
-|CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |  
+|CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.us | One hour |
+|CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | One hour |  
 
 For more information about automatic enrollment for Windows, see [Set up automatic enrollment](../enrollment/windows-enroll.md).  
-
-## Next steps
-
-

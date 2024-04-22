@@ -3,14 +3,14 @@ title: Use Task Sequence Variables in a Running Task Sequence
 titleSuffix: Configuration Manager
 description: In Configuration Manager, you can create, get, and set task sequence variables in a running task sequence by using the task sequence environment COM automation object.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 2ed7e134-02da-4492-bb81-ce4a1f484955
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -22,15 +22,15 @@ In Configuration Manager, you can create, get, and set task sequence variables i
 > [!NOTE]
 >  When you set a task variable on the Configuration Manager client, it becomes available to subsequent steps in the task sequence.  
 
- To create a custom task sequence variable, you set a `Microsoft.SMS.TSEnvironment` property by using the name of the new variable that you want to create. If the variable does not already exist, it is created. If the variable already exists, its value is updated. You can subsequently get the custom variable value from `Microsoft.SMS.TSEnvironment`.  
+ To create a custom task sequence variable, you set a `Microsoft.SMS.TSEnvironment` property by using the name of the new variable that you want to create. If the variable doesn't already exist, it's created. If the variable already exists, its value is updated. You can later get the custom variable value from `Microsoft.SMS.TSEnvironment`.  
 
- When a task sequence variable is an array, it is passed in the following format:  
+ When a task sequence variable is an array, it's passed in the following format:  
 
 ```  
 <base array name><element #><Property>="value".  
 ```  
 
- For example, the `OSDPartitions` variable is an array of `SMS_TaskSequencePartitionSettings`. The following represents a one element `OSDPartitions` Array:  
+ For example, the `OSDPartitions` variable is an array of `SMS_TaskSequencePartitionSettings`. The following example represents a one element `OSDPartitions` Array:  
 
 ```  
 OSDPartitions0Bootable="true"  
@@ -43,7 +43,7 @@ OSDPartitions0Type="Primary"
 
  To access `FileSystem` in this array, you would use `OSDPartitions0FileSystem`. If the array is larger, you would use`OSDPartitions1FileSystem` for the second element and so on through the array.  
 
- It is not recommended that you use managed code with the task sequencing environment because you cannot use it in the following environments:  
+ It isn't recommended that you use managed code with the task sequencing environment because you can't use it in the following environments:  
 
 - Windows PE  
 
@@ -61,7 +61,7 @@ OSDPartitions0Type="Primary"
 |Visual Studio 2005|2.0|  
 |Visual Studio 2008|2.0 to 3.5|  
 
- You will need to use COM interop to access the `TSEnvironment` object. You will need the following:  
+ You'll need to use COM interop to access the `TSEnvironment` object. You'll need the following:  
 
 -   Reference to **TSEnvironment 1.0 Type Library**.  
 

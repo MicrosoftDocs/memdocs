@@ -3,14 +3,14 @@ description: Learn how to use the ICcmAlternateDownloadProvider Interface to def
 title: ICcmAlternateDownloadProvider Interface
 titleSuffix: Configuration Manager
 ms.date: 07/25/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 42eb99e9-6421-415d-8e80-7e8f8b322cb3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

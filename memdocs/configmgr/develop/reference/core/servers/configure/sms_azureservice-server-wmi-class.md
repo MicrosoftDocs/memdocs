@@ -1,23 +1,23 @@
 ---
 title: SMS_AzureService class
 titleSuffix: Configuration Manager
-description: The SMS_AzureService WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service which is a cloud distribution point for Configuration Manager.
+description: The SMS_AzureService WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service that is a cloud distribution point for Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a7506056-7433-4903-8a9a-b3dcd417bf8c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_AzureService server WMI class
 
-The `SMS_AzureService` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service which is a cloud distribution point for Configuration Manager.  
+The `SMS_AzureService` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service that is a cloud distribution point for Configuration Manager.  
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -290,7 +290,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  `true` if Indicates whether storage quota should automatically grow dynamically.  
 
- This property is not currently used.  
+ This property isn't currently used.  
 
  `StorageQuotaInGB`  
  Data type: `UInt32`  
@@ -364,7 +364,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Indicates whether the service should be stopped when the traffic out threshold is met.  
 
- This property is not currently used.  
+ This property isn't currently used.  
 
  `TrafficOutUsage`  
  Data type: `UInt32`  

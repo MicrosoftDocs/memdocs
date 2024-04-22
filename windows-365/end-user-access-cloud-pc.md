@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/27/2023
+ms.date: 01/31/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -32,13 +31,19 @@ ms.collection:
 
 # Access a Cloud PC
 
-Users can access their Cloud PCs in these ways:
+Users can access their Cloud PCs in accordance with the matrix below:
 
-- [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
-- [windows365.microsoft.com](https://Windows365.microsoft.com) web client
-- Microsoft Remote Desktop
+| Windows 365 Edition | [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) | [windows365.microsoft.com](https://Windows365.microsoft.com) web client | [Microsoft Remote Desktop](#remote-desktop) | [LG Web OS](#lg-webos-23) |
+|--|--|--|--|--|
+| Windows 365 Business | X | X | X | X |
+| Windows 365 Enterprise | X | X | X | X |
+| Windows 365 Frontline | X | X | | |
 
 For information on hardware requirements, see [End user hardware requirements](end-user-hardware-requirements.md).
+
+## Windows App
+
+For more information about the requirements of running and using Windows App, see [What is Windows App?](/windows-app/overview).
 
 ## Windows 365 web site
 
@@ -49,7 +54,7 @@ Users can navigate to [windows365.microsoft.com](https://windows365.microsoft.co
 To access their Cloud PC from this website, the user's device must meet the following requirements:
 
 - Supported operating systems: Windows, macOS, ChromeOS, Linux
-- A modern browser like Microsoft Edge, Google Chrome, Safari, or Mozilla Firefox (v55.0 and later).
+- A modern browser like Microsoft Edge, Google Chrome, Safari, Mozilla Firefox (v55.0 and later), or LG webOS 23.
 
 ### Home page
 
@@ -68,7 +73,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ![Card menu.](business/media/get-started-windows-365-business/cloud-pc-gear.png)
 
-- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Intune, Azure Active Directory, on the device, or in the Remote Desktop Apps.
+- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Intune, Microsoft Entra ID, on the device, or in the Remote Desktop Apps.
 - **Reset**:
   - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.
@@ -78,7 +83,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
     > [!IMPORTANT]  
     > Before resetting your Cloud PC, make sure to back up any important files you need to keep to a cloud storage service or external storage. Resetting your Cloud PC will delete these files.
 
-- **Restart**: Restarts the Cloud PC.
+- **Restart**: Restarts the Cloud PC. For Cloud PCs created after 1/31/2024, you can also restart or shut down by using the keyboard combination CTRL+ALT+DEL.
 - **Troubleshoot**: Troubleshoot and attempt to resolve any issues that may be preventing a user from connecting to their Cloud PC. The checks run include:
     - Check whether any files or agents required for connectivity are correctly installed.
     - Make sure that the Azure resources are available.
@@ -87,9 +92,18 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
   | ------------- | ------------- |
   | No issues detected | None of the checks discovered an issue with the Cloud PC. |
   | Issues resolved  | An issue was detected and fixed. |
-  | Can’t connect to Cloud PC. We’re working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
-  | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exists because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reset. |
+  | Can't connect to Cloud PC. We're working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
+  | We couldn't fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exists because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reset. |
 - **System Information**: Displays information about the Cloud PC specification.
+
+### Dark mode
+
+To switch the windows365.microsoft.com site to dark mode:
+
+1. Go to windows365.microsoft.com.
+2. Select the gear icon and select **Dark Mode**.
+
+     ![Screenshot of dark mode option.](media/end-user-access-cloud-pc/dark-mode.png)
 
 ## Windows 365 web client
 
@@ -103,6 +117,15 @@ When you select **Open in browser** for a Cloud PC on the windows365.microsoft.c
 2. Select **Show advanced settings** to see the following options:
     - [Alternative keyboard layout](#alternative-keyboard-layout)
 3. Select **Connect**. The Cloud PC opens in the web client (browser).
+
+### Change settings in Cloud PC
+
+To change settings from within the Cloud PC:
+
+1. Select the gear icon.
+2. Select the options you want change > **Update**.
+
+The changes will appear the next time you restart the Cloud PC.
 
 ### User feedback
 
@@ -134,7 +157,7 @@ You can restrict users from transferring files by using RDP drive redirection. F
 
 Users can collect logs of their Cloud PC sessions. The logs are collected from the browser and the user can choose the save location.
 
-To turn on log collection, in the client, select the gear icon > **Capture logs**.
+To turn on log collection, in the client, select the information icon > **Capture logs**.
 
    ![Capture logs.](media/get-users-started/settings-logs.png)
 
@@ -146,7 +169,11 @@ To turn hardware acceleration on or off, in the client, select the gear icon > *
 
 ### High DPI
 
-You can use the **High DPI** toggle to render the web client using the native resolution of the end user device.
+You can use the **High DPI** toggle to render the web client using the native resolution of the physical device. This is a good option to turn on if you're using a high resolution screen, like 4K or UHD monitors.
+
+The High Dots Per Inch (DPI) setting adjusts the display resolution to match the physical size of the screen and the distance between the user and the screen.
+
+To choose this option, select the gear icon > **High DPI**.
 
 ### Alternative keyboard layout
 
@@ -161,9 +188,11 @@ By default, **Alternative keyboard layout** is turned off. If using a standard k
 
 ### Location (preview)
 
-Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, you let your Cloud PC use the location of your physical device for most apps (the Weather widget isn’t currently supported).
+Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, you let your Cloud PC use the location of your physical device for most apps (the Weather widget isn't currently supported).
 
 For more information about location services, see [Windows location service and privacy](https://support.microsoft.com/en-us/windows/windows-location-service-and-privacy-3a8eee0a-5b0b-dc07-eede-2a5ca1c49088).
+
+Location redirection requires local admin privileges on the Cloud PC. For more information, see [Assign user as a local admin](enterprise/assign-users-as-local-admin.md).
 
 To turn on location redirection, follow these steps:
 
@@ -195,22 +224,28 @@ To turn on keyboard shortcuts for your Cloud PC:
 
 When **Keyboard shortcuts** is turned on, the web client opens in full-screen mode. Keyboard shortcuts only work in full-screen mode. Full screen using F11 isn't supported. You must use the full screen mode from the toolbar.
 
-To turn off keyboard shortcuts, in your web client, select **Settings** > **In session** > deselect **Keyboard shortcuts** > **Update**.
+To turn off keyboard shortcuts, in your web client, select **Settings** > deselect **Keyboard shortcuts** > **Update**.
 
-### Dark mode
+### LG webOS 23
 
-To switch the windows365.microsoft.com site to dark mode:
+The Windows 365 web client can be accessed through LG TV with the latest webOS 23.
 
-1. Go to windows365.microsoft.com.
-2. Select the settings icon and select **Dark Mode**.
+To launch the web client on an LG TV (with LG webOS 23), navigate to **Home Office** > **Windows 365**.
 
-     ![Screenshot of dark mode option.](media/end-user-access-cloud-pc/dark-mode.png)
+The following Windows 365 features aren't available on LG TV:
+
+- File Transfer
+- Clipboard
+- Location redirection
+- Collected error logs
+- Hardware acceleration
+- Keyboard shortcuts
 
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
 
-For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). For a comparison of features by client, see [Compare the clients: features](/windows-server/remote/remote-desktop-services/clients/remote-desktop-features#client-features).
+For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). For a comparison of features by client, see [Compare the clients: features](/azure/virtual-desktop/compare-remote-desktop-clients).
 
 ### Install the Microsoft Remote Desktop app
 
@@ -218,7 +253,7 @@ To set up their Remote Desktop client, users follow these steps:
 
 1. Download the Remote Desktop app from the [Remote Desktop clients page](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
 2. Select **Subscribe**.
-3. Enter their Azure Active Directory credentials.
+3. Enter their Microsoft Entra credentials.
 4. The Cloud PC appears in the list, and they can double-click it to launch.
 
 <!-- ########################## -->

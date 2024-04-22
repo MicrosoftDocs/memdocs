@@ -3,8 +3,8 @@ title: Changes to CMPivot
 titleSuffix: Configuration Manager
 description: Learn about changes made to CMPivot between Configuration Manager versions.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 ms.author: gokarthi
 author: gowdhamankarthikeyan
@@ -145,7 +145,7 @@ Starting in version 1910, CMPivot was significantly optimized to reduce network 
   - Windows event logs ([WinEvent](#bkmk_WinEvent))
   - File content ([FileContent](#bkmk_File))
   - Dlls loaded by processes ([ProcessModule](#bkmk_ProcessModule))
-  - Azure Active Directory information ([AADStatus](#bkmk_AadStatus))
+  - Microsoft Entra information ([AADStatus](#bkmk_AadStatus))
   - Endpoint protection status ([EPStatus](#bkmk_EPStatus))
 - [Local device query evaluation using CMPivot standalone](#bkmk_local-eval)
 - [Other enhancements to CMPivot](#bkmk_Other)
@@ -209,7 +209,7 @@ ProcessModule('powershell')
 
 ### <a name="bkmk_AadStatus"></a> AadStatus
 
-This entity can be used to get the current Azure Active Directory identity information from a device.
+This entity can be used to get the current Microsoft Entra identity information from a device.
 
 ``` Kusto
 AadStatus

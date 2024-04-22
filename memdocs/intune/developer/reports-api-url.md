@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 
 # optional metadata
@@ -25,20 +24,20 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 # Intune Data Warehouse API endpoint
 
-You can use the Intune Data Warehouse API with an account with specific role-based access controls and Azure AD credentials. You will then authorize your REST client with Azure AD using OAuth 2.0. And finally, you will form a meaningful URL to call a data warehouse resource.
+You can use the Intune Data Warehouse API with an account with specific role-based access controls and Microsoft Entra credentials. You will then authorize your REST client with Microsoft Entra ID using OAuth 2.0. And finally, you will form a meaningful URL to call a data warehouse resource.
 
 [!INCLUDE [reports-credential-reqs](../includes/reports-credential-reqs.md)]
 
 ## Authorization
 
-Azure Active Directory (Azure AD) uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Azure AD tenant. This guide is language independent, and describes how to send and receive HTTP messages without using any open-source libraries. The OAuth 2.0 authorization code flow is described in [section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) of the OAuth 2.0 specification.
+Microsoft Entra ID uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Microsoft Entra tenant. This guide is language independent, and describes how to send and receive HTTP messages without using any open-source libraries. The OAuth 2.0 authorization code flow is described in [section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) of the OAuth 2.0 specification.
 
-For more information, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
+For more information, see [Authorize access to web applications using OAuth 2.0 and Microsoft Entra ID](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 ## API URL structure
 

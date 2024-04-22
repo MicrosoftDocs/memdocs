@@ -3,14 +3,14 @@ title: Use a Custom Action Control
 titleSuffix: Configuration Manager
 description: The custom action control is used to configure a custom action that you have defined. The custom action then becomes a step in the task sequence you are editing.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b08bf2a3-d433-4024-ab38-824620dacd05
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

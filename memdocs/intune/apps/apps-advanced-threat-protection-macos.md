@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -52,6 +51,9 @@ You can add Microsoft Defender for Endpoint to Intune using the following steps:
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **App type** list under the **Microsoft Defender for Endpoint**, select **macOS**.
 
+> [!NOTE]
+> Currently, Apple does not provide a way for Intune to uninstall Microsoft Defender for Endpoint on macOS devices.
+
 ## Configure app information
 
 In this step, you provide information about this app deployment. This information helps you identify the app in Intune, and it helps users find the app in the company portal.
@@ -84,9 +86,6 @@ You can use scope tags to determine who can see client app information in Intune
 When you've completed configuring, select **Add** from the **App app** pane.
 
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select.
-
-> [!NOTE]
-> Currently, Apple does not provide a way for Intune to uninstall Microsoft Defender for Endpoint on macOS devices.
 
 ## Next steps
 

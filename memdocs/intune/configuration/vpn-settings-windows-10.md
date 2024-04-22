@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -21,9 +20,9 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: abalwan, tycast
+ms.reviewer: abalwan
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
@@ -129,7 +128,7 @@ The following settings are shown depending on the connection type you select. No
 
   For more information, including creating custom EAP XML, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
-- **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to devices joined to Azure Active Directory (AD).
+- **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to devices joined to Microsoft Entra ID.
 
   To use this feature, you must configure the following settings:
 
@@ -140,6 +139,15 @@ The following settings are shown depending on the connection type you select. No
   Only assign one profile per device with **Device Tunnel** enabled.
 
 ### IKE Security Association Parameters (IKEv2 only)
+
+> [!IMPORTANT]
+> Windows 11 requires that:
+>
+> - All of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
+>
+>   **OR**
+>
+> - None of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
 
 These cryptography settings are used during IKE security association negotiations (also known as `main mode` or `phase 1`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
 
@@ -156,6 +164,15 @@ These cryptography settings are used during IKE security association negotiation
   When set to **Not configured**, Intune doesn't change or update this setting.
 
 ### Child Security Association Parameters (IKEv2 only)
+
+> [!IMPORTANT]
+> Windows 11 requires that:
+>
+> - All of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
+>
+>   **OR**
+>
+> - None of the [IKE Security Association Parameters](#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](#child-security-association-parameters-ikev2-only) settings are configured.
 
 These cryptography settings are used during child security association negotiations (also known as `quick mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
 
@@ -247,9 +264,6 @@ Example:
 
     To allow inbound and outbound, create two separate rules. Create one rule for inbound, and another rule for outbound.
 
-    > [!NOTE]
-    > This setting is coming in a future release, possibly the 2308 Intune release.
-
   - **Protocol**: Enter the port number of the network protocol you want the VPN to use, from 0-255. For example, enter `6` for TCP, or `17` for UDP.
 
     When you enter a protocol, you're connecting two networks over this same protocol. If you use the TPC (`6`) or UDP (`17`) protocols, you also need to enter the allowed local & remote port ranges and the allowed local & remote IP address ranges.
@@ -286,7 +300,7 @@ Example:
 
 ## Conditional Access
 
-- **Conditional Access for this VPN connection**: Enables device compliance flow from the client. When enabled, the VPN client communicates with Azure Active Directory (AD) to get a certificate to use for authentication. The VPN should be set up to use certificate authentication, and the VPN server must trust the server returned by Azure AD.
+- **Conditional Access for this VPN connection**: Enables device compliance flow from the client. When enabled, the VPN client communicates with Microsoft Entra ID to get a certificate to use for authentication. The VPN should be set up to use certificate authentication, and the VPN server must trust the server returned by Microsoft Entra ID.
 
 - **Single sign-on (SSO) with alternate certificate**: For device compliance, use a certificate different from the VPN authentication certificate for Kerberos authentication. Enter the certificate with the following settings:
 

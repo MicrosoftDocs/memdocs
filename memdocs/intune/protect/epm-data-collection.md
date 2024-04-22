@@ -5,12 +5,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 11/9/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -31,9 +30,7 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
-
-Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
@@ -69,7 +66,7 @@ Usage data is elevation data that is used by customers to determine what elevati
 ||Device Identifier|Identifier (GUID) unique to the device.|
 ||User Name|Identifier ("AzureAd\User") of the user completing the elevation.|
 ||Justification|Justification string (if provided) provided by the user when completing the elevation|
-||File name|Name of the file (String) that completed the elevation|
+||File name|Name of the file *including the path* (String) that completed the elevation|
 ||Event Id|Internal identifier (Integer) used to identify the type of elevation described in the event.|
 ||Event Name|Internal Name (String) used to identify the type of elevation described in the event.|
 ||Time Created|Time the event was generated on the device.|

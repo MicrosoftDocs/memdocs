@@ -7,19 +7,17 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 07/13/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: abalwan
 params:
   siblings_only: true
 ms.suite: ems
@@ -68,9 +66,6 @@ As an Intune administrator, you can create and assign VPN settings to Android En
   - **Pulse Secure**
   - **Microsoft Tunnel** (Not supported on Android Enterprise dedicated devices.)  
 
-    > [!Important]
-    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
-
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
 ### Base VPN (fully managed, dedicated, and corporate-owned work profile)
@@ -115,14 +110,15 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
+
+    > [!NOTE]
+    > With Cisco AnyConnect in the personally owned work profile, there may be some extra steps for end users to complete the VPN connection. For more information, go to [VPN profiles - What successful VPN profiles look like](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles?tabs=android#what-successful-vpn-profiles-look-like).
+
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
   - **NetMotion Mobility**
   - **Microsoft Tunnel**  
-
-    > [!Important]
-    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -171,3 +167,5 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows 10 and later](vpn-settings-windows-10.md).
+
+[Troubleshooting VPN profile issues in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles)

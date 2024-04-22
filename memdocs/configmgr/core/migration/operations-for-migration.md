@@ -3,8 +3,8 @@ title: Migration operations
 titleSuffix: Configuration Manager
 description: Create and run jobs to migrate data and clients to Configuration Manager current branch.
 ms.date: 12/30/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

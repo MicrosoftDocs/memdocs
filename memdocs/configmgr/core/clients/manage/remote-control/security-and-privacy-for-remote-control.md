@@ -3,8 +3,8 @@ title: Remote control security privacy
 titleSuffix: Configuration Manager
 description: Get security and privacy information for remote control in Configuration Manager.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

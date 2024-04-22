@@ -3,14 +3,14 @@ title: Read an Object by Using Managed Code
 titleSuffix: Configuration Manager
 description: The GetInstance method takes a string that identifies a specific object instance and returns an IResultObject that is used to access the object.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c02c7824-d46e-4a7a-b96d-8d1aa695fbbc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

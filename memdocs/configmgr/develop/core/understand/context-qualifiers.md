@@ -3,14 +3,14 @@ title: Context Qualifiers
 titleSuffix: Configuration Manager
 description: Use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 0b4faf3c-edff-4874-b998-3fc34810cf34
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ description: Learn how to use SMS_G_System_CollectedFile class which contains in
 title: SMS_G_System_CollectedFile Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 602346d5-3d06-4d2e-9fc7-103dd2c81c0c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

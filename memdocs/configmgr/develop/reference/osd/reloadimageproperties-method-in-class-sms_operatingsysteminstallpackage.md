@@ -3,14 +3,14 @@ description: Learn how to use the ReloadImageProperties method in class SMS_Oper
 title: ReloadImageProperties method in class SMS_OperatingSystemInstallPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3e6c970d-beb0-441b-98c6-11a8c4d26152
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

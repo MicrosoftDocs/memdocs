@@ -3,17 +3,16 @@
 
 title: Set up Trend Micro MTD integration with Intune
 titleSuffix: Intune on Azure
-description: "Trend Micro Mobile Security as Service connector integration with Intune"
+description: How to set up Trend Micro Mobile Security with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -33,7 +32,7 @@ ms.collection:
 
 # Connect Trend Micro Mobile Security as a Service with Microsoft Intune
 
-Connect Trend Micro Mobile Security as a Service to monitor and mitigate device risk levels on Intune-managed devices. Trend Micro Mobile Security as a Service works by reporting device risk levels to Microsoft Intune. Intune then uses that information to enforce the appropriate app configuration and risk assessment policies. For more information about Trend Micro Mobile Security as a Service, see [Getting Started with Mobile Security](https://docs.trendmicro.com/en-us/enterprise/trend-vision-one/mobile-security/getting-started-with_003.aspx) in the Trend Micro documentation.        
+Connect Trend Micro Mobile Security as a Service to monitor and mitigate device risk levels on Intune-managed devices. Trend Micro Mobile Security as a Service works by reporting device risk levels to Microsoft Intune. Intune then uses that information to enforce the appropriate app configuration and risk assessment policies. For more information about Trend Micro Mobile Security as a Service, see [Getting Started with Mobile Security](https://docs.trendmicro.com/en-us/enterprise/trend-vision-one/mobile-security/getting-started-with_003.aspx) in the Trend Micro documentation.
 
 This article describes the requirements and steps to connect Trend Micro Mobile Security as a Service in your tenant.
 
@@ -42,7 +41,7 @@ This article describes the requirements and steps to connect Trend Micro Mobile 
 The following subscriptions and accounts are required to integrate Trend Micro Mobile Security as a Service with Microsoft Intune.
 
 - Microsoft Intune Plan 1 subscription
-- Azure Active Directory (Azure AD) account with Global Administrator rights to grant the following permissions:
+- Microsoft Entra account with Global Administrator rights to grant the following permissions:
   - Sign in and read user profile
   - Access the directory as the signed-in user
   - Read directory data
@@ -54,15 +53,15 @@ The following subscriptions and accounts are required to integrate Trend Micro M
 The following authorization process happens when you configure the integration with Trend Micro Mobile Security as a Service:
 
 - Allow Trend Micro Mobile Security as a Service to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day-to-day operation.
-- Allow Trend Micro Mobile Security as a Service to sync Azure AD enrollment group membership to populate its device's database.
-- Allow Trend Micro Vision One management console to use Azure AD Single Sign On (SSO).
-- Allow Trend Micro Mobile as a Service agent app to sign in using Azure AD SSO.
-- Allow Trend Micro Mobile Security as a Service to get installed app information to perform malware  scanning.
+- Allow Trend Micro Mobile Security as a Service to sync Microsoft Entra enrollment group membership to populate its device's database.
+- Allow Trend Micro Vision One management console to use Microsoft Entra single sign-on (SSO).
+- Allow Trend Micro Mobile as a Service agent app to sign in using Microsoft Entra SSO.
+- Allow Trend Micro Mobile Security as a Service to get installed app information to perform malware scanning.
 - Allow Trend Micro Mobile Security as a Service to add its mobile apps in Intune for deployment.
 - Allow Trend Micro Mobile Security as a Service to create device configuration profiles.
 - Allow Trend Micro Mobile Security as a Service to perform remote actions when necessary.
 
-For more information about consent and Azure AD applications, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin).
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/v2-permissions-and-consent).
 
 ## Configuration Overview
 
@@ -79,7 +78,7 @@ The configuration of Trend Micro Mobile Security as a Service and Intune integra
 ## Set up Mobile Security as a Service integration
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.
-2. Go to **All services** > **Tenant administration**.
+2. Go to **Tenant administration**.
 3. Select **Connectors and tokens**.
 4. Under **Cross platform**, select **Mobile Threat Defense**.
 5. Select **Add**.
@@ -90,5 +89,5 @@ The configuration of Trend Micro Mobile Security as a Service and Intune integra
 
 ## Next steps
 
-- [Customize Mobile Policies in Trend Micro Mobile Security as a Service](https://docs.trendmicro.com/en-us/enterprise/trend-vision-one/mobile-security/mobile-policy/configuring-mobile-p.aspx)
+- [Customize Mobile Policies in Trend Micro Mobile Security as a Service](https://docs.trendmicro.com/en-us/enterprise/trend-vision-one/mobile-security/integration-with-mdm/mobile-policy/configuring-mobile-p.aspx)
 - [Create Mobile Threat Defense (MTD) device compliance policy with Intune](../protect/mtd-device-compliance-policy-create.md)

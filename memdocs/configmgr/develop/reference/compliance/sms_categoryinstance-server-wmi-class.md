@@ -3,14 +3,14 @@ title: SMS_CategoryInstance Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a category instance for replicating information about a category, for example, a product or a classification, to all child sites.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1564111c-d22b-407f-8299-e42f13179d50
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ description: Article detailing the use of ClearLastNBSAdvForCollection in Config
 title: ClearLastNBSAdvForCollection Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fe8e72cc-1b96-4a3c-b1b6-ea99d9588dcf
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

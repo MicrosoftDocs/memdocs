@@ -3,8 +3,8 @@ title: Sample queries for application management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common application management views to other views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: c0d69334-75eb-408c-8828-94898cf134f5
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

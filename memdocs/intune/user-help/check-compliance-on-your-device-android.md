@@ -2,16 +2,15 @@
 # required metadata
 
 title: Check compliance on your Android device | Microsoft Docs
-description: During a check-in, Company Portal will confirm that the settings on your device meet your organization's policy requirements.
+description: During a check-in, Company Portal confirms that the settings on your device meet your organization's policy requirements.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 11/15/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: d98d9bbe-98fa-48a9-8808-110435eac9e4
 searchScope:
  - User help
@@ -21,7 +20,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: arnab
+ms.reviewer: abigailstein
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -32,17 +31,26 @@ ms.collection:
 # Check compliance in Company Portal app for Android     
 *Applies to Intune Company Portal app for Android*  
 
-Use the Intune Company Portal app to remotely check the status of an enrolled device, and confirm or resolve access issues caused by noncompliant settings. During a status check, Company Portal confirms whether or not the selected device meets your organization's requirements. If your device doesn't meet requirements, your organization may limit or restrict it from accessing internal resources until you make changes.     
+Use the Intune Company Portal app to remotely check the status of an enrolled work device, and confirm or resolve access issues caused by noncompliant settings.
+
+During a status check, Company Portal checks your device to make sure it meets your organization's requirements. Company Portal provides next-step information along with the status if your device doesn't meet requirements. Your organization might limit or restrict the device from accessing work resources until you adjust the settings.      
 
 >[!TIP]
-> After you update the settings on a noncompliant device, we recommend running a status check to register the changes with the Intune app.  
+> After you change the settings on a noncompliant device, we recommend running another status check to register the changes with the Company Portal app.  
 
-1. Open the Company Portal app for Android on your device.  
+1. Sign in to the Company Portal app for Android with your work account.  
 
 2. Tap **Devices** and then select your device.  
 
-3. Under **Device Settings Status**, tap **Check device settings**. Company Portal will check your device to confirm that it's meeting your organization's policy requirements. 
+3. Tap **Check device settings**. Wait while Company Portal checks your device.  
 
-4. After the check, your device settings status will either read, **In Compliance** or **Not in Compliance**. If you're required to make any changes, a message will appear at the top of the screen. Tap it for more details. 
+4. If you're required to make any changes, the message **You need to update settings on this device** appears at the top of the screen. Tap the message for more details. 
 
-For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## Device settings status  
+
+The device settings status tells you the following information about your enrolled device:    
+* **In Compliance**: Your device is allowed to access work or school resources.  
+* **Can access resources, but action required**: Your device is allowed to access work or school resources, but one or more settings don't meet your organization's requirements. Update your device settings by the date shown to keep your access.  
+* **Not in Compliance**: Your device isn't allowed to access work or school resources. Make the required changes to gain access.  
+
+For more help and support, contact your IT support person. Go to the **Support** tab in the Company Portal app for contact information, or access support details and device actions on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

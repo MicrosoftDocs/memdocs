@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 12/12/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
 
 # optional metadata 
@@ -21,7 +20,7 @@ ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,6 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Configure
 ---
 
 # App configuration policies for Microsoft Intune
@@ -112,11 +112,11 @@ For Android Enterprise app configuration policies, you can select the device enr
 Enrollment type can be one of the following:
 
 - **All Profile Types**: If a new profile is created and **All Profile Types** is selected for device enrollment type, you will not be able to associate a certificate profile with the app config policy. This option supports username and password authentication. If you use certificate-based authentication, don't use this option.
-- **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only**: If a new profile is created and **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only** is selected, **Fully Managed, Dedicated, and Corporate-Owned Work Profile** certificate policies created under **Device** > **Configuration profiles** can be utilized. This option supports certificate-based authentication, and username and password authentication. **Fully Managed** relates to Android Enterprise fully managed devices (COBO). **Dedicated** relates to Android Enterprise dedicated devices (COSU). **Corporate-Owned Work Profile** relates to Android Enterprise corporate-owned work profile (COPE).
-- **Personally-Owned Work Profile Only**: If a new profile is created and **Personally-Owned Work Profile Only** is selected, Work Profile certificate policies created under **Device** > **Configuration profiles** can be utilized. This option supports certificate-based authentication, and username and password authentication.
+- **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only**: If a new profile is created and **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only** is selected, **Fully Managed, Dedicated, and Corporate-Owned Work Profile** certificate policies created under **Devices** > **Configuration** can be utilized. This option supports certificate-based authentication, and username and password authentication. **Fully Managed** relates to Android Enterprise fully managed devices (COBO). **Dedicated** relates to Android Enterprise dedicated devices (COSU). **Corporate-Owned Work Profile** relates to Android Enterprise corporate-owned work profile (COPE).
+- **Personally-Owned Work Profile Only**: If a new profile is created and **Personally-Owned Work Profile Only** is selected, Work Profile certificate policies created under **Devices** > **Configuration** can be utilized. This option supports certificate-based authentication, and username and password authentication.
 
 > [!NOTE]
-> If you deploy a Gmail or Nine configuration profile to an Android Enterprise dedicated device work profile which doesn’t involve a user, it will fail because Intune can’t resolve the user.
+> If you deploy a Gmail or Nine configuration profile to an Android Enterprise dedicated device work profile which doesn't involve a user, it will fail because Intune can't resolve the user.
 
 > [!IMPORTANT]
 > Existing policies created prior to the release of this feature (April 2020 release - 2004) that do not have any certificate profiles associated with the policy will default to **All Profile Types** for device enrollment type. Also, existing policies created prior to the release of this feature that have certificate profiles associated with them will default to Work Profile only.
@@ -129,13 +129,10 @@ You can validate the app configuration policy using the following three methods:
 
    1. Verify the app configuration policy visibly on the device. Confirm that the targeted app is exhibiting the behavior applied in the app configuration policy.
    2. Verify via Diagnostic Logs (see the [Diagnostic Logs](#diagnostic-logs) section below).
-   3. Verify in the Microsoft Intune admin center. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the related app**. Then, under the **Monitor** section, select either **Device install status** or **User install status**:
+   3. Verify in the Microsoft Intune admin center. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > *select the related app**. Then, under the **Monitor** section, select **Device install status**:
       Device Install Status Report monitors the latest check-in's for all the devices the configuration policy has been targeted to.
       ![First screenshot of device install status](./media/app-configuration-policies-overview/device-install-status-1.png)
-      
-      User Install Status Report monitors the latest changes to the user details, such as name, e-mail, and UPN. User Report is also independent of Device Report.
-      ![Second screenshot of device install status](./media/app-configuration-policies-overview/device-install-status-2.png)
-
+          
       Additionally,in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > *select a device* > **App configuration**. The app configuration** pane will display all the assigned policies and their state:
 
       ![Screenshot of app configuration](./media/app-configuration-policies-overview/app-configuration.png)
@@ -144,7 +141,7 @@ You can validate the app configuration policy using the following three methods:
 
 ### iOS/iPadOS configuration on unmanaged devices
 
-You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** for settings deployed through the managed app configuration policies. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
+You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** for settings deployed through the managed app configuration policies. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Microsoft Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
 
 1. If not already installed on the device, download and install the **Microsoft Edge** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
 2. Launch the **Microsoft Edge** and enter **about:intunehelp** in the address box.

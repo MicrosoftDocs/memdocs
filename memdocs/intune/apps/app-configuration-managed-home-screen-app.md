@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 865c7f03-f525-4dfa-b3a8-d088a9106502
 
 # optional metadata 
@@ -40,7 +39,7 @@ The Managed Home Screen is the application used for corporate-owned Android Ente
 
 First, ensure that your devices are supported. Intune supports the enrollment of Android Enterprise dedicated devices for Android devices running OS version 8.0 and above that reliably connect to Google Mobile Services. Similarly, Managed Home Screen supports Android devices running OS version 8.0 and above. 
 
-Typically, if settings are available to you through Device configuration, configure the settings there. Doing so will save you time, minimize errors, and will give you a better Intune-support experience. However, some of the Managed Home Screen settings are currently only available via the **App configuration policies** pane in the Intune admin center. Use this document to learn how to configure the different settings either using the configuration designer or a JSON script. Additionally, use this document to learn what Managed Home Screen settings are available using Device configuration. You may also see [Dedicated device settings](../configuration/device-restrictions-android-for-work.md#device-experience) for a full list of settings available in **Device configuration** that impact the Managed Home Screen. 
+Typically, if settings are available to you through device configuration profiles (**Devices** > **Configuration**), configure the settings there. Doing so will save you time, minimize errors, and will give you a better Intune-support experience. However, some of the Managed Home Screen settings are currently only available via the **App configuration policies** pane in the Intune admin center. Use this document to learn how to configure the different settings either using the configuration designer or a JSON script. Additionally, use this document to learn what Managed Home Screen settings are available using device configuration profiles. You may also see [Dedicated device settings](../configuration/device-restrictions-android-for-work.md#device-experience) for a full list of settings available in **Devices** > **Configuration** that impact the Managed Home Screen. 
 
 If using App configuration, navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Managed Home Screen** as the associated app. Select **Configuration settings** to configure the different available Managed Home Screen settings. 
 
@@ -53,19 +52,19 @@ There are two methods that you can use to define configuration settings for Mana
 
 If you add properties with Configuration Designer, you can automatically convert these properties to JSON by selecting **Enter JSON data** from the **Configuration settings format** dropdown.
 
-![Screenshot of Configuration setting format options](./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_01.png)
+:::image type="content" alt-text="Screenshot of Configuration setting format options" source="./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_01.png":::
 
 ## Using Configuration Designer
 
 Configuration designer allows you to select pre-populated settings and their associated values. 
 
-![Screenshot of added configuration settings](./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_02.png)
+:::image type="content" alt-text="Screenshot of added configuration settings" source="./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_02.png":::
 
 The following table lists the Managed Home Screen available configuration keys, value types, default values, and descriptions. The description provides the expected device behavior based on selected values. Configuration keys of type `BundleArray` are disabled in the Configuration Designer and are further described in the **Enter JSON Data** section of this document.
 
 **Configuration to customize applications, folders, and general appearance of Managed Home Screen**:
 
-| Configuration   Key | Value Type | Default Value | Description | Available in device configuration |
+| Configuration   Key | Value Type | Default Value | Description | Available in device configuration profile |
 |-|-|-|-|-|
 | Set allow-listed applications | bundleArray | See **Enter JSON Data** section of this   document.  | Allows you to define the set of apps visible on   the home screen from amongst the apps installed on the device. You can define   the apps by entering the app package name of the apps that you want visible. For example, `com.microsoft.emmx` would make settings accessible   on the home screen. The apps that you allow-list in this section should   already be installed on the device to be visible on the home screen. | ✔️ |
 | Set pinned web links | bundleArray | See **Enter JSON Data** section of this document. | Allows   you to pin websites as quick launch icons on the home screen. With this   configuration, you can define the URL and add it to the home screen for the   end user to launch in the browser with a single tap. Note: We recommend that   you create, assign, and approve Managed Google Play web links to   your devices. When you do, they're treated like allow-listed applications. | ✔️ |
@@ -80,22 +79,27 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Set screen orientation | integer | 1 | Allows you to set the orientation of the home   screen to portrait mode, landscape mode or allow auto rotate. You can set the   orientation by entering values 1 (for portrait mode), 2 (for Landscape mode),   3 (for Autorotate). | ✔️ |
 | Set device wall paper | string | Default | Allows you to set a wallpaper of your choice. Enter the URL of the image that you want to set as a wallpaper. | ✔️ |
 | Define theme color | string | light | Specify if you want Managed Home   Screen to run in "light" or "dark" mode.  | ❌ |
-| Block pinning browser web pages to MHS | bool | FALSE | Set this restriction to `true` to block users from pinning web pages from any browser onto Managed Home Screen.  | ✔️ |
+| Block pinning browser web pages to MHS | bool | FALSE | Set this restriction to `true` to block users from pinning web pages from any browser onto Managed Home Screen.  | ❌ |
+| Enable updated user experience | bool | FALSE  | (PREVIEW) Set to **true** to display the updated app design, with improvements to user workflows for usability and supportability, for MHS. If **false**, user will continue to see previous workflows on the app. | ❌ |
+| Top Bar Primary Element | choice |  | (PREVIEW) Use this key to select whether the primary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. This setting can only be used if **Enable sign in** key is set to **false**. If the **Enable sign in** key is set to **true**, the user's name will be shown as the primary element. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices. If you select serial number, **Show serial number for all supported OS versions on MHS** must be set to `{{SerialNumber}}`. If you select device name, **Show device name for all supported OS version on MHS** must be set to `{{DeviceName}}`. | ❌ |
+| Top Bar Secondary Element | choice |  | (PREVIEW) Use this key to select whether the secondary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices. If you select serial number, **Show serial number for all supported OS versions on MHS** must be set to `{{SerialNumber}}`. If you select device name, **Show device name for all supported OS version on MHS** must be set to `{{DeviceName}}`. | ❌ |
+| Top Bar User Name Style | choice |  | (PREVIEW) Use this setting to select the style of the user's name in the top bar based on the following list:<ul><li>display name</li><li>last name, first name</li><li>first name, last name</li><li>first name, last initial</li></ul><br>This setting can only be used if the **Enable sign in** key is set to **true**. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices. | ❌ |
 
 **Configurations for device peripherals and Managed Home Screen settings**: 
 
 | Configuration   Key | Value Type | Default Value | Description | Available in device   configuration  |
 |-|-|-|-|-|
-| Show Managed Setting | bool | TRUE | "Managed Setting" is a Managed Home   Screen app that appears only if you've configured any settings for quick   access. These settings can include the Show Wi-Fi Setting, Show Bluetooth   setting, Show volume setting, and show flashlight setting. These   settings can also be accessed by swiping-down on the screen. Set this key   to False to hide the "Managed Setting" app and have   end-users access settings only via swiping-down. | ✔️ |
+| Show Managed Setting | bool | TRUE | The **Managed Setting** menu in the Managed Home Screen app appears only if you've configured any related settings for quick access. These settings can include the **Show Wi-Fi setting**, **Show Bluetooth setting**, **Show volume setting**, and **Show flashlight setting**. These settings can also be accessed by swiping-down on the screen. Set this key to FALSE to hide the **Managed Setting** app menu and have the end-users access settings only via swiping-down.<p>(PREVIEW) The **Managed Settings** menu is specific to the Managed Home Screen app. It is visible on the top bar of the app. Specific settings appear in this menu only if you've configured these settings for quick access. These settings can include the **Show Wi-Fi setting**, **Show Bluetooth setting**, **Show volume setting**, and **Show flashlight setting**. Set this key to FALSE to hide the **Managed Settings** menu from the top bar. If required permissions are missing or the device is configured with sign-in enabled, the settings menu will be visible to allow users access to required permissions and profile information. Note that even if **Show Managed settings** is set to FALSE, you can choose to configure other settings to appear, which will allow the **Managed Settings** menu to be visible. | ✔️ |
 | Show Wi-Fi setting | bool | FALSE | Turning this setting to True allows the end user to connect to different Wi-Fi networks. | ✔️ |
 | Enable Wi-Fi allow-list | bool | FALSE | True fills out the Wi-Fi   allow-list key to restrict what Wi-Fi   networks are shown within Managed Home Screen. Set to False to show all possible   available Wi-Fi networks the device has discovered. This setting is   only relevant if show Wi-Fi setting has been set to True and the Wi-Fi allow-list has been filled out. | ✔️ |
 | Wi-Fi allow-list | bundleArray | See **Enter JSON Data** section of this document. | Allows you to list all the SSIDs of what Wi-Fi   networks you want the device to show within Managed Home Screen. This list is   only relevant if show Wi-Fi setting and Enable Wi-Fi   allow-list have been set to True. If either setting has been   set to False, then   you don't need to modify this configuration. | ✔️ |
 | Show Bluetooth setting | bool | FALSE | Turning this setting to True allows the   end user to turn on or off Bluetooth and to connect to different   Bluetooth-capable devices. | ✔️ |
 | Show volume setting | bool | FALSE | Turning this setting to True allows the   end user to access a volume slider to adjust media volume. | ✔️ |
 | Show flashlight setting | bool | FALSE | Turning this setting to True allows the   end user to on or off the device's flashlight. If the device doesn't support   a flashlight, then this setting won't appear, even if configured   to True. | ✔️ |
-| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting app   or swipe-down. Accessible information includes device's make, model, and serial number for OS 8. | ✔️ |
+| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting app   or swipe-down. Accessible information includes device's make, model, and serial number. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`.| ✔️ |
 | Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune admin center "device name" property from the Managed Settings app or from swipe-down when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
-| Show serial number for all supported OS version on MHS | choice | {{serialnumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
+| Show serial number for all supported OS version on MHS | choice | {{SerialNumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} when **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
+| Show device name for all supported OS version on MHS | choice | {{DeviceName}} | Ensure that app configuration device name is configured to display `{{DeviceName}}`. This value is auto-populated by Intune with the correct value. | ❌ |
 | Enable virtual home button | bool | FALSE | True allows end users to have access to a Managed Home Screen home button that will return   the user to the Managed Home Screen from the current task they are in. | ✔️ |
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
@@ -110,9 +114,20 @@ The following table lists the Managed Home Screen available configuration keys, 
 > 
 > On Android devices running OS 10, when an end-user tries to connect to a network via the Managed Home Screen app, they will get prompted with a consent via notifications. Because of this prompt, users on OS 10 will need to have access to the status bar and notifications in order to complete the consent step. Use the [General settings for dedicated devices](../configuration/device-restrictions-android-for-work.md#dedicated-devices) to make status bar and notifications available to your end-users, if appropriate. Additionally, when an end-user tries to connect to a password protected network via the Managed Home Screen app, they will be asked to input the password. Even if the password is correct, the network will only change if the device is not already connected to a stable network.
 
+> [!IMPORTANT]
+> For devices running on Android 10+ and using Managed Home Screen, for Bluetooth pairing to successfully work on devices that require a pairing key, admins must enable the following Android system apps:
+> - Android System Bluetooth
+> - Android System Settings
+> - Android System UI
+>
+> For more information on how to enable Android system apps, go to: [Manage Android Enterprise system apps](apps-ae-system.md#enable-a-system-app-in-intune)
+
+> [!NOTE]
+> The virtual home button requires granting overlay permission to MHS. The notification badge functionality requires granting notification permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant these permissions to prevent possible breakout scenarios from the Settings application.
+
 **Configurations for a custom screensaver**: 
 
-| Configuration   Key | Value Type | Default Value | Description | Available in device configuration |
+| Configuration   Key | Value Type | Default Value | Description | Available in device configuration profile |
 |-|-|-|-|-|
 | Enable screen saver | bool | FALSE | To enable screen saver mode or not. If set to   true, you can configure screen_saver_image, screen_saver_show_time, inactive_time_to_show_screen_saver, and media_detect_screen_saver. | ✔️ |
 | Screen saver image | string |   | Set the URL of the screen saver image. If no URL   is set, devices will show the default screen saver image when screen saver is   activated. The default image shows the Managed Home Screen app icon. | ✔️ |
@@ -125,9 +140,12 @@ The following table lists the Managed Home Screen available configuration keys, 
 > screen saver will show until the lock screen appears. If the system's lock screen timeout is shorter than **inactive time to enable screen saver** the screensaver will appear
 > as soon as the device's lock screen appears.
 
+> [!NOTE]
+> The screensaver requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
+
 **Configurations to help with troubleshooting issues on the device**:
 
-| Configuration   Key | Value Type | Default Value | Description | Available in device configuration |
+| Configuration   Key | Value Type | Default Value | Description | Available in device configuration profile |
 |-|-|-|-|-|
 | Exit lock task mode password | string |   | Enter a 4-6-digit code to use to temporarily drop   out of lock-task mode for troubleshooting. | ✔️ |
 | Enable easy access debug menu | bool | FALSE | Turn this setting to True to access the   debug menu from the Managed Settings app or from swipe-down while in Managed   Home Screen. The debug menu is currently where the capability to exit kiosk   mode lives, and is accessed by clicking the back button about 15 times. Keep   this setting set to False to keep the entry point to debug menu   only accessible via the back button. | ✔️ |
@@ -136,32 +154,50 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Enable MAX time outside MHS | bool | FALSE | Turn this setting to True to automatically   re-launch Managed Home Screen after a set period of time has passed. The   timer will factor in both inactive and active time spent outside of Managed   Home Screen. Use **MAX time outside MHS** to set the inactivity timer. By   default, this setting is off. This setting can only be used if **Exit lock   task mode password** has been configured. | ❌ |
 | MAX time outside MHS | integer | 600 | Set the maximum amount of absolute time, in   seconds, that a user can spend outside of Managed Home Screen before it is   automatically re-launched. By default, this configuration is set to 600   seconds. **Enable MAX time outside of MHS** must be set to true to use this   setting. | ❌ |
 
-**Configurations to customize Managed Home Screen experience when device is set up with Azure AD Shared device mode**:
+>[!NOTE]
+> The automatic relaunch functionality requires granting exact alarm permission to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant exact alarm permission to prevent possible breakout scenarios from the Settings application.
 
-|     Configuration Key    |     Value Type    |     Default Value    |     Description    |     Available in device configuration    |
+
+**Configurations to customize Managed Home Screen experience when device is set up with Microsoft Entra shared device mode**:
+
+|     Configuration Key    |     Value Type    |     Default Value    |     Description    |     Available in device configuration profile    |
 |-|-|-|-|-|
-|     Enable sign in    |     bool    |     FALSE    |     Turn this setting to True to enable   end-users to sign into Managed Home Screen. When used with   Azure AD Shared device mode, users who sign in to Managed Home Screen will   get automatically signed in to all other apps on the device that have participated   with Azure AD’s Shared device mode. By default this setting is off.     |     ✔️          |
-|     Sign in type    |     string    |     AAD    |     Set this configuration to "AAD" to sign in   with an AAD account. Otherwise, set this configuration to "Other". Users who   sign in with a non-AAD account won't get single sign-on to all apps that   have integrated with Azure AD’s Shared device mode, but will still get signed   in to Managed Home Screen. By default, this setting uses "AAD" user accounts.   This setting can only be used if **Enable sign in** has been set to True.     |     ✔️          |
+|     Enable sign in    |     bool    |     FALSE    |     Turn this setting to True to enable   end-users to sign into Managed Home Screen. When used with   Microsoft Entra shared device mode, users who sign in to Managed Home Screen will   get automatically signed in to all other apps on the device that have participated   with Microsoft Entra shared device mode. By default this setting is off.     |     ✔️ <p>NOTE:  On devices that have a device configuration profile with the [**Enabled System Navigation Features** setting](../configuration/device-restrictions-android-for-work.md#dedicated-devices) set to **Home and Overview buttons**, end users can ignore and skip the sign in screen.         |
+|     Sign in type    |     string    |     Microsoft Entra ID    |     Set this configuration to "AAD" to sign in   with a Microsoft Entra account. Otherwise, set this configuration to "Other". Users who   sign in with a non-AAD account won't get single sign-on to all apps that   have integrated with Microsoft Entra shared device mode, but will still get signed   in to Managed Home Screen. By default, this setting uses "AAD" user accounts.   This setting can only be used if **Enable sign in** has been set to True.     |     ✔️          |
 |     Set to the url of wallpaper    |     string    |          |     Allows you to set a wallpaper of your choice   for the sign in screen. To use this setting, enter the URL of the image that   you want set for the sign-in screen wallpaper. This image can be different   than the Managed Home Screen wallpaper that is configured with **Set device   wallpaper**. This setting can only be used if **Enable sign in** has been set   to True.      |     ✔️          |
-|     Enable show organization logo on sign in   page    |     bool    |     TRUE    |     Turn this setting to True to use a company   logo that will appear on the sign-in screen and the Session PIN screen. This   setting is used with **Organization logo on sign in page** and   can only be used if **Enable sign in** has been set to True.      |     ✔️          |
+|     Enable show organization logo on sign in   page    |     bool    |     TRUE    |     Turn this setting to True to use a company   logo that will appear on the sign-in screen and the Session PIN screen. This   setting is used with **Organization logo on sign in page** and   can only be used if **Enable sign in** has been set to True.<p>(PREVIEW) Turn this setting to True to use a company   logo that will appear on the sign-in screen. This   setting is used with **Organization logo on sign in page** and   can only be used if **Enable sign in** has been set to True.|     ✔️          |
 |     Organization logo on sign in page    |     string    |          |     Allows you to brand your device with a logo   of your choice on the Managed Home Screen sign-in screen and Session PIN   screen. To use this setting, enter the URL of the image that you want set for   the logo. This setting can only be used if **Enable show organization logo on   sign in page** and **Enable sign in** have been set to True.     |     ✔️          |
-|     Enable session PIN    |     bool    |     FALSE    |     Turn this setting to True if you want   end-users to get prompted to create a local Session PIN after they’ve   successfully signed in to Managed Home Screen. The Session PIN prompt will   appear before end-user gets access to the home screen, and can be used in   conjunction with other features. The Session PIN lasts for the duration of a   user’s sign-in, and is cleared upon sign-out. By default, this setting is   off. This setting can only be used if **Enable sign in** has been set to   True.      |     ✔️          |
+|     Enable session PIN    |     bool    |     FALSE    |     Turn this setting to True if you want   end-users to get prompted to create a local Session PIN after they've   successfully signed in to Managed Home Screen. The Session PIN prompt will   appear before end-user gets access to the home screen, and can be used in   conjunction with other features. The Session PIN lasts for the duration of a   user's sign-in, and is cleared upon sign-out. By default, this setting is   off. This setting can only be used if **Enable sign in** has been set to   True.      |     ✔️ <p>NOTE:  On devices that have a device configuration profile with the [**Enabled System Navigation Features** setting](../configuration/device-restrictions-android-for-work.md#dedicated-devices) set to **Home and Overview buttons**, end users can ignore and skip the session PIN screen.    |
 |     Complexity of session PIN    |     string    |          |     Choose whether the local session PIN should   be **simple**, **complex**, or **alphanumeric complex**. If you choose **simple**, users will only be required to enter a numeric PIN. If you choose **complex**, users will get prompted to create a PIN with alphanumeric characters and no repeating (444) or ordered sequences (123, 432, 246) are allowed. Evaluation of repeating and sequential patterns begins at three (3) digits/characters. If you choose **alphanumeric complex**, then users will get prompted to create a PIN with alphanumeric characters, and at least one symbol or letter is required. No repeating (444) or ordered sequences (123, 432, 246) are allowed. Evaluation of repeating and sequential patterns begins at three (3) characters. The default value for this setting is one (1), where one (1) means that the user must have at least one character in their Session PIN. This setting can only be used if **Enable session PIN** and **Enable sign in** have been   set to True.    |     ✔️  <p>NOTE: The **alphanumeric complex** option is only available in app config today.        |
 |     Minimum length for session PIN    |     string    |          |     Define the minimum length a user's session PIN must adhere to. This can be used with any of the complexity values for session PIN. This setting can only be used if **Enable session PIN** and **Enable sign in** have been set to True.    |     ❌        |
 |     Maximum number of attempts for session PIN    |     string    |          |     Define the maximum number of times a user can attempt to enter their session PIN before getting automatically logged out from Managed Home Screen. The default value is zero (0), where zero (0) means the user gets infinite tries. This can be used with any of the complexity values for session PIN. This setting can only be used if **Enable session PIN** and **Enable sign in** have been set to True.    |     ❌        |
-|     Customer facing folder    |     Bool    |     FALSE    |     Use this specification with   **Create   Managed Folder for grouping apps** to create a folder that can’t be exited   without a user entering their Session PIN. This setting can only be used if   **Enable session PIN** and **Enable sign in** have been set to True.     |     ❌          |
+|     Customer facing folder    |     Bool    |     FALSE    |     Use this specification with   **Create   Managed Folder for grouping apps** to create a folder that can't be exited   without a user entering their Session PIN. This setting can only be used if   **Enable session PIN** and **Enable sign in** have been set to True.     |     ❌          |
 |     Require PIN code after returning from   screensaver     |     bool    |     FALSE    |     Turn this setting True if you want to   require end-users to enter their Session PIN to resume activity on Managed   Home Screen after the screensaver has appeared. This setting can only be used   if **Enable sign in** has been set to True.        |     ✔️          |
-|     Enable auto sign-out     |     bool    |     FALSE    |     Turn this setting to True to automatically   sign current user out of Managed Home Screen after a specified period of   inactivity. When used with Azure AD Shared device mode, users   will also get signed out of all apps on the device that participate with   Azure AD Shared device mode. By default, this setting is turned off. This   setting can only be used if **Enable sign in** has been set to True.     |     ✔️          |
+|     Enable auto sign-out     |     bool    |     FALSE    |     Turn this setting to True to automatically   sign current user out of Managed Home Screen after a specified period of   inactivity. When used with Microsoft Entra shared device mode, users   will also get signed out of all apps on the device that participate with   Microsoft Entra shared device mode. By default, this setting is turned off. This   setting can only be used if **Enable sign in** has been set to True.     |     ✔️          |
 |     Auto sign-out time    |     integer    |     300    |     Set a period of inactivity, in seconds, that   can pass before user gets automatically signed out of Managed Home Screen.   This setting can only be used if **Enable auto sign-out** and **Enable sign   in** have been set to True.      |     ✔️          |
 |     Count down time on auto sign-out dialog    |     integer    |     60    |     The amount of time, in seconds, to give   notice to user before signing them out of Managed Home Screen.  This setting can only be used if **Enable   auto sign-out** and **Enable sign in** have been set to True.      |     ✔️          |
-|     Privacy statement title    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. Use this setting to name the link containing your organization’s   privacy statement, which is specified in **Privacy statement link**.    |     ❌          |
-|     Privacy statement link    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. If you set a link but don't set **Privacy statement title**, the   title will read "Custom privacy statement".    |     ❌          |
+|     Privacy statement title    |     string    |          |     Optionally display your organization's   custom privacy statement on Managed Home Screen, next to Microsoft's privacy   statement. Use this setting to name the link containing your organization's   privacy statement, which is specified in **Privacy statement link**.    |     ❌          |
+|     Privacy statement link    |     string    |          |     Optionally display your organization's   custom privacy statement on Managed Home Screen, next to Microsoft's privacy   statement. If you set a link but don't set **Privacy statement title**, the   title will read "Custom privacy statement".    |     ❌          |
+
+> [!NOTE]
+> Managed Home Screen with Sign In enabled is not supported on GCC, GCC High or DoD Tenants.
+
+> [!NOTE]
+> Managed Home Screen uses the exact alarm permission to do the following actions:
+> - Automatically sign users out after a set time of inactivity on the device
+> - Launch a screen saver after a set period of inactivity
+> - Automatically relaunch MHS after a certain period of time when a user exits kiosk mode
+> 
+> For devices running Android 14 and higher, by default, the exact alarm permission will be denied. To make sure critical user functionality is not impacted, end-users will be prompted to grant exact alarm permission upon first launch of Managed Home Screen.
+
+> [!NOTE]
+> The automatic sign out feature requires granting overlay permission and exact alarm permission (OS 14+) to MHS. Users will be prompted for permission upon startup of MHS, which requires the use of the Settings application. When possible, it is recommended to use OEMconfig to auto-grant overlay and exact alarm permission to prevent possible breakout scenarios from the Settings application.
 
 ## Enter JSON Data
 
 Enter JSON data to configure all available settings for Managed Home Screen, and the settings disabled in **Configuration Designer**.
 
-![Screenshot of added JSON data](./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_03.png)
+:::image type="content" alt-text="Screenshot of added JSON data" source="./media/app-configuration-managed-home-screen-app/app-configuration-managed-home-screen-app_03.png":::
 
 In addition to the list of configurable settings listed in the **Configuration Designer** table (above), the following table provides the configuration keys you can only configure via JSON data.
 
@@ -228,7 +264,7 @@ The following syntax is an example JSON script with all the available configurat
                 }
             ]
         },
-		{
+        {
             "key": "widgets",
             "valueBundleArray": [
                 {
@@ -289,13 +325,29 @@ The following syntax is an example JSON script with all the available configurat
             "key": "show_device_info_setting",
             "valueBool": false
         },
-	{
+        {
             "key": "show_device_name",
             "valueBool": false
         },
         {
             "key": "device_name",
             "valueString": "{{DeviceName}}"
+        },
+        {
+            "key": "enable_updated_user_experience",
+            "valueBool": false
+        },
+        {
+            "key": "header_primary_element",
+            "valueString": "Tenant Name"
+        },
+        {
+            "key": "header_secondary_element",
+            "valueString": "Device Name"
+        },
+        {
+            "key": "header_name_style",
+            "valueString": "Display Name"
         },
         {
             "key": "device_serial_number",
@@ -413,7 +465,7 @@ The following syntax is an example JSON script with all the available configurat
                         }
                     ]
                 },
-				{
+                {
                     "managedProperty": [
                         {
                             "key": "package",
@@ -432,7 +484,7 @@ The following syntax is an example JSON script with all the available configurat
                             "valueInteger": 1
                         }
                     ]
-                }	
+                }    
             ]
         },
         {
@@ -481,7 +533,7 @@ The following syntax is an example JSON script with all the available configurat
                             "key": "folder_name",
                             "valueString": "Example folder name 2"
                         },
-						{
+                        {
                             "key": "is_customer_facing",
                             "valueBool": true
                         },
@@ -502,11 +554,11 @@ The following syntax is an example JSON script with all the available configurat
                 }
             ]
         },
-	{
+        {
             "key": "show_notification_badge",
             "valueBool": true
         },
-	{
+        {
             "key": "show_screen_saver",
             "valueBool": true
         },
@@ -518,7 +570,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "screen_saver_show_time",
             "valueInteger": 0
         },
-	{
+        {
             "key": "inactive_time_to_show_screen_saver",
             "valueInteger": 30
         },
@@ -526,7 +578,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "media_detect_before_screen_saver",
             "valueBool": true
         }, 
-	{
+        {
             "key": "enable_max_inactive_time_outside_MHS",
             "valueBool": false
         },
@@ -542,7 +594,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "max_absolute_time_outside_MHS",
             "valueInteger": 600
         },
-	{
+        {
             "key": "theme_color",
             "valueString": "light"
         },
@@ -578,7 +630,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "session_PIN_complexity",
             "valueString": "simple"
         },
-	{
+        {
             "key": "max_number_of_attempts_for_session_PIN",
             "valueInteger": 0
         },

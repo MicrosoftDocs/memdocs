@@ -3,14 +3,14 @@ title: DeleteByQuery Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the DeleteByQuery WMI class method deletes status messages specified by a WQL query.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0b96f338-dd8a-449d-a4c0-8177ebbb0bc3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

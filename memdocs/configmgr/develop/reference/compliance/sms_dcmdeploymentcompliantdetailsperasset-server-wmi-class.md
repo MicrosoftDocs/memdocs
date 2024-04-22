@@ -3,14 +3,14 @@ title: SMS_DCMDeploymentCompliantDetailsPerAsset Class
 description: Learn how to use the SMS_DCMDeploymentCompliantDetailsPerAsset class in Configuration Manager set compliant asset details for a deployment.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 73bc9f0b-e30e-475e-8424-21fadbbdc993
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

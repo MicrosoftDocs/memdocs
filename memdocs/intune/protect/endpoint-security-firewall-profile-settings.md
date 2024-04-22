@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2022
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -26,7 +25,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 
 ---
 # Firewall policy settings for endpoint security in Intune
@@ -39,8 +38,9 @@ Applies to:
 - Windows 10
 - Windows 11
 
-> [!NOTE]  
-> Beginning on April 5, 2022, the Firewall profiles for the  *Windows 10 and later* platform were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+> [!NOTE]
+>
+> Beginning on April 5, 2022, the Firewall profiles for the *Windows 10 and later* platform were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 >
@@ -52,7 +52,7 @@ Supported platforms and profiles:
   - Profile: **macOS firewall**
 
 - **Windows 10 and later**:
-  - Profile: **Microsoft Defender Firewall**
+  - Profile: **Windows Firewall**
 
 ## macOS firewall profile
 
@@ -65,7 +65,7 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
   - **Not configured** (*default*)
   - **Yes** - Enable the firewall.
   
-  When set to *Yes*, you can configure the following settings.  
+  When set to *Yes*, you can configure the following settings.
 
   - **Block all incoming connections**
 
@@ -86,10 +86,9 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 
     - **Bundle ID** - The ID identifies the app. For example: *com.apple.app*
 
-## Microsoft Defender Firewall profile
+## Windows Firewall profile
 
-
-### Microsoft Defender Firewall
+### Windows Firewall
 
 The following settings are configured as [Endpoint Security policy for Windows Firewalls](../protect/endpoint-security-firewall-policy.md).
 
@@ -97,7 +96,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
 
   - **Not configured** (*default*)
-  - **Allow** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections. 
+  - **Allow** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections.
   - **Disabled** - Stateful FTP is disabled.
 
 - **Number of seconds a security association can be idle before it's deleted**  
@@ -170,11 +169,11 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Queue Outbound**
   - **Queue Both**
 
-- **Turn on Microsoft Defender Firewall for domain networks**  
+- **Turn on Windows Firewall for domain networks**  
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **domain** is turned on and enforced. You also gain access to additional settings for this network.
+  - **Yes** - The Windows Firewall for the network type of **domain** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
 
   Additional settings for this network, when set to *Yes*:
@@ -253,11 +252,11 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
-- **Turn on Microsoft Defender Firewall for private networks**  
+- **Turn on Windows Firewall for private networks**  
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **private** is turned on and enforced. You also gain access to additional settings for this network.
+  - **Yes** - The Windows Firewall for the network type of **private** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
 
   Additional settings for this network, when set to *Yes*:
@@ -336,11 +335,11 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
-- **Turn on Microsoft Defender Firewall for public networks**  
+- **Turn on Windows Firewall for public networks**  
   CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
-  - **Yes** - The Microsoft Defender Firewall for the network type of **public** is turned on and enforced. You also gain access to additional settings for this network.
+  - **Yes** - The Windows Firewall for the network type of **public** is turned on and enforced. You also gain access to additional settings for this network.
   - **No** - Disable the firewall.
 
   Additional settings for this network, when set to *Yes*:
@@ -419,7 +418,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
-### Microsoft Defender Firewall rules
+### Windows Firewall rules
 
 *This profile is in Preview*.
 
@@ -487,6 +486,8 @@ Specify the local and remote ports to which this rule applies:
   - **Wireless**
   - **Local area network**
   - **Not configured**
+  - **Mobile Broadband** - This option replaces use of the previous entry for Mobile Broadband, which is deprecated and no longer supported.
+  - **[Not Supported] Mobile Broadband** - Do not use this option, which is the original Mobile Broadband option. This option no longer functions correctly. Replace use of this option with the newer version of *Mobile Broadband*.  
 
 - **Authorized users**  
   [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)

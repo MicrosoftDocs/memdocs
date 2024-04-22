@@ -2,14 +2,14 @@
 title: Remove a Category from a Windows Driver
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 85b50703-f51d-470b-9d9f-4d065c2bcb88
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to remove a category from a Windows driver by modifying the CategoryInstance_UniqueIDs array property.
 ms.reviewer: mstewart,aaroncz 

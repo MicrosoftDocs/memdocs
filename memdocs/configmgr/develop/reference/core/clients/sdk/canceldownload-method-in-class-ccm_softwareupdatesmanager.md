@@ -3,14 +3,14 @@ description: Learn how to cancel an in-progress download of software updates dur
 title: CancelDownload method in class CCM_SoftwareUpdatesManager
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 890faba7-0382-4189-adc6-8ea16a9296da
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

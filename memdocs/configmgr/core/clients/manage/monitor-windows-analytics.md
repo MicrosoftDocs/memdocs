@@ -3,8 +3,8 @@ title: Monitor clients with Windows Analytics
 titleSuffix: Configuration Manager
 description: Windows Analytics is a set of solutions that allow you do draw valuable insights into the current state of your environment.
 ms.date: 01/31/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

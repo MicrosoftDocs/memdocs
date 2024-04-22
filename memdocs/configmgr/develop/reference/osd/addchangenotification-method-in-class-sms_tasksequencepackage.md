@@ -3,14 +3,14 @@ title: AddChangeNotification Method in SMS_TaskSequencePackage
 description: Learn how to add a task sequence package change notification using the AddChangNotification class in Configuration Manager.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a38f79cd-7493-470f-9ca0-489c985cdf75
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

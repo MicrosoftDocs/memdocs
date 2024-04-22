@@ -3,8 +3,8 @@ title: File-based replication
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager uses file-based replication to transfer data between sites in your hierarchy
 ms.date: 08/09/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

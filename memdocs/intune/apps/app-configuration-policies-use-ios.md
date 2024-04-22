@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 10/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -39,7 +38,7 @@ ms.collection:
 
 Use app configuration policies in Microsoft Intune to provide custom configuration settings for an iOS/iPadOS app. These configuration settings allow an app to be customized based on the app suppliers direction. You must get these configuration settings (keys and values) from the supplier of the app. To configure the app, you specify the settings as keys and values, or as XML containing the keys and values.
 
-As the Microsoft Intune admin, you can control which user accounts are added to Microsoft Office applications on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. The supporting applications process the app configuration and remove and block unapproved accounts. The configuration policy settings are used when the app checks for them, typically the first time it is run.
+As the Microsoft Intune admin, you can control which user accounts are added to Microsoft 365 (Office) applications on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. The supporting applications process the app configuration and remove and block unapproved accounts. The configuration policy settings are used when the app checks for them, typically the first time it is run.
 
 Once you add an app configuration policy, you can set the assignments for the app configuration policy. When you set the assignments for the policy, you can choose to use a [filter](../fundamentals/filters.md) and to include and exclude the groups of users for which the policy applies. When you choose to include one or more groups, you can choose to select specific groups to include or select built-in groups. Built-in groups include **All Users**,  **All Devices**, and **All Users + All Devices**. 
 
@@ -89,8 +88,6 @@ Once you have selected the included groups for your application configuration po
 
 14. Click **Select groups to exclude** to display the related pane.
 
-    :::image type="content" alt-text="Screenshot of Policy assignments - Select groups to exclude pane" source="./media/app-configuration-policies-use-ios/app-config-policy03.png" :::
-
 15. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
@@ -129,6 +126,7 @@ As the Microsoft Intune administrator, you can control which work or school acco
 
    > [!NOTE]
    > The following apps process the above app configuration and only allow organization accounts:
+   > - Copilot for iOS (28.1.420324001 and later)
    > - Edge for iOS (44.8.7 and later)
    > - Office, Word, Excel, PowerPoint for iOS (2.41 and later)
    > - OneDrive for iOS (10.34 and later)

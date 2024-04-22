@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -46,6 +45,8 @@ To use virtualization-based workloads, the Cloud PC must meet these requirements
 - 4vCPU or higher Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization).
 - Be provisioned in one of the [supported regions](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning) for Windows 365. (Nested virtualization isn't currently supported in Germany West Central and South Africa North).
 - Some users might experience a decline in their 4vCPU Cloud PC performance when using nested virtualization. For more information on addressing such performance issues, see [Troubleshooting](troubleshooting.md#performance-decreases-with-nested-virtualization).
+
+GPU Cloud PCs don't support nested virtualization.
 
 ## Set up virtualization-based workloads
 

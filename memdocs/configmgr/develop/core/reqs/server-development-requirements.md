@@ -3,14 +3,14 @@ title: Server Development Requirements
 titleSuffix: Configuration Manager
 description: The SMS Provider and associated technologies can be programmed by using managed code, VBScript, C++, and other languages.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 186d3283-419b-417f-a168-0b7fba5ec628
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: SMS_TaskSequence_ApplyNetworkSettingsAction Class
 titleSuffix: Configuration Manager
 description: Represent a task sequence action that specifies the network or workgroup configuration information for the target computer.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 58711e92-36da-48f3-affe-9d095a45b1cc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

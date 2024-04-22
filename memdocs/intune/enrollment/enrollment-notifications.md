@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/01/2022
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -44,11 +43,11 @@ Set up enrollment notifications in Microsoft Intune to notify employees of newly
 
 Enrollment notifications are supported on these devices:   
 
-* Android devices in bring-your-own-device (BYOD) scenarios    
-* iOS/iPadOS devices in BYOD scenarios      
-* Macs   
-* Devices running Windows 10/11, excluding hybrid Azure AD-joined devices
-* Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment    
+* Android devices in bring-your-own-device (BYOD) scenarios.      
+* iOS/iPadOS devices in BYOD scenarios such as device enrollment. However, enrollment notifications aren't supported with user enrollment.  
+* macOS devices in BYOD scenarios such as device enrollment.    
+* Devices running Windows 10/11, excluding Microsoft Entra hybrid joined devices.  
+* Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment.      
 
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.    
@@ -73,20 +72,19 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 > Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks, but only for HTTPS links.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Go to **Devices** > **Enroll device** and select the platform you're creating notifications for. Your options:  
-   * **Windows enrollment**  
-   * **Apple enrollment**  
-   * **Android enrollment**    
-3. Select **Enrollment notifications**.  
-4. Select **Create notification**. For Apple and Android notifications, select the OS platform you're configuring the notifications for. 
+2. Go to **Devices** > **Enrollment**.
+3. Select the **Windows**, **Apple**, or **Android** tab. 
+3. Choose **Enrollment notifications**. 
+4. Apple and Android notifications are supported on iOS, macOS, Android Enterprise, and Android device administrator, respectively. Select the tab that corresponds to the OS you're managing.  
 
     Your options for Apple enrollment are:  
-      * **iOS Notifications**  
+      * **iOS/iPadOS Notifications**  
       * **macOS Notifications**  
 
    Your options for Android enrollment are:  
       * **Android Enterprise Notifications**  
       * **Android device administrator Notifications**  
+4. Select **Create notifications**. 
 5. In **Basics**, configure the following settings:  
     * **Name**: Enter a descriptive name for the notification. Name your notifications so you can easily identify them later.  
     * **Description**: Enter a description for the notification. This setting is optional, but recommended.  
@@ -112,8 +110,11 @@ Email notifications appear in the user's inbox. Push notifications appear in the
          * Model  
          * OS  
          * OS version  
-         * Serial number     
-    * **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
+         * Serial number
+    > [!NOTE]
+    > Device name does not always reflect the most recent device name in a tenant. Some devices have a pre-configured device name from Intune that changes once enrolled and given timing, this pre-configured name can sometimes show in the Device details of the message. The Company portal website link will always show the most recent and accurate device name.
+
+* **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
     * **Show contact information**: Flip the switch **On** to show your organization's contact information. The tenant value is automatically populated.  
     * **Show Company portal website link**: Flip the switch **On** to show a link to the Company Portal website. The tenant value is automatically populated. 
 8. Select **Next**. 

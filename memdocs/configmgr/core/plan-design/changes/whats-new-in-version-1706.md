@@ -3,8 +3,8 @@ title: New version 1706
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1706 of Configuration Manager.
 ms.date: 08/11/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -42,7 +42,7 @@ Version 1706 drops support for the following products:
 
 ### Client Peer Cache support for express installation files for Windows 10 and Microsoft 365  
 <!-- 1352486 -->
-Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Microsoft 365. No additional configurations are required to support this change.
+Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Microsoft 365. No other configurations are required to support this change.
 
 ### Updates for the data warehouse
 <!-- 1277922 -->
@@ -50,13 +50,13 @@ The data warehouse is no longer a pre-release feature. We have also updated the 
 
 ### Accessibility improvements
 <!-- 1253000 -->
-We have added additional improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](../../understand/accessibility-features.md).
+We have added more improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](../../understand/accessibility-features.md).
 
 ### Improvements  for SQL Server Always On availability groups
 <!-- 1352094 -->
-With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
+With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add more replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
 - Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](../../servers/manage/recover-sites.md#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
-- This release does not support failover to use the asynchronous commit replica as your site database.
+- This release doesn't support failover to use the asynchronous commit replica as your site database.
 For more information, see [Prepare to use an availability group](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Update reset tool
@@ -78,7 +78,7 @@ For more information, see [software update points](../../servers/deploy/configur
 
 ### Azure AD integration with Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
-With this release, we have improved the integration of Configuration Manager and Azure Active Directory (Azure AD).  These improvements streamline how you configure the Azure services you use with Configuration Manager, and help you to manage clients and users who authenticate though Azure AD.
+With this release, we have improved the integration of Configuration Manager and Azure Active Directory (Azure AD).  These improvements streamline how you configure the Azure services you use with Configuration Manager, and help you to manage clients and users who authenticate through Azure AD.
 
 The improved integration makes the following possible:  
 - Azure Services Wizard – This Wizard provides a common configuration experience that replaces the individual workflows to set up the following Azure services you use with Configuration Manager.
@@ -98,11 +98,11 @@ The improved integration makes the following possible:
 
 - Install and manage the Configuration Manager client on computers that are located on the internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](../../clients/deploy/deploy-clients-cmg-azure.md).
 
-- Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+- Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information, see [Azure AD User Discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 ### Peer cache improvements
 <!-- 1252345 -->
-Peer cache no longer uses the Network Access Account to authenticate download requests from peers. There is one caveat to this when the account remains required by clients. This remains a requirement for clients that boot in to WinPE and then access content from a peer cache source. For more information, see [requirements and considerations for peer cache](../hierarchy/client-peer-cache.md#requirements).
+Peer cache no longer uses the Network Access Account to authenticate download requests from peers. There's one caveat to this when the account remains required by clients. This remains a requirement for clients that boot in to WinPE and then access content from a peer cache source. For more information, see [requirements and considerations for peer cache](../hierarchy/client-peer-cache.md#requirements).
 
 
 <!-- ## Migration  -->
@@ -113,7 +113,7 @@ Peer cache no longer uses the Network Access Account to authenticate download re
 
 ## Compliance settings
 
-### New configuration settings for Windows 10 devices that are not managed with the Configuration Manager client
+### New configuration settings for Windows 10 devices that aren't managed with the Configuration Manager client
 <!-- 1354715 -->
 In this release, we've added new configuration item settings for Windows 10 devices that are enrolled with Intune, or managed on premises by Configuration Manager. The settings are:
 
@@ -149,13 +149,13 @@ For details of all Windows 10 settings, see [How to create configuration items f
   * Windows 8.1+
   * iOS 6+
   <br></br>
-* **Block USB debugging on device**. You do not have to configure this settings as USB debugging is already disabled on Android for Work devices.
+* **Block USB debugging on device**. You don't have to configure this setting as USB debugging is already disabled on Android for Work devices.
 
   **Supported on:**
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
   <br></br>
-* **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You do not have to configure this setting as Android for Work devices always restrict installation from unknown sources.
+* **Block apps from unknown sources**. Require that devices prevent installation of apps from unknown sources. You don't have to configure this setting as Android for Work devices always restrict installation from unknown sources.
 
   **Supported on:**
   * Android 4.0+
@@ -178,7 +178,7 @@ In Configuration Manager, you can deploy scripts to client devices using package
 - Import PowerShell Scripts to Configuration Manager
 - Edit the scripts from the Configuration Manager console (for unsigned scripts only)
 - Mark scripts as Approved or Denied, to improve security
-- Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they are run in near real time on client devices.
+- Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they're run in near real time on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](../../../apps/deploy-use/create-deploy-scripts.md).
@@ -204,7 +204,7 @@ When you run **Update Distribution Points** on a selected boot image, you can no
 ## Software updates
 
 ### Improvements to Express Update download time
-In this release, we have significantly improved the download time for Express Updates. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+In this release, we have improved the download time for Express Updates. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
 ### Manage Microsoft Surface driver updates
 <!-- 1098490 -->
@@ -228,7 +228,7 @@ You can now configure deferral policies for Windows 10 Feature Updates or Qualit
 For details, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### Improved user notifications for Microsoft 365 updates
-Improvements have been made to leverage the Office Click-to-Run user experience when a client installs a Microsoft 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
+Improvements have been made to apply the Office Click-to-Run user experience when a client installs a Microsoft 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## Reporting
 
@@ -248,7 +248,7 @@ With this release, the values for the **Allow data sharing between work and pers
 
 ### Android and iOS enrollment restrictions
 <!-- 1290826 -->
-With this release, you can now specify that users cannot enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
+With this release, you can now specify that users can't enroll personal Android or iOS devices. New device restriction settings let you limit Android device enrollment to predeclared devices. For iOS devices, you can block enrollment of all devices except those enrolled with Apple's Device Enrollment Program, Apple Configurator, or the Intune device enrollment manager account.
 
 ## Protect devices
 
@@ -259,7 +259,7 @@ In this release, we've added further capabilities to Device Guard policy managem
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
 
 - Overcome issues with managed installer behaviors
-- Trust line-of-business apps that cannot be deployed with Configuration Manager
+- Trust line-of-business apps that can't be deployed with Configuration Manager
 - Trust apps that are included in an operating system deployment image
 
-For more details, see [Device Guard management with Configuration Manager](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md).
+For more information, see [Device Guard management with Configuration Manager](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md).

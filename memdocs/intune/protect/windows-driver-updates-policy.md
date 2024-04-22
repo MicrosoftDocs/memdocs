@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
-description: Create and manage policies that install Windows driver updates on Windows 10 and Windows 11 devices you manage with Microsoft Intune.
+description: Use Microsoft Intune to manage policies that install Windows driver updates on your Intune managed Windows 10 and Windows 11 devices.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 02/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,13 +27,14 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- ContentEnagagementFY24
 ---
 
 # Manage policy for Windows Driver updates with Microsoft Intune
 
 This article can help you use Microsoft Intune to create and manage Windows Driver updates policies for your Windows 10 and Windows 11 devices. These policies allow you to view the list of available driver updates that are applicable to the devices targeted by the policy, approve updates for deployment, or pause the deployment of individual updates. When driver updates are approved, Intune sends the assignments to Windows Update, which manages the update installation on devices based on the policy configuration.
 
-Before you create and deploy driver update policies, take time to [plan how you might deploy and manage Windows driver updates](../protect/windows-driver-updates-overview.md#plan-for-driver-updates) in your organization. Also review the [prerequisites](../protect/windows-driver-updates-overview.md#prerequisites) for using Windows driver updates ensure your tenant is configured to support them.
+Before you create and deploy driver update policies, take time to review the Windows driver update prerequisites, consider a constructing a driver update deployment plan, and review the frequently asked questions for Driver updates. These subjects are available in the [Windows Driver updates overview article](../protect/windows-driver-updates-overview.md#prerequisites).
 
 After you create driver update policies, plan to review them regularly for newly added driver updates. *Recommended* driver updates that are added to policies that support automatic approvals start to deploy without any intervention. However, any other new updates added to your policies won't install until an admin manually approves them.
 
@@ -258,6 +259,36 @@ On the *Manage driver* pane, you can:
 - **Declined** – You can configure a driver update to be declined, which removes it from appearing as a new driver that needs review.
 
   Setting an update to declined doesn’t remove it from the policy, and you can change it back to *Approved* if you would like the update to deploy to applicable devices.
+
+### Bulk driver updates
+
+Bulk driver updates allow the user to approve, pause, or decline multiple drivers for devices at once.
+
+#### How to use bulk driver updates
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows 10 and later updates**> **Driver updates**, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
+2. In the Driver Updates page, select **Bulk actions**.  
+
+    :::image type="content" source="./media/windows-driver-updates-policy/bulk-actions.png" alt-text="A screen capture that shows the bulk actions button." lightbox="./media/windows-driver-updates-policy/bulk-actions.png":::
+
+3. In the **Select action** tab, select one of the actions from the **Driver actions** drop-down list; *Approve*, *Pause* or *Decline* multiple drivers.
+4. If you select an action that needs further information, for example, if you select *Approve*, then you also need to select the start date using **Make available in Windows update**. Select **Next**.
+5. In the **Select drivers** tab, use **Select drivers to include** to see and select the available drivers. The **Select available drivers** fly-out appears.
+The displayed list includes drivers that are able to be approved. For example, drivers that have a status of *Paused* or *Needs Review*. This is because you can (re)approve drivers that are *Paused* or have status as *Needs Review*. Drivers that are already approved are filtered out.
+6. In the **Select available drivers** fly-out you can also bulk select the drivers.
+
+   > [!NOTE]
+   > You can only select up to 100 drivers at a time. If  you select more than a 100 and select **Save**, an error  message is displayed.  
+
+7. Select **Save** and then **Next**.
+8. In the **Review +Save** tab, you can review and save the changes you made.
+
+> [!NOTE]
+> You can't mix actions. For example, you cannot *Pause* and *Approve* a set in one action. You must go through each action separately.
+
+#### Benefits of bulk driver updates
+
+The bulk driver updates can help the user to manage the driver updates more efficiently and conveniently. For example, the user can approve all the drivers together before a regular monthly security release and schedule them to start on that day.
 
 ## Next steps
 

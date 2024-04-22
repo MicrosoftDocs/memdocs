@@ -60,7 +60,7 @@ After completing the sign up process, you're directed to the Microsoft 365 admin
 
 Once you have signed up for Intune, you can use any device with a [supported browser](supported-devices-browsers.md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to administer the service.
 
-By default, your account must have one of the following permissions in Azure AD:
+By default, your account must have one of the following permissions in Microsoft Entra ID:
 
 - Global Administrator
 - Intune Service Administrator (also known as Intune Administrator)

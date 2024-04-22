@@ -3,8 +3,8 @@ title: Share applications in the Software Center
 titleSuffix: Configuration Manager
 description: Share a link to an application in the Software Center in Configuration Manager.
 ms.date: 01/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: baladelli
 ms.author: baladell

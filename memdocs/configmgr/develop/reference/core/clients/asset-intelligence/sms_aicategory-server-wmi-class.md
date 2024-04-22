@@ -3,14 +3,14 @@ title: SMS_AICategory Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_AICategory Windows Management Instrumentation class categorizes the software entries in the SMS_AISoftwareList Server WMI class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9c90f84f-e111-4195-9063-a09eacd83c50
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

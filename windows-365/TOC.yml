@@ -17,6 +17,8 @@ items:
   href: enterprise/privacy-personal-data.md
 - name: What if my subscription expires? 
   href: subscription-ends.md
+- name: Business continuity and disaster recovery
+  href: business-continuity-disaster-recovery.md
 - name: Windows 365 Business docs
   href: business/index.yml
 - name: Windows 365 Enterprise docs

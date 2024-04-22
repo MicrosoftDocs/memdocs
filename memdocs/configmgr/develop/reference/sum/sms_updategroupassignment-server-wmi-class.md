@@ -3,14 +3,14 @@ description: Learn how to  represent a deployment of an update group in Configur
 title: "SMS_UpdateGroupAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e0f59acd-8dbc-42b4-aaef-8261c4860577
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

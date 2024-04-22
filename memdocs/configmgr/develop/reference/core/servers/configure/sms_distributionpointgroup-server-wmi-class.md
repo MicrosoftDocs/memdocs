@@ -3,14 +3,14 @@ title: SMS_DistributionPointGroup Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a group of distribution points rendered in the Configuration Manager console.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 01cb6452-86e2-4af2-a851-7aa550ab7d7a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

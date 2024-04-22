@@ -3,18 +3,16 @@
 
 title: Set up enrollment for Android Enterprise fully managed devices
 titleSuffix: Microsoft Intune
-description: Learn how to set up enrollment for devices using the Android Enterprise fully managed device management solution.   
+description: Set up enrollment in Intune for devices using the Android Enterprise fully managed device management solution.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/22/2023
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,7 @@ ms.reviewer: shthilla
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -54,7 +52,7 @@ Complete these prerequisites to ensure a successful enrollment.
   There is no restriction on device manufacturer/OEM if all three requirements are met. 
  * Make sure Android Enterprise is supported in your region. For Android Enterprise requirements, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).  
  * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).    
- * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have an Azure AD Conditional Access policy with the following configurations, you will need to exclude the Microsoft Intune cloud app from the policy:  
+ * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have a Microsoft Entra Conditional Access policy with the following configurations, you will need to exclude the Microsoft Intune cloud app from the policy:  
      * *Require a device to be marked as compliant* setting is used to grant or block access.  
     * The policy applies to **All Cloud apps**, **Android**, and **Browsers**.   
 
@@ -63,18 +61,19 @@ Intune automatically generates a default enrollment profile and enrollment token
 
 To create a new enrollment profile:       
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enroll devices**.    
-3. Select **Android enrollment**  > **Corporate-owned, fully managed user devices**.
-4. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**. 
-5. Select **Create profile**.  
-6. Enter the basics for your profile:  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).   
+2. Go to **Devices** > **Enrollment**.  
+3. Select the **Android** tab.  
+4. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned, fully managed user devices**. 
+5. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**. 
+6. Select **Create profile**.  
+7. Enter the basics for your profile:  
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
-    - **Description**: Optionally, add a profile description.  
-7. Select **Next**. 
-8. Optionally, on the **Scope tags** page, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Admin users who are assigned roles with these scope tags and have the proper permissions will be able to access the profile. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
-9. Select **Next**.  
-10. Review the summary of your profile, and then select **Create** to finalize it.    
-
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
+8. Select **Next** to continue to **Scope tags**.
+9. Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+10. Select **Next** to continue to **Review + create**.    
+11. Review the summary of your profile, and then select **Create** to finalize it.  
 
 To review, make changes, or delete the profile:  
 
@@ -83,8 +82,10 @@ To review, make changes, or delete the profile:
 3. Select **Properties** > **Edit** to make changes to the profile basics or scope tags.  
 4. Select **Token** to retrieve, revoke, or export the token.  
 
-## Step 3: Create dynamic Azure AD group  
-Optionally, create a dynamic Azure AD group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. 
+<a name='step-3-create-dynamic-azure-ad-group'></a>
+
+## Step 3: Create dynamic Microsoft Entra group  
+Optionally, create a dynamic Microsoft Entra group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. 
 
 Add these configurations to your group:    
 * **Group type**: Security

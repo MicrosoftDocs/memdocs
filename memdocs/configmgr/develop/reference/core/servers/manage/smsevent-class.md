@@ -3,14 +3,14 @@ title: SMSEvent Class
 titleSuffix: Configuration Manager
 description: The SmsEvent class represents a Configuration Manager event on the client. The class implements the ICcmEvent interface.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 255fe69c-c404-4d21-820a-df11b1eb3048
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

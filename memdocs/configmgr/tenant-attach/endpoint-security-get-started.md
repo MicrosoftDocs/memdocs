@@ -1,14 +1,14 @@
 ---
-title: Get started - Create and deploy endpoint security policies from the admin center (preview)
+title: Get started - Create and deploy endpoint security policies from the admin center
 titleSuffix: Configuration Manager
 description: Create and deploy endpoint security policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 03/21/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.localizationpriority: high
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3

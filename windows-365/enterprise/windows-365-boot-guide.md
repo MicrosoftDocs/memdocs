@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/23/2023
+ms.date: 01/11/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -30,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Guided scenario - deploy Windows 365 Boot to shared physical devices
+# Guided scenario - deploy Windows 365 Boot to physical devices
 
 By following this guided scenario, you can deploy [Windows 365 Boot](windows-365-boot-overview.md) to shared Windows 11 Pro physical devices. Windows 365 Boot lets physical device users sign in directly to their Cloud PCs, without signing in to their physical devices.
 
@@ -45,7 +44,7 @@ For more information about guided scenarios in general, see [Intune guided scena
 
 ## Prerequisites
 
-- Each physical device must be running Windows 11 Enterprise or Professional.
+- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.3227 or later.
 - You must have the Intune Service Administrator role.
 
 Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).
@@ -55,7 +54,7 @@ You can complete the guided scenario before there are any devices in the group. 
 ## Step 1 - Introduction
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with the Intune Service Administrator role.
-2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Windows 365 Boot** (under Windows 365 guides).
+2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Windows 365 Boot** (under Windows 365 guides). If you want to use public preview features, select **Windows 365 Boot - Public Preview**.
 3. On the **Introduction** page, select **Next: Basics**.
 
 ## Step 2 - Basics
@@ -66,7 +65,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
 1. **Autopilot device name template**: This guided scenario enrolls your devices in Windows Autopilot. When they enroll, you can optionally name your devices using a unique pattern that applies to all devices. Your options:
 
-   - **Apply device name template**: If you don't check this box, then no template or pattern is created when naming your devices. The device will have the OEM name, such as DESKTOP-, followed by some random characters. Select the box to create a unique pattern to name your devices. For example, enter Contoso-%RAND:7% to name all your devices Contoso- followed by seven random characters.
+   - **Apply device name template**: If you don't check this box, then no template or pattern is created when naming your devices. The device gets the OEM name, such as DESKTOP-, followed by some random characters. Select the box to create a unique pattern to name your devices. For example, enter Contoso-%RAND:7% to name all your devices Contoso- followed by seven random characters.
 
      The names:
 
@@ -76,11 +75,16 @@ Choose how your devices are named when they enroll, and choose the prefix of all
      - Can use the %SERIAL% macro to add a hardware-specific serial number.
      - Can use the %RAND:x% macro to add a random string of characters, where x equals the number of characters to add.
 
-   - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix:
+   - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix.
 
-2. **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created will be named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
+2. **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created are named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
 
-3. Select **Next: Endpoint updates**.
+3. **Boot device mode**: Select one of the following options:
+
+   - **Shared PC mode**: For physical devices shared by multiple users
+   - **Dedicated mode**: For a physical device used by one specific user.
+
+4. Select **Next: Endpoint updates**.
 
 ## Step 3 - Endpoint updates
 
@@ -96,10 +100,17 @@ Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopa
 
 1. (Optional) On the **Settings** page, select the **VPN profile** and **Wifi profile** to use for Windows 365 Boot physical devices.
 2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
+3. (Optional) Select the **Security baseline profile** to use for Windows 365 Boot physical devices.
+4. (Optional) Select a value for the **Set the maximum connection timeout value** for Windows 365 Boot. The operating system waits for a connection until the selected timeout value has been reached. For more information, see [SetMaxConnectionTimeout policy CSP](/windows/client-management/mdm/policy-csp-clouddesktop#setmaxconnectiontimeout).
+5. (Optional) If you want to customize the branding shown at the top of the sign-in screen, provide any or all of the following information:
+    - **Company name**
+    - **Company logo URL**
+    - **Lock screen image URL**
+
 
 ## Step 5 - Assignments
 
-Select the groups that will receive this guided scenario, and all the resources it creates. You can assign existing groups, or create new ones and assign them.
+Select the groups that you want to receive this guided scenario, and all the resources it creates. You can assign existing groups, or create new ones and assign them.
 
 - **Create new group**: Creates a new group, and deploys the guided scenario policies to this group. As devices are added to this group, they receive the resources from this guided scenario.
 

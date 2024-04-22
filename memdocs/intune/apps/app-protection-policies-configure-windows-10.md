@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Configure app protection policies for Windows 10/11 
+title: Configure app protection policies for Windows 10/11
 titleSuffix: Microsoft Intune
-description: This topic describes how to configure app protection policies (APP) for Windows 10/11 devices.
+description: This article describes how to configure app protection policies (APP) for Windows 10/11 devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 
 # optional metadata
@@ -25,7 +24,6 @@ ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -36,34 +34,34 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Enable mobile application management (MAM) for Windows 10/11 by setting the MAM provider in Azure AD. Setting a MAM provider in Azure AD allows you to define the enrollment state when creating a new Windows Information Protection (WIP) policy with Intune. The enrollment state can be either MAM or mobile device management (MDM).
+Enable Windows Information Protection (WIP) for Windows 10/11 by setting the WIP provider in Microsoft Entra ID. Setting a WIP provider in Microsoft Entra ID allows you to define the enrollment state when creating a new WIP policy with Intune. The enrollment state can be either WIP or mobile device management (MDM).
 
 >[!IMPORTANT]
 > Windows Information Protection (WIP) policies without enrollment has been deprecated. You can no longer create WIP policies for unenrolled devices.
 
-## To configure the MAM provider
+## To configure the WIP provider
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **All services** and choose **M365 Azure Active Directory** to switch dashboards.
-3. Select **Azure Active Directory**.
-4. Choose **Mobility (MDM and MAM)** in the **Manage** group.
-5. Click **Microsoft Intune**.
-6. Configure the settings in the  **Restore default MAM URLs** group on the **Configure** pane.
+2. Select **All services** and choose **M365 Microsoft Entra ID** to switch dashboards.
+3. Select **Microsoft Entra ID**.
+4. Choose **Mobility (MDM and WIP)** in the **Manage** group.
+5. Select **Microsoft Intune**.
+6. Configure the settings in the  **Restore default WIP URLs** group on the **Configure** pane.
 
-   **MAM user scope**  
-   Use MAM auto-enrollment to manage enterprise data on your employees' Windows devices. MAM auto-enrollment will be configured for bring your own device scenarios.<ul><li>**None**<br>Select if no users can be enrolled in MAM.</li><li>**Some**<br>Select Azure AD groups that contain users who will be enrolled in MAM.</li><li>**All**<br>Select if all users can be enrolled in MAM.</li></ul>
+   **WIP user scope**  
+   Use WIP autoenrollment to manage enterprise data on your employees' Windows devices. WIP autoenrollment will be configured for your own device scenarios.<ul><li>**None**<br>Select if no users can be enrolled in WIP.</li><li>**Some**<br>Select Microsoft Entra groups that contain users who will be enrolled in WIP.</li><li>**All**<br>Select if all users can be enrolled in WIP.</li></ul>
 
-   **MAM terms of use URL**  
-   The MAM terms of use URL is not supported for Microsoft Intune. This input box must be left blank for protection policies to apply.
+   **WIP terms of use URL**  
+   The WIP terms of use URL isn't supported for Microsoft Intune. This input box must be left blank for protection policies to apply.
 
-   **MAM discovery URL**  
-   The URL of the enrollment endpoint of the MAM service. The enrollment endpoint is used to enroll devices for management with the MAM service.
+   **WIP discovery URL**  
+   The URL of the enrollment endpoint of the WIP service. The enrollment endpoint is used to enroll devices for management with the WIP service.
 
-   **MAM compliance URL**  
-   The MAM compliance URL is not supported for Microsoft Intune. This input box must be left blank for protection policies to apply. 
+   **WIP compliance URL**  
+   The WIP compliance URL isn't supported for Microsoft Intune. This input box must be left blank for protection policies to apply. 
 
-7. Click **Save**.
+7. Select **Save**.
 
 ## Next steps
 
-[Create a WIP policy](windows-information-protection-policy-create.md)
+[Create a WIP policy.](windows-information-protection-policy-create.md)

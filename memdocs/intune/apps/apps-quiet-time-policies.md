@@ -11,7 +11,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 ms.reviewer: cdemello
 ms.suite: ems

@@ -2,9 +2,9 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/25/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 01/24/2024
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: PalikaSingh
 ms.author: palsi
@@ -38,7 +38,7 @@ For information about what's new in the *current branch* of Configuration Manage
 
 For most product prerequisites, use the information in the [Supported configurations](../plan-design/configs/supported-configurations.md). The following exceptions apply to the technical preview branch:
 
-- Each install is active for 90 days before it becomes inactive.
+- Each install is active for 180 days before it becomes inactive.
 
 - English is the only language supported.
 
@@ -95,7 +95,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2305**
+- **Technical preview version 2401**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
@@ -128,16 +128,18 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2305
+### Technical preview version 2401
 
-- [OSD preferred MP option for PXE boot scenario](2023/technical-preview-2305.md) <!--2839966-->
-- [New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to cleanup data older than 30 days or configured number of days](2023/technical-preview-2305.md) <!-- 6167745 -->
-- [CMG creation using 3rd PartyApp via Console](2023/technical-preview-2305.md) <!--15627214 -->
-- [CMG creation using 3rd Party ServerApp via PowerShell](2023/technical-preview-2305.md) <!--17186203 -->
-- [Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement](2023/technical-preview-2305.md) <!--9217349-->
-- [Enhancing security for External service notifications URL](2023/technical-preview-2305.md) <!--10060597-->
-- [Enable Bitlocker through ProvisionTS](2023/technical-preview-2305.md) <!--15620822-->
-- [Client certificate state in console (self-signed) to match state in control panel(PKI)](2023/technical-preview-2305.md) <!--10278780-->
+- [Automated diagnostic Dashboard for Software Update Issues](2024/technical-preview-2401.md)
+- [Introducing Centralized Search box: Effortlessly Find What You Need in the Console!](2024/technical-preview-2401.md)
+- [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](2024/technical-preview-2401.md)
+- [Microsoft Azure Active Directory re-branded to Microsoft Entra ID](2024/technical-preview-2401.md)
+- [Enhancement in Deploying Software Packages with Dynamic Variables](2024/technical-preview-2401.md)
+- [Enabling Auto-Image Patching for CMG Virtual Machine Scale Sets](2024/technical-preview-2401.md)
+- [Window 11 Readiness dashboard to support Windows 23H2](2024/technical-preview-2401.md)
+- [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](2024/technical-preview-2401.md)
+- [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
+- [Improvements to Bitlocker](2024/technical-preview-2401.md)
 
 
 > [!NOTE]
@@ -156,6 +158,37 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
+
+### Technical preview version 2311
+
+- [Folder support for Scripts node in Software Library](2023/technical-preview-2311.md)
+- [New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet](2023/technical-preview-2311.md)
+- [Support for ARM64 Operating System Deployment](2023/technical-preview-2311.md)
+- [Resource access profiles and deployments will block Configuration manager upgrade](2023/technical-preview-2311.md)
+- [WildCard Support added in Defender Exploit Guard policy for Controlled Folders](2023/technical-preview-2311.md)
+
+
+### Technical preview version 2307
+
+- [Windows 11 Edition Upgrade using Configuration Manager policy settings](2023/technical-preview-2307.md)
+- [Windows 11 Upgrade Readiness Dashboard](2023/technical-preview-2307.md)
+- [Option to schedule scripts' runtime](2023/technical-preview-2307.md)
+- [External service notification Run details from Azure Logic application](2023/technical-preview-2307.md)
+- [Maintenance window creation using PS cmdlet](2023/technical-preview-2307.md)
+- [Update Orchestrator Service (USO) for Windows 11 22H2 or later with windows native reboot experience](2023/technical-preview-2307.md)
+
+
+### Technical preview version 2305
+
+- [OSD preferred MP option for PXE boot scenario](2023/technical-preview-2305.md) <!--2839966-->
+- [New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to cleanup data older than 30 days or configured number of days](2023/technical-preview-2305.md) <!-- 6167745 -->
+- [CMG creation using 3rd PartyApp via Console](2023/technical-preview-2305.md) <!--15627214 -->
+- [CMG creation using 3rd Party ServerApp via PowerShell](2023/technical-preview-2305.md) <!--17186203 -->
+- [Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement](2023/technical-preview-2305.md) <!--9217349-->
+- [Enhancing security for External service notifications URL](2023/technical-preview-2305.md) <!--10060597-->
+- [Enable Bitlocker through ProvisionTS](2023/technical-preview-2305.md) <!--15620822-->
+- [Client certificate state in console (self-signed) to match state in control panel(PKI)](2023/technical-preview-2305.md) <!--10278780-->
+
 ### Technical preview version 2303
 
 - [SQL Server 2022 version support added for Configuration Manager](2023/technical-preview-2303.md#bkmk_SQlodbc) <!--17276757-->
@@ -173,13 +206,13 @@ The following features were released with previous versions of the Configuration
 - [Removing Microsoft Store for Business and Education new config capability](2023/technical-preview-2301.md#bkmk_msfb) <!--10901602-->
 - [Update to the default value of supersedence age in months for software updates](2023/technical-preview-2301.md#bkmk_softwareupdates) <!--16441147-->
 - [Microsoft Configuration Manager product branding](2023/technical-preview-2301.md#bkmk_branding)<!-- 15885998. -->
-- [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2023/technical-preview-2301.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
+- [Improvements to Cloud Sync (Collections to Microsoft Entra group Synchronization) feature](2023/technical-preview-2301.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
 
 ### Technical preview version 2211
 
 - [Authorization failure message in admin service now shown in Status message viewer](2022/technical-preview-2211.md#bkmk_audit-admin-service) <!-- 13022894 -->
 - [Network Access Account (NAA) account usage alert](2022/technical-preview-2211.md#bkmk_naa-account)<!-- 14538358 -->
-- [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2022/technical-preview-2211.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
+- [Improvements to Cloud Sync (Collections to Microsoft Entra group Synchronization) feature](2022/technical-preview-2211.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
 
 ### Technical preview version 2210
 

@@ -3,14 +3,14 @@ title: SMS_Site Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents identification and status data for a Configuration Manager site installation.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a8824024-5e6c-49f9-a54e-9b5ec597b86d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -47,7 +47,7 @@ Class SMS_Site : SMS_BaseClass
 |Method|Description|  
 |------------|-----------------|  
 |[EncryptDataEx Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/encryptdataex-method-in-class-sms_site.md)|Encrypts data using the specified site server's public key and returns the encrypted data.|  
-|[GetAutoUpgradeConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getautoupgradeconfigs-method-in-class-sms_site.md)|Gets configurations for auto-upgrade settings.|  
+|[GetAutoUpgradeConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getautoupgradeconfigs-method-in-class-sms_site.md)|Gets configurations for autoupgrade settings.|  
 |[GetClientInfo Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getclientinfo-method-in-class-sms_site.md)|Gets information about a client.|  
 |[GetClientPilotingConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getclientpilotingconfigs-method-in-class-sms_site.md)|Gets the configurations for client piloting settings.|  
 |[GetFeatureState Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getfeaturestate-method-in-class-sms_site.md)|Gets the enabled/disabled state of a feature.|  
@@ -56,10 +56,10 @@ Class SMS_Site : SMS_BaseClass
 |[ImportGlobalUserAccountEx Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/importglobaluseraccountex-method-in-class-sms_site.md)|Encrypts data that is shared in the hierarchy.|  
 |[ImportMachineEntry Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md)|Imports computer information.|  
 |[IsUsedCert Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/isusedcert-method-in-class-sms_site.md)|Determines whether the specified certificate is used.|  
-|[RedistributeAutoUpgradeClientContent Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md)|Redistributes auto-upgrade client content to the specified distribution point.|  
+|[RedistributeAutoUpgradeClientContent Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md)|Redistributes autoupgrade client content to the specified distribution point.|  
 |[SubmitRegistrationRecord Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md)|Submits a registration record.|  
-|[UpdateAutoUpgradeClientContent Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateautoupgradeclientcontent-method-in-class-sms_site.md)|Updates auto-upgrade client content to all distribution points.|  
-|[UpdateAutoUpgradeConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateautoupgradeconfigs-method-in-class-sms_site.md)|Updates configurations for auto-upgrade settings.|  
+|[UpdateAutoUpgradeClientContent Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateautoupgradeclientcontent-method-in-class-sms_site.md)|Updates autoupgrade client content to all distribution points.|  
+|[UpdateAutoUpgradeConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateautoupgradeconfigs-method-in-class-sms_site.md)|Updates configurations for autoupgrade settings.|  
 |[UpdateClientPilotingConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateclientpilotingconfigs-method-in-class-sms_site.md)|Updates the configurations for client piloting settings.|  
 |[UpdateConsoleUsageData Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updateconsoleusagedata-method-in-class-sms_site.md)|Updates console usage data received from console connections.|  
 |[UpdateFeatureState Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/updatefeaturestate-method-in-class-sms_site.md)|Updates the enabled/disabled state of a feature.|  
@@ -109,8 +109,8 @@ Class SMS_Site : SMS_BaseClass
 |3|Upgrade in progress.|  
 |4|Evaluation has expired.|  
 |5|Site expansion in progress.|  
-|6|Interop mode where there are primary sites, having the same version as the CAS, were not upgraded.|  
-|7|Interop mode where there are secondary sites, having the same version as the top-level site server, were not upgraded.|  
+|6|Interop mode where there are primary sites, having the same version as the CAS, weren't upgraded.|  
+|7|Interop mode where there are secondary sites, having the same version as the top-level site server, weren't upgraded.|  
 
  `ReportingSiteCode`  
  Data type: `String`  

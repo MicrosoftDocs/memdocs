@@ -3,14 +3,14 @@ title: Configure and Deploy Updates
 titleSuffix: Configuration Manager
 description: Learn how to use the Configuration Manager SDK to configure and deploy software updates
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: bd5be2ec-0db9-4bdb-adc6-452c2103b5b4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

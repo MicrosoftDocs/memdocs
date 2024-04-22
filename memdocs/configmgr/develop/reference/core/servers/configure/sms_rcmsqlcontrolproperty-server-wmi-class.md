@@ -3,14 +3,14 @@ title: SMS_RcmSqlControlProperty Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_RcmSqlControlProperty Windows Management Instrumentation class is an SMS Provider server class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6ebd8c91-7e3a-446d-b7bb-53bc8fe7ba8e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

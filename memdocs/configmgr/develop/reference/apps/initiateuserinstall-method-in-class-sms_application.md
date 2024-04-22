@@ -3,14 +3,14 @@ title: InitiateUserInstall Method
 titleSuffix: Configuration Manager
 description: InitiateUserInstall method is reserved for future use in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 955b71e0-6890-4cae-8ce1-9d3e3b5d78fe
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

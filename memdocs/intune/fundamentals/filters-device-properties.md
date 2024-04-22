@@ -7,19 +7,18 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 02/21/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -43,6 +42,9 @@ When you create a filter, you enter the app or device properties to use in your 
 Advanced rule editing is also available. You can use common operators, such as `and`, `contains`, and `startsWith` to create expressions. These expressions are saved and used in your filter.
 
 This article describes the different [managed device properties](#managed-device-properties), [managed app properties](#managed-app-properties), and [operators](#supported-operators) you can use in your filters, and gives examples.
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Managed device properties
 
@@ -85,12 +87,16 @@ You can use the following device properties in your managed device filter rules:
 
 - **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
+  For iOS/iPadOS and macOS devices, use the model, not the product name. Only the model is recognized for Apple devices. For example, for iPhone 8 devices, enter the model as `iPhone 8`.
+  
   Examples:
 
   - `(device.model -eq "Surface Book 3")`
   - `(device.model -in ["Surface Book 3", "Surface Book 2"])`
   - `(device.model -startsWith "Surface Book")`
-
+  - `(device.model -startsWith "MacBookPro")`
+  - `(device.model -startsWith "iPhone 8")`
+    
   This property applies to:
 
   - Android device administrator
@@ -187,7 +193,7 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
-- **`deviceTrustType` (Azure AD Join type)**: Create a filter rule based on the device's Azure AD Join type. Choose between Azure AD Join, Hybrid Azure AD, Azure AD registered or unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
+- **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Azure AD joined, Azure AD registered, Hybrid Azure AD joined,  or Unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
 
   Examples:
 
@@ -200,6 +206,9 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
+  > [!NOTE]
+  > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune filters article apply to Intune. They don't apply to Microsoft Entra ID.
+ 
 - **`operatingSystemSKU` (Operating System SKU)**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
@@ -267,61 +276,28 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - **`deviceManagementType` (Device Management Type)**: On Intune enrolled devices, create a filter rule based on the Intune device management type. Devices must be Intune enrolled to use this app property. Select from the following values using the `-eq` and `-ne` operators: 
 
-  - `Unmanaged`
-
-    This property applies to:
-
-    - Android
-    - iOS/iPadOS
-
-  - `Managed`
-
-    This property applies to:
-
-    - iOS/iPadOS
-
-  - `Android device administrator`
-
-    This property applies to:
-
-    - Android
-
-  - `AOSP userless devices`
-
-    This property applies to:
-
-    - Android
-
-  - `AOSP user-associated devices`
-
-    This property applies to:
-
-    - Android
-
-  - `Corporate-owned dedicated devices with Azure AD Shared mode`
-
-    This property applies to:
-
-    - Android
-
-  - `Corporate-owned fully managed`
-
-    This property applies to:
-
-    - Android
-
-  - `Personal-owned work profile`
-
-    This property applies to:
-
-    - Android
+  | Value | Supported platforms |
+  |-----------|------------------------|
+  | `Unmanaged` | Android <br/>iOS/iPadOS |
+  | `Managed`   | iOS/iPadOS |
+  | `Android device administrator` | Android |
+  | `Android Enterprise` | Android |
+  | `AOSP userless devices` | Android |
+  | `AOSP user-associated devices` | Android |
+  | `Corporate-owned dedicated devices with Azure AD Shared mode` | Android |
 
   Example:
 
   - `(app.deviceManagementType -eq "Unmanaged")`
+
+  This property applies:
+
+  - Android
+  - iOS/iPadOS
 
 - **`deviceManufacturer` (Manufacturer)**: Create a filter rule based on the client reported device manufacturer. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -334,6 +310,7 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - **`deviceModel` (Model)**: Create a filter rule based on the client reported device model. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -347,6 +324,7 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - **`osVersion` (OS Version)**: Create a filter rule based on the client reported operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -360,10 +338,11 @@ You can use the following app properties in your managed app filter rules:
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 ## Advanced rule editing
 
-When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar to Azure AD dynamic groups: `([entity].[property name] [operation] [value])`.
+When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar to Microsoft Entra dynamic groups: `([entity].[property name] [operation] [value])`.
 
 ### What you need to know
 

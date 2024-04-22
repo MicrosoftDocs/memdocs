@@ -2,7 +2,7 @@
 # required metadata
 
 title: High-level architecture for Microsoft Intune
-description: This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Azure Active Directory.
+description: This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Microsoft Entra ID.
 keywords:
 ms.author: erikre
 author: erikre
@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 3b992f64-fe34-4270-9730-bc6c65c308ed
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid: 3b992f64-fe34-4270-9730-bc6c65c308ed
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: davidra
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,8 +30,8 @@ ms.collection:
 - triage
 ---
 # High-level architecture for Microsoft Intune
-This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Azure Active Directory.  
+This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Microsoft Entra ID.  
 
-:::image type="content" source="./media/high-level-architecture/intunearchitecture_wh.svg" alt-text="High-level architectural diagram for Microsoft Intune"  lightbox="./media/high-level-architecture/intunearchitecture_wh.png" :::
+:::image type="content" source="./media/high-level-architecture/intunearchitecture_wh.png" alt-text="High-level architectural diagram for Microsoft Intune"  lightbox="./media/high-level-architecture/intunearchitecture_wh.png" :::
 
 <!-- [Image with dark contrast](./media/intunearchitecture.svg) -->

@@ -3,14 +3,14 @@ title: SMS_ConfigurationPolicy Class
 titleSuffix: Configuration Manager
 description: The SMS_ConfigurationPolicy Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the desired values of settings declared in a subclass of SMS_SettingsDefinitionBase.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e962a42b-2100-4140-a53e-e290a92117a1
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

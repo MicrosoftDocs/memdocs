@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 12/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 #ROBOTS:
 #audience:
-ms.reviewer: chrisbal
+ms.reviewer: anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,7 +29,7 @@ ms.collection:
 
 # Use custom settings for Android Enterprise devices in Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your Android Enterprise personally owned devices with a work profile using a "custom profile". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your Android Enterprise personally owned devices with a work profile using a custom profile. Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 This feature applies to:
 
@@ -50,11 +50,11 @@ This article shows you how to create a custom profile for Android Enterprise dev
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following settings:
 
     - **Platform**: Select **Android Enterprise**.
-    - **Profile**: Select **Personally-owned work profile** > **Custom**.
+    - **Profile type**: Select **Personally-owned work profile** > **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -103,11 +103,11 @@ This article shows you how to create a custom profile for Android Enterprise dev
 In this example, you create a custom profile that restricts copy and paste actions between work and personal apps on Android Enterprise devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following settings:
 
     - **Platform**: Select **Android Enterprise**.
-    - **Profile**: Select **Personally-owned work profile** > **Custom**.
+    - **Profile type**: Select **Personally-owned work profile** > **Custom**.
 
 4. In **Basics**, enter the following properties:
 
@@ -131,7 +131,7 @@ In this example, you create a custom profile that restricts copy and paste actio
 
     After you enter the settings, your environment looks similar to the following image:
 
-    :::image type="content" source="./media/custom-settings-android-for-work/custom-policy-afw-copy-paste.png" alt-text="You can add more OMA-URI values, and export the values for Android Enterprise personally owned devices with a work profile in Microsoft Intune.":::
+    :::image type="content" source="./media/custom-settings-android-for-work/custom-policy-afw-copy-paste.png" alt-text="Screenshot that shows you can add more OMA-URI values, and export the values for Android Enterprise personally owned devices with a work profile in Microsoft Intune.":::
 
 8. Select **Next**.
 9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).

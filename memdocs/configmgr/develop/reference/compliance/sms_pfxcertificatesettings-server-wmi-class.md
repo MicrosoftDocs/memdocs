@@ -3,14 +3,14 @@ description: Article outlining how to use the SMS_PfxCertificateSettings in Conf
 title: SMS_PfxCertificateSettings Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e04ba594-ce7a-4f9d-ac0f-893c3374d257
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

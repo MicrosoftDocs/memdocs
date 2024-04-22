@@ -3,14 +3,14 @@ title: AddAssociation Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the AddAssociation WMI class method adds the computer association between two system resources used in state migration.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fa65a143-b6f7-4951-9e0b-2ff874509483
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

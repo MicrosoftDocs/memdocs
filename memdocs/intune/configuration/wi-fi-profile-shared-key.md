@@ -2,17 +2,16 @@
 # required metadata
 
 title: Create WiFi profile with preshared key in Microsoft Intune
-description: Use a custom profile to create a Wi-Fi profile with a preshared key, and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
+description: Use a custom profile to create a Wi-Fi profile with a preshared key (PSK), and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 01/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,9 +30,13 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Use a custom device profile to create a WiFi profile with a preshared key in Intune
+# Use a custom device profile to create a WiFi profile with a preshared key using Intune
 
-Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi profile using a preshared key. To create the profile, use the **Custom device profiles** feature within Intune. This article also includes some examples of how to create an EAP-based Wi-Fi profile.
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
+Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi device configuration policy using a preshared key.
+
+To create the profile, use the **Custom device profiles** feature within Intune.
 
 This feature applies to:
 
@@ -42,31 +45,39 @@ This feature applies to:
 - Windows
 - EAP-based Wi-Fi
 
+You add Wi-Fi and PSK information in an XML file. Then, you add the XML file to a custom device configuration policy in Intune. When the policy is ready, you assign the policy to your devices. The next time the device checks in, the policy is applied, and a Wi-Fi profile is created on the device.
+
+This article shows you how to create the policy in Intune, and includes an XML example of an EAP-based Wi-Fi policy.
+
 > [!IMPORTANT]
 >
 > - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
 > - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
 
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+
 ## Before you begin
 
-- It may be easier to copy the code from a computer that connects to that network, as described in [Create the XML file from an existing Wi-Fi connection](#create-the-xml-file-from-an-existing-wi-fi-connection) (in this article).
+- It might be easier to copy the XML syntax from a computer that connects to that network, as described in [Create the XML file from an existing Wi-Fi connection](#create-the-xml-file-from-an-existing-wi-fi-connection) (in this article).
 - You can add multiple networks and keys by adding more OMA-URI settings.
 - For iOS/iPadOS, use Apple Configurator on a Mac station to set up the profile.
-- PSK requires a string of 64 hexadecimal digits, or a passphrase of 8 to 63 printable ASCII characters. Some characters, such as asterisk ( * ), aren't supported.
+- PSK requires a string of 64 hexadecimal digits, or a passphrase of 8 to 63 printable ASCII characters. Some characters, such as asterisk (`*`), aren't supported.
 
 ## Create a custom profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Choose your platform.
-    - **Profile**: Select **Custom**. Or, select **Templates** > **Custom**.
+    - **Profile type**: Select **Custom**. Or, select **Templates** > **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile for Android DA**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Android-Custom Wi-Fi profile**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -80,11 +91,11 @@ This feature applies to:
         - **For Windows**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
         > [!NOTE]
-        > 
-        > - Be sure to include the dot character at the beginning.
+        >
+        > - Be sure to include the period character at the beginning of the OMA-URI value.
         > - If the SSID has a space, then add an escape space `%20`.
 
-        SSID is the SSID for which you're creating the policy. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
+        SSID (Service Set Identifier) is your Wi-Fi network name that you're creating the policy for. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
     4. **Data Type**: Select **String**.
 
@@ -114,11 +125,11 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 
 ### What you need to know
 
-- `<protected>false</protected>` must be set to **false**. When **true**, it could cause the device to expect an encrypted password, and then try to decrypt it; which may result in a failed connection.
+- `<protected>false</protected>` must be set to **false**. When **true**, it could cause the device to expect an encrypted password, and then try to decrypt it; which can result in a failed connection.
 
-- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows 10/11 devices may return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
+- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows 10/11 devices can return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
 
-- XML has special characters, such as the `&` (ampersand). Using special characters may prevent the XML from working as expected. 
+- XML has special characters, such as the `&` (ampersand). Using special characters can prevent the XML from working as expected.
 
 ### Example
 
@@ -130,7 +141,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 <nonBroadcast><true/false></nonBroadcast>
 <Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
 <Type of encryption> = Type of encryption used by the network, such as AES.
-<protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
+<protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which can result in a failed connection.
 <password> = Plain text of the password to connect to the network
 -->
 
@@ -166,7 +177,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 
 ### EAP-based Wi-Fi profile example
 
-The following example includes the XML code for an EAP-based Wi-Fi profile: The example is provided to show proper format and provide more details. It's only an example, and isn't intended as a recommended configuration for your environment.
+The following example includes the XML code for an EAP-based Wi-Fi profile. The example shows the proper format and provides more details. It's only an example, and isn't intended as a recommended configuration for your environment.
 
 ```xml
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -252,18 +263,16 @@ The following example includes the XML code for an EAP-based Wi-Fi profile: The 
 
 You can also create an XML file from an existing Wi-Fi connection. On a Windows computer, use the following steps:
 
-1. Create a local folder for the exported W-Fi- profiles, such as c:\WiFi.
+1. Create a local folder for the exported Wi-Fi profiles, such as c:\WiFi.
 2. Open up a command prompt as an administrator (right-click `cmd` > **Run as administrator**).
 3. Run `netsh wlan show profiles`. The names of all the profiles are listed.
 4. Run `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. This command creates a file named `Wi-Fi-YourProfileName.xml` in c:\Wifi.
 
-    - If you're exporting a Wi-Fi profile that includes a preshared key, add `key=clear` to the command:
+    - If you're exporting a Wi-Fi profile that includes a preshared key, add `key=clear` to the command. The `key=clear` parameter exports the key in plain text, which is required to successfully use the profile:
   
-        `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
+      `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
-        `key=clear` exports the key in plain text, which is required to successfully use the profile.
-
-    - If the exported Wi-Fi profile `<name></name>` element includes a space, then it might return a `ERROR CODE 0x87d101f4 ERROR DETAILS Syncml(500)` error when assigned. When this issue happens, the profile is listed in `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces`, and shows as a known network. But, it doesn't successfully display as managed policy in the "Areas managed by..." URI.
+    - If the exported Wi-Fi profile `<name></name>` element includes a space, then it might return an `ERROR CODE 0x87d101f4 ERROR DETAILS Syncml(500)` error when assigned. When this issue happens, the profile is listed in `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces`, and shows as a known network. But, it doesn't successfully display as managed policy in the "Areas managed by..." URI.
 
       To resolve this issue, remove the space.
 
@@ -276,10 +285,15 @@ After you have the XML file, copy and paste the XML syntax into OMA-URI settings
 
 - Before you deploy a Wi-Fi profile with PSK, confirm that the device can connect to the endpoint directly.
 
-- When rotating keys (passwords or passphrases), expect downtime and plan your deployments. Consider pushing new Wi-Fi profiles during non-working hours. Also, warn users that connectivity may be affected.
+- When rotating keys (passwords or passphrases), expect downtime and plan your deployments. You should:
 
-- For a smooth transition, be sure the end user's device has an alternate connection to the Internet. For example, the end user can switch back to Guest WiFi (or some other WiFi network) or have cellular connectivity to communicate with Intune. The extra connection allows the user to receive policy updates when the corporate WiFi Profile is updated on the device.
+  - Confirm the devices have an alternate connection to the Internet.
 
-## Next steps
+    For example, the end user can switch back to Guest WiFi (or some other WiFi network) or have cellular connectivity to communicate with Intune. The extra connection allows the user to receive policy updates when the corporate Wi-Fi profile is updated on the device.
+
+  - Push new Wi-Fi profiles during non-working hours.
+  - Warn users that connectivity might be affected.
+
+## Resources
 
 Be sure to [assign the profile](device-profile-assign.md), and [monitor](device-profile-monitor.md) its status.

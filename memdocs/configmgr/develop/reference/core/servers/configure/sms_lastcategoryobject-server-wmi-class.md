@@ -3,14 +3,14 @@ title: SMS_LastCategoryObject Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents the object that has this assignment as the last category assignment.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7d777ba2-006e-4b23-9f14-cfdd05ba16d5
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

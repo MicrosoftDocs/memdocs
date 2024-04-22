@@ -3,8 +3,8 @@ title: Enable TLS 1.2 on servers
 titleSuffix: Configuration Manager
 description: Information about how to enable Transport Layer Security (TLS) 1.2 for Configuration Manager site servers and remote site systems.
 ms.date: 05/04/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur

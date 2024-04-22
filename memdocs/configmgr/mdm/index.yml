@@ -7,8 +7,8 @@ metadata:
   title: Mobile device management
   titleSuffix: Configuration Manager
   description: Use Microsoft Intune and Configuration Manager to manage mobile devices in your organization, either on-premises or cloud-based
-  ms.prod: configuration-manager
-  ms.technology: configmgr-mdm
+  ms.subservice: mdm
+  ms.service: configuration-manager
   ms.topic: landing-page
   author: banreet
   ms.author: banreetkaur

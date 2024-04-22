@@ -2,18 +2,16 @@
 # required metadata
 
 title: Create a Windows Network Boundary profile in Microsoft Intune
-description: Add a Windows Network Boundary policy to add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers on Windows 10/11 devices in Microsoft Intune. Sites in this boundary are trusted by Microsoft Defender Application Guard in Microsoft Edge.
-keywords:
+description: Add a Windows Network Boundary policy to Windows devices using Microsoft Intune. Add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers to a device configuration policy. Sites in this boundary are trusted by Microsoft Defender Application Guard in Microsoft Edge.
+keywords: network boundary, ipv4, ipv6, windows, proxy server, ip range, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 01/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -31,7 +29,9 @@ ms.collection:
 
 # Use a network boundary to add trusted sites on Windows devices in Microsoft Intune
 
-When using Microsoft Defender Application Guard and Microsoft Edge, you can protect your environment from sites that aren't trusted by your organization. This feature is called a network boundary. It allows you to add network domains, IPV4 and IPv6 ranges, proxy servers, and more to your network boundary. Items in this boundary are trusted.
+When using Microsoft Defender Application Guard and Microsoft Edge, you can protect your environment from sites that your organization doesn't trust. This feature is called a network boundary. 
+
+In a network bound, you can add network domains, IPV4 and IPv6 ranges, proxy servers, and more. Microsoft Defender Application Guard in Microsoft Edge trusts sites in this boundary.
 
 In Intune, you can create a network boundary profile, and deploy this policy to your devices.
 
@@ -46,21 +46,22 @@ This article shows you how to create the profile, and add trusted sites.
 
 ## Before you begin
 
-This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/policy-csp-networkisolation).
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/policy-csp-networkisolation).
 
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Network boundary**.
+    - **Profile type**: Select **Templates** > **Network boundary**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows devices: Network boundary profile**.
+    - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows-Contoso network boundary**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -69,7 +70,7 @@ This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/poli
     - **Boundary type**: This setting creates an isolated network boundary. Sites in this boundary are considered trusted by Microsoft Defender Application Guard. Your options:
       - **IPv4 range**: Enter a comma-separated list of IPv4 ranges of devices in your network. Data from these devices is considered part of your organization, and is protected. These locations are considered a safe destination for organization data to be shared to.
       - **IPv6 range**: Enter a comma-separated list of IPv6 ranges of devices in your network. Data from these devices is considered part of your organization, and is protected. These locations are considered a safe destination for organization data to be shared to.
-      - **Cloud resources**: Enter a pipe-separated list of organization resource domains hosted in the cloud that you want protected.
+      - **Cloud resources**: Enter a pipe-separated (`|`) list of organization resource domains hosted in the cloud that you want protected.
       - **Network domains**: Enter a comma-separated list of domains that create the boundaries. Data from any of these domains is sent to a device, is considered organization data, and is protected. These locations are considered a safe destination for organization data to be shared to. For example, enter `contoso.sharepoint.com, contoso.com`.
       - **Proxy servers**: Enter a comma-separated list of proxy servers. Any proxy server in this list is at the internet-level, and not internal to the organization. For example, enter `157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59`.
       - **Internal proxy servers**: Enter a comma-separated list of internal proxy servers. The proxies are used when adding **Cloud resources**. They force traffic to the matched cloud resources. For example, enter `157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59`.
@@ -93,7 +94,7 @@ This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/poli
 
 The next time each device checks in, the policy is applied.
 
-## Next steps
+## Resources
 
 After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
 

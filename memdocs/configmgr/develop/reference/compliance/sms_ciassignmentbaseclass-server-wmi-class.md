@@ -3,14 +3,14 @@ title: SMS_CIAssignmentBaseClass Class
 titleSuffix: Configuration Manager
 description: The SMS_CIAssignmentBaseClass WMI class is an SMS Provider server class that serves as an abstract base class for the SMS_BaselineAssignment Server WMI Class and SMS_UpdatesAssignment Server WMI Class.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 8d6a9e6e-f315-4527-90e3-514611e3431a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

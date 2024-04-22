@@ -3,8 +3,8 @@ title: Manage publications
 titleSuffix: Configuration Manager
 description: Manage groups of software updates as a publication with System Center Updates Publisher
 ms.date: 04/29/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

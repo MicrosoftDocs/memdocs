@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 02/27/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 55db37c5-0da7-4d9c-8027-525afb1c6349
 Customer intent: As an Intune admin, I want to learn how to configure Slack to use Intune for EMM and app configuration..
 
@@ -22,7 +21,7 @@ Customer intent: As an Intune admin, I want to learn how to configure Slack to u
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -45,13 +44,13 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Prerequisites
 You'll need a test tenant with the following subscriptions for this tutorial:
-- Azure Active Directory Premium ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft Entra ID P1 or P2 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 - Intune subscription ([free trial](../fundamentals/free-trial-sign-up.md))
 
 You will also need a [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) plan.
 
 ## Configure your Slack Enterprise Grid plan
-Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructions](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) and [connect Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) as your Grid plan's identity provider (IDP).
+Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructions](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) and [connect Microsoft Entra ID](/azure/active-directory/saas-apps/slack-tutorial) as your Grid plan's identity provider (IDP).
 
 ## Sign in to Intune
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
@@ -88,7 +87,7 @@ Add an app configuration policy for the iOS/iPadOS Slack for EMM app.
 
 ### (Optional) Create an iOS device compliance policy
 Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for iOS/iPadOS devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on Android devices.
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance**, and then select **Create Policy**.
 2. Select **iOS/iPadOS** as the **Platform**. Then, click **Create**.
 3. In the **Basics** step, enter "iOS compliance policy test" as the **Name** and click **Next**.
 4. In the **Compliance settings**, under **Device Health** and next to **Jailbroken devices**, select **Block**.
@@ -137,7 +136,7 @@ Add an app configuration policy for Slack. App configuration policies for manage
 
 ### (Optional) Create an Android device compliance policy
 Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for Android devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on iOS/iPadOS devices.
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance** > **Create policy**.
 2. Select **Android Enterprise** as the **Platform** and select **Personally-owned work profile** as the **Profile type**. Then, click **Create**.
 3. In the **Basics** step, enter "Android Enterprise compliance policy test" as the **Name** and click **Next**.
 4. In the **Compliance settings**, under **Device Health** and next to **Rooted devices**, select **Block**.

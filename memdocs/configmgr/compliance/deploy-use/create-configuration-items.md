@@ -3,8 +3,8 @@ title: How to create configuration items
 titleSuffix: Configuration Manager
 description: Create and deploy configurations to devices that are managed by Configuration Manager and enrolled with Microsoft Intune.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth

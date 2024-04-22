@@ -3,14 +3,14 @@ title: "Configure Remote Tools Settings"
 titleSuffix: "Configuration Manager"
 description: "Learn how to use the Remote Tools Client Agent settings by modifying the necessary site control file settings."
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 4137849f-7cd8-4c97-bba8-747b59795af3
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

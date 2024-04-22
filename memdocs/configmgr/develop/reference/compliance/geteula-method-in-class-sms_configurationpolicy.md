@@ -3,14 +3,14 @@ title: GetEULA Method in Class SMS_ConfigurationPolicy
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the GetEULA Windows Management Instrumentation class method gets the localized Microsoft Software License Terms text of the configuration item.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 67749427-9cbb-4e53-b391-a872fca6fc16
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

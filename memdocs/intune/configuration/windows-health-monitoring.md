@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 11/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -44,14 +42,19 @@ This feature applies to:
 
 This article shows you how to create the profile, and enable the monitoring.
 
+## Before you begin
+
+- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, go to [What is Endpoint analytics?](../../analytics/overview.md).
+- If you use co-management, then to use this profile, the Device Configuration workload must be in Intune. For more information on these features, go to [What is co-management?](../../configmgr/comanage/overview.md) and [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
+
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Choose **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Windows health monitoring**.
+    - **Profile type**: Select **Templates** > **Windows health monitoring**.
 
     > [!NOTE]
     >
@@ -69,22 +72,20 @@ This article shows you how to create the profile, and enable the monitoring.
 6. Select **Next**.
 7. In **Configuration settings**, configure the following settings:
 
-    - **Health monitoring**: This setting turns on health monitoring to track Windows updates and events. Your options:
+    - **Health monitoring**: This setting turns on health monitoring to track events. Your options:
       - **Not configured**: Intune doesn't change or update this setting.
       - **Enable**: Event information is collected from the devices, and sent to Microsoft for analytics and insights.
       - **Disable**: Event information isn't collected from the devices.
 
-      [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
+      [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#allowdevicehealthmonitoring)
 
     - **Scope**: Choose the event information you want collected and evaluated. Your options:
-      - **Windows updates**: This option configures devices to send Windows Update data to Intune. This data is then used in a [compliance policy](../protect/windows-update-reports.md) that reports on Windows updates.
       - **Endpoint analytics**
-
-      [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)
+      [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#configdevicehealthmonitoringscope)
 
 8. Select **Next**.
 
-9. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+9. In **Assignments**, select the devices or device groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -96,8 +97,7 @@ This article shows you how to create the profile, and enable the monitoring.
 
 The next time each device checks in, the policy is applied.
 
-## Next steps
+## Related content
 
-After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
-
-[What is Endpoint analytics](../../analytics/overview.md)
+- After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
+- [What is Endpoint analytics](../../analytics/overview.md)

@@ -12,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -81,7 +79,7 @@ After the initial configuration is complete, the following process unfolds for e
 
 3. The end user unboxes the PC, powers it on, and goes through the initial Windows **out of box experience**. As part of this process, the end user connects the PC to a Wi-Fi network, and signs into their **work or school** account.
 
-4. After the user has authenticated to the enterprise's (or school's) Azure Active Directory, the work or school account is set up on the device. As part of this process, the PC is enrolled to MDM, which then provisions it as configured by the enterprise (in step 1). This configuration includes the FQDN of the operator's download server (SM-DP+).
+4. After the user has authenticated to the enterprise's (or school's) Microsoft Entra ID, the work or school account is set up on the device. As part of this process, the PC is enrolled to MDM, which then provisions it as configured by the enterprise (in step 1). This configuration includes the FQDN of the operator's download server (SM-DP+).
 
 5. After configuration is complete, the PC connects to the download server (SM-DP+) according to the standard eSIM download protocol. As part of this process, the download server (SM-DP+) receives and authenticates the EID of the PC. The download server (SM-DP+) looks up the eSIM profile for that EID (created in step 2) and downloads that eSIM profile to the PC.
 
@@ -110,18 +108,18 @@ If you're unsure that your devices support eSIM, then contact your device manufa
 
 After your mobile operator confirms that you need to create eSIM profiles on the download server (SM-DP+), go to Microsoft Intune and create a profile for the EIDs tied to the eSIM-capable Windows devices that you want to enable with eSIM.
 
-## Create an Azure AD device group
+## Create a Microsoft Entra device group
 
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
-> We recommend creating a static Azure AD device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
+> We recommend creating a static Microsoft Entra device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
 
 ## Create a profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create Profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. For the **Platform** field, select **Windows 10 and later**.
 
@@ -154,7 +152,7 @@ Also, before creating the profile, you need to have your group(s) set up. For mo
 
 ## Best practices & troubleshooting
 
-- Create a device Azure AD group that only includes the targeted eSIM devices. (Note: if the policy is deployed to a non-eSIM-capable device, the **Assignment Status** will display an Error.)
+- Create a device Microsoft Entra group that only includes the targeted eSIM devices. (Note: if the policy is deployed to a non-eSIM-capable device, the **Assignment Status** will display an Error.)
 
 - The current implementation only supports a single Server Name. Even if more Server Names are added, only the first one is used.
 

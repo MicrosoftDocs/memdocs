@@ -3,8 +3,8 @@ title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
 ms.date: 02/16/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg
@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz
 
 <!--5686290-->
 
-The cloud management gateway (CMG) supports many types of clients, but even with [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), these clients require a [client authentication certificate](../manage/cmg/configure-authentication.md#pki-certificate). This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate.
+The cloud management gateway (CMG) supports many types of clients, but even with [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), these clients require a [client authentication certificate](../manage/cmg/configure-authentication.md#pki-certificate). This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Microsoft Entra ID, and don't have a method to install a PKI-issued certificate.
 
 To overcome these challenges, Configuration Manager extends its device support by issuing its own authentication tokens to devices. To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](../manage/upgrade/test-client-upgrades.md#promote-a-new-client-to-production).
 
@@ -35,7 +35,7 @@ The Configuration Manager client together with the management point manage this 
 > [!NOTE]
 > These methods only support device-centric management scenarios.
 >
-> Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
+> Microsoft recommends joining devices to Microsoft Entra ID. Internet-based devices can use Microsoft Entra ID to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Microsoft Entra identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
 Make sure to **Enable clients to use a cloud management gateway** in the **Cloud services** group of client settings. Even with a site token, clients can't communicate with a CMG if client settings don't allow it. For more information, see [About client settings: Cloud services](about-client-settings.md#cloud-services).<!-- MEMDocs #540 -->
 
@@ -46,7 +46,7 @@ This method requires the client to first register with the management point on t
 The site enables this behavior by default.
 
 > [!NOTE]
-> With an HTTPS management point, the client needs to first register regardless of internet/intranet management point. The client needs to present a valid PKI-issued certificate, an Azure AD token, or a bulk registration token.
+> With an HTTPS management point, the client needs to first register regardless of internet/intranet management point. The client needs to present a valid PKI-issued certificate, a Microsoft Entra token, or a bulk registration token.
 
 ## Bulk registration token
 
@@ -70,7 +70,7 @@ To create a bulk registration token for use during client installation on intern
     `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
-    > For more information on this command line, see [Install and register the client using Azure AD identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity). This process is similar, just doesn't use the Azure AD properties.
+    > For more information on this command line, see [Install and register the client using Microsoft Entra identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity). This process is similar, just doesn't use the Microsoft Entra properties.
 
 To verify, review the following log file for a similar entry:<!-- bug 7357499 -->
 
@@ -154,4 +154,4 @@ You can't renew a bulk registration token. Once a bulk registration token expire
 
 - [Overview of cloud management gateway](../manage/cmg/overview.md)
 
-- [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md)
+- [Install and assign Configuration Manager clients using Microsoft Entra ID for authentication](deploy-clients-cmg-azure.md)

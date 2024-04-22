@@ -17,6 +17,6 @@ End users have a 1:1 relationship with their Cloud PC. It’s their own personal
 
 ### Creating a Cloud PC
 
-Cloud PCs are created automatically by the Windows 365 service when an end user in an appropriate Azure AD user group is assigned a Windows 365 license.
+Cloud PCs are created automatically by the Windows 365 service when an end user in an appropriate Microsoft Entra user group is assigned a Windows 365 license.
 
 Admins don't manually create Cloud PCs.

@@ -40,10 +40,15 @@ You have two ways to manage software updates on android:
 
 - Use Firmware Over-the-Air (FOTA), which works for some OEMs.
 
+    > [!NOTE]
+    > [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md) is required.
+    >
+    > If Zebra updated the available firmware list in the last 24 hours, the list of firmware available may take up to 24 hours to populate.
+
 - If FOTA isn't available you can use Device restrictions profiles, which work for all OEMs.
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Navigate to **Devices** > **Android** > **Configuration profiles** > **Device restrictions**.  
+    2. Navigate to **Devices** > **Android** > **Configuration profiles** > **Create** > **New policy** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device restrictions**.  
     3. Device restrictions profiles offer control over how the device handles over-the-air updates and allow you to set a freeze period for these updates.  
     > [!NOTE]
     > Not all device manufacturers support over-the-air updates. For more information, see [Corporate-owned Android Enterprise device restriction settings in Microsoft Intune](../configuration/device-restrictions-android-for-work.md)
@@ -56,7 +61,7 @@ In the context of FOTA, a deployment is an update policy that includes instructi
 
 In addition, Microsoft Intune supports FOTA update management for supported devices from the following manufacturers. Manufacturer-specific FOTA support may offer more controls beyond what Device restrictions profiles offer.  
 
-- **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md). This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+- **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md). 
 - **Samsung**: Go to [Samsung E-FOTA Update Management with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/samsung-e-fota-update-management-with-microsoft-endpoint-manager/ba-p/2002552)
 
 

@@ -3,8 +3,8 @@ title: Remote actions with co-management
 titleSuffix: Configuration Manager
 description: Run remote actions from Intune for co-managed devices
 ms.date: 11/08/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -45,7 +45,7 @@ The global consulting firm Avanade regularly uses remote actions to manage the d
 > *Our immediate win from having the Intune functionality was the ability to remotely reset Windows on a machine. This is important to us for lost or stolen machines, which is more common in our highly mobile workforce.*
 > *This is functionality that we otherwise would have had to build and maintain in a custom ConfigMgr package.*
 
-For more information on how to use these remote actions, see [Available device actions](../../intune/remote-actions/device-management.md#available-device-actions).
+For more information on how to use these remote actions, see [Available device actions](../../intune/remote-actions/device-management.md#available-remote-actions).
 
 ## Value proposition
 
@@ -94,7 +94,7 @@ For more information, see [Remotely restart devices with Intune](../../intune/re
 
 The **Fresh Start** device action removes any apps installed on a device running Windows 10, version 1703 or later. Fresh Start helps remove pre-installed (OEM) apps that are typically installed with a new device.
 
-If you choose not to retain user data, the device restores to its out-of-box state. It unenrolls from Azure AD and MDM.
+If you choose not to retain user data, the device restores to its out-of-box state. It unenrolls from Microsoft Entra ID and MDM.
 
 If you have predetermined standards regarding what apps should be on the device, then this action eliminates the ones that don't meet your criteria.
 

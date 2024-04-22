@@ -3,8 +3,8 @@ title: Choose what to migrate
 titleSuffix: Configuration Manager
 description: Learn which data you can migrate and which data you can't migrate to Configuration Manager current branch.
 ms.date: 12/29/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

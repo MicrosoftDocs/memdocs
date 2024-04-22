@@ -1,21 +1,21 @@
 ---
 title: SMS_ContextMethods Class
-description: The SMS_ContextMethods Windows Management Instrumentation (WMI) class is an abstract class, in Configuration Manager, that contains methods for caching WMI context qualifiers with the SMS Provider.
+description: The SMS_ContextMethods Windows Management Instrumentation (WMI) class is an abstract class in Configuration Manager that contains methods for caching WMI context qualifiers with the SMS Provider.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 92b831f5-d232-4c63-b5fe-0565d07cad83
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ContextMethods Server WMI Class
-The `SMS_ContextMethods` Windows Management Instrumentation (WMI) class is an abstract class, in Configuration Manager, that contains methods for caching WMI context qualifiers with the SMS Provider.  
+The `SMS_ContextMethods` Windows Management Instrumentation (WMI) class is an abstract class in Configuration Manager that contains methods for caching WMI context qualifiers with the SMS Provider.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -34,7 +34,7 @@ Class SMS_ContextMethods ();
 |[GetContextHandle Method in Class SMS_ContextMethods](../../../develop/reference/misc/getcontexthandle-method-in-class-sms_contextmethods.md)|Caches multiple context qualifiers within the SMS Provider. This allows applications to use a much smaller context object when making API calls to WMI.|  
 
 ## Properties  
- The `SMS_ContextMethods` class does not define any properties.  
+ The `SMS_ContextMethods` class doesn't define any properties.  
 
 ## Remarks  
  Class qualifiers for this class include:  

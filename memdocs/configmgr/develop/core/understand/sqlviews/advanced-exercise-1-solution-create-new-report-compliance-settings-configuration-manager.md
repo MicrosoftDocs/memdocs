@@ -3,14 +3,14 @@ title: "'Advanced exercise 1 solution: Create a new report for compliance settin
 titleSuffix: Configuration Manager
 description: Procedure to create the report in Advanced Exercise 1.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: b9ea9f33-258f-40d9-950c-4d8f06bab460
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
