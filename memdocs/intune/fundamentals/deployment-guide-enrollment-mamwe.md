@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2024
+ms.date: 04/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -42,7 +42,10 @@ MAM is available on the following platforms:
 - iOS/iPadOS
 - Windows
 
-This article provides recommendations on when to use MAM. It also includes an overview of the administrator and user tasks. For more specific information on MAM, see [Microsoft Intune app management](../apps/app-management.md).
+This article provides recommendations on when to use MAM. It also includes an overview of the administrator and user tasks. For more specific information on MAM, go to:
+
+- [Microsoft Intune app management](../apps/app-management.md)
+- [Data protection for Windows MAM](../apps/protect-mam-windows.md)
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
@@ -86,9 +89,9 @@ The specific tasks depend on how you tell users to install the apps.
 
 - To install the apps, users can:
 
-  - Go to the app store, and download the app.
   - Go to the app store, and download the Company Portal app. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). The Company Portal app authenticates the user. Users see a list of available apps, including required apps.
   - Go to the Company Portal web site at `portal.manage.microsoft.com`, and sign in with their organization credentials (`user@contoso.com`). After users sign in, they see a list of available apps, including required apps.
+  - Go to the app store, and download the apps they need. This option is for users who don't want to use the Company Portal app or web site. End users might also have to buy the app.
 
 - After the app is installed, they open the app, and are prompted to sign in with their organization credentials (`user@contoso.com`). When users sign in, they might have to restart the app. After the restart, the app data is "managed" by Intune.
 
