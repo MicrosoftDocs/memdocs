@@ -32,7 +32,7 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 
 ## Benefits of Enterprise App Management
 
-The benefits of using Enterprise App Management are the following:
+The Enterprise App Management provides the following benefits:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
 - **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog.
@@ -60,11 +60,11 @@ Also, Intune prefills the requirements that devices must meet before the app is 
 > [!IMPORTANT]
 > Microsoft recommends using the pre-populated fields containing specific commands and rules, however you can modify the pre-populated fields if needed.
 
-You can also configure app specific rules used to detect the presence of the Enterprise App Catalog app where you can choose to either manually configure the detection rules or use a custom script to detect the presence of the app before installing the app.
+You can also configure app specific rules used to detect the presence of the Enterprise App Catalog app. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app before installing the app.
 
 ## Self-updating apps
 
-The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, and will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
+The Enterprise App Catalog includes apps that self update. Intune ensures the app is at least at a target minimum version, and considers the app installed if the detected version of the app is at or above the minimum version. Self-updating apps update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
 
 > [!IMPORTANT]
 > Self-updating apps may require that your tenant has network rules configured to allow an update from the app vendor.
@@ -100,7 +100,7 @@ No SLA is currently available.
 
 ### How many applications are in the catalog?
 
-At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog. Additional apps will be available on an on-going basis.
+At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog. Additional apps are available on an on-going basis.
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
@@ -108,7 +108,7 @@ Graph API will be available soon after general availability.
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-No, the created app will remain at the version it was created at so the IT Pro can have full control over the experience.
+No, the created app remains at the version it was created at so the IT Pro can have full control over the experience.
 
 ### Can you get licensed applications from this catalog?
 
