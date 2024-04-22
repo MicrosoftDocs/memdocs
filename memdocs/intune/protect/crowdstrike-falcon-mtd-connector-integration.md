@@ -66,30 +66,9 @@ The CrowdStrike Falcon app authorization process consists of the following steps
 
 - Allow the CrowdStrike Falcon app to sign in using Microsoft Entra SSO.
 
-## To set up CrowdStrike Falcon for Mobile integration
+## Set up CrowdStrike Falcon for Mobile integration
 
-<!-- This procedural guidance, or link to CrowdStrike docs, is pending.>
-
-1. Go to [CrowdStrike Falcon for Mobile console](https://falcon.crowdstrike.com) and sign in with your credentials.
-
-2. Select on the **Settings** tab.
-
-3. Choose **Device management**, then **Settings**.
-
-4. Choose **Microsoft Intune** from the **MDM Service** drop-down list.
-
-5. Once you set Microsoft Intune as the MDM Service, the **Microsoft Intune Configuration** window pops up, choose the **Add to my organization** for each device platform: iOS/iPadOS, Android and Windows to authorize CrowdStrike Falcon for Mobile to communicate with Intune and Microsoft Entra ID.
-
-   > [!IMPORTANT]
-   >
-   > You must add all device platforms to proceed to the next step.
-
-6. Choose **Accept** to authorize the CrowdStrike Falcon app to communicate with Intune and Microsoft Entra.
-
-7. Once you enabled all device platforms, you need to enter the Microsoft Entra security group.
-
-8. Choose **Verify**, once the Microsoft Entra security group is successfully verified, choose **Save**.
--->
+The integration steps are documented by CrowdStrike at [Integrating Falcon for Mobile with Microsoft Intune for remediation actions](https://falcon.crowdstrike.com/documentation/page/odf8977b/integrating-falcon-for-mobile-with-microsoft-intune-for-remediation-actions) in the CrowdStrike documentation. You must sign in with your CrowdStrike credentials before you can access this content.
 
 ## Next steps
 

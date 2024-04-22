@@ -90,15 +90,12 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 ### CrowdStrike Falcon for Mobile app configuration policy
 
-- **Android Enterprise**:
+To configure **Android Enterprise** and **iOS** app configuration policies for CrowdStrike Falcon, see [Integrating Falcon for Mobile with Microsoft Intune for remediation actions](https://falcon.crowdstrike.com/documentation/page/odf8977b/integrating-falcon-for-mobile-with-microsoft-intune-for-remediation-actions) in the CrowdStrike documentation. You must sign in with your CrowdStrike credentials before you can access this content.
 
-  See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the CrowdStrike Falcon for Mobile app configuration policy.
+For general guidance about Intune app configuration policies, see the following articles in the Intune documentation:
 
-  For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
-
-- **iOS**:
-
-  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the CrowdStrike Falcon for Mobile app configuration policy.
+- [Android managed devices](../apps/app-configuration-policies-use-android.md)
+- [iOS managed devices](../apps/app-configuration-policies-use-ios.md)
 
 ### Jamf Trust app configuration policy
 
