@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/08/2024
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -143,19 +143,30 @@ There are various applications available in the Enterprise App Catalog. To view 
 
 The following table of Enterprise Apps is available within Intune:
 
-| App |
+| Apps |
 |---|
 | 7-Zip |
+| ActiveState Software Komodo Edit |
 | Amazon AWS Tools for Windows |
+| Amazon AWS VPN Client |
 | Amazon Corretto 16 |
+| Amazon Corretto 19 |
+| Amazon Corretto 8 |
 | Amazon Kindle |
 | Android Studio 2022 |
 | Android Studio 3 |
 | Android Studio 4 |
+| App Dynamic AirServer Universal |
 | Araxis Merge |
+| Arduino IDE |
 | Artweaver Free |
+| ASAP Utilities |
 | Atomi Systems ActivePresenter |
 | Audacity |
+| Autodesk Single Signon Component |
+| AVS Media Player |
+| Azure Functions Core Tools |
+| Belgium e-ID viewer |
 | Beyond Compare |
 | Blender |
 | BlueJeans 2 |
@@ -171,57 +182,120 @@ The following table of Enterprise Apps is available within Intune:
 | Citrix Receiver |
 | Citrix Workspace app |
 | Citrix Workspace app LTSR |
+| Cloudflare WARP |
 | CMake |
-| Dell Command Update (Windows Universal   Application) |
+| DAX Studio |
+| DB Browser for SQLite |
+| DBeaver Community |
+| Dell Command Update (Windows Universal Application) |
 | Docker Desktop |
 | draw.io Desktop |
 | Duo Desktop |
 | Eclipse Temurin JDK with Hotspot 11 (LTS) |
+| Eclipse Temurin JDK with Hotspot 15 |
+| Eclipse Temurin JDK with Hotspot 16 |
+| Eclipse Temurin JDK with Hotspot 17 (LTS) |
+| Eclipse Temurin JDK with Hotspot 18 |
 | Eclipse Temurin JDK with Hotspot 19 |
+| Eclipse Temurin JDK with Hotspot 8 (LTS) |
 | Eclipse Temurin JRE with Hotspot 11 (LTS) |
+| Eclipse Temurin JRE with Hotspot 15 |
+| Eclipse Temurin JRE with Hotspot 16 |
+| Eclipse Temurin JRE with Hotspot 17 (LTS) |
+| Eclipse Temurin JRE with Hotspot 18 |
 | Eclipse Temurin JRE with Hotspot 19 |
+| Eclipse Temurin JRE with Hotspot 8 (LTS) |
 | Egnyte Connect Desktop App |
 | Egnyte WebEdit |
 | Evernote |
+| FastStone Soft Capture |
+| FastStone Soft Image Viewer |
 | Foxit PDF Editor 11 |
 | Foxit PDF Editor 12 |
 | Foxit PDF Reader |
 | Frame App |
 | Free Countdown Timer |
+| FXHOME HitFilm Express |
+| Gadwin PrintScreen |
+| Gadwin PrintScreenPro |
+| GitHub CLI |
+| GoodSync 12 |
 | Google Chrome for Business |
 | Google Drive |
+| Google Drive File Stream |
+| Gpg4win |
+| HeidiSQL |
+| IcedTea-Web |
 | Inkscape |
+| IronPython 2.7 |
 | JAM Software TreeSize Free |
 | KeePass Password Safe (Classic Edition) |
 | KeePassXC |
 | Lansweeper |
 | Lenovo Quick Clean |
+| Logi Tune |
+| Logitech SetPoint |
 | LogMeIn GoToMeeting IT Installer |
+| MariaDB Server 10.4 |
+| MariaDB Server 10.6 |
+| MariaDB Server 10.9 |
+| Mattermost Desktop |
+| Mendeley Desktop |
+| Mendeley Reference Manager |
 | Microsoft .NET Runtime 6.0 |
+| Microsoft .NET Runtime 7.0 |
+| Microsoft ASP.NET Core Runtime 7.0 |
 | Microsoft Azure CLI |
 | Microsoft Azure Storage Explorer |
 | Microsoft Power BI Desktop |
 | Microsoft PowerShell Core |
 | Microsoft PowerToys |
 | Microsoft Skype for Desktop |
-| Microsoft Surface Diagnostic Toolkit for   Business |
+| Microsoft SQL Server 2016 Report Builder |
+| Microsoft Surface Diagnostic Toolkit for Business |
 | Microsoft Visual C++ 2008 Redistributable |
-| Microsoft Visual C++ 2015-2022  Redistributable |
+| Microsoft Visual C++ 2015-2022 |
 | Microsoft Visual Studio Code |
+| Microsoft Windows Admin Center |
 | Mozilla Firefox |
+| Mozilla Firefox ESR 102 |
+| Mozilla FrontMotion Firefox Community Edition |
+| Mozilla FrontMotion Firefox Community Edition ESR |
+| Mozilla SeaMonkey |
 | Mozilla Thunderbird |
+| MuseScore 3 |
 | Nessus Agent 10 |
+| NetLogo |
+| Node.js 15 |
+| Node.js 17 |
+| Node.js 18 LTS |
+| Node.js 19 |
+| NoMachine |
 | Notepad++ |
 | NVIDIA GeForce Experience |
+| OpenJDK 11 |
+| OpenJDK 16 |
+| OpenJDK 17 |
 | OpenShot Video Editor |
 | OpenVPN |
+| OpenWebStart |
 | Oracle Java Runtime Environment Version 8 |
+| Oracle Java SE Development Kit 17 |
+| Oracle MySQL Installer 8 for Windows |
 | Parallels Client 18 |
+| PeaZip |
+| Pexip Infinity Connect |
+| pgAdmin 4 |
+| PicPick |
 | Piriform CCleaner |
+| Piriform CCleaner Slim |
 | Poll Everywhere |
 | Poly Lens Desktop App |
+| Project Plan 365 |
+| Project Viewer 365 |
 | Python 3.10 |
 | Python 3.11 |
+| Python 3.9 |
 | QNAP Qsync |
 | R for Windows |
 | Rarlab WinRAR |
@@ -230,23 +304,53 @@ The following table of Enterprise Apps is available within Intune:
 | Royal TS 6 |
 | Royal TS 7 |
 | ScreenToGif |
+| Sejda PDF Desktop |
 | Simon Tatham Putty |
+| SnapGene Viewer |
+| Snapmaker Luban |
+| Squirrels Reflector 3 |
+| Squirrels Reflector 4 |
+| SRWare Iron |
+| SURF eduVPN Client |
 | SyncBackFree |
+| Tabular Editor 2 |
+| Tailscale |
 | TeamSpeak client |
 | TechSmith Snagit 2019 |
 | TechSmith Snagit 2020 |
 | TechSmith Snagit 2021 |
 | TechSmith Snagit 2023 |
 | TechSmith Snagit 2024 |
+| TGRMN Software Bulk Rename Utility |
+| Tidio |
 | TightVNC |
 | TortoiseSVN |
 | TortoiseSVN ipv6 |
 | UltraViewer |
+| VariCAD |
 | voidtools Everything |
 | voidtools Everything Lite |
+| Waterfox Classic |
 | WinSCP |
 | WireGuard |
+| Xamarin Mono for Windows |
+| XnSoft XnView Extended |
+| XnSoft XnView Standard |
+| Yubico Authenticator |
 | Zoom Client for Meetings |
+| Zoom Plugin for Microsoft Outlook |
+| Zulu JDK 11 (LTS) |
+| Zulu JDK 13 (MTS) |
+| Zulu JDK 15 (MTS) |
+| Zulu JDK 16 (STS) |
+| Zulu JDK 17 (LTS) |
+| Zulu JDK 18 (STS) |
+| Zulu JDK 8 (LTS) |
+| Zulu JRE 11 (LTS) |
+| Zulu JRE 13 (MTS) |
+| Zulu JRE 15 (MTS) |
+| Zulu JRE 17 (LTS) |
+| Zulu JRE 8 (LTS) |
 
 ## Next steps
 
