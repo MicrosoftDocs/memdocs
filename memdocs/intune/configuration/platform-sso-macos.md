@@ -334,7 +334,7 @@ When you configure Platform SSO, you might see the following errors:
 
   Multiple SSO extension payloads are applying to the device and are in conflict. There should only be one extension profile on the device, and that profile should be the settings catalog profile.
 
-  If you previously created an SSO app extension profile using the Device Features template, then unassign that profile. The settings catalog profile the only profile that should be assigned to the device.
+  If you previously created an SSO app extension profile using the Device Features template, then unassign that profile. The settings catalog profile is the only profile that should be assigned to the device.
 
 ## Related articles
 
