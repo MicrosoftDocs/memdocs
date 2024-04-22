@@ -32,6 +32,9 @@ ms.collection:
 
 # Set up account driven Apple User Enrollment  
 
+> [!IMPORTANT]
+> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+
 Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment profile silently installs and Intune policies are applied. Intune uses just-in-time registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.      
 
 This article describes how to set up account driven Apple User Enrollment in Microsoft Intune. You will:   
