@@ -1,6 +1,31 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/enrollment/android-fully-managed-security-settings.md",
+      "redirect_url": "/mem/intune/protect/device-restrictions-android-for-work",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/android-work-profile-security-settings.md",
+      "redirect_url": "/mem/intune/protect/compliance-policy-create-android-for-work",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/android-app-configuration-policies.md",
+      "redirect_url": "/mem/intune/apps/app-configuration-policies-use-android",
+      "redirect_document_id": false 
+    },       
+    {
+      "source_path": "memdocs/intune/enrollment/device-enrollment-restrictions.md",
+      "redirect_url": "/mem/intune/enrollment/enrollment-restrictions-set",
+      "redirect_document_id": false 
+    },    
+    {
+      "source_path": "memdocs/intune/enrollment/android-configuration-framework.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-android",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/fundamentals/security-copilot.md",
       "redirect_url": "/mem/intune/copilot/security-copilot",
       "redirect_document_id": true 
@@ -2389,6 +2414,11 @@
     {
       "source_path": "memdocs/intune/protect/wandera-mtd-connector-integration.md",
       "redirect_url": "/mem/intune/protect/jamf-mtd-connector-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows-365/enterprise/troubleshoot-citrix-hdx-plus.md",
+      "redirect_url": "/windows-365/enterprise/troubleshoot-partner-connector",
       "redirect_document_id": false
     }
   ]

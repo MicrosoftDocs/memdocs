@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 04/11/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -95,7 +94,9 @@ Intune enrollment with Apple device enrollment has the following known issues an
 
 * If your organization uses Microsoft Defender for Endpoint, that app can't be the first app users sign in to after enrollment. JIT registration and compliance remediation may not work as expected if users authenticate in Microsoft Defender for Endpoint first. Users should authenticate in another Microsoft app to complete enrollment. We are actively working to fix this experience.   
 
-* Web based device enrollment can be used without JIT registration. We recommend using the Web Company Portal instead of the iOS Company Portal to deploy apps to the device. If you are planning to use the iOS Company Portal for app deployment, MS Authenticator and the SSO extension policy must be sent to the device post web enrollment.  
+* Web-based device enrollment can be used without JIT registration. We recommend using the web version of Company Portal instead of Company Portal for iOS to deploy apps to the device. If you are planning to use the Company Portal app for app deployment, MS Authenticator and the SSO extension policy must be sent to the device post web enrollment. 
+
+* There is a known issue with web-based enrollment and JIT registration that prevents the Company Portal app from recognizing enrolled devices. When a user tries to sign in to Company Portal for iOS on a device that doesn't have the SSO extension policy, Company Portal is unable to determine that the device has been enrolled. We are actively working to resolve this issue. To avoid this issue, we recommend deploying the SSO extension policy to enrolling devices. Or, as a temporary workaround, you can deploy a web clip for the web version of Company Portal, as described under [Best practices for web enrollment](web-based-device-enrollment-ios.md#best-practices).    
 
 ## Next steps  
 

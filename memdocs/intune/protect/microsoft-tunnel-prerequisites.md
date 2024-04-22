@@ -10,8 +10,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -46,12 +44,16 @@ After configuring the prerequisites, we recommend you run the [readiness tool](#
 
 The following sections detail the prerequisites for the Microsoft Tunnel, and provide guidance on using the readiness tool.
 
+> [!NOTE]
+> Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
+
+
 ## Linux server
 
 Set up a Linux based virtual machine or a physical server on which to install the Microsoft Tunnel Gateway.
 
 > [!NOTE]
-> Only the operating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list.
+> Only the operating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list. Keep OS up to date with security updates as well.
 
 - **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require:
 
@@ -380,7 +382,6 @@ You can configure Podman to use the proxy to download (pull) updated images for 
    [Service]
    Environment="http_proxy=[address]"
    Environment="https_proxy=[address]"
-   PassEnvironment=http_proxy, https_proxy
    ```
 
 3. Next, run the following at the command prompt:
@@ -396,7 +397,6 @@ You can configure Podman to use the proxy to download (pull) updated images for 
    ```
    Environment="http_proxy=address:port"
    Environment="https_proxy=address:port"
-   PassEnvironment=http_proxy https_proxy
    ```
 
 ### Update the proxy server in use by the tunnel server

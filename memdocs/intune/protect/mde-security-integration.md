@@ -12,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
  
 #ROBOTS:
@@ -510,6 +508,8 @@ Because a Microsoft Entra ID trust is required, domain controllers aren't curren
 Security settings management doesn't support Server core installations due to Server core platform limitations.
 
 ### PowerShell restrict mode
+
+Powershell needs to be enabled.
 
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 

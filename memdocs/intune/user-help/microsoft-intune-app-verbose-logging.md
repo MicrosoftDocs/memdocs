@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 03/04/2024
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 
 searchScope:
  - User help

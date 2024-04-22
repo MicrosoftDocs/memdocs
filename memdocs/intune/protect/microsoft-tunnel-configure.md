@@ -10,8 +10,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -446,6 +444,7 @@ With prerequisites in place, you can then use the [installation script procedure
 
 Use of a rootless Podman container requires your environment meet the following prerequisites, which are in *addition* to the default [Microsoft Tunnel prerequisites](../protect/microsoft-tunnel-prerequisites.md):
 
+
 **Supported platform**:
 
 - The Linux server must run Red Hat (RHEL) 8.8 or later.
@@ -453,6 +452,9 @@ Use of a rootless Podman container requires your environment meet the following 
 
 - The rootless container must be installed under the **/home** folder.
 - The **/home** folder must have a minimum of 10 GB of free space.
+
+**Throughput**
+  - The peak throughput should not exceed 230Mbps
 
 **Network**:
 The following network settings, which are not available in a rootless namespace, must be set in **/etc/sysctl.conf**:
@@ -479,11 +481,11 @@ To support an outbound proxy for the rootless user, edit **/etc/profile.d/http_p
 
 To install Microsoft Tunnel to a rootless Podman container, use the following command line to begin the installation script. This command line sets **mst_rootless_mode** as an environment variable and replaces use of the default installation command line during *step 2* of the [installation procedure](#use-the-script-to-install-microsoft-tunnel):
 
-- `chmod mst_rootless_mode=1 ./mstunnel-setup`
+- `mst_rootless_mode=1 ./mstunnel-setup`
 
 ## Uninstall the Microsoft Tunnel
 
-To uninstall the product, run **./mst-cli uninstall** from the Linux server as root.
+To uninstall the product, run **mst-cli uninstall** from the Linux server as root.
 
 After the product is uninstalled, delete the corresponding server record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
 

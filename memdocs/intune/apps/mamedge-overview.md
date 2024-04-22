@@ -54,8 +54,8 @@ The target audience for this content includes:
 This guide provides the following content:
 
 1. **Microsoft Entra conditional access with Microsoft Edge for Business** - Create an Entra conditional access policy and Intune app protection policy for browsing on Android, iOS and Windows.
-2. **App protection policies for Microsoft Edge for Business** - Ensure secure access and usage of enterprise applications when implementing an app protection policies.
-3. **Integrate Mobile Threat Defense** - Enhance the overall security posture of your organization by using the secure enterprise browser to integrate with the Windows Security Center or any MTD Partners.
+2. **App protection policies for Microsoft Edge for Business** - Ensure secure access and usage of enterprise applications when implementing app protection policies.
+3. **Integrate Mobile Threat Defense** - Enhance the overall security posture of your organization by using the secure enterprise browser to integrate with the Windows Security Center, Microsoft Defender or any MTD Partners.
 4. **App configuration policies for Microsoft Edge for Business** - Understand Microsoft Edge for Business and Microsoft Application Management can be used to protect your organization from various cyber threats.
 5. **Microsoft Edge for Business end user experience** - Understand how security measures impact user interaction for Microsoft Edge for Business.
 6. **Troubleshooting Examples:** - A series of examples on how to troubleshoot App Protection Policies and a list of FAQ.
@@ -87,7 +87,7 @@ Microsoft Edge for Business offers a multitude of advantages:
 **Centralized management:** With Microsoft Intune, managing a Microsoft Edge for Business policy experience is not complex. This centralized management system simplifies the process, saving time and resources.
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to corporate data on personal devices. This capability uses the following functionality:
-- Intune application configuration policies (ACP) to customize the organization user experience.
+- Intune application configuration policies (ACP) with Microsoft Edge for Business. Using ACP allows you to leverage Edge’s settings to better enable a secure browsing experience.
 - Intune application protection policies (APP) to secure organization data and ensure the client device is healthy.
 - Mobile Threat Protection (MTP) integrated with Intune APP to detect local health threats on personal Windows and all mobile devices.
 - Microsoft Entra conditional access to ensure the device is protected and healthy before granting protected services access via Microsoft Entra.
@@ -106,7 +106,7 @@ Microsoft Edge for Business, built on the robust and secure foundation of Chromi
 
 In addition to the inherent security features of Chromium, Microsoft Edge for Business incorporates unique protection features and supports a range of Microsoft technologies:
 
-- **[Microsoft Defender](/microsoft-365/security/defender-endpoint):** Provides comprehensive security solutions.
+- **Microsoft Defender:** Provides comprehensive security solutions.
 - **[Microsoft Entra](/entra/):** Formerly known as Azure Active Directory, it offers identity and access management services.
 - **[Microsoft Intune](/mem/):** Offers mobile device and application management.
 - **[Microsoft Purview](/purview/):** Supports data governance across your hybrid data estate.

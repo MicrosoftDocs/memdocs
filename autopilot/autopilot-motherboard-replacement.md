@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/21/2024
+ms.date: 04/17/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -24,13 +24,13 @@ This document offers guidance for Windows Autopilot device repair scenarios that
 
 Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requirements with Windows Autopilot requirements. Specifically, OEM requirements include strict uniqueness across motherboards, MAC addresses, etc. Windows Autopilot requires strict uniqueness at the hardware hash level for each device to enable successful registration. The hardware hash doesn't always accommodate all the OEM hardware component requirements. These requirements are sometimes at odds, which can cause issues with some repair scenarios. The hardware hash is also known as the hardware ID.
 
-If the OEM resets the OS, the device needs to be re-registered. Additionally, if a motherboard is replaced on an Autopilot registered device, then the following process is recommended:
+If a motherboard is replaced on an Autopilot registered device, then the following process is recommended:
 
-1. If the device isn't going back to the original tenant, [deregister it from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). If it's going back to the same tenant, you don't need to deregister it.
+1. [Deregister the device from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). 
 
 1. [Replace the motherboard](#replace-the-motherboard).
 
-1. If the device needs to be re-registered because of a reimage or because it will be used in a new tenant, [capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
+1. [Capture the new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
 
 1. [Reregister the device](#reregister-the-repaired-device-using-the-new-device-id) with Windows Autopilot.
 
@@ -171,9 +171,6 @@ To reregister an Autopilot device from the Microsoft Partner Center MPC, an OEM 
 1. Navigate to the **Customer** > **Devices** page.
 
 1. Select **Add devices** to upload the csv file.
-
-   ![Screenshot of Add devices button](images/device2.png)<br>
-   ![Screenshot of Add devices page](images/device3.png)
 
 When a repaired device is reregistering through MPC, the uploaded csv file must contain the 4K HH for the device, and not just the PKID or Tuple (SerialNumber + OEMName + ModelName). If only the PKID or Tuple was used, the Autopilot service would be unable to find a match in the Autopilot database. No match would be found because no 4K HH info was previously submitted for this essentially "new" device and the upload fails, likely returning a **ZtdDeviceNotFound** error. For this reason, only upload the 4K HH. Don't upload the Tuple or PKID.
 
