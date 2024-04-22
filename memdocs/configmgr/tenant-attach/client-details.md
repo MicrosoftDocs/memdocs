@@ -40,6 +40,9 @@ The user account accessing tenant attach features within the Microsoft Intune ad
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
+> [!IMPORTANT]
+> The "Enforce Configuration Manager RBAC for cloud console requests that interact with Configuration Manager" check box does not grant permissions to the user to perform cloud console requests that interact with Configuration Manager unless the user is assigned an Intune role.
+
 ## View ConfigMgr client details
 
 1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
