@@ -52,7 +52,7 @@ This restriction means:
 Intune doesn't support any configuration that utilizes a Trusted Platform Module or hardware management, including:
 
 - [BitLocker settings](../configuration/device-profiles.md#endpoint-protection)
-- [Device Firmware Configuration Interface settings](../configuration/device-profiles.md#device-firmware-configuration-interface)
+- [Device Firmware Configuration Interface settings](../configuration/device-profiles.md#bios-configuration-and-dfci)
 
 ## Reporting
 

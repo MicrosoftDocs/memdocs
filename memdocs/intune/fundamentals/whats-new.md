@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 04/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of April 15, 2024
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 26740168 -->
+
+The following protected app is now available for Microsoft Intune:
+
+- Atom Edge by Arlanto Apps
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ## Week of April 1, 2024
 
 ### Device management
@@ -130,6 +143,20 @@ Applies to:
 - Windows 365
 - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
 
+### Device configuration
+
+#### New BIOS device configuration profile for OEMs<!-- 9278502  -->
+
+There is a new **BIOS configuration and other settings** device configuration policy for OEMs. Admins can use this new policy to enable or disable different BIOS features that secure device. In the Intune device configuration policy, you add the BIOS configuration file, deploy a Win32 app, and then assign the policy to your devices.
+
+For example, admins can use the [Dell Command tool](https://www.dell.com/support/kbdoc/000108963/how-to-use-and-troubleshoot-dell-command-update-to-update-all-drivers-bios-and-firmware-for-your-system) (opens Dell's website) to create the BIOS configuration file. Then, they add this file to the new Intune policy.
+
+For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../configuration/bios-configuration.md).
+
+Applies to
+
+- Windows 10 and later
+
 ## Week of March 25, 2024 (Service release 2403)
 
 ### Microsoft Intune Suite
@@ -153,7 +180,7 @@ For more information on this new capability, see [Support approved elevation req
 
 ### App management
 
-#### Extended capabilities for Managed Google Play apps on personally-owned Android devices with a work profile<!-- 26554642 -->
+#### Extended capabilities for Managed Google Play apps on personally owned Android devices with a work profile<!-- 26554642 -->
 
 There are new capabilities extended to work profile devices. The following capabilities were previously available only on corporate-owned devices:
 
@@ -302,7 +329,7 @@ For more information, see [Device compliance - Google Play Protect](../protect/c
 
 #### New compliance settings for Android work profile, personal devices<!-- 24743927 -->
 
-Now you can add compliance requirements for work profile passwords without impacting device passwords. All new Microsoft Intune settings are available in compliance profiles for Android Enterprise personally-owned work profiles under **System Security** > **Work Profile Security**, and include:
+Now you can add compliance requirements for work profile passwords without impacting device passwords. All new Microsoft Intune settings are available in compliance profiles for Android Enterprise personally owned work profiles under **System Security** > **Work Profile Security**, and include:
 
 - Require a password to unlock work profile
 - Number of days until password expires
@@ -332,7 +359,7 @@ For more information about installing an expedited update, see [Expedite Windows
 
 #### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
 
-In the Windows Settings Catalog, you can configure **Configuration Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
+In the Windows Settings Catalog, you can configure **Configuration Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
 To support this feature, a remote action will be added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
 
@@ -668,7 +695,7 @@ For more information, see [Bulk driver updates](../protect/windows-driver-update
 
 #### App Control for Business policy limitation is resolved<!-- 19548950  -->
 
-A previously documented limitation for App Control for Business policy (WDAC), that limited the number of active polices per device to 32, has been resolved by Windows. The issue involves a potential [Boot stop failure when more than 32 policies are active](/windows/security/application-security/application-control/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active) on a device.
+A previously documented limitation for App Control for Business policy (WDAC), that limited the number of active policies per device to 32, has been resolved by Windows. The issue involves a potential [Boot stop failure when more than 32 policies are active](/windows/security/application-security/application-control/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active) on a device.
 
 This issue is resolved for devices that run Windows 10 1903 or later with a Windows security update released on or after March 12, 2024. Older versions of Windows are expected receive this fix in future Windows security updates.
 

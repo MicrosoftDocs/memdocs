@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2024
+ms.date: 04/10/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,16 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of April 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use HP Anyware for Windows 365 Enterprise (preview)<!--48782170-->
+
+You can now use HP Anyware for Windows 365 Enterprise Cloud PCs. For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md).
 
 <!-- ########################## -->
 ## Week of April 1, 2024

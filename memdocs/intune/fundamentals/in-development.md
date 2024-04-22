@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/04/2024
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -127,16 +127,6 @@ Applies to:
 
 - macOS
 
-### New BIOS device configuration profile for OEMs<!-- 9278502  -->
-
-There will be a new **BIOS configuration and other settings** device configuration policy for OEMs. OEMs can use this new policy to enable or disable different BIOS features that secure device. In the Intune device configuration policy, you add the BIOS configuration file, and then assign the policy to your devices.
-
-For example, admins can use the [Dell Command tool](https://www.dell.com/support/kbdoc/000108963/how-to-use-and-troubleshoot-dell-command-update-to-update-all-drivers-bios-and-firmware-for-your-system) (opens Dell's website) to create the BIOS configuration file. Then, they add this file to the new Intune policy.
-
-Applies to
-
-- Windows 10 and later
-
 ### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->
 
 In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
@@ -162,9 +152,9 @@ Intune will support account-driven Apple User Enrollment, the new and improved v
 
 If you prefer, you can continue to target iOS/iPadOS devices using the Apple User Enrollment method that requires Company Portal. Devices running iOS/iPadOS 14.8.1 and earlier will be unaffected by this update and can continue to use the method with Company Portal.
 
-#### RBAC changes coming to enrollment platform restrictions for Windows<!-- 25036419  -->
+#### RBAC changes coming to enrollment platform restrictions <!-- 25036419  -->
 
-We're updating RBAC for Windows enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will  be able to create and edit enrollment platform restrictions.
+We're updating RBAC for enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to create and edit enrollment platform restrictions.
 
 <!-- *********************************************** -->
 
@@ -182,7 +172,7 @@ Access to BitLocker recovery keys by end-users can be prevented when not allowed
 
 ### Defender for Endpoint security settings support in government cloud environments<!-- 24191406  -->
 
-Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you've onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
 For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
 
@@ -228,7 +218,7 @@ For more information on Windows update reports, go to [Windows Update reports on
 
 ### Remote Help supports full control of a macOS device<!--22985205  -->
 
-Remote Help will support helpdesk connecting to a users device and requesting full control of the macOS device.
+Remote Help will support helpdesk connecting to a user's device and requesting full control of the macOS device.
 
 For more information on Remote Help, see [Remote Help on macOS](../fundamentals/remote-help-macos.md).
 

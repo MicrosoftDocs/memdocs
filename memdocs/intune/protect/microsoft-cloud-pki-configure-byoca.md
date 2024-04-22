@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/26/2024
+ms.date: 04/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -134,7 +134,27 @@ A private CA is required to sign the certificate signing request (CSR) file you 
 
 - Option 2: Use the Windows ADCS command line tool `certreq.exe` executable file.  
 
-For more information about certificate signing, see the documentation provided by your CA.  
+The following table lists the object identifiers (OID) supported for signing certificates used in BYOCA deployments.        
+
+| Subject name property | Object identifier |
+| --- | --- |
+| Common name (CN) |  OID.2.5.4.3 |
+| Organization (O) |  OID.2.5.4.10 |
+| Organizational Unit (OU) |  OID.2.5.4.11 |
+| Locality (L) |  OID.2.5.4.7 |
+| State (ST) or Province |  OID.2.5.4.8 |
+| Country (C) |  OID.2.5.4.6 |
+| Title (T) |  OID.2.5.4.12 |
+| Serial Number | OID.2.5.4.5 |
+| Email (E) | OID.1.2.840.113549.1.9.1 |
+| Domain Component (DC) | OID.0.9.2342.19200300.100.1.25 |
+| Street | OID.2.5.4.9 |
+| Given name | OID.2.5.4.42 |
+| Initials | OID.2.5.4.43 |
+| Postal Code | OID.2.5.4.17 |
+| Distinguished Name Qualifier | OID.2.5.4.46 |
+
+For more information about certificate signing, see the help documentation provided by your CA.  
 
 ### Option 1: Certification authority web enrollment
 
