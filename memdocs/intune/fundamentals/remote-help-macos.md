@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 04/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -121,7 +121,7 @@ Remote Help is available to download from Microsoft and must be installed on the
 ## Download Remote Help
 
 Download the latest version of Remote Help directly from Microsoft at https://aka.ms/downloadremotehelpmacos 
-The most recent version of Remote Help is.
+The most recent version of Remote Help is 1.0.2404171.
 
 ## Add Remote Help as a LOB application
 
