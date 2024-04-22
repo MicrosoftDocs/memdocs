@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/06/2024
+ms.date: 03/12/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -98,6 +98,7 @@ The following list includes some common device actions:
 | [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a full scan of the device by Microsoft Defender Antivirus. | Windows |
 | [Locate device](device-locate.md) | Shows the approximate location of a device on a map. | - Android <br/>- iOS/iPadOS <br/>- Windows |
 | [Lost mode](device-lost-mode.md) | Locks a device with a custom message and disables sound and vibration. | iOS/iPadOS |
+| [Pause Config Refresh](pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.| (Windows 11 only)|
 | [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a quick scan of the device by Microsoft Defender Antivirus. | Windows |
 | [Remote control with Team Viewer](teamviewer-support.md) | Allows you to remotely control a device using TeamViewer. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Remote lock](device-remote-lock.md) | Locks a device and resets its password. | - Android <br/>- iOS/iPadOS <br/>- macOS  |

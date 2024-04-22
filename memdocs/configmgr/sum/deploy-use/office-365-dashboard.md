@@ -5,7 +5,7 @@ description: Review Microsoft 365 Apps client information from the Office 365 Cl
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
-ms.date: 03/05/2021
+ms.date: 04/05/2024
 ms.topic: conceptual
 ms.service: configuration-manager
 ms.subservice: software-updates
@@ -20,6 +20,9 @@ ms.collection: tier3
 
 > [!Note]
 > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+
+> [!Note]
+> Starting on April 1, 2025, office 365 client management dashboard add-in support statement will be removed from dashboard
 
 Beginning in Configuration Manager version 1802, you can review Microsoft 365 Apps client information from the Office 365 Client Management dashboard. The Office 365 client management dashboard displays a list of relevant devices when graph sections are selected. <!--1357281 -->
 
@@ -161,6 +164,9 @@ Selecting the **Ready to upgrade** category on the graph shows more details abou
 Devices that might be at risk for compatibility issues are marked as **Needs review**. These devices may need action to be taken before upgrading them to Microsoft 365 Apps. For example, you might update critical add-ins to a more recent version.
 
 ### Add-in information
+
+> [!Note]
+> Starting on April 1, 2025, office 365 client management dashboard add-in support statement will be removed from dashboard
 
  On each device, an inventory of all installed add-ins is collected. The inventory is then compared with the information Microsoft has about the add-in performance on Microsoft 365 Apps. If an add-in is found which is likely to cause issues after upgrading, then all devices with the add-in are flagged for review.
 

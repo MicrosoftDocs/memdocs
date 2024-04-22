@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -41,11 +40,11 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > - BlackBerry Mobile (Android, iOS/iPadOS)
 > - Better Mobile (Android,iOS/iPadOS)
 > - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
+> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
 > - Lookout for Work (Android, iOS/iPadOS)
 > - SentinelOne (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Trellix Mobile Security (Android,iOS/iPadOS)
-> - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
 
 ## Classic conditional access policies for Mobile Threat Defense (MTD) apps

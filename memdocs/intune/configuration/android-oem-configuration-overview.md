@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2023
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -34,7 +33,7 @@ ms.collection:
 
 In Microsoft Intune, you can use OEMConfig to add, create, and customize OEM-specific settings for Android Enterprise devices. OEMConfig is typically used to configure settings that aren't built in to Intune. Different original equipment manufacturers (OEM) include different settings. The available settings depend on what the OEM includes in their OEMConfig app.
 
-This feature applies to:  
+This feature applies to:
 
 - Android Enterprise
 
@@ -48,7 +47,7 @@ OEMConfig policies are a special type of device configuration policy similar to 
 
 Historically, OEMs create features. Then EMMs, like Intune, manually build support for these OEM-specific features. This approach leads to duplicated efforts and slow adoption.
 
-With OEMConfig, an OEM creates a schema that defines OEM-specific management features. The OEM embeds the schema into an app, and then puts this app on Google Play. The EMM service reads the schema from the app, and exposes the schema in the EMM admin console. The console allows Intune administrators to configure the settings in the schema.
+With OEMConfig, an OEM creates a schema that defines OEM-specific management features. The OEM embeds the schema into an app, and then puts this app on Google Play. The EMM service reads the schema from the app, and exposes the schema in the EMM admin console. The console allows administrators to configure the settings in the schema.
 
 When the OEMConfig app installs on a device, it uses the settings configured in the EMM admin console to manage the device. The OEMConfig app executes the device settings, instead of an MDM agent built by the EMM.
 
@@ -59,34 +58,77 @@ When the OEM adds and improves management features, the OEM also updates the app
 
 ## Before you begin
 
-When using OEMConfig, be aware of the following information:
+When using OEMConfig, be familiar with the following information:
 
-- Intune exposes the OEMConfig app's schema so you can configure it. Intune doesn't validate or change the schema provided by the app. So if the schema is incorrect, or has inaccurate data, then this data is still sent to devices. If you find a problem that originates in the schema, contact the OEM for guidance.
-- Intune doesn't influence or control the content of the app schema. For example, Intune doesn't have any control over strings, language, the actions allowed, and so on. We recommend contacting the OEM for more information on managing their devices with OEMConfig.
-- At any time, OEMs can update their supported features and schemas, and upload a new app to Google Play. Intune always syncs the latest version of the OEMConfig app from Google Play. Intune doesn't maintain older versions of the schema or the app. If you run into version conflicts, we recommend contacting the OEM for more information.
-- On Zebra devices, you can create multiple profiles, and assign them to the same device. For more information, go to [OEMConfig on Zebra devices](oemconfig-zebra-android-devices.md).
+- The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. When you try to create a new profile that exceeds 500 KB in the Intune admin center, then the following error is shown:
 
-  The OEMConfig model on non-Zebra devices only supports a single policy per device. If multiple profiles are assigned to the same device, you may see inconsistent behavior.
+  `Profile is larger than 500KB. Adjust profile settings to decrease the size.`
+
+  To reduce the size, you can try one or more of the following options:
+
+  - Reduce the number of settings configured in the profile.
+  - In the built-in JSON editor in the Intune admin center, reduce the size of the value entered for the keys.
+
+- When working with OEMConfig apps, you should know that:
+
+  - The available settings depend on what the OEM includes in their OEMConfig app.
+
+  - Intune exposes the OEMConfig app's schema so you can configure it. Intune doesn't validate or change the schema provided by the app. So if the schema is incorrect, or has inaccurate data, then this data is still sent to devices. If you find a problem that originates in the schema, contact the OEM for guidance.
+
+  - Intune doesn't influence or control the content of the app schema. For example, Intune doesn't have any control over strings, language, the actions allowed, and so on. We recommend contacting the OEM for more information on managing their devices with OEMConfig.
+
+  - At any time, OEMs can update their supported features and schemas within their app, and upload a new app to Google Play. Intune always syncs the latest version of the OEMConfig app from Google Play. Intune doesn't maintain older versions of the schema or the app. If you run into version conflicts, we recommend contacting the OEM for more information.
+
+- When deploying multiple OEMConfig policies to your devices, be aware of the following behaviors:
+
+  - OEMConfig apps have top parent groups or bundles that include a set of settings or controls, like a Wi-Fi configuration. Each top parent group or bundle can only be configured in one profile. If you deploy multiple profiles with the same top parent group or bundle, then both profiles go into a **Conflict** state and neither profile is deployed.
+
+    So if multiple OEMConfig profiles are deployed to the same device, then the settings in the profiles must belong to different top parent groups or bundles.
+
+    The following example shows the top parent groups or bundles available in an OEMConfig app that you can configure in an Intune policy:
+
+    :::image type="content" source="./media/android-oem-configuration-overview/knox-top-parent-options.png" alt-text="Screenshot that shows a sample OEMConfig device configuration profile with top parent groups or bundles  that can be configured in Microsoft Intune.":::
+
+    The following example shows the Wi-Fi top parent group or bundle configured in the Intune profile:
+
+    :::image type="content" source="./media/android-oem-configuration-overview/knox-top-parent-wifi-configurations.png" alt-text="Screenshot that shows a sample OEMConfig device configuration profile with the Wi-Fi top parent group or bundle configured in Microsoft Intune." lightbox="./media/android-oem-configuration-overview/knox-top-parent-wifi-configurations.png":::
+
+  - On Zebra devices, you can create multiple profiles using the **Legacy Zebra OEMConfig** app, and assign the profiles to the same device. For more information, go to [OEMConfig on Zebra devices](oemconfig-zebra-android-devices.md).
+
+  - On non-Zebra devices, the OEMConfig model only supports a single policy per device. If multiple profiles are assigned to the same device, you can see inconsistent behavior.
 
 ## Prerequisites
 
 To use OEMConfig on your devices, you need the following requirements:
 
-- An Android Enterprise device enrolled in Intune.
-- An OEMConfig app built by the OEM, and uploaded to Google Play. If it's not on Google Play, contact the OEM for more information.
-- The Intune administrator has role-based access control (RBAC) permissions for **Mobile apps**, **Device Configurations**, and the "read" permission under **Android for Work**. These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations.
+- The Android Enterprise devices must be MDM enrolled in Intune.
+- To create the Intune profile, the Intune admin needs the following role-based access (RBAC) permissions in Intune:
 
-## Prepare the OEMConfig app
+  - **Mobile apps**
+  - **Device Configurations**
+  - **Android Enterprise** > **Read**
 
-Be sure the device supports OEMConfig, the correct OEMConfig app is added to Intune, and the app is installed on the device. Contact the OEM for this information.
+  These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations. You can create a [custom role](../fundamentals/create-custom-role.md) that only includes these permissions.
 
-> [!TIP] 
-> OEMConfig apps are specific to the OEM. For example, a Sony OEMConfig app installed on a Zebra Technologies device doesn't do anything.
+## Step 1 - Get the OEMConfig app
 
-1. Get the OEMConfig app from the Managed Google Play Store. [Add Managed Google Play apps to Android enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
-2. Some OEMs may ship devices with the OEMConfig app preinstalled. If the app isn't preinstalled, use Intune to [add and deploy the app to devices](../apps/apps-deploy.md).
+OEMs provide their own OEMConfig app that lets you configure features within the app. To use OEMConfig, the OEMConfig app must be built by the OEM, and uploaded to Google Play. If the OEMConfig app isn't available on Google Play, then contact the OEM.
 
-## Create an OEMConfig profile
+You get the OEMConfig app from the Managed Google Play Store, add the app to Intune, and assign the app to your devices.
+
+1. Confirm that your devices support OEMConfig. OEMConfig apps are specific to the OEM. For example, a Sony OEMConfig app installed on a Zebra Technologies device doesn't do anything.
+
+    For a list of supported OEMConfig apps, go to [Supported OEMConfig apps](#supported-oemconfig-apps) (in this article).
+
+2. Get the OEMConfig app from the Managed Google Play Store and add it to Intune. Some OEMs ship the devices with the OEMConfig app preinstalled. If the app isn't preinstalled, then you can get the app from the Managed Google Play store.
+
+    For the steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+
+3. Assign the app to your devices. For the steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+
+## Step 2 - Create an OEMConfig profile
+
+After the app is added to Intune, you create an OEMConfig profile to configure the features defined in the app.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration** > **Create**.
@@ -107,7 +149,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
     If you don't see any apps listed, then set up Managed Google Play, and get apps from the Managed Google Play store. [Add Managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
 
     > [!IMPORTANT]
-    > If you added an OEMConfig app and synced it to Google Play, but it's not listed as an **Associated app**, you may have to contact Intune to onboard the app. See [adding a new app](#supported-oemconfig-apps) (in this article).
+    > If you added an OEMConfig app and synced it to Google Play, but it's not listed as an **Associated app**, you might have to contact Intune to onboard the app. See [adding a new app](#supported-oemconfig-apps) (in this article).
 
 7. Select **Next**.
 8. In **Configure settings**, select the **Configuration designer** or **JSON editor**:
@@ -125,7 +167,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
       - Use the **Locate** button to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting. 
 
-      - If you create an empty (unconfigured) bundle in the configuration designer, it's deleted when switching to the JSON editor.
+      - If you create an empty (unconfigured) bundle in the configuration designer, then the bundle is deleted when you switch to the JSON editor.
 
     - **JSON editor**: When you select this option, a JSON editor opens with a template for the full configuration schema embedded in the app. In the editor, customize the template with values for the different settings. If you use the **Configuration designer** to change your values, the JSON editor overwrites the template with values from the configuration designer.
 
@@ -144,7 +186,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
 11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
 
-    The maximum size of any OEMConfig profile is 350 KB. Any profile that exceeds this limit isn't deployed to the device.
+    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. For more details, go to [Before you begin](#before-you-begin) (in this article).
 
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
@@ -168,14 +210,16 @@ After your profile is deployed, you can check its status:
 
 3. You can also see if individual settings in a profile successfully applied. To see the per-setting status of an OEMConfig profile, select **Devices** > **All devices**, and choose a device from the list. Then, go to **App configuration**, and select your OEMConfig profile. Select an individual setting status to get more information.
 
-    The maximum size of any OEMConfig profile is 350 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 350KB aren't shown.
+    The maximum size of any OEMConfig profile is 500 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 500 KB aren't shown. For more details, go to [Before you begin](#before-you-begin) (in this article).
 
 > [!NOTE]
 > For Zebra devices, only a single setting row is shown. Selecting the row shows details for all settings in the policy.
 
 ## Supported OEMConfig apps
 
-Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas and functions. OEMs must [register their OEMConfig apps with Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform). If you don't register, these features may not work as expected. Intune currently supports the following OEMConfig apps:
+Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas and functions. OEMs must [register their OEMConfig apps with Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform). If you don't register, then these features might not work as expected.
+
+Intune supports the following OEMConfig apps:
 
 -----------------
 
@@ -229,6 +273,7 @@ If you represent an OEM, and an OEMConfig application exists for your devices, b
 >
 > If you experience settings within an OEMConfig app behaving incorrectly, then contact the developers of the OEMConfig app. Intune isn't responsible for technical issues with the individual OEMConfig apps.
 
-## Next steps
+## Related articles
 
-[Monitor the profile status](device-profile-monitor.md).
+- [Monitor the profile status](device-profile-monitor.md)
+- [Deploy OEMConfig profiles to Zebra devices in Intune](oemconfig-zebra-android-devices.md)

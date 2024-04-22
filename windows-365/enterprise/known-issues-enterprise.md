@@ -12,7 +12,6 @@ ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -38,7 +37,7 @@ The following items are known issues for Windows 365 Enterprise.
 
 When using Conditional Access, a user who signs in to a Cloud PC for the first time might trigger an impossible travel location alert.
 
-**Troubleshooting steps**: [Follow the steps to investigate risk](/entra/id-protection/howto-identity-protection-investigate-risk) to verify that the activity matches the expected behavior for the user, based on their physical location and the location of the Cloud PC.
+**Troubleshooting steps**: [Follow these steps to investigate risk](/entra/id-protection/howto-identity-protection-investigate-risk) to verify that the activity matches the expected behavior for the user, based on their physical location and the location of the Cloud PC.
 
 ## Watermarking support in Windows 365
 
@@ -108,10 +107,10 @@ To prevent this dialog from being shown, you can create a pre-consented device g
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
-When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
+When single sign-on isn't used, users can opt see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
 
 1. Users can use passwordless authentication to unlock their Cloud PC.
-2. Conditional Access policies and multi-factor authentication can be enforced when unlocking the Cloud PC.
+2. Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
 
 <a name='single-sign-on-users-arent-asked-to-reauthenticate-to-azure-ad-when-connecting-from-an-unmanaged-device---35593334--'></a>
 
@@ -170,10 +169,10 @@ For GCC High customers with resources deployed to `microsoft.us` environments, t
 
 As a result, you can’t connect to your Cloud PC session.
 
-**Troubleshooting steps**: Allow third-party cookies from `microsoft.us` in your
+**Troubleshooting steps**: Allow third-party cookies from `microsoft.us` in your:
 
-- web client or Safari browser settings, or
-- through Group Policy.
+- Web client or Safari browser settings, or
+- Group Policy.
 
 This change lets the web client/Safari browser store and use the `microsoft.us` cookies for connecting to your Cloud PC session.  
 
@@ -181,11 +180,25 @@ This change lets the web client/Safari browser store and use the `microsoft.us` 
 
 Windows Security reports *Memory Integrity is off. Your device may be vulnerable.* 
 
-In the Cloud PC's Windows Systems Information you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
+In the Cloud PC's Windows Systems Information, you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
-This can be caused when the Intune tenant configuration requires Direct Memory Access (DMA), which Cloud PCs don’t support. Currently, if DMA is required in a VBS policy used by a Cloud PC, the VBS policy won’t run.
+This issue can be caused when the Intune tenant configuration requires Direct Memory Access (DMA), which Cloud PCs don’t support. Currently, if DMA is required in a VBS policy used by a Cloud PC, the VBS policy won’t run.
 
 **Troubleshooting steps**: In the Intune policies used by the Cloud PC, remove the DMA requirement from **Virtualization-based security BS Required Security Properties**. Make sure your VBS configurations still provide your desired security.
+
+## Teams isn’t enforcing screen capture protection<!-- 49423094 -->
+
+When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn’t enforcing screen capture protection.
+
+**Troubleshooting steps**:
+
+- Confirm that the WebRTC version is up-to-date.
+- Confirm that the screen capture protection policy is configured correctly to have client and server selected:
+
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > choose the policy.
+  2. Under  **Configuration settings**, make sure the following is chosen: **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**:
+      - **Enable screen capture protection** = Enable
+      - **Screen Capture Protection Options** = Block screen capture on client and server
 
 ## Next steps
 

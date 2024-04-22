@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:  
 
 # optional metadata
@@ -120,12 +119,12 @@ Select **Next**.
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
-3. On the **Basics** page, enter the following properties, and then choose **Next**.
-   - **Platform**: macOS
-   - **Profile**: FileVault
+1. On the **Basics** page, enter the following properties, and then choose **Next**.
+- **Platform**: macOS
+- **Profile**: FileVault
 
    ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
+  
 4. On the **Configuration settings** page:
    1. Set *Enable FileVault* to **Yes**.
    2. For *Recovery key type*, only **Personal Recovery Key** is supported.
@@ -186,13 +185,20 @@ For devices that run macOS 14 and later, your settings catalog policy can also e
 
 - The **Await final configuration** feature for the device must be set to **Yes**. This configuration prevents end users from accessing restricted content or changing settings until applicable Intune device configuration policies apply. For information on this configuration, see [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
 
+- Create a filter using the *EnrollmentProfileName* attribute that will be assigned to the settings catalog policy. This ensures that the FileVault policy will be assigned when the device first enrolls with Intune. For more information on configuring filters, see [Create filters in Microsoft Intune](../fundamentals/filters.md). 
+
 - When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile
 
-  - FileVault > **Force Enable in Setup Assistant** – Set to **Enabled**.
+- FileVault > **Force Enable in Setup Assistant** – Set to **Enabled**.
   
    The following image shows the settings catalog profile configured with the core settings to enable FileVault and use the Setup Assistant to enforce encryption. In this example, the Location setting uses the simple name of our domain, *Contoso*:
 
-    :::image type="content" source="./media/encrypt-devices-filevault/force-enable-in-setup-assistant.png" alt-text="Screen capture of the basic settings catalog profile to enable FileVault with the addition of the Force Enable in Setup Assistant setting.":::
+    
+  
+  > [!IMPORTANT]
+  > The **Defer** setting must be configured to **Enabled** to successfully enable FileVault in Setup Assistant for devices running macOS 14.4. 
+  
+  :::image type="content" source="./media/encrypt-devices-filevault/filevault-setup-assistant-configuration.png" alt-text="Screenshot of the settings needed to enable File Vault in Setup Assistant.":::
 
 ## Manage FileVault
 

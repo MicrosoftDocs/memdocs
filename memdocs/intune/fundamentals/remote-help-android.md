@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -102,7 +101,7 @@ To set up Remote Help for Android, you need to complete the following steps:
 
 2. Grant permissions.  
 
-   - Configure camera and microphone permissions.
+   - Configure camera permissions.
 
    - Configure permission setup for Zebra devices.
 
@@ -118,12 +117,12 @@ To set up Remote Help for Android, you need to complete the following steps:
 
 To protect user privacy on the device, both the Android OS and device OEMs require certain permissions to be granted to the Remote Help app.
 
-#### Camera and microphone
+#### Camera
 
-The Remote Help app requires Camera and Microphone permissions.
+The Remote Help app requires Camera permissions.
 
 > [!NOTE]
-> Remote Help does not store camera/microphone input. These permissions are only used to initiate a remote help session between the device and the Intune service.  
+> Remote Help does not store camera input. These permissions are only used to initiate a remote help session between the device and the Intune service.  
 
 You can autogrant them through app configuration policy:
 
@@ -131,7 +130,7 @@ You can autogrant them through app configuration policy:
 
 2. Create the policy for **Android Enterprise** with type **Fully managed, Dedicated, and Corporate-Owned Work Profile Only**. Target the policy to the **Remote Help** app that you approved earlier.
 
-3. Under **Permissions**, add **RECORD_AUDIO** and **CAMERA** permissions. Then, set the permission state to **Auto grant**.
+3. Under **Permissions**, add **CAMERA** permissions. Then, set the permission state to **Auto grant**.
 
 4. Assign the profile to the devices on which you want to use Remote Help.
 

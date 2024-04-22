@@ -10,7 +10,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -243,11 +242,12 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
       > [!div class="mx-imgBorder"]
       > ![Image of the root certificate setting, with a root CA certificate selected.](./media/microsoft-cloud-pki/scep-root-certificate.png)
 
-1. For **SCEP Server URLS**, paste the SCEP URI.
+1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device.
 1. Configure the remaining settings, following these best practices:  
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.  
 
    - **Extended Key Usage**: Microsoft Cloud PKI doesn't support the **Any Purpose** option.
 
    - **SCEP Server URLs**: Don't combine NDES and SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
+
 1. Assign and review the profile. When you're ready to finalize everything, select **Create**.  

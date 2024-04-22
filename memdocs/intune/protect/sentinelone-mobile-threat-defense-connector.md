@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: SentinelOne MTD connector with Intune
+title: SentinelOne MTD connector with Microsoft Intune
 titleSuffix: Intune on Azure
-description: Learn about integrating Intune with SentinelOne Mobile Threat Defense to control mobile device access to your corporate resources.
+description: How to set up SentinelOne Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata

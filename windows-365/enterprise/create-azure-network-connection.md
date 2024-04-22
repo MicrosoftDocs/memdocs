@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 04/01/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -44,11 +43,12 @@ As part of the connection process, the Windows 365 service is granted the follow
 
 ## Requirements
 
-To create an ANC, you must:
+To create an ANC, you must meet these requirements:
 
 - Have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
-- Have an Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (hybrid Microsoft entra join ANCs only).
+- Have an Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (hybrid Microsoft Entra join ANCs only).
 - Have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
+- If you want to create an ANC with a network or resource group that was never used in any pervious ANC creation, then you must have the Subscription owner or user administrator role.
 - For Disaster Recovery (DR) purposes, make sure that there are at least 50% of the IP addresses available in your subnet. If reprovisioning for DR is required, sufficient new IP addresses are required for each Cloud PC provisioned on the subnet.
 - For Windows 365 Government - GCC only and not GCC-H - make sure to complete the script options listed in [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
    - If you aren't using Azure CloudShell, make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).

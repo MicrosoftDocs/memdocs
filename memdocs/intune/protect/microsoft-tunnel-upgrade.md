@@ -10,8 +10,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -129,6 +127,21 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 > [!IMPORTANT]
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
+
+### March 14, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:a0fa473b477c051445548f9e024cd58b3f87b0a87da7bafdf0d71ad6bb49a7c5
+
+- **serverImageDigest**: sha256:5f3f34f3f11a4d45efdd369e86d183cae0fafdd78c9c1d0a9275f26ce64e5510
+
+Changes in this release:
+
+- Bug fix: recreate the /tmp/mstunnel folder during upgrading if missing.
+- Update OpenConnect VPN Server to version 1.2.3.
+- Enhancements on the diagnostic tool.
+- Security updates on the base image.
 
 ### February 1, 2024
 

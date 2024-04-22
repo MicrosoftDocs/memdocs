@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2024
+ms.date: 04/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,11 +47,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
-
-- When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
-
-  - [Android Enterprise fully managed, dedicated, and corporate-owned work profile security settings](../enrollment/android-fully-managed-security-settings.md)
+Create an [Android device restrictions configuration profile](device-restrictions-configure.md).  
 
 ## Fully managed, dedicated, and corporate-owned work profile
 
@@ -175,7 +171,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer
 
-- **End-user access to device settings**: **Block** prevents users from accessing the Settings app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings app.
+- **End-user access to device settings**: **Block** prevents users from accessing the Settings app and prevents other apps in kiosk mode from opening the Settings app. If the device is a kiosk, then set this setting to **Block**.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access the Settings and allow apps in Kiosk mode to open the Settings app.
 
   This setting applies to:
 
@@ -252,6 +250,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     > To use dialer & phone applications, or for your users to receive push notifications in kiosk mode, use the [Dedicated devices](#dedicated-devices) > **Enabled system navigation features** (with **Home button** options) and **System notifications and information** settings (in this article). These features are available on Android devices running 9.0 and newer.
     >
     > On OS 9 and newer, the [Device password](#device-password) > **Disable lock screen** (in this article) setting manages the device's lock screen behavior.
+
+    >[!NOTE]
+    > Kiosk mode does not prevent the kiosk application from being able to launch other applications which are installed on the device, including the device Settings application. Admins should ensure that all applications enabled in kiosk mode do not launch other applications which users should not have access to and uninstall any applications which are not necessary on the device. 
   
     Your kiosk mode options:
 
@@ -296,6 +297,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         > [!IMPORTANT]
         > When using multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices can lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
+   
+        >[!NOTE]
+        >Applications added within MHS are not prevented from launching other applications installed on the device. Admins should ensure that all applications allowed within MHS do not launch other applications users should not have access to and uninstall any applications which are not necessary on the device. 
 
       - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
@@ -575,18 +579,21 @@ End of comment -->
   - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
   - **Always**: Updates are installed when they're available.
 
-- **Allow access to all apps in Google Play store**: When set to **Allow**:
+- **Allow access to all apps in Google Play store**:
 
-  - Users get access to all apps in the Google Play store.
-  - Users can't use apps that are explicitly targeted with uninstall.
-  - Users can't use apps that are added to a blocklist on the personal profile of corporate-owned devices with a work profile. 
+  - When set to **Allow**:
 
-  For more information on excluding users and groups from specific apps, see [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+    - Users get access to all apps in the Google Play store and any private apps added to your organization's Managed Google Play account.
+    - Make sure you target any app (private or public) with the uninstall intent that shouldn't be findable or apps installed by users from the Managed Google Play Store.
+    - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
+    For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+
+  - When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
   
-  - Only show apps in the Managed Google Play store that are approved, or apps that are required.
-  - Uninstall apps that were installed outside of the Managed Google Play store.
+    - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
+    - Uninstalls apps that were installed outside of the Managed Google Play store.
+    - If you change this setting from **Allow** to **Not configured**, then any app not in the policy is automatically uninstalled from the device.
 
 - The following settings are part of the Google's delegated scope feature:
 

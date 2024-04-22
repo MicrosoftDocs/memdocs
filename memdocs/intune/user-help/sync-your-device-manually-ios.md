@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2023
+ms.date: 04/08/2024
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
 searchScope:
  - User help
@@ -32,23 +30,24 @@ ms.collection:
 
 
 # Check compliance on your iOS device  
-Manually start a device check-in from the Company Portal to:
+Use the *check status* action in the Intune Company Portal app for iOS to:  
 
-* Update your device settings status 
-* Regain access to your work or school resources 
+* Update your device settings status.   
+* Regain access to work or school resources.   
 
-Company Portal regularly checks in with your device, but you can start a check-in anytime from the app.  During a check-in, Company Portal confirms that the settings on your device meet your organization's policy requirements. Your organization can limit or restrict access to work or school resources until you check in.  
+Company Portal checks in with enrolled devices regularly to make sure device settings meet workplace requirements. If a device doesn't meet the requirements, Company Portal marks it as *noncompliant*. Noncompliant devices can be restricted from accessing workplace resources. 
 
-If you recently made changes to your device settings, you may need to manually check in to register these changes with Company Portal. 
+If your device is noncompliant or blocked from accessing workplace resources, change the settings on the device to align with your organization's requirements, and then initiate a status check in Company Portal.   
 
-1. Open the Company Portal app for iOS on your device.  
+1. Open the Company Portal app for iOS on your device.   
 
-2. Tap **Device** and then select your device.  
+2. Go to **Devices**.  
+   
+3. Select your device.  
+   
+4. Tap **Check status**. Wait while Company Portal checks your settings. After the check, the device settings status tells you if you have access to workplace resources.  
 
-3. Tap **Check status**. Company Portal checks your device to confirm that it's meeting your organization's policy requirements. Once the check is complete, the device settings status tells you if you have access to company resources. 
-
-
-Still need help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Still need help? Contact your IT support person. Check for your organization's support details in the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or Company Portal app for iOS.  
 
 
 

@@ -11,7 +11,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 ms.reviewer: dguilory
 ms.suite: ems
@@ -142,109 +141,112 @@ There are various applications available in the Enterprise App Catalog. To view 
 > [!NOTE]
 > Additional apps will be available on an on-going basis in the Enterprise App Catalog.
 
-The following list of Enterprise Apps is available within Intune:
+The following table of Enterprise Apps is available within Intune:
 
-- 7-Zip
-- Amazon AWS Tools for Windows
-- Amazon Corretto 16
-- Amazon Kindle
-- Android Studio 2022
-- Android Studio 3
-- Android Studio 4
-- Araxis Merge
-- Artweaver Free
-- Atomi Systems ActivePresenter
-- Audacity
-- Beyond Compare
-- Blender
-- BlueJeans 2
-- Brady Workstation
-- Burp Suite Community Edition
-- Burp Suite Professional Edition
-- Calibre
-- Cisco Jabber 14
-- Cisco Webex Meetings
-- Cisco WebEx Recorder and Player
-- Cisco WebEx Recording Editor
-- Cisco Webex Teams
-- Citrix Receiver
-- Citrix Workspace app
-- Citrix Workspace app LTSR
-- CMake
-- Dell Command Update (Windows Universal Application)
-- Docker Desktop
-- draw.io Desktop
-- Duo Desktop
-- Eclipse Temurin JDK with Hotspot 11 (LTS)
-- Eclipse Temurin JDK with Hotspot 19
-- Eclipse Temurin JRE with Hotspot 11 (LTS)
-- Eclipse Temurin JRE with Hotspot 19
-- Egnyte Connect
-- Egnyte WebEdit
-- Evernote
-- Foxit PDF Editor 11
-- Foxit PDF Editor 12
-- Foxit PDF Reader
-- Frame App
-- Free Countdown Timer
-- Google Chrome for Business
-- Google Drive
-- Inkscape
-- JAM Software TreeSize Free
-- KeePass Password Safe (Classic Edition)
-- KeePassXC
-- Lansweeper
-- Lenovo Quick Clean
-- LogMeIn GoToMeeting IT Installer
-- Microsoft .NET Runtime 6.0
-- Microsoft Azure CLI
-- Microsoft Azure Storage Explorer
-- Microsoft Power BI Desktop
-- Microsoft PowerShell Core
-- Microsoft Skype for Desktop
-- Microsoft Surface Diagnostic Toolkit for Business
-- Microsoft Visual C++ 2008 Redistributable
-- Microsoft Visual C++ 2015-2022  Redistributable
-- Microsoft Visual Studio Code
-- Mozilla Firefox
-- Mozilla Thunderbird
-- Nessus Agent 10
-- Notepad++
-- NVIDIA GeForce Experience
-- OpenShot Video Editor
-- OpenVPN
-- Oracle Java Runtime Environment Version 8
-- Parallels Client 18
-- Piriform CCleaner
-- Poll Everywhere
-- Poly Lens Desktop App
-- Python 3.10
-- Python 3.11
-- QNAP Qsync
-- R for Windows
-- Rarlab WinRAR
-- Remote Help
-- Royal TS 5
-- Royal TS 6
-- Royal TS 7
-- ScreenToGif
-- Simon Tatham Putty
-- SyncBackFree
-- TeamSpeak client
-- TechSmith Snagit 2019
-- TechSmith Snagit 2020
-- TechSmith Snagit 2021
-- TechSmith Snagit 2023
-- TechSmith Snagit 2024
-- TightVNC
-- TortoiseSVN
-- TortoiseSVN ipv6
-- UltraViewer
-- voidtools Everything
-- voidtools Everything Lite
-- WinSCP
-- WireGuard
-- Zoom Client for Meetings
+| App |
+|---|
+| 7-Zip |
+| Amazon AWS Tools for Windows |
+| Amazon Corretto 16 |
+| Amazon Kindle |
+| Android Studio 2022 |
+| Android Studio 3 |
+| Android Studio 4 |
+| Araxis Merge |
+| Artweaver Free |
+| Atomi Systems ActivePresenter |
+| Audacity |
+| Beyond Compare |
+| Blender |
+| BlueJeans 2 |
+| Brady Workstation |
+| Burp Suite Community Edition |
+| Burp Suite Professional Edition |
+| Calibre |
+| Cisco Jabber 14 |
+| Cisco Webex Meetings |
+| Cisco WebEx Recorder and Player |
+| Cisco WebEx Recording Editor |
+| Cisco Webex Teams |
+| Citrix Receiver |
+| Citrix Workspace app |
+| Citrix Workspace app LTSR |
+| CMake |
+| Dell Command Update (Windows Universal   Application) |
+| Docker Desktop |
+| draw.io Desktop |
+| Duo Desktop |
+| Eclipse Temurin JDK with Hotspot 11 (LTS) |
+| Eclipse Temurin JDK with Hotspot 19 |
+| Eclipse Temurin JRE with Hotspot 11 (LTS) |
+| Eclipse Temurin JRE with Hotspot 19 |
+| Egnyte Connect Desktop App |
+| Egnyte WebEdit |
+| Evernote |
+| Foxit PDF Editor 11 |
+| Foxit PDF Editor 12 |
+| Foxit PDF Reader |
+| Frame App |
+| Free Countdown Timer |
+| Google Chrome for Business |
+| Google Drive |
+| Inkscape |
+| JAM Software TreeSize Free |
+| KeePass Password Safe (Classic Edition) |
+| KeePassXC |
+| Lansweeper |
+| Lenovo Quick Clean |
+| LogMeIn GoToMeeting IT Installer |
+| Microsoft .NET Runtime 6.0 |
+| Microsoft Azure CLI |
+| Microsoft Azure Storage Explorer |
+| Microsoft Power BI Desktop |
+| Microsoft PowerShell Core |
+| Microsoft PowerToys |
+| Microsoft Skype for Desktop |
+| Microsoft Surface Diagnostic Toolkit for   Business |
+| Microsoft Visual C++ 2008 Redistributable |
+| Microsoft Visual C++ 2015-2022  Redistributable |
+| Microsoft Visual Studio Code |
+| Mozilla Firefox |
+| Mozilla Thunderbird |
+| Nessus Agent 10 |
+| Notepad++ |
+| NVIDIA GeForce Experience |
+| OpenShot Video Editor |
+| OpenVPN |
+| Oracle Java Runtime Environment Version 8 |
+| Parallels Client 18 |
+| Piriform CCleaner |
+| Poll Everywhere |
+| Poly Lens Desktop App |
+| Python 3.10 |
+| Python 3.11 |
+| QNAP Qsync |
+| R for Windows |
+| Rarlab WinRAR |
+| Remote Help |
+| Royal TS 5 |
+| Royal TS 6 |
+| Royal TS 7 |
+| ScreenToGif |
+| Simon Tatham Putty |
+| SyncBackFree |
+| TeamSpeak client |
+| TechSmith Snagit 2019 |
+| TechSmith Snagit 2020 |
+| TechSmith Snagit 2021 |
+| TechSmith Snagit 2023 |
+| TechSmith Snagit 2024 |
+| TightVNC |
+| TortoiseSVN |
+| TortoiseSVN ipv6 |
+| UltraViewer |
+| voidtools Everything |
+| voidtools Everything Lite |
+| WinSCP |
+| WireGuard |
+| Zoom Client for Meetings |
 
 ## Next steps
 
