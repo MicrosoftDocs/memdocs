@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/17/2024
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -88,7 +88,7 @@ The following table summarizes the Platform SSO features in Intune. Use this inf
 | --- | --- |
 | **Platform support** | ❌ iOS/iPadOS <br/>✅ macOS 13.0 and newer|
 | **Supported enrollment types** | ✅ Device enrollment<br/>✅ Automated Device Enrollment (supervised) <br/>❌ User enrollment <br/>✅ Direct enrollment (Apple Configurator) |
-| **Supported authentication types** | ✅ Passwordless <br/> ✅ Microsoft Entra ID <br/> ✅ Smartcard |
+| **Supported authentication types** | ✅ Secure Enclave (UserSecureEnclaveKey) <br/> ✅ Password (Microsoft Entra ID) <br/> ✅ Smartcard |
 | **Supported app types** | ✅ Microsoft 365 apps<br/>✅ Apps, websites or services integrated with Microsoft Entra ID <br/>✅ Apps, websites or services that support Apple Enterprise SSO and are integrated with on-premises Active Directory |
 | **Intune admin center location** | **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type > **Authentication** > **Extensible Single Sign On (SSO)** |
 | **Recommendation** | ✅ Recommended. <br/><br/> You use Platform SSO and the SSO app extension together. You can use the SSO app extension on its own. To use Platform SSO, you must use only Platform SSO, as it includes the SSO app extension settings. |
