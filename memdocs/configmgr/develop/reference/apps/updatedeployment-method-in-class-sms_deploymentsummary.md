@@ -3,8 +3,8 @@ description: Learn how to update the summarized results for a specific Classic D
 title: UpdateDeployment Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 22b3f4f4-a739-4c09-80c7-089fe1b34a46
 author: Banreet

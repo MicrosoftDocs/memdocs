@@ -3,8 +3,8 @@ description: Learn how to delete a maintenance window for a collection in Config
 title: Delete a Maintenance Window for a Collection
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 257a15d2-4408-41ae-9277-77acca0cc914
 author: Banreet

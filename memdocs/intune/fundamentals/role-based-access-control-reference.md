@@ -232,6 +232,7 @@ Manages security and compliance features such as security baselines, device comp
 | Managed devices | Set primary user |
 | Managed devices | Update |
 | Managed devices | View reports |
+| Managed devices | Query |
 | Microsoft Defender ATP | Read |
 | Microsoft Store For Business | Read |
 | Mobile apps | Read |

@@ -3,8 +3,8 @@ title: Backup sites
 titleSuffix: Configuration Manager
 description: Learn to back up your sites before the event of failure or data loss in Configuration Manager.
 ms.date: 10/08/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: banreet
 ms.author: banreetkaur

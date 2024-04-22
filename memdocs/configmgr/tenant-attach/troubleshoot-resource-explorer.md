@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Troubleshooting resource explorer for Intune tenant attach
 ms.date: 01/25/2022
 ms.topic: troubleshooting
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
@@ -29,7 +29,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 **Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 ### <a name="bkmk_noinfo"></a> Unable to get resource information
 
-**Error message 1:** Unable to get resource information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message 1:** Unable to get resource information. Make sure Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
@@ -41,11 +41,11 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
 
-    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
-    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
+    - **Microsoft Entra tenant ID**: This value should be a GUID for the Microsoft Entra tenant.
+    - **Microsoft Entra user ID**: This value should be a GUID for this account in Microsoft Entra ID.
     - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
 
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+    If the Microsoft Entra properties are empty, check the configuration of the site's [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 ### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
 

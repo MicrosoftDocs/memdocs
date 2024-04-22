@@ -3,8 +3,8 @@ title: Delete Updates from a Deployment Package
 titleSuffix: Configuration Manager
 description: Remove update content from the existing software updates management package by using the RemoveContent method.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b8a24372-4e7a-4565-8dda-96e912fd2fd4
 author: Banreet

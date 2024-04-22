@@ -3,8 +3,8 @@ title: Plan on-premises MDM
 titleSuffix: Configuration Manager
 description: Plan for on-premises mobile device management to manage mobile devices in Configuration Manager
 ms.date: 01/09/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Trend Micro Mobile Security as a Service connector with Intune
+title: Trend Micro Mobile Security and Microsoft Intune
 titleSuffix: Intune on Azure
-description: Set up the Trend Micro Mobile Threat Defense connector with Intune.
-keywords:
+description: How to set up Trend Micro Mobile Threat Defense with with Microsoft Intune to control mobile device access to your corporate resources
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -35,7 +33,7 @@ ms.collection:
 
 Control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Trend Micro Mobile Security as a Service, a mobile threat defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices protected by the Trend Micro Mobile Security as a Service, including:
 
-- Malicious  apps installed
+- Malicious apps installed
 - Malicious network behavior and profiles
 - Operating system vulnerabilities
 - Device misconfiguration
@@ -45,6 +43,7 @@ You can configure Conditional Access policies based on Trend Micro Mobile Securi
 <!-- Trend Micro links are no longer available - and replacement content is not identified. >
 For more information about how to integrate Trend Micro with Microsoft Intune, see [Integration with Microsoft Endpoint Manager (Intune)](http://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003/integration-with-int.aspx) in the [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security.aspx).
 -->
+
 > [!NOTE]
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
 
@@ -55,7 +54,7 @@ For more information about how to integrate Trend Micro with Microsoft Intune, s
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
 - Trend Micro account with administrative access to the Trend Micro Vision One console
 
@@ -65,7 +64,7 @@ The Trend Micro Mobile Security as a Service mobile agent app for Android and iO
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for MTD, which can use risk assessment information from Trend Micro. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources, such as Exchange Online and SharePoint Online. Users also receive guidance from the Trend Micro Mobile Security as a Service mobile agent app installed on their devices to resolve the issue and regain access to corporate resources. To support using Trend Micro with enrolled devices:
 
-  - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md) (This is done automatically when  setting up Trend Micro Mobile Security as a Service integration)
+  - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md) (This is done automatically when setting up Trend Micro Mobile Security as a Service integration)
   - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
   - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
 

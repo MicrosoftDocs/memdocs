@@ -3,8 +3,8 @@ title: SubmitRegistrationRecord Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that submits a registration record.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ca40b886-729f-4390-aacf-64878811a96a
 author: Banreet

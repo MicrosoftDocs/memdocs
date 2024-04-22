@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2023
+ms.date: 10/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -57,7 +55,7 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
   - macOS 10.15 and newer
 - The Microsoft Company Portal app must be installed on the device.
 
-  The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
+  The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, go to [Package Management - Adding a Package to Jamf Admin](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Package_Management.html#ariaid-title4) (opens Jamf Pro's web site).
 
 > [!NOTE]
 > On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
@@ -88,11 +86,11 @@ For more information on the single sign-on extension, go to [Single sign-on app 
 In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**.
-    - **Profile**: Select **Templates** > **Device features**.
+    - **Profile type**: Select **Templates** > **Device features**.
 
 4. Select **Create**:
 
@@ -106,9 +104,9 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 6. Select **Next**.
 7. In **Configuration settings**, select **Single sign-on app extension**, and configure the following properties:
 
-    - **SSO app extension type**: Select **Microsoft Azure AD**:
+    - **SSO app extension type**: Select **Microsoft Entra ID**:
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Azure AD for macOS in Intune":::
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for macOS in Intune":::
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
@@ -126,7 +124,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 When the device checks in with the Intune service, it will receive this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
 
-To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Configuration Profiles** > select the profile you created and generate a report:
+To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Configuration** > select the profile you created and generate a report:
 
 :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the macOS device configuration profile deployment report in Intune.":::
 
@@ -164,7 +162,7 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/sso-extension-basic-settings-2.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for macOS devices.":::
 
-6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
+6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Microsoft Enterprise SSO plug-in for Apple devices documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
     The following example is a recommended PLIST file that meets the needs of most organizations:
 
@@ -194,7 +192,7 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 When the device checks in with the Jamf Pro service, it receives this profile.
 
 > [!TIP]
-> If you use Jamf Connect, it is recommended that you follow the [latest Jamf guidance on integrating Jamf Connect with Azure AD](https://learn.jamf.com/bundle/jamf-connect-documentation-current/page/Jamf_Connect_and_Microsoft_Conditional_Access.html). The recommended integration pattern ensures that Jamf Connect works properly with your Conditional Access policies and Azure AD Identity Protection.
+> If you use Jamf Connect, it is recommended that you follow the [latest Jamf guidance on integrating Jamf Connect with Microsoft Entra ID](https://learn.jamf.com/bundle/jamf-connect-documentation-current/page/Jamf_Connect_and_Microsoft_Conditional_Access.html). The recommended integration pattern ensures that Jamf Connect works properly with your Conditional Access policies and Microsoft Entra ID Protection.
 
 # [Other MDMs](#tab/create-profile-other-mdm)
 

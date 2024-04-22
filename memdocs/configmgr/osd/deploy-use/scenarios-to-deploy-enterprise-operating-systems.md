@@ -3,8 +3,8 @@ title: Scenarios to deploy enterprise operating systems
 titleSuffix: Configuration Manager
 description: Learn about several scenarios to deploy enterprise operating systems with Configuration Manager.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

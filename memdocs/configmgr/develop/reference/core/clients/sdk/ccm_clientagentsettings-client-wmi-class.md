@@ -3,8 +3,8 @@ title: CCM_ClientAgentSettings Class
 titleSuffix: Configuration Manager
 description: A client class, in Configuration Manager, that contains common client agent settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6388838c-8832-4e84-ba1a-bb66af8f79ff
 author: Banreet

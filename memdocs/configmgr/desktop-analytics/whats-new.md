@@ -3,8 +3,8 @@ title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
 ms.date: 11/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -41,7 +41,7 @@ To take advantage of this change, make sure your environment is up to date:
     - Enterprise
     - Professional
     - Education
-  - The device must be joined to Azure Active Directory.
+  - The device must be joined to Microsoft Entra ID.
 
   > [!IMPORTANT]
   > Devices with an older OS version like Windows 7 will continue to show in Desktop Analytics until January 31, 2022. Use Desktop Analytics to update those devices to a supported version of Windows 10. After that date, Desktop Analytics will only display devices with supported versions of Windows 10.

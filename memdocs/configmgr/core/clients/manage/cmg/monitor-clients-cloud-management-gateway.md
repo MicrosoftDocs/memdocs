@@ -3,8 +3,8 @@ title: Monitor the CMG
 titleSuffix: Configuration Manager
 description: Monitor clients and network traffic through the cloud management gateway (CMG).
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
@@ -65,7 +65,7 @@ To aid troubleshooting, use the CMG connection analyzer for real-time verificati
 
 1. In the CMG connection analyzer window, select one of the following options to authenticate with the service:
 
-     1. **Azure AD user**: Use this option to simulate communication the same as a cloud-based user identity signed in to an Azure AD-joined Windows device. Select **Sign In** to securely enter the credentials for an Azure AD user account.
+     1. **Microsoft Entra user**: Use this option to simulate communication the same as a cloud-based user identity signed in to a Microsoft Entra joined Windows device. Select **Sign In** to securely enter the credentials for a Microsoft Entra user account.
 
      1. **Client certificate**: Use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](configure-authentication.md#pki-certificate).
 

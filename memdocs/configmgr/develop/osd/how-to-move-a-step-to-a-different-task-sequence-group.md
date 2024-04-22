@@ -3,8 +3,8 @@ title: Move a Step to a Different OS Deployment Task Sequence Group
 titleSuffix: Configuration Manager
 description: Move a step from one operating system deployment task sequence group to another by adding the step to the target group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: f93360ef-677e-48e0-886a-a07b8451611c
 author: Banreet

@@ -34,9 +34,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/mem/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-Intune",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/memdocs",
-      "brand": "Microsoft Endpoint Manager",
+      "feedback_system": "Standard",
+            "brand": "Microsoft Endpoint Manager",
       "searchScope": ["Intune"],     
       "contributors_to_exclude": [
         "PRMerger9",
@@ -79,13 +78,12 @@
         "rmca14",
         "garycentric",
         "jborsecnik",
-        "AngelaMotherofDragons",
-        "v-dihans",
         "dstrome",
-        "tiburd",
-        "traya1",
+        "shdyas",
         "claydetels19",
-        "beccarobins"
+        "beccarobins",
+        "Stacyrch140",
+        "American-Dipper"
       ]          
     },
     "fileMetadata": {

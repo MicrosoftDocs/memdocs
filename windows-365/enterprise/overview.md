@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -28,6 +27,7 @@ ms.custom: intune-azure; get-started; intro-overview
 ms.collection:
 - M365-identity-device-management
 - tier2
+- essentials-overview
 ---
 
 # What is Windows 365 Enterprise?

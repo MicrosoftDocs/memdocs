@@ -3,8 +3,8 @@ title: SMS_Identification Class
 titleSuffix: Configuration Manager
 description: The SMS_Identification Windows Management Instrumentation (WMI) class is an SMS Provider server class that provides basic information about the installed SMS_Site Server WMI Class object.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1310f54d-03a1-4c14-a017-09625250c6fa
 author: Banreet

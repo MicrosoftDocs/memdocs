@@ -3,8 +3,8 @@ title: Collections introduction
 titleSuffix: Configuration Manager
 description: Get an introduction to using collections in Configuration Manager.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

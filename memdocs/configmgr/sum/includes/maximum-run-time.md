@@ -1,7 +1,7 @@
 ---
 author: BalaDelli
 ms.author: baladell
-ms.prod: configuration-manager
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 04/08/2022
 ms.localizationpriority: medium

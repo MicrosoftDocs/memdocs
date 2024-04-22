@@ -7,12 +7,11 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -51,7 +50,7 @@ This guide is for Android developers who are looking to add support for Microsof
 Before you start integrating the Intune App SDK into your Android application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
 - [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
-  and where to find these features in the Microsoft Intune admin center.  
+  and where to find these features in the Microsoft Intune admin center.
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Android app protection policy settings] describes each Android setting in detail.
   Your app will support these settings by integrating the SDK.
@@ -62,6 +61,10 @@ Before you start integrating the Intune App SDK into your Android application, t
 > See [Stage 7: App Participation Features] for more detail.
 
 ## Key Decisions for SDK integration
+
+### Do I need to register my application with the Microsoft identity platform?
+
+Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 
 ### Do I have access to my application's source code?
 
@@ -104,9 +107,9 @@ Initially integrating and testing as single-identity will help ensure proper int
 
 ### Does my application have or need App Configuration settings?
 
-Android supports [application-specific management configurations] that apply to applications deployed under Android Enterprise management modes. Admins can configure these [application configuration policies for managed Android Enterprise devices] in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Android supports [application-specific management configurations] that apply to applications deployed under Android Enterprise management modes. Admins can configure these [application configuration policies for managed Android Enterprise devices] in the [Microsoft Intune admin center].
 
-Intune also supports application configurations that apply to SDK-integrated applications, regardless of device management mode. Admins can configure these [application configuration policies for managed apps] in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Intune also supports application configurations that apply to SDK-integrated applications, regardless of device management mode. Admins can configure these [application configuration policies for managed apps] in the [Microsoft Intune admin center].
 
 The Intune App SDK supports both types of application configuration and provides a single API for accessing configurations from both channels. If your application has or will support either of these types of application configuration, you'll need to follow [Stage 6: App Configuration].
 
@@ -123,22 +126,22 @@ Multi-identity apps must take code changes to properly honor notification policy
 
 Android supports [backup and restore] functionality to preserve data and personalization for users when they upgrade to a new device or reinstall your app.
 
-Intune also supports backup and restore functionality for SDK-integrated applications, to ensure corporate data can't be leaked through a restore. 
+Intune also supports backup and restore functionality for SDK-integrated applications, to ensure corporate data can't be leaked through a restore.
 
 If your app supports this functionality, it must take code changes to protect corporate data during restore.
 See [Policy for protecting backup data] in [Stage 7: App Participation Features].
 
 ### Does my application have resources that should be protected by Conditional Access?
 
-[Conditional Access (CA)] is an [Azure Active Directory (AAD)]
-feature that can be used to control access to AAD resources.
+[Conditional Access (CA)] is a [Microsoft Entra ID]
+feature that can be used to control access to Microsoft Entra resources.
 Intune administrators can define CA rules that allow resource access only from devices or apps that are managed by Intune.
 
 Intune supports two types of CA: **device-based CA** and **app-based CA**, also known as [App Protection CA].
 Device-based CA blocks access to protected resources until the entire device is managed by Intune.
 App-based CA blocks access to protected resources until the specific app is managed by Intune App Protection Policies.
 
-If your app acquires any AAD access tokens and accesses resources that can be CA-protected, you'll need to follow [Support App Protection CA] in [Stage 7: App Participation Features].
+If your app acquires any Microsoft Entra access tokens and accesses resources that can be CA-protected, you'll need to follow [Support App Protection CA] in [Stage 7: App Participation Features].
 
 ### Does my application have a distinct theme that needs to persist across UI shown by the Intune App SDK?
 
@@ -160,8 +163,11 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 
 ### Android versions
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 33 (Android 13).
-In order to target Android API 33 (Android 13), you must use Intune App SDK `v9.0.0` or later.
+> [!NOTE]
+> Ensure that your app is compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk).
+
+The SDK fully supports Android API 28 (Android 9.0) through Android API 34 (Android 14).
+In order to target Android API 34 (Android 14), you must use Intune App SDK `v10.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).
@@ -196,8 +202,8 @@ To create a new account:
 Before you test app protection policy settings within your own application, it's helpful to familiarize yourself with how these settings behave inside other SDK-integrated applications.
 
 > [!TIP]
-> If your app isn't listed in the Microsoft Intune admin center, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.  
-> You must target your app with app protection policy and deploy the policy to a user to successfully test your integration.  
+> If your app isn't listed in the Microsoft Intune admin center, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.
+> You must target your app with app protection policy and deploy the policy to a user to successfully test your integration.
 > Even if policy is targeted and deployed, your app will not properly enforce policies until it has successfully integrated the SDK.
 
 ## Exit Criteria
@@ -237,7 +243,6 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 
 <!-- Stage 1 links -->
 <!-- internal links -->
-[Stage 1: Planning the Integration]:#stage-1-planning-the-integration
 [Telemetry]:#telemetry
 [Exit Criteria]:#exit-criteria
 
@@ -259,7 +264,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Android app protection policy settings]:/mem/intune/apps/app-protection-policy-settings-android
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
-[Azure Active Directory (AAD)]:https://azure.microsoft.com/services/active-directory/
+[Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [App Protection CA]:/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection
 [application configuration policies for managed Android Enterprise devices]:/mem/intune/apps/app-configuration-policies-use-android
 [application configuration policies for managed apps]:/mem/intune/apps/app-configuration-policies-managed-app
@@ -276,6 +281,10 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Assign licenses]:/mem/intune/fundamentals/licenses-assign
 [Create and assign app protection policies]:/mem/intune/apps/app-protection-policies
 [app configuration policy]:/mem/intune/apps/app-configuration-policies-overview
+[Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration
+
+<!-- Other Microsoft links -->
+[Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
 
 <!-- 3rd party links -->
 [application-specific management configurations]:https://developer.android.com/work/managed-configurations

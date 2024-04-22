@@ -3,8 +3,8 @@ title: Technical Preview 1802 | Microsoft Docs
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview version 1802 for Configuration Manager.
 ms.date: 02/09/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -223,7 +223,7 @@ The list of [unsupported scenarios](../plan-design/network/cng-certificates-over
 
 ## Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud management gateway](../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager.
 
@@ -233,19 +233,19 @@ Configuration Manager does not migrate existing classic CMG instances to the Azu
 > This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### Prerequisites
-- Integration with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Azure AD user discovery is not required.
+- Integration with [Microsoft Entra ID](../clients/deploy/deploy-clients-cmg-azure.md). Microsoft Entra user discovery is not required.
 - The same [requirements for cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md#requirements), except for the Azure management certificate.
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
 1. In the Configuration Manager console, **Administration** workspace, expand **Cloud Services**, and select **Cloud Management Gateway**. Click **Create Cloud Management Gateway** in the ribbon. 
-2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Azure AD subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.  
+2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Microsoft Entra subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.  
 3. On the **Settings** page, provide the server PKI certificate file as usual. This certificate defines the CMG service name in Azure. Select the **Region**, and then select a resource group option to either **Create new** or **Use existing**. Enter the new resource group name, or select an existing resource group from the drop-down list. 
 4. Complete the wizard.
 
 > [!NOTE] 
-> For the selected Azure AD server app, Azure assigns the subscription **contributor** permission. 
+> For the selected Microsoft Entra server app, Azure assigns the subscription **contributor** permission. 
 
 Monitor the service deployment progress with **cloudmgr.log** on the service connection point.
 
@@ -272,19 +272,21 @@ Starting in this release, when a user requests an application that requires appr
 
 
 
-## Use Software Center to browse and install user-available applications on Azure AD-joined devices
+<a name='use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices'></a>
+
+## Use Software Center to browse and install user-available applications on Microsoft Entra joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
+If you deploy applications as available to users, they can now browse and install them through Software Center on Microsoft Entra devices.  
 
 ### Prerequisites
 - Enable HTTPS on the management point
-- Integrate the site with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md)
+- Integrate the site with [Microsoft Entra ID](../clients/deploy/deploy-clients-cmg-azure.md)
 - Deploy an application as available to a user collection
 - Distribute any application content to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 - Enable the client setting **Use new Software Center** in the [Computer agent](../clients/deploy/about-client-settings.md#computer-agent) group
 - The client must be: 
    - Windows 10
-   - Azure AD-joined, also known as cloud domain-joined
+   - Microsoft Entra joined, also known as cloud domain-joined
 - To support internet-based clients:
     - [Cloud management gateway](../clients/manage/cmg/overview.md) 
     - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../clients/deploy/about-client-settings.md#client-policy) group
@@ -344,7 +346,7 @@ For customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/micro
 - **Allow extensions**: For more information, see [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 ### Prerequisites
-- Windows 10 client that is Azure Active Directory-joined. 
+- Windows 10 client that is Microsoft Entra joined. 
 
 ### Known issues
 - On-premises domain-joined devices cannot apply this policy in this release. This issue also pertains to hybrid domain-joined devices.

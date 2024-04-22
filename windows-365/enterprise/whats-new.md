@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -37,6 +36,10 @@ Learn what new features are available in Windows 365 Enterprise.
 > [!NOTE]
 > Each monthly update may roll out over several weeks and might not be immediately available to all customers.
 
+For information about Windows App and its features, see [What's new in Windows App](/windows-app/whats-new?tabs=windows).
+
+For more information about public preview items, see [Public preview in Windows 365](../public-preview.md).
+
 <!-- Common categories:  
 ### App management
 ### Device configuration
@@ -51,6 +54,439 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of April 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use HP Anyware for Windows 365 Enterprise (preview)<!--48782170-->
+
+You can now use HP Anyware for Windows 365 Enterprise Cloud PCs. For more information, see [Set up HP Anyware for Windows 365 Enterprise](hp-anyware-set-up.md).
+
+<!-- ########################## -->
+## Week of April 1, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Step-up licenses now support storage<!--48555915-->
+
+For Windows 365, step-up licenses now support storage. For more information, see [Resize with Step-up Licenses](resize-cloud-pc.md#resize-with-step-up-licenses).
+
+<!-- ########################## -->
+## Week of March 26, 2024 (Service release 2403)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Concurrency buffer for Windows 365 Frontline Cloud PCs<!--48929001-->
+
+A new concurrency buffer lets you exceed the max concurrency count for a limited time under certain circumstances, like during shift changes. For more information, see [Exceeding the maximum concurrency limit](introduction-windows-365-frontline.md#exceeding-the-maximum-concurrency-limit).
+
+#### Maintenance windows (public preview)<!--48851694-->
+
+You can now set maintenance windows for running remote actions on Cloud PCs. This will notify users in-session about the impending remote action period. For more information, see [Cloud PC maintenance windows](cloud-pc-maintenance-windows.md).
+
+#### Bulk remote action support<!--49086004-->
+
+You can now use bulk actions with the following remote actions: Restore, Restart, Resize, and Reprovision. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Microsoft Purview Data Loss Prevention support for Windows 365 Enterprise<!--49070474-->
+
+Microsoft Purview Data Loss Prevention (DLP) now supports Windows 365 Enterprise. For more information, see [Endpoint DLP support for virtualized environments](/purview/endpoint-dlp-getting-started#endpoint-dlp-support-for-virtualized-environments).
+
+#### Windows 365 Boot shared mode supports FIDO<!--49080360-->
+
+Windows 365 Boot shared mode now supports FIDO. For more information, see [How-to: Password-less FIDO2 Security Key Sign-in to Windows 10 HAADJ Devices](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-password-less-fido2-security-key-sign-in-to-windows-10/ba-p/1434583).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Known issues<!--49423094-->
+
+We’ve updated the article [Known issues: Windows 365 Enterprise and Frontline](known-issues-enterprise.md#teams-isnt-enforcing-screen-capture-protection), add a known issue for Teams isn't enforcing screen capture.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Microsoft Graph APIs support for Windows 365 v1.0 workloads<!--47055302-->
+
+In addition to Beta workloads, the Microsoft Graph APIs now support Windows 365 as v1.0 workloads. For more information, see [Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph](permission-scopes.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Cloud PC utilization report creation date<!--49175145-->
+
+The Cloud PC utilization report now shows the Cloud PC creation date. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC size recommendation report (public preview)<!--45433311-->
+
+A new Intune admin center report recommends appropriate sizes for Cloud PCs to better fit your organization's needs. For more information, see [Cloud PC recommendations report](report-cloud-pc-recommendations.md).
+
+#### Improvements to Cloud PC connection quality report are now generally available<!--46738280-->
+
+Improvements to the Cloud PC connection quality report have moved out of preview and into general availability. These improvements include:
+
+- a more comprehensive view of the overall performance of their Cloud PCs.
+- a more detailed view of devices when they are in a state of poor performance due to high round trip times.
+- Tenant level visibility to most recent/current for:
+  - Round Trip Time.
+  - Bandwidth.
+  - Connection Time.
+  - UDP Utilization.
+- Connection specific detail on client IP and associated CPC Gateway.
+- Filters for all columns.
+
+For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Frontline
+
+#### Windows 365 Frontline support for power on/off in bulk<!--49473730-->
+
+You can now use bulk actions to turn on/off Windows 365 Frontline Cloud PCs.
+
+<!-- ########################## -->
+## Week of March 11, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Forced browser sign-in setting for Cloud PC gallery images<!--49401955-->
+
+We’ve updated the article [Device images overview](device-images.md#gallery-images), noting that gallery images have [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin) pre-applied.
+
+<!-- ########################## -->
+## Week of March 4, 2024 (Service release 2402)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Alerts for Windows 365 Frontline maximum concurrent Cloud PCs<!--45903013-->
+
+A new alert notifies admins when the maximum concurrent Cloud PCs are active for Windows 365 Frontline subscriptions.
+
+#### Cloud PC utilization report now generally available<!-- 46738247-->
+
+The **Cloud PC utilization** report has moved out of preview and into general availability. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Device action data kept for 90 days<!--48439987-->
+
+On the **Overview** page for individual Cloud PCs, the **Actions** will show actions performed within the last 90 days.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch support for Windows 365 Frontline<!--46816178-->
+
+Windows 365 Switch now supports Windows 365 Frontline Cloud PCs. For more information, see [Windows 365 Switch](windows-365-switch-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
+
+Windows 365 Frontline Cloud PCs that haven’t been used for seven days are now automatically turned on and synced with Windows Update for Business Policies.
+
+#### Admins can remotely power on and off Windows 365 Frontline Cloud PCs<!--48801654-->
+
+Admins can now power on and off Windows 365 Frontline Cloud PCs using remote actions. For more information, see [Remotely manage Windows 365 devices](remotely-manage-cloud-pc.md).
+
+#### Uni-directional clipboard support (preview)<!--48897413-->
+
+You can now configure uni-directional clipboard for Cloud PCs that have Windows Insider Build 25898 or later. For more information, see [Configure the clipboard transfer direction and types of data that can be copied in Azure Virtual Desktop](/azure/virtual-desktop/clipboard-transfer-direction-data-types).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Customer Lockbox support is now generally available<!--47499839-->
+
+Windows 365 Enterprise and Frontline support for Microsoft Purview Customer Lockbox has moved out of preview and is now generally available.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- ########################## -->
+## Week of February 26, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### New faster sign-in frequency option (preview)<!--48439987-->
+
+When single sign-on is enabled, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option provides a faster reauthentication period of 5-10 minutes depending on the client used. For more information, see [Set conditional access policies](set-conditional-access-policies.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Boot
+
+#### Shared and dedicated Windows 365 Boot device modes are now generally available<!--48742628-->
+
+Windows 365 Boot shared and dedicated device modes have moved out of preview and into general availability.
+
+For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) and [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot sign-in page customization is now generally available<!--48742587-->
+
+Windows 365 Boot support for sign-in page customization has moved out of preview and into general availability. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot fail fast notifications are now generally available<!--48742676-->
+
+Windows 365 Boot detection and notification of network or application setup issues has moved out of preview and into general availability.
+
+#### Manage local PC settings through Windows 365 Boot is now generally available<!--48742743-->
+
+User management of local PC settings through their Windows 365 Boot Cloud PC has moved out of preview and into general availability.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch desktop identifiers are now generally available<!--48064527-->
+
+Windows Task view identifiers for Cloud PC or local PC have moved out of preview and into general availability.
+
+#### Windows 365 Switch improved disconnecting is now generally available<!--48743248-->
+
+The ability for users to seamlessly disconnect from their Cloud PC without leaving their local desktop has moved out of preview and into general availability. For more information, see [Windows 365 Switch](https://support.microsoft.com/en-us/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### Windows 365 Switch connection status now generally available<!--48743180-->
+
+Connection status and timeout information on the connection screen for Windows 365 Switch with Windows 365 Frontline Cloud PCs has moved out of preview and into general availability.
+
+<!-- ########################## -->
+## Week of January 29, 2024 (Service release 2401)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### FQDN requirement changes<!--46731885-->
+
+Many required FQDNs have been moved to the *.infra.windows365.microsoft.com wildcard FQDN. This move reduces the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs were moved to *.infra.windows365.microsoft.us. To avaoid any issues when provisioning new Cloud PCs, you must make sure that *.infra.windows365.microsoft.com (*.infra.windows365.microsoft.us for Windows 365 Government) is an accessible endpoint in your network allow list.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### End users can restart their Windows Cloud PC using the keyboard<!--48453601-->
+
+For newly created Cloud PCs, end users can now restart or shut down their Cloud PC by using the keyboard combination CTL+ALT+DEL. This doesn't apply to Cloud PCs created before 1/31/2024.
+
+<!-- ########################## -->
+## Week of January 15, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Updated documentation article: Relative performance for different Cloud PC sizes<!--48521010-->
+
+We’ve updated the article and added performance information for additional Cloud PC sizes. For more information, see [Relative performance for different Cloud PC sizes](../relative-cloud-pc-performance.md).
+
+<!-- ########################## -->
+## Week of January 8, 2024 (Service release 2312)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New alert rule: Cloud PCs that aren't available (preview)<!--47321010-->
+
+A new alert rule is now available to notify you when Cloud PCs aren't available. For more information about alerts in general, see [Alerts in Windows 365](alerts.md).  For more information about the report, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md). This feature is not yet available for Windows 365 Frontline.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Windows 365 now supports Italy North and Poland Central<!--41741396-->
+
+Windows 365 Enterprise and Windows 365 Frontline Cloud PC now support the Italy North and Poland Central regions. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Boot
+
+#### Manage local PC settings through Windows 365 Boot (preview)<!--48416631-->
+
+Users can now access and manage local PC settings more easily from their Windows 365 Boot Cloud PC. These include sound, display, and other device specific settings of their local PC. Settings can be found by going to Start > **Settings** in the Cloud PC.
+
+#### Windows 365 Boot sign-in page customization (preview)<!--48416441-->
+
+Windows 365 Boot now supports customizing the Cloud PC sign-in page with company logo branding for Cloud PCs in shared PC mode. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot device modes - shared and dedicated (preview)<!--48065006-->
+
+Windows 365 Boot now supports two modes of signing in to a Cloud PC from a physical device:
+
+- Shared PC mode: Multiple users can use the same physical device to sign in to their own Cloud PCs through the Windows 11 sign-in screen.
+- (New) Dedicated PC mode: The physical device is assigned to a specific user to sign in to their Cloud PC through the Windows 11 sign-in screen.
+
+For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) and [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot fail fast notifications (preview)<!--48416583-->
+
+To speed up the sign-in process, Windows 365 Boot now detects network or application setup issues and notifies the users about them immediately during the sign-in process.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch improved disconnecting (preview)<!--48064527-->
+
+Users can now seamlessly disconnect from their Cloud PC without leaving their local desktop. For more information, see [Windows 365 Switch](https://support.microsoft.com/en-us/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### Windows 365 Switch desktop identifiers (preview)<!--48064527-->
+
+When switching between desktops using Task view, each desktop is identified as a Cloud PC or Local PC.
+
+#### Windows 365 Switch connection status (preview)<!--48064527-->
+
+When using Windows 365 Switch with Windows 365 Frontline Cloud PCs, users now see connection status and timeout information on the connection screen. In case of an error, users can copy the correlation ID to help with resolving the issue.
+
+<!-- ########################## -->
+## Week of December 10, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 support for Microsoft Purview Customer Key (preview)<!--46980464-->
+
+Windows 365 now supports encrypting Cloud PCs by setting up Microsoft Purview Customer Key. For more information, see [Service encryption with Microsoft Purview Customer Key]( /purview/customer-key-overview).
+
+
+<!-- ########################## -->
+## Week of December 04, 2023 (Service release 2311)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 Boot is now available for Windows 365 Government<!--46030732-->
+
+Windows 365 Boot is now available for US Government Community Cloud (GCC) customers using Windows 365 Government. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### UI change in web client<!--46838016-->
+
+The gear icon menu has been updated. For details on the new menu, see [Windows 365 web client](end-user-access-cloud-pc.md#windows-365-web-client).
+
+#### New Microsoft Teams app is now generally available for Windows 365<!--47459639-->
+
+The new Microsoft Teams app has moved out of preview and into general availability. It's been optimized for faster performance and more efficient resource use on Cloud PCs. For more information, see [Upgrade to new Teams for Virtualized Desktop Infrastructure]( /microsoftteams/new-teams-vdi-requirements-deploy).
+
+The new Microsoft Teams app is not yet available in the Windows 365 gallery images.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New report: Action status (preview)<!--44871923-->
+
+A new report is now available that lets you know which actions have been performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided. For more information, see [Cloud PC actions report](report-cloud-pc-actions.md).
+
+#### New filter option for the Connected Frontline Cloud PCs report<!--47323230-->
+
+A new filter is available in the Connected Frontline Cloud PCs report. This new filter shows hourly data for various data periods. For more information, see [Connected Frontline Cloud PCs report (preview)](report-connected-frontline-cloud-pcs.md). 
+
+<!-- ########################## -->
+## Week of November 13, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Screen capture protection in Windows 365 settings catalog<!--46981580-->
+
+You can now implement screen capture protection for your Cloud PCs by using the settings catalog. Alongside watermarking, screen capture is a deterrent to data leaks and data loss. For more information, see [Enable screen capture protection in Azure Virtual Desktop](/azure/virtual-desktop/screen-capture-protection) and [Configure the administrative template](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
+
+This feature isn’t supported on Android, iOS, or web clients. Enabling this feature blocks users from accessing their Cloud PCs when using these clients.
+
+#### Watermarking support in Windows 365 settings catalog<!--45779621-->
+
+You can now implement watermarking for your Cloud PCs by using the settings catalog. Alongside screen capture, watermarking is a deterrent to data leaks and data loss. For more information, see [Watermarking in Azure Virtual Desktop](/azure/virtual-desktop/watermarking) and [Configure the administrative template](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
+
+#### Customer Lockbox support (preview)<!--46807263-->
+
+Windows 365 Enterprise and Frontline now support Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Single sign-on is now generally available<!--43836114-->
+
+The following single sign-on updates have moved out of preview and are now generally available:
+
+- Single sign-on for Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
+- You can turn on single sign-on separately for each provisioning policy to apply it to new Cloud PCs.
+- You can apply single sign-on to existing Cloud PCs.
+- A new Azure Network Connection check for Microsoft Entra hybrid joined provisioning policies to make sure that the domain is properly configured for single sign-on.
+
+These updates are also available for Windows 365 Frontline.
+
+#### New GPU offerings for Cloud PCs (preview)<!--46699074-->
+
+Three new GPU offerings are now available for Window 365 Enterprise Cloud PCs. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows App now available in public preview<!--46667283-->
+
+Windows App lets users securely connect to Windows devices and apps. Supported remote devices include:
+
+- Azure Virtual Desktop
+- Windows 365 Cloud PC
+- Microsoft Dev Box
+- Remote Desktop Services
+- Remote PC
+
+Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers.
+
+For more information, see [What is Windows App?](/windows-app/overview)
+
+<!-- ########################## -->
+## Week of October 30, 2023 (Service release 2310)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Permissions update for placing a Cloud PC under review<!--46608968-->
+
+You now need an additional role, Storage Blob Data Contributor, to place a Cloud PC under review. For more information, see [Place a Windows 365 Enterprise Cloud PC under review](place-cloud-pc-under-review.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Two new sizes for Cloud PCs<!--46653331-->
+
+Two new sizes are now available for Windows 365 Cloud PCs:
+
+- 16vCPU/64GB RAM/512GB storage​
+- 16vCPU/64GB RAM/1TB storage
+
+These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
+
+#### New gallery images<!--47114436-->
+
+Two new gallery images are now available for Windows 365 Cloud PCs:
+
+- Windows 11 Preview + Microsoft 365 Apps 23H2
+- Winodws 11 Preview + OS Optimizations 23H2
+
+You can choose the new gallery images when [creating a provisioning policy](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### New Graph API for Windows 365 Frontline<!--46770829-->
+
+A new graph API is now available for Windows 365 Frontline.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Audit logs supported in Azure Log Analytics<!--45693398-->
+
+You can now send Windows 365 audit log data directly to Azure Log Analytics, Event Hub, or certain third-party solutions. For more information, see [Send Windows 365 audit logs to diagnostic settings in Azure Monitor](get-cloud-pc-audit-logs-using-powershell.md#send-windows-365-audit-logs-to-diagnostic-settings-in-azure-monitor).
+
 
 <!-- ########################## -->
 ## Week of September 25, 2023 (Service release 2309)

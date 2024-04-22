@@ -3,8 +3,8 @@ title: SMS_G_System Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_G_System WMI class is an SMS Provider server class that serves as the abstract base class for all hardware and software system classes.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0386de30-a4f7-4e89-a92f-31692cc62d46
 author: Banreet

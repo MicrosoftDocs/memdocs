@@ -7,12 +7,11 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/09/2023
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -119,12 +118,12 @@ To determine whether your app should implement the `getIsSaveToLocationAllowed` 
 
 | `service` Parameter: `SaveLocation` Enum  Value | Use Case | Associated Username |
 | - | - | - |
-| `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `SHAREPOINT` | The app is saving data to Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `BOX` | This app is saving data to Box. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `SHAREPOINT` | The app is saving data to Sharepoint. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `BOX` | This app is saving data to Box. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `LOCAL` | The app is saving data to an external storage location on the device that is **not** the app's private storage. | The external storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
 | `PHOTO_LIBRARY` | The app is saving data to Android local photo storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
-| `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `OTHER` | The app is saving data to a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
 
 Files placed in private app storage that are either necessary for app
@@ -152,12 +151,12 @@ To determine whether your app should implement the `getIsOpenFromLocationAllowed
 
 | `location` Parameter: `OpenLocation` Enum Value | Use Case | Associated Username |
 | - | - | - |
-| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `SHAREPOINT` | The app is opening data from Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `SHAREPOINT` | The app is opening data from Sharepoint. | A `username` for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `CAMERA` | The app is opening data from the camera. | A `null` value, because the device camera isn't a cloud service. |
 | `LOCAL` | The app is opening data from an external storage location on the device that is **not** the app's private storage. | Although the external storage isn't a cloud service location, a `username` parameter is expected because it indicates ownership. <br>  When opening a file from local storage, the file owner must always be considered, because the file owner's save-as policy may or may not permit other identities to open the file: <br> - **For identity-tagged files,** `username` should be the file owner's identity. <br> - **For files without an identity tag,** `username` should be `null`. |
 | `PHOTO_LIBRARY` | The app is opening data from Android photo local storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
-| `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for Microsoft Entra authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `OTHER` | The app is opening data from a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
 
 > [!NOTE]
@@ -381,7 +380,7 @@ For example, if your app uses a custom rendering engine to render the current vi
 ## Support App Protection CA
 
 [App Protection CA] (Conditional Access), also known as app-based CA, restricts access to resources until your application is managed by Intune App Protection Policies.
-AAD enforces this by requiring the app to be enrolled and managed by APP before granting a token to access a CA protected resource.
+Microsoft Entra ID enforces this by requiring the app to be enrolled and managed by APP before granting a token to access a CA protected resource.
 
 > [!NOTE]
 > Support for App Protection CA requires version 1.0.0 (or greater) of the MSAL library.
@@ -414,7 +413,7 @@ public interface MAMComplianceManager {
 }
 ```
 
-The `remediateCompliance()` method is called to attempt to put the app under management to satisfy the conditions for AAD to grant the requested token.
+The `remediateCompliance()` method is called to attempt to put the app under management to satisfy the conditions for Microsoft Entra ID to grant the requested token.
 The first four parameters can be extracted from the exception received by the MSAL `AuthenticationCallback.onError()` method (see code sample below).
 The final parameter is a boolean which controls whether a UX is shown during the compliance attempt.
 
@@ -928,7 +927,7 @@ Test Steps:
 ## Next Steps
 
 If you followed this guide in order and have completed all the [Exit Criteria] above, **congratulations**, your app is now fully integrated with the Intune App SDK and can enforce app protection policies!
-If you skipped either of the previous app participations sections, [Stage 5: Multi-Identity] and [Stage 6: App Configuration], and are unsure if your app should support these features, revisit [Key Decisions for SDK integration].
+If you skipped either of the previous app participation sections, [Stage 5: Multi-Identity] and [Stage 6: App Configuration], and are unsure if your app should support these features, revisit [Key Decisions for SDK integration].
 
 App protection is now a core scenario for your app.
 Do continue to refer to this guide and the [Appendix] as you continue to develop your app.

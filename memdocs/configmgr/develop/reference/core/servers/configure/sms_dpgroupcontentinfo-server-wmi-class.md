@@ -3,8 +3,8 @@ title: SMS_DPGroupContentInfo Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that describes package information for a given distribution point group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b4b254cb-4bb0-41c5-9510-8e8ecfef5509
 author: Banreet

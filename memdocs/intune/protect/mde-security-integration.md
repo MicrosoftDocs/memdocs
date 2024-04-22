@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Use Intune to manage Microsoft Defender security settings management on devices not enrolled with Microsoft Intune 
-description: Use Intune profiles to manage security settings management for Microsoft Defender for Endpoint on devices supported by Defender that don't enroll with Microsoft Intune. 
+title: Use Intune to manage security settings for Microsoft Defender on devices that are not enrolled with Microsoft Intune 
+description: Learn about the device management scenario called Microsoft Defender security settings management, where you use Intune profiles to manage Microsoft Defender for Endpoint settings on devices that haven't enrolled with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 02/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
  
 #ROBOTS:
@@ -29,78 +27,32 @@ ms.collection:
 - highpri
 ms.reviewer: laarrizz
 
-zone_pivot_groups: mde-attach-preview
-
 ---
 
-<!--  PIVOTS in use:
-    - id: mdssc-ga
-      title: Generally Available
-    - id: mdssc-preview
-      title: Opt-in Public Preview
--->
-# Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
+# Manage endpoint security policies on devices onboarded to Microsoft Defender for Endpoint
 
-When you use Microsoft Defender for Endpoint, you can  deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
+When you use Microsoft Defender for Endpoint, you can deploy endpoint security policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
 
-::: zone pivot="mdssc-ga"
-**The following describes behavior that is generally available.**
-::: zone-end
+When you manage devices through security settings management:
 
-::: zone pivot="mdssc-preview"
-**The following describes behavior for the opt-in public preview.**
-::: zone-end
-
->[!NOTE]
->
-> Beginning in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
->
-> You can opt-in to the public preview by enabling the use of **Preview features** from within the [Microsoft 365 Defender portal](https://sip.security.microsoft.com/homepage). For more information on this, see [Microsoft Defender for Endpoint preview features](/microsoft-365/security/defender-endpoint/preview) in the Defender documentation.
-
-::: zone pivot="mdssc-ga"
-
-When you manage devices through security settings management without participation in the public preview:
-
-- You use the Microsoft Intune admin center to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure AD groups
-- Devices get the policies based on their Azure Active Directory device object. A device that isn’t already present in Azure Active Directory is joined as part of this solution
-- On devices that receive a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center
-
-This scenario extends the Microsoft Intune Endpoint Security surface to devices that aren't capable of enrolling in Intune. When a device is managed by Intune (enrolled to Intune), the device doesn't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
-
-Applies to:
-
-- Windows 10
-- Windows 11
-
-:::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
-
-::: zone-end
-::: zone pivot="mdssc-preview"
-
-*The information in this article describes behavior for the opt-in public preview. If you use security settings management but haven't opted in to the public preview, select **Generally Available** at the top of this article to view content that describes the behaviors your tenant supports*
-
-When you manage devices through security settings management as part of the public preview:
-
-- You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure policies for endpoint security for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
+- You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure policies for endpoint security for Defender for Endpoint and assign those policies to Microsoft Entra ID groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
   To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
 
-- Devices get their assigned policies based on their Azure AD device object. A device that isn’t already registered in Azure Active Directory is joined as part of this solution.
+- Devices get their assigned policies based on their Entra ID device object. A device that isn’t already registered in Microsoft Entra is joined as part of this solution.
 
-- When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft 365 Defender portal.
+- When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft Defender portal.
 
 This scenario extends the Microsoft Intune Endpoint Security surface to devices that aren't capable of enrolling in Intune. When a device is managed by Intune (enrolled to Intune) the device doesn't process policies for Defender for Endpoint security settings management. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
 
 Applies to:
 
+- Windows 10 and Windows 11
+- Windows Server (2012 R2 and up)
 - Linux
 - macOS
-- Windows 10
-- Windows 11
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview-2.png" alt-text="Conceptual presentation of the Microsoft Defender for Endpoint-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview-2.png":::
-
-::: zone-end
 
 ## Prerequisites
 
@@ -110,62 +62,22 @@ Review the following sections for requirements for the Defender for Endpoint sec
 
 When a supported device onboards to Microsoft Defender for Endpoint:
 
-::: zone pivot="mdssc-ga"
-
 - The device is surveyed for an existing Microsoft Intune presence, which is a mobile device management (MDM) enrollment to Intune.
 - Devices without an Intune presence enable the security settings management feature.
-- A trust is created with Azure Active Directory if one doesn't already exist.
+- For devices that aren't fully Microsoft Entra registered, a synthetic device identity is created in Microsoft Entra ID that allows the device to retrieve policies. Fully registered devices use their current registration.
 - Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
 
 Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
-
-::: zone-end
-::: zone pivot="mdssc-preview"
-
-- The device is surveyed for an existing Microsoft Intune presence, which is a mobile device management (MDM) enrollment to Intune.
-- Devices without an Intune presence enable the security settings management feature.
-- For devices that aren't fully Azure AD registered, a synthetic device identity is created in Azure AD that allows the device to retrieve policies. Fully registered devices use their current registration.
-- Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
-
-Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
-::: zone-end
-
-### Active Directory requirements
-
-When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. Security settings management fully supports this scenario with the following requirements:
-
-- Azure Active Directory Connect (Azure AD Connect) must be synchronized to the tenant that is used from Microsoft Defender for Endpoint.
-- Hybrid Azure Active Directory Join must be configured in your environment (either through Federation or Azure AD Connect Sync).
-- Azure AD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join).
-- Azure AD Connect rules for sync [must be modified for Server 2012 R2](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt#instructions-for-applying-computer-join-rule-in-aad-connect) (when support for Server 2012 R2 is needed).
-- All devices must register in the Azure Active Directory of the tenant that hosts Microsoft Defender for Endpoint. Cross-tenant scenarios aren't supported.
-
-> [!NOTE]
->
-> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device. 
->
-> If the device was part of any dynamic Azure AD groups previously and has now been re-added back into Azure AD (with the same Device ID), the policies targeting the device will be resolved within a minimum of 48 hours. However, if the device was part of any static Azure AD groups previously, administrators will need to go back and re-add the device back into those groups.
->
-> This is a known issue with Azure AD.
 
 ### Connectivity requirements
 
-Devices must have access to the following endpoints:
+Devices must have access to the following endpoint:
 
-- `enterpriseregistration.windows.net` - For Azure AD registration.
-- `login.microsoftonline.com` - For Azure AD registration.
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
-
-> [!NOTE]
-> You need to configure an endpoint system-wide proxy in an environment that is not connected to the internet. Use of only the EDR static proxy configuration is not sufficient.
->
-> If your organization uses Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
 
 ### Supported platforms
 
 Policies for Microsoft Defender for Endpoint security management are supported for the following device platforms:
-
-::: zone pivot="mdssc-preview"
 
 **Linux**:
 
@@ -182,22 +94,20 @@ With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defende
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
 
-*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they're missing the following filepath: `/sys/class/dmi/id/board_vendor`. 
-
+*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they're missing the following filepath: `/sys/class/dmi/id/board_vendor`.
 
 **macOS**:
 
 With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#system-requirements) agent version **101.23052.0004** or later, security settings management supports the following macOS versions:
 
+- macOS 14 (Sonoma)
 - macOS 13 (Ventura)
 - macOS 12 (Monterey)
 - macOS 11 (Big Sur)
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for macOS*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-updates).
 
-*Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Azure AD before enrolling with security settings management receive a duplicate Device ID in Azure AD, which is a synthetic registration.  When you create an Azure AD group for targeting policy, you must use the synthetic Device ID created by security settings management. In Azure AD, the Join Type column for the synthetic Device ID  is blank.
-
-::: zone-end
+*Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Microsoft Entra ID before enrolling with security settings management receive a duplicate Device ID in Microsoft Entra ID, which is a synthetic registration.  When you create a Microsoft Entra group for targeting policy, you must use the synthetic Device ID created by security settings management. In Microsoft Entra ID, the Join Type column for the synthetic Device ID  is blank.
 
 **Windows**:
 
@@ -208,7 +118,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
 - Windows Server 2022 (with [KB5006745](https://support.microsoft.com/topic/october-26-2021-kb5006745-os-build-20348-320-preview-8ff9319a-19e7-40c7-bbd1-cd70fcca066c))
 
-Security settings management doesn't work on and is not supported with the following devices:
+Security settings management doesn't work on and isn't supported with the following devices:
 
 - Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
 - Domain Controllers
@@ -235,41 +145,32 @@ To use security settings management, you need:
 
 The following diagram is a conceptual representation of the Microsoft Defender for Endpoint security configuration management solution.
 
-::: zone pivot="mdssc-ga"
-
-:::image type="content" alt-text="Conceptual representation of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture.png" lightbox="./media/mde-security-integration/mde-architecture.png":::
-
-1. Devices onboard to Microsoft Defender for Endpoint.
-2. A trust is established between each device and Azure AD. When a device has an existing trust, it uses that trust. When devices haven't registered, a new trust is created.
-3. Devices use their Azure AD Identity to communicate with Intune. This identity enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
-4. Defender for Endpoint reports the status of the policy back to Microsoft Intune.
-
-::: zone-end
-::: zone pivot="mdssc-preview"
-
 :::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png" lightbox="./media/mde-security-integration/mde-architecture-2.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
 2. Devices communicate with Intune. This communication enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
-3. A registration is established for each device in Azure AD:
+3. A registration is established for each device in Microsoft Entra ID:
    - If a device was previously fully registered, like a Hybrid Join device, the existing registration is used.
-   - For devices that haven't been registered, a synthetic device identity is created in Azure AD to enable the device to retrieve policies. When a device with a synthetic registration has a full Azure AD registration created for it, the synthetic registration is removed and the devices management continues on uninterrupted by using the full registration.
+   - For devices that haven't been registered, a synthetic device identity is created in Microsoft Entra ID to enable the device to retrieve policies. When a device with a synthetic registration has a full Microsoft Entra registration created for it, the synthetic registration is removed and the devices management continues on uninterrupted by using the full registration.
 4. Defender for Endpoint reports the status of the policy back to Microsoft Intune.
 
 > [!IMPORTANT]
-> With the public preview, security settings management uses a synthetic registration for devices that don’t fully register in Azure AD, and drops the Hybrid Azure AD Join prerequisite. With this change, Windows devices that previously had enrollment errors will begin onboarding to Defender and then receive and process the security settings management policies.
 >
-> To filter for devices that were unable to enroll due to failing to meet the Hybrid Azure AD Join prerequisite, navigate to the **Devices** list in the Microsoft 365 Defender portal, and filter by enrollment status. Because these devices are not fully registered, their device attributes show **MDM** = **Intune** and **Join Type** = **Blank**. These devices will now enroll with security settings management using the synthetic registration.
+> Security settings management uses a synthetic registration for devices that don’t fully register in Microsoft Entra ID, and drops the Microsoft Entra hybrid join prerequisite. With this change, Windows devices that previously had enrollment errors will begin onboarding to Defender and then receive and process the security settings management policies.
 >
-> After enrolling these devices appear in the device lists for Microsoft 365 Defender, Microsoft Intune, and Azure AD portals. While the devices won’t be fully registered with Azure AD, their synthetic registration counts as one device object.
+> To filter for devices that were unable to enroll due to failing to meet the Microsoft Entra hybrid join prerequisite, navigate to the **Devices** list in the Microsoft Defender portal, and filter by enrollment status. Because these devices are not fully registered, their device attributes show **MDM** = **Intune** and **Join Type** = **Blank**. These devices will now enroll with security settings management using the synthetic registration.
+>
+> After enrolling these devices appear in the device lists for Microsoft Defender, Microsoft Intune, and Microsoft Entra portals. While the devices won’t be fully registered with Microsoft Entra, their synthetic registration counts as one device object.
 
-### What to expect in the Microsoft 365 Defender portal
+<a name='what-to-expect-in-the-microsoft-365-defender-portal'></a>
 
-You can use the Microsoft 365 Defender *Device inventory* to confirm a device is using the security settings management capability in Defender for Endpoint, by reviewing the devices status in the **Managed by** column. The *Managed by* information is also available on the devices side-panel or device page. *Managed by* should consistently indicate that its managed by **MDE**.  
+### What to expect in the Microsoft Defender portal
+
+You can use the Microsoft Defender XDR *Device inventory* to confirm a device is using the security settings management capability in Defender for Endpoint, by reviewing the devices status in the **Managed by** column. The *Managed by* information is also available on the devices side-panel or device page. *Managed by* should consistently indicate that its managed by **MDE**.  
 
 You can also confirm a device has enrolled in *security settings management* successfully by confirming that the device-side panel or device page display **MDE Enrollment status** as **Success**.
 
-:::image type="content" source="./media/mde-security-integration/defender-enrollment-validation.png" alt-text="A screenshot of a devices security settings management enrollment status on the device page in the Microsoft 365 Defender portal." lightbox="./media/mde-security-integration/defender-enrollment-validation.png":::
+:::image type="content" source="./media/mde-security-integration/defender-enrollment-validation.png" alt-text="A screenshot of a devices security settings management enrollment status on the device page in the Microsoft Defender portal." lightbox="./media/mde-security-integration/defender-enrollment-validation.png":::
 
 If the **MDE Enrollment** status doesn’t display **Success**, make sure you’re looking at a device that was updated and is in scope for security settings management. (You configure the scope on the Enforcement scope page while configuring security settings management.)
 
@@ -281,7 +182,7 @@ In the Microsoft Intune admin center, go to the All Devices page. Devices enroll
 
 > [!TIP]
 >
-> In June 2023, security settings management began using synthetic registration for devices that don’t fully register in Azure AD. With this change, devices that previously had enrollment errors will begin onboarding  to Defender and then receive and process the security settings management policies.
+> In June 2023, security settings management began using synthetic registration for devices that don’t fully register in Microsoft Entra. With this change, devices that previously had enrollment errors will begin onboarding  to Defender and then receive and process the security settings management policies.
 
 ### What to expect in the Microsoft Azure portal
 
@@ -289,22 +190,21 @@ On the *All devices* page In the Microsoft Azure portal, you can view device det
 
 :::image type="content" source="./media/mde-security-integration/azure-enrollment-validation.png" alt-text="A screenshot of the All device page in the Microsoft Azure portal with an example device highlighted." lightbox="./media/mde-security-integration/azure-enrollment-validation.png":::
 
-To ensure that all devices enrolled in Defender for Endpoint security settings management receive policies, we recommend creating a [dynamic Azure AD group](../fundamentals/groups-add.md) based on the devices’ OS Type. With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
+To ensure that all devices enrolled in Defender for Endpoint security settings management receive policies, we recommend creating a [dynamic Microsoft Entra group](../fundamentals/groups-add.md) based on the devices’ OS Type. With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
 
 > [!IMPORTANT]
 >
-> If you used security settings management prior to joining the public preview, review your Azure AD groups that rely on system labels and make changes that will identify the devices added after joining the public preview. Prior to the new opt-in public preview, enrolled devices would use the following system labels (tags) of *MDEManaged* and *MDEJoined* to identify managed devices. With the changes introduced with the opt-in public preview, these system labels are no longer supported and added to devices that enroll.
+> From July 2023 to September 25, 2023, security settings management ran an opt-in public preview that introduced new behavior for devices that were managed and enrolled to the scenario. Starting on September 25, 2023, the public preview behavior became generally available and now applies to all tenants that use security settings management.
+>
+> If you used security settings management prior to September 25, 2023, and did not join the opt-in public preview that ran from July 2023 to September 25, 2023, review your Microsoft Entra groups that rely on system labels to make changes that will identify new devices you manage with security settings management. This is because prior to September 25, 2023, devices not managed through the opt-in public preview would use the following system labels (tags) of *MDEManaged* and *MDEJoined* to identify managed devices. These two system labels are no longer supported and are no longer added to devices that enroll.
 
-With the behavior that is introduced with the public preview in July of 2023, use the following guidance for your Dynamic groups:
+Use the following guidance for your Dynamic groups:
 
-- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, WindowsServer, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
+- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceOSType* attribute (Windows, Windows Server, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
 
 - If necessary, dynamic groups containing exclusively devices that are managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices that are managed by Defender for Endpoint via the security settings management functionality, and devices remain in this group only while managed by Defender for Endpoint.
 
-Also, when configuring security settings management, if you intend to manage entire OS platform fleets using Microsoft Defender for Endpoint, by selecting **all devices** instead of **tagged devices** in the Microsoft Defender for Endpoint Enforcement Scope page, understand that any synthetic registrations are counted against Azure AD quotas the same as full registrations.
-
-
-::: zone-end
+Also, when configuring security settings management, if you intend to manage entire OS platform fleets using Microsoft Defender for Endpoint, by selecting **all devices** instead of **tagged devices** in the Microsoft Defender for Endpoint Enforcement Scope page, understand that any synthetic registrations are counted against Microsoft Entra ID quotas the same as full registrations.
 
 ## Which solution should I use?
 
@@ -316,21 +216,6 @@ When you deploy an endpoint security policy that’s supported for both *Defende
 - Devices that are managed by either Intune or Configuration Manager.
 
 Profiles for the *Windows 10 and later platform* aren't supported for devices managed by security settings management.
-
-::: zone pivot="mdssc-ga"
-
-| Endpoint security policy | Platform  | Profile | Defender for Endpoint security settings management  |  Microsoft Intune |
-|-----------|--------------------------|---------|--------------------------------------------------------|-------------------|
-| Windows 10, Windows 11, and Windows Server | Antivirus  | Antivirus                   | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Windows 10, Windows 11, and Windows Server | Antivirus           | Antivirus Exclusions        | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Windows 10, Windows 11, and Windows Server| Attack Surface Reduction  | Attack Surface Reduction Rules  | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Windows 10, Windows 11, and Windows Server| Endpoint detection and response  | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Windows 10, Windows 11, and Windows Server| Firewall     | Firewall                    | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Windows 10, Windows 11, and Windows Server | Firewall   | Firewall Rules  | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-
-::: zone-end
-
-::: zone pivot="mdssc-preview"
 
 Following profiles are supported for each device type:
 
@@ -360,26 +245,37 @@ To support use with Microsoft Defender security settings management, your polici
 
 | Endpoint security policy | Profile | Defender for Endpoint security settings management  |  Microsoft Intune |
 |---------|----------|-----------|----------|
+| Antivirus              | Defender Update controls           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Windows Security Experience            | *Note 1*         | ![Supported](./media/mde-security-integration/green-check.png) |
-|Attack Surface Reduction |Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Attack Surface Reduction | Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall Rules      | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 
 ***1*** - The *Windows Security Experience* profile is available in the Defender portal but only applies to devices managed by Intune. It isn't supported for devices managed by Microsoft Defender security settings management.
 
-::: zone-end
-
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization. The following are descriptions of the policies that support security settings management:
 
 - **Antivirus** policies manage the security configurations found in Microsoft Defender for Endpoint. See  [antivirus](/mem/intune/protect/endpoint-security-antivirus-policy) policy for endpoint security.
-- **Attack surface reduction** (ASR) policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run Windows 10, Windows 11, and Windows Server. For more information, see:
-  - [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
-  - [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
-  - [Attack surface reduction](/mem/intune/protect/endpoint-security-asr-policy) policy for endpoint security, in the Intune documentation.
   
+  > [!NOTE]
+  >
+  > While endpoints do not require a restart in order to apply modified settings or new policies, we are aware of an issue where the *AllowOnAccessProtection* and *DisableLocalAdminMerge* settings might at times require end users to restart their devices for these settings to update. We are currently investigating this issue in order to provide a resolution.
+
+- **Attack surface reduction** (ASR) policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run *Windows 10*, *Windows 11*, and *Windows Server*. 
+
+  For current guidance about which settings apply to the different platforms and versions, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+
+  > [!TIP]
+  >
+  > To help keep supported endpoints up to date, consider using the [modern unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#onboarding-steps-summary) for Windows Server 2012 R2 and 2016.
+
+  Also see:
+  - [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
+  - [Attack surface reduction](/mem/intune/protect/endpoint-security-asr-policy) policy for endpoint security, in the Intune documentation.
+
 - **Endpoint detection and response** (EDR) policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats. See [endpoint detection and response](/mem/intune/protect/endpoint-security-edr-policy) policy for endpoint security.
 - **Firewall** policies focus on the Defender firewall on your devices. See [firewall](/mem/intune/protect/endpoint-security-firewall-policy) policy for endpoint security.
 - **Firewall Rules** configure granular rules for Firewalls, including specific ports, protocols, applications, and networks. See [firewall](/mem/intune/protect/endpoint-security-firewall-policy) policy for endpoint security.
@@ -392,23 +288,33 @@ The following sections guide you through that process.
 
 ### Configure Microsoft Defender for Endpoint
 
-In Microsoft Defender for Endpoint portal, as a security admin, your account needs at minimum permissions to view and edit security settings (Manage security settings in Security Center).
+In Microsoft Defender for Endpoint portal, as a security administrator:
 
-1. Sign in to [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope** and enable the platforms for security settings management.
+1. Sign in to [Microsoft Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope** and enable the platforms for security settings management.
 
-   :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft 365 Defender portal." lightbox="./media/mde-security-integration/enable-mde-settings-management-defender.png#lightbox":::
+   :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/mde-security-integration/enable-mde-settings-management-defender.png#lightbox":::
+
+   > [!NOTE]
+   >
+   > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender for Endpoint portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
 
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
-3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
-
-   :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft 365 Defender portal." lightbox="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" :::
+   > [!IMPORTANT]
+   >
+   > Use of [*Microsoft Defender for Endpoint’s Dynamic tag capability*](/microsoft-365/security/defender/configure-asset-rules?view=o365-worldwide&preserve-view=true) to tag devices with *MDE-Management* isn’t currently supported with security settings management. Devices tagged through this capability won’t successfully enroll. This issue remains under investigation.
 
    > [!TIP]
    >
-   > Use the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
+   > Use the proper device tags to test and validate your rollout on a small number of devices. When selecting the *All devices*, any device that falls into the scope configured will automatically be enrolled.
 
-4. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Intune. If not already provided, request for your IT administrator to grant applicable users the Microsoft Intune's **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
+3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
+
+   :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" :::
+
+   > [!TIP]
+   >
+   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
 
 ### Configure Intune
 
@@ -424,17 +330,17 @@ In the Microsoft Intune admin center, your account need permissions equal to End
 
 ## Onboard devices to Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboard devices and configure Microsoft Defender for Endpoint capabilities](/microsoft-365/security/defender-endpoint/onboard-configure) in the Defender for Endpoint documentation.
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboard to Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboarding) in the Defender for Endpoint documentation.
 
 ## Coexistence with Microsoft Configuration Manager
 
 In some environments it might be desired to use security settings management with devices managed by Configuration Manager. If you use both, you need to control policy through a single channel. Use of more than one channel creates the opportunity for conflicts and undesired results.
 
-To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
+To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
 
 :::image type="content" source="./media/mde-security-integration/disable-configuration-manager-toggle.png" alt-text="Screen shot of the Defender portal showing the Manage Security settings using Configuration Manager toggle set to Off." lightbox="./media/mde-security-integration/disable-configuration-manager-toggle.png" :::
 
-## Create Azure AD Groups
+## Create Microsoft Entra Groups
 
 After devices onboard to Defender for Endpoint, you'll need to create device groups to support deployment of policy for Microsoft Defender for Endpoint. To identify devices that have enrolled with Microsoft Defender for Endpoint but aren't managed by Intune or Configuration Manager:
 
@@ -444,33 +350,37 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
    Devices that onboard to Microsoft Defender for Endpoint and have registered but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
 
-   ::: zone pivot="mdssc-ga"
+   Starting on September 25, 2023, devices that use security management for Microsoft Defender for Endpoint can no longer be identified by using the following system labels:
 
-   You can also find two labels for devices that are using security management for Microsoft Defender for Endpoint:
-   - **MDEJoined** - Added to devices that are joined to the directory as part of this scenario.
-   - **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
-
-   ::: zone-end
-   ::: zone pivot="mdssc-preview"
-
-   With behavior introduced with the opt-in public preview, devices that used security management for Microsoft Defender for Endpoint can no longer be identified by using the following system labels:
-
-   - **MDEJoined** - Added to devices that are joined to the directory as part of this scenario.
-   - **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
+   - **MDEJoined** - A now deprecated tag that was previously added to devices that were joined to the directory as part of this scenario.
+   - **MDEManaged** - A now deprecated tag that was previously added to devices that actively used the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
 
    Instead of using system labels, you can use the management type attribute, and configure it to **MicrosoftSense**.
 
-   ::: zone-end
+You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
 
-You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
+- **Windows 10 and Windows 11** - The deviceOSType or OS displays as *Windows*
+- **Windows Server** - The deviceOSType or OS displays as *Windows Server*
+- **Linux Device** - The deviceOSType or OS displays as *Linux*
 
-- **Windows 10 and Windows 11** - The deviceType or OS displays as *Windows*
-- **Windows Server** - The deviceType or OS displays as *Windows Server*
+### Sample Intune Dynamic Groups with Rule Syntax
+
+**Windows Workstations**:
+
+:::image type="content" source="./media/mde-security-integration/windowworkstation.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Workstations." lightbox="./media/mde-security-integration/windowworkstation.jpg":::
+
+**Windows Servers**:
+
+:::image type="content" source="./media/mde-security-integration/windowsserver.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Servers." lightbox="./media/mde-security-integration/windowsserver.jpg":::
+
+**Linux Devices**:
+
+:::image type="content" source="./media/mde-security-integration/linuxdevices.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Linux." lightbox="./media/mde-security-integration/linuxdevices.jpg":::
 
 > [!IMPORTANT]
-> In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
+> In May 2023, *deviceOSType* updated to distinguish between *Windows clients* and *Windows Servers*.
 >
-> Custom scripts and [Azure AD dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* might exclude *Windows Servers* when used with the Security Management for Microsoft Defender for Endpoint solution. For example:
+> Custom scripts and [Microsoft Entra dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* might exclude *Windows Servers* when used with the Security Management for Microsoft Defender for Endpoint solution. For example:
 >
 > - If you have a rule that uses the `equals` or `not equals` operator to identify *Windows*, this change will affect your rule. That is because previously both *Windows* and *Windows Server* were reported as *Windows*. To continue to include both, you must update the rule to also reference *Windows Server*.
 > - If you have a rule that use the `contains` or `like` operator to specify *Windows*, then the rule won’t be affected by this change. These operators can find both *Windows* and *Windows Server*.
@@ -481,7 +391,7 @@ You can create groups for these devices [in Azure AD](/azure/active-directory/fu
 
 ## Deploy policy
 
-After creating one or more Azure AD groups that contain devices managed by Microsoft Defender for Endpoint, you can create and deploy the following policies for security settings management to those groups. The policies and profiles available vary by platform.
+After creating one or more Microsoft Entra groups that contain devices managed by Microsoft Defender for Endpoint, you can create and deploy the following policies for security settings management to those groups. The policies and profiles available vary by platform.
 
 For the list of policy and profile combinations supported for security settings management, see the chart in [Which solution should I use?](#which-solution-should-i-use) earlier in this article.
 
@@ -512,7 +422,7 @@ For the list of policy and profile combinations supported for security settings 
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the Azure AD groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
+7. On the **Assignments** page, select the Microsoft Entra groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 
    Select **Next** to continue.
 
@@ -546,7 +456,7 @@ When you select a policy, you can view information about the device check-in sta
 
 Devices managed by this capability check-in with Microsoft Intune every 90 minutes to update policy.
 
-You can manually sync a device on-demand from the [Microsoft 365 Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by Microsoft Defender for Endpoint, and then select the **Policy sync** button:  
+You can manually sync a device on-demand from the [Microsoft Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by Microsoft Defender for Endpoint, and then select the **Policy sync** button:  
 
 :::image type="content" source="./media/mde-security-integration/policy-sync-from-mde.png" alt-text="Manually sync devices managed by Microsoft Defender for Endpoint." lightbox="./media/mde-security-integration/policy-sync-from-mde.png"  :::
 
@@ -573,20 +483,9 @@ Once a device is removed from either location, that change propagates to the oth
 
 Most initial provisioning flows are typically completed by an Administrator of both services (such as a Global Administrator). There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, individuals who are delegated the *Endpoint Security Manager* role might not have the necessary permissions to enable this feature.
 
-### Active Directory joined devices
+### Microsoft Entra joined devices
 
-::: zone pivot="mdssc-ga"
-
-Devices that are joined to Active Directory use their **existing infrastructure** to complete the Hybrid Azure Active Directory join process. While the Defender for Endpoint component starts this process, the join action uses your Federation provider or Azure Active Directory Connect (Azure AD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
-
-To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
-
-::: zone-end
-::: zone pivot="mdssc-preview"
-
-Devices that are joined to Active Directory use their **existing infrastructure** to complete the Hybrid Azure Active Directory join process.
-
-::: zone-end
+Devices that are joined to Active Directory use their **existing infrastructure** to complete the Microsoft Entra hybrid join process.
 
 ### Unsupported security settings
 
@@ -598,7 +497,7 @@ The following security settings are pending deprecation. The Defender for Endpoi
 
 ### Use of security settings management on domain controllers
 
-Because an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+Because a Microsoft Entra ID trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
 
 > [!IMPORTANT]
 >
@@ -610,14 +509,15 @@ Security settings management doesn't support Server core installations due to Se
 
 ### PowerShell restrict mode
 
+Powershell needs to be enabled.
+
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
+
+### Managing security through MDE if you were previously using a 3rd party security tool
+
+If you previously had a third-party security tool on the machine and are now managing it with MDE, you may see some impact on MDE’s capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of MDE on your machine.
 
 ## Next steps
 
 - [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
-
-::: zone pivot="mdssc-preview"
-
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
-
-::: zone-end

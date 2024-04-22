@@ -1,26 +1,24 @@
 ---
 title: Setting the BitLocker encryption algorithm for Autopilot devices
 description: Microsoft Intune provides a comprehensive set of configuration options to manage BitLocker on Windows devices.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 11/14/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
 ms.topic: how-to
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Setting the BitLocker encryption algorithm for Autopilot devices
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
 
 BitLocker [automatically encrypts](/windows-hardware/design/device-experiences/oem-bitlocker#bitlocker-automatic-device-encryption) internal drives during the out of box experience (OOBE) for devices that support [Modern Standby](/windows-hardware/design/device-experiences/modern-standby) or meet the [Hardware Security Testability Specification (HSTI)](/windows-hardware/test/hlk/testref/hardware-security-testability-specification). By default, BitLocker uses XTS-AES 128-bit used space only for automatic encryption.
 
@@ -45,10 +43,6 @@ To make sure the BitLocker encryption algorithm you want is set before automatic
 
 3. Enable the Autopilot [enrollment status page](enrollment-status.md) for these devices. If you don't enable this feature, the policy won't apply before encryption starts.
 
-The following image is an example of the Endpoint Security disk encryption settings.
-
-:::image type="content" source="media/bitlocker/endpoint-security-disk-encryption-policy.png" alt-text="Screenshot example of the Endpoint Security disk encryption settings.":::
-
 ## Full disk or used space-only encryption
 
 There are two types of encryption, full disk or used space-only. The type of encryption is automatically determined by configuration of [silent enablement](/mem/intune/protect/encrypt-devices#silently-enable-bitlocker-on-devices) and hardware support for modern standby. You can enforce it by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, the encryption type is used when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/mem/intune/protect/encrypt-devices#full-disk-vs-used-space-only-encryption).
@@ -61,16 +55,11 @@ To enforce the type of drive encryption used:
 
 3. Enable the Autopilot [enrollment status page](enrollment-status.md) for these devices. If you don't enable this feature, the policy won't apply before encryption starts.
 
-The following image is an example of the settings catalog profile.
-
-:::image type="content" source="media/bitlocker/settings-catalog-drive-type.png" alt-text="Screenshot example of the BitLocker drive type configuration in the settings catalog.":::
-
 ## Requirements
 
-A supported version of Windows 11 or Windows 10.
+A supported version of Windows.
 
 ## Next steps
 
-[BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview)
-
-[Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices)
+- [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices)

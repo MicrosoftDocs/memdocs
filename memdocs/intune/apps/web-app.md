@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Web
 ---
 
 # Add web apps to Microsoft Intune

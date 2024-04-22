@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 
 searchScope:
  - User help
@@ -32,7 +30,7 @@ ms.collection:
 
 # Turn off Microsoft data collection on AOSP device  
 
-When usage data is turned on in the Microsoft Intune app, your in-app performance and usage data is automatically anonymized and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. Your organization doesn't have control over the collection of this data and can't change your preferences.  
+In-app performance and usage data is automatically anonymized and shared with Microsoft when usage data is turned on in the Microsoft Intune app. This type of data helps us improve the reliability and performance of Microsoft products. Your organization doesn't have control over the collection of this data and can't change your preferences.  
 
 To turn off data collection:    
 

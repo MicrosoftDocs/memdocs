@@ -2,7 +2,7 @@
 
 title: Add users and grant permissions
 titleSuffix: Microsoft Intune
-description:  Synchronize on-premises users with Azure AD and grant administrator permissions for your Intune subscription.
+description:  Synchronize on-premises users with Microsoft Entra ID and grant administrator permissions for your Intune subscription.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -21,7 +21,7 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic, get-started, has-azure-ad-ps-ref
+ms.custom: intune-classic, get-started, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -44,7 +44,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
    - **First name**
    - **Last name**
    - **Display name**
-   - **User name** - Universal principle name (UPN) stored in Azure Active Directory used to access the service.
+   - **User name** - Universal principle name (UPN) stored in Microsoft Entra ID used to access the service.
    - **Password** - Autogenerate or create.
 4. Choose **Next**.
 5. In the **Assign product licenses** page, select a **Location** and then choose a license for this user. A license including Intune is required.
@@ -56,13 +56,13 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 9. On the **Review and finish** page, select **Finish adding** to add the user. Choose **Close** to close the **Add a user** page.
 
 > [!NOTE]
-> If you're moving to Microsoft 365 from an Office 365 subscription, your users and groups are already in Azure AD. Intune uses the same Azure AD, and can use the existing users and groups.
+> If you're moving to Microsoft 365 from an Office 365 subscription, your users and groups are already in Microsoft Entra ID. Intune uses the same Microsoft Entra ID, and can use the existing users and groups.
 
 ### Add individual Intune users in the Microsoft Intune admin center
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create user**.
 2. Specify the following user details:
-   - **User name** - The new name that the user will use to sign in to Azure Active Directory.
+   - **User name** - The new name that the user will use to sign in to Microsoft Entra ID.
    - **Name** - The user's given name.
    - **First name** - The user's first name.
    - **Last name** - The user's last name. 
@@ -81,7 +81,7 @@ You can add Intune users in bulk by uploading a csv file containing the full lis
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create user** pane is displayed.
 2. Download, edit, and upload a *csv* template containing a list of users that you want to add to Intune. 
 
-The *csv* file is a comma-separated value list that can be edited in Notepad or Excel. For more information about using a *csv* file to add Intune users, see [Bulk create users in Azure Active Directory](/azure/active-directory/enterprise-users/users-bulk-add).
+The *csv* file is a comma-separated value list that can be edited in Notepad or Excel. For more information about using a *csv* file to add Intune users, see [Bulk create users in Microsoft Entra ID](/azure/active-directory/enterprise-users/users-bulk-add).
 
 ## Grant admin permissions
 
@@ -117,17 +117,19 @@ To access the Microsoft 365 admin center, your account must have a **Sign-in all
 
 ## Sync Active Directory and add users to Intune
 
-You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Azure AD tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
+You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Entra which includes Intune users. Having your on-premises Active Directory service connected with all of your Microsoft Entra ID-based services makes managing user identity simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Microsoft Entra tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
 
-Be sure your AD admins have access to your Azure AD subscription, and are trained to complete common AD and Azure AD tasks.
+Be sure your AD admins have access to your Microsoft Entra subscription, and are trained to complete common AD and Microsoft Entra tasks.
 
-### How to sync on-premises users with Azure AD
+<a name='how-to-sync-on-premises-users-with-azure-ad'></a>
 
-- To move existing users from on-premises Active Directory to Azure AD, you can set up [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). Hybrid identities exist in both services - on-premises AD and Azure AD.
+### How to sync on-premises users with Microsoft Entra ID
+
+- To move existing users from on-premises Active Directory to Microsoft Entra ID, you can set up [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). Hybrid identities exist in both services - on-premises AD and Microsoft Entra ID.
 
 - You can also export Active Directory users using the UI or through script. An internet search can help you find the best option for your organization.
 
-- To synchronize your user accounts with Azure AD, use the [Azure AD Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Azure AD Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the Azure AD PowerShell module.
+- To synchronize your user accounts with Microsoft Entra ID, use the [Microsoft Entra Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Microsoft Entra Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview?view=graph-powershell-1.0&branch=main) module.
 
 > [!TIP]
-> Azure AD Connect encompasses functionality that was previously released as Dirsync and Azure AD Sync. Learn more about [directory integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). To learn about syncing user accounts from a local directory to Azure AD, see [Similarities between Active Directory and Azure AD](/previous-versions/azure/azure-services/dn518177(v=azure.100)).
+> Microsoft Entra Connect encompasses functionality that was previously released as Dirsync and Azure AD Sync. Learn more about [directory integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). To learn about syncing user accounts from a local directory to Microsoft Entra ID, see [Similarities between Active Directory and Microsoft Entra ID](/previous-versions/azure/azure-services/dn518177(v=azure.100)).

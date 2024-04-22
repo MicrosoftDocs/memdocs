@@ -3,8 +3,8 @@ title: SMS_ObjectContainerItem Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that contains information about a Configuration Manager console folder item.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bfa25626-733e-4023-98b2-e1ff3ee18255
 author: Banreet
@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ObjectContainerItem Server WMI Class
-The `SMS_ObjectContainerItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about a Configuration Manager console folder item.  
+The `SMS_ObjectContainerItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that contains information about a Configuration Manager console folder item.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -105,7 +105,9 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
 |23|TYPE_DRIVERPACKAGE|  
 |25|TYPE_DRIVER|  
 |1011|TYPE_SOFTWAREUPDATE|  
-|2011|TYPE_CONFIGURATIONBASELINE|  
+|2011|TYPE_CONFIGURATIONBASELINE|
+|5000|TYPE_DEVICE_COLLECTION|
+|5001|TYPE_USER_COLLECTION|
 
  `ObjectTypeName`  
  Data type: `String`  
@@ -126,7 +128,7 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
  The sitecode of the site that the relation was originally created from.  
 
 ## Remarks  
-
+When attempting to move an item from a root node such as a user collection or device collection, the item does not exist as an SMS_ObjectContainerItem. As such a new instance will need to be created instead.
 ## Requirements  
 
 ## Runtime Requirements  

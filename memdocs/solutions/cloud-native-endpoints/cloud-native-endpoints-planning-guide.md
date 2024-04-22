@@ -9,12 +9,11 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 01/09/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -105,17 +104,17 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
 - **Device identity**
   
-  A device's identity is determined by the identity providers (IdP) that have knowledge of the device and a security trust with the device. For Windows endpoints, the most common IdP's are on-premises Active Directory (AD) and Azure Active Directory (Azure AD). Endpoints with identities from one of these IdP's are typically joined to one or joined to both.
+  A device's identity is determined by the identity providers (IdP) that have knowledge of the device and a security trust with the device. For Windows endpoints, the most common IdP's are on-premises Active Directory (AD) and Microsoft Entra ID. Endpoints with identities from one of these IdP's are typically joined to one or joined to both.
 
-  - For cloud-native endpoints, Azure AD join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
-  - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign-in, to deliver group policies, and change passwords. These options aren't suitable for cloud-native endpoints.
+  - For cloud-native endpoints, Microsoft Entra join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
+  - On-premises AD join and hybrid Microsoft Entra join require connectivity to an on-premises domain controller. They need connectivity for initial user sign-in, to deliver group policies, and change passwords. These options aren't suitable for cloud-native endpoints.
 
   > [!NOTE]
-  > Azure AD registration, sometimes referred to as workplace join, is for bring your own device (BYOD) scenarios only. It shouldn't be used for organization owned Windows endpoints. Some functionality may not be supported or work as expected on Azure AD registered Windows endpoints.
+  > Microsoft Entra registration, sometimes referred to as workplace join, is for bring your own device (BYOD) scenarios only. It shouldn't be used for organization owned Windows endpoints. Some functionality may not be supported or work as expected on Microsoft Entra registered Windows endpoints.
 
 - **Provision your endpoints**
 
-  For newly deployed Azure AD join endpoints, use Windows Autopilot to preconfigure devices. Joining Azure AD is typically a user-driven task, and Windows Autopilot is designed with users in mind. Windows Autopilot enables provisioning using the cloud from anywhere on the Internet, and by any user.
+  For newly deployed Microsoft Entra join endpoints, use Windows Autopilot to preconfigure devices. Joining Microsoft Entra is typically a user-driven task, and Windows Autopilot is designed with users in mind. Windows Autopilot enables provisioning using the cloud from anywhere on the Internet, and by any user.
 
   For more information, go to:
 
@@ -208,23 +207,23 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   - **Authentication and authorization**: To access on-premises resources from cloud-native endpoints, users need to authenticate and verify who they are. For more specific information, go to [Authentication and access to on-premises resources with cloud-native endpoint](cloud-native-endpoints-on-premises.md#authentication-and-access-to-on-premises-resources).
 
-  - **Connectivity**: Review and evaluate apps & resources that only live on-premises. Connectivity and access to these resources should be available off-premises, and without any direct connectivity, like a VPN. This task might include moving to SaaS versions of your apps, using [Azure AD Application Proxy](/azure/active-directory/app-proxy/application-proxy), [Azure Virtual Desktop](/azure/virtual-desktop/overview), [Windows 365](/windows-365/overview), [SharePoint](/sharepoint/introduction), [OneDrive](/onedrive/plan-onedrive-enterprise), or [Microsoft Teams](/microsoftteams/teams-overview).
+  - **Connectivity**: Review and evaluate apps & resources that only live on-premises. Connectivity and access to these resources should be available off-premises, and without any direct connectivity, like a VPN. This task might include moving to SaaS versions of your apps, using [Microsoft Entra Application Proxy](/azure/active-directory/app-proxy/application-proxy), [Azure Virtual Desktop](/azure/virtual-desktop/overview), [Windows 365](/windows-365/overview), [SharePoint](/sharepoint/introduction), [OneDrive](/onedrive/plan-onedrive-enterprise), or [Microsoft Teams](/microsoftteams/teams-overview).
 
   > [!NOTE]
-  > Azure AD doesn't support the Kerberos authentication protocol. On-premises AD does support the Kerberos authentication protocol. In your planning, you may learn more about Azure AD Kerberos. When configured, users sign in to a cloud-native endpoint using their Azure AD account, and can access on-premises apps or services that use Kerberos authentication.
+  > Microsoft Entra doesn't support the Kerberos authentication protocol. On-premises AD does support the Kerberos authentication protocol. In your planning, you may learn more about Microsoft Entra Kerberos. When configured, users sign in to a cloud-native endpoint using their Microsoft Entra account, and can access on-premises apps or services that use Kerberos authentication.
   >
-  > Azure AD Kerberos:
+  > Microsoft Entra Kerberos:
   >
   > - Isn't used in cloud-native solutions.
-  > - Doesn't solve any connectivity issues for resources that require authentication through Azure AD.
-  > - Isn't the answer or work-around for any domain authentication requirements through Azure AD.
+  > - Doesn't solve any connectivity issues for resources that require authentication through Microsoft Entra.
+  > - Isn't the answer or work-around for any domain authentication requirements through Microsoft Entra.
   > - Doesn't address the machine authentication challenges listed at [Known Issues and important information](cloud-native-endpoints-known-issues.md).
   >
-  > For a deeper understanding of Azure AD Kerberos and the scenarios it can address, go to the following blogs:
+  > For a deeper understanding of Microsoft Entra Kerberos and the scenarios it can address, go to the following blogs:
   >
-  > - [Why We Built Azure AD Kerberos](https://syfuhs.net/why-we-built-azure-ad-kerberos) (opens an external website)
-  > - [Deep dive: How Azure AD Kerberos works](https://techcommunity.microsoft.com/t5/itops-talk-blog/deep-dive-how-azure-ad-kerberos-works/ba-p/3070889) (opens another Microsoft website)
-  > - [How Azure AD Kerberos Works (syfuhs.net)](https://syfuhs.net/how-azure-ad-kerberos-works) (opens an external website)
+  > - [Why We Built Microsoft Entra Kerberos](https://syfuhs.net/why-we-built-azure-ad-kerberos) (opens an external website)
+  > - [Deep dive: How Microsoft Entra Kerberos works](https://techcommunity.microsoft.com/t5/itops-talk-blog/deep-dive-how-azure-ad-kerberos-works/ba-p/3070889) (opens another Microsoft website)
+  > - [How Microsoft Entra Kerberos Works (syfuhs.net)](https://syfuhs.net/how-azure-ad-kerberos-works) (opens an external website)
 
 ## Transition your workloads in phases
 
@@ -306,11 +305,11 @@ The following phases are a high-level approach for organizations to move their e
 
 ### ✅ Phase 1: Define endpoints, dependencies, and milestones
 
-This phase is the first step for your organization migration to be fully cloud-native. Review what you currently have, define success criteria, and start planning how your devices will be added to Azure AD.
+This phase is the first step for your organization migration to be fully cloud-native. Review what you currently have, define success criteria, and start planning how your devices will be added to Microsoft Entra.
 
 1. **Define the endpoints that require a cloud identity**
 
-    - Endpoints that use internet access require a cloud identity. You'll add these endpoints to Azure AD.
+    - Endpoints that use internet access require a cloud identity. You'll add these endpoints to Microsoft Entra.
     - Endpoints that don't use the internet or are only used on-premises shouldn't have a cloud identity. Don't migrate these scenarios to be cloud-native.
 
 2. **Define dependencies**
@@ -348,19 +347,19 @@ This phase is the first step for your organization migration to be fully cloud-n
 
 To be fully cloud-native, Microsoft recommends existing Windows endpoints be reset as part of a hardware refresh cycle. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
 
-If you're not ready to reset your endpoints, then you can enable hybrid Azure AD join. A cloud identity is created for hybrid Azure AD join endpoints. Remember, hybrid Azure AD join still requires on-premises connectivity.
+If you're not ready to reset your endpoints, then you can enable hybrid Microsoft Entra join. A cloud identity is created for hybrid Microsoft Entra join endpoints. Remember, hybrid Microsoft Entra join still requires on-premises connectivity.
 
-Remember, hybrid Azure AD join is a transitionary step to cloud-native, and isn't the end goal. The end goal is for all existing endpoints to be fully cloud-native.
+Remember, hybrid Microsoft Entra join is a transitionary step to cloud-native, and isn't the end goal. The end goal is for all existing endpoints to be fully cloud-native.
 
 When endpoints are fully cloud-native, user data is stored in a cloud storage provider, like OneDrive. So when an endpoint is reset, the user applications, configuration, and data is still accessible, and can replicate to a newly provisioned endpoint.
 
 For more information, go to:
 
-- [Azure AD joined (AADJ) vs. Hybrid Azure AD joined (HAADJ)](azure-ad-joined-hybrid-azure-ad-joined.md)
-- [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join)
+- [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+- [Configure hybrid Microsoft Entra join](/azure/active-directory/devices/howto-hybrid-azure-ad-join)
   
 > [!NOTE]
-> Microsoft doesn't have a migration utility to convert existing endpoints from on-premises domain joined or hybrid Azure AD joined to Azure AD joined. Microsoft recommends these devices be reset and redeployed as part of a hardware refresh.
+> Microsoft doesn't have a migration utility to convert existing endpoints from on-premises domain joined or hybrid Microsoft Entra joined to Microsoft Entra joined. Microsoft recommends these devices be reset and redeployed as part of a hardware refresh.
 
 ### ✅ Phase 3: Cloud attach Configuration Manager (optional)
 
@@ -370,7 +369,7 @@ When you cloud attach, you can remotely manage your client endpoints, co-manage 
 
 For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../intune/fundamentals/tutorial-walkthrough-endpoint-manager.md).
 
-### ✅ Phase 4: Create an Azure AD joined proof of concept
+### ✅ Phase 4: Create an Microsoft Entra joined proof of concept
 
 This critical phase can start at any time. It helps identify potential issues, unknown issues, and validates overall functionality and resolutions to those issues. As with all POCs, the goal is to prove and validate functionality in an actual enterprise environment instead of a lab environment.
 
@@ -385,15 +384,15 @@ Important steps for this phase include:
 
     This minimum configuration doesn't and shouldn't have all possible configurations applied. Remember, the intent is to discover more configurations that are required for users to be successful.
 
-2. **Configure Windows Autopilot for Azure AD joined endpoints**
+2. **Configure Windows Autopilot for Microsoft Entra joined endpoints**
 
-    Using Windows Autopilot to provision new endpoints and reprovision existing endpoints is the fastest way to introduce Azure AD joined systems to your organization. It's an important part of the POC.
+    Using Windows Autopilot to provision new endpoints and reprovision existing endpoints is the fastest way to introduce Microsoft Entra joined systems to your organization. It's an important part of the POC.
 
-3. **Deploy a POC for Azure AD joined systems**
+3. **Deploy a POC for Microsoft Entra joined systems**
 
     - Use a mix of endpoints that represent different configurations and users. You want as much validation of this new system state as possible.
 
-    - Only real production use by real production users will fully validate the workloads and their functionality. Through natural, day-to-day use of the POC Azure AD endpoints, users organically test and validate your workloads.
+    - Only real production use by real production users will fully validate the workloads and their functionality. Through natural, day-to-day use of the POC Microsoft Entra endpoints, users organically test and validate your workloads.
 
     - Create checklists of business critical functionality and scenarios, and give these lists to your POC users. The checklists are specific to each organization and may change as workloads are transitioned to cloud-native friendly workloads.
 
@@ -407,23 +406,23 @@ Important steps for this phase include:
 
     - Use the milestones and success criteria previously established for each workload. They'll help determine the progress and scope of the POC.
 
-### ✅ Phase 5: Azure AD join your existing Windows endpoints
+### ✅ Phase 5: Microsoft Entra join your existing Windows endpoints
 
-This phase transitions new Windows endpoint provisioning to Azure AD joined. Once all blockers and issues have been resolved, you can move existing devices to be fully cloud-native. You have the following options:
+This phase transitions new Windows endpoint provisioning to Microsoft Entra joined. Once all blockers and issues have been resolved, you can move existing devices to be fully cloud-native. You have the following options:
 
 - **Option 1: Replace your devices**. If the devices are end-of-life or don't support modern security, then replacing them is the best choice. Modern devices support new and enhanced security features, including the Trusted Platform Module (TPM) technology.
 
-- **Option 2: Reset the Windows devices**. If your existing devices support the newer security features, then you can reset the devices. During the out of box experience (OOBE) or when users sign in, they can join the devices to Azure AD.
+- **Option 2: Reset the Windows devices**. If your existing devices support the newer security features, then you can reset the devices. During the out of box experience (OOBE) or when users sign in, they can join the devices to Microsoft Entra.
 
   Before resetting an existing Windows endpoint, be sure to:
   
   1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
   2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
-  3. [Delete the existing Azure AD device object](/azure/active-directory/devices/manage-stale-devices).
+  3. [Delete the existing Microsoft Entra device object](/azure/active-directory/devices/manage-stale-devices).
   
   Then, reset the device, and reprovision the endpoint.
 
-When the devices are ready, join these devices to Azure AD using the option that best for your organization. For more specific information, go to [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) and [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan).
+When the devices are ready, join these devices to Microsoft Entra using the option that best for your organization. For more specific information, go to [Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join) and [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan).
 
 ## Move from Group Policy Objects (GPOs)
 
@@ -499,9 +498,9 @@ Some of the benefits include:
 - **Users can reset existing endpoints themselves**: If users have existing Windows endpoints, they can reset the devices themselves. When they're reset, it restores the endpoints to a minimum baseline and managed state. It doesn't require a high cost IT intervention or physical access to the endpoint.
 
 > [!NOTE]
-> It's not recommended to use Windows Autopilot to hybrid Azure AD join newly provisioned endpoints. It works, but there are some challenges. On newly provisioned endpoints, use Windows Autopilot to Azure AD join (not hybrid Azure AD join).
+> It's not recommended to use Windows Autopilot to hybrid Microsoft Entra join newly provisioned endpoints. It works, but there are some challenges. On newly provisioned endpoints, use Windows Autopilot to Microsoft Entra join (not hybrid Microsoft Entra join).
 >
-> To help determine the join method that's right for your organization, go to [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md).
+> To help determine the join method that's right for your organization, go to [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md).
 
 For more information on Windows Autopilot, go to:
 
@@ -513,7 +512,7 @@ For more information on Windows Autopilot, go to:
 
 1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
 2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
-3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 5. 🡺 **High level planning guide** (*You are here*)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)

@@ -16,7 +16,7 @@ ms.date: 12/18/2020
   
    ![Configure cloud sync](../media/tenant-attach-intune/cloud-sync.png)
 
-3. Select **Add** and then select the Azure Active Directory group that you would like to synchronize with **Collect membership results**.
+3. Select **Add** and then select the Microsoft Entra group that you would like to synchronize with **Collect membership results**.
 
 4. Select **OK** to save the configuration.
 

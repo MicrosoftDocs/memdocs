@@ -2,8 +2,8 @@
 title: AddDistributionPoints Method in SMS_TaskSequencePackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 56aed021-c205-4b29-9d2e-e67e279e044d
 author: Banreet

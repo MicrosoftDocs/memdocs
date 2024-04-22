@@ -3,8 +3,8 @@ title: CancelClientOperation Method
 titleSuffix: Configuration Manager
 description: The CancelClientOperation Windows Management Instrumentation (WMI) class method cancels a client operation.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 620de3b8-3755-41f2-92e2-7327eb144104
 author: Banreet

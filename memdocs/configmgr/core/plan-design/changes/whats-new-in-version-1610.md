@@ -3,8 +3,8 @@ title: New version 1610
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1610 of Configuration Manager.
 ms.date: 11/23/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

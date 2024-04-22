@@ -21,7 +21,6 @@ ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -76,7 +75,7 @@ Intune Plan 1 for Education is included in the following licenses:
 
 ## Licensing for Configuration Manager-managed devices in Intune
 
-For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses an Azure Active Directory (Azure AD) feature called Windows 10 auto-enrollment. Auto-enrollment with co-management requires licenses for both Azure AD Premium (AADP1) and Microsoft Intune Plan 1. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Intune now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
+For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses a Microsoft Entra feature called Windows 10 auto-enrollment. Auto-enrollment with co-management requires licenses for both Microsoft Entra ID P1 or P2 (AADP1) and Microsoft Intune Plan 1. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Intune now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
 
 ## Additional information
 
@@ -91,11 +90,11 @@ For more information about giving administrators access to the Microsoft Intune 
 
 ## Device-only licenses
 
-Microsoft Intune offers a device-only subscription service that helps organizations manage devices that aren't affiliated with specific users. 
+Microsoft Intune offers a device-only subscription service that helps organizations manage devices that aren't affiliated with specific users.
 
 You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a device is enrolled through any of the following methods:
 
-- [Windows Autopilot Self-Deploying mode](/windows/deployment/windows-autopilot/self-deploying)
+- [Windows Autopilot Self-Deploying mode](/autopilot/self-deploying)
 - [Apple Device Enrollment Program without user affinity](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple School Manager without user affinity](../enrollment/apple-school-manager-set-up-ios.md)
 - [Apple Configurator without user affinity](../enrollment/apple-configurator-enroll-ios.md)
@@ -115,7 +114,7 @@ When a device is enrolled by using a device license, the following Intune functi
 
 ## Confirm your licenses
 
-A Microsoft Intune license is created for you when you sign up for the Intune free trial. As part of this trial, you'll also have a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
+A Microsoft Intune license is created for you when you sign up for the Intune free trial. As part of this trial, you'll also have a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.
 
 > [!NOTE]
 > If you are unable to access this portal using the step below, or if you don't have an Intune license, you can sign up now for the [Intune free trial](./free-trial-sign-up.md). When setting up Intune, you can give an administrators access to the Microsoft Intune admin center [without them requiring an Intune license](./unlicensed-admins.md).
@@ -131,17 +130,17 @@ To confirm your Microsoft Intune license or trial, use the following steps:
 > [!NOTE]
 > For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/training/modules/set-up-microsoft-intune?azure-portal=true).
 
-To check on your Azure AD Premium license, use the following steps:
+To check on your Microsoft Entra ID P1 or P2 license, use the following steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Select **Azure Active Directory**.
+2. Select **Microsoft Entra ID**.
 3. Select **Overview**. On the **Overview** pane, select the **Overview** tab if it isn't already selected.
 4. Under **Basic information**, view your license.
 
-If you don't have a license for Azure AD Premium, see [Sign up for Azure Active Directory Premium editions](/azure/active-directory/fundamentals/active-directory-get-started-premium).
+If you don't have a license for Microsoft Entra ID P1 or P2, see [Sign up for Microsoft Entra ID P1 or P2 editions](/azure/active-directory/fundamentals/active-directory-get-started-premium).
 
 ## Next steps
 
-For the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases, see the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page.  
+For the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases, see the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page.
 
 For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](licenses-assign.md).

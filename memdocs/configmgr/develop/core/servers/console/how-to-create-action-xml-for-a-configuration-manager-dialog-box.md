@@ -3,8 +3,8 @@ description: Learn how to create action XML for dialog boxes.
 title: Create Action XML for a Dialog Box
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: b946a1cb-d54a-48d3-a3f1-5db70c426513
 author: Banreet

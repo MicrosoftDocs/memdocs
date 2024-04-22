@@ -3,8 +3,8 @@ title: Site components
 titleSuffix: Configuration Manager
 description: Learn how to configure site components to modify the behavior of site system roles and site status reporting.
 ms.date: 12/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

@@ -8,19 +8,18 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/08/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: smithre4
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,17 +29,18 @@ ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
 - Android
+- FocusArea_Apps_SpecificApp
 ---
 
 # Manage collaboration experiences in Teams for iOS and Android with Microsoft Intune
 
 Microsoft Teams is the hub for team collaboration in Microsoft 365 that integrates the people, content, and tools your team needs to be more engaged and effective.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Azure Active Directory Premium features, such as conditional access. At a minimum, you'll want to deploy a conditional access policy that allows connectivity to Teams for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as conditional access. At a minimum, you'll want to deploy a conditional access policy that allows connectivity to Teams for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 ## Apply Conditional Access
 
-Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Teams for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Teams for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 > [!NOTE]
 > To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
@@ -103,7 +103,19 @@ You can learn more about configuring the org allowed accounts mode setting here:
 - [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
 - [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
-This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you aren't using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys.
+This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you aren't using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys. 
+
+## Simplify the sign-in experience with domain-less sign in 
+
+You can simplify the sign-in experience on Teams for iOS and Android by pre-filling the domain name on the sign-in screen for users on shared and managed devices by applying the following policies: 
+   
+   | Name | Value |
+   |---|---|
+   | domain_name | A string value providing the domain of the tenant to appended. Use a semicolon delimited value to add multiple domains. This policy only works on enrolled devices. |
+   | enable_numeric_emp_id_keypad | A boolean value used to indicate that the employee ID is all numeric and the number keypad should be enabled for easy entry. If the value is not set, then the alphanumeric keyboard will open. This policy only works on enrolled devices.  |
+
+> [!NOTE]
+> These policies will only work on enrolled shared and managed devices.
 
 ## Notification settings in Microsoft Teams
 
@@ -132,7 +144,7 @@ Use the following options to configure your notifications on the portal through 
    :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-03.png" alt-text="app-configuration-policies-at-a-glance" border="true" :::
 
 1. On the **Basics** page, add a **Name** and click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
-1. Under **General configuration settings**, set any of the following keys to **1** to turn this feature **ON** for chat, channels, all other notifications or any of these combinations. And, set to **0** to turn off the feature.
+1. Under **General configuration settings**, set any of the notification keys to **1** to turn the feature **ON** for chat, channels, all other notifications or any of these combinations. And, set to **0** to turn off the feature. 
 
    | Name | Value |
    |---|---|

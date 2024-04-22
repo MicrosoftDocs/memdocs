@@ -3,7 +3,7 @@
 
 title: Set up enrollment for macOS devices
 titleSuffix: Microsoft Intune
-description: Learn how to set up enrollment for macOS devices in Intune.
+description: Set up enrollment for macOS devices in Intune.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -13,7 +13,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 
 # optional metadata
@@ -64,7 +63,7 @@ Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll the
 Intune supports the following enrollment methods for company-owned macOS devices. Select a hyperlinked method to open its setup steps. 
 
 - [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.   
-- [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Azure Active Directory account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
+- [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Microsoft Entra account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
 - [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.  
 
 ## Bootstrap tokens   
@@ -90,9 +89,9 @@ The token is then automatically escrowed to Microsoft Intune. You can use a comm
 You can monitor the escrow status for any enrolled Mac in the admin center. The *Bootstrap token escrowed* hardware property reports whether or not the bootstrap token has been escrowed in Intune. Intune reports **Yes** when the token has been successfully escrowed and **No** when the token has not been escrowed. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
-2. Go to **Devices** > **macOS**. All macOS devices are shown in a table. 
-3. Select a device. 
-4. Select **Hardware**. 
+2. Go to **Devices** > **macOS**.  
+3. Select a device from your list of macOS devices.  
+4. Select **Hardware**.  
 5. In your hardware details, scroll down to **Conditional access** > **Bootstrap token escrowed**.  
 
 ### Manage kernel extensions and software updates  
@@ -114,7 +113,7 @@ By default, Intune lets macOS devices enroll. To block macOS devices from enroll
 
 Intune supports virtual machines running:
 
-* Parallel Desktop
+* Parallels Desktop
 * VMware Fusion  
 * Apple Silicon  
 
@@ -140,7 +139,7 @@ Enter any string of alphanumeric characters for the serial number. For hardware 
 VMware Fusion is only supported on Intel Macs. See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
 
 ### Apple Silicon 
-No changes are required for virtual machines running on Apple Silicon hardware. Parallel Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
+No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
 
 ## User-approved enrollment
 

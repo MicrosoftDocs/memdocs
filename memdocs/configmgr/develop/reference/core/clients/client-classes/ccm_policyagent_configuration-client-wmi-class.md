@@ -3,8 +3,8 @@ title: CCM_PolicyAgent_Configuration Class
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class that represents the Policy Agent configuration for a given authority.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 72e377e9-0494-4ec6-a7b6-4361df7112e2
 author: Banreet

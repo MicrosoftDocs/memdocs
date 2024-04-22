@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Set up integration of Better Mobile with Intune | Microsoft Docs
-description: Set up the Better Mobile connector as part of integrating the Better Mobile Threat Defense solution with Microsoft Intune.
+title: Set up Better Mobile integration with Intune
+description: How to set  up the Better Mobile solution with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -42,7 +41,7 @@ Before starting the process of integrating Better Mobile with Intune, make sure 
 
 - Microsoft Intune Plan 1 subscription
 
-- Microsoft Entra ID admin credentials to grant the following permissions:
+- Microsoft Entra admin credentials to grant the following permissions:
 
   - Sign in and read user profile
 
@@ -62,7 +61,7 @@ The Better Mobile app authorization process follows:
 
 - Better Mobile syncs with Microsoft Entra Enrollment Group membership to populate its device's database.
 
-- Allow the Better Mobile admin console to use Microsoft Entra Single Sign On (SSO).
+- Allow the Better Mobile admin console to use Microsoft Entra single sign-on (SSO).
 
 - Allow the Better Mobile app to sign in using Microsoft Entra SSO.
 

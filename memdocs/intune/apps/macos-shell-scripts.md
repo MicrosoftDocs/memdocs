@@ -7,12 +7,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -41,7 +40,7 @@ Use shell scripts to extend device management capabilities in Intune, beyond wha
 
 Ensure that the following prerequisites are met when composing shell scripts and assigning them to macOS devices.
 
-- Devices are running macOS 11.0 or later.
+- Devices are running macOS 12.0 or later.
 - Devices are managed by Intune.
 - Devices are connected directly to the Internet. Connection through a proxy is not supported. 
 - Shell scripts begin with `#!` and must be in a valid location such as `#!/bin/sh` or `#!/usr/bin/env zsh`.
@@ -71,7 +70,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
    - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once. Scripts with a frequency set will also run after a device restart.
    - **Max number of times to retry if script fails:** Select how many times the script should be run if it returns a non-zero exit code (zero meaning success). Choose **Not configured** (default) to not retry when a script fails.
 5. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
-6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
+6. Select **Assignments** > **Select groups to include**. An existing list of Microsoft Entra groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
     > [!NOTE]
     >
     > - Shell scripts assigned to user groups applies to any user logging in to the Mac.
@@ -180,7 +179,7 @@ You can create custom attribute profiles which enable you to collect custom prop
    > echo $var # Prints an ISO-8601 compliant date in UTC time
    > ```
 
-5. In **Assignments**, click **Select groups to include**. When you choose **Select groups to include** an existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy. Alternatively, you can choose to select **All users**, **All devices**, or **All users and all devices** by selecting one of these options in the dropdown box next to **Assign to**.
+5. In **Assignments**, click **Select groups to include**. When you choose **Select groups to include** an existing list of Microsoft Entra groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy. Alternatively, you can choose to select **All users**, **All devices**, or **All users and all devices** by selecting one of these options in the dropdown box next to **Assign to**.
    > [!NOTE]
    >
    > - Scripts assigned to user groups applies to any user logging in to the Mac.

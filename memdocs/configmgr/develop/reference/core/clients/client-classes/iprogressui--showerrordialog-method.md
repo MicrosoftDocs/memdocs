@@ -3,8 +3,8 @@ title: "IProgressUI::ShowErrorDialog"
 titleSuffix: Configuration Manager
 description: "IProgressUI::ShowErrorDialog method"
 ms.date: 04/03/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 13e3b9a0-96ea-4b63-be49-5a5d4e61228f
 author: Banreet

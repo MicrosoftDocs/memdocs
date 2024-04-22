@@ -3,8 +3,8 @@ title: SMS_CollectionInfoInFullEvaluationQueue class
 titleSuffix: Configuration Manager
 description: Show collection info from full evaluation queue.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a894f86c-e983-4820-9ccb-60b93e72d100
 author: Banreet

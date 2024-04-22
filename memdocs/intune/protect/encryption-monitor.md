@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2023
+ms.date: 01/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:  
 
 # optional metadata
@@ -40,7 +39,7 @@ The Microsoft Intune encryption report is a centralized location to view details
 > - [Manage BitLocker policy](../protect/encrypt-devices.md)
 > - [Manage FileVault policy](encrypt-devices-filevault.md)
 
-To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Monitor**, and then under *Configuration*, select **Encryption report**.
+To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
 
 ## View encryption details
 
@@ -113,7 +112,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
 - **Profile state summary** – A summary of the profiles that apply to this device. The summary represents the least favorable condition across the applicable profiles. For example, if only one out of several applicable profiles results in an error, the *Profile state summary* displays *Error*.
 
-  To view more details of a status, go to **Intune** > **Device configuration** > **Profiles**, and select the profile. Optionally, select **Device status** and then select a device.
+  To view more details of a status in the Intune admin center, go to **Devices** > **Configuration** > select the profile. Optionally, select **Device status** and then select a device.
 
 - **Status details** – Advanced details about the device's encryption state.
 
@@ -174,7 +173,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - The encryption method of the fixed drive doesn't match the BitLocker policy.
 
-  - To encrypt drives, the BitLocker policy requires either the user to sign in as an Administrator or, if the device is joined to Azure AD, the AllowStandardUserEncryption policy must be set to `1`.
+  - To encrypt drives, the BitLocker policy requires either the user to sign in as an Administrator or, if the device is joined to Microsoft Entra ID, the AllowStandardUserEncryption policy must be set to `1`.
 
   - Windows Recovery Environment (WinRE) isn't configured.
   

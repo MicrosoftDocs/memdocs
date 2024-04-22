@@ -3,8 +3,8 @@ title: Client security and privacy
 titleSuffix: Configuration Manager
 description: Learn about security and privacy for Configuration Manager clients.
 ms.date: 05/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg
@@ -49,7 +49,7 @@ When you can't use PKI authentication, approval identifies a computer that you t
 - Automatic for computers in trusted domains
 - Automatic for all computers
 
-The most secure approval method is to automatically approve clients that are members of trusted domains. This option includes cloud-domain joined clients from connected Azure Active Directory (Azure AD) tenants.<!-- MEMDocs#318 --> Then manually check and approve all other computers. Automatically approving all clients isn't recommended, unless you have other access controls to prevent untrustworthy computers from accessing your network.
+The most secure approval method is to automatically approve clients that are members of trusted domains. This option includes cloud-domain joined clients from connected Microsoft Entra tenants.<!-- MEMDocs#318 --> Then manually check and approve all other computers. Automatically approving all clients isn't recommended, unless you have other access controls to prevent untrustworthy computers from accessing your network.
 
 For more information about how to manually approve computers, see [Manage clients from the devices node](../../manage/manage-clients.md#manage-clients-from-the-devices-node).
 

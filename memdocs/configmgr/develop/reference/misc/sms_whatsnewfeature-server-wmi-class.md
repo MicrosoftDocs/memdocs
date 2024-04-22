@@ -3,8 +3,8 @@ title: SMS_WhatsNewFeature Class
 titleSuffix: Configuration Manager
 description: The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9cf5d7ff-d13d-4e1d-9df9-3c644e709be4
 author: Banreet

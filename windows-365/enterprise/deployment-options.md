@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/14/2022
+ms.date: 12/08/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -50,7 +49,7 @@ This option is simple, reliable, and scalable, offering Cloud PC connectivity wh
 - Manages the network that the Cloud PCs occupy.
 - Provides a Zero Trust Framework-aligned model of an End User Computing (EUC) environment. For more information, see [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
 
-The customer’s only responsibility is the configuration and management of the Cloud PCs. Microsoft doesn’t configure anything within the Cloud PC itself.
+The customer’s only responsibility is the configuration and management of the Cloud PCs.
 
 Microsoft recommends that customers use this option for their Windows 365 deployment.
 

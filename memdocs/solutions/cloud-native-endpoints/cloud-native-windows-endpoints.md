@@ -3,18 +3,17 @@
 
 title: Tutorial-Get started with cloud-native Windows endpoints 
 titleSuffix: Microsoft Intune
-description: Set up secure cloud-native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Windows Autopilot.
+description: Set up secure cloud-native Windows endpoints that are Microsoft Entra joined, enrolled in Intune, and then deploy at scale with Windows Autopilot.
 keywords:
 author: scottbreenmsft
   
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 01/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -72,7 +71,7 @@ Use the five ordered phases in this guide, which build on each other to help you
 - Phase 4 – Apply your custom settings and applications
 - Phase 5 – Deploy at scale with Windows Autopilot
 
-At the end of this guide, you have a cloud-native Windows endpoint ready to start testing in your environment. Before you get started, you might want to check out the Azure AD join planning guide at [How to plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan).
+At the end of this guide, you have a cloud-native Windows endpoint ready to start testing in your environment. Before you get started, you might want to check out the Microsoft Entra join planning guide at [How to plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan).
 
 ## Phase 1 – Set up your environment
 
@@ -88,7 +87,7 @@ If your wireless network requires certificates, you can start with an Ethernet c
 
 ### Step 2 - Enrollment and Licensing
 
-Before you can join Azure AD and enroll in Intune, there are a few things you need to check. You could create a new Azure AD group, such as the name **Intune MDM Users**. Then, add specific test user accounts and target each of the following configurations at that group to limit who can enroll devices while you set up your configuration. To create an Azure AD group, go to [Create a basic group and add members](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+Before you can join Microsoft Entra and enroll in Intune, there are a few things you need to check. You could create a new Microsoft Entra group, such as the name **Intune MDM Users**. Then, add specific test user accounts and target each of the following configurations at that group to limit who can enroll devices while you set up your configuration. To create an Microsoft Entra group, go to [Create a basic group and add members](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
 
 - **Enrollment restrictions**  
 Enrollment restrictions allow you to control what types of devices can enroll into management with Intune. For this guide to be successful, make sure *Windows (MDM)* enrollment is allowed, which is the default configuration.
@@ -96,14 +95,14 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../intune/enrollment/enrollment-restrictions-set.md).
 
 - **Azure AD Device MDM settings**  
-  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Windows Autopilot to work.
+  When you join a Windows device to Microsoft Entra, Microsoft Entra can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Windows Autopilot to work.
   
-  To check your Azure AD Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../intune/enrollment/quickstart-setup-auto-enrollment.md).
+  To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../intune/enrollment/quickstart-setup-auto-enrollment.md).
   
 - **Azure AD company branding**  
-  Adding your corporate logo and images to Azure AD ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
+  Adding your corporate logo and images to Microsoft Entra ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
 
-  For information on configuring custom branding in Azure AD, go to [Add branding to your organization's Azure AD sign-in page](/azure/active-directory/fundamentals/customize-branding).
+  For information on configuring custom branding in Microsoft Entra, go to [Add branding to your organization's Microsoft Entra sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 - **Licensing**  
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune require two key capabilities.
@@ -111,7 +110,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   Users require the following licenses:
   - A **Microsoft Intune** or **Microsoft Intune for Education** license
   - A license like one of the following options that allows for automatic MDM enrollment:
-    - **Azure AD Premium P1**
+    - **Microsoft Entra Premium P1**
     - **Microsoft Intune for Education**
 
   To assign licenses, go to [Assign Microsoft Intune licenses](../../intune/fundamentals/licenses-assign.md).
@@ -148,33 +147,33 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
    - `Get-WindowsAutopilotInfo.ps1 -GroupTag CloudNative -Online`
 
    > [!NOTE]
-   > Group Tags allow you to create dynamic Azure AD groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Intune admin center. We'll use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
+   > Group Tags allow you to create dynamic Microsoft Entra groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Intune admin center. We'll use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
 
 9. When prompted for credentials, sign in with your Intune Administrator account.
 
 10. Leave the computer at the out of box experience until [Phase 2](#phase-2---build-a-cloud-native-windows-endpoint).
 
-### Step 4 - Create Azure AD dynamic group for the device
+### Step 4 - Create Microsoft Entra dynamic group for the device
 
-To limit the configurations from this guide to the test devices that you import to Windows Autopilot, create a dynamic Azure AD group. This group should automatically include the devices that import to Windows Autopilot and have the Group Tag *CloudNative*. You can then target all your configurations and applications at this group.
+To limit the configurations from this guide to the test devices that you import to Windows Autopilot, create a dynamic Microsoft Entra group. This group should automatically include the devices that import to Windows Autopilot and have the Group Tag *CloudNative*. You can then target all your configurations and applications at this group.
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Groups**.
+2. Select **Groups** > **New group**. Enter the following details:
 
-3. Select **New Group** and enter the following details:
-   1. Group type: **Security**
-   2. Group Name: **Autopilot Cloud-Native Windows Endpoints**
-   3. Membership type: **Dynamic Device**
+   - **Group type**: Select **Security**.
+   - **Group Name**: Enter **Autopilot Cloud-Native Windows Endpoints**.
+   - **Membership type**: Select **Dynamic Device**.
 
-4. Select **Add dynamic query**.
+3. Select **Add dynamic query**.
 
-5. In the **Rule Syntax** section, select **Edit.**
+4. In the **Rule Syntax** section, select **Edit.**
 
-6. Paste the following text:
-   - `(device.devicePhysicalIds -any (_ -eq "[OrderID]:CloudNative"))`
+5. Paste the following text:
 
-7. Select **OK** > **Save** > **Create**.
+    `(device.devicePhysicalIds -any (_ -eq "[OrderID]:CloudNative"))`
+
+6. Select **OK** > **Save** > **Create**.
 
 > [!TIP]
 > Dynamic groups take a few minutes to populate after changes occur. In large organizations, it [can take much longer](/azure/active-directory/enterprise-users/groups-troubleshooting#troubleshooting-dynamic-memberships-for-groups). After creating a new group, wait a few minutes before you check to confirm the device is now a member of the group.
@@ -183,7 +182,7 @@ To limit the configurations from this guide to the test devices that you import 
 
 ### Step 5 - Configure the Enrollment Status Page
 
-The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](../../intune/enrollment/windows-enrollment-status.md). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud-Native Windows Endpoints** group created in the previous step, *Create Azure AD dynamic group for the device*.
+The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](../../intune/enrollment/windows-enrollment-status.md). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud-Native Windows Endpoints** group created in the previous step, *Create Microsoft Entra dynamic group for the device*.
 
 - For the purposes of testing, we recommend the following settings, but feel free to adjust them as required:
   - **Show app and profile configuration progress** - Yes
@@ -191,11 +190,11 @@ The enrollment status page (ESP) is the mechanism an IT pro uses to control the 
 
 ### Step 6 - Create and assign the Windows Autopilot profile
 
-Now we can create the Windows Autopilot profile and assign it to our test device. This profile tells your device to join Azure AD and what settings to apply during OOBE.
+Now we can create the Windows Autopilot profile and assign it to our test device. This profile tells your device to join Microsoft Entra and what settings to apply during OOBE.
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Enroll devices** > **Deployment profiles** (under **Windows Autopilot Deployment Program**).
+2. Select **Devices** > **Enrollment** > **Windows Autopilot** > **Deployment profiles**.
 
 3. Select **Create profile** > **Windows PC**.
 
@@ -205,7 +204,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 6. Leave the scope tags and select **Next**.
 
-7. Assign the profile to the Azure AD group you created called **Autopilot Cloud-Native Windows Endpoint**, select **Next**, and then select **Create**.
+7. Assign the profile to the Microsoft Entra group you created called **Autopilot Cloud-Native Windows Endpoint**, select **Next**, and then select **Create**.
 
 ### Step 7 - Sync Windows Autopilot devices
 
@@ -213,7 +212,7 @@ The Windows Autopilot service synchronizes several times a day. You can also tri
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Enroll devices** > **Devices**.
+2. Select **Devices** > **Enrollment** > **Windows Autopilot** > **Devices**.
 
 3. Select **Sync**.
 
@@ -283,7 +282,7 @@ To build your first cloud-native Windows endpoint, use the same virtual machine 
    > [!NOTE]
    > If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn't triggered. In that situation, restart the device and ensure it has internet access. If it still doesn't work, try resetting the PC or reinstalling Windows.
 
-2. Sign in with Azure AD credentials (*UPN* or *AzureAD\username*).
+2. Sign in with Microsoft Entra credentials (*UPN* or *AzureAD\username*).
 3. The enrollment status page shows the status of the device configuration.
 
 **Congratulations!** You've provisioned your first cloud-native Windows endpoint!
@@ -366,7 +365,7 @@ Microsoft Defender Firewall can detect a trusted network using the [NetworkListM
 Using the *domain* network profile allows you to separate firewall rules based on a trusted network, a private network, and a public network. These settings can be applied using a Windows custom profile.
 
 > [!NOTE]
-> Azure AD joined endpoints cannot leverage LDAP to detect a domain connection in the same way that domain-joined endpoints do. Instead, use the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) to specify a TLS endpoint that when accessible will switch the endpoint to the *domain* firewall profile.
+> Microsoft Entra joined endpoints cannot leverage LDAP to detect a domain connection in the same way that domain-joined endpoints do. Instead, use the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) to specify a TLS endpoint that when accessible will switch the endpoint to the *domain* firewall profile.
 
 ### BitLocker Encryption
 
@@ -433,7 +432,7 @@ When you configure the following BitLocker settings, they silently enable 128-bi
 
 By default, the built-in local administrator account ([well known SID](/windows-server/identity/ad-ds/manage/understand-security-identifiers#well-known-sids) S-1-5-500) is disabled. There are some scenarios where a local administrator account can be beneficial, such as troubleshooting, end-user support, and device recovery. If you decide to enable the built-in administrator account, or create a new local administrator account, it's important to secure the password for that account.
 
-Windows Local Administrator Password Solution (LAPS) is one of the features you can use to randomize and securely store the password in Azure AD. If you're using Intune as your MDM service, then use the following steps to enable [Windows LAPS](/windows-server/identity/laps/laps-overview).
+Windows Local Administrator Password Solution (LAPS) is one of the features you can use to randomize and securely store the password in Microsoft Entra. If you're using Intune as your MDM service, then use the following steps to enable [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
 > [!IMPORTANT]
 > Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you.
@@ -442,14 +441,14 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
 
 1. Make sure your Windows 10 (20H2 or later) or Windows 11 devices have the April 2023 (or later) security update installed.
 
-    For more information, go to [Azure AD operating system updates](/azure/active-directory/devices/howto-manage-local-admin-passwords#operating-system-updates).
+    For more information, go to [Microsoft Entra operating system updates](/azure/active-directory/devices/howto-manage-local-admin-passwords#operating-system-updates).
 
-2. Enable Windows LAPS in Azure AD:
+2. Enable Windows LAPS in Microsoft Entra:
 
-    1. Sign in to [Azure AD](https://aka.ms/aaddevice).
+    1. Sign in to [Microsoft Entra](https://aka.ms/aaddevice).
     2. For the **Enable Local Administrator Password Solution (LAPS)** setting, select **Yes** > **Save** (top of the page).
 
-    For more information, go to [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
+    For more information, go to [Enabling Windows LAPS with Microsoft Entra](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
 
 3. In Intune, create an endpoint security policy:
 
@@ -548,7 +547,7 @@ You can customize and set a standard start and taskbar layout using Intune.
 - **For Windows 11**:
 
   - To create and apply a Start menu layout, go to [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11).
-  - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11).
+  - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/taskbar/configure).
 
 ### Settings catalog
 
@@ -565,7 +564,7 @@ The settings catalog is a single location where all configurable Windows setting
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
 - **Azure Active Directory preferred tenant domain**  
-  This setting configures the preferred tenant domain name to be appended to a user's username. A preferred tenant domain allows users to sign in to Azure AD endpoints with only their username rather than their whole UPN so long as the user's domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
+  This setting configures the preferred tenant domain name to be appended to a user's username. A preferred tenant domain allows users to sign in to Microsoft Entra endpoints with only their username rather than their whole UPN so long as the user's domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
 
   The setting can be found in:
   - Authentication
@@ -603,7 +602,7 @@ Following are some settings available in the settings catalog that might be rele
 
 - **Control which tenants the Teams desktop client can sign in to**
 
-  When this policy is configured on a device, users can only sign in with accounts homed in an Azure AD tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Azure AD tenant IDs. By specifying this policy and defining an Azure AD tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
+  When this policy is configured on a device, users can only sign in with accounts homed in an Microsoft Entra tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining an Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
   
   - Administrative Templates \ Microsoft Teams
     - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
@@ -612,7 +611,7 @@ Following are some settings available in the settings catalog that might be rele
 
 Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../intune/configuration/device-restrictions-configure.md).
 
-To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profile** > **Create  profile** > Select **Windows 10 and later** for or *Platform* and **Templates** for *Profile type* > **Device restrictions**.
+To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > Select **Windows 10 and later** for or *Platform* and **Templates** for *Profile type* > **Device restrictions**.
 
 - **Desktop background picture URL (Desktop only)**  
   Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
@@ -638,7 +637,7 @@ Customers using Microsoft Configuration Manager can deploy connected cache serve
 
 ### Local Administrators
 
-If there's only one user group that needs local administrator access to all Azure AD joined Windows devices, then you can add them to the [Azure AD Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator).
+If there's only one user group that needs local administrator access to all Microsoft Entra joined Windows devices, then you can add them to the [Microsoft Entra Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator).
 
 You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
 
@@ -646,7 +645,7 @@ You might have a requirement for IT helpdesk or other support staff to have loca
 - If you have Windows 10 20H1 (2004) use the [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace).
 - Windows versions prior to Windows 10 20H1 (2004) can't use groups, only individual accounts.
 
-For more information, go to [How to manage the local administrators group on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin)
+For more information, go to [How to manage the local administrators group on Microsoft Entra joined devices](/azure/active-directory/devices/assign-local-admin)
 
 ### Group Policy to MDM Setting Migration
 
@@ -716,7 +715,7 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 
 1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
 2. 🡺 **Tutorial: Get started with cloud-native Windows endpoints** (*You are here*)
-3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
@@ -725,7 +724,7 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 
 - [Co-management for Windows devices](../../configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
-- Configure an Intune [device compliance policy](../../intune/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on an Azure AD [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
+- Configure an Intune [device compliance policy](../../intune/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on an Microsoft Entra [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
 - Add [Store Apps](../../intune/apps/windows-store-for-business.md)
 - Add [Win32 apps](../../intune/apps/apps-win32-app-management.md)
 - [Use certificates for authentication in Intune](../../intune/protect/certificates-configure.md)

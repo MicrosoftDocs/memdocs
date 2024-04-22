@@ -3,8 +3,8 @@ title: Flowchart - Download updates
 titleSuffix: Configuration Manager
 description: See the process by which a site with an online service connection point downloads in-console updates.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

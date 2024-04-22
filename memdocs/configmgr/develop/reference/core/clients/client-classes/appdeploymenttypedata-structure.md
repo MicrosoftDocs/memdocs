@@ -3,8 +3,8 @@ title: AppDeploymentTypeData Structure
 titleSuffix: Configuration Manager
 description: The AppDeploymentTypeData structure contains detection results for a set of deployment types.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7adb722c-0a96-4580-bf2b-4f381e9b5a95
 author: Banreet

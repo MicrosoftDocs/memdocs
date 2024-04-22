@@ -3,8 +3,8 @@ title: Find site resources
 titleSuffix: Configuration Manager
 description: Learn how and when Configuration Manager clients use service location to find site resources.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -151,8 +151,6 @@ From the set of management points sorted by preference, the client attempts to u
 When a client can't contact the first management point, it tries each successive management point on its list. It tries each preferred management point in the category before trying the non-preferred management points. If a client can't successfully communicate with any management point in the category, it attempts to contact a preferred management point from the next category, until it finds a management point to use.
 
 After a client establishes communication with a management point, it continues to use that same management point until:
-
-- 25 hours have passed.
 
 - The client is unable to communicate with the management point for five attempts over a period of 10 minutes.
 

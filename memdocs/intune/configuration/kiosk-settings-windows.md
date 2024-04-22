@@ -2,7 +2,7 @@
 # required metadata
 
 title: Kiosk settings for Windows 10/11 in Microsoft Intune
-description: Configure your Windows 10/11 client devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune. 
+description: Configure your Windows 10/11 client devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
 keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
@@ -22,7 +22,7 @@ ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -127,7 +127,7 @@ Runs only one app on the device, such as a web browser or Store app.
       `office.com`
 
     > [!NOTE]
-    > Windows 10/11 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Azure Active Directory (AD) credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
+    > Windows 10/11 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
 
   - **Add Store app**: Select **Add a store app**, and choose an app from the list.
 
@@ -162,7 +162,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
 
   - **Auto logon (Windows 10 version 1803 and later)**: Use on kiosks in public-facing environments that don't require the user to sign in, similar to a guest account. This setting uses the [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Local user account**: **Add** the local (to the device) user account. The account you enter signs in to the kiosk.
-  - **Azure AD user or group (Windows 10 version 1803 and later)**: Select **Add**, and choose Azure AD users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
+  - **Microsoft Entra user or group (Windows 10 version 1803 and later)**: Select **Add**, and choose Microsoft Entra users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
   - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser and Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
@@ -203,7 +203,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
         To allow specific websites, upload a .csv file that includes a list of the allowed websites. If you don't add a .csv file, all websites are allowed.
 
       > [!NOTE]
-      > Windows 10 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Azure Active Directory (AD) credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
+      > Windows 10 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
 
   - **Applications**
 

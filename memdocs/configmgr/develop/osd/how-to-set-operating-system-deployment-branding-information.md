@@ -2,8 +2,8 @@
 title: Set Operating System Deployment Branding Information
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 95a1f0b7-2568-403f-bd24-43abc859eaf0
 author: Banreet

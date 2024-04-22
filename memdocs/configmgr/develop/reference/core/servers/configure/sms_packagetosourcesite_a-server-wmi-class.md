@@ -3,8 +3,8 @@ description: Learn how to use the SiteCode property to relate an SMS_Package Ser
 title: SMS_PackageToSourceSite_a Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 44bfdfde-3c1f-4a86-b4e9-1ec81cfede1c
 author: Banreet

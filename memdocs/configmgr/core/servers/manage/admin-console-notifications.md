@@ -3,8 +3,8 @@ title: Configuration Manager console notifications
 titleSuffix: Configuration Manager
 description: Learn about notifications from the Configuration Manager console.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
@@ -90,11 +90,11 @@ You can also view the [Product Lifecycle Dashboard](../../clients/manage/asset-i
 
 - You have an option to receive [Messages from Microsoft](#bkmk_msft)
 - If you configure Azure services to cloud-attach your site, you'll see notifications with an action to [renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew).<!--6386392--> The site evaluates the state of the following alerts once per hour:
-   - One or more Azure AD app secret keys will expire soon
-   - One or more Azure AD app secret keys have expired
+   - One or more Microsoft Entra app secret keys will expire soon
+   - One or more Microsoft Entra app secret keys have expired
 
 > [!Important]
-> When you use an [imported Azure AD app](../deploy/configure/azure-services-wizard.md#import-apps-dialog-server), you aren't notified of an upcoming expiration date from console notifications. <!--10568158-->
+> When you use an [imported Microsoft Entra app](../deploy/configure/azure-services-wizard.md#import-apps-dialog-server), you aren't notified of an upcoming expiration date from console notifications. <!--10568158-->
 
 ## <a name="bkmk_noncrit"></a> Configure a site to show non-critical notifications
 

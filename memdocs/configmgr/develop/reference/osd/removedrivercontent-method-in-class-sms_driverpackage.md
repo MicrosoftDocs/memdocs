@@ -3,8 +3,8 @@ title: RemoveDriverContent Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the RemoveDriverContent WMI class method removes the specified driver from the driver package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f1cc53f3-3478-4bee-a48a-81d53ffdb3b2
 author: Banreet

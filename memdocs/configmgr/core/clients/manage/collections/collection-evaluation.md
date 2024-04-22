@@ -3,8 +3,8 @@ title: Collection evaluation
 titleSuffix: Configuration Manager
 description: Learn about the collection evaluation process, types, and triggers. Understand the collection evaluation graph and hierarchy.
 ms.date: 06/05/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

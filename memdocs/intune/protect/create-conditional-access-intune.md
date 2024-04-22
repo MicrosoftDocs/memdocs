@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -106,7 +105,7 @@ To take advantage of device compliance status, configure Conditional Access poli
      - Require multi-factor authentication
      - Require authentication strength
      - Require device to be marked as compliant - *This option is required for the policy to use device compliance status.*
-     - Require Hybrid Microsoft Entra joined device
+     - Require Microsoft Entra hybrid joined device
      - Require approved client app
      - Require app protection policy
      - Require password change

@@ -3,8 +3,8 @@ title: Sample queries for software metering
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common software metering views to other views.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

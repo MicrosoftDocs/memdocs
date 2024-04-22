@@ -3,8 +3,8 @@ title: Prestart commands for task sequence media
 titleSuffix: Configuration Manager
 description: Create a script to use for the prestart command, distribute the content associated with the prestart command, and configure the prestart command in media.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

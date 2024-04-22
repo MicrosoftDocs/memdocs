@@ -2,13 +2,12 @@
 # required metadata
 
 title: Operating systems and browsers supported by Microsoft Intune
-titleSuffix: 
 description: Lists supported device platforms and browsers for Intune device management
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 10/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -23,7 +22,7 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started; seodec18
+ms.custom: get-started
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -35,7 +34,6 @@ ms.collection:
 Before setting up Microsoft Intune, review the supported operating systems and browsers.
 
 For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).  
-
 
 ## Intune supported operating systems
 
@@ -63,7 +61,7 @@ Microsoft Intune only attempts Samsung Knox activation during enrollment on supp
 
 The Samsung device models in the following table don't support Knox solutions and features. Intune enrolls them as native Android devices.
 
-| **Device Name** | **Device Model Numbers** |
+| Device Name | Device Model Numbers |
 | --- | --- |
 | Galaxy Avant | SM-G386T |
 | Galaxy Core 2/Core 2 Duos | SM-G355H<br>SM-G355M |
@@ -107,7 +105,7 @@ Device management and administrative tasks are done in the Microsoft Intune admi
 - [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure portal](https://portal.azure.com/)
 
-Microsoft Intune is supported with the following web browsers: 
+Microsoft Intune is supported with the following web browsers:
 
 - Microsoft Edge (latest version)
 - Safari (latest version, Mac only)
@@ -115,6 +113,7 @@ Microsoft Intune is supported with the following web browsers:
 - Firefox (latest version)  
 
 ## Next steps  
+
 For network configuration requirements, or to learn more about setting up devices using the configuration service provider (CSP), see:
 
 * [Intune network configuration requirements and bandwidth](network-bandwidth-use.md)   

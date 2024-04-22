@@ -3,8 +3,8 @@ title: Add a Windows Driver to a Boot Image Package
 description: In Configuration Manager, you add a Windows driver to an operating system deployment boot image package by adding a reference to the required driver in the SMS_BootImagePackage Server WMI Class ReferencedDrivers array property.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 5887b585-618e-42ed-a707-d374d0da4b0b
 author: Banreet

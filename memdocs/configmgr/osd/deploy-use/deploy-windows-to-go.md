@@ -3,8 +3,8 @@ title: Deploy Windows To Go
 titleSuffix: Configuration Manager
 description: Learn how to provision Windows To Go in Configuration Manager to create a Windows To Go workspace that boots from an external drive.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

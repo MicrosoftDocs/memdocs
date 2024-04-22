@@ -5,13 +5,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/03/2023
+ms.date: 11/10/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -61,15 +59,20 @@ For details about these settings, see the settings entry in [Set preferences for
 
 For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
 
-- **Enable real-time protection**  
+- **Enable real-time protection (deprecated)**  - This setting is replaced by *Enforcement level*.
   - *Not configured* (*default*)
   - *Enabled*
   - *Disabled*
 
-- **Enable passive mode**  
+- **Enable passive mode (deprecated)** - This setting is replaced by *Enforcement level*.
   - *Not configured* (*default*)
   - *Enabled*
   - *Disabled*
+
+- **Enforcement level**  
+  - *Passive* (*default*)
+  - *Real time*
+  - *On Demand*
 
 - **Scan history size**
   - *Not configured* (*default*)

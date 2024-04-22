@@ -3,8 +3,8 @@ title: How to Create an Application with the Script Deployment Type
 titleSuffix: Configuration Manager
 description: Use the SDK to create an app with the script deployment type.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur

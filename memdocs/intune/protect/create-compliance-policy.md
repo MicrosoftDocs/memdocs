@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/08/2023
+ms.date: 03/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,13 +33,13 @@ ms.collection:
 
 Device compliance policies are a key feature when using Intune to protect your organization's resources. In Intune, you can create rules and settings that devices must meet to be considered compliant, such as a minimum OS version. If the device isn't compliant, you can then block access to data and resources using [Conditional Access](conditional-access.md).
 
-You can also take actions for non-compliance, such as sending a notification email to the user. For an overview of what compliance policies do, and how they're used, see [get started with device compliance](device-compliance-get-started.md).
+You can also take actions for noncompliance, such as sending a notification email to the user. For an overview of what compliance policies do, and how they're used, see [get started with device compliance](device-compliance-get-started.md).
 
 This article:
 
 - Lists the prerequisites and steps to create a compliancy policy.
 - Shows you how to assign the policy to your user and device groups.
-- Describes additional features, including scope tags to "filter" your policies, and steps you can take on devices that aren't compliant.
+- Describes other features, including scope tags to "filter" your policies, and steps you can take on devices that aren't compliant.
 - Lists the check-in refresh cycle times when devices receive policy updates.
 
 ## Before you begin
@@ -49,7 +49,7 @@ To use device compliance policies, be sure you:
 - Use the following subscriptions:
 
   - Intune
-  - If you use Conditional Access, then you need Azure Active Directory (AD) Premium edition. [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Azure AD.
+  - If you use Conditional Access, then you need Microsoft Entra ID P1 or P2 edition. [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Microsoft Entra ID.
 
 - Use a supported platform:
 
@@ -80,31 +80,29 @@ For more information about using custom compliance settings, including supported
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+2. Go to **Devices** > **Compliance** and choose **Create policy**.   
 
-3. Select a **Platform** for this policy from the following options:
-   - *Android device administrator*
-   - *Android (AOSP)*
-   - *Android Enterprise*
-   - *iOS/iPadOS*
-   - *Linux* - (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS)
-   - *macOS*
-   - *Windows 8.1 and later*
-   - *Windows 10 and later*
+4. Select a **Platform** for this policy from the following options:
+   - **Android device administrator**
+   - **Android (AOSP)**
+   - **Android Enterprise**
+   - **iOS/iPadOS**
+   - **Linux** - (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS)
+   - **macOS**
+   - **Windows 8.1 and later**
+   - **Windows 10 and later**   
 
     For *Android Enterprise*, you also select a **Policy type**:
-     - *Fully Managed*
-     - *Dedicated*
-     - *Corporate-Owned Work Profile*
-     - *Personally Owned Work Profile*
+     - **Fully managed, dedicated, and corporate-owned work profile**  
+     - **Personally-owned work profile**  
 
-    Then, select **Create** to open the **Create policy** configuration window.
+    Then select **Create** to open the configuration page.  
 
-4. On the **Basics** tab, specify a **Name** that helps you identify them later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
+5. On the **Basics** tab, specify a **Name** that helps you identify them later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
 
    You can also choose to specify a **Description**.
   
-5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the available compliance settings for each platform:
+6. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the available compliance settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
    - [Android (AOSP)](compliance-policy-create-android-aosp.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
@@ -114,7 +112,7 @@ For more information about using custom compliance settings, including supported
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
    - [Windows 10/11](compliance-policy-create-windows.md)  
 
-6. Add custom settings to policies for supported platforms.
+7. Add custom settings to policies for supported platforms.
 
    > [!TIP]  
    > This is an optional step that’s supported only for the following platforms:  
@@ -127,7 +125,7 @@ For more information about using custom compliance settings, including supported
 
    **For Windows**:  
    1. On the *Compliance settings* page, expand **Custom Compliance** and set *Custom compliance* to **Require**.
-   2. For *Select your discovery script*, select **Click to select**, and then specify a script that’s been previously added to the Microsoft Intune admin center. This script must have been uploaded before you begin to create the policy.
+   2. For *Select your discovery script*, select **Click to select**, and then specify a script that’s been previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy.  
    3. For *Upload and validate the JSON file with your custom compliance settings*, select the folder icon and then locate and add the JSON file for Windows that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).
 
    **For Linux**:  
@@ -139,25 +137,25 @@ For more information about using custom compliance settings, including supported
 
    The JSON you enter is validated and any problems are displayed. After validation of the JSON contents, the rules from the JSON are displayed in table format.
 
-7. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
+8. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
 
-   You can add multiple actions and configure schedules and additional details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
+   You can add multiple actions, and configure schedules and details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
 
    For information about the actions you can configure, see [Add actions for noncompliant devices](actions-for-noncompliance.md), including how to create notification emails to send to your users.
 
    Another example includes the use of Locations where you add at least one location to a compliance policy. In this case, the default action for noncompliance applies when you select at least one location. If the device isn't connected to any of the selected locations, it's considered not compliant. You can configure the schedule to give your users a grace period, such as one day.
 
-8. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
+9. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
 
    For information on using scope tags, see [Use scope tags to filter policies](../fundamentals/scope-tags.md).
 
-9. On the **Assignments** tab, assign the policy to your groups.  
+10. On the **Assignments** tab, assign the policy to your groups.  
 
    Select **+ Select groups to include** and then assign the policy to one or more groups. The policy will apply to these groups when you save the policy after the next step.
 
    Policies for Linux don't support user-based assignments and can only be assigned to device groups.
 
-10. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
+11. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
 
     The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
 
@@ -206,4 +204,4 @@ For example, a device has three compliance policies assigned to it: one Unknown 
 
 ## Next steps
 
-[Monitor your policies](compliance-policy-monitor.md).
+[Monitor your policies](compliance-policy-monitor.md).  

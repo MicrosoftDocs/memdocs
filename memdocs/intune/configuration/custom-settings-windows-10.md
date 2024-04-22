@@ -12,8 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -90,7 +88,7 @@ Also, Intune doesn't support all the settings listed in [CSP reference](/windows
 >
 > - Create, Read, and Update permissions in a Microsoft Intune role-based access control (RBAC) role.
 > - Intune Service Administrator.
-> - Global Administrator Azure Active Directory role.
+> - Global Administrator Microsoft Entra role.
 >
 > For more information, go to [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 

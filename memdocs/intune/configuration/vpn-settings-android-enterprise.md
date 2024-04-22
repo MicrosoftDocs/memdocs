@@ -12,14 +12,12 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: abalwan
 params:
   siblings_only: true
 ms.suite: ems
@@ -67,9 +65,6 @@ As an Intune administrator, you can create and assign VPN settings to Android En
   - **F5 Access**
   - **Pulse Secure**
   - **Microsoft Tunnel** (Not supported on Android Enterprise dedicated devices.)  
-
-    > [!Important]
-    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -124,9 +119,6 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
   - **Pulse Secure**
   - **NetMotion Mobility**
   - **Microsoft Tunnel**  
-
-    > [!Important]
-    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 

@@ -3,8 +3,8 @@ title: SMS_MigrationExpandingScope Class
 titleSuffix: Configuration Manager
 description: The SMS_MigrationExpandingScope class represents collections that have the expanding scope problem when migrated to System Center 2012 Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f80595c2-73e9-4869-8e13-ab711783f9d9
 author: Banreet

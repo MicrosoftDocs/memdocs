@@ -3,8 +3,8 @@ title: Client installation methods
 titleSuffix: Configuration Manager
 description: Learn about the methods of installing the Configuration Manager client.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg
@@ -160,7 +160,7 @@ For more information about how to manually install the client on each of platfor
 
 -   Doesn't require you to configure and maintain an installation account for the intended client computer.  
 
--   Can use modern authentication with Azure Active Directory.  
+-   Can use modern authentication with Microsoft Entra ID.  
 
 -   Can install and assign computers on the internet.  
 
@@ -176,4 +176,4 @@ For more information, see the following articles:
 
 - [How to install clients to Intune MDM-managed Windows devices](../deploy-clients-to-windows-computers.md#bkmk_mdm)
 
-- [Install and assign Configuration Manager clients using Azure AD for authentication](../deploy-clients-cmg-azure.md)
+- [Install and assign Configuration Manager clients using Microsoft Entra ID for authentication](../deploy-clients-cmg-azure.md)

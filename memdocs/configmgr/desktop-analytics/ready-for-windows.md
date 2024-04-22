@@ -3,8 +3,8 @@ title: Ready for Windows
 titleSuffix: Configuration Manager
 description: About the retirement of the Ready for Windows website
 ms.date: 04/21/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

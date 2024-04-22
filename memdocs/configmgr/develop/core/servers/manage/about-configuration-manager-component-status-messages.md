@@ -3,8 +3,8 @@ title: About Component Status Messages
 titleSuffix: Configuration Manager
 description: The message text for both the Configuration Manager components and the raw user-defined messages is contained in message DLLs.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: fb0d7f0c-a341-4c41-a84f-16c027433e2d
 author: Banreet

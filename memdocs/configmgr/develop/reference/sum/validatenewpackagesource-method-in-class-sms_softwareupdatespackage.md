@@ -3,8 +3,8 @@ description: Learn how to use the ValidateNewPackageSource class method to valid
 title: ValidateNewPackageSource method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 10479561-8533-4c16-9ddb-ef1e2509e352
 author: banreet

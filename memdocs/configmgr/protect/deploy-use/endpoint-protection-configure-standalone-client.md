@@ -3,8 +3,8 @@ title: Configure Endpoint Protection on a standalone client
 titleSuffix: Configuration Manager
 description: Learn how to configure Endpoint Protection on a standalone client.
 ms.date: 07/22/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

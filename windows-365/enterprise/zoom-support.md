@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -59,7 +58,7 @@ Alternatively, the admin can deploy the Zoom VDI client. For more information ab
 ## Install the plugin on the local Windows PC
 
 1. Sign in to the Windows PC that will be used to access the Cloud PC.
-2. In a browser, navigate to the VDI release version page matching the page you used to install the VDI client. For example, [VDI Release Version 5.8.4]( https://support.zoom.us/hc/en-us/articles/4413719670285).
+2. In a browser, navigate to the VDI release version page matching the page you used to install the VDI client. For example, [VDI Release Version 5.16.6]( https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0068823).
 3. In the **Compatible Plugins** table, find the VDI client that you installed, and select the appropriate entry for **Azure Virtual Desktop**. For example, **Windows x86 or x64 (Phone and Meetings): 5.8.4.21112**. Only Windows clients are supported for these optimizations.
 4. Run the MSI and follow the installation instructions.
 

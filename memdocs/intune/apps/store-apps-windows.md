@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- FocusArea_Apps_Store
 ---
 
 # Add Microsoft Store apps to Intune (legacy)

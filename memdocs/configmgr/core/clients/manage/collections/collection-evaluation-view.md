@@ -3,8 +3,8 @@ title: How to view collection evaluation
 titleSuffix: Configuration Manager
 description: View collection evaluation queues and evaluation-related information.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

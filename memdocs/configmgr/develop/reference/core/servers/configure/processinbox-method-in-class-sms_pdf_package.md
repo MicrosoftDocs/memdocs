@@ -3,8 +3,8 @@ title: ProcessInBox Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the ProcessInBox Windows Management Instrumentation class method imports package definition files from the package definition file inbox.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ab2245c3-f676-47cc-82ea-f1787abf9b79
 author: Banreet

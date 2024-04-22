@@ -3,8 +3,8 @@ title: SMS_CollectionPermission Class
 titleSuffix: Configuration Manager
 description: Article outlining the use of SMS_CollectionPermission in Configuration Manager to query and define which collection scopes are associated to an RBAC role.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f2c7789c-c55e-492f-88c7-0e6d8861938b
 author: Banreet

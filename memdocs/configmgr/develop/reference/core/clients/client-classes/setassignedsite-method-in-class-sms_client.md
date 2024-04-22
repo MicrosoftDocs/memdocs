@@ -3,8 +3,8 @@ description: Learn how the SetAssignedSite method, in Configuration Manager, set
 title: SetAssignedSite Methodt
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2a8b79cd-9aaa-4aff-a8cb-74d8b8102dfd
 author: Banreet

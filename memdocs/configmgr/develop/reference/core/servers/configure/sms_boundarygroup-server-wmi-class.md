@@ -3,8 +3,8 @@ title: SMS_BoundaryGroup Class
 titleSuffix: Configuration Manager
 description: The SMS_BoundaryGroup WMI class is an SMS Provider server class that represents a boundary group defined in the site hierarchy.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6c6cea04-987d-4ace-8ac4-7414493efb70
 author: Banreet

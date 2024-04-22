@@ -3,8 +3,8 @@ title: Import configuration data
 titleSuffix: Configuration Manager
 description: Import configuration data if it's contained in a cabinet file format and adheres to the supported Service Modeling Language schema.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth
@@ -17,7 +17,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-In addition to creating configuration baselines and configuration items in the Configuration Manager console, you can import configuration data if it is contained in a cabinet (.cab) file format and adheres to the supported Service Modeling Language (SML) schema. You can import configuration data from:  
+In addition to creating configuration baselines and configuration items in the Configuration Manager console, you can import configuration data if it's contained in a cabinet (.cab) file format and adheres to the supported Service Modeling Language (SML) schema. You can import configuration data from:  
 
 - Best practice configuration data (Configuration Packs) that has been downloaded from Microsoft or from other software vendor sites.  
 
@@ -25,11 +25,11 @@ In addition to creating configuration baselines and configuration items in the C
 
 - Configuration data that was externally authored and that conforms to the SML schema.  
 
-When you import a configuration baseline, some or all of the configuration items that are referenced in the configuration baseline might also be included in the cabinet file. During the import process, Configuration Manager verifies that all of the configuration items that are referenced in the configuration baseline are either also included in the cabinet file or already exist in the Configuration Manager site. The import process fails if you attempt to import a configuration baseline that references configuration data that Configuration Manager cannot locate.  
+When you import a configuration baseline, some or all of the configuration items that are referenced in the configuration baseline might also be included in the cabinet file. During the import process, Configuration Manager verifies that all of the configuration items that are referenced in the configuration baseline are either also included in the cabinet file or already exist in the Configuration Manager site. The import process fails if you attempt to import a configuration baseline that references configuration data that Configuration Manager can't locate.  
 
 Other scenarios where the import process might fail include the following:  
 
--   The configuration data references configuration data that Configuration Manager cannot locate, either in its database or in the cabinet file itself.  
+-   The configuration data references configuration data that Configuration Manager can't locate, either in its database or in the cabinet file itself.  
 
 -   The configuration data is already present in the Configuration Manager database with the same name and configuration data version, but the content version differs.  
 

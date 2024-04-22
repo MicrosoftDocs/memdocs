@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2023
+ms.date: 11/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -52,15 +50,15 @@ This article describes the different features you can configure, and shows you h
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
-    - **Platform**: Choose your platform:
+    - **Platform**: Select your platform:
 
         - **iOS/iPadOS**
         - **macOS**
 
-    - **Profile**: Select **Device features**. Or, select **Templates** > **Device features**.
+    - **Profile type**: Select **Device features**. Or, select **Templates** > **Device features**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -76,11 +74,11 @@ This article describes the different features you can configure, and shows you h
     - [macOS](macos-device-features-settings.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -90,9 +88,9 @@ This article describes the different features you can configure, and shows you h
 
 Airprint is an Apple feature that allows devices to print to files over a wireless network. In Intune, you can add AirPrint information to devices.
 
-For a list of the settings you can configure in Intune, see [AirPrint on iOS/iPadOS](ios-device-features-settings.md#airprint) and [AirPrint on macOS](macos-device-features-settings.md#airprint).
+For a list of the settings you can configure in Intune, go to [AirPrint on iOS/iPadOS](ios-device-features-settings.md#airprint) and [AirPrint on macOS](macos-device-features-settings.md#airprint).
 
-For more information on AirPrint, see [About AirPrint](https://support.apple.com/HT201311) on Apple's web site.
+For more information on AirPrint, go to [About AirPrint](https://support.apple.com/HT201311) on Apple's web site.
 
 Applies to:
 
@@ -104,9 +102,9 @@ Applies to:
 
 Choose how apps on your iOS and iPadOS devices receive notifications. For example, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
 
-For a list of the settings you can configure in Intune, see [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
+For a list of the settings you can configure in Intune, go to [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
-For more information on this feature, see [Notifications](https://developer.apple.com/notifications/) on Apple's web site.
+For more information on this feature, go to [Notifications](https://developer.apple.com/notifications/) on Apple's web site.
 
 Applies to:
 
@@ -122,9 +120,9 @@ Associated domains allow you to create a relationship between your domains, such
 
   For example, create an associated domain to allow password autofill to recommend credentials, such as a password, for websites associated with your app.
 
-For a list of the settings you can configure in Intune, see [Associated domains on macOS](macos-device-features-settings.md#associated-domains).
+For a list of the settings you can configure in Intune, go to [Associated domains on macOS](macos-device-features-settings.md#associated-domains).
 
-For more information on this feature, see [Setting Up an App's Associated Domains](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) on Apple's web site.
+For more information on this feature, go to [Setting Up an App's Associated Domains](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) on Apple's web site.
 
 Applies to:
 
@@ -137,7 +135,7 @@ These settings configure the app layout and folders on the home screen and dock.
 - Use the **Home screen** settings to add apps and folders to the home screen on devices.
 - Use the **Dock** settings to add apps or folders to the dock on the screen. For example, show Safari and the Mail app on the device dock.
 
-For a list of the settings you can configure in Intune, see [Home screen layout on iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
+For a list of the settings you can configure in Intune, go to [Home screen layout on iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
 
 Applies to:
 
@@ -148,9 +146,9 @@ Applies to:
 
 Use these settings to show a custom message or text on the sign in window and lock screen. For example, you can enter an "If lost, return to ..." message, and show asset tag information.
 
-For a list of the settings you can configure in Intune, see [Lock screen message settings on iOS/iPadOS](ios-device-features-settings.md#lock-screen-message).
+For a list of the settings you can configure in Intune, go to [Lock screen message settings on iOS/iPadOS](ios-device-features-settings.md#lock-screen-message).
 
-For more information on Lock Screen Message, see [LockScreenMessage](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) on Apple's web site.
+For more information on Lock Screen Message, go to [LockScreenMessage](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) on Apple's web site.
 
 Applies to:
 
@@ -161,7 +159,7 @@ Applies to:
 
 Use this feature to choose the apps, custom apps, files, and folders that open when users sign in to the devices.
 
-For a list of the settings you can configure in Intune, see [Login items on macOS](macos-device-features-settings.md#login-items).
+For a list of the settings you can configure in Intune, go to [Login items on macOS](macos-device-features-settings.md#login-items).
 
 Applies to:
 
@@ -169,9 +167,9 @@ Applies to:
 
 ## Login window
 
-Control the appearance of the login screen and functions available to users before they sign in. For example, add a banner with a custom message, choose if the sleep button is shown, and more.
+Control the appearance of the sign in screen and functions available to users before they sign in. For example, add a banner with a custom message, choose if the sleep button is shown, and more.
 
-For a list of the settings you can configure in Intune, see [Login window on macOS](macos-device-features-settings.md#login-window).
+For a list of the settings you can configure in Intune, go to [Login window on macOS](macos-device-features-settings.md#login-window).
 
 Applies to:
 
@@ -188,7 +186,7 @@ To use single sign-on, be sure you have:
 - An app that's coded to look for the user credential store in single sign-on on the device.
 - Intune configured for iOS/iPadOS device single sign-on.
 
-For a list of the settings you can configure in Intune, see [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
+For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
 Applies to:
 
@@ -201,13 +199,13 @@ These settings configure an app extension that enables single sign-on (SSO) for 
 
 In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth, and SAML2. You can choose between the Microsoft Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth, and SAML2. You can choose between the Microsoft Entra SSO extension ([Microsoft Enterprise SSO plug-in](/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
 
 - The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
 
-  The Azure AD macOS SSO app extension should work with any third party or partner MDM. The extension must be deployed as a kerberos SSO extension, or deployed as a custom configuration profile with all the required properties configured.
+  The Microsoft Entra macOS SSO app extension should work with any third party or partner MDM. The extension must be deployed as a kerberos SSO extension, or deployed as a custom configuration profile with all the required properties configured.
 
-For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
+For a list of the settings you can configure in Intune, go to [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
 
 For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web). 
 
@@ -236,7 +234,7 @@ Applies to:
 
 Add a custom .png, .jpg, or .jpeg image to your supervised iOS/iPadOS devices. For example, use Intune to add a company logo to the lock screen on your devices.
 
-For a list of the settings you can configure in Intune, see [Wallpaper on iOS/iPadOS](ios-device-features-settings.md#wallpaper).
+For a list of the settings you can configure in Intune, go to [Wallpaper on iOS/iPadOS](ios-device-features-settings.md#wallpaper).
 
 Applies to:
 
@@ -247,7 +245,7 @@ Applies to:
 
 These settings use Apple's built-in AutoFilter algorithm to evaluate web pages, and block adult content and adult language. You can also create a list of allowed web links and restricted web links. For example, you can allow only `contoso` web sites to open.
 
-For a list of the settings you can configure in Intune, see [Web content filter on iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
+For a list of the settings you can configure in Intune, go to [Web content filter on iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 
 Applies to:
 
@@ -256,6 +254,6 @@ Applies to:
 
 ## Next steps
 
-The profile is created, but it may not be doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but might not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 View all the device feature settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.

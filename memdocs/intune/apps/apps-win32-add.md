@@ -11,10 +11,9 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
@@ -22,21 +21,25 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Win32
 ---
 
 # Add, assign, and monitor a Win32 app in Microsoft Intune
 
 After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.md) by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. To learn more about preparing a Win32 app to be uploaded, see [Prepare Win32 app content for upload](apps-win32-prepare.md).
 
+> [!NOTE]
+> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](../apps/apps-add-enterprise-app.md). 
+
 ## Prerequisites
 
 To use Win32 app management, be sure you meet the following criteria:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
-- Devices must be joined or registered to Azure Active Directory (Azure AD) and be auto-enrolled. The Intune management extension supports devices that are Azure AD joined, Azure AD registered, hybrid domain joined, or group policy enrolled. 
+- Devices must be joined or registered to Microsoft Entra ID and be auto-enrolled. The Intune management extension supports devices that are Microsoft Entra joined, Microsoft Entra registered, hybrid domain joined, or group policy enrolled. 
   > [!NOTE]
-  > For the scenario of group policy enrollment, the user uses the local user account to Azure AD join their Windows 10 device. The user must log on to the device by using their Azure AD user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
-- Windows application size is capped at 8 GB per app.
+  > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows 10 device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
+- Windows application size is capped at 30 GB per app.
 
 Much like a standard line-of-business (LOB) app, you can add a Win32 app to Microsoft Intune. This type of app is typically written in-house or by a third party. 
 
@@ -124,7 +127,7 @@ On the **Program** page, configure the app installation and removal commands for
     > [!NOTE]
     > You can configure a Win32 app to be installed in **User** or **System** context. **User** context refers to only a particular user. **System** context refers to all users of a Windows 10 device.
     > 
-    > When a device is enrolled by being Azure AD registered, select **System**.
+    > When a device is enrolled by being Microsoft Entra registered, select **System**.
     >
     > Users are not required to be logged in on the device to install Win32 apps.
     > 
@@ -249,22 +252,23 @@ After you've added your rules, select **Next** to display the **Dependencies** p
 
 ## Step 5: Dependencies
 
-App dependencies are applications that must be installed before your Win32 app can be installed. You can require that other apps are installed as dependencies. 
+App dependencies define a relationship between apps where one app requires one or more dependent apps to be installed. If Intune has not yet installed an app on a device, any apps configured as dependent apps must be installed first. If an app is already installed on a device, Intune will install any newly configured dependent apps, that are configured for automatic installation, the next time Intune evaluates app policy on the device.
 
-Specifically, the device must install the dependent apps before it installs the Win32 app. There's a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
-
-You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. 
+You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. There's a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
 
 Any Win32 app dependency needs to also be a Win32 app. It doesn't support depending on other app types, such as single MSI LOB apps or Microsoft Store apps.
 
 When you're adding an app dependency, you can search based on the app name and publisher. Additionally, you can sort your added dependencies based on app name and publisher. Previously added app dependencies can't be selected in the list of added app dependencies. 
 
-You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app isn't targeted to the user or device, Intune will install the app on the device to satisfy the dependency before installing your Win32 app.
+You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app isn't targeted to the user or device, Intune will install the app on the device to satisfy the defined dependency relationship.
+
+> [!IMPORTANT]
+> You do not have to assign dependent apps; Intune automatically targets and installs them based on the app relationships that you create.
 
 > [!NOTE]
-> The install status of a dependent app will be displayed within Intune if the app is targeted to the user or device.
+> The install status of a dependent app will be displayed within Intune only if the app is targeted to the user or device.
 
-It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies doesn't follow a specific order at a dependency level.
+It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be evaluated before the main dependency is evaluated. Additionally, evaluation and installation of dependencies doesn't follow a specific order at a dependency level.
 
 Win32 apps added to Intune can't be removed while they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. 
 
@@ -297,7 +301,7 @@ When a dependent app isn't installed, the user will commonly see one of the foll
 
 If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).
 
-Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global reevaluation schedule. Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies aren't applicable for uninstalling a Win32 app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
+Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global reevaluation schedule. Dependencies aren't applicable for uninstalling a Win32 app. However, if it's set as a dependent app, the Company Portal won't show the uninstall button for the app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
 
 ## Step 6: Supersedence
 

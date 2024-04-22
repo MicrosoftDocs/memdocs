@@ -7,8 +7,8 @@ metadata:
   title: SDK documentation
   titleSuffix: Configuration Manager
   description: The Configuration Manager SDK contains documentation and samples that are useful in developing applications that access and modify Configuration Manager data.
-  ms.prod: configuration-manager
-  ms.technology: configmgr-sdk
+  ms.subservice: sdk
+  ms.service: configuration-manager
   ms.topic: landing-page
   author: banreet
   ms.author: banreetkaur

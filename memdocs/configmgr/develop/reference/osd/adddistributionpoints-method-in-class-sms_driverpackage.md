@@ -3,8 +3,8 @@ description: Learn how to use Configuration Manager AddDistributionPoints Window
 title: AddDistributionPoints Method in SMS_DriverPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bc7520bd-ec54-40db-bbee-03df22ebc593
 author: Banreet

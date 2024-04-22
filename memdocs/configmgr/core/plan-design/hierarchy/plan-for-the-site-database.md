@@ -3,8 +3,8 @@ title: Plan the site database
 titleSuffix: Configuration Manager
 description: Consider the site database and the site database server role as you plan your Configuration Manager hierarchy.
 ms.date: 10/08/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

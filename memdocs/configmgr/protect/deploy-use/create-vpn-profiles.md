@@ -3,8 +3,8 @@ title: How to create VPN profiles
 titleSuffix: Configuration Manager
 description: Learn how to create VPN profiles in Configuration Manager.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

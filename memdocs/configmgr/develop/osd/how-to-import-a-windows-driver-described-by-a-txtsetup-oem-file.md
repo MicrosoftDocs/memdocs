@@ -3,8 +3,8 @@ title: Import a Windows Driver Described by a Txtsetup.oem File
 titleSuffix: Configuration Manager
 description: Use the CreateFromOEM Method in Class SMS_Driver to import a Windows driver that is described by a Txtsetup.oem file in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 1b6e61bc-ac48-4229-8c13-d470e4e8caf0
 author: Banreet

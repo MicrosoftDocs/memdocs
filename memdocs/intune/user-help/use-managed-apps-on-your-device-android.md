@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 08/07/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
 searchScope:
  - User help
@@ -50,7 +48,7 @@ Managed apps enforce your organization's app and data protection policies, which
 
 * Access to specific websites  
 
-* Access to internal company websites using Microsoft Edge and the Azure Active Directory proxy  
+* Access to internal company websites using Microsoft Edge and the Microsoft Entra ID proxy  
 
 * Minimum app and OS version  
 

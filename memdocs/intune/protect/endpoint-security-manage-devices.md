@@ -12,8 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -68,9 +66,9 @@ Consider the following fields:
 
   - **ConfigMgr** – These devices appear in the Microsoft Intune admin center when you use *tenant attach* to add the devices you manage with Configuration Manager. To be managed, the device must run the Configuration Manager client and be:
 
-    - In a Workgroup (Microsoft Entra ID joined and otherwise)
+    - In a Workgroup (Microsoft Entra joined and otherwise)
     - Domain Joined
-    - Hybrid Microsoft Entra ID Joined (joined to the AD and Microsoft Entra ID)
+    - Microsoft Entra hybrid joined (joined to the AD and Microsoft Entra ID)
 
     Compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Intune admin center.
 
@@ -92,7 +90,7 @@ Consider the following fields:
 
 ## Review a devices policy
 
-To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, you can view the [**Device configuration report**](../fundamentals/reports.md#device-configuration-report-operational). Both *endpoint security* and *security baseline* policies are device configuration policies.
+To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, see [**Security reports**](../fundamentals/reports.md#security-reports). Both *endpoint security* and *security baseline* policies are device configuration policies.
 
 To view the report, select a device and then select **Device configuration**, which is found below the *Monitor* category.
   

@@ -7,8 +7,8 @@ ms.author: baladell
 manager: apoorvseth
 ms.date: 01/14/2022
 ms.topic: tutorial
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 # Customer intent: As a Configuration Manager admin, I want to enable my WSUS servers and software update points to use TLS/SSL to reduce the ability of a potential attacker to remotely compromise a client and elevate privileges.
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 

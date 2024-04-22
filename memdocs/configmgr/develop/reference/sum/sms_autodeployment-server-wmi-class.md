@@ -3,8 +3,8 @@ description: Learn how to use Configuration Manager SMS_AutoDeployment Windows M
 title: SMS_AutoDeployment Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fd4929f6-441f-4589-8325-3c0aff129fb1
 author: Banreet

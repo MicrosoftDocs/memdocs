@@ -3,8 +3,8 @@ description: Learn how to track the history of a request each time a request is 
 title: SMS_VirtualEnvironment Classes
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b6e5fec6-6d2f-442e-8f06-ac9269165a23
 author: Banreet

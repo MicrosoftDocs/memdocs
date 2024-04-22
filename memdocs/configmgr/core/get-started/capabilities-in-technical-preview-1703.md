@@ -3,8 +3,8 @@ title: Capabilities in Technical Preview 1703
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1703.
 ms.date: 03/24/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -91,7 +91,7 @@ When you set up a connection between Configuration Manager and the Windows Store
 
 - The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to use the folder you specified.
 
-In Azure Active Directory, register Configuration Manager as a web application or Web API management tool. This creates the client ID that you will need later.
+In Microsoft Entra ID, register Configuration Manager as a web application or Web API management tool. This creates the client ID that you will need later.
 
 ### Use the wizard to configure the WSfB cloud service
 

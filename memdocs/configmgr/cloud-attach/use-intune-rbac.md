@@ -3,8 +3,8 @@ title: Intune role-based access control for tenant-attached devices
 titleSuffix: Configuration Manager
 description: Enable Intune role-based access control for Configuration Manager tenant-attached clients
 ms.date: 08/24/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: banreet
 ms.author: banreetkaur
@@ -97,7 +97,7 @@ The following Intune permissions control access to the Configuration Manager clo
 
 ### I have cloud-only users that need access to tenant-attached devices in Intune, will this give them access?
 
-Yes. When a user is cloud only, in this scenario meaning they are in Azure Active Directory (Azure AD) and can access Intune, using Intune RBAC will give them access to tenant-attached devices.
+Yes. When a user is cloud only, in this scenario meaning they are in Microsoft Entra ID and can access Intune, using Intune RBAC will give them access to tenant-attached devices.
 
 ### What if I have multiple Configuration Manager hierarchies connected to my tenant?
 

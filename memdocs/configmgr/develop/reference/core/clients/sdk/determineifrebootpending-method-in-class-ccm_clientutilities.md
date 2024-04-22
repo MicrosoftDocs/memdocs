@@ -2,8 +2,8 @@
 title: DetermineIfRebootPending Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3a3d65ac-be3c-471c-9819-2bbb28be3b15
 author: Banreet

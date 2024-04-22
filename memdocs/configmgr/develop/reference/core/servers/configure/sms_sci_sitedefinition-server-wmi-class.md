@@ -3,8 +3,8 @@ description: Learn how to use the SMS_SCI_SiteDefinition class which contains ge
 title: SMS_SCI_SiteDefinition Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: eee21135-4800-4002-90ed-f125270369e6
 author: Banreet

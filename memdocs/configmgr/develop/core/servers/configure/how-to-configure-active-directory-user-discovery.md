@@ -3,8 +3,8 @@ description: Learn how to configure the Active Directory User Discovery settings
 title: Configure Active Directory User Discovery
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: d64464a2-dba8-4e87-a487-bfdeb9073e12
 author: Banreet

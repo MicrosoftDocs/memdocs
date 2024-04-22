@@ -3,8 +3,8 @@ title: Audit remote control usage
 titleSuffix: Configuration Manager
 description: Audit remote control use in Configuration Manager.
 ms.date: 04/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

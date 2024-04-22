@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: dc5e9af9-8a3e-4b3c-ba49-e79142092e2e
 
 # optional metadata
@@ -30,6 +29,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - privacy
+- essentials-privacy
 ---
 
 

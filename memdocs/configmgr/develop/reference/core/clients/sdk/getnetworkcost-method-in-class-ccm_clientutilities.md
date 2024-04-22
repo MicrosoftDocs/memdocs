@@ -3,8 +3,8 @@ description: The GetNetworkCost Windows Management Instrumentation (WMI) class m
 title: GetNetworkCost Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: de103be8-9c09-4014-949b-57372690d704
 author: Banreet

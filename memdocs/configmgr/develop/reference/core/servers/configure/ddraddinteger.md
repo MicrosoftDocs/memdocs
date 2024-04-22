@@ -3,8 +3,8 @@ description: Learn how to add an integer property to the data discovery record (
 title: DDRAddInteger
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cfd88c36-bb38-487b-8ed0-9bfbf470ae2b
 author: Banreet

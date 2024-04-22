@@ -12,8 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -47,12 +45,12 @@ To learn about Delivery Optimization on Windows 10 and Window 11, see [Delivery 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile**: Select **Templates** > **Delivery optimization**.
+   - **Profile type**: Select **Templates** > **Delivery optimization**.
 
 4. Select **Create**.
 
@@ -89,11 +87,11 @@ Delivery Optimization was previously configured as part of Software Update Rings
 
 1. Create a Delivery Optimization device configuration profile:
 
-    1. In the Microsoft Intune admin center, select **Devices** > **Configuration profiles** > **Create profile**.
+    1. In the Microsoft Intune admin center, select **Devices** > **Configuration** > **Create**.
     2. Enter the following properties:
 
         - **Platform**: Select **Windows 10 and later**.
-        - **Profile**: Select **Templates** > **Delivery Optimization**.
+        - **Profile type**: Select **Templates** > **Delivery Optimization**.
 
     3. Select **Create**.
     4. In **Basics**, enter the following properties:

@@ -7,12 +7,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 
 # optional metadata
@@ -25,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -44,7 +43,13 @@ Before running the tool, review [Security considerations for running the App Wra
 
 ## Fulfill the prerequisites for using the App Wrapping Tool
 
-- You must run the App Wrapping Tool on a Windows computer running Windows 7 or later.
+- Your app must use up-to-date libraries
+  
+- Your app must be compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk)
+  
+- If your app is complex, it must integrate with the [Intune App SDK for Android](../developer/app-sdk-android-phase1.md)
+
+- You must run the App Wrapping Tool on a Windows computer running Windows 10 or later.
 
 - Your input app must be a valid Android application package with the file extension .apk and:
 
@@ -68,6 +73,18 @@ Before running the tool, review [Security considerations for running the App Wra
 
   - Use ProGuard to eliminate unused class references from the app's primary DEX file.
   - For customers using v3.1.0 or higher of the Android Gradle plugin, disable the [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+
+## How often should I rewrap my Android application with the Intune App Wrapping Tool?
+
+The main scenarios in which you would need to rewrap your applications are as follows:
+
+- The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Microsoft Intune admin center.
+
+- The Intune App Wrapping Tool for Android has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens every 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
+
+Some best practices for rewrapping include:
+
+- Maintaining signing certificates used during the build process, see [Reusing signing certificates and wrapping apps](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps)
 
 ## Install the App Wrapping Tool
 
@@ -129,18 +146,6 @@ invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped
 
 The wrapped app and a log file are generated and saved in the output path you specified.
 
-## How often should I rewrap my Android application with the Intune App Wrapping Tool?
-
-The main scenarios in which you would need to rewrap your applications are as follows:
-
-- The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Microsoft Intune admin center.
-
-- The Intune App Wrapping Tool for Android has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens every 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
-
-Some best practices for rewrapping include:
-
-- Maintaining signing certificates used during the build process, see [Reusing signing certificates and wrapping apps](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps)
-
 ## Reusing signing certificates and wrapping apps
 
 Android requires that all apps must be signed by a valid certificate in order to be installed on Android devices.
@@ -183,4 +188,4 @@ The `.apks` output file is a ZIP archive containing a single universal APK file.
 
 - [Decide how to prepare apps for mobile application management with Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 
-- [Microsoft Intune App SDK for Android developer guide](/mem/intune/developer/app-sdk-android-phase1)
+- [Microsoft Intune App SDK for Android developer guide](../developer/app-sdk-android-phase1.md)

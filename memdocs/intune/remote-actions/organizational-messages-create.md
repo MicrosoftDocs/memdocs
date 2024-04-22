@@ -6,12 +6,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 # optional metadata
 
@@ -51,7 +50,7 @@ Make sure your tenant is set up to support organizational messages.
 ### Confirm license requirements  
 Confirm that your tenant has the license required to support organizational messages. This step only has to be done once. You must be assigned the [Organization/Update permission](../fundamentals/create-custom-role.md#custom-role-permissions) or be a global administrator to complete this step.      
 1. Go to the **Message** tab.  
-2. Review licensing requirements and verify that your tenant meets the requirements. Then select **I confirm that my organization owns the appropriate license and I undestand the Windows device requirements.** 
+2. Review and verify that your tenant meets all licensing requirements. Select **I confirm that my organization owns the appropriate license and I understand the Windows device requirements.**  
 3. Select **Confirm**.  
 
 ## Step 1: Create a message  
@@ -160,12 +159,12 @@ For more information about scope tags, see [Use role-based access control (RBAC)
 > Intune only enforces scope tags and scope groups for messages created in Intune, and for admins with Intune roles.   
 
 ## Step 4: Assign message  
-Assign the message to Azure AD-registered users in your organization. You can assign the message to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
+Assign the message to Microsoft Entra registered users in your organization. You can assign the message to Microsoft Entra user groups, not Microsoft Entra device groups. If a group includes both users and devices, Intune will only send the message to the users. 
 
 1. To include groups in the assignment, you have two options:    
-   * **Add groups**: Select this option to individually choose from a list of Azure AD groups.  
-   * **Include all users**: Select the option to assign the message to all Azure AD-registered users.  
-2. If needed, exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
+   * **Add groups**: Select this option to individually choose from a list of Microsoft Entra groups.  
+   * **Include all users**: Select the option to assign the message to all Microsoft Entra registered users.  
+2. If needed, exclude Microsoft Entra groups from the assignment. Under **Exclude**, select **Add groups** and choose the Microsoft Entra groups to leave out.  
 3. Select **Next: Review + Create** to review and finalize your message.  
 
 ## Step 5: Review and create message  

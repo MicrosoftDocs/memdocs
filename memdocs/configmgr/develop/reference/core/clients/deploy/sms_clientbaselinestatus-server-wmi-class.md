@@ -3,8 +3,8 @@ title: SMS_ClientBaselineStatus Class
 titleSuffix: Configuration Manager
 description: The SMS_ClientBaselineStatus WMI class is an SMS Provider server class, in Configuration Manager, that represents a client deployment baseline status.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fbc0259a-4be5-4157-985d-fb387060e4f1
 author: Banreet

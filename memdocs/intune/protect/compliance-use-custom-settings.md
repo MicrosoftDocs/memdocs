@@ -12,8 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -51,13 +49,13 @@ After you’ve deployed custom compliance settings and devices have reported bac
 
 ## Prerequisites
 
-- **Azure Active Directory (Azure AD) joined** devices, *including* hybrid Azure AD-joined devices. 
+- **Microsoft Entra joined** devices, *including* Microsoft Entra hybrid joined devices. 
 
-  Hybrid Azure AD-joined devices are devices that are joined to Azure AD and also joined to on-premises Active Directory. For more information, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
+  Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-- **Azure AD registered/Workplace joined (WPJ)**
+- **Microsoft Entra registered/Workplace joined (WPJ)**
 
-  Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school. 
+  Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school. 
 
   On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored. 
 
@@ -141,7 +139,7 @@ Policies support the use of a single script. However, each script supports check
 
 To identify settings that aren't compliant for a device:
 
-- [In the Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can identify devices that aren't compliant with policy. **Navigate** to **Reports** > **Device compliance**, select the *Reports* tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.
+- [In the Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can identify devices that aren't compliant with policy. Go to **Reports** > **Device compliance**, select the **Reports** tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.  
 
 The admin center displays a separate line for each setting that isn’t compliant on a device.  
 

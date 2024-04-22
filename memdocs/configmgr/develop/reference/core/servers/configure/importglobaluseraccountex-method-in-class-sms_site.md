@@ -3,8 +3,8 @@ title: ImportGlobalUserAccountEx Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the ImportGlobalUserAccountEx WMI class method encrypts data that is shared in the hierarchy.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 444bc340-442b-465c-99e8-bbe766c6ceab
 author: Banreet

@@ -3,8 +3,8 @@ description: In Configuration Manager, the CCM_Service_HostedClass class is a cl
 title: CCM_Service_HostedClass Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 42a42ed1-56cd-4c21-a105-cf8c42197136
 author: Banreet

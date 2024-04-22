@@ -6,7 +6,7 @@ description: Learn more about what device management means and how it can help o
 author: MandiOhlinger
 ms.author: mandia 
 manager: dougeby 
-ms.date: 06/06/2023
+ms.date: 12/11/2023
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -45,7 +45,7 @@ Device management solutions have the following features and benefits:
 
 - The toolset to manage devices, including the ability to deploy and update software, configure settings, enforce policies, and monitor with data and reports
 - The ability to administer and manage virtual and physical devices, regardless of their physical location
-- Maintain a network of devices running common operating systems, including Windows, macOS, iOS/iPadOS, and Android
+- Maintain a network of devices running common operating systems, including Windows, macOS, iOS/iPadOS, Linux, and Android
 - Automate policy management and deployment for apps, device features, security, and compliance
 - Optimize device features for business use
 - Provide a single point of management for devices, including the ability to manage devices from a central console
@@ -90,7 +90,7 @@ Users "enroll" their devices, and use certificates to communicate with Intune. A
 
 In the second approach, you manage apps on devices. This approach is called mobile application management (MAM).
 
-Users can use their personal devices to access organizational resources. When users open an app, such as Outlook or SharePoint, they can be prompted to authenticate. If a device is ever lost or stolen, you can remove all organization data from the Intune managed applications.
+Users can use their personal devices to access organizational resources. When users open an app, such as Outlook or Teams, they can be prompted to authenticate. If a device is ever lost or stolen, you can remove all organization data from the Intune managed applications.
 
 You can also use a combination of MDM and MAM together.
 

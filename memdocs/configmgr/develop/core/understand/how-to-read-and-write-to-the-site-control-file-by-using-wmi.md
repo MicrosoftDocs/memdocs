@@ -3,8 +3,8 @@ title: Read and Write to the Site Control File by Using WMI
 titleSuffix: Configuration Manager
 description: In Configuration Manager, you write to the site control file using Windows Management Instrumentation (WMI) by using the `SMS_SiteControlFile` class methods.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 815a4ee8-b211-48de-ba9f-6eff7497dd2b
 author: Banreet

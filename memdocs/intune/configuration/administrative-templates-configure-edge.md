@@ -65,11 +65,11 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 ## Create a policy for Microsoft Edge
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Administrative Templates**.
+    - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -115,7 +115,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 
 13. In **Assignments**, select **Next**.
 
-    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select an Azure Active Directory (Azure AD) group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](device-profile-assign.md).
+    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
     :::image type="content" source="./media/administrative-templates-configure-edge/add-azure-ad-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center.":::
 

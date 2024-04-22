@@ -3,8 +3,8 @@ title: Migrate from MBAM
 titleSuffix: Configuration Manager
 description: Understand the considerations when migrating from Microsoft BitLocker Administration and Monitoring (MBAM) to BitLocker management in Configuration Manager.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

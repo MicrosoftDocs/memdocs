@@ -3,8 +3,8 @@ title: Cost of CMG
 titleSuffix: Configuration Manager
 description: Understand the costs of operating the cloud management gateway (CMG) service in Microsoft Azure.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -38,6 +38,9 @@ To help determine potential costs, use the following Azure resources:
 ## Compute costs
 
 CMG uses Azure platform as a service (PaaS), which uses virtual machines (VMs). These VMs incur compute costs. The specific type to use when estimating costs depends upon which deployment method you use.
+
+> [!NOTE]
+> Although CMG is built on Azure PaaS, CMG is a software as a serice (SaaS) solution provided and maintained by Microsoft. CMG resources are added to customer Azure subscriptions so that consumption costs can be directly monitored and accounted for by the customer.
 
 ### Virtual machine scale set
 

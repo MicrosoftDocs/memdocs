@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -38,12 +37,12 @@ ms.custom: intune-azure
 Edge for Windows is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is also offered in other Microsoft mobile apps.
 
 This feature applies to:
-- Windows 10 or later
+- Applies to Windows 11 22H2
 
 > [!NOTE]
 > Edge for Windows doesn't consume settings that users set for the native browser on their devices, because Edge for Windows can't access these settings.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Entra ID (AAD) Premium features.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features.
 
 ## Add an app configuration policy for Edge as a managed app on Windows devices
 

@@ -3,8 +3,8 @@ title: "SMS_CM_UpdatePackDetailedPrereqMonitoring Class"
 titleSuffix: "Configuration Manager"
 description: "In Configuration Manager, the SMS_CM_UpdatePackDetailedPrereqMonitoring WMI class is an SMS Provider server class that is used to get detailed update package prerequisite status per site."
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6b377381-af80-4a94-8365-f196aec7ebcf
 author: banreet

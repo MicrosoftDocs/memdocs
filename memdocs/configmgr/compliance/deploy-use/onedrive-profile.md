@@ -3,8 +3,8 @@ title: OneDrive for Business Profiles
 titleSuffix: Configuration Manager
 description: Redirect Windows known folders to OneDrive for Business using a OneDrive for Business profile in Configuration Manager.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

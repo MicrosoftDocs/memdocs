@@ -3,8 +3,8 @@ title: TriggerSchedule Method
 titleSuffix: Configuration Manager
 description: Trigger the client to run a specific schedule.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a4e13dea-899a-4d9e-8e5b-60b7f81c0c45
 author: Banreet

@@ -3,8 +3,8 @@ title: Internet-based client management
 titleSuffix: Configuration Manager
 description: Create a plan to manage internet-based clients in Configuration Manager.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

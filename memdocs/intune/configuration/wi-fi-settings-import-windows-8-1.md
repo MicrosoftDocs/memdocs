@@ -12,13 +12,11 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
 #audience:
-ms.reviewer: tycast
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -69,14 +67,14 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 ## Import the Wi-Fi settings into Intune
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 8.1 and later**.
 
       Even though you select Windows 8.1, this feature still applies to Windows 10/11 and Windows Holographic.
 
-    - **Profile**: Select **Wi-Fi import**.
+    - **Profile type**: Select **Wi-Fi import**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

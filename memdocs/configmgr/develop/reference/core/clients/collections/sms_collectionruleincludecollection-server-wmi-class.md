@@ -3,8 +3,8 @@ title: SMS_CollectionRuleIncludeCollection Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents an inclusion rule that's added as a rule to the `SMS_Collection` instance.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 27193c49-d811-4f93-b119-f2faf39fffea
 author: Banreet
@@ -30,7 +30,7 @@ Class SMS_ CollectionRuleIncludeCollection : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ CollectionRuleIncludeCollection` class does not define any methods.  
+ The `SMS_ CollectionRuleIncludeCollection` class doesn't define any methods.  
 
 ## Properties  
  `IncludeCollectionID`  

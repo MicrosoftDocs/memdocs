@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/11/2023
+ms.date: 01/31/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -34,13 +33,17 @@ ms.collection:
 
 Users can access their Cloud PCs in accordance with the matrix below:
 
-| Windows 365 Edition | [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) | [windows365.microsoft.com](https://Windows365.microsoft.com) web client | Microsoft Remote Desktop | LG Web OS |
+| Windows 365 Edition | [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) | [windows365.microsoft.com](https://Windows365.microsoft.com) web client | [Microsoft Remote Desktop](#remote-desktop) | [LG Web OS](#lg-webos-23) |
 |--|--|--|--|--|
 | Windows 365 Business | X | X | X | X |
 | Windows 365 Enterprise | X | X | X | X |
 | Windows 365 Frontline | X | X | | |
 
 For information on hardware requirements, see [End user hardware requirements](end-user-hardware-requirements.md).
+
+## Windows App
+
+For more information about the requirements of running and using Windows App, see [What is Windows App?](/windows-app/overview).
 
 ## Windows 365 web site
 
@@ -80,7 +83,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
     > [!IMPORTANT]  
     > Before resetting your Cloud PC, make sure to back up any important files you need to keep to a cloud storage service or external storage. Resetting your Cloud PC will delete these files.
 
-- **Restart**: Restarts the Cloud PC.
+- **Restart**: Restarts the Cloud PC. For Cloud PCs created after 1/31/2024, you can also restart or shut down by using the keyboard combination CTRL+ALT+DEL.
 - **Troubleshoot**: Troubleshoot and attempt to resolve any issues that may be preventing a user from connecting to their Cloud PC. The checks run include:
     - Check whether any files or agents required for connectivity are correctly installed.
     - Make sure that the Azure resources are available.
@@ -119,7 +122,7 @@ When you select **Open in browser** for a Cloud PC on the windows365.microsoft.c
 
 To change settings from within the Cloud PC:
 
-1. Select the gear icon > **In Session**.
+1. Select the gear icon.
 2. Select the options you want change > **Update**.
 
 The changes will appear the next time you restart the Cloud PC.
@@ -154,7 +157,7 @@ You can restrict users from transferring files by using RDP drive redirection. F
 
 Users can collect logs of their Cloud PC sessions. The logs are collected from the browser and the user can choose the save location.
 
-To turn on log collection, in the client, select the gear icon > **Capture logs**.
+To turn on log collection, in the client, select the information icon > **Capture logs**.
 
    ![Capture logs.](media/get-users-started/settings-logs.png)
 
@@ -162,7 +165,7 @@ To turn on log collection, in the client, select the gear icon > **Capture logs*
 
 You can turn on hardware acceleration when using the web client to access your Cloud PC. This option decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
 
-To turn hardware acceleration on or off, in the client, select the gear icon > **In Session** > **Use hardware acceleration**.
+To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
 
 ### High DPI
 
@@ -170,7 +173,7 @@ You can use the **High DPI** toggle to render the web client using the native re
 
 The High Dots Per Inch (DPI) setting adjusts the display resolution to match the physical size of the screen and the distance between the user and the screen.
 
-To choose this option, select the gear icon > **In Session** > **High DPI**.
+To choose this option, select the gear icon > **High DPI**.
 
 ### Alternative keyboard layout
 
@@ -221,7 +224,7 @@ To turn on keyboard shortcuts for your Cloud PC:
 
 When **Keyboard shortcuts** is turned on, the web client opens in full-screen mode. Keyboard shortcuts only work in full-screen mode. Full screen using F11 isn't supported. You must use the full screen mode from the toolbar.
 
-To turn off keyboard shortcuts, in your web client, select **Settings** > **In session** > deselect **Keyboard shortcuts** > **Update**.
+To turn off keyboard shortcuts, in your web client, select **Settings** > deselect **Keyboard shortcuts** > **Update**.
 
 ### LG webOS 23
 
@@ -242,7 +245,7 @@ The following Windows 365 features aren't available on LG TV:
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
 
-For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). For a comparison of features by client, see [Compare the clients: features](/windows-server/remote/remote-desktop-services/clients/remote-desktop-features#client-features).
+For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). For a comparison of features by client, see [Compare the clients: features](/azure/virtual-desktop/compare-remote-desktop-clients).
 
 ### Install the Microsoft Remote Desktop app
 

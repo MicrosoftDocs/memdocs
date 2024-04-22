@@ -11,21 +11,21 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: 
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Win32
 ---
 
 # Add Win32 app supersedence
 
-After you've [added a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This topic provides an overview of the supersedence feature.
+After you [add a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This topic provides an overview of the supersedence feature.
 
 > [!IMPORTANT]
 > Supersedence, which enables you to update and replace a version of a Win32 app, doesn't currently allow you to interchange the Win32 app with an app dependency. For more information about app dependencies, see [Dependencies](../apps/apps-win32-add.md#step-5-dependencies).
@@ -51,14 +51,14 @@ The following steps help you create a supersedence relationship between apps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**, and then select a Win32 app from the list. If you haven't added a Win32 app, you can follow the steps to [add a Win32 app to Intune](apps-win32-add.md).
-3. After you have selected the existing Win32 app, click **Properties**.
+3. After you select the existing Win32 app, click **Properties**.
 4. In the **Supersedence** section, click **Edit** > **Add** to choose apps that should be superseded.
 
     > [!NOTE]
     > There can be a maximum of 10 nodes in a supersedence relationship in Intune.
 
 5. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
-6. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it isn't necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
+6. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command is sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it isn't necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
 7. Once this step is finalized, click **Review + save** > **Save**.
 
     > [!IMPORTANT]
@@ -79,7 +79,7 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time.
 
 > [!NOTE]
-> End-users won't be able to check whether a specific Win32 app supersedence operation is an update or replacement in the Company Portal. In addition, when multiple apps supersede an app with available targeting in the Company Portal, the superseded app's details page will navigate to the app page of the first superseding app that was set up. For example, if app A is superseded by app B and C, and app B is superseded by app A first, then app A's detail page in the Company Portal will navigate to App B.
+> End-users won't be able to check whether a specific Win32 app supersedence operation is an update or replacement in the Company Portal. In addition, when multiple apps supersede an app with available targeting in the Company Portal, the superseded app's details page will navigate to the app page of the first superseding app that was set up. For example, if app A is superseded by apps B and C, and app B supersedes app A first, then app A's detail page in the Company Portal will navigate to App B.
 
 Understanding how supersedence is applied when updating an app versus replacing an app can be illustrated based on the following scenario.
 
@@ -94,13 +94,10 @@ In the following scenarios, you should review app detection rules after performi
 
 | Update   type | Update description and details |
 |-|-|
-| In-place   app update | <ul><li>With an   in-place app update, admin can only swap the app content, update the   metadata, and change the detection and install commands.</li>      <li>Admin cannot change any of the fields that aren't stored on the   app with an in-place app update.  For   example, the admin cannot modify targeting at the same time as an   update.</li>      <li>Admin can only perform the in-place app update one app at a   time.</li></ul> |
+| In-place   app update | <ul><li>With an   in-place app update, admin can only swap the app content, update the   metadata, and change the detection and install commands.</li>      <li>Admin can't change any of the fields that aren't stored on the   app with an in-place app update.  For   example, the admin can't modify targeting at the same time as an   update.</li>      <li>Admin can only perform the in-place app update one app at a   time.</li></ul> |
 | Supersedence   app update | <ul><li>Admin can   update an app in its entirety with a new set of   configurations.</li>      <li>Admin can elect to send down an uninstall command to uninstall   previous app versions.</li>      <li>Admin can update devices containing multiple app versions to the   newest app version with one Supersedence configuration. The admin also   maintains access to older version of the app.</li></ul> |
 
 ### Understand interactions between dependencies and supersedence
-
-> [!NOTE]
-> Supersedence GA is currently being rolled out. For more information, see [Upcoming improvements to Win32 app supersedence - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026).
 
 Interactions between dependencies and supersedence include the following:
 

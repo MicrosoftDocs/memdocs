@@ -3,8 +3,8 @@ title: Introduction to certificate profiles
 titleSuffix: Configuration Manager
 description: Learn how certificate profiles in Configuration Manager work with Active Directory Certificate Services.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

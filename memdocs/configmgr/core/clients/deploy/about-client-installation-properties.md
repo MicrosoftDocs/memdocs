@@ -3,8 +3,8 @@ title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
 ms.date: 04/05/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: reference
 author: sheetg09
 ms.author: sheetg
@@ -294,7 +294,7 @@ Specify this parameter for the client to use a PKI client authentication certifi
 
 Example: `CCMSetup.exe /UsePKICert`
 
-If a device uses Azure Active Directory (Azure AD) for client authentication and also has a PKI-based client authentication certificate, if you use include this parameter the client won't be able to get Azure AD onboarding information from a cloud management gateway (CMG). For a client that uses Azure AD authentication, don't specify this parameter, but include the [AADRESOURCEURI](#aadresourceuri) and [AADCLIENTAPPID](#aadclientappid) properties.<!-- MEMDocs#1483 -->
+If a device uses Microsoft Entra ID for client authentication and also has a PKI-based client authentication certificate, if you use include this parameter the client won't be able to get Microsoft Entra onboarding information from a cloud management gateway (CMG). For a client that uses Microsoft Entra authentication, don't specify this parameter, but include the [AADRESOURCEURI](#aadresourceuri) and [AADCLIENTAPPID](#aadclientappid) properties.<!-- MEMDocs#1483 -->
 
 > [!NOTE]
 > In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update-based client installation. Use this parameter when you manually install a client and use the `/mp` parameter with an HTTPS-enabled management point.
@@ -337,23 +337,23 @@ The following properties can modify the installation behavior of client.msi, whi
 
 ### `AADCLIENTAPPID`
 
-Specifies the Azure Active Directory (Azure AD) client app identifier. You create or import the client app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). For the `AADCLIENTAPPID` property, this application ID is for the **Native** application type.
+Specifies the Microsoft Entra client app identifier. You create or import the client app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). For the `AADCLIENTAPPID` property, this application ID is for the **Native** application type.
 
 Example: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
 ### `AADRESOURCEURI`
 
-Specifies the Azure AD server app identifier. You create or import the server app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. When you create the server app, in the Create Server Application window, this property is the **App ID URI**.
+Specifies the Microsoft Entra server app identifier. You create or import the server app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. When you create the server app, in the Create Server Application window, this property is the **App ID URI**.
 
-An Azure administrator can get the value for this property from the Azure portal. In **Azure Active Directory**, find the server app under **App registrations**. Look for application type **Web app / API**. Open the app, select **Settings**, and then select **Properties**. Use the **App ID URI** value for this `AADRESOURCEURI` client installation property.
+An Azure administrator can get the value for this property from the Azure portal. In **Microsoft Entra ID**, find the server app under **App registrations**. Look for application type **Web app / API**. Open the app, select **Settings**, and then select **Properties**. Use the **App ID URI** value for this `AADRESOURCEURI` client installation property.
 
 Example: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
 
 ### `AADTENANTID`
 
-Specifies the Azure AD tenant identifier. Configuration Manager links to this tenant when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. To get the value for this property, use the following steps:
+Specifies the Microsoft Entra tenant identifier. Configuration Manager links to this tenant when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. To get the value for this property, use the following steps:
 
-- On a device that runs Windows 10 or later and is joined to the same Azure AD tenant, open a command prompt.
+- On a device that runs Windows 10 or later and is joined to the same Microsoft Entra tenant, open a command prompt.
 - Run the following command: `dsregcmd.exe /status`
 - In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -656,7 +656,7 @@ Use the following process:
     - If you're installing the client from Intune during co-management enrollment, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md).
 
       > [!NOTE]
-      > This method may have additional prerequisites. For example, enrolling the site to Azure Active Directory, or creating a content-enabled cloud management gateway.
+      > This method may have additional prerequisites. For example, enrolling the site to Microsoft Entra ID, or creating a content-enabled cloud management gateway.
       >
       > Regardless the method, only use this property with **ccmsetup.msi**.<!-- 9277971 -->
 

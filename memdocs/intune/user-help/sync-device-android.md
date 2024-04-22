@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 
 searchScope:
  - User help
@@ -41,14 +39,12 @@ Syncing can also help resolve work-related downloads or other processes that are
 ## Sync device  
 To force a sync:    
 
-1. Sign in to the Company Portal app.  
-2. Tap the menu.  
-3. Tap **Settings**.   
-4. Scroll down to **Management Policy** and tap **Sync**.  
-5. Wait while Company Portal syncs your device. When complete, the screen will show the timestamp of the last successful sync.  
+1. Sign in to the Company Portal app for Android.  
+2. Go to **Settings**.   
+3. Scroll down to **Management Policy** and tap **Sync**. Wait while Company Portal syncs your device. When complete, the screen shows the timestamp of the last successful sync.  
 
 ## Next steps  
-After you sync a device, you may receive notifications from Company Portal about updating its settings. Microsoft Learn offers step-by-step articles to help guide you through these updates. To find these articles, go to the table of contents and choose **Android device management** > **Update device settings**.  
+After you sync a device, you may receive notifications from Company Portal about updating its settings. Microsoft Learn offers how-to articles to help guide you through these updates. To find these articles, go to the table of contents and choose **Android device management** > **Update device settings**.  
 
 The Company Portal **Sync** feature is different from the **Check device settings** feature. The latter feature forces Company Portal to verify that your settings meet your organization's requirements. Whenever Company Portal prompts you to make changes to your settings, make the change and then select **Check device settings** to regain access to work or school apps. For more information about this feature, see [Check device compliance](check-compliance-on-your-device-android.md).   
 

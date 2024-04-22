@@ -3,8 +3,8 @@ title: SMS_AdvertisementInfo Class
 description: Learn how to use the SMS_AdvertisementInfo class in Configuration Manager to provide information about a specific advertisement.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: de34161a-9f17-4b93-b1b0-5020f0533886
 author: Banreet

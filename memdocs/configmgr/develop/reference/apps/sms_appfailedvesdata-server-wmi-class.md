@@ -3,8 +3,8 @@ description: The SMS_AppFailedVEsData Windows Management Instrumentation (WMI) c
 title: SMS_AppFailedVEsData Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 22eb79c4-c169-4a91-a478-78ce2cd7ba27
 author: Banreet

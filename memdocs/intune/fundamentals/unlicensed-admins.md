@@ -13,11 +13,10 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
-# CustomerIntent: As an  IT admin, I want to give other administrators access to Microsoft Intune without them requiring an Intune license so that right admins have the right access. 
+# CustomerIntent: As an  IT admin, I want to give other administrators access to Microsoft Intune without them requiring an Intune license so that right admins have the correct access. 
 
 #ROBOTS:
 #audience:
@@ -34,7 +33,7 @@ ms.collection:
 
 # Unlicensed admins
 
-You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on. Other features or services, such as those in Azure Active Directory (AD) Premium, may require a license for the administrator.
+You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Microsoft Entra administrators, and so on. Other features or services, such as those in Microsoft Entra ID P1 or P2, may require a license for the administrator.
 
 The Unlicensed admins option has been enabled by default on all accounts created after the 2006 release.
 
@@ -57,4 +56,3 @@ It can take up to 48 hours for access changes to take effect.
 [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
 
 [Microsoft Intune licensing](licenses.md)
-

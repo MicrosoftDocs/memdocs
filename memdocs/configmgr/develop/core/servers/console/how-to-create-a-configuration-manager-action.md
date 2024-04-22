@@ -2,8 +2,8 @@
 title: Create a Configuration Manager Action
 description: Learn how to create a console action by creating an XML file that populates an ActionDescription XML element for the action.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: affca54f-bebb-44f8-9c94-58598670770e
 author: Banreet

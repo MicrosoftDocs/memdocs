@@ -1,14 +1,14 @@
 ---
 title: Windows Autopilot registration overview
 description: Overview of Windows Autopilot device registration.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/25/2023
+ms.date: 04/15/2024
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -41,13 +41,13 @@ Registration can also be performed within your organization by collecting the ha
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
 
-When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
+When you register an Autopilot device, it automatically creates a Microsoft Entra object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
 
 > [!NOTE]
 >
 > Don't register to Autopilot the following types of devices:
 >
-> - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
+> - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
 > - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune)
 >
 > These options are intended for users to join personally-owned devices to their organization's network.
@@ -87,13 +87,11 @@ For more information about device IDs, see the following articles:
 
 ## Windows Autopilot devices
 
-Devices that have been registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**:
-
-![Autopilot devices](images/ap-devices.png)
+Devices that have been registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**:
 
 > [!NOTE]
 >
-> Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
+> Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
 
 > - The Autopilot registration process is successful.
 > - A [licensed](licensing-requirements.md) user has signed in on the device.

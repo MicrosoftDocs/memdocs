@@ -3,8 +3,8 @@ title: Create Software Distribution Packages for Mobile Devices
 titleSuffix: Configuration Manager
 description: How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 3becb7a9-cf6b-432b-85e7-a0087df0dbb6
 author: Banreet

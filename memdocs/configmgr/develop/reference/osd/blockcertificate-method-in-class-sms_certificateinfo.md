@@ -3,8 +3,8 @@ title: BlockCertificate Method
 titleSuffix: Configuration Manager
 description: The BlockCertificate Windows Management Instrumentation (WMI) class method, in Configuration Manager, blocks or unblocks the specified certificate.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f477e086-3a1b-46fb-b957-1e63e9d6602b
 author: Banreet

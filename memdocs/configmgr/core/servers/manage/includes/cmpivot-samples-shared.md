@@ -1,7 +1,7 @@
 ---
 ms.author: gokarthi
 author: gowdhamankarthikeyan
-ms.prod: configuration-manager
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 02/25/2021
 ms.localizationpriority: medium
@@ -31,7 +31,7 @@ CCMRecentlyUsedApplications
 
 ## Device start times
 
-The following query shows when devices have started in the last seven days:
+The following query shows when were the devices started in the last seven days:
 
 ```kusto
 OperatingSystem
@@ -90,7 +90,7 @@ ProcessModule('powershell')
 
 ## Antimalware software status
 
-Gets the status of antimalware software installed on the computer gathered by the `Get-MpComputerStatus` cmdlet. The entity is supported on Windows 10 and Server 2016, or later with defender running. <!--7643613-->|
+Gets the status of antimalware software installed on the computer gathered by the `Get-MpComputerStatus` cmdlet. The entity is supported on Windows 10 and Server 2016, or later with Defender running. <!--7643613-->|
 
 ```kusto
 EPStatus
@@ -119,7 +119,7 @@ Device
 
 ## Find 'Scripts' in the CCM logs in the last hour
 
-The following query will look at events in the last 1 hour:
+The following query looks at events in the last 1 hour:
 
 ```kusto
 CcmLog('Scripts',1h)

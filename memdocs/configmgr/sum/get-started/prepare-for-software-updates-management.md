@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: To prepare to manage updates, complete these tasks to display compliance assessment data in the Configuration Manager console.
 ms.date: 10/06/2016
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 manager: apoorvseth
 author: BalaDelli
 ms.author: baladell

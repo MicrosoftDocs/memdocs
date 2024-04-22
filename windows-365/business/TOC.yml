@@ -17,6 +17,8 @@ items:
     items:
     - name: Users installing apps
       href: apps-install.md   
+    - name: Admins installing apps
+      href: apps-install-admin.md   
   - name: Device and user management
     items:
     - name: Manage your Cloud PCs
@@ -33,6 +35,12 @@ items:
       href: reset-user-password.md
     - name: Restore a Cloud PC to an earlier state
       href: restore-overview.md
+  - name: Identity and access management
+    items:
+    - name: Set conditional access policies
+      href: set-conditional-access-policies.md
+    - name: Configure single sign-on
+      href: configure-single-sign-on.md
 - name: Troubleshoot
   items:
   - name: Troubleshooting

@@ -7,12 +7,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - Android
+- FocusArea_Apps_LOB
 ms.custom: intune-azure
 ---
 
@@ -65,6 +65,7 @@ A line-of-business (LOB) app is an app that you add to Intune from an app instal
     - **Name**: Enter the name of the app as it appears in the company portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.
     - **Description**: Enter the description of the app. The description appears in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
+    - **Targeted platform**: From the list, choose the targeted platform on which the app can be installed. 
     - **Minimum Operating System**: From the list, choose the minimum operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, it will not be installed.
     - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
     - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.

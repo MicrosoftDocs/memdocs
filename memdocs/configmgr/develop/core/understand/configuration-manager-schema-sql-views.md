@@ -3,8 +3,8 @@ title: Schema SQL Views
 titleSuffix: Configuration Manager
 description: Creates schema information views. These are particularly useful for determining the names for custom inventory resource type (architecture) tables.
 ms.date: 03/08/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 0da896ff-441e-4ee3-af8b-ff79ccca73bc
 author: Banreet

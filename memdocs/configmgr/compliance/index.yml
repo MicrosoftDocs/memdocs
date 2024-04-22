@@ -8,8 +8,8 @@ metadata:
   title: Device compliance documentation
   titleSuffix: Configuration Manager
   description: Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. 
-  ms.prod: configuration-manager
-  ms.technology: configmgr-compliance
+  ms.service: configuration-manager
+  ms.subservice: compliance
   ms.topic: landing-page
   author: sheetg09 
   ms.author: sheetg

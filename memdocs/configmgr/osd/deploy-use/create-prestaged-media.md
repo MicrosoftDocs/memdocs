@@ -2,9 +2,9 @@
 title: Create prestaged media
 titleSuffix: Configuration Manager
 description: Use prestaged media in Configuration Manager to simplify deployment of Windows in several scenarios.
-ms.date: 03/10/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.date: 12/14/2023
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
@@ -106,7 +106,9 @@ The hard drive of the destination computer must be formatted before the prestage
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the prestaged media.  
 
         > [!IMPORTANT]  
-        > As a security best practice, always assign a password to help protect the prestaged media.  
+        > As a security best practice, always assign a password to help protect the prestaged media. Assigning a password to the media not only prevents someone without the password from running a task sequence when using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
+        >
+        > Using a password doesn't encrypt the remaining content of the prestaged media such as packages. Don't include any sensitive information in task sequence packages such as scripts. Store and implement all sensitive information by using task sequence variables.
  
     - For HTTP communications, select **Create self-signed media certificate**. Then specify the start and expiration date for the certificate.  
     

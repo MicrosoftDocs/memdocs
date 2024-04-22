@@ -8,12 +8,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/15/2023
+ms.date: 12/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -32,15 +31,15 @@ ms.collection:
 
 # Manage your apps and app data in Microsoft Intune
 
-Managing and protecting apps and their data is a significant part of any endpoint management strategy and solution. In most environments, users can install public retail apps and possibly access organization data from these apps. Many organizations also have their own private apps and line-of-business apps that need to be deployed & managed, and make sure this app data stays within the organization.
+Managing and protecting apps and their data is a significant part of any endpoint management strategy and solution. In most environments, users can install public retail apps and possibly access organization data from these apps. Many organizations also have their own private apps and line-of-business apps that need to be deployed & managed. They must make sure this app data stays within the organization.
 
 App management can be challenging and Intune can help. Microsoft Intune is a cloud-based service that can manage many apps types. Using Intune, admins can deploy, configure, protect, and update apps that access your organization resources. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
 
 :::image type="content" source="./media/manage-apps/manage-apps-with-intune.png" alt-text="Diagram that shows app management in the Microsoft Intune admin center, including deploying apps, and using app configuration policies & app protection policies for managed apps & personal apps." lightbox="./media/manage-apps/manage-apps-with-intune.png":::
 
-Microsoft Intune supports Android, iOS/iPadOS, macOS and Windows client devices. So, you can use Intune's app management features across your many devices.
+Microsoft Intune can manage apps on Android, iOS/iPadOS, macOS, and Windows client devices. So, you can use Intune's app management features across your many devices.
 
-From a service perspective, Intune uses Azure Active Directory (AD) for identity management. To use some apps, these Azure AD user identities must have licenses assigned to them. The Microsoft Intune admin center can also help you manage licensing.
+From a service perspective, Intune uses Microsoft Entra ID for identity management. To use some apps, these Microsoft Entra user identities must have licenses assigned to them. The Microsoft Intune admin center can also help you manage licensing.
 
 This article discusses concepts and features you should consider when managing and securing apps.
 
@@ -48,7 +47,7 @@ This article discusses concepts and features you should consider when managing a
 
 Organizations use many different types of apps, including store apps, line-of-business (LOB) apps, web apps, and more. You can add apps to Intune and then use its app policy management to deploy these apps to your devices.
 
-The app features in the Intune admin center make it easier to deploy these different kinds of apps. Intune supports Android, iOS/iPadOS, macOS, and Windows client devices:
+The app features in the Intune admin center make it easier to deploy these different kinds of apps.
 
 - For **Android** devices, the Intune admin center automatically connects to the public Play Store and gives you the ability to search for apps. You can also sync with your Managed Google Play account to access your Android Enterprise apps, including private apps.
 
@@ -131,19 +130,19 @@ The app features in the Intune admin center make it easier to deploy these diffe
 
 ## Configure apps before they're installed
 
-When an app is deployed to your users and devices, your users may be prompted for configuration information. Users might not know what to enter or you may have organization settings you want configured a certain way.
+When an app is deployed to your users and devices, your users can be prompted for configuration information. Users might not know what to enter or you might have organization settings you want configured a certain way.
 
 App configuration policies give you these features. You can create app configuration policies that automatically configure apps. Depending on your policy settings, users might not need to enter any configuration information when they open the app.
 
 For example, in an app configuration policy, you can enter the app language, add your organization's logo, block apps from using personal accounts, and more.
 
-Your app configuration policies can be deployed at any time. If you want to configure apps before users open them the first time, then you can include the app configuration policy when users enroll their devices. During enrollment, your app configuration policies are automatically deployed and the apps include your configuration settings.
+Your app configuration policies can be deployed at any time. If you want to configure apps before users open them the first time, then include the app configuration policy when users enroll their devices. During enrollment, your app configuration policies are automatically deployed and the apps include your configuration settings.
 
 For more specific information, go to [App configuration policies in Intune](../apps/app-configuration-policies-overview.md).
 
 ## Protect apps on organization owned and personal devices
 
-App protection policies are a key part to protecting data in apps that access organization data. If user-owned personal devices are accessing your organization data, then you need app protection policies. You can use these policies to protect email, protect shared files, protect access to meetings, and more.
+App protection policies are a key part to protecting data in apps that access organization data. If user-owned personal devices are accessing your organization data, then you need app protection policies. Use these policies to protect email, protect shared files, protect access to meetings, and more.
 
 You can use Intune to create, configure, and deploy app protection policies to your users and your devices, including personally owned devices and devices managed by another MDM provider. Typically, organization owned devices are managed by your organization. If there are apps on these managed devices that require extra security, then you can also use app protection policies on these devices.
 
@@ -160,7 +159,7 @@ Apps are often updated to include bug fixes, feature improvements, security upda
 
 You can also use Windows Autopatch for automatic patching of Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams.
 
-If users install apps themselves, including from a public app store, then these apps will need updated manually. In this situation, you can use app protection policies to enforce a minimum app version, and even wipe organization data on devices that don't meet your standards.
+If users install apps themselves, including from a public app store, then these apps need updated manually. In this situation, you can use app protection policies to enforce a minimum app version, and even wipe organization data on devices that don't meet your standards.
 
 For more information, go to:
 

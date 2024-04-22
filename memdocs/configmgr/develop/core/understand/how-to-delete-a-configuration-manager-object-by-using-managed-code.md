@@ -3,8 +3,8 @@ description: Learn how to create a Configuration Manager object by using the man
 title: Delete an Object by Using Managed Code
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 3e797ee7-ebc6-4d4d-b5d7-8a3b901d8d51
 author: Banreet

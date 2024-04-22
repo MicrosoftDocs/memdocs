@@ -3,8 +3,8 @@ title: SMS_ClientDataSourcesContentStats Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_ClientDataSourcesContentStats WMI class is an SMS Provider server class that represents client content data sources per package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fbf0a142-d3dd-4576-9343-35ebfd1e88ab
 author: Banreet
