@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
 
 # optional metadata
@@ -94,10 +93,9 @@ Additionally, before you begin enrollment, confirm the version of Windows runnin
 ## Confirm device enrollment  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
-2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
-3. Verify that you have an additional device enrolled within Intune.
+2. Select **Devices** > **All devices** to view the enrolled devices in Intune.  
+3. Verify that you have an additional device enrolled within Intune.  
 
-   ![Screenshot of Intune-enrolled devices](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
 
 ## Clean up resources
 

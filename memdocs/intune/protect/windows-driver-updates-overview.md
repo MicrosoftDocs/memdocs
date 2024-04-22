@@ -60,13 +60,18 @@ Windows driver update management applies to:
 
 ## Prerequisites
 
+> [!IMPORTANT]
+> This feature is not supported on GCC cloud environment.
+>
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
+
 To use Windows Driver Update management, your organization must have the following licenses, subscriptions, and network configurations: 
 
 ### Subscriptions
 
 - **Intune**: Your tenant requires the *Microsoft Intune Plan 1* subscription.
 
-- **Azure Active Directory (Azure AD)**: *Azure AD Free* (or greater) subscription.
+- **Microsoft Entra ID**: *Microsoft Entra ID Free* (or greater) subscription.
 
 ### Device & Edition requirements
 
@@ -100,7 +105,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 - Run a version of Windows 10/11 that remains in support.
 
-- Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
+- Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
 
 - Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
 
@@ -116,7 +121,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 ### Enable data collection for reports
 
-To support reports for Windows Driver updates, you must enable the use of Windows diagnostic data in Intune. Its possible that diagnostic data is already enabled for other reports, like Windows Feature updates and Expedited Quality update reports.
+To support reports for Windows Driver updates, you must enable the use of Windows diagnostic data in Intune. It's possible that diagnostic data is already enabled for other reports, like Windows Feature updates and Expedited Quality update reports.
 To enable the use of Windows diagnostic data:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
@@ -147,7 +152,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
+Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for other capabilities that aren't supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
@@ -157,7 +162,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
   
 **Windows Driver Update Management architecture**:
 
-1. Microsoft Intune provides the Azure Active Directory IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
+1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
 2. WUfB-DS configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
 3. Devices send data to Microsoft so that Windows Update can identify the applicable driver updates for a device during its regular Windows Update scans for updates.  Any approved updates install on the device.
 4. WUfB-DS reports Windows diagnostic data back to Intune for reports.
@@ -176,7 +181,7 @@ Before you create policies and manage the approval of drivers in your policies, 
 
   You might also set the update availability for manually approved updates to match common update cycles like Microsoft’s Patch Tuesday release. Alignment of schedules can help reduce extra system restarts that some driver updates require.
 
-- Assign devices to only one driver update policy to help prevent a device from having its drivers managed through more than one policy. This can help avoid having a driver installed by one policy when you previously declined or paused that same update in a separate policy. 
+- Assign devices to only one driver update policy to help prevent a device from having its drivers managed through more than one policy. This can help avoid having a driver installed by one policy when you previously declined or paused that same update in a separate policy.
 For more information about planning deployments, see [Create a deployment plan](/windows/deployment/update/create-deployment-plan) in the Windows deployment documentation.
 
 ## Frequently Asked Questions
@@ -243,7 +248,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### Why do my devices have driver updates installed that didn't pass through an updates policy?
 
-- These are likely *extension* drivers, which are “sub drivers” that a main driver can reference to be installed when the main driver is installed or updated. Extension drivers show up in the installed drivers or update history on the device, but aren't directly manageable. Because extension drivers don't function without base drivers, it is safe to allow them to install.
+- These are likely *extension* drivers, which are “sub drivers” that a main driver can reference to be installed when the main driver is installed or updated. Extension drivers show up in the installed drivers or update history on the device, but aren't directly manageable. Because extension drivers don't function without base drivers, it's safe to allow them to install.
 
 ### How quickly are paused updates actually paused?
 
@@ -266,14 +271,48 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### How do I use driver management if I’m currently using Configuration Manager for updates?
 
-- You can continue to use Configuration Manager for updates other than Drivers, or to start to move other update types to cloud management in Intune one at a time. First, ensure you're using [cloud attach](/mem/configmgr/cloud-attach/overview) or co-management, so that your devices are enrolled in Intune. Then, configure your driver policies in Intune to enroll devices and get them ready for management. After approximately one day, [set the policy]( /windows/client-management/mdm/policy-csp-update#setpolicydrivenupdatesourcefordriverupdates) *SetPolicyDrivenUpdateSourceForDriverUpdates* to a value of **0**, to scan for driver updates from Windows Update.
+You can continue to use Configuration Manager for updates other than Drivers, or start to move other update types to cloud management in Intune one at a time. To do this, first, enable [cloud attach](/mem/configmgr/cloud-attach/overview) or co-management in your Configuration Manager hierarchy to enroll your managed devices in Intune.
 
-  > [!NOTE]  
-  > You can move Feature update management to the cloud in Intune by using other similar policies. If using Update Ring policies in Intune, such as for Quality Updates, you also need enable co-management and assign the Windows Updates workload to Intune, or a pilot collection.
+The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](/mem/configmgr/comanage/workloads#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
+
+   1. Leave the [Windows Update](/mem/configmgr/comanage/workloads#windows-update-policies) workload set to Configuration Manager.
+
+   2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
+
+   3. Configure a domain-based group policy to configure **Windows Update** as the source for **Driver Updates** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus).
+
+      > [!NOTE]
+      > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
+
+   4. Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy drivers and firmware to.
+
+   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](windows-update-reports.md).
+
+      > [!NOTE]
+      > By default, diagnostic data submission to Microsoft is allowed on Windows devices. Disabling diagnostic data collection prevents the use of Windows Update reports for Microsoft Intune from reporting any update information for your managed devices.
+
+      Configure the **Allow Diagnostic data** setting to **Optional** or **Required** using a domain-based group policy or Intune. For more information on how to complete this task, go to:
+
+         - [Use Group Policy to manage diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-manage-diagnostic-data-collection)
+         
+         - [Use MDM to manage diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-mdm-to-manage-diagnostic-data-collection)
+
+   6. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements).
+
+      > [!NOTE]
+      > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](/mem/configmgr/comanage/workloads#device-configuration) co-management workload to Intune.
+
+   You can move Feature update management to the cloud in Intune by configuring a [Feature update](windows-10-feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
+   
+   Using Update Ring policies in Intune for Quality or Feature Updates requires you to move the **Windows Update** workload to Intune.
 
 ### Is there a way to set a deadline for drivers?
 
-- The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but is not a deferral period. The deferral period delays when updates are first offered to a device.
+- The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but isn't a deferral period. The deferral period delays when updates are first offered to a device.
+
+### Are the user experience settings from an Update Ring policy applied for driver updates?
+
+- Yes, user experience settings such as automatic update behavior, active hours, notifications, and so on, are applied for driver updates as well.
 
 ### Why does it take up to 24 hours for the driver update inventory to be returned?
 

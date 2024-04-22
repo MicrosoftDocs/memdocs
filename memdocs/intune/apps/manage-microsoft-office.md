@@ -8,19 +8,18 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2023
+ms.date: 03/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: smithre4
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,6 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
 - Android
+- FocusArea_Apps_SpecificApp
 ---
 
 # Manage collaboration experiences in Microsoft 365 (Office) for iOS and Android with Microsoft Intune
@@ -40,10 +40,10 @@ Microsoft 365 (Office) for iOS and Android delivers several key benefits includi
 - Integrating Microsoft Lens technology to unlock the power of the camera with capabilities like converting images into editable Word and Excel documents, scanning PDFs, and capturing whiteboards with automatic digital enhancements to make the content easier to read.
 - Adding new functionality for common tasks people often encounter when working on a phone—things like making quick notes, signing PDFs, scanning QR codes, and transferring files between devices.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Azure Active Directory Premium features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Microsoft 365 (Office) for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Microsoft 365 (Office) for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 ## Apply Conditional Access
-Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Microsoft 365 (Office) for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Microsoft 365 (Office) for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 1. Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Microsoft 365 (Office) for iOS and Android, but blocks third-party OAuth capable mobile device clients from connecting to Microsoft 365 endpoints.
 
@@ -76,7 +76,8 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
-> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
+> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.
+>  For Android App Protection Policies, add the Office Hub, Office Hub [HL], and Office Hub [ROW] apps. For more information, see [Support Tip: How to enable Intune app protection policies with the Office mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
 ## Utilize app configuration
 
@@ -90,6 +91,7 @@ App configuration can be delivered either through the mobile device management (
 
 > [!IMPORTANT]
 > For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft 365 (Office) for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
+>  For Android App Configurations, add the Office Hub, Office Hub [HL], and Office Hub [ROW] apps. For more information, see [Support Tip: How to enable Intune app protection policies with the Office mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
 
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
 
@@ -164,6 +166,19 @@ To manage these, you can use the following key:
 
 This key can be used both by managed devices and managed apps.
 
+### Data protection settings in Microsoft 365 (Office)
+
+You can enable or disable offline caching when **Save As to Local Storage** is blocked by the [app protection policy](../apps/app-protection-policies.md). 
+
+> [!IMPORTANT]
+> This setting is only applicable to the Microsoft 365 (Office) app on Android.
+To configure this setting, you can use the following key:
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.IntuneMAMOnly.AllowOfflineCachingWhenSaveAsBlocked   |    **false** (default) disables offline caching when **Save As to local storage** is blocked<br>**true** enables offline caching when **Save As to local storage** is blocked    |
+
+
 ### Enable or disable Microsoft 365 Feed for iOS and Android
 
 Admins can now enable or disable the Microsoft 365 Feed by configuring the following setting in the Intune admin center. To deploy this app setting, use an [app configuration policy](app-configuration-policies-overview.md) in Intune.
@@ -173,6 +188,19 @@ To manage the Microsoft 365 Feed, you can use the following key:
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.office.officemobile.Feed.IsAllowed    |    **true** (default) Feed is enabled for the tenant<br>**false** disables Feed for the tenant    |
+
+This key can be used by managed devices and managed apps.
+
+
+### Copilot with commercial data protection
+
+Admins can now enable or disable Copilot in Microsoft 365 app by configuring the following setting in the Intune admin center. To deploy this app setting, use an [app configuration policy](app-configuration-policies-overview.md) in Intune.
+
+To manage Copilot in Microsoft 365 app, you can use the following key:
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.officemobile.BingChatEnterprise.IsAllowed    |    **true** (default) Copilot is enabled for the tenant<br>**false** disables Copilot for the tenant    |
 
 This key can be used by managed devices and managed apps.
 

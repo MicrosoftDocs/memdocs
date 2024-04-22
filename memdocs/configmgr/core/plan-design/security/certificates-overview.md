@@ -3,8 +3,8 @@ title: Certificates overview
 titleSuffix: Configuration Manager
 description: Learn about how Configuration Manager uses self-signed and PKI digital certificates.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: Banreet
 ms.author: banreetkaur
@@ -39,7 +39,7 @@ For more information, see [CNG v3 certificates overview](../network/cng-certific
 
 ## Enhanced HTTP
 
-Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers because of the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. You can instead enable the site to use _enhanced HTTP_. This configuration supports HTTPS on site systems by using self-signed certificates, along with Azure AD for some scenarios. It doesn't require PKI.
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers because of the overhead of managing PKI certificates. The introduction of Microsoft Entra integration reduces some but not all of the certificate requirements. You can instead enable the site to use _enhanced HTTP_. This configuration supports HTTPS on site systems by using self-signed certificates, along with Microsoft Entra ID for some scenarios. It doesn't require PKI.
 
 For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).  
 

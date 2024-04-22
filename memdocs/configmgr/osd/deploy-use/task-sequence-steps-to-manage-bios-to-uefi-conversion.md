@@ -3,8 +3,8 @@ title: Convert BIOS to UEFI
 titleSuffix: Configuration Manager
 description: Learn how to customize an OS deployment task sequence to prepare a FAT32 partition for transition to UEFI.
 ms.date: 02/16/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

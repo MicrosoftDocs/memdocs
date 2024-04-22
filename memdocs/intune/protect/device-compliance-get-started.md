@@ -129,13 +129,13 @@ Intune includes a device compliance dashboard that you use to monitor the compli
 
 When you use Conditional Access, you can configure your Conditional Access policies to use the results of your device compliance policies to determine which devices can access your organizational resources. This access control is in addition to and separate from the actions for noncompliance that you include in your device compliance policies.
 
-When a device enrolls in Intune it registers in Azure AD. The compliance status for devices is reported to Azure AD. If your Conditional Access policies have Access controls set to *Require device to be marked as compliant*, Conditional access uses that compliance status to determine whether to grant or block access to email and other organization resources.
+When a device enrolls in Intune it registers in Microsoft Entra ID. The compliance status for devices is reported to Microsoft Entra ID. If your Conditional Access policies have Access controls set to *Require device to be marked as compliant*, Conditional access uses that compliance status to determine whether to grant or block access to email and other organization resources.
 
 If you’ll use device compliance status with Conditional Access policies, review how your tenant has configured *Mark devices with no compliance policy assigned as*, which you manage under [Compliance policy settings](#compliance-policy-settings).
 
 For more information about using Conditional Access with your device compliance policies, see [Device-based Conditional Access](conditional-access-intune-common-ways-use.md#device-based-conditional-access)
 
-Learn more about Conditional Access in the Azure AD documentation:
+Learn more about Conditional Access in the Microsoft Entra documentation:
 
 - [What is Conditional Access](/azure/active-directory/conditional-access/overview)
 - [What is a device identity](/azure/active-directory/device-management-introduction)

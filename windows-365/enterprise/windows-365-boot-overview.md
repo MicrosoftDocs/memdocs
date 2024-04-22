@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 01/11/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -39,6 +38,10 @@ Windows 365 Boot lets admins configure Windows 11 physical devices so that users
 
 When a user turns on their physical device and signs in, Windows 365 Boot signs them in directly to their Cloud PC, not their physical device. If single sign-on is turned on for their Cloud PC, they don't have to sign in again to their Cloud PC. This expedited sign in process reduces the time it takes the user to access their Cloud PC.
 
+Windows 365 Boot supports both dedicated and shared PC scenarios.
+
+Windows 365 Boot shared mode supports FIDO authentication. For more information, see [How-to: Password-less FIDO2 Security Key Sign-in to Windows 10 HAADJ Devices](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-password-less-fido2-security-key-sign-in-to-windows-10/ba-p/1434583).
+
 ## Shared PC scenario
 
 Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for workers such as nursing, salespeople, and call centers, who share company physical devices. Such workers might frequently switch between physical tasks and computer interaction. Windows 365 Boot lets them bypass the lengthy startup process and boot directly into their secure Cloud PC to pick up right where they left off.
@@ -50,6 +53,10 @@ Such workers can:
 3. The next shift worker can use the same physical device to sign in to their Cloud PC.
 
 Signing out of the Windows 365 Cloud PC brings the device back to the Windows 11 login screen, ready for the next user.
+
+## Dedicated PC scenario
+
+In this scenario, the physical device is assigned to a specific user for them to connect to their Cloud PC. Windows 365 Boot dedicated mode supports Windows Hello.
 
 ## Access to the physical device
 

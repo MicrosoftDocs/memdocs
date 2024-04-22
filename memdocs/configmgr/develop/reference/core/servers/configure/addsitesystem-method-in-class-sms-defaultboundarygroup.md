@@ -2,8 +2,8 @@
 title: AddSiteSystem method in class SMS_DefaultBoundaryGroup
 titleSuffix: Configuration Manager
 ms.date: 03/13/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 229fd29c-8651-4920-8482-194d52469e05
 author: Banreet

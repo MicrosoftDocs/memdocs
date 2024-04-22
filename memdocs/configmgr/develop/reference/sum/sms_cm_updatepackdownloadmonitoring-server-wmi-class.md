@@ -3,8 +3,8 @@ description: Learn how to get the update package download status per site in Con
 title: "SMS_CM_UpdatePackDownloadMonitoring Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ab04d08b-25e3-444b-91c6-372d083bd8b0
 author: banreet

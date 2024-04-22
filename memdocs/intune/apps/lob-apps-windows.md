@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 1/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,6 +30,8 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
+- FocusArea_Apps_Win32
+- FocusArea_Apps_LOB
 ---
 
 # Add a Windows line-of-business app to Microsoft Intune
@@ -116,6 +117,9 @@ You can configure a known self-updating mobile MSI app to ignore the version che
 Some MSI installer-based apps are automatically updated by the app developer or another update method. For these automatically updated MSI apps, you can configure the **Ignore app version** setting in the **App information** pane. When you switch this setting to **Yes**, Microsoft Intune will not enforce the app version that's installed on the Windows client.
 
 This capability is useful to avoid getting into a race condition. For instance, a race condition can occur when the app is automatically updated by the app developer and is updated by Intune. Both might try to enforce a version of the app on a Windows client, which creates a conflict.
+
+## Add store-signed LOB apps for Surface Hub devices
+You can add and deploy store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps enables offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
 
 ## Next steps
 

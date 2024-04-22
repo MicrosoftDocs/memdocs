@@ -3,8 +3,8 @@ title: Technical preview 1810.2
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1810.2.
 ms.date: 10/16/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

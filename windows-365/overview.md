@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 11/27/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -44,6 +43,12 @@ Windows 365 is available in multiple editions:
 To learn about the differences between the Business and Enterprise versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
 
 [!INCLUDE [What is a Cloud PC?](./includes/what-is-cloud-pc.md)]
+
+## Licensing and how to buy
+
+Before your users can gain access to a Cloud PC, you must purchase Windows 365 licenses. Customers can purchase Windows 365 as a separate license per user for a fixed monthly fee to access and use Cloud PCs. Additional costs may apply based on network usage. After licenses are purchased, you can create provisioning policies to automatically create Cloud PCs for users.
+
+For more information, see  [Windows 365 Licensing]( https://www.microsoft.com/licensing/product-licensing/windows-365) and [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/all-pricing?rtc=1).
 
 ## Billing
 

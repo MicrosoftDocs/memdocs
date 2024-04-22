@@ -3,8 +3,8 @@ title: Capabilities in Technical Preview 1601
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1601.
 ms.date: 01/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ROBOTS: NOINDEX
@@ -22,11 +22,11 @@ This article introduces the features that are available in the Technical Preview
 
  **Known Issues for this Technical Preview:**  
 
--   When you manage **Client Update Options** to promote a pre-production client to production, the  text for the checkbox   displays a client version of zero (0) instead of the actual client build number. The correct pre-production client version is shown on the surface above this option, and is the client version that is promoted to production when you select this option.  
+-   When you manage **Client Update Options** to promote a preproduction client to production, the  text for the checkbox   displays a client version of zero (0) instead of the actual client build number. The correct preproduction client version is shown on the surface above this option, and is the client version that is promoted to production when you select this option.  
 
--   When updating to Technical Preview 1601 and choosing to test the Configuration Manager client in a pre-production collection, the client package for the collection will not be upgraded. This issue is for Technical Preview 1601 only.  
+-   When updating to Technical Preview 1601 and choosing to test the Configuration Manager client in a preproduction collection, the client package for the collection won't be upgraded. This issue is for Technical Preview 1601 only.  
 
-     To workaround this issues, do one of the follow:  
+     To work around this issues, do one of the follow:  
 
     -   Run the following SQL script on the primary site's database:  
 
@@ -49,7 +49,7 @@ This article introduces the features that are available in the Technical Preview
 
         ```  
 
-    -   Add a new distribution point site system role to your lab  site. The new distribution point will upgrade the pre-production collection with the new client package.  
+    -   Add a new distribution point site system role to your lab  site. The new distribution point will upgrade the preproduction collection with the new client package.  
 
 **The following are new features you can try out with this version.**  
 
@@ -60,31 +60,31 @@ In the 1601 Technical Preview, we have added support for the following features:
 
 -   **Conditional access support for PCs that are managed by Configuration Manager**  
 
-     You can now set conditional access policies for PCs managed by Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Azure AD through the  compliance policy, and to monitor and report on Azure AD registration.  
+     You can now set conditional access policies for PCs managed by Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Microsoft Entra ID through the  compliance policy, and to monitor and report on Microsoft Entra registration.  
 
     > [!NOTE]  
     >  Conditional Access is not yet supported on Windows 10.  
 
     Following are the prerequisites  to use this feature:  
 
-    -   Azure Active Directory Premium subscription and ADFS Sync.  
+    -   Microsoft Entra ID P1 or P2 subscription and ADFS Sync.  
 
     -   A Microsoft Intune Subscription. The Microsoft Intune Subscription  should be configured in Configuration Manager Console.  
 
-    -   [Prerequisites for Azure AD auto-registration](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
+    -   [Prerequisites for Microsoft Entra auto-registration](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a conditional access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by Configuration Manager.  
 
-    -   **Require registration in Azure ActiveDirectory:** This rule checks if the user's device is  work place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
+    -   **Require registration in Microsoft Entra ID:** This rule checks if the user's device is  work place joined to Microsoft Entra ID, and if not, the device is automatically registered in Microsoft Entra ID. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
-    -   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see  if the user's device has all required updates (specified in the **Required automatic updates** rule) within deadline and grace period specified by you, and automatically install the any pending required updates.  
+    -   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see  if the user's device has all required updates (specified in the **Required automatic updates** rule) within deadline and grace period specified by you, and automatically install any pending required updates.  
 
-    -   **Require BitLocker drive encryption:** This is a check to see if the primary drive (e.g. C:\\) on the device is BitLocker encrypted. If Bitlocker encryption is not enabled on the primary device access to email and SharePoint services is blocked.  
+    -   **Require BitLocker drive encryption:** This is a check to see if the primary drive (for example, C:\\) on the device is BitLocker encrypted. If BitLocker encryption isn't enabled on the primary device access to email and SharePoint services is blocked.  
 
     -   **Require Antimalware:** This is a check to see if the antimalware software (System Center Endpoint Protection or Windows Defender only) is enabled and running.  
-         If it is not enabled, access to email and SharePoint services is blocked.  
+         If it isn't enabled, access to email and SharePoint services is blocked.  
 
-    End-users who are blocked due to non compliance will view compliance information in the Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
+    End-users who are blocked due to noncompliance will view compliance information in the Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
 
 -   **Conditional access with Health Attestation Service** You can now restrict access to email and 0365 services based on the health of the devices as reported by the Health Attestation Service.  Additionally, devices that are managed by Intune are included in the device health reports.  
 
@@ -96,7 +96,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 
          To create a rule for automatic updates, open the **Create Compliance Policy Wizard**,  and add a new rule.  Select  **Minimum classification of required updates** as the condition, and set the value to one of the available values: **None**, **Recommended**, and **Important**.  
 
-        -   **None:** Updates are not automatically installed.  
+        -   **None:** Updates aren't automatically installed.  
 
         -   **Recommended:** All recommended updates are installed  
 
@@ -106,7 +106,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 
          To create a rule for password to unlock mobile devices,  open the **Create Compliance Policy Wizard**,  and add a new rule. Select **Require a password to unlock an idle device** as the condition, and set the value to **True**.  
 
-    -   **Minutes of inactivity before password is required:**  Specifies the idle time before the user must re-enter their password.  
+    -   **Minutes of inactivity before password is required:**  Specifies the idle time before the user must reenter their password.  
 
          To create this rule, open the **Create Compliance Policy Wizard**,  and add a new rule. **Select Minutes of inactivity before password is required** as the condition, and set the value to one of the available options: 1 minute, 5 minutes, 15 minutes, 30 minutes,  I hour.  
 
@@ -122,7 +122,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 ##  <a name="bkmk_clientStatus"></a> Client online status  
 Beginning with technical preview 1601, you can identify at a glance whether a client is online or offline in the Configuration Manager console. With updated icons and columns in the console device listings, you can assess the status of clients in your environment to identify problem areas and other issues that might need your attention.  
 
-A client is online if it is currently connected to a Configuration Manager management point site system role. As long as the management point is receiving ping-like messages from the client, its status is online. If the management doesn't receive a message for 5 minutes or so, the client's status changes to offline.  
+A client is online if it's currently connected to a Configuration Manager management point site system role. As long as the management point is receiving ping-like messages from the client, its status is online. If the management doesn't receive a message for 5 minutes or so, the client's status changes to offline.  
 
 ### Icons for client status  
 
@@ -163,9 +163,9 @@ Client online status is only available for Windows computers with the Configurat
 
 
 ### iOS - App Configuration for applications<br />Hybrid  
- Some iOS applications support pre-configuring settings such as a server or database that the application should connect to. Configuration Manager now supports deploying app configuration policies to the device which enable the user to use the app immediately without needing to know this information. Developers must enable this functionality in their apps.  
+ Some iOS applications support preconfiguring settings such as a server or database that the application should connect to. Configuration Manager now supports deploying app configuration policies to the device which enable the user to use the app immediately without needing to know this information. Developers must enable this functionality in their apps.  
 
- A limited number of publicly released apps currently support pre-configuring settings; you might also have in-house developed line of business apps that support these.  
+ A limited number of publicly released apps currently support preconfiguring settings; you might also have in-house developed line of business apps that support these.  
 
 #### Prerequisites for this scenario  
 
@@ -206,7 +206,7 @@ Client online status is only available for Windows computers with the Configurat
  For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Android - Kiosk Mode for Samsung KNOX Standard<br />Hybrid  
- Kiosk mode lets you lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. These settings are not available for Samsung KNOX Standard devices in the **Windows 8.1 and Windows 10** configuration item (settings apply to Windows 10 devices only).  
+ Kiosk mode lets you lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. These settings aren't available for Samsung KNOX Standard devices in the **Windows 8.1 and Windows 10** configuration item (settings apply to Windows 10 devices only).  
 
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 

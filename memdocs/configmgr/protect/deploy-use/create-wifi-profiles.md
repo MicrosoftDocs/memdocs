@@ -3,8 +3,8 @@ title: How to create Wi-Fi profiles
 titleSuffix: Configuration Manager
 description: Learn how to use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to users in your organization.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

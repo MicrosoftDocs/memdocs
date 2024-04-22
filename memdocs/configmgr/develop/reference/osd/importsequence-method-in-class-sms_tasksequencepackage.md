@@ -3,8 +3,8 @@ title: ImportSequence Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the ImportSequence WMI class method imports a task sequence package file based on the provided XML data of a previously exported task sequence package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 70b08f66-fa17-482d-80d8-d2a3fb999e23
 author: Banreet

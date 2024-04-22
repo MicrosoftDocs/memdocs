@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 04/16/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- FocusArea_Apps_Add
 ---
 
 # Step 8: Add and assign an app

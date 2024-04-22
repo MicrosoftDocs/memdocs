@@ -3,8 +3,8 @@ title: SMS_AIProxy Class
 titleSuffix: Configuration Manager
 description: Details of SMS_AIProxy server WMI class
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: dbd4b08e-979f-426e-979b-4dce5dce48dc
 author: Banreet

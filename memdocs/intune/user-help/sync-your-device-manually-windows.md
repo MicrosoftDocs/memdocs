@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 
 searchScope:
  - User help
@@ -80,8 +78,6 @@ Sync devices running Windows 10 or later from the system Settings app.
       ![Screenshot of the Settings app's account settings section highlighting the Access work or school option with a red rectangle.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
     * If your screen shows the **Work access** option, jump to [Work access steps](#work-access-steps) in this article.  
-
-      ![Screenshot of the account settings section highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
 
 ### Access work or school steps  
 

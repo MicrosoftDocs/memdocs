@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 12/06/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -52,7 +51,7 @@ To assign these permissions, go to **Tenant administration** > **Roles** > **Cre
 
 ## Use the Connected Frontline Cloud PCs report
 
-To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Connected Frontline Cloud PCs**).
+To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Connected Frontline Cloud PCs**) > select a Cloud PC size.
 
 :::image type="content" source="./media/report-connected-frontline-cloud-pcs/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-connected-frontline-cloud-pcs/view-report.png":::
 
@@ -61,7 +60,9 @@ To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft In
 The report shows the following data aggregated for the last 28 days:
 
 - **Current connections**: Number of currently connected Frontline Cloud PCs.
-- **Most concurrent connections**: Highest number of connected Frontline Cloud PCs for each day in the filtered range (7 or 28 days).
+- **Most concurrent connections**: Highest number of connected Frontline Cloud PCs for the filtered range:
+    - Daily for past 7 or 28 days.
+    - Hourly for the past one, three, or seven days.
 - **Limit**: Maximum concurrency limit, which is equal to the number of licenses purchased.
 - **Reached concurrency limit**: Warnings for approaching and reaching the maximum concurrency limit.
 

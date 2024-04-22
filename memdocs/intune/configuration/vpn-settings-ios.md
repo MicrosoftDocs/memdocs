@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 03/27/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -85,32 +83,16 @@ Select the VPN connection type from the following list of vendors:
 - **Citrix SSO**
 - **Zscaler**
 
-  To use Conditional Access, or allow users to bypass the Zscaler sign-in screen, you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+  To use Conditional Access, or allow users to bypass the Zscaler sign-in screen, you must integrate Zscaler Private Access (ZPA) with your Microsoft Entra account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **NetMotion Mobility**
 - **IKEv2**
 
   [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
 
-- **Microsoft Tunnel (standalone client)(preview)**
-
-  Applies to the Microsoft Tunnel client app.
-
-  > [!Important]
-  >
-  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
-  >
-  > - On July 29, 2022, the standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
-  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
-  >
-  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
-
 - **Microsoft Tunnel**
 
   Applies to the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
 
-  > [!Important]
-  > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
-  
 - **Custom VPN**
 
 > [!NOTE]
@@ -119,7 +101,7 @@ Select the VPN connection type from the following list of vendors:
 ## Base VPN settings
 
 - **Connection name**: End users see this name when they browse their device for a list of available VPN connections.
-- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Azure Active Directory (AD) is used.
+- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Microsoft Entra ID is used.
 - **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
 - **Authentication method**: Choose how devices authenticate to the VPN server.
@@ -144,6 +126,11 @@ Select the VPN connection type from the following list of vendors:
 
   - If you haven't already, integrate ISE with Intune for NAC as described at **Configure Microsoft Intune as an MDM Server** in the [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
   - Enable NAC in the VPN profile.
+
+  > [!IMPORTANT]
+  > The [network access control (NAC) service is deprecated](../protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support changes within Cisco ISE, Intune changed the device ID format. So, your existing profiles with the original NAC service will stop working.
+  > 
+  > To use the CR Service and prevent downtime with your VPN connection, redeploy this same VPN device configuration profile. No changes are needed to the profile. You only need to redeploy. When the device syncs with Intune service and receives the VPN configuration profile, then the CR Service changes are automatically deployed to the device. And, your VPN connections should continue to work.
 
   **When using Citrix SSO with Gateway**, be sure to:
 
@@ -292,7 +279,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN
 
-- **Type of automatic VPN**: Select the VPN type you want to configure: On-demand VPN or per-app VPN:
+- **Type of automatic VPN**: Select the VPN type you want to configure - On-demand VPN or per-app VPN. Make sure you only use one option. Using them both simultaneously causes connection issues.
 
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
@@ -397,7 +384,6 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 These settings apply to the following VPN connection types:
 
-- **Microsoft Tunnel (standalone client) (preview)**
 - **Microsoft Tunnel**
 
 **Settings**:

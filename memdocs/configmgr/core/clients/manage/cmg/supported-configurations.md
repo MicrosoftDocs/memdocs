@@ -3,8 +3,8 @@ title: Supported configurations for CMG
 titleSuffix: Configuration Manager
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
 ms.date: 07/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell
@@ -48,10 +48,10 @@ The following table lists CMG support for Configuration Manager features:
 | CMPivot | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Compliance settings | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Automatic client upgrade | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
-| Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Client install<br>(with [Microsoft Entra integration](../../deploy/deploy-clients-cmg-azure.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Software distribution (device-targeted) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
-| Software distribution (user-targeted, required)<br>(with Azure AD integration) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Software distribution (user-targeted, required)<br>(with Microsoft Entra integration) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | BitLocker Management | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
 | Pull distribution point source | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |

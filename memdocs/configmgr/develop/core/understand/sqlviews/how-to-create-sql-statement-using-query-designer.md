@@ -3,8 +3,8 @@ title: How to create a SQL statement by using query designer
 titleSuffix: Configuration Manager
 description: How to create Configuration Manager report queries using Query Designer.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 
 

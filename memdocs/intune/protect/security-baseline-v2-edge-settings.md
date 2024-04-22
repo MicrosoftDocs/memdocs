@@ -7,12 +7,11 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/24/2022
+ms.date: 12/11/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:
 
 # optional metadata
@@ -28,23 +27,22 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 
----
-
-<!-- Add when pivots are needed:
- 
-Metadata:
 zone_pivot_groups: dcv2-edge-baselines
 
-Pivot yml: 
+---
+
+<!-- Pivot details: 
+
 - id: dcv2-edge-baselines
   title: Microsoft Edge baseline versions
   prompt: Choose a version
   pivots:
-    - id: edge-may2023-112
-      title: May 2023 v112
-    - id: edge-future
-      title: Future version
+    - id: edge-v112
+      title: Edge v112 (May 2023)
+    - id: edge-v117
+      title: Edge v117 (November 2023)
 -->
+
 # Microsoft Edge security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later.
@@ -79,46 +77,43 @@ To learn more about using security baselines, see:
 
 ## Microsoft Edge
 
-<!-- >::: zone pivot="edge-may2023-112" -->
+::: zone pivot="edge-v117"
 
-**Microsoft Edge baseline for May 2023 (Edge version 112)**
+**Microsoft Edge baseline for November 2023 (Edge version 117)**
 
-For more information about the following settings that are included in this baseline, download the [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and review the *Microsoft Edge v112 Security Baseline.zip* file.
+For information about the most recent baseline versions and settings from Microsoft, including versions of this baseline that might not be available through Intune, download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center.
 
 - **Allow unconfigured sites to be reloaded in Internet Explorer mode**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
   
 - **Allow users to proceed from the HTTPS warning page**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
+
+- **Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode**  
+  Baseline default: *Disabled*
 
 - **Enable browser legacy extension point blocking**  
-  Baseline default: *Enabled*  
+  Baseline default: *Enabled*
 
 - **Enable site isolation for every site**  
-  Baseline default: *Enabled*  
+  Baseline default: *Enabled*
 
 - **Enhance images enabled**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
 
 - **Force WebSQL to be enabled**  
-  Baseline default: *Disabled*  
-
-- **Minimum TLS version enabled**  
-  Baseline default: *Enabled*  
-
-  - **Minimum SSL version enabled (Device)**  
-    Baseline default: *TLS 1.2*  
+  Baseline default: *Disabled*
 
 - **Show the Reload in Internet Explorer mode button in the toolbar**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
 
 - **Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
 
 **Extensions**:
 
 - **Control which extensions cannot be installed**  
-  Baseline default: *Enabled*  
+  Baseline default: *Enabled*
 
   - **Extension IDs the user should be prevented from installing (or * for all) (Device)**  
     Baseline default: *\**  
@@ -126,7 +121,91 @@ For more information about the following settings that are included in this base
 **HTTP authentication**:
 
 - **Allow Basic authentication for HTTP**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
+
+- **Supported authentication schemes**  
+  Baseline default: *Enabled*  
+  [Learn more](/deployedge/microsoft-edge-policies#authschemes)
+
+**Native Messaging**:
+
+- **Allow user-level native messaging hosts (installed without admin permissions)**  
+  Baseline default: *Disabled*
+
+**Private Network Request Settings**:
+
+- **Specifies whether to allow insecure websites to make requests to more-private network endpoints**  
+  Baseline default: *Disabled*
+
+**SmartScreen settings**:
+
+- **Configure Microsoft Defender SmartScreen**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+
+- **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
+  Baseline default: *Enabled*
+
+- **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+
+- **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+
+- **Configure Edge TyposquattingChecker**  
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="edge-v112"
+
+**Microsoft Edge baseline for May 2023 (Edge version 112)**
+
+For information about the most recent baseline versions and settings from Microsoft, including versions of this baseline that might not be available through Intune, download the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center.
+
+- **Allow unconfigured sites to be reloaded in Internet Explorer mode**  
+  Baseline default: *Disabled*
+  
+- **Allow users to proceed from the HTTPS warning page**  
+  Baseline default: *Disabled*
+
+- **Enable browser legacy extension point blocking**  
+  Baseline default: *Enabled*
+
+- **Enable site isolation for every site**  
+  Baseline default: *Enabled*
+
+- **Enhance images enabled**  
+  Baseline default: *Disabled*
+
+- **Force WebSQL to be enabled**  
+  Baseline default: *Disabled*
+
+- **Minimum TLS version enabled**  
+  Baseline default: *Enabled*
+
+  - **Minimum SSL version enabled (Device)**  
+    Baseline default: *TLS 1.2*  
+
+- **Show the Reload in Internet Explorer mode button in the toolbar**  
+  Baseline default: *Disabled*
+
+- **Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context**  
+  Baseline default: *Disabled*
+
+**Extensions**:
+
+- **Control which extensions cannot be installed**  
+  Baseline default: *Enabled*
+
+  - **Extension IDs the user should be prevented from installing (or * for all) (Device)**  
+    Baseline default: *\**  
+  
+**HTTP authentication**:
+
+- **Allow Basic authentication for HTTP**  
+  Baseline default: *Disabled*
 
 - **Supported authentication schemes**  
   Baseline default: *Enabled*  
@@ -138,7 +217,7 @@ For more information about the following settings that are included in this base
 **Native Messaging**:
 
 - **Allow user-level native messaging hosts (installed without admin permissions)**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
 
 **Password manager and protection**:
 
@@ -149,7 +228,7 @@ For more information about the following settings that are included in this base
 **Private Network Request Settings**:
 
 - **Specifies whether to allow insecure websites to make requests to more-private network endpoints**  
-  Baseline default: *Disabled*  
+  Baseline default: *Disabled*
 
 **SmartScreen settings**:
 
@@ -158,7 +237,7 @@ For more information about the following settings that are included in this base
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
-  Baseline default: *Enabled*  
+  Baseline default: *Enabled*
 
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
   Baseline default: *Enabled*  
@@ -168,9 +247,7 @@ For more information about the following settings that are included in this base
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
-<!-- ::: zone-end  -->
-
-## Next steps
+::: zone-end
 
 - [Learn about security baselines](../protect/security-baselines.md)
 - [Avoid conflicts](../protect/security-baselines.md#avoid-conflicts)

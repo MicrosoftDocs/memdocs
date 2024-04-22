@@ -2,17 +2,14 @@
 # required metadata
 
 title: In development - Windows 365 Business
-titleSuffix: 
 description: Windows 365 Business features in development
 keywords:
-author: ErikjeMS 
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/08/2023
+ms.date: 03/13/2024
 ms.topic: conceptual
 ms.service: windows-365
-ms.subservice: 
-ms.assetid: 
 
 # optional metadata
 
@@ -22,7 +19,6 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -53,12 +49,16 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 -->
 
+<!-- ***********************************************-->
+## Device management
 
-## End user experience
+### Upgrade Cloud PCs to more storage, RAM, and CPU<!--48540819-->
 
-### Self-help in Windows 365 Business<!--45828334-->
+By using the upcoming Resize action, you'll be able to upgrade Cloud PCs to more storage, RAM, and CPU.
 
-A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
+### Resize support for Windows 365 Business<!--48540819-->
+
+You'll be able to use the resize remote action for Windows 365 Business Cloud PCs.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -66,6 +66,13 @@ A new self-help button for end users will be available in a future release of Wi
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+<!-- ***********************************************-->
+## Security
+
+### Single sign-on (public preview)
+
+Windows 365 Business will support single sign-on for new and existing Cloud PCs. You'll be able to turn on single sign-on in **Organizational settings**. When turned on, users no longer have to sign in to the operating system.
 
 ## Next steps
 

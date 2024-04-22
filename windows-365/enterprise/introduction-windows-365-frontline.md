@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 04/15/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -44,7 +43,7 @@ Windows 365 Frontline is designed specifically for workers who don't need 24/7 a
 - Part-time workers.
 - Contingent staff.
 
-The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you’ve purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC.
+The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you’ve purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC. A concurrency buffer exists to exceed this maximum a limited number of times per day. For more information, see [Exceeding the maximum concurrency limit ](#exceeding-the-maximum-concurrency-limit).
 
 Windows 365 Frontline is currently only available for Azure Global Cloud.
 
@@ -96,6 +95,40 @@ For the best user experience, make sure to:
 
 - Configure the Windows Update Ring profiles.
 - Set a time limit for idle Remote Desktop Sessions.
+
+## Exceeding the maximum concurrency limit
+
+Windows 365 Frontline includes a concurrency buffer to let a tenant temporarily exceed the maximum concurrency limit for Windows 365 Frontline Cloud PCs.
+
+For example, when workers overlap during a shift change, a previous worker might need to finish up something before signing off. Or, an incoming worker might need to start a few minutes early. The concurrency buffer is intended to allow for such rare and brief over usage to make sure workers aren’t impacted by unforeseen lockouts.
+
+The concurrency buffer can be used up to four times per day with maximum of one hour in each instance. This hour starts from the moment the tenant exceeded the max concurrency limit.
+
+### Temporary blocks
+
+Excessive use of the concurrency buffer will temporarily block its further use for the next 48 hours. A temporary block is imposed when:
+
+- On two or more occasions within a 24-hour period, the concurrency buffer is used for more than one hour.
+
+### Permanent blocks
+
+If the tenant is temporarily blocked more than two times in a seven day period, the tenant is permanently blocked from using the concurrency buffer.
+
+While permanently blocked, you can still use your Frontline Cloud PCs up to the maximum concurrency limit.
+
+To unblock your tenant, open a ticket with support from the Intune portal.
+
+### Monitor the concurrency buffer
+
+You can monitor the use of concurrency buffer with the Frontline connection hourly report. You can use the Frontline concurrency alert to receive alerts each time the concurrency buffer is activated.
+
+## Features not yet supported Windows 365 Frontline
+
+The following features aren't yet supported for Windows 365 Frontline.
+
+- GPU Cloud PCs
+- Resize a Cloud PC remote action
+- [Move a Cloud PC](move-cloud-pc.md)
 
 ## Next steps
 

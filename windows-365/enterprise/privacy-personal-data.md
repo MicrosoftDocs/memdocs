@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -28,6 +27,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - M365-identity-device-management
 - tier2
+- essentials-privacy
 ---
 
 # Privacy, customer data, and customer content in Windows 365

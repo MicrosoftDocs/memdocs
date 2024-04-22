@@ -1,7 +1,7 @@
 ---
 title: Remote Windows Autopilot Reset in Intune
 description: Remote Windows Autopilot Reset in Intune.
-ms.prod: windows-client
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
-ms.technology: itpro-deploy
+ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,7 +20,7 @@ appliesto:
 
 # Reset devices with remote Windows Autopilot Reset
 
-You can use Intune to start the remote Windows Autopilot Reset process. Resetting in this way avoids the need for someone to visit each device that needs to be reset to start the Windows Autopilot Reset process. Unlike [local Windows Autopilot reset](local-autopilot-reset.md), a configuration profile doesn't need to be configured or assigned for remote Windows Autopilot Reset to work. Remote Windows Autopilot Reset is available on any Azure AD join device that is an Autopilot device without any additional configuration.
+You can use Intune to start the remote Windows Autopilot Reset process. Resetting in this way avoids the need for someone to visit each device that needs to be reset to start the Windows Autopilot Reset process. Unlike [local Windows Autopilot reset](local-autopilot-reset.md), a configuration profile doesn't need to be configured or assigned for remote Windows Autopilot Reset to work. Remote Windows Autopilot Reset is available on any Microsoft Entra join device that is an Autopilot device without any additional configuration.
 
 ## Workflow
 

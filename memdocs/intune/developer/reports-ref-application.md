@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 
 # optional metadata
@@ -23,9 +22,8 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -117,6 +115,3 @@ The **mobileAppInstallState** entity represents the install state for a mobile a
 | appInstallStateKey | The unique ID of the app install state for your account. |
 | appInstallState | Enum value of the app install state. |
 | appInstallStateName | Name of the app install state. |
-
-
-

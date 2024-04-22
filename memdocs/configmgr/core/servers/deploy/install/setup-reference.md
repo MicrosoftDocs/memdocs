@@ -3,8 +3,8 @@ title: Setup reference
 titleSuffix: Configuration Manager
 description: Review this reference to help you prepare to install a Configuration Manager site or hierarchy.
 ms.date: 01/04/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

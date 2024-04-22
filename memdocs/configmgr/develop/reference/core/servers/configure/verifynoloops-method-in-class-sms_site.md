@@ -3,8 +3,8 @@ description: Learn how to use VerifyNoLoops class method to determine if the ins
 title: VerifyNoLoops Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1abbb982-f594-4ccb-87c4-906154245644
 author: Banreet

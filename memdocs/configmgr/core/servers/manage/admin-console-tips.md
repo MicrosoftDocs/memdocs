@@ -3,8 +3,8 @@ title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
 ms.date: 08/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: banreet
 ms.author: banreetkaur
@@ -44,7 +44,7 @@ The following improvements were made to the console and user experience:
 - Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query. Closing the console will clear the cached query.
 - Added a search filter to the **Products** and **Classifications** tabs in the **Software Update Point Component Properties**. <!--10998089, 9575773-->
 - You can now exclude subcontainers when doing **Active Directory System Discovery** and **Active Directory User Discovery** in untrusted domains. <!--4655840, 9575773-->
-- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Azure Active Directory. <!--12433024, 9575773-->
+- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Microsoft Entra ID. <!--12433024, 9575773-->
 - Added the **Collection ID** to the collection summary details tab <!--12630582, 9575773-->
 - Increased the size of the **Membership Rules** pane in the **Properties** page for collections. <!--12947295, 9575773 -->
 - Added a **View Script** option for **Run PowerShell Script** steps when using the **View** action for a task sequence. <!--12498818, 9575773 -->

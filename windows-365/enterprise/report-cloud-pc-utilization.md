@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 03/07/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -32,38 +31,53 @@ ms.collection:
 
 # Cloud PC utilization report (preview)
 
-The Cloud PC utilization report helps you make sure that your licenses are assigned to active users. By reviewing Cloud PCs with low usage, you can decide if a Windows 365 license would better serve other users who might use these resources more often.
+The Cloud PC utilization report helps you monitor and optimize Cloud PC usage in your organization. It shows you how much time users spend on their Cloud PCs and when they last connected to them.
+
+By reviewing Cloud PCs with low usage, you can reduce costs by:
+
+- Reassigning under-used Cloud PC licenses to other users who might use them more often.
+- Identifying and deprovisioning Cloud PCs that are inactive for long periods of time.
 
 ## Use the Cloud PC utilization report
 
-To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with low utilization**).
+To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance** > **Cloud PCs utilization (preview)**.
 
 :::image type="content" source="./media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-cloud-pc-utilization/view-report.png":::
 
-## All Cloud PCs tab
+## Cloud PC utilization (preview) report page (tenant data)
 
-On the **All Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
+The report shows the following tenant data aggregated for the last four weeks:
 
-- This histogram shows user connection time in three sections:
+- This histogram shows the number of Cloud PCs connected for each range:
   - **High time connected**: More than 80 hours.
   - **Average time connected**: 40-80 hours.
   - **Low time connected**: Less than 40 hours.
   - **No active time connected**: Zero hours.
 - List of individual Cloud PCs with the following columns:
   - **Device name**
-  - **Primary user UPN**
-  - **Total time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
-  - **Days since last sign in**
+  - **Primary user UPN**: The user's identifier in Active Directory in the form of an email address.
+  - **PC type**
+  - **Time connected**: The total hours that the user has been connected to the Cloud PC over the last four weeks.
+  - **Date last connected**: The date when the user most recently connected to their Cloud PC (within the last 60 days). If the user isn't currently connected to the Cloud PC, this date is the sign out time. If the user is connected to the Cloud PC, this date is the most recent connection time.
+  - **Date created**: The date the Cloud PC was created.
 
-You can use the filter options to see only data for a specific usage group.
+### Filters
 
-## Other reports
+The **Add filters** control lets you filter the table by:
+
+- **PC type**
+- **Time connected**
+- **Date last connected**
+
+You can use these filters to help you understand usage patterns and identify Cloud PCs that are underused and can be deprovisioned or downgraded.
+
+## Device level data
 
 You can see similar utilization data on a per-Cloud PC basis:
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All Devices**.
+1. sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance** > **Cloud PCs utilization (preview)**.
 2. Select a device and then select **Performance (preview)**.
-3. You'll see **Time connected to device**. Under this chart, select **View report** to see more utilization data specific to this Cloud PC.
+3. The **Time connected** section shows usage data for this Cloud PC. For more detail, in this section, select **View report**.
 
 <!-- ########################## -->
 ## Next steps

@@ -3,8 +3,8 @@ title: Online Documentation
 titleSuffix: Configuration Manager
 ms.date: 02/17/2021
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.subservice: other
+ms.service: configuration-manager
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

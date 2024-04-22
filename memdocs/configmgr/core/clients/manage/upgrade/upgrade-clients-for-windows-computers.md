@@ -3,8 +3,8 @@ title: Upgrade clients on Windows
 titleSuffix: Configuration Manager
 description: Upgrade clients on Windows computers in Configuration Manager.
 ms.date: 04/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
 ms.author: sheetg

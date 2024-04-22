@@ -3,8 +3,8 @@ title: Application deployment client components technical reference
 titleSuffix: Configuration Manager
 description: Client components used for troubleshooting application deployment in Configuration Manager.
 ms.date: 11/04/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: troubleshooting
 author: baladelli
 ms.author: baladell

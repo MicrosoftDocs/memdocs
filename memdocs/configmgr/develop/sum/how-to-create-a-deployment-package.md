@@ -3,8 +3,8 @@ title: Create a Deployment Package
 titleSuffix: Configuration Manager
 description: A software updates deployment package initiated by creating an instance of the SMS_SoftwareUpdatesPackage class and populating the properties.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: e32f4162-ec92-475f-8b39-f283de85d9e0
 author: Banreet

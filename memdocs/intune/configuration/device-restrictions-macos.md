@@ -8,13 +8,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2022
+ms.date: 02/20/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -36,7 +34,7 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
+This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, and more.
 
 This feature applies to:
 
@@ -288,6 +286,9 @@ This feature applies to:
 - Some settings apply to macOS 10.15 and newer.
 - These settings only apply on devices that have the privacy preferences profile installed before being upgraded.
 
+> [!NOTE]
+> When you allow apps using a policy, these apps aren't shown in System settings (Privacy + Security) on the device. Only apps manually allowed by end users are shown.
+ 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
@@ -442,11 +443,17 @@ This feature applies to:
 
 ### Settings apply to: All enrollment types
 
-- **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
+The restricted apps settings don't prevent users from installing and opening specific apps. Instead, devices with restricted apps installed populate the **Devices with restricted apps** report in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Monitor**).
 
+- **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, users might have access to apps you assign, and built-in apps.
   - **Approved apps**: List the apps that users are allowed to install. Users must not install other apps. If users install apps that aren't allowed, then it's reported in Intune. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list.
+
+    If an app is installed that isn't on the approved apps list, then the restricted apps setting reports an error.
+
   - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune.
+
+    If an app is installed that's on the prohibited apps list, then the restricted apps setting reports an error.
 
 - **Apps list**: **Add** apps to your list:
   - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).

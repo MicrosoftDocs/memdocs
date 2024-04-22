@@ -3,8 +3,8 @@ description: Article outlining the use of the GetSuppressComputerActivityInPrese
 title: GetSuppressComputerActivityInPresentationMode Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2286886d-040d-49e6-9739-d2950606b9e2
 author: Banreet

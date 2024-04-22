@@ -2,9 +2,9 @@
 title: Console support
 titleSuffix: Configuration Manager
 description: Learn about which OS versions you can install the Configuration Manager console.
-ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 12/01/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur
@@ -25,10 +25,6 @@ Configuration Manager supports the installation of the console on the following 
 - **Windows Server 2019**: Standard, Datacenter
 
 - **Windows Server 2016**: Standard, Datacenter
-
-- **Windows Server 2012 R2** (x64): Standard, Datacenter
-
-- **Windows Server 2012** (x64): Standard, Datacenter
 
 - **Windows 11** (x64): Pro, Enterprise
 

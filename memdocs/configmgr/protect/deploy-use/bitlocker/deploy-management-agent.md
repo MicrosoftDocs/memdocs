@@ -3,8 +3,8 @@ title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

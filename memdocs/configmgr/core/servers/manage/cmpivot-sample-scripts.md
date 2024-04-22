@@ -3,8 +3,8 @@ title: CMPivot sample scripts
 titleSuffix: Configuration Manager
 description: Script samples for CMPivot in Configuration Manager.
 ms.date: 07/12/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: sample
 ms.author: gokarthi
 author: gowdhamankarthikeyan

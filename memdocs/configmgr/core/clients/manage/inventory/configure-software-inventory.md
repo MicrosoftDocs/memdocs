@@ -3,8 +3,8 @@ title: Configure software inventory
 titleSuffix: Configuration Manager
 description: Configure software inventory, and exclude folders from software inventory in Configuration Manager.
 ms.date: 01/03/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

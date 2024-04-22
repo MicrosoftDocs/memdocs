@@ -2,8 +2,8 @@
 title: AddDistributionPoints Method in SMS_BootImagePackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 46fc8e66-a1ab-4260-a5db-e12f6fd553e5
 author: Banreet

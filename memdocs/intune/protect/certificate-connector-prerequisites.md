@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:
 
 # optional metadata
@@ -45,7 +44,7 @@ Requirements for the computer where you install the connector software:
 
 - .NET 4.7.2
 
-- Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Azure Active Directory documentation.  
+- Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Microsoft Entra documentation.  
 
 - The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../fundamentals/network-bandwidth-use.md)
 
@@ -155,9 +154,11 @@ To use SCEP with a Microsoft CA, you’ll need to add NDES to the server that ho
 
 For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../protect/certificates-scep-configure.md#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
 
-### Azure Active Directory User
+<a name='azure-active-directory-user'></a>
 
-When configuring the connector, you'll need to use a user account that: is either a Global Admin or Intune Admin, has an Intune license assigned, and must be a synchronized account from your local Active Directory.
+### Microsoft Entra user
+
+When configuring the connector, you'll need to use a user account that: is either a Global Admin or Intune Admin and has an Intune license assigned.
 
 ## Next steps
 

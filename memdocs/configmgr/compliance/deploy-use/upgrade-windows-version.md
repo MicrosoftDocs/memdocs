@@ -3,8 +3,8 @@ title: Upgrade Windows devices to a different version
 titleSuffix: Configuration Manager
 description: Use Configuration Manager to automatically upgrade Windows 11 and Windows 10 devices to a different Windows edition.
 ms.date: 09/15/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: PalikaSingh
 ms.author: palsi

@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/23/2023
+ms.date: 04/03/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -47,12 +46,21 @@ You might consider resizing a Cloud PC when a user needs:
 
 Resizing supports:
 
-- Both direct and group-based licenses.
+- Direct and group-based licenses.
+- Paid, preview, and trial licenses.
 - Bulk and single device operations.
+
+Resizing doesn't support:
+
+- GPU Cloud PCs. GPU Cloud PCs might show up in the resize flow, but trying to resize a GPU Cloud PC will result in an error.
 
 Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin. Contact your end users and have them save their work and sign out before you begin resizing.
 
+Downsizing may impact support for nested virtualization. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
+
 ## Requirements
+
+### Role requirements
 
 To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles.
 
@@ -69,13 +77,24 @@ To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles
 
 Alternatively, you can assign a custom role that includes the permissions of these built-in roles.
 
+## IP address requirements
+
+When resizing a Microsoft Entra hybrid join bring-your-own-network Cloud PC, a second IP address must be available in the subnet for the Cloud PC to be resized.
+
+During the resizing operation, a second IP address is used when moving to the new size. This precaution makes sure that the Cloud PC can be rolled back to the original should an issue occur.
+
+To account for this precaution, you can:
+
+- Make sure that adequate IP addresses are available in the vNET for all Cloud PCs to be resized, or
+- Stagger your resize operations to make sure that the address scope is maintained.
+
+If inadequate addresses are available, resize failures can occur.
+
+### Other requirements
+
 In order to use **Resize** there must be available licenses in inventory for the resized Cloud PC configuration.
 
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node.
-
-The **Resize** remote action is supported for paid, preview, and trial licenses.
-
-Downsizing may impact support for nested virtualization. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
 ## Resize a single Cloud PC provisioned with a direct assigned license
 
@@ -165,7 +184,7 @@ Devices with a state of **Resize not supported** won't be resized. The status me
 
 ## Resize with Step-up Licenses
 
-The Windows 365 step-up licenses are lead status licenses available for Enterprise admins that have a direct Enterprise Agreement. A step-up SKU makes it easier for admins to migrate users from a lower-configuration license to a higher-configuration license without incurring the full cost of licensing two separate subscriptions of the product. For Windows 365, step-ups are available only for compute (RAM/CPU) and not for storage and scoped to upgrades and not downgrades of licenses.
+The Windows 365 step-up licenses are lead status licenses available for Enterprise admins that have a direct Enterprise Agreement. A step-up SKU makes it easier for admins to migrate users from a lower-configuration license to a higher-configuration license without incurring the full cost of licensing two separate subscriptions of the product. For Windows 365, step-ups are available for compute (RAM/CPU) and storage and scoped to upgrades and not downgrades of licenses.
 
 If you converted a Windows 365 Enterprise license subscription by purchasing Microsoft Step-up Licenses, you can migrate your users to the new license and preserve all user data by performing a bulk resize for those users.  
 

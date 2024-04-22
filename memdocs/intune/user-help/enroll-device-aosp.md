@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 11/17/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 
 searchScope:
  - User help
@@ -33,7 +31,7 @@ ms.collection:
 
 # Enroll AOSP device with the Microsoft Intune app
 
-Enroll your corporate-owned AOSP device to get secure, mobile access to your organization's internal resources. This article describes the enrollment requirements and steps for AOSP devices. 
+Enroll your corporate-owned AOSP device to get secure, mobile access to your organization's internal resources. This article describes the enrollment requirements and steps for AOSP devices.   
 
 ## Prerequisites 
 

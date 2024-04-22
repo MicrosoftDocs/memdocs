@@ -3,8 +3,8 @@ title: SMS_ContentPackage Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents the content package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f338598f-826c-4303-927f-9b007e1d2aac
 author: Banreet

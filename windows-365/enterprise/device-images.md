@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/10/2023
+ms.date: 03/12/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -51,7 +50,7 @@ Both marketplace and custom images must meet the following requirements:
 A custom image must also meet the following extra requirements:
 
 - Exist in an Azure subscription.
-- Is stored as a managed image in Azure.
+- Is stored as a [managed image](/azure/virtual-machines/capture-image-resource) in Azure.
 
 Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
@@ -66,7 +65,7 @@ There are two sets of images available to choose from across the different versi
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
-  - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Microsoft Entra ID and synchronization.
+  - Microsoft Edge settings like sleeping tabs, [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin), startup boost, and first time optimizations based on Microsoft Entra ID and synchronization. For more information, see [Configure Microsoft Edge policy settings with Microsoft Intune](/deployedge/configure-edge-with-intune).
   - Microsoft Outlook first-time configuration settings (auto log on based on Microsoft Entra profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.

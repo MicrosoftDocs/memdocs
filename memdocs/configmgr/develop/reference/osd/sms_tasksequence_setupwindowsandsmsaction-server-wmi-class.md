@@ -3,8 +3,8 @@ description: Learn how to use Configuration Manager SMS_TaskSequence_SetupWindow
 title: SMS_TaskSequence_SetupWindowsAndSMSAction Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 227e3d90-f685-48f8-b2fe-5950f7edadd3
 author: Banreet

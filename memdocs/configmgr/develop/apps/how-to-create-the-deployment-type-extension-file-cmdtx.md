@@ -2,8 +2,8 @@
 title: How to Create the Deployment Type Extension File
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c576b3fd-5eb3-4e57-9c20-3158f8d0b7cb
 author: Banreet

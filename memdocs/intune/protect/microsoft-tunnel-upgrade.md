@@ -5,13 +5,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2022
+ms.date: 02/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -29,9 +27,15 @@ ms.collection:
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
 
-Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically receives [software upgrades](#microsoft-tunnel-update-history), which must install on the tunnel servers to keep them in support. To stay in support, servers must run the most recent release, or at most be one version behind. The information in this article explains the upgrade process, upgrade controls, and status reports you use to understand the software version of tunnel servers, when upgrades are available, and how to control when upgrades happen.
+Microsoft Tunnel, a VPN gateway solution for Microsoft Intune, periodically receives [software upgrades](#microsoft-tunnel-update-history), which must install on the tunnel servers to keep them in support. To stay in support, servers must run the most recent release, or at most be one version behind. The information in this article explains:
 
-Intune handles the upgrade of servers assigned to each tunnel site for you. When upgrades for  site begin, all servers in the site will upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.  
+- The upgrade process
+- Upgrade controls
+- Status reports you can use to understand the software version of tunnel servers
+- When upgrades are available
+- How to control when upgrades happen.
+
+Intune handles the upgrade of servers assigned to each tunnel site for you. When upgrades for site begin, all servers in the site upgrade one at a time, which is referred to as an upgrade cycle. While a server is upgrading, the Microsoft Tunnel on the server isn't available for use. Upgrading a single server at a time helps minimize disruptions to users when the site includes multiple servers.
 
 During an upgrade cycle:
 
@@ -54,11 +58,12 @@ This setting determines if an upgrade cycle for the site can begin automatically
 
   If you set a maintenance window for the site, the upgrade cycle begins between the windows start and end time. When no maintenance window is set, the upgrade cycle starts as soon as possible.
 
-- **No** – When set to *No*, Intune won’t upgrade servers until an admin explicitly chooses to begin the upgrade cycle.
+- **No** – When set to *No*, Intune doesn't upgrade servers until an admin explicitly chooses to begin the upgrade cycle.
 
   After upgrade is approved for a site with a maintenance window, the upgrade cycle begins between the windows start and end time. If there's no maintenance window, the upgrade cycle starts as soon as possible.
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
+  >
   > When you configure site for manual upgrades, periodically review the [Health check](#view-tunnel-server-status) tab to understand when newer versions of Microsoft Tunnel are available to install. The report also identifies when the current tunnel version at the site is out of support.
 
 ### Limit server upgrades to maintenance window
@@ -67,11 +72,11 @@ Use this setting to define a maintenance window for the site.
 
 When configured for site, the server upgrade cycle can begin only during the configured period. However, once begun, the cycle continues to update servers one-by-one until all servers assigned to the site complete the upgrade.
 
-- **No** *(default)* – No maintenance window is set. Sites configured to upgrade automatically will do so as soon as possible. Sites configured to require explicit action to start the upgrade will do so as soon as possible *after* the upgrade is approved.
+- **No** *(default)* – No maintenance window is set. Sites that are configured to upgrade automatically do so as soon as possible. Sites configured to require explicit action to start the upgrade will do so as soon as possible *after* the upgrade is approved.
 
 - **Yes** – Set a maintenance window. The window limits when a server upgrade cycle can begin at the site. The maintenance window doesn’t define when individual servers assigned to the site might start to upgrade.
 
-  Sites configured to upgrade automatically will start the upgrade cycle only during the configured period. Sites configured to require the admin to approve the upgrade before beginning, will do during the next maintenance window *after* the upgrade is approved.
+  Sites that are configured to upgrade automatically start the upgrade cycle only during the configured period. Sites configured to require the admin to approve the upgrade before beginning, will do during the next maintenance window *after* the upgrade is approved.
 
   When set to *Yes*, configure the following options:
 
@@ -85,11 +90,11 @@ You can view information about the status of Microsoft Tunnel servers, including
 
 For sites that don't support automatic upgrade, you can also view when upgrades to a new version are available.
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.  Select a server and then open the **Health check** tab to view the following information about it:
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**. Select a server and then open the **Health check** tab to view the following information about it:
 
 - **Server version** - The status of the Tunnel Gateway Server software, in the context of the most recent version available.
 
-  - **Healthy** - Up to date with the most recent software version. 
+  - **Healthy** - Up to date with the most recent software version.
   - **Warning** - One version behind.
   - **Unhealthy** - Two or more versions behind, and out of support.
 
@@ -97,9 +102,10 @@ When a server doesn’t run the most recent software version, plan to install an
 
 ## Approve upgrades
 
-Sites that have the setting *Automatically upgrade servers at this site* set to *No* won't automatically upgrade servers. Instead, an admin must approve upgrades for servers at that site before the upgrade cycle starts.
+Sites that have the setting *Automatically upgrade servers at this site* set to *No* don't automatically upgrade servers. Instead, an admin must approve upgrades for servers at that site before the upgrade cycle starts.
 
 To understand when an upgrade is available for servers, use the [Health check](#view-tunnel-server-status) tab to review server status.
+
 ### To approve an upgrade
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
@@ -108,46 +114,74 @@ To understand when an upgrade is available for servers, use the [Health check](#
 
 3. On the site’s properties, select **Upgrade servers**.
 
-After you choose to upgrade servers, Intune starts the process to do so, which cannot be canceled. The time that upgrades begin at the site depends on the configuration of maintenance windows for the site.
+After you choose to upgrade servers, Intune starts the process to do so, which can't be canceled. The time that upgrades begin at the site depends on the configuration of maintenance windows for the site.
 
-<!-- ## Manage upgrades
-
-Upgrade installation depends on how a site is configured.
-
-### Sites that support automatic upgrade
-
-When a site [supports automatic upgrades](#automatically-upgrade-servers-at-this-site) of servers, no administrative action is necessary. When the upgrade starts depends on the configuration of a maintenance window for the site:
-
-- **Without a maintenance window**: Upgrade start as soon as possible after a new version of Microsoft Tunnel becomes available.
-
-- **With a maintenance window**: Upgrades start during the next maintenance window after a new version of Microsoft Tunnel becomes available.
-
-### Sites that don't support automatic upgrade
-
-When a site [doesn’t support automatic upgrade](#automatically-upgrade-servers-at-this-site), new versions of Microsoft Tunnel must be explicitly approved for the site before servers will upgrade.
-
-Use the [Health check](#view-tunnel-server-status) tab to understand when newer versions of Microsoft Tunnel are available to install. The report also identifies when the current tunnel version at the site is out of support.
-
-#### To approve installation of an upgrade
-
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
-
-2. Select the site with an **Upgrade type** of **Manual**.
-
-3. On the site’s properties, select **Upgrade servers**.
-
-After you choose to upgrade servers, Intune starts the process to do so, which cannot be canceled. The time that upgrades begin at the site depends on the configuration of maintenance windows for the site.
--->
 ## Microsoft Tunnel update history
 
 Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here.
 
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
-The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
- > [!IMPORTANT]  
-  > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week. 
+> [!IMPORTANT]
+>
+> Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
+
+### March 14, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:a0fa473b477c051445548f9e024cd58b3f87b0a87da7bafdf0d71ad6bb49a7c5
+
+- **serverImageDigest**: sha256:5f3f34f3f11a4d45efdd369e86d183cae0fafdd78c9c1d0a9275f26ce64e5510
+
+Changes in this release:
+
+- Bug fix: recreate the /tmp/mstunnel folder during upgrading if missing.
+- Update OpenConnect VPN Server to version 1.2.3.
+- Enhancements on the diagnostic tool.
+- Security updates on the base image.
+
+### February 1, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:845aee9cbe3e4c9bd70b1b8108cd5108e454aff38237b236f75092164c885023
+
+- **serverImageDigest**: sha256:6f444d251b56e467b8791201f554b22d1431a135a5f66bc45638cec453e22b47
+
+Changes in this release:
+
+- Bug fix: do not issue the "docker network reload" command to reset the network. The command is not supported on Docker.
+- Security updates on the base image. 
+
+### January 4, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:9cd55c3f4ea4b4ff8212db46a81a0ceda29c3e9c534226ee4d0ce896bcc32596
+
+- **serverImageDigest**: sha256:0389d8c16794cf2f982a955a528b0bbba79b7c7180fd5706f44bb691ca61734d
+
+Changes in this release:
+
+- Bug fix: Rootless container fix
+- MTG handling for Diagnostic and Log Upload request in HB response
+
+
+### November 14, 2023
+
+Image hash values:
+
+- **agentImageDigest**: sha256:fd64c2f2ae3c2f411188a35da65e23385c9124c8f98b3614e0fb6500f59cf485
+
+- **serverImageDigest**: sha256:7385c838ed95f3f5fea48a3e277223e4faa502d64205f182cf43740ad4dd9573
+
+Changes in this release:
+
+- Bug fix: Resolved the issue causing the MSTunnel server container to become stuck in an improper state
+- Enforce the use of TLS 1.2 in the agent and mstunnel apps
 
 ### October 4, 2023
 
@@ -158,10 +192,10 @@ Image hash values:
 - **serverImageDigest**: sha256:9b477e6bc029d2ebadcafd4db3f516e87f0209b50d44fa2a5933aa7f17e9203b
 
 Changes in this release:
+
 - Bug fix: add legacy NAT tables for the mstunnel-server container on Cent OS 7 and Red Hat 7 hosts
 - Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
 - Increase mstunnel-server container pid limit to 10000
-
 
 ### October 2, 2023
 
@@ -172,9 +206,12 @@ Image hash values:
 - **serverImageDigest**: sha256:e465e4f7a9a5977950abd44dde1e418a57db5eb9dbb0456e4acc735153589581
 
 Changes in this release:
-- Bug fix: Ensure the monitor starts the container when the state is empty 
-- Bug fix for server container: Check /dev/tun permissions only when the server container is running 
-- Limit Tunnel server's maximum logging level to verbose to enhance privacy 
+
+- Bug fix: Ensure the monitor starts the container when the state is empty
+- Bug fix for server container: Check /dev/tun permissions only when the server container is running
+- Limit Tunnel server's maximum logging level to verbose to enhance privacy
+
+<!-- Archive of past releases
 
 ### July 24, 2023
 
@@ -188,12 +225,12 @@ Changes in this release:
 
 - Minor bug fixes
 - Server upgrades
-  
+
 ### June 12, 2023
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:ef5c23cc4c56263732124be7215f01a0904b5abaf78f5f033672d139205fcc3a
+- **agentImageDigest**: sha256:ef5c23cc4c56263732124be7215f01a0904b5abaf78f5f033672d139205fcc3a
 
 - **serverImageDigest**: sha256:1b11852378c1a0f0f595d76d841dafe4d23cc962b296eae365629c5c31adcc9a
 
@@ -202,12 +239,11 @@ Changes in this release:
 - Minor bug fixes
 - Agent container fixes
 
-  
 ### April 3, 2023
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:73b95c79b430c4ae88199132f62d1da08c7ce7bdf76484dbb0b28fa324c5f8ad
+- **agentImageDigest**: sha256:73b95c79b430c4ae88199132f62d1da08c7ce7bdf76484dbb0b28fa324c5f8ad
 
 - **serverImageDigest**: sha256:e424c4bb707d3a18c59f18259549de007f2916c995dea92212a1d3396cf05bf5
 
@@ -219,7 +255,7 @@ Changes in this release:
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:c4478f5e54dc1536523113885095b6eda37da1b2a31461347cd85ea8a7d487b5
+- **agentImageDigest**: sha256:c4478f5e54dc1536523113885095b6eda37da1b2a31461347cd85ea8a7d487b5
 
 - **serverImageDigest**: sha256:cf706bc6a5ea8a743bab84ed8be9901733738881e2e84d0f9083654e9c5cd317
 
@@ -228,12 +264,11 @@ Changes in this release:
 - Minor bug fixes
 - Updated Microsoft Tunnel Server Gateway EULA
 
-
 ### February 2, 2023
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:9140d4e7f397d0a7c6c203b0c74a4f11b66affee3d36837298a50821b5dca9a4
+- **agentImageDigest**: sha256:9140d4e7f397d0a7c6c203b0c74a4f11b66affee3d36837298a50821b5dca9a4
 
 - **serverImageDigest**: sha256:709219327f6aff5f81f6b6dc9f644334ccefd6af2f75ed4461ae06885bff9551
 
@@ -245,7 +280,7 @@ Changes in this release:
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:517a2267b5b4fbbd58ab46be22202158e55562bfb8f79eb7ef4fc35a0fc3cc8d
+- **agentImageDigest**: sha256:517a2267b5b4fbbd58ab46be22202158e55562bfb8f79eb7ef4fc35a0fc3cc8d
 
 - **serverImageDigest**: sha256:3a367955746522fe89fc8f0fb6edc259aefe0e681db652281b1ff264fdcce6dc
 
@@ -259,7 +294,7 @@ Changes in this release:
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:df03d4ad8469511a4b649dcbbad5dbaa5c7f10cdc9640b7801190623090a67ae
+- **agentImageDigest**: sha256:df03d4ad8469511a4b649dcbbad5dbaa5c7f10cdc9640b7801190623090a67ae
 
 - **serverImageDigest**: sha256:0f66f2b5463e283c1621fc4250f69fac97ebda77bef8f570ed181b78000d762c
 
@@ -270,12 +305,11 @@ Changes in this release:
 - Mst-readiness script enhancements
 - Add Azure storage endpoint
 
-
 ### August 22, 2022
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:186ff8d5c9a70085adc01778251f577988fef9b456801dc30e846f1a2bc3784c
+- **agentImageDigest**: sha256:186ff8d5c9a70085adc01778251f577988fef9b456801dc30e846f1a2bc3784c
 
 - **serverImageDigest**: sha256:ec5bd023b5582e58b6b9eb6aa41a9b064003f5b2b228508115bf6d42be9564a3
 
@@ -284,12 +318,11 @@ Changes in this release:
 - Security improvements
 - Mst-readiness script enhancements
 
-
 ### July 27, 2022
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:94e08d27c4f18706b2e3d92594d8a173446638a641240ae86a18a583be257cae
+- **agentImageDigest**: sha256:94e08d27c4f18706b2e3d92594d8a173446638a641240ae86a18a583be257cae
 
 - **serverImageDigest**: sha256:683ff13cfc16824741e961f04b94bce766777a5dcc80f019af234b4c9948fd66
 
@@ -298,13 +331,11 @@ Changes in this release:
 - Minor bug fixes
 - Set process limit to 6000 in the server container
 
-<!-- Archive of past releases
-
 ### June 30, 2022
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:b42b8e158cebb91b6a69f2bdcedffde18a5f3f12cc502509c8aa9fea80f4daaa
+- **agentImageDigest**: sha256:b42b8e158cebb91b6a69f2bdcedffde18a5f3f12cc502509c8aa9fea80f4daaa
 
 - **serverImageDigest**: sha256:aa45b73bf143f1e440329853362cb4f300d9cc865d758534a94b983c8286ca4d
 
@@ -313,12 +344,11 @@ Changes in this release:
 - Advanced setting improvements in Microsoft Tunnel configurations 
 - Logging improvements
 
-
 ### April 27, 2022
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:588c0c59fb9e0032640e78b06cfe12c7be0b28b1d8ca01ad87fb315da4088446
+- **agentImageDigest**: sha256:588c0c59fb9e0032640e78b06cfe12c7be0b28b1d8ca01ad87fb315da4088446
 
 - **serverImageDigest**: sha256:81d42ec83b5157068b81d6243d46601b8c003e99513426ffb90d9cbac31bd271
 
@@ -332,14 +362,13 @@ Changes in this release:
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:14a5f496bf9d36ba1577e8e6059f5d06b7c03abe319eaba91a4ac88eeafc4825
+- **agentImageDigest**: sha256:14a5f496bf9d36ba1577e8e6059f5d06b7c03abe319eaba91a4ac88eeafc4825
 
 - **serverImageDigest**: sha256:f21481a2a299cb2beed7faadf4faba50fdcf1bb591d193ee78d1e0505bcaa192
 
 Changes in this release:
 - Minor bug fixes
 - Access log enhancements
-
 
 ### February 16, 2022
 
@@ -365,7 +394,7 @@ Changes in this release:
 - Minor bug fixes
 - A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5 and RHEL 8.6, do not.
 
-  For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
+  For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).
 
 ### October 25, 2021
 

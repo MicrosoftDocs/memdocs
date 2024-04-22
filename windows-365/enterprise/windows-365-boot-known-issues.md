@@ -12,7 +12,6 @@ ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -38,7 +37,7 @@ This page lists recent known issues with [Windows 365 Boot](windows-365-boot-ove
 
 Wi-fi connections that require captive browser-based authentication or consent aren't supported.
 
-User-based wi-fi profiles that require the user to sign-in to connect to wi-fi aren't supported. New users who have never signed in before converting the device to a Windows 365 Boot device can't use the device to connect it to the network.
+User-based wi-fi profiles that require the user to sign-in to connect to wi-fi aren't supported. New users who never signed in before converting the device to a Windows 365 Boot device can't use the device to connect it to the network.
 
 ## VPN support
 
@@ -156,7 +155,7 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
 3. Make sure that the “Cloud Desktop” configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
-4. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
+4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
@@ -170,7 +169,7 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
 3. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
-4. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
+4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
@@ -212,7 +211,7 @@ This error can occur when a device is removed from and then re-enrolled in Windo
 Resources created by the Windows 365 Boot guided scenario can be applied to both:
 
 - Microsoft Entra joined devices
-- Microsoft Entra hybrid joined devices in tenants where certain workloads have been switched to Intune. For Microsoft Entra hybrid joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
+- Microsoft Entra hybrid joined devices in tenants where certain workloads were switched to Intune. For Microsoft Entra hybrid joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
 
 **Troubleshooting steps**: To determine if your device is Microsoft Entra hybrid joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is Microsoft Entra hybrid joined, see [Comanagement workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
 
@@ -232,13 +231,21 @@ The provider app could not be found. Try signing in from another device.
 To resolve this issue here, contact support.
 ```
 
-This occurs when the provider app was uninstalled, or isn't available or installed on the end user's physical device.
+This occurs in the following scenarios:
+
+- The provider app was uninstalled.
+- The provider app isn't available or installed on the end user's physical device.
+- The provider app was installed at the user scope manually prior to the device being set up for Boot.
 
 **Troubleshooting steps**: The end user can use any of these options:
 
 - Sign in from another device.
 - Wait for the app to install on the physical device.
 - Contact the user's IT admin and ask them to push the app to the device.
+- If you suspect the app was installed in user scope, use the following steps:
+    1. Contact the user's IT admin to remove the device from Boot mode by removing it from the device group.
+    2. Uninstall the provider app installed in user scope.
+    3. Put the device back to Boot mode device group (the system scope apps should be delivered by Intune if set up through Guided Scenario).
 
 If the issue persists, contact support.
 

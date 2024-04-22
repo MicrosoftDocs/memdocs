@@ -3,8 +3,8 @@ title: SMS_ConfigurationPlatform Class
 titleSuffix: Configuration Manager
 description: The `SMS_ConfigurationPlatform` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents supported operating system platforms as configuration items and is referenced by other configuration items to define operating system applicability conditions.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2397f41d-657f-4f68-8475-c11c028937aa
 author: Banreet

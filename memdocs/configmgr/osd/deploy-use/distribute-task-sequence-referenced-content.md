@@ -3,8 +3,8 @@ title: Distribute referenced content
 titleSuffix: Configuration Manager
 description: Before clients run a task sequence that references content, distribute that content to distribution points.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 ms.localizationpriority: medium
 author: BalaDelli

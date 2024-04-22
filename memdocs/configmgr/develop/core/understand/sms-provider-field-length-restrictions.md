@@ -3,8 +3,8 @@ description: Learn about the SMS Provider Field Length Restrictions on the width
 title: SMS Provider Field Length Restrictions
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: dea156b8-e508-4234-a350-fbd10dec8ea7
 author: Banreet

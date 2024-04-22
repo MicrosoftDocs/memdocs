@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Synchronize Microsoft 365 Apps updates on the top-level software update point that is disconnected from the Internet.
 ms.date: 08/11/2020
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 manager: apoorvseth
 author: BalaDelli
 ms.author: baladell

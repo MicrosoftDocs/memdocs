@@ -3,8 +3,8 @@ title: SMS_AmPolicySummary Class
 titleSuffix: Configuration Manager
 description: The SMS_AmPolicySummary Windows Management Instrumentation class is an SMS Provider server class in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: adfce640-adc5-48d7-a723-5be5c9f40206
 author: Banreet

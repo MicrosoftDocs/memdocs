@@ -6,12 +6,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/03/2022
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -76,7 +75,7 @@ If you have the Company Portal app open on an Android device, the notification r
 - You can only send up to 25 messages to groups per hour. This restriction is at the tenant level. This limitation doesn't apply when sending notifications to individuals.
 - When sending messages to individual devices, you can only send up to 10 messages per hour to the same device.
 - You can send notifications to users in groups. When sending notifications to groups, each notification can directly target up to 25 groups. Nested groups don't count against this total. When sending a notification to a group, messages target only the users in the group and are sent to each iOS/iPadOS or Android device that the user has registered. Devices in the group will be ignored when targeting the notification.
-- You can send notifications to a single device. Instead of using groups, you select a device and then use a remote [device action](device-management.md#available-device-actions) to send the custom notification.
+- You can send notifications to a single device. Instead of using groups, you select a device and then use a remote [device action](device-management.md#available-remote-actions) to send the custom notification.
 
 **Delivery**:
 

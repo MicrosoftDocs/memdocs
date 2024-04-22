@@ -3,8 +3,8 @@ title: SMS_SummarizationSettings Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that represents the site summarization settings for a site.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d826df70-49be-4272-a777-b9fa5f720c96
 author: Banreet

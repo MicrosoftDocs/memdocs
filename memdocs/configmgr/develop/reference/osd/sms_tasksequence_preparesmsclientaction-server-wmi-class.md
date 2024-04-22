@@ -3,8 +3,8 @@ description: Learn how to represent a task sequence action that prepares the Con
 title: SMS_TaskSequence_PrepareSMSClientAction Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 11c46902-7ea3-4f90-b35c-de978626b321
 author: Banreet

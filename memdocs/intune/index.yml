@@ -8,10 +8,11 @@ metadata:
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: johmar
-  ms.date: 02/14/2023
+  manager: dansimp
+  ms.date: 01/09/2024
   ms.collection: 
   - tier1
+  - essentials-navigation
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
@@ -367,8 +368,8 @@ additionalContent:
     - title: Related services
       items:
         # Card
-        - title: Azure Active Directory
-          summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
+        - title: Microsoft Entra ID
+          summary: Microsoft Entra ID is a cloud-based identity and access management service.
           url: /azure/active-directory/
         # Card
         - title: Windows client docs for IT Pros

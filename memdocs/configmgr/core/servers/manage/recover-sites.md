@@ -3,8 +3,8 @@ title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
 ms.date: 09/18/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: banreet
 ms.author: banreetkaur

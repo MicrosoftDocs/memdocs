@@ -6,15 +6,14 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2023
+ms.date: 01/10/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
@@ -22,6 +21,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Add
 ---
 
 # Add apps to Microsoft Intune
@@ -71,6 +71,7 @@ The following table lists the specific app types and how you can add them in the
 | [Cross platform web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [Android Enterprise system apps](../apps/apps-ae-system.md)  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | [Windows app (Win32)](../apps/apps-win32-add.md)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
+| [Enterprise App Catalog app (Win32)](../apps/apps-add-enterprise-app.md)  | LOB app  | Select **Enterprise App Catalog app (Win32)** as the **app type**, select the app from the **Enterprise App Catalog**, and then set the app information, installation commands, requirements, and detection rules.  |
 | [macOS LOB apps](../apps/lob-apps-macos.md) | LOB app  | Select **Line-of-business app** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
 | [macOS apps (DMG)](../apps/lob-apps-macos-dmg.md) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
 | [macOS apps (PKG)](../apps/macos-unmanaged-pkg.md) | LOB app  | Select **macOS app (PKG)** as the app type, select the **App package** file, and then select an installation file with the extension *.pkg*. This app type is used to add an unmanaged macOS PKG app to Intune.  |
@@ -109,7 +110,7 @@ As you're determining which apps your workforce needs, consider the various grou
 
 First, you must determine which group should have access to the app, based on the sensitivity of the data the app contains. You might need to include or exclude certain types of roles within your organization. For example, only certain LOB apps might be required for your sales group, whereas people focused on engineering, finance, HR, or legal might not need to use the LOB apps. In addition, your sales group might need additional data protection and access to internal corporate services on their mobile devices. You must determine how this group will connect to resources using the app. Will the data that the app accesses live in the cloud or on-premises? Also, how will the users connect to resources by using the app?
 
-Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../protect/certificates-configure.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Azure Active Directory Application Proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
+Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../protect/certificates-configure.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Microsoft Entra application proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
 
 Use the [Intune deployment planning, design and implementation guide](../fundamentals/intune-planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
@@ -120,7 +121,7 @@ You can choose from the following app types:
 - **Apps from the store**: Apps that have been uploaded to either the Microsoft store, the iOS/iPadOS store, or the Android store are store apps. The provider of a store app maintains and provides updates to the app. You select the app in the store list and add it by using Intune as an available app for your users.
 - **Apps written in-house or as a custom app (line-of-business)**: Apps that are created in-house or as a custom app are line-of-business (LOB) apps. The functionality of this type of app has been created for one of the Intune supported platforms, such as Windows, iOS/iPadOS, macOS, or Android. Your organization creates and provides you with updates as a separate file. You provide updates of the app to users by adding and deploying the updates using Intune.
 - **Apps on the web**: Web apps are client-server applications. The server provides the web app, which includes the UI, content, and functionality. Additionally, modern web hosting platforms commonly offer security, load balancing, and other benefits. This type of app is separately maintained on the web. You use Intune to point to this app type. You also assign which groups of users can access the app.
-- **Apps from other Microsoft services**: Apps that have been sourced from either Azure AD or Office Online. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). You can hide or show Azure AD Enterprise and Office Online applications to end-users in the Company Portal. From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. Select to **Hide** or **Show** either **Azure AD Enterprise applications** or **Office Online applications** in the Company Portal for each end-user. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options).
+- **Apps from other Microsoft services**: Apps that have been sourced from either Microsoft Entra ID or Office Online. **Microsoft Entra Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). You can hide or show Microsoft Entra Enterprise and Office Online applications to end-users in the Company Portal. From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. Select to **Hide** or **Show** either **Microsoft Entra Enterprise applications** or **Office Online applications** in the Company Portal for each end-user. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options).
 
 As you're determining which apps your organization needs, consider how the apps integrate with cloud services, what data the apps access, whether the apps are available to BYOD users, and whether the apps require internet access.
 
@@ -164,10 +165,9 @@ All apps that you create by using the software installer installation type (for 
 Requirements for cloud storage space are as follows:
 
 - All app installation files must be in the same folder.
-- The maximum file size for any file that you upload is 8 GB.
-
-  > [!NOTE]
-  > Windows Line-of-business (LOB) apps, including Win32, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSI X, and Windows Universal MSI X bundle, have a maximum size limit of 8 GB per app. All other LOB apps, including iOS/iPadOS LOB apps, have a maximum size limit of 2 GB per app.
+- The maximum file size for Windows Line-of-business (LOB) apps, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSIX, and Windows Universal MSIX bundle, have a maximum size limit of 8 GB per app.
+- Win32 apps have a maximum size limit of 30GB per app.
+- iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
 
 ## Create and edit categories for apps
 
@@ -257,3 +257,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)
 - [Win32 apps](apps-win32-app-management.md)
+- [Enterprise App Catalog app (Win32)](apps-add-enterprise-app.md)

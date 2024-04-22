@@ -3,8 +3,8 @@ description: Learn all about software distribution programs and how they are pac
 title: Software Distribution Programs
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 590d8888-608d-491e-a754-4831138fca2a
 author: Banreet

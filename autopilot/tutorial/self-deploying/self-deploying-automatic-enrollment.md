@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot self-deploying mode - Step 1 of 5 - Set up Windows automatic Intune enrollment
 description: How to - Windows Autopilot self-deploying mode - Step 1 of 5 - Set up Windows automatic Intune enrollment.
-ms.prod: windows-client
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection: 
 - tier1
   - highpri
-ms.technology: itpro-deploy
+ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -39,7 +39,9 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 [!INCLUDE [Set up Windows automatic enrollment](../includes/automatic-intune-enrollment.md)]
 
-## Next step: Allow users to join devices to Azure AD
+<a name='next-step-allow-users-to-join-devices-to-azure-ad'></a>
+
+## Next step: Allow users to join devices to Microsoft Entra ID
 
 > [!div class="nextstepaction"]
 > [Step 2: Register devices as Autopilot devices](self-deploying-register-device.md)

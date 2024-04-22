@@ -3,8 +3,8 @@ title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur
@@ -386,10 +386,10 @@ Client computers use the **network access account** when they can't use their lo
 
 A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account.
 
-If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
+If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Microsoft Entra joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!NOTE]
-> If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
+> If you enable **Enhanced HTTP** to not require the network access account, distribution points need to be running currently supported versions of Windows Server or Windows 10/11. <!--SCCMDocs-pr issue #2696-->
 
 #### Permissions for the network access account
 

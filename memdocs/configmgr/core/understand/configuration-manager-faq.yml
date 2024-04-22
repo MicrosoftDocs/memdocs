@@ -4,8 +4,8 @@ metadata:
   titleSuffix: Configuration Manager
   description: Frequently asked questions about Microsoft Configuration Manager
   ms.date: 04/16/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-core
+  ms.subservice: core-infra
+  ms.service: configuration-manager
   ms.topic: faq
   ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
   author: banreet
@@ -32,7 +32,8 @@ sections:
           - [Configuration Manager](../../index.yml)
           - [Intune](../../../intune/index.yml)
           - [Desktop Analytics](../../desktop-analytics/overview.md)
-          - [Autopilot]/autopilot/enrollment-autopilot)
+            - NOTE: Desktop Analytics is deprecated. Instead, see [Endpoint analytics](../../../analytics/index.yml)
+          - [Autopilot](/autopilot/enrollment-autopilot/)
           
       - question: |
           What things change in Configuration Manager and the Microsoft Intune family of products?

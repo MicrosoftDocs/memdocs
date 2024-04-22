@@ -5,15 +5,14 @@ title: Collect diagnostics from a Windows device
 titleSuffix: Microsoft Intune
 description: Learn how to collect diagnostics from a Windows device.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/23/2023
+ms.date: 02/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -58,7 +57,13 @@ The *Collect diagnostics* remote action is supported for:
 - Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
-> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
+> For diagnostics to be able to upload successfully from the client, make sure that the following URLs are not blocked on the network:
+> `lgmsapeweu.blob.core.windows.net`
+> `lgmsapewus2.blob.core.windows.net`
+> `lgmsapesea.blob.core.windows.net`
+> `lgmsapeaus.blob.core.windows.net`
+> `lgmsapeind.blob.core.windows.net`
+
 
 ## Collect diagnostics
 
@@ -79,7 +84,7 @@ To use the *Collect diagnostics* action:
 To view the diagnostics collected after an Autopilot failure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows Devices**.
+2. Navigate to **Devices** > **Windows**.
 3. Select a device.
 4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.
@@ -100,6 +105,7 @@ Registry Keys:
 
 - HKLM\SOFTWARE\Microsoft\CloudManagedUpdate
 - HKLM\SOFTWARE\Microsoft\EPMAgent
+- HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceHealthMonitoring
 - HKLM\SOFTWARE\Microsoft\IntuneManagementExtension
 - HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
 - HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
@@ -112,6 +118,7 @@ Registry Keys:
 - HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 - HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 - HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm
+- HKLM\SYSTEM\Setup\SetupDiag\Results
 
 Commands:
 
@@ -173,7 +180,9 @@ Files:
 - %windir%\logs\measuredboot\\\*.*
 - %windir%\logs\Panther\unattendgc\setupact.log
 - %windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\\*.log
+- %windir%\Logs\SetupDiag\SetupDiagResults.xml
 - %windir%\logs\WindowsUpdate\\*.etl
+- %windir%\SensorFramework\*.etl
 - %windir%\system32\config\systemprofile\AppData\Local\mdm\\\*.log
 - %windir%\temp\%computername%*.log
 - %windir%\temp\officeclicktorun*.log

@@ -3,8 +3,8 @@ title: Create a Console Custom View
 description: Learn how to create  a view that displays a custom control. In this example, the view displays the string content of a label control.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 4bd77dc3-97d1-475b-a860-bff0157054be
 author: Banreet

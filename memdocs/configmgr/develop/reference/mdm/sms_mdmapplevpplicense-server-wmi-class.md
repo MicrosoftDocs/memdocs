@@ -3,8 +3,8 @@ title: SMS_MDMAppleVppLicense Class
 titleSuffix: Configuration Manager
 description: The SMS_MDMAppleVppLicense WMI class represents an Apple Volume Purchase Program (VPP) licensed application.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4a368d69-28a1-49bc-9a50-fa184f2b07cc
 author: Banreet

@@ -3,8 +3,8 @@ title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell
@@ -1899,14 +1899,17 @@ Use this variable to control the timeout period for the task sequence to wait fo
 
 (input)
 
-This optional task sequence variable controls client behavior when a software update installation requires two restarts. Set this variable before this step to prevent a task sequence from failing because of a second restart from software update installation.
+This optional task sequence variable controls client behavior when a software update installation triggered by the **Install Software Updates** task requires multiple restarts. Set this variable before the **Install Software Updates** step to prevent a task sequence from failing because of multiple restarts from software update installation.
 
-Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task sequence pauses on this step while the computer restarts. Allow sufficient time in case there's a second restart.
+This variable is useful when a single **Install Software Updates** task sequence step installs software updates that need multiple restarts to finish installing.
 
-For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run. This variable is useful when a single Install Software Updates task sequence step installs hundreds of software updates.
+Set the **SMSTSWaitForSecondReboot** value in seconds to specify how long the task sequence pauses on this step while the computer restarts. Allow sufficient time in case there's multiple restarts. For example, if you set **SMSTSWaitForSecondReboot** to `600`, the task sequence pauses for 10 minutes after a restart before additional steps run.
 
-> [!Note]
-> This variable only applies to a task sequence that deploys an OS. It doesn't work in a custom task sequence. <!-- 2839998 -->
+The **SMSTSWaitForSecondReboot** variable is intended for use with the **Install Software Updates** task, but can be set anywhere in the task sequence to introduce delays after reboots initiated by tasks other than the **Install Software Updates** task. For this reason, when this variable is set before the **Install Software Updates** task, it's advisable to also set it again after the **Install Software Updates** task with a value of `0`. This resets the variable and prevents unnecessary delays during the task sequence. If there are multiple **Install Software Updates** tasks in the task sequence, define the variable to the desired value before the first **Install Software Updates** task, and then reset it back to `0` after the last **Install Software Updates** task.
+
+> [!NOTE]
+>
+> This variable only applies to OSD task sequences that deploys an OS. It doesn't work with any task sequence that doesn't utilize the **Setup Windows and ConfigMgr** task, such as stand-alone task sequences or in-place upgrade task sequences. <!-- 2839998 -->
 
 ### <a name="TSDebugMode"></a> TSDebugMode
 

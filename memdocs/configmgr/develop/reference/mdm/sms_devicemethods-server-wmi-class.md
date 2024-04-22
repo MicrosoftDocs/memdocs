@@ -3,8 +3,8 @@ title: SMS_DeviceMethods Class
 titleSuffix: Configuration Manager
 description: The SMS_DeviceMethods WMI class is an SMS Provider server class that provides access to actions that you can take on mobile devices and Microsoft Exchange ActiveSync devices.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a775bb4c-6f9f-4918-bd96-892ca9e05467
 author: Banreet

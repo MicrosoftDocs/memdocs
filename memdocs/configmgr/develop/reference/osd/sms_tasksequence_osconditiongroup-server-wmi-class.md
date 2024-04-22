@@ -3,8 +3,8 @@ description: Learn how to use Configuration Manager SMS_TaskSequence_OSCondition
 title: SMS_TaskSequence_OSConditionGroup Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 89182703-07ff-410a-9406-f2424eca5550
 author: Banreet

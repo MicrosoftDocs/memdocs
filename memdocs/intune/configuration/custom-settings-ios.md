@@ -8,13 +8,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 12/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -45,9 +43,8 @@ This feature applies to:
 
 When using iOS/iPadOS devices, there are two ways to get custom settings into Intune:
 
-
-- [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
-- [Apple Profile Manager](https://support.apple.com/profile-manager)
+- [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12) (opens Apple's website)
+- [Apple Profile Manager](https://support.apple.com/profile-manager) (opens Apple's website)
 
 You can use these tools to export settings to a configuration profile. In Intune, you import this file, and then assign the profile to your iOS/iPadOS users and devices. Once assigned, the settings are distributed. They also create a baseline or standard for iOS/iPadOS in your organization.
 
@@ -78,7 +75,9 @@ When you configure the profile, enter the following settings:
 - **Custom configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status.
 - **Configuration profile file**: Browse to the configuration profile you created using the Apple Configurator or Apple Profile Manager. The max file size is `1000000` bytes (just under 1 MB). The imported file is shown in the **File contents** area.
 
-  You can also add device tokens to your custom configuration files. Device tokens are used to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC`, which is unique to each device. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
+  You can also add device tokens to your custom configuration files. Device tokens are used to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC`, which is unique to each device.
+
+  When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
 
   > [!NOTE]
   > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information.
@@ -87,4 +86,4 @@ When you configure the profile, enter the following settings:
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md).
 
-See how to [create the profile on macOS devices](custom-settings-macos.md). 
+See how to [create the profile on macOS devices](custom-settings-macos.md).

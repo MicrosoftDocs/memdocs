@@ -3,8 +3,8 @@ title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
 ms.date: 11/10/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

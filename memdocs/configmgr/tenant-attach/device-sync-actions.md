@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
 ms.date: 08/12/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -24,7 +24,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
-If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Cloud Attach Configuration Wizard**](#bkmk_config) to enable device upload instead.  Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) have been met.
+If you have co-management enabled currently, you must use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Cloud Attach Configuration Wizard**](#bkmk_config) to enable device upload instead.  Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) are met.
 
 When co-management is already enabled, edit the co-management properties to enable device upload using the instructions below:
 
@@ -35,24 +35,24 @@ When co-management is already enabled, edit the co-management properties to enab
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
    - When a single collection is selected, its child collections are also uploaded.
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights for optimizing the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
-1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC will be enforced along with Intune RBAC when you are uploading your Configuration Manager devices to the cloud service. Hence, the checkbox will be checked by default. If you want to enforce only Intune RBAC, you can uncheck the box. However, the enforcement of Intune RBAC only won't apply at this time. The [Release notes](../../configmgr/core/servers/deploy/install/release-notes.md) and the [What's New in Intune](../../intune/fundamentals/whats-new.md) will be updated when you're able to enforce Intune RBAC only. 
+1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. Hence, the checkbox is checked by default. If you want to enforce only Intune RBAC or if you're using cloud-only account, you must uncheck the option.
 1. Check the option to **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center** if you want to use [Endpoint Security reports in Intune admin center](deploy-antivirus-policy.md#bkmk_mdereports)
 
 > [!Important]
-> When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../analytics/enroll-configmgr.md#bkmk_cm_enable).
+> When you enable Endpoint analytics data upload, your default client settings is automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more information on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../analytics/enroll-configmgr.md#bkmk_cm_enable).
 
  [![Screenshot that shows how to upload devices to Microsoft Intune admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox) 
  
 <!-- : : : image type="content" source="../../analytics/media/13058986-configure-upload-configmgr.png" alt-text="Upload devices to Microsoft Intune admin center." : : : -->
  
 1. Sign in with your *Global Administrator* account when prompted.
-1. Select **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
+1. Select **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync.
 1. Choose **OK** to exit the co-management properties once you've done making changes.
 
 
 ## <a name="bkmk_config"></a> Enable device upload when co-management isn't enabled
 
-If you don't have co-management enabled, you'll use the **Cloud Attach Configuration Wizard** to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. All Devices managed by Configuration Manager that have **Yes** in the **Client** column will be uploaded. If needed, you can limit upload to a single device collection. If co-management is already enabled in your environment, [Edit co-management properties](#bkmk_edit) to enable device upload instead. Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) have been met.
+If you don't have co-management enabled, use the **Cloud Attach Configuration Wizard** to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. All Devices managed by Configuration Manager that have **Yes** in the **Client** column is uploaded. If needed, you can limit upload to a single device collection. If co-management is already enabled in your environment, [Edit co-management properties](#bkmk_edit) to enable device upload instead. Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) have been met.
 
 When co-management isn't enabled, use the instructions below to enable device upload:
 
@@ -66,15 +66,15 @@ When co-management isn't enabled, use the instructions below to enable device up
 1. Select **Sign In**. Use your *Global Administrator* account to sign in.
 1. Ensure the **Enable Microsoft Endpoint Manager admin center** option is selected on the **Cloud attach** page. For version 2103 and earlier, select the **Upload to Microsoft Endpoint Manager admin center** option on the **Tenant onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
-   - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
+   - If you enable co-management along with device upload, there will be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
 
    [![Co-management Configuration Wizard](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Choose **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
-     - Optionally, you can import a previously created Azure AD application during tenant attach onboarding. For more information, see the [Import a previously created Azure AD application](#bkmk_aad_app) section.
+1. Choose **Next** and then **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync.
+     - Optionally, you can import a previously created Microsoft Entra application during tenant attach onboarding. For more information, see the [Import a previously created Microsoft Entra application](#bkmk_aad_app) section.
 1. On the **Configure upload** page, select the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
     - When a single collection is selected, its child collections are also uploaded. <!--8717629-->
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
-1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC will be enforced along with Intune RBAC when you are uploading your Configuration Manager devices to the cloud service. Hence, the checkbox will be checked by default. If you want to enforce only Intune RBAC, you can uncheck the box. However, the enforcement of Intune RBAC only won't apply at this time. The [Release notes](../../configmgr/core/servers/deploy/install/release-notes.md) and the [What's New in Intune](../../intune/fundamentals/whats-new.md) will be updated when you're able to enforce Intune RBAC only. 
+1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. Hence, the checkbox is checked by default. If you want to enforce only Intune RBAC or if you're using cloud-only account, you must uncheck the option.
 1. Check the option to **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center** if you want to use [Endpoint Security reports in Intune admin center](deploy-antivirus-policy.md#bkmk_mdereports)
 1. Select **Summary** to review your selection, then choose **Next**.
 1. When the wizard is complete, select **Close**.  
@@ -116,7 +116,7 @@ Recommendations include:
 - Provide device insights
 - Improve the health of the site
 
-To view recommendations, go to **Tenant administration > Connectors and tokens > Microsoft Endpoint Configuration Manager**, and select a _site_ to view recommendations for that . Once selected, you’ll find the _Recommendations_ tab that displays each insight along with a _Learn more_ link that opens details on how to apply that recommendation.
+To view recommendations, go to **Tenant administration > Connectors and tokens > Microsoft Endpoint Configuration Manager**, and select a _site_ to view recommendations for that. Once selected, you’ll find the _Recommendations_ tab that displays each insight along with a _Learn more_ link that opens details on how to apply that recommendation.
 
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 

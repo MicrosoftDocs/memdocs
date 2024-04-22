@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -43,11 +42,15 @@ To help improve security for your Cloud PCs, consider the following general guid
 
 4. One of the most important elements of device security is OS updates. These updates make sure that devices stay up-to-date and secure while delivering new features and defenses against vulnerabilities. For Cloud PCs, Endpoint Manager can be used by IT admins to configure Intune Windows 10/11 update rings and policies for Windows Update for Business. For more information, see [Manage Windows 10/11 software updates in Intune](/mem/intune/protect/windows-update-for-business-configure).  
 5. By default Windows 365 Enterprise, end users aren't administrators of their Cloud PCs. This policy aligns with Windows 10/11 security guidance. For more information about this guidance, see [Local Accounts](/windows/security/identity-protection/access-control/local-accounts#sec-restrict-protect-accounts) in the Windows documentation.
-6. Windows 365 integrates with Microsoft Defender for Endpoint. Security and endpoint admins can work together to manage their Cloud PC environment just like they manage a physical endpoint. If subscribed, Cloud PCs will:
+6. Windows 365 integrates with Microsoft Defender for Endpoint. Learn why [Microsoft Defender Antivirus and Microsoft Defender for Endpoint are better together](/microsoft-365/security/defender-endpoint/why-use-microsoft-defender-antivirus). Security and endpoint admins can work together to manage their Cloud PC environment just like they manage a physical endpoint. If subscribed, Cloud PCs will:
     - Send data through to Microsoft 365 Secure Score.
     - Unhealthy PCs will show up on the Microsoft Defender for Endpoint Security Center and threat analysis dashboards.
-    - Cloud PCs will respond to remediation measures just like other managed devices.
-
+    - Respond to remediation measures just like other managed devices.
+    - Support tamper protection management using [Defender](/microsoft-365/security/defender-endpoint/manage-tamper-protection-microsoft-365-defender) or [Intune](/microsoft-365/security/defender-endpoint/manage-tamper-protection-intune)  
+7. Windows 365 integrates with Microsoft Purview. Onboarding to Defender for Endpoint includes [Purview Endpoint Data Loss Protection (DLP)](/purview/endpoint-dlp-getting-started). DLP detects when sensitive items are used and shared. This gives you the visibility and control you need to make sure that data is used and protected properly, and to help prevent risky behavior that might compromise them. [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings) to prevent data from getting:
+    - Copied from a Cloud PC clipboard/drive to unauthorized devices.
+    - Printed to unauthorized printers.
+    
 <!-- ########################## -->
 ## Next steps
 

@@ -3,8 +3,8 @@ title: List of reports
 titleSuffix: Configuration Manager
 description: Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

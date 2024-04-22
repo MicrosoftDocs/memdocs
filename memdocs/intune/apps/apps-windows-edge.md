@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 04/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -42,7 +41,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 > [!NOTE]
 > Microsoft Edge *version 77 and later* is available for macOS as well.
 >
-> You cannot use the built-in application deployment of Microsoft Edge for workplace join computers. Built-in application deployment requires the Intune management extension, which only exists for AAD joined devices. You can still deploy Microsoft Edge *version 77 and later* using an *.msi* uploaded to **Apps**, see [Add a Windows line-of-business app to Microsoft Intune](lob-apps-windows.md).
+> You cannot use the built-in application deployment of Microsoft Edge for workplace join computers. Built-in application deployment requires the Intune management extension, which only exists for Microsoft Entra joined devices. You can still deploy Microsoft Edge *version 77 and later* using an *.msi* uploaded to **Apps**, see [Add a Windows line-of-business app to Microsoft Intune](lob-apps-windows.md).
 
 ## Prerequisites
 

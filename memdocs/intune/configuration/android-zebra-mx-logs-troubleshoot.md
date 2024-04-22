@@ -12,7 +12,6 @@ ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
-ms.technology:
 ms.assetid: 
 
 # optional metadata

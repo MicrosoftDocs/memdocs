@@ -3,8 +3,8 @@ title: SMS_BoundaryGroupSiteSystems Class
 titleSuffix: Configuration Manager
 description: The SMS_BoundaryGroupSiteSystems WMI class represents site systems that serve computers within the boundary group.
 ms.date: 03/13/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9d48ae1d-dce8-483f-bcd0-f4154a3ecbef
 author: Banreet

@@ -3,8 +3,8 @@ title: How to create deployment plans
 titleSuffix: Configuration Manager
 description: A how-to guide for creating deployment plans in Desktop Analytics.
 ms.date: 03/12/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

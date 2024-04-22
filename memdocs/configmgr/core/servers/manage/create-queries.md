@@ -3,8 +3,8 @@ title: Create queries
 titleSuffix: Configuration Manager
 description: Discover how to create and import queries in Configuration Manager. Includes example queries and tips.
 ms.date: 04/27/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

@@ -3,8 +3,8 @@ title: Monitor Endpoint Protection status
 titleSuffix: Configuration Manager
 description: Learn how monitor Endpoint Protection in your Configuration Manager hierarchy.
 ms.date: 03/13/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

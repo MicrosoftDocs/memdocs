@@ -3,8 +3,8 @@ description: Learn how the AssemblyType action defines the type and assembly for
 title: AssemblyType Action
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 0a910d9f-9064-4295-b286-01a6d809702b
 author: Banreet

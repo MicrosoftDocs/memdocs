@@ -3,8 +3,8 @@ title: Read a Task Sequence from a Task Sequence Package
 titleSuffix: Configuration Manager
 description: Read a task sequence from a task sequence package, in Configuration Manager, by calling the SMS_TaskSequencePackage method.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 222d153e-50d4-4572-b2b1-6a0d131c998b
 author: Banreet

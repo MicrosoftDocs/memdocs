@@ -41,12 +41,14 @@ Before you begin, complete these prerequisites to enable iOS/iPadOS device manag
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
 * [Set mobile device management authority](mdm-authority-set.md) 
-* [Have Global Administrator or Intune administrator Azure Active Directory permissions](role-based-access-control.md)  
+* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
 * [Set up Apple MDM push (APNs) certificate](../enrollment/apple-mdm-push-certificate-get.md)  
 
 ## Plan for your deployment  
 
 The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios, and requirements. It also describes how to create plans for rollout, communication, support, testing, and validation.  
+
+<!-- Removing section, framework pending review and has been removed  
 
 ## Leverage the iOS/iPadOS security configuration framework 
 
@@ -73,12 +75,11 @@ The security levels for supervised devices are:
 For more information about the security framework, including specific recommendations and the minimum apps that must be protected, see the articles listed in the following table. 
 
 | Task | Detail | 
-| ---- | ------ | 
-| [Learn about the iOS/iPadOS framework deployment methodology](/mem/intune/enrollment/ios-ipados-configuration-framework)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |       
+| ---- | ------ |  
 | [Disallow personal accounts for Microsoft apps on iOS/iPadOS devices](../enrollment/ios-ipados-app-configuration-policies.md) |Configure an app policy that prevents users from signing into a personal account on a work or school device. |  
 | [Configure device compliance security settings](../enrollment/ios-ipados-device-compliance-security-configurations.md)|Apply these security settings to configure a basic or high security level on personally owned and corporate owned devices. |  
 |[Configure device security settings for personal devices ](../enrollment/ios-ipados-personal-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on personally owned devices. | 
-|[Configure device security settings for supervised devices ](../enrollment/ios-ipados-supervised-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on supervised devices. | 
+|[Configure device security settings for supervised devices ](../enrollment/ios-ipados-supervised-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on supervised devices. | -->  
 
 
 ## Create compliance rules  
@@ -90,7 +91,7 @@ Use compliance policies to define the rules and conditions that users and device
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |       
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Specify the app or services you want to protect and define the conditions for access. |  
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of. For example, things like meeting room calendar kiosks use basic authentication.  |  
+|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Microsoft Entra ID and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of. For example, things like meeting room calendar kiosks use basic authentication.  |  
 
 ## Configure endpoint security  
 
@@ -160,7 +161,7 @@ As you set up apps and app policies, think about your organization's requirement
 
 ## Enroll devices  
 
- Enrolling devices allows them to receive the policies you create, so have your Azure AD user groups and device groups ready. 
+ Enrolling devices allows them to receive the policies you create, so have your Microsoft Entra user groups and device groups ready. 
 
 For information about each enrollment method and how to choose one that's right for your organization, see the [iOS/iPadOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-ios-ipados.md). 
 

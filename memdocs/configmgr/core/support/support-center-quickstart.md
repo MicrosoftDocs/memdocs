@@ -3,8 +3,8 @@ title: Support Center quickstart
 titleSuffix: Configuration Manager
 description: Quickly capture the state of a Configuration Manager client for troubleshooting.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: quickstart
 author: banreet
 ms.author: banreetkaur

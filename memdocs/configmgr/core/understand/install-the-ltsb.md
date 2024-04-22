@@ -3,8 +3,8 @@ title: Install a site using the 1606 baseline media
 titleSuffix: Configuration Manager
 description: Install or upgrade to the LTSB for System Center Configuration Manager.
 ms.date: 09/06/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
@@ -24,9 +24,9 @@ The baseline media is available on DVD as part of Microsoft System Center 2016, 
 
 When you use the version 1606 baseline media, the site you install or upgrade to is:
 - A *Current Branch site* that is equivalent to a site that was first installed using the 1511 baseline media, and then updated to version 1606 plus the 1606 hotfix rollup - KB3186654.
-- An *LTSB site* that is equivalent to the Current Branch site that runs version 1606 plus the 1606 hotfix rollup - KB3186654. The baseline media already includes the hotfix rollup.  But, the LTSB does not support all of the features or capabilities available with the Current Branch, as detailed in [Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md).
+- An *LTSB site* that is equivalent to the Current Branch site that runs version 1606 plus the 1606 hotfix rollup - KB3186654. The baseline media already includes the hotfix rollup.  But, the LTSB doesn't support all of the features or capabilities available with the Current Branch, as detailed in [Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md).
 
-If you are not familiar with the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use](which-branch-should-i-use.md).
+If you aren't familiar with the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use](which-branch-should-i-use.md).
 
 
 
@@ -35,7 +35,7 @@ If you are not familiar with the different branches of Configuration Manager, se
 The 1606 baseline media introduces the following changes to Setup for Configuration Manager.
 
 ### Branch and edition
-When you run Setup, you are now presented with a Licensing page where you can select the branch of Configuration Manager you want to install. You can choose either the Current Branch or LTSB as a licensed installation, or you can choose an Evaluation edition of the Current Branch as a non-licensed installation.
+When you run Setup, you're now presented with a Licensing page where you can select the branch of Configuration Manager you want to install. You can choose either the Current Branch or LTSB as a licensed installation, or you can choose an Evaluation edition of the Current Branch as a non-licensed installation.
 
 For more information, see [Licensing and branches for Configuration Manager](learn-more-editions.md).
 
@@ -52,8 +52,8 @@ For more information, see "Software Assurance agreements" in [Licensing and bran
 
 
 ### Additional pre-upgrade configurations
-Prior to starting an upgrade of System Center 2012 Configuration Manager to the LTSB, you must take the following additional steps as part of pre-upgrade checklist.  
-Uninstall the site system roles that the LTSB does not support:
+Prior to starting an upgrade of System Center 2012 Configuration Manager to the LTSB, you must take the following extra steps as part of pre-upgrade checklist.  
+Uninstall the site system roles that the LTSB doesn't support:
 - Asset Intelligence synchronization point
 - Microsoft Intune connector
 - Cloud-based distribution points
@@ -94,13 +94,13 @@ For more information, see [Use a command line to install Configuration Manager s
 When you use the 1606 baseline media to install a new site of either branch, use the site planning, preparation, and installation procedures documented in the [Installing Configuration Manager sites](../servers/deploy/install/installing-sites.md) topic with the addition of the following considerations for Setup:
 
 - During Setup you must choose the branch of Configuration Manager that you want to install, and you can specify details for your Software Assurance agreement.
-- All sites in the same hierarchy must run the same branch. It is not supported to have a hierarchy with a mix of LTSB and Current Branch at different sites.
+- All sites in the same hierarchy must run the same branch. It isn't supported to have a hierarchy with a mix of LTSB and Current Branch at different sites.
 - New scripted installation. For more information, see "New scripted installation options" earlier in this article.
 
 ## Expand a stand-alone primary site
 You can expand a stand-alone primary site that runs the LTSB.  The process is no different than that used for a Current Branch site with one caveat:
 
-- When installing the new central administration site you must use Setup from the original source media you used to install the LTSB site. Running Setup from the CD.Latest folder for this scenario is not supported.
+- When installing the new central administration site, you must use Setup from the original source media you used to install the LTSB site. Running Setup from the CD.Latest folder for this scenario isn't supported.
 
 For more information about expanding a site, see "Expand a stand-alone primary site" in [Install a site using the Setup Wizard](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md).
 
@@ -119,14 +119,14 @@ When you upgrade from System Center 2012 Configuration Manager, use the site pla
 ### In-place upgrade paths for the 1606 baseline media
 You can use the 1606 baseline media to upgrade the following to a licensed edition of Configuration Manager:
 - System Center 2012 R2 Configuration Manager with Service Pack 1
-- System Center 2012 R2 Configuration Manager with no service pack (this requires the use of the baseline media for version 1606 that was rereleased on December 15th, 2016.)
+- System Center 2012 R2 Configuration Manager with no service pack (this requires the use of the baseline media for version 1606 that was rereleased on December 15, 2016.)
 - System Center 2012 Configuration Manager with Service Pack 2
-- System Center 2012 Configuration Manager with Service Pack 1 (this requires the use of the baseline media for version 1606 that was rereleased on December 15th, 2016.)
+- System Center 2012 Configuration Manager with Service Pack 1 (this requires the use of the baseline media for version 1606 that was rereleased on December 15, 2016.)
 
 
 You can also use this media to upgrade a non-licensed Evaluation edition of Current Branch to a fully licensed version of the Current Branch.
 
-This media does not support the upgrade of:
+This media doesn't support the upgrade of:
 - Other versions of System Center 2012 Configuration Manager.
 - Configuration Manager 2007 or earlier.
 - A release candidate installation of Configuration Manager.
@@ -137,9 +137,9 @@ The following are limitations on using the media that Configuration Manager crea
 Media in the CD.Latest folder is supported for:
 - Site recovery.
 - Site maintenance.
-- Installing additional child primary sites.
+- Installing other child primary sites.
 
-Media in the CD.Latest folder is not supported for:  
+Media in the CD.Latest folder isn't supported for:  
 - Installing a central administration site as part of a site expansion scenario.
 
 For more information, see [the CD.Latest folder](../servers/manage/the-cd.latest-folder.md).

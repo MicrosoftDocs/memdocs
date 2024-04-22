@@ -3,8 +3,8 @@ description: Learn how to define functions to interact with the handler in Confi
 title: IAppManagementHandler Interface
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 674e4aa0-f1bf-45f5-b369-4c0592a93b57
 author: Banreet

@@ -52,7 +52,14 @@ There's also a visual guide of the different enrollment options for each platfor
 
 ## Before you begin
 
-For a list of all the Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
+For a list of all the Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md). 
+
+> [!NOTE]
+> After you create an enrollment profile and assign it to users or groups, don't rename the enrollment profile. It can prevent future enrollments. If you need to change the name of the enrollment profile, then:
+>
+> 1. Create a new enrollment profile with the new name
+> 2. Assign the new profile to the your users & devices
+> 3. Delete the old profile
 
 ## BYOD: Android Enterprise personally owned devices with a work profile
 

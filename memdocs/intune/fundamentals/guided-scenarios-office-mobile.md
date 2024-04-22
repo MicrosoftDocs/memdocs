@@ -6,12 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 
 ms.reviewer: ilwu
 ms.suite: ems
@@ -40,11 +39,11 @@ The app protection that you enable will enforce the following actions:
 
 ## Background
 
-Office mobile apps, as well as Microsoft Edge for Mobile, support dual identity. Dual identity allows the apps to manage work files separately from personal files. 
+Office mobile apps, and Microsoft Edge for Mobile, support dual identity. Dual identity allows the apps to manage work files separately from personal files. 
 
 ![Image of corporate data versus personal data](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-01.png)
 
-[Intune app protection policies](../apps/app-protection-policy.md) help protect your work files on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that are not enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that work files and resources are protected.
+[Intune app protection policies](../apps/app-protection-policy.md) help protect your work files on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that aren't enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that work files and resources are protected.
 
 You can use App protection policies to prevent users from saving work files in unprotected locations. You can also restrict data movement to other apps that aren't protected by App protection policies. App protection policy settings include:
 
@@ -69,16 +68,16 @@ You'll need the follow Intune admin permissions:
 
 ## Step 1 - Introduction
 
-By following the **Intune App Protection** guided scenario, you will prevent data from being shared or leaked outside of your organization. 
+By following the **Intune App Protection** guided scenario, you'll prevent data from being shared or leaked outside of your organization. 
 
-Assigned iOS/iPadOS and Android users must enter a PIN each time they open an Office app. After 5 failed PIN attempts, users must reset their PIN. If you already require a device PIN, users won't be impacted.​
+Assigned iOS/iPadOS and Android users must enter a PIN each time they open an Office app. After five failed PIN attempts, users must reset their PIN. If you already require a device PIN, users won't be impacted.​
 
 ### What you will need to continue
 
 We'll ask you about the apps your users need, and what's needed to access them. Make sure you have the following information handy:
 
 - List of Office apps approved for corporate use.
-- Any PIN requirements for launching approved apps on non-managed devices.
+- Any PIN requirements for launching approved apps on nonmanaged devices.
 
 ## Step 2 - Basics
 
@@ -121,11 +120,11 @@ The following settings are applied when using the **Enhanced data protection** s
 
 In this step, you can choose the user groups that you want to include to ensure that they have access to your corporate data. App protection is assigned to users, and not devices, so your corporate data will be secure regardless of the device used and its enrollment status.
 
-Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and non-managed local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
+Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and nonmanaged local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
 
 ## Step 6 - Review + create
 
-The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Create** to complete the guided scenario. Once the guided scenario is complete, a table of resources is displayed. You can edit these resources later, however once you leave the summary view, the table will not be saved.
+The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Create** to complete the guided scenario. Once the guided scenario is complete, a table of resources is displayed. You can edit these resources later, however once you leave the summary view, the table won't be saved.
 
 > [!IMPORTANT]
 > Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources will not be saved.

@@ -3,8 +3,8 @@ title: Monitor orchestration groups
 titleSuffix: Configuration Manager
 description: Monitor and reset orchestration groups.
 ms.date: 07/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

@@ -4,23 +4,21 @@
 title: Configure 802.1x wired network settings for macOS and Windows devices in Microsoft Intune
 titleSuffix:
 description: Create or add a wired network device configuration profile or policy using the IEEE 802.1X standard for macOS, Windows 10, and Windows 11 devices and computers. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
-keywords:
+keywords: 802.1x, wired network, macos, windows, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 01/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: tycast, ochukwunyere
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -54,21 +52,25 @@ You have a wired network named **Contoso wired network**. You want to set up all
 2. Assign the profile to a group that includes all users macOS desktop computers. For recommendations on using group types, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 3. On their desktops, users find the **Contoso wired network** in the list of networks. They can then connect to the network, using the authentication method of your choosing.
 
-This article lists the steps to create a wired network profile. It also includes links that describe the different settings.
+This article lists the steps to create a wired network profile in Intune. It also includes links that describe the different settings.
+
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **macOS** or **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Wired network**.
+    - **Profile type**: Select **Templates** > **Wired network**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: wired network policy**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS-Wired network policy**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -87,6 +89,6 @@ This article lists the steps to create a wired network profile. It also includes
 > [!TIP]
 > If you use certificate based authentication for your wired network profile, then deploy the wired network profile, certificate profile, and trusted root profile to the same groups. This deployment makes sure that each device can recognize the legitimacy of your certificate authority. For more information, go to [configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
-## Next steps
+## Resources
 
 The profile is created, but may not be doing anything. Be sure to [assign this profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).

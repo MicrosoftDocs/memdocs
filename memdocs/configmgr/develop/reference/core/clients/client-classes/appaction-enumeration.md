@@ -3,8 +3,8 @@ title: AppAction Enumeration
 titleSuffix: Configuration Manager
 description: Learn how the AppAction enumeration defines action types.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 859ba1cf-2cc7-499a-ac79-6d4a1095d97f
 author: Banreet

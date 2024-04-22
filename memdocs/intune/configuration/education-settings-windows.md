@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 
 # optional metadata
@@ -48,7 +47,7 @@ Create a [Windows 10 secure assessment education device configuration profile](e
 ## Take a test settings
 
 - **Account type**: Choose how users sign in to the test. Your options:
-  - Azure AD account
+  - Azure AD account (Microsoft Entra account)
   - Domain account
   - Local account
   - Local guest account: Only available on devices running Windows 10, version 1903 and later.

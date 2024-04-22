@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 # optional metadata
 
 #ROBOTS:
@@ -20,7 +19,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: priyar
+ms.reviewer: priyar, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

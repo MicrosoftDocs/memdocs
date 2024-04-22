@@ -3,8 +3,8 @@ title: UpdateClientPilotingConfigs Method
 titleSuffix: Configuration Manager
 description: UpdateClientPilotingConfigs, in Configuration Manager, updates the configurations for client piloting settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 970cb1ba-ee11-459c-9c59-cf2c992cbbab
 author: Banreet

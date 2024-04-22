@@ -3,8 +3,8 @@ title: Configure options
 titleSuffix: Configuration Manager
 description: Configure options for using System Center Updates Publisher
 ms.date: 04/29/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -35,24 +35,24 @@ Options are divided into the following:
 -   Logging
 
 ## Update Server
-You must configure Updates Publisher to work with update server like Windows Server Update Services (WSUS) before you can [publish updates](manage-updates-with-updates-publisher.md#publish-updates-and-bundles-from-the-updates-workspace). This includes specifying the server, methods to connect to that server when it is remote from the console, and a certificate to use to digitally sign updates you publish.
+You must configure Updates Publisher to work with update server like Windows Server Update Services (WSUS) before you can [publish updates](manage-updates-with-updates-publisher.md#publish-updates-and-bundles-from-the-updates-workspace). This includes specifying the server, methods to connect to that server when it's remote from the console, and a certificate to use to digitally sign updates you publish.
 
 - **Configure an update server**. When you configure an update server, select the top-level WSUS server (update server) in your Configuration Manager hierarchy so that all child sites have access to the updates that you publish.
 
-  If your update server is remote from your Updates Publisher server, specify the fully qualified domain name (FQDN) of the server, and if you will connect by SSL. When you connect by SSL, the default port changes from 8530 to 8531. Ensure the port you set matches what is in use by your update server.
+  If your update server is remote from your Updates Publisher server, specify the fully qualified domain name (FQDN) of the server, and if you'll connect by SSL. When you connect by SSL, the default port changes from 8530 to 8531. Ensure the port you set matches what is in use by your update server.
 
   > [!TIP]  
   > If you do not configure an update server, you can still use Updates Publisher to author software updates.
 
 - **Configure the signing certificate**. You must configure and successfully connect to an update server before you can configure the signing certificate.
 
-  Updates Publisher uses the signing certificate to sign the software updates that are published to the update server. Publishing fails if the digital certificate is not available in the certificate store of the update server or the computer that runs Updates Publisher.
+  Updates Publisher uses the signing certificate to sign the software updates that are published to the update server. Publishing fails if the digital certificate isn't available in the certificate store of the update server or the computer that runs Updates Publisher.
 
   For more information about adding the certificate to the certificate store, see [Certificates and security for Updates Publisher](updates-publisher-security.md).
 
-  If a digital certificate is not automatically detected for the update server, choose one of the following:
+  If a digital certificate isn't automatically detected for the update server, choose one of the following:
 
-  -   **Browse**: Browse is only available when the update server is installed on the server where you run the console. After you select a certificate you must choose **Create** to add that certificate to the WSUS certificate store on the update server. You must enter the **.pfx** file password for certificates that you select by this method.
+  -   **Browse**: Browse is only available when the update server is installed on the server where you run the console. After you select a certificate, you must choose **Create** to add that certificate to the WSUS certificate store on the update server. You must enter the **.pfx** file password for certificates that you select by this method.
 
   -   **Create:** Use this option to create a new certificate. This also adds the certificate to the WSUS certificate store on the update server.
 
@@ -84,27 +84,27 @@ Updates Publisher uses the proxy settings when you import software catalogs from
 
 -   Specify the FQDN or IP address of a proxy server. IPv4 and IPv6 are supported.
 
--   If the proxy server authenticates users for Internet access, you must specify the Windows name. A universal principle name (UPN) is not supported.
+-   If the proxy server authenticates users for Internet access, you must specify the Windows name. A universal principle name (UPN) isn't supported.
 
 ## Trusted Publishers
 When you import an update catalog, the source of that catalog (based on its certificate), is added as a trusted publisher. Similarly, when you publish an update, the source of the updates certificate is added as a trusted publisher.
 
 You can view certificate details for each publisher and remove a publisher from the list of trusted publishers.
 
-Content from publishers that are not trusted can potentially harm client computers when the client scans for updates. You should accept content only from publishers that you trust.
+Content from publishers that aren't trusted can potentially harm client computers when the client scans for updates. You should accept content only from publishers that you trust.
 
 ## Advanced
 Advanced options include the following:
 
 -   **Repository location:** View and modify the location of the Database file, **scupdb.sdf**. This file is the repository for Updates Publisher.
 
--   **Timestamp:** When enabled, a timestamp is added to updates you sign that identifies when it was signed. An update that was signed while a certificate was valid can be used after that signing certificate expires. By default, software updates cannot be deployed after their signing certificate expires.
+-   **Timestamp:** When enabled, a timestamp is added to updates you sign that identifies when it was signed. An update that was signed while a certificate was valid can be used after that signing certificate expires. By default, software updates can't be deployed after their signing certificate expires.
 
 -   **Check for updates to subscribed catalogs:** Each time Updates Publisher starts, it can automatically check for updates to catalogs that you have subscribed to. When a catalog update is found, details are provided as **Recent Alerts** in the **Overview** window of the **Updates Workspace**.
 
 -   **Certificate revocation:** Choose this option to enable certificate revocation checks.
 
--   **Local source publishing:** Updates Publisher can use a local copy of an update you are publishing before downloading that update from the Internet. The location must be a folder on the computer that runs Updates Publisher. By default, this location is **My Documents\LocalSourcePublishing.** Use this when you have previously downloaded one or more updates, or have made modifications to an update you want to deploy.
+-   **Local source publishing:** Updates Publisher can use a local copy of an update you're publishing before downloading that update from the Internet. The location must be a folder on the computer that runs Updates Publisher. By default, this location is **My Documents\LocalSourcePublishing.** Use this when you have previously downloaded one or more updates, or have made modifications to an update you want to deploy.
 
 -   **Software Updates Cleanup Wizard:** Start the updates cleanup wizard. The wizard expires updates that are on the update server but not in the Updates Publisher repository. See [Expire unreferenced updates](#expire-unreferenced-software-updates) for more details.
 
@@ -115,7 +115,7 @@ To manually check for updates, in the Updates Publisher console click on
 ![Properties](media/properties2.png)  
 to open the **Updates Publisher Properties**, and then choose **Check for update**.
 
-After Updates Publisher finds a new update, it displays the **Update Available** window and you can then choose to install it. If you choose to not install the update, it is offered the next time you open the console.
+After Updates Publisher finds a new update, it displays the **Update Available** window and you can then choose to install it. If you choose to not install the update, it's offered the next time you open the console.
 
 ## Logging
 Updates Publisher logs basic information about Updates Publisher to **%WINDIR%\Temp\UpdatesPublisher.log**.
@@ -132,7 +132,7 @@ to open the **Updates Publisher Properties**, and then choose **View log file**.
 ## Expire unreferenced software updates
 You can run the **Software Update Cleanup Wizard** to expire updates that are on your update server but not in the Updates Publisher repository. This notifies Configuration Manager which then removes those updates from any future deployments.
 
-The act of expiring an update cannot be reversed. Only perform this task when you are sure that the software updates you select are no longer required by your organization.
+The act of expiring an update can't be reversed. Only perform this task when you're sure that the software updates you select are no longer required by your organization.
 
 ### To remove expired software updates
 1.  In the Updates Publisher console, click on ![Properties](media/properties2.png) to open the **Updates Publisher Properties**, and then choose **Options**.

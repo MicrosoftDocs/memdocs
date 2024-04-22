@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 01/19/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -37,7 +36,7 @@ Provisioning in Windows 365 is the automated process that:
 1. Creates a Cloud PC virtual machine.
 2. Sets it up for the user.
 3. Completes other tasks that prepare it to be used.
-4. Sends access information to the user.
+4. Creates and presents sign-in credentials that admins can pass onto end users.
 
 Admins need only provide a few configuration details to set up the provisioning process. Then, users who have a Windows 365 license and match the configuration details automatically have a Cloud PC provisioned for them. Provisioning is a one-time per user and per-license process. Any given user and license pair can only have one Cloud PC provisioned for them.
 
@@ -63,7 +62,7 @@ As the admin, you provide the following required information when creating a pro
 
 Without this information, Windows 365 can’t provision the Cloud PCs.
 
-After you’ve created the provisioning policy, Windows 365 handles all of the provisioning process to automatically get licensed users their own Cloud PCs.
+After you’ve created the provisioning policy, Windows 365 handles all of the provisioning process to automatically get licensed users their own Cloud PCs. After the Cloud PCs are provisioned, you can inform end users that their Cloud PCs are ready for sign-in.
 
 Changing these configurations doesn’t impact any previously provisioned Cloud PCs. However, any newly provisioned (or reprovisioned) Cloud PCs reflect the updated settings.
 

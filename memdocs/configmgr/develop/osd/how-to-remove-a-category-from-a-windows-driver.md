@@ -2,8 +2,8 @@
 title: Remove a Category from a Windows Driver
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 85b50703-f51d-470b-9d9f-4d065c2bcb88
 author: Banreet

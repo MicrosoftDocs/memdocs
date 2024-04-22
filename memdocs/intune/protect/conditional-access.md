@@ -13,7 +13,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 
 # optional metadata
@@ -36,7 +35,7 @@ ms.collection:
 
 Use Conditional Access with Microsoft Intune compliance policies to control the devices and apps that can connect to your email and company resources. When integrated, you can gate access to keep your corporate data secure, while giving users an experience that allows them to do their best work from any device, and from any location.
 
-[Conditional Access](/azure/active-directory/conditional-access/overview) is an Azure Active Directory capability that is included with an Azure Active Directory Premium license. Through Azure Active Directory, Conditional Access brings signals together to make decisions, and enforce organizational policies. Intune enhances this capability by adding mobile device compliance and mobile app management data to the solution. Common signals include:
+[Conditional Access](/azure/active-directory/conditional-access/overview) is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. Through Microsoft Entra ID, Conditional Access brings signals together to make decisions, and enforce organizational policies. Intune enhances this capability by adding mobile device compliance and mobile app management data to the solution. Common signals include:
 
 - User or group membership.
 - IP location information.
@@ -55,7 +54,7 @@ Conditional Access works with Intune device configuration and compliance policie
 
 - **Device-based Conditional Access**
 
-  Intune and Azure Active Directory work together to make sure only managed and compliant devices can access email, Microsoft 365 services, Software as a service (SaaS) apps, and on-premises apps. Additionally, you can set a policy in Azure Active Directory to enable only domain-joined computers or mobile devices that have enrolled in Intune to access Microsoft 365 services.  Including:
+  Intune and Microsoft Entra ID work together to make sure only managed and compliant devices can access email, Microsoft 365 services, Software as a service (SaaS) apps, and on-premises apps. Additionally, you can set a policy in Microsoft Entra ID to enable only domain-joined computers or mobile devices that have enrolled in Intune to access Microsoft 365 services.  Including:
 
   - Conditional Access based on network access control
 
@@ -69,7 +68,7 @@ Conditional Access works with Intune device configuration and compliance policie
 
 - **App-based Conditional Access**
 
-  Intune and Azure Active Directory work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
+  Intune and Microsoft Entra ID work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
 
   Learn more about [app-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 

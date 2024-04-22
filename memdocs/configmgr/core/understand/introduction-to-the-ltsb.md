@@ -3,8 +3,8 @@ title: Introduction to the LTSB
 titleSuffix: Configuration Manager
 description: Learn about the long-term servicing branch of Configuration Manager.
 ms.date: 08/23/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
@@ -45,7 +45,7 @@ Cloud integrations, as well as any features included with Configuration Manager 
 - Co-management
 - Desktop Analytics
 - Cloud management gateway
-- Azure Active Directory integration
+- Microsoft Entra integration
 - Apps from the Microsoft Store for Business
 
 ## Find LTSB documentation

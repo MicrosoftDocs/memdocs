@@ -6,21 +6,21 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 12/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- FocusArea_Apps_Win32
 ---
 
 # Enable Win32 apps on S mode devices

@@ -3,8 +3,8 @@ title: How to deploy to production
 titleSuffix: Configuration Manager
 description: A how-to guide for deploying to a Desktop Analytics production group.
 ms.date: 07/07/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

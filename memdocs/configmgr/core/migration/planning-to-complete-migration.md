@@ -3,8 +3,8 @@ title: Complete migration
 titleSuffix: Configuration Manager
 description: Learn how to finish migration to a Configuration Manager current branch destination hierarchy after a source hierarchy no longer has data.
 ms.date: 01/12/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

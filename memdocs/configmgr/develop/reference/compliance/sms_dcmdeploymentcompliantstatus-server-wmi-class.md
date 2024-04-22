@@ -3,8 +3,8 @@ title: SMS_DCMDeploymentCompliantStatus Class
 description: Learn how to use the SMS_DCMDeploymentCompliantStatus class in Configuration Manager to set the compliant status of a deployment.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 15f5c573-86b5-477f-a3a5-082e7f23765e
 author: Banreet

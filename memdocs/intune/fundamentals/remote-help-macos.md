@@ -8,12 +8,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/21/2023
+ms.date: 04/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -39,7 +38,7 @@ ms.collection:
 
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device.
 
-In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the web app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions. During the session, the support staff can view the device's display.
+In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the web app. It's through your Microsoft Entra ID that the proper trusts are established for the Remote Help sessions. During the session, the support staff can view the device's display.
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
@@ -65,7 +64,10 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 
 The prerequisites for Remote Help on macOS are listed under [Supported devices](#supported-devices).
 
-If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help. 
+If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help.
+
+> [!NOTE]
+> Remote Help for macOS is not supported on Microsoft Government Community Cloud (GCC) tenants.
 
 ## Supported devices
 
@@ -76,6 +78,8 @@ If your organization, by default, restricts remote assistance to enrolled device
 - 12 Monterey
 
 - 13 Ventura
+
+- 14 Sonoma 
 
 ### Browser versions
 
@@ -93,23 +97,32 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 
 | Domain/Name                       | Description                                           |
 |-----------------------------------|-------------------------------------------------------|
+|aadcdn.msauth.net | Required for logging in to the application Microsoft Entra ID |
+|aadcdn.msftauth.net| Required for logging in to the application Microsoft Entra ID |
+|*.akstat.io| |
+|\*.alcdn.msauth.net| Required to log in to the application Microsoft Azure Authentication Library |
 |\*.aria.microsoft.com             | Accessible Rich Internet Applications (ARIA) service for providing accessible experiences to users|
-|\*.cc.skype.com                   | Required for Azure Communication Service|
+|\*.akamaihd.net| |
+|\*.akamaized.net| |
+|\*.cc.skype.com | Required for Azure Communication Service|
+|ecs.communication.microsoft.com | |
+|edge.microsoft.com | Microsoft Edge update service for WebView2|
+|edge.skype.com| Used for Azure Communication Service for chat and connection between parties|
 |\*.events.data.microsoft.com      | Microsoft Telemetry Service |
 |\*.flightproxy.skype.com          | Required for Azure Communication Service|
+|\*.go-mpulse.net| |
+|graph.microsoft.com | Used for connecting to the Microsoft Graph service|
+|login.live.com| Required for logging in to the application (MSA)|
+|login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
+|mem.gfx.ms| |
+|\*.monitor.azure.com| Required for telemetry and remote service initialization|
+|\*.mp.microsoft.com| Microsoft Edge update service for WebView2|
 |\*.registrar.skype.com            | Required for Azure Communication Service|
+|remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
 |\*.support.services.microsoft.com | Primary endpoint used for the Remote Help application|
-|\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
-|\*.aadcdn.msauth.net              | Required for logging in to the application Microsoft Azure Active Directory|
-|\*.aadcdn.msftauth.net            | Required for logging in to the application Microsoft Azure Active Directory|
-|\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
-|\*.login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
-|\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
-|\*.turn.azure.com  | Azure Communication Service |
-|\*.remotehelp.microsoft.com  | Primary endpoint for Remote Help Web App |
-|\*.trouter.teams.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
 |\*.trouter.communication.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
-|\*.alcdn.msauth.net|Required to sign-in to the application Microsoft Azure Authentication Library|
+|\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
+|\*.trouter.teams.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
 |\*.wcpstatic.microsoft.com| Used to confirm cookie compliance in accordance with various laws|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
 
@@ -127,7 +140,7 @@ To request help, you must reach out to your support staff to request assistance.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
-1. The helper sends you a Remote Help session link (For example: https://aka.ms/rh?passcode=4060r0gx) and you can navigate in your browser.
+1. The helper sends you a Remote Help session link (For example: `https://aka.ms/rh?passcode=4060r0gx`) and you can navigate in your browser.
 
 2. You may need to sign in to authenticate. After you sign in, you can see information about the helper including the full name, job title, company, profile picture, and verified domain. At this time, the helper can only request a screen sharing session. You can either choose to Allow or to Decline the request.
 
@@ -161,9 +174,9 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 2. Copy and share session link with the sharer that you're trying to help, before selecting **Start** to launch a new Remote Help session.  
 
-   a. When the sharer navigates to the session link with the passcode embedded, they're able to directly get to the specific session.
+   1. When the sharer navigates to the session link with the passcode embedded, they're able to directly get to the specific session.
 
-   b. As an alternative, you can copy and share the 8-digit passcode with the sharer. The sharer can navigate to aka.ms/rh and follow the steps.
+   1. As an alternative, you can copy and share the 8-digit passcode with the sharer. The sharer can navigate to aka.ms/rh and follow the steps.
 
 3. When Remote Help opens in a new tab, you must sign in to authenticate to your organization.
 
@@ -189,6 +202,7 @@ This section outlines the steps for provisioning the Remote Help service on the 
 
 1. Open PowerShell in admin mode.
     - It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
+
 2. Within PowerShell enter the following commands:
 
     - Install-Module -Name AzureADPreview

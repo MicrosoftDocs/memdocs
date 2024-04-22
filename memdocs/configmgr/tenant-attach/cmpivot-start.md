@@ -3,8 +3,8 @@ title: Launch tenant attached CMPivot
 titleSuffix: Configuration Manager
 description: Launch CMPivot for Microsoft Intune tenant attached devices.
 ms.date: 07/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

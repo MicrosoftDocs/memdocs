@@ -3,8 +3,8 @@ title: What's new in version 2203
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2203 of Configuration Manager current branch.
 ms.date: 04/26/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

@@ -3,8 +3,8 @@ title: Device restart notifications
 titleSuffix: Configuration Manager
 description: Restart notification behavior for various client settings in Configuration Manager.
 ms.date: 09/18/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

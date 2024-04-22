@@ -3,8 +3,8 @@ description: Learn how to manage downloads of legacy software distribution progr
 title: ExecutePrograms Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0e3b8430-0571-4ae8-9e6f-e9e6a130adf1
 author: Banreet

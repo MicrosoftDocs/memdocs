@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2023
+ms.date: 02/12/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: maholdaa, tycast
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -70,6 +70,9 @@ Create an [Android device administrator Wi-Fi device configuration profile](wi-f
   - **EAP-TTLS**: Also enter:
 
     - **Server Trust** - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
+
+      > [!NOTE]
+      > For Android 11 and newer, Google requires a Trusted root certificate.
 
     - **Client Authentication**: Choose an **Authentication method**. Your options:
 

@@ -3,8 +3,8 @@ title: SMS_LicensedVppApps Class
 titleSuffix: Configuration Manager
 description: The SMS_LicensedVppApps WMI class represents license Information for Apple App Store Volume Purchase Program (VPP) and Microsoft Store for Business applications.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c5c499ab-97f4-4d11-befa-e5151db75cba
 author: Banreet

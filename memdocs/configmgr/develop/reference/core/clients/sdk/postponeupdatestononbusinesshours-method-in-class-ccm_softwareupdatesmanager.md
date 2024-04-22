@@ -3,8 +3,8 @@ description: Learn how to postpone a set of software updates to automatically in
 title: PostponeUpdatesToNonBusinessHours Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 466bbee1-f688-40f1-bfd2-ec819cfafa75
 author: Banreet

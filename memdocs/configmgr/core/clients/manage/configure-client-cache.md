@@ -3,8 +3,8 @@ title: Configure the client cache
 titleSuffix: Configuration Manager
 description: Configure the client content cache during or after client install.
 ms.date: 06/16/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
 ms.author: sheetg

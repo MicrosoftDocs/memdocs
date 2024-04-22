@@ -9,7 +9,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:
 
 #ROBOTS:
@@ -34,14 +33,14 @@ ms.collection:
 
 > [!NOTE]
 >
-> Consider reading the [Get Started with Microsoft Tunnel iOS SDK](/mem/intune/developer/tunnel-mam-ios-sdk) article, which explains how to prepare for integration on each supported platform.
+> Consider reading the [Get Started with Microsoft Tunnel iOS SDK](../developer/tunnel-mam-ios-sdk.md) article, which explains how to prepare for integration on each supported platform.
 
 ## Overview
 
 The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of Microsoft Tunnel for MAM functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed tunnel connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
 
 ## How it works
-The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a  wrapper/bridge to its public APIs. Since Xamarin/.NET apps typically use ADAL or MSAL for .NET as their AAD auth library, and the native Intune SDK doesn't know how to call into those libraries for its own enrollment/auth scenarios, the Xamarin bindings depend on the MAM SDK bindings that also contain Objective-C MSAL library, which can share a common token cache with ADAL/MSAL for .NET.
+The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a  wrapper/bridge to its public APIs. Since Xamarin/.NET apps typically use ADAL or MSAL for .NET as their Microsoft Entra auth library, and the native Intune SDK doesn't know how to call into those libraries for its own enrollment/auth scenarios, the Xamarin bindings depend on the MAM SDK bindings that also contain Objective-C MSAL library, which can share a common token cache with ADAL/MSAL for .NET.
 
 These bindings are also available as a NuGet package which developers can pull into their Xamarin.iOS project directly via the Visual Studio UI.
 
@@ -60,7 +59,7 @@ __Mobile app platforms__:
 
 __Intune Mobile Application Management scenarios__:
 
-- Intune [MAM](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)
+- Intune [MAM](../apps/android-deployment-scenarios-app-protection-work-profiles.md)
 
 ## Prerequisites
 
@@ -78,8 +77,10 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
 
 - Ensure that Xamarin app development is performed on a secure work station.
 - Ensure the bindings are from a valid Microsoft source:
+
   - [MS Microsoft Tunnel iOS SDK NuGet Profile](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS)
   - [Microsoft Tunnel iOS SDK Xamarin GitHub Repository](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-xamarin)
+
 - Configure your NuGet config for your project to trust signed, unmodified NuGet packages. For more information, see [installing signed packages](/nuget/consume-packages/installing-signed-packages).
 - Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 

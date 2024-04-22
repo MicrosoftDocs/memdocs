@@ -2,9 +2,9 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 12/05/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 11/15/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: PalikaSingh
 ms.author: palsi
@@ -26,17 +26,20 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 
     > [!IMPORTANT]
     > Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
+    
+    > [!Note]
+    > ADK for Windows 11, version 22H2 (updated September 2023): VBScript is not currently working in WinPE. It is expected to be fixed in an upcoming servicing update.
 
 ## Windows ADK versions
 
 The following table lists the versions of the Windows ADK that you can use with different versions of Configuration Manager.
 
-| Windows ADK version            | ConfigMgr 2111 | ConfigMgr 2203| ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303  |
-|--------------------------------|----------------|----------------|----------------|----------------|----------------|
-| **Windows 11**<br>(10.1.22621.1)| ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
-| **Windows 11**<br>(10.1.22000) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)|![Supported](media/green-check.png) |
-| **Windows Server 2022**<br>(10.1.20348)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |![Supported](media/green-check.png)|![Supported](media/green-check.png) |
-| **Windows 10, version 2004**<br>(10.1.19041)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |![Supported](media/green-check.png) |
+| Windows ADK version            | ConfigMgr 2207| ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309  |
+|--------------------------------|----------------|----------------|----------------|----------------|
+| **Windows 11**<br>(10.1.22621.1)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
+| **Windows 11**<br>(10.1.22000) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
+| **Windows Server 2022**<br>(10.1.20348)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |![Supported](media/green-check.png)|![Supported](media/green-check.png) |
+| **Windows 10, version 2004**<br>(10.1.19041)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |![Supported](media/green-check.png) |
  
 |Key|
 |--|

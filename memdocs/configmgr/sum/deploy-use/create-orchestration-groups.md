@@ -3,8 +3,8 @@ title: Create orchestration groups
 titleSuffix: Configuration Manager
 description: Create, edit, and use orchestration groups.
 ms.date: 03/28/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

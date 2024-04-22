@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/17/2023
+ms.date: 01/16/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -32,7 +31,7 @@ ms.collection:
 
 # Public preview in Microsoft Intune
 
-Microsoft Intune releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a "Preview" basis. You can test and use these features in production environments and scenarios, and provide feedback.
+Microsoft Intune releases features in **public preview**. These features are being actively developed, and might not be complete. They're made available on a "Preview" basis. You can test and use these features in production environments and scenarios, and provide feedback.
 
 Preview features have a **(preview)** tag in the Microsoft Intune admin center:
 
@@ -42,13 +41,13 @@ Preview features have a **(preview)** tag in the Microsoft Intune admin center:
 
 When working with features in public preview, these features:
 
-- May have restricted or limited functionality. For example, the feature may only apply to one platform.
+- Might have restrictions or limited functionality. For example, the feature might only apply to one platform.
 - Typically go through feature changes before they're generally available (GA).
 - Are fully supported by Microsoft.
-- May only be available in selected geographic regions or cloud environments. For example, the feature may not exist in the [Azure Government](/azure/azure-government/documentation-government-welcome) cloud.
-- Individual features in preview may have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
+- Might only be available in selected geographic regions or cloud environments. For example, the feature might not exist in the [Azure Government](/azure/azure-government/documentation-government-welcome) cloud.
+- Individual features in preview can have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
 
-## Next steps
+## Resources
 
 - Review the [important notices](whats-new.md#notices).
 - See what's [in development](in-development.md).

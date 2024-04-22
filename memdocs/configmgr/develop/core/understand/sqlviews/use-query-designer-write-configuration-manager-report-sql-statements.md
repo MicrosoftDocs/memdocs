@@ -3,8 +3,8 @@ title: Using query designer to write report SQL statements
 titleSuffix: Configuration Manager
 description: Information about using query designer to write report SQL statements for Configuration Manager reports.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

@@ -3,8 +3,8 @@ title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
 ms.date: 03/28/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

@@ -3,8 +3,8 @@ title: Approve Method
 titleSuffix: Configuration Manager
 description: The `Approve` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves user application requests.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f1517eea-0a50-40b3-b83a-a20120fd09af
 author: Banreet

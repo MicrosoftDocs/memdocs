@@ -3,8 +3,8 @@ title: SMS_ProductFileInfo Class
 titleSuffix: Configuration Manager
 description: The SMS_ProductFileInfo WMI class represents a combination of file and product information for inventory and metering.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ef754afa-1157-4213-8db5-b855c0bde8a5
 author: Banreet

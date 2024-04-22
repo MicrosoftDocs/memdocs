@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - Android
+- FocusArea_Apps_Store
 ms.custom: intune-azure
 ---
 

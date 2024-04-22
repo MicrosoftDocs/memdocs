@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 11/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -27,7 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-ms.reviewer: mattcall
+ms.reviewer: laarrizz
 
 ---
 
@@ -58,10 +56,6 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
  For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
-- **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
-
-- **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
-
 > [!NOTE]  
 > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
 >
@@ -69,20 +63,20 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 >
 > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
-For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
+- **Windows Firewall** – Configure settings for Windows Firewall with Advanced Security. Windows Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
-- **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
-
-- **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
+- **Windows Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
 
   > [!TIP]  
   > Use  of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information see the following Windows Defender articles:  
   > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
   > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
 
+- **Windows Hyper-V Firewall Rules** The Windows Hyper-V Firewall Rules template allows you to control firewall rules that will apply to specific Hyper-V containers on Windows, including applications like the Windows Subsystem for Linux (WSL) and the Windows Subsystem for Android (WSA)
+
 #### Add reusable settings groups to profiles for Firewall rules
 
-In public preview, Microsoft Defender Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
+In public preview, Windows Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
 - *Windows 10 and Windows 11*
 
@@ -105,17 +99,17 @@ For prerequisites and guidance on configuring reusable groups, and then adding t
 
 Plan for Firewall policies to be applied to a device using only one policy. Use of a single policy instance and policy type helps avoid having two separate policies apply different configurations to the same setting, which creates conflicts. When a conflict exists between two policy instances or types of policy that manage the same setting with different values, the setting isn't sent to the device.
 
-- That form of policy conflict applies to the **Microsoft Defender Firewall** profile, which can conflict with other Microsoft Defender Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
+- That form of policy conflict applies to the **Windows Firewall** profile, which can conflict with other Windows Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
 
-  *Microsoft Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
+  *Windows Firewall profiles* don't conflict with *Windows Firewall rules* profiles.
 
-When you use **Microsoft Defender Firewall rules** profiles, you can apply multiple rules profiles to the same device. However, when different rules exist for the same thing with different configurations, both are sent to the device and create a conflict, on that device.
+When you use **Windows Firewall rules** profiles, you can apply multiple rules profiles to the same device. However, when different rules exist for the same thing with different configurations, both are sent to the device and create a conflict, on that device.
 
 - For example, if one rule blocks *Teams.exe* through the firewall and a second rule allows *Teams.exe*, both rules are delivered to the client. This result is different from conflicts created through other policies for  Firewall settings.
 
 When rules from multiple rules profiles don't conflict with each other, devices merge the rules from each profile to create a combined firewall rule configuration on the device. This behavior enables you to deploy more than the 150 rules that each individual profile supports to a device.
 
-- For example, you have two Microsoft Defender Firewall rules profiles. The first profile allows *Teams.exe* through the firewall. The second profile allows *Outlook.exe* through the firewall. When a device receives both profiles, the device is configured to allow both apps through the firewall.
+- For example, you have two Windows Firewall rules profiles. The first profile allows *Teams.exe* through the firewall. The second profile allows *Outlook.exe* through the firewall. When a device receives both profiles, the device is configured to allow both apps through the firewall.
 
 ## Firewall policy reports
 

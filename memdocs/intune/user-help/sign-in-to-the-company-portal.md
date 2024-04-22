@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 08/07/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: cfd214bc-f072-4808-af2e-a3cbf7af9bca
 searchScope:
  - User help
@@ -139,7 +137,7 @@ To adjust permissions on your device, go to **Settings** > **Apps** > **Company 
 ### Contacts  
 To enroll your Android device with the app, you must allow Company Portal access to your contacts. The Intune Company Portal app never accesses your contacts. The permission text is controlled by Google and can't be changed.  
 
-* If you approve access, Intune can create a work account for you and manage the Azure Active Directory identity that's registered to you on your device.   
+* If you approve access, Intune can create a work account for you and manage the Microsoft Entra identity that's registered to you on your device.   
 
 * If you deny access, you can't enroll your device for work. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
 

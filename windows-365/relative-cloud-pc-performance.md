@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/28/2023
+ms.date: 01/18/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -33,11 +32,14 @@ ms.collection:
 # Relative performance for different Cloud PC sizes
 
 This article examines the relative performance between three common Cloud PC sizes. This information can help Windows 365 admins decide on the right Cloud PC size for their users.
-For the purposes of the comparisons in this article, these commonly deployed sizes were used:
+For the purposes of the comparisons in this article, the following Cloud PC sizes were used:
 
 - 2 vCPU/8-GB RAM/128-GB storage
 - 4 vCPU/16-GB RAM/128-GB storage
 - 8 vCPU/32-GB RAM/128-GB storage
+- 4 vCPU/16-GB RAM/512-GB storage
+- 8 vCPU/32-GB RAM/512-GB storage
+- 16 vCPU/64-GB RAM/512-GB storage
 
 As Microsoft Cloud technology improves, the underlying virtual machines and platform that support Cloud PCs will also improve. Windows 365 development includes change management and update testing to make sure that Cloud PCs consistently support improvements in availability, performance, and the end user experience. This frees you from the need to track and adopt these changes yourselves. Instead, you can choose from a predefined set of Cloud PCs sizes for which the underlying platform is managed, tested, upgraded, and improved by Microsoft.
 
@@ -53,17 +55,21 @@ These tests were run with identical parameters through multiple iterations with 
 
 These tests didn’t factor in various customer-specific third-party agents often deployed in customer environments. Each of these agents will have its own resource requirements that can impact performance.
 
+These tests represent office worker workloads and don’t stress the resources, like CPU, of each Cloud PC.
+
 It can be valuable for you to do your own testing with workloads approximating what your intended users require. Be sure to include the line-of-business applications that your employees run regularly. Use the results of your tests to determine the right choice for your users. For more information, see the [Planning guide for Windows 365](enterprise/planning-guide.md).
 
 ## Test results
 
 ![Diagram of relative Windows 365 Cloud PC vCPU performance.](media/relative-cloud-pc-performance/relative-cloud-pc-performance.png)
 
-A common starting point for Windows 365 Cloud PC users is the 2 vCPU / 8-GB RAM / 128-GB storage size. The chart shows that the relative performance improvement of the 4 vCPU configuration over the 2 vCPU configuration is up to 28% faster.  
+A common starting point for Windows 365 Cloud PC users is the 2 vCPU / 8-GB RAM / 128-GB storage size. The chart shows that the relative performance improvement of the 4 vCPU configuration over the 2 vCPU configuration is up to 27% faster.  
 
-For the workloads we test, the performance improvement when moving from 4 vCPU to 8 vCPU is up to 27% faster. However, more processor intensive workloads may see greater improvement.
+For the workloads we test, the performance improvement when moving from 4 vCPU to 8 vCPU is up to 18% faster.
 
-If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads like business analytics tools with large datasets in the 64-bit version of Microsoft Excel work best with 8 vCPU. By contrast, the 4 vCPU size is popular among Windows 365 customers with employees who only use Microsoft Teams, browsers, or Microsoft applications.
+The 16 vCPU / 64-GB RAM / 512-GB storage size is meant to accommodate more processor intensive workloads. It's up to 14% faster than the 8 vCPU / 32-GB RAM / 512-GB storage size.
+
+If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads that require processing large datasets and have strict latency requirements during compilation work best with 16 vCPU sizes. By contrast, the 4 vCPU size is popular among Windows 365 customers with employees who only use Microsoft Teams, browsers, or Microsoft applications.
 
 ## Choosing the Cloud PC size for your users
 

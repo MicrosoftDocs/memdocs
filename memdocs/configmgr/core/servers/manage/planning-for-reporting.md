@@ -3,8 +3,8 @@ title: Plan for reporting
 titleSuffix: Configuration Manager
 description: From installation details to security and network bandwidth, it's important to plan for reporting in Configuration Manager.
 ms.date: 04/01/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

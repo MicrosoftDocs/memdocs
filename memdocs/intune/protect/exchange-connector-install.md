@@ -8,13 +8,12 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 11/10/2023
 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 
 # optional metadata
@@ -36,11 +35,9 @@ ms.collection:
 # Set up the on-premises Intune Exchange connector
 
 > [!IMPORTANT]
-> The information in this article applies to customers who are supported to use an Exchange Connector.
->
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, your Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
->
->Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
+> Support for the on-premises Intune Exchange connector is ending on February 19, 2024. After this date, the Exchange connector will no longer sync with Intune. If you use the Exchange connector, we recommend taking one of the following actions before February 19, 2024:  
+   >* [Migrate your Exchange mailboxes to Exchange online](/exchange/hybrid-deployment/move-mailboxes)
+   >* [Set up hybrid modern authentication](/microsoft-365/enterprise/hybrid-modern-auth-overview)  
 
 To help protect access to Exchange, Intune relies on an on-premises component that's known as the Microsoft Intune Exchange connector. This connector is also called the *Exchange ActiveSync on-premises connector* in some locations of the Intune admin center.
 
@@ -85,9 +82,9 @@ If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (p
 
 6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
+7. The EAS client ID gets registered by the Microsoft Entra Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
-8. The Azure AD Device Registration saves the device state information.
+8. The Microsoft Entra Device Registration saves the device state information.
 
 9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
 
@@ -105,7 +102,7 @@ The following table lists the requirements for the computer on which you install
 | Microsoft Exchange          | On-premises connectors require Microsoft Exchange 2010 SP3 or later or legacy Exchange Online Dedicated. To determine if your Exchange Online Dedicated environment is in the *new* or *legacy* configuration, contact your account manager. |
 | Mobile device management authority           | [Set the mobile device management authority to Intune](../fundamentals/mdm-authority-set.md). |
 | Hardware              | The computer on which you install the connector requires a 1.6 GHz CPU with 2 GB of RAM and 10 GB of free disk space. |
-|  Active Directory synchronization             | Before you use the connector to connect Intune to your Exchange server, [set up Active Directory synchronization](../fundamentals/users-add.md). Your local users and security groups must be synced with your instance of Azure Active Directory. |
+|  Active Directory synchronization             | Before you use the connector to connect Intune to your Exchange server, [set up Active Directory synchronization](../fundamentals/users-add.md). Your local users and security groups must be synced with your instance of Microsoft Entra ID. |
 | Additional software         | The computer that hosts the connector must have a full installation of Microsoft .NET Framework 4.5 and Windows PowerShell 2.0. |
 | Network               | The computer on which you install the connector must be in a domain that has a trust relationship with the domain that hosts your Exchange server.<br /><br />Configure the computer to allow it to access the Intune service through firewalls and proxy servers over ports 80 and 443. Intune uses these domains: <br> - manage.microsoft.com <br> - \*manage.microsoft.com<br> - \*.manage.microsoft.com <br><br> The Intune Exchange connector communicates with the following services: <br> - Intune service: HTTPS port 443 <br> - Exchange Client Access server (CAS): WinRM service port 443<br> - Exchange Autodiscover 443<br> - Exchange Web Services (EWS) 443  |
 

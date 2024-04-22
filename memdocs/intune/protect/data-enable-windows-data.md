@@ -8,12 +8,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 10/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: b204a956-18ec-11e8-accf-0ed5f89f718b
 
 # optional metadata
@@ -54,11 +53,16 @@ The following features require you to enable this support:
 - [Windows feature update device readiness report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-device-readiness-report) 
 - [Windows feature update compatibility risks report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
 - [Windows driver updates report](../protect/windows-driver-updates-overview.md)
+- Windows feature update report
+- Windows expedited Update Report
+- Driver update policies with alerts / Windows driver update failures
+- Expedited quality update policies with alerts /  Windows expedited update failures
+- Feature update policies with alerts / Feature update failures
 
 To enable support, set **Enable features that require Windows diagnostic data in processor configuration** to **On**. By default, it's *Off*.
 
 - While there are other methods to enable this support for a tenant, this toggle only reflects your configuration choice for Intune features.
-- Changing this toggle from *On* to *Off* will disable use of Intune features that require this configuration but might not turn off processor configuration configured by other methods.
+- Changing this toggle from *On* to *Off* disables use of Intune features that require this configuration but might not turn off processor configuration configured by other methods.
 
 To learn more about this configuration, see [Enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) in the Windows privacy documentation.
 

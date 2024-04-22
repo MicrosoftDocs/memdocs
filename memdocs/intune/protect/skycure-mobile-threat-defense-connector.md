@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Use Symantec Endpoint Protection Mobile connector with Microsoft Intune
+title: Symantec Endpoint Protection Mobile connector with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Learn about integrating Intune with Symantec Endpoint Protection Mobile to control mobile device access to your corporate resources.
+description: How to set up Symantec Endpoint Protection Mobile with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 
 # optional metadata
@@ -54,12 +53,10 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 - **iOS 10 and later**
 
-## Pre-requisites
+## Prerequisites
 
-- Azure Active Directory Premium
-
+- Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
-
 - Symantec Endpoint Protection Mobile subscription
 
 For more information, check [Symantec website](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection-mobile/1-0/Integrations/integrating-microsoft-intune-with-v131237277-d4221e13845.html).
@@ -75,7 +72,6 @@ If the device is found noncompliant, access to resources like Exchange Online an
 Intune supports two modes of integration with SEP Mobile:
 
 - **Basic setup** which is a read only mode that allows SEP Mobile visibility for devices in Intune.
-
 - **Full integration** which allows SEP Mobile to report device risk and security incident details to Intune.
 
 ## Sample scenarios
@@ -87,9 +83,7 @@ Here are some common scenarios:
 When malicious apps such as malware are detected on devices, you can block devices until the threat is resolved:
 
 - Connecting to corporate e-mail
-
 - Syncing corporate files with the OneDrive for Work app
-
 - Accessing company apps
 
 *Block when malicious apps are detected:*
@@ -111,6 +105,7 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 *Access granted on remediation:*
 
 :::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated. ":::
+
 ### Control access to SharePoint Online based on threat to network
 
 Detect threats like **Man-in-the-middle** in network, and prevent synchronization of corporate files based on the device risk.

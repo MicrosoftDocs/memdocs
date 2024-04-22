@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Troubleshooting the device timeline for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
@@ -24,18 +24,18 @@ Use the following to troubleshoot the device timeline in the Microsoft Intune ad
 
 When viewing or synching the timeline from the Microsoft Intune admin center, you may run across one of these errors.  
 
-### <a name="bkmk_401"></a> The necessary configuration is missing in Azure Active Directory
+### <a name="bkmk_401"></a> The necessary configuration is missing in Microsoft Entra ID
 
-**Error message:** The necessary configuration is missing in Azure Active Directory. Make sure to attach the Configuration Manager site to your Azure tenant, and assign the proper user role in Azure AD.
+**Error message:** The necessary configuration is missing in Microsoft Entra ID. Make sure to attach the Configuration Manager site to your Azure tenant, and assign the proper user role in Microsoft Entra ID.
 
 **Possible causes:**
 
-- Make sure [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) are configured and the user account accessing tenant attach features from the Microsoft Intune admin center is discovered by both.
+- Make sure [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) are configured and the user account accessing tenant attach features from the Microsoft Intune admin center is discovered by both.
 - The user account might need an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. <!--7980141-->
 
 ### <a name="bkmk_403"></a> Unable to get timeline information
 
-**Error message:** Unable to get timeline information. Make sure the Azure AD and AD user discovery are configured and the user is discovered by both. Verify the user has the proper permissions in Configuration Manager.
+**Error message:** Unable to get timeline information. Make sure the Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify the user has the proper permissions in Configuration Manager.
 
 **Possible causes:**
 

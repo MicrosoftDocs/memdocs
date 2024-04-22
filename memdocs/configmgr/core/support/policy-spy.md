@@ -3,8 +3,8 @@ title: Policy Spy
 titleSuffix: Configuration Manager
 description: Use Policy Spy to view and troubleshoot the policy system on Configuration Manager clients.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

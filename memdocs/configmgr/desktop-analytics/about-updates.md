@@ -3,8 +3,8 @@ title: Updates in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about feature updates in Desktop Analytics.
 ms.date: 04/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

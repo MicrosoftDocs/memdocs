@@ -3,8 +3,8 @@ title: "IProgressUI::ShowMessage"
 titleSuffix: Configuration Manager
 description: "IProgressUI::ShowMessage method"
 ms.date: 04/03/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2b79dafd-c4ba-4832-88f7-62d2e6b4caf0
 author: Banreet

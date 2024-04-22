@@ -3,8 +3,8 @@ title: Add site system roles
 titleSuffix: Configuration Manager
 description: Understand Configuration Manager site system roles and how to add them to extend the functionality and capacity of your site.
 ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: sheetg09
 ms.author: sheetg

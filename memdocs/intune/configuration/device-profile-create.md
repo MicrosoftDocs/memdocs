@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/05/2023
+ms.date: 03/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 
 # optional metadata
@@ -72,9 +71,9 @@ Profiles are created in the [Microsoft Intune admin center](https://go.microsoft
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
 - **By platform**: Create and view policies and profiles by your platform. This view may also show features specific to the platform. For example, select **Windows**. You'll see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
-- **Policy**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
+- **Manage devices**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
-When you create a profile (**Configuration profiles** > **Create profile**), choose your platform:
+When you create a profile (**Configuration** > **Create**), choose your platform:
 
 - **Android device administrator**
 - **Android Enterprise**
@@ -86,11 +85,12 @@ When you create a profile (**Configuration profiles** > **Create profile**), cho
 Then, choose the profile. Depending on the platform you choose, the settings you can configure are different. The following articles describe the different profiles:
 
 - [Administrative templates (Windows)](administrative-templates-windows.md)
+- [BIOS configuration and other settings](bios-configuration.md)
 - [Custom](custom-settings-configure.md)
 - [Delivery Optimization (Windows)](delivery-optimization-windows.md)
 - [Derived credential (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Device features (macOS, iOS, iPadOS)](device-features-configure.md)
-- [Device firmware (Windows)](device-firmware-configuration-interface-windows.md)
+- [Device firmware configuration interface (DFCI) (Windows)](device-firmware-configuration-interface-windows.md)
 - [Device restrictions](device-restrictions-configure.md)
 - [Domain join (Windows)](domain-join-configure.md)
 - [Edition upgrade and mode switch (Windows)](edition-upgrade-configure-windows-10.md)
@@ -164,7 +164,7 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 ### Add a rule
 
-1. Select **Applicability Rules**. You can choose the **Rule**, and **Property**:
+1. In your policy, select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
     :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune.":::
 

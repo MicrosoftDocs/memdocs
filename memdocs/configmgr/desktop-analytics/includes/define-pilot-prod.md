@@ -2,7 +2,7 @@
 author: banreet
 ms.author: banreetkaur
 ms.reviewer: acabello
-ms.prod: configuration-manager
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 06/11/2021
 ms.localizationpriority: medium

@@ -3,8 +3,8 @@ title: Communications between endpoints
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site systems and components communicate across a network.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -85,8 +85,8 @@ Use the following table to understand how this process works:
 
 | MP type  | Client authentication  | Client authorization<br>Device identity  | Client authorization<br>User identity  |
 |----------|---------|---------|---------|
-| HTTP     | Anonymous<br>With Enhanced HTTP, the site verifies the Azure AD *user* or *device* token. | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - Azure AD *device* token (Enhanced HTTP)<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Azure AD *user* token (Enhanced HTTP) |
-| HTTPS    | Using one of the following methods:<br> - PKI certificate<br> - Windows-integrated authentication<br> - Azure AD *user* or *device* token | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - PKI certificate<br> - Azure AD *user* or *device* token<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Azure AD *user* token |
+| HTTP     | Anonymous<br>With Enhanced HTTP, the site verifies the Microsoft Entra ID *user* or *device* token. | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - Microsoft Entra ID *device* token (Enhanced HTTP)<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Microsoft Entra ID *user* token (Enhanced HTTP) |
+| HTTPS    | Using one of the following methods:<br> - PKI certificate<br> - Windows-integrated authentication<br> - Microsoft Entra ID *user* or *device* token | Location request: Anonymous<br>Client package: Anonymous<br>Registration, using one of the following methods to prove device identity:<br> - Anonymous (manual approval)<br> - Windows-integrated authentication<br> - PKI certificate<br> - Microsoft Entra ID *user* or *device* token<br>After registration, the client uses message signing to prove device identity | For user-centric scenarios, using one of the following methods to prove user identity:<br> - Windows-integrated authentication<br> - Microsoft Entra ID *user* token |
 
 > [!Tip]  
 > For more information on the configuration of the management point for different device identity types and with the cloud management gateway, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#enable-management-point-for-https).  

@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 12/12/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -52,7 +51,7 @@ To check the release version of your tenant, use the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Tenant status**. Your tenant's name, location, MDM authority, account status, and service release number are shown.
 
-In the following example, the tenant has the 2104 (April 2021) service release:
+In the following example, the tenant has the 2311 (November 2023) service release:
 
 :::image type="content" source="./media/intune-service-servicing-information/intune-admin-center-tenant-status.png" alt-text="In the Intune admin center, select tenant administration and then tenant status to see the service release version." lightbox="./media/intune-service-servicing-information/intune-admin-center-tenant-status.png":::
 
@@ -65,7 +64,7 @@ Keeping up to date about releases and changes is an important part of your Intun
   Content is published at the end of the current sprint, which is when the UI updates start deploying to the Microsoft Intune admin center.
 
 - **[In development for Microsoft Intune](in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with upcoming features and changes.
-- **[Microsoft 365 message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, a message is posted in the **Message center**. Or, you can view the same messages in the Message Center at `portal.office.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Intune admin center.
+- **[Microsoft 365 Message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, a message is posted in the **Message center**. Or, you can view the same messages in the Message center at `portal.office.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Intune admin center.
 - **[Microsoft Intune tenant status](tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
 
   To see the hub, use the following steps:
@@ -74,7 +73,7 @@ Keeping up to date about releases and changes is an important part of your Intun
   2. Go to **Tenant administration** > **Tenant status** > **Service health and message center**.
   3. Under **Message center**, select any message to read it.
 
-- **Social media**: Get the latest announcements on Twitter at `@IntuneSuppTeam`.
+- **Social media**: Get the latest announcements on X at `@IntuneSuppTeam`.
 
 For more information from the Intune support team, go to the following blog posts:
 

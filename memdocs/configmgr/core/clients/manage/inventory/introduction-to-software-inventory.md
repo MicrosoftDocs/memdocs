@@ -3,8 +3,8 @@ title: Software inventory
 titleSuffix: Configuration Manager
 description: Get an introduction to software inventory in Configuration Manager.
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

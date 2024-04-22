@@ -7,18 +7,16 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/25/2023
+ms.date: 12/04/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
 #audience:
-ms.reviewer: tycast
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,8 +31,7 @@ ms.collection:
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
-
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization. Use these settings so users can easily and securely connect to your organizational network.
 
@@ -51,7 +48,7 @@ This feature applies to:
   > For Windows 11 devices, there is an issue between the Windows 11 client and the Windows VPNv2 CSP. A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
   >
   > The following changes can cause a loss of VPN functionality:
-  > 
+  >
   > - Changes to a VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile, and applies the updated profile.
   > - Two new VPN profiles apply to the device at the same time.
   > - An active VPN profile is removed at the same time a new VPN profile is assigned.
@@ -156,20 +153,6 @@ You can create VPN profiles using the following VPN connection types:
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
 
-  > [!IMPORTANT]
-  > As of June 14, 2021, both the standalone tunnel app and standalone client connection type for Android are deprecated and drop from support after October 26, 2021.
-
-- Microsoft Tunnel (standalone client)(preview)
-  - iOS/iPadOS
-
-  > [!IMPORTANT]
-  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
-  >
-  > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
-  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
-  >
-  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
-
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
@@ -212,7 +195,7 @@ You can create VPN profiles using the following VPN connection types:
 After the VPN app is assigned to the device, this next step creates the device configuration policy that configures the VPN connection. If your VPN app connection type uses an app configuration policy to configure the app, then skip this step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Choose the platform of your devices. Your options:
@@ -223,7 +206,7 @@ After the VPN app is assigned to the device, this next step creates the device c
       - **macOS**
       - **Windows 10 and later**
       - **Windows 8.1 and later**
-    - **Profile**: Select **VPN**. Or, select **Templates** > **VPN**.
+    - **Profile type**: Select **VPN**. Or, select **Templates** > **VPN**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

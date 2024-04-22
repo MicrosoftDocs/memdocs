@@ -2,17 +2,16 @@
 # required metadata
 
 title: Reset passcode on Windows devices with Microsoft Intune
-description: To reset the passcode on Windows devices, install the Microsoft Pin Reset Service and Microsoft Pin Reset Client, create a device policy using your Azure Active Directory Directory ID, and then reset the passcode in the Azure portal using Microsoft Intune.
+description: To reset the passcode on Windows devices, install the Microsoft Pin Reset Service and Microsoft Pin Reset Client, create a device policy using your Microsoft Entra Directory ID, and then reset the passcode in the Azure portal using Microsoft Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/22/2020
+ms.date: 10/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 
 # optional metadata
@@ -38,7 +37,7 @@ You can reset the passcode for Windows devices. The reset passcode feature uses 
 
 ## Supported platforms
 
-- Windows 10 Mobile running Creators Update and later (Azure AD joined).
+- Windows 10 Mobile running Creators Update and later (Microsoft Entra joined).
 
 The following platforms are **not** supported:
 - Windows
@@ -72,7 +71,7 @@ To configure the PIN reset on the Windows devices you manage, use an [Intune Win
 
 **Use the device policy** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
-Replace *tenant ID* with your Azure AD Directory ID, which is listed in the **Properties** of Azure Active Directory in the [Azure portal](https://portal.azure.com).
+Replace *tenant ID* with your Microsoft Entra Directory ID, which is listed in the **Properties** of Microsoft Entra ID in the [Azure portal](https://portal.azure.com).
 
 Set the value for this CSP to **True**.
 

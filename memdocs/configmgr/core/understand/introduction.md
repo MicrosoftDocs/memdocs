@@ -3,15 +3,17 @@ title: What is Configuration Manager?
 titleSuffix: Configuration Manager
 description: Learn the basics of Microsoft Configuration Manager.
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.custom: intro-overview
 ms.topic: overview
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+    - tier3
+    - essentials-overview
 ms.reviewer: mstewart,aaroncz 
 ---
 
@@ -63,7 +65,7 @@ Configuration Manager extends and works alongside many Microsoft technologies an
 
 Configuration Manager also uses:  
 
-- Active Directory Domain Services and Azure Active Directory for security, service location, configuration, and to discover the users and devices that you want to manage.  
+- Active Directory Domain Services and Microsoft Entra ID for security, service location, configuration, and to discover the users and devices that you want to manage.  
 - Microsoft SQL Server as a distributed change management database—and integrates with SQL Server Reporting Services (SSRS) to produce reports to monitor and track management activities.  
 - Site system roles that extend management functionality and use the web services of Internet Information Services (IIS).
 - Delivery Optimization, Windows Low Extra Delay Background Transport (LEDBAT), Background Intelligent Transfer Service (BITS), BranchCache, and other peer caching technologies to help manage content on your networks and between devices.

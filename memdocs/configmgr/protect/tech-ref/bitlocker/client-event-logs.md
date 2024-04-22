@@ -3,8 +3,8 @@ title: Client event logs
 titleSuffix: Configuration Manager
 description: A technical reference for the possible BitLocker (MBAM) client entries in the Windows event log
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell
@@ -104,7 +104,7 @@ Detected OS volume encryption policies conflict. Check BitLocker policies relate
 
 ### 22: ConflictingFDDVolumePolicies
 
-Detected fixed data drive volume encryption policies conflict. Check BitLocker policies related to fixed data drive drive protectors.
+Detected fixed data drive volume encryption policies conflict. Check BitLocker policies related to fixed data drive protectors.
 
 ### 27: EncryptionFailedNoDra
 
@@ -142,19 +142,19 @@ Successfully connected to the MBAM Recovery and Hardware service.
 
 ### 28: TpmOwnerAuthEscrowed
 
-The TPM OwnerAuth has been escrowed.
+The TPM OwnerAuth is escrowed.
 
 ### 29: RecoveryKeyEscrowed
 
-The BitLocker recovery key for the volume has been escrowed.
+The BitLocker recovery key for the volume is escrowed.
 
 ### 30: RecoveryKeyReset
 
-The BitLocker recovery key for the volume has been updated.
+The BitLocker recovery key for the volume is updated.
 
 ### 31: EnforcePolicyDateSet
 
-The enforce policy date...has been set for the volume
+The enforce policy date...is set for the volume
 
 ### 32: EnforcePolicyDateCleared
 

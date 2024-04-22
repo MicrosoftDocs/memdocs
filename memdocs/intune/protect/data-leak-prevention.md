@@ -13,7 +13,6 @@ ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: b1512c3a-3bbd-4111-a0df-c874a0a335df
 
 # optional metadata
@@ -73,4 +72,4 @@ As appropriate, share the following links to provide additional information:
 
 ## Next steps
 
-Want help enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Want help enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Microsoft Entra ID P1 or P2, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

@@ -3,18 +3,17 @@
 
 title: Use on-premises services with cloud-native endpoints
 titleSuffix: Microsoft Intune
-description: For cloud-native endpoints to access on-premises resources, such as file servers, printers, and web servers, use Windows integrated authentication (WIA) and Azure AD Connect.
+description: For cloud-native endpoints to access on-premises resources, such as file servers, printers, and web servers, use Windows integrated authentication (WIA) and Microsoft Entra Connect.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 01/09/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -49,9 +48,9 @@ For cloud-native Windows endpoints to access on-premises resources and services 
 
 - Client apps **must use Windows integrated authentication (WIA)**. For more specific information, go to [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
 
-- **Configure Azure AD Connect**. Azure AD Connect synchronizes user accounts from the on-premises AD to Azure AD. For more specific information, go to [Azure AD Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis).
+- **Configure Microsoft Entra Connect**. Microsoft Entra Connect synchronizes user accounts from the on-premises AD to Microsoft Entra. For more specific information, go to [Microsoft Entra Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis).
 
-  In Azure AD Connect, you may have to adjust your domain-based filtering to confirm that the required domains data is synchronized to Azure AD.
+  In Microsoft Entra Connect, you may have to adjust your domain-based filtering to confirm that the required domains data is synchronized to Microsoft Entra.
 
 - The device has line of sight **connectivity (either directly or through VPN) to a domain controller** from the AD domain and to the service or resource being accessed.
 
@@ -59,7 +58,7 @@ For cloud-native Windows endpoints to access on-premises resources and services 
 
 For end users, a Windows cloud-native endpoint behaves like any other on-premises Windows device.
 
-The following list is a common set of on-premises resources that users can access from their Azure AD joined devices:
+The following list is a common set of on-premises resources that users can access from their Microsoft Entra joined devices:
 
 - A file server: Using SMB (Server Message Block), you can map a network drive to a domain-member server that hosts a network share or NAS (Network Attached Storage).
 
@@ -67,33 +66,33 @@ The following list is a common set of on-premises resources that users can acces
 
 - A printer resource on a domain-member server: Users can print to their local or nearest printer.
 - A web server on a domain-member server that uses Windows Integrated security: Users can access any Win32 or web-based application.
-- Want to manage your on-premises AD domain from an Azure AD joined endpoint: Install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520):
+- Want to manage your on-premises AD domain from an Microsoft Entra joined endpoint: Install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520):
 
   - Use the Active Directory Users and Computers (ADUC) snap-in to administer all AD objects. You must manually enter the domain that you want to connect to.
   - Use the DHCP snap-in to administer an AD-joined DHCP server. You might need to enter the DHCP server name or address.
 
 > [!TIP]
-> To understand how Azure AD joined devices use cached credentials in a cloud-native approach, watch [OPS108: Windows authentication internals in a hybrid world (syfuhs.net)](https://syfuhs.net/ops108-windows-authentication-internals-in-a-hybrid-world) (opens an external website).
+> To understand how Microsoft Entra joined devices use cached credentials in a cloud-native approach, watch [OPS108: Windows authentication internals in a hybrid world (syfuhs.net)](https://syfuhs.net/ops108-windows-authentication-internals-in-a-hybrid-world) (opens an external website).
 
 ## Authentication and access to on-premises resources
 
-The following steps describe how an Azure AD joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
+The following steps describe how an Microsoft Entra joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
 
-The following steps are an overview. For more specific information, including detailed swimlane graphics that describe the full process, go to [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token).
+The following steps are an overview. For more specific information, including detailed swimlane graphics that describe the full process, go to [Primary Refresh Token (PRT) and Microsoft Entra](/azure/active-directory/devices/concept-primary-refresh-token).
 
 1. When users sign in, their credentials are sent to the Cloud Authentication Provider (CloudAP) and the Web Account Manager (WAM).
 
-2. The CloudAP plugin sends the user and device credentials to Azure AD. Or, [it authenticates using Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-how-it-works-authentication).
+2. The CloudAP plugin sends the user and device credentials to Microsoft Entra. Or, [it authenticates using Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-how-it-works-authentication).
 
-3. During Windows sign-in, the Azure AD CloudAP plugin requests a Primary Refresh Token (PRT) from Azure AD using the user credentials. It also caches the PRT, which enables cached sign-in when users don't have an internet connection. When users try to access applications, the Azure AD WAM plugin uses the PRT to enable SSO.
+3. During Windows sign-in, the Microsoft Entra CloudAP plugin requests a Primary Refresh Token (PRT) from Microsoft Entra using the user credentials. It also caches the PRT, which enables cached sign-in when users don't have an internet connection. When users try to access applications, the Microsoft Entra WAM plugin uses the PRT to enable SSO.
 
-4. Azure AD authenticates the user and device, and returns a PRT & an ID token. The ID token includes the following attributes about the user:
+4. Microsoft Entra authenticates the user and device, and returns a PRT & an ID token. The ID token includes the following attributes about the user:
 
     - `sAMAccountName`
     - `netBIOSDomainName`
     - `dnsDomainName`
 
-    These attributes are synced from on-premises AD using Azure AD Connect.
+    These attributes are synced from on-premises AD using Microsoft Entra Connect.
 
     The Kerberos Authentication Provider receives the credentials and the attributes. On the device, the Windows Local Security Authority (LSA) service enables Kerberos and NTLM authentication.
 
@@ -114,7 +113,7 @@ The following steps are an overview. For more specific information, including de
 
 7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically use SSO when a user tries to access the apps. WIA includes standard user authentication to an on-premises AD domain using NTLM or Kerberos when accessing on-premises services or resources.
 
-    For more information, go to [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso).
+    For more information, go to [How SSO to on-premises resources works on Microsoft Entra joined devices](/azure/active-directory/devices/azuread-join-sso).
 
     It's important to emphasize the value of Windows Integrated Authentication. Native cloud endpoints simply "work" with any application configured for WIA.
 
@@ -124,16 +123,16 @@ The following steps are an overview. For more specific information, including de
 
 1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
 2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
-3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. 🡺 **Concept: Cloud-native endpoints and on-premises resources** (*You are here*)
 5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
 
 ## Helpful online resources
 
-- [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token)
-- [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso)
+- [Primary Refresh Token (PRT) and Microsoft Entra](/azure/active-directory/devices/concept-primary-refresh-token)
+- [How SSO to on-premises resources works on Microsoft Entra joined devices](/azure/active-directory/devices/azuread-join-sso)
 - [How Windows Hello for Business works - Authentication - Windows security](/windows/security/identity-protection/hello-for-business/hello-how-it-works-authentication)
 - [Integrated Windows Authentication](/aspnet/web-api/overview/security/integrated-windows-authentication)
-- [Azure AD Kerberos authentication (Preview)](/azure/active-directory/authentication/how-to-authentication-kerberos)
-- [Azure AD Authentication documentation](/azure/active-directory/authentication/)
+- [Microsoft Entra Kerberos authentication (Preview)](/azure/active-directory/authentication/how-to-authentication-kerberos)
+- [Microsoft Entra Authentication documentation](/azure/active-directory/authentication/)

@@ -3,8 +3,8 @@ title: GetCategorizationRequestText Method
 titleSuffix: Configuration Manager
 description: The GetCategorizationRequestText retrieves the XML that is sent to System Center Online for categorization.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0181433b-d409-4739-8582-2d11dadf2f5b
 author: Banreet

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/23/2023
-ms.topic: how-to 
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -20,7 +20,7 @@ ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec18
+ms.custom: intune-azure
 
 ms.collection:
 - tier1
@@ -151,7 +151,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that will receive this profile.
@@ -202,7 +202,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices. Your options:
@@ -301,17 +301,17 @@ Platforms:
 
   - **CN={{UserName}}**: The user name of the user, such as *Jane Doe*.
   - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
-  - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
+  - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Microsoft Entra ID. This ID is typically used to authenticate with Microsoft Entra ID.
   - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
   - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
   - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
   - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
 
-  - **CN={{onPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
+  - **CN={{onPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Microsoft Entra ID using Microsoft Entra Connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
-    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
 
   All device variables listed in the following *Device certificate type* section can also be used in user certificate subject names.
 

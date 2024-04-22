@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/23/2023
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -39,9 +38,15 @@ Set up enrollment in Microsoft Intune for corporate-owned, userless devices buil
 * Intended to be shared by more than one user. 
 * Used to accomplish a specific set of tasks at work. 
 
-Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment.
+This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work. 
 
-With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). Through Company Portal installation, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
+## You should know    
+Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account and aren't associated with a specific user. 
+
+Devices are configured in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. Devices enable single sign-on (SSO) between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). By installing Company Portal, users can also leverage SSO when signing out of [apps that are integrated with the Intune SDK](../apps/apps-supported-intune-apps.md), even apps that don't yet participate with shared device mode. 
+
+
+
 
 ## Prerequisites
 
@@ -58,16 +63,20 @@ You must also:
 
 
 ## Create an enrollment profile  
-Create an enrollment profile to enable enrollment on devices.
+Create an enrollment profile to enable enrollment on devices. 
 
 > [!TIP]
 > Intune also generates a token in plain text form, but that one can't be used to enroll devices.   
 
-1.	Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
-2.	Select **Create** and fill out the required fields.
-    - **Name**: Type a name to use when assigning the profile to the dynamic device group.  
-    - **Description**: Add a profile description (optional).  
-    - **Token expiration date**: The date when the token expires. Intune enforces a maximum of 90 days.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Devices** > **Enrollment**.  
+3. Select the **Android** tab.  
+4. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, userless devices (Preview)**.  
+5. Select **Create profile**.  
+6.	Enter the basics for your profile:  
+    - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
+    - **Token expiration date**: Select the date the token expires, up to 90 days in the future.  
     - **SSID**: Identifies the network that the device will connect to.  
 
         > [!NOTE]
@@ -80,18 +89,20 @@ Create an enrollment profile to enable enrollment on devices.
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
 
-3. Select **Next** and optionally, select scope tags. 
-4. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
+7. Select **Next**.
+8. Optionally, select scope tags.  
+9. Select **Next**. 
+10. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
 After you create a profile, Intune generates a token that's needed for enrollment. To access the token:
 
-1. Go to **Corporate-owned, userless devices**.
+1. Go to **Corporate-owned, userless devices (Preview)**.
 2. From the list, select your enrollment profile. 
-2. Select **Tokens**. 
+3. Select **Tokens**. 
 
 Another way to find the token is:
-1. Go to **Corporate-owned, userless devices**.
+1. Go to **Corporate-owned, userless devices (Preview)**.
 2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
 3. Select **View enrollment token**.  
 
@@ -99,7 +110,7 @@ The token appears as a QR code. During device setup, when prompted to, scan the 
 
 You can also export the enrollment profile JSON file. To create a JSON file:
 
-1. Go to **Corporate-owned, userless devices**.
+1. Go to **Corporate-owned, userless devices (Preview)**.
 2. From the list, select your enrollment profile.
 3. Select **Token > Export**.   
 
@@ -110,12 +121,13 @@ You can also export the enrollment profile JSON file. To create a JSON file:
 ### Replace token  
 Generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
-3. Choose the profile that you want to work with.
-4. Select **Token** > **Replace token**.
-5. Enter the new token expiration date. Tokens must be replaced at least every 90 days. 
-6. Select **OK**.    
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
+2. Select the **Android** tab.  
+3. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, userless devices (Preview)**. 
+4. Choose the profile that you want to work with.
+5. Select **Token** > **Replace token**.
+6. Enter the new token expiration date. Tokens must be replaced at least every 90 days. 
+7. Select **OK**.    
 
 ### Revoke token  
 Revoke a token to immediately expire it and make it unusable. For example, it's appropriate to revoke a token when:
@@ -125,19 +137,20 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 
  Revoking a token does not affect devices that are already enrolled.
 
-1.	Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.
-2.	Choose the profile that you want to work with.
-3.	Select **Token** > **Revoke token** > **Yes**.   
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
+2. Select the **Android** tab.  
+3. In the **Android Open Source Project (AOSP) (Preview)** section, choose **Corporate-owned, userless devices (Preview)**.  
+4.	Choose the profile that you want to work with.
+5.	Select **Token** > **Revoke token** > **Yes**.   
 
 ## Create a device group  
 You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
 Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name. 
 
-Complete the following steps to create a dynamic Azure AD device group for devices enrolled with an Android (AOSP) corporate-owned, userless enrollment profile.  
+Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Android (AOSP) corporate-owned, userless enrollment profile.  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **All groups** > **New group**.  
 2. In the **Group** blade, fill out the required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name (like Factory 1 devices)
@@ -149,7 +162,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
     - In the middle box, choose **Equals**.
     - In the last field, enter the enrollment profile name that you created earlier.  
 
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Choose **Add query** > **Create**.  
 
 
@@ -169,7 +182,8 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
     *  Microsoft Intune app  
     *  Intune Company Portal app  
 
-To use JSON to enroll devices, refer to instructions provided by the device manufacturer.
+To use JSON to enroll devices, refer to instructions provided by the device manufacturer.  
+
 ## After enrollment 
 
 ### App updates    
@@ -220,9 +234,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Weak biometric   
 *  Device compliance reporting is not available for Android (AOSP).   
 
-* Android (AOSP) management is not supported in these environments:  
-    * Intune for Government Community Cloud (GCC) High and Department of Defense (D0D)  
-    * Intune operated by 21Vianet  
+* Android (AOSP) management is not supported in environments using Intune operated by 21Vianet.    
 
 ## Next steps  
 

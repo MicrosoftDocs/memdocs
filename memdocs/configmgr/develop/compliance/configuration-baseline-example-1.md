@@ -2,8 +2,8 @@
 title: Configuration Baseline Example 1
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 488ff3c1-2bc0-49a0-b925-ab6f41c9561f
 author: Banreet

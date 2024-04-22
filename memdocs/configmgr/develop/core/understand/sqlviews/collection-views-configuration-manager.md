@@ -3,8 +3,8 @@ title: Collection views
 titleSuffix: Configuration Manager
 description: Information about the collections, collection rules, and collection members.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: fbccfda5-8577-41ba-9e89-ce027e1917e2
 author: Banreet

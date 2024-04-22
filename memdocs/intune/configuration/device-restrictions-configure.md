@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 11/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -63,7 +61,7 @@ This article shows you how to create a device restrictions profile. You can also
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Choose the platform of your devices. Your options:  
@@ -76,7 +74,7 @@ This article shows you how to create a device restrictions profile. You can also
         - **Windows 10 and later**
         - **Windows 8.1 and later**
 
-    - **Profile**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
+    - **Profile type**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
 
         To create a device restrictions profile for Windows 10 Team devices, such as Surface Hub, then choose **Device restrictions (Windows 10 Team)**.
 
@@ -101,11 +99,11 @@ This article shows you how to create a device restrictions profile. You can also
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 

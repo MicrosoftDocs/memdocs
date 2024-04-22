@@ -53,6 +53,8 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
   - Windows 10/11 Pro
   - Windows 10/11 Enterprise
+  - Windows 10/11 IoT Enterprise
+  - Windows 10/11 Education
   - Windows 10/11 Team - for Surface Hub devices
   - Windows Holographic for Business - Windows Holographic for Business supports a subset of settings for Windows updates, including:
     - **Automatic update behavior**
@@ -61,7 +63,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
     For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
-  - Windows 10/11 Enterprise LTSC - LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
+  - Windows 10/11 Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
     - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates  
     - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)  
     - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)  
@@ -96,9 +98,13 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    When ready, select **Next** to continue to *Assignments*.
 
-6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue. 
+   > [!NOTE]
+   > When configuring or editing Intune policies, some policy types might not display the Scope Tags configuration page if there are no custom defined scope tags for the tenant.
+   > If you don't see the Scope Tag option, ensure that at least one tag in addition to the default scope tag has been defined.
 
-   While update rings can deploy to both device and user groups, consider using only device groups [when you also use feature updates](../protect/windows-10-feature-updates.md#limitations-for-feature-updates-for-windows-10-and-later-policy).
+6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
+
+   In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](../protect/windows-10-feature-updates.md#limitations-for-feature-updates-for-windows-10-and-later-policy) and removes the need for a user to sign-on to a device before the policy can apply.
 
 7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 

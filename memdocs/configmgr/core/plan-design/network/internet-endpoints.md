@@ -3,8 +3,8 @@ title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur
@@ -63,6 +63,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
     > [!IMPORTANT]
     > This Azure endpoint only supports TLS 1.2 with specific cipher suites.<!-- 10424111 --> Make sure your environment supports these Azure configurations. For more information, see [Azure Front Door: TLS configuration FAQ](/azure/frontdoor/front-door-faq#tls-configuration).
 
+- `cmbitsstore.blob.core.windows.net`
+  
 - `ceuswatcab01.blob.core.windows.net`
 
 - `ceuswatcab02.blob.core.windows.net`
@@ -74,6 +76,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 - `weus2watcab01.blob.core.windows.net`
 
 - `weus2watcab02.blob.core.windows.net`
+
+- `cmbitsstore.blob.core.windows.net`
 
 - `umwatsonc.events.data.microsoft.com`
 

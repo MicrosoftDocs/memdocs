@@ -75,6 +75,9 @@
     "live": [
       "Publish",
       "Pdf"
+    ],
+    "collab-win365-mr": [
+      "Pdf"
     ]
   },
   "targets": {

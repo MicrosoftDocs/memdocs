@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2023
+ms.date: 02/14/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -38,6 +37,16 @@ The Windows 365 Alerts system notifies you when specific events occur in your Cl
 - Define the severity of alerts.
 - Turn each alert rule on or off.
 - Configure each alert to notify you in the console and/or by email.
+
+## Requirements
+
+To see alerts, your account must meet the following requirements:
+
+- Windows 365 Enterprise
+- One of the following roles:
+  - Global administrator
+  - Intune administrator
+  - Windows 365 administrator
 
 ## View alerts
 

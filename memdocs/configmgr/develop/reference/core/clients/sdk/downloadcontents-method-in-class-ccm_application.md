@@ -3,8 +3,8 @@ title: DownloadContents Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the DownloadContents Windows Management Instrumentation class method that downloads the content for an application.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3f054d62-d84c-4c08-80b2-4d8869a05c09
 author: Banreet

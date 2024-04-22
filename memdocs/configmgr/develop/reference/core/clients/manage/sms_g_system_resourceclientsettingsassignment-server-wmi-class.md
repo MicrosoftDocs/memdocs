@@ -3,8 +3,8 @@ description: Learn how to represent resource-specific client agent settings assi
 title: SMS_G_SYSTEM_ResourceClientSettingsAssignment Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6561a03d-01a3-4fe2-b6cf-220dd743421e
 author: Banreet

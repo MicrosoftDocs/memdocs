@@ -2,12 +2,12 @@
 title: Cloud distribution point
 titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
-ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 04/05/2024
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -86,7 +86,7 @@ Deployment and operation of the cloud distribution point includes the following 
 ### Azure Resource Manager
 
 <!--1322209-->
-Create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
+Create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources.
 
 > [!Note]  
 > This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -126,7 +126,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
 - The site server requires **internet access** to deploy and manage the cloud service.  
 
-- When using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Azure AD](../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD *user discovery* isn't required.  
+- When using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Microsoft Entra ID](../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Microsoft Entra ID *user discovery* isn't required.  
 
 - A **server authentication certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
 
@@ -149,6 +149,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
     > [!Important]  
     > - While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.
+    > - If the software update is distributed to cloud distribution point, it still uses local distribution point for content download when the clients are on Intranet. 
     > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 - Configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](use-a-pull-distribution-point.md#about-source-distribution-points).<!--1321554-->  
@@ -219,7 +220,7 @@ A cloud distribution point uses the following Azure components, which incur char
 
 - For more information, see [Monitor cloud distribution points](../../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md#bkmk_monitor).  
 
-- See the [Azure bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/) to help determine potential costs. Pricing for data transfer is tiered. The more you use, the less you pay per gigabyte.  
+- See the [Azure bandwidth pricing details](https://azure.microsoft.com/pricing/details/bandwidth/) to help determine potential costs. Pricing for data transfer is tiered. The more you use, the less you pay per gigabyte.
 
 #### Content storage
 

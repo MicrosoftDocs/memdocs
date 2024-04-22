@@ -3,8 +3,8 @@ title: Capabilities in Technical Preview 1612
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1612.
 ms.date: 01/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -28,14 +28,14 @@ This article introduces the features that are available in the Technical Preview
 ## The Data Warehouse Service point
 Beginning with the Technical Preview version 1612, the Data Warehouse Service point enables you to store and report on long-term historical data for your Configuration Manager deployment. This is accomplished by automated synchronizations from the Configuration Manager site database to a data warehouse database. This information is then accessible from your Reporting services point.
 
-By default, when you install the new site system role, Configuration Manager creates the data warehouse database for you on a SQL Server instance that you specify. The data warehouse supports up to 2 TB of data, with timestamps for change tracking.  By default, the data that is synchronized from the site database includes the data groups for Global Data, Site Data, Global_Proxy, Cloud Data, and Database Views. You can also modify what is synchronized to include additional tables, or exclude specific tables from the default replication sets.
+By default, when you install the new site system role, Configuration Manager creates the data warehouse database for you on a SQL Server instance that you specify. The data warehouse supports up to 2 TB of data, with timestamps for change tracking.  By default, the data that is synchronized from the site database includes the data groups for Global Data, Site Data, Global_Proxy, Cloud Data, and Database Views. You can also modify what is synchronized to include more tables, or exclude specific tables from the default replication sets.
 The default data that is synchronized includes information about:
 - Infrastructure health
 - Security
 - Compliance
 - Malware   
 - Software deployments
-- Inventory details (however, inventory history is not synchronized)
+- Inventory details (however, inventory history isn't synchronized)
 
 In addition to installing and configuring the data warehouse database, several new reports are installed so you can easily search for and report on this data.
 
@@ -59,10 +59,10 @@ In addition to installing and configuring the data warehouse database, several n
 - The database is supported:
   - With SQL Server 2012 or later, Enterprise or Datacenter edition.
   - On a default or named instance
-  - On a *SQL Server Cluster*. Although this configuration should work, it has not been tested and support is best effort.
+  - On a *SQL Server Cluster*. Although this configuration should work, it hasn't been tested and support is best effort.
   - When co-located with either the site database or Reporting services point database. However, we recommend it be installed on a separate server.  
 - The account that is used as the *Reporting Services Point Account* must have the **db_datareader** permission to the data warehouse database.  
-- The database is not supported on a *SQL Server AlwaysOn availability group*.
+- The database isn't supported on a *SQL Server AlwaysOn availability group*.
 
 ### Install the Data Warehouse
 You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](../servers/deploy/configure/install-site-system-roles.md) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.  
@@ -77,19 +77,19 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
 
 **General** page: The following general information is required:
 - **Configuration Manager database settings:**   
-  - **Server Name** - Specify the FQDN of the server that hosts the site database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
+  - **Server Name** - Specify the FQDN of the server that hosts the site database. If you don't use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **Database name** - Specify the name of the site database.
   - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 </br></br>
 - **Data Warehouse database settings:**
-  - **Server name** - Specify the FQDN of the server that hosts the Data Warehouse Service point and database. If you do not use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
+  - **Server name** - Specify the FQDN of the server that hosts the Data Warehouse Service point and database. If you don't use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL Server, Configuration Manager will use that database.
   - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 
 **Synchronization settings** page:   
 - **Data settings:**
   - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](../plan-design/hierarchy/data-transfers-between-sites.md#bkmk_dbrep) and **Distributed views** in [Data transfers between sites](../plan-design/hierarchy/data-transfers-between-sites.md).
-  - **Tables included to synchronize** – Specify the name of each additional table you want to synchronize. Separate multiple tables by using a comma. These tables will be synchronized from the site database in addition to the replication groups you select.
+  - **Tables included to synchronize** – Specify the name of each extra table you want to synchronize. Separate multiple tables by using a comma. These tables will be synchronized from the site database in addition to the replication groups you select.
   - **Tables excluded to synchronize** - Specify the name of individual tables from replication groups you synchronize. Tables you specify will be excluded from. Separate multiple tables by using a comma.
 - **Synchronization settings:**
   - **Synchronization interval (minutes)** - Specify a value in minutes. After the interval is reached, a new synchronization starts. This supports a range from 60 to 1440 minutes (24 hours).
@@ -123,7 +123,7 @@ Use the following steps to move the data warehouse database to a new SQL Server:
    - The data groups you synchronize
    - Tables you include or exclude from synchronization       
 
-   You will reconfigure these data groups and tables after you restore the database to a new server and reinstall the site system role.  
+   You'll reconfigure these data groups and tables after you restore the database to a new server and reinstall the site system role.  
 
 2. Use SQL Server Management Studio to backup the data warehouse database, and then again to restore that database to a SQL Server on the new computer that will host the data warehouse.
 
@@ -143,7 +143,7 @@ You can review the following Configuration Manager logs to confirm the site syst
 ## Content Library Cleanup Tool
 Beginning with Technical Preview version 1612, you can use a new command line tool (**ContentLibraryCleanup.exe**) to remove content that is no-longer associated with any package or application from a distribution point (orphaned content). This tool is called the content library cleanup tool.
 
-This tool only affects the content on the distribution point you specify when you run the tool and cannot remove content from the content library on the site server.
+This tool only affects the content on the distribution point you specify when you run the tool and can't remove content from the content library on the site server.
 
 After you install Technical Preview 1612, you can find **ContentLibraryCleanup.exe** in the *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* folder on the Technical Preview site server.
 
@@ -151,14 +151,14 @@ The tool released with this Technical Preview is intended to replace older versi
 
 ### Requirements  
 - The tool can be run directly on the computer that hosts the distribution point, or remotely from another server. The tool can only be run against a single distribution point at a time.
-- The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool does not function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
+- The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool doesn't function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
 
 ### Modes of operation
 The tool can be run in two modes:
 1. **What-If mode**:   
-   When you do not specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point but does not actually delete any data.
+   When you don't specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point but doesn't actually delete any data.
 
-   - When the tool runs in this mode, information about the content that would be deleted is automatically written to the tools log file. The user is not prompted to confirm each potential deletion.
+   - When the tool runs in this mode, information about the content that would be deleted is automatically written to the tools log file. The user isn't prompted to confirm each potential deletion.
    - By default, the log file is written to the users temp folder on the computer where you run the tool, however you can use the /log switch to redirect the log file to another location.  
    </br>
 
@@ -183,9 +183,9 @@ To run the tool:
 
 **Known issue**
 When the tool is run, an error like the following might be returned when any package or deployment has failed, or is in progress:
--  *System.InvalidOperationException: This content library cannot be cleaned up right now because package \<packageID> is not fully installed.*
+-  *System.InvalidOperationException: This content library can't be cleaned up right now because package \<packageID> isn't fully installed.*
 
-**Workaround:** None. The tool cannot reliable identify orphaned files when content is in progress or has failed to deploy. Therefore, the tool will not allow you to clean-up content until that issue is resolved.
+**Workaround:** None. The tool can't reliable identify orphaned files when content is in progress or has failed to deploy. Therefore, the tool won't allow you to clean-up content until that issue is resolved.
 
 
 
@@ -194,12 +194,12 @@ The following command line switches can be used in any order.
 
 |Switch|Details|
 |---------|-------|
-|**/delete**  |**Optional** </br> Use this switch when you want to delete content from the distribution point. You are prompted before content is deleted. </br></br> When this switch is not used, the tool logs results about what content would be deleted, but does not delete any content from the distribution point. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
-| **/q**       |**Optional** </br> Run the tool in quiet mode that suppresses all prompts (like prompts when you are deleting content), and do not automatically open the log file. </br></br> Example: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
+|**/delete**  |**Optional** </br> Use this switch when you want to delete content from the distribution point. You're prompted before content is deleted. </br></br> When this switch isn't used, the tool logs results about what content would be deleted, but doesn't delete any content from the distribution point. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
+| **/q**       |**Optional** </br> Run the tool in quiet mode that suppresses all prompts (like prompts when you're deleting content), and don't automatically open the log file. </br></br> Example: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
 | **/dp &lt;distribution point FQDN>**  | **Required** </br> Specify the fully qualified domain name (FQDN) of the distribution point that you want to clean. </br></br> Example:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;primary site FQDN>**       | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the FQDN of the primary site the distribution point belongs to, or of the parent primary parent when the distribution point is at a secondary site. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the site code of the primary site that the distribution point belongs to, or of the parent primary site when the distribution point is at a secondary site.</br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log \<log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch is not used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+| **/log \<log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch isn't used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## Improvements for in-console search
@@ -211,7 +211,7 @@ Based on your feedback, we have added the following improvements to in-console s
   When you enter text in the search text box, and then switch between searching a sub-node and the current node, the text you typed will now persist and remain available for a new search without having to retype it.
 
 - **Preservation of your decision to search sub-nodes:**  
-  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
+  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you're working in.   This new behavior means you don't need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
 You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, users will see a dialog box asking them to close the processes that are blocking installation.
@@ -231,12 +231,12 @@ A new Windows 10 notification informs end users that they must take additional a
 ## Windows Store for Business support in Configuration Manager
 
 You can now deploy online licensed apps with a deployment purpose of **Available** from the Windows Store for Business to PCs running the Configuration Manager client.
-For more details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
+For more information, see [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.
 
 ## Return to previous page when a task sequence fails
-You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
+You can now return to a previous page when you run a task sequence and there's a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
 
 - When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
 - When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn't distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
@@ -290,28 +290,30 @@ In your favorite OData query viewer, try queries similar to the following exampl
 > [!NOTE]
 > The example queries shown in the table use *localhost* as the host name in the URL and can be used on the computer running the SMS Provider. If you're running your queries from a different computer, replace localhost with the FQDN of the server with the SMS Provider installed.
 
-## Azure Active Directory onboarding
+<a name='azure-active-directory-onboarding'></a>
 
-Azure Active Directory (AD) onboarding creates a connection between Configuration Manager and Azure Active Directory to be used by other cloud services. This can currently be used for creating the connection needed for the Cloud Management Gateway.
+## Microsoft Entra onboarding
+
+Microsoft Entra onboarding creates a connection between Configuration Manager and Microsoft Entra ID to be used by other cloud services. This can currently be used for creating the connection needed for the Cloud Management Gateway.
 
 Perform this task with an Azure admin, as you will need Azure admin credentials.
 
 #### To create the connection:
 
-2. In the **Administration** workspace, choose **Cloud Services** > **Azure Active Directory** > **Add Azure Active Directory**.
-2. Choose **Sign In** to create the connection with Azure AD.
+2. In the **Administration** workspace, choose **Cloud Services** > **Microsoft Entra ID** > **Add Microsoft Entra ID**.
+2. Choose **Sign In** to create the connection with Microsoft Entra ID.
 
 #### Configuration Manager client requirements
 
 There are several requirements for enabling the creation of user policy in the Cloud Management Gateway.
 
-- The Azure AD onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
-- Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD).
+- The Microsoft Entra onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
+- Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Microsoft Entra ID).
 - You must run [Active Directory User Discovery](../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - You must modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
 - Your management point must be configured to use HTTPS to secure the token on the network, and must have .Net 4.5 installed.
 
-After you make these configuration changes, you can create a user policy and move clients to the Internet to test the policy. User policy requests through the Cloud Management Gateway will be authenticated with Azure AD token-based authentication.
+After you make these configuration changes, you can create a user policy and move clients to the Internet to test the policy. User policy requests through the Cloud Management Gateway will be authenticated with Microsoft Entra token-based authentication.
 
 ## Change to configuring multi-factor authentication for device enrollment
 

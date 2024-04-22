@@ -3,8 +3,8 @@ title: Provisioning mode
 titleSuffix: Configuration Manager
 description: Learn about client provisioning mode during the Configuration Manager task sequence.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: troubleshooting
 author: BalaDelli
 ms.author: baladell
