@@ -299,7 +299,7 @@ To troubleshoot Platform SSO, go to [macOS Platform single sign-on known issues 
 
 After you confirm that your settings catalog policy is working, then we recommend you unassign any existing [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md) profiles created using the Intune Device Features template.
 
-Both policies can coexist as you test the settings catalog policy. But, conflicts can occur. When testing is complete, unassign any previous SSO app extension profiles created using the Device Features template.
+If you keep both policies, conflicts can occur. When testing is complete, unassign any previous SSO app extension profiles created using the Device Features template.
 
 ## More Platform SSO settings you can configure
 
