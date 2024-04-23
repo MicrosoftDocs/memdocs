@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What info can your company see when you enroll your device?
+title: What info can your organization see when you enroll your device?  
 description: Describes the information on your enrolled device that's visible to your organization.  
 keywords:
 author: lenewsad
@@ -87,6 +87,7 @@ Your organization can always see:
  
 ### What is a managed app? 
 An app is considered a **managed app** when it's installed in one of the following ways:  
+
  * You install it from the Company Portal app after your organization makes it available to you. 
  * Your organization requires you to have a certain app for work and school and automatically installs it on the device upon enrollment.  
 
@@ -107,39 +108,39 @@ If you have trouble installing a required app, your support person may look at y
 * Device configured by your organization: Your organization can view the location of a lost device. 
 * Personal device: Your organization can't view the location of a personal device.   
 
-If necessary, your organization can put an iPhone or iPad they configured into *managed lost mode*, This mode lets them request the location of the device. When someone requests access to the device location, the device locks and a message appears on the lock screen to explain what's happening. For more information about *supervision*, which is another available mode for Apple devices configured by your organization, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs.  
+If necessary, your organization can put an iPhone or iPad they configured into *managed lost mode*. This mode lets them request the location of the device. When someone requests access to the device location, the device locks and a message appears on the lock screen to explain what's happening. For information about *supervision*, which is another available mode for Apple devices configured by your organization, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs.  
 
 ### App inventory details
 
 Your organization can require you to install a mobile threat defense (MTD) app. If you're required to install an MTD app on your device:   
 
 * Device configured by your organization: Your organization can view details about all apps on the device. 
-* Personal-owned device: Your organization can't see any data, such as texts, emails, and pictures, in your personal apps. Mobile threat defense apps fo report information about your apps, such as name and version, to your organization. Your organization can view all the details about managed apps.  
+* Personal device: Your organization can't see any data such as texts, emails, and pictures, in your personal apps. Mobile threat defense apps do report information about your apps, such as name and version, to your organization. Your organization can view all the details about managed apps.  
 
 For more information about mobile threat defense, see [Install mobile threat defense app](set-up-mobile-threat-defense.md).  
 
 ### App permissions  
-*Applies to devices running Android 11 and earlier* 
+*Applies to devices running Android 11 and earlier*  
 
-An IT admin can grant permission to apps in the work profile, both manually and by automation. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when someone grants permission to an app.
+An IT admin can grant permission to apps in the work profile, both manually and by automation. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when someone grants permission to an app.  
 
 ###  Network information
-Some information about network connections for Android devices may be available to your organization. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it's connected.  
+Some information about network connections for Android devices may be available to your organization. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it's connected.    
 
 ### Additional device details
 
 Your organization can query these details about a Windows device configured by them:  
 
- - Hardware and operating system environment information
+ - Hardware and operating system environment information  
 
- - Installed certificate details
+ - Installed certificate details  
 
- - File paths and file names
+ - File paths and file names  
 
- - Operating system user and group information
+ - Operating system user and group information  
 
- - Registry and event log entries
+ - Registry and event log entries  
 
- - Details about running processes
+ - Details about running processes  
 
-For more information go to [Device Query](../../analytics/device-query.md)
+For more information, see [Device Query](../../analytics/device-query.md).  
