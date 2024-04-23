@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
+- magic-ai-copilot
 ---
 
 # Use Microsoft Copilot in Intune to troubleshoot devices (public preview)

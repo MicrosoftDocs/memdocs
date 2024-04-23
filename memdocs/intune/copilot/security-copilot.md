@@ -29,6 +29,7 @@ ms.collection:
 - highpri
 - highseo
 - security-copilot
+- magic-ai-copilot
 ---
 
 # Access your Microsoft Intune data in Copilot for Security
