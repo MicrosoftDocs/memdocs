@@ -8,7 +8,7 @@ keywords:
 author: Smritib17  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 9/02/2021
+ms.date: 04/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,36 +32,41 @@ ms.collection:
 
 # Using Azure Virtual Desktop with Intune
 
-[Azure Virtual Desktop](/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. It lets end users connect securely to a full desktop from any device. With Microsoft Intune, you can secure and manage your Azure Virtual Desktop VMs with policy and apps at scale, after they're enrolled. 
+[Azure Virtual Desktop](/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. It lets end users connect securely to a full desktop from any device. With Microsoft Intune, you can secure and manage your Azure Virtual Desktop VMs with policy and apps at scale, after they're enrolled.
 
-## Prerequisites 
+## Prerequisites
 
-Currently, for single-session, Intune supports Azure Virtual Desktop VMs that are: 
+Currently, for single-session, Intune supports Azure Virtual Desktop VMs that are:
 
 - Running Windows 10 Enterprise, version 1809 or later, or running Windows 11.
-- Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure. 
-- [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods: 
+- Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure.
+- [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods:
     - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are Microsoft Entra hybrid joined.
     - [Configuration Manager co-management](/configmgr/comanage/overview).
     - [User self-enrollment via Microsoft Entra join](/mem/intune/fundamentals/deployment-guide-enroll#user-self-enrollment-in-intune).
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Under the same tenant as Intune
 
+For cloned scenarios:
+
+- Once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Intune can only support one VM instance at a time, and for a cloning scenario only one instance of a device can be up and managed at a time. For more information about the cloning scenario, see [Create an Azure Virtual Desktop golden image](azure/virtual-desktop/set-up-golden-image).
+
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
 For information about working with multi-session remote desktops, see [Windows 10 or Windows 11 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
-Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine. 
+Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 ## Limitations
 
-There are some limitations to keep in mind when managing Windows 10 Enterprise remote desktops: 
+There are some limitations to keep in mind when managing Windows 10 Enterprise remote desktops:
 
 ### Configuration
 
 All VM limitations listed in [Using Windows 10 virtual machines](windows-10-virtual-machines.md) also apply to Azure Virtual Desktop VMs.
 
 Also, the following profiles aren't currently supported:
+
 - [Domain Join](../configuration/device-profiles.md#domain-join)
 - [Wi-Fi](../configuration/device-profiles.md#wi-fi)
 
