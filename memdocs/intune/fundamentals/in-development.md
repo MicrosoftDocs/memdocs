@@ -162,16 +162,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Monitor and troubleshoot
 
-### Remote Help supports full control of a macOS device<!--22985205  -->
-
-Remote Help will support helpdesk connecting to a user's device and requesting full control of the macOS device.
-
-For more information on Remote Help, see [Remote Help on macOS](../fundamentals/remote-help-macos.md).
-
-Applies to:
-
-- macOS 11, 12, 13, and 14
-
 ### Intune support of Microsoft 365 remote application diagnostics<!-- 17409991  -->
 
 The Microsoft 365 remote application diagnostics will allow Intune admins to request Intune App Protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. Admins will find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Summary** > *App protection**.
