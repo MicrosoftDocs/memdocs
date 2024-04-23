@@ -49,7 +49,7 @@ Your organization can't see your personal information when you enroll a device i
 There are two types of devices we refer to in this article:    
 
 * Personal devices: You own the device.   
-* Devices configured by your organization: Your workplace or school owns the device. Also referred to as corporate-owned.  
+* Devices configured by your organization: Your workplace or school owns the device. Also referred to as *corporate-owned*.  
 
 To view the ownership type for an enrolled device, sign in to the Intune Company Portal app or website and go to **Device Details**.  
 
