@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 04/11/2022
+ms.date: 03/28/2024
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
@@ -1537,6 +1537,9 @@ The following conditions affect the packages installed by the task sequence:
 
 This setting specifies that the step continues if an individual software package installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
 
+#### Retry this step if computer unexpectedly restarts
+
+If one of the package installations unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries. <!--24334765-->
 
 
 ## <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates
@@ -2508,7 +2511,7 @@ The task sequence continues running the next step.
 >
 > The task sequence transitions from Windows PE to the newly installed Windows OS during the **Setup Windows and ConfigMgr** task. When the newly installed Windows starts for the first time, Windows Setup runs. At the end of Windows Setup, the task sequence is relaunched by the Windows Setup script **SetupComplete.cmd**. This results in the task sequence running entirely within Windows Setup. Windows group policy normally doesn't process until after Windows Setup is complete, so therefore group policy isn't processed until the task sequence is complete. This behavior is consistent across different versions of Windows. For more information on the order of operations, see [Run a script after setup is complete (SetupComplete.cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).<!-- 2841304 -->
 >
-> Although group policy doesn't normally run until Windows Setup and the task sequence completes, Windows or the task sequence doesn't block group policy from running. Certain actions such as scripts or application installs during the task sequence can trigger group policy evaluation. For example, the [Install Software Updates](#BKMK_InstallSoftwareUpdates) task may trigger group policy evaluation when setting the WSUS server.
+> Although group policy doesn't normally run until Windows Setup and the task sequence completes, Windows and the task sequence engine don't block group policy from running. Some actions such as scripts, application installs, or certain task sequence steps run during the task sequence can trigger group policy evaluation. For example, the [Install Software Updates](#BKMK_InstallSoftwareUpdates) task may trigger group policy evaluation when it sets WSUS server. A script that calls gpupdate could also trigger a group policy refresh. 
 
 ### Variables for Setup Windows and ConfigMgr
 

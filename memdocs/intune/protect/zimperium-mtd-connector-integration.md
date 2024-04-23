@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Integrate Zimperium MTD with Microsoft Intune
+title: Set up Zimperium MTD integration with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: How to set up the Zimperium Mobile Threat Defense (MTD) solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
 
 # optional metadata

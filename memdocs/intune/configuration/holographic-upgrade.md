@@ -1,17 +1,16 @@
 ---
 # required metadata
 title: Upgrade to Windows Holographic for Business in Microsoft Intune
-description: Upgrade HoloLens (1st gen) to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
+description: Upgrade HoloLens (first gen) to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 04/16/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -21,7 +20,6 @@ ms.technology:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier3
 - M365-identity-device-management
@@ -46,9 +44,8 @@ For more information on this feature, see [Upgrade Windows 10/11 editions or ena
 
 ## Before you begin
 
-[Create a Windows client edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
-
-When you create a Windows client edition upgrade and mode switch device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
+- [Create a Windows client edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
+- When you create a Windows client edition upgrade and mode switch device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
 ## Edition upgrade
 
@@ -57,8 +54,8 @@ When you create a Windows client edition upgrade and mode switch device configur
 
   :::image type="content" source="./media/holographic-upgrade/Holographic-edition-upgrade.png" alt-text="In Intune, enter the XML file name that includes the Holographic for Business license information.":::
 
-## Next steps
+## Related articles
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-You can also create edition upgrade profiles for [Windows 10/11](edition-upgrade-windows-settings.md) devices.
+- Create edition upgrade profiles for [Windows 10/11](edition-upgrade-windows-settings.md) devices.

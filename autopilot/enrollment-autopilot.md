@@ -8,8 +8,8 @@ manager: aaroncz
 ms.date: 12/13/2023
 ms.topic: how-to
 ms.localizationpriority: high
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.suite: ems
 search.appverid: MET150
 ms.collection: 

@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 03/26/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -144,6 +143,7 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-4-prod-prna01.azure-devices.net (443 & 5671 outbound)
   
 All endpoints connect over port 443 unless otherwise specified.
 

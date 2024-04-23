@@ -30,9 +30,6 @@ ms.collection:
 
 # View ChromeOS device information in Intune    
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
-
 View details about your Chrome Enterprise connector and ChromeOS devices in the Microsoft Intune admin center. Information becomes available after:  
 
 * You establish the connection between Google Admin console and Microsoft Intune.
@@ -43,7 +40,7 @@ You can view synced devices in the **Devices** > **All devices** list and throug
 
 ## Prerequisites  
 
-To view ChromeOS devices and device details, you must be assigned a role that has read permission for *Chrome Enterprise (preview)*.  
+To view ChromeOS devices and device details, you must be assigned a role that has read permission for *Chrome Enterprise*.  
 
 Devices must be enrolled before you can see them in the admin center. Enrollment for ChromeOS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
 
@@ -55,7 +52,7 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 * **Ownership**: ChromeOS devices are always marked as **Corporate**.  
 * **Compliance**: Compliance policies are not supported with ChromeOS devices in Intune so they'll appear in this column as **Not evaluated**.  
 
-Select **Filter** to filter the device list by platform. You can also go to the navigation menu and select **ChromeOS (preview)** for an exclusive view of ChromeOS devices.    
+Select **Filter** to filter the device list by platform. You can also go to the navigation menu and select **ChromeOS** for an exclusive view of ChromeOS devices.    
 
 ## View ChromeOS device details  
 Directly select a device to view more details about it. The device's **Overview** page shows the device name, and lists key properties of the device, such as ownership, serial number, primary user, and device model. 

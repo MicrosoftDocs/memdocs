@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Integrate Lookout Mobile Endpoint with Microsoft Intune | Microsoft Docs
-description: Learn about integrating Intune with Lookout Mobile Threat Defense (MTD) to control mobile device access to your corporate resources.
+title: Lookout Mobile Endpoint with Microsoft Intune
+description: How to set up Lookout Mobile Threat Defense (MTD) How to set up to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 3a730a5d-2a90-42b0-aa28-aadfc7a18788
 
 # optional metadata

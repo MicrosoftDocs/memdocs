@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -59,7 +58,7 @@ Company Portal for macOS can be downloaded and installed using the [macOS LOB ap
 
 1. Download Company Portal for macOS from https://go.microsoft.com/fwlink/?linkid=853070. 
 
-2. Follow the instructions to create a macOS LOB app in [macOS LOB apps](lob-apps-macos.md).
+2. Follow the instructions to create a macOS LOB app in [Add an unmanaged macOS PKG app to Microsoft Intune](macos-unmanaged-pkg.md).
 
 > [!NOTE]
 > Once installed, the Company Portal for macOS app will automatically update using Microsoft AutoUpdate (MAU).

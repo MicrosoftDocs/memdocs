@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 02/05/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -118,41 +118,48 @@ Managed software updates have precedence over other policies that configure soft
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-5. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update**.
+1. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update**.
 
     Configure the following settings:
 
-    - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
-    - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
+   - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
+   - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
+   
+     If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+     
+   - **Target Local Date Time**: Select the local date time value that specifies when to force the installation of the software update.
+   
+     The **Target Local Date Time** setting schedules the update using the UTC timezone. For example, an Admin located in Eastern US configures an update to install at 2PM UTC. Due to time conversion, the deadline for the update is actually for 7PM EST.
 
-      If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+     - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+     - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
+            
+        > [!IMPORTANT]
+        > If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`. To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time using the date time picker. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
 
-    - **Target Local Date Time**: Select the local date time value that specifies when to force the installation of the software update.
-
-      - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
-      - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
-
-      > [!IMPORTANT]
-      > If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`.
-      >
-      > To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time using the date time picker. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
-
-    - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
-
+   - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
+      
 6. Select **Next**.
 
-7. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go to [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-    Select **Next**.
+8. Select **Next**.
 
-8. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-    Select **Next**.
+  > [!IMPORTANT]
+  > Assignment filters are not supported for DDM-based policies.
 
-    > [!IMPORTANT]
-    > Assignment filters are not supported for DDM-based policies.
+10. Select **Next**.
+   
+11. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-9. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+## Monitoring managed software updates
+
+Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies.](/mem/intune/configuration/device-profile-monitor).
+
+> [!IMPORTANT]
+> A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
 ## Delay visibility of updates
 

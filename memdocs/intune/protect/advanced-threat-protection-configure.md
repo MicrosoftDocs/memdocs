@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/18/2024
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -107,18 +107,7 @@ Open the Microsoft Defender for Endpoint portal at [security.microsoft.com](http
 
 > [!TIP]
 >
-> When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy, such as Windows Defender ATP device policy, in Microsoft Entra ID. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
->
-> If the classic policy is deleted, you will need to delete the connection to Intune that was responsible for its creation, and then set it up again. This recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
->
-> Classic conditional access policies for MTD apps:
->
-> - Are used by Intune MTD to require that devices are registered in Microsoft Entra ID so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
-> - Have no effect on any other Cloud apps or Resources.
-> - Are distinct from conditional access policies you might create to help manage MTD.
-> - By default, don't interact with other conditional access policies you use for evaluation.
->
-> To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
+> As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the Microsoft Defender for Endpoint connector. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint, it can be deleted. To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
 
 ## Onboard devices
 
@@ -152,7 +141,7 @@ After onboarding a device using the configuration package, you don't need to do 
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
 6. On the **Configuration settings** page, configure the following options for **Endpoint Detection and Response**:
 
-   - **Microsoft Defender for Endpoint client configuration package type**: Select *Auto from connector* to use the onboarding package (blob) from your Defender for Endpoint deployment.
+   - **Microsoft Defender for Endpoint client configuration package type**: Select *Auto from connector* to use the onboarding package (blob) from your Defender for Endpoint deployment. If you are onboarding to a different or disconnected Defender for Endpoint deployment, select *Onboard* and paste the text from the WindowsDefenderATP.onboarding blob file into the *Onboarding (Device)* field.
    - **Sample Sharing**: Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
    - **[Deprecated] Telemetry Reporting Frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender for Endpoint service more frequently.
 

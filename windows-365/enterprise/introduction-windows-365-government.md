@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2023
+ms.date: 04/10/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: tcheck
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,7 +41,7 @@ Windows 365 Government supports this scenario in a secure, scalable, and transpa
 
 Windows 365 Government is available for GCC and GCC High customers in the US, and contractors (in US entities) holding or processing data on behalf of US government agencies.
 
-For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Windows 365 Government](https://aka.ms/win365).
+For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Windows 365 Government](/office365/servicedescriptions/windows-365-service-description/windows-365-government-how-to-buy).
 
 ## Features not yet supported Windows 365 Government
 
@@ -62,6 +61,10 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - GPU Cloud PCs
 - Audit logs support in Azure Log Analytics
 - [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
+- Windows 365 Boot (available for GCC, not available for GCCH)
+- Microsoft Purview Customer Lockbox
+- Windows App
+- Cloud PC Reports
 
 ## Next steps
 

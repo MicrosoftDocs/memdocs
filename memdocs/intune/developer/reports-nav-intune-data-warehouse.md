@@ -8,11 +8,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/04/2023
-ms.topic: overview
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 701D6CE9-43F6-4A29-8E84-E2B59931C635
 
 # optional metadata
@@ -25,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 

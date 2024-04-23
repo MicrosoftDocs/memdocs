@@ -52,7 +52,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Intune operated by 21Vianet supports the Microsoft Store app (legacy) with Available assignment. You can deploy the Company Portal for Windows from the Download Center. Download the Microsoft Intune Company Portal for Windows from the Official [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=105219) and deploy it via the LOB required app as a workaround.
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
-  - Google Play Protect capabilities such as SafetyNet device attestation.
+  - Google Play Protect capabilities such as Play integrity verdict.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
 - The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable). 

@@ -7,7 +7,9 @@ metadata:
    ms.service: configuration-manager
    ms.localizationpriority: high
    ms.date: 11/10/2021
-   ms.collection: highpri
+   ms.collection: 
+    - highpri
+    - essentials-navigation
    ms.custom: intro-overview
 
 highlightedContent: 

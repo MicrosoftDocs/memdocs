@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/03/2023
+ms.date: 02/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 
 # optional metadata
@@ -61,6 +60,9 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 A Global administrator or Intune administrator can use the following steps to add and deploy a Microsoft Store app. 
 
+> [!NOTE]
+> To ensure the Company Portal app is successfully installed on your end user's device, you may need to set the **Install behavior** to **User** and the deployment Entra ID group as **Only devices**. 
+
 ### Step 1: Add an app from the Microsoft Store
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
@@ -87,11 +89,11 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     > [!NOTE]
     > Specific Microsoft Store apps may not be displayed and available in Intune. Common reasons an app doesn't appear when searching within Intune include the following:
     >
-    > - The app is not available in your region
-    > - The app is not available if there is an age restriction
-    > - The app is a paid app, which is not supported
-    > - The app is an Android app
-    > - The app is a Microsoft Store for Business app that is not available publicly in the consumer store
+    > - The app is not available in US region.
+    > - The app is not available if there is an age restriction.
+    > - The app is a paid app, which is not supported.
+    > - The app is an Android app.
+    > - The app is a Microsoft Store for Business app that is not available publicly in the consumer store.
 
 3. Choose the app that you want to deploy and choose **Select**.
 

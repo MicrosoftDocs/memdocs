@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 
 # optional metadata
@@ -30,6 +29,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - privacy
+- essentials-privacy
 ---
 
 # Audit, export, or delete personal data in Intune
@@ -82,6 +82,10 @@ Users can remove their [Android](../user-help/unenroll-your-device-from-intune-a
 ### Retire
 
 The **Retire** action removes Intune provisioned data like company applications, data about apps that Intune is managing, policy settings, and email profiles that are provisioned through Intune. This action leaves the user's personal data on the device.
+
+### BIOS passwords
+
+If Intune has configured a BIOS password for the device as part of BIOS configuration management, the BIOS password will remain on the device until explicitly removed. BIOS passwords could be removed by editing the **BIOS configuration and other settings** policy, or locally on the device by changing the existing password.
 
 ### Delete a tenant from Microsoft Intune
 

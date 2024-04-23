@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot policy conflicts
 description: Inform yourself about policy conflicts that may occur during Windows Autopilot deployment.
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

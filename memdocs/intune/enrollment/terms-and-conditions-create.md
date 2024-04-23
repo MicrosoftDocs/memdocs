@@ -2,7 +2,6 @@
 # required metadata
 
 title: Set terms and conditions in Microsoft Intune
-titleSuffix: 
 description: Set terms and conditions that users see in the Company Portal for Intune.
 keywords:
 author: Lenewsad
@@ -13,19 +12,16 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-
-ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

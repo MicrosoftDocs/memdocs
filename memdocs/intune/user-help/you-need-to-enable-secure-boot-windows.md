@@ -2,31 +2,29 @@
 # required metadata
 
 title: Enable Secure Boot on Windows devices - Microsoft Intune | Microsoft Docs
-description: Learn how to make your enrolled device compliant again by enabling Secure Boot.  
+description: Learn how to make your enrolled device compliant again by enabling Secure Boot.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2023
 ms.topic: end-user-help
-ms.prod:
 ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: de881f1b-7622-4ec2-8bf8-025f71ca9887
 searchScope:
  - User help
 
 # optional metadata
 
-ROBOTS:  
+ROBOTS:
 #audience:
 
 ms.reviewer: madholdaa
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser; seodec18
+ms.custom: intune-enduser
 ms.collection:
 - tier2
 ---

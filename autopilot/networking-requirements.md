@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot networking requirements
 description: Inform yourself about networking requirements for Windows Autopilot deployment.
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

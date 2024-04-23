@@ -2,7 +2,6 @@
 # required metadata
 
 title: Manage Specialty devices with Microsoft Intune
-titleSuffix: 
 description: This article provides information about specialty devices and how can you manage them with Microsoft Intune
 keywords:
 author: Smritib17
@@ -23,7 +22,7 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started; seodec18
+ms.custom: get-started
 ms.collection:
 - tier1
 - M365-identity-device-management

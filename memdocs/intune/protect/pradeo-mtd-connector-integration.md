@@ -3,7 +3,7 @@
 
 title: Set up the Pradeo integration with Intune
 titleSuffix: Intune on Azure
-description: "Pradeo connector integration with Intune"
+description: How to set up the Pradeo Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 
 # optional metadata

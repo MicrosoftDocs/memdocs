@@ -18,9 +18,12 @@ ms.collection: tier3
 
 <!-- Intune 11300628 -->
 
-When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first enrolls to Microsoft Entra ID and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app introduces component timing and policy delays.
+When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first joins Microsoft Entra and enrolls in Microsoft Intune. Previously, if the intended end-state of the device was co-management, the experience was difficult because the installation of the Configuration Manager client as a Win32 app introduces component timing and policy delays.
 
-Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. This feature and its functionality are referred to as Autopilot into co-management. 
+
+> [!NOTE]
+> While it is still possible to enable co-management on Windows devices during Autopilot without the Autopilot into co-management feature, the documentation, guidance, and requirements below are specific to this feature alone and do not apply specifically to any other method.
 
 You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune co-management settings policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This parameter can optionally include the [PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts) property to specify a task sequence.
 

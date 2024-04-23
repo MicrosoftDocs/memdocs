@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 
 # optional metadata
@@ -124,6 +123,7 @@ Learn how to protect access to company resource based on device, network, and ap
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md)
 - [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+- [Jamf Mobile Threat Defense](jamf-mtd-connector.md) *(formerly Wandera)*
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
@@ -132,7 +132,6 @@ Learn how to protect access to company resource based on device, network, and ap
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
 - [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md)
 - [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md)
-- [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
 - [Windows Security Center](../apps/protect-mam-windows.md) *(Supports integration with Windows MAM)*
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
 

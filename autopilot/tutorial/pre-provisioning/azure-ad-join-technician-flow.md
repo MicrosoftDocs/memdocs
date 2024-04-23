@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - Technician flow
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - Technician flow.
-ms.prod: windows-client
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -12,7 +12,7 @@ ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
-ms.technology: itpro-deploy
+ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

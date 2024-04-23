@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot configuration requirements
 description: Inform yourself about configuration requirements for Windows Autopilot deployment.
-ms.prod: windows-client
-ms.technology: itpro-deploy
+ms.service: windows-client
+ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

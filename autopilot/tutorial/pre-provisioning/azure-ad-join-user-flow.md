@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - User flow
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - User flow.
-ms.prod: windows-client
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
@@ -9,10 +9,10 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/26/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
-ms.technology: itpro-deploy
+ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -61,6 +61,10 @@ Once the technician flow step of the pre-provisioning process completes successf
 [!INCLUDE [Tips AADJ screens](../includes/tips-aadj-screens.md)]
 
 [!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]
+
+[!INCLUDE [Tips wait to run User flow](../includes/tips-pre-provision-wait-user-flow.md)]
+
+[!INCLUDE [Tips compliance resets during User flow](../includes/tips-pre-provision-compliance-user-flow.md)]
 
 ## More information
 

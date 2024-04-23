@@ -21,7 +21,6 @@ ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -91,11 +90,11 @@ For more information about giving administrators access to the Microsoft Intune 
 
 ## Device-only licenses
 
-Microsoft Intune offers a device-only subscription service that helps organizations manage devices that aren't affiliated with specific users. 
+Microsoft Intune offers a device-only subscription service that helps organizations manage devices that aren't affiliated with specific users.
 
 You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a device is enrolled through any of the following methods:
 
-- [Windows Autopilot Self-Deploying mode](/windows/deployment/windows-autopilot/self-deploying)
+- [Windows Autopilot Self-Deploying mode](/autopilot/self-deploying)
 - [Apple Device Enrollment Program without user affinity](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple School Manager without user affinity](../enrollment/apple-school-manager-set-up-ios.md)
 - [Apple Configurator without user affinity](../enrollment/apple-configurator-enroll-ios.md)
@@ -142,6 +141,6 @@ If you don't have a license for Microsoft Entra ID P1 or P2, see [Sign up for Mi
 
 ## Next steps
 
-For the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases, see the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page.  
+For the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases, see the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page.
 
 For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](licenses-assign.md).

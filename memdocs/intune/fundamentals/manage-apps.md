@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -38,7 +37,7 @@ App management can be challenging and Intune can help. Microsoft Intune is a clo
 
 :::image type="content" source="./media/manage-apps/manage-apps-with-intune.png" alt-text="Diagram that shows app management in the Microsoft Intune admin center, including deploying apps, and using app configuration policies & app protection policies for managed apps & personal apps." lightbox="./media/manage-apps/manage-apps-with-intune.png":::
 
-Microsoft Intune can manage apps Android, iOS/iPadOS, macOS, and Windows client devices. So, you can use Intune's app management features across your many devices.
+Microsoft Intune can manage apps on Android, iOS/iPadOS, macOS, and Windows client devices. So, you can use Intune's app management features across your many devices.
 
 From a service perspective, Intune uses Microsoft Entra ID for identity management. To use some apps, these Microsoft Entra user identities must have licenses assigned to them. The Microsoft Intune admin center can also help you manage licensing.
 

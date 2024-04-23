@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: User Device Association - Intune Data Warehouse
-titleSuffix: Microsoft Intune 
+titleSuffix: Microsoft Intune
 description: The UserDeviceAssociation entity contains user device associations in your organization.
 keywords: Intune Data Warehouse
 author: Erikre
@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 777484A7-09CE-4409-987F-76B3F87DFE93
 
 # optional metadata
@@ -23,9 +22,9 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic; seodec18
+ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 # Reference for User Device Association entity

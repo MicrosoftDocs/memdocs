@@ -10,10 +10,10 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: frankroj,mstewart,aaroncz
 ---
 
-# Microsoft Deployment Toolkit release notes  
+# Microsoft Deployment Toolkit release notes
 
 This article provides details on the latest release of the Microsoft Deployment Toolkit (MDT). These details include supported platforms, prerequisites, and any limitations. It assumes familiarity with MDT version concepts, features, and capabilities.
 
@@ -67,6 +67,7 @@ The following OS versions are supported for deployment with this build of MDT:
 - Windows Server 2008 R2
 
 > [!NOTE]
+>
 > MDT doesn't support Windows 10 ARM64 devices, Windows 11 and Windows Server 2022 operating systems.
 
 FAQ: [Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version *X*?](./faq.yml#what-s-the-mdt-support-life-cycle-)
@@ -81,6 +82,7 @@ MDT requires the following components, which are included in Windows:
 MDT requires the latest [Windows ADK for Windows 10](/windows-hardware/get-started/adk-install). MDT also requires the **Windows PE add-on** for the Windows ADK.
 
 > [!NOTE]
+>
 > Windows recommends using the Windows ADK that matches the version of Windows you're deploying. For example, use the Windows ADK for Windows 10 version 1809 when deploying Windows 10 version 1809. For more information on Windows ADK component supportability, see [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](/windows/deployment/usmt/usmt-requirements#bkmk-1).
 
 When integrating MDT with Configuration Manager for ZTI and UDI scenarios, use the latest version of Configuration Manager current branch.
@@ -94,6 +96,7 @@ The current release of MDT supports upgrading from the following versions of MDT
 - MDT build 8450
 
 > [!TIP]
+>
 > Create a backup of the existing MDT infrastructure before attempting an upgrade.
 
 ### LTI

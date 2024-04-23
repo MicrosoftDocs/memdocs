@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -31,6 +30,8 @@ ms.collection:
 - M365-identity-device-management
 - macOS
 - highpri
+- FocusArea_Apps_LOB
+- FocusArea_Apps_MacOS
 ---
 
 # Add a macOS DMG app to Microsoft Intune

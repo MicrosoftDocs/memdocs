@@ -2,7 +2,6 @@
 # required metadata
 
 title: Settings insight
-titleSuffix: 
 description: The Settings insight feature adds insights giving you confidence in configurations that are successfully adopted by similar organizations.
 keywords:
 author: Smritib17
@@ -23,7 +22,7 @@ ms.reviewer: Lavanya.lakshman
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started; seodec18
+ms.custom: get-started
 ms.collection:
 - tier1
 - M365-identity-device-management

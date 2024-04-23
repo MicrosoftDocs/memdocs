@@ -4,7 +4,7 @@ description: include file
 author: erikre 
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 12/14/2023
+ms.date: 01/30/2024
 ms.author: erikre
 ms.custom: include file
 ---
@@ -27,7 +27,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Data transfer |       Third-party   keyboards  |          Block  |          iOS/iPadOS        | On iOS/iPadOS, this blocks all third-party keyboards from   functioning within the app.  |
 | Data transfer |       Approved   keyboards  |          Require  |          Android        |  |
 | Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
-| Functionality |       Printing org data  |          Block  |          iOS/iPadOS, Android         |  |
+| Functionality |       Print org data  |          Block  |          iOS/iPadOS, Android, Windows         |  |
 
 #### Access requirements
 
@@ -45,8 +45,11 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Device conditions |       Require device lock  |          High/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
+|       Device   conditions  |          Max   allowed device threat level  |          Secured / Block access  |          Windows        |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
 |       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](/mem/intune/protect/mtd-enable-unenrolled-devices).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](/mem/intune/protect/mtd-device-compliance-policy-create).</p> |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 11.0* / Block access   |          Android        | Microsoft recommends configuring   the maximum Android major version to ensure beta or unsupported versions of the operating system aren't used.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor.Build <br>Example:   15.0* / Block access |          iOS/iPadOS        | Microsoft recommends configuring   the maximum iOS/iPadOS major version to ensure beta or unsupported versions of the operating system aren't used. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
+| Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 22631.* / Block access   |          Windows        | Microsoft recommends configuring   the maximum Windows major version to ensure beta or unsupported versions of the operating system aren't used. |
 | Device conditions  |       Samsung Knox device attestation  | Wipe data |          Android        | Microsoft recommends configuring the **Samsung Knox device attestation** setting to **Wipe data** to ensure the org data is removed if the device doesn't meet Samsung's Knox hardware-based verification of device health.  This setting verifies all Intune MAM client responses to the Intune service were sent from a healthy device.  <p> This setting will apply to all devices targeted.  To apply this setting only to Samsung devices, you can use "Managed apps" assignment filters.  For more information on assignment filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune/fundamentals/filters).|
+

@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 02/01/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -50,6 +49,8 @@ The following redirections can be managed by using the appropriate setting:
 | Printers | Do not allow client printer redirection |
 | Smartcards | Do not allow smart card device redirection |
 | USB drives| Do not allow supported Plug and Play device redirection |
+
+Some settings may not be immediately available in the Settings Catalog.
 
 There are two ways to manage these redirections:
 

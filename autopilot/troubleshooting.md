@@ -1,8 +1,8 @@
 ---
 title: Windows Autopilot troubleshooting overview
 description: Learn how to handle issues as they arise during the Windows Autopilot deployment process.
-ms.technology: itpro-deploy
-ms.prod: windows-client
+ms.subservice: itpro-deploy
+ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj

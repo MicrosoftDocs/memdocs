@@ -3,7 +3,7 @@
 
 title: Automatically enroll devices with Samsung Knox Mobile Enrollment
 titleSuffix: Microsoft Intune
-description: Learn how to enroll Android devices in Microsoft Intune with the Knox Mobile Enrollment tool. 
+description: Learn how to enroll Android devices in Microsoft Intune with the Knox Mobile Enrollment tool.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 
 # optional metadata
@@ -25,7 +24,6 @@ ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -70,4 +68,3 @@ For more information about Knox Mobile Enrollment setup and requirements, see:
 
 * [Get started with Knox Mobile Enrollment](https://docs.samsungknox.com/admin/knox-mobile-enrollment/get-started/get-started-with-knox-mobile-enrollment/)  
 * [About Knox Deployment App](https://docs.samsungknox.com/admin/knox-mobile-enrollment/about-kda.htm)  
-

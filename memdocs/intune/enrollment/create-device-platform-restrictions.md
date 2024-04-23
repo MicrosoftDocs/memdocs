@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 04/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: 
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -131,6 +130,7 @@ The following filter properties are always available to use with enrollment poli
 * OS version 
 * Operating System SKU 
 * Ownership
+* Enrollment profile name  
 
 **iOS/iPadOS and macOS**  
 * Manufacturer 

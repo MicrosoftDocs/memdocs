@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 12655728-a1af-4d89-97bc-925fe36c0dc4
 ms.localizationpriority: high
 searchScope:
@@ -50,7 +48,7 @@ Your organization can't see:
 - Calendar
 - Passwords
 - Pictures, including what's in the photos app or camera roll
-- Files
+- Content of user created documents
 - Additionally, on corporate-owned Android devices with a work profile:
   - Apps and data in your personal profile
   - Phone number 
@@ -108,9 +106,25 @@ For more information about mobile threat defense, see [Install mobile threat def
 ### App permissions  
 *Applies to devices running Android 11 and earlier* 
 
-An IT admin can grant permission to apps in the work profile, both manually and by automation. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when someone grants permission to an app.    
+An IT admin can grant permission to apps in the work profile, both manually and by automation. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when someone grants permission to an app.
 
 ###  Network information
 Some information about network connections for Android devices may be available to your organization. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it's connected.  
 
+### Additional device details
 
+On corporate-owned Windows devices, admins can query for:
+
+ - Hardware and operating system environment information
+
+ - Installed certificate details
+
+ - File paths and file names
+
+ - Operating system user and group information
+
+ - Registry and event log entries
+
+ - Details about running processes
+
+For more information go to [Device Query](../../analytics/device-query.md)

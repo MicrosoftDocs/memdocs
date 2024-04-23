@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -28,6 +27,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - M365-identity-device-management
 - tier2
+- essentials-security
 ---
 
 # Windows 365 security
@@ -39,7 +39,7 @@ Windows 365 provides an end-to-end connection flow for users to do their work ef
 - Securing the Cloud PC device itself
     - Aligns with securing the **Endpoint**, where you can place more measures on the Cloud PC devices since that is the device being used to access organizational data.
 - Securing the Cloud PC data and other data available while using the Cloud PC
-    - Aligns with securing the **Data**, where you can place more measures on the data itself or on how the Cloud PC user access the data.
+    - Aligns with securing the **Data**, where you can place more measures on the data itself or on how the Cloud PC user accesses the data.
 
 Take a look at the following sections to better understand the components and features available to you to secure your Cloud PC environment.
 
@@ -80,15 +80,13 @@ The following security components are enabled by default on specific Cloud PC SK
         - [Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
         - [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview)
     - **Required configuration**: Cloud PC must have 4 vCPU and 16-GB RAM or more. For more information, see [set up virtualization-based workloads support](nested-virtualization.md#requirements).
- 
+
 > [!NOTE]
 > Given the technological complexity, the security promise of Microsoft Defender Application Guard (MDAG) may not hold true on VMs and in VDI environments. Hence, MDAG is currently not officially supported on VMs and in VDI environments. However, for testing and automation purposes on non-production machines, you may enable MDAG on a VM by enabling Hyper-V nested virtualization on the host.
 
-## Optional security features
+## Microsoft Purview Customer Lockbox
 
-The following security components can be turned on by an admin:
-
-- Microsoft Purview Customer Lockbox. Customer Lockbox ensures that Microsoft can't access a customer's content to do service operations without your explicit approval. You can turn Customer Lockbox on or off in the Microsoft 365 admin center. For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
+Microsoft Purview Customer Lockbox can be turned on by an admin. Customer Lockbox ensures that Microsoft can't access a customer's content to do service operations without your explicit approval. You can turn Customer Lockbox on or off in the Microsoft 365 admin center. For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
 
 ## Secure Cloud PC data
 

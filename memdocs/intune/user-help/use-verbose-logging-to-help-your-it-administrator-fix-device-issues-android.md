@@ -1,18 +1,16 @@
 ---
 # required metadata
 
-title: Configure logging settings in Intune apps| Microsoft Docs
-description: Help your company support fix device issues by using verbose logging in the Intune Company Portal or Microsoft Intune app. 
+title: Turn on verbose logging in Company Portal app| Microsoft Docs
+description: Turn on verbose logging in the Intune Company Portal app to improve troubleshooting on your Android device.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2023
+ms.date: 03/04/2024
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 2a9183a6-b40d-4132-a1ce-61ce0f1c23aa
 searchScope:
  - User help
@@ -31,26 +29,19 @@ ms.collection:
 ---
 
 
-# Configure logging settings
+# Turn on verbose logging in Company Portal app    
 
-Configure your logging settings to let the Company Portal app, Microsoft Intune app, and Intune-managed apps record app actions. If you ever experience a problem in the app, and then report it, your support team will review these logs for more details. 
+Configure your logging settings to let the Intune Company Portal app record app actions. If you ever experience a problem in the app, and then report it, your support team can review these logs for more insight into the problem. *Verbose* logging, which is the highest level of logging, is most helpful for troubleshooting because it provides the most details about what happened in the app. 
 
-> [!NOTE]
-> The logs that you send to your support team will include your email address.  
-
-## Configure Company Portal logging
+## Configure logging 
 Verbose logging records every action you take in the Company Portal app. It's enabled on your device by default. To turn verbose logging off in Company Portal:  
 
 1. Sign in to the Company Portal app.
 2. Tap **Settings**.
-3. Next to **Verbose Logging**, flip the switch to **Off**.
+3. Next to **Verbose Logging**, flip the switch to **Off**.  
 
-## Configure Microsoft Intune app logging
-In the Microsoft Intune app, you can configure the level of log details. The level defaults to **Important**. To adjust logging detail:  
-
-1. Open the Microsoft Intune app.  
-2. Tap **Settings**.  
-3. Under **Log level detail**, select **Verbose** to increase the level of details recorded, or select **Off** to turn off logging.  
+> [!NOTE]
+> The logs sent to your support team include your email address.  
 
 ## Next steps  
 

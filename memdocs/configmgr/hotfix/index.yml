@@ -25,6 +25,8 @@ landingContent:
             url: 2309/24341484.md
           - text: KB 26129847 Client update for 2309
             url: 2309/26129847.md
+          - text: 25858444 Update rollup for Configuration Manager version 2309
+            url: 2309/25858444.md
   - title: Configuration Manager 2303
     linkLists:
       - linkListType: overview

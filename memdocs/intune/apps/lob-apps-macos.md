@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 
 # optional metadata
@@ -31,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - macOS
 - highpri
+- FocusArea_Apps_LOB
 ---
 
 # How to add macOS line-of-business (LOB) apps to Microsoft Intune

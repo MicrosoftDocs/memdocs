@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 
 # optional metadata
@@ -41,8 +40,8 @@ Microsoft Intune can help you manage Activation Lock, a feature of the Find My i
 
 Supported platforms:
 
-- iOS/iPadOS 7.1 or later (supervised)
-- macOS 10.15 or later (supervised)
+- iOS/iPadOS 7.1 or later (supervised through ADE)
+- macOS 10.15 or later (supervised through ADE)
 
 ## How Activation Lock affects you
 

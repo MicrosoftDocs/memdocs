@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -31,6 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- essentials-get-started
 ---
 
 # Get started with your Microsoft Intune deployment

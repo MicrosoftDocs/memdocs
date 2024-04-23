@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up Android Enterprise work profile for corporate owned devices 
+title: Set up Android Enterprise work profile for corporate owned devices
 titleSuffix: Microsoft Intune
-description: Set up Android Enterprise work profile for corporate-owned devices enrolling in Microsoft Intune.  
+description: Set up Android Enterprise work profile for corporate-owned devices enrolling in Microsoft Intune.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -13,8 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,7 @@ ms.reviewer: shthilla
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure;seodec18
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

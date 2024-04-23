@@ -3,7 +3,7 @@
 
 title: Enroll iOS/iPadOS devices with Apple ADE
 titleSuffix: Microsoft Intune
-description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE).  
+description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE).
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 
 # optional metadata
@@ -25,7 +24,6 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -380,7 +378,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Software Update** | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |  
 | **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
 | **Appearance** | Display the Appearance screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |  
-| **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. This feature isn't available for ADE devices running iOS 13 and later, so this screen won't appear on those devices.  
+| **Device to Device Migration** | Give the user the option to transfer data from an old device to this device. The option to transfer data directly from a device isn't available for ADE devices running iOS 13 or later.   
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
 | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
 | **Get Started**| Shows users the Get Started welcome screen.  

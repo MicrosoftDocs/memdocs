@@ -4,7 +4,7 @@ description: include file
 author: erikre 
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 12/14/2023
+ms.date: 01/30/2024
 ms.author: erikre
 ms.custom: include file
 ---
@@ -20,15 +20,18 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 |-----------------|--------------------------------------------------------|-----------------------|----------------------------------------|
 | Data   Transfer |             Back up org data to…  |             Allow  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Send org   data to other apps  |             All apps  |             iOS/iPadOS, Android        |
+| Data   Transfer |       Send org data to  |             All destinations  |             Windows       |
 | Data   Transfer |       Receive   data from other apps  |             All apps  |             iOS/iPadOS, Android        |
+| Data   Transfer |       Receive data from  |             All sources  |             Windows        |
 | Data   Transfer |       Restrict   cut, copy, and paste between apps  |             Any app  |             iOS/iPadOS, Android        |
+| Data   Transfer |       Allow cut, copy, and paste for  |  Any destination and any source  |             Windows        |
 | Data   Transfer |       Third-party keyboards  |             Allow  |             iOS/iPadOS        |
 | Data   Transfer |       Approved keyboards  |             Not required  |             Android        |
 | Data   Transfer |       Screen   capture and Google Assistant  |             Allow  |             Android        |
 | Encryption |             Encrypt org data  |             Require  |             iOS/iPadOS, Android        |
 | Encryption |       Encrypt   org data on enrolled devices  |             Require  |             Android        |
 | Functionality  |             Sync app with native contacts app  |             Allow  |             iOS/iPadOS, Android        |
-| Functionality  |       Printing   org data  |             Allow  |             iOS/iPadOS, Android        |
+| Functionality  |       Printing   org data  |             Allow  |             iOS/iPadOS, Android, Windows        |
 | Functionality  |       Restrict   web content transfer with other apps  |             Any app  |             iOS/iPadOS, Android        |
 | Functionality  |       Org data notifications  |             Allow  |             iOS/iPadOS, Android        |
 
@@ -56,10 +59,13 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App conditions |       Max PIN   attempts  |          5 / Reset   PIN  |          iOS/iPadOS,   Android  |                  |
-| App conditions |       Offline   grace period  |          1440 /   Block access (minutes)  |          iOS/iPadOS,   Android  |                  |
-| App conditions |       Offline   grace period  |          90 / Wipe   data (days)  |          iOS/iPadOS,   Android  |                  |
+| App conditions |       Offline   grace period  |          1440 /   Block access (minutes)  |          iOS/iPadOS, Android, Windows  |                  |
+| App conditions |       Offline   grace period  |          90 / Wipe   data (days)  |          iOS/iPadOS, Android, Windows  |                  |
 | Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
-| Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google's SafetyNet Attestation on end-user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
+| Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google Play’s device integrity check on end-user devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
 | Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end-user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
+| Device conditions  |       Max allowed device threat level  |        Low / Block   access  |          Windows  |                  |
 | Device conditions  |       Require device lock  |        Low/Warn |         Android  |          This setting ensures that Android devices have a device password that meets the minimum password requirements.                |
 
+> [!NOTE]
+> Windows conditional launch settings are labeled as **Health Checks**.
