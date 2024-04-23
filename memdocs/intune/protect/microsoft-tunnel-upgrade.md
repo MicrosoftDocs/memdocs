@@ -128,6 +128,20 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week.
 
+### April 22, 2024
+
+Image hash values:
+
+- **agentImageDigest**: sha256:987028e043434cabf9a85a8be232a35cb10d6499ab9fa2b0ac33bd214455cdf6
+
+- **serverImageDigest**: sha256:95106796faa4648ffe877c1ae4635037fd8bd630498bb3caea366e3c832f84cc
+
+Changes in this release:
+
+- Added rootless Podman container support
+- Fixed "mst-cli server capture" command
+- Fixed some TLS certificate revocation check failures
+
 ### March 14, 2024
 
 Image hash values:
