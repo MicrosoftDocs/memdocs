@@ -1688,7 +1688,7 @@ Administrators can now utilize conditional access capability when setting up pol
 For more information, see:
 
 - [Conditional access](../protect/conditional-access.md)
-- [Remote Help](../fundamentals/remote-help-windows.md#set-up-conditional-access-for-remote-help)
+- [Remote Help](../fundamentals/remote-help-windows.md#setup-conditional-access-for-remote-help)
 
 ### Device security
 
