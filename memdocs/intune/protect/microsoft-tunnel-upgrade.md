@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/02/2024
+ms.date: 04/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -168,7 +168,7 @@ Image hash values:
 Changes in this release:
 
 - Bug fix: do not issue the "docker network reload" command to reset the network. The command is not supported on Docker.
-- Security updates on the base image. 
+- Security updates on the base image.
 
 ### January 4, 2024
 
@@ -182,7 +182,6 @@ Changes in this release:
 
 - Bug fix: Rootless container fix
 - MTG handling for Diagnostic and Log Upload request in HB response
-
 
 ### November 14, 2023
 
@@ -211,6 +210,8 @@ Changes in this release:
 - Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
 - Increase mstunnel-server container pid limit to 10000
 
+<!-- Archive of past releases
+
 ### October 2, 2023
 
 Image hash values:
@@ -224,8 +225,6 @@ Changes in this release:
 - Bug fix: Ensure the monitor starts the container when the state is empty
 - Bug fix for server container: Check /dev/tun permissions only when the server container is running
 - Limit Tunnel server's maximum logging level to verbose to enhance privacy
-
-<!-- Archive of past releases
 
 ### July 24, 2023
 
