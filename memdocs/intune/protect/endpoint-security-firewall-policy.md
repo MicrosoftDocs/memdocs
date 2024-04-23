@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 04/22/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,6 +43,16 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 - Windows 11
 - Windows Server 2012 R2 or later
 - Any supported version of macOS
+
+> [!IMPORTANT]
+>
+> Windows has updated how the Windows Firewall configuration service provider (CSP) enforces rules from Atomic blocks of firewall rules. The [***Windows Firewall CSP***](/windows/client-management/mdm/firewall-csp) on a device implements the firewall rule settings from your Intune endpoint security Firewall policies. Beginning with the following versions of Windows, the updated CSP behavior now enforces an all-or-nothing application of firewall rules from each Atomic block of rules:
+>
+> - Windows 11 21H2
+> - Windows 11 22H2
+> - Windows 10 21H2
+>
+> On devices that run an earlier version of Windows, the CSP processes firewall rules in an Atomic block of rules, one rule (or setting) at a time. The intent is to apply all the rules in that Atomic block, or none of them. However, if the CSP encounters an issue with applying any rule from the block, the CSP stops applying subsequent rules but doesn't roll back a rule from that block that has already been applied successfully. This behavior can result in a partial deployment of firewall rules on a device.
 
 ## Firewall profiles
 
