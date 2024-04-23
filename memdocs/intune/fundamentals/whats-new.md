@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/05/2024
+ms.date: 04/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,34 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of April 22, 2024
+
+### Monitor and troubleshoot
+
+### Remote Help supports full control of a macOS device<!--22985205 -->
+
+Remote Help now supports helpdesk connecting to a user's device and requesting full control of the macOS device.
+For more information, go to:
+
+[Remote Help on macOS](../fundamentals/remote-help-macos.md).
+[Remote Help Web App](../fundamentals/remote-help-webapp.md)
+
+Applies to:
+
+- macOS 12, 13 and 14
+
+## Week of April 15, 2024
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 26740168 -->
+
+The following protected app is now available for Microsoft Intune:
+
+- Atom Edge by Arlanto Apps
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ## Week of April 1, 2024
 
 ### Device management
