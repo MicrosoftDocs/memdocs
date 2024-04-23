@@ -70,21 +70,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
-## Week of April 22, 2024
-
-### Monitor and troubleshoot
-
-### Remote Help supports full control of a macOS device<!--22985205 -->
-
-Remote Help now supports helpdesk connecting to a user's device and requesting full control of the macOS device.
-For more information, go to:
-
-[Remote Help on macOS](../fundamentals/remote-help-macos.md).
-[Remote Help Web App](../fundamentals/remote-help-webapp.md)
-
-Applies to:
-
-- macOS 12, 13 and 14
 
 ## Week of April 22, 2024 (Service release 2404)
 
@@ -186,6 +171,19 @@ For more information on Windows update distribution reports, see [Windows Update
 The M365 remote application diagnostics allows Intune admins to request Intune app protection logs and M365 application logs (where applicable) directly from the Intune console. You can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
 
 For more information, see [Collect diagnostics from an Intune managed device](../remote-actions/collect-diagnostics.md).
+
+#### Remote Help supports full control of a macOS device<!--22985205 -->
+
+Remote Help now supports helpdesk connecting to a user's device and requesting full control of the macOS device.
+
+For more information, see:
+
+- [Remote Help on macOS](../fundamentals/remote-help-macos.md)
+- [Remote Help Web App](../fundamentals/remote-help-webapp.md)
+
+Applies to:
+
+- macOS 12, 13 and 14
 
 ## Week of April 15, 2024
 
