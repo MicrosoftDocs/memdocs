@@ -49,7 +49,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
 
 For cloned scenarios:
 
-- Once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Intune can only support one VM instance at a time, and for a cloning scenario only one instance of a device can be up and managed at a time. For more information about the cloning scenario, see [Create an Azure Virtual Desktop golden image](azure/virtual-desktop/set-up-golden-image).
+- Once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Intune can only support one VM instance at a time, and for a cloning scenario only one instance of a device can be up and managed at a time. For more information about the cloning scenario, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 

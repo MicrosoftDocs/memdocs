@@ -76,7 +76,7 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
 - Microsoft Entra joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Licensing: The appropriate Azure Virtual Desktop and Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, go to [Microsoft Intune licensing](licenses.md).
 
-For cloned scenarios, once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Intune can only support one VM instance at a time, and for a cloning scenario only one instance of a device can be up and managed at a time. For more information about the cloning scenario, see [Create an Azure Virtual Desktop golden image](azure/virtual-desktop/set-up-golden-image).
+For cloned scenarios, once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Intune can only support one VM instance at a time, and for a cloning scenario only one instance of a device can be up and managed at a time. For more information about the cloning scenario, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).
 
 > [!NOTE]
 > If you're joining session hosts to Microsoft Entra Domain Services, you can't manage them using Intune.
