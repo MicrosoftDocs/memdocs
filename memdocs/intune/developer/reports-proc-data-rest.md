@@ -86,7 +86,7 @@ You need the following information to make a REST call using Postman:
 | Access Token URL | This is the URL used to grant the token.      | https://login.microsoftonline.com/common/oauth2/token |
 | Client ID        | You created, and noted this when creating the native app in Azure.   | 4184c61a-e324-4f51-83d7-022b6a81b991 |
 | Client Secret    | You created, and noted this when creating the native app in Azure.  | Ksml3dhDJs+jfK1f8Mwc8  |
-| Scope (Optional) | Blank  | You can leave the field blank.   |
+| Scope (Optional) | You can leave the field blank. <br>Note that some SDKs (such as the [Microsoft Authentication Library (MSAL) for Python](https://learn.microsoft.com/en-us/entra/msal/python/) may need a scope defined with [double slashes](https://learn.microsoft.com/en-us/entra/identity-platform/msal-acquire-cache-tokens#:~:text=Certain%20web%20APIs,slash%20(//).)  (//) | SCOPE = ['https://api.manage.microsoft.com//.default']
 | Grant Type       | The token is an authorization code.       | Authorization code   |
 
 ### OData endpoint
