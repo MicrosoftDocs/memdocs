@@ -11,7 +11,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 4/11/2024
+ms.date: 4/23/2024
 
 # optional metadata
 
@@ -45,8 +45,8 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 ## Prerequisites 
 
 - Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
-- To complete this step, you must:
-  - [Create a user](quickstart-create-user.md).
+- To complete this step, you must:  
+  - [Create a user](../fundamentals/quickstart-create-user.md).  
   - [Create a group](../fundamentals/quickstart-create-group.md).
   - Sign up for the Microsoft Entra ID Free Premium trial.
 
@@ -56,11 +56,11 @@ Automatic MDM enrollment is a premium Microsoft Entra feature. To sign up for a 
 2. Go to **Identity** > **Settings** > **Mobility**.  
 3. Select **Get a free Premium trial to use this feature**. This option gets you the Microsoft Entra ID Free Premium trial.  
 4. Choose the **Enterprise Mobility + Security E5** free trial option.  
-5. Select **Free trial** > **Activate**. It can take a few minutes to activate.## Sign in to the Microsoft Intune admin center
+5. Select **Free trial** > **Activate**. It can take a few minutes to activate.  
 
 ## Sign in to the Microsoft Intune admin center
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.  
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or Intune service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.  
 
 ## Set up automatic enrollment  
 
