@@ -2,7 +2,7 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 11/15/2023
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -25,16 +25,19 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 - [Download the Windows ADK](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
+    > ADK for Windows 11, Version 22H2 and all earlier supported versions of Windows 10 and 11 (Updated September 2023 - version 10.1.25398.1) is required to deploy Windows 10/11 ARM64 operating system deployment.
+    > 
     > Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
-    
+        
     > [!Note]
     > ADK for Windows 11, version 22H2 (updated September 2023): VBScript is not currently working in WinPE. It is expected to be fixed in an upcoming servicing update.
+      
 
 ## Windows ADK versions
 
 The following table lists the versions of the Windows ADK that you can use with different versions of Configuration Manager.
 
-| Windows ADK version            | ConfigMgr 2207| ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309  |
+| Windows ADK version            | ConfigMgr 2211| ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403  |
 |--------------------------------|----------------|----------------|----------------|----------------|
 | **Windows 11**<br>(10.1.22621.1)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
 | **Windows 11**<br>(10.1.22000) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
@@ -49,7 +52,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 ## Support notes
 
-- Configuration Manager only supports x86 and amd64 components of the Windows ADK. It doesn't currently support ARM or ARM64 components.
+- Configuration Manager only supports x86, amd64 and arm64 components of the Windows ADK. 
 
 - Windows Server builds have the same Windows ADK requirement as the associated Windows client version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
 
