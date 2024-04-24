@@ -94,7 +94,9 @@ If necessary, your organization can put a missing, corporate-owned iPhone or iPa
 
 ### App inventory details
 
-On corporate-owned Android devices that have a work profile, your organization can only see the apps installed in the work profile. For all other corporate-owned devices, they see all installed apps. Your organization can see the managed app inventory, which includes work and school apps, on a personal device. There are certain configurations that, when applied, enable them to see more than just the managed app inventory on a personal device. To learn more about the information your organization collects, contact your IT administrator.   
+On corporate-owned Android devices that have a work profile, your organization can only see the apps installed in the work profile. For all other corporate-owned devices, they see all installed apps. 
+
+Your organization can see the managed app inventory, which includes work and school apps, on a personal device. Some configurations enable organizations to see more than just the managed app inventory on a personal device. To learn more about the information your organization collects, contact your IT admin.    
 
 ### App permissions  
 *Applies to devices running Android 11 and earlier*  
