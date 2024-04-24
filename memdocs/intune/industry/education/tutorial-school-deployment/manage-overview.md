@@ -46,7 +46,7 @@ To learn more about remote actions in Intune for Education, see [Remote actions]
 
 With devices managed by Intune, you can remotely assist students and teachers that are having issues with their devices.
 
-For more information, see [Remote assistance for managed devices - Intune for Education][EDU-2].
+For more information, see [Remote assistance for managed devices][EDU-2].
 
 ## Device inventory and reporting
 
