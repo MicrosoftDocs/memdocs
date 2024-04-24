@@ -93,7 +93,7 @@ Your organization can view the location of a lost corporate-owned device. They c
 If necessary, your organization can put a missing, corporate-owned iPhone or iPad into *managed lost mode*. This mode lets them request the location of the device. When someone requests access to the device location, the device locks and a message appears on the lock screen to explain what's happening. For information about *supervision*, which is another type of configuration for corporate-owned Apple devices, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
 
 ### App inventory details
-Your organization can only see managed app inventory, which includes work and school apps, on a personal device. They can see all installed apps on a corporate-owned device. However, on corporate-owned Android devices with a work profile, your organization can only see the apps installed in the work profile.  
+Your organization can see managed app inventory, which includes work and school apps, on a personal device. On corporate-owned Android devices that have a work profile, you organization can only see the apps installed in the work profile. For all other corporate-owned devices, they see all installed apps.     
 
 ### App permissions  
 *Applies to devices running Android 11 and earlier*  
@@ -105,7 +105,7 @@ Some information about network connections for Android devices may be available 
 
 ### Additional device details
 
-Your organization can query these details about a Windows device configured by them:  
+Your organization can query these details about a corporate-owned Windows device.  
 
  - Hardware and operating system environment information  
 
