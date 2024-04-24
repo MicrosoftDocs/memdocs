@@ -156,7 +156,7 @@ Before you begin to add and assign apps, consider the following points:
 - Some apps or items that you assign might depend on built-in iOS/iPadOS apps. For example, if you assign a book in the iOS/iPadOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
 - There are limits to the number of apps you can add to Intune.
   - For trial Intune tenants, you can create 500 apps per tenant.
-  - For licensed Intune tenants, you can create 10,000 apps per tenant. Note that synced iOS VPP apps and Android Enterprise apps are be counted towards this limit.
+  - For licensed Intune tenants, you can create 10,000 apps per tenant. Note that synced Apple Volume Purchase Program (VPP) apps and Android Enterprise apps are not counted towards this limit.
 
 > [!IMPORTANT]
 > If you change the name of the app through Intune after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
