@@ -49,7 +49,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
 
 For cloned scenarios:
 
-- Once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Private certificates including MDM certificates should not be cloned to another VM. An MDM certificate is the identity for the VM to communicate with Intune and we do not support multiple VMs using the same identity. So, you must ensure that private certificates are not cloned to multiple VMs. For more information, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).
+- Once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Private certificates including MDM certificates shouldn't be cloned to another VM. An MDM certificate is the identity for the VM to communicate with Intune and we don't support multiple VMs using the same identity. So, you must ensure that private certificates aren't cloned to multiple VMs. For more information, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
@@ -96,8 +96,8 @@ The following table provides a set of known issues along with more information a
 
 | Issue | More   information |
 |---|---|
-| Cannot auto-enroll if tenant has more than one MDM provider | This issue will be fixed in the future. |
-| Modern apps, such as Universal Windows Platform (UWP) apps, are not working correctly if [FSLogix](/fslogix/overview) is configured | Using FSLogix and Modern apps could cause compatibility issues. We recommend that you don’t configure Modern apps when FSLogix is configured.|
+| Can't auto-enroll if tenant has more than one MDM provider | This issue will be fixed in the future. |
+| Modern apps, such as Universal Windows Platform (UWP) apps, aren't working correctly if [FSLogix](/fslogix/overview) is configured | Using FSLogix and Modern apps could cause compatibility issues. We recommend that you don’t configure Modern apps when FSLogix is configured.|
 
 ## Next steps
 

@@ -384,7 +384,7 @@ Both options use Automatic enrollment. With Automatic enrollment, users sign in 
 
 Configuration Manager can randomize the enrollment, so enrollment might not occur immediately. When enrollment completes, it's ready to receive the policies and profiles you create.
 
-## Related content
+## Related articles
 
 - [MAM without enrollment](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
