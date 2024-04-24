@@ -141,6 +141,12 @@ For more information on the subject of how the Windows Firewall CSP uses Atomic 
 
 For troubleshooting guidance, see the Intune support blog [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452).
 
+#### CrowdStrike – New mobile threat defense partner<!-- 16882021 -->
+
+We’ve added [CrowdStrike Falcon](../protect/crowdstrike-falcon-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the CrowdStrike connector in Intune, you can control mobile device access to corporate resources using Conditional Access that's based on risk assessment in your compliance policies.
+
+With the Intune 2404 service release, the CrowdStrike connector is now available in the admin center. However, it isn't useable until CrowdStrike publishes the required App Configuration profile details necessary to support iOS and Android devices, which is expected sometime after second week of May.
+
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 26825160, 26954999, 26891466, 27184602 -->
