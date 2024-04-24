@@ -77,11 +77,11 @@ Windows Autopilot is a collection of technologies you can use to simplify the se
 
 #### [Intune](#tab/intune)
 
-Refer here for more information on how to do that in the Intune Admin Console, see [Windows Autopilot](/autopilot)
+For instructions on how to configure Autopilot, see [Windows Autopilot](/autopilot)
 
 #### [Intune for Education](#tab/intune-for-education)
 
-Refer here for more information on how to do that in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup)
+For instructions on how to configure Autopilot in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup)
 
 See the following table for more best practices.  
 
