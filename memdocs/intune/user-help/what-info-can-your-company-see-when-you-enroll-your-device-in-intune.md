@@ -69,12 +69,6 @@ Your organization can always see:
 - Device manufacturer, such as *Microsoft*
 - Operating system and version, such as *iOS 12.0.1*
 - Device IMEI  
- 
-### What is a managed app? 
-An app is considered a **managed app** when it's installed in one of the following ways:  
-
- * You install it from the Company Portal app after your organization makes it available to you. 
- * Your organization requires you to have a certain app for work and school and automatically installs it on the device upon enrollment.  
 
 ## Things your organization might see  
 
@@ -96,7 +90,12 @@ If necessary, your organization can put a missing, corporate-owned iPhone or iPa
 
 On corporate-owned Android devices that have a work profile, your organization can only see the apps installed in the work profile. For all other corporate-owned devices, they see all installed apps. 
 
-Your organization can see the managed app inventory, which includes work and school apps, on a personal device. Some configurations enable organizations to see more than just the managed app inventory on a personal device. To learn more about the information your organization collects, contact your IT admin.    
+On personal devices, your organization can see the managed app inventory, which includes work and school apps. Some configurations enable organizations to see more than just the managed app inventory on a personal device. To learn more about the information your organization collects, contact your IT admin.    
+
+>[!NOTE]
+> An app is considered a *managed app* when it's installed in one of the following ways:
+> * You install it from the Company Portal app after your organization makes it available to you. 
+> * Your organization requires you to have a certain app for work and school and automatically installs it on the device upon enrollment.  
 
 ### App permissions  
 *Applies to devices running Android 11 and earlier*  
