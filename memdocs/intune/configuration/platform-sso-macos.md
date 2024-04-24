@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 04/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -283,6 +283,9 @@ For **existing devices** already enrolled in Intune, assign the Platform SSO pol
 When the device receives the policy, there's a **Registration required** notification that shows in the Notification Center.
 
 - End users select this notification, sign in to the Microsoft Entra ID plug-in with their organization account, and complete multifactor authentication (MFA).
+
+  MFA is a feature of Microsoft Entra. Make sure MFA is enabled in your tenant. For more informaiton, including any additional app requirements, go to [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
+
 - When they successfully authenticate, the device is Microsoft Entra-Joined to the organization and the workplace join (WPJ) certificate is bound to the device.
 
 For more information about the different end-user experiences for device registration, go to [Join a Mac device with Microsoft Entra ID](/entra/identity/devices/device-join-microsoft-entra-company-portal).
@@ -297,15 +300,15 @@ To troubleshoot Platform SSO, go to [macOS Platform single sign-on known issues 
 
 ## Step 7 - Unassign any existing SSO app extension profiles
 
-After you confirm that your settings catalog policy is working, then we recommend you unassign any existing [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md) profiles created using the Intune Device Features template.
+After you confirm that your settings catalog policy is working, unassign any existing [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md) profiles created using the Intune Device Features template.
 
-If you keep both policies, conflicts can occur. When testing is complete, unassign any previous SSO app extension profiles created using the Device Features template.
+If you keep both policies, conflicts can occur.
 
 ## More Platform SSO settings you can configure
 
 When you create the settings catalog profile in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune), there are more optional settings that you can configure.
 
-The following settings let you customize the end-user experience and give more granular control on user privileges.
+The following settings let you customize the end-user experience and give more granular control on user privileges. Any undocumented Platform SSO settings aren't supported.
 
 | Platform SSO settings | Possible values  | Usage |
 | --- | --- | --- |
@@ -313,9 +316,6 @@ The following settings let you customize the end-user experience and give more g
 | **Enable Create User At Login** | **Enable** or **Disable**. | Allow any organizational user to sign in to the device using their Microsoft Entra credentials.  |
 | **New User Authorization Mode** | **Standard**, **Admin**, or **Groups** | One-time permissions the user has at sign-in when the account is created using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 | **User Authorization Mode** | **Standard**, **Admin**, or **Groups** | Persistent permissions the user has at sign-in each time the user authenticates using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
-
-> [!NOTE]
-> Any undocumented Platform SSO settings aren't supported.
 
 ## Common errors
 
@@ -326,9 +326,11 @@ When you configure Platform SSO, you might see the following errors:
   This error can occur if:
   
   - There's a required setting that isn't configured in the settings catalog profile.
-  - There's a setting in the settings catalog profile that you configured that's not applicable for the redirect type payload.
+  - There's a setting in the settings catalog profile that you configured that's not applicable for the [redirect type payload](use-enterprise-sso-plug-in-ios-ipados-macos.md#sso-app-extension).
 
-  The authentication settings you configure in the settings catalog profile are different for macOS 13.x and 14.x devices. If you have macOS 13 and macOS 14 devices in your environment, then you must create one settings catalog policy, and configure their respective authentication settings. This information is documented in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune) (in this article).
+  The authentication settings you configure in the settings catalog profile are different for macOS 13.x and 14.x devices.
+
+  If you have macOS 13 and macOS 14 devices in your environment, then you must create one settings catalog policy, and configure their respective authentication settings in the same policy. This information is documented in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune) (in this article).
 
 - `10002: multiple SSOe payloads configured.`
 
