@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 04/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,7 +58,7 @@ This feature applies to:
 
 - macOS
 
-The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **Platform SSO** and the **SSO app extension**. This section focuses on **Platform SSO**.
+The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **Platform SSO** and the [**SSO app extension**](#sso-app-extension). This section focuses on **Platform SSO**.
 
 On macOS devices, users normally sign in with a local account. Then, they sign into apps and websites with their Microsoft Entra ID.
 
@@ -66,8 +66,8 @@ With Platform SSO:
 
 - Organizations can:
 
-  - Choose the authentication method that meets their business need, including passwordless authentication, Microsoft Entra user account, or smart card authentication.
-  - Configure the SSO app extension settings, as the SSO app extension is part of Platform SSO. Specifically, you:
+  - Choose the authentication method that meets your business need, including Secure Enclave passwordless passkey authentication, Microsoft Entra user account & password, or smart card authentication.
+  - Use the SSO app extension, as the SSO app extension is part of Platform SSO. Specifically, you:
 
     - Use the SSO app extension to sign into apps and websites with Microsoft Entra ID.
     - Use Platform SSO to enhance your SSO configuration. You can configure different authentication methods, create new organizational users at sign in, and assign authorization modes for users.
@@ -103,7 +103,7 @@ This feature applies to:
 - iOS/iPadOS
 - macOS
 
-The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **Platform SSO** and the **SSO app extension**. This section focuses on the **SSO app extension**.
+The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - [**Platform SSO**](#platform-sso) and the **SSO app extension**. This section focuses on the **SSO app extension**.
 
 The SSO app extension provides SSO to apps, websites, and accounts that use Microsoft Entra ID for authentication, including:
 
