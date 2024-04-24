@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/21/2024
+ms.date: 04/24/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,6 +34,268 @@ ms.collection:
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 <!-- ########################## -->
+
+## Week of October 23, 2023 (Service release 2310)
+
+### App management
+
+#### Update for users of Android Company Portal app<!-- 25109006   -->
+
+If users launch a version of the Android Company Portal app below version 5.0.5333.0 (released November 2021), they'll see a prompt encouraging them to update their Android Company Portal app. If a user with an older Android Company Portal version attempts a new device registration using a recent version of the Authenticator app, the process will likely fail. To resolve this behavior, update the Android Company Portal app.
+
+#### Minimum SDK version warning for iOS devices<!-- 9410239  -->
+
+The **Min SDK version** for the iOS Conditional Launch setting on iOS devices now includes a **warn** action. This action warns end users if the min SDK version requirement isn't met.
+
+For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
+
+#### Minimum OS for Apple LOB and store apps<!-- 24623225  -->
+
+You can configure the minimum operating system to be the latest Apple OS releases for both Apple line-of-business apps and iOS/iPadOS store apps. You can set the minimum operating system for Apple apps as follows:
+
+- iOS/iPadOS 17.0 for iOS/iPadOS line-of-business apps
+- macOS 14.0 for macOS line-of-business apps
+- iOS/iPadOS 17.0 for iOS/iPadOS store apps
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+#### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138   -->
+
+You can install and uninstall mandatory LOB apps on AOSP devices by using the **Required** and **Uninstall** group assignments.
+
+Applies to:
+
+- Android
+
+To learn more about managing LOB apps, see [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md).
+
+#### Configuration scripts for unmanaged macOS PKG apps<!-- 17745891  -->
+
+You can now configure pre-install and post-install scripts in unmanaged macOS PKG apps. This feature gives you greater flexibility over custom PKG installers. Configuring these scripts is optional and requires the Intune agent for macOS devices v2309.007 or higher.
+
+For more information about adding scripts to unmanaged macOS PKG apps, see [Add an unmanaged macOS PKG app](../apps/macos-unmanaged-pkg.md).
+
+### Device configuration
+
+#### FSLogix settings are available in the Settings Catalog and Administrative Templates<!-- 10946920  -->
+
+The [FSLogix settings](/fslogix/reference-configuration-settings) are available in the Settings Catalog and in Administrative Templates (ADMX) for you to configure.
+
+Previously, to configure FSLogix settings on Windows devices, you imported them using the ADMX import feature in Intune.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For more information on these features, see:
+
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+- [What is FSLogix?](/fslogix/overview-what-is-fslogix)
+
+#### Use delegated scopes in your Managed Google Play apps that configure enhanced permissions on Android Enterprise devices<!-- 14029609  -->
+
+In your Managed Google Play apps, you can give apps enhanced permissions using delegated scopes.
+
+When your apps include delegated scopes, you can configure the following settings in a device configuration profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**):
+
+- **Allow other apps to install and manage certificates**: Admins can select multiple apps for this permission. The selected apps are granted access to certificate installation and management.
+- **Allow this app to access Android security logs**: Admins can select one app for this permission. The selected app is granted access to security logs.
+- **Allow this app to access Android network activity logs**: Admins can select one app for this permission. The selected app is granted access to network activity logs.
+
+To use these settings, your Managed Google Play app must use delegated scopes.
+
+Applies to:
+
+- Android Enterprise fully managed devices
+- Android Enterprise dedicated devices
+- Android Enterprise corporate-owned devices with a work profile
+
+For more information on this feature, see:
+
+- [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations)
+- [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune > Applications](../configuration/device-restrictions-android-for-work.md#applications)
+
+#### Samsung ended support for kiosk mode on Android device administrator (DA) devices<!-- 24810356  -->
+
+Samsung marked the Samsung Knox kiosk APIs used on Android device administrator as deprecated in Knox 3.7 (Android 11).
+
+Though the functionality might continue to work, there's no guarantee that it will continue working. Samsung won't fix bugs that might arise. For more information on Samsung support for deprecated APIs, see [What kind of support is offered after an API is deprecated?](https://docs.samsungknox.com/dev/knox-sdk/faqs/general/deprecated-api-support-change.htm) (opens Samsung's web site).
+
+Instead, you can manage kiosk devices with Intune using [dedicated device management](../enrollment/android-kiosk-enroll.md).
+
+Applies to:
+
+- Android device administrator (DA)
+
+#### Import and export settings catalog policies<!-- 3470151  -->
+
+The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration** > **Create** > **New Policy** > Select your **platform** > For **Profile**, select **Settings catalog**).
+
+The settings catalog policies can be imported and exported:
+
+- To export an existing policy, select the profile > select the ellipsis > **Export JSON**.
+- To import a previously exported settings catalog policy, select **Create** > **Import policy** > select the previously exported JSON file.
+
+For more information about the settings catalog, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+> [!NOTE]
+>
+> This feature is continuing to roll out. It may be a couple of weeks before it's available in your tenant.
+
+#### New setting to block users from using the same password to unlock the device and access the work profile on Android Enterprise personally owned devices with a work profile<!-- 6167371  -->
+
+On Android Enterprise personally owned devices with a work profile, users can use the same password to unlock the device and access the work profile.
+
+There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
+
+- **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile. When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
+
+This setting is optional and doesn't impact existing configuration profiles.
+
+Currently, if the work profile password doesn't meet the policy requirements, then device users see a notification. The device isn't marked as non-compliant. A separate compliance policy for the work profile is being created and will be available in a future release.
+
+Applies to:
+
+- Android Enterprise personally owned devices with a work profile (BYOD)
+
+For a list of settings you can configure on personally owned devices with a work profile, see [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
+
+#### New settings available in the macOS settings catalog<!-- 24950434  -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- System Policy App Data
+
+**Restrictions**:
+
+- Force On Device Only Dictation
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Device enrollment
+
+#### Web based device enrollment with JIT registration for personal iOS/iPadOS devices<!-- 15412485  -->
+
+Intune supports web-based device enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the Company Portal app. Also, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps.
+
+For more information, see [Set up web based device enrollment for iOS](../enrollment/web-based-device-enrollment-ios.md).
+
+### Device management
+
+#### Updates to the Intune add-ons page<!--17395941 -->
+
+The Intune add-ons page under **Tenant administration** includes **Your add-ons**, **All add-ons**, and **Capabilities**. It provides an enhanced view into your trial or purchased licenses, the add-on capabilities you're licensed to use in your tenant, and support for new billing experiences in Microsoft admin center.
+
+For more information, see [Use Intune Suite add-ons capabilities](../fundamentals/intune-add-ons.md).
+
+#### Remote Help for Android is now Generally available<!--17675897 -->
+
+Remote Help is generally available for Android Enterprise Dedicated devices from Zebra and Samsung.
+
+With Remote Help, IT Pros can remotely view the device screen and take full control in both attended and unattended scenarios, to diagnose and resolve issues quickly and efficiently.
+
+Applies to:
+
+- Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
+
+For more information, see [Remote Help on Android](../fundamentals/remote-help-android.md).
+
+### Device security
+
+#### Configure declarative software updates and passcode policies for Apple devices in the Settings Catalog<!-- 24989083  -->
+
+You can manage software updates and passcode using Apple's declarative device management (DDM) configuration using the settings catalog (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative device management**).
+
+For more information about DDM, see [Apple's declarative device management (DDM)](https://developer.apple.com/documentation/devicemanagement/leveraging_the_declarative_management_data_model_to_scale_devices) (opens Apple's website).
+
+DDM allows you to install a specific update by an enforced deadline. The autonomous nature of DDM provides an improved user experience as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
+
+In the settings catalog, the following declarative software update settings are available at **Declarative device management > Software Update**:
+
+- **Details URL**: The web page URL that shows the update details. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
+- **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+- **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
+- **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
+
+For more information on this feature, see [Manage software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+
+In the settings catalog, the following declarative passcode settings are available at **Declarative device management > Passcode**:
+
+- **Automatic Device Lock**: Enter the maximum time period that a user can be idle before the system automatically locks the device.
+- **Maximum Grace Period**: Enter the maximum time period that a user can unlock the device without a passcode.
+- **Maximum Number of Failed Attempts**: Enter the maximum number of wrong passcode attempts before:
+  - iOS/iPadOS wipes the device
+  - macOS locks the device
+- **Minimum Passcode Length**: Enter the minimum number of characters a passcode must have.
+- **Passcode Reuse Limit**: Enter the number of previously used passcodes that can't be used.
+- **Require Complex Passcode**: When set to **True**, a complex passcode is required. A complex passcode doesn't have repeated characters, and doesn't have increasing or decreasing characters, like `123` or `CBA`.
+- **Require Passcode on Device**: When set to **True**, the user must set a passcode to access the device. If you don't set other passcode restrictions, then there aren't any requirements about the length or quality of the passcode.
+
+Applies to:
+
+- iOS/iPadOS 17.0 and later
+- macOS 14.0 and later
+
+For information about the settings catalog, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+#### Mvision Mobile is now Trellix Mobile Security<!-- 16208061 -->
+
+The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile** has transitioned to **Trellix Mobile Security**. With this change, we've updated our documentation and the Intune admin center UI. For example, the *Mvision Mobile connector* is now *Trellix Mobile Security*. Existing installs of the Mvision Mobile connector also update to Trellix Mobile Security.
+
+If you have questions about this change, reach out to your Trellix Mobile Security representative.
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 24920511, 24950232  -->
+
+The following protected app is now available for Microsoft Intune:
+
+- BuddyBoard by Brother Industries, LTD
+- Microsoft Loop by Microsoft Corporation
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+#### Updated reports for Policy compliance and Setting compliance are now generally available<!-- 24299948, 24299945  -->
+
+The following device compliance reports are out of public preview and are now generally available:
+
+- [Policy compliance](../fundamentals/reports.md#policy-compliance-report-organizational)
+- [Setting compliance](../fundamentals/reports.md#settings-compliance--organizational)
+
+With this move to general availability, the older versions of both reports have been retired from the Intune admin center and are no longer available.
+
+For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
+
+### Tenant administration
+
+#### Intune admin center home page update<!-- 16950040  -->
+
+The Intune admin center home page has been redesigned with a fresh new look and more dynamic content. The **Status** section has been simplified. You can explore Intune related capabilities in the **Spotlight** section. The **Get more out of Intune** section provides links to the Intune community and blog, and Intune customer success. Also, the **Documentation and training** section provides links to **What's New in Intune**, **Feature in development**, and more training. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home**.
+
+## Week of October 16, 2023
+
+### Tenant administration
+
+#### `endpoint.microsoft.com` URL redirects to `intune.microsoft.com`<!-- 25169925 -->
+
+Previously, it was announced that the Microsoft Intune admin center has a new URL (`https://intune.microsoft.com`).
+
+The `https://endpoint.microsoft.com` URL now redirects to `https://intune.microsoft.com`.
 
 ## Week of September 18, 2023 (Service release 2309)
 
