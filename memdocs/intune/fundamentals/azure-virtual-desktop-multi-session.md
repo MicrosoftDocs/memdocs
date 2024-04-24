@@ -5,7 +5,7 @@ title: Using Azure Virtual Desktop multi-session with Microsoft Intune
 titleSuffix: 
 description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Intune
 keywords:
-author: smbhardwaj  
+author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
 ms.date: 07/21/2023
