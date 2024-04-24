@@ -81,7 +81,7 @@ An app is considered a **managed app** when it's installed in one of the followi
 Your organization can see and access certain aspects of your device when assisting with or troubleshooting device setup. This section describes the type of information available.   
 
 ### Phone number  
-Your organization can see the full phone number of all corporate-owned devices, except for Android devices with a work profile, which only show the last 4 digits. They can't see the last four digits of a personal device's phone number.   
+Your organization can see the full phone number of all corporate-owned devices, except for Android devices with a work profile, which only show the last 4 digits. They can see the last four digits of a personal device's phone number.   
 
 ### Device storage space   
 If you have trouble installing a required app, your support person may look at your storage size to find out if low space is the cause.   
@@ -93,7 +93,8 @@ Your organization can view the location of a lost corporate-owned device. They c
 If necessary, your organization can put a missing, corporate-owned iPhone or iPad into *managed lost mode*. This mode lets them request the location of the device. When someone requests access to the device location, the device locks and a message appears on the lock screen to explain what's happening. For information about *supervision*, which is another type of configuration for corporate-owned Apple devices, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
 
 ### App inventory details
-Your organization can see managed app inventory, which includes work and school apps, on a personal device. On corporate-owned Android devices that have a work profile, you organization can only see the apps installed in the work profile. For all other corporate-owned devices, they see all installed apps.     
+
+On corporate-owned Android devices that have a work profile, your organization can only see the apps installed in the work profile. For all other corporate-owned devices, they see all installed apps. Your organization can see the managed app inventory, which includes work and school apps, on a personal device. There are certain configurations that, when applied, enable them to see more than just the managed app inventory on a personal device. To learn more about the information your organization collects, contact your IT administrator.   
 
 ### App permissions  
 *Applies to devices running Android 11 and earlier*  
