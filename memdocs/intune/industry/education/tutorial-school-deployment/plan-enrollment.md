@@ -45,6 +45,9 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 - **Bulk enrollment with provisioning packages.** Provisioning packages are files that can be used to set up Windows devices, and can include information to connect to Wi-Fi networks and to join a Microsoft Entra tenant. Provisioning packages can be created using either **Set Up School PCs** or **Windows Configuration Designer** applications. These files can be used from the school device's desktop, or by saving it to a USB flash drive and distributing it to other devices during the out-of-box-experience (OOBE)
 - **Automatic Intune enrollment with Windows Autopilot.** Windows Autopilot is a collection of cloud services to configure the out-of-box experience, enabling light-touch or zero-touch deployment scenarios. With this option, you can pre-provision Windows Autopilot-registered devices with required apps and settings so that they're nearly ready for school use when students receive them. Students just have to connect to Wi-Fi and complete the remaining setup steps.
 
+> [!TIP]
+> For details about bring your own device (BYOD) or enrollment with co-management, see [Enrollment guide: Enroll Windows client devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-windows).
+
 ### Provisioning package overview
 A provisioning package (.ppkg) is a file that contains configuration settings, and is used to quickly and efficiently configure Windows client devices without installing a new image. This method ensures that school devices have a standard set of apps and settings when students start using them. For more information, see [Provisioning packages overview](/windows/configuration/provisioning-packages/provisioning-packages).  
 
@@ -82,9 +85,6 @@ See the following table for more best practices.
 |You want to provision more than one device at a time. | Make sure you have a reliable internet connection at your enrollment site while using Windows Autopilot, especially if you're enrolling more than one device at the same time. |
 |You want to pre-provision devices. | Make sure you have ethernet connectivity, a prerequisite for Autopilot pre-provisioned deployments. For more information about prerequisites, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites).  |
 
-> [!CAUTION]
-> This document is actually quite good.. do we replicate it... or refer to it? [Enrollment guide: Enroll Windows client devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-windows)
-
 ::: zone-end
 
 ::: zone pivot="ios"
@@ -95,8 +95,8 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 - **Automated Device Enrollment.** Automated Device Enrollment applies your organization's settings from Apple School Manager and enrolls devices without IT needing to physically interact with the device. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Devices can be configured with user affinity for use with one user or no user affinity for shared device scenarios.
 - **Bulk enrollment with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when devices aren't registered in Apple School Manager (for example - donated devices) or IT doesn't have physical access to the devices.
 
-> [!CAUTION]
-> This document is actually quite good.. do we replicate it... or refer to it? [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados)
+> [!TIP]
+> For a more in depth guide about enrollment and choosing the right option, see [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados)
 
 ::: zone-end
 
@@ -130,7 +130,7 @@ The following table provides more information about the features supported by ea
 |You want to allow students and teachers to provision devices.|✔️|✔️|❌|
 |Devices are user-less or shared.|❌|✔️|✔️|
 |You want a partner to enroll devices on your behalf.|❌|✔️|✔️|
-|You don't have or can't use Apple School Manager.|✔️||✔️|
+|You don't have or can't use Apple School Manager.|✔️|❌|✔️|
 |You want to add apps.|❌|❌|✔️|
 |You want devices to be ready for sign-in and use when teachers and students receive them|❌|✔️|✔️|
 

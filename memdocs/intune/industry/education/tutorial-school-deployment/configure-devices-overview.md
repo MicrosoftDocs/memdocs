@@ -20,7 +20,6 @@ Microsoft Intune uses Microsoft Entra groups to assign policies and applications
 > [!div class="checklist"]
 >In this section you will:
 >
-> - Create groups
 > - Create and assign policies to groups
 > - Create and assign applications to groups
 
@@ -30,9 +29,3 @@ With the groups created, you can configure policies and applications to deploy t
 
 > [!div class="nextstepaction"]
 > [Next: Configure policies >](configure-device-settings.md)
-
-<!-- Reference links in article -->
-
-[EDU-1]: /intune-education/create-groups
-[EDU-2]: /intune-education/edit-groups-intune-for-edu
-[EDU-3]: /intune-education/edit-groups-intune-for-edu#edit-dynamic-group-rules
