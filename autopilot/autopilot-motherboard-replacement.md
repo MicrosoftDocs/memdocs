@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/17/2024
+ms.date: 04/19/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -26,7 +26,7 @@ Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requ
 
 If a motherboard is replaced on an Autopilot registered device, then the following process is recommended:
 
-1. [Deregister the device from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). 
+1. [Deregister the device from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program).
 
 1. [Replace the motherboard](#replace-the-motherboard).
 
