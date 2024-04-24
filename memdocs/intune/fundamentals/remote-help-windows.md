@@ -333,6 +333,8 @@ Currently, Remote Help needs access to the Remote Assistance app, Microsoft Intu
 
 If these apps don't appear by default in the app selection area of the Conditional Access policy, see the following section for instructions on configuration.
 
+The following table shows you the App ID of the 2 apps needed.
+
 |Display Name| App ID|
 |:-----------------------------------|:----------------------------:|
 |00000002-0000-0000-c000-000000000000|Windows Azure Active Directory|
