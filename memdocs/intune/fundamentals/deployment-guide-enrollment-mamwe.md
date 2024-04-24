@@ -97,7 +97,7 @@ The specific tasks depend on how you tell users to install the apps.
 
 - Some platforms can require specific apps to install other apps, such as Outlook or Teams. For example, on iOS devices, users must install a broker app, such as the Microsoft Authenticator app. On Android devices, users must install the Company Portal app.
 
-## Related content
+## Related articles
 
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
