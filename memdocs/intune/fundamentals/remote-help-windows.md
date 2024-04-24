@@ -327,13 +327,13 @@ When setting a Conditional Access policy for apps Office 365 and Office 365 Shar
 Currently, Remote Help needs access to the Remote Assistance app, Microsoft Intune app, Windows Azure Active Directory app, and the Microsoft Command Device Graph Service. To use Remote Help, you must allow the following resources, or the app will block the user as it is unable to support the feature set it is designed for. 
 
 1. In your Conditional Access policy,
- - Exclude the Remote Assistance app by browsing to it. Remote Assistance allows connections to be made through the Remote Help app. 
- - Exclude Microsoft Intune. Microsoft Intune is needed to perform RBAC checks to determine if the helper has permissions to assist the sharer. 
- - Exclude the Windows Azure Active Directory and Microsoft Command Device Graph Service apps. Windows Azure Active Directory grants Remote Help the ability to read organizational data like users, groups, management chain to support showing the user profile information as part of the information shown to the helper and sharer such as profile picture, name, title, etc. Microsoft Command Device Graph Service is needed to support the ability to confirm Intune enrollment and check compliance.
+  - exclude the Remote Assistance app by browsing to it. Remote Assistance allows connections to be made through the Remote Help app. 
+  - exclude Microsoft Intune. Microsoft Intune is needed to perform RBAC checks to determine if the helper has permissions to assist the sharer. 
+  - exclude the Windows Azure Active Directory and Microsoft Command Device Graph Service apps. Windows Azure Active Directory grants Remote Help the ability to read organizational data like users, groups, management chain to support showing the user profile information as part of the information shown to the helper and sharer such as profile picture, name, title, etc. Microsoft Command Device Graph Service is needed to support the ability to confirm Intune enrollment and check compliance.
 
-If these apps don't appear by default in the app selection area of the Conditional Access policy, see the following section for instructions on configuration.
+If these apps don't appear by default in the app selection area of the Conditional Access policy, see this section for instructions on configuration.
 
-The following table shows you the App ID of the 2 apps needed.
+The following table shows you the App ID of the 2 apps needed:
 
 |Display Name| App ID|
 |:-----------------------------------|:----------------------------:|
@@ -351,7 +351,8 @@ If these applications are not found in the tenant, then the admin must create th
 > New-AzureADServicePrincipal -AppId 00000002-0000-0000-c000-000000000000
 > New-AzureADServicePrincipal -AppId 62060984-07ca-4b01-802e-d9c0e90718d8
 ```
-After these Service Principals are created, these applications need to be excluded, which can be done by creating an attribute-value and using the app filters described in the documentation [here.](/entra/identity/conditional-access/concept-filter-for-applications) You can learn more information about these scopes in this document [here.](/graph/permissions-reference)
+After these Service Principals are created, these applications need to be excluded, which can be done by creating an attribute-value and using the app filters described in the documentation [here.](/entra/identity/conditional-access/concept-filter-for-applications) 
+You can learn more about these scopes [here.](/graph/permissions-reference)
 
 
 ## Languages Supported
