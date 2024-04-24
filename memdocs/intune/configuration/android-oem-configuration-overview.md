@@ -236,6 +236,7 @@ Intune supports the following OEMConfig apps:
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
 | Elo | com.elotouch.oemconfig | [Elo OEMConfig Configurations](https://www.elotouch.com/oemconfig-configurations) |
 | Getac | com.getac.app.getacoemconfig | |
+| Handheld | com.handheldgroup.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | Honeywell - Scanpal EDA | com.honeywell.oemconfig.scanpal | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 |
@@ -250,6 +251,7 @@ Intune supports the following OEMConfig apps:
 | Motorola Solutions | com.motorolasolutions.lexoemconfig | |
 | Motorola Mobility | com.motorola.oemconfig.rel | [Moto OEMConfig Guide](https://motorola-global-portal.custhelp.com/app/answers/prod_answer_detail/a_id/160503 ) |
 | Panasonic | com.panasonic.mobile.oemconfig | |
+| Pepperl+Fuchs SE | com.ecom.econfig.smart0x | |
 | Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
 | Seuic | com.seuic.seuicoemconfig | | 
