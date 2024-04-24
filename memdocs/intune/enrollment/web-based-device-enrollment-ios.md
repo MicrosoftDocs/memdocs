@@ -91,7 +91,7 @@ Alternatively, you can provide employees and students with a URL that opens the 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 
 >[!IMPORTANT]
-> Safari browser is the only supported browser for this enrollment. If a user has the defulat browser to anything other than Safari, the user will have to copy the link or initiate teh enrollment from Safari browser. Now, Safari is only needed to download the profile and finish the enrollment. once completed users can contineu to use their prefered browser.
+> Safari browser is the only supported browser for this type of enrollment, and is needed to download the management profile and complete enrollment. If a user's default browser is anything other than Safari, they will need to copy the enrollment link and paste it into a Safari browser to initiate enrollment. After they complete enrollment, users can return to their preferred browser.  
 
 1. Open Safari and sign in to the Company Portal website with your work or school account using one of the following links:
    *  https://portal.manage.microsoft.com/conditionalaccess/enrollment  
