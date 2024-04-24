@@ -46,7 +46,7 @@ This restriction means:
   - Windows Autopilot and Commercial OOBE aren't supported.
   - Enrollment Status Page isn't supported.
 
-- For cloned scenarios, once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Intune can only support one VM instance at a time, and for a cloning scenario only one instance of a device can be up and managed at a time. For more information about the cloning scenario, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).  
+- For cloned scenarios, once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Private certificates including MDM certificates should not be cloned to another VM. An MDM certificate is the identity for the VM to communicate with Intune and we do not support multiple VMs using the same identity. So, you must ensure that private certificates are not cloned to multiple VMs. For more information, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).  
 
 ## Configuration
 
