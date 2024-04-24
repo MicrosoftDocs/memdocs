@@ -81,7 +81,7 @@ An app is considered a **managed app** when it's installed in one of the followi
 Your organization can see and access certain aspects of your device when assisting with or troubleshooting device setup. This section describes the type of information available.   
 
 ### Phone number  
-Your organization can see the full phone number of all corporate-owned devices, except for Android devices with a work profile, which only show the last 4 digits. They can see the last four digits of a personal device's phone number.   
+Your organization can see the full phone number of all corporate-owned devices, except for Android devices with a work profile, which only show the last four digits. They can see the last four digits of a personal device's phone number.   
 
 ### Device storage space   
 If you have trouble installing a required app, your support person may look at your storage size to find out if low space is the cause.   
