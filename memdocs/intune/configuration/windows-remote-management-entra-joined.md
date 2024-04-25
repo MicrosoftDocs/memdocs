@@ -1,13 +1,14 @@
 ---
 # required metadata
 
-title: [ARTICLE TITLE | SERVICE NAME]
+title: Windows Remote Management on Entra ID joined devices
 description: This article describes how to enable and configure the WinRM service on clients that are Entra ID joined only.
-author: [GITHUB USERNAME]
+author: niklasrast
 manager: [ALIAS]
-ms.date: 04/28/2016
+ms.date: 04/25/2024
 ms.topic: reference
-ms.service: winrm
+ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 
 # optional metadata
@@ -24,7 +25,7 @@ ms.localizationpriority: medium
 
 # Windows Remote Management on Entra ID joined devices
 
-Windows Remote Management can be used to manage Windows devices remotely from PowerShell. In an legacy active directory environment this could be implemented following this guide on [WinRM](https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management). But in an Intune and Entra ID environment it is a bit different as we dont have Kerberos for Authentication and other legacy methods.
+Windows Remote Management can be used to manage Windows devices remotely from PowerShell. In an legacy active directory environment this could be implemented using gpo. But in an Intune and Entra ID environment it is a bit different as we dont have Kerberos for Authentication and other legacy methods.
 
 # Implementing WinRM with Intune
 
@@ -46,7 +47,7 @@ Search for "WinRM Service" within the settings catalog and add the following set
 | Turn On Compatibility HTTP Listener | disabled |
 | Turn On Compatibility HTTPS Listener | disabled |
 
-:::image type="content" source="memdocs/intune/media/windows-remote-management-entra-joined/winrm-service.png" alt-text="Overview WinRm Intune settings":::
+![Overview WinRm service settings ](./media/windows-remote-management-entra-joined/winrm-service.png)  
 
 Next search for "WinRM Client" to define the client settings in our WinRM configuration. Add the following settings to your configuration:
 
@@ -58,11 +59,11 @@ Next search for "WinRM Client" to define the client settings in our WinRM config
 | Trusted Hosts | enabled |
 | TrustedHostsList: (Device) | "*" or "*.mydomain.com" or "List of Hostnames" -> whatever fits your environment best |
 
-:::image type="content" source="memdocs/intune/media/windows-remote-management-entra-joined/winrm-client.png" alt-text="Overview WinRm Intune settings":::
+![Overview WinRm client settings ](./media/windows-remote-management-entra-joined/winrm-client.png)  
 
 When you want to use your domain you need to add a DNS suffix. To configure this simply search for "DNS Client" and add "DNS Suffices (Device)" from the Network section your your settings catalog configuration:
 
-:::image type="content" source="memdocs/intune/media/windows-remote-management-entra-joined/dns-client.png" alt-text="Overview WinRm Intune settings":::
+![Overview WinRm dns settings ](./media/windows-remote-management-entra-joined/dns-client.png) 
 
 ## Enabling the WinRM service
 Now that we have configured the WinRM service and client we need to ensure that the service will be started on the device. As there currently is not native option to enable service we will make use of Intune Remediations to enable the service.
@@ -122,7 +123,7 @@ Lastly it is required to create a local Windows Firewall rule that allows the tr
 | Local Ports | 5985 (or 5986 for HTTPS) |
 | Remote Ports | Any |
 
-:::image type="content" source="memdocs/intune/media/windows-remote-management-entra-joined/winrm-firewall.png" alt-text="Overview WinRm Intune settings":::
+![Overview WinRm firewall settings ](./media/windows-remote-management-entra-joined/winrm-firewall.png) 
 
 
 ## Connecting to an Entra ID joined device using WinRM
