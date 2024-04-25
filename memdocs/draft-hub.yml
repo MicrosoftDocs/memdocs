@@ -36,7 +36,7 @@ productDirectory:
   items:
     # Card
     - title: Multifactor Authentication
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/multifactor-authentication.svg
       links:
         - url: https://11
           text: Read the documentation
@@ -44,7 +44,7 @@ productDirectory:
           text: View the prescriptive guidance <verify name>
     # Card
     - title: App protection policies
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/app-protection.svg
       links:
         - url: ./intune/apps/app-protection-policy.md
           text: Read the documentation
@@ -52,14 +52,14 @@ productDirectory:
           text: View the prescriptive guidance <verify name>
      # Card
     - title: Secure your devices
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/device-protect.svg
       links:
         - url: ./intune/fundamentals/manage-devices.md#secure-your-devices
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/4/0
           text: View the prescriptive guidance <verify name> 
     - title: Conditional Access and Intune
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/conditional-access.svg
       links:
         - url: ./intune/protect/conditional-access.md
           text: Read the documentation
@@ -73,14 +73,14 @@ productDirectory:
         - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
           text: View the prescriptive guidance <verify name> 
     - title: Manage apps
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/app-manage.svg
       links:
         - url: ./intune/apps/app-management.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2901/prescriptive-guidance-intune-application-deployment/index.html#/0/0
           text: View the prescriptive guidance <verify name> 
     - title: Update Windows with Intune
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/update-windows.svg
       links:
         - url: ./intune/protect/windows-update-for-business-configure.md
           text: Read the documentation
@@ -241,4 +241,3 @@ additionalContent:
         - title: Microsoft Defender for Endpoint
           summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
           url: /microsoft-365/security/defender-endpoint/
-          
