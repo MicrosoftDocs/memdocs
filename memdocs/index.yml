@@ -32,7 +32,7 @@ highlightedContent:
 # productDirectory section (optional)
 productDirectory:
   title: Learn how Intune can support more secure productivity
-  summary: Read the documentation and follow the interactive guides to configure Intune with settings that are "best for most" and aligned with Zero Trust principals
+  summary: Read the documentation and follow the interactive guides to configure Intune with settings that are "best for most" and aligned with Zero Trust principals.
   items:
     # Card
     - title: Multifactor Authentication
@@ -100,10 +100,10 @@ conceptualContent:
   sections:
 
   - title: Additional resources
-    summary: "Go beyond the documentation with videos, blogs, training guides, communities and more from Microsoft Experts and partners"
+    summary: "Go beyond the documentation with videos, blogs, training guides, communities, and more from Microsoft Experts and partners"
     items:
       - title: Get to know Intune
-        summary: Resources to see Intune capabilities, get to know the admin center, and then set up a trial environment
+        summary: Resources to see Intune capabilities, get to know the admin center, and then set up a trial environment.
         links:
         - url: ./intune/fundamentals/what-is-intune.md
           itemType: overview
@@ -125,7 +125,7 @@ conceptualContent:
           text: Watch a tutorial to set up Intune on Developer (community)
 
       - title: Plan a move to Intune
-        summary: Microsoft offers comprehensive guidance on planning a migration to Intune
+        summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
         links:
         - text: Set up or move to Intune
           itemType: how-to-guide
@@ -144,7 +144,7 @@ conceptualContent:
           url: ./intune/fundamentals/get-started-with-intune.md
 
       - title: Intune news
-        summary: <revise> Checkout Intune community resources for blogs, announcements, discussions, and more 
+        summary: <revise> Checkout Intune community resources for blogs, announcements, discussions, and more.
         links:
           - url: ./intune/fundamentals/whats-new.md
             itemType: overview
@@ -172,7 +172,7 @@ conceptualContent:
             url: https://www.youtube.com/@IntuneTraining
 
       - title: Co-manage devices with Intune and Configuration Manager
-        summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology
+        summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology.
         links:
         - text: Get Intune benefits without changing management policies
           itemType: how-to-guide
@@ -208,7 +208,7 @@ additionalContent:
         url: ./intune/fundamentals/intune-add-ons   
       # Card
       - title: Microsoft Configuration Manager
-        summary: Manage on-premises endpoints, such as Windows PCs and servers, as well as cloud-connected devices.
+        summary: Manage on-premises endpoints, such as Windows PCs and servers, and cloud-connected devices.
         url: ./configmgr/index.yml
       # Card
       - title: Windows Autopilot docs
