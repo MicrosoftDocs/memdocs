@@ -170,7 +170,7 @@ You can drill down further in the report for each quality update that aggregates
 
 Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
 
-For more information on Windows update distribution reports, see [Windows Update reports on Intune](../protect/windows-update-reports.md).
+For more information on Windows update distribution reports, see [Windows Update reports on Intune](../protect/windows-update-reports.md#windows-update-distribution-report).
 
 #### Intune support of M365 remote application diagnostics<!-- 17409991 -->
 
