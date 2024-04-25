@@ -4,6 +4,7 @@
 title: Windows Remote Management on Entra ID joined devices
 description: This article describes how to enable and configure the WinRM service on clients that are Entra ID joined only.
 author: niklasrast
+ms.author: niklasrast
 manager: [ALIAS]
 ms.date: 04/25/2024
 ms.topic: reference
@@ -26,8 +27,6 @@ ms.localizationpriority: medium
 # Windows Remote Management on Entra ID joined devices
 
 Windows Remote Management can be used to manage Windows devices remotely from PowerShell. In an legacy active directory environment this could be implemented using gpo. But in an Intune and Entra ID environment it is a bit different as we dont have Kerberos for Authentication and other legacy methods.
-
-# Implementing WinRM with Intune
 
 ## Configuration
 First of all create a new settings catalog profile which will include our WinRM configuration for Intune managed Windows endpoints that are only Entra ID joined.
