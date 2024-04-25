@@ -69,7 +69,7 @@ Intune does not support using a cloned image of a computer that is already enrol
 
 - For more information, see [Mobile device enrollment - Windows Client Management](/windows/client-management/mobile-device-enrollment) and [Certificate authentication device enrollment - Windows Client Management](/windows/client-management/certificate-authentication-device-enrollment).
 - For information on disabling token roaming in AVD, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](azure-virtual-desktop-multi-session.md#prerequisites).
-- For information on troubleshooting issues related to image cloning, see [Error hr 0x8007064c: The machine is already enrolled](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors.md#error-hr-0x8007064c-the-machine-is-already-enrolled).
+- For information on troubleshooting issues related to image cloning, see [Error hr 0x8007064c: The machine is already enrolled](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#error-hr-0x8007064c-the-machine-is-already-enrolled).
 
 ## Next steps
 
