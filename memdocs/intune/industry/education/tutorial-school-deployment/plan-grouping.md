@@ -59,14 +59,6 @@ The way you target configuration and apps may depend on many factors and the enr
 
 ::: zone pivot="windows"
 
-For Windows devices:
-- Applications and policies targeted to a *device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot) will be applied to the devices as soon as they are enrolled in Intune, before users signs in.
-  This can be useful in bulk enrollment scenarios, where devices are enrolled without requiring users to sign in. Devices can be configured and prepared in advance, before distribution.
-
-- Applications and policies targeted to a *device dynamic group* based on other attributes will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
-
- > **alternative display option below**
-
 The following table provides guidance about which Windows device grouping options to use based on the enrollment method and desired behavior.
 
 | Enrollment type | Behavior | Best grouping options |
@@ -79,11 +71,6 @@ The following table provides guidance about which Windows device grouping option
 ::: zone-end
 
 ::: zone pivot="ios"
-
-For iOS devices:
-- If you target applications and policies to a *device dynamic group*, they will be applied to the devices after they are enrolled in Intune, after users gain access to the device.
-
- > **alternative display option below**
 
 The following table provides guidance about which iOS device grouping options to use based on the enrollment method and desired behavior.
 
@@ -104,23 +91,6 @@ The following table provides guidance about which iOS device grouping options to
 ✅ Create your organization groups
 
 After you've chosen your enrollment method and grouping option, you can create your groups.
-
-::: zone pivot="windows"
-
-> [!NOTE]
-> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
-
-> [!NOTE]
-> If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
-
-::: zone-end
-
-::: zone pivot="ios"
-
-> [!NOTE]
-> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
-
-::: zone-end
 
 ### [Intune](#tab/intune)
 
@@ -151,6 +121,7 @@ On Windows apps and policies can also be targeted at user groups. Many apps and 
 
 ### Autopilot
 When devices are imported into Autopilot they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use this to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
+
 These are the common groups used for devices that are enrolled using Autopilot.
 
 | Name | Type | Query |
@@ -159,6 +130,12 @@ These are the common groups used for devices that are enrolled using Autopilot.
 | All Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
 | All non-Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
 | All Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*Student*\")) |
+
+> [!NOTE]
+> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+
+> [!NOTE]
+> If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
 
 ### Provisioning packages
 These are the common groups used for devices that are enrolled using provisioning packages.
@@ -191,6 +168,9 @@ Here are examples of queries commonly used for dynamic security groups.
 To apply settings as quickly as possible during enrollment without waiting for dynamic group updates, some customers use a filter based on enrollmentProfileName and target configuration at the *All Devices* virutal group.
 
 - Devices with a specific enrollmentProfileName (enrollmentProfileName *equals* *'use case*')
+
+> [!NOTE]
+> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
 
 > [!WARNING]
 > Each time an iOS device enrolls it creates a new Entra device object, so *assigned group* memberships aren't maintained afer a device is reset.

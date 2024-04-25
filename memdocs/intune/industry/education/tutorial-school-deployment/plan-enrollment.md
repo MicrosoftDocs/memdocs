@@ -62,8 +62,6 @@ You can use *Windows Configuration Designer* or the *Set up School PCs app* to c
 
 After you create the provisioning package (PPKG) you can copy it to one or more USB drives, insert them into devices and power them on to start the provisioning process.
 
-:::image type="content" source="./images/enroll-ppkg.png" alt-text="A diagram showing the steps to create and use a provisioning package to enroll devices." border="false":::
-
 Devices continue to sync in the background after provisioning. Track provisioning progress on the Enrollment Status Page to ensure all required mobile device management policies and apps are delivered before student use. See the following table for more best practices.  
 
 |Scenario | Considerations |
@@ -86,6 +84,8 @@ For instructions on how to configure Autopilot, see [Windows Autopilot](/autopil
 #### [Intune for Education](#tab/intune-for-education)
 
 For instructions on how to configure Autopilot in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup)
+
+---
 
 See the following table for more best practices.  
 
