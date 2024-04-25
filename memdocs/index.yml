@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Microsoft Intune documentation
-summary: Learn more about how Microsoft Intune can help you secure, deploy, and manage Windows, macOS, Android, iOS/iPadOS, and Linux devices.
+title: Microsoft Intune product and capabilities documentation
+summary: Learn more about how Microsoft Intune products and capabilities can help you secure, deploy, and manage users, apps, and endpoint devices.
 
 metadata:
   services: service
