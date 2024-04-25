@@ -110,7 +110,7 @@ The following security baseline instances are available for use with Intune. Use
 
 - **Microsoft Edge Baseline**:
   - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
-  - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?&pivots=edge-v112) - May 2023
+  - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023
   - [Microsoft Edge version 85 and later](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020) - September 2020
   - [Microsoft Edge version 80 and later](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020) - April 2020
   - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
