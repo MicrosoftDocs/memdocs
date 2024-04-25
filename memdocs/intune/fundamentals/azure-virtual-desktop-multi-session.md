@@ -75,8 +75,15 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Microsoft Entra joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Licensing: The appropriate Azure Virtual Desktop and Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, go to [Microsoft Intune licensing](licenses.md).
+- See [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements) for more information about Azure Virtual Desktop licensing requirements.
 
-For cloned scenarios, once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Private certificates including MDM certificates should not be cloned to another VM. An MDM certificate is the identity for the VM to communicate with Intune and we do not support multiple VMs using the same identity. So, you must ensure that private certificates are not cloned to multiple VMs. For more information, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).
+## Limitations
+
+Intune does not support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
+
+- For more information, see [Mobile device enrollment - Windows Client Management](/windows/client-management/mobile-device-enrollment) and [Certificate authentication device enrollment - Windows Client Management](/windows/client-management/certificate-authentication-device-enrollment).
+- For information on disabling token roaming in AVD, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](#prerequisites).
+- For information on troubleshooting issues related to image cloning, see [Error hr 0x8007064c: The machine is already enrolled](/device-enrollment/troubleshoot-windows-enrollment-errors#error-hr-0x8007064c-the-machine-is-already-enrolled).
 
 > [!NOTE]
 > If you're joining session hosts to Microsoft Entra Domain Services, you can't manage them using Intune.
@@ -84,8 +91,6 @@ For cloned scenarios, once Intune detects an existing MDM certificate all device
 > [!IMPORTANT]
 > - If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won't work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
 > - Intune does not currently support token roaming functionality between devices. If [FSLogix](/fslogix), or a similar technology, is used to manage Windows user profiles and settings, you must ensure that tokens are not unexpectedly roamed or duplicated across devices. To confirm that you are running a supported version and configuration of FSLogix with token roaming disabled, please see the [FSLogix RoamIdentity Configuration Settings Reference](/fslogix/reference-configuration-settings?tabs=profiles#roamidentity).
-
-See [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements) for more information about Azure Virtual Desktop licensing requirements.
 
 Windows 10 or Windows 11 Enterprise multi-session VMs are treated as a separate OS edition and some Windows 10 or Windows 11 Enterprise configurations won't be supported for this edition. Using Microsoft Intune doesn't depend on or interfere with Azure Virtual Desktop management of the same VM.
 
@@ -157,7 +162,7 @@ You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by con
 
 All other policies report as **Not applicable**.
 
-> [!Important]
+> [!IMPORTANT]
 > You'll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren't supported.
 
 [Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session.

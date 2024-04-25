@@ -41,15 +41,11 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
 - Running Windows 10 Enterprise, version 1809 or later, or running Windows 11.
 - Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure.
 - [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods:
-    - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are Microsoft Entra hybrid joined.
-    - [Configuration Manager co-management](/configmgr/comanage/overview).
-    - [User self-enrollment via Microsoft Entra join](/mem/intune/fundamentals/deployment-guide-enroll#user-self-enrollment-in-intune).
+  - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are Microsoft Entra hybrid joined.
+  - [Configuration Manager co-management](/configmgr/comanage/overview).
+  - [User self-enrollment via Microsoft Entra join](/mem/intune/fundamentals/deployment-guide-enroll#user-self-enrollment-in-intune).
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Under the same tenant as Intune
-
-For cloned scenarios:
-
-- Once Intune detects an existing MDM certificate all devices or clients using the same MDM certificate will no longer be able to check into Intune. Private certificates including MDM certificates shouldn't be cloned to another VM. An MDM certificate is the identity for the VM to communicate with Intune and we don't support multiple VMs using the same identity. So, you must ensure that private certificates aren't cloned to multiple VMs. For more information, see [Create an Azure Virtual Desktop golden image](/azure/virtual-desktop/set-up-golden-image).
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
@@ -74,6 +70,14 @@ Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/w
 
 > [!NOTE]
 > Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
+
+### Cloning physical and virtual devices
+
+Intune does not support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
+
+- For more information, see [Mobile device enrollment - Windows Client Management](/windows/client-management/mobile-device-enrollment) and [Certificate authentication device enrollment - Windows Client Management](/windows/client-management/certificate-authentication-device-enrollment).
+- For information on disabling token roaming in AVD, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](azure-virtual-desktop-multi-session.md#prerequisites).
+- For information on troubleshooting issues related to image cloning, see [Error hr 0x8007064c: The machine is already enrolled](/device-enrollment/troubleshoot-windows-enrollment-errors#error-hr-0x8007064c-the-machine-is-already-enrolled).
 
 ### Remote actions
 
