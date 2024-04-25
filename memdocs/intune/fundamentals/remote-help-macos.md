@@ -116,7 +116,7 @@ Remote Help offers different session modes for macOS.
 
 ## Install and update Remote Help
 
-Remote Help is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session. Remote Help receives the latest versions through the Microsoft AutoUpdate (MAU) application. Users can opt in for automatic updates to ensure Remote Help is up to date.
+Remote Help is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session. Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
 
 ## Download Remote Help
 
