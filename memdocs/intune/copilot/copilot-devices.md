@@ -39,7 +39,7 @@ With Copilot in Intune, you can:
 
 - Get more information about a specific device, including installed apps, group membership, and more.
 - Compare devices to see the similarities and differences between them, like the compliance policies, hardware, and device configurations assigned to both devices.
-- Use the error analyzer prompt to enter an error code, get more about information about the error, and get a possible resolution.
+- Use the error analyzer prompt to enter an error code, get more information about the error, and get a possible resolution.
 
 This article describes how to use Copilot to manage and troubleshoot device issues in Intune.
 
@@ -52,7 +52,7 @@ This article describes how to use Copilot to manage and troubleshoot device issu
   - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#before-you-begin)
   - [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot)
 
-- When you use the Copilot prompts to troubleshoot your devices, you are in the scope of the device you select.
+- When you use the Copilot prompts to troubleshoot your devices, you are within the scope of the device you select.
 
 ## Use a suggested prompt
 
@@ -60,13 +60,13 @@ To troubleshoot devices, you can use Copilot with an existing set of prompts to 
 
 The guided prompts include:
 
-- Summarize this device
-- Analyze an error code
-- Compare this device with another device
-- Show apps on this device
-- Show policies on this device
-- Show group memberships
-- Show the primary user of this device
+- Summarize this device.
+- Analyze an error code.
+- Compare this device with another device.
+- Show apps on this device.
+- Show policies on this device.
+- Show group memberships.
+- Show the primary user of this device.
 
 ## Get details and troubleshoot a device
 
@@ -78,7 +78,7 @@ This section steps through some Copilot prompts that you can use.
 
     :::image type="content" source="./media/copilot-devices/explore-with-copilot.png" alt-text="Screenshot that shows selecting any device and then select Explore with Copilot in Microsoft Intune and Intune admin center.":::
 
-4. In Copilot, there are existing prompts for you to choose. Select a prompt to get more information about the device.
+4. In Copilot, there are existing prompts for you to choose from. Select a prompt to get more information about the device.
 
 Let's walk through some of the prompts you can use.
 
@@ -88,15 +88,15 @@ Select the **Summarize this device** prompt:
 
 :::image type="content" source="./media/copilot-devices/sample-prompts.png" alt-text="Screenshot that shows the Copilot sample prompts after you select any device in Microsoft Intune and Intune admin center.":::
 
-The **Summarize this device** prompt shows more information about the device. The summary includes device specific information, like the operating system, if the device is registered in Microsoft Entra ID, malware counts, any noncompliant policies, group membership, and more.
+The **Summarize this device** prompt shows more information about the device. The summary includes device-specific information, like the operating system, if the device is registered in Microsoft Entra ID, malware counts, any noncompliant policies, group membership, and more.
 
-Remember, these prompts and their results are in the scope of the device you select.
+Remember, these prompts and their results are within the scope of the device you select.
 
 ### Compare this device
 
 When you use the **Compare this device with another device** prompt, you can compare a working/healthy device with a non-working/unhealthy device. This comparison can help you identify the differences between the two devices and troubleshoot the nonworking device.
 
-Select the prompt guide and select **Compare this device with another device**:
+Select the prompt guide and select **Compare this device with another device**.
 
 :::image type="content" source="./media/copilot-devices/prompt-guide.png" alt-text="Screenshot that shows the Copilot prompt guide after you select any device in Microsoft Intune and Intune admin center.":::
 
