@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 04/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -34,8 +34,11 @@ ms.collection:
 
 Intune gives you the ability to use the **Wipe** remote device action to wipe data from macOS devices, including the operating system.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > When you use **Wipe**, the device is also removed from Intune management and no warning is given to the end user once a wipe is initiated.
+
+> [!NOTE]
+> The behavior for **Wipe** on iOS devices is that it restores the device to factory defaults and removes the management profile, including any configuration profiles that were installed.
 
 ## Before you start
 
@@ -45,7 +48,7 @@ Intune gives you the ability to use the **Wipe** remote device action to wipe da
 
 ## How to use Wipe
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > and select the device you want to wipe. Select **Wipe**. 
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > and select the device you want to wipe. Select **Wipe**.
 
     :::image type="content" source="./media/device-wipe-mac-os/wipeaction-mac-os.png" alt-text="Screen shot that shows where in the Intune admin center you select Wipe." lightbox="./media/device-wipe-mac-os/wipeaction-mac-os.png":::
 

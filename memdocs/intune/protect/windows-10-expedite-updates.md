@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/12/2024
+ms.date: 04/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -150,7 +150,7 @@ Group Policy settings override mobile device management policies, and the follow
 - **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
 - **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
 
-**Enable Windows Health Monitoring**:
+**Monitoring and reporting**:
 
 Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting).
 

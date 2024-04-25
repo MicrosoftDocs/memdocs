@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/08/2024
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,7 +32,7 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 
 ## Benefits of Enterprise App Management
 
-The benefits of using Enterprise App Management are the following:
+The Enterprise App Management provides the following benefits:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
 - **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog.
@@ -60,11 +60,11 @@ Also, Intune prefills the requirements that devices must meet before the app is 
 > [!IMPORTANT]
 > Microsoft recommends using the pre-populated fields containing specific commands and rules, however you can modify the pre-populated fields if needed.
 
-You can also configure app specific rules used to detect the presence of the Enterprise App Catalog app where you can choose to either manually configure the detection rules or use a custom script to detect the presence of the app before installing the app.
+You can also configure app specific rules used to detect the presence of the Enterprise App Catalog app. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app before installing the app.
 
 ## Self-updating apps
 
-The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, and will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
+The Enterprise App Catalog includes apps that self update. Intune ensures the app is at least at a target minimum version, and considers the app installed if the detected version of the app is at or above the minimum version. Self-updating apps update on client devices based on the vendor's process. Intune will report the version of the app detected on the device.
 
 > [!IMPORTANT]
 > Self-updating apps may require that your tenant has network rules configured to allow an update from the app vendor.
@@ -100,7 +100,7 @@ No SLA is currently available.
 
 ### How many applications are in the catalog?
 
-At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog. Additional apps will be available on an on-going basis.
+At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog. Additional apps are available on an on-going basis.
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
@@ -108,7 +108,7 @@ Graph API will be available soon after general availability.
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-No, the created app will remain at the version it was created at so the IT Pro can have full control over the experience.
+No, the created app remains at the version it was created at so the IT Pro can have full control over the experience.
 
 ### Can you get licensed applications from this catalog?
 
@@ -143,19 +143,30 @@ There are various applications available in the Enterprise App Catalog. To view 
 
 The following table of Enterprise Apps is available within Intune:
 
-| App |
+| Apps |
 |---|
 | 7-Zip |
+| ActiveState Software Komodo Edit |
 | Amazon AWS Tools for Windows |
+| Amazon AWS VPN Client |
 | Amazon Corretto 16 |
+| Amazon Corretto 19 |
+| Amazon Corretto 8 |
 | Amazon Kindle |
 | Android Studio 2022 |
 | Android Studio 3 |
 | Android Studio 4 |
+| App Dynamic AirServer Universal |
 | Araxis Merge |
+| Arduino IDE |
 | Artweaver Free |
+| ASAP Utilities |
 | Atomi Systems ActivePresenter |
 | Audacity |
+| Autodesk Single Signon Component |
+| AVS Media Player |
+| Azure Functions Core Tools |
+| Belgium e-ID viewer |
 | Beyond Compare |
 | Blender |
 | BlueJeans 2 |
@@ -171,57 +182,120 @@ The following table of Enterprise Apps is available within Intune:
 | Citrix Receiver |
 | Citrix Workspace app |
 | Citrix Workspace app LTSR |
+| Cloudflare WARP |
 | CMake |
-| Dell Command Update (Windows Universal   Application) |
+| DAX Studio |
+| DB Browser for SQLite |
+| DBeaver Community |
+| Dell Command Update (Windows Universal Application) |
 | Docker Desktop |
 | draw.io Desktop |
 | Duo Desktop |
 | Eclipse Temurin JDK with Hotspot 11 (LTS) |
+| Eclipse Temurin JDK with Hotspot 15 |
+| Eclipse Temurin JDK with Hotspot 16 |
+| Eclipse Temurin JDK with Hotspot 17 (LTS) |
+| Eclipse Temurin JDK with Hotspot 18 |
 | Eclipse Temurin JDK with Hotspot 19 |
+| Eclipse Temurin JDK with Hotspot 8 (LTS) |
 | Eclipse Temurin JRE with Hotspot 11 (LTS) |
+| Eclipse Temurin JRE with Hotspot 15 |
+| Eclipse Temurin JRE with Hotspot 16 |
+| Eclipse Temurin JRE with Hotspot 17 (LTS) |
+| Eclipse Temurin JRE with Hotspot 18 |
 | Eclipse Temurin JRE with Hotspot 19 |
+| Eclipse Temurin JRE with Hotspot 8 (LTS) |
 | Egnyte Connect Desktop App |
 | Egnyte WebEdit |
 | Evernote |
+| FastStone Soft Capture |
+| FastStone Soft Image Viewer |
 | Foxit PDF Editor 11 |
 | Foxit PDF Editor 12 |
 | Foxit PDF Reader |
 | Frame App |
 | Free Countdown Timer |
+| FXHOME HitFilm Express |
+| Gadwin PrintScreen |
+| Gadwin PrintScreenPro |
+| GitHub CLI |
+| GoodSync 12 |
 | Google Chrome for Business |
 | Google Drive |
+| Google Drive File Stream |
+| Gpg4win |
+| HeidiSQL |
+| IcedTea-Web |
 | Inkscape |
+| IronPython 2.7 |
 | JAM Software TreeSize Free |
 | KeePass Password Safe (Classic Edition) |
 | KeePassXC |
 | Lansweeper |
 | Lenovo Quick Clean |
+| Logi Tune |
+| Logitech SetPoint |
 | LogMeIn GoToMeeting IT Installer |
+| MariaDB Server 10.4 |
+| MariaDB Server 10.6 |
+| MariaDB Server 10.9 |
+| Mattermost Desktop |
+| Mendeley Desktop |
+| Mendeley Reference Manager |
 | Microsoft .NET Runtime 6.0 |
+| Microsoft .NET Runtime 7.0 |
+| Microsoft ASP.NET Core Runtime 7.0 |
 | Microsoft Azure CLI |
 | Microsoft Azure Storage Explorer |
 | Microsoft Power BI Desktop |
 | Microsoft PowerShell Core |
 | Microsoft PowerToys |
 | Microsoft Skype for Desktop |
-| Microsoft Surface Diagnostic Toolkit for   Business |
+| Microsoft SQL Server 2016 Report Builder |
+| Microsoft Surface Diagnostic Toolkit for Business |
 | Microsoft Visual C++ 2008 Redistributable |
-| Microsoft Visual C++ 2015-2022  Redistributable |
+| Microsoft Visual C++ 2015-2022 |
 | Microsoft Visual Studio Code |
+| Microsoft Windows Admin Center |
 | Mozilla Firefox |
+| Mozilla Firefox ESR 102 |
+| Mozilla FrontMotion Firefox Community Edition |
+| Mozilla FrontMotion Firefox Community Edition ESR |
+| Mozilla SeaMonkey |
 | Mozilla Thunderbird |
+| MuseScore 3 |
 | Nessus Agent 10 |
+| NetLogo |
+| Node.js 15 |
+| Node.js 17 |
+| Node.js 18 LTS |
+| Node.js 19 |
+| NoMachine |
 | Notepad++ |
 | NVIDIA GeForce Experience |
+| OpenJDK 11 |
+| OpenJDK 16 |
+| OpenJDK 17 |
 | OpenShot Video Editor |
 | OpenVPN |
+| OpenWebStart |
 | Oracle Java Runtime Environment Version 8 |
+| Oracle Java SE Development Kit 17 |
+| Oracle MySQL Installer 8 for Windows |
 | Parallels Client 18 |
+| PeaZip |
+| Pexip Infinity Connect |
+| pgAdmin 4 |
+| PicPick |
 | Piriform CCleaner |
+| Piriform CCleaner Slim |
 | Poll Everywhere |
 | Poly Lens Desktop App |
+| Project Plan 365 |
+| Project Viewer 365 |
 | Python 3.10 |
 | Python 3.11 |
+| Python 3.9 |
 | QNAP Qsync |
 | R for Windows |
 | Rarlab WinRAR |
@@ -230,23 +304,53 @@ The following table of Enterprise Apps is available within Intune:
 | Royal TS 6 |
 | Royal TS 7 |
 | ScreenToGif |
+| Sejda PDF Desktop |
 | Simon Tatham Putty |
+| SnapGene Viewer |
+| Snapmaker Luban |
+| Squirrels Reflector 3 |
+| Squirrels Reflector 4 |
+| SRWare Iron |
+| SURF eduVPN Client |
 | SyncBackFree |
+| Tabular Editor 2 |
+| Tailscale |
 | TeamSpeak client |
 | TechSmith Snagit 2019 |
 | TechSmith Snagit 2020 |
 | TechSmith Snagit 2021 |
 | TechSmith Snagit 2023 |
 | TechSmith Snagit 2024 |
+| TGRMN Software Bulk Rename Utility |
+| Tidio |
 | TightVNC |
 | TortoiseSVN |
 | TortoiseSVN ipv6 |
 | UltraViewer |
+| VariCAD |
 | voidtools Everything |
 | voidtools Everything Lite |
+| Waterfox Classic |
 | WinSCP |
 | WireGuard |
+| Xamarin Mono for Windows |
+| XnSoft XnView Extended |
+| XnSoft XnView Standard |
+| Yubico Authenticator |
 | Zoom Client for Meetings |
+| Zoom Plugin for Microsoft Outlook |
+| Zulu JDK 11 (LTS) |
+| Zulu JDK 13 (MTS) |
+| Zulu JDK 15 (MTS) |
+| Zulu JDK 16 (STS) |
+| Zulu JDK 17 (LTS) |
+| Zulu JDK 18 (STS) |
+| Zulu JDK 8 (LTS) |
+| Zulu JRE 11 (LTS) |
+| Zulu JRE 13 (MTS) |
+| Zulu JRE 15 (MTS) |
+| Zulu JRE 17 (LTS) |
+| Zulu JRE 8 (LTS) |
 
 ## Next steps
 
