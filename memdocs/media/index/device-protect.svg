@@ -25,8 +25,8 @@
 			<stop offset="1" stop-color="#f0fffd" stop-opacity="1"/>
 		</linearGradient>
 		<linearGradient id="grad0-11" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-124.74681367405 0.5 0.5)">
-			<stop offset="0" stop-color="#0081df" stop-opacity="1"/>
-			<stop offset="1" stop-color="#98c4fa" stop-opacity="1"/>
+			<stop offset="0" stop-color="#75baff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#c8e0fd" stop-opacity="1"/>
 		</linearGradient>
 		<linearGradient id="grad0-28" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-90 0.5 0.5)">
 			<stop offset="0" stop-color="#0078d4" stop-opacity="1"/>
