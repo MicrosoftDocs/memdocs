@@ -87,7 +87,7 @@ productDirectory:
         - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
           text: View the prescriptive guidance <verify name>
     - title: Manage macOS devices
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/macos-manage.svg
       links:
         - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
           text: Read the documentation
