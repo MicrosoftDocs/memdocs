@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/6/2024
+ms.date: 04/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -133,7 +133,6 @@ In this section, the following tables list the Intune dependencies and the ports
 - [Delivery optimization dependencies](#delivery-optimization-dependencies)
 - [Apple dependencies](#apple-dependencies)
 - [Android AOSP dependencies](#android-aosp-dependencies)
-- [Microsoft Azure Attestation](#microsoft-azure-attestation)
 
 #### Windows Push Notification Services(WNS) dependencies
 
@@ -192,12 +191,6 @@ Android Enterprise capabilities (see this [Google documentation](https://support
 **Google Android Enterprise** - Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
 
 **Android push notification** - Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
-
-#### Microsoft Azure Attestation
-
-| ID  | Desc | Category | ER    | Addresses | Ports |
-| --- | ---- | -------- | ----- | --------- | ----- |
-| 186 | Microsoft Azure Attestation | Default<BR>Required | False | `intunemaape1.eus.attest.azure.net`<BR>`intunemaape2.eus2.attest.azure.net`<BR>`intunemaape3.cus.attest.azure.net`<BR>`intunemaape4.wus.attest.azure.net`<BR>`intunemaape5.scus.attest.azure.net`<BR>`intunemaape6.ncus.attest.azure.net`<BR>`intunemaape7.neu.attest.azure.net`<BR>`intunemaape8.neu.attest.azure.net`<BR>`intunemaape9.neu.attest.azure.net`<BR>`intunemaape10.weu.attest.azure.net`<BR>`intunemaape11.weu.attest.azure.net`<BR>`intunemaape12.weu.attest.azure.net`<BR>`intunemaape13.jpe.attest.azure.net`<BR>`intunemaape17.jpe.attest.azure.net`<BR>`intunemaape18.jpe.attest.azure.net`<BR>`intunemaape19.jpe.attest.azure.net` | **TCP:** 443 |
 
 ### Authentication dependencies
 

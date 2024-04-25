@@ -382,7 +382,6 @@ You can configure Podman to use the proxy to download (pull) updated images for 
    [Service]
    Environment="http_proxy=[address]"
    Environment="https_proxy=[address]"
-   PassEnvironment=http_proxy, https_proxy
    ```
 
 3. Next, run the following at the command prompt:
@@ -398,7 +397,6 @@ You can configure Podman to use the proxy to download (pull) updated images for 
    ```
    Environment="http_proxy=address:port"
    Environment="https_proxy=address:port"
-   PassEnvironment=http_proxy https_proxy
    ```
 
 ### Update the proxy server in use by the tunnel server
