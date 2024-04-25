@@ -25,7 +25,7 @@ highlightedContent:
     - title: Intune news
       itemType: whats-new
       url: /mem/draft-hub#additional-resources
-    - title: Microsoft Intune Suite add-ons <rename>
+    - title: Microsoft Intune Suite
       itemType: deploy
       url: ./intune/fundamentals/intune-add-ons.md
 
@@ -38,7 +38,7 @@ productDirectory:
     - title: Multifactor Authentication
       imageSrc: ./media/index/multifactor-authentication.svg
       links:
-        - url: https://11
+        - url: /entra/identity/authentication/tutorial-enable-azure-mfa
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
           text: View the prescriptive guidance <verify name>
