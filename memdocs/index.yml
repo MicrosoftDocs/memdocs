@@ -52,7 +52,7 @@ productDirectory:
           text: View the prescriptive guidance <verify name>
      # Card
     - title: Secure your devices
-      imageSrc: ./media/index/device-protect.svg
+      imageSrc: ./media/index/device-secure.svg
       links:
         - url: ./intune/fundamentals/manage-devices.md#secure-your-devices
           text: Read the documentation
