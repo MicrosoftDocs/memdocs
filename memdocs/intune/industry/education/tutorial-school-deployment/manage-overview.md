@@ -88,6 +88,11 @@ To learn more about reports in Intune for Education, see [Reports in Intune for 
 
 ---
 
+________________________________________________________
+
+> [!div class="nextstepaction"]
+> [Next: Reset and Wipe >](reset-wipe.md)
+
 <!-- Reference links in article -->
 
 [EDU-1]: /intune-education/edu-device-remote-actions

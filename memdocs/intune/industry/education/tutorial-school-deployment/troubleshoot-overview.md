@@ -64,6 +64,11 @@ Follow these steps to obtain support in Microsoft Intune provides many tools tha
 
 For more information, see [Microsoft Intune support page][MEM-1].
 
+________________________________________________________
+
+> [!div class="nextstepaction"]
+> [Next: Common Education configuration overview >](common-config-overview.md)
+
 <!-- Reference links in article -->
 [MEM-1]: /mem/get-support
 [MEM-2]: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune

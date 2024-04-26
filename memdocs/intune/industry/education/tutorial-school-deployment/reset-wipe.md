@@ -146,6 +146,11 @@ There are scenarios that require a device to be deleted from your tenant, for ex
 1. Delete the device from Microsoft Entra ID using [these steps][MEM-3].
 ::: zone-end
 
+________________________________________________________
+
+> [!div class="nextstepaction"]
+> [Next: Troubleshoot and get help >](troubleshoot-overview.md)
+
 <!-- Reference links in article -->
 
 [MEM-1]: /mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal
