@@ -99,7 +99,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show brightness slider | bool | FALSE | Turn this setting to TRUE to allow end users to access a brightness slider to adjust the device screen brightness. This configuration is only available when **Enable updated user experience** is set to TRUE.  | ❌ |
 | Show adaptive brightness toggle | bool | FALSE | Turn this setting to TRUE to allow end users to turn adaptive brightness on and off on the device. Adaptive brightness allows the device to select an optimal brightness based on ambient lighting. This configuration is only available when **Enable updated user experience** is set to TRUE.  | ❌ |
 | Show autorotate toggle | bool | FALSE | Turn this setting to TRUE to allow end users to access a toggle to turn on and off the device's auto-rotation setting. This configuration is only available when **Enable updated user experience** is set to TRUE.| ❌ |
-| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting menu. Accessible information includes device's make, model, and serial number. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`.| ✔️ |
+| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting menu. Accessible information includes device's make, model, serial number, and IPv4 and IPv6 details. On OS version 9 and newer, to let users see the device's serial number, ensure that **Show serial number for all supported OS version on MHS** is configured to display `{{SerialNumber}}`.| ✔️ |
 | Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune admin center "device name" property from the Managed Settings menu on the updated workflows when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
 | Show serial number for all supported OS version on MHS | choice | {{SerialNumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} when **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
 | Show device name for all supported OS version on MHS | choice | {{DeviceName}} | Ensure that app configuration device name is configured to display `{{DeviceName}}`. This value is auto-populated by Intune with the correct value. | ❌ |
@@ -688,14 +688,10 @@ The following syntax is an example JSON script with all the available configurat
             "key": "enable_PIN_to_resume",
             "valueBool": true
         },
-
-
         {
             "key": "minimum_inactive_time_before_session_pin_required",
             "valueInteger": 30
         },
-
-
         {
             "key": "custom_privacy_statement_title",
             "valueString": "name of custom privacy statement here"
