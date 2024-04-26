@@ -91,7 +91,6 @@ See the following table for more best practices.
 
 |Scenario | Considerations |
 |---------|---------|
-
 |You want to provision more than one device at a time. | Make sure you have a reliable internet connection at your enrollment site while using Windows Autopilot, especially if you're enrolling more than one device at the same time. |
 |You want to reduce set-up time for students and teachers. | Use Windows Autopilot for pre-provisioning deployments which allows IT admins, Microsoft partners, or an OEM to preinstall apps and policies. For more information, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites). |
 | You want to use custom OS images to configure initial apps and settings| Ensure that the device is left in the out-of-box-experience. Alternatively, you can [pre-provision Autopilot devices](/autopilot/pre-provision), which is a similar approach that lets you, a Microsoft partner, or OEM provider preinstall apps and policies.  |
