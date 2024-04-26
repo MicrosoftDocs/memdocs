@@ -91,9 +91,10 @@ See the following table for more best practices.
 
 |Scenario | Considerations |
 |---------|---------|
-| You want to use custom OS images to configure initial apps and settings| Ensure that the device is left in the out-of-box-experience. Alternatively, you can [pre-provision Autopilot devices](/autopilot/pre-provision), which is a similar approach that lets you, a CSP partner, or OEM provider preinstall apps and policies.  |
+
 |You want to provision more than one device at a time. | Make sure you have a reliable internet connection at your enrollment site while using Windows Autopilot, especially if you're enrolling more than one device at the same time. |
-|You want to reduce the end user set-up time. | Use Windows Autopilot for pre-provisioning deployments. Pre-provisioning allows IT admins/partners/OEM to preinstall apps and policies. For more information, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites). |
+|You want to reduce set-up time for students and teachers. | Use Windows Autopilot for pre-provisioning deployments which allows IT admins, Microsoft partners, or an OEM to preinstall apps and policies. For more information, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites). |
+| You want to use custom OS images to configure initial apps and settings| Ensure that the device is left in the out-of-box-experience. Alternatively, you can [pre-provision Autopilot devices](/autopilot/pre-provision), which is a similar approach that lets you, a Microsoft partner, or OEM provider preinstall apps and policies.  |
 
 ::: zone-end
 
@@ -118,17 +119,17 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 
 The following table provides more information about the features supported by each Windows provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.  
 
-| Feature | Provisioning package | Windows Autopilot  |
+| Configuation need | Provisioning package | Windows Autopilot  |
 |---------|---------|---------|
-|You want to apply custom OS images.| ✔️ | ✔️ <br/><br/> Devices must remain in OOBE mode after you apply the images.|
-|You want to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ | ✔️ |
-|You want to allow students and teachers to provision devices.  | ❌ <br/><br/> This method requires you or your IT staff to unbox the device, turn on the device, and configure the device. | ✔️ <br/><br/> This method is optimized for limited engagement from IT staff, so students and teachers can unbox the device, turn on the device, and complete the initial configuration.    
-|You want an OEM provider to enroll devices on your behalf.| ❌ | ✔️ <br/><br/>The OEM provider must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can [pre-provision devices](/autopilot/pre-provision).|
-|You want a partner to enroll school devices on your behalf.| ✔️ | ✔️ <br/><br/> Partners must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can pre-provision devices.|
-|You want to set up shared devices. | ✔️  | ✔️ <br/><br/> We recommend using [Windows Autopilot self-deploying mode](/autopilot/self-deploying) for shared device scenarios. To set up devices for individual users, use [Windows Autopilot user-driven mode](/autopilot/user-driven).  |
-|You want to set up a device for a single user.|✔️ <br/><br/> A [primary user](/mem/intune/remote-actions/find-primary-user#what-is-the-primary-user) isn't assigned.|✔️ <br/><br/> Supported with [Windows Autopilot user-driven mode](/autopilot/user-driven). To set up shared devices, use [Windows Autopilot self-deploying mode](/autopilot/self-deploying).|
-|You want to add apps. | ✔️ <br/><br/> You can add Win32 apps to the provisioning package to reduce deployment time and network load during deployment. Silent installation is required for Win32 apps. | ✔️ <br/><br/> Works well with all [app types](/mem/intune/apps/apps-add). Silent installation is required for Win32 apps. To further reduce deployment time and network load during deployment, you can pre-provision devices. |
-|First day of class experience.| ✔️ | ❌ <br/><br/> Students must connect the device to Wi-Fi and complete the remaining setup steps. To further reduce end-user provisioning time, you can pre-provision devices. |
+|Apply custom OS images.| ✔️ | ✔️ <br/><br/> Devices must remain in OOBE mode after you apply the images.|
+|Bulk enroll devices.| ✔️ | ✔️ |
+|Allow IT department or staff to provision devices.  | ✔️ <br/><br/> This method requires you or your IT staff to unbox the device, turn on the device, and configure the device. | ✔️ <br/><br/> This method is optimized for limited engagement from IT staff, so students and teachers can unbox the device, turn on the device, and complete the initial configuration.
+|An OEM can enroll devices on your behalf.| ❌ | ✔️ <br/><br/>The OEM provider must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can [pre-provision devices](/autopilot/pre-provision).|
+|Microsoft Partner or Cloud Service Provider (CSP) partner can enroll devices on your behalf.| ✔️ | ✔️ <br/><br/> Partners must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can pre-provision devices.|
+|Set up a shared device. | ✔️  | ✔️ <br/><br/> We recommend using [Windows Autopilot self-deploying mode](/autopilot/self-deploying) for shared device scenarios. To set up devices for individual users, use [Windows Autopilot user-driven mode](/autopilot/user-driven).  |
+|Set up a device for a single user.|✔️ <br/><br/> A [primary user](/mem/intune/remote-actions/find-primary-user#what-is-the-primary-user) isn't assigned.|✔️ <br/><br/> Supported with [Windows Autopilot user-driven mode](/autopilot/user-driven). To set up shared devices, use [Windows Autopilot self-deploying mode](/autopilot/self-deploying).|
+|Add apps. | ✔️ <br/><br/> You can add Win32 apps to the provisioning package to reduce deployment time and network load during deployment. Silent installation is required for Win32 apps. | ✔️ <br/><br/> Works well with all [app types](/mem/intune/apps/apps-add). Silent installation is required for Win32 apps. To further reduce deployment time and network load during deployment, you can pre-provision devices. |
+|Devices are ready for sign-in and use on first day of class.| ✔️ | ❌ <br/><br/> Students must connect the device to Wi-Fi and complete the remaining setup steps. To further reduce end-user provisioning time, you can pre-provision devices. |
 
 ::: zone-end
 
