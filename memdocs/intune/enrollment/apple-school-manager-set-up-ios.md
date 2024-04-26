@@ -151,17 +151,6 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 1. To save the profile, choose **Create**.
 
-## Connect School Data Sync
-(Optional) Apple School Manager supports synchronizing class roster data to the Microsoft Entra ID using Microsoft School Data Sync (SDS). You can only sync one token with SDS. If you set up another token with School Data Sync, SDS will be removed from the token that previously had it. A new connection will replace the current token. Complete the following steps to use SDS to sync school data.
-
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.    
-1. Select the **Apple** tab.  
-1. Choose **Enrollment Program Tokens**.  
-1. Select an Apple School Manager token and then choose **School Data Sync**.  
-1. Under **School Data Sync**, choose **Allow**. This setting allows Intune to connect with SDS in Microsoft 365.
-1. To enable a connection between Apple School Manager and Microsoft Entra ID, choose **Set up Microsoft School Data Sync**. Learn more about [how to set up School Data Sync](/schooldatasync/how-to-deploy-sds-using-sds-v2.1-csv-files).
-1. Select **Save** > **OK**.
-
 ## Sync managed devices
 
 After Intune has been assigned permission to manage your Apple School Manager devices, synchronize Intune with the Apple service to see your managed devices in Intune.
