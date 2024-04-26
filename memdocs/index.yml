@@ -66,7 +66,7 @@ productDirectory:
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/9/0
           text: View the prescriptive guidance <verify name> 
     - title: Windows Autopilot
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/index/i_deploy.svg
       links:
         - url: /mem/autopilot/windows-autopilot
           text: Read the documentation
