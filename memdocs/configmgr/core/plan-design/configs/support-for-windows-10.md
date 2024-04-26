@@ -2,7 +2,7 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients with Configuration Manager.
-ms.date: 10/13/2022
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -44,7 +44,7 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version                         | ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 |
+| Windows 10 version                         | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|
 | **22H2**<br>(10.0.19045) <!--2025-05-13--> |  ![Supported](media/green-check.png)  |  ![Supported](media/green-check.png)  |   ![Supported](media/green-check.png) |![Supported](media/green-check.png) | 
 | **21H2**<br>(10.0.19044) <!--06/11/2024--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |  ![Supported](media/green-check.png) |![Supported](media/green-check.png) |  
@@ -83,7 +83,7 @@ The **All Windows 10 (ARM64)** platform is available in the list of supported OS
 > [!NOTE]
 > If you previously selected the top-level **Windows 10** platform, this action automatically selected both **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)**. If you want to add **All Windows 10 (ARM64)**, manually select it in the list.
 
-OS deployment isn't supported, except for a feature update task sequence. Starting in version 2103, you can deploy a task sequence with a feature update to a Windows 10 on ARM64 device. For more information, see [Deploy a feature update with a task sequence](../changes/whats-new-in-version-2103.md#deploy-a-feature-update-with-a-task-sequence).
+Starting in version 2403 OS deployment is supported for **Windows 10 22H2 (ARM64)**, you can deploy a task sequence with a feature update to a Windows 10 on ARM64 device. For more information, see [Deploy a feature update with a task sequence](../changes/whats-new-in-version-2103.md#deploy-a-feature-update-with-a-task-sequence).
 
 ## Support for Windows Insider
 

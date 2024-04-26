@@ -793,6 +793,11 @@ items:
               items:
               - name: Check Point Harmony and Intune integration
                 href: ./protect/checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Set up CrowdStrike
+              href: ./protect/crowdstrike-falcon-defense-connector.md
+              items:
+              - name: CrowdStrike Falcon and Intune integration
+                href: ./protect/crowdstrike-falcon-mtd-connector-integration.md
             - name: Set up Jamf
               href: ./protect/jamf-mtd-connector.md
               items:
@@ -2201,9 +2206,11 @@ items:
       - name: Remote Help on Windows
         href: ./fundamentals/remote-help-windows.md
       - name: Remote Help on macOS
-        href: ./fundamentals/remote-help-macos.md  
+        href: ./fundamentals/remote-help-macos.md
+      - name: Remote Help Web App
+        href: ./fundamentals/remote-help-webapp.md    
       - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md
+        href: ./fundamentals/remote-help-android.md  
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md   
     - name: Remediations
