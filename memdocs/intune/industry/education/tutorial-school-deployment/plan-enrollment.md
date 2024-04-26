@@ -139,15 +139,15 @@ for school environments.
 
 The following table provides more information about the features supported by each iOS provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.  
 
-|Feature | Company Portal | Automated Device Enrollment | Apple Configurator |
+|Configuation need | Company Portal | Automated Device Enrollment | Apple Configurator |
 |---------|---------|---------|---------|
-|You want to enroll a few devices, or a large number of devices (bulk enrollment).|❌|✔️|✔️|
-|You want to allow students and teachers to provision devices.|✔️|✔️|❌|
+|Bulk enroll devices.|❌|✔️|✔️|
+|Allow IT department or staff to provision devices.|✔️|✔️|❌|
 |Devices are user-less or shared.|❌|✔️|✔️|
-|You want a partner to enroll devices on your behalf.|❌|✔️|✔️|
-|You don't have or can't use Apple School Manager.|✔️|❌|✔️|
-|You want to add apps.|❌|❌|✔️|
-|You want devices to be ready for sign-in and use when teachers and students receive them|❌|✔️|✔️|
+|A Partner can enroll devices on your behalf.|❌|✔️|✔️|
+|Enroll without Apple School Manager.|✔️|❌|✔️|
+|Add apps.|❌|❌|✔️|
+|Devices are ready for sign-in and use on first day of class.|❌|✔️|✔️|
 
 ::: zone-end
 
