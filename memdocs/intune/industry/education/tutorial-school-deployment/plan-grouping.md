@@ -35,7 +35,7 @@ Intune has four main targeting methods:
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
 | Virtual groups | Created by Intune and allow you to target *All devices* and *All users* | Always up to date automatically | Can only be scoped using filters |
-| Assigned groups | Used when you want to manually add users or devices to a group. | Easily manage unique group memebership | Membership are manually maintained |
+| Assigned groups | Used when you want to manually add users or devices to a group. | Easily manage unique group membership | Membership are manually maintained |
 | Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
 | Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
 
@@ -90,7 +90,7 @@ The following table provides guidance about which iOS device grouping options to
 
 ✅ Create your organization groups
 
-After you've chosen your enrollment method and grouping option, you can create your groups.
+With your enrollment and grouping plan in place, you can create your groups.
 
 ### [Intune](#tab/intune)
 
@@ -113,14 +113,14 @@ After you've chosen your enrollment method and grouping option, you can create y
 
 ✅ See examples of common grouping by enrollment type
 
-This section includes targeting methods commonly seen amongst Education organizations.
+This section includes targeting methods commonly seen in Education organizations.
 
 ::: zone pivot="windows"
 
 ### Autopilot
-When devices are imported into Autopilot they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use this to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
+When devices are imported into Autopilot, they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use group tags to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
 
-These are the common groups used for devices that are enrolled using Autopilot.
+This table contains common groups used for devices that are enrolled using Autopilot.
 
 | Name | Type | Query |
 | --- | --- | --- |
@@ -135,7 +135,7 @@ These are the common groups used for devices that are enrolled using Autopilot.
 > - On Windows, apps and policies can also be targeted at user groups. However, the majority of apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
 
 ### Provisioning packages
-These are the common groups used for devices that are enrolled using provisioning packages.
+This table contains common groups used for devices that are enrolled using provisioning packages.
 
 | Name | Type | Query |
 | --- | --- | --- |
@@ -153,7 +153,7 @@ Filters can be used to further include or exclude devices from groups. For examp
 ::: zone pivot="ios"
 
 ### Automated Device Enrollment
-When devices are enrolled with Automated Device Enrollment, the devices are stamped with the enrollment profile name used during enrollment. Devices can be associated with different enrollment profiles in the Automated Device Enrollment token section under enrollment. Some customers use this to create groups or filters for different enrollment settings, to target different apps or profiles and also for assigning scope tags for role-based access control.
+When devices are enrolled with Automated Device Enrollment, the devices are stamped with the enrollment profile name used during enrollment. Devices can be associated with different enrollment profiles in the Automated Device Enrollment token section under enrollment. Some customers use enrollment profile names to create groups or filters for different enrollment settings, to target different apps or profiles and also for assigning scope tags for role-based access control.
 
 Here are examples of queries commonly used for dynamic security groups.
 
