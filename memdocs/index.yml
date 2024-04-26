@@ -38,7 +38,7 @@ productDirectory:
     - title: Multifactor Authentication
       imageSrc: ./media/index/multifactor-authentication.svg
       links:
-        - url: /entra/identity/authentication/tutorial-enable-azure-mfa
+        - url: ./intune/enrollment/multi-factor-authentication  
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
           text: View the prescriptive guidance <verify name>
@@ -65,13 +65,6 @@ productDirectory:
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/9/0
           text: View the prescriptive guidance <verify name> 
-    - title: Windows Autopilot
-      imageSrc: ./media/index/i_deploy.svg
-      links:
-        - url: /mem/autopilot/windows-autopilot
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
-          text: View the prescriptive guidance <verify name> 
     - title: Manage apps
       imageSrc: ./media/index/app-manage.svg
       links:
@@ -91,7 +84,13 @@ productDirectory:
       links:
         - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
           text: Read the documentation
-        
+    - title: Windows Autopilot
+      imageSrc: ./media/index/windows-autopilot.svg
+      links:
+        - url: /mem/autopilot/windows-autopilot
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
+          text: View the prescriptive guidance <verify name>         
 
 # additionalContent section (optional)
 # Card with summary style
