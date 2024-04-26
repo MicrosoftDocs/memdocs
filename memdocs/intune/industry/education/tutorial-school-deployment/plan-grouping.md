@@ -28,8 +28,6 @@ Intune has three main targeting methods:
 
 - [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. <br><br>For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
 
- > **alternative display option below**
-
 Intune has four main targeting methods:
 
 | Grouping type | Description | Benefits | Disadvantages |
