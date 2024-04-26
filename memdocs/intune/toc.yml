@@ -1212,6 +1212,9 @@ items:
           - name: Profiles on Zebra devices
             displayName: original equipment manufacturers, oem, oemconfig, schema, android
             href: ./configuration/oemconfig-zebra-android-devices.md
+          - name: Managed Home Screen permissions
+            displayName: original equipment manufacturers, oem, oemconfig, schema, android, mhs, auto-grant
+            href: ./configuration/oemconfig-managed-home-screen-permissions-android.md
         - name: Kiosks and dedicated devices
           href: ./configuration/kiosk-settings.md
           displayName: single app, multi app, windows, holographic

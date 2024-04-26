@@ -2,7 +2,7 @@
 # required metadata
 
 title: Set permissions to Managed Home Screen using Android Enterprise OEMConfig
-description: 
+description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX, and Legacy Zebra OEMConfig apps to Intune, and use the app schemas to configure permissions for the Managed Home Screen (MHS) app on Android Enterprise devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -35,7 +35,7 @@ ms.collection:
 
 The Managed Home Screen (MHS) is an Intune feature that allows you to configure the home screen on the device. The MHS is typically used for kiosk devices. For more information on the MHS, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
-For the MHS to work correctly (??), you configure permissions using an [OEMConfig device configuration profile](android-oem-configuration-overview.md). OEMConfig is a standard for OEMs to expose their device-specific features. It allows you to configure device settings that aren't built-in to Intune.
+For the MHS to work correctly (??), you configure permissions using an [OEMConfig device configuration profile](android-oem-configuration-overview.md). OEMConfig is a standard for OEMs to expose their device-specific features. It allows you to configure device settings that aren't built in to Intune.
 
 This feature applies to:
 
@@ -44,10 +44,6 @@ This feature applies to:
 - Zebra
 
 This article lists the steps to create an OEMConfig policy that automatically grants permissions for the MHS app on Samsung and Zebra devices.
-
-This section lists the steps to get the OEMConfig app and configure the app schema to auto-grans permissions to the devices using an Intune policy
-
-You get the app from the Managed Google Play Store, add the app to Intune, and assign the app to your devices. This section lists the steps to auto-grant permissions to the devices using their respective OEMConfig apps.
 
 To auto-grant permissions on a Zebra device, here are some high level steps.
 
@@ -60,12 +56,12 @@ Why would someone want to do this?
 
 
 
-| Permission  | Samsung | Zebra | Honeywell |
+| Permission  | Samsung | Zebra | Legacy Zebra |
 |---|---|---|---|
-| Overlay permission includes: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
-| Notification permission includes:<br/><br/>- Notification badge| ✅ | ✅ | ❌ |
-| Alarms & Reminders permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | |
-| Write settings permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | |
+| Overlay Permission includes: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
+| Notification Permission includes:<br/><br/>- Notification badge| ✅ | ✅ | ❌ |
+| Alarms & Reminders Permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | |
+| Write Settings Permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | |
 
 ## Before you begin
 
@@ -75,11 +71,15 @@ Why would someone want to do this?
 
 ## Step 1 - Get the app from the Managed Google Play Store
 
-OEMs provide their own OEMConfig app that lets you configure features within the app. In this step, get the OEMConfig app and add the app to Intune.
+OEMs provide their own OEMConfig app that lets you configure features within the app. In this step, you:
+
+✅ Get the OEMConfig app from the Managed Google Play Store.
+
+✅ Assign the app to your devices or device groups that use the MHS.
 
 Samsung and Zebra OEMs use the following Managed Google Play apps:
 
-| OEM | App anme |
+| OEM | App name |
 |---|---|
 | Samsung | Knox Service Plugin |
 | Zebra | Zebra OEMConfig Powered by MX <br/><br/>Zebra OEMConfig Powered by MX is a new version of the OEMConfig app released in May 2023.|
@@ -92,7 +92,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
-3. In the **Knox Service Plugin** app properties, make it a required app, and assign the app to your devices.
+3. In the **Knox Service Plugin** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
 
@@ -103,7 +103,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
-3. In the **Zebra OEMConfig Powered by MX** app properties, make it a required app, and assign the app to your devices.
+3. In the **Zebra OEMConfig Powered by MX** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
 
@@ -116,23 +116,23 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
 3. Optional. Install [Remote Help](../fundamentals/remote-help-android.md) on the device.
 
-    When using Legacy Zebra OEMConfig, OEMConfig profiles are applied as one-off actions, not persistent policy states.
+    When you use Legacy Zebra OEMConfig, OEMConfig profiles are applied as one-off actions, not persistent policy states.
 
     So, if you use Remote Help, then deploy the Remote Help app on the device first, and then assign the OEMConfig configuration policy. If you uninstall and reinstall the Remote Help app on the device, after the Remote Help app is reinstalled, then re-apply this OEMConfig policy. You can create a new OEMConfig profile and assign it to the device, or edit the previously created OEMConfig profile.
 
     ??Does this apply to any other apps or policies??
 
-4. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices.
+4. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
 
 ## Step 2 - Create the OEMConfig profile that configures the app
 
-The next step is to create an OEMConfig profile that configures the app. In this profile, you configure the app schema settings that auto-grant permissions to the MHS app features.
+The next step is to create an OEMConfig profile that configures the permissions in the OEMConfig app. In this profile, you configure the app schema settings that auto-grant permissions to the MHS app features.
 
 # [Samsung](#tab/samsung)
 
-This profile grants permissions using the schema settings in the **Knox Service Plugin** app.
+This profile grants the **Overlay Permission**, **Notification Permission**, and **Alarms & Reminders Permission** using the schema settings in the **Knox Service Plugin** app.
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -199,15 +199,19 @@ This profile grants permissions using the schema settings in the **Knox Service 
 
 The next time the device checks for configuration updates, the settings you configured are applied to the app.
 
-## Zebra
+# [Zebra OEMConfig Powered by MX](#tab/zebra-mx)
 
-On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is `HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04`. You must upgrade to a later BSP to use the new OEMConfig app.
+This profile grants the **Overlay Permission** and **Notification Permission** using the schema settings in the **Zebra OEMConfig Powered by MX** app.
 
-For instructions on updating supported Zebra devices with Intune, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+For more information on these permissions, go to:
 
-# [Zebra](#tab/zebra-mx)
+- [Enable Notification Access Permission via MDM/EMM OEMConfig 11.9.x.x and Up](https://supportcommunity.zebra.com/s/article/000027795) (opens Zebra's web site)
+- [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://supportcommunity.zebra.com/s/article/000021297) (opens Zebra's web site)
 
-This profile grants permissions using the schema settings in the **Zebra OEMConfig Powered by MX** app.
+> [!NOTE]
+> On Android 11, the **Zebra OEMConfig Powered by MX** app schema doesn't work if the board support package (BSP) version is `HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04`. To use the Zebra OEMConfig powered by MX app, you must upgrade to a newer BSP.
+>
+> For more information on updating Zebra devices with Intune, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -234,7 +238,7 @@ This profile grants permissions using the schema settings in the **Zebra OEMConf
 
     1. Select the **Package Configuration** ellipsis > **Add Setting**.
 
-        :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-add-setting.png" alt-text="Screenshot that shows how to add a settings to the Package Configuration node in the Zebra OEMConfig Powered by MX app schema in a device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-add-setting.png":::
+        :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-add-setting.png" alt-text="Screenshot that shows how to add a setting to the Package Configuration node in the Zebra OEMConfig Powered by MX app schema in a device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-add-setting.png":::
 
     2. Select the new **Package** child node and configure the following settings:
 
@@ -247,7 +251,7 @@ This profile grants permissions using the schema settings in the **Zebra OEMConf
 
     4. The **Permissions** child node is added to the **Settings** list. Select the ellipsis > **Add setting**. Do this twice to add two child nodes.
 
-        :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node-add-setting.png" alt-text="Screenshot that shows how to add a settings to the Permissions node in the Zebra OEMConfig Powered by MX app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node-add-setting.png":::
+        :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node-add-setting.png" alt-text="Screenshot that shows how to add settings to the Permissions node in the Zebra OEMConfig Powered by MX app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node-add-setting.png":::
 
     5. Select the first child node and configure the following settings:
 
@@ -273,7 +277,9 @@ This profile grants permissions using the schema settings in the **Zebra OEMConf
 
 The next time the device checks for configuration updates, the settings you configured are applied to the app.
 
-# [Zebra Legacy](#tab/zebra-legacy)
+# [Legacy Zebra OEMConfig](#tab/zebra-legacy)
+
+??Which permissions does this profile grant??
 
 This profile grants permissions using the schema settings in the **Legacy Zebra OEMConfig** app.
 
@@ -302,9 +308,12 @@ This profile grants permissions using the schema settings in the **Legacy Zebra 
 
     1. Select the **Transaction steps** ellipsis > **Add Setting**:
 
-        :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-legacy-add-setting.png" alt-text="Screenshot that shows how to add a settings to the Transaction Steps node in the Legacy Zebra OEMConfig app schema in a device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-legacy-add-setting.png":::
+        :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-legacy-add-setting.png" alt-text="Screenshot that shows how to add a setting to the Transaction Steps node in the Legacy Zebra OEMConfig app schema in a device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-legacy-add-setting.png":::
 
-    2. Select the **Permission Access Configuration** node > **Configure**.
+    2. Select the new **Transaction Step** child node > **Permission Access Configuration** > **Configure**:
+
+        :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-legacy-permission-access-configuration.png" alt-text="Screenshot that shows how to configure the Permission Access Configuration node in the Legacy Zebra OEMConfig app schema in a device configuration policy in Microsoft Intune.":::
+
     3. Configure the following settings:
 
         - **Permission Access Action**: Select **Grant**.
