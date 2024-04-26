@@ -3,7 +3,7 @@
 
 title: Plan Education device enrollment
 titleSuffix: Intune for Education
-description: Plan enrollment for Edcuation devices in Intune.  
+description: Plan enrollment for Education devices in Intune.  
 keywords:
 author: scottbreenmsft
 ms.author: scbree
@@ -31,7 +31,7 @@ zone_pivot_groups: platforms-windows-ios
 
 # Plan Education device enrollment
 
-Understanding and deciding how devices will be enrolled helps you understand how to create groups to use for targeting profiles and applications.
+Understanding and deciding how devices are enrolled helps you understand how to create groups to use for targeting profiles and applications.
 
 :::image type="content" source="./images/enroll.png" alt-text="The device lifecycle for Intune-managed devices - enrollment" border="false":::
 
@@ -79,11 +79,11 @@ Windows Autopilot is a collection of technologies you can use to simplify the se
 
 #### [Intune](#tab/intune)
 
-For instructions on how to configure Autopilot, see [Windows Autopilot](/autopilot)
+For instructions on how to configure Autopilot, see [Windows Autopilot](/autopilot).
 
 #### [Intune for Education](#tab/intune-for-education)
 
-For instructions on how to configure Autopilot in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup)
+For instructions on how to configure Autopilot in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup).
 
 ---
 
@@ -93,7 +93,7 @@ See the following table for more best practices.
 |---------|---------|
 | You want to use custom OS images to configure initial apps and settings| Ensure that the device is left in the out-of-box-experience. Alternatively, you can [pre-provision Autopilot devices](/autopilot/pre-provision), which is a similar approach that lets you, a CSP partner, or OEM provider preinstall apps and policies.  |
 |You want to provision more than one device at a time. | Make sure you have a reliable internet connection at your enrollment site while using Windows Autopilot, especially if you're enrolling more than one device at the same time. |
-|You want to reduce the end user set-up time. | Use Windows Autopilot for pre-provisioning deployments. Pre-provisioning allows IT admins/partners/OEM to pre-install apps and policies. For more information, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites). |
+|You want to reduce the end user set-up time. | Use Windows Autopilot for pre-provisioning deployments. Pre-provisioning allows IT admins/partners/OEM to preinstall apps and policies. For more information, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites). |
 
 ::: zone-end
 
@@ -101,7 +101,7 @@ See the following table for more best practices.
 
 There are three main methods for joining iOS devices to Microsoft Entra ID and getting them enrolled and managed by Intune:
 
-- **Company Portal.** Enrollment is performed manually by the user. The user downloads and installs the Company Portal app from the App store, then opens Company Portal and follows the instructions to enroll the device. The device is enrolled with personal ownership. This option isn't an ideal enrollment method for education devices.
+- **Company Portal.** Enrollment is performed by the user using the *Company Portal* app. The user downloads and installs the Company Portal app from the App store, then opens Company Portal and follows the instructions to enroll the device. The device is enrolled with personal ownership. This option isn't an ideal enrollment method for education devices.
 - **Automated Device Enrollment.** Automated Device Enrollment applies your organization's settings from Apple School Manager and enrolls devices without IT needing to physically interact with the device. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Devices can be configured with user affinity for use with one user or no user affinity for shared device scenarios.
 - **Bulk enrollment with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when devices aren't registered in Apple School Manager (for example - donated devices) or IT doesn't have physical access to the devices.
 

@@ -11,7 +11,7 @@ ms.manager: dougeby
 
 # Configure settings and applications with Microsoft Intune
 
-Before distributing devices to your users, you must ensure that the devices will be configured with the required policies, settings, and applications as they get enrolled in Intune.
+Before distributing devices to your users, you must ensure that the devices are with the required policies, settings, and applications as they get enrolled in Intune.
 
 :::image type="content" source="./images/configure.png" alt-text="The device lifecycle for Intune-managed devices" border="false":::
 

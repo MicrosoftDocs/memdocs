@@ -1,6 +1,6 @@
 ---
 title: Plan Education device grouping and targeting
-description: Plan how you will group devices and users and target policies and applications.
+description: Plan how you'll group devices and users and target policies and applications.
 ms.date: 01/16/2024
 ms.topic: tutorial
 appliesto:
@@ -35,11 +35,11 @@ Intune has four main targeting methods:
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
 | Virtual groups | Created by Intune and allow you to target *All devices* and *All users* | Always up to date automatically | Can only be scoped using filters |
-| Assigned groups | Used when you want to manually add users or devices to a group. | Easily manage unique group memeberships | Membership are manually maintained |
+| Assigned groups | Used when you want to manually add users or devices to a group. | Easily manage unique group memebership | Membership are manually maintained |
 | Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
-| Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned or dynamic groups |
+| Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
 
-Organizations typically use a combination of these grouping types in their envrironments.
+Organizations typically use a combination of these grouping types.
 
 > [!NOTE]
 > Filters aren't accessible in the Intune for Education admin console but are accessible in the Intune admin console.
@@ -117,8 +117,6 @@ This section includes targeting methods commonly seen amongst Education organiza
 
 ::: zone pivot="windows"
 
-On Windows apps and policies can also be targeted at user groups. Many apps and policies on Windows are "device" targeted, so even if targeted at a user group, will apply to all subsequent users of that device.
-
 ### Autopilot
 When devices are imported into Autopilot they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use this to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
 
@@ -132,10 +130,9 @@ These are the common groups used for devices that are enrolled using Autopilot.
 | All Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*Student*\")) |
 
 > [!NOTE]
-> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
-
-> [!NOTE]
-> If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
+> - Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+> - If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
+> - On Windows, apps and policies can also be targeted at user groups. However, the majority of apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
 
 ### Provisioning packages
 These are the common groups used for devices that are enrolled using provisioning packages.
@@ -165,7 +162,7 @@ Here are examples of queries commonly used for dynamic security groups.
 | All iOS devices | Dynamic membership rules | (device.deviceOSType -startsWith \"iOS\") |
 | All *'use case'* devices | Dynamic membership rules | (device.enrollmentProfileName -eq \"'*use case*'\") |
 
-To apply settings as quickly as possible during enrollment without waiting for dynamic group updates, some customers use a filter based on enrollmentProfileName and target configuration at the *All Devices* virutal group.
+To apply settings as quickly as possible during enrollment without waiting for dynamic group updates, some customers use a filter based on enrollmentProfileName and target configuration at the *All Devices* virtual group.
 
 - Devices with a specific enrollmentProfileName (enrollmentProfileName *equals* *'use case*')
 
