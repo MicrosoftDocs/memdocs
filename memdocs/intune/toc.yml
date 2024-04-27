@@ -1802,9 +1802,9 @@ items:
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/common-config-overview.md
-          - name: Intune Policies for Windows in Education
+          - name: Intune policies for Windows in Education
             items:
-            - name: Device Restrictions
+            - name: Device restrictions
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md
             - name: Windows Update
               href: ./industry/education/tutorial-school-deployment/common-config-windows-update.md
@@ -1812,9 +1812,9 @@ items:
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md
             - name: Delivery Optimization
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
-            - name: Windows Privacy
+            - name: Windows privacy
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy.md
-            - name: Start Menu Customization
+            - name: Start menu customization
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
             - name: OneDrive Known Folder Move
               href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md

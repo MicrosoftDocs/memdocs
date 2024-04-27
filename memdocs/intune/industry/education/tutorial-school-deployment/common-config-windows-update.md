@@ -38,7 +38,7 @@ To learn more, see:
 
 | **User experience settings** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
-| **Automatic update behavior** | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the Settings Catalog, the value should be **Auto install and restart**. | [AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
+| **Automatic update behavior** | Reset to default | Auto install and restart. Updates are downloaded automatically on non-metered networks and installed during "Automatic Maintenance" when the device isn't in use and isn't running on battery power.<br><br>**Note:** If Windows Update policy is configured via the settings catalog, the value should be **Auto install and restart**. | [AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate) |
 | **Restart checks (EDU Restart)** | Allow | Must not be disabled in existing Windows Update Rings. This setting is no longer available when creating a new Windows Update Ring policy.  | [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart) |
 | **Option to pause Windows updates** | Disable |     | [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess) |
 | **Option to check for Windows updates** | Disable |     | [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess) |
@@ -49,9 +49,9 @@ To learn more, see:
 | **Grace period** | 2   |     | [ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)<br><br>[ConfigureDeadlineGracePeriodForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiodforfeatureupdates) |
 | **Auto reboot before deadline** | Yes |     | [ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
 
-## Settings Catalog
+## Settings catalog
 
-Settings described in this section aren't available in an Update ring policy and should be configured using a Settings Catalog type Configuration Profile.
+Settings described in this section aren't available in an Update ring policy and should be configured using a settings catalog type configuration profile.
 
 To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
 

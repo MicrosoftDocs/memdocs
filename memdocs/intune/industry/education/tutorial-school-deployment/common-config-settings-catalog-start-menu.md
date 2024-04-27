@@ -32,7 +32,7 @@ To learn more, see:
 
 | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
-| **:::no-loc text="Custom Start Menu** | A custom XML string | Create and deploy a custom Start menu and taskbar layout. Please refer to articles in the Additional information. | [StartLayout](/windows/client-management/mdm/policy-csp-start) |
+| **:::no-loc text="Custom Start Menu":::** | A custom XML string | Create and deploy a custom Start menu and taskbar layout. Please refer to articles in the Additional information. | [StartLayout](/windows/client-management/mdm/policy-csp-start) |
 | **:::no-loc text="Hide App List":::** | None | | [Start/HideAppList](/windows/client-management/mdm/policy-csp-start#hideapplist) |
 | **:::no-loc text="Hide Change Account Settings":::** | Disabled | | [Start/HideChangeAccountSettings](/windows/client-management/mdm/policy-csp-start#hidechangeaccountsettings) |
 | **:::no-loc text="Hide Frequently Used Apps":::** | Enabled | | [Start/HideFrequentlyUsedApps](/windows/client-management/mdm/policy-csp-start#hidefrequentlyusedapps) |
