@@ -6,7 +6,7 @@ ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
-no-loc: [Microsoft, Windows]
+no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ---
 
 # Delivery Optimization
@@ -17,12 +17,16 @@ Windows Delivery Optimization helps you get Windows updates and Microsoft Store 
 
 To learn more, see:
 
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
 - [Delivery Optimization reference](/windows/deployment/do/waas-delivery-optimization-reference)
 - [YouTube: Delivery Optimization](https://www.youtube.com/playlist?list=PLMuDtq95SdKtN9lntgTcuhsYCsSQR4Dyl)
 
-## Settings Catalog Policies
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
 
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+## Settings catalog policies
+
+| **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 | **:::no-loc text="DO Delay Background Download From Http":::** | 3600 | 1 hour in seconds. After the max delay is reached, the download will resume using HTTP, either downloading the entire payload or complementing the bytes that couldn't be downloaded from Peers. | [DODelayBackgroundDownloadFromHttp](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodelaybackgrounddownloadfromhttp) |
 | **:::no-loc text="DO Download Mode":::** | HTTP blended with peering behind the same NAT. | Delivery Optimization enables peer sharing on the same network between clients that connect to the Internet using the same public IP.  | [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#dodownloadmode) |

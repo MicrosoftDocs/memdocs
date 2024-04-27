@@ -6,7 +6,7 @@ ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
-no-loc: [Microsoft, Windows]
+no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ---
 
 # OneDrive Known Folder Move
@@ -16,11 +16,17 @@ Microsoft Intune and Intune for Education can configure the settings to redirect
 > [!NOTE]
 > This is an optional policy
 
-To learn more, see [Redirect and move Windows known folders to OneDrive](/sharepoint/redirect-known-folders).
+To learn more, see:
 
-## Settings Catalog Policies
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
+- [Redirect and move Windows known folders to OneDrive](/sharepoint/redirect-known-folders).
 
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
+
+## Settings catalog policies
+
+| **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 |**:::no-loc text="Allow syncing OneDrive accounts for only specific organizations":::** | Enabled | Only enables the setting configuration. | [AllowTenantList](/sharepoint/use-group-policy#allow-syncing-onedrive-accounts-for-only-specific-organizations) |
 |**:::no-loc text="Allow syncing OneDrive accounts for only specific organizations\Tenant ID: (Device)":::** | _tenant ID_ | **Important!** This is a tenant-specific value. [How to find your Microsoft Entra tenant ID](/entra/fundamentals/how-to-find-tenant)| [AllowTenantList](/sharepoint/use-group-policy#allow-syncing-onedrive-accounts-for-only-specific-organizations) |

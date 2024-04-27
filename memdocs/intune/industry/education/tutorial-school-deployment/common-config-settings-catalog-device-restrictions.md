@@ -6,22 +6,25 @@ ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
-no-loc: [Microsoft, Windows]
+no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ---
 
-# Device Restrictions
+# Device restrictions
 
 There are many device restriction settings and configuration options you have available. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
 Intune and Intune for Education includes device restriction policies that help administrators control a wide range of settings and features on Android, iOS/iPadOS, macOS, and Windows devices to protect your organization's resources.
 
-## Organization-specific settings
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
+
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
+
+## Organization-specific settings catalog policies
 
 Configure these settings to personalize user experience and simplify the Windows sign-in process. Values for these settings should be defined according to the environment.
 
-To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
-
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+| **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 |**:::no-loc text="Preferred Aad Tenant Domain Name":::** | _domain_ | Simplifies the sign-in to Windows by automatically appending the domain to the username | [Authentication/PreferredAadTenantDomainName](/windows/client-management/mdm/policy-csp-authentication#preferredaadtenantdomainname) |
 |**:::no-loc text="Desktop Image Url":::** | _url_ | An http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to be used as the Desktop Image. | [Personalization/DesktopImageUrl](/windows/client-management/mdm/personalization-csp#desktopimageurl) |
@@ -32,9 +35,7 @@ To learn more, see [Use the settings catalog to configure settings on Windows, i
 
 Commonly applied device restrictions in education.
 
-To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
-
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+| **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 |**:::no-loc text="Allow Cortana Above Lock":::** | Block | The system will need to be unlocked for the user to interact with Cortana using speech. | [AboveLock/AllowCortanaAboveLock](/windows/client-management/mdm/policy-csp-abovelock#allowcortanaabovelock) |
 |**:::no-loc text="Allow Toasts":::** | Block | Block toast notifications above the device lock screen | [AboveLock/AllowToasts](/windows/client-management/mdm/policy-csp-abovelock#allowtoasts) |

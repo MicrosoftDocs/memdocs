@@ -6,7 +6,7 @@ ms.topic: windows-update
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
-no-loc: [Microsoft, Windows]
+no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ---
 
 # Windows Update
@@ -55,7 +55,10 @@ Settings described in this section aren't available in an Update ring policy and
 
 To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
 
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
+
+| **Name** | **Value** | **Notes** | **CSP** |
 | --- | --- | --- | --- |
 | **:::no-loc text="No update notifications during active hours":::** | Enabled |     | [NoUpdateNotificationsDuringActiveHours](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
 

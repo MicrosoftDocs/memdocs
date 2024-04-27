@@ -6,7 +6,7 @@ ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
-no-loc: [Microsoft, Windows]
+no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ---
 
 # Microsoft Edge
@@ -16,19 +16,23 @@ Microsoft Intune and Intune for Education can configure Microsoft Edge settings.
 Microsoft Edge supports mandatory and recommended policies. Mandatory policies override user preferences and prevent the user from modifying the policy. Recommended policies provide a default setting that the user can override. Most policies are only mandatory but there's a subset that is mandatory and recommended. If both versions of a policy are set, the mandatory setting takes precedence. A recommended policy only takes effect when the user hasn't modified the setting.
 
 > [!NOTE]
-> Microsoft Intune Settings Catalog categories:
+> Microsoft Intune settings catalog categories:
 >
 >- Mandatory policies category: **Microsoft Edge**
 >- Recommended policies category: **Microsoft Edge – Default Settings (users can override)**
 
 To learn more, see:
 
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog)
 - [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies)
 - [Configure Microsoft Edge policy settings on Windows devices](/deployedge/configure-microsoft-edge)
 
-## Settings Catalog Policies
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
 
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+## Settings catalog policies
+
+| **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 | **:::no-loc text="Ads setting for sites with intrusive ads":::** | Disabled | Block ads on sites with intrusive ads. | [AdsSettingForIntrusiveAdsSites](/deployedge/microsoft-edge-policies#adssettingforintrusiveadssites) |
 | **:::no-loc text="Default sensors setting":::** | Disabled | Don't allow any site to access sensors. | [DefaultSensorsSetting](/deployedge/microsoft-edge-policies#defaultsensorssetting) |
@@ -96,7 +100,7 @@ To learn more, see:
 
 ## (Optional) Startup, home page and new tab page
 
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+| **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 | **:::no-loc text="Action to take on startup":::** | _custom_ | Specify how Microsoft Edge behaves when it starts. | [RestoreOnStartup](/deployedge/microsoft-edge-policies#restoreonstartup) |
 | **:::no-loc text="Configure the home page URL":::** | Enabled | Configures the default home page URL in Microsoft Edge. The home page is the page opened by the Home button. | [HomepageLocation](/deployedge/microsoft-edge-policies#homepagelocation) |

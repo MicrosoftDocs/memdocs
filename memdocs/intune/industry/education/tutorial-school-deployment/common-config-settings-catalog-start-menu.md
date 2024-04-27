@@ -1,15 +1,15 @@
 ---
-title: Common Education Start Menu configuration
-description: Learn about common Start Menu configuration used by Education organizations in Intune.
+title: Common Education Start menu configuration
+description: Learn about common Start menu configuration used by Education organizations in Intune.
 ms.date: 4/9/2024
 ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
-no-loc: [Microsoft, Windows]
+no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ---
 
-# Start Menu Customization
+# Start menu customization
 
 Microsoft Intune and Intune for Education can configure settings for a customized Start menu for Windows 10 and later. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
@@ -25,9 +25,12 @@ To learn more, see:
 - [Customize and export the Start layout](/en-us/windows/configuration/start/customize-and-export-start-layout)
 - [Configure Windows Taskbar](/en-us/windows/configuration/taskbar/?pivots=windows-11)
 
-## Settings Catalog Policies
+> [!TIP]
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
 
-| **Settings Catalog** | **Value** | **Notes** | **CSP** |
+## Settings catalog policies
+
+| **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 | **:::no-loc text="Custom Start Menu** | A custom XML string | Create and deploy a custom Start menu and taskbar layout. Please refer to articles in the Additional information. | [StartLayout](/windows/client-management/mdm/policy-csp-start) |
 | **:::no-loc text="Hide App List":::** | None | | [Start/HideAppList](/windows/client-management/mdm/policy-csp-start#hideapplist) |
