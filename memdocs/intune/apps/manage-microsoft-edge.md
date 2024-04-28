@@ -435,12 +435,16 @@ If this policy is not configured, the value from the **DefaultPopupsSetting** po
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
 
+For more information about the URLs format, see [Enterprise policy URL pattern format](/edge-learnmore-ent-policy-url-patterns).
+
 ### Block pop-up on specific sites
 If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/edge-learnmore-ent-policy-url-patterns).
 
 ### Default search provider
 By default, Edge uses the default search provider to perform a search when users enter non-URL texts in the address bar. Users can change the search provider list. Organizations can manage the search provider behavior.
@@ -609,6 +613,8 @@ The example to block all websites, including internal websites, from uploading f
 An example to allow specific websites to upload files
 - com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://[*.]contoso.com/|[*.]sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/edge-learnmore-ent-policy-url-patterns).
 
 > [!NOTE]
 > For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
