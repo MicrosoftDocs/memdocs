@@ -23,7 +23,7 @@ Here's a collection of resources to help you troubleshoot Windows devices manage
 - [Troubleshooting Windows Autopilot][MEM-9]
 - [Troubleshoot Windows Wi-Fi profiles][MEM-6]
 - [Troubleshooting BitLocker with the Intune encryption report][MEM-4]
-- [Troubleshooting CSP custom settings][MEM-8]
+- [Troubleshooting custom settings][MEM-8]
 - [Troubleshooting Win32 app installations with Intune][MEM-7]
 - [**Collect diagnostics**][MEM-10] is a remote action that lets you collect and download Windows device logs without interrupting the user
   :::image type="content" source="./images/intune-diagnostics.png" alt-text="Intune for Education dashboard" lightbox="./images/intune-diagnostics.png" border="true":::
@@ -37,14 +37,14 @@ Here's a collection of resources to help you troubleshoot iOS devices managed by
 - [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors)
 - [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment)
 - [Troubleshooting profile installation failed error on iOS or iPadOS devices](/troubleshoot/mem/intune/device-enrollment/profile-installation-failed)
-- [Intune enrollment process doesn't start on Apple ADE devices](/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment)
+- [Intune enrollment process doesn't start on Apple Automated Device Enrollment devices](/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment)
 - [ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'](/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error)
-- [You cannot access company resources on an Intune-enrolled ADE device](/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep)
+- [You can't access company resources on an Intune-enrolled ADE device](/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep)
 ::: zone-end
 
 ## How to contact Microsoft Support
 
-Microsoft provides global technical, pre-sales, billing, and subscription support for cloud-based device management services. This support includes Microsoft Intune, Configuration Manager, Windows 365, and Microsoft Managed Desktop.
+Microsoft provides global technical, pre sales, billing, and subscription support for cloud-based device management services. This support includes Microsoft Intune, Configuration Manager, Windows 365, and Microsoft Managed Desktop.
 
 Follow these steps to obtain support in Microsoft Intune provides many tools that can help you troubleshoot Windows devices:
 
@@ -53,9 +53,9 @@ Follow these steps to obtain support in Microsoft Intune provides many tools tha
     :::image type="content" source="images/advanced-support.png" alt-text="Screenshot that shows how to obtain support from Microsoft Intune." lightbox="images/advanced-support.png":::
 - Select the required support scenario: Configuration Manager, Intune, Co-management, or Windows 365.
 - Above **How can we help?**, select one of three icons to open different panes: *Find solutions*, *Contact support*, or *Service requests*.
-- In the **Find solutions** pane, use the text box to specify a few details about your issue. The console may offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console provides help like:
+- In the **Find solutions** pane, use the text box to specify a few details about your issue. Depending on the presence of specific keywords, the console provides help like:
   - Run diagnostics: start automated tests and investigations of your tenant from the console to reveal known issues. When you run a diagnostic, you may receive mitigation steps to help with resolution.
-  - View insights: find links to documentation that provides context and background specific to the product area or actions you've described.
+  - View insights: find links to documentation that provides context and background specific to the product area or actions relating to your issue.
   - Recommended articles: browse suggested troubleshooting topics and other content related to your issue.
 - If needed, use the *Contact support* pane to file an online support ticket.
   > [!IMPORTANT]
@@ -63,6 +63,11 @@ Follow these steps to obtain support in Microsoft Intune provides many tools tha
 - To review your case history, select the **Service requests** pane. Active cases are at the top of the list, with closed issues also available for review.
 
 For more information, see [Microsoft Intune support page][MEM-1].
+
+________________________________________________________
+
+> [!div class="nextstepaction"]
+> [Next: Common Education configuration overview >](common-config-overview.md)
 
 <!-- Reference links in article -->
 [MEM-1]: /mem/get-support

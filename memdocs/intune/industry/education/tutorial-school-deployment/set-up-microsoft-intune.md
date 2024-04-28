@@ -6,6 +6,7 @@ ms.topic: tutorial
 appliesto:
 ms.author: scbree
 author: scottbreenmsft
+zone_pivot_groups: platforms-windows-ios
 ms.manager: dougeby
 ---
 
@@ -81,19 +82,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 - Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune/apps/company-portal-app).
 - Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](/mem/intune/enrollment/terms-and-conditions-create).
 
-## Configure the Intune service for Windows Education devices
-
-These steps are only required if you plan to manage Windows devices in your school.
-
-> [!div class="checklist"]
->In this section you will:
->
-> - Configure Windows enrollment
-> - Disable Windows Hello for Business
-> - Intune data collection policy
-> - Configure Windows data
-> - Configure Windows device diagnostics
-> - (Optional) Configure the Enrollment Status Page
+::: zone pivot="windows"
 
 ### Configure Windows enrollment
 
@@ -205,6 +194,59 @@ This table provides the settings most commonly set by customers, but can be cust
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Turn on log collection and diagnostics page for end users | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until required apps are installed if they are assigned to the user/device | *All* or *Selected* with the minimum apps required. <br><br>For example, Microsoft 365 apps or web content filtering softtware |
+
+::: zone-end
+
+::: zone pivot="ios"
+
+### Set up Apple MDM Certificate
+
+#### [Intune](#tab/intune)
+
+To set up an Apple MDM certificate, see [Get an Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#steps-to-get-your-certificate).
+
+#### [Intune for Education](#tab/intune-for-education)
+
+To set up an Apple MDM certificate in Intune for Education, see [Add an MDM push certificate](/intune-education/setup-ios-device-management)
+
+---
+
+> [!IMPORTANT]
+> The Apple MDM certificate needs to be renewed yearly. Make a note in your calendar to renew the certificate in just under a year from when you add the certificate. You can can view the expiry date in the console at any time.
+
+### Configure Volume Purchase Program (VPP)
+
+#### [Intune](#tab/intune)
+
+To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](/mem/intune/apps/vpp-apps-ios).
+
+#### [Intune for Education](#tab/intune-for-education)
+
+To set up an Apple VPP in Intune for Education, see [Configure VPP tokens](/intune-education/setup-ios-device-management#configure-vpp-tokens).
+
+---
+
+> [!IMPORTANT]
+> The Apple VPP token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can can view the expiry date in the console at any time.
+
+### Configure Automated Device Enrollment (ADE)
+
+If you plan to integrate Apple School Manager and use Automated Device Enrollment follow these steps.
+
+#### [Intune](#tab/intune)
+
+To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
+
+#### [Intune for Education](#tab/intune-for-education)
+
+To set up an Apple ADE in Intune for Education, see [Configure enrollment program token](/intune-education/setup-ios-device-management#configure-enrollment-program-token).
+
+---
+
+> [!IMPORTANT]
+> The Apple ADE token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can can view the expiry date in the console at any time.
+
+::: zone-end
 
 ---
 

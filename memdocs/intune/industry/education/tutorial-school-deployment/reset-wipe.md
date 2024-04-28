@@ -41,11 +41,12 @@ Intune provides reset functionalities that enable IT administrators to remotely 
 
 ✅ Return a device to original settings
 
-A factory reset, or a wipe, reverts a device to the original settings when it was purchased. All settings, applications and data installed on the device after purchase are removed. By default, the device is also removed from Intune management.
+A factory reset, or a wipe, reverts a device to the original settings when it was purchased. All settings, applications, and data installed on the device after purchase are removed. By default, the device is also removed from Intune management.
 
-Once the wipe is completed, the device will be in out-of-box experience.
+Once the wipe is completed, the device is in out-of-box experience.
 
 #### [Intune](#tab/intune)
+
 Here are the steps to perform a factory reset from Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -55,6 +56,7 @@ Here are the steps to perform a factory reset from Intune:
 1. Select **Wipe** to confirm the action.
 
 #### [Intune For Education](#tab/intune-for-education)
+
 Here are the steps to perform a factory reset from Intune for Education:
 
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
@@ -86,9 +88,10 @@ Consider using factory reset in the following example scenarios:
 
 Autopilot Reset is ideal when all data on a device needs to be wiped, but the device remains enrolled in your tenant.
 
-Once the Autopilot reset action is completed, the device will ask to chose region and keyboard layout, then it will display the sign-in screen.
+Once the Autopilot reset action is completed, the device asks to chose region and keyboard layout, then it displays the sign-in screen.
 
 #### [Intune](#tab/intune)
+
 Here are the steps to perform an Autopilot reset from Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -98,6 +101,7 @@ Here are the steps to perform an Autopilot reset from Intune:
 1. Select **Yes** to confirm the action.
 
 #### [Intune For Education](#tab/intune-for-education)
+
 Here are the steps to perform an Autopilot reset from Intune for Education:
 
 1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
@@ -128,7 +132,7 @@ There are scenarios that require a device to be deleted from your tenant, for ex
 
 - The device is lost or stolen (for iOS devices, you may consider using [Lost Mode](/mem/intune/remote-actions/device-lost-mode) instead).
 - It's the end of the life of the device.
-- The device has been replaced with a new device or has had a significant hardware change.
+- The device is replaced or has a new hardware components.
 
 > [!IMPORTANT]
 > The following actions should only be performed for devices that are no longer going to be used in your tenant.
@@ -136,19 +140,27 @@ There are scenarios that require a device to be deleted from your tenant, for ex
  To completely remove a device, you need to perform the following actions:
 
 ::: zone pivot="windows"
+
 1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1].
 1. If the device is registered in Autopilot, delete the Autopilot object using [these steps][MEM-2].
 1. Delete the device from Microsoft Entra ID using [these steps][MEM-3].
+
 ::: zone-end
 
 ::: zone pivot="ios"
+
 1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1].
 1. Delete the device from Microsoft Entra ID using [these steps][MEM-3].
+
 ::: zone-end
+
+________________________________________________________
+
+> [!div class="nextstepaction"]
+> [Next: Troubleshoot and get help >](troubleshoot-overview.md)
 
 <!-- Reference links in article -->
 
 [MEM-1]: /mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal
 [MEM-2]: /mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal
 [MEM-3]: /mem/intune/remote-actions/devices-wipe#delete-devices-from-the-azure-active-directory-portal
-[MEM-4]: /mem/autopilot/autopilot-mbr
