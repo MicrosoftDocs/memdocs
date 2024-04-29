@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2024
+ms.date: 04/29/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -22,6 +22,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Add
+- AI-Assisted
 ---
 
 # Add apps to Microsoft Intune
@@ -30,7 +31,22 @@ ms.collection:
 
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
-The users of apps and devices at your company (your company's workforce) might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your company, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the apps and capabilities that your workforce needs, and who needs them. The information in this article helps you get started.
+Intune apps refer to the applications that are managed by Microsoft Intune. These apps can be deployed, configured, protected, and updated to access your organization’s resources. Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. Intune also supports several platforms, such as iOS/iPadOS and Android. 
+
+Managing Microsoft Intune apps offers several benefits for your organization, including the following:
+- Data protection for your managed apps
+- Broad app support
+- Access control to your managed apps
+- App configuration for your managed apps
+- App updates for your managed apps
+
+Examples of when you should add, configure, protect, and deploy managed apps using Intune include the following:
+- Your organization needs to configure the app with specific settings for your organization.
+- Your organization must protect sensitive data used within a managed app.
+- Your organization must protect access to a managed app.
+- Your organization must monitor your managed apps to ensure data is protected and apps are updated as needed.
+
+The users of apps and devices at your organization might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your organization, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the capabilities and apps that your workforce needs, and who needs them. The information in this article helps you get started.
 
 ## App types in Microsoft Intune
 
