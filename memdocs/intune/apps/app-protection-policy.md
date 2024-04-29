@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/30/2023
+ms.date: 04/29/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,7 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- AIreviewed
+- AI-Assisted
 ---
 
 # App protection policies overview
