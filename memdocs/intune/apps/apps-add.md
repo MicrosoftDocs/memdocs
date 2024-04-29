@@ -22,6 +22,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Add
+- AI-Assisted
 ---
 
 # Add apps to Microsoft Intune
