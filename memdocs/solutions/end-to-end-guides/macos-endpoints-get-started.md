@@ -65,7 +65,7 @@ At the end of this guide, you have a macOS endpoint enrolled into Intune and rea
 
 ## Phase 1 - Set up your environment
 
-Before you build your first macOS endpoint, there are some requirements and configuration features that should be configured.
+Before you build your first macOS endpoint, there are some requirements and configuration features that you configure.
 
 In this phase, you check the requirements, integrate Intune with Apple Business Manager (or Apple School Manager), configure some features, and add some apps to Intune.
 
@@ -305,7 +305,7 @@ When the user signs in, the enrollment policy applies. When it completes, your m
 
 ## Phase 3 - Secure your macOS endpoints
 
-In this phase, you build security settings for your organization.
+In this phase, you configure security settings and features that help protect your endpoints, including keeping devices current with updates.
 
 :::image type="content" source="./media/macos-endpoints-get-started/phase-3-secure-endpoints.png" alt-text="A diagram that lists the steps to secure macOS devices using compliance policies, software updates, and more in Microsoft Intune":::
 
@@ -629,6 +629,8 @@ For more information, go to [Configure Wi-Fi settings for macOS devices in Micro
 
 ## Phase 5 - Caching (optional)
 
+There are some caching features you can use to help reduce your network bandwidth.
+
 :::image type="content" source="./media/macos-endpoints-get-started/phase-5-optional-caching.png" alt-text="A diagram that describes using content caching and AutoUpdate local cache app on macOS devices using Microsoft Intune":::
 
 ✅ **Use content caching**
@@ -722,7 +724,7 @@ For more information, go to [Use shell scripts on macOS devices in Microsoft Int
 
 Microsoft Entra ID can be configured to automatically provision and deprovision users to Apple Business Manager (ABM) using the Microsoft Entra provisioning service.
 
-For more information, go to [Tutorial: Configure Apple Business Manager for automatic user provisioning](/entra/identity/saas-apps/apple-business-manager-provision-tutorial)
+For more information, go to [Tutorial: Configure Apple Business Manager for automatic user provisioning](/entra/identity/saas-apps/apple-business-manager-provision-tutorial).
 
 ## Related articles
 
