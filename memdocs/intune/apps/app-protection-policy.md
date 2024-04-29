@@ -185,7 +185,7 @@ There are a few additional requirements that you want to be aware of when using 
 > [!IMPORTANT]
 > Intune mobile application management (MAM) on Android requires Microsoft Entra ID device registration for Microsoft 365 apps. To improve security, Android devices must be registered with Microsoft Entra ID to continue receiving MAM policy for Microsoft 365 apps. 
 >
-> When accessing Microsoft 365 apps that are targeted with a MAM policy, users might be prompted to authenticate if the device is not already registered with Entra ID. Users will need to complete the authentication and registration to access their Microsoft 365 MAM-enabled applications.
+> When accessing Microsoft 365 apps that are targeted with a MAM policy, users might be prompted to authenticate if the device is not already registered with Entra ID. Users will need to complete the authentication and registration process to access their Microsoft 365 MAM-enabled applications.
 >
 > If you have Conditional Access policies or multi-factor authentication enabled, devices should already be registered, and users will not notice any change.
 >
