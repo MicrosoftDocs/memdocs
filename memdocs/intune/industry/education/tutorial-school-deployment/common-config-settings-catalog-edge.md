@@ -28,7 +28,7 @@ To learn more, see:
 - [Configure Microsoft Edge policy settings on Windows devices](/deployedge/configure-microsoft-edge)
 
 > [!TIP]
-> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
 
 ## Settings catalog policies
 

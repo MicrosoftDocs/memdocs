@@ -18,7 +18,7 @@ Intune and Intune for Education includes device restriction policies that help a
 To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
 
 > [!TIP]
-> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search to find the desired policy.
+> When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
 
 ## Organization-specific settings catalog policies
 
