@@ -47,6 +47,10 @@ Applies to:
 
 We are working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We are working with the owner to resolve this as quickly as possible.
 
+### Organization that disable User Account Control (UAC) may experience issues with Endpoint Privilege Management
+
+Endpoint Privilege Management does not support UAC being explicitly disabled. Windows policy controls for UAC Prompt Behavior exist to control the behavior of UAC prompts. If organizations take additional steps to disable UAC outside of the existing policy controls, like disabling Windows services, they may experience issues with Endpoint Privilege Management.
+
 ### Organizations use Application Control for Business might experience issues running Endpoint Privilege Management
 
 Application Control for Business policies that do not account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function.
