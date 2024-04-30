@@ -17,7 +17,7 @@ By organizing devices, students, classrooms, or learning curricula into groups, 
 
 ## Grouping and targeting overview
 
-Intune has four main targeting methods:
+Intune has four targeting methods:
 
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
@@ -26,7 +26,7 @@ Intune has four main targeting methods:
 | Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
 | Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
 
-Organizations typically use a combination of these grouping types.
+Organizations typically use a combination of these targeting methods.
 
 > [!NOTE]
 > Filters aren't accessible in the Intune for Education admin console but are accessible in the Intune admin console.
