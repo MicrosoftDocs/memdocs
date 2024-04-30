@@ -120,6 +120,10 @@ Applies to:
 
 ## Device enrollment
 
+### Define corporate device identifiers for Windows<!-- 25873757 -->
+
+Microsoft Intune will support corporate device identifiers for Windows devices. You will be able to upload a CSV file with model, manufacturer, and serial number to identify corporate machines ahead of enrolling. When a device that matches the model, manufacturer, and serial number criteria enrolls, it will be marked as corporate and managed appropriately.
+
 ### Intune adding support for Red Hat Enterprise Linux<!-- 25160548 -->
 
 Microsoft Intune will support device management for Red Hat Enterprise Linux. You'll be able to enroll and manage Red Hat Enterprise Linux devices, and assign standard compliance policies, custom configuration scripts, and compliance scripts.
