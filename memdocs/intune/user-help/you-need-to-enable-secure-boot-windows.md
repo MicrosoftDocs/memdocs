@@ -35,13 +35,13 @@ ms.collection:
 Secure Boot is a security standard developed by members of the PC industry to help ensure that a device boots using only software that's trusted by the original equipment manufacturer (OEM). Your organization's device management policies may require you to enable it on your enrolled Windows device. Devices that don't meet this requirement may be unable to access work or school resources.     
 
 ## Enable Secure Boot  
-You can manage Secure Boot in the UEFI BIOS settings (PC firmware) on your device. See the manufacturer's documentation to learn how to boot your specific device to BIOS. For example, on tablets it's common to press the Volume up or Volume down button while powering on your device. 
+You can manage Secure Boot in the UEFI BIOS settings (PC firmware) on your device. To learn how to boot your device into UEFI or BIOS mode, see the manufacturer's documentation. For example, on tablets it's common to press the **Volume up** or **Volume down** button while powering on your device. Other common keys used include Esc, Delete, F1, F2, F10, F11, or F12. 
 
 The following steps describe how to change the Secure Boot configuration on a Surface device. For more information about Secure Boot for Surface, see [Manage Surface UEFI settings](/surface/manage-surface-uefi-settings#open-surface-uefi-menu). 
 
-1. Save any open work.
-2. Go to **Settings** > **System** > **Recovery**.
-3. Under **Recovery options**, find **Advanced setup** and select **Restart now**.
+1. Save any open work.  
+2. Open **Settings** and go to **System** > **Recovery**.  
+3. Under **Recovery options**, find **Advanced setup** and select **Restart now**.  
 4. Select **Restart now** to confirm. 
 5. After your device restarts, select **Troubleshoot**.
 6. Select **Advanced options** > **UEFI Firmware Settings**.  
