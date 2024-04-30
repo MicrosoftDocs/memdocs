@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/27/2024
+ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -181,7 +181,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
   - **Allow traffic from non-native captive networking apps to pass outside VPN**: A captive network refers to Wi-Fi hotspots typically found in restaurants and hotels. Your options:
     - **No**: Forces all Captive Networking (CN) app traffic through the VPN tunnel​.
     - **Yes, all apps**: Allows all CN app traffic to bypass the VPN​.
-    - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`.
+    - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
   - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign-on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
   - **Network address translation (NAT) keepalive interval (seconds)**: To stay connected to the VPN, the device sends network packets to remain active. Enter a value in seconds on how often these packets are sent, from 20-1440. For example, enter a value of `60` to send the network packets to the VPN every 60 seconds. By default, this value is set to `110` seconds.

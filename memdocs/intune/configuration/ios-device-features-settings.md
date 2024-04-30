@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -172,7 +172,9 @@ When you assign the policy to an iPhone, the dock looks similar to the following
 
   :::image type="content" source="./media/ios-device-features-settings/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
 
-  - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
+  - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
+    When set to **Not configured** or left blank, Intune doesn't change or update this setting.
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
   - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
   - **Notifications**: **Enable** or **Disable** the app from sending notifications to devices. When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -415,7 +417,7 @@ This feature applies to:
   
   - iOS/iPadOS 14 and newer
 
-- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices.
+- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
   If you use the **Microsoft Entra ID** SSO app extension type, then:
 

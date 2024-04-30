@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -101,6 +101,8 @@ These settings use the [AssociatedDomains.ConfigurationItem payload](https://dev
     The bundle ID uniquely identifies the app, and typically is formatted in reverse domain name notation. For example, the bundle ID of Finder is `com.apple.finder`. To find the bundle ID, use the AppleScript in Terminal:
 
     `osascript -e 'id of app "ExampleApp"'`
+
+    To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
   - **Domains**: Enter the website domain to associate with an app. The domain includes a service type and fully qualified hostname, like `webcredentials:www.contoso.com`.
 
@@ -421,7 +423,7 @@ This setting applies to:
 
   For more information about shared device mode, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
 
-- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
+- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 - **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you add in Intune. For more information about certificates, go to [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 - **Preferred KDCs** (Kerberos only): Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers aren't discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don't respond, then the device uses DNS discovery.
