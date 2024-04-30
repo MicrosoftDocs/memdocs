@@ -165,7 +165,7 @@ Get details on **policy targets**, like the groups that have a specific app assi
 **Sample prompts**:
 
 - How many users is ContosoApp assigned to?
-- Which groups is ContosoApp assigned to?
+- Which groups are ContosoApp assigned to?
 - How many apps are assigned to the device ID *Enter the device ID* in Intune?
 - Why is the "Allow Microsoft Store App to auto update" policy applying to DeviceA?
 - Tell me about Intune devices for user UserA.
@@ -207,7 +207,7 @@ Whenever possible, and when the result isn't what you expect, write a few words 
 
 For more information about data privacy in Copilot for Security, go to [Privacy and data security in Microsoft Copilot for Security](/security-copilot/privacy-data-security).
 
-When you interact with the Security Copilot to get Intune data, the Security Copilot pulls that data from Intune. The prompts, the Intune data that's retrieved, and the output shown in the prompt results are processed and stored within the Security Copilot service.
+When you interact with the Security Copilot to get Intune data, the Security Copilot pulls that data from Intune. The prompts, the Intune data that's retrieved, and the output shown in the prompt results is processed and stored within the Security Copilot service.
 
 When you use Copilot for Security to get Intune data, Copilot for Security also has access to the data and permissions defined by the [RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) assigned to you.
 
