@@ -63,7 +63,7 @@ With enrollment restrictions, you control which devices can enroll and be manage
 To block personally owned devices from enrolling:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **Enroll devices** > **Enrollment device platform restrictions**
+1. Select **Devices** > **Enroll devices** > **Device platform restrictions**
 1. Select the tab for the platform you want to restrict
 1. Select **Create restriction**
 1. On the **Basics** page, provide a name for the restriction and, optionally, a description > **Next**
