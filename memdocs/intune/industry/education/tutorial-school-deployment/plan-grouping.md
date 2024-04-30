@@ -17,18 +17,7 @@ By organizing devices, students, classrooms, or learning curricula into groups, 
 
 ## Grouping and targeting overview
 
-Intune has three main targeting methods:
-
-- **Virtual groups** are created by Intune and allow you to target *All devices* and *All users*.
-
-- **Groups** are created and managed in Entra and can contain users or devices.
-  - **Assigned groups** are used when you want to manually add users or devices to a group.
-
-  - **Dynamic groups** reference rules that you create to assign students or devices to groups, which automate the membership's maintenance of those groups.
-
-- [**Filters**](/mem/intune/fundamentals/filters) allows you to narrow the assignment scope of a policy. <br><br>For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more. Filters are evaluated dynamically during a device check-in and can therefore sometimes offer a faster dynamic grouping option than an Entra dynamic group.
-
-Intune has four main targeting methods:
+Intune has four targeting methods:
 
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
@@ -37,7 +26,7 @@ Intune has four main targeting methods:
 | Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
 | Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
 
-Organizations typically use a combination of these grouping types.
+Organizations typically use a combination of these targeting methods.
 
 > [!NOTE]
 > Filters aren't accessible in the Intune for Education admin console but are accessible in the Intune admin console.
