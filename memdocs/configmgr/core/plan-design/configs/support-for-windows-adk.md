@@ -2,7 +2,7 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 03/28/2024
+ms.date: 04/30/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -25,9 +25,8 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 - [Download the Windows ADK](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
-    > ADK for Windows 11, Version 22H2 and all earlier supported versions of Windows 10 and 11 (Updated September 2023 - version 10.1.25398.1) is required to deploy Windows 10/11 ARM64 operating system deployment.
-    > 
-    > Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
+    > - Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
+    > - ADK for Windows 11, Version 22H2 (10.1.22621.1) is required to deploy Windows 10/11 ARM64 operating systems.
         
     > [!Note]
     > ADK for Windows 11, version 22H2 (updated September 2023): VBScript is not currently working in WinPE. It is expected to be fixed in an upcoming servicing update.
@@ -39,8 +38,8 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 | Windows ADK version            | ConfigMgr 2211| ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403  |
 |--------------------------------|----------------|----------------|----------------|----------------|
-| **Windows 11**<br>(10.1.22621.1)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
-| **Windows 11**<br>(10.1.22000) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
+| **Windows 11 22H2**<br>(10.1.22621.1)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
+| **Windows 11 21H1**<br>(10.1.22000) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
 | **Windows Server 2022**<br>(10.1.20348)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |![Supported](media/green-check.png)|![Supported](media/green-check.png) |
 | **Windows 10, version 2004**<br>(10.1.19041)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |![Supported](media/green-check.png) |
  
