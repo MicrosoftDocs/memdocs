@@ -79,7 +79,29 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
-### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427 -->
+### New settings available in the macOS settings catalog<!-- 26970197 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+We will add new settings in the macOS Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+
+**Microsoft AutoUpdate (MAU)**:
+
+- Microsoft Teams (work or school)
+- Microsoft Teams classic
+
+**Microsoft Defender > Features**:
+
+- Use Data Loss Prevention
+- Use System Extensions
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+
+- macOS
+
+### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->
 
 In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
 
@@ -120,6 +142,10 @@ We're updating RBAC for enrollment platform restrictions. Enrollment platform re
 <!-- *********************************************** -->
 
 ## Device management
+
+### New version of Windows hardware attestation report<!-- 15425680 -->
+
+We're introducing a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows 10/11. The Windows hardware attestation report will be built on a new reporting infrastructure, and updated to reflect new settings added to Microsoft Azure Attestation. The report will be available in the admin center under **Reports** > **Device Compliance** > **Reports**. The Windows health attestation report that exists today under **Devices** > **Monitor** will be retired.
 
 ### Optional feature updates<!--12769586 -->
 
