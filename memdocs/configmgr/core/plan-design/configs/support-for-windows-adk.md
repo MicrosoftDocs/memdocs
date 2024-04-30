@@ -11,7 +11,7 @@ ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz,frankroj
 ---
 
 # Support for the Windows ADK in Configuration Manager
@@ -47,7 +47,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 |Key|
 |--|
-| ✅ = **Supported** <br/> This table only shows Windows ADK supportability in relation to the version of Configuration Manager. Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. Use the latest Windows ADK version when deploying the latest Windows version. The latest Windows ADK version may support deployment of older OS versions, such as Windows 8.1.<!-- SCCMDocs issue 1229 --> For more information on Windows ADK component supportability, see [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms), [USMT requirements](/windows/deployment/usmt/usmt-requirements#bkmk-1), and [Choose the right ADK for your scenario](/windows-hardware/get-started/adk-install#choose-the-right-adk-for-your-scenario). |
+| ✅ = **Supported** <br/> This table only shows Windows ADK supportability in relation to the version of Configuration Manager. Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. Use the latest Windows ADK version when deploying the latest Windows version. The latest Windows ADK version might support deployment of older OS versions, such as Windows 10.<!-- SCCMDocs issue 1229 --> For more information on Windows ADK component supportability, see [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms), [USMT requirements](/windows/deployment/usmt/usmt-requirements#bkmk-1), and [Choose the right ADK for your scenario](/windows-hardware/get-started/adk-install#choose-the-right-adk-for-your-scenario). |
 | ![Backwards compatible](media/blue-compat.png)  = **Backward compatible** <br/> This combination isn't tested but should work. We'll document any known issues or caveats. |
 | ❌ = **Not supported** |
 
