@@ -117,7 +117,10 @@ This table contains common groups used for devices that are enrolled using Autop
 | All Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*Student*\")) |
 
 > [!NOTE]
-> - Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+> The "All Autopilot Student devices" group example is assuming the Autopilot Group Tag is set to "Student". You could use another Group Tag and update the membership rule accordingly.
+
+> [!NOTE]
+> - If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
 > - If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
 > - On Windows, apps and policies can also be targeted at user groups. However, the majority of apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
 
@@ -127,7 +130,10 @@ This table contains common groups used for devices that are enrolled using provi
 | Name | Type | Query |
 | --- | --- | --- |
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
-| All Student devices | Dynamic membership rules | (device.displayName -startsWith \"*STU-*\") |
+| All Student devices | Dynamic membership rules | (device.displayName -startsWith \"*STU-*\")|
+
+> [!NOTE]
+> The "All Student devices" group example is assuming the device name prefix in the provisioning package is set to "STU-". You could use another prefix and update the membership rule accordingly.
 
 ### All enrollment types
 Filters can be used to further include or exclude devices from groups. For example:
@@ -154,7 +160,7 @@ To apply settings as quickly as possible during enrollment without waiting for d
 - Devices with a specific enrollmentProfileName (enrollmentProfileName *equals* *'use case*')
 
 > [!NOTE]
-> Remember if you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+> If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
 
 > [!WARNING]
 > Each time an iOS device enrolls it creates a new Entra device object, so *assigned group* memberships aren't maintained afer a device is reset.
