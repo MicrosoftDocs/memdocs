@@ -65,6 +65,8 @@ The following table lists the versions of the Windows ADK that you can use with 
     >
     > To enable VBScript support in the **ADK 10.1.25398.1 (updated September 2023)** Windows PE boot images, make sure to add the [Scripting/WinPE-Scripting](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) optional component before applying the cumulative update.
 
+- For information on applying the [BlackLotus UEFI bootkit vulnerability](https://prod.support.services.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d) security updates to ADK for Windows 11, version 22H2 or older Windows PE boot images, see [Customize Windows PE boot images](/windows/deployment/customize-boot-image).
+
 - Windows Server builds have the same Windows ADK requirement as the associated Windows client version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
 
 - If you're deploying both Windows 11 and Windows Server 2022, use the Windows ADK for Windows 11, which is the latest version. If you're deploying Windows Server 2022 and not Windows 11, you can use either Windows ADK for Windows Server 2022 or Windows 11.
