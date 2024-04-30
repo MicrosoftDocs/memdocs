@@ -83,6 +83,28 @@ Intune Company Portal will now be automatically installed on all Android Enterpr
 
 ## Device configuration
 
+#### New settings available in the macOS settings catalog<!-- 26970197 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+We will add new settings in the macOS Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+
+**Microsoft AutoUpdate (MAU)**:
+
+- Microsoft Teams (work or school)
+- Microsoft Teams classic
+
+**Microsoft Defender > Features**:
+
+- Use Data Loss Prevention
+- Use System Extensions
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+
+- macOS
+
 ### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->
 
 In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
