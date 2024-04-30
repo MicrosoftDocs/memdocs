@@ -63,7 +63,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
     > [!NOTE]
     >
-    > To enable VBScript support in the **ADK 10.1.25398.1 (updated September 2023)** when following the article, make sure to add the [Scripting/WinPE-Scripting](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) optional component before applying the cumulative update.
+    > To enable VBScript support in the **ADK 10.1.25398.1 (updated September 2023)** Windows PE boot images, make sure to add the [Scripting/WinPE-Scripting](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) optional component before applying the cumulative update.
 
 - Windows Server builds have the same Windows ADK requirement as the associated Windows client version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
 
