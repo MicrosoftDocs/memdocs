@@ -61,12 +61,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Auto update available with Win32 app supersedence<!-- 17644510  -->
-
-Win32 app supersedence will provide the capability to supersede apps deployed as available with **auto-update** intent. For example, if you deploy a Win32 app (app A) as available and installed by users on their device, you will be able to create a new Win32 app (app B) to supersede app A using **auto-update**. All targeted devices and users with app A installed as available from the Company Portal will be superseded with app B. Also, only app B will show in the Company Portal. Currently, there was no **auto-update** option, superseding an available app only replaced app A in the Company Portal. You will be able to find the **auto-update** feature for available app supersedence as a toggle under the **Available assignment** in the **Assignments** tab.
-
-For more information about app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
-
 ### Device IPv4 and IPv6 addresses available from Managed Home Screen<!-- 25994445  -->
 
 IPv4 and IPv6 addresses will both be available from the Device Information page of Managed Home Screen (MHS).
@@ -89,27 +83,11 @@ Intune Company Portal will now be automatically installed on all Android Enterpr
 
 ## Device configuration
 
-### Error message is shown when OEMConfig policy exceeds 500 KB on Android Enterprise devices<!-- 15326924  -->
-
-On Android Enterprise devices, you can use an OEMConfig device configuration profile to add, create and/or customize OEM specific settings.
-
-Currently, when you create and assign any OEMConfig policy that exceeds 500 KB, then these policies go into a pending state. Admins might not know about the policy size limit, as this information isn't shown.
-
-Now, when you create OEMConfig policy that exceeds 500 KB, then the following error is shown in the Intune admin center:
-
-`Profile is larger than 500KB. Adjust profile settings to decrease the size.`
-
-For more information on OEMConfig profiles, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
-
-Applies to:
-
-- Android Enterprise
-
-### New settings available in the macOS settings catalog<!-- 26970197  -->
+#### New settings available in the macOS settings catalog<!-- 26970197 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the macOS Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+We will add new settings in the macOS Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
 
 **Microsoft AutoUpdate (MAU)**:
 
@@ -121,7 +99,7 @@ There are new settings in the macOS Settings Catalog. To see these settings, in 
 - Use Data Loss Prevention
 - Use System Extensions
 
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 Applies to:
 
@@ -205,26 +183,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
-
-### Windows update distribution report<!--16579592  -->
-
-The Windows update distribution report in Intune will provide a summarized report to show the number of devices that are on each quality update level and the % coverage for each update across the devices managed by Intune (including co-managed devices).
-
-You will be able to drill down further in the report for each quality update that aggregates devices based on the Windows 10/11 feature version and the update statuses.
-
-Finally, the admins will be able to get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
-
-For more information on Windows update reports, go to [Windows Update reports on Intune](../protect/windows-update-reports.md).
-
-### Remote Help supports full control of a macOS device<!--22985205  -->
-
-Remote Help will support helpdesk connecting to a user's device and requesting full control of the macOS device.
-
-For more information on Remote Help, see [Remote Help on macOS](../fundamentals/remote-help-macos.md).
-
-Applies to:
-
-- macOS 11, 12, 13, and 14
 
 ### Intune support of Microsoft 365 remote application diagnostics<!-- 17409991  -->
 
