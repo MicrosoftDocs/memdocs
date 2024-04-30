@@ -66,7 +66,7 @@ The endpoint security Overview page presents a consolidated dashboard with displ
 
   - **Onboard devices to Defender for Endpoint** – A link to open the Defender portal, where you can take other steps to onboard devices outside of Intune’s streamlined workflow.
 
-- **Antivirus agent status** – This view displays the summary details of Intune’s *Antivirus agent status* report, otherwise available in the Intune admin center by going to *Reports* > *Microsoft Defender Antivirus* where the report is on the *Summary* tab.
+- **Antivirus agent status** – This view displays the summary details of Intune’s *Antivirus agent status* report, otherwise available in the Intune admin center by going to *Reports* \> *Microsoft Defender Antivirus* where the report is on the *Summary* tab.
 
 - **Other Monitoring reports** - This section includes tiles that open additional Microsoft Defender Antivirus reports, including *Detected Malware Firewall Status*. Another tile opens the *Defender portal* where you can view sensor and antivirus health data.
 
@@ -167,7 +167,7 @@ For more information, see [Role-based access control (RBAC) with Microsoft Intun
 
 ### Permissions granted by the *Endpoint Security Manager* role
 
-You can view the following list of permissions in the Microsoft Intune admin center by going to **Tenant administration** > **Roles** > **All Roles**, select **Endpoint Security Manager** > **Properties**.
+You can view the following list of permissions in the Microsoft Intune admin center by going to **Tenant administration** \> **Roles** \> **All Roles**, select **Endpoint Security Manager** \> **Properties**.
 
 **Permissions:**
 
