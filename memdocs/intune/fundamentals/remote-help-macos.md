@@ -57,7 +57,7 @@ The Remote Help web app supports the following capabilities on macOS:
 
 - **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For more information on setting up conditional access, see [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
 
-- **Compliance Warnings**: Remote Help will show non-compliance warnings if the device the helper is connecting to is not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings**: Remote Help will show non-compliance warnings if the device the helper is connecting to isn't compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
 - **Enrollment status**: If the user's device that the helper is trying to connect to isn't enrolled, the helper sees a prompt notifying them of the device status.
 
@@ -117,7 +117,7 @@ If your organization, restricts Remote Help to enrolled devices only there are t
 
 ### Native app operating system permissions
 
-On macOS, applications that access and control the screen require permission. By default, users must accept these permissions. macOS allows some control capabilties for each type of privacy setting using *Privacy Preferences Policy Control*.
+On macOS, applications that access and control the screen require permission. By default, users must accept these permissions. macOS allows some control capabilities for each type of privacy setting using *Privacy Preferences Policy Control*.
 
 |Permission|MDM control capabilities|
 |---|---|
@@ -141,7 +141,7 @@ With settings catalog, we can streamline the end users experience for allowing t
       - **Identifer**
       - **Identifer type**
       - **Static code**
-1. Close the **Add settings** pane and select **+ Edit instance** under **Accessbility** and configure the following settings:
+1. Close the **Add settings** pane and select **+ Edit instance** under **Accessibility** and configure the following settings:
 
     | Name | Configuration |
     |---|---|
@@ -257,7 +257,7 @@ When you as the sharer and your helper are ready to begin the session:
 1. After the session is established, the helper can then help in resolving any issues on the device.
 
 > [!NOTE]
-> If you remote help wasn't installed by your administrator you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](#install-and-update-remote-help-native-app) section.
+> If Remote Help wasn't installed by your administrator you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](#install-and-update-remote-help-native-app) section.
 
 ## Provide help
 
