@@ -1761,9 +1761,9 @@ items:
           href: ./industry/education/tutorial-school-deployment/introduction.md
         - name: 1. Plan your deployment
           items:
-          - name: Plan enrollment
+          - name: Enrollment methods
             href: ./industry/education/tutorial-school-deployment/plan-enrollment.md
-          - name: Plan grouping
+          - name: Grouping and Targeting
             href: ./industry/education/tutorial-school-deployment/plan-grouping.md
         - name: 2. Prepare your tenant
           items:
