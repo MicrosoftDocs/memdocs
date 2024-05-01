@@ -1,7 +1,7 @@
 ---
 title: Enrollment in Intune with standard out-of-box experience (OOBE)
 description: Learn how to join devices to Microsoft Entra ID from OOBE and automatically get them enrolled in Intune.
-ms.date: 11/09/2023
+ms.date: 5/2/2024
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree

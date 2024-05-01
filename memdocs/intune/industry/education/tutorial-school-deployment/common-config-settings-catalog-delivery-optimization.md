@@ -1,7 +1,7 @@
 ---
 title: Common Education Windows Delivery Optimization configuration
 description: Learn about common Windows Delivery Optimization configuration used by Education organizations in Intune.
-ms.date: 4/9/2024
+ms.date: 5/2/2024
 ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr
@@ -13,7 +13,7 @@ no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 
 There are many configuration options you can set in Delivery Optimization to customize the content delivery experience specific to your environment needs. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
-Windows Delivery Optimization helps you get Windows updates and Microsoft Store apps more quickly and reliably. It works by letting you get Windows updates and Microsoft Store apps from sources in addition to Microsoft, like other PCs on your local network, or PCs on the internet that are downloading the same files. Delivery Optimization also sends updates and apps from your PC to other PCs on your local network or PCs on the internet, based on your settings. Sharing this data between PCs helps reduce the internet bandwidth that’s needed to keep more than one device up to date or can make downloads more successful if you have a limited or unreliable internet connection. Delivery Optimization creates a local cache, and stores files that it has downloaded in that cache for a short period of time.
+Windows Delivery Optimization helps you get Windows updates and Microsoft Store apps more quickly and reliably. It works by letting you get Windows updates and Microsoft Store apps from sources in addition to Microsoft, like other PCs on your local network, or PCs on the internet that are downloading the same files. Delivery Optimization also sends updates and apps from your PC to other PCs on your local network or PCs on the internet, based on your settings. Sharing this data between PCs helps reduce the internet bandwidth that's needed to keep more than one device up to date or can make downloads more successful if you have a limited or unreliable internet connection. Delivery Optimization creates a local cache, and stores files that it has downloaded in that cache for a short period of time.
 
 To learn more, see:
 

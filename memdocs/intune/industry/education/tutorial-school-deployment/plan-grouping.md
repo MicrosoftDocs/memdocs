@@ -1,7 +1,7 @@
 ---
 title: Plan Education device grouping and targeting
 description: Plan how you'll group devices and users and target policies and applications.
-ms.date: 01/16/2024
+ms.date: 5/2/2024
 ms.topic: tutorial
 appliesto:
 ms.author: scbree

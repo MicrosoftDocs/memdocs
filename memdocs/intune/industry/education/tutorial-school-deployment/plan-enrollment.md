@@ -8,7 +8,7 @@ keywords:
 author: scottbreenmsft
 ms.author: scbree
 manager: dougeby
-ms.date: 03/08/2024
+ms.date: 5/2/2024
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: education
