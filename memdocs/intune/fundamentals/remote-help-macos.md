@@ -42,7 +42,12 @@ Remote Help is a cloud-based solution for secure help desk connections with role
 
 In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper.
 
-Remote Help is available for macOS as both a native application that can be downloaded and installed on the user's device, and as a Web App that runs within the user's web browser.
+Remote Help is available for macOS as both a native application, and as a Web App that runs within the user's web browser. The native application is required on the helpers machines to perform the *Full control* capability.
+
+|Capability|Client requirement|Helper app|
+|---|---|---|
+|**Screen sharing**: View the remote screen.|✔️Web app</br>✔️Native app|✔️Web app|
+|**Full control**: View the display and control the devices mouse and keyboard.|✔️Native app|✔️Web app|
 
 ### Remote Help capabilities
 
@@ -52,28 +57,21 @@ The Remote Help web app supports the following capabilities on macOS:
 
 - **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For more information on setting up conditional access, go to [Setup Conditional Access for Remote Help](#setup-conditional-access-for-remote-help)
 
-- **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings**: Remote Help will show non-compliance warnings if the device the helper is connecting to is not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
 - **Enrollment status**: If the user's device that the helper is trying to connect to isn't enrolled, the helper sees a prompt notifying them of the device status.
 
 - **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages supported](#supported-languages).
 
-Remote Help offers different session modes for macOS.
-
-|Capability|Client requirement|Helper app|
-|---|---|---|
-|**Screen sharing**: View the remote screen.|✔️Web app</br>✔️Native app|✔️Web app|
-|**Full control**: View the display and control the devices mouse and keyboard.|✔️Native app|✔️Web app|
-
 ### Remote Help Native macOS App
 
-Most organizations install the Remote Help application for macOS on their users' devices. This makes the application readily available to users when they need to initiate a support session. Remote Help for macOS provides the helper with view only and full control capabilities where they can control the Sharer's mouse and keyboard.
+Most organizations install the Remote Help application for macOS on their users' devices. Remote Help for macOS provides the helper with view only and full control capabilities where they can control the Sharer's mouse and keyboard.
 
 ### Remote Help Web App
 
-In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, which allows them to guide the user through resolving whichever issue they have encountered.
+In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, allowing them to guide the user through resolving issues.
 
-Helpers always use the Remote Help Web App to provide support to a Sharer that is on macOS. This provides them with a consistent and friendly experience accessible through the Intune portal. For more details, go to [Remote Help Web app](remote-help-webapp.md).
+Helpers always use the Remote Help Web App to provide support to a Sharer that is on macOS. For more details, go to [Remote Help Web app](remote-help-webapp.md).
 
 ## Authentication and Permissions
 
@@ -128,9 +126,8 @@ On macOS applications that access and control the screen require permission. By 
 
 With settings catalog, we can streamline the end users experience for allowing these permissions.
 
- To create these policies, in the , go to:
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Configuration > Create > macOS > Settings catalog**
-1. Enter a name and desription for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
+1. Enter a name and description for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
 1. Select **Add settings** and in the settings picker, navigate to **Privacy > Privacy Preferences Policy Control > Services**
     1. Under **Accessibility** select:
       - **Authorization**
@@ -221,9 +218,9 @@ The most recent version of Remote Help is **1.0.2404171**.
 
 For enrolled devices, you can streamline the user experience by installing Remote Help on behalf of your users.
 
-For more information on installing Remote Help through Intune, see [Add an unmanaged macOS PKG app to Microsoft Intune](/mem/intune/apps/macos-unmanaged-pkg).
+For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](/mem/intune/apps/macos-unmanaged-pkg).
 
-If you prefer to make Remote Help available for installtion in Company Portal you can deploy the Remote Help using macOS line-of-business app deployment. For more information, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
+For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
 ### Update Remote Help
 
@@ -236,7 +233,7 @@ This section covers the steps for using the macOS native app to request Remote H
 > [!TIP]
 > If you can't just want to share your screen and don't need the helper to be able to control your screen or you can't install the native app, you can use the web app. For more information on using the web app to request help, see [Remote Help web app](remote-help-webapp.md)
 
-To request help, you must reach out to your support staff to request assistance and you'll need to enter a code they provide to start the session.
+To request help, you must reach out to your support staff to request assistance, and enter a code they provide to start the session.
 
 When you as the sharer and your helper are ready to begin the session:
 
@@ -245,8 +242,8 @@ When you as the sharer and your helper are ready to begin the session:
     1. **Accessibility** (also available to set in **Settings > Privacy & Security > Accessibility**)
     1. **Screen and System Audio Recording**  (also available to set in **Settings > Privacy & Security > Screen and System Audio Recording**)
 1. If prompted, sign in with your organization credentials to authenticate. to your organization.
-1. Your helper will provide you with an 8-digit security code. After entering the code, select **Share screen** to continue.
-1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to *Allow* or to *Decline* the request.
+1. Enter the 8-digit security code provided by the helper. After entering the code, select **Share screen** to continue.
+1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to *Allow* or to *Decline* the request.
 1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
     :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="The microphone permission prompt showing to select Don't Allow":::
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
@@ -273,7 +270,7 @@ As a helper, you can provide remote assistance to their device by providing them
 
    1. From the remote action bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
 
-1. Copy and share the 8-digit session code with the sharer that you're trying to help, before selecting **Start** to launch a new Remote Help session. this allows you to navigate to the session link with the embedded passcode.  
+1. Copy and share the 8-digit session code with the sharer that you're trying to help, before selecting **Start** to launch a new Remote Help session.
 
 1. When Remote Help opens in a new tab for the first time, you must sign in to authenticate to your organization.
 
@@ -296,7 +293,7 @@ As a helper, you can provide remote assistance to their device by providing them
 
 ## Setup Conditional Access for Remote Help
 
-Remote Help for macOS supports conditional access. For more details, see [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
+Remote Help for macOS supports conditional access. For more information, see [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
 
 ## Known Issues
 
