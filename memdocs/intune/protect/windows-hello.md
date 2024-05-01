@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2023
+ms.date: 05/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,8 +46,8 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 > [!IMPORTANT]
 > Prior to the Anniversary Update (Windows version 1607), you could set two different PINS that could be used to authenticate to resources:
 >
-> - The **device PIN** could be used to unlock the device and connect to cloud resources.
-> - The **work PIN** was used to access Microsoft Entra resources on user's personal devices (BYOD).
+> - The device PIN could be used to unlock the device and connect to cloud resources.
+> - The work PIN was used to access Microsoft Entra resources on a user's personal device (BYOD).
 >
 > In the Anniversary Update, these two PINS were merged into one single device PIN.
 > Any Intune configuration policies you set to control the device PIN, and additionally, any Windows Hello for Business policies you configured, now both set this new PIN value.
@@ -62,17 +62,19 @@ You must be an Intune Service Administrator to create or edit a Windows Hello fo
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Hello for Business**. The Windows Hello for Business pane opens.
+2. Go to **Devices** > **Enrollment**.
+   
+4. In the **Windows** tab, under **Enrollment options**, select **Windows Hello for Business**. Wait while the Windows Hello for Business pane opens.
 
-3. Select from the following options for **Configure Windows Hello for Business**:
+5. Select from the following options for **Configure Windows Hello for Business**:
 
    - **Enabled**. Select this setting if you want to configure Windows Hello for Business settings. When you select *Enabled*, other settings for Windows Hello are visible and can be configured for devices.
 
    - **Disabled**. If you don't want to enable Windows Hello for Business during device enrollment, select this option. When disabled, users can't provision Windows Hello for Business. When set to *Disabled*, you can still configure the subsequent settings for Windows Hello for Business even though this policy won't enable Windows Hello for Business.
 
-   - **Not configured**. Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on 10/11 devices isn't changed. All other settings on the pane are unavailable.
+   - **Not configured**. Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on Windows 10/11 devices don't change. All other settings on the pane are unavailable. 
 
-4. If you selected **Enabled** in the previous step, configure the required settings that are applied to all enrolled Windows 10/11 devices. After you configure these settings, select **Save**.
+6. If you selected **Enabled** in the previous step, configure the required settings that are applied to all enrolled Windows 10/11 devices. After you configure these settings, select **Save**.
 
    - **Use a Trusted Platform Module (TPM)**:
 
@@ -89,11 +91,11 @@ You must be an Intune Service Administrator to create or edit a Windows Hello fo
 
      You can enforce a stronger PIN by requiring the use of uppercase letters, lowercase letters, and special characters in the PIN. For each, select from:
 
-     - **Allowed**. Users can use the character type in their PIN, but it isn't mandatory.
+     - **Allowed**: Users can use the character type in their PIN, but it isn't mandatory.
 
-     - **Required**. Users must include at least one of the character types in their PIN. For example, it's common practice to require at least one uppercase letter and one special character.
+     - **Required**: Users must include at least one of the character types in their PIN. For example, it's common practice to require at least one uppercase letter and one special character.
 
-     - **Not allowed** (default). Users must not use these character types in their PIN. (This is also the behavior if the setting isn't configured.)
+     - **Not allowed** (default): Users must not use these character types in their PIN. (This is also the behavior if the setting isn't configured.)
 
        Special characters include: **! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~**
 
@@ -126,12 +128,12 @@ You must be an Intune Service Administrator to create or edit a Windows Hello fo
    
       Configure [Windows Hello Enhanced Sign-in Security](/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security) on devices with capable hardware. Your options:  
 
-      * **Default. Enhanced sign-in security will be enabled on systems with capable hardware.** Device users can't use external peripherals to sign in to their device with Windows Hello. 
-      * **Enhanced sign-in security will be disabled on all systems.** Device users can use external peripherals that are compatible with Windows Hello to sign in to their device.  
+      * **Enhanced sign-in security will be enabled on systems with capable hardware** (default): Device users can't use external peripherals to sign in to their device with Windows Hello. 
+      * **Enhanced sign-in security will be disabled on all systems**: Device users can use external peripherals that are compatible with Windows Hello to sign in to their device.  
 
    - **Use security keys for sign-in**:
 
-     When set to **Enable**, this setting provides the capacity for remotely turning ON/OFF Windows Hello Security Keys for all computers in a customer's organization.
+     When set to **Enabled**, this setting provides the capacity for remotely turning ON/OFF Windows Hello Security Keys for all computers in a customer's organization.
 
 ## Windows Holographic for Business support
 
