@@ -129,7 +129,7 @@ On macOS applications that access and control the screen require permission. By 
 With settings catalog, we can streamline the end users experience for allowing these permissions.
 
  To create these policies, in the , go to:
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Configuration > Create > Settings catalog**
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Configuration > Create > macOS > Settings catalog**
 1. Enter a name and desription for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
 1. Select **Add settings** and in the settings picker, navigate to **Privacy > Privacy Preferences Policy Control > Services**
     1. Under **Accessibility** select:
