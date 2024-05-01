@@ -66,6 +66,12 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
 
   - Microsoft Edge
   - Google Chrome
+  
+    Platform SSO requires you install and enable the [Windows Accounts extension](https://chromewebstore.google.com/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji). You can add the app to Intune, and assign it to the devices that use Google Chrome. For more information, go to:
+
+    - [Set up Chrome browser on Mac](https://support.google.com/chrome/a/answer/7550274) (opens Google's web site)
+    - [Chrome Enterprise policy - ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist) (opens Google's web site)
+
   - Safari
 
     When Mac devices join a Microsoft Entra tenant, the devices get a workplace join (WPJ) certificate that is hardware-bound and only accessible by the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin). To access resources protected using Conditional Access, apps and web browsers need this WPJ certificate. With Platform SSO configured, the SSO app extension acts as the broker for Microsoft Entra ID authentication and Conditional Access.
