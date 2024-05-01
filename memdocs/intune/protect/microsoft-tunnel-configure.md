@@ -207,8 +207,8 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 ##  Add trusted root certificates to Tunnel containers
 Trusted root certificates must be added to the Tunnel containers when:
 
-The outgoing server traffic requires SSL proxy inspection.
-The endpoints accessed by the Tunnel containers are not exempt from proxy inspection.
+- The outgoing server traffic requires SSL proxy inspection.
+- The endpoints accessed by the Tunnel containers are not exempt from proxy inspection.
 
 **Steps:**
 1. Copy the trusted root certificate(s) with .crt extension to /etc/mstunnel/ca-trust
