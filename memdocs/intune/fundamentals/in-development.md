@@ -164,7 +164,7 @@ We're introducing a new version of the Windows hardware attestation report that 
 
 With the introduction of Optional Feature updates, Feature updates will be made available to end users as Optional updates. End users will see the update in the **Windows Update** settings page in the same way it is shown for consumer devices.
 
-End users can then easily opt-in to try out the next feature update and provide feedback. When it is time to roll out the feature as a **required** update, then admins will be able to change the setting on the policy, and update the rollout settings so that the update is deployed as a **required** update to devices that do not yet have it installed.
+End users can then easily opt in to try out the next feature update and provide feedback. When it's time to roll out the feature as a **required** update, then admins will be able to change the setting on the policy, and update the rollout settings so that the update is deployed as a **required** update to devices that do not yet have it installed.
 
 For more information on Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md).
 
@@ -199,7 +199,7 @@ For more information about the Intune features supported in GCC High and DoD env
 
 ### Updated security baseline for Windows 365 Cloud PC<!-- 26504698 -->
 
-We're working on an update to the Intune security baseline for **Windows 365 Cloud PC**. The new baseline version will use the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
+We're working on an update to the Intune security baseline for **Windows 365 Cloud PC**. The new baseline version uses the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
 
 Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
 
@@ -237,7 +237,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ### Customize your Intune admin center experience<!-- 24155584 -->
 
-You will be able to better customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the Intune admin center will be updated to support expanding and collapsing each subsection of the menu. In addition, you will be able to set admin center pages as favorites.
+You'll be able to better customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the Intune admin center will be updated to support expanding and collapsing each subsection of the menu. In addition, you'll be able to set admin center pages as favorites.
 
 By default, menu sections will be expanded and provide the same experience today. You will be able to choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, you can select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section will retain the expanded or collapsed state that you choose. Additionally, selecting the star icon next to a page on the left nav will add the page to a **Favorites** section near the top of the menu.
 
