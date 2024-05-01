@@ -146,7 +146,7 @@ With settings catalog, we can streamline the end users experience for allowing t
     | Name | Configuration |
     |---|---|
     | Authorization | Allow |
-    | Code Requirement | identifier "com.microsoft.remotehelp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /\* exists \*/ and certificate leaf[field.1.2.840.113635.100.6.1.13] /\* exists \*/ and certificate leaf[subject.OU] = UBF8T346G9 |
+    | Code Requirement | `identifier "com.microsoft.remotehelp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9` |
     | Identifier | com.microsoft.remotehelp |
     | Identifier type | bundle ID |
     | Static Code | False |
@@ -156,7 +156,7 @@ With settings catalog, we can streamline the end users experience for allowing t
     | Name | Configuration |
     |---|---|
     | Authorization | Allow Standard User To Set System Service |
-    | Code Requirement | identifier "com.microsoft.remotehelp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /\* exists \*/ and certificate leaf[field.1.2.840.113635.100.6.1.13] /\* exists \*/ and certificate leaf[subject.OU] = UBF8T346G9 |
+    | Code Requirement | `identifier "com.microsoft.remotehelp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9` |
     | Identifier | com.microsoft.remotehelp |
     | Identifier type | bundle ID |
     | Static Code | False |
