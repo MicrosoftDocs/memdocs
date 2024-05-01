@@ -77,12 +77,12 @@ To remotely start a session:
   - Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
 
 - Optional Windows updates for higher notification reliability:
-   - Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
-   - Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
+   - Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
+   - Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
 ### Network considerations
 
-Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remoteassistance.support.services.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
+Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remotehelp.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
 
 Both the helper and sharer must be able to reach these endpoints over port 443. Go to [Network endpoints for Remote Help](intune-endpoints.md#remote-help) for a list of endpoints needed for Remote Help.
 
@@ -270,7 +270,7 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
-## Setup Conditional Access for Remote Help
+## Setup conditional access for Remote Help
 
 This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
 
@@ -292,9 +292,10 @@ Use the `Connect-MgGraph` command to sign in with the required scopes. You'll ne
 Connect-MgGraph -Scopes "Application.ReadWrite.All"
 ```
 
-### Create the Service Principal
+### Create the service principal
 
 Create a Service Principal using the `Remote Assistance Service` AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2".
+
 ```powershell
 New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
 ```
@@ -302,7 +303,7 @@ New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
 ```Output
 DisplayName                                     Id AppId                                   ServicePrincipalType
 ----                                         ------- -----------                                   ---------------
-RemoteAssistanceService                           3d5ff82b-a5f2-483a-xxxx-9514ed66f7c5    1dee7b72-b80d-4e56-933d-8b6b04f9a3e2                           Application
+RemoteAssistanceService                      3d5ff82b-a5f2-483a-xxxx-9514ed66f7c5        1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
 ```
 
 This output has been shortened for readability.
@@ -318,6 +319,41 @@ Use the `Disconnect-MgGraph` command to sign out.
 ```powershell
 Disconnect-MgGraph
 ```
+
+### Remote Help to work on non-compliant and unenrolled devices through Conditional Access
+
+When setting a Conditional Access policy for apps Office 365 and Office 365 SharePoint Online with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, the tenant can use Remote Help by completing the steps shown here. The Conditional Access policy created blocks some scope that Remote Help uses to access resources when the device is non-compliant. 
+
+Currently, Remote Help needs access to the Remote Assistance app, Microsoft Intune app, Windows Azure Active Directory app, and the Microsoft Command Device Graph Service. To use Remote Help, you must allow the following resources, or the app will block the user as it is unable to support the feature set it is designed for. 
+
+1. In your Conditional Access policy,
+  - exclude the Remote Assistance app by browsing to it. Remote Assistance allows connections to be made through the Remote Help app. 
+  - exclude Microsoft Intune. Microsoft Intune is needed to perform RBAC checks to determine if the helper has permissions to assist the sharer. 
+  - exclude the Windows Azure Active Directory and Microsoft Command Device Graph Service apps. Windows Azure Active Directory grants Remote Help the ability to read organizational data like users, groups, management chain to support showing the user profile information as part of the information shown to the helper and sharer such as profile picture, name, title, etc. Microsoft Command Device Graph Service is needed to support the ability to confirm Intune enrollment and check compliance.
+
+If these apps don't appear by default in the app selection area of the Conditional Access policy, see this section for instructions on configuration.
+
+The following table shows you the App ID of the 2 apps needed:
+
+|Display Name| App ID|
+|:-----------------------------------|:----------------------------:|
+|00000002-0000-0000-c000-000000000000|Windows Azure Active Directory|
+|62060984-07ca-4b01-802e-d9c0e90718d8|Microsoft Command Device Graph Service|
+
+If these applications are not found in the tenant, then the admin must create the Service Principal for these applications using the following commands in Powershell.
+
+[PowerShell Gallery | AzureADPreview 2.0.2.149](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)
+
+```powershell
+> Install-Module -Name AzureADPreview
+> Connect-AzureAD
+> New-AzureADServicePrincipal -AppId <app-id>
+> New-AzureADServicePrincipal -AppId 00000002-0000-0000-c000-000000000000
+> New-AzureADServicePrincipal -AppId 62060984-07ca-4b01-802e-d9c0e90718d8
+```
+After these Service Principals are created, these applications need to be excluded, which can be done by creating an attribute-value and using the app filters described in the documentation [here.](/entra/identity/conditional-access/concept-filter-for-applications) 
+You can learn more about these scopes [here.](/graph/permissions-reference)
+
 
 ## Languages Supported
 
@@ -359,10 +395,6 @@ Remote Help is supported in the following languages:
 - Ukrainian
 
 ## Known Issues
-
-When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session isn't established.
-If a conditional access policy is configured as described earlier and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant can't use Remote Help.
-
 For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
 After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
 For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.

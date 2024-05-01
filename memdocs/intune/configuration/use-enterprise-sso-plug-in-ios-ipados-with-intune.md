@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure iOS/iPadOS Enterprise SSO app extension with MDMs
-description: Learn more about the Microsoft Enterprise SSO plug-in an. Add or create an iOS or iPadOS device configuration profile using the Microsoft Enterprise SSO plug-in app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
+description: Learn more about the Microsoft Enterprise single sign-on (SSO) plug-in. Add or create an iOS or iPadOS device configuration profile using the Microsoft Enterprise SSO plug-in app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
 keywords: Enterprise SSO plug-in, Microsoft Intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2024
+ms.date: 05/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,6 +34,8 @@ ms.collection:
 This article applies to:
 
 - iOS/iPadOS
+
+  For macOS, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
 This article shows how to create an SSO app extension configuration policy for iOS/iPadOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
 
@@ -138,7 +140,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
     For guidance on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
-When the device checks in with the Intune service, it will receive this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
+When the device checks in with the Intune service, it receives this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
 
 To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Configuration** > select the profile you created and generate a report:
 
@@ -163,7 +165,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     - **Payload Type**: Select **SSO**.
     - **Extension Identifier**: Enter `com.microsoft.azureauthenticator.ssoextension`.
-    - **Team Identifier**: No value is needed, leave the field blank.
+    - **Team Identifier**: No value is needed. Leave the field blank.
     - **Sign-On Type**: Select **Redirect**.
     - **URLs**: Enter the following URLs, one at a time:
       - `https://login.microsoftonline.com`
