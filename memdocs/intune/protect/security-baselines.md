@@ -96,10 +96,10 @@ The following security baseline instances are available for use with Intune. Use
 
 - **Microsoft Defender for Endpoint baseline**:  
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites))*.
-  - [Version 6](security-baseline-settings-defender-atp.md?pivots=december-2020)
-  - [Version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
-  - [Version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
-  - [Version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
+  - [Version 6](security-baseline-settings-defender.md?pivots=december-2020)
+  - [Version 5](security-baseline-settings-defender.md?pivots=atp-sept-2020)
+  - [Version 4](security-baseline-settings-defender.md?pivots=atp-april-2020)
+  - [Version 3](security-baseline-settings-defender.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
@@ -186,7 +186,7 @@ Within the Intune security baseline policy UI, Intune provides information text 
 
 - View the settings in the latest versions of the available baselines:
   - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
-  - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender.md)
   - [Microsoft 365 Apps for Enterprise security baseline (Office)](security-baseline-v2-office-settings.md)
   - [Microsoft Edge security baseline](security-baseline-settings-edge.md)
   - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)
