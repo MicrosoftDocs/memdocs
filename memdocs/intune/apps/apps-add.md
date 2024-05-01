@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/29/2024
+ms.date: 05/01/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -170,6 +170,9 @@ Before you begin to add and assign apps, consider the following points:
 
 - When you add and assign an app from a store, your users must have an account with that store to be able to install the app.
 - Some apps or items that you assign might depend on built-in iOS/iPadOS apps. For example, if you assign a book in the iOS/iPadOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
+- There are limits to the number of apps you can add to Intune.
+  - For trial Intune tenants, you can create 500 apps per tenant.
+  - For licensed Intune tenants, you can create 10,000 apps per tenant. Certain apps, including [iOS/iPadOS volume-purchased apps](../apps/vpp-apps-ios.md) and [Managed Google Play apps](../apps/apps-add-android-for-work.md), don't count towards this limit. 
 
 > [!IMPORTANT]
 > If you change the name of the app through Intune after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
