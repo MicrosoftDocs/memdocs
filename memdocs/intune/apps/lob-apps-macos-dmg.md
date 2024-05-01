@@ -36,7 +36,7 @@ ms.collection:
 
 # Add a macOS DMG app to Microsoft Intune
 
-Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple’s website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
+Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple's website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
 
 > [!NOTE]
 > The DMG file must contain one or more files with .app extensions. DMG files containing other types of installer files will not be installed.
@@ -59,7 +59,7 @@ A single DMG should only contain a single application file or multiple applicati
 It is not recommended that multiple apps that are not dependent on each other are installed using the same DMG file. If multiple independent apps are deployed using the same DMG app, failure to install one app will cause other apps to be re-installed. In this case, monitoring reports consider the DMG installation a failure as well.
 
 > [!NOTE]
-> You can update apps of type **macOS apps (DMG)** deployed using Intune. Edit a DMG app that is already created in Intune by uploading the update for the app with the same bundle identifier as the original DMG app. In addition, you must use the Microsoft Intune agent for macOS version 2304.039 or greater.
+> You can update apps of type **macOS apps (DMG)** deployed using Intune. Edit a DMG app that is already created in Intune by uploading the update for the app with the same bundle identifier as the original DMG app. In addition, you must use the Microsoft Intune agent for macOS version 2304.039 or greater. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
 ## Select the app type
 
@@ -113,16 +113,16 @@ You can use detection rules to choose how an app installation is detected on a m
 > [!NOTE]
 >
 > - The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file. 
-> - Mac Terminal can be used to lookup and confirm the included app details of an installed app.
->   For example, to look up the bundle ID and build number of Company Portal, run the following:
+> - Mac Terminal can be used to lookup and confirm the included app details of an installed app. For example, to look up the bundle ID and build number of Company Portal, run the following:
 >
->   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier```
+>   `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`
 >
 >   Then, run the following:
 >
->   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString```
+>   `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString`
 >
 > - Alternatively, the `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of a mounted DMG file on a Mac.
+> - For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../apps/get-app-bundle-id-intune-admin-center.md).
 
 ## Step 4 – Select scope tags (optional)
 
