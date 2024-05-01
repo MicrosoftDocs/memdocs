@@ -75,7 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### Updates to the Managed Home Screen experience<!-- 24990268 -->
+#### Updates to the Managed Home Screen experience<!-- 24990268 --> 
 We recently released and improved the Managed Home Screen experience, which is now Generally Available. The app has been redesigned to improve the core workflows throughout the application. The updated design offers a more usable and supportable experience. 
 
 With the release, we will stop investing in previous Managed Home Screen workflows. New features and fixes for Managed Home Screen will only be added to the new experience. The new experience will automatically be enabled for all devices during August 2024.
