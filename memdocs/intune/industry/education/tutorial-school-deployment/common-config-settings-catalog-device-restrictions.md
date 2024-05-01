@@ -13,7 +13,7 @@ no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 
 There are many device restriction settings and configuration options you have available. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
-Intune and Intune for Education includes device restriction policies that help administrators control a wide range of settings and features on Android, iOS/iPadOS, macOS, and Windows devices to protect your organization's resources.
+Intune includes *device restriction policies* that help administrators control a wide range of settings and features on Android, iOS/iPadOS, macOS, and Windows devices to protect your organization's resources.
 
 To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune/configuration/settings-catalog).
 
@@ -27,8 +27,8 @@ Configure these settings to personalize user experience and simplify the Windows
 | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
 |**:::no-loc text="Preferred Aad Tenant Domain Name":::** | _domain_ | Simplifies the sign-in to Windows by automatically appending the domain to the username | [Authentication/PreferredAadTenantDomainName](/windows/client-management/mdm/policy-csp-authentication#preferredaadtenantdomainname) |
-|**:::no-loc text="Desktop Image Url":::** | _url_ | An http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to be used as the Desktop Image. | [Personalization/DesktopImageUrl](/windows/client-management/mdm/personalization-csp#desktopimageurl) |
-|**:::no-loc text="Lock Screen Image Url":::** | _url_ | An http or https URL to a jpg, jpeg or png image that needs to be downloaded and used as the Lock Screen Image. | [Personalization/LockScreenImageUrl](/windows/client-management/mdm/personalization-csp#lockscreenimageurl) |
+|**:::no-loc text="Desktop Image Url":::** | _url_ | An http or https Url to a jpg, jpeg, or png image to downloaded and use as the Desktop Image, or a file Url to a local image on the file system to be used as the Desktop Image. | [Personalization/DesktopImageUrl](/windows/client-management/mdm/personalization-csp#desktopimageurl) |
+|**:::no-loc text="Lock Screen Image Url":::** | _url_ | An http or https URL to a jpg, jpeg, or png image that needs to be downloaded and used as the Lock Screen Image. | [Personalization/LockScreenImageUrl](/windows/client-management/mdm/personalization-csp#lockscreenimageurl) |
 |**:::no-loc text="Configure Time Zone":::** | _timezone_ | Use Timezone column from [Default Time Zones](/windows-hardware/manufacture/desktop/default-time-zones) | [TimeLanguageSettings/ConfigureTimeZone](/windows/client-management/mdm/policy-csp-timelanguagesettings#configuretimezone) |
 
 ## General restrictions
@@ -37,7 +37,7 @@ Commonly applied device restrictions in education.
 
 | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|
-|**:::no-loc text="Allow Cortana Above Lock":::** | Block | The system will need to be unlocked for the user to interact with Cortana using speech. | [AboveLock/AllowCortanaAboveLock](/windows/client-management/mdm/policy-csp-abovelock#allowcortanaabovelock) |
+|**:::no-loc text="Allow Cortana Above Lock":::** | Block | Devices need to be unlocked for the user to interact with Cortana using speech. | [AboveLock/AllowCortanaAboveLock](/windows/client-management/mdm/policy-csp-abovelock#allowcortanaabovelock) |
 |**:::no-loc text="Allow Toasts":::** | Block | Block toast notifications above the device lock screen | [AboveLock/AllowToasts](/windows/client-management/mdm/policy-csp-abovelock#allowtoasts) |
 |**:::no-loc text="Allow Adding Non Microsoft Accounts Manually":::** | Block | Block users from adding non-MSA email account. | [Accounts/AllowAddingNonMicrosoftAccountsManually](/windows/client-management/mdm/policy-csp-accounts#allowaddingnonmicrosoftaccountsmanually) |
 |**:::no-loc text="Allow Microsoft Account Connection":::** | Block | Block users from using an MSA account for non-email related connection authentication and services. | [Accounts/AllowMicrosoftAccountConnection](/windows/client-management/mdm/policy-csp-accounts#allowmicrosoftaccountconnection) |
@@ -50,13 +50,13 @@ Commonly applied device restrictions in education.
 |**:::no-loc text="On battery power, turn display off after (seconds)":::** | 300 | | [Power/DisplayOffTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#displayofftimeoutonbattery) |
 |**:::no-loc text="Turn off the display (plugged in)":::** | Enabled | | [Power/DisplayOffTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#displayofftimeoutpluggedin) |
 |**:::no-loc text="When plugged in, turn display off after (seconds)":::** | 300 | | [Power/DisplayOffTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#displayofftimeoutpluggedin) |
-|**:::no-loc text="All Removable Storage classes: Deny all access":::** | Disabled | Do not block access to removable storage | [ADMX_RemovableStorage/RemovableStorageClasses_DenyAll_Access_2](/windows/client-management/mdm/policy-csp-admx-removablestorage#removablestorageclasses_denyall_access_2) |
+|**:::no-loc text="All Removable Storage classes: Deny all access":::** | Disabled | Don't block access to removable storage | [ADMX_RemovableStorage/RemovableStorageClasses_DenyAll_Access_2](/windows/client-management/mdm/policy-csp-admx-removablestorage#removablestorageclasses_denyall_access_2) |
 |**:::no-loc text="Allow Advertising":::** | Block | Blocks the device from sending out Bluetooth advertisements. | [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#allowadvertising) |
 |**:::no-loc text="Allow Discoverable Mode":::** | Allow | Allow other Bluetooth-enabled devices discover the device. | [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#allowdiscoverablemode) |
 |**:::no-loc text="Allow Prompted Proximal Connections":::** | Block | Block users on these managed devices from using Swift Pair and other proximity based scenarios. | [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#allowpromptedproximalconnections) |
 |**:::no-loc text="Allow Camera":::** | Allowed | | [Camera/AllowCamera](/windows/client-management/mdm/policy-csp-camera#allowcamera) |
-|**:::no-loc text="Allow Bluetooth":::** | Allow Bluetooth. The radio in the Bluetooth control panel will be functional and the user will be able to turn Bluetooth on. | | [Connectivity/AllowBluetooth](/windows/client-management/mdm/policy-csp-connectivity#allowbluetooth) |
-|**:::no-loc text="Allow Cellular Data Roaming":::** | Do not allow cellular data roaming. The user cannot turn it on. This value is not supported in Windows 10, version 1511. | | [Connectivity/AllowCellularDataRoaming](/windows/client-management/mdm/policy-csp-connectivity#allowcellulardataroaming) |
+|**:::no-loc text="Allow Bluetooth":::** | Allow Bluetooth. The user will be able to turn Bluetooth on or off. | | [Connectivity/AllowBluetooth](/windows/client-management/mdm/policy-csp-connectivity#allowbluetooth) |
+|**:::no-loc text="Allow Cellular Data Roaming":::** | Don't allow cellular data roaming. The user can't turn it on. This value isn't supported in Windows 10, version 1511. | | [Connectivity/AllowCellularDataRoaming](/windows/client-management/mdm/policy-csp-connectivity#allowcellulardataroaming) |
 |**:::no-loc text="Allow Cortana":::** | Block | | [Experience/AllowCortana](/windows/client-management/mdm/policy-csp-experience#allowcortana) |
 |**:::no-loc text="Allow Manual MDM Unenrollment":::** | Block | Block the user from deleting the workplace account using the workplace control panel. | [Experience/AllowManualMDMUnenrollment](/windows/client-management/mdm/policy-csp-experience#allowmanualmdmunenrollment) |
 |**:::no-loc text="Allow Widgets":::** | Not allowed. | This policy applies to the entire widgets experience, including content on the taskbar. | [AllowNewsAndInterests](/windows/client-management/mdm/policy-csp-newsandinterests) |
