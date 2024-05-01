@@ -50,8 +50,8 @@ The following table provides guidance about which Windows device grouping option
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
-| Autopilot | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
-| Autopilot user driven | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
+| Autopilot user driven | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ *User dynamic group*✔️ Assigned groups |
+| Autopilot self-deploying mode | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
 | All enrollment types | Fastest application during enrollment | ✔️ *All devices* group</br>✔️ *All devices* group with a filter |
 | All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes |
 
@@ -114,7 +114,7 @@ This table contains common groups used for devices that are enrolled using Autop
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
 | All Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
 | All non-Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
-| All Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*Student*\")) |
+| All Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*`Student`*\")) |
 
 > [!NOTE]
 > The "All Autopilot Student devices" group example is assuming the Autopilot Group Tag is set to "Student". You could use another Group Tag and update the membership rule accordingly.
@@ -130,7 +130,7 @@ This table contains common groups used for devices that are enrolled using provi
 | Name | Type | Query |
 | --- | --- | --- |
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
-| All Student devices | Dynamic membership rules | (device.displayName -startsWith \"*STU-*\")|
+| All Student devices | Dynamic membership rules | (device.displayName -startsWith \"*`STU-`*\")|
 
 > [!NOTE]
 > The "All Student devices" group example is assuming the device name prefix in the provisioning package is set to "STU-". You could use another prefix and update the membership rule accordingly.

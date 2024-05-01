@@ -47,7 +47,7 @@ Before deployment, devices must be registered in the Windows Autopilot service. 
 
 You can create dynamic device groups using Autopilot attributes.
 
-If you didn't already create groups in [Plan grouping](plan-grouping.md) earlier, here are the steps for creating a dynamic group for the devices that have an assigned Autopilot group tag:
+If you didn't already create groups in [Plan grouping](plan-grouping.md) earlier, you can create the groups now.
 
 # [Intune](#tab/intune)
 

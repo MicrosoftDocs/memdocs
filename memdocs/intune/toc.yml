@@ -1763,7 +1763,7 @@ items:
           items:
           - name: Enrollment methods
             href: ./industry/education/tutorial-school-deployment/plan-enrollment.md
-          - name: Grouping and Targeting
+          - name: Grouping and targeting
             href: ./industry/education/tutorial-school-deployment/plan-grouping.md
         - name: 2. Prepare your tenant
           items:
