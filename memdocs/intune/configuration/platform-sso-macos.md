@@ -65,7 +65,9 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
 - Supported web browsers include:
 
   - Microsoft Edge
-  - Google Chrome: Platform SSO requires you install and enable the [Windows Accounts extension](https://chromewebstore.google.com/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji).
+  - Google Chrome
+  
+    Platform SSO requires you install and enable the [Windows Accounts extension](https://chromewebstore.google.com/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji). You can add the app to Intune, and assign it to the devices that use Google Chrome.
 
   - Safari
 
