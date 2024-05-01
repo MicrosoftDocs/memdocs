@@ -8,22 +8,20 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/15/2024
+ms.date: 04/19/2024
 ms.topic: how-to
-ms.collection: 
+ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
   - tier1
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
+  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
 # Windows Autopilot registration overview
-
-**Applies to:**
-
-- Windows 11
-- Windows 10
-- Windows Holographic, version 2004
 
 Before a device is deployed using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service.
 
@@ -62,7 +60,7 @@ The following terms are used to refer to various steps in the registration proce
 | --- | --- |
 | device registration | Device registration happens when a device's hardware hash is associated with the Windows Autopilot service. This process can be automated for new enterprise devices manufactured by OEMs that are Windows Autopilot partners. |
 | add devices | Adding a device is the process of registering a device with the Windows Autopilot service (if it isn't already registered) **and associating it to a tenant ID**. |
-| import devices | Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information such as the model and serial number in order to manually add devices. |
+| import devices | Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information in order to manually add devices. The device information includes information such the model and serial number. |
 | enroll devices | Enrolling a device is the process of adding devices to Intune. |
 
 ## Device identification
@@ -71,28 +69,28 @@ To identify a device with Windows Autopilot, the device's unique hardware hash m
 
 The hardware hash contains details about the device, such as:
 
-- manufacturer
-- model
-- device serial number
-- hard drive serial number
-- details about when the ID was generated
-- many other attributes that can be used to uniquely identify the device
+- Manufacturer.
+- Model.
+- Device serial number.
+- Hard drive serial number.
+- Details about when the ID was generated.
+- Many other attributes that can be used to uniquely identify the device.
 
 The hardware hash changes each time it's generated because it includes details about when it was generated. When the Windows Autopilot deployment service attempts to match a device, it considers changes like that. It also considers large changes such as a new hard drive, and is still able to match successfully. But large changes to the hardware, such as a motherboard replacement, wouldn't match, so a new hash would need to be generated and uploaded.
 
 For more information about device IDs, see the following articles:
 
-- [Windows Autopilot device guidelines](autopilot-device-guidelines.md)
-- [Add devices to a customer account](/partner-center/autopilot)
+- [Windows Autopilot device guidelines](autopilot-device-guidelines.md).
+- [Add devices to a customer account](/partner-center/autopilot).
 
 ## Windows Autopilot devices
 
-Devices that have been registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**:
+Devices that are registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**:
 
 > [!NOTE]
 >
 > Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
-
+>
 > - The Autopilot registration process is successful.
 > - A [licensed](licensing-requirements.md) user has signed in on the device.
 

@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/15/2024
+ms.date: 04/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -116,12 +116,12 @@ Remote Help offers different session modes for macOS.
 
 ## Install and update Remote Help
 
-Remote Help is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session. Remote Help receives the latest versions through the Microsoft AutoUpdate (MAU) application. Users can opt in for automatic updates to ensure Remote Help is up to date.
+Remote Help is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session. Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
 
 ## Download Remote Help
 
 Download the latest version of Remote Help directly from Microsoft at https://aka.ms/downloadremotehelpmacos 
-The most recent version of Remote Help is.
+The most recent version of Remote Help is 1.0.2404171.
 
 ## Add Remote Help as a LOB application
 

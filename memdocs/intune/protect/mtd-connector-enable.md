@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2024
+ms.date: 04/30/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,14 +48,13 @@ Applies to:
 
 4. For **Mobile Threat Defense connector to setup**, select your MTD partner solution from the drop-down list.
 
-5. Enable the toggle options according to your organization's requirements. The toggle options that are visible can vary depending on the MTD partner. For example, the following image shows the available options that are available for Symantec Endpoint Protection:
-
-   :::image type="content" source="./media/mtd-connector-enable/enable-mtd-connector-1.png" alt-text="Screen shot example that shows the MDM Compliance Policy Settings for the MDT connector.":::
-
 > [!NOTE]
 >
 > As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the **Microsoft Defender for Endpoint** connector. As of April 2024 Intune service release (2404), classic CA policies are no longer needed for 3rd party **Mobile Threat Defense** connectors either. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint or 3rd party Mobile Threat Defense connectors, it can be deleted.
 
+5. Enable the toggle options according to your organization's requirements. The toggle options that are visible can vary depending on the MTD partner. For example, the following image shows the available options that are available for Symantec Endpoint Protection:
+
+   :::image type="content" source="./media/mtd-connector-enable/enable-mtd-connector-1.png" alt-text="Screen shot example that shows the MDM Compliance Policy Settings for the MDT connector.":::
 
 ## Mobile Threat Defense toggle options
 

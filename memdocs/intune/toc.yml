@@ -466,7 +466,9 @@ items:
               - name: PowerShell scripts
                 href: ./apps/intune-management-extension.md
               - name: macOS shell scripts
-                href: ./apps/macos-shell-scripts.md        
+                href: ./apps/macos-shell-scripts.md
+              - name: Get the app bundle ID
+                href: ./apps/get-app-bundle-id-intune-admin-center.md      
             - name: Assign apps
               items:
               - name: Assign apps to groups
@@ -794,6 +796,11 @@ items:
               items:
               - name: Check Point Harmony and Intune integration
                 href: ./protect/checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Set up CrowdStrike
+              href: ./protect/crowdstrike-falcon-defense-connector.md
+              items:
+              - name: CrowdStrike Falcon and Intune integration
+                href: ./protect/crowdstrike-falcon-mtd-connector-integration.md
             - name: Set up Jamf
               href: ./protect/jamf-mtd-connector.md
               items:
