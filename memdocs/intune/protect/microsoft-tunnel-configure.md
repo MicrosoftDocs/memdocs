@@ -204,6 +204,17 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
 8. If you're using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
+##  Add trusted root certificates to Tunnel containers
+Trusted root certificates must be added to the Tunnel containers when:
+
+The outgoing server traffic requires SSL proxy inspection.
+The endpoints accessed by the Tunnel containers are not exempt from proxy inspection.
+
+**Steps:**
+1. Copy the trusted root certificate(s) with .crt extension to /etc/mstunnel/ca-trust
+2. Restart Tunnel containers using "mst-cli server restart" and "mst-cli agent restart"
+
+
 ## Deploy the Microsoft Tunnel client app
 
 To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client app. Microsoft Tunnel uses Microsoft Defender for Endpoint as the Tunnel client app:
