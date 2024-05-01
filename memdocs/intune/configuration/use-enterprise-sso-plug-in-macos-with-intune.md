@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure macOS Enterprise SSO app extension with MDMs
-description: Learn more about the Microsoft Enterprise SSO app extension plug-in. Add or create an macOS device profile using the SSO app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
+description: Learn more about the Microsoft Enterprise single sign-on (SSO) app extension plug-in. Add or create an macOS device profile using the SSO app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 05/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,6 +34,8 @@ ms.collection:
 This article applies to:
 
 - macOS
+
+    For iOS/iPadOS, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md).
 
 On macOS devices, you can configure SSO app extension settings in two places in Intune:
 
@@ -141,7 +143,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       When you're done configuring the recommended settings, the settings look similar to the following values in your Intune configuration profile:
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO app extension plug-in on macOS devices in Intune.":::
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO app extension plug-in on macOS devices in Microsoft Intune.":::
 
 8. Continue creating the profile, and assign the profile to the users or groups that receive these settings. For the specific steps, go to [Create the profile](device-features-configure.md#create-the-profile).
 

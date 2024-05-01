@@ -1190,12 +1190,12 @@ items:
               href: ./configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md
             - name: macOS SSO
               items:
-              - name: Enterprise SSO app extension plug-in
-                displayName: single sign-on, macos
-                href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
               - name: Platform SSO
                 displayName: single sign-on, macos
                 href: ./configuration/platform-sso-macos.md
+              - name: Enterprise SSO app extension plug-in
+                displayName: single sign-on, macos
+                href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
 
         - name: Extensions on macOS
           href: ./configuration/kernel-extensions-overview-macos.md

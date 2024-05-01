@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/24/2024
+ms.date: 05/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -48,7 +48,7 @@ Some benefits of Platform SSO include:
 - Get the benefits of Microsoft Entra ID Join, which allows any organization user to sign into the device.
 - Included with all [Microsoft Intune licensing plans](../fundamentals/licenses.md).
 
-Platform SSO uses the Microsoft Intune [settings catalog](settings-catalog.md) to configure the policy. When the policy is ready, you assign the policy to your users or devices. Microsoft recommends you assign the policy when the device enrolls in Intune. But, it can be assigned at any time, including on existing devices. 
+Platform SSO uses the Microsoft Intune [settings catalog](settings-catalog.md) to configure the policy. When the policy is ready, you assign the policy to your users. Microsoft recommends you assign the policy when the user enrolls the device in Intune. But, it can be assigned at any time, including on existing devices.
 
 This article shows you how to configure Platform SSO for macOS devices in Intune.
 
@@ -70,7 +70,7 @@ This article shows you how to configure Platform SSO for macOS devices in Intune
 
     When Mac devices join a Microsoft Entra tenant, the devices get a workplace join (WPJ) certificate that is hardware-bound and only accessible by the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin). To access resources protected using Conditional Access, apps and web browsers need this WPJ certificate. With Platform SSO configured, the SSO app extension acts as the broker for Microsoft Entra ID authentication and Conditional Access.
 
-    These browsers are broker-aware and can redirect to the SSO app extension for Microsoft Entra ID authentication or Conditional Access check.
+  These browsers are broker-aware and can redirect to the SSO app extension for Microsoft Entra ID authentication or Conditional Access check.
 
 - To create the Intune policy, at a minimum, sign in with an account that has the **Policy and Profile Manager** Intune RBAC role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -94,7 +94,10 @@ Your authentication options:
   **Secure Enclave**:
 
   - Is considered password-less and meets phish-resistant multifactor (MFA) requirements. It's conceptually similar to Windows Hello for Business. It can also use the same features as Windows Hello for Business, like Conditional Access.
-  - Leaves the local account username and password as-is. These values aren't changed.​ This behavior is by design due to Apple's FileVault disk encryption, which uses the local password as the unlock key.
+  - Leaves the local account username and password as-is. These values aren't changed.​
+
+    This behavior is by design due to Apple's FileVault disk encryption, which uses the local password as the unlock key.
+
   - After a device reboots, users must enter the local account password. After this initial machine unlock​, Touch ID can be used to unlock the device.
   - After the unlock, the device gets the hardware-backed Primary Refresh Token (PRT) for device-wide SSO.​
   - In web browsers, this PRT key can be used as a passkey using [WebAuthN APIs](https://webauthn.guide).
@@ -121,6 +124,8 @@ Your authentication options:
 
   - Is considered password-less.
   - Leaves the local account username and password as-is. These values aren't changed.​
+
+  For more information, go to [Microsoft Entra certificate-based authentication on iOS and macOS](/entra/identity/authentication/concept-certificate-based-authentication-mobile-ios).
 
 ## Step 2 - Create the Platform SSO policy in Intune
 
@@ -206,7 +211,7 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
         Any Intune password policy you configure also affects this setting. For example, if you have a password policy that blocks simple passwords, then simple passwords are also blocked for this setting. Make sure your Intune password policy and/or compliance policy matches your Microsoft Entra password policy. If the policies don't match, then the password might not sync and end users are denied access.
 
-      - **UserSecureEnclaveKey**: Enables SSO across apps that use Microsoft Entra ID for authentication by provisioning a [Secure Enclave](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/protecting_keys_with_the_secure_enclave) cryptographic key.
+      - **UserSecureEnclaveKey**: Enables SSO across apps that use Microsoft Entra ID for authentication by provisioning a [Secure Enclave](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/protecting_keys_with_the_secure_enclave) (opens Apple's web site) cryptographic key.
 
       - **SmartCard**: Enables SSO across apps that use Microsoft Entra ID for authentication. It uses a smart card or smart card-compatible hard token, like a YubiKey. This token acts as a local machine password.​
 
@@ -220,7 +225,7 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
         Any Intune password policy you configure also affects this setting. For example, if you have a password policy that blocks simple passwords, then simple passwords are also blocked for this setting. Make sure your Intune password policy and/or compliance policy matches your Microsoft Entra password policy. If the policies don't match, then the password might not sync and end users are denied access.
 
-      - **UserSecureEnclaveKey**: Enables SSO across apps that use Microsoft Entra ID for authentication by provisioning a [Secure Enclave](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/protecting_keys_with_the_secure_enclave) cryptographic key.
+      - **UserSecureEnclaveKey**: Enables SSO across apps that use Microsoft Entra ID for authentication by provisioning a [Secure Enclave](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/protecting_keys_with_the_secure_enclave) (opens Apple's web site) cryptographic key.
 
       > [!IMPORTANT]
       > If you have a mix of macOS 13 and macOS 14+ devices in your environment, then configure the **Platform SSO** > **Authentication Method** and the **Authentication Method (Deprecated)** authentication settings in the same profile.
@@ -240,7 +245,7 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
     Select **Next**.
 
-11. In **Assignments**, select the users or user groups that will receive your profile. Don't assign the platform SSO policy to devices. Platform SSO policies are user-based policies.
+11. In **Assignments**, select the users or user groups that will receive your profile. Platform SSO policies are user-based policies. Don't assign the platform SSO policy to devices.
 
     For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
@@ -272,7 +277,7 @@ To use Platform SSO, the devices must be MDM enrolled in Intune using one of the
   - Create an [Automated device enrollment](../enrollment/device-enrollment-program-enroll-macos.md) policy using Apple Business Manager or Apple School Manager.
   - Create a [Direct enrollment](../enrollment/device-enrollment-direct-enroll-macos.md) policy using Apple Configurator.
 
-- For **personally-owned devices**, create a [Device enrollment](../fundamentals/deployment-guide-enrollment-macos.md#byod-device-enrollment) policy. With this enrollment method, end users open the Company Portal app and sign in with their Microsoft Entra ID. When they successfully sign-in, the enrollment policy applies.
+- For **personally-owned devices**, create a [Device enrollment](../fundamentals/deployment-guide-enrollment-macos.md#byod-device-enrollment) policy. With this enrollment method, end users open the Company Portal app and sign in with their Microsoft Entra ID. When they successfully sign in, the enrollment policy applies.
 
 For **new devices**, we recommend you precreate and configure all the necessary policies, including the enrollment policy. Then, when the devices enroll in Intune, the policies automatically apply.
 
@@ -284,7 +289,7 @@ When the device receives the policy, there's a **Registration required** notific
 
 - End users select this notification, sign in to the Microsoft Entra ID plug-in with their organization account, and complete multifactor authentication (MFA).
 
-  MFA is a feature of Microsoft Entra. Make sure MFA is enabled in your tenant. For more informaiton, including any additional app requirements, go to [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
+  MFA is a feature of Microsoft Entra. Make sure MFA is enabled in your tenant. For more information, including any other app requirements, go to [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
 
 - When they successfully authenticate, the device is Microsoft Entra-Joined to the organization and the workplace join (WPJ) certificate is bound to the device.
 
@@ -292,9 +297,9 @@ For more information about the different end-user experiences for device registr
 
 ## Step 6 - Confirm the settings on the device
 
-Once Platform SSO registration completes, you can confirm that Platform SSO is configured. For the steps, go to [Microsoft Entra ID - Check your device registration status](/entra/identity/devices/device-join-macos-platform-single-sign-on#check-your-device-registration-status).
+When Platform SSO registration completes, you can confirm that Platform SSO is configured. For the steps, go to [Microsoft Entra ID - Check your device registration status](/entra/identity/devices/device-join-macos-platform-single-sign-on#check-your-device-registration-status).
 
-On enrolled devices, you can also go to **Settings** > **Privacy and security** > **Profiles**. Your Platform SSO profile is shown under `com.apple.extensiblesso Profile`. Select the profile to see the settings you configured, including the URLs.
+On Intune enrolled devices, you can also go to **Settings** > **Privacy and security** > **Profiles**. Your Platform SSO profile is shown under `com.apple.extensiblesso Profile`. Select the profile to see the settings you configured, including the URLs.
 
 To troubleshoot Platform SSO, go to [macOS Platform single sign-on known issues and troubleshooting](/entra/identity/devices/troubleshoot-macos-platform-single-sign-on-extension).
 
