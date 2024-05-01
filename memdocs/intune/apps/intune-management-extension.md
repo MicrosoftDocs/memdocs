@@ -115,7 +115,7 @@ The Intune management extension has the following prerequisites. Once they're me
 ## Create a script policy and assign it
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Scripts** > **Add** > **Windows 10 and later**.
+2. Select **Devices** > **Scripts and remediations** > **Platform scripts** > **Add** > **Windows 10 and later**.
 
     ![Screenshot that shows creating a new script for a Windows 10 device.](./media/intune-management-extension/create-script-windows.png)
 
