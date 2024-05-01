@@ -172,7 +172,12 @@ When you assign the policy to an iPhone, the dock looks similar to the following
 
   :::image type="content" source="./media/ios-device-features-settings/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
 
-  - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add.
+
+    To get the app bundle ID:
+
+    - For some examples, go to [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
     When set to **Not configured** or left blank, Intune doesn't change or update this setting.
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.

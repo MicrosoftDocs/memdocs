@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get app bundle ID
-description: Learn about adding Microsoft Store apps to Microsoft Intune.
+description: Get the app bundle ID in Microsoft Intune for Android, iOS/iPadOS, macOS, and Windows apps. Use the bundle ID in your app policies, device configuration profiles, enrollment policies, and compliance policies in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -31,9 +31,9 @@ ms.collection:
 
 # Get the app bundle ID for your policies in Microsoft Intune
 
-When you add an app to Intune or use the built-in apps, the bundle ID of the app is also added. This bundle ID identifies the app, and you can use the bundle ID in your policies. For example, you can use the bundle ID in an Intune device configuration profiles to allow or block specific apps.
+When you add an app to Intune or use the built-in apps, the bundle ID of the app is also added. This bundle ID identifies the app, and you can use the bundle ID in your policies.
 
-This article lists the steps to get the app bundle IDs using the Intune admin center.
+For example, you can use the bundle ID in an Intune device configuration profile to allow or block specific apps.
 
 Applies to:
 
@@ -41,6 +41,8 @@ Applies to:
 - iOS/iPadOS
 - macOS
 - Windows
+
+This article lists the steps to get the app bundle IDs using the Intune admin center.
 
 ## Get the app bundle ID
 
@@ -50,7 +52,7 @@ Applies to:
 
     :::image type="content" source="./media/get-app-bundle-id-intune-admin-center/all-apps-column.png" alt-text="Screenshot that shows how to select the Columns option in All Apps in Microsoft Intune and the Intune admin center.":::
 
-1. In the list, select **App Bundle ID** > **Apply**.
+1. In the list, select **App identifier** > **Apply**.
 
     :::image type="content" source="./media/get-app-bundle-id-intune-admin-center/columns-select-app-identifier.png" alt-text="Screenshot that shows how to select the App Bundle ID column in All Apps in Microsoft Intune and the Intune admin center.":::
 
