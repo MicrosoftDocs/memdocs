@@ -117,10 +117,10 @@ If your organization, restricts Remote Help to enrolled devices only there are t
 
 ### Native app operating system permissions
 
-On macOS applications that access and control the screen require permission. By default, users must accept these permissions.
+On macOS, applications that access and control the screen require permission. By default, users must accept these permissions.
 
 |Permission|MDM control capabilities|Notes|
-|---|---|---|
+|---------------|---|---|
 |Accessibility|✔️Allow</br>✔️Allow Standard User To Set System Service||
 |Screen sharing|✔️Allow Standard User To Set System Service|This permission by default requires administrator privileges to allow it. You can allow standard users to accept this permission using settings catalog profiles.|
 
