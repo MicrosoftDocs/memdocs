@@ -2420,6 +2420,11 @@
       "source_path": "windows-365/enterprise/troubleshoot-citrix-hdx-plus.md",
       "redirect_url": "/windows-365/enterprise/troubleshoot-partner-connector",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/security-baseline-settings-defender-atp.md",
+      "redirect_url": "/mem/intune/protect/security-baseline-settings-defender",
+      "redirect_document_id": false
     }
   ]
 }
