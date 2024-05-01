@@ -31,7 +31,7 @@ For more information, see [Install Windows Configuration Designer][WIN-1], which
 
 ## Set up School PCs
 
-With Set up School PCs, you can create a package containing the most common device configurations that students need, and enroll devices in Intune. The package is saved on a USB stick, which can then be plugged into devices during OOBE. Applications and settings will be automatically applied to the devices, including the Microsoft Entra join and Intune enrollment process.
+With Set up School PCs, you can create a package containing the most common device configurations that students need, and enroll devices in Intune. The package is saved on a USB stick, which can then be plugged into devices during OOBE. Applications and settings are automatically applied to the devices, including the Microsoft Entra join and Intune enrollment process.
 
 ### Create a provisioning package
 
@@ -42,7 +42,7 @@ The Set Up School PCs app guides you through configuration choices for school-ow
 > [!CAUTION]
 > If you are creating a provisioning package for **Windows 11 SE** devices, ensure to select the correct *OS version* in the *Configure device settings* page.
 
-Set Up School PCs will configure many settings, allowing you to optimize devices for shared use and other scenarios.
+Set Up School PCs configures many settings, allowing you to optimize devices for shared use and other scenarios.
 
 For more information on prerequisites, configuration, and recommendations, see [Use the Set Up School PCs app][EDU-1].
 
@@ -51,9 +51,9 @@ For more information on prerequisites, configuration, and recommendations, see [
 
 ## Enroll devices with the provisioning package
 
-To provision Windows devices with provisioning packages, insert the USB stick containing the package during the out-of-box experience. The devices will read the content of the package, join Microsoft Entra ID and automatically enroll in Intune.
+To provision Windows devices with provisioning packages, insert the USB stick containing the package during the out-of-box experience. The devices read the content of the package, join Microsoft Entra ID and automatically enroll in Intune.
 
-All settings defined in the package and in Intune will be applied to the device, and the device will be ready to use.
+All settings defined in the package and in Intune are applied to the device, and the device is ready to use.
 
 > [!NOTE]
 > After the device arrives at the logon screen Intune will continue to apply poicies and install applications in the background.
