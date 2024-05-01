@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 05/21/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,11 +30,11 @@ zone_pivot_groups: atp-baseline-versions
 ---
 
 <!-- Pivots and versions still in use: 
-
-- December 2020 v6 > "atp-december-2020"
+- May 2024 v24h1    > "mde-v24h1"
+- December 2020 v6  > "atp-december-2020"
 - September 2020 v5 > "atp-sept-2020"
-- April 2020 v4 > "atp-april-2020"
-- March 2020 v3 > "atp-march-2020"
+- April 2020 v4     > "atp-april-2020"
+- March 2020 v3     > "atp-march-2020"
 
 -->
 
@@ -56,6 +56,9 @@ To learn more about using security baselines, see [Use security baselines](secur
 <!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
+::: zone pivot="mde-24h1"
+**Microsoft Defender for Endpoint baseline version 24H1**  
+::: zone-end
 ::: zone pivot="atp-december-2020"
 **Microsoft Defender for Endpoint baseline for December 2020 - version 6**  
 ::: zone-end  
@@ -73,6 +76,13 @@ The Microsoft Defender for Endpoint  baseline is available when your environment
 
 This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can affect remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
+::: zone pivot="mde-24h1"
+
+
+
+
+
+::: zone-end
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
 ## Attack Surface Reduction Rules
