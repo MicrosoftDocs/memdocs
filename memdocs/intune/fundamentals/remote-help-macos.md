@@ -111,7 +111,7 @@ Both the helper and sharer must be able to reach specific endpoints over port 44
 
 If your organization, restricts Remote Help to enrolled devices only there are two extra requirements:
 
-1. **Single sign-on (SSO)**. For more information, see [here.](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
+1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. **Open and sign in to Company Portal**. The user must open and sign into Company Portal for Remote Help to recognize the device is enrolled.
 
 > [!NOTE]
