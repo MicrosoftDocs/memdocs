@@ -55,7 +55,7 @@ The Remote Help web app supports the following capabilities on macOS:
 
 - **Use Remote Help with unenrolled devices**: Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For more information on setting up conditional access, go to [Setup Conditional Access for Remote Help](#setup-conditional-access-for-remote-help)
+- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For more information on setting up conditional access, see [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
 
 - **Compliance Warnings**: Remote Help will show non-compliance warnings if the device the helper is connecting to is not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
@@ -73,7 +73,7 @@ In situations where the Sharer needs assistance but is unable to install the nat
 
 Helpers always use the Remote Help Web App to provide support to a Sharer that is on macOS. For more details, go to [Remote Help Web app](remote-help-webapp.md).
 
-## Authentication and Permissions
+### Authentication and Permissions
 
 Both helpers and sharers sign in to your organization using Microsoft Entra ID, which ensures that proper trusts are established for the Remote Help sessions.
 
@@ -290,10 +290,6 @@ As a helper, you can provide remote assistance to their device by providing them
 > [!NOTE]
 > - Remote Help displays a *Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
 > - If the tenant is configured to allow Remote Help on unenrolled devices, you will receive a warning when connecting to unenrolled devices. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
-
-## Setup Conditional Access for Remote Help
-
-Remote Help for macOS supports conditional access. For more information, see [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
 
 ## Known Issues
 
