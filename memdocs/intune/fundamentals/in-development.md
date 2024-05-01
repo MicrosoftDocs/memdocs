@@ -120,7 +120,11 @@ Applies to:
 
 ## Device enrollment
 
-## Stage Android device enrollment to reduce end-user steps<!-- 15503468 -->
+### New enrollment time grouping for devices <!-- 16902437 -->
+
+Enrollment time grouping is a new, faster way to group devices during enrollment. When configured, Intune adds devices to the appropriate groups without requiring inventory discovery and dynamic membership evaluations. To set up enrollment time grouping, you must configure a static Microsoft Entra security group in each enrollment profile. After a device enrolls, Intune will add it to the static security group.
+
+### Stage Android device enrollment to reduce end-user steps<!-- 15503468 -->
 
 To reduce the enrollment time for end users, Microsoft Intune will support device staging for Android devices. With *device staging*, you can stage an enrollment profile and complete all related enrollment steps for workers receiving these devices:
 
