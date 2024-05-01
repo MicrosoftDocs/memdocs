@@ -120,6 +120,15 @@ Applies to:
 
 ## Device enrollment
 
+## Stage Android device enrollment to reduce end-user steps<!-- 15503468 -->
+
+To reduce the enrollment time for end users, Microsoft Intune will support device staging for Android devices. With *device staging*, you can stage an enrollment profile and complete all related enrollment steps for workers receiving these devices:
+
+- Corporate-owned fully managed devices
+- Corporate-owned devices with a work profile
+
+When frontline workers receive the devices, all they have to do is connect to Wi-Fi and sign in to their work account. A new *device staging token* is required to enable this feature.
+
 ### Define corporate device identifiers for Windows<!-- 25873757 -->
 
 Microsoft Intune will support corporate device identifiers for Windows devices. You will be able to upload a CSV file with model, manufacturer, and serial number to identify corporate machines ahead of enrolling. When a device that matches the model, manufacturer, and serial number criteria enrolls, it will be marked as corporate and managed appropriately.
