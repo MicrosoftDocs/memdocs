@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 05/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,7 +99,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 > [!NOTE]  
 > **Unsupported versions and editions**:  
-> *Windows 10/11 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+> *Windows 10/11 Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don’t support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
 
 **Devices must**:
 
