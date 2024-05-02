@@ -60,8 +60,8 @@ To use Copilot in Intune, you should know the following information:
 
   For more information on SCUs, go to:
 
-  - [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
-  - [Manage capacity in Copilot for Security](/security-copilot/manage-usage).
+  - [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot)
+  - [Manage capacity in Copilot for Security](/security-copilot/manage-usage)
 
 - **Copilot configuration**: Before you can use the Copilot features in Intune, Microsoft Copilot for Security must be configured, and you must complete the first run tour in the [Microsoft Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the specific setup tasks, go to [Get started with Microsoft Copilot](/security-copilot/get-started-security-copilot).
 
@@ -75,11 +75,11 @@ To use Copilot in Intune, you should know the following information:
 
 - **Intune plug-in source**: To use Copilot in Intune, you need the Intune plug-in enabled in Copilot for Security. This plug-in allows you to access your Intune data and use Copilot in the Intune admin center.
 
-  Go to the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner):
+  Go to the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), select **Sources** (prompt bar > right corner).
 
   :::image type="content" source="./media/copilot-intune-overview/security-copilot-sources.png" alt-text="Screenshot that shows the plugin sources that are available, enabled, and disabled in Microsoft Copilot for Security.":::
 
-  In **Manage sources**, enable Microsoft Intune:
+  In **Manage sources**, enable Microsoft Intune.
 
   :::image type="content" source="./media/copilot-intune-overview/intune-plug-in-enabled.png" alt-text="Screenshot that shows the Microsoft Intune plug-in source is enabled in the Microsoft Copilot for Security portal.":::
 
@@ -93,14 +93,14 @@ To use Copilot in Intune, you should know the following information:
 
 ## Start using Copilot in Intune
 
-To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Home screen lists the ways to get started with Copilot:
+To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Home screen lists the ways to get started with Copilot.
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-home-page.png" alt-text="Screenshot that shows the Intune admin center homepage with Copilot features in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-home-page.png":::
 
 Currently, there are two areas to use Copilot in Intune:
 
-- Policy and setting management.
-- Device details and troubleshooting.
+- Policy and setting management
+- Device details and troubleshooting
 
 ### Policy and setting management
 
@@ -124,9 +124,9 @@ The Copilot prompts can help you understand the impact of the setting, look for 
 
 You can use the Copilot tooltips on the following policy types in Intune:
 
-- Compliance policies.
-- Device configuration policies, including the settings catalog.
-- Most endpoint security policies.
+- Compliance policies
+- Device configuration policies, including the settings catalog
+- Most endpoint security policies
 
 #### ✅ Use Copilot to summarize an existing policy
 
@@ -138,9 +138,9 @@ To use this feature in Intune, select an existing policy and then select **Summa
 
 You can use this feature on the following policy types in Intune:
 
-- Compliance policies.
-- Device configuration policies, including the settings catalog.
-- Most endpoint security policies.
+- Compliance policies
+- Device configuration policies, including the settings catalog
+- Most endpoint security policies
 
 ### Device details and troubleshooting
 
