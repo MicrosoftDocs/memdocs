@@ -31,7 +31,7 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 
     > [!NOTE]
     >
-    > **ADK 10.1.25398.1 (updated September 2023)** isn't currently supported for use with Configuration Manager with Windows PE AMD64 boot images due to [known issues](#support-notes) unless the Windows PE boot images are updated with the latest cumulative update (LCU). Supported versions of the ADK before the **ADK 10.1.25398.1 (updated September 2023)** for use with Configuration Manager can be found at [Download and install the Windows ADK: Other ADK downloads](/windows-hardware/get-started/adk-install#other-adk-downloads). For more information, see [Support notes](#support-notes).
+    > **ADK 10.1.25398.1 (updated September 2023)** isn't currently supported for use with Configuration Manager due to [known issues](#support-notes) unless the Windows PE boot images are updated with the latest cumulative update (LCU). Previous supported ADK versions can be found at [Other ADK downloads](/windows-hardware/get-started/adk-install#other-adk-downloads). For more information, see [Support notes](#support-notes).
 
 ## Windows ADK versions
 
