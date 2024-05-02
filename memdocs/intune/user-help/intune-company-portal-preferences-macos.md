@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/16/2024
+ms.date: 05/06/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -33,29 +33,20 @@ ms.collection:
 Select your preferences for single sign-on and in-app data collection in Company Portal. To access your preferences:  
 
 1. Open the Company Portal app.
-2. Go to the menu bar and select **Company Portal** > **Preferences**.  
-
-## Platform single sign-on  
-The Platform single sign-on (SSO) extension configures a work or school device so that while you're using it, you only have to authenticate once to access all apps and services. To enable PSSO, go to Action Center and select the notification prompting for registration. Then follow the onscreen steps to register your device.  
-
-Platform SSO is available on Macs that support PSSO, which is determined by your organization. The Company Portal preferences for Platform SSO become available after you register on the Mac with your work or school account. They include:  
-
-**Sign out**: Remove your work or school account from this device. This action signs you out of your account on the device and clears Platform SSO extension tokens.  
-**Deregister**: Remove Platform SSO registration from this device. To access protected resources again on this device, you must register with Platform SSO.    
-
-To opt out of Platform SSO, select the checkbox next to **Don't ask me to sign in with Platform SSO for this device**. 
-
+2. Go to the menu bar and select **Company Portal** > **Preferences**.   
 
 ## Single sign-on   
-The single sign-on (SSO) extension configures your work or school account so that you only have to authenticate once to access all apps and services within your organization's network. 
+Single sign-on (SSO) configures your work or school account so that you only have to authenticate once to access all cloud-based apps and services. Options include:  
 
-Options include:  
+**Register device**: Add your device to gain access to protected resources. This action registers your device with your organization's identity provider.  
+**Remove account from this device**: Remove your work or school account from this device and any SSO authentication tokens. 
 
-**Register device**: 
-**Remove account from this device**: Remove your work or school account from this device. This action signs you out of your account on the device and clears SSO extension tokens.  
+Additional preferences are available for Macs that support platform SSO, which is determined by your organization. These preferences become available after you register your account on your device, and include:    
+
+**Remove device registration**: Remove your work or school account and any SSO authentication tokens from the device.  
+**Deregister**: Remove SSO registration from this device. To access protected resources again on this device, you must reregister.     
 
 To opt out of SSO on your Mac, select the checkbox next to **Don't ask me to sign in with single sign-on for this device**.  
-
 
 ## Send usage data to Microsoft    
 
