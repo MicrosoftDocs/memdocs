@@ -36,15 +36,13 @@ Select your preferences for single sign-on and in-app data collection in Company
 2. Go to the menu bar and select **Company Portal** > **Preferences**.   
 
 ## Single sign-on   
-Single sign-on (SSO) configures your work or school account so that you only have to authenticate once to access all cloud-based apps and services. Options include:  
+Single sign-on (SSO) configures your work or school account so that you only have to authenticate once to access all cloud-based work apps and services. Preferences include:  
 
-**Register device**: Add your device to gain access to protected resources. This action registers your device with your organization's identity provider.  
-**Remove account from this device**: Remove your work or school account from this device and any SSO authentication tokens. 
+* **Register device**: Register your device to enable SSO and gain access to protected resources. 
 
-Additional preferences are available for Macs that support platform SSO, which is determined by your organization. These preferences become available after you register your account on your device, and include:    
+* **Deregister**: Remove device registration and disable SSO. To access protected resources again on this device, you must reregister. 
 
-**Remove device registration**: Remove your work or school account and any SSO authentication tokens from the device.  
-**Deregister**: Remove SSO registration from this device. To access protected resources again on this device, you must reregister.     
+* **Remove account from this device**: Remove your work or school account and any SSO authentication tokens from the device. This preference becomes available after you register your work or school account on your device. It's only available for Macs that support platform SSO. 
 
 To opt out of SSO on your Mac, select the checkbox next to **Don't ask me to sign in with single sign-on for this device**.  
 
