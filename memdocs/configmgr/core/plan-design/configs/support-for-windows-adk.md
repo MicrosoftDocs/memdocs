@@ -27,11 +27,11 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
     > [!IMPORTANT]
     >
     > - Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
-    > - **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) or newer is required to deploy Windows 10/11 ARM64 operating systems. However, **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) Windows PE boot images have some known issues and need to be updated with the latest cumulative update to work. For more information, see [Support notes](#support-notes).
+    > - **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) or newer is required to deploy Windows 10/11 ARM64 operating systems. However, **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) Windows PE boot images have some known issues and need to be updated with the latest cumulative update to work with Configuration Manager. For more information, see [Support notes](#support-notes).
 
     > [!NOTE]
     >
-    > **ADK 10.1.25398.1 (updated September 2023)** isn't currently supported for use with Configuration Manager with Windows PE AMD64 boot images due to [known issues](#support-notes) unless the Windows PE boot images are updated with the latest cumulative update. Supported versions of the ADK prior to the **ADK 10.1.25398.1 (updated September 2023)** for use with Configuration Manager can be found at [Download and install the Windows ADK: Other ADK downloads](/windows-hardware/get-started/adk-install#other-adk-downloads). For more information, see [Support notes](#support-notes).
+    > **ADK 10.1.25398.1 (updated September 2023)** isn't currently supported for use with Configuration Manager with Windows PE AMD64 boot images due to [known issues](#support-notes) unless the Windows PE boot images are updated with the latest cumulative update (LCU). Supported versions of the ADK before the **ADK 10.1.25398.1 (updated September 2023)** for use with Configuration Manager can be found at [Download and install the Windows ADK: Other ADK downloads](/windows-hardware/get-started/adk-install#other-adk-downloads). For more information, see [Support notes](#support-notes).
 
 ## Windows ADK versions
 
@@ -39,7 +39,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 | Windows ADK version            | ConfigMgr 2211| ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403  |
 |--------------------------------|----------------|----------------|----------------|----------------|
-| **ADK 10.1.25398.1 (updated September 2023)** <br>(10.1.25398.1)| ❌ | ❌ | ❌ | ARM64 Only |
+| **ADK 10.1.25398.1 (updated September 2023)** <br>(10.1.25398.1)| ❌ | ❌ | Only with LCU | Only with LCU |
 | **ADK for Windows 11, version 22H2**<br>(10.1.22621.1)| ✅ | ✅ | ✅ | ✅ |
 | **ADK for Windows 11, version 21H1**<br>(10.1.22000) | ✅ | ✅ | ✅ | ✅ |
 | **ADK for Windows Server 2022**<br>(10.1.20348)  | ✅ | ✅ | ✅ | ✅ |
@@ -59,15 +59,17 @@ The following table lists the versions of the Windows ADK that you can use with 
   - The **Pre-provision BitLocker** task doesn't work in WinPE.
   - Devices with UFS storage, such as the Surface Go 4, don't work in WinPE.
 
-    These issues can be fixed by applying the latest **Windows Server 23H2** cumulative update to the Windows PE AMD64 boot images found in the **ADK 10.1.25398.1 (updated September 2023)**. Once the latest cumulative update is applied to the Windows PE AMD64 boot images, they can be used with Configuration Manager. Information regarding applying cumulative updates to Windows PE boot images can be found in the article [Customize Windows PE boot images](/windows/deployment/customize-boot-image).
- 
+    These issues can be fixed by applying the latest **Windows Server 23H2** cumulative update to the Windows PE AMD64 boot image found in the **ADK 10.1.25398.1 (updated September 2023)**. Once the latest cumulative update is applied to the Windows PE AMD64 boot image, it can be used with Configuration Manager. Information regarding applying cumulative updates to Windows PE boot images can be found in the article [Customize Windows PE boot images](/windows/deployment/customize-boot-image).
+
     > [!NOTE]
     >
-    > To enable VBScript support in the **ADK 10.1.25398.1 (updated September 2023)** Windows PE AMD64 boot images, make sure to add the [Scripting/WinPE-Scripting](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) optional component before applying the latest **Windows Server 23H2** cumulative update.
+    > To enable VBScript support in the **ADK 10.1.25398.1 (updated September 2023)** Windows PE AMD64 boot image, make sure to add the [Scripting/WinPE-Scripting](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) optional component before applying the latest **Windows Server 23H2** cumulative update to the Windows PE AMD64 boot image.
+
+    The Windows PE ARM64 boot image in the **ADK 10.1.25398.1 (updated September 2023)** doesn't support either VBScript or BitLocker while in Windows PE, even when the ([Scripting/WinPE-Scripting](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)) and ([Startup/WinPE-SecureStartup](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)) optional components are added and the latest **Windows Server 23H2** cumulative update is applied to the Windows PE ARM64 boot image.
 
     Windows PE ARM64 boot images aren't affected by the VBScript and BitLocker issues in the **ADK 10.1.25398.1 (updated September 2023)** since the **ADK 10.1.25398.1 (updated September 2023)** doesn't currently offer installation of the optional components into the Windows PE ARM64 boot images necessary to enable either VBScript ([Scripting/WinPE-Scripting](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)) or BitLocker ([Startup/WinPE-SecureStartup](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)).
 
-- For information on applying the [BlackLotus UEFI bootkit vulnerability](https://prod.support.services.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d) security updates to boot images from ADKs prior to the **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1), see [Customize Windows PE boot images](/windows/deployment/customize-boot-image). Boot images from the **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) and newer already have the BlackLotus UEFI bootkit vulnerability security update applied to them.
+- For information on applying the [BlackLotus UEFI bootkit vulnerability](https://prod.support.services.microsoft.com/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d) security updates to boot images from ADKs before the **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1), see [Customize Windows PE boot images](/windows/deployment/customize-boot-image). Boot images from the **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) and newer already have the BlackLotus UEFI bootkit vulnerability security update applied to them.
 
 - Windows Server builds have the same Windows ADK requirement as the associated Windows client version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
 
