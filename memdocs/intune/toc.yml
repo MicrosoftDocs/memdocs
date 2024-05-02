@@ -466,7 +466,9 @@ items:
               - name: PowerShell scripts
                 href: ./apps/intune-management-extension.md
               - name: macOS shell scripts
-                href: ./apps/macos-shell-scripts.md        
+                href: ./apps/macos-shell-scripts.md
+              - name: Get the app bundle ID
+                href: ./apps/get-app-bundle-id-intune-admin-center.md      
             - name: Assign apps
               items:
               - name: Assign apps to groups
@@ -1033,7 +1035,7 @@ items:
           - name: Windows 10 MDM baseline settings
             href: ./protect/security-baseline-settings-mdm-all.md
           - name: Microsoft Defender for Endpoint baseline settings 
-            href: ./protect/security-baseline-settings-defender-atp.md
+            href: ./protect/security-baseline-settings-defender.md
           - name: Microsoft 365 Apps for Enterprise baseline settings (Office) 
             href: ./protect/security-baseline-v2-office-settings.md
           - name: Microsoft Edge baseline settings (version 112 and higher)
