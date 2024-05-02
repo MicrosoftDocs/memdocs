@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2023 
+ms.date: 05/8/2024 
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -162,6 +162,32 @@ To manually remove the existing roles and add the new roles, refer to the follow
 | Subscription | Reader | Reader |
 
 For more details about removing a role assignment from an Azure resource, see [Remove Azure role assignments](/azure/role-based-access-control/role-assignments-remove).
+
+## Scope tags
+
+For RBAC, roles are only part of the equation. While roles work well to define a set of permissions, scope tags help define visibility of your organization’s resources. This is most helpful when organizing your tenant to have users scoped to certain hierarchies, geographical regions, business units, and so on. 
+
+The creation and management of scope tags is handled by Intune. For more information on how scope tags are created and managed, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).  
+
+In Windows 365, scope tags can be applied to the following resources:
+
+- Provisioning policies
+- Azure network connections (ANC)
+- Cloud PCs
+- Custom images
+- Windows 365 RBAC role assignments
+
+To make sure that both the Intune-owned **All devices** list and Windows 365-owned **All Cloud PCs** list show the same Cloud PCs based on scope, follow these steps after creating your scope tags and provisioning policy:
+
+1. Create an Microsoft Entra ID dynamic device group with rule that enrollmentProfileName equals the exact name of the provisioning policy created.  
+2. Assign the created scope tag  to the dynamic device group.
+3. After the Cloud PC is provisioned and enrolled into Intune, both the All Devices list and All Cloud PCs list should display the same Cloud PCs.  
+
+To let scoped administrators view which scope tags are assigned to them and the objects within their scope, they must be assigned one of the following roles:
+
+- Intune read only
+- Cloud PC reader/administrator
+- A custom role with similar permissions.
 
 <!-- ########################## -->
 ## Next steps
