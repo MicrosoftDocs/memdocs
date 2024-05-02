@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/13/2023
+ms.date: 04/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -154,6 +154,7 @@ The following third-party certification authorities support Intune:
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
+- [Splashtop](https://docs.foxpass.com/docs/scep)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:

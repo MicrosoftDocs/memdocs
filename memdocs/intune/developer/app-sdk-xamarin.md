@@ -7,7 +7,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 04/22/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,10 +32,11 @@ ms.collection:
 
 # Microsoft Intune App SDK Xamarin Bindings
 
-> [!NOTE]
-> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android). For .NET MAUI support on iOS, see [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS). See [Xamarin Support Policy](https://dotnet.microsoft.com/platform/support/policy/xamarin) and [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate) for more information about Xamarin support and migrating your apps from Xamarin Forms to .NET MAUI.
+> [!IMPORTANT]
+> Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) documentation.
 > 
-> You might wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
+> Xamarin support has ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. For Intune support on Android and iOS platforms, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)and [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
+
 ## Overview
 The [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) enable [Intune app protection policy](../apps/app-protection-policy.md) in iOS and Android apps built with Xamarin. The bindings allow developers to easily build-in Intune app protection features into their Xamarin-based app.
 

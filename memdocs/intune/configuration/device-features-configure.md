@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/11/2024
+ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,9 +28,6 @@ ms.collection:
 ---
 
 # Add iOS, iPadOS, or macOS device feature settings in Intune
-
-> [!IMPORTANT]
-> This article is a final draft and ready for PM review. It will go live when Platform SSO goes live. **Delete this note before publishing**.
 
 Intune includes many features and settings that help administrators control iOS, iPadOS, and macOS devices. For example, administrators can:
 
@@ -188,13 +185,14 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
   - macOS 13.0 and newer
 
-  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra. It enables single sign-on (SSO) using passwordless authentication, Microsoft Entra ID user accounts, and smart cards. Users can also manually sign into their macOS devices using their Microsoft Entra ID, instead of a local account.
+  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID. It enables single sign-on (SSO) using passwordless authentication, Microsoft Entra user accounts, and smart cards. Users can also manually sign into their macOS devices using their Microsoft Entra account, instead of a local account.
 
-  In Intune, you create a settings catalog policy that configures the Platform SSO settings.
+  In Intune, you create an Intune settings catalog policy and configure the Platform SSO settings.
 
-  **Platform SSO** includes the **SSO app extension**. The SSO app extension enables single sign-on to apps and websites. Platform SSO extends these features. It gives you more granular control over authentication methods, the ability to create new organizational users at sign in, and assign authorization modes for users.
+  For more information on Platform SSO, go to:
 
-  For more information on Platform SSO, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+  - [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md)
+  - [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md)
 
 - **SSO app extension** (recommended)
 
@@ -204,17 +202,15 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
   - iPadOS 13.0 and newer
   - macOS 10.15 and newer
 
-  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra. It allows iOS/iPadOS and macOS users to sign into apps and websites using their Microsoft Entra ID. You create an Intune device configuration policy to configure the SSO app extension settings.
+  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID. It allows iOS/iPadOS and macOS users to sign into apps and websites using Microsoft Entra ID.
 
-  You use these settings to configure an SSO app extension created by your organization, by your identity provider, by Microsoft, or by Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
-
-  On macOS devices, you can use **SSO app extension** by itself. If you also want to use **Platform SSO**, then you must use only **Platform SSO**, as Platform SSO includes the SSO app extension settings.
+  In Intune, you create an Intune device features configuration policy and configure the SSO app extension settings.
 
   For more information, go to:
 
   - [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md)
-  - [iOS/iPadOS SSO app extension settings](ios-device-features-settings.md#single-sign-on-app-extension)
-  - [macOS SSO app extension settings](macos-device-features-settings.md#single-sign-on-app-extension)
+  - [SSO app extension on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
+  - [SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)
 
   For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web).
 
