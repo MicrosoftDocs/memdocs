@@ -98,11 +98,11 @@ Windows Server semi-annual channel versions are Server Core installations, such 
 
 - **Windows Server 2012** (x64) <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-#### <a name="bkmk_note2"></a> Note 1
+#### <a name="bkmk_note1"></a> Note 1
 
 To support [client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).
 
-#### <a name="bkmk_note3"></a> Note 2
+#### <a name="bkmk_note2"></a> Note 2
 
 The Software Center app isn't supported on any version of Windows Server Core.<!--SCCMDocs issue 683-->
 
