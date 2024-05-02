@@ -1,7 +1,7 @@
 ---
 title: EEnroll devices with Automated Device Enrollment
 description: Learn how to automatically enroll devices through Apple School Manager with Automated Device Enrollment during Setup Assistant on iOS/iPadOS devices.
-ms.date: 11/09/2023
+ms.date: 5/2/2024
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree

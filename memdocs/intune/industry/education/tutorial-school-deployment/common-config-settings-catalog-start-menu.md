@@ -1,7 +1,7 @@
 ---
 title: Common Education Start menu configuration
 description: Learn about common Start menu configuration used by Education organizations in Intune.
-ms.date: 4/9/2024
+ms.date: 5/2/2024
 ms.topic: conceptual
 author: yegor-a
 ms.author: egorabr

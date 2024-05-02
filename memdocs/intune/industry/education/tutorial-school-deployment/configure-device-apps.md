@@ -6,7 +6,7 @@ ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
-ms.date: 03/05/2024
+ms.date: 5/2/2024
 ---
 
 # Configure applications with Microsoft Intune

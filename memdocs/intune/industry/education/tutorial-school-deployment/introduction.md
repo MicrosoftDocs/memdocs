@@ -1,7 +1,7 @@
 ---
 title: Introduction to the tutorial for deploying and managing devices in a school
 description: Introduction to deployment and management of devices in education environments.
-ms.date: 04/18/2024
+ms.date: 5/2/2024
 ms.topic: tutorial
 ms.collection: essentials-get-started
 ms.author: scbree
