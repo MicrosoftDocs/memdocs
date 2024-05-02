@@ -42,9 +42,9 @@ If you use [Microsoft Intune](../fundamentals/what-is-intune.md) in the same ten
 
 There are Intune capabilities built into Copilot for Security, and you can use prompts to get more information, including:
 
-- Information about your devices, apps, compliance & configuration policies, and policy assignments managed in Intune.
-- Managed device attributes and hardware details.
-- Issue with specific devices and compare a working & non-working device.
+- Information about your devices, apps, compliance & configuration policies, and policy assignments managed in Intune
+- Managed device attributes and hardware details
+- Issue with specific devices and compare a working & non-working device
 
 This article shows you how to access your Microsoft Intune data in Copilot for Security and includes sample prompts.
 
@@ -56,11 +56,11 @@ For example, there's a user or device that is showing signs of malicious intent.
 
 In Copilot for Security, you can use the Intune capabilities to get more information, like:
 
-- Ask about a specific device, get all the properties about that device, including the device name, device ID, and device manufacturer.
-- Determine when the device is enrolled in Intune.
-- Find the primary user of a device.
-- Determine the type of device, like a laptop or mobile phone.
-- Check the compliance status, especially if a device is noncompliant, and why it's noncompliant.
+- Ask about a specific device, get all the properties about that device, including the device name, device ID, and device manufacturer
+- Determine when the device is enrolled in Intune
+- Find the primary user of a device
+- Determine the type of device, like a laptop or mobile phone
+- Check the compliance status, especially if a device is noncompliant, and why it's noncompliant
 
 In Microsoft Defender, you can use this information, including the device type, to determine your next steps. For example, you might take different actions based on the type of device (laptop vs. mobile phone vs. tablet). Copilot for Security can also give you a link to the device in Microsoft Defender, so you can run any Defender actions.
 
@@ -75,15 +75,15 @@ In Microsoft Defender, you can use this information, including the device type, 
 
   For more information on roles and authentication, go to:
 
-  - [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication).
-  - [Role based access control (RBAC) in Intune](../fundamentals/role-based-access-control.md).
-  - [Use RBAC and scope tags for distributed IT in Intune](../fundamentals/scope-tags.md).
+  - [Roles and authentication in Microsoft Copilot for Security](/security-copilot/authentication)
+  - [Role based access control (RBAC) in Intune](../fundamentals/role-based-access-control.md)
+  - [Use RBAC and scope tags for distributed IT in Intune](../fundamentals/scope-tags.md)
 
 - You can access your Intune data in the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989) and Copilot in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on Copilot in Intune vs. Copilot for Security, and other common questions, go to the [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
 
 ## Open Copilot for Security and enable Intune
 
-To use the Intune capabilities in Copilot for Security, enable the Intune plugin:
+To use the Intune capabilities in Copilot for Security, enable the Intune plugin.
 
 1. Go to [Microsoft Copilot for Security](https://go.microsoft.com/fwlink/?linkid=2247989) and sign in with your credentials.
 2. In the prompt bar, select **Sources** (right corner).
@@ -119,7 +119,7 @@ To view the list of Intune built-in system capabilities for Intune, use the foll
 
 When you use prompts in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or in the Copilot for Security portal, the sessions are saved. To see the saved sessions, use the following steps:
 
-1. In the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), go to the menu > **My sessions**:
+1. In the [Copilot for Security portal](https://go.microsoft.com/fwlink/?linkid=2247989), go to the menu > **My sessions**.
 
     :::image type="content" source="./media/security-copilot/security-copilot-menu-my-sessions.png" alt-text="Screenshot that shows the Microsoft Copilot for Security menu and My sessions with previous sessions in Copilot for Security portal.":::
 
@@ -144,8 +144,8 @@ You can create your own prompts in Copilot for Security to get information about
 
   You can also save your prompts in a promptbook for future use. For more information, go to:
 
-  - [Prompting in Microsoft Copilot for Security](/security-copilot/prompting-security-copilot).
-  - [Using promptbooks in Microsoft Copilot for Security](/security-copilot/using-promptbooks).
+  - [Prompting in Microsoft Copilot for Security](/security-copilot/prompting-security-copilot)
+  - [Using promptbooks in Microsoft Copilot for Security](/security-copilot/using-promptbooks)
 
 ### General information about your Intune data
 
@@ -197,7 +197,7 @@ Get the **similarities and differences** between two devices, like the complianc
 
 ## Provide feedback
 
-Your feedback on the Intune integration with Copilot for Security helps with development. To provide feedback, in Copilot for Security, use the feedback buttons at the bottom of each completed prompt:
+Your feedback on the Intune integration with Copilot for Security helps with development. To provide feedback, in Copilot for Security, use the feedback buttons at the bottom of each completed prompt.
 
 :::image type="content" source="./media/security-copilot/security-copilot-prompt-feedback.png" alt-text="Screenshot that shows how to submit feedback on the prompt results in Microsoft Copilot for Security.":::
 
@@ -214,5 +214,5 @@ When you use Copilot for Security to get Intune data, Copilot for Security also 
 ## Related articles
 
 - [What is Microsoft Copilot for Security?](/security-copilot/microsoft-security-copilot)
-- [Privacy and data security in Microsoft Copilot for Security](/security-copilot/privacy-data-security).
-- [Use Microsoft Copilot in Intune](copilot-intune-overview.md).
+- [Privacy and data security in Microsoft Copilot for Security](/security-copilot/privacy-data-security)
+- [Use Microsoft Copilot in Intune](copilot-intune-overview.md)
