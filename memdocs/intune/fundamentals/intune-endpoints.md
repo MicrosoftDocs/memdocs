@@ -56,7 +56,7 @@ Managed devices require configurations that let **All Users** access services th
 
 ## PowerShell script
 
-To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune endpoint information is accessed through a PowerShell script. There are other dependent services for Intune, which are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
+To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune endpoint information is accessed through a PowerShell script. There are other dependent services for Intune that are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
 
 By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service.
 
