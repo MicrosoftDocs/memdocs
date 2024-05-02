@@ -56,9 +56,9 @@ Upgrade your Xamarin based apps to .NET MAUI. Review the following documentation
 - [Microsoft Intune App SDK for .NET MAUI – Android | NuGet Gallery](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)
 - [Microsoft Intune App SDK for .NET MAUI – iOS | NuGet Gallery](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS)
 
-### Plan for Change: Update your PowerShell scripts with a Microsoft Entra ID registered app ID by April 2024<!--26960016-->
+### Plan for Change: Update your PowerShell scripts with a Microsoft Entra ID registered app ID<!--26960016-->
 
-Last year we announced a [new Microsoft Intune GitHub repository](https://aka.ms/Intune/Scripts-blog) based on the Microsoft Graph SDK-based PowerShell module. The legacy Microsoft Intune PowerShell sample scripts GitHub repository is now read-only. Additionally, starting on **April 1, 2024**, due to updated authentication methods in the Graph SDK-based PowerShell module, the global Microsoft Intune PowerShell application (client) ID based authentication method will be removed.
+Last year we announced a [new Microsoft Intune GitHub repository](https://aka.ms/Intune/Scripts-blog) based on the Microsoft Graph SDK-based PowerShell module. The legacy Microsoft Intune PowerShell sample scripts GitHub repository is now read-only. Additionally, in **May 2024**, due to updated authentication methods in the Graph SDK-based PowerShell module, the global Microsoft Intune PowerShell application (client) ID based authentication method will be removed.
 
 #### How does this affect you or your users?
 
@@ -66,10 +66,12 @@ If you're using the Intune PowerShell application ID (d1ddf0e4-d672-4dae-b554-9d
 
 #### How can you prepare?
 
-Before April 1, 2024, update your PowerShell scripts by:
+Update your PowerShell scripts by:
 
 1. Creating a new app registration in the Microsoft Entra admin center. For detailed instructions, read: [Quickstart: Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
 2. Update scripts containing the Intune application ID (d1ddf0e4-d672-4dae-b554-9d5bdfd93547) with the new application ID created in step 1.
+
+For detailed step-by-step instructions visit [powershell-intune-samples/Updating App Registration (github.com)](https://github.com/microsoftgraph/powershell-intune-samples/blob/master/Updating%20App%20Registration).
 
 ### Intune moving to support Android 10 and later for user-based management methods in October 2024<!--14755802-->
 
