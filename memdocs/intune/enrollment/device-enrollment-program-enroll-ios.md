@@ -68,7 +68,8 @@ Before you create the enrollment profile, you must have:
 ## Before you begin      
 Read through these enrollment requirements and best practices to prepare for a successful setup and deployment.    
 
-### Choose an authentication method  
+### Choose an authentication method
+
 Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication and has features like multi-factor authentication. 
 
 Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Microsoft Entra registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. 
@@ -78,6 +79,7 @@ Setup Assistant with modern authentication is supported on devices running iOS/i
 For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
 
 ### What is supervised mode?  
+
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop. 
 
 Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](../remote-actions/device-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment. 
@@ -117,7 +119,6 @@ To enable automatic app updates for Company Portal, go to your app token setting
 
 ### Troubleshoot enrollment   
 If you experience sync problems during the enrollment process, you can look for solutions at [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages). 
-
 
 ## Get an Apple automated device enrollment token
 
@@ -239,7 +240,7 @@ Now that you've installed your token, you can create an enrollment profile for a
 
    :::image type="content" source="./media/device-enrollment-program-enroll-ios/single-app-mode.png" alt-text="Screenshot that shows the Run Company Portal in Single App Mode option.":::
 
-1. If you want devices using this profile to be supervised, select **Yes** in the **Supervised** list:
+1. If you want devices using this profile to be supervised, select **Yes** in the **Supervised** list.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/supervisedmode.png" alt-text="Screenshot that shows the Supervised option.":::
 
@@ -392,7 +393,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Choose **Enrollment Program Tokens**.  
-1. Select a token in the list, and then select **Devices** > **Sync**:
+1. Select a token in the list, and then select **Devices** > **Sync**.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token." lightbox="./media/device-enrollment-program-enroll-ios/image06.png":::
 
@@ -472,7 +473,7 @@ You'll sometimes need to renew your tokens:
 ### Renew your tokens
 
 1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has an Administrator or Device Enrollment Manager role.
-2. Select **Settings**. Under **MDM Servers**, select the MDM server associated with the token file that you want to renew. Select **Download Token**:
+2. Select **Settings**. Under **MDM Servers**, select the MDM server associated with the token file that you want to renew. Select **Download Token**.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-macos/download-token.png" alt-text="Screenshot that shows how to renew and download an Apple token in Apple Business Manager.":::
 
@@ -493,7 +494,7 @@ You'll sometimes need to renew your tokens:
 
 10. Select **Next** to go to the **Scope tags** page. Assign scope tags if you want to.
 
-11. Select **Renew token**. You'll see a confirmation that the token is renewed:
+11. Select **Renew token**. You'll see a confirmation that the token is renewed.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/confirmation.png" alt-text="Screenshot that shows the confirmation message.":::
 
