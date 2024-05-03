@@ -38,11 +38,11 @@ Select your preferences for single sign-on and in-app data collection in Company
 ## Single sign-on   
 Single sign-on (SSO) configures your work or school account so that you only have to authenticate once to access all cloud-based work apps and services. Preferences include:  
 
-* **Register device**: Register your device to enable SSO and gain access to protected resources. 
+* **Register device**: Register your device to enable SSO and gain access to protected resources. This setting is only available on devices enabled for platform SSO.  
 
-* **Deregister**: Remove device registration and disable SSO. To access protected resources again on this device, you must reregister. 
+* **Deregister**: Remove device registration and disable SSO. To access protected resources again on this device, you must reregister. This setting is only available on devices enabled for platform SSO. 
 
-* **Remove account from this device**: Remove your work or school account and any SSO authentication tokens from the device. This preference becomes available after you register your work or school account on your device. It's only available for Macs that support platform SSO. 
+* **Remove account from this device**: Remove your work or school account and any SSO authentication tokens from the device. 
 
 To opt out of SSO on your Mac, select the checkbox next to **Don't ask me to sign in with single sign-on for this device**.  
 
@@ -54,7 +54,7 @@ To turn off data collection in Company Portal, clear the checkbox next to **Allo
 
 ## Advanced logging
 
-Select the checkbox next to **Turn on advanced logging** to turn on detailed logging for troubleshooting. Company Portal logs certificate usage details when advanced logging is turned on. Advanced logging is turned off by default. Keep this setting turned off unless otherwise instructed by your organization's IT administrator.    
+Select the checkbox next to **Turn on advanced logging** to turn on verbose logging, which is used for troubleshooting, for Company Portal and MSAL.  Company Portal logs certificate usage and network responses when advanced logging is turned on. Advanced logging is turned off by default. Keep this setting turned off unless otherwise instructed by your organization's IT administrator.    
 
 ## Next steps  
 
