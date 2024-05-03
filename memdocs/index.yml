@@ -36,7 +36,7 @@ productDirectory:
   items:
     # Card
     - title: Try and evaluate
-      imageSrc: ./intune/media/icons/get-started.svg
+      imageSrc: ./media/index/get-started.svg
       links:
         - url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
@@ -45,7 +45,7 @@ productDirectory:
 
     # Card
     - title: Plan a migration to Intune
-      imageSrc: ./intune/media/icons/plan.svg
+      imageSrc: ./media/index/plan-migrate.svg
       links:
         - url: ./intune/fundamentals/intune-planning-guide.md
           text: Microsoft Intune planning guide
@@ -63,7 +63,7 @@ productDirectory:
 
     # Card
     - title: Move to cloud native endpoints
-      imageSrc: ./media/index/cloud-native.svg
+      imageSrc: ./media/index/cloud-endpoint.svg
       links:
         - url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
           text: Learn about cloud native endpoints
@@ -76,7 +76,7 @@ productDirectory:
       links:
         - url: ./intune/protect/conditional-access.md
           text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/9/0
+        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/0/0
           text: View the interactive demo
 
     # Card
