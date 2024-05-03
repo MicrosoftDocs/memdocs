@@ -101,7 +101,9 @@ Configuration Manager operating system deployment support is now added on Window
 
 ### Enhancement in Deploying Software Packages with Dynamic Variables  
 
-Administrators while deploying the "Install Software Package" via Dynamic variable with "Continue on error" unchecked to clients, will not be notified with task sequence failures even if package versions on the distribution point are updated.
+When deploying a Task Sequence for installing a software package using dynamic variables, if the 'Continue on error' option is unchecked and the package is updated on distribution points while the client is installing the Task Sequence, the installation process fails due to version inconsistencies with the updated packages on the distribution points. Previously, the only recourse was to reinstall the entire Task Sequence from the software center.
+
+To address this issue, we've introduced a new feature allowing administrators to specify the number of retries the system should attempt before marking the Task Sequence as failed. This retry mechanism is activated only when the 'Continue on error' checkbox is unchecked."
 
 :::image type="content" source="media/24334765-dyn-var.png" alt-text="Screenshot of changes in dynamic variable in task sequence in CM console.":::
 
