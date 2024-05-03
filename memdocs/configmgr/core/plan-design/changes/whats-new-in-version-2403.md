@@ -141,9 +141,9 @@ For more information on BitLocker management, see [Deploy BitLocker management.]
   For example, [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
 
 ## Next steps
-At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
+<!--At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).-->
 
-<!--As of March 28, 2024, version 2403 is globally available for all customers to install.
+As of May 03, 2024, version 2403 is globally available for all customers to install.
 >[!NOTE] 
 > For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.-->
 
