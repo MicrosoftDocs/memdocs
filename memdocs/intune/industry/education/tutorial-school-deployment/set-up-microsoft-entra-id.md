@@ -18,13 +18,14 @@ Microsoft Entra ID, which is included with the Microsoft 365 Education subscript
 
 If you don't already have a Microsoft 365 tenant, you need to create one.
 
-For more information, see [Create your Office 365 tenant][M365-1]
+For more information, see [Create your Office 365 tenant][M365-1].
 
 > [!TIP]
-> To learn more, and practice how to configure the Microsoft 365 tenant for your school, try <a href="https://www.microsoft.com/en-us/education/interactive-demos/set-up-Microsoft-365" target="_blank"><u>this interactive demo</u></a>.
+> To learn more, and practice how to configure the Microsoft 365 tenant for your school, try [this interactive demo](https://www.microsoft.com/en-us/education/interactive-demos/set-up-Microsoft-365).
+
 ### Explore the Microsoft 365 admin center
 
-The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the <a href="https://admin.microsoft.com" target="_blank"><u>Microsoft 365 admin center</u></a>, sign in with the same global administrator account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
+The **Microsoft 365 admin center** is the hub for all administrative consoles for the Microsoft 365 cloud. To access the [Microsoft 365 admin center](https://admin.microsoft.com), sign in with the same global administrator account when you [created the Microsoft 365 tenant](#create-a-microsoft-365-tenant).
 
 From the Microsoft 365 admin center, you can access different administrative dashboards: Microsoft Entra ID, Microsoft Intune, Intune for Education, and others:
 
@@ -58,10 +59,10 @@ School Data Sync (SDS) imports and synchronizes SIS data to create classes in Mi
 For more information, see [Overview of School Data Sync][SDS-1].
 
 > [!TIP]
-> To learn more and practice with School Data Sync, follow the <a href="https://interactiveguides-schooldatasync.azurewebsites.net/" target="_blank"><u>Microsoft School Data Sync demo</u></a>, which provides detailed steps to access, configure, and deploy School Data Sync in your Microsoft 365 Education tenant.
+> To learn more and practice with School Data Sync, follow the [Microsoft School Data Sync demo](https://interactiveguides-schooldatasync.azurewebsites.net/), which provides detailed steps to access, configure, and deploy School Data Sync in your Microsoft 365 Education tenant.
 
 > [!NOTE]
-> You can perform a test deployment by cloning or downloading sample SDS CSV school data from the [<u>O365-EDU-Tools GitHub site</u>](https://github.com/OfficeDev/O365-EDU-Tools).
+> You can perform a test deployment by cloning or downloading sample SDS CSV school data from the [O365-EDU-Tools GitHub site](https://github.com/OfficeDev/O365-EDU-Tools).
 >
 > Remember that you should typically deploy test SDS data (users, groups, and so on) in a separate test tenant, not your school production environment.
 
@@ -86,12 +87,12 @@ In addition to the above methods, you can manually add users and groups, and ass
 There are two options for adding users manually, either individually or in bulk:
 
 1. To add students and teachers as users in Microsoft 365 Education *individually*:
-    - Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
-    - Select **Microsoft Entra ID** > **Users** > **All users** > **New user** > **Create new user**
+    - Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+    - Select **Microsoft Entra ID** > **Users** > **All users** > **New user** > **Create new user**.
     For more information, see [Add users and assign licenses at the same time][M365-3].
 1. To add *multiple* users to Microsoft 365 Education:
-    - Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
-    - Select **Microsoft Entra ID** > **Users** > **All users** > **Bulk operations** > **Bulk create**
+    - Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+    - Select **Microsoft Entra ID** > **Users** > **All users** > **Bulk operations** > **Bulk create**.
 
 For more information, see [Add multiple users in the Microsoft 365 admin center][M365-4].
 
@@ -101,11 +102,11 @@ For more information, see [Add multiple users in the Microsoft 365 admin center]
 
 Creating groups is important to simplify multiple tasks, like assigning licenses, delegating administration, deploy settings, applications or to distribute assignments to students. To create groups:
 
-1. Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
-1. Select **Microsoft Entra ID** > **Groups** > **All groups** > **New group**
-1. On the **New group** page, select **Group type** > **Security**
-1. Provide a group name and add members, as needed
-1. Select **Next**
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+1. Select **Microsoft Entra ID** > **Groups** > **All groups** > **New group**.
+1. On the **New group** page, select **Group type** > **Security**.
+1. Provide a group name and add members, as needed.
+1. Select **Next**.
 
 For more information, see [Create a group in the Microsoft 365 admin center][M365-5].
 
@@ -117,10 +118,10 @@ The recommended way to assign licenses is through group-based licensing. With th
 
 To assign a license to a group:
 
-1. Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
-1. Select **Microsoft Entra ID** > **Show More** > **Billing** > **Licenses**
-1. Select the required products that you want to assign licenses for > **Assign**
-1. Add the groups to which the licenses should be assigned
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+1. Select **Microsoft Entra ID** > **Show More** > **Billing** > **Licenses**.
+1. Select the required products that you want to assign licenses for > **Assign**.
+1. Add the groups to which the licenses should be assigned.
 
    :::image type="content" source="images/entra-assign-licenses.png" alt-text="Assign licenses from Microsoft Entra admin center." lightbox="images/entra-assign-licenses.png":::
 
@@ -134,8 +135,8 @@ Configuring your school branding enables a more familiar Autopilot experience to
 
 To configure your school's branding:
 
-1. Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
-1. Select **Microsoft Entra ID** > **Show More** > **User experiences** > **Company branding**
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+1. Select **Microsoft Entra ID** > **Show More** > **User experiences** > **Company branding**.
 1. You can specify brand settings like background image, logo, username hint and a sign-in page text
     :::image type="content" source="images/entra-branding.png" alt-text="Configure Microsoft Entra ID branding from Microsoft Entra admin center." lightbox="images/entra-branding.png":::
 1. To adjust the school tenant's name displayed during OOBE, select **Microsoft Entra ID** > **Overview** > **Properties**
@@ -154,9 +155,9 @@ In this section, you configure Microsoft Entra device settings.
 
 To allow Microsoft Entra join:
 
-1. Sign in to the <a href="https://entra.microsoft.com" target="_blank"><b>Microsoft Entra admin center</b></a>
-1. Select **Microsoft Entra ID** > **Devices** > **Device Settings**
-1. Under **Users may join devices to Microsoft Entra ID**, select **All**
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+1. Select **Microsoft Entra ID** > **Devices** > **Device Settings**.
+1. Under **Users may join devices to Microsoft Entra ID**, select **All**.
     > [!NOTE]
     > If it is required that only specific users can join devices to Microsoft Entra ID, select **Selected**. If using provisioning packages, ensure that the user account that will create provisioning packages is included in the list of users.
 1. You may also want to review the **Maximum number of devices per user** value on this page, which Education customers commonly set to **Unlimited**.
