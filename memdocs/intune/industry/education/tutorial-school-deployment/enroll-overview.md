@@ -2,7 +2,7 @@
 title: Device enrollment overview
 description: Learn about the different options to enroll Windows devices in Microsoft Intune.
 ms.date: 5/2/2024
-ms.topic: overview
+ms.topic: tutorial
 zone_pivot_groups: platforms-windows-ios
 author: scottbreenmsft
 ms.author: scbree
@@ -21,12 +21,14 @@ ms.manager: dougeby
 Select one of the following options to learn the next steps about the enrollment method you chose:
 
 ::: zone pivot="windows"
+
 - [Automatic Intune enrollment via Microsoft Entra join](enroll-entra-join.md)
 - [Automatic Intune enrollment with provisioning packages](enroll-package.md)
 - [Automatic Intune enrollment with Windows Autopilot](enroll-autopilot.md)
 ::: zone-end
 
 ::: zone pivot="ios"
+
 - [Enroll with Company Portal](enroll-ios-company-portal.md)
 - [Enroll devices with Automated Device Enrollment](enroll-ios-ade.md)
 - [Enroll devices with Apple Configurator](enroll-ios-apple-configurator.md)

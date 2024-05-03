@@ -3,7 +3,6 @@ title: Set up device management
 description: Learn how to configure the Intune service and set up the environment for education.
 ms.date: 5/2/2024
 ms.topic: tutorial
-appliesto:
 ms.author: scbree
 author: scottbreenmsft
 zone_pivot_groups: platforms-windows-ios
@@ -63,15 +62,15 @@ With enrollment restrictions, you control which devices can enroll and be manage
 To block personally owned devices from enrolling:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **Enroll devices** > **Device platform restrictions**
-1. Select the tab for the platform you want to restrict
-1. Select **Create restriction**
-1. On the **Basics** page, provide a name for the restriction and, optionally, a description > **Next**
-1. On the **Platform settings** page, in the **Personally owned devices** field, select **Block** > **Next**
+1. Select **Devices** > **Enroll devices** > **Device platform restrictions**.
+1. Select the tab for the platform you want to restrict.
+1. Select **Create restriction**.
+1. On the **Basics** page, provide a name for the restriction and, optionally, a description > **Next**.
+1. On the **Platform settings** page, in the **Personally owned devices** field, select **Block** > **Next**.
     :::image type="content" source="./images/enrollment-restrictions.png" alt-text="This screenshot is of the device enrollment restriction page in Microsoft Intune admin center." lightbox="./images/enrollment-restrictions.png":::
-1. Optionally, on the **Scope tags** page, add scope tags > **Next**
-1. On the **Assignments** page, select **Add groups**, and then use the search box to find and choose groups to which you want to apply the restriction > **Next**
-1. On the **Review + create** page, select **Create** to save the restriction
+1. Optionally, on the **Scope tags** page, add scope tags > **Next**.
+1. On the **Assignments** page, select **Add groups**, and then use the search box to find and choose groups to which you want to apply the restriction > **Next**.
+1. On the **Review + create** page, select **Create** to save the restriction.
 
 For more information, see [Create a device platform restriction][MEM-2].
 
@@ -89,13 +88,13 @@ For more information, see [Create a device platform restriction][MEM-2].
 ✅ Configure which users can enroll Windows devices
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **Enroll devices** > **Automatic Enrollment**
-1. Set the **MDM user scope** to **All** or **Some** and select a group if you want to restrict enrollment to certain users
+1. Select **Devices** > **Enroll devices** > **Automatic Enrollment**.
+1. Set the **MDM user scope** to **All** or **Some** and select a group if you want to restrict enrollment to certain users.
     > [!IMPORTANT]
     > The MDM user scope must be set to *All* if provisioning pacakges are used to enroll devices.
-1. Set **MAM user scope** to **None**
+1. Set **MAM user scope** to **None**.
     :::image type="content" source="./images/intune-windows-enrollment.png" alt-text="A screenshot showing the MDM user scope and MAM user scope." lightbox="./images/intune-windows-enrollment.png":::
-1. Select **Save**
+1. Select **Save**.
 
 For more information, see [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 
@@ -110,10 +109,10 @@ It's common for Windows Hello for Business to be disabled at the tenant level. T
 To disable Windows Hello for Business at the tenant level:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **Windows** > **Windows Enrollment**
-1. Select **Windows Hello for Business**
-1. Ensure that **Configure Windows Hello for Business** is set to **disabled**
-1. Select **Save**
+1. Select **Devices** > **Windows** > **Windows Enrollment**.
+1. Select **Windows Hello for Business**.
+1. Ensure that **Configure Windows Hello for Business** is set to **disabled**.
+1. Select **Save**.
 
 :::image type="content" source="./images/whfb-disable.png" alt-text="Disablement of Windows Hello for Business from Microsoft Intune admin center." lightbox="./images/whfb-disable.png":::
 
@@ -128,16 +127,16 @@ Intune needs permission to collect data for Endpoint analytics on Windows device
 To enable data collection:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Reports** > **Endpoint analytics** > **Settings**
-1. Under **Intune data collection policy**, select **Intune data collection policy**
+1. Select **Reports** > **Endpoint analytics** > **Settings**.
+1. Under **Intune data collection policy**, select **Intune data collection policy**.
     :::image type="content" source="./images/intune-data-collection-policy.png" alt-text="Selecting the Intune data collection policy." lightbox="./images/intune-data-collection-policy.png":::
-1. Select **Properties**
-1. Under **Configuration settings** select **Edit**
-1. Set **Health Monitoring** to **Enable**
-1. Select **Scope** and tick **Endpoint analytics**
+1. Select **Properties**.
+1. Under **Configuration settings** select **Edit**.
+1. Set **Health Monitoring** to **Enable**.
+1. Select **Scope** and tick **Endpoint analytics**.
     :::image type="content" source="./images/intune-data-collection-policy-settings.png" alt-text="A screenshot showing the configuration of the Intune data collection policy." lightbox="./images/intune-data-collection-policy-settings.png":::
-1. Select **Review + Save**
-1. Select **Save**
+1. Select **Review + Save**.
+1. Select **Save**.
 
 For more information on data collection, see [Endpoint analytics data collection](/mem/analytics/data-collection).
 
@@ -149,10 +148,10 @@ Intune needs permission to collect certain data for Windows update reports on Wi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Tenant administration** > **Connectors and tokens** > **Windows data**
-1. Under **Windows data** select **On**
-1. Review the **Windows license verification** section and configure as per your licensing
+1. Under **Windows data** select **On**.
+1. Review the **Windows license verification** section and configure as per your licensing.
     :::image type="content" source="./images/intune-windows-data.png" alt-text="A screenshot showing the configuration of the Intune Windows data settings." lightbox="./images/intune-windows-data.png":::
-1. Click **Save**
+1. Click **Save**.
 
 For more information, see [Enable use of Windows diagnostic data by Intune](/mem/intune/protect/data-enable-windows-data).
 
@@ -161,14 +160,14 @@ For more information, see [Enable use of Windows diagnostic data by Intune](/mem
 ✅ Allow remote retrieval of diagnostic information
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Tenant administration** > **Device diagnostics**
-1. Configure settings as per your requirements
+1. Select **Tenant administration** > **Device diagnostics**.
+1. Configure settings as per your requirements.
 
 This table provides the settings most commonly set by customers, but can be customized to suit your schools needs.
 
 | Setting | Common configuration |
 | --- | --- |
-| Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name | Enabled |
+| Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
 | Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
 
 For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).

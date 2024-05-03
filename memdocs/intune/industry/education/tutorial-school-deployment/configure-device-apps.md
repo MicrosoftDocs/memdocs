@@ -92,7 +92,7 @@ Intune for Education supports:
 
 To create web applications in Intune for Education:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Apps**.
 1. Select **New app** > **New web app**.
 1. Provide a URL for the web app, app name, and optionally an icon and description.
@@ -104,7 +104,7 @@ For more information, see [Add web apps][INT-2].
 
 To create Microsoft Store apps in Intune for Education:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Apps**.
 1. Select **New app** > **New Microsoft Store app (new)**.
 1. Search for and select the app.
@@ -171,7 +171,7 @@ For more information, see [Configure VPP tokens](/intune-education/setup-ios-dev
 
 To add apps to iOS devices without using VPP in Intune:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Apps**.
 1. Select **New app** > **New iOS app**.
 1. Search the app store by entering the app name and selecting the country.
@@ -185,7 +185,7 @@ To add apps to iOS devices without using VPP in Intune:
 
 To create web applications in Intune for Education:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Apps**.
 1. Select **New app** > **New web app**.
 1. Provide a URL for the web app, a name, and optionally an icon and description.
@@ -223,7 +223,7 @@ To assign applications to a group of users or devices:
 
 To assign applications to a group of users or devices:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Groups** > Pick a group to manage.
 1. Select **Apps**.
 1. Select either **Web apps** or **Windows apps**.
@@ -247,7 +247,7 @@ To assign applications to a group of users or devices:
 
 ### [Intune For Education](#tab/intune-for-education)
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Groups** > Pick a group to manage.
 1. Select **Apps**.
 1. Select either **Web apps** or **iOS apps**.

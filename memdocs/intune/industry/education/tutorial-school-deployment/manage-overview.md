@@ -71,7 +71,7 @@ To learn more about reports in Intune, see [Reports in Intune](/mem/intune/funda
 
 Here are the steps for generating reports in Intune for Education:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Reports**.
 1. Select between one of the report types:
     - Device inventory

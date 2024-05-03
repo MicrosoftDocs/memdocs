@@ -36,7 +36,7 @@ Before deployment, devices must be registered in the Windows Autopilot service. 
     > For **Microsoft Surface registration**, collect the details shown in this [<u>documentation table</u>][SURF-1] and follow the instruction to submit the request form to Microsoft Support.
 - **Cloud Solution Provider (CSP) registration process.** As with OEMs, CSP partners must be granted permission to register devices for a school. For more information, see [Partner registration][MEM-5].
     > [!TIP]
-    > Try the <a href="https://cloudpartners.transform.microsoft.com/resources/autopilot-in-edu-setup-english" target="_blank"><u>Microsoft Partner Center clickable demo</u></a>, which provides detailed steps to establish a partner relationship and register devices.
+    > Try the [Microsoft Partner Center clickable demo](https://cloudpartners.transform.microsoft.com/resources/autopilot-in-edu-setup-english), which provides detailed steps to establish a partner relationship and register devices.
 - **Manual registration.** To manually register a device, you must first capture its hardware hash. Then upload the hardware hash to the Windows Autopilot service using Microsoft Intune. For steps, see [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices).
     > [!IMPORTANT]
     > **Windows 11 SE** devices do not support the use of Windows PowerShell or Microsoft Configuration Manager to capture hardware hashes. We recommend working with an OEM, partner, or device reseller to register devices.
@@ -49,13 +49,13 @@ You can create dynamic device groups using Autopilot attributes.
 
 If you didn't already create groups in [Plan grouping](plan-grouping.md) earlier, you can create the groups now.
 
-# [Intune](#tab/intune)
+### [Intune](#tab/intune)
 
 For more information, see [Create an Autopilot device group using Intune][MEM-3].
 
-# [Intune For Education](#tab/intune-for-education)
+### [Intune For Education](#tab/intune-for-education)
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Groups** > **Create group**.
 1. Specify a **Group name** and select **Dynamic**.
 1. Under **Rules**, select **I want to manage: Devices** and use the clause **Where: Device group tag starts with**, specifying the required tag value
@@ -79,13 +79,13 @@ A deployment profile is a collection of settings that determine the behavior of 
 
 To create an Autopilot deployment profile:
 
-# [Intune](#tab/intune)
+### [Intune](#tab/intune)
 
 For more information, see [Windows Autopilot deployment profiles][MEM-4].
 
-# [Intune For Education](#tab/intune-for-education)
+### [Intune For Education](#tab/intune-for-education)
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Groups** > Select a group from the list.
 1. Select **Windows device settings**.
 1. Expand the **Enrolment** category.
@@ -141,6 +141,7 @@ When a Windows device is turned on for the first time, the end-user experience w
 :::image type="content" source="./images/win11-login-screen.png" alt-text="Windows 11 login screen" border="false":::
 
 ________________________________________________________
+
 ## Next steps
 
 With the devices joined to Microsoft Entra tenant and managed by Intune, you can use Intune to maintain them and report on their status.

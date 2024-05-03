@@ -9,23 +9,12 @@ author: scottbreenmsft
 ms.author: scbree
 manager: dougeby
 ms.date: 5/2/2024
-ms.topic: article
+ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: education
-ms.assetid: c884df47-61a9-4799-a407-8cd311d376d1
 searchScope:
  - IntuneEDU
 zone_pivot_groups: platforms-windows-ios
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: elcox
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom: intune-education
 
 ---
 
@@ -49,6 +38,7 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 > For details about bring your own device (BYOD) or enrollment with co-management, see [Enrollment guide: Enroll Windows client devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-windows).
 
 ### Provisioning package overview
+
 A provisioning package (.ppkg) is a file that contains configuration settings, and is used to quickly and efficiently configure Windows client devices without installing a new image. This method ensures that school devices have a standard set of apps and settings when students start using them. For more information, see [Provisioning packages overview](/windows/configuration/provisioning-packages/provisioning-packages).  
 
 > [!TIP]
@@ -84,8 +74,6 @@ For instructions on how to configure Autopilot, see [Windows Autopilot](/autopil
 #### [Intune for Education](#tab/intune-for-education)
 
 For instructions on how to configure Autopilot in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup).
-
----
 
 See the following table for more best practices.  
 
@@ -139,7 +127,7 @@ for school environments.
 
 The following table provides more information about the features supported by each iOS provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.  
 
-|Configuation need | Company Portal | Automated Device Enrollment | Apple Configurator |
+|Configuration need | Company Portal | Automated Device Enrollment | Apple Configurator |
 |---------|---------|---------|---------|
 |Bulk enroll devices.|❌|✔️|✔️|
 |Allow IT department or staff to provision devices.|✔️|✔️|❌|

@@ -3,7 +3,6 @@ title: Plan Education device grouping and targeting
 description: Plan how you'll group devices and users and target policies and applications.
 ms.date: 5/2/2024
 ms.topic: tutorial
-appliesto:
 ms.author: scbree
 author: scottbreenmsft
 zone_pivot_groups: platforms-windows-ios
@@ -105,6 +104,7 @@ This section includes targeting methods commonly seen in Education organizations
 ::: zone pivot="windows"
 
 ### Autopilot
+
 When devices are imported into Autopilot, they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use group tags to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
 
 This table contains common groups used for devices that are enrolled using Autopilot.
@@ -120,11 +120,13 @@ This table contains common groups used for devices that are enrolled using Autop
 > The "All Autopilot Student devices" group example is assuming the Autopilot Group Tag is set to "Student". You could use another Group Tag and update the membership rule accordingly.
 
 > [!NOTE]
+>
 > - If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
 > - If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
 > - On Windows, apps and policies can also be targeted at user groups. However, the majority of apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
 
 ### Provisioning packages
+
 This table contains common groups used for devices that are enrolled using provisioning packages.
 
 | Name | Type | Query |
@@ -136,6 +138,7 @@ This table contains common groups used for devices that are enrolled using provi
 > The "All Student devices" group example is assuming the device name prefix in the provisioning package is set to "STU-". You could use another prefix and update the membership rule accordingly.
 
 ### All enrollment types
+
 Filters can be used to further include or exclude devices from groups. For example:
 
 - Devices running Windows 10 (osVersion *starts with* 10.0.1)
@@ -146,6 +149,7 @@ Filters can be used to further include or exclude devices from groups. For examp
 ::: zone pivot="ios"
 
 ### Automated Device Enrollment
+
 When devices are enrolled with Automated Device Enrollment, the devices are stamped with the enrollment profile name used during enrollment. Devices can be associated with different enrollment profiles in the Automated Device Enrollment token section under enrollment. Some customers use enrollment profile names to create groups or filters for different enrollment settings, to target different apps or profiles and also for assigning scope tags for role-based access control.
 
 Here are examples of queries commonly used for dynamic security groups.

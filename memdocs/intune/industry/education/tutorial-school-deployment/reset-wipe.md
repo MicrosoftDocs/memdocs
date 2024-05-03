@@ -59,7 +59,7 @@ Here are the steps to perform a factory reset from Intune:
 
 Here are the steps to perform a factory reset from Intune for Education:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Devices**.
 1. Select the device you want to reset > **Factory reset**.
 1. Select **Factory reset** to confirm the action.
@@ -104,7 +104,7 @@ Here are the steps to perform an Autopilot reset from Intune:
 
 Here are the steps to perform an Autopilot reset from Intune for Education:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Devices**.
 1. Select the device you want to reset > **Autopilot reset**.
 1. Select **Autopilot reset** to confirm the action.
