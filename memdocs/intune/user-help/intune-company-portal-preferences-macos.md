@@ -48,7 +48,7 @@ To opt out of SSO on your Mac, select the checkbox next to **Don't ask me to sig
 
 ## Send usage data to Microsoft    
 
-This setting enables Microsoft to collect data about your Intune Company Portal usage. When the checkbox is selected, your in-app performance and usage data is automatically anonymized and shared with Microsoft to help improve the reliability and performance of our products. Your organization doesn't have control over the collection of this data and cannot change your preference.  
+This setting enables Microsoft to collect data about your Intune Company Portal usage. When the checkbox is selected, your in-app performance and usage data are automatically anonymized and shared with Microsoft to help improve the reliability and performance of our products. Your organization doesn't have control over the collection of this data and cannot change your preference.  
 
 To turn off data collection in Company Portal, clear the checkbox next to **Allow Microsoft to collect usage data**.  
 
