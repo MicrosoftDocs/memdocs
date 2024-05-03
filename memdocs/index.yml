@@ -45,7 +45,7 @@ productDirectory:
 
     # Card
     - title: Plan a migration to Intune
-      imageSrc: ./intune/media/icons/plan.svg
+      imageSrc: ./media/index/plan-migrate.svg
       links:
         - url: ./intune/fundamentals/intune-planning-guide.md
           text: Microsoft Intune planning guide
