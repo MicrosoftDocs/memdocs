@@ -9,25 +9,25 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: dansimp
-  ms.date: 04/25/2024
+  ms.date: 05/02/2024
   ms.localizationpriority: high
   ms.collection: 
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
   items:
-    - title: Get to know Microsoft Intune
-      itemType: get-started
-      url: /mem/draft-hub#additional-resources
-    - title: Plan a move to Intune
-      itemType: deploy
-      url: /mem/draft-hub#additional-resources
-    - title: Intune news
-      itemType: whats-new
-      url: /mem/draft-hub#additional-resources
-    - title: Microsoft Intune Suite
-      itemType: deploy
-      url: ./intune/fundamentals/intune-add-ons.md
+    - title: What is Intune?
+      itemType: overview
+      url: ./fundamentals/what-is-intune.md
+    - title: What's new in Intune
+      itemType: overview
+      url: ./fundamentals/whats-new.md
+    - title: Intune Blog and Community
+      itemType: overview
+      url: /mem/index#intune-blog-and-community
+    - title: Microsoft Intune Suite add-ons
+      itemType: overview
+      url: ./fundamentals/intune-add-ons.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -35,29 +35,42 @@ productDirectory:
   summary: Read the documentation and follow the interactive guides to configure Intune with settings that are "best for most" and aligned with Zero Trust principals.
   items:
     # Card
-    - title: Multifactor Authentication
-      imageSrc: ./media/index/multifactor-authentication.svg
+    - title: Try and evaluate
+      imageSrc: ./intune/media/icons/get-started.svg
       links:
-        - url: ./intune/enrollment/multi-factor-authentication  
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
-          text: View the prescriptive guidance <verify name>
+        - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
+          text: Walkthrough Microsoft Intune admin center
+        - url: ./fundamentals/try-intune-overview.md
+          text: Evaluate and try Intune tasks
+
     # Card
-    - title: App protection policies
-      imageSrc: ./media/index/app-protection.svg
+    - title: Plan a migration to Intune
+      imageSrc: ./media/icons/plan.svg
       links:
-        - url: ./intune/apps/app-protection-policy.md
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/2/0
-          text: View the prescriptive guidance <verify name>
-     # Card
-    - title: Secure your devices
-      imageSrc: ./media/index/device-secure.svg
+        - url: ./fundamentals/intune-planning-guide.md
+          text: Microsoft Intune planning guide
+        - url: ./fundamentals/supported-devices-browsers.md
+          text: Supported operating systems and browsers
+
+    # Card
+    - title: Use Intune with Configuration Manager
+      imageSrc: ./media/index/co-manage.svg
       links:
-        - url: ./intune/fundamentals/manage-devices.md#secure-your-devices
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/4/0
-          text: View the prescriptive guidance <verify name> 
+        - url: ./configmgr/comanage/overview.md
+          text: Learn about co-management
+        - url: ./configmgr/comanage/tutorial-co-manage-clients.md
+          text: "See the tutorial: Enable co-management"
+
+    # Card
+    - title: Move to cloud native endpoints
+      imageSrc: ./media/index/cloud-native.svg
+      links:
+        - url: ./intune/apps/app-management.md
+          text: Learn about cloud native endpoints
+        - url: ./solutions/cloud-native-endpoints/cloud-native-windows-endpoints
+          text: "See the tutorial: Get started with cloud native Windows endpoints"
+
+    # Card
     - title: Conditional Access and Intune
       imageSrc: ./media/index/conditional-access.svg
       links:
@@ -65,13 +78,8 @@ productDirectory:
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/9/0
           text: View the prescriptive guidance <verify name> 
-    - title: Manage apps
-      imageSrc: ./media/index/app-manage.svg
-      links:
-        - url: ./intune/apps/app-management.md
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2901/prescriptive-guidance-intune-application-deployment/index.html#/0/0
-          text: View the prescriptive guidance <verify name> 
+
+    # Card
     - title: Update Windows with Intune
       imageSrc: ./media/index/update-windows.svg
       links:
@@ -79,6 +87,8 @@ productDirectory:
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
           text: View the prescriptive guidance <verify name>
+  
+    # Card
     - title: Manage macOS devices
       imageSrc: ./media/index/macos-manage.svg
       links:
@@ -101,12 +111,9 @@ conceptualContent:
   - title: Additional resources
     summary: "Go beyond the documentation with videos, blogs, training guides, communities, and more from Microsoft Experts and partners"
     items:
-      - title: Get to know Intune
-        summary: Resources to see Intune capabilities, get to know the admin center, and then set up a trial environment.
+      - title: Get to know Intune capabilities
+        summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment.
         links:
-        - url: ./intune/fundamentals/what-is-intune.md
-          itemType: overview
-          text: What is Intune?
         - url: ./intune/fundamentals/account-sign-up.md
           itemType: how-to-guide
           text: Interactive Guided Tour of Intune <need link>
@@ -138,19 +145,10 @@ conceptualContent:
         - text: Customize your migration instructions with the setup wizard
           itemType: how-to-guide
           url: https://setup.microsoft.com/intune/deploy-and-set-up-microsoft-intune
-        - text: Follow step-by-step guidance to deploy Intune
-          itemType: how-to-guide
-          url: ./intune/fundamentals/get-started-with-intune.md
 
-      - title: Intune news
-        summary: <revise> Checkout Intune community resources for blogs, announcements, discussions, and more.
+      - title: Blog and community resources
+        summary: Checkout Intune community resources for blogs, announcements, discussions, and more.
         links:
-          - url: ./intune/fundamentals/whats-new.md
-            itemType: overview
-            text: What's new in Intune
-          - url: ./intune/fundamentals/in-development.md
-            itemType: overview
-            text: Features in development
           - url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
             itemType: how-to-guide
             text: Microsoft Intune Tech Community blog
