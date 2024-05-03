@@ -18,16 +18,16 @@ highlightedContent:
   items:
     - title: What is Intune?
       itemType: overview
-      url: ./fundamentals/what-is-intune.md
+      url: ./intune/fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: overview
-      url: ./fundamentals/whats-new.md
+      url: ./intune/fundamentals/whats-new.md
     - title: Intune Blog and Community
       itemType: overview
       url: /mem/index#intune-blog-and-community
     - title: Microsoft Intune Suite add-ons
       itemType: overview
-      url: ./fundamentals/intune-add-ons.md
+      url: ./intune/fundamentals/intune-add-ons.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -38,18 +38,18 @@ productDirectory:
     - title: Try and evaluate
       imageSrc: ./intune/media/icons/get-started.svg
       links:
-        - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
+        - url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
-        - url: ./fundamentals/try-intune-overview.md
+        - url: ./intune/fundamentals/try-intune-overview.md
           text: Evaluate and try Intune tasks
 
     # Card
     - title: Plan a migration to Intune
       imageSrc: ./media/icons/plan.svg
       links:
-        - url: ./fundamentals/intune-planning-guide.md
+        - url: ./intune/fundamentals/intune-planning-guide.md
           text: Microsoft Intune planning guide
-        - url: ./fundamentals/supported-devices-browsers.md
+        - url: ./intune/fundamentals/supported-devices-browsers.md
           text: Supported operating systems and browsers
 
     # Card
@@ -65,9 +65,9 @@ productDirectory:
     - title: Move to cloud native endpoints
       imageSrc: ./media/index/cloud-native.svg
       links:
-        - url: ./intune/apps/app-management.md
+        - url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
           text: Learn about cloud native endpoints
-        - url: ./solutions/cloud-native-endpoints/cloud-native-windows-endpoints
+        - url: ./solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
           text: "See the tutorial: Get started with cloud native Windows endpoints"
 
     # Card
