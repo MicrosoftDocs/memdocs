@@ -74,3 +74,12 @@ groups:
       title: Generally Available
     - id: mdssc-preview
       title: Opt-in Public Preview
+
+- id: platforms-windows-ios
+  title: Device platform
+  prompt: Choose which platform you are configuring
+  pivots: 
+  - id: windows
+    title: Windows
+  - id: ios
+    title: iOS
