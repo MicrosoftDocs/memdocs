@@ -2,7 +2,7 @@
 title: Device enrollment overview
 description: Learn about the different options to enroll Windows devices in Microsoft Intune.
 ms.date: 5/2/2024
-ms.topic: overview
+ms.topic: tutorial
 zone_pivot_groups: platforms-windows-ios
 author: scottbreenmsft
 ms.author: scbree

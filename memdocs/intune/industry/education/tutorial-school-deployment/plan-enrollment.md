@@ -9,23 +9,12 @@ author: scottbreenmsft
 ms.author: scbree
 manager: dougeby
 ms.date: 5/2/2024
-ms.topic: article
+ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: education
-ms.assetid: c884df47-61a9-4799-a407-8cd311d376d1
 searchScope:
  - IntuneEDU
 zone_pivot_groups: platforms-windows-ios
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: elcox
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom: intune-education
 
 ---
 

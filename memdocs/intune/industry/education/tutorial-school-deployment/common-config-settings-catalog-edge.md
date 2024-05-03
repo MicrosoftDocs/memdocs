@@ -2,7 +2,7 @@
 title: Common Education Microsoft Edge configuration
 description: Learn about common Microsoft Edge configuration used by Education organizations in Intune.
 ms.date: 5/2/2024
-ms.topic: conceptual
+ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby

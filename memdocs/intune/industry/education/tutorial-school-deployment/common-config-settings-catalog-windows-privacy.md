@@ -2,7 +2,7 @@
 title: Common Education privacy configuration
 description: Learn about common privacy configuration used by Education organizations in Intune.
 ms.date: 5/2/2024
-ms.topic: windows-privacy
+ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby

@@ -2,7 +2,7 @@
 title: Common Education Windows Delivery Optimization configuration
 description: Learn about common Windows Delivery Optimization configuration used by Education organizations in Intune.
 ms.date: 5/2/2024
-ms.topic: conceptual
+ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
