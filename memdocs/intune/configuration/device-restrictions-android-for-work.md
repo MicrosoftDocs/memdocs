@@ -280,6 +280,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
+      > [!NOTE]
+      > Not all **Managed Home Screen** settings are available from the device restrictions page. To view all settings available for **Managed Home Screen**, see [Configure the Microsoft Managed Home Screen app](../apps/app-configuration-managed-home-screen-app.md). 
+
       - **Custom app layout**: **Enable** lets you put apps and folders in different places on the Managed Home Screen. When set to **Not configured**, Intune doesn't change or update this setting. By default, the apps and folders you add are shown on the home screen in alphabetical order.
 
         - **Grid size**: Select the size of your home screen. An app or folder takes one place on the grid.
@@ -352,11 +355,11 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >
         > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
-      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings.
+      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. On the updated Managed Home Screen workflow, the **Managed Settings** menu is available from the top bar. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings. On the updated Managed Home Screen workflow, users can select the settings icon to access settings.  
 
       - **Quick access to debug menu**: This setting controls how users access the debug menu. Your options:
 
-        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut. As always, they can continue to select the back button 15 times.
+        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut or Managed Settings menu on the updated Managed Home Screen workflow. As always, they can continue to select the back button 15 times.
         - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
 
         In the debug menu, users can:
