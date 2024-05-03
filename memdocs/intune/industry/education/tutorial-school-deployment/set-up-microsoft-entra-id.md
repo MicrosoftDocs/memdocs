@@ -122,7 +122,6 @@ To assign a license to a group:
 1. Select **Microsoft Entra ID** > **Show More** > **Billing** > **Licenses**.
 1. Select the required products that you want to assign licenses for > **Assign**.
 1. Add the groups to which the licenses should be assigned.
-
    :::image type="content" source="images/entra-assign-licenses.png" alt-text="Assign licenses from Microsoft Entra admin center." lightbox="images/entra-assign-licenses.png":::
 
 For more information, see [Group-based licensing using Microsoft Entra admin center][AAD-4].
