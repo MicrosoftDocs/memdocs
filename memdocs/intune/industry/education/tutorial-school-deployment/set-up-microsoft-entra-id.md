@@ -122,7 +122,7 @@ To assign a license to a group:
 1. Select **Microsoft Entra ID** > **Show More** > **Billing** > **Licenses**.
 1. Select the required products that you want to assign licenses for > **Assign**.
 1. Add the groups to which the licenses should be assigned.
-   :::image type="content" source="images/entra-assign-licenses.png" alt-text="Assign licenses from Microsoft Entra admin center." lightbox="images/entra-assign-licenses.png":::
+    :::image type="content" source="images/entra-assign-licenses.png" alt-text="Assign licenses from Microsoft Entra admin center." lightbox="images/entra-assign-licenses.png":::
 
 For more information, see [Group-based licensing using Microsoft Entra admin center][AAD-4].
 
@@ -136,10 +136,10 @@ To configure your school's branding:
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
 1. Select **Microsoft Entra ID** > **Show More** > **User experiences** > **Company branding**.
-1. You can specify brand settings like background image, logo, username hint and a sign-in page text
+1. You can specify brand settings like background image, logo, username hint and a sign-in page text.
     :::image type="content" source="images/entra-branding.png" alt-text="Configure Microsoft Entra ID branding from Microsoft Entra admin center." lightbox="images/entra-branding.png":::
-1. To adjust the school tenant's name displayed during OOBE, select **Microsoft Entra ID** > **Overview** > **Properties**
-1. In the **Name** field, enter the school district or organization's name > **Save**
+1. To adjust the school tenant's name displayed during OOBE, select **Microsoft Entra ID** > **Overview** > **Properties**.
+1. In the **Name** field, enter the school district or organization's name > **Save**.
     :::image type="content" alt-text="Configure Microsoft Entra tenant name from Microsoft Entra admin center." source="images/entra-tenant-name.png" lightbox="images/entra-tenant-name.png":::
 
 For more information, see [Add branding to your directory][AAD-5].
