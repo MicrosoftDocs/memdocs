@@ -114,9 +114,9 @@ conceptualContent:
       - title: Get to know Intune capabilities
         summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment.
         links:
-        - url: ./intune/fundamentals/account-sign-up.md
-          itemType: how-to-guide
-          text: Interactive Guided Tour of Intune <need link>
+        - url: https://aka.ms/Intune_GuidedDemo
+          itemType: overview
+          text: Interactive Guided Tour of Intune
         - url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md  
           itemType: how-to-guide
           text: Walk through the Intune Admin Center
