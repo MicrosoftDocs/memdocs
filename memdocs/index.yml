@@ -31,8 +31,8 @@ highlightedContent:
 
 # productDirectory section (optional)
 productDirectory:
-  title: Learn how Intune can support more secure productivity
-  summary: Read the documentation and follow the interactive guides to configure Intune with settings that are "best for most" and aligned with Zero Trust principals.
+  title: I want to...
+  summary: We have highlighted some of the most requested objectives and key resources in the following section.
   items:
     # Card
     - title: Try and evaluate
