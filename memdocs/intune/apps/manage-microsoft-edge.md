@@ -444,7 +444,7 @@ If this policy is not configured, the value from the **DefaultPopupsSetting** po
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
 
-For more information about the URLs format, see [Enterprise policy URL pattern format](/edge-learnmore-ent-policy-url-patterns).
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 ### Default search provider
 By default, Edge uses the default search provider to perform a search when users enter non-URL texts in the address bar. Users can change the search provider list. Organizations can manage the search provider behavior.
