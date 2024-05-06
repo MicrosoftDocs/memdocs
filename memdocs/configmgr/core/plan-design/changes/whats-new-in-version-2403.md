@@ -143,9 +143,9 @@ For more information on BitLocker management, see [Deploy BitLocker management.]
 ## Next steps
 At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
 
-<!--As of March 28, 2024, version 2403 is globally available for all customers to install.
+As of May 06, 2024, version 2403 is globally available for all customers to install.
 >[!NOTE] 
-> For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.-->
+> For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2403.md).
 
