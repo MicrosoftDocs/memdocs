@@ -7751,7 +7751,7 @@ For more information, see the settings for [App and browser isolation](../protec
 We have new versions available for the following [security baselines](../protect/security-baselines.md):
 
 - **[MDM Security baseline (Windows 10 Security)](../protect/security-baseline-settings-mdm-all.md?pivots=december-2020)**
-- **[Microsoft Defender for Endpoint baseline](../protect/security-baseline-settings-defender-atp.md?pivots=december-2020)**
+- **[Microsoft Defender for Endpoint baseline](../protect/security-baseline-settings-defender.md?pivots=december-2020)**
 
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
 
@@ -8023,7 +8023,7 @@ Attack surface reduction rule merge behavior is as follows:
 - Attack surface reduction rules from the following profiles are evaluated for each device the rules apply to:
   - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > [Attack Surface Reduction](../protect/endpoint-protection-windows-10.md#attack-surface-reduction).
   - Endpoint security > Attack surface reduction policy > [Attack surface reduction rules](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles).
-  - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > [Attack Surface Reduction Rules](../protect/security-baseline-settings-defender-atp.md#attack-surface-reduction-rules).
+  - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > [Attack Surface Reduction Rules](../protect/security-baseline-settings-defender.md#attack-surface-reduction-rules).
 - Settings that don't have conflicts are added to a superset of policy for the device.
 - When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy. Settings that don't conflict are added to the superset policy that applies to a device.
 - Only the configurations for conflicting settings are held back.
@@ -8172,7 +8172,7 @@ With the Microsoft Enterprise SSO plug-in release, you can configure the SSO ext
 
 To get SSO with the Microsoft Entra SSO app extension type, users need to install and sign in to the Company Portal app on their macOS devices.
 
-For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
+For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-sso).
 
 Applies to:
 - macOS 10.15 and newer
@@ -8592,7 +8592,7 @@ To view the full set of permission for any Intune RBAC role, go to (**Tenant adm
 We have new versions available for the following [security baselines](../protect/security-baselines.md):
 
 - **[MDM Security baseline (Windows 10 Security)](../protect/security-baseline-settings-mdm-all.md?pivots-mdm-sept-2020)**
-- **[Microsoft Defender for Endpoint baseline](../protect/security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)**
+- **[Microsoft Defender for Endpoint baseline](../protect/security-baseline-settings-defender.md?pivots=atp-sept-2020)**
 
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
 
@@ -9592,7 +9592,7 @@ On iOS/iPadOS devices, you can:
 Applies to:
 - iOS/iPadOS 13.0+
 
-For more information on using single sign-on on iOS/iPadOS devices, see [Single sign-on app extension overview](../configuration/device-features-configure.md#single-sign-on-app-extension) and [Single sign-on settings list](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+For more information on using single sign-on on iOS/iPadOS devices, see [Single sign-on app extension overview](../configuration/device-features-configure.md#single-sign-on-sso) and [Single sign-on settings list](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
 
 #### New shell script settings for macOS devices<!-- 6884363 -->
 When configuring shell scripts for macOS devices, you can now configure the following new settings: 
@@ -9743,7 +9743,7 @@ Applies to:
 - iOS 13.0 and newer
 - iPadOS 13.0 and newer
 
-For more information about iOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
+For more information about iOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-sso).
 
 #### Enterprise app trust settings modification setting is removed from iOS/iPadOS device restriction profiles<!-- 6225131   -->
 On iOS/iPadOS devices, you create a device restrictions profile (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** for platform > **Device restrictions** for profile type). The **Enterprise app trust settings modification** setting is removed by Apple, and is removed from Intune. If you currently use this setting in a profile, it has no impact, and is removed from existing profiles. This setting is also removed from any reporting in Intune.
@@ -11431,7 +11431,7 @@ To see the available settings, go to [App Store, Doc Viewing, Gaming iOS setting
 Applies to: iOS
 
 #### Microsoft Defender for Endpoint  baseline  (Preview)<!--  3754134 -->
-We've added a security baseline Preview for [Microsoft Defender for Endpoint](../protect/security-baseline-settings-defender-atp.md) settings. This baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md#prerequisites).
+We've added a security baseline Preview for [Microsoft Defender for Endpoint](../protect/security-baseline-settings-defender.md) settings. This baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md#prerequisites).
 
 #### Outlook signature and biometric settings for  iOS and Android devices<!-- 4050557 -->
 You can now specify if the default signature is enabled in Outlook on iOS and Android devices. Also, you can choose to allow users to change the biometric setting in Outlook on iOS.

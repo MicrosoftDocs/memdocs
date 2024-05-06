@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 04/30/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -204,6 +204,8 @@ All endpoints connect over port 443 unless specified otherwise.
 | registration.gcp01.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
 | hm-iot-in-gcb-gcb01.azure-devices.us (port 443 and 5671) |GCC |
 | hm-iot-in-ghb-ghb01.azure-devices.us (port 443 and 5671) |GCCH |
+| enterpriseregistration.windows.net | GCCH |
+| enterpriseregistration.microsoftonline.us | GCCH |
 
 #### Azure Virtual Device-dependent URLs
 
