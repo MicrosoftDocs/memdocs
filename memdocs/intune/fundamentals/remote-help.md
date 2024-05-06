@@ -53,7 +53,7 @@ The Remote Help app supports the following capabilities in general across the su
 > To know more about specific capabilities and requirements based on the platform that you're using, go to:
 >  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
 >  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
->  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities-and-requirements-on-macos)
+>  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities)
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
@@ -83,7 +83,7 @@ For specific prerequisites based on the platform that you're using, go to:
 
 - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
 - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
-- [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#prerequisites-for-remote-help-on-macos)
+- [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-requirements)
 
 Limitations:  
 
