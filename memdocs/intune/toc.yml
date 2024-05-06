@@ -1179,17 +1179,22 @@ items:
           - name: Device features
             href: ./configuration/device-features-configure.md
             displayName: airprint, home screen, lock screen, sso, single sign-on, ios, ipados, macos
-          - name: Use Enterprise SSO plug-in
+          - name: Single sign-on (SSO)
             items:
-            - name: SSO plug-in overview
+            - name: SSO overview & options
               displayName: single sign-on, ios, ipados, macos
               href: ./configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md
-            - name: iOS/iPadOS SSO plug-in
+            - name: iOS/iPadOS Enterprise SSO plug-in
               displayName: single sign-on, ios, ipados
               href: ./configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md
-            - name: macOS SSO plug-in
-              displayName: single sign-on, macos
-              href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
+            - name: macOS SSO
+              items:
+              - name: Platform SSO
+                displayName: single sign-on, macos
+                href: ./configuration/platform-sso-macos.md
+              - name: Enterprise SSO app extension plug-in
+                displayName: single sign-on, macos
+                href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
 
         - name: Extensions on macOS
           href: ./configuration/kernel-extensions-overview-macos.md

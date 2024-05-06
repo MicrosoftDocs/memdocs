@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/01/2024
+ms.date: 05/06/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -100,21 +100,6 @@ For more information about configuring Settings Catalog profiles in Intune, see 
 Applies to:
 
 - macOS
-
-### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->
-
-In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
-
-The Company Portal app version will support the platform SSO settings for macOS 13 and later. Platform SSO allows you to sync your Microsoft Entra ID password to local accounts on Macs using the Enterprise Single Sign-On extension.
-
-For more information on the Enterprise SSO plug-in, see:
-
-- [Use Intune to deploy the Microsoft Enterprise SSO plug-in for Apple devices](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-- [Microsoft Entra ID and the Microsoft Enterprise SSO plug-in overview for Apple devices](/azure/active-directory/develop/apple-sso-plugin)
-
-Applies to:
-
-- macOS 13 and later
 
 <!-- *********************************************** -->
 
