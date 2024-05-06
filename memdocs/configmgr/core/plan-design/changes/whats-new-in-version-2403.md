@@ -141,7 +141,7 @@ For more information on BitLocker management, see [Deploy BitLocker management.]
   For example, [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
 
 ## Next steps
-At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
+<!--At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).-->
 
 As of May 06, 2024, version 2403 is globally available for all customers to install.
 >[!NOTE] 
