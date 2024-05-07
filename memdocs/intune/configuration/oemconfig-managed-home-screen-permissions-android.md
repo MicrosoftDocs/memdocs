@@ -49,12 +49,16 @@ This article lists the steps to create an OEMConfig policy that automatically gr
 
 ## Required permissions
 
+For the MHS to work, certain permissions are required for certain functionalities. Samsung and Zebra have auto-grant permissions for devices using OEMConfig. The following Managed Home Screen permissions are offered for Samsung and Zebra.
+
+The following table lists the permissions that you can configure for the MHS app on Samsung and Zebra devices:
+
 | Permission  | Samsung | Zebra | Legacy Zebra |
 |---|---|---|---|
-| Overlay Permission includes: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
-| Notification Permission includes:<br/><br/>- Notification badge| ✅ | ✅ | ❌ |
-| Alarms & Reminders Permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | |
-| Write Settings Permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | |
+| **Overlay Permission** includes: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
+| **Notification Permission** includes:<br/><br/>- Notification badge| ✅ | ✅ | ❌ |
+| **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ? |
+| **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ? |
 
 ## Before you begin
 
@@ -78,7 +82,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 | Zebra | Zebra OEMConfig Powered by MX <br/><br/>Zebra OEMConfig Powered by MX is a new version of the OEMConfig app released in May 2023.|
 | Zebra | Legacy Zebra OEMConfig |
 
-# [Samsung](#tab/samsung)
+# [Samsung](#tab/samsung-app)
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
 2. Search for the **Knox Service Plugin** app, select the app, and then select **Sync**.
@@ -89,7 +93,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
 
-# [Zebra](#tab/zebra-mx)
+# [Zebra](#tab/zebra-mx-app)
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
 2. Search for the **Zebra OEMConfig Powered by MX** app, select the app, and then select **Sync**.
@@ -100,7 +104,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
 
-# [Zebra Legacy](#tab/zebra-legacy)
+# [Zebra Legacy](#tab/zebra-legacy-app)
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
 2. Search for the **Legacy Zebra OEMConfig** app, select the app, and then select **Sync**.
@@ -113,7 +117,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
     So, if you use Remote Help, then deploy the Remote Help app on the device first, and then assign the OEMConfig configuration policy. If you uninstall and reinstall the Remote Help app on the device, after the Remote Help app is reinstalled, then re-apply this OEMConfig policy. You can create a new OEMConfig profile and assign it to the device, or edit the previously created OEMConfig profile.
 
-    ??Does this apply to any other apps or policies??
+    ??Does this apply to any other apps or policies? Or, does it only apply to Remote Help??
 
 4. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
@@ -123,7 +127,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
 The next step is to create an OEMConfig profile that configures the permissions in the OEMConfig app. In this profile, you configure the app schema settings that auto-grant permissions to the MHS app features.
 
-# [Samsung](#tab/samsung)
+# [Samsung](#tab/samsung-policy)
 
 This profile grants the **Overlay Permission**, **Notification Permission**, and **Alarms & Reminders Permission** using the schema settings in the **Knox Service Plugin** app.
 
@@ -192,7 +196,7 @@ This profile grants the **Overlay Permission**, **Notification Permission**, and
 
 The next time the device checks for configuration updates, the settings you configured are applied to the app.
 
-# [Zebra OEMConfig Powered by MX](#tab/zebra-mx)
+# [Zebra OEMConfig Powered by MX](#tab/zebra-mx-policy)
 
 This profile grants the **Overlay Permission** and **Notification Permission** using the schema settings in the **Zebra OEMConfig Powered by MX** app.
 
@@ -270,7 +274,7 @@ For more information on these permissions, go to:
 
 The next time the device checks for configuration updates, the settings you configured are applied to the app.
 
-# [Legacy Zebra OEMConfig](#tab/zebra-legacy)
+# [Legacy Zebra OEMConfig](#tab/zebra-legacy-policy)
 
 ??Which permissions does this profile grant??
 
