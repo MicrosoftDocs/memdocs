@@ -25,7 +25,8 @@ Starting in Configuration Manager version 2002, you can use a tool to import Mic
 
 ## Prerequisites
 
-- An internet connected WSUS server running a minimum of Windows Server 2012.
+- An internet connected WSUS server running a minimum of Windows Server 2016.
+
 - The WSUS server needs connectivity to these internet endpoints:
    - `officecdn.microsoft.com`
    - `config.office.com`
@@ -71,9 +72,8 @@ Starting in Configuration Manager version 2002, you can use a tool to import Mic
       - Downloads the content and any additional metadata needed by the Microsoft 365 Apps updates to the destination folder
 
 1. At the command prompt on the internet connected WSUS server, navigate to the folder that contains WsusUtil.exe. By default, the tool is located in %*ProgramFiles*%\Update Services\Tools. For example, if the tool is located in the default location, type **cd %ProgramFiles%\Update Services\Tools**.
-   - If you're using Windows Server 2012, ensure [KB2819484](https://support.microsoft.com/help/2819484/cab-file-that-is-exported-by-using-the-wsusutil-exe-command-is-display) is installed on the WSUS servers.
    - The user that runs the WsusUtil tool must be a member of the local Administrators group on the server.
-
+      
 1. Type the following to export the software updates metadata to a GZIP file:  
 
     **WsusUtil.exe export**  *packagename*  *logfile*  
