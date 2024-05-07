@@ -118,7 +118,7 @@ In addition to the streamlined experience during OOBE, the experience is also im
   - See status for remaining required applications.
   - See clear indication that device setup is complete.
 
-### Troubleshooting and Reporting
+## Troubleshooting and Reporting
 
 Windows Autopilot Device Preparation offers near real-time status updates on your deployments, including detailed application and script information and deployment time, allowing for improved troubleshooting and reporting.
 
