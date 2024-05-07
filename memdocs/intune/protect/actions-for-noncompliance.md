@@ -34,7 +34,6 @@ ms.collection:
 
 As part of a [compliance policy](../protect/device-compliance-get-started.md) that protects your organizations resources from devices that don't meet your security requirements, compliance policies also include **Actions for noncompliance**. Actions for noncompliance are one or more time-ordered actions that are taken by a policy to help protect devices and your organization. As an example, an action for noncompliance can remotely lock a device to ensure it's protected, or send a notification to devices or users to help them understand and resolve the noncompliant status.
 
-
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Overview
@@ -208,12 +207,10 @@ Add variables to the message to create a personalized email with dynamic content
    
    To create a template with dynamic content, insert the token of a supported variable in the subject line or message. For a list of supported variables, see the table under [Create a notification message template](#create-a-notification-message-template) in this article. 
 
-      
    >[!IMPORTANT]
    >  Be sure to only use Intune-supported HTML tags and attributes in the message body. Intune will send messages that contain other types of tags, elements, or styling as plaintext instead of HTML format. This includes messages that contain: 
    > - CSS  
    > - Tags and attributes not listed in this article 
-
 
    >[!NOTE]
    > Intune converts Windows-style new line characters to `<br>` HTML tags but ignores all other types of new line characters, including those for macOS and Linux. To ensure line breaks render properly in templates, we recommend using the `<br>` tag to indicate the end of a line.
