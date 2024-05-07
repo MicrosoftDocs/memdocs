@@ -49,7 +49,7 @@ This article guides you through the end-to-end steps to create and manage your m
 
 This guide has seven phases. Each phase has a set of steps that help build your macOS endpoint configuration and deployment. Each phase builds on the previous phase. 
 
-:::image type="content" source="./media/macos-endpoints-get-started/all-steps-overview.png" alt-text="A diagram that summarizes all the phases to onboard macOS devices, including testing, enrolling, securing, deploying policies, and supporting the devices using Microsoft Intune":::
+:::image type="content" source="./media/macos-endpoints-get-started/all-steps-overview.png" border=false alt-text="A diagram that summarizes all the phases to onboard macOS devices, including testing, enrolling, securing, deploying policies, and supporting the devices using Microsoft Intune":::
 
 Complete the phases and steps in order. The phases include:
 
@@ -69,7 +69,7 @@ Before you build your first macOS endpoint, there are some requirements and conf
 
 In this phase, you check the requirements, integrate Intune with Apple Business Manager (or Apple School Manager), configure some features, and add some apps to Intune.
 
-:::image type="content" source="./media/macos-endpoints-get-started/phase-1-setup-environment.png" alt-text="A diagram that lists the steps to setup your environment to support macOS devices in Microsoft Intune, including netowrk requirements, certificates, configuring single sign-on, and more":::
+:::image type="content" source="./media/macos-endpoints-get-started/phase-1-setup-environment.png" border=false alt-text="A diagram that lists the steps to setup your environment to support macOS devices in Microsoft Intune, including netowrk requirements, certificates, configuring single sign-on, and more":::
 
 ### Step 1 - Network requirements
 
@@ -283,7 +283,7 @@ Some must-have apps include:
 
 The next phase enrolls a test macOS device into Intune. This phase gets you familiar with the initial steps so you're ready when it's time to enroll all your macOS devices in Intune.
 
-:::image type="content" source="./media/macos-endpoints-get-started/phase-2-enroll-test-endpoint.png" alt-text="A diagram that lists the steps to enroll a test macOS device using Microsoft Intune, including registering a device, assigning a profile, and more":::
+:::image type="content" source="./media/macos-endpoints-get-started/phase-2-enroll-test-endpoint.png" border=false alt-text="A diagram that lists the steps to enroll a test macOS device using Microsoft Intune, including registering a device, assigning a profile, and more":::
 
 To enroll your first organization macOS endpoint, make sure the macOS device is:
 
@@ -307,7 +307,7 @@ When the user signs in, the enrollment policy applies. When it completes, your m
 
 In this phase, you configure security settings and features that help protect your endpoints, including keeping devices current with updates.
 
-:::image type="content" source="./media/macos-endpoints-get-started/phase-3-secure-endpoints.png" alt-text="A diagram that lists the steps to secure macOS devices using compliance policies, software updates, and more in Microsoft Intune":::
+:::image type="content" source="./media/macos-endpoints-get-started/phase-3-secure-endpoints.png" border=false alt-text="A diagram that lists the steps to secure macOS devices using compliance policies, software updates, and more in Microsoft Intune":::
 
 This section focuses on the different endpoint security features in Microsoft Intune, including:
 
@@ -499,7 +499,7 @@ The Mac Evaluation Utility confirms that your Mac has the configuration and sett
 
 In this phase, you apply organization-specific settings and apps, and review your on-premises configuration.
 
-:::image type="content" source="./media/macos-endpoints-get-started/phase-4-apply-organization-customizations.png" alt-text="A diagram that lists some features to customize you macOS devices using apps, device settings, certificates and more using Microsoft Intune":::
+:::image type="content" source="./media/macos-endpoints-get-started/phase-4-apply-organization-customizations.png" border=false alt-text="A diagram that lists some features to customize you macOS devices using apps, device settings, certificates and more using Microsoft Intune":::
 
 The phase helps you customize any features specific to your organization. Notice the various components of macOS. There are sections for each of the following areas:
 
@@ -599,7 +599,7 @@ For more information, go to [Notifications MDM payload settings for Apple device
 You can enforce a wallpaper on macOS using a combination of a sample script and the settings catalog:
 
 - **Devices > Configuration > Create > Settings Catalog > User Experience > Desktop**:
-  - **Override Picture Path**: Enter the \<path of the image>.
+  - **Override Picture Path**: 'Enter the \<path of the image>'.
 
 The image file must exist on the macOS endpoint. To download a picture from a web location, you can use a sample script at [GitHub - Microsoft Intune wallpaper shell sample](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Wallpaper). You can also use an app package tool to copy a file and then deploy it using the [unmanaged PKG](../../intune/apps/macos-unmanaged-pkg.md) deployment feature.
 
@@ -631,7 +631,7 @@ For more information, go to [Configure Wi-Fi settings for macOS devices in Micro
 
 There are some caching features you can use to help reduce your network bandwidth.
 
-:::image type="content" source="./media/macos-endpoints-get-started/phase-5-optional-caching.png" alt-text="A diagram that describes using content caching and AutoUpdate local cache app on macOS devices using Microsoft Intune":::
+:::image type="content" source="./media/macos-endpoints-get-started/phase-5-optional-caching.png" border=false alt-text="A diagram that describes using content caching and AutoUpdate local cache app on macOS devices using Microsoft Intune":::
 
 ✅ **Use content caching**
 
@@ -651,7 +651,7 @@ For more information, go to [GitHub - Microsoft AutoUpdate Cache Admin](https://
 
 So far, you created your configuration and added apps. Now you're ready to enroll all your macOS endpoints with an Automated Device Enrollment policy using Microsoft Intune.
 
-:::image type="content" source="./media/macos-endpoints-get-started/phase-6-enroll-all-endpoints.png" alt-text="A diagram that tells you to enroll all your macOS endpoints with an Automated Device Enrollment policy using Microsoft Intune":::
+:::image type="content" source="./media/macos-endpoints-get-started/phase-6-enroll-all-endpoints.png" border=false alt-text="A diagram that tells you to enroll all your macOS endpoints with an Automated Device Enrollment policy using Microsoft Intune":::
 
 ✅ **Create the Automated Device Enrollment policy**
 
@@ -663,13 +663,13 @@ For more information on Automated Device Enrollment, and to get started, go to [
 
 The final phase is to support and maintain your macOS devices. This phase includes using Intune features, like remote help, monitoring your Apple certificates, and more.
 
-:::image type="content" source="./media/macos-endpoints-get-started/phase-7-support-maintenance.png" alt-text="A diagram that lists the steps to support and maintain your macOS devices, including using remote help, adding custom attributes, and configuring Apple Business Manager using Microsoft Intune":::
+:::image type="content" source="./media/macos-endpoints-get-started/phase-7-support-maintenance.png" border=false alt-text="A diagram that lists the steps to support and maintain your macOS devices, including using remote help, adding custom attributes, and configuring Apple Business Manager using Microsoft Intune":::
 
 Intune manages macOS devices using the built-in operating system MDM capabilities and the Intune Management Extension (IME) agent.
 
 These two components offer separate functionality and communicate with the macOS device through different channels. Enrollment is orchestrated through Apple Business Manager, MDM is orchestrated through the Apple Push Notification Service, and the IME communicates directly with Intune.
 
-:::image type="content" source="./media/macos-endpoints-get-started/macos-endpoint-ime-architecture.png" alt-text="A diagram that shows how the macOS MDM and the Intune Managemnt Extension work together to support management of macOS devices using Microsoft Intune":::
+:::image type="content" source="./media/macos-endpoints-get-started/macos-endpoint-ime-architecture.png" border=false alt-text="A diagram that shows how the macOS MDM and the Intune Managemnt Extension work together to support management of macOS devices using Microsoft Intune":::
 
 For more information about the Intune Management Extension, go to [Understanding Microsoft Intune management agent for macOS](../../intune/apps/lob-apps-macos-agent.md).
 
