@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 05/07/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: naramkri
+ms.reviewer: evas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,6 +37,7 @@ If you want to use a custom device image, you can add it into your Azure subscri
 >
 > - Windows 10 images should not contain Azure Virtual Desktop client components. Additionally, you can't import Windows 10 Multisession images into Windows 365.
 > - For information about support for Windows 11 custom device images, see [What's New for Windows 365 Enterprise](whats-new.md#support-for-windows-11).
+> - You can also use existing built-in [gallery images](device-images#gallery-images.md) without customization for a stream-lined experience. 
 
 ## Add a custom device image
 
