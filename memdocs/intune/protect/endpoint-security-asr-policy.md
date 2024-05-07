@@ -48,6 +48,7 @@ Applies to:
 
 - Windows 10
 - Windows 11
+- Windows Server
 
 ## Prerequisites for Attack surface reduction profiles
 
