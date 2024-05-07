@@ -33,11 +33,11 @@ ms.collection:
 
 The Managed Home Screen (MHS) is an Intune feature that allows you to configure the home screen on the device. It's designed to only show the apps that your users access and the device settings that admins need to manage.
 
-The MHS is typically used for kiosk devices, including frontline worker (FLW) devices. It replaces the default launcher on your Android dedicated devices. For more information on the MHS, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+The MHS is typically used for kiosk devices, including frontline worker (FLW) devices. It replaces the default launcher on your Android Enterprise dedicated devices. For more information on the MHS, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 Typically, when you configure the MHS on a device, end users need to manually accept the permissions that MHS needs. These permissions allow the MHS to access device features and settings.
 
-Instead of relying on end users to accept the permissions, you can use [OEMConfig device configuration policy](android-oem-configuration-overview.md) to automatically grant permissions to the MHS app.
+Instead of relying on end users to accept the permissions, you can use an [OEMConfig device configuration policy](android-oem-configuration-overview.md) to automatically grant permissions to the MHS app.
 
 This feature applies to:
 
@@ -45,7 +45,12 @@ This feature applies to:
 - Samsung
 - Zebra
 
-This article lists the steps to create an OEMConfig policy that automatically grants permissions for the MHS app on Samsung and Zebra devices.
+This article:
+
+> [!div class="checklist"]
+> * Lists the required permissions that the MHS needs.
+> * Shows how to get the OEM app from the Managed Google Play Store.
+> * Lists the steps to create an OEMConfig policy that automatically grants permissions for the MHS app.
 
 ## Required permissions
 
@@ -57,12 +62,12 @@ The following table lists the permissions that you can configure for the MHS app
 |---|---|---|---|
 | **Overlay Permission** includes: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
 | **Notification Permission** includes:<br/><br/>- Notification badge| ✅ | ✅ | ❌ |
-| **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ? |
-| **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ? |
+| **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ?? |
+| **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ?? |
 
-## Before you begin
+## Before you begin and prerequisites
 
-- This article creates OEMConfig configuration profile in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
+- This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
 - Devices must be MDM enrolled in Intune.
 - To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -131,7 +136,13 @@ The next step is to create an OEMConfig profile that configures the permissions 
 
 # [Samsung](#tab/samsung-policy)
 
-This profile grants the **Overlay Permission**, **Notification Permission**, and **Alarms & Reminders Permission** using the schema settings in the **Knox Service Plugin** app.
+Using the schema settings in the **Knox Service Plugin** app, this profile grants the following permissions:
+
+- **Overlay Permission**
+- **Notification Permission**
+- **Alarms & Reminders Permission**
+
+**Create the policy**:
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -166,7 +177,7 @@ This profile grants the **Overlay Permission**, **Notification Permission**, and
 
     :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-top-node.png" alt-text="Screenshot that shows how to select the top node in the Knox Service Plugin app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-top-node.png":::
 
-    1. Select the **Permission Controls** node > **Configure**. Scroll up to see this node in the **Settings** list:
+    1. Select the **Permission Controls** node > **Configure**. You might have to scroll up to see this node in the **Settings** list:
 
         :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-permission-controls-node.png" alt-text="Screenshot that shows how to configure the Permission Controls node in the Knox Service Plugin app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-permission-controls-node.png":::
 
@@ -200,7 +211,10 @@ The next time the device checks for configuration updates, the settings you conf
 
 # [Zebra OEMConfig Powered by MX](#tab/zebra-mx-policy)
 
-This profile grants the **Overlay Permission** and **Notification Permission** using the schema settings in the **Zebra OEMConfig Powered by MX** app.
+Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this profile grants the following permissions:
+
+- **Overlay Permission**
+- **Notification Permission**
 
 For more information on these permissions, go to:
 
@@ -211,6 +225,8 @@ For more information on these permissions, go to:
 > On Android 11, the **Zebra OEMConfig Powered by MX** app schema doesn't work if the board support package (BSP) version is `HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04`. To use the Zebra OEMConfig powered by MX app, you must upgrade to a newer BSP.
 >
 > For more information on updating Zebra devices with Intune, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+
+**Create the policy**:
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -278,9 +294,11 @@ The next time the device checks for configuration updates, the settings you conf
 
 # [Legacy Zebra OEMConfig](#tab/zebra-legacy-policy)
 
-??Which permissions does this profile grant??
+Using the schema settings in the **Legacy Zebra OEMConfig** app, this profile grants the following permissions:
 
-This profile grants permissions using the schema settings in the **Legacy Zebra OEMConfig** app.
+- ??Which permissions does this profile grant??
+
+**Create the policy**:
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
