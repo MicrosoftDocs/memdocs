@@ -119,7 +119,9 @@ _Applies to Standard and Datacenter_
 
 > [!NOTE]
 > On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
-
+> [!TIP]
+> Starting in Configuration Manager 2309, you'll be notified when performing a site upgrade about site systems with operating systems that are past the end of support date. 
+> Starting in Configuration Manager 2403 you'll be blocked from performing a site upgrade if any site systems is detected with operating systems that are past the end of support date. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 ## Client OS versions
 
 The following client OS versions are supported for use as a **distribution point** <sup>[Note 1](#bkmk_note1)</sup>:
