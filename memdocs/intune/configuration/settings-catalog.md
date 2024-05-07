@@ -67,7 +67,7 @@ This feature applies to:
 > - For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
 > - To see the Microsoft Edge policies you've configured, open Microsoft Edge, and go to `edge://policy`.
 
-This article show how to create a policy, how to search and filter the settings in Intune, and how to use Copilot.
+This article shows how to create a policy, how to search and filter the settings in Intune, and how to use Copilot.
 
 When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 
@@ -323,7 +323,7 @@ The following list includes some possible combinations of scope, assignment, and
 - If a user-scoped policy is assigned to a user, only that user has that setting applied.
 - There are some settings that are available in the user scope and the device scope. If one of these settings is assigned to both user and device scope, user scope takes precedence over device scope.
 
-If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, you can see some user scope settings marked as not applicable. This behavior occurs fora  device before a user is present.
+If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, you can see some user scope settings marked as not applicable. This behavior occurs for a  device before a user is present.
 
 ## Next steps
 
