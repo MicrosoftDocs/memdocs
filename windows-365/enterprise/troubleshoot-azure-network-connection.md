@@ -73,6 +73,8 @@ If this check fails, make sure that:
 - You clean out any unused vNICs and IP addresses. It’s best to use a dedicated subnet for Cloud PCs only to make sure that no other services are eating allocation.  
 - You expand the subnet to make more addresses are available.
 
+- Note: During provisioning attempts, it’s important to consider any existing locks at the Resource Group level or above. If these locks are present, the Network Interfaces created in the process will not be automatically deleted. In the event this occurs, manual removal of the vNICs will be necessary before you can retry.
+
 ## Azure tenant readiness
 
 When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we’re unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
