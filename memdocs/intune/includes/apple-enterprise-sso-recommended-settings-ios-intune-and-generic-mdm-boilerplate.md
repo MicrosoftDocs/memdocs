@@ -1,12 +1,13 @@
 ---
 title: include file
 description: include file
-author: miepping
+author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/18/2023
-ms.author: miepping
+ms.date: 04/16/2024
+ms.author: mandia
 ms.custom: include file
+ms.reviewer: miepping
 ---
 
 <!-- This include file is used in the Apple Enterprise SSO deployment guide docs for generic MDMs. -->

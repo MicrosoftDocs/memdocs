@@ -101,7 +101,9 @@ Configuration Manager operating system deployment support is now added on Window
 
 ### Enhancement in Deploying Software Packages with Dynamic Variables  
 
-Administrators while deploying the "Install Software Package" via Dynamic variable with "Continue on error" unchecked to clients, will not be notified with task sequence failures even if package versions on the distribution point are updated.
+When deploying a Task Sequence for installing a software package using dynamic variables, if the 'Continue on error' option is unchecked and the package is updated on distribution points while the client is installing the Task Sequence, the installation process fails due to version inconsistencies with the updated packages on the distribution points. Previously, the only recourse was to reinstall the entire Task Sequence from the software center.
+
+To address this issue, we've introduced a new feature allowing administrators to specify the number of retries the system should attempt before marking the Task Sequence as failed. This retry mechanism is activated only when the 'Continue on error' checkbox is unchecked."
 
 :::image type="content" source="media/24334765-dyn-var.png" alt-text="Screenshot of changes in dynamic variable in task sequence in CM console.":::
 
@@ -139,11 +141,11 @@ For more information on BitLocker management, see [Deploy BitLocker management.]
   For example, [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
 
 ## Next steps
-At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).
+<!--At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).-->
 
-<!--As of March 28, 2024, version 2403 is globally available for all customers to install.
+As of May 06, 2024, version 2403 is globally available for all customers to install.
 >[!NOTE] 
-> For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.-->
+> For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2403.md).
 
