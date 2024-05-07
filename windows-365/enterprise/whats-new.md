@@ -61,7 +61,7 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-### FQDNs removed from requirement list<!--48907341-->
+#### FQDNs removed from requirement list<!--48907341-->
 
 Many required FQDNs were previously moved to the *.infra.windows365.microsoft.com wildcard FQDN. The old FQDNs are now being removed. For an updated list of FQDNs, see [Network requirements](requirements-network.md).
 
