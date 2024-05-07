@@ -107,7 +107,7 @@ To prevent this dialog from being shown, you can create a pre-consented device g
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
-When single sign-on isn't used, users can opt see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
+When single sign-on isn't used, users can see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
 
 1. Users can use passwordless authentication to unlock their Cloud PC.
 2. Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
