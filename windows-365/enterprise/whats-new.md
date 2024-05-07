@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/10/2024
+ms.date: 05/08/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,7 +56,31 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of April 8, 2024
+## Week of May 6, 2024 (Service release 2404)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+### FQDNs removed from requirement list<!--48907341-->
+
+Many required FQDNs were previously moved to the *.infra.windows365.microsoft.com wildcard FQDN. The old FQDNs are now being removed. For an updated list of FQDNs, see [Network requirements](requirements-network.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Cloud PCs that aren't available report is now generally available<!--46738272-->
+
+The **Cloud PCs that aren't available report** has moved out of preview and into general availability. For more information, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Intune scope tags<!--48907552-->
+
+Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
+
+<!-- ########################## -->
+## Week of April 10, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Partners
