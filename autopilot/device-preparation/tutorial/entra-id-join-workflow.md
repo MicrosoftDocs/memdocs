@@ -1,6 +1,6 @@
 ---
-title: Overview for Windows Autopilot user-driven Microsoft Entra join in Intune
-description: Overview for Windows Autopilot user-driven Microsoft Entra join in Intune.
+title: Overview for Windows Autopilot Device Preparation user-driven Microsoft Entra join in Intune
+description: Overview for Windows Autopilot Device Preparation user-driven Microsoft Entra join in Intune.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Step by step tutorial for Windows Autopilot user-driven Microsoft Entra join in Intune
+# Step by step tutorial for Windows Autopilot Device Preparation user-driven Microsoft Entra join in Intune
 
 This step by step tutorial guides you through using Intune to perform a Windows Autopilot user-driven scenario when the devices are strictly Microsoft Entra joined.
 
