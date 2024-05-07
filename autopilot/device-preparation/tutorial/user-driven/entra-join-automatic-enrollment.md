@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot user-driven Microsoft Entra join - Step 1 of 8 - Set up Windows automatic Intune enrollment
-description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 1 of 8 - Set up Windows automatic Intune enrollment.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 1 of 8 - Set up Windows automatic Intune enrollment
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 1 of 8 - Set up Windows automatic Intune enrollment.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 05/07/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -18,9 +18,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven Microsoft Entra join: Set up Windows automatic Intune enrollment
+# Windows Autopilot device preparation user-driven Microsoft Entra join: Set up Windows automatic Intune enrollment
 
-Autopilot user-driven Microsoft Entra join steps:
+Autopilot device preparation user-driven Microsoft Entra join steps:
 > [!div class="checklist"]
 > - **Step 1: Set up Windows automatic Intune enrollment**
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
@@ -39,7 +39,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## Set up Windows automatic Intune enrollment
 
-In order for Windows Autopilot to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the Azure portal:
+In order for Windows Autopilot device preparation to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the Azure portal:
 
 [!INCLUDE [Set up Windows automatic enrollment](../../includes/automatic-intune-enrollment.md)]
 

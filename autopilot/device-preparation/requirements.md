@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot Device Preparation requirements
-description: Requirements for Windows Autopilot Device Preparation.
+title: Windows Autopilot device preparation requirements
+description: Requirements for Windows Autopilot device preparation.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
@@ -22,15 +22,15 @@ appliesto:
 ---
 
 
-# Windows Autopilot Device Preparation requirement
+# Windows Autopilot device preparation requirement
 
-## Windows Autopilot Device Preparation software requirements
+## Windows Autopilot device preparation software requirements
 
-Windows Autopilot Device Preparation depends on specific features available in Windows client, Microsoft Entra ID, and MDM services, such as Microsoft Intune. To use Windows Autopilot Device Preparation and access these features, some software requirements must be met.
+Windows Autopilot device preparation depends on specific features available in Windows client, Microsoft Entra ID, and MDM services, such as Microsoft Intune. To use Windows Autopilot device preparation and access these features, some software requirements must be met.
 
 > [!NOTE]
 >
-> For a list of OEMs that currently support Windows Autopilot Device Preparation, see the Participant device manufacturers section at [Windows Autopilot Device Preparation](https://www.microsoft.com/microsoft-365/windows/windows-autopilot).
+> For a list of OEMs that currently support Windows Autopilot device preparation, see the Participant device manufacturers section at [Windows Autopilot device preparation](https://www.microsoft.com/microsoft-365/windows/windows-autopilot).
 
 ### Windows 11
 
@@ -44,9 +44,9 @@ The following editions are supported:
 - Windows 11 Enterprise
 - Windows 11 Education
 
-## Windows Autopilot Device Preparation networking requirements
+## Windows Autopilot device preparation networking requirements
 
-Windows Autopilot Device Preparation depends on various internet-based services. Access to these services must be provided for Windows Autopilot Device Preparation to function properly. In the simplest case, enabling proper functionality can be achieved by ensuring the following conditions:
+Windows Autopilot device preparation depends on various internet-based services. Access to these services must be provided for Windows Autopilot device preparation to function properly. In the simplest case, enabling proper functionality can be achieved by ensuring the following conditions:
 
 - Ensure Domain Name Services (DNS) name resolution for internet DNS names.
 - Allow access to all hosts via port 80 (HTTP), 443 (HTTPS), and 123 (UDP/NTP).
@@ -60,9 +60,9 @@ Additional configuration might be required to grant access to required services 
 >
 > Smart card and certificate based authentication isn't supported during OOBE. For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
-### Windows Autopilot Device Preparation deployment service
+### Windows Autopilot device preparation deployment service
 
-After a network connection is in place, each Windows device will contact the Windows Autopilot Device Preparation Deployment Service. The following URLs are used:
+After a network connection is in place, each Windows device will contact the Windows Autopilot device preparation Deployment Service. The following URLs are used:
 
 - `https://ztd.dds.microsoft.com`
 - `https://cs.dds.microsoft.com`
@@ -70,7 +70,7 @@ After a network connection is in place, each Windows device will contact the Win
 
 ### Windows activation
 
-Windows Autopilot Device Preparation requires Windows Activation services. For more information about the URLs that need to be accessible for the activation services, see [Windows activation or validation fails with error code 0x8004FE33](https://support.microsoft.com/topic/windows-activation-or-validation-fails-with-error-code-0x8004fe33-a9afe65e-230b-c1ed-3414-39acd7fddf52).
+Windows Autopilot device preparation requires Windows Activation services. For more information about the URLs that need to be accessible for the activation services, see [Windows activation or validation fails with error code 0x8004FE33](https://support.microsoft.com/topic/windows-activation-or-validation-fails-with-error-code-0x8004fe33-a9afe65e-230b-c1ed-3414-39acd7fddf52).
 
 ### Microsoft Entra ID
 
@@ -83,7 +83,7 @@ Once authenticated, Microsoft Entra ID triggers enrollment of the device into th
 - [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use).
 - [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 
-### Windows Autopilot Device Preparation automatic device diagnostics collection
+### Windows Autopilot device preparation automatic device diagnostics collection
 
 For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network. Diagnostics are available for 28 days before they're removed.
 
@@ -97,7 +97,7 @@ If Windows Update is inaccessible, the Autopilot process still continues but cri
 
 ### Delivery Optimization
 
-Windows Autopilot Device Preparation contacts the [Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the internet.
+Windows Autopilot device preparation contacts the [Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the internet.
 
 - Windows Updates.
 - Microsoft Store apps and app updates.
@@ -118,7 +118,7 @@ To resolve DNS names for all services, the device communicates with a DNS server
 
 Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-enterprise-diagnostic-data).
 
-If the device can't send diagnostic data, the Windows Autopilot Device Preparation process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
+If the device can't send diagnostic data, the Windows Autopilot device preparation process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
 
 ### Network Connection Status Indicator (NCSI)
 
@@ -130,7 +130,7 @@ Windows must be able to tell that the device can access the internet. For more i
 
 This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store).
 
-If the WNS services aren't available, the Windows Autopilot Device Preparation process still continues without notifications.
+If the WNS services aren't available, the Windows Autopilot device preparation process still continues without notifications.
 
 ### Microsoft Store, Microsoft Store for Business & Education
 
@@ -148,11 +148,11 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 
 ### Proxy settings
 
-Deploying proxy settings for Windows Autopilot Device Preparation should be configured on the proxy server itself. Implementing proxy settings via Intune policy isn't fully supported as it might cause issues and unexpected behavior with privileged access deployments.
+Deploying proxy settings for Windows Autopilot device preparation should be configured on the proxy server itself. Implementing proxy settings via Intune policy isn't fully supported as it might cause issues and unexpected behavior with privileged access deployments.
 
-## Windows Autopilot Device Preparation licensing requirements
+## Windows Autopilot device preparation licensing requirements
 
-Windows Autopilot Device Preparation depends on specific capabilities available in Windows client and Microsoft Entra ID. It also requires an MDM service such as Microsoft Intune. These capabilities can be obtained through various editions and subscription programs:
+Windows Autopilot device preparation depends on specific capabilities available in Windows client and Microsoft Entra ID. It also requires an MDM service such as Microsoft Intune. These capabilities can be obtained through various editions and subscription programs:
 
 To provide needed Microsoft Entra ID (automatic MDM enrollment and company branding features) and MDM functionality, one of the following subscriptions is required:
 
