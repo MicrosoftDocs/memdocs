@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -38,45 +38,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 >
 > If you have already allowed users to join devices to Microsoft Entra ID as part of the [Windows Autopilot user-driven Microsoft Entra join](../user-driven/azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
 
-<a name='allow-users-to-join-devices-to-azure-ad'></a>
-
 ## Allow users to join devices to Microsoft Entra ID
 
 In order for Windows Autopilot to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the Azure portal:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-1. Select **Microsoft Entra ID**.
-
-1. In the **Overview** screen, under **Manage** in the left hand pane, select **Devices**.
-
-1. In the **Devices | Overview** screen, select **Device Settings** in the left hand pane.
-
-1. In the **Devices | Device settings** screen that opens, under **Users may join devices to Microsoft Entra**, select either **All** or **Selected**:
-
-   - If **All** is selected, all users can join their devices to Microsoft Entra ID.
-
-   - If **Some** is selected, only users specified under **Selected** can join their devices to Microsoft Entra ID. To add users:
-
-      1. Select the link under **Selected**.
-
-      1. In the **Members allowed to join devices** page that opens:
-
-         1. Select **Add**.
-
-         1. In the **Add members** window that opens:
-
-            1. select the desired user(s) and/or group(s) to add.
-
-            1. Once all of the desired users(s) and group(s) have been selected, select **Select** to close the **Add members** window.
-
-         1. Select **OK**.
-
-        > [!NOTE]
-        >
-        > Any selected groups must be a Microsoft Entra group that contains user objects.
-
-1. In the **Devices | Overview** screen, if any changes were made, select **Save**.
+[!INCLUDE [Allow users to join devices to Microsoft Entra ID](../../includes/automatic-intune-enrollment.md)]
 
 > [!NOTE]
 >

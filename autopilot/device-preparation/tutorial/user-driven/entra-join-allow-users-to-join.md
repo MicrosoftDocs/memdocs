@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot user-driven Microsoft Entra join - Step 2 of 8 - Allow users to join devices to Microsoft Entra ID
-description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 2 of 8 - Allow users to join devices to Microsoft Entra ID.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 2 of 8 - Allow users to join devices to Microsoft Entra ID
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 2 of 8 - Allow users to join devices to Microsoft Entra ID.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 05/07/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra join: Allow users to join devices to Microsoft Entra ID
 
-Autopilot user-driven Microsoft Entra join steps:
+Autopilot device preparation user-driven Microsoft Entra join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 > [!div class="checklist"]
 > - **Step 2: Allow users to join devices to Microsoft Entra ID**
@@ -39,13 +39,9 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## Allow users to join devices to Microsoft Entra ID
 
-In order for Windows Autopilot to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the Azure portal:
+In order for Windows Autopilot device preparation to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the Azure portal:
 
 [!INCLUDE [Allow users to join devices to Microsoft Entra ID](../../includes/automatic-intune-enrollment.md)]
-
-> [!NOTE]
->
-> This step of allowing users to join devices to Microsoft Entra ID is only needed for the Autopilot user-driven Microsoft Entra join and Autopilot for pre-provisioned deployment Microsoft Entra join scenarios. This setting doesn't apply to Microsoft Entra hybrid joined devices and Microsoft Entra joined devices using Windows Autopilot self-deployment mode as these methods work in a userless context.
 
 ## Next step: Register devices as Autopilot devices
 

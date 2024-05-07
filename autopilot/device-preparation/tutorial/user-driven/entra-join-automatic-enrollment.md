@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 In order for Windows Autopilot device preparation to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the Azure portal:
 
-[!INCLUDE [Set up Windows automatic enrollment](../../includes/automatic-intune-enrollment.md)]
+[!INCLUDE [Set up Windows automatic enrollment](../../../includes/automatic-intune-enrollment.md)]
 
 ## Next step: Allow users to join devices to Microsoft Entra ID
 

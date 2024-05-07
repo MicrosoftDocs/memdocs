@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/24/2023
+ms.date: 05/07/2024
 ms.localizationpriority: medium
 ---
 
@@ -16,6 +16,7 @@ tutorials/pre-provisioning/hybrid-azure-ad-join-automatic-enrollment.md
 tutorials/self-deploying/self-deploying-automatic-enrollment.md
 tutorials/user-driven/azure-ad-join-automatic-enrollment.md
 tutorials/user-driven/hybrid-azure-ad-join-automatic-enrollment.md
+device-preparation/tutorial/user-driven/entra-join-automatic-enrollment.md
 
 Headings are driven by article context. -->
 
