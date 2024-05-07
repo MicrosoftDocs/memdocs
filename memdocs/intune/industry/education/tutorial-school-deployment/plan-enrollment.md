@@ -134,7 +134,6 @@ The following table provides more information about the features supported by ea
 |Devices are user-less or shared.|❌|✔️|✔️|
 |A Partner can enroll devices on your behalf.|❌|✔️|✔️|
 |Enroll without Apple School Manager.|✔️|❌|✔️|
-|Add apps.|❌|❌|✔️|
 |Devices are ready for sign-in and use on first day of class.|❌|✔️|✔️|
 
 ::: zone-end
