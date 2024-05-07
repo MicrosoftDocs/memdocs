@@ -33,7 +33,13 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. You can assign roles for your Cloud PCs by using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 will transparently assign the required built-in roles on your Azure Subscription, resource group, and virtual network associated with the ANC, if they're not already assigned. If you only have the Subscription Reader role, these assignments won't be done automatically. Instead, you'll need to manually configure the required built-in roles to the Windows First Party App in Azure.
+When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 transparently assigns the required built-in roles the following resources (if tehy're not already assigned):
+
+- Azure Subscription
+- Resource group
+- Virtual network associated with the ANC
+
+If you only have the Subscription Reader role, these assignments aren't automatic. Instead, you must manually configure the required built-in roles to the Windows First Party App in Azure.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
@@ -104,7 +110,7 @@ The following permissions are available when creating custom roles.
 | Cloud PCs/Troubleshoot | Troubleshoot Cloud PCs in your tenant. |
 | Cloud PCs/ChangeUserAccountType | Change user account type between local administrator and standard user of a Cloud PC in your tenant. |
 | Cloud PCs/PlaceUnderReview | Set Cloud PCs under review in your tenant. |
-| Cloud PCs/RetryPartnerAgentInstallation | Attempt to re-install party partner agents in a Cloud PC which were failed to install. |
+| Cloud PCs/RetryPartnerAgentInstallation | Attempt to reinstall party partner agents in a Cloud PC which failed to install. |
 | Cloud PCs/ApplyCurrentProvisioningPolicy | Apply current provisioning policy config to Cloud PCs in your tenant. |
 | Cloud PCs/CreateSnapshot | Manually create snapshot for Cloud PCs in your tenant. |
 | Device Images/Create | Upload a custom OS image that you can later provision on Cloud PCs. |
@@ -151,9 +157,9 @@ To create a provisioning policy, an admin needs the following permissions:
 
 ## Migrating existing permissions
 
-For ANCs created before November 26, 2023, the Network Contributor role is used to apply permissions on both the Resource Group and Virtual Network. To apply to the new RBAC roles, you can retry the ANC health check. Note that the existing roles must be manually removed.
+For ANCs created before November 26, 2023, the Network Contributor role is used to apply permissions on both the Resource Group and Virtual Network. To apply to the new RBAC roles, you can retry the ANC health check. The existing roles must be manually removed.
 
-To manually remove the existing roles and add the new roles, refer to the following table for the existing roles used on each Azure resource. Prior to removing the existing roles make sure that the updated roles have been assigned.
+To manually remove the existing roles and add the new roles, refer to the following table for the existing roles used on each Azure resource. Before removing the existing roles make sure that the updated roles are assigned.
 
 | Azure resource | Existing role (before November 26, 2023) | Updated role (after November 26, 2023) |
 | --- | --- | --- |
@@ -165,9 +171,9 @@ For more details about removing a role assignment from an Azure resource, see [R
 
 ## Scope tags
 
-For RBAC, roles are only part of the equation. While roles work well to define a set of permissions, scope tags help define visibility of your organization’s resources. This is most helpful when organizing your tenant to have users scoped to certain hierarchies, geographical regions, business units, and so on. 
+For RBAC, roles are only part of the equation. While roles work well to define a set of permissions, scope tags help define visibility of your organization’s resources. Scope tags are most helpful when organizing your tenant to have users scoped to certain hierarchies, geographical regions, business units, and so on.
 
-The creation and management of scope tags is handled by Intune. For more information on how scope tags are created and managed, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).  
+Use Intune to create and manage scope tags. For more information on how scope tags are created and managed, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).  
 
 In Windows 365, scope tags can be applied to the following resources:
 
@@ -179,7 +185,7 @@ In Windows 365, scope tags can be applied to the following resources:
 
 To make sure that both the Intune-owned **All devices** list and Windows 365-owned **All Cloud PCs** list show the same Cloud PCs based on scope, follow these steps after creating your scope tags and provisioning policy:
 
-1. Create an Microsoft Entra ID dynamic device group with rule that enrollmentProfileName equals the exact name of the provisioning policy created.  
+1. Create a Microsoft Entra ID dynamic device group with rule that enrollmentProfileName equals the exact name of the provisioning policy created.  
 2. Assign the created scope tag  to the dynamic device group.
 3. After the Cloud PC is provisioned and enrolled into Intune, both the All Devices list and All Cloud PCs list should display the same Cloud PCs.  
 
