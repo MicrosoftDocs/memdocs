@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/25/2024
+ms.date: 05/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,11 +31,13 @@ ms.collection:
 
 # Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices
 
-**Doc draft**: https://microsoft.sharepoint.com/:w:/r/teams/CTeam/_layouts/15/Doc.aspx?sourcedoc=%7BA5EABB09-55B9-4FF5-9B63-451A34162862%7D&file=Doc%20for%20Setting%20up%20permissions%20using%20OEMConfig%20for%20MHS.docx&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&action=default&mobileredirect=true
+The Managed Home Screen (MHS) is an Intune feature that allows you to configure the home screen on the device. It's designed to only show the apps that your users access and the device settings that admins need to manage.
 
-The Managed Home Screen (MHS) is an Intune feature that allows you to configure the home screen on the device. The MHS is typically used for kiosk devices. For more information on the MHS, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+The MHS is typically used for kiosk devices, including frontline worker (FLW) devices. It replaces the default launcher on your Android dedicated devices. For more information on the MHS, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
-For the MHS to work correctly (??), you configure permissions using an [OEMConfig device configuration profile](android-oem-configuration-overview.md). OEMConfig is a standard for OEMs to expose their device-specific features. It allows you to configure device settings that aren't built in to Intune.
+Typically, when you configure the MHS on a device, end users need to manually accept the permissions that MHS needs. These permissions allow the MHS to access device features and settings.
+
+Instead of relying on end users to accept the permissions, you can use [OEMConfig device configuration policy](android-oem-configuration-overview.md) to automatically grant permissions to the MHS app.
 
 This feature applies to:
 
@@ -45,16 +47,7 @@ This feature applies to:
 
 This article lists the steps to create an OEMConfig policy that automatically grants permissions for the MHS app on Samsung and Zebra devices.
 
-To auto-grant permissions on a Zebra device, here are some high level steps.
-
-How did admins manage these perms before this article?
-What happens if these perms aren't managed? Does MHS block activity?
-What's the intent of this feature?
-Why would someone want to do this?
-
 ## Required permissions
-
-
 
 | Permission  | Samsung | Zebra | Legacy Zebra |
 |---|---|---|---|
@@ -65,7 +58,7 @@ Why would someone want to do this?
 
 ## Before you begin
 
-- This article creates OEMConfig configuration profile in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500 KB file size limit and other important information.
+- This article creates OEMConfig configuration profile in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
 - Devices must be MDM enrolled in Intune.
 - To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -171,7 +164,7 @@ This profile grants the **Overlay Permission**, **Notification Permission**, and
 
         :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-permission-controls-node.png" alt-text="Screenshot that shows how to configure the Permission Controls node in the Knox Service Plugin app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-permission-controls-node.png":::
 
-    2. Select the **Permission Controls** ellipsis > **Add Setting**. Do this twice to add two child nodes.
+    2. Select the **Permission Controls** ellipsis > **Add Setting**. Do this step twice to add two child nodes.
 
         :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-add-settings.png" alt-text="Screenshot that shows how to add a setting to the Permission Controls node in the Knox Service Plugin app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/knox-service-plugin-add-settings.png":::
 
@@ -249,7 +242,7 @@ For more information on these permissions, go to:
 
         :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node.png" alt-text="Screenshot that shows how to select the Permissions node and configure the settings in the Zebra OEMConfig Powered by MX app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node.png":::
 
-    4. The **Permissions** child node is added to the **Settings** list. Select the ellipsis > **Add setting**. Do this twice to add two child nodes.
+    4. The **Permissions** child node is added to the **Settings** list. Select the ellipsis > **Add setting**. Do this step twice to add two child nodes.
 
         :::image type="content" source="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node-add-setting.png" alt-text="Screenshot that shows how to add settings to the Permissions node in the Zebra OEMConfig Powered by MX app schema in an OEMConfig device configuration policy in Microsoft Intune." lightbox="./media/oemconfig-managed-home-screen-permissions-android/zebra-mx-permissions-node-add-setting.png":::
 
