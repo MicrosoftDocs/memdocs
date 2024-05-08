@@ -138,7 +138,7 @@ In this section, the following tables list the Intune dependencies and the ports
 - [Apple dependencies](#apple-dependencies)
 - [Android AOSP dependencies](#android-aosp-dependencies)
 
-#### Windows Push Notification Services (WNS) dependencies
+#### Windows Push Notification Services(WNS) dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
