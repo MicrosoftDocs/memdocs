@@ -96,9 +96,9 @@ Applies to:
 
 #### Customize your Intune admin center experience<!-- 24155584 -->
 
-You can now customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) has been updated to support expanding and collapsing each subsection of the menu. In addition, you can set admin center pages as favorites.
+You can now customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) has been updated to support expanding and collapsing each subsection of the menu. In addition, you can set admin center pages as favorites. This portal capability will gradually roll out over the next week. 
 
-By default, menu sections are expanded. You can choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section retains the expanded or collapsed state that you choose.  Additionally, selecting the star icon next to a page on the left navigation adds the page to a **Favorites** section near the top of the menu.
+By default, menu sections are expanded. You can choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section retains the expanded or collapsed state that you choose.  Additionally, selecting the star icon next to a page on the left navigation adds the page to a **Favorites** section near the top of the menu. For related information, see [Change the Portal settings](../fundamentals/tutorial-walkthrough-endpoint-manager.md#change-the-portal-settings).
 
 ## Week of April 29, 2024
 
