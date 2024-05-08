@@ -57,7 +57,7 @@ The drop in security scores for clients happens under the following conditions:
 Customers that have a potentially affected environment should wait to deploy version 2403 or the 2309 Update Rollup until a fix is available. 
 See the details below if the environment is already updated, but the new clients aren't yet installed.
   - If enabled, disable the hierarchy setting to *Upgrade all clients in the pre-production collection automatically using the pre-production client*. For more information, see [Configuration automatic client upgrades to use a pre-production collection](../../../clients/manage/upgrade/test-client-upgrades.md#configure-automatic-client-upgrades-to-use-a-pre-production-collection).
-  -  Avoid using the *Promote Pre-production Client* action. For more information, see [Promote a new client to production](../../../clients/manage/clients/manage/upgrade/test-client-upgrades.md#promote-a-new-client-to-production). 
+  -  Avoid using the *Promote Pre-production Client* action. For more information, see [Promote a new client to production](../../../clients/manage/upgrade/test-client-upgrades.md#promote-a-new-client-to-production). 
 
 If clients are already updated, set the *Manage Endpoint Protection client on client computers* value to **No** in client settings. This can be done only for collections with co-managed clients. Microsoft Intune policy will reapply, and the clients will again be managed as expected.
 
