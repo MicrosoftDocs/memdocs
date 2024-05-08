@@ -27,7 +27,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 - Step 3: [Create a device group](entra-join-device-group.md)
 - Step 4: [Create a user group](entra-join-device-group.md)
 - Step 5: [Assign applications and scripts to device group]
-- Step 6: [Create and assign Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
+- Step 6: [Create Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow)
 

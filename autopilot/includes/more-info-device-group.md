@@ -17,6 +17,7 @@ tutorial/self-deploying/self-deploying-device-group.md
 tutorial/user-driven/azure-ad-join-device-group.md
 tutorial/user-driven/hybrid-azure-ad-join-device-group.md
 device-preparation/tutorial/user-driven/entra-join-device-group.md
+device-preparation/tutorial/user-driven/entra-join-user-group.md
 
 Headings are driven by article context. -->
 

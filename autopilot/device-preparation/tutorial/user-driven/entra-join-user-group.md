@@ -20,15 +20,13 @@ appliesto:
 # Windows Autopilot device preparation user-driven Microsoft Entra join: Create a user group
 
 Windows Autopilot device preparation user-driven Microsoft Entra join steps:
-- Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
-- Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
+- Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
+- Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
+- Step 3: [Create a device group](entra-join-device-group.md)
 > [!div class="checklist"]
-> - **Step 4: Create a device group**
-- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
-- Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
-- Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
-- Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
+> - **Step 3: Create a user group**
+- Step 5: [Assign applications and scripts to device group]
+- Step 6: [Create Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
 
 For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
 
@@ -52,8 +50,8 @@ To create a dynamic device group for use with Windows Autopilot device preparati
 ## Next step: Configure and assign the Enrollment Status Page (ESP)
 
 > [!div class="nextstepaction"]
-> [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+> [Step 5: Assign applications and scripts to device group]
 
 ## More information
 
-[!INCLUDE [More information device group](../includes/more-info-device-group.md)]
+[!INCLUDE [More information device group](../../../includes/more-info-device-group.md)]

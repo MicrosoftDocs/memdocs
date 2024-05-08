@@ -53,7 +53,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 3: [Create a device group](entra-join-device-group.md)
 > - Step 4: [Create a user group](entra-join-device-group.md)
 > - Step 5: [Assign applications and scripts to device group]
-> - Step 6: [Create and assign Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
+> - Step 6: [Create Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
 
 > [!NOTE]
 >
