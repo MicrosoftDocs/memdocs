@@ -11,7 +11,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 4/23/2024
+ms.date: 5/08/2024
 
 # optional metadata
 
@@ -48,15 +48,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 - To complete this step, you must:  
   - [Create a user](../fundamentals/quickstart-create-user.md).  
   - [Create a group](../fundamentals/quickstart-create-group.md).
-  - Sign up for the Microsoft Entra ID Free Premium trial.
-
-Automatic MDM enrollment is a premium Microsoft Entra feature. To sign up for a Microsoft Entra ID Premium trial subscription:  
-
-1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).  
-2. Go to **Identity** > **Settings** > **Mobility**.  
-3. Select **Get a free Premium trial to use this feature**. This option gets you the Microsoft Entra ID Free Premium trial.  
-4. Choose the **Enterprise Mobility + Security E5** free trial option.  
-5. Select **Free trial** > **Activate**. It can take a few minutes to activate.  
+  - [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.  
 
 ## Sign in to the Microsoft Intune admin center
 
@@ -64,25 +56,29 @@ Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?link
 
 ## Set up automatic enrollment  
 
-For this example, you'll configure Microsoft Intune mobile device management (MDM) and mobile application management (MAM) enrollment settings so that corporate-owned and personal devices automatically enroll in Microsoft Intune. The MDM and MAM user scopes determine how devices and apps are managed in Intune. *MDM user scope* enables automatic enrollment for Microsoft Intune device management. *MAM user scope* enables automatic enrollment for Microsoft Intune mobile application management (MAM). 
+For this example, you'll configure Microsoft Intune mobile device management (MDM) enrollment settings so that corporate-owned and personal devices automatically enroll in Microsoft Intune. *MDM user scope* enables automatic enrollment for Microsoft Intune device management.  
 
-1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).  
-2. Go to **Identity** > **Settings** > **Mobility**.  
-4. Select Microsoft Intune.   
-5. Configure the MDM and MAM user scope.   
+1. In the Microsoft Intune admin center, go to **Devices** > **Enrollment**.     
+2. Go to the **Windows** tab. Then select **Automatic Enrollment**.  
+
+> [!IMPORTANT]
+>  Automatic MDM enrollment is a premium Microsoft Entra feature and is available for Microsoft Entra ID Premium subscribers. Select **Automatic MDM enrollment is available only for Microsoft Entra ID Premium subscribers** to activate a free trial.  
+ 
+3. Select **Microsoft Intune**.   
+4. Configure the MDM and WIP user scope.   
    1. For **MDM user scope** select **All**. Or you can select **Some** and select **Contoso Testers** as the group. Make sure users aren't members of a group targeted by the MAM user scope.     
-   2. For **MAM user scope**, select **None**. We're only setting up automatic enrollment for mobile device management. 
-6. Use the default values for the remaining configuration values on the page.    
-7. Choose **Save**.  
+   2. For **WIP user scope**, select **None**. We're only setting up automatic enrollment for mobile device management. 
+5. Use the default values for the remaining configuration values on the page.    
+6. Choose **Save**.  
 
 >[!IMPORTANT]
 > If you configure both user scope types for the same user:
 > - The MDM user scope takes precedence if they're on a corporate-owned device. The device automatically enrolls in Microsoft Intune when they set it up for work.  
-> - The MAM user scope takes precedence if they bring their own device. The device doesn't enroll in Microsoft Intune for device management. Microsoft Purview Information Protection policies are applied if you configured them. 
+> - The WIP user scope takes precedence if they bring their own device. The device doesn't enroll in Microsoft Intune for device management. Microsoft Purview Information Protection policies are applied if you configured them. 
 
 ## Clean up resources  
 
-To reconfigure Intune automatic enrollment, check out [Set up enrollment for Windows devices](windows-enroll.md).  
+To reconfigure Intune automatic enrollment, see [Set up enrollment for Windows devices](windows-enroll.md).  
 
 ## Next steps  
 
