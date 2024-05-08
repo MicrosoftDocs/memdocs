@@ -35,11 +35,33 @@ For information about the new features introduced with different versions, see t
 
 > [!TIP]
 > You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
+
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://learn.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
 
 <!-- ## Client management -->
+## Endpoint Protection
+### Security configurations removed from Intune
+<!-- 27951696 -->
+_Applies to: version 2309 with KB25858444 and later_
 
+Microsoft Defender security configurations are no longer managed with Microsoft Intune after updating to Configuration Manager version 2403, or installing the [Update Rollup for 2309](../../hotfix/2309/25858444.md). 
+
+The symptom is seen as a drop in the Microsoft Security Score values when viewed in Intune. This issue happens because security policy configuration data is incorrectly removed from clients after Configuration Manager clients are upgraded. 
+
+The drop in security scores for clients happens under the following conditions:
+1. The Configuration Manager clients are co-managed with Microsoft Intune.
+2. The *Device Configuration* -> *Endpoint Protection* workload is actively managed in Intune. For more information, see [How to switch workloads](../../comanage/how-to-switch-workloads.md).
+3. The *Manage Endpoint Protection client on client computers* value is set to **Yes** in client settings. For more information, see [To enable Endpoint Protection and configure custom client settings](../../protect/deploy-use/endpoint-protection-configure-client.md#to-enable-endpoint-protection-and-configure-custom-client-settings).
+
+Customers that have a potentially affected environment should wait to deploy version 2403 or the 2309 Update Rollup until a fix is available. 
+See the details below if the environment is already updated, but the new clients aren't yet installed.
+  - If enabled, disable the hierarchy setting to *Upgrade all clients in the pre-production collection automatically using the pre-production client*. For more information, see [Configuration automatic client upgrades to use a pre-production collection](../../core/clients/manage/upgrade/test-client-upgrades.md#configure-automatic-client-upgrades-to-use-a-pre-production-collection).
+  -  Avoid using the *Promote Pre-production Client* action. For more information, see [Promote a new client to production](../../core/clients/manage/upgrade/test-client-upgrades.md#promote-a-new-client-to-production). 
+
+If clients are already updated, set the *Manage Endpoint Protection client on client computers* value to **No** in client settings. This can be done only for collections with co-managed clients. Microsoft Intune policy will reapply, and the clients will again be managed as expected.
+
+This note will be updated when additional information is available.
 ## Set up and upgrade
 
 ### Version 2107 update fails to download
