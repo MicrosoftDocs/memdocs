@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot user-driven Microsoft Entra join - Step 4 of 8 - Create a device group
-description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 4 of 8 - Create a device group.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 4 of 6 - Create a user group
+description: How to - Windows Autopilot device preparation  user-driven Microsoft Entra join - Step 4 of 6 - Create a user group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 05/08/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -15,12 +15,11 @@ ms.collection:
 ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
-  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven Microsoft Entra join: Create a device group
+# Windows Autopilot device preparation user-driven Microsoft Entra join: Create a user group
 
-Autopilot user-driven Microsoft Entra join steps:
+Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
 - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
@@ -39,9 +38,16 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## Create a device group
 
-[!INCLUDE [Device group description](../includes/device-group-description.md)]
+Device groups are a collection of devices organized into a Microsoft Entra group. Device groups can be either dynamic or assigned:
 
-[!INCLUDE [How to create a device group in Intune](../../includes/create-dynamic-device-group.md)]
+- **Dynamic groups** - Devices are automatically added to the group based on rules.
+- **Assigned groups** - Devices are manually added to the group and are static.
+
+Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation profile. The device group specified in the Windows Autopilot device preparation profile is the device group where devices are added to automatically during the Windows Autopilot device preparation deployment. In the case of the device group specified in the Windows Autopilot device preparation profile, the device group needs to be an assigned group of type security.
+
+To create a dynamic device group for use with Windows Autopilot device preparation, follow these steps:
+
+[!INCLUDE [How to create a device group in Intune](../../../includes/create-assigned-device-group.md)]
 
 ## Next step: Configure and assign the Enrollment Status Page (ESP)
 
@@ -50,4 +56,4 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## More information
 
-[!INCLUDE [More information device group](../../includes/more-info-device-group.md)]
+[!INCLUDE [More information device group](../includes/more-info-device-group.md)]

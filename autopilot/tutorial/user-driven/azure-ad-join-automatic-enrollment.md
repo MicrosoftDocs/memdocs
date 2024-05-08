@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/07/2024
+ms.date: 05/08/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -50,4 +50,4 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 
 ## More information
 
-[!INCLUDE [More information automatic enrollment](../includes/more-info-automatic-enrollment.md)]
+[!INCLUDE [More information automatic enrollment](../../includes/more-info-automatic-enrollment.md)]

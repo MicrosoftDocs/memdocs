@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/07/2024
+ms.date: 05/08/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -15,7 +15,6 @@ ms.collection:
 ms.subservice: itpro-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
-  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Step by step tutorial for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune
@@ -39,11 +38,10 @@ Windows Autopilot device preparation user-driven deployments can perform the fol
 
 - Joins the device to Microsoft Entra ID.
 - Enrolls the device in Intune.
-- Installs applications.
-- Applies device configuration policies such as BitLocker and Windows Hello for Business.
-- Checks for compliance.
+- Installs critical applications.
+- Runs critical scripts.
 
-Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
+Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop. Additional applications and scripts deployed to the device but not directly specified in the Windows Autopilot device preparation profile run after the end-user signs in and is at the Desktop.
 
 ## Workflow
 
@@ -51,13 +49,11 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!div class="checklist"]
 > - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
-> - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
-> - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
-> - Step 4: [Create a device group](azure-ad-join-device-group.md)
-> - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
-> - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
-> - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
-> - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
+> - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
+> - Step 3: [Create a device group](entra-join-device-group.md)
+> - Step 4: [Create a user group](entra-join-device-group.md)
+> - Step 5: [Assign applications and scripts to device group]
+> - Step 6: [Create and assign Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
 
 > [!NOTE]
 >
@@ -66,6 +62,6 @@ The following steps are needed to configure and then perform a Windows Autopilot
 ## Walkthrough
 
 > [!div class="nextstepaction"]
-> [Step 1: Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
+> [Step 1: Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 
 ## Related content

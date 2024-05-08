@@ -36,13 +36,13 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If you have already allowed users to join devices to Microsoft Entra ID as part of the [Windows Autopilot user-driven Microsoft Entra join](../user-driven/azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
+> If users have already been set up to allow joining of devices to Microsoft Entra ID from another Autopilot scenario, skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
 
 ## Allow users to join devices to Microsoft Entra ID
 
 In order for Windows Autopilot to work, users need to be allowed to join devices to Microsoft Entra ID. Allowing users to join devices to Microsoft Entra ID can be configured in the Azure portal:
 
-[!INCLUDE [Allow users to join devices to Microsoft Entra ID](../../includes/automatic-intune-enrollment.md)]
+[!INCLUDE [Allow users to join devices to Microsoft Entra ID](../../includes/allow-users-to-join.md)]
 
 > [!NOTE]
 >
@@ -55,6 +55,4 @@ In order for Windows Autopilot to work, users need to be allowed to join devices
 
 ## More information
 
-For more information on allowing users to join devices to Microsoft Entra ID, see the following article(s):
-
-- [Configure device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+[!INCLUDE [More information automatic enrollment](../../includes/more-info-allow-users-to-join.md)]

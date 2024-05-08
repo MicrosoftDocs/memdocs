@@ -5,14 +5,14 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 05/07/2024
+ms.date: 05/08/2024
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
-tutorials/pre-provisioning/azure-ad-join-allow-users-to-join.md
-tutorials/user-driven/azure-ad-join-allow-users-to-join.md
+tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md
+tutorial/user-driven/azure-ad-join-allow-users-to-join.md
 device-preparation/tutorial/user-driven/entra-join-allow-users-to-join.md
 
 Headings are driven by article context. -->
