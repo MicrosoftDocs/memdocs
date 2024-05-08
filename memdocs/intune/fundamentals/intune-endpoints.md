@@ -133,12 +133,12 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 
 In this section, the following tables list the Intune dependencies and the ports and services that the Intune client accesses.
 
-- [Windows Push Notification Services dependencies](#windows-push-notification-serviceswns-dependencies)
+- [Windows Push Notification Services dependencies](#windows-push-notification-services-wns-dependencies)
 - [Delivery optimization dependencies](#delivery-optimization-dependencies)
 - [Apple dependencies](#apple-dependencies)
 - [Android AOSP dependencies](#android-aosp-dependencies)
 
-#### Windows Push Notification Services(WNS) dependencies
+#### Windows Push Notification Services (WNS) dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 | --- | ---- | -------- | ----- | --------- | ----- |
