@@ -79,31 +79,53 @@ Applies to:
 
 ### App management
 
+<<<<<<< Updated upstream
 #### Updates to the Managed Home Screen experience 
 We recently released and improved the Managed Home Screen experience, which is now Generally Available. The app has been redesigned to improve the core workflows throughout the application. The updated design offers a more usable and supportable experience. 
+=======
+#### Updates to the Managed Home Screen experience<!-- 24990268 --> 
+We recently released and improved the Managed Home Screen experience, which is now Generally Available. The app has been redesigned to improve the core workflows throughout the application. The updated design offers a more usable and supportable experience.
+>>>>>>> Stashed changes
 
 With the release, we stop investing in previous Managed Home Screen workflows. New features and fixes for Managed Home Screen are only added to the new experience. During August 2024, the new experience will automatically be enabled for all devices.
 
 For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
 
+<<<<<<< Updated upstream
 #### Require end users to enter PIN to resume activity on Managed Home Screen
+=======
+#### Require end users to enter PIN to resume activity on Managed Home Screen<!-- 9322838 -->
+>>>>>>> Stashed changes
 In Intune, you can require end users to enter their session PIN to resume activity on Managed Home Screen after the device has been inactive for a specified period of time. Set the **Minimum inactive time before session PIN is required** setting to the number of seconds the device is inactive before the end user must input their session PIN. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 #### Device IPv4 and IPv6 details available from Managed Home Screen
 IPv4 and IPv6 connectivity details are now both available from the **Device Information** page of the Managed Home Screen app. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\remote-actions\collect-diagnostics.md).
 
+<<<<<<< Updated upstream
 #### Updates to Managed Home Screen sign-in support
 Managed Home Screen now supports domainless sign-in. Admins can configure a domain name, which will be automatically appended to usernames upon sign-in. Also, Managed Home Screen supports a custom login hint text to be displayed to users during the sign-in process.
 
 For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
 
 #### Allow end users to control Android Enterprise device auto-rotation
+=======
+#### Updates to Managed Home Screen sign-in support<!-- 24990268 -->
+Managed Home Screen now supports domainless sign-in. Admins can configure a domain name, which will be automatically appended to usernames upon sign-in. Also, Managed Home Screen supports a custom sign-in hint text to be displayed to users during the sign-in process.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+
+#### Allow end users to control Android Enterprise device auto-rotation<!-- 9322838 -->
+>>>>>>> Stashed changes
 In Intune, you can now expose a setting in the Managed Home Screen app, which will allow the end user to turn on and off the device's auto-rotation. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 #### Allow end users to adjust Android Enterprise device screen brightness
 In Intune, you can expose settings in the Managed Home Screen app to adjust screen brightness for Android Enterprise devices. You can choose to expose a setting in the app to allow end users to access a brightness slider to adjust the device screen brightness. Also, you can expose a setting to allow end users to toggle adaptive brightness. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
+<<<<<<< Updated upstream
 #### Migrated to .NET MAUI from Xamarin
+=======
+#### Migrated to .NET MAUI from Xamarin<!-- 27143739 -->
+>>>>>>> Stashed changes
 Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) documentation.
 
 Xamarin support ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. For Intune support on Android and iOS platforms, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)and [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
@@ -160,7 +182,11 @@ For troubleshooting guidance, see the Intune support blog [How to trace and trou
 
 We added [CrowdStrike Falcon](../protect/crowdstrike-falcon-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the CrowdStrike connector in Intune, you can control mobile device access to corporate resources using Conditional Access that's based on risk assessment in your compliance policies.
 
+<<<<<<< Updated upstream
 With the Intune 2404 service release, the CrowdStrike connector is now available in the admin center. However, it isn't useable until CrowdStrike publishes the required App Configuration profile details necessary to support iOS and Android devices. The profile details are expected sometime after second week of May.
+=======
+With the Intune 2404 service release, the CrowdStrike connector is now available in the admin center. However, it isn't useable until CrowdStrike publishes the required App Configuration profile details necessary to support iOS and Android devices. The profile details is expected sometime after second week of May.
+>>>>>>> Stashed changes
 
 ### Intune apps
 
@@ -1315,7 +1341,11 @@ Applies to:
 
 #### Microsoft Defender Firewall profiles are renamed to Windows Firewall
 
+<<<<<<< Updated upstream
 To align to Firewall branding changes in Windows, we're updating the names of Intune profiles for endpoint security Firewall policies. In profiles that have *Microsoft Defender Firewall* in the name we're replacing that with *Windows Firewall*.
+=======
+To align to Firewall branding changes in Windows, we are updating the names of Intune profiles for endpoint security Firewall policies. In profiles that have *Microsoft Defender Firewall* in the name we're replacing that with *Windows Firewall*.
+>>>>>>> Stashed changes
 
 The following platforms have profiles that are affected, with only the profile names being affected by this change:
 
