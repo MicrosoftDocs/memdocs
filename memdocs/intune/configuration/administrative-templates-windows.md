@@ -44,7 +44,7 @@ The Intune templates are 100-percent cloud-based, are built into Intune (no down
 
 - The **Office, Microsoft Edge, and Visual Studio** settings are ADMX-ingested and use the same administrative template files that you would download in on-premises environments.
 
-- You can import custom and third-party ADMX and ADML files. For more information,see [Import custom or partner ADMX files](administrative-templates-import-custom.md).
+- You can import custom and third-party ADMX and ADML files. For more information, see [Import custom or partner ADMX files](administrative-templates-import-custom.md).
 
 When you manage devices in your organization, you create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can do this by using **Administrative Templates** in Microsoft Intune.
 
@@ -60,7 +60,7 @@ This article shows how to create a template for Windows client devices and how t
 
 - There are two ways to create an administrative template: Using a template, or using the Settings Catalog. This article focuses on using the **Administrative Templates** template. The Settings Catalog has more Administrative Template settings available.
 
-  For more detial, see [Use the settings catalog to configure settings](settings-catalog.md).
+  For more detail, see [Use the settings catalog to configure settings](settings-catalog.md).
 
 - The ADMX templates use the following sources:
 
