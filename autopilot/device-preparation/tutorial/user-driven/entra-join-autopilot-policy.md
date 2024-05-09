@@ -76,17 +76,25 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
 ## Configuration settings
 
-The **Configuration settings** page has several configuration options. The following describes each option and what the option should be set to for a Microsoft Entra join Windows Autopilot device preparation deployment:
+The **Configuration settings** page has several configuration options. The following section describes each option in the **Configuration settings** page and what each option should be set to for a Microsoft Entra join Windows Autopilot device preparation deployment.
+
+In the **Configuration settings** page:
 
 1. Expand the **Out-of-box experience settings** section by selecting it.
 
-   1. Next to **Minutes allowed before showing installation error**, enter the number of minutes allowed before failing a deployment. The value entered here is for the whole deployment and not for an individual application install or script. The acceptable value is an integer between 15 and 720.
+   1. **Minutes allowed before showing installation error** - enter the number of minutes allowed before failing a deployment.
 
-   1. For **Custom error message**, enter a custom message to display to the end-user if the deployment fails.
+      The value entered here is for the whole deployment and not for an individual application install or script. The acceptable value is an integer between 15 and 720.
 
-   1. For **Allow users to skip setup after multiple attempts**, select either **Yes** or **No** as desired by toggling the switch. Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the Desktop.
+   2. **Custom error message** - enter a custom message to display to the end-user if the deployment fails.
 
-   1. For **Show link to diagnostics**, select either **Yes** or **No** as desired by toggling the switch. In case of a deployment failure, setting this option to **Yes** will display a link at the deployment failure page allowing the end-user to retrieve diagnostic logs.
+   3. **Allow users to skip setup after multiple attempts** - select either **Yes** or **No** as desired by toggling the switch.
+
+      Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the Desktop.
+
+   4. **Show link to diagnostics** - select either **Yes** or **No** as desired by toggling the switch.
+
+      In case of a deployment failure, setting this option to **Yes** will display a link at the deployment failure page allowing the end-user to retrieve diagnostic logs.
 
 2. Expand the **Apps** section by selecting it:
 
@@ -110,17 +118,17 @@ The **Configuration settings** page has several configuration options. The follo
 
 3. Expand the **Deployment settings** section by selecting it:
 
-   1. Next to **Deployment mode**, select **Single user** in the drop down menu.
+   1. **Deployment mode** - select **Single user** in the drop down menu.
 
-   2. Next to **Deployment type**, select **User driven** in the drop down menu.
+   2. **Deployment type** - select **User driven** in the drop down menu.
 
-   3. Next to **Join type**, select **Microsoft Entra joined** in the drop down menu.
+   3. **Join type** - select **Microsoft Entra joined** in the drop down menu.
 
-   4. Next to **User account type**, select either **Standard User** or **Administrator** as desired by toggling the switch.
+   4. **User account type** - select either **Standard User** or **Administrator** as desired by toggling the switch.
 
 4. Expand the **Scripts** section by selecting it:
 
-    The **Apps** section allows selection of up to 10 PowerShell scripts to install during the deployment. The scripts specified here should be the critical scripts that should run on the device before the end-user can start using the device.
+    The **Apps** section allows selection of up to ten PowerShell scripts to install during the deployment. The scripts specified here should be the critical scripts that should run on the device before the end-user can start using the device.
 
     > [!IMPORTANT]
     >

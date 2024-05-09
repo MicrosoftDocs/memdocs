@@ -24,7 +24,9 @@ appliesto:
 
 # Windows Autopilot device preparation requirement
 
-## Windows Autopilot device preparation software requirements
+# [**Software**](#tab/software)
+
+## Software requirements
 
 Windows Autopilot device preparation depends on specific features available in Windows client, Microsoft Entra ID, and MDM services, such as Microsoft Intune. To use Windows Autopilot device preparation and access these features, some software requirements must be met.
 
@@ -44,7 +46,9 @@ The following editions are supported:
 - Windows 11 Enterprise
 - Windows 11 Education
 
-## Windows Autopilot device preparation networking requirements
+# [**Network**](#tab/network)
+
+## Networking requirements
 
 Windows Autopilot device preparation depends on various internet-based services. Access to these services must be provided for Windows Autopilot device preparation to function properly. In the simplest case, enabling proper functionality can be achieved by ensuring the following conditions:
 
@@ -150,7 +154,9 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 
 Deploying proxy settings for Windows Autopilot device preparation should be configured on the proxy server itself. Implementing proxy settings via Intune policy isn't fully supported as it might cause issues and unexpected behavior with privileged access deployments.
 
-## Windows Autopilot device preparation licensing requirements
+# [**Licensing**](#tab/licensing)
+
+## Licensing requirements
 
 Windows Autopilot device preparation depends on specific capabilities available in Windows client and Microsoft Entra ID. It also requires an MDM service such as Microsoft Intune. These capabilities can be obtained through various editions and subscription programs:
 
@@ -173,6 +179,6 @@ Additionally, the following are also recommended (but not required):
 - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0), which can be deployed easily via Intune (or other MDM services).
 - [Windows Subscription Activation](/windows/deployment/windows-10-enterprise-subscription-activation), to automatically step up devices from Windows Pro to Windows Enterprise edition.
 
+---
 
 ## Related content
-
