@@ -31,11 +31,11 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 - Step 5: [Assign applications and scripts to device group](entra-join-assign-apps-scripts.md)
 - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
+For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
 > [!NOTE]
 >
-> If you have already created device groups from another Autopilot scenario, you can skip this step and move on to [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md). However, if you're deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
+> The user group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a user group specifically for use with Windows Autopilot device preparation instead of reusing existing user groups used in other Autopilot scenarios.
 
 ## Create a device group
 

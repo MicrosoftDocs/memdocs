@@ -127,7 +127,7 @@ For tutorials with detailed instructions on configuring Windows Autopilot device
 
 ## Related content
 
-- [Windows Autopilot device preparation FAQs](faq.yaml).
+- [Windows Autopilot device preparation FAQs](device-preparation-faq.yaml).
 - [Windows Autopilot device preparation tutorial](tutorial/scenarios.md).
 - [Windows Autopilot device preparation requirements](requirements.md).
 - [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).

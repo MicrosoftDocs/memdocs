@@ -31,6 +31,6 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
+For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
 ## Assign applications and scripts to device group
