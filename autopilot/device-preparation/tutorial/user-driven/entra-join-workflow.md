@@ -41,7 +41,7 @@ Windows Autopilot device preparation user-driven deployments can perform the fol
 - Installs critical applications.
 - Runs critical scripts.
 
-Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop. Additional applications and scripts deployed to the device but not directly specified in the Windows Autopilot device preparation profile run after the end-user signs in and is at the Desktop.
+Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop. Additional applications and scripts deployed to the device but not directly specified in the Windows Autopilot device preparation policy run after the end-user signs in and is at the Desktop.
 
 ## Workflow
 
@@ -51,9 +51,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 > - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
 > - Step 3: [Create a device group](entra-join-device-group.md)
-> - Step 4: [Create a user group](entra-join-device-group.md)
-> - Step 5: [Assign applications and scripts to device group]
-> - Step 6: [Create Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
+> - Step 4: [Create a user group](entra-join-user-group.md)
+> - Step 5: [Assign applications and scripts to device group](entra-join-assign-apps-scripts.md)
+> - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
 
 > [!NOTE]
 >

@@ -45,7 +45,7 @@ When new Windows devices are initially deployed, Windows Autopilot Preparation u
 
 - Configure apps and policies for a security group.
 - Select apps and scripts to be installed during OOBE (Out-of-Box Experience).
-- Assign the Windows Autopilot device preparation profile to users.
+- Assign the Windows Autopilot device preparation policy to users.
 - Deliver Windows Autopilot device preparation configuration during user authentication in OOBE.
 - Automatically add devices to the security group and receive selected apps and scripts assigned to the group.
 

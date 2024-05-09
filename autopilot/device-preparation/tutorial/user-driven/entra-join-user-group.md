@@ -20,15 +20,18 @@ appliesto:
 # Windows Autopilot device preparation user-driven Microsoft Entra join: Create a user group
 
 Windows Autopilot device preparation user-driven Microsoft Entra join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
 - Step 3: [Create a device group](entra-join-device-group.md)
+
 > [!div class="checklist"]
 > - **Step 3: Create a user group**
-- Step 5: [Assign applications and scripts to device group]
-- Step 6: [Create Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
+- Step 5: [Assign applications and scripts to device group](entra-join-assign-apps-scripts.md)
+- Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
+
+For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
 
 > [!NOTE]
 >
@@ -41,16 +44,16 @@ Device groups are a collection of devices organized into a Microsoft Entra group
 - **Dynamic groups** - Devices are automatically added to the group based on rules.
 - **Assigned groups** - Devices are manually added to the group and are static.
 
-Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation profile. The device group specified in the Windows Autopilot device preparation profile is the device group where devices are added to automatically during the Windows Autopilot device preparation deployment. In the case of the device group specified in the Windows Autopilot device preparation profile, the device group needs to be an assigned group of type security.
+Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is the device group where devices are added to automatically during the Windows Autopilot device preparation deployment. In the case of the device group specified in the Windows Autopilot device preparation policy, the device group needs to be an assigned group of type security.
 
 To create a dynamic device group for use with Windows Autopilot device preparation, follow these steps:
 
 [!INCLUDE [How to create a device group in Intune](../../../includes/create-assigned-device-group.md)]
 
-## Next step: Configure and assign the Enrollment Status Page (ESP)
+## Next step: Assign applications and scripts to device group
 
 > [!div class="nextstepaction"]
-> [Step 5: Assign applications and scripts to device group]
+> [Step 5: Assign applications and scripts to device group](entra-join-assign-apps-scripts.md)
 
 ## More information
 

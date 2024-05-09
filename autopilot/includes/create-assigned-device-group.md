@@ -39,17 +39,19 @@ Headings are driven by article context. -->
 
        1. Scroll through the list of objects and select **Intune Provisioning Client**. Alternatively, use the **Search** bar to search for and select **Intune Provisioning Client**.
 
+           > [!NOTE]
+           >
+           > If the **Intune Provisioning Client** object isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client object](#adding-the-intune-provisioning-client-object).
+
        1. Once **Intune Provisioning Client** is selected as the owner, select the **Select** button.
 
-       > [!NOTE]
-       >
-       > If the **Intune Provisioning Client** object isn't available either in the list of objects or when searching, please see [Adding the Intune Provisioning Client object](#adding-the-intune-provisioning-client-object).
+
 
     1. Select the **Create** button to finish creating the assigned device group.
 
     > [!IMPORTANT]
     >
-    > Don't manually add any devices to this device group by selecting the **No members selected** link under **Members**. Devices will be automatically added to this device group during the Windows Autopilot device preparation deployment.
+    > Don't manually add any devices to the device group created in this step by selecting the **No members selected** link under **Members**. Devices will be automatically added to this device group during the Windows Autopilot device preparation deployment.
 
 ### Adding the Intune Provisioning Client object
 

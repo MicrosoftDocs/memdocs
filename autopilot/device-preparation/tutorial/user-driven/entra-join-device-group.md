@@ -27,11 +27,11 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 > [!div class="checklist"]
 > - **Step 3: Create a device group**
 
-- Step 4: [Create a user group](entra-join-device-group.md)
-- Step 5: [Assign applications and scripts to device group]
-- Step 6: [Create Windows Autopilot device preparation profile](entra-join-autopilot-profile.md)
+- Step 4: [Create a user group](entra-join-user-group.md)
+- Step 5: [Assign applications and scripts to device group](entra-join-assign-apps-scripts.md)
+- Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
 
-For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow)
+For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
 > [!NOTE]
 >
@@ -44,16 +44,16 @@ Device groups are a collection of devices organized into a Microsoft Entra group
 - **Dynamic groups** - Devices are automatically added to the group based on rules.
 - **Assigned groups** - Devices are manually added to the group and are static.
 
-Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation profile. The device group specified in the Windows Autopilot device preparation profile is the device group where devices are added to automatically during the Windows Autopilot device preparation deployment. In the case of the device group specified in the Windows Autopilot device preparation profile, the device group needs to be an assigned security group.
+Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is the device group where devices are added to automatically during the Windows Autopilot device preparation deployment. In the case of the device group specified in the Windows Autopilot device preparation policy, the device group needs to be an assigned security group.
 
 To create an assigned security device group for use with Windows Autopilot device preparation, follow these steps:
 
 [!INCLUDE [How to create a device group in Intune](../../../includes/create-assigned-device-group.md)]
 
-## Next step: Configure and assign the Enrollment Status Page (ESP)
+## Next step: Create a user group
 
 > [!div class="nextstepaction"]
-> [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+> [Step 4: Create a user group](entra-join-user-group.md)
 
 ## More information
 
