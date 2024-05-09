@@ -32,7 +32,7 @@ ms.collection:
 
 # Integrate CrowdStrike Falcon for Mobile with Microsoft Intune
 
-Complete the following steps to integrate the CrowdStrike Falcon Mobile Threat Defense solution with Intune.
+Complete the following steps to integrate the CrowdStrike Falcon for Mobile solution with Intune.
 
 > [!NOTE]
 >
