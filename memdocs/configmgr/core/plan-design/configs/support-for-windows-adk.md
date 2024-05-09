@@ -59,7 +59,7 @@ The following table lists the versions of the Windows ADK that you can use with 
   - The **Pre-provision BitLocker** task doesn't work in WinPE.
   - Devices with UFS storage, such as the Surface Go 4, don't work in WinPE.
 
-    These issues can be fixed by applying the latest **Windows Server 23H2** cumulative update to the Windows PE AMD64 boot image found in the **ADK 10.1.25398.1 (updated September 2023)**. Once the latest cumulative update is applied to the Windows PE AMD64 boot image, it can be used with Configuration Manager. Information regarding applying cumulative updates to Windows PE boot images can be found in the article [Customize Windows PE boot images](/windows/deployment/customize-boot-image).
+    These issues can be fixed by applying the latest **Windows Server 23H2** cumulative update (**Cumulative Update for Microsoft server operating system version 23H2 for x64-based Systems**) to the Windows PE AMD64 boot image found in the **ADK 10.1.25398.1 (updated September 2023)**. Once the latest cumulative update is applied to the Windows PE AMD64 boot image, it can be used with Configuration Manager. Information regarding applying cumulative updates to Windows PE boot images can be found in the article [Customize Windows PE boot images](/windows/deployment/customize-boot-image).
 
     > [!NOTE]
     >
