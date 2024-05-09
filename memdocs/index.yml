@@ -71,7 +71,7 @@ productDirectory:
           text: "See the tutorial: Get started with cloud native Windows endpoints"
 
     # Card
-    - title: Conditional Access and Intune
+    - title: Set up Conditional Access with Intune
       imageSrc: ./media/index/conditional-access.svg
       links:
         - url: ./intune/protect/conditional-access.md
@@ -94,7 +94,7 @@ productDirectory:
       links:
         - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
           text: Read the documentation
-    - title: Windows Autopilot
+    - title: Deploy devices with Windows Autopilot
       imageSrc: ./media/index/windows-autopilot.svg
       links:
         - url: /mem/autopilot/windows-autopilot
@@ -199,6 +199,10 @@ additionalContent:
       - title: Microsoft Intune core capabilities
         summary: Manage and protect cloud-connected endpoints across Windows, Android, macOS, iOS, and Linux operating systems.
         url: ./intune/index.yml
+      # Card
+      - title: Device protection overview
+        summary: Protect data and devices across Windows, Android, macOS, iOS, and Linux operating systems.
+        url: ./intune/protect/device-protect.md
       # Card
       - title: Microsoft Intune Suite
         summary: Provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. 
