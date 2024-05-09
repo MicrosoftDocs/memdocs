@@ -56,15 +56,17 @@ ms.collection:
 
 ## What's in the SDK Repository
 
-* **IntuneMAMSwift.xcframework**: The Intune App SDK framework. It's recommended that you link this framework to your app/extensions to enable Intune client application management. However, some developers might prefer the performance benefits of the static library. See the following:
+* **IntuneMAMSwift.xcframework**: The Intune App SDK dynamic framework. It's recommended that you link this framework to your app/extensions to enable Intune client application management. However, some developers might prefer the performance benefits of the static framework (IntuneMAMStatic.xcframework). See below.
 
-* **libIntuneMAMSwift.xcframework**: The Intune App SDK static library. Developers might choose to link the static library instead of the framework. Because static libraries are embedded directly into the app/extension binary at build time, there are some launch-time performance benefits to using the static library. However, integrating it into your app is a more complicated process. If your app includes any extensions, linking the static library to the app and extensions will result in a larger app bundle size, as the static library will be embedded into each app/extension binary. When using the framework, apps and extensions can share the same Intune SDK binary, resulting in a smaller app size.
+* **IntuneMAMStatic.xcframework**: The Intune App SDK static framework. Developers might choose to link the static framework instead of the dynamic framework. Because the executable code from a static framework is embedded directly into the app/extension binary at build time, there are some launch-time performance benefits to using the static library. However, if your app includes any extensions, linking the static framework to the app and extensions will result in a larger app bundle size, as the executable code will be embedded into each app/extension binary. In contrast, when using the dynamic framework, apps and extensions can share the same Intune SDK binary, resulting in a smaller app size.
 
-* **IntuneMAMSwiftStub.xcframework**: The Intune App SDK Swift Stub framework. This is a required dependency of both IntuneMAMSwift.xcframework and libIntuneMAMSwift.xcframework which apps/extensions must link.
-
-* **IntuneMAMResources.bundle**: A resource bundle that contains resources that the SDK relies on. The resources bundle is required only for apps which integrate the static library (libIntuneMAMSwift.xcframework).
+* **IntuneMAMSwiftStub.xcframework**: The Intune App SDK Swift Stub framework. This is a required dependency of both IntuneMAMSwift.xcframework and IntuneMAMStatic.xcframework which apps/extensions must link.
 
 * **IntuneMAMConfigurator**: A tool used to configure the app or extension's Info.plist with the minimum required changes for Intune management. Depending on the functionality of your app or extension, you might need to make additional manual changes to the Info.plist.
+
+* **libIntuneMAMSwift.xcframework**: The Intune App SDK static library. This variant of the Intune MAM iOS SDK has been deprecated and will be removed in a future update. It's recommended that you do not link the static library, and instead link your app/extensions to either the dynamic famework (IntuneMAMSwift.xcframework) or static framework (IntuneMAMStatic.xcframework) previously mentioned. 
+
+* **IntuneMAMResources.bundle**: A resource bundle that contains resources that the SDK relies on. The resources bundle is required only for apps which integrate the deprecated static library (libIntuneMAMSwift.xcframework), and will be removed in a future update.
 
 ## How the Intune App SDK works
 
@@ -87,9 +89,11 @@ To enable the Intune App SDK, follow these steps:
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-framework.png" alt-text="Intune App SDK iOS Framework: Xcode Frameworks, Libraries, and Embedded Content sample":::
 
-   **Option 2 - Static Library**:  Link `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
+   **Option 2 - Static Library**:  Link `IntuneMAMStatic.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `IntuneMAMStatic.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-static-lib.png" alt-text="Screenshot of the Intune App SDK iOS Static Library: Xcode Frameworks, Libraries, and Embedded Content sample.":::
+
+    For both options, for your main app, select "Embed & Sign" in the "Embed" column for both the xcframeworks added. For any extensions, select "Do Not Embed".
 
     > [!NOTE]
     > Currently, if you run the SDK static lib on iOS 15 simulator, it can cause a crash since AppleArchive does not exist.
