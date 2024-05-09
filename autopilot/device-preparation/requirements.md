@@ -154,7 +154,7 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 
 Deploying proxy settings for Windows Autopilot device preparation should be configured on the proxy server itself. Implementing proxy settings via Intune policy isn't fully supported as it might cause issues and unexpected behavior with privileged access deployments.
 
-## [:::image type="icon" source="../images/icons/license.svg"::: **Licensing**](#tab/licensing)
+## [:::image type="icon" source="../images/icons/license-17.svg"::: **Licensing**](#tab/licensing)
 
 ### Licensing requirements
 
