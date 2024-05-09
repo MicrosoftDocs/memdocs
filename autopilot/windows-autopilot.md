@@ -10,7 +10,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 09/13/2023
 ms.topic: article
-ms.collection: 
+ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
@@ -19,7 +19,7 @@ ms.collection:
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
-  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>  
+  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
 # Overview of Windows Autopilot
@@ -37,6 +37,10 @@ Windows Autopilot simplifies the Windows device lifecycle, for both IT and end u
 See the following video:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4C7G9?autoplay=false]
+
+> [!NOTE]
+>
+> This article is for **Windows Autopilot**. For **Windows Autopilot device preparation**, see [Overview of Windows Autopilot device preparation](device-preparation/overview.md).
 
 ## Process overview
 

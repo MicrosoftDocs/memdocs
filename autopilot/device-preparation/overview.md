@@ -29,6 +29,8 @@ This article explores the capabilities of the Windows Autopilot device preparati
 - Reducing the time IT spends on deploying devices.
 - Reducing the infrastructure required to maintain the devices.
 - Maximizing ease of use for all types of end users.
+- Improved troubleshooting.
+- Real-time detailed deployment reporting.
 
 > [!NOTE]
 >
@@ -41,7 +43,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 
 ## Process overview
 
-When new Windows devices are initially deployed, Windows Autopilot Preparation uses the OEM-optimized version of Windows client. The OEM-optimized version of Windows client is preinstalled on the device, so custom images and drivers don't need to be maintained for every device model. Instead of re-imaging the device, with Windows Autopilot device preparation, the existing Windows installation can be transformed into a "business-ready" state that can:
+When new Windows devices are initially deployed, Windows Autopilot device preparation uses the OEM-optimized version of Windows client. The OEM-optimized version of Windows client is preinstalled on the device, so custom images and drivers don't need to be maintained for every device model. Instead of re-imaging the device, with Windows Autopilot device preparation, the existing Windows installation can be transformed into a "business-ready" state that can:
 
 - Configure apps and policies for a security group.
 - Select apps and scripts to be installed during OOBE (Out-of-Box Experience).
@@ -72,7 +74,7 @@ Features new in Windows Autopilot device preparation include:
 
 ## Key features and capabilities
 
-The key features of Windows Autopilot Preparation include:
+The key features of Windows Autopilot device preparation include:
 
 - Enrollment time grouping.
 - Faster and more reliable setup.
@@ -123,7 +125,7 @@ The key to Windows Autopilot device preparation is Enrollment Time Grouping. It 
 
 ## Tutorial
 
-For tutorials with detailed instructions on configuring Windows Autopilot device preparation, see the [Windows Autopilot device preparation tutorials](/tutorial/autopilot-device-preparation-scenarios.md).
+For tutorials with detailed instructions on configuring Windows Autopilot device preparation, see the [Windows Autopilot device preparation tutorials](tutorial/scenarios.md).
 
 ## Related content
 
