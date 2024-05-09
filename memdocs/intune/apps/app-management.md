@@ -29,7 +29,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
-- AIreviewed
+- AI-Assisted
 - FocusArea_Apps_AppManagement
 ---
 

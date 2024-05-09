@@ -2,17 +2,18 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 03/28/2023
+ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: troubleshooting
-author: banreet
-ms.author: banreetkaur
-manager: sunitashaw
+ms.topic: conceptual
+author: PalikaSingh
+ms.author: palsi
+manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-
+ms.reviewer: mstewart,aaroncz 
 ---
+
 
 # Release notes for Configuration Manager
 
@@ -26,11 +27,10 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2403](../../../plan-design/changes/whats-new-in-version-2403.md)
 - [What's new in version 2309](../../../plan-design/changes/whats-new-in-version-2309.md)
 - [What's new in version 2303](../../../plan-design/changes/whats-new-in-version-2303.md)
 - [What's new in version 2211](../../../plan-design/changes/whats-new-in-version-2211.md)
-- [What's new in version 2207](../../../plan-design/changes/whats-new-in-version-2207.md)
-- [What's new in version 2203](../../../plan-design/changes/whats-new-in-version-2203.md)
 
 
 > [!TIP]
@@ -159,7 +159,7 @@ GO
  ```log
     The SELECT permission was denied on the object 'vSMS_DefaultBoundaryGroup', database 'CM_xxx', schema 'dbo'.
  ```
- To workaround the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
+ To work around the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
 
 ```sql
     GRANT SELECT ON vSMS_DefaultBoundaryGroup To smsdbrole_MP

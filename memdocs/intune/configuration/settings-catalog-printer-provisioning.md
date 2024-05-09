@@ -7,11 +7,12 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/06/2023
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
+
 # optional metadata
 
 #ROBOTS:
@@ -82,7 +83,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 This policy includes your printer information. When you assign the policy, the printers are automatically installed. Then, on their devices, users select a printer that you added.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -104,7 +105,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 8. Configure the settings:
 
-    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer will automatically install. Select **Uninstall** to uninstall a printer.
+    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer will automatically install.
     - **Cloud Device ID**: Enter the printer ID. This ID is created when the printer is registered in Microsoft Entra ID using the Universal Print service. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared ID**: Enter the Shared ID of the printer. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared Name**: Enter the Shared Name of the printer. To get the name, use the [Universal Print portal](/universal-print/portal/navigate-up).
@@ -165,7 +166,7 @@ If the [common issues](#common-issues) (in this article) don't resolve your issu
 
 For more information and specific steps, go to [Universal Print troubleshooting guide - Use PrintCollect, Fiddler, and UPPrinterInstaller](/universal-print/fundamentals/universal-print-troubleshooting-support-howto#use-printcollect-fiddler-and-upprinterinstaller).
 
-## Learn more
+## Related articles
 
 - [What is Universal Print](/universal-print/fundamentals/universal-print-whatis)
 - [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)

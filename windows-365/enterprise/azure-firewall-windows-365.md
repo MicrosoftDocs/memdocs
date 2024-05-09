@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -109,6 +109,12 @@ Azure Firewall doesn’t currently handle nonstandard ports in an FQDN tag. Wind
 | UDP connectivity via TURN | IP | 20.202.0.0/16 | UDP | 3478 | Not recommended | Required |
 | TURN connectivity | IP | 20.202.0.0/16 | TCP | 443 | Not recommended | Required |
 | Registration | FQDN | hm-iot-in-4-prod-prna01.azure-devices.net | TCP | 443, 5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+
+## Partner security solution options
+
+Other ways to help protect your Windows 365 environment are partner security solution options that provide automated rulesets to access required endpoints for the Windows 365 service. Such options include:
+
+- Check Point Software Technologies [Updatable Objects](https://support.checkpoint.com/results/sk/sk131852)
 
 <!-- ########################## -->
 ## Next steps
