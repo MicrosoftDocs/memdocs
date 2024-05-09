@@ -32,7 +32,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 
 > [!NOTE]
 >
-> This article is for **Windows Autopilot device preparation**. For **Windows Autopilot**, see [Overview of Windows Autopilot][../windows-autopilot.md]
+> This article is for **Windows Autopilot device preparation**. For **Windows Autopilot**, see [Overview of Windows Autopilot](../windows-autopilot.md).
 
 ## Requirements
 
@@ -127,7 +127,7 @@ For tutorials with detailed instructions on configuring Windows Autopilot device
 
 ## Related content
 
-- [Windows Autopilot device preparation FAQs](device-preparation-faq.yaml).
+- [Windows Autopilot device preparation FAQs](faq.yml).
 - [Windows Autopilot device preparation tutorial](tutorial/scenarios.md).
 - [Windows Autopilot device preparation requirements](requirements.md).
 - [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
