@@ -198,7 +198,7 @@ additionalContent:
       # Card
       - title: Microsoft Intune core capabilities
         summary: Manage and protect cloud-connected endpoints across Windows, Android, macOS, iOS, and Linux operating systems.
-        url: ./intune/index
+        url: ./intune/index.yml
       # Card
       - title: Device protection overview
         summary: Protect data and devices across Windows, Android, macOS, iOS, and Linux operating systems.
