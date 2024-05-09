@@ -478,149 +478,146 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 ## Firewall
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Certificate revocation list verification**  
+  Baseline default: *None*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalcrlcheck)
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Disable Stateful Ftp**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobaldisablestatefulftp)
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Enable Domain Network Firewall**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmodeipsecsecuredpacketexemption)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Stealth Mode**  
+  Baseline default: *False*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmode)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Allow Local Ipsec Policy Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalipsecpolicymerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Inbound Notifications**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Global Ports Allow User Pref Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileglobalportsallowuserprefmerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Unicast Responses To Multicast Broadcast**  
+  Baseline default: *False*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableunicastresponsestomulticastbroadcast)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Allow Local Policy Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalpolicymerge)
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Enable Packet Queue**  
+  Baseline default: *Configured*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalenablepacketqueue)
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Enable Private Network Firewall**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Default Inbound Action for Private Profile**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Unicast Responses To Multicast Broadcast**  
+  Baseline default: *False*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableunicastresponsestomulticastbroadcast)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Stealth Mode**  
+  Baseline default: *False*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmode)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Global Ports Allow User Pref Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileglobalportsallowuserprefmerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Allow Local Ipsec Policy Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalipsecpolicymerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmodeipsecsecuredpacketexemption)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Allow Local Policy Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalpolicymerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Default Outbound Action**  
+  Baseline default: *Allow*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Auth Apps Allow User Pref Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileauthappsallowuserprefmerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Inbound Notifications**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Enable Public Network Firewall**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Stealth Mode**  
+  Baseline default: *False*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmode)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Default Outbound Action**  
+  Baseline default: *Allow*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Inbound Notifications**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmodeipsecsecuredpacketexemption)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Default Inbound Action for Public Profile**  
+  Baseline default: *Block*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Global Ports Allow User Pref Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileglobalportsallowuserprefmerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Allow Local Policy Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Allow Local Ipsec Policy Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Auth Apps Allow User Pref Merge**  
+  Baseline default: *True*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileauthappsallowuserprefmerge)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+  - **Disable Unicast Responses To Multicast Broadcast**  
+  Baseline default: *False*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableunicastresponsestomulticastbroadcast)
 
-  - ****  
-  Baseline default: **  
-  [Learn more]()
+- **Preshared Key Encoding**  
+  Baseline default: *UTF8*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalpresharedkeyencoding)
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
-
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Security association idle time**  
+  Baseline default: *Configured*  
+  Value: *300*  
+  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalsaidletime)
 
 
 ## Microsoft Edge
