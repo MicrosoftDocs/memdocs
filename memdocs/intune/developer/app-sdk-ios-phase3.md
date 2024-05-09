@@ -163,7 +163,7 @@ To enable the Intune App SDK, follow these steps:
    |- o |  (Optional) `<Path to the output plist>` |
 
    If the '-o' parameter isn't specified, the input file will be modified in-place. The tool is idempotent, and should be rerun whenever changes to the app's Info.plist or entitlements have been made. You should also download and run the latest version of the tool when updating the Intune SDK, in case Info.plist config requirements have changed in the latest release.
-This section contains pending changes to our [public integration guide](https://learn.microsoft.com/intune/app-sdk-ios). 
+This section contains pending changes to our [public integration guide](app-sdk-ios-phase1.md). 
 
 #### Xcode Build Settings
 The app should have both "Strip Swift Symbols"(STRIP_SWIFT_SYMBOLS) and "Enable Bitcode"(ENABLE_BITCODE) set to NO.
