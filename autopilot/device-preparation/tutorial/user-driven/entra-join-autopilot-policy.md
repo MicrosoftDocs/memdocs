@@ -55,59 +55,14 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 8. In the **Basics** page:
 
    1. In the **Name** text box, enter a name for the Windows Autopilot device preparation policy.
+
    2. In the **Description** text box, if desired, enter a description for the Windows Autopilot device preparation policy.
+
    3. Once a name and description have been entered, select the **Next** button.
 
 9. In the **Device group** page, select the **Search by group name..** box, and then either select or search for the device group created in [Step 3: Create a device group](entra-join-device-group.md). Make sure to select the device group created in [Step 3: Create a device group](entra-join-device-group.md) and not the user group created in [Step 4: Create a user group](entra-join-user-group.md). Once the correct device group has been selected, select the **Next** button.
 
-10. In the **Configuration settings** page:
-
-    1. Expand the **Out-of-box experience settings** section by selecting it.
-
-       1. Next to **Minutes allowed before showing installation error**, enter the number of minutes allowed before the installation fails and shows an error. The acceptable value is an integer between 15 and 720.
-
-       2. For **Custom error message**, enter a message to display to the end-user if a failure or error occurs.
-
-       3. For **Allow users to skip setup after multiple attempts**, select either **Yes** or **No** as desired by toggling the switch.
-
-       4. For **Show link to diagnostics**, select either **Yes** or **No** as desired by toggling the switch. If set to **Yes**, this option will display a link to the end-user allowing them to retrieve diagnostic logs in case of a failure.
-
-    2. Expand the **Apps** section by selecting it:
-
-        The **Apps** section allows selection of up to ten managed applications reference with the deployment. The apps specified here should be the critical apps that should be installed on the device before the end-user can start using the device.
-
-        > [!IMPORTANT]
-        >
-        > The applications selected in this setting should be assigned to the device security group previously specified in the **Device group** page. If applicable, the applications should also be configured to install in the **System** context since it is installed during OOBE when no user is signed in.
-
-       1. Under **Allowed Applications**, select **Add**. The **Select Apps** pane opens.
-       2. In the **Select Apps** pane:
-          1. Scroll through the list of applications or use the **Search** box to search for desired applications.
-          2. Once a desired application is found, select the **Add** button next to the application. The application will be added in the list under **Selected Apps**.
-          3. Once all of the desired applications have been selected, select the **Save** button. All of the selected applications should display under **Allowed Applications**.
-
-    3. Expand the **Deployment settings** section by selecting it:
-
-       1. Next to **Deployment mode**, select **Single user** in the drop down menu.
-       2. Next to **Deployment type**, select **User driven** in the drop down menu.
-       3. Next to **Join type**, select **Azure Ad joined** in the drop down menu.
-       4. Next to **User account type**, select either **Standard User** or **Administrator** as desired by toggling the switch.
-
-    4. Expand the **Scripts** section by selecting it:
-
-        The **Apps** section allows selection of up to 10 PowerShell scripts to install during the deployment. The scripts specified here should be the critical scripts that should run on the device before the end-user can start using the device.
-
-        > [!IMPORTANT]
-        >
-        > The PowerShell scripts selected in this setting should be assigned to the device security group previously specified in the **Device group** page. The PowerShell script should also be configured to run in the **System** context since the scripts runs during OOBE when no user is signed in. The script can be set to run in the **System** context by setting the option **Run this script using the logged on credentials** to **No** in the properties of the script.
-
-       1. Under **Allowed Scripts**, select **Add**. The **Select Scripts** pane opens.
-       2. In the **Select Scripts** pane:
-          1. Scroll through the list of scripts or use the **Search** box to search for desired scripts.
-          2. Once a desired script is found, select the **Add** button next to the script. The script will be added in the list under **Selected Scripts**.
-          3. Once all of the desired scripts have been selected, select the **Save** button. All of the selected scripts should display under **Allowed Scripts**.
-
-    5. Once all of the configuration settings have been configured as desired, select the **Next** button.
+10. In the **Configuration settings** page, configure the various settings as desired and then select the **Next** button. For detailed information on the configurations on this page, see the next section [Configuration settings](#configuration-settings).
 
 11. In the **Scope tags** page, select **Next**.
 
@@ -118,5 +73,69 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 12. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create a device group](entra-join-device-group.md). Once the correct user group has been selected, select the **Next** button.
 
 13. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select the **Save** button to finish creating the Windows Autopilot device preparation policy.
+
+## Configuration settings
+
+The **Configuration settings** page has several configuration options. The following describes each option and what the option should be set to for a Microsoft Entra join Windows Autopilot device preparation deployment:
+
+1. Expand the **Out-of-box experience settings** section by selecting it.
+
+   1. Next to **Minutes allowed before showing installation error**, enter the number of minutes allowed before failing a deployment. The value entered here is for the whole deployment and not for an individual application install or script. The acceptable value is an integer between 15 and 720.
+
+   1. For **Custom error message**, enter a custom message to display to the end-user if the deployment fails.
+
+   1. For **Allow users to skip setup after multiple attempts**, select either **Yes** or **No** as desired by toggling the switch. Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the Desktop.
+
+   1. For **Show link to diagnostics**, select either **Yes** or **No** as desired by toggling the switch. In case of a deployment failure, setting this option to **Yes** will display a link at the deployment failure page allowing the end-user to retrieve diagnostic logs.
+
+2. Expand the **Apps** section by selecting it:
+
+   The **Apps** section allows selection of up to ten managed applications reference with the deployment. The apps specified here should be the critical apps that should be installed on the device before the end-user can start using the device.
+
+   > [!IMPORTANT]
+   >
+   > The applications selected in this setting should be assigned to the device security group previously specified in the **Device group** page. If applicable, the applications should also be configured to install in the **System** context since it is installed during OOBE when no user is signed in.
+
+   1. Under **Allowed Applications**, select **Add**. The **Select Apps** pane opens.
+
+   2. In the **Select Apps** pane:
+
+      1. Scroll through the list of applications or use the **Search** box to search for desired applications.
+
+      2. Once a desired application is found, select the **Add** button next to the application. The application will be added in the list under **Selected Apps**.
+
+      3. Once all of the desired applications have been selected, select the **Save** button.
+
+    All of the selected applications should display under **Allowed Applications**.
+
+3. Expand the **Deployment settings** section by selecting it:
+
+   1. Next to **Deployment mode**, select **Single user** in the drop down menu.
+
+   2. Next to **Deployment type**, select **User driven** in the drop down menu.
+
+   3. Next to **Join type**, select **Microsoft Entra joined** in the drop down menu.
+
+   4. Next to **User account type**, select either **Standard User** or **Administrator** as desired by toggling the switch.
+
+4. Expand the **Scripts** section by selecting it:
+
+    The **Apps** section allows selection of up to 10 PowerShell scripts to install during the deployment. The scripts specified here should be the critical scripts that should run on the device before the end-user can start using the device.
+
+    > [!IMPORTANT]
+    >
+    > The PowerShell scripts selected in this setting should be assigned to the device security group previously specified in the **Device group** page. The PowerShell script should also be configured to run in the **System** context since the scripts runs during OOBE when no user is signed in. The script can be set to run in the **System** context by setting the option **Run this script using the logged on credentials** to **No** in the properties of the script.
+
+   1. Under **Allowed Scripts**, select **Add**. The **Select Scripts** pane opens.
+
+   2. In the **Select Scripts** pane:
+
+      1. Scroll through the list of scripts or use the **Search** box to search for desired scripts.
+
+      2. Once a desired script is found, select the **Add** button next to the script. The script will be added in the list under **Selected Scripts**.
+
+      3. Once all of the desired scripts have been selected, select the **Save** button.
+
+    All of the selected scripts should display under **Allowed Scripts**.
 
 ## More information

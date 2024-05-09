@@ -45,9 +45,6 @@ This article explores the capabilities of the Windows Autopilot device preparati
 
 When new Windows devices are initially deployed, Windows Autopilot device preparation uses the OEM-optimized version of Windows client. The OEM-optimized version of Windows client is preinstalled on the device, so custom images and drivers don't need to be maintained for every device model. Instead of re-imaging the device, with Windows Autopilot device preparation, the existing Windows installation can be transformed into a "business-ready" state that can:
 
-- Configure apps and policies for a security group.
-- Select apps and scripts to be installed during OOBE (Out-of-Box Experience).
-- Assign the Windows Autopilot device preparation policy to users.
 - Deliver Windows Autopilot device preparation configuration during user authentication in OOBE.
 - Automatically add devices to the security group and receive selected apps and scripts assigned to the group.
 
@@ -60,17 +57,10 @@ Windows Autopilot device preparation is an improved profile experience which inc
 - Observable.
 - Reliable.
 
-With theses goals, Windows Autopilot device preparation should provide:
-
-- Simplicity.
-- Consistency and reliability.
-- Improved insights.
-- Improved user friendliness.
-
 Features new in Windows Autopilot device preparation include:
 
-- **Enrollment time grouping** - Device is added to a security group at enrollment time and configuration is delivered immediately. This provides a faster and more reliable setup.
-- **Granular reporting** - Near real-time status of deployments, including applications and scripts details and deployment time. This provides improved troubleshooting.
+- **Utilizing enrollment time grouping in Intune** - Device is added to a security group at enrollment time and configuration is delivered immediately. This provides a faster and more reliable setup.
+- **Out of the box granular reporting** - Out of the box reporting and monitoring with near real-time status of deployments, including applications and scripts details and deployment time. This provides improved troubleshooting.
 
 ## Key features and capabilities
 
