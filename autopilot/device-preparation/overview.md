@@ -1,6 +1,6 @@
 ---
 title: Overview of Windows Autopilot device preparation
-description: Windows Autopilot Preparation is used to set up and pre-configure new devices, getting them ready for productive use.
+description: Windows Autopilot device preparation is used to set up and pre-configure new devices, getting them ready for productive use.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium

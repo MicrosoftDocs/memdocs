@@ -34,3 +34,12 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
 ## Assign applications and scripts to device group
+
+Windows Autopilot device preparation allows deployment of up to ten managed applications and ten PowerShell scripts during the out-of-box (OOBE) experience before the end-user is signed in for the first time at the end of the deployment. The applications specified during the Windows Autopilot device preparation deployment should be the critical applications that should be installed on the device and the critical scripts that should run on the device before the end-user can start using the device.
+
+Any applications installed or scripts that run during a Windows Autopilot device preparation deployment should be configured to install in the **System** context since the applications are installed and the scripts ran during OOBE when no user is signed in.
+
+In order for applications to install and the scripts run successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create a device group](entra-join-device-group.md).
+
+To assign the desired applications and scripts to the device group created for Windows Autopilot device preparation:
+
