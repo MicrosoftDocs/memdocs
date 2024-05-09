@@ -85,25 +85,14 @@ The following diagram provides the Intune App SDK for iOS process flow:
 
 To enable the Intune App SDK, follow these steps:
 
-1. **Option 1 - Framework (recommended)**: Link `IntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to your target: Drag `IntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.
+> [!IMPORTANT]
+> Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) for updates and incorporate into your software development release cycle  to ensure your apps support the latest App Protection Policy settings.
+
+To enable the Intune App SDK, follow these steps:
+
+1. Link either `IntuneMAMSwift.xcframework` or `IntuneMAMStatic.xcframework` to your target: Drag the xcframework bundle  to the **Frameworks, Libraries, and Embedded Content** list of the project target. Repeat this for `IntuneMAMSwiftStub.xcframework`. For your main app, select "Embed & Sign" in the "Embed" column for both the xcframeworks added. For any extensions, select "Do Not Embed".
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-framework.png" alt-text="Intune App SDK iOS Framework: Xcode Frameworks, Libraries, and Embedded Content sample":::
-
-   **Option 2 - Static Library**:  Link `IntuneMAMStatic.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `IntuneMAMStatic.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
-
-    :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-static-lib.png" alt-text="Screenshot of the Intune App SDK iOS Static Library: Xcode Frameworks, Libraries, and Embedded Content sample.":::
-
-    For both options, for your main app, select "Embed & Sign" in the "Embed" column for both the xcframeworks added. For any extensions, select "Do Not Embed".
-
-    > [!NOTE]
-    > Currently, if you run the SDK static lib on iOS 15 simulator, it can cause a crash since AppleArchive does not exist.
-    > This can be fixed by explicitly weak linking `libSwiftAppleArchive` in the main app target by marking it as "optional".
-    >
-    > ![Screenshot of the Intune App SDK iOS Static Library: Weak linking Apple Archive sample.](./media/app-sdk-ios/intune-app-sdk-ios-weak-link-apple-archive.png.png)
-
-     Add the `IntuneMAMResources.bundle` resource bundle to the project by dragging the resource bundle under **Copy Bundle Resources** within **Build Phases**.
-
-     ![Intune App SDK iOS: copy bundle resources](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. Add these iOS frameworks to the project:  
    -  MessageUI.framework  
@@ -174,8 +163,9 @@ To enable the Intune App SDK, follow these steps:
    |- o |  (Optional) `<Path to the output plist>` |
 
    If the '-o' parameter isn't specified, the input file will be modified in-place. The tool is idempotent, and should be rerun whenever changes to the app's Info.plist or entitlements have been made. You should also download and run the latest version of the tool when updating the Intune SDK, in case Info.plist config requirements have changed in the latest release.
+This section contains pending changes to our [public integration guide](https://learn.microsoft.com/intune/app-sdk-ios). 
 
-### Xcode Build Settings
+#### Xcode Build Settings
 The app should have both "Strip Swift Symbols"(STRIP_SWIFT_SYMBOLS) and "Enable Bitcode"(ENABLE_BITCODE) set to NO.
 
 ### Integrating a File Provider extension
