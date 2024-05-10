@@ -1310,7 +1310,7 @@ This step installs the specified applications, or a set of applications defined 
 
 The applications must meet the following criteria:
 
-- The application must have a deployment type of **Windows Installer** or **Script** installer. Windows app package (.appx file) deployment types aren't supported.
+- The application must have a deployment type of **Windows Installer** or **Script** installer. Windows app package (.appx, .appxbundle, .msix, .msixbundle file types) deployment types aren't supported.
 
 - It must run under the Local System account and not the user account.
 
