@@ -119,7 +119,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
     Baseline default: *True*
 
   - **Configure storage of BitLocker recovery information to AD DS:**  
-    Baseline default: *Backup recovery passwords and key packages*  
+    Baseline default: *Backup recovery passwords and key packages*
 
     Value: *Allow 256-bit recovery key*
 
@@ -227,10 +227,10 @@ This baseline is optimized for physical devices and isn't recommended for use on
     Baseline default: *False*
 
 - **Deny write access to removable drives not protected by BitLocker**  
-  Baseline default: *Enabled*
+  Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption)
 
-  - **Do not allow write access to devices configured in another organization**
+  - **Do not allow write access to devices configured in another organization**  
     Baseline default: *False*
 
 ### Windows Components > File Explorer
@@ -641,7 +641,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
   Baseline default: *Enabled*  
 
-::: zone-end
+::: zone-end  
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
 ## Attack Surface Reduction Rules
