@@ -66,7 +66,7 @@ For this example, you'll configure Microsoft Intune mobile device management (MD
  
 3. Select **Microsoft Intune**.   
 4. Configure the MDM and WIP user scope.   
-   1. For **MDM user scope** select **All**. Or you can select **Some** and select **Contoso Testers** as the group. Make sure users aren't members of a group targeted by the MAM user scope.     
+   1. For **MDM user scope** select **All**. Or you can select **Some** and select **Contoso Testers** as the group. Make sure users aren't members of a group targeted by the WIP user scope.     
    2. For **WIP user scope**, select **None**. We're only setting up automatic enrollment for mobile device management. 
 5. Use the default values for the remaining settings on the page.    
 6. Choose **Save**.  
