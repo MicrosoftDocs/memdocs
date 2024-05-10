@@ -33,7 +33,7 @@ ms.collection:
 
 Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy.
 
-You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md) to get more information about your settings and your policies.
+You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md) to get more information about your policies and the settings configured in your policies.
 
 This article shows you how to check the assignment status of existing device configuration policies, make changes, troubleshoot conflicts, and how to use Copilot for some of these features.
 
@@ -49,9 +49,9 @@ All of your policies are shown. You also see the platform, the type of policy, a
 
 ## View details on a policy
 
-After you create your device configuration policy, Intune provides reporting data. These reports show the status of a policy, such as it being successfully assigned to devices, or if the policy shows a conflict.
+After you create your device configuration policy, Intune provides reporting data. These reports show the status of a policy, like it being successfully assigned to devices, or if the policy shows a conflict.
 
-# [By policy](#tab/)
+# [By policy](#tab/policy)
 
 1. In **Devices** > **Configuration** > **Policies** tab, select an existing policy.
 
@@ -99,11 +99,11 @@ After you create your device configuration policy, Intune provides reporting dat
     - **Configuration settings**: See the settings you configured in the policy.
     - **Applicability Rules**: On your Windows devices, go to the [applicability rules](device-profile-create.md#applicability-rules) used in the policy.
 
-# [Copilot](#copilot-devices)
+# [Copilot](#tab/copilot-devices)
 
 1. Go to **Devices** > **Configuration** > **Policies** > select an existing policy.
 
-2. Select **Summarize with Copilot**.
+2. Select **Summarize with Copilot**:
 
     :::image type="content" source="./media/device-profile-monitor/copilot-summarize-policy.png" alt-text="Screenshot that shows you can select Summarize with Copilot on a device configuration policy in Microsoft Intune and Intune admin center.":::
 
@@ -117,7 +117,9 @@ After you create your device configuration policy, Intune provides reporting dat
 
     :::image type="content" source="./media/device-profile-monitor/explore-with-copilot.png" alt-text="Screenshot that shows how to select Explore with Copilot when you select a device in Microsoft Intune and Intune admin center.":::
 
-    In the set of prompts, you can get device-specific information, like the assigned policies and compare this device with another device. For more information on using Copilot to troubleshoot devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+    In the set of prompts, you can get device-specific information, like the assigned policies and compare this device with another device.
+
+    For more information on using Copilot to troubleshoot devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
 ---
 
@@ -140,7 +142,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 ## View conflicts
 
-To help with conflicts, there are features in Intune to help you troubleshoot and fix any discrepancies with the policies. When there's a conflict, you also see all the configuration policies that contain this setting.
+To help with conflicts, there are features in Intune to help you troubleshoot any discrepancies with the policies. When there's a conflict, you also see all the configuration policies that contain this setting.
 
 # [By device](#tab/devices)
 
@@ -156,7 +158,7 @@ Now that you know the conflicting setting, and the policies that include that se
 
 # [Copilot](#tab/copilot-setting)
 
-If you use Copilot in Intune, then you can use Copilot to help troubleshoot conflicts at the setting level.
+You can use Copilot to help troubleshoot conflicts at the setting level.
 
 1. Select **Devices** > **Configuration** > select an existing policy in the list.
 
@@ -164,9 +166,11 @@ If you use Copilot in Intune, then you can use Copilot to help troubleshoot conf
 
     :::image type="content" source="./media/device-profile-monitor/copilot-configuration-settings-expand-category.png" alt-text="Screenshot that shows how to expand a category to see the Copilot tooltip in Microsoft Intune and Intune admin center.":::
 
-3. For each setting, there's a Copilot tooltip. Select the tooltip to get more information about setting. The Copilot prompts can help you understand the effect of the setting, look for potential conflicts, and provide a recommended value.
+3. For each setting, there's a Copilot tooltip:
 
     :::image type="content" source="./media/device-profile-monitor/copilot-tooltip.png" alt-text="Screenshot that shows the Copilot tooltip for a setting in Microsoft Intune and Intune admin center.":::
+
+    Select the tooltip to get more information about setting. The Copilot prompts can help you understand the effect of the setting, look for potential conflicts, and provide a recommended value.
 
 ---
 
