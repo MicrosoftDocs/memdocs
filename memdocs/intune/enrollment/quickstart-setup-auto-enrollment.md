@@ -11,7 +11,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 5/08/2024
+ms.date: 5/10/2024
 
 # optional metadata
 
@@ -48,7 +48,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 - To complete this step, you must:  
   - [Create a user](../fundamentals/quickstart-create-user.md).  
   - [Create a group](../fundamentals/quickstart-create-group.md).
-  - [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.  
+  - [Have Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.  
 
 ## Sign in to the Microsoft Intune admin center
 
@@ -56,19 +56,19 @@ Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?link
 
 ## Set up automatic enrollment  
 
-For this example, you'll configure Microsoft Intune mobile device management (MDM) enrollment settings so that corporate-owned and personal devices automatically enroll in Microsoft Intune. *MDM user scope* enables automatic enrollment for Microsoft Intune device management.  
+For this example, you'll configure Microsoft Intune mobile device management (MDM) enrollment settings so that corporate-owned and personal devices automatically enroll in Microsoft Intune. *MDM user scope* enables automatic enrollment for Microsoft Intune device management. 
 
 1. In the Microsoft Intune admin center, go to **Devices** > **Enrollment**.     
 2. Go to the **Windows** tab. Then select **Automatic Enrollment**.  
 
 > [!IMPORTANT]
->  Automatic MDM enrollment is a premium Microsoft Entra feature and is available for Microsoft Entra ID Premium subscribers. Select **Automatic MDM enrollment is available only for Microsoft Entra ID Premium subscribers** to activate a free trial.  
+>  Automatic MDM enrollment is a premium Microsoft Entra feature available for Microsoft Entra ID Premium subscribers. If you can't see the automatic enrollment settings, select **Automatic MDM enrollment is available only for Microsoft Entra ID Premium subscribers** to activate a free trial.   
  
 3. Select **Microsoft Intune**.   
 4. Configure the MDM and WIP user scope.   
    1. For **MDM user scope** select **All**. Or you can select **Some** and select **Contoso Testers** as the group. Make sure users aren't members of a group targeted by the MAM user scope.     
    2. For **WIP user scope**, select **None**. We're only setting up automatic enrollment for mobile device management. 
-5. Use the default values for the remaining configuration values on the page.    
+5. Use the default values for the remaining settings on the page.    
 6. Choose **Save**.  
 
 >[!IMPORTANT]
