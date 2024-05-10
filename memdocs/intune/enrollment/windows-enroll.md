@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/06/2023
+ms.date: 05/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,9 +40,12 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Microsoft Entra ID. 
+Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Microsoft Entra ID. Enrollment in Intune will occur when:  
 
-Automatic enrollment can be used in the following device management and provisioning scenarios:
+* A Microsoft Entra user adds their work or school account to their personal device.
+* A corporate-owned device joins to your Microsoft Entra ID. 
+
+Automatic enrollment can be used in the following device management and provisioning scenarios:  
 
 * Bring-your-own-device (BYOD), personal devices   
 * Bulk enrollment 
@@ -67,9 +70,8 @@ The Microsoft Intune user-help docs provide conceptual information, tutorials, a
 Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).  
 
 You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).  
-  
 
-### Best practices and troubleshooting   
+## Best practices and troubleshooting   
 
 * Device users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
