@@ -641,7 +641,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
   Baseline default: *Enabled*  
 
-::: zone-end  
+::: zone-end
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
 ## Attack Surface Reduction Rules
@@ -739,10 +739,12 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   - **Network domains**  
     Baseline default: *securitycenter.windows.com*
 
-::: zone-end
+::: zone-end  
+::: zone pivot="atp-december-2020,atp-september-2020,atp-march-2020,atp-april-2020"
 
 ## BitLocker
 
+::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Require storage cards to be encrypted (mobile only)**  
@@ -993,10 +995,12 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   - **Block list**  
     Baseline default: *Not configured by default. Manually add one or more setup class globally unique identifiers.*
 
-::: zone-end
+::: zone-end  
+::: zone pivot="atp-sept-2020,atp-december-2020"
 
 ## DMA Guard
 
+::: zone-end  
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
@@ -1010,7 +1014,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
-::: zone-end
+::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020"
 
 <!-- Endpoint Detection and Response is removed as categories beginning with the September 2020 version -->
@@ -1025,11 +1029,10 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   Baseline default: *Yes*  
   [Learn more](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
-::: zone-end
+::: zone-end  
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## Firewall
-
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 - **Stateful File Transfer Protocol (FTP)**  
   Baseline default: *Disabled*  
@@ -1193,9 +1196,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
     [Learn more](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
 ::: zone-end  
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## Microsoft Defender
 
+::: zone-end  
 ::: zone pivot="atp-december-2020"
 
 - **Turn on real-time protection**  
@@ -1590,11 +1595,10 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   Baseline default: *Yes*  
   [Learn more](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride)
 
-::: zone-end
+::: zone-end  
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
 ## Smart Screen
-
-::: zone pivot="atp-sept-2020,atp-december-2020"
 
 - **Block users from ignoring SmartScreen warnings**  
   Baseline default: *Yes*  
