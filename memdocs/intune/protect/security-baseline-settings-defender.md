@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Settings list for the Microsoft Defender for Endpoint security baseline in Microsoft Intune  
+title: Settings list for the Microsoft Intune security baseline for Microsoft Defender for Endpoint
 titleSuffix: Microsoft Intune
-description: View a list of the settings in the Microsoft Intune security baseline for Microsoft Defender for Endpoint. This list includes the default values for settings as found in the default configuration of the baseline.
+description: View the settings in the Microsoft Intune security baseline for Microsoft Defender for Endpoint and each settings default value.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -40,25 +40,24 @@ zone_pivot_groups: atp-baseline-versions
 
 # List of the settings in the Microsoft Defender for Endpoint security baseline in Intune
 
-This article is a reference for the settings that are available in the different versions of the Microsoft Defender for Endpoint security baseline that you can deploy with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
+This article is a reference for the settings that are available in the different versions of the Microsoft Defender for Endpoint security baseline that you can deploy with Microsoft Intune. Use the tabs to select and view the settings in the most recent baseline version and a few older versions that might still be in use.
 
-For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
+For each setting this reference identifies the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, can also set different defaults.
 
 When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
 
-When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created prior to the availability of a new version:
+When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that are created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
 
-<!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
 ::: zone pivot="mde-24h1"
 **Microsoft Defender for Endpoint baseline version 24H1**  
-::: zone-end
+::: zone-end  
 ::: zone pivot="atp-december-2020"
 **Microsoft Defender for Endpoint baseline for December 2020 - version 6**  
 ::: zone-end  
@@ -72,7 +71,7 @@ To learn more about using security baselines, see [Use security baselines](secur
 **Microsoft Defender for Endpoint baseline for March 2020 - version 3**  
 ::: zone-end
 
-The Microsoft Defender for Endpoint  baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites).
+The Microsoft Defender for Endpoint baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites).
 
 This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can affect remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
@@ -84,7 +83,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Prevent installation of devices using drivers that match these device setup classes**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
 
   - **Also apply to matching devices that are already installed.**  
     Baseline default: *False*  
@@ -111,7 +110,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Choose how BitLocker-protected fixed drives can be recovered**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrecoveryoptions)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrecoveryoptions)
 
   - **Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives**  
     Baseline default: *True*
@@ -135,11 +134,11 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Deny write access to fixed drives not protected by BitLocker**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
 
 - **Enforce drive encryption type on fixed data drives**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesencryptiontype)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesencryptiontype)
 
   - **Select the encryption type: (Device)**  
     Baseline default: *Used Space Only encryption*
@@ -148,15 +147,15 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN.**  
   Baseline default: *Disabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootpinexceptionondecapabledevice)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootpinexceptionondecapabledevice)
 
 - **Allow enhanced PINs for startup**  
   Baseline default: *Disabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenhancedpin)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenhancedpin)
 
 - **Choose how BitLocker-protected operating system drives can be recovered**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrecoveryoptions)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrecoveryoptions)
 
   - **Omit recovery options from the BitLocker setup wizard**  
     Baseline default: *True*
@@ -180,18 +179,18 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Enable use of BitLocker authentication requiring preboot keyboard input on slates**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootinputprotectorsonslates)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootinputprotectorsonslates)
 
 - **Enforce drive encryption type on operating system drive**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesencryptiontype)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesencryptiontype)
 
   - **Select the encryption type: (Device)**  
     Baseline default: *Used Space Only encryption*
 
 - **Require additional authentication at startup**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrequirestartupauthentication)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrequirestartupauthentication)
 
   - **Configure TPM startup key and PIN:**  
     Baseline default: *Do not allow startup key and PIN with TPM*
@@ -212,14 +211,14 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Control use of BitLocker on removable drives**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesconfigurebde)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesconfigurebde)
 
   - **Allow users to apply BitLocker protection on removable data drives (Device)**  
     Baseline default: *True*
 
     - **Enforce drive encryption type on removable data drives**  
       Baseline default: *Enabled*  
-      [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesencryptiontype)
+      [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesencryptiontype)
 
       - **Select the encryption type: (Device)**  
       Baseline default: *Used Space Only encryption*
@@ -229,7 +228,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Deny write access to removable drives not protected by BitLocker**  
   Baseline default: *Enabled*
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption)
 
   - **Do not allow write access to devices configured in another organization**
     Baseline default: *False*
@@ -238,7 +237,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Configure Windows Defender SmartScreen**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen)
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen)
 
   - **Pick one of the following settings: (Device)**  
     Baseline default: *Warn and prevent bypass*
@@ -247,15 +246,15 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
 
 - **Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet (User)**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
 
 - **Prevent managing SmartScreen Filter**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventmanagingsmartscreenfilter)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventmanagingsmartscreenfilter)
 
   - **Select SmartScreen Filter mode**  
     Baseline default: *On*
@@ -264,65 +263,65 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Allow Warning For Other Disk Encryption**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#allowwarningforotherdiskencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#allowwarningforotherdiskencryption)
 
 - **Configure Recovery Password Rotation**  
   Baseline default: *Refresh on for both Azure AD-joined and hybrid-joined devices*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)
 
 - **Require Device Encryption**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#requiredeviceencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#requiredeviceencryption)
 
 ## Defender
 
 - **Allow Archive Scanning**  
   Baseline default: *Allowed. Scans the archive files.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowarchivescanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowarchivescanning)
 
 - **Allow Behavior Monitoring**  
   Baseline default: *Allowed. Turns on real-time behavior monitoring.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowbehaviormonitoring)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowbehaviormonitoring)
 
 - **Allow Cloud Protection**  
   Baseline default: *Allowed. Turns on Cloud Protection.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowcloudprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowcloudprotection)
 
 - **Allow Email Scanning**  
   Baseline default: *Allowed. Turns on email scanning.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowemailscanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowemailscanning)
 
 - **Allow Full Scan Removable Drive Scanning**  
   Baseline default: *Allowed. Scans removable drives.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowfullscanremovabledrivescanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowfullscanremovabledrivescanning)
 
 - **Allow On Access Protection**  
   Baseline default: *Allowed.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowonaccessprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowonaccessprotection)
 
 - **Allow Realtime Monitoring**  
   Baseline default: *Allowed. Turns on and runs the real-time monitoring service.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowrealtimemonitoring)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowrealtimemonitoring)
 
 - **Allow Scanning Network Files**  
   Baseline default: *Allowed. Scans network files.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscanningnetworkfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscanningnetworkfiles)
 
 - **Allow scanning of all downloaded files and attachments**  
   Baseline default: *Allowed.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowioavprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowioavprotection)
 
-- **Allow Script Scannin**  
+- **Allow Script Scanning**  
   Baseline default: *Allowed.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
 
 - **Allow User UI Access**  
   Baseline default: *Allowed. Lets users access UI.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowuseruiaccess)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowuseruiaccess)
 
   - **Block execution of potentially obfuscated scripts**  
   Baseline default: *Off*  
-  [Learn more](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/defender-endpoint/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Win32 API calls from Office macros**  
   Baseline default: *Off*  
@@ -398,275 +397,249 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Check For Signatures Before Running Scan**  
   Baseline default: *Enabled*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#checkforsignaturesbeforerunningscan)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#checkforsignaturesbeforerunningscan)
 
 - **Cloud Block Level**  
   Baseline default: *High*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudblocklevel)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudblocklevel)
 
 - **Cloud Extended Timeout**  
   Baseline default: *Configured*  
   Value: *50*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudextendedtimeout)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudextendedtimeout)
 
 - **Disable Local Admin Merge**  
   Baseline default: *Enable Local Admin Merge*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationdisablelocaladminmerge)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationdisablelocaladminmerge)
 
 - **Enable Network Protection**  
   Baseline default: *Enabled (block mode)*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#enablenetworkprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#enablenetworkprotection)
 
 - **Hide Exclusions From Local Admins**  
   Baseline default: *If you enable this setting, local admins will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocaladmins)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocaladmins)
 
 - **Hide Exclusions From Local Users**  
   Baseline default: *If you enable this setting, local users will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocalusers)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocalusers)
 
 - **Oobe Enable Rtp And Sig Update**  
   Baseline default: *If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationoobeenablertpandsigupdate)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationoobeenablertpandsigupdate)
 
 - **PUA Protection**  
   Baseline default: *PUA Protection on. Detected items are blocked. They will show in history along with other threats.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#puaprotection)
 
 - **Real Time Scan Direction**  
   Baseline default: *Monitor all files (bi-directional).*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#realtimescandirection)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#realtimescandirection)
 
 - **Scan Parameter**  
   Baseline default: *Quick scan*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#scanparameter)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#scanparameter)
 
 - **Schedule Quick Scan Time**  
   Baseline default: *Configured*  
   Value: *120*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulequickscantime)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulequickscantime)
 
 - **Schedule Scan Day**  
   Baseline default: *Every day*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescanday)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescanday)
 
 - **Schedule Scan Time**  
   Baseline default: *Configured*  
   Value: *120*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescantime)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescantime)
 
 - **Signature Update Interval**  
   Baseline default: *Configured*  
   Value: *4*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#signatureupdateinterval)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#signatureupdateinterval)
 
 - **Submit Samples Consent**  
   Baseline default: *Send all samples automatically.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#submitsamplesconsent)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#submitsamplesconsent)
 
 ## Device Guard
 
 - **Credential Guard**  
   Baseline default: *(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
 
 ## Dma Guard
 
 - **Device Enumeration Policy**  
   Baseline default: *Block all (Most restrictive)*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
+  [Learn more](/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
 
 ## Firewall
 
 - **Certificate revocation list verification**  
   Baseline default: *None*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalcrlcheck)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalcrlcheck)
 
 - **Disable Stateful Ftp**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobaldisablestatefulftp)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobaldisablestatefulftp)
 
 - **Enable Domain Network Firewall**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
 
   - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmodeipsecsecuredpacketexemption)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmodeipsecsecuredpacketexemption)
 
   - **Disable Stealth Mode**  
   Baseline default: *False*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmode)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmode)
 
   - **Allow Local Ipsec Policy Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalipsecpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalipsecpolicymerge)
 
   - **Disable Inbound Notifications**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
 
   - **Global Ports Allow User Pref Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileglobalportsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileglobalportsallowuserprefmerge)
 
   - **Disable Unicast Responses To Multicast Broadcast**  
   Baseline default: *False*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableunicastresponsestomulticastbroadcast)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableunicastresponsestomulticastbroadcast)
 
   - **Allow Local Policy Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalpolicymerge)
 
 - **Enable Packet Queue**  
   Baseline default: *Configured*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalenablepacketqueue)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalenablepacketqueue)
 
 - **Enable Private Network Firewall**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
 
   - **Default Inbound Action for Private Profile**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
 
   - **Disable Unicast Responses To Multicast Broadcast**  
   Baseline default: *False*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableunicastresponsestomulticastbroadcast)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableunicastresponsestomulticastbroadcast)
 
   - **Disable Stealth Mode**  
   Baseline default: *False*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmode)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmode)
 
   - **Global Ports Allow User Pref Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileglobalportsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileglobalportsallowuserprefmerge)
 
   - **Allow Local Ipsec Policy Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalipsecpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalipsecpolicymerge)
 
   - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmodeipsecsecuredpacketexemption)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmodeipsecsecuredpacketexemption)
 
   - **Allow Local Policy Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalpolicymerge)
 
   - **Default Outbound Action**  
   Baseline default: *Allow*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
 
   - **Auth Apps Allow User Pref Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileauthappsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileauthappsallowuserprefmerge)
 
   - **Disable Inbound Notifications**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
 
 - **Enable Public Network Firewall**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
 
   - **Disable Stealth Mode**  
   Baseline default: *False*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmode)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmode)
 
   - **Default Outbound Action**  
   Baseline default: *Allow*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
 
   - **Disable Inbound Notifications**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
 
   - **Disable Stealth Mode Ipsec Secured Packet Exemption**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmodeipsecsecuredpacketexemption)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmodeipsecsecuredpacketexemption)
 
   - **Default Inbound Action for Public Profile**  
   Baseline default: *Block*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
 
   - **Global Ports Allow User Pref Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileglobalportsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileglobalportsallowuserprefmerge)
 
   - **Allow Local Policy Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
 
   - **Allow Local Ipsec Policy Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
   - **Auth Apps Allow User Pref Merge**  
   Baseline default: *True*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileauthappsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileauthappsallowuserprefmerge)
 
   - **Disable Unicast Responses To Multicast Broadcast**  
   Baseline default: *False*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableunicastresponsestomulticastbroadcast)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableunicastresponsestomulticastbroadcast)
 
 - **Preshared Key Encoding**  
   Baseline default: *UTF8*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalpresharedkeyencoding)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalpresharedkeyencoding)
 
 - **Security association idle time**  
   Baseline default: *Configured*  
   Value: *300*  
-  [Learn more](https://learn.microsoft.com/en-us/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalsaidletime)
-
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalsaidletime)
 
 ## Microsoft Edge
 
+- **Configure Microsoft Defender SmartScreen**  
+  Baseline default: *Enabled*  
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
+  Baseline default: *Enabled*  
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Enable Microsoft Defender SmartScreen DNS requests**  
+  Baseline default: *Enabled*  
 
-- ****  
-  Baseline default: **  
-  [Learn more]()
+- **Enable new SmartScreen library**  
+  Baseline default: *Enabled*  
 
+- **Force Microsoft Defender SmartScreen checks on downloads from trusted sources**  
+  Baseline default: *Enabled*  
 
+- **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
+  Baseline default: *Enabled*  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
+  Baseline default: *Enabled*  
 
 ::: zone-end
 ::: zone pivot="atp-sept-2020,atp-december-2020"
@@ -770,8 +743,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 ## BitLocker
 
-::: zone pivot="atp-march-2020,atp-april-2020" 
-<!-- GOOD -->
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Require storage cards to be encrypted (mobile only)**  
   Baseline default: *Yes*  
@@ -851,7 +823,6 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   - **Disable BitLocker on devices where TPM is incompatible**  
     Baseline default: *Yes*  
     [Learn more](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)  
-
 
   - **Configure encryption method for Operating System drives**  
     Baseline default: *Not configured*  
@@ -975,7 +946,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
-## Device Guard  
+## Device Guard
 
 - **Turn on credential guard**  
   Baseline default: *Enable with UEFI lock*  
