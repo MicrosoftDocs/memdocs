@@ -55,7 +55,7 @@ Azure monitor's diagnostic settings let you export platform logs and metrics to 
 
 ## Use Graph API and PowerShell to retrieve audit events
 
-To get audit log events for up to seven days for your Windows 365 tenant, follow these steps:
+To get audit log events for your Windows 365 tenant, follow these steps:
 
 ### Install the SDK
 
