@@ -55,7 +55,7 @@ Update settings control what bits a device will download, and when. For more inf
 
 - **Quality update deferral period (days)**  
   **Default**: 0  
-  Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
+  Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)  
 
   Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when it is first offered to a device.
 
@@ -63,7 +63,7 @@ Update settings control what bits a device will download, and when. For more inf
 
 - **Feature update deferral period (days)**  
   **Default**: 0  
-  Windows Update CSP: [Update/DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+  Windows Update CSP: [Update/DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays)  
 
   Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
 
