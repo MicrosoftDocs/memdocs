@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 6 - Assign applications and scripts to device group
-description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 6 - Assign applications and scripts to device group.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and scripts to device group
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and scripts to device group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation User-driven Microsoft Entra join: Assign applications and scripts to device group
+# Windows Autopilot device preparation user-driven Microsoft Entra join: Assign applications and scripts to device group
 
 Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
@@ -30,6 +30,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 > - **Step 5: Assign applications and scripts to device group**
 
 - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
+- Step 7: [Identify device using corporate identifiers (optional)](entra-join-corporate-identifier.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 

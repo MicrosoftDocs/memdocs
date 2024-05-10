@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 6 - Create a user-driven Microsoft Entra join Autopilot policy
-description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 6 - Create a user-driven Microsoft Entra join Autopilot policy.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a user-driven Microsoft Entra join Autopilot policy
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a user-driven Microsoft Entra join Autopilot policy.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation User-driven Microsoft Entra join: Create user-driven Microsoft Entra join Windows Autopilot device preparation policy
+# Windows Autopilot device preparation user-driven Microsoft Entra join: Create user-driven Microsoft Entra join Windows Autopilot device preparation policy
 
 Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
@@ -30,11 +30,13 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 > [!div class="checklist"]
 > - **Step 6: Create Windows Autopilot device preparation policy**
 
+- Step 7: [Identify device using corporate identifiers (optional)](entra-join-corporate-identifier.md)
+
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
 ## Create user-driven Microsoft Entra join Windows Autopilot device preparation policy
 
-The Autopilot policy specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
+The Autopilot policy specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
 To create a user-driven Microsoft Entra join Windows Autopilot device preparation policy, follow these steps:
 

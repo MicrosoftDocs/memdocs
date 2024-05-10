@@ -84,26 +84,31 @@ Windows Autopilot device preparation capabilities include:
 - Simplified and clear OOBE user experience.
 - Detailed deployment report for better admin troubleshooting.
 
-## User experience
+## Improved experiences
 
-One of the improvements of Windows Autopilot device preparation is the user experience:
+## Admin experience
+
+Windows Autopilot device preparation simplifies admin configuration by having a single profile to provision all policies in one location, including deployment and OOBE settings.
+
+### User experience
+
+Windows Autopilot device preparation also improves the user experience in the following ways:
 
 - A simplified view during OOBE where the percentage of progress is displayed.
 - The experience is more consistent.
 - The user is informed when the OOBE setup is complete.
 - When issues arise, logs can be exported with ease.
+- The end-user gets to the desktop faster.
 
 ## Troubleshooting and Reporting
 
-Windows Autopilot device preparation offers near real-time status updates on your deployments. Windows Autopilot device preparation reporting includes detailed application and script information and deployment time, allowing for improved troubleshooting and reporting.
+Windows Autopilot device preparation offers near real-time status updates on deployments. Windows Autopilot device preparation reporting includes detailed application and script information and deployment time, allowing for improved troubleshooting and reporting.
 
-- Deployment report captures status of each deployment:
+Deployment report captures status of each deployment:
 
-  - Easily track which devices went through Autopilot.
-  - Track status and deployment phase in near real-time.
-
+- Easily track which devices went through Autopilot.
+- Track status and deployment phase in near real-time.
 - More details for each deployment:
-
   - Device details.
   - Profile name and version.
   - Deployment status details.
@@ -118,9 +123,17 @@ The key to Windows Autopilot device preparation is Enrollment Time Grouping. It 
 - **Select apps and scripts to get installed during OOBE** - Selected apps and scripts assigned to the group are installed. The device joins the security group.
 - **Intune pre-calculates apps and policies** - User gets to the desktop. Remaining configuration is applied.
 
+## Corporate identifiers for Windows
+
+Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation. This feature is optional for Windows Autopilot device preparation and isn't required for a Windows Autopilot device preparation deployment to work. For more information, see:
+
+- [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
+- [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
+- [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
+
 ## Tutorial
 
-For tutorials with detailed instructions on configuring Windows Autopilot device preparation, see the [Windows Autopilot device preparation tutorials](tutorial/scenarios.md).
+For tutorials with detailed instructions on configuring Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
 
 ## Related content
 
