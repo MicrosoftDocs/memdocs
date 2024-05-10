@@ -1,12 +1,13 @@
 ## Enable Windows automatic enrollment  
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or Intune service administrator](../fundamentals/users-add.md#types-of-administrators).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)    
 1. Go to **Devices** > **Enrollment**.     
 1. Go to the **Windows** tab. Then select **Automatic Enrollment**.  
 
    > [!NOTE]
    >  Automatic MDM enrollment is a premium Microsoft Entra feature available for Microsoft Entra ID Premium subscribers. If you can't see the automatic enrollment settings, select **Automatic MDM enrollment is available only for Microsoft Entra ID Premium subscribers** to activate a free trial.   
 1. Select **Microsoft Intune**.   
-1. Select the **MDM user scope**. This setting enables automatic MDM enrollment for Microsoft Entra users so that you can manage their devices in Microsoft Intune.
+1. Select the **MDM user scope**. This setting enables automatic MDM enrollment for Microsoft Entra users so that you can manage their devices in Intune.  
 
    Your options are:  
    
@@ -15,20 +16,20 @@
    - **All** - Automatic MDM enrollment is enabled for all users. Their devices automatically enroll in Intune when they join or register with Microsoft Entra ID.  
       
       > [!TIP]
-      > If your intent is to enable automatic MDM enrollment for Windows BYOD devices, configure the MDM user scope to **All** or **Some**. Then configure the WIP user scope to **None** or **Some**,  ensuring that users are not members of a group targeted by both user scopes). 
+      > If your intent is to enable automatic MDM enrollment for Windows BYOD devices, configure the MDM user scope to **All** or **Some**. Then configure the WIP user scope to **None** or **Some**,  ensuring that users are not members of both user scopes. 
    
    ![Screenshot shows the Microsoft Entra MDM user scope.](../enrollment/media/windows-enroll/auto-enroll-scope.png)  
 1. Use the Microsoft Intune default values for these URLs:   
-   - **MDM Terms of use URL**
-   - **MDM Discovery URL**
+   - **MDM Terms of use URL**  
+   - **MDM Discovery URL**  
    - **MDM Compliance URL**  
  
-1. For **WIP user scope**, select **None**. If the WIP user scope is set to any other value, make sure the selected users aren't a part of the MDM user scope. 
+1. For **WIP user scope**, select **None**. If the WIP user scope is set to any other value, make sure the selected users aren't a part of the MDM user scope.  
    
    > [!IMPORTANT]
     > If a user is included in both the MDM user scope and WIP user scope: 
     > - The MDM user scope takes precedence if they're on a corporate-owned device. The device automatically enrolls in Microsoft Intune when they set it up for work.  
-    > - The WIP user scope takes precedence if they bring their own device. The device doesn't enroll in Microsoft Intune for device management. Microsoft Purview Information Protection policies are applied if you configured them.  
+    > - The WIP user scope takes precedence if they bring their own device. The device doesn't enroll in Microsoft Intune for device management. Microsoft Purview Information Protection policies are applied if you configured them. 
 
 1. Select **Save**.    
 
