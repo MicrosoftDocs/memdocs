@@ -740,7 +740,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
     Baseline default: *securitycenter.windows.com*
 
 ::: zone-end  
-::: zone pivot="atp-december-2020,atp-september-2020,atp-march-2020,atp-april-2020"
+::: zone pivot="atp-december-2020,atp-sept-2020,atp-march-2020,atp-april-2020"
 
 ## BitLocker
 
