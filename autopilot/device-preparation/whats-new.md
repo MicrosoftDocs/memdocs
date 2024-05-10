@@ -1,23 +1,20 @@
 ---
-title: Windows Autopilot device preparation reporting and monitoring
-description: Reporting and monitoring in Windows Autopilot device preparation.
+title: What's new in Autopilot device preparation
+description: News and resources about the latest updates of Windows Autopilot device preparation.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
 manager: aaroncz
+ms.reviewer: jubaptis
 ms.date: 05/09/2024
-ms.topic: article
 ms.collection:
   - M365-modern-desktop
-  - m365initiative-coredeploy
-  - highpri
-  - tier1
-  - essentials-overview
+  - tier2
+ms.topic: conceptual
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation reporting and monitoring
+# Windows Autopilot device preparation: What's new

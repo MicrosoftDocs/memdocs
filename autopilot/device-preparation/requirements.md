@@ -22,7 +22,7 @@ appliesto:
 ---
 
 
-# Windows Autopilot device preparation requirement
+# Windows Autopilot device preparation requirements
 
 ## [:::image type="icon" source="../images/icons/software-18.svg"::: **Software**](#tab/software)
 
@@ -36,7 +36,7 @@ Windows Autopilot device preparation depends on specific features available in W
 
 #### Windows 11
 
-A [supported version](/windows/release-health/) of Windows 11 General Availability Channel is required.
+Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later is required.
 
 The following editions are supported:
 
