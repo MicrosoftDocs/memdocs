@@ -89,5 +89,9 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 
 You can also use Intune’s bulk device actions to place multiple Cloud PCs under review at the same time. For more information, see [Use bulk device actions]( /mem/intune/remote-actions/bulk-device-actions).
 
+## Management via API
+
+You can use the Graph API to place or remove a Cloud PC from review.  Learn more at [managedDevice: setCloudPcReviewStatus](/graph/api/manageddevice-setcloudpcreviewstatus?view=graph-rest-beta&tabs=http).
+
 ## Next steps
 [Learn more about digital forensics and Cloud PCs](digital-forensics.md).
