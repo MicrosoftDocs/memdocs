@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/30/2024
+ms.date: 05/01/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -286,6 +286,9 @@ For more information on these settings, go to [Content Caching payload settings]
 This setting applies to:
 
 - macOS 10.15 and newer
+
+> [!NOTE]
+> On macOS devices, you can use Platform SSO to enable single sign-on (SSO). For more information, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
 
