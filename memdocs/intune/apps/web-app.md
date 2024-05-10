@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 05/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,9 +66,9 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of this app.
    - **App URL**: Enter the URL of the website that hosts the app that you want to assign.
-      **Note:**
-      
-      **Once you deploy a web link app, the App URL cannot be modified; this is by design.**
+
+        > [!NOTE]
+        > Once you deploy a web link app, the App URL cannot be modified, which is by design.
       
     - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
     - **Full screen**: [iOS/iPadOS only] If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there’s no URL or search bar, and no bookmarks.
