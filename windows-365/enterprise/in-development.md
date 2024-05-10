@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 05/10/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -64,13 +64,29 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 In a future update, you'll be able use the Intune admin center to manage redirections for Android users who access their Cloud PCs using Microsoft Remote Desktop.
 
 <!-- ***********************************************-->
-<!--## Device provisioning-->
+## Device provisioning
+
+### New Cloud PC images aligned with Microsoft 365 apps images<!--48537480-->
+
+In a future update, new Cloud PC optimized images aligned with the Microsoft 365 apps images will be available in the gallery.
+
+### Windows 365 Cloud PC gallery images to pre-install new Microsoft Teams<!--49222964-->
+
+In a future update, gallery images for Windows 365 Cloud PCs won't pre-install Microsoft Teams (classic). Instead, these images will install the new Microsoft Teams. All new devices created from these gallery images will have the new Teams pre-installed. For more information, see [Gallery images](device-images.md#gallery-images).
 
 <!--***********************************************-->
 <!-- ## End user experience -->
 
 <!-- ***********************************************-->
-<!--## Miscellaneous-->
+## Miscellaneous
+
+### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
+
+In a future update, customers that have Modern Microsoft Cloud Agreements will be able to upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
+
+### New Windows 365 Frontline offers for GCC<!--50308895-->
+
+In a future update, new Windows 365 Frontline offers will be available for Government Community Cloud (GCC) customers using the Azure Commercial cloud.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -92,6 +108,10 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 ### FQDN requirement changes<!--46731885-->
 
 In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
+
+### New settings for Windows 365 security baselines<!--49685126-->
+
+New configuration settings will be introduced for the Windows 365 security baseline.
 
 <!-- ***********************************************
 ## Windows 365 app-->
