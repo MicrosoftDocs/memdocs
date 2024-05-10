@@ -26,6 +26,10 @@ The following table summarizes the scenarios that are available in Windows Autop
 | --- | --- | --- |
 | **Windows Autopilot device preparation user-driven mode** | Device for a single user | User runs deployment |
 
+> [!NOTE]
+>
+> This tutorial is for **Windows Autopilot device preparation**. For a **Windows Autopilot** tutorial, see [Windows Autopilot scenarios](../../tutorial/autopilot-scenarios.md).
+
 ## Next steps: Scenario walkthroughs
 
 The following list contains links to Windows Autopilot device preparation scenario walkthroughs. The walkthroughs contain step by step instructions on how to configure each of the Windows Autopilot device preparation scenarios:
