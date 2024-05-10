@@ -27,7 +27,7 @@ Before beginning, refer to the [How to: Plan your Microsoft Entra join implement
 
 ## Windows Autopilot user-driven Microsoft Entra join overview
 
-Windows Autopilot device preparation user-driven Microsoft Entra join is a Windows Autopilot device preparation solution that automates the configuration of Windows on a new device delivered directly from an OEM or reseller to the end-user without the need for IT intervention. Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+Windows Autopilot device preparation user-driven Microsoft Entra join is a solution that automates the configuration of Windows on a new device without the need for IT intervention. Normally the device is delivered directly from an OEM or reseller to the end-user  Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
@@ -38,10 +38,10 @@ Windows Autopilot device preparation user-driven deployments can perform the fol
 
 - Joins the device to Microsoft Entra ID.
 - Enrolls the device in Intune.
-- Installs critical applications.
-- Runs critical scripts.
+- Installs up to 10 critical applications.
+- Runs up to 10 critical PowerShell scripts.
 
-Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop. Additional applications and scripts deployed to the device but not directly specified in the Windows Autopilot device preparation policy run after the end-user signs in and is at the Desktop.
+Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
 
 ## Workflow
 

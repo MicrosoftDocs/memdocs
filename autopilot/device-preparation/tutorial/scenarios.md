@@ -40,3 +40,4 @@ The following list contains links to Windows Autopilot device preparation scenar
 ## Related content
 
 - [Windows Autopilot device preparation overview](../overview.md).
+- [Windows Autopilot scenarios](../../tutorial/autopilot-scenarios.md).

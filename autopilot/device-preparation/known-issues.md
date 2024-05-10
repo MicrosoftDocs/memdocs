@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot device preparation known issues
-description: Inform yourself about known issues that may occur during a Windows Autopilot device preparation deployment.
+description: Inform yourself about known issues that might occur during a Windows Autopilot device preparation deployment.
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium

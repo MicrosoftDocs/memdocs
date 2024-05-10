@@ -44,7 +44,7 @@ Device groups are a collection of devices organized into a Microsoft Entra group
 - **Dynamic groups** - Devices are automatically added to the group based on rules.
 - **Assigned groups** - Devices are manually added to the group and are static.
 
-Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is the device group where devices are added to automatically during the Windows Autopilot device preparation deployment. In the case of the device group specified in the Windows Autopilot device preparation policy, the device group needs to be an assigned security group.
+Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is the device group where devices are added automatically during the Windows Autopilot device preparation deployment. The device group specified in the Windows Autopilot device preparation policy needs to be an assigned security group.
 
 To create an assigned security device group for use with Windows Autopilot device preparation, follow these steps:
 
