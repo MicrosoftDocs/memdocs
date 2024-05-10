@@ -146,4 +146,8 @@ In the **Configuration settings** page:
 
     All of the selected scripts should display under **Allowed Scripts**.
 
+> [!IMPORTANT]
+>
+> Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile will take precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment will run instead of the Windows Autopilot device preparation deployment.
+
 ## More information

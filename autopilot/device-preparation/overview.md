@@ -39,7 +39,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 ## Requirements
 
 - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
-- Microsoft Entra ID - Only Microsoft Entra is supported.
+- Microsoft Entra ID - Only Microsoft Entra join is supported.
 - Device shouldn't be registered or added as a Windows Autopilot device - If the device is registered or added as Windows Autopilot device, the Windows Autopilot profile will take precedence over the Windows Autopilot device preparation policy.
 
 For additional detailed requirements, please see [Windows Autopilot device preparation requirements](requirements.md).
