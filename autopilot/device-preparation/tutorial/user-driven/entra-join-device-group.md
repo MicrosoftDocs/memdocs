@@ -25,12 +25,13 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
 
 > [!div class="checklist"]
+>
 > - **Step 3: Create a device group**
 
 - Step 4: [Create a user group](entra-join-user-group.md)
 - Step 5: [Assign applications and scripts to device group](entra-join-assign-apps-scripts.md)
 - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-- Step 7: [Identify device using corporate identifiers (optional)](entra-join-corporate-identifier.md)
+- Step 7: [Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 

@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a user-driven Microsoft Entra join Autopilot policy
-description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a user-driven Microsoft Entra join Autopilot policy.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 7 of 7 - Add Windows corporate identifier to device (optional)
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 7 of 7 - Add optional Windows corporate identifier to device.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation user-driven Microsoft Entra join: Identify device using corporate identifiers (optional)
+# Windows Autopilot device preparation user-driven Microsoft Entra join: Add Windows corporate identifier to device (optional)
 
 Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
@@ -30,6 +30,6 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 > [!div class="checklist"]
 >
-> - **Step 7: Identify device using corporate identifiers (optional)**
+> - **Step 7: Add Windows corporate identifier to device (optional)**
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
