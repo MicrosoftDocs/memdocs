@@ -36,6 +36,8 @@ items:
               href: device-preparation/tutorial/user-driven/entra-join-assign-apps-scripts.md
             - name: Step 6 - Create Windows Autopilot device preparation policy
               href: device-preparation/tutorial/user-driven/entra-join-autopilot-policy.md
+            - name: Step 7 - Add Windows corporate identifier to device (optional)
+              href: device-preparation/tutorial/user-driven/entra-join-corporate-identifier.md
 
 - name: Windows Autopilot
   expanded: true
