@@ -41,7 +41,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 - Windows 10
 - Windows 11
-- Windows Server 2012 R2 or later
+- Windows Server 2012 R2 or later *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 - Any supported version of macOS
 
 > [!IMPORTANT]
