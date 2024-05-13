@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 05/13/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,7 +43,9 @@ Applies to:
 
 - Linux
 - macOS
-- Windows 10/11
+- Windows 10
+- Windows 11
+- Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
 ## Prerequisites for antivirus policy
 
