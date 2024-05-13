@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -125,6 +124,7 @@ You can use filters for some common app policies on the following platforms. For
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - For **managed devices**, you can use filters for app configuration policies on the following platforms:
 
@@ -137,6 +137,7 @@ You can use filters for some common app policies on the following platforms. For
 
   - Android
   - iOS/iPadOS
+  - Windows
 
 - For **managed devices**, filters aren't supported for app protection policies. For other features not supported on managed devices, go to [not supported](#not-supported-on-managed-devices) (in this article).
 

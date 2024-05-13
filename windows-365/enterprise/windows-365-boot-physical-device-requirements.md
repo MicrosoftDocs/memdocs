@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/29/2024
+ms.date: 04/03/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -36,7 +35,11 @@ Follow these steps and requirements to set up shared physical devices for Window
 
 ## Operating system requirements
 
-Each physical device (and Cloud PC) must be running Windows 11 Enterprise or Professional, version 22H2 build 22621.3235, or 23H2 build 22631.3235, or later.
+Each physical device (and Cloud PC) must be running one of the following, version 22621.2361 or later:
+
+- Windows 11 Enterprise
+- Windows 11 Professional
+- Windows IoT Enterprise
 
 ## Configure the physical device
 

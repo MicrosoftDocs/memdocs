@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Set up integration of Better Mobile with Intune | Microsoft Docs
-description: Set up the Better Mobile connector as part of integrating the Better Mobile Threat Defense solution with Microsoft Intune.
+title: Set up Better Mobile integration with Intune
+description: How to set  up the Better Mobile solution with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata

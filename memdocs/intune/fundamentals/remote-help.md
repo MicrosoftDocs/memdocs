@@ -6,12 +6,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/21/2023
+ms.date: 04/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -49,15 +48,16 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 ## Remote Help capabilities and requirements
 
 The Remote Help app supports the following capabilities in general across the supported platforms.
+
 > [!NOTE]
 > To know more about specific capabilities and requirements based on the platform that you're using, go to:
 >  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
 >  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
->  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities-and-requirements-on-macos)
+>  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities)
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
-- **Use Remote Help with unenrolled devices**: Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
+- **Use Remote Help with unenrolled devices**: Remote Help is supported on enrolled devices that also need to be Entra registered devices. This setting is disabled by default. To allow Remote Help on devices that aren't enrolled in Intune, you must turn on this setting.
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
@@ -73,25 +73,31 @@ The Remote Help app supports the following capabilities in general across the su
 
 ## Prerequisites
 
-The following general prerequisites apply to Remote Help.
+General prerequisites that apply to Remote Help:
 
-- [Intune subscription](../fundamentals/licenses.md)
-- [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
-- [Supported platforms and devices](#supported-platforms-and-devices)
+  - [Intune subscription](../fundamentals/licenses.md)
+  - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
+  - [Supported platforms and devices](#supported-platforms-and-devices)
 
-> [!NOTE]
-> For specific prerequisites based on the platform that you're using, go to:
->
-> - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
-> - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
-> - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#prerequisites-for-remote-help-on-macos)
+For specific prerequisites based on the platform that you're using, go to:
 
-> [!NOTE]
-> Remote Help has the following limitations:  
->
-> - Remote Help is not supported on GCC, GCC High or DoD Tenants.
-> - You cannot establish a Remote Help session from one tenant to a different tenant.
-> - May not be available in all markets or localizations.
+- [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
+- [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
+- [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-requirements)
+
+Limitations:  
+
+- Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
+
+  - Windows 10/11
+  - Windows 10/11 on ARM64 devices
+  - Windows 365
+  - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
+
+    Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
+
+  - You cannot establish a Remote Help session from one tenant to a different tenant.
+  - Remote Help might not be available in all markets or localizations.
 
 ## Supported platforms and devices
 
@@ -102,7 +108,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
-- macOS 11, 12, 13 and 14
+- macOS 12, 13 and 14
 
 ## Data and privacy
 
@@ -144,7 +150,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 > When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours).
 > When you try to create a Remote Help session you may continue to see messages indicating that Remote Help isn't enabled for the tenant even if you enabled Remote Help in the tenant after activation.
 
-### Task 2:  Configure permissions for Remote Help
+### Task 2: Configure permissions for Remote Help
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
@@ -204,7 +210,7 @@ You can monitor the use of Remote Help from within the Microsoft Intune admin ce
    - The type of control session.
 
 > [!NOTE]
-> The Recipient ID and Recipient name display “--” for Android Enterprise Dedicated devices, as these devices do not have user affinity.
+> The Recipient ID and Recipient name display "--" for Android Enterprise Dedicated devices, as these devices do not have user affinity.
 
 ### Try an interactive demo
 
@@ -212,4 +218,4 @@ The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.
 
 ## Next steps
 
-[Get support in Microsoft Intune admin center](../../get-support.md)
+[Get support in Microsoft Intune admin center](../../get-support.md).

@@ -6,7 +6,7 @@ description: Use Microsoft Intune Security Tasks to manage threats and vulnerabi
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/14/2023
+ms.date: 03/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect

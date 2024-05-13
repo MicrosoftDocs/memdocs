@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2022
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -39,8 +38,9 @@ Applies to:
 - Windows 10
 - Windows 11
 
-> [!NOTE]  
-> Beginning on April 5, 2022, the Firewall profiles for the  *Windows 10 and later* platform were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+> [!NOTE]
+>
+> Beginning on April 5, 2022, the Firewall profiles for the *Windows 10 and later* platform were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 >
@@ -65,7 +65,7 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
   - **Not configured** (*default*)
   - **Yes** - Enable the firewall.
   
-  When set to *Yes*, you can configure the following settings.  
+  When set to *Yes*, you can configure the following settings.
 
   - **Block all incoming connections**
 
@@ -96,7 +96,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
 
   - **Not configured** (*default*)
-  - **Allow** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections. 
+  - **Allow** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections.
   - **Disabled** - Stateful FTP is disabled.
 
 - **Number of seconds a security association can be idle before it's deleted**  

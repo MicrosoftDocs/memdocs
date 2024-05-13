@@ -4,6 +4,8 @@ groups:
   title: Security Baselines for Windows 10 and later
   prompt: Choose a version
   pivots:
+    - id: mdm-23h2
+      title: Version 23H2
     - id: mdm-november-2021
       title: November 2021
     - id: mdm-december-2020
@@ -72,3 +74,12 @@ groups:
       title: Generally Available
     - id: mdssc-preview
       title: Opt-in Public Preview
+
+- id: platforms-windows-ios
+  title: Device platform
+  prompt: Choose which platform you are configuring
+  pivots: 
+  - id: windows
+    title: Windows
+  - id: ios
+    title: iOS

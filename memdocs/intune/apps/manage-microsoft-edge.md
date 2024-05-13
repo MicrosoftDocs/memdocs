@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 3fb2f050-ec94-42ab-be05-c3d4101148bb
 
 # optional metadata
@@ -155,7 +154,7 @@ The **Custom** layout is the default one for the new tab page. It shows top site
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
 
 > [!NOTE]
-> **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes affect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
+> **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes effect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
 
 
 An example of turning off the news feeds
@@ -413,7 +412,7 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 |com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled |**true** (default) Use built-in certificate verifier and Microsoft Root Store to verify certificates <br>**false** Use system certificate verifier and system root certificates as the source of public trust to verify certificates |
 
 > [!NOTE]
-> A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](/mem/intune/protect/microsoft-tunnel-mam-android).
+> A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](../protect/microsoft-tunnel-mam-android.md).
 
 #### SSL warning page control
 By default, users can click through warning pages shows when users navigate to sites that have SSL errors. Organizations can manage the behavior.
@@ -434,14 +433,18 @@ If this policy is not configured, the value from the **DefaultPopupsSetting** po
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 ### Block pop-up on specific sites
 If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 ### Default search provider
 By default, Edge uses the default search provider to perform a search when users enter non-URL texts in the address bar. Users can change the search provider list. Organizations can manage the search provider behavior.
@@ -579,20 +582,39 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
+### Control the behavior of the Site Blocked popup
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites，depending on the AllowTransitionOnBlock and OpenInPrivateIfBlocked policy configurations. You can choose preferences between InPrivate and personal account.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account  when it is signed in.<br>**2**: Automatically switch to personal account if it is signed in and InPrivate is simultaneously enabled.<br>**3**:Automatically switch to InPrivate if it is signed in and InPrivate is simultaneously enabled. |
+
+> [!NOTE]
+> AutoTransitionModeOnBlock policy is currently only avaiable to Edge for iOS.
+
+### Control the behavior of opening unmanaged URLs
+This policy is to control the behavior of opening Intune unmanaged URL.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch |**0**: (Default) URLs will be  opened in normal tabs with work accounts. <br> <br> **1**: Microsoft Edge adheres to Intune’s protection policy; the behavior is determined by the **Receive data from other apps** configuration within the Intune protection policy.<br><br>When the value is **All apps**, setting the value to **1** will fall back to behavior for policy value 0. When the value is **None** or **Policy managed apps**, and the personal account is signed-in, URLs will be opened in normal tabs with personal profile. If the personal account isn't signed-in, URLs will be opened in InPrivate. If InPrivate is disabled, the URLs will not be opened.<br><br>**2**: (Android only) Microsoft Edge will check URLAllowlist or URLBlocklist. The allowed URLs will be opened in normal tabs with work accounts. The blocked URLs may be opened in InPrivate or normal tabs with personal accounts, however the functionality depends on how openInPrivateIfBlocked is configured. |
+
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
-|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://[*.]external.filesupload1.com/|https://external.filesupload2/|https://external.filesupload3.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://contoso.com/|http://contoso.com/|https://[*.]contoso.com|[*.]contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls | The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`https://external.filesupload1.com/|http://external.filesupload2.com/|https://[*.]external.filesupload1.com|[*.]filesupload1.com`|
 
 The example to block all websites, including internal websites, from uploading files
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
 
 An example to allow specific websites to upload files
-- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`http://[*.]contoso.com/|[*.]sharepoint.com/`
+- com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://[*.]contoso.com/|[*.]sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 > [!NOTE]
 > For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
@@ -662,7 +684,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled	| DefaultSearchProviderEnabled|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
-|com.microsoft.intune.mam.managedbrowser.Chat | EdgeChat|
+|com.microsoft.intune.mam.managedbrowser.Chat | EdgeCopilotEnabled |
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
 
 ## Deploy app configuration scenarios with Microsoft Intune

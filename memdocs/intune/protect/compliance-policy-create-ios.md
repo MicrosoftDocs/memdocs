@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
 
 # optional metadata
@@ -175,7 +174,13 @@ For details about email profiles, see [configure access to organization email us
   You can restrict apps by adding their bundle IDs to the policy. If a device has the app installed, the device is marked as non-compliant.
 
   - **App name** - Enter a user-friendly name to help you identify the bundle ID.
-  - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider. To find the bundle ID, see [Bundle IDs for native iOS and iPadOS apps](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) at Support.apple.com, or contact the software vendor of the app.
+  - **App Bundle ID** - Enter the unique bundle identifier assigned by the app provider.
+
+    To get the app bundle ID:
+
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+    - For some examples, go to [Bundle IDs for built-in iOS/iPadOS apps](../configuration/bundle-ids-built-in-ios-apps.md).
   
   > [!NOTE]
   > The *Restricted apps* setting applies to un-managed applications that are installed outside of management context.

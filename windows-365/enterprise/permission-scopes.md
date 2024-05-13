@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2023
+ms.date: 03/27/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -32,7 +31,7 @@ ms.collection:
 
 # Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph
 
-The Microsoft Graph API supports Windows 365 as a Beta workload with specific APIs and permission roles. The Microsoft Graph API uses Microsoft Entra ID for authentication and access control. Access to the Windows 365 APIs in Microsoft Graph requires:
+The Microsoft Graph API supports Windows 365 as Beta and V1.0 workloads with specific APIs and permission roles. The Microsoft Graph API uses Microsoft Entra ID for authentication and access control. Access to the Windows 365 APIs in Microsoft Graph requires:
 
 - An application ID with:
   - Permission to call Microsoft Entra ID and the Microsoft Graph APIs.
@@ -46,6 +45,8 @@ This article:
 
 - Shows how to register an application with access to Microsoft Graph API and relevant permission roles.
 - Describes the Windows 365 API permission roles.
+
+For more information about API versions, see [Versioning, support, and breaking change policies for Microsoft Graph](/graph/versioning-and-support). 
 
 ## Register apps to use the Microsoft Graph API
 

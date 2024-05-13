@@ -74,7 +74,6 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 Windows 365 Business will support single sign-on for new and existing Cloud PCs. You'll be able to turn on single sign-on in **Organizational settings**. When turned on, users no longer have to sign in to the operating system.
 
-
 ## Next steps
 
 [Get started with Windows 365 Business](get-started-windows-365-business.md).

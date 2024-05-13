@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 02/23/2024
+ms.date: 03/26/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -107,7 +107,7 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin targets all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first out-of-box (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
+- From the first out-of-box experience (OOBE) screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.
@@ -140,6 +140,14 @@ If the pre-provisioning process fails:
 
 ### User flow
 
+<!-- MAXADO 8850476 -->
+
+> [!IMPORTANT]
+>
+> - In order to make sure tokens are refreshed properly between the Technician flow and the User flow, wait at least 90 minutes after running the Technician flow before running the User flow. This scenario mainly affects lab and testing scenarios when the User flow is run within 90 minutes after the Technician flow completes.
+>
+> - Compliance in Microsoft Entra ID is reset during the User flow. Devices might show as compliant in Microsoft Entra ID after the Technician flow completes, but then show as noncompliant once the User flow starts. Allow enough time after the User flow completes for compliance to reevaluate and update.
+
 If the pre-provisioning process completed successfully and the device was resealed, you can deliver to the end user. The end user completes the normal Windows Autopilot user-driven process following these steps:
 
 - Power on the device.
@@ -158,7 +166,7 @@ If the pre-provisioning process completed successfully and the device was reseal
 
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
-The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This behavior allows the ESP to install other policies that are assigned to the device after the device has completed the technician phase.
+The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This behavior allows the ESP to install other policies that are assigned to the device after the device completes the technician phase.
 
 > [!NOTE]
 >

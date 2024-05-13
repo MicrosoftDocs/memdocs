@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -90,6 +89,9 @@ Alternatively, you can provide employees and students with a URL that opens the 
  `portal.manage.microsoft.com/conditionalaccess/enrollment`   
 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
+
+>[!IMPORTANT]
+> Safari browser is the only supported browser for this type of enrollment, and is needed to download the management profile and complete enrollment. If a user's default browser is anything other than Safari, they will need to copy the enrollment link and paste it into a Safari browser to initiate enrollment. After they complete enrollment, users can return to their preferred browser.  
 
 1. Open Safari and sign in to the Company Portal website with your work or school account using one of the following links:
    *  https://portal.manage.microsoft.com/conditionalaccess/enrollment  
