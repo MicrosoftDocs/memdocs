@@ -216,8 +216,8 @@ SecondaryForegroundColor| String| Specifies the secondary foreground color for t
 SupportsDarkMode| Boolean | Specifies whether the Intune SDK's UI color scheme should observe the system dark mode setting, if no explicit value has been set for BackgroundColor/ForegroundColor/AccentColor | Optional. Defaults to yes. |
 MAMTelemetryDisabled| Boolean| Specifies if the SDK won't send any telemetry data to its back end.| Optional. Defaults to no. |
 MAMTelemetryUsePPE | Boolean | Specifies if MAM SDK will send data to PPE telemetry backend. Use this when testing your apps with Intune policy so that test telemetry data doesn't mix up with customer data. | Optional. Defaults to no. |
-MaxFileProtectionLevel | String | Allows the app to specify the maximum `NSFileProtectionType` it can support. This value will override the policy sent by the service if the level is higher than what the application can support. Possible values: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`. Notice: With the highest file protection level (`NSFileProtectionComplete`), protected files can only be accessed while the device is unlocked. Ten seconds after the device is locked, the app will lose access to protected files.  In some cases, this may cause loss of access to internal components (such as MySQL databases), leading to unexpected behavior. It's recommended that applications that present lock screen UI elements set this value to `NSFileProtectionCompleteUntilFirstUserAuthentication`. | Optional. Defaults to `NSFileProtectionComplete`. |
-OpenInActionExtension | Boolean | Set to YES for Open in Action extensions. See the Sharing Data via UIActivityViewController section for more information. 
+MaxFileProtectionLevel | String | Allows the app to specify the maximum `NSFileProtectionType` it can support. This value will override the policy sent by the service if the level is higher than what the application can support. Possible values: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`. Notice: With the highest file protection level (`NSFileProtectionComplete`), protected files can only be accessed while the device is unlocked. 10 seconds after the device is locked, the app will lose access to protected files. In some cases, this may cause loss of access to internal components (such as MySQL databases), leading to unexpected behavior. It's recommended that applications that present lock screen UI elements set this value to `NSFileProtectionCompleteUntilFirstUserAuthentication`. | Optional. Defaults to `NSFileProtectionComplete`. |
+OpenInActionExtension | Boolean | Set to YES for Open in Action extensions. For more information, see the Sharing Data via UIActivityViewController section.
 WebViewHandledURLSchemes | Array of Strings | Specifies the URL schemes that your app's WebView handles. | Required if your app uses a WebView that handles URLs via links and/or JavaScript. |
 DocumentBrowserFileCachePath | String | If your app uses the [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) to browse through files in various file providers, you can set this path relative to the home directory in the application sandbox so the Intune SDK can drop decrypted managed files into that folder. | Optional. Defaults to the `/Documents/` directory. |
 VerboseLoggingEnabled | Boolean | If set to YES, Intune will log in verbose mode. | Optional. Defaults to NO |
@@ -303,7 +303,7 @@ Before a user is signed out of an app, the app should deregister the user from t
 
 2. App protection policy will be removed.
 
-3. If the app initiates a selective wipe (optional), any corporate data is deleted.
+3. Any corporate data is deleted if the app initiates a selective wipe (optional).
 
 Before the user is signed out, the app should call the following method on the  `IntuneMAMEnrollmentManager` instance:
 
@@ -415,7 +415,7 @@ The return value of this method tells the SDK if the application must handle the
 After you've either configured the build plugin or integrated the command line tool into your build process, validate that it's running successfully:
 
 - Ensure that your build compiles and builds successfully.
-- Launch your compiled app, login with a Microsoft Entra user that isn't targeted with App Protection Policy, and confirm that app functions as expected.
+- Launch your compiled app, log in with a Microsoft Entra user that isn't targeted with App Protection Policy, and confirm that app functions as expected.
 - Logout and repeat this test *with a Microsoft Entra user that is targeted with App Protection Policy* and confirm that app is now managed by Intune and restarted.
 
 At this point in the integration, your app can now receive and enforce App Protection Policy. 
@@ -432,9 +432,9 @@ Execute the following test first to get familiar with the complete end user expe
 4. Install your application.
 5. Log in to your application with your test account that is targeted with App Protection Policy.
 6. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This indicates that the SDK has successfully retrieved policy for this account.
-7. You should be prompted to set an app PIN. Create a PIN.
+7. Create a PIN when you are prompted to set an app PIN. 
 8. Log the managed account out of your application.
-9. If possible without logging in, navigate around your application and confirm your app works as expected.
+9. Navigate around your application and confirm your app works as expected if possible without logging in.
 
 This is a *bare minimum- test to confirm that your app has properly registered the account, registered the authentication callback, and unregistered the account. 
 Execute the following tests to more thoroughly validate how other App Protection Policy settings modify the behavior of your application.
