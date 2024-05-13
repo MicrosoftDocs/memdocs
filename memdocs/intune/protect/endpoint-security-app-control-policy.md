@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 05/13/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -81,7 +81,7 @@ The following devices are supported when enrolled with Intune:
   - AVD devices are supported to use App Control for Business policies
 
 - **Co-managed devices**:
-  - To support [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
+  - To support Application Control for Business Policies on [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
 
 ### Windows Defender App Control for Business
 
@@ -174,6 +174,8 @@ For more information, see [Allow apps installed by a managed installer](/windows
 > This can cause unexpected problems such as applications failing to start, and failing to boot or logon into Windows.
 > To avoid this issue, we recommend removing any RuleCollection defined as **NotConfigured** with an empty rule set from your existing AppLocker policy if it is currently in place.
 
+- Managed Installer can enable stopped or disabled App-Locker Policies (on targeted PCs) enforced from GPO.
+  
 ### Remove the Intune Management Extension as a managed installer
 
 Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
