@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2024
+ms.date: 05/13/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,7 +58,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-## Prerequisites (only applies to Application Control for Business Policies)
+## Prerequisites
 
 ### Devices
 
@@ -81,7 +81,7 @@ The following devices are supported when enrolled with Intune:
   - AVD devices are supported to use App Control for Business policies
 
 - **Co-managed devices**:
-  - To support [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
+  - To support Application Control for Business Policies on [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
 
 ### Windows Defender App Control for Business
 
