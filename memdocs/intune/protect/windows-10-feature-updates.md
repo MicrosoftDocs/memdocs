@@ -85,6 +85,12 @@ To be able to use a cloud-based capability, in addition to a license for Intune,
 - Microsoft 365 Business Premium
 
 Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license is checked and enforced.
+**Gradual Rollout **
+Capabilities supported by client policies on Professional SKU devices won't require a license. That includes basic controls for deploying a specified feature update and when to start making the update available to devices. The Gradual Rollout capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
+
+**Windows 10 (SxS)**
+The Windows 10 (SxS) feature is a cloud-only feature.
+If you’re blocked when creating new policies for capabilities that require WUfB ds and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See Enable subscription activation with an existing EA.
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
