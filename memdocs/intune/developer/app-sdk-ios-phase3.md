@@ -319,7 +319,7 @@ Before the user is signed out, the app should call the following method on the  
 
 This method must be called before the user account's Microsoft Entra tokens are deleted. The SDK needs the user account's Microsoft Entra token(s) to make specific requests to the Intune MAM service on behalf of the user.
 
-If the app will delete the user's corporate data on its own, the `doWipe` flag can be set to false. Otherwise, the app can have the SDK initiate a selective wipe. This will result in a call to the app's selective wipe delegate.
+If the app will delete the user's corporate data on its own, the `doWipe` flag can be set to false. Otherwise, the app can have the SDK initiate a selective wipe. This results in a call to the app's selective wipe delegate.
 
 Example:
 
@@ -369,7 +369,7 @@ These delegate methods return an `IntuneMAMEnrollmentStatus` object that has the
 
 ### Sample code
 
-These are example implementations of the delegate methods:
+The following are example implementations of the delegate methods:
 
 ```objc
 - (void)enrollmentRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
@@ -403,7 +403,7 @@ The return value of this method tells the SDK if the application must handle the
 
 * If true is returned, the application must handle the restart.
 
-* If false is returned, the SDK will restart the application after this method returns. The SDK will immediately show a dialog box that tells the user to restart the application.
+* If false is returned, the SDK will restart the application after this method returns. The SDK immediately shows a dialog box that tells the user to restart the application.
 
 ## Exit Criteria
 
@@ -422,11 +422,11 @@ Execute the following test first to get familiar with the complete end user expe
 
 1. Create an iOS App Protection Policy in the Microsoft Intune admin center. For this test, configure the policy:
     - Under Access Requirements, leave the default settings. Notably, "PIN for Access" should be "Require".
-2. Ensure the App Protection Policy is targeted to your application. You'll likely need to manually add the bundle ID of the application in the policy creation wizard.
+2. Ensure the App Protection Policy is targeted to your application. You might need to manually add the bundle ID of the application in the policy creation wizard.
 3. Assign the App Protection Policy to a user group containing your test account.
 4. Install your application.
 5. Log in to your application with your test account that is targeted with App Protection Policy.
-6. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This screen indicates that the SDK successfully retrieves policy for this account.
+6. Confirm that you're prompted with an Intune managed screen and confirming the prompt restarts the app. This screen indicates that the SDK successfully retrieves policy for this account.
 7. Create a PIN when you are prompted to set an app PIN. 
 8. Log the managed account out of your application.
 9. Navigate around your application and confirm your app works as expected if possible without logging in.
