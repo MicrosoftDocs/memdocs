@@ -301,7 +301,7 @@ As a helper, you can provide remote assistance to their device by providing them
 
 1. At this time, you can request a session with full control of the sharer's device or choose only screen sharing. The sharer can choose to *Allow* or to *Decline* the request.
 
-#### [:::image type="icon" source="../media/icons/intune.svg"::: **Web app**](#tab/web-app)
+#### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web app**](#tab/web-app)
 
 1. Sign in to <a href="https://aka.ms/rhh" target="_blank"><u>https://aka.ms/rhh</u></a>.
 1. Copy and share the 8-digit session code with the sharer that you're trying to help.
