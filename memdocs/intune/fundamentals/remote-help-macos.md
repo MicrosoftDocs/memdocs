@@ -169,7 +169,6 @@ With settings catalog, we can streamline the end users experience for allowing t
 Use the following Graph call to automatically create the settings catalog policy in your tenant without assignments or scope tags.
 
 1. Click *Try it* to open Graph Explorer. 
-
   ```msgraph-interactive
   POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
   Content-Type: application/json
