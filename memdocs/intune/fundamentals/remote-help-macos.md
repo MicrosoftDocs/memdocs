@@ -166,10 +166,7 @@ With settings catalog, we can streamline the end users experience for allowing t
 
 #### [Graph](#tab/graph)
 
-> [!TIP]
-> Use the following Graph call to automatically create the settings catalog policy in your tenant without assignments nor scope tags.
->
-> When using this call, authenticate to your tenant in the Graph Explorer window. If it's the first time using Graph Explorer, you may need to authorize the application to access your tenant or to modify the existing permissions. This graph call requires *DeviceManagementConfiguration.ReadWrite.All* permissions. After you've signed in you can select **modify permissions** and select **Consent**.
+Use the following Graph call to automatically create the settings catalog policy in your tenant without assignments nor scope tags.
 
 - Click *Try it* to open Graph Explorer. 
 
@@ -181,6 +178,8 @@ With settings catalog, we can streamline the end users experience for allowing t
   ```
 - Once Graph Explorer is open, select the 👤 person icon in the top right to sign-in.
 - Click **Run query** to create a policy in your tenant with the name **MS Learn - macOS Remote Help Privacy Preferences Policy Control**.
+    >[!TIP]
+    >If it's the first time using Graph Explorer, you may need to authorize the application to access your tenant or to modify the existing permissions. This graph call requires *DeviceManagementConfiguration.ReadWrite.All* permissions. After you've signed in you can select **modify permissions** and select **Consent**.
 - After it's created, you can edit the policy as required and assign to your devices.
 
 ---
