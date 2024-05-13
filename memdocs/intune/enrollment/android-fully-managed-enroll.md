@@ -65,15 +65,14 @@ To create a new enrollment profile:
 2. Go to **Devices** > **Enrollment**.  
 3. Select the **Android** tab.  
 4. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned, fully managed user devices**. 
-5. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**. 
-6. Select **Create profile**.  
-7. Enter the basics for your profile:  
+5. Select **Create profile**.  
+6. Enter the basics for your profile:  
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
-8. Select **Next** to continue to **Scope tags**.
-9. Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
-10. Select **Next** to continue to **Review + create**.    
-11. Review the summary of your profile, and then select **Create** to finalize it.  
+7. Select **Next** to continue to **Scope tags**.
+8. Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+9. Select **Next** to continue to **Review + create**.    
+10. Review the summary of your profile, and then select **Create** to finalize it.  
 
 To review, make changes, or delete the profile:  
 
