@@ -90,7 +90,7 @@ To enable the Intune App SDK, follow these steps:
 
 To enable the Intune App SDK, follow these steps:
 
-1. Link either `IntuneMAMSwift.xcframework` or `IntuneMAMStatic.xcframework` to your target: Drag the xcframework bundle  to the **Frameworks, Libraries, and Embedded Content** list of the project target. Repeat this for `IntuneMAMSwiftStub.xcframework`. For your main app, select "Embed & Sign" in the "Embed" column for both the xcframeworks added. For any extensions, select "Do Not Embed".
+1. Link either `IntuneMAMSwift.xcframework` or `IntuneMAMStatic.xcframework` to your target: Drag the xcframework bundle to the **Frameworks, Libraries, and Embedded Content** list of the project target. Repeat this for `IntuneMAMSwiftStub.xcframework`. For your main app, select "Embed & Sign" in the "Embed" column for both the xcframeworks added. For any extensions, select "Do Not Embed".
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-framework.png" alt-text="Intune App SDK iOS Framework: Xcode Frameworks, Libraries, and Embedded Content sample":::
          
@@ -163,21 +163,25 @@ To enable the Intune App SDK, follow these steps:
    |- o |  (Optional) `<Path to the output plist>` |
 
    If the '-o' parameter isn't specified, the input file will be modified in-place. The tool is idempotent, and should be rerun whenever changes to the app's Info.plist or entitlements have been made. You should also download and run the latest version of the tool when updating the Intune SDK, in case Info.plist config requirements have changed in the latest release.
-This section contains pending changes to our [public integration guide](app-sdk-ios-phase1.md). 
 
-#### Xcode Build Settings
+### Xcode Build Settings
 The app should have both "Strip Swift Symbols"(STRIP_SWIFT_SYMBOLS) and "Enable Bitcode"(ENABLE_BITCODE) set to NO.
 
-### Integrating a File Provider extension
-File Provider extensions have certain memory requirements that might make integrating the full SDK difficult. To make it easier, there's a static library `libIntuneMAMSwiftFileProvider.xcframework` which is a stripped down version of the SDK specifically for File Provider extensions. Note this is for the non-UI portion of the FileProvider extension. You'll need to integrate the full SDK into the file-provider UI extension. 
+### Integrating a Non-Replicated File Provider extension
+Your app is using a Non-Replicated File Provider if it implements the NSFileProviderExtension protocol. All file providers created before iOS 16.0 are non-replicated.
 
-To integrate the one of these libraries with your File Provider extension, follow the steps for integrating the SDK as a static library as shown above. Make sure to include `ContainingAppBundleId` setting.
+In - startProvidingItemAtURL:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forIdentity API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
 
-If it’s a multi-identity app, the current user identity should be set in the file provider enumerator in `- enumeratorForContainerItemIdentifier:error:` API using `setIdentity:onFileProviderEnumerator:` method of `IntuneMAMFileProtectionManager`.
+In - importDocumentAtURL:toParentItemIdentifier:completionHandler: check whether the file is encrypted using isFileEncrytped: API in IntuneMAMFileProtectionManager. If it's then decrypt it using decryptFile:toCopyPath: API of IntuneMAMFileProtectionManager. In multi-identity apps, also check against the canReceiveSharedFile: API in the destination owner's IntuneMAMPolicy to see if the owner can receive the file.
 
-In `- startProvidingItemAtURL:completionHandler:` check if you should encrypt files using `[[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]`. Use `encryptFile:forIdentity` API in `IntuneMAMFileProtectionManager` for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+### Integrating a Replicated File Provider extension
+Your app is using a Replicated File Provider if it implements the NSFileProviderReplicatedExtension protocol (added in iOS 16.0).
 
-In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check whether the file is encrypted using `isFileEncrytped:` API in `IntuneMAMFileProtectionManager`. If it's then decrypt it using `decryptFile:toCopyPath:` API of `IntuneMAMFileProtectionManager`.
+In - fetchContentsForItemWithIdentifier:version:request:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forIdentity API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+
+In - createItemBasedOnTemplate:fields:contents:options:request:completionHandler: check whether the file is encrypted using isFileEncrypted: API in IntuneMAMFileProtectionManager. If it's then decrypt it using decryptFile:toCopyPath: API of IntuneMAMFileProtectionManager. In multi-identity apps, also check against the canReceiveSharedFile: API in the destination owner's IntuneMAMPolicy to see if the owner can receive the file.
+
+Anywhere that the Replicated File Provider creates and passes an NSFileProviderItem to the system, call the IntuneMAMFileProtectionManager's protectFileProviderItem:forAccountId: API with the item's owner identity. Depending on where the NSFileProviderItem object is created and persisted within your extension, you might need to do this in each of the NSFileProviderReplicatedExtension's protocol methods.
 
 ## Configure settings for the Intune App SDK
 
