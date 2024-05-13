@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune endpoint security disk encryption policy settings | Microsoft Docs
-description: Endpoint security disk encryption policy settings for BitLocker and FileVault in Microsoft Intune 
+title: Intune endpoint security disk encryption policy settings
+description: View the list of settings that are available in Microsoft Intune endpoint security disk encryption policy settings for BitLocker and FileVault.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/31/2023
+ms.date: 05/13/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,8 @@ View the settings you can configure in profiles for *Disk Encryption* policy in 
 Applies to:
 
 - macOS
-- Windows 10/11
+- Windows 10
+- Windows 11
 
 Supported platforms and profiles:
 
@@ -49,10 +50,11 @@ Supported platforms and profiles:
 ### Encryption
 
 **Enable FileVault**  
+
 - **Not configured** (*default*)
 - **Yes** - Enable Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later. FileVault is enabled when the user signs off of the device.
 
-  When set to *Yes*, you can configure additional settings for FileVault.
+  When set to *Yes*, you can configure more settings for FileVault.
 
   - **Recovery key type**
     *Personal key* recovery keys are created for devices. Configure the following settings for the personal key:
