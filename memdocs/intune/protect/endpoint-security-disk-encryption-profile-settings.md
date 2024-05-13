@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Intune endpoint security disk encryption policy settings | Microsoft Docs
-description: Endpoint security disk encryption policy settings for BitLocker and FileVault in Microsoft Intune
+title: Intune endpoint security disk encryption policy settings
+description: View the list of settings that are available in Microsoft Intune endpoint security disk encryption policy settings for BitLocker and FileVault.
 keywords:
 author: brenduns
 ms.author: brenduns
