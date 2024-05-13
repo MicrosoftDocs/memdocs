@@ -138,7 +138,7 @@ To enable the Intune App SDK, follow these steps:
        > [!NOTE]
        > An entitlements file is an XML file that is unique to your mobile application. It is used to specify special permissions and capabilities in your iOS app. If your app did not previously have an entitlements file, enabling keychain sharing (step 3) should have caused Xcode to generate one for your app. Ensure the app's bundle ID is the first entry in the list.
 
-5. Include each protocol that your app passes to `UIApplication canOpenURL` in the `LSApplicationQueriesSchemes` array of your app's Info.plist file. For each protocol listed in this array, a copy of the protocol appended with `-intunemam` also needs to be added to the array. Additionally, `http-intunemam`, `https-intunemam`, `microsoft-edge-http-intunemam`, `microsoft-edge-https-intunemam`,  `smart-ns`,  `zips`,  `lacoonsecurity`,  `wandera`,  `lookoutwork-ase`,  `skycure`,  `betteractiveshield`,  `smsec`, `mvisionmobile`, `scmx` and `intunemam-mtd` should be added to the array. If your app uses the mailto: protocol, `ms-outlook-intunemam` should be added to the array as well. Be sure to save your changes before proceeding to the next step.
+5. Include each protocol that your app passes to `UIApplication canOpenURL` in the `LSApplicationQueriesSchemes` array of your app's Info.plist file. For each protocol listed in this array, a copy of the protocol appended with `-intunemam` also needs to be added to the array. Additionally, `http-intunemam`, `https-intunemam`, `microsoft-edge-http-intunemam`, `microsoft-edge-https-intunemam`,  `smart-ns`,  `zips`,  `lacoonsecurity`,  `wandera`,  `lookoutwork-ase`,  `skycure`,  `betteractiveshield`,  `smsec`, `mvisionmobile`, `scmx`, and `intunemam-mtd` should be added to the array. If your app uses the mailto: protocol, `ms-outlook-intunemam` should be added to the array as well. Be sure to save your changes before proceeding to the next step.
 
    If the app runs out of space in its LSApplicationQueriesSchemes list, then it can remove the "-intunemam" schemes for apps that are known to also implement the Intune MAM SDK. When the app removes  "scheme-intunemam" from the LSApplicationQueriesSchemes list, `canOpenURL()` may return incorrect responses for those schemes. To fix this problem, the app should instead call `[IntuneMAMPolicy isURLAllowed:url isKnownManagedAppScheme:YES]` for that scheme. This call will return `NO` if the policy will block the URL from being opened. If it returns true, then the app can call `canOpenURL()` with an empty identity to determine if the url can be opened. For example:
 
@@ -431,17 +431,17 @@ Execute the following test first to get familiar with the complete end user expe
 3. Assign the App Protection Policy to a user group containing your test account.
 4. Install your application.
 5. Log in to your application with your test account that is targeted with App Protection Policy.
-6. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This indicates that the SDK has successfully retrieved policy for this account.
+6. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This screen indicates that the SDK successfully retrieves policy for this account.
 7. Create a PIN when you are prompted to set an app PIN. 
 8. Log the managed account out of your application.
 9. Navigate around your application and confirm your app works as expected if possible without logging in.
 
-This is a *bare minimum- test to confirm that your app has properly registered the account, registered the authentication callback, and unregistered the account. 
+This list of steps is a *bare minimum- test to confirm that your app properly registers the account, registers the authentication callback, and unregisters the account. 
 Execute the following tests to more thoroughly validate how other App Protection Policy settings modify the behavior of your application.
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, continue to [Stage 4: App participation features].
+After you complete all the [Exit Criteria], continue to [Stage 4: App participation features].
 
 <!-- Stage 3 links -->
 <!-- internal links -->
