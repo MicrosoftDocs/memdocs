@@ -64,6 +64,28 @@ When a device receives a policy for Feature updates:
 > 
 > [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
 
+The basic functionality of creating and targeting a feature update only requires a license for Intune. This includes creating the policy and selecting a feature update to update devices, as well as using the Start Now or specify a start date, as well as reporting.
+
+Additional cloud-based functionality does require an additional license. The cloud-based capabilities requiring the additional license are indicated in the policy creation page and include these and potentially new features:
+
+- gradual rollout (link to the gradual rollout section)
+
+- optional feature updates
+
+- Windows 10 (SxS)  (link to the Windows 10 SxS section)
+
+To be able to use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
+
+- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+
+- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+
+- Windows Virtual Desktop Access E3 or E5
+
+- Microsoft 365 Business Premium
+
+Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license is checked and enforced.
+
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
 - In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
