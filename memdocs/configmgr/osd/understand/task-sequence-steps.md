@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 04/11/2022
+ms.date: 04/30/2024
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz,frankroj
 ms.collection: tier3
 ---
 
@@ -1310,7 +1310,7 @@ This step installs the specified applications, or a set of applications defined 
 
 The applications must meet the following criteria:
 
-- The application must have a deployment type of **Windows Installer** or **Script** installer. Windows app package (.appx file) deployment types aren't supported.
+- The application must have a deployment type of **Windows Installer** or **Script** installer. Windows app package (.appx, .appxbundle, .msix, .msixbundle file types) deployment types aren't supported.
 
 - It must run under the Local System account and not the user account.
 
@@ -1537,6 +1537,9 @@ The following conditions affect the packages installed by the task sequence:
 
 This setting specifies that the step continues if an individual software package installation fails. If you specify this setting, the task sequence continues regardless of any installation errors. If you don't specify this setting, and the installation fails, the step immediately ends.  
 
+#### Retry this step if computer unexpectedly restarts
+
+If one of the package installations unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries. <!--24334765-->
 
 
 ## <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates
@@ -1588,11 +1591,9 @@ Select this option to install all available software updates. First deploy these
 
 #### Evaluate software updates from cached scan results
 
-By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Enable this option when using a task sequence to [capture and build an OS image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md). A large number of software updates is likely in this scenario.
+By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Enable this option when using a task sequence to [capture and build an OS image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md).
 
-Many of these updates have dependencies. For example, install update ABC before update XYZ appears as applicable. When you disable this setting, and deploy the task sequence to many clients, they all connect to the software update point at the same time. This behavior results in performance issues during the process and download of the update catalog.
-
-In most circumstances, use the default setting to use cached scan results.
+Many updates have dependencies. For example, install update ABC before update XYZ appears as applicable. When you disable this setting, and deploy the task sequence to many clients, they all connect to the software update point at the same time. This behavior might result in performance issues during the process and download of the update catalog. If deploying to many clients at once, use the default setting to use cached scan results. If deploying to a small number of clients at once, uncheck this option to ensure all software updates are installed on the client.
 
 The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 60 minutes. For more information, see [Task sequence variables](task-sequence-variables.md#SMSTSSoftwareUpdateScanTimeout).
 
@@ -1602,10 +1603,9 @@ Besides the default options, configure the following additional settings on the 
 
 #### Retry this step if computer unexpectedly restarts
 
-If one of the updates unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries.  
+If one of the updates unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries.
 
-> [!NOTE]  
-> Configure the **SMSTSWaitForSecondReboot** variable to specify how many seconds the task sequence pauses after the computer restarts in this scenario. For more information, see [Task sequence variables](task-sequence-variables.md#SMSTSWaitForSecondReboot).  
+This option only applies to stand-alone task sequences. It doesn't work with OSD task sequences that deploy an OS and utilize the **Setup Windows and ConfigMgr** task. For OSD task sequences that deploy an OS and utilize the **Setup Windows and ConfigMgr** task, use the **SMSTSWaitForSecondReboot** variable instead. For more information, see [Task sequence variables: SMSTSWaitForSecondReboot](task-sequence-variables.md#SMSTSWaitForSecondReboot).  
 
 
 

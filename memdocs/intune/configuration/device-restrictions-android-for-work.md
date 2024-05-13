@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/08/2024
+ms.date: 04/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -280,6 +280,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
+      > [!NOTE]
+      > Not all **Managed Home Screen** settings are available from the device restrictions page. To view all settings available for **Managed Home Screen**, see [Configure the Microsoft Managed Home Screen app](../apps/app-configuration-managed-home-screen-app.md). 
+
       - **Custom app layout**: **Enable** lets you put apps and folders in different places on the Managed Home Screen. When set to **Not configured**, Intune doesn't change or update this setting. By default, the apps and folders you add are shown on the home screen in alphabetical order.
 
         - **Grid size**: Select the size of your home screen. An app or folder takes one place on the grid.
@@ -352,11 +355,11 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >
         > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
-      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings.
+      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. On the updated Managed Home Screen workflow, the **Managed Settings** menu is available from the top bar. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings. On the updated Managed Home Screen workflow, users can select the settings icon to access settings.  
 
       - **Quick access to debug menu**: This setting controls how users access the debug menu. Your options:
 
-        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut. As always, they can continue to select the back button 15 times.
+        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut or Managed Settings menu on the updated Managed Home Screen workflow. As always, they can continue to select the back button 15 times.
         - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
 
         In the debug menu, users can:
@@ -579,18 +582,21 @@ End of comment -->
   - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
   - **Always**: Updates are installed when they're available.
 
-- **Allow access to all apps in Google Play store**: When set to **Allow**:
+- **Allow access to all apps in Google Play store**:
 
-  - Users get access to all apps in the Google Play store.
-  - Users can't use apps that are explicitly targeted with uninstall.
-  - Users can't use apps that are added to a blocklist on the personal profile of corporate-owned devices with a work profile. 
+  - When set to **Allow**:
 
-  For more information on excluding users and groups from specific apps, see [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+    - Users get access to all apps in the Google Play store and any private apps added to your organization's Managed Google Play account.
+    - Make sure you target any app (private or public) with the uninstall intent that shouldn't be findable or apps installed by users from the Managed Google Play Store.
+    - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
+    For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+
+  - When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
   
-  - Only show apps in the Managed Google Play store that are approved, or apps that are required.
-  - Uninstall apps that were installed outside of the Managed Google Play store.
+    - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
+    - Uninstalls apps that were installed outside of the Managed Google Play store.
+    - If you change this setting from **Allow** to **Not configured**, then any app not in the policy is automatically uninstalled from the device.
 
 - The following settings are part of the Google's delegated scope feature:
 

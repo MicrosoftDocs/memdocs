@@ -1,12 +1,13 @@
 ---
 title: include file
 description: include file
-author: miepping
+author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/19/2023
-ms.author: miepping
+ms.date: 04/16/2024
+ms.author: mandia
 ms.custom: include file
+ms.reviewer: miepping
 ---
 
 <!-- This include file is used in the Apple Enterprise SSO deployment guide docs. -->
@@ -25,8 +26,8 @@ You can test single sign-on by opening [Safari in private mode](https://support.
 
 :::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/macos-sso-animated.gif" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
 
-On macOS, when users sign in to a work or school app, they're prompted to opt in or out of SSO. They can select **Don’t ask me again** to opt out of SSO and block future requests.
+On macOS, when users sign in to a work or school app, they're prompted to opt in or out of SSO. They can select **Don't ask me again** to opt out of SSO and block future requests.
 
-Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, go to the Company Portal app menu bar > **Company Portal** > **Settings**. They can select or deselect **Don’t ask me to sign in with single sign-on for this device**.
+Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, go to the Company Portal app menu bar > **Company Portal** > **Settings**. They can select or deselect **Don't ask me to sign in with single sign-on for this device**.
 
-:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/macos-sso-dont-ask.png" alt-text="Don’t ask me to sign in with single sign-on for this device.":::
+:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/macos-sso-dont-ask.png" alt-text="Don't ask me to sign in with single sign-on for this device.":::
