@@ -49,19 +49,16 @@ Microsoft Defender security configurations are no longer managed with Microsoft 
 
 The symptom is seen as a drop in the Microsoft Security Score values when viewed in Intune. This issue happens because security policy configuration data is incorrectly removed from clients after Configuration Manager clients are upgraded. 
 
-The drop in security scores for clients happens under the following conditions:
-1. The Configuration Manager clients are co-managed with Microsoft Intune.
-2. The *Device Configuration* -> *Endpoint Protection* workload is actively managed in Intune. For more information, see [How to switch workloads](../../../../comanage/how-to-switch-workloads.md).
-3. The *Manage Endpoint Protection client on client computers* value is set to **Yes** in client settings. For more information, see [To enable Endpoint Protection and configure custom client settings](../../../../protect/deploy-use/endpoint-protection-configure-client.md#to-enable-endpoint-protection-and-configure-custom-client-settings).
+An updated version of the Microsoft Security Client Policy Configuration Tool, ConfigSecurityPolicy.exe, is available to resolve the Endpoint Protection policy issue described in this note.
 
-Customers that have a potentially affected environment should wait to deploy version 2403 or the 2309 Update Rollup until a fix is available. 
-See the details below if the environment is already updated, but the new clients aren't yet installed.
-  - If enabled, disable the hierarchy setting to *Upgrade all clients in the pre-production collection automatically using the pre-production client*. For more information, see [Configuration automatic client upgrades to use a pre-production collection](../../../clients/manage/upgrade/test-client-upgrades.md#configure-automatic-client-upgrades-to-use-a-pre-production-collection).
-  -  Avoid using the *Promote Pre-production Client* action. For more information, see [Promote a new client to production](../../../clients/manage/upgrade/test-client-upgrades.md#promote-a-new-client-to-production). 
+The updated tool, version 4.18.24040.4, is distributed with the April 2024 monthly Microsoft Defender platform update. At the time of this writing, the platform update is in the process of global distribution, and should be broadly available in all regions by May 17, 2024.   
+Once the platform update is installed on affected clients, Endpoint Protection policies are reapplied from Intune within 8 hours. The "Manage Endpoint Protection client on client computers" setting in Configuration Manager can be changed back to "Yes" as required.
+#### Additional references
 
-If clients are already updated, set the *Manage Endpoint Protection client on client computers* value to **No** in client settings. This can be done only for collections with co-managed clients. Microsoft Intune policy will reapply, and the clients will again be managed as expected.
+- [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates#monthly-platform-and-engine-versions)
+- [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/topic/microsoft-defender-update-for-windows-operating-system-installation-images-1c89630b-61ff-00a1-04e2-2d1f3865450d).
+- [Sync devices to get the latest policies and actions with Intune](/mem/intune/remote-actions/device-sync#sync-a-device)
 
-This note will be updated when additional information is available.
 ## Set up and upgrade
 
 ### Version 2107 update fails to download
