@@ -164,7 +164,7 @@ With settings catalog, we can streamline the end users experience for allowing t
     | Static Code | False |
 1. Select **Next**, configure scope tags as required, assign the profile to groups as required, review settings and **Create** the policy.
 
-#### [:::image type="icon" source="../media/icons/graph.svg"::: **Intune Graph**](#tab/graph)
+#### [:::image type="icon" source="../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
 
 Use the following Graph call to automatically create the settings catalog policy in your tenant without assignments or scope tags.
 
