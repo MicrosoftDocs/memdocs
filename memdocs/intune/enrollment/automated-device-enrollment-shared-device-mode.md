@@ -102,7 +102,7 @@ You can configure the rest of the policy to meet your organization's needs. When
 
 For more information about creating an SSO app extension policy, see:  
 * [Create a device configuration profile](../configuration/device-features-configure.md#create-the-profile)  
-* [Single-sign on (SSO) app extension settings](../configuration/device-features-configure.md#single-sign-on-app-extension)  
+* [Single-sign on (SSO) app extension settings](../configuration/device-features-configure.md#single-sign-on-sso)  
 
 ## Step 5: Assign the Microsoft Authenticator app
 Assign the Microsoft Authenticator app to targeted devices. Assign the app as *required* to **All devices**. Then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter). You must have purchased the Microsoft Authenticator app through an Apple volume-purchase program.      
