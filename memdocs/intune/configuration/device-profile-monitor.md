@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- magic-ai-copilot
 ---
 
 # Monitor device configuration policies in Microsoft Intune
