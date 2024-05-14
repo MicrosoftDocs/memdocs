@@ -833,7 +833,7 @@
     },
     {
       "source_path": "memdocs/autopilot/windows-autopilot-requirements.md",
-      "redirect_url": "/autopilot/software-requirements",
+      "redirect_url": "/autopilot/requirements",
       "redirect_document_id": false
     },
     {
@@ -1718,7 +1718,7 @@
     },
     {
       "source_path": "memdocs/autopilot/configuration-requirements.md",
-      "redirect_url": "/autopilot/configuration-requirements",
+      "redirect_url": "/autopilot/requirements&tabs=configuration",
       "redirect_document_id": false
     },
     {
@@ -1758,7 +1758,7 @@
     },
     {
       "source_path": "memdocs/autopilot/licensing-requirements.md",
-      "redirect_url": "/autopilot/licensing-requirements",
+      "redirect_url": "/autopilot/requirements&tabs=licensing",
       "redirect_document_id": false
     },
     {
@@ -1768,7 +1768,7 @@
     },
     {
       "source_path": "memdocs/autopilot/networking-requirements.md",
-      "redirect_url": "/autopilot/networking-requirements",
+      "redirect_url": "/autopilot/requirements&tabs=networking",
       "redirect_document_id": false
     },
     {
@@ -1818,7 +1818,7 @@
     },
     {
       "source_path": "memdocs/autopilot/software-requirements.md",
-      "redirect_url": "/autopilot/software-requirements",
+      "redirect_url": "/autopilot/requirements&tabs=software",
       "redirect_document_id": false
     },
     {
@@ -2433,22 +2433,22 @@
     },
     {
       "source_path": "autopilot/software-requirements.md",
-      "redirect_url": "/autopilot/requirements?branch=pr-en-us-14854&tabs=software",
+      "redirect_url": "/autopilot/requirements&tabs=software",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/networking-requirements.md",
-      "redirect_url": "/autopilot/requirements?branch=pr-en-us-14854&tabs=networking",
+      "redirect_url": "/autopilot/requirements&tabs=networking",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/licensing-requirements.md",
-      "redirect_url": "/autopilot/requirements?branch=pr-en-us-14854&tabs=licensing",
+      "redirect_url": "/autopilot/requirements&tabs=licensing",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/configuration-requirements.md",
-      "redirect_url": "/autopilot/requirements?branch=pr-en-us-14854&tabs=configuration",
+      "redirect_url": "/autopilot/requirements&tabs=configuration",
       "redirect_document_id": false
     }
   ]
