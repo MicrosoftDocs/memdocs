@@ -70,11 +70,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   Additional cloud-based functionality does require an additional license. The cloud-based capabilities requiring the additional license are indicated in the policy creation page and include the following items and potentially new features:
 
-  - Gradual rollout
+  - Gradual rollout: The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature.Capabilities supported by client policies on Professional SKU devices won't require a license. That includes basic controls for deploying a specified feature update and when to start making the update available to devices. The Gradual Rollout capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
 
+  - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you’re blocked when creating new policies for capabilities that require Windows Update for Business deployment service and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+  
   - Optional feature updates
-
-  - Windows 10 (SxS)
 
   To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
 
@@ -89,14 +89,6 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license is checked and enforced.
   
   *Review your subscription details for applicability to Windows 11.*
-
-  **Gradual Rollout**
-  The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature. 
-  capabilities supported by client policies on Professional SKU devices won't require a license. That includes basic controls for deploying a specified feature update and when to start making the update available to devices. The Gradual Rollout capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
-
-  **Windows 10 (SxS)**
-  The Windows 10 (SxS) feature is a cloud-only feature.
-  If you’re blocked when creating new policies for capabilities that require Windows Update for Business deployment service and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea)
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
