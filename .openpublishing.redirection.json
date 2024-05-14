@@ -2432,7 +2432,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/autopilot/software-requirements.md",
+      "source_path": "autopilot/software-requirements.md",
       "redirect_url": "/autopilot/requirements&tabs=software",
       "redirect_document_id": false
     }
