@@ -39,6 +39,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 ## Requirements
 
 - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
+- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 
 - Microsoft Entra ID - Only Microsoft Entra join is supported.
 
@@ -64,8 +65,9 @@ Windows Autopilot device preparation is an improved profile experience that inco
 
 New features in Windows Autopilot device preparation include:
 
-- **Utilizing enrollment time grouping in Intune** - Device is added to a security group at enrollment time and configuration is delivered immediately. This feature provides a faster and more reliable setup.
-- **Out of the box granular reporting** - Out of the box reporting and monitoring with near real-time status of deployments, including applications and scripts details and deployment time. This feature provides improved troubleshooting.
+- **Utilizing enrollment time grouping in Intune** - Device is added to a security group at enrollment time and configuration is delivered immediately. This feature provides a faster and more reliable setup.  For more information, see [Enrollment Time Grouping](#enrollment-time-grouping).
+- **Out of the box granular reporting** - Out of the box reporting and monitoring with near real-time status of deployments, including applications and scripts details and deployment time. This feature provides improved troubleshooting. For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
+- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
 
 ## Key features and capabilities
 
@@ -142,3 +144,4 @@ For tutorials with detailed instructions on configuring Windows Autopilot device
 - [Windows Autopilot device preparation requirements](requirements.md).
 - [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 - [Windows Autopilot device preparation known issues](known-issues.md).
+- [Windows Autopilot device preparation: What's new](whats-new.md).

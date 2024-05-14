@@ -36,7 +36,8 @@ Windows Autopilot device preparation depends on specific features available in W
 
 #### Windows 11
 
-Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later is required.
+- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
+- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 
 The following editions are supported:
 
@@ -46,7 +47,7 @@ The following editions are supported:
 - Windows 11 Enterprise
 - Windows 11 Education
 
-## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Network**](#tab/network)
+## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/network)
 
 ### Networking requirements
 
