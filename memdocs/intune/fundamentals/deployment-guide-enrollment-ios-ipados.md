@@ -430,6 +430,8 @@ Your users must do the following steps. For the specific user experience, go to 
 >
 > [Enroll your iOS/iPadOS device](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 
+> [!NOTE]
+> The renew process for IOS Profile Signing Certificate, this certificate has a lifetime of one year, during device renewal of the management profile, there will be another push on expiring signing cert to force it to renew, failed renewed devices will show on Apple UI of management status that the management profile is not verified. However, this won’t impact end users, and the devices will continue to check in.
 ## Related articles
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
