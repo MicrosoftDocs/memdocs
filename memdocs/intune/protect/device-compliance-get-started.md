@@ -32,9 +32,9 @@ ms.collection:
 
 # Use compliance policies to set rules for devices you manage with Intune
 
-Microsoft Intune compliance policies are sets of rules and conditions that you use to assess the configuration of your managed devices. These policies can help you protect organizational data and resources from devices that fail to meet those configuration requirements. Managed devices must meet the conditions you set in your policies to be considered compliant by Intune.
+Microsoft Intune compliance policies are sets of rules and conditions that you use to evaluate the configuration of your managed devices. These policies can help you secure organizational data and resources from devices that don't meet those configuration requirements. Managed devices must satisfy the conditions you set in your policies to be considered compliant by Intune.
 
-If you also integrate the compliance results from your policies with Microsoft Entra Conditional Access, you can take advantage of an extra layer of security. Conditional Access can enforce Microsoft Entra access controls based on a devices current compliance status to help ensure that only devices that are compliant are allowed to access corporate resources.
+If you also integrate the compliance results from your policies with Microsoft Entra Conditional Access, you can benefit from an extra layer of security. Conditional Access can enforce Microsoft Entra access controls based on a devices current compliance status to help ensure that only devices that are compliant are permitted to access corporate resources.
 
 Intune compliance policies are divided into two areas:
 
@@ -53,6 +53,7 @@ Compliance policy settings include the following settings:
 - **Mark devices with no compliance policy assigned as**
 
   This setting determines how Intune treats devices that aren't assigned a device compliance policy. This setting has two values:
+
   - **Compliant** (*default*): This security feature is off. Devices that aren’t sent a device compliance policy are considered *compliant*.
   - **Not compliant**: This security feature is on. Devices without a device compliance policy are considered noncompliant.
 
@@ -87,7 +88,7 @@ When using device compliance policies:
 - Like other Intune policies, compliance policy evaluations for a device depend on when the device checks in with Intune, and [policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 
-The available settings you can specify in a device compliance policy depend on the platform type you select when you create a policy. Different device platforms support different settings, and each platform type requires a separate policy.  
+The available settings you can specify in a device compliance policy depend on the platform type you select when you create a policy. Different device platforms support different settings, and each platform type requires a separate policy.
 
 The following subjects link to dedicated articles for different aspects of device configuration policy.
 
@@ -145,6 +146,7 @@ The following table describes how noncompliant settings are managed when a compl
 - **Remediated**: The device operating system enforces compliance. For example, the user is forced to set a PIN.
 
 - **Quarantined**: The device operating system doesn't enforce compliance. For example, Android and Android Enterprise devices don't force the user to encrypt the device. When the device isn't compliant, the following actions take place:
+
   - If a Conditional Access policy applies to the user, the device is blocked.
   - The Company Portal app notifies the user about any compliance problems.
 
