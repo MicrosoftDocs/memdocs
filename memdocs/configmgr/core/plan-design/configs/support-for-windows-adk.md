@@ -27,7 +27,7 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
     > [!IMPORTANT]
     >
     > - Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
-    > - **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) or newer is required to deploy Windows 10/11 ARM64 operating systems. However, **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) Windows PE boot images have some known issues and need to be updated with the latest cumulative update to work with Configuration Manager. For more information, see [Support notes](#support-notes).
+    > - **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) or newer is required to deploy Windows 10/11 ARM64 operating systems as older versions do not include the x64-support component required to run x64 emulated binaries in WinPE. However, **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) Windows PE boot images have some known issues and need to be updated with the latest cumulative update to work with Configuration Manager. For more information, see [Support notes](#support-notes).
 
     > [!NOTE]
     >
