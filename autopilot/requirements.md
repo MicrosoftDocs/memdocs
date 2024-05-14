@@ -26,7 +26,7 @@ appliesto:
 
 # Windows Autopilot requirements
 
-## [:::image type="icon" source="../images/icons/software-18.svg"::: **Software**](#tab/software)
+## [:::image type="icon" source="images/icons/software-18.svg"::: **Software**](#tab/software)
 
 ### Software requirements
 
@@ -70,7 +70,7 @@ Windows 10 LTSC/LTSB editions aren't supported.
 >
 > Procedures for deploying Windows Autopilot might refer to specific products and versions. The inclusion of these products in this content doesn't imply an extension of support for a version that is beyond its support lifecycle. Windows Autopilot doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](/lifecycle/).
 
-## [:::image type="icon" source="../images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/network)
+## [:::image type="icon" source="images/icons/wifi-ethernet-18.svg"::: **Networking**](#tab/networking)
 
 ### Networking requirements
 
@@ -200,7 +200,7 @@ For each firmware TPM provider, make sure that the appropriate URL is accessible
 
 Deploying proxy settings for Windows Autopilot should be configured on the proxy server itself. Implementing proxy settings via Intune policy isn't fully supported as it might cause issues and unexpected behavior with privileged access deployments.
 
-## [:::image type="icon" source="../images/icons/license-18.svg"::: **Licensing**](#tab/licensing)
+## [:::image type="icon" source="images/icons/license-18.svg"::: **Licensing**](#tab/licensing)
 
 ### Licensing requirements
 
@@ -225,7 +225,7 @@ Additionally, the following are also recommended (but not required):
 - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0), which can be deployed easily via Intune (or other MDM services).
 - [Windows Subscription Activation](/windows/deployment/windows-10-enterprise-subscription-activation), to automatically step up devices from Windows Pro to Windows Enterprise edition.
 
-## [:::image type="icon" source="../images/icons/license-18.svg"::: **Configuration**](#tab/licensing)
+## [:::image type="icon" source="images/icons/license-18.svg"::: **Configuration**](#tab/configuration)
 
 ### Configuration requirements
 
