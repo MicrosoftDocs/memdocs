@@ -104,7 +104,7 @@ Kernel extension management is automatically available on Macs running macOS 11 
 For more information about changing security settings, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
 
 ## Block macOS enrollment  
-By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set a device platform restriction](https://learn.microsoft.com/en-us/mem/intune/enrollment/macos-enroll).    
+By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set a device platform restriction](create-device-platform-restrictions.md).    
 
 ## Enroll virtual macOS machines for testing
 
