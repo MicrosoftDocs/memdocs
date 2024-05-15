@@ -2,13 +2,13 @@
 # required metadata
 
 title: iOS/iPadOS device compliance settings in Microsoft Intune
-description: See a list of all the settings you can use when setting compliance for your iOS/iPadOS devices in Microsoft Intune. Require an email, check jailbroken or rooted devices, set the allowed minimum and maximum operating system, set any password restrictions, including password length and device inactivity, restrict apps, and more.
+description: View the device compliance settings for iOS/iPadOS that you can manage with Microsoft Intune compliance policies.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/02/2023
-ms.topic: reference  
+ms.date: 05/15/2024
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -51,7 +51,7 @@ For details about the settings for each level:
 
 - For personally owned and for supervised devices, see [iOS/iPadOS device compliance security configurations](../enrollment/ios-ipados-device-compliance-security-configurations.md) -->
 
-[Create an iOS/iPadOS device compliance policy](create-compliance-policy.md#create-the-policy) to access available settings.     
+[Create an iOS/iPadOS device compliance policy](create-compliance-policy.md#create-the-policy) to access available settings.
 
 ## Email
 
@@ -59,9 +59,10 @@ For details about the settings for each level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - A managed email account is required. If the user already has an email account on the device, the email account must be removed so Intune can set one up correctly. If no email account exists on the device, the user should contact the IT administrator to configure a managed email account.
 
-  The device is considered non-compliant in the following situations:  
+  The device is considered non-compliant in the following situations:
+
   - The email profile is assigned to a different user group than the user group targeted by the compliance policy.
-  - The user already set up an email account on the device that matches the Intune email profile deployed to the device. Intune can't overwrite the user-configured profile, and Intune can't manage it. To be compliant,  the end user must remove the existing email settings. Then, Intune can install the managed email profile.  
+  - The user already set up an email account on the device that matches the Intune email profile deployed to the device. Intune can't overwrite the user-configured profile, and Intune can't manage it. To be compliant, the end user must remove the existing email settings. Then, Intune can install the managed email profile.
 
 For details about email profiles, see [configure access to organization email using email profiles with Intune](../configuration/email-settings-configure.md).
 
@@ -71,7 +72,7 @@ For details about email profiles, see [configure access to organization email us
   *Supported for iOS 8.0 and later*
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Block** - Mark rooted (jailbroken) devices as not compliant.  
+  - **Block** - Mark rooted (jailbroken) devices as not compliant.
 
 - **Require the device to be at or under the Device Threat Level**  
   *Supported for iOS 8.0 and later*
@@ -85,7 +86,7 @@ For details about email profiles, see [configure access to organization email us
 
 ## Device Properties
 
-### Operating System Version  
+### Operating System Version
 
 - **Minimum OS version**  
   *Supported for iOS 8.0 and later*
@@ -123,10 +124,11 @@ For details about email profiles, see [configure access to organization email us
 ### Password
 
 > [!NOTE]
+>
 > After a compliance or configuration policy is applied to an iOS/iPadOS device, users are prompted to set a passcode every 15 minutes. Users are continually prompted until a passcode is set. When a passcode is set for the iOS/iPadOS device, the encryption process automatically starts. The device remains encrypted until the passcode is disabled.
 
 - **Require a password to unlock mobile devices**  
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.  
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Users must enter a password before they can access their device. iOS/iPadOS devices that use a password are encrypted.
 
 - **Simple passwords**  
@@ -181,12 +183,13 @@ For details about email profiles, see [configure access to organization email us
     - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
     - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
     - For some examples, go to [Bundle IDs for built-in iOS/iPadOS apps](../configuration/bundle-ids-built-in-ios-apps.md).
-  
+
   > [!NOTE]
+  >
   > The *Restricted apps* setting applies to un-managed applications that are installed outside of management context.
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](actions-for-noncompliance.md).and [use scope tags to filter policies](../fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
 - See the [compliance policy settings for macOS](compliance-policy-create-mac-os.md) devices.
