@@ -3,7 +3,7 @@
 
 title: Device staging overview   
 titleSuffix: Microsoft Intune
-description: An overview of the device staging enrollment feature in Microsoft Intune. 
+description: An overview of the device staging enrollment token in Microsoft Intune. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -30,7 +30,7 @@ ms.collection:
 - highpri
 ---
 
-## Device staging for Android Enterprise enrollment  
+# Device staging overview   
 
 **Applies to Android**  
 
@@ -46,7 +46,7 @@ This article provides an overview of device staging and token management in the 
 
 ## Token types     
 
-When you create an enrollment profile in the admin center, you have to select the token type. There is a default token and a staging token. Each type enables a different enrollment experience. 
+When you create an enrollment profile in the admin center for one of the supported management types, you have to select the token type. There's a default token and a staging token. Each type enables a different enrollment experience.  
 
 ### Staging token  
 
@@ -95,15 +95,15 @@ The *default* token enables the standard enrollment flow, with two stages of pre
 -  Stage 1 - Completed by admin 
 -  Stage 2 - Completed by end users    
 
-You complete a portion of the pre-provisioning steps before you distribute the devices. Then end users complete the remaining steps when they sign in with their work or school account. With this token, end users complete the majority of the pre-provisioning steps.  
+You complete a portion of the pre-provisioning steps before you distribute the devices. Then end users complete the remaining steps when they sign in with their work or school account. With this token, end users complete most of the pre-provisioning steps.  
 
 <screenshot> 
 
 In the first stage, an Intune admin completes the following steps:  
 
 1. Create the default enrollment token and initiate the enrollment process for the device.  
-1. Scan the QR code and follow the on-screen prompts to complete enrollment. 
-1. For a device enrolling with a newly-created enrollment token, create a dynamic device group or an assignment filter to assign policies and apps in the user stage. 
+1. With the new device, scan the QR code, and then follow the on-screen prompts to configure the device. 
+1. For a device enrolling with a newly created enrollment token, create a dynamic device group or an assignment filter to assign policies and apps in the user stage.  
 1. Distribute the device to the end user.   
 
 In the second, and final stage, an end user completes the following steps: 
