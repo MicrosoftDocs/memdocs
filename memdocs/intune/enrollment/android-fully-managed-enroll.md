@@ -40,13 +40,6 @@ Set up the *Android Enterprise fully managed device* solution in Microsoft Intun
 
 You and your device users can initiate enrollment by entering or scanning an enrollment token during device setup. This article describes the prerequisites for enrollment and how to create enrollment profiles and tokens. At the end of this article, you will be ready to enroll devices.  
 
-## Token types   
-When you create the enrollment profile in the admin center, you have to select a token type. There are two types of tokens. Each type enables a different enrollment flow.  
-
-The default token, *corporate-owned, fully managed*, enrolls devices into Microsoft Intune as standard Android Enterprise corporate fully managed devices. This token requires you to complete pre-provisioning steps before you distribute the devices. End users complete the remaining steps on the device when they sign in with their work or school account. 
-
-The device staging token, *Corporate-owned, fully managed, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all preprovisioning steps. End users complete the last step of provisioning by signing into devices with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.  
-
 ## Step 1: Prerequisites  
 Complete these prerequisites to ensure a successful enrollment.     
 
@@ -78,7 +71,7 @@ To create a new enrollment profile:
 
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
 
-    - **Token type**: Choose the type of token you want to use to enroll corporate fully managed devices  Your options:  
+    - **Token type**: Choose the type of token you want to use to enroll corporate fully managed devices. For more information see, [Token types](#token-types) in this article. Your options:  
 
       - **Corporate-owned, fully managed (default)** 
       - **Corporate-owned, fully managed, via staging**  
@@ -122,6 +115,15 @@ Now that you've set up the enrollment profile, token, and dynamic group, you can
 
 For the next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices](android-dedicated-devices-fully-managed-enroll.md).  
 
+## Token types   
+When you create the enrollment profile in the admin center, you have to select a token type. There are two types of tokens. Each type enables a different enrollment flow.   
+
+The default token, *corporate-owned, fully managed*, enrolls devices into Microsoft Intune as standard Android Enterprise corporate fully managed devices. This token requires you to complete preprovisioning steps before you distribute the devices. End users complete the remaining steps on the device when they sign in with their work or school account. 
+
+The device staging token, *Corporate-owned, fully managed, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.  
+
+For more information, see [Device staging overview](device-staging-overview.md).  
+
 ## Replace, remove, or export token  
 Select a token in the admin center to access these management options:   
 
@@ -135,9 +137,7 @@ Select a token in the admin center to access these management options:
 
 - **Export token**: Export the JSON content of the token. You can use this option to get the JSON content required for Google Zero Touch or Knox Mobile Enrollment configuration.  
 
-When applied, these actions don't have any effect on devices that are already enrolled.   
-
-## Next steps  
+When applied, these actions don't have any effect on devices that are already enrolled.    
 
 
 

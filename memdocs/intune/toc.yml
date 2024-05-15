@@ -1534,6 +1534,8 @@ items:
           items:
           - name: Prerequisite - Connect Intune to Android Enterprise 
             href: ./enrollment/connect-intune-android-enterprise.md
+          - name: Device staging overview          
+            href: ./enrollment/overview-device-staging-android  
           - name: Set up work profile management
             items: 
             - name: Overview  

@@ -34,7 +34,7 @@ ms.collection:
 
 **Applies to Android**  
 
-Enable device staging during enrollment to reduce end user steps for frontline workers and optimize devices for immediate productivity. During device staging, you or a third-party vendor can complete both the admin and end user stages of preprovisioning. Minimal interaction is required of the user when they receive their device.
+Enable device staging during enrollment to reduce end user steps for frontline workers and optimize productivity. During device staging, you or a third-party vendor can complete both the admin and end user stages of preprovisioning. Minimal interaction is required of the user when they receive their device.   
 
 Device staging uses a *staging* token during the enrollment process rather than the *default* token type. Microsoft Intune supports device staging for Android Enterprise devices running Android 8 or later. You can enable device staging in these enrollment profiles:   
 
@@ -46,7 +46,7 @@ This article provides an overview of device staging and token management in the 
 
 ## Token types     
 
-When you create an enrollment profile in the admin center, you have to select a token type. There is a default token and a staging token. Each type enables a different enrollment experience. 
+When you create an enrollment profile in the admin center, you have to select the token type. There is a default token and a staging token. Each type enables a different enrollment experience. 
 
 ### Staging token  
 
@@ -54,46 +54,61 @@ The *staging* token enables a staged version of the enrollment flow so that you 
 
 There are three stages during this process:  
 
--  Admin 
--  Third party vendor 
--  End user  
+-  Stage 1 - Completed by admin 
+-  Stage 2 - Completed by admin or third-party vendor 
+-  Stage 3 - Completed by end users    
 
-The device remains userless throughout the admin and vendor stage. It becomes user affiliated and ready for use at the last step when the user signs in with their credentials. 
+The device is userless in stage 1 and stage 2. It becomes user affiliated and ready for use at the last step when the user signs in with their credentials. 
 
 If you're not using a third party vendor to provision devices, you can continue in the admin stage until it's time to distribute devices to the end user. End users complete the last stage by signing into devices with their work or school account. Devices are ready to use upon sign-in.  
 
 <screenshot> 
 
-The admin stage of this flow requires you to:
-1. Create the enrollment token and initiate the enrollment process for the device. 
-1. Scan the QR code and follow the on-screen prompts to complete enrollment. 
+In the first stage, an Intune admin completes the following steps:  
 
->[!IMPORTANT] If a third-party is doing the provisioning for you, share the device staging token with them now so they can continue with the steps.    
+1. Create the enrollment profile and staging enrollment token in the admin center. 
+1. Set the token's expiration date. 
+1. Optionally, in the admin center, create a dynamic device group or an assignment filter so you can assign policies and apps in the user stage. The dynamic device group feature isn't available to configure in the remaining stages. 
 
-1. Complete the provisioning steps. 
-1. For a device enrolling with a newly-created enrollment token, create a dynamic device group or an assignment filter to assign policies and apps in the user stage. 
-1. Distribute the device to the end user.   
+In the second stage, an Intune admin or third-party vendor completes the following steps: 
+ 
+1. Unbox, assemble, and power on the new device you're enrolling.      
+1. Complete the enrollment steps and setup wizard. When you get to the sign-in screen, stop. Don't sign in.  
+1. With the device, scan the staging token's QR code or enter the token string.  
+1. Turn off the device and distribute it to the end user.   
+
+During stage 2, the Intune assignment filter is the only available mechanism for targeting policies and apps. After the final stage ends, you can use other targeting mechanism supported for Android Enterprise. Example: User security groups and dynamic groups 
+
+In the third, and final stage, an end user completes the following steps: 
+
+1. Power on the device.  
+1. Open the Microsoft Intune app, and then sign in with your work or school account.   
+1. Complete the remaining enrollment steps. When enrollment is done, the device is ready for use at work or school.   
+
+> [!NOTE]
+> Screens that don’t require end user input can be skipped, depending on technical feasibility. An *enrollment in progress* screen takes their place.  
 
 ### Default token   
 
 The *default* token enables the standard enrollment flow, with two stages of pre-provisioning: 
 
-- Admin stage  
-- End user stage  
+-  Stage 1 - Completed by admin 
+-  Stage 2 - Completed by end users    
 
 You complete a portion of the pre-provisioning steps before you distribute the devices. Then end users complete the remaining steps when they sign in with their work or school account. With this token, end users complete the majority of the pre-provisioning steps.  
 
 <screenshot> 
 
-The admin stage of this flow requires you to:  
+In the first stage, an Intune admin completes the following steps:  
+
 1. Create the default enrollment token and initiate the enrollment process for the device.  
 1. Scan the QR code and follow the on-screen prompts to complete enrollment. 
 1. For a device enrolling with a newly-created enrollment token, create a dynamic device group or an assignment filter to assign policies and apps in the user stage. 
 1. Distribute the device to the end user.   
 
-The end user stage of this flow requires end users to: 
+In the second, and final stage, an end user completes the following steps: 
 
-1. Unbox the device and connect to Wi-Fi 
+1. Unbox the device and connect to Wi-Fi.   
 1. Sign in to work or school account, and then follow the on-screen prompts.  
 1. Complete the pre-provisioning steps. If they're going through work profile enrollment, for example, they create and install the work profile.  
 1. Grant permissions or accept terms wherever required. 
@@ -117,7 +132,17 @@ Select a token in the admin center to access these management options:
 
 When applied, these actions don't have any effect on devices that are already enrolled.   
 
-## Next steps  
+## Reporting   
 
+To view all devices with a staging token, go to **Devices** > **All devices**. 
 
+Devices set up via staging remain in stage 2 until the end user signs in with their work or school account. These devices appear in the report with a *staging* prefix.   
+
+* Naming convention: *Staging_serialnumber_enrollmentmode_MM/DD/YY_H.MM*  
+* Example: *Staging_ XX1234_AnroidEnterprise_06/22/2024_ 4.20 AM*   
+
+After end users complete enrollment, the *username* replaces the *staging* prefix in the report. 
+
+* Naming convention: *Username_enrollmentmode_MM/DD/YY_H.MM*  
+* Example: *john@contoso.com_ AnroidEnterprise_06/22/2024_ 4.20 AM*   
 
