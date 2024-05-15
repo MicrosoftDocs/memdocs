@@ -40,12 +40,12 @@ This feature applies to:
 
 As an Intune administrator, use these compliance settings to help protect your organizational resources.
 
+## Before you begin
+
 - To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
-- To create an iOS/iPadOS device compliance policy, see [Create a compliance policy in Microsoft Intune](create-compliance-policy.md).
+- To create an iOS/iPadOS device compliance policy, see [Create a compliance policy in Microsoft Intune](create-compliance-policy.md). For **Platform**, select **iOS/iPadOS**.
 
 <!-- Removing section, framework pending review and has been removed
-
-## Before you begin
 
 When configuring compliance policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS compliance policies.
 
