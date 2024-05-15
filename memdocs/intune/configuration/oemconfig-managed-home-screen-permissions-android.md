@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2024
+ms.date: 05/15/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices
+# Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune
 
 The Managed Home Screen (MHS) is an Intune feature that allows you to configure the home screen on the device. It's designed to only show the apps that your users access and the device settings that admins need to manage.
 
@@ -50,7 +50,7 @@ This article:
 > [!div class="checklist"]
 > * Lists the required permissions that the MHS needs.
 > * Shows how to get the OEM app from the Managed Google Play Store.
-> * Lists the steps to create an OEMConfig policy that automatically grants permissions for the MHS app.
+> * Lists the steps to create an OEMConfig policy in Intune that automatically grants permissions for the MHS app.
 
 ## Required permissions
 
@@ -65,10 +65,10 @@ The following table lists the permissions that you can configure for the MHS app
 | **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ?? |
 | **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ?? |
 
-## Before you begin and prerequisites
+## Before you begin
 
 - This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
-- Devices must be MDM enrolled in Intune.
+- Devices must be MDM enrolled in Intune. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 - To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Step 1 - Get the app from the Managed Google Play Store
@@ -86,6 +86,8 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 | Samsung | Knox Service Plugin |
 | Zebra | Zebra OEMConfig Powered by MX <br/><br/>Zebra OEMConfig Powered by MX is a new version of the OEMConfig app released in May 2023.|
 | Zebra | Legacy Zebra OEMConfig |
+
+### Add the OEMConfig app
 
 # [Samsung](#tab/samsung-app)
 
@@ -122,7 +124,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
     So, if you use Remote Help, then deploy the Remote Help app on the device first, and then assign the OEMConfig configuration policy. If you uninstall and reinstall the Remote Help app on the device, after the Remote Help app is reinstalled, then re-apply this OEMConfig policy. You can create a new OEMConfig profile and assign it to the device, or edit the previously created OEMConfig profile.
 
-    ??Does this apply to any other apps or policies? Or, does it only apply to Remote Help??
+    ??Why install Remote Help? Does the uninstall/reinstall apply to any other apps or policies? Or, does it only apply to Remote Help??
 
 4. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
