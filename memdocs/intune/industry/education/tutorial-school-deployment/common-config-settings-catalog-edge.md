@@ -1,8 +1,8 @@
 ---
 title: Common Education Microsoft Edge configuration
 description: Learn about common Microsoft Edge configuration used by Education organizations in Intune.
-ms.date: 4/9/2024
-ms.topic: conceptual
+ms.date: 5/2/2024
+ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
@@ -13,7 +13,7 @@ no-loc: [Microsoft, Windows, Autopatch, Autopilot, Edge]
 
 Microsoft Intune and Intune for Education can configure Microsoft Edge settings. This article summarizes the configurations that are most commonly used for student and teacher devices that provide a clean and seamless experience for staff and students.
 
-Microsoft Edge supports mandatory and recommended policies. Mandatory policies override user preferences and prevent the user from modifying the policy. Recommended policies provide a default setting that the user can override. Most policies are only mandatory but there's a subset that is mandatory and recommended. If both versions of a policy are set, the mandatory setting takes precedence. A recommended policy only takes effect when the user hasn't modified the setting.
+Microsoft Edge supports mandatory and recommended policies. Mandatory policies override user preferences and prevent the user from modifying the policy. Recommended policies provide a default setting that the user can override. Most policies are only mandatory but there's a subset that is mandatory and recommended. If both versions of a policy are set, the mandatory setting takes precedence. A recommended policy can be overwritten by the user.
 
 > [!NOTE]
 > Microsoft Intune settings catalog categories:

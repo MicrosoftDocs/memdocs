@@ -6,7 +6,7 @@ ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
-ms.date: 03/05/2024
+ms.date: 5/2/2024
 ---
 
 # Configure and secure devices with Microsoft Intune
@@ -99,7 +99,7 @@ With Express Configuration, you can get Intune for Education up and running in j
 
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
 
-- Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>.
+- Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - Go to **Devices** > **Configuration profiles** > **+ Create profile**.
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
@@ -111,7 +111,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 
 Groups are used to manage users and devices with similar management needs, allowing you to apply changes to many devices or users at once. To review the available group settings:
 
-1. Sign in to the <a href="https://intuneeducation.portal.azure.com/" target="_blank"><b>Intune for Education portal</b></a>.
+1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Groups** > Pick a group to manage.
 1. Select **Windows device settings**.
 1. Expand the different categories and review information about individual settings.
@@ -192,6 +192,7 @@ For more information, see [Updates and upgrade][INT-6].
 
 > [!NOTE]
 > If you require a more complex Windows Update policy, you can create it in Microsoft Intune. For more information:
+>
 > - [What is Windows Update for Business?][WIN-1]
 > - [Manage Windows software updates in Intune][MEM-1]
 
@@ -270,6 +271,7 @@ For more information, see [Security][INT-4].
 
 > [!NOTE]
 > If you require more sophisticated security policies, you can create them in Microsoft Intune. For more information, see:
+>
 > - [Antivirus][MEM-2]
 > - [Disk encryption][MEM-3]
 > - [Firewall][MEM-4]
@@ -289,7 +291,7 @@ In Intune, you can configure iOS security settings using Settings Catalog.
 
 To create a settings catalog device configuration profile in Microsoft Intune, you need to follow these steps:
 
-- Sign in to the <a href="https://intune.microsoft.com/" target="_blank"><b>Intune admin center</b></a>.
+- Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - Go to **Devices** > **Configuration profiles** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**.

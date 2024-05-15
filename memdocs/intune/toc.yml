@@ -465,7 +465,9 @@ items:
               - name: PowerShell scripts
                 href: ./apps/intune-management-extension.md
               - name: macOS shell scripts
-                href: ./apps/macos-shell-scripts.md        
+                href: ./apps/macos-shell-scripts.md
+              - name: Get the app bundle ID
+                href: ./apps/get-app-bundle-id-intune-admin-center.md      
             - name: Assign apps
               items:
               - name: Assign apps to groups
@@ -793,6 +795,11 @@ items:
               items:
               - name: Check Point Harmony and Intune integration
                 href: ./protect/checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Set up CrowdStrike
+              href: ./protect/crowdstrike-falcon-defense-connector.md
+              items:
+              - name: CrowdStrike Falcon and Intune integration
+                href: ./protect/crowdstrike-falcon-mtd-connector-integration.md
             - name: Set up Jamf
               href: ./protect/jamf-mtd-connector.md
               items:
@@ -1027,7 +1034,7 @@ items:
           - name: Windows 10 MDM baseline settings
             href: ./protect/security-baseline-settings-mdm-all.md
           - name: Microsoft Defender for Endpoint baseline settings 
-            href: ./protect/security-baseline-settings-defender-atp.md
+            href: ./protect/security-baseline-settings-defender.md
           - name: Microsoft 365 Apps for Enterprise baseline settings (Office) 
             href: ./protect/security-baseline-v2-office-settings.md
           - name: Microsoft Edge baseline settings (version 112 and higher)
@@ -1172,17 +1179,22 @@ items:
           - name: Device features
             href: ./configuration/device-features-configure.md
             displayName: airprint, home screen, lock screen, sso, single sign-on, ios, ipados, macos
-          - name: Use Enterprise SSO plug-in
+          - name: Single sign-on (SSO)
             items:
-            - name: SSO plug-in overview
+            - name: SSO overview & options
               displayName: single sign-on, ios, ipados, macos
               href: ./configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md
-            - name: iOS/iPadOS SSO plug-in
+            - name: iOS/iPadOS Enterprise SSO plug-in
               displayName: single sign-on, ios, ipados
               href: ./configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md
-            - name: macOS SSO plug-in
-              displayName: single sign-on, macos
-              href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
+            - name: macOS SSO
+              items:
+              - name: Platform SSO
+                displayName: single sign-on, macos
+                href: ./configuration/platform-sso-macos.md
+              - name: Enterprise SSO app extension plug-in
+                displayName: single sign-on, macos
+                href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
 
         - name: Extensions on macOS
           href: ./configuration/kernel-extensions-overview-macos.md
@@ -1754,13 +1766,19 @@ items:
         items:
         - name: Introduction
           href: ./industry/education/tutorial-school-deployment/introduction.md
-        - name: 1. Prepare your tenant
+        - name: 1. Plan your deployment
+          items:
+          - name: Enrollment methods
+            href: ./industry/education/tutorial-school-deployment/plan-enrollment.md
+          - name: Grouping and targeting
+            href: ./industry/education/tutorial-school-deployment/plan-grouping.md
+        - name: 2. Prepare your tenant
           items:
           - name: Set up Microsoft Entra ID
             href: ./industry/education/tutorial-school-deployment/set-up-microsoft-entra-id.md
           - name: Set up Microsoft Intune
             href: ./industry/education/tutorial-school-deployment/set-up-microsoft-intune.md
-        - name: 2. Configure settings and applications
+        - name: 3. Configure settings and applications
           items:
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/configure-devices-overview.md
@@ -1768,7 +1786,7 @@ items:
             href: ./industry/education/tutorial-school-deployment/configure-device-settings.md
           - name: Configure applications
             href: ./industry/education/tutorial-school-deployment/configure-device-apps.md        
-        - name: 3. Deploy devices
+        - name: 4. Deploy devices
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/enroll-overview.md
@@ -1788,7 +1806,7 @@ items:
               href: ./industry/education/tutorial-school-deployment/enroll-ios-ade.md
             - name: Bulk enrollment with Apple Configurator
               href: ./industry/education/tutorial-school-deployment/enroll-ios-apple-configurator.md
-        - name: 4. Manage devices
+        - name: 5. Manage devices
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/manage-overview.md
@@ -1796,9 +1814,9 @@ items:
             href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
           - name: Reset and wipe devices
             href: ./industry/education/tutorial-school-deployment/reset-wipe.md
-        - name: 5. Troubleshoot and get help
+        - name: 6. Troubleshoot and get help
           href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
-        - name: 6. Common Education configuration
+        - name: 7. Common Education configuration
           items: 
           - name: Overview
             href: ./industry/education/tutorial-school-deployment/common-config-overview.md
@@ -2195,9 +2213,11 @@ items:
       - name: Remote Help on Windows
         href: ./fundamentals/remote-help-windows.md
       - name: Remote Help on macOS
-        href: ./fundamentals/remote-help-macos.md  
+        href: ./fundamentals/remote-help-macos.md
+      - name: Remote Help Web App
+        href: ./fundamentals/remote-help-webapp.md    
       - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md
+        href: ./fundamentals/remote-help-android.md  
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md   
     - name: Remediations
