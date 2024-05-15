@@ -85,7 +85,7 @@ For details about email profiles, see [configure access to organization email us
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. a device with any level of threats is evaluated as noncompliant.
   - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
-  - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
+  - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. A device that has a high-level threat is considered to be noncompliant.
   - **High** - This option is the least secure, as it allows all threat levels. It can be useful when using this solution only for reporting purposes.
 
 ## Device Properties
@@ -95,7 +95,7 @@ For details about email profiles, see [configure access to organization email us
 - **Minimum OS version**  
   *Supported for iOS 8.0 and later*
 
-  When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. The user can view a link with information on how to upgrade and can choose to upgrade their device. After that, they can access organization resources.
+  A device that doesn't meet the minimum OS version requirement is considered to be noncompliant. The user can view a link with information on how to upgrade and can choose to upgrade their device. After that, they can access organization resources.
 
 - **Maximum OS version**  
   *Supported for iOS 8.0 and later*
