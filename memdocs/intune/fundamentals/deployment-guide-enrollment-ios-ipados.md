@@ -207,12 +207,12 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
       When users enter their Microsoft Entra credentials, the enrollment starts.
 
   2. Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete. The device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices.
-une admin center.
 
-      At this point, the device isn't fully registered with Microsoft Entra ID and shows as noncompliant in Microsoft Entra ID. The device shows it's compliant in the Microsoft Int
-  3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Microsoft Entra registration in the Company Portal app, which fully registers the device with Microsoft Entra ID. Users then gain access to corporate resources protected by Conditional Access policies and the device shows as being compliant in Microsoft Entra ID.
+      At this point, the device isn't fully registered with Microsoft Entra ID and shows as noncompliant in Microsoft Entra ID. The device shows it's compliant in the Microsoft Intune admin center.
 
-  4. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
+  4. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Microsoft Entra registration in the Company Portal app, which fully registers the device with Microsoft Entra ID. Users then gain access to corporate resources protected by Conditional Access policies and the device shows as being compliant in Microsoft Entra ID.
+
+  5. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
 
       1. Users sign in to the Apple app store with their Apple ID (`user@iCloud.com` or `user@gmail.com`). When they sign in, the Company Portal app automatically installs.
 
