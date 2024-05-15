@@ -94,14 +94,16 @@ You can monitor the escrow status for any enrolled Mac in the admin center. The 
 4. Select **Hardware**.  
 5. In your hardware details, scroll down to **Conditional access** > **Bootstrap token escrowed**.  
 
-### Manage kernel extensions and software updates  
+### Manage kernel extensions and software updates   
+
+>[!IMPORTANT]
+> Kernel extensions are no longer recommended for macOS. Apple recommends using system extensions where possible. For more details, see [Apple Platform Security guide - Securely extending the kernel in macOS](https://support.apple.com/guide/security/securely-extending-the-kernel-sec8e454101b/web) on Apple Support.   
+
 A bootstrap token can be used to approve the installation of both kernel extensions and software updates on a Mac with Apple silicon. 
 
 User-initiated software updates can be carried out with a bootstrap token on Macs that are running macOS, version 11.1, and enrolled via automated device enrollment. To authorize user-initiated software updates on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. You can also utilize the bootstrap token for software updates on Macs running macOS 11.2 and later, with the only requirement being that the device needs to be supervised. 
 
-Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings.
-
-For more information about changing security settings, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
+Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. For more information, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
 
 ## Block macOS enrollment  
 By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set a device platform restriction](create-device-platform-restrictions.md).    
