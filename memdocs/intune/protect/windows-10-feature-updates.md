@@ -164,7 +164,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 3. Under **Deployment settings**:
 
-   a. **Name**, **Description**, and **Feature update to deploy**: Specify a name, a description (optional).
+   a. **Name**, **Description**: Specify a name, and a description (optional).
   
    b. **Required/Optional updates**: These options are only available when the target version is Windows 11.
 
