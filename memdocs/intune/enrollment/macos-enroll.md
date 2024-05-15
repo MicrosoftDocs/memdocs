@@ -31,11 +31,9 @@ ms.collection:
 - highpri
 ---
 
-# Set up enrollment for macOS devices in Intune
+# Set up enrollment for macOS devices in Intune  
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
- Microsoft Intune supports enrollment on personal and company-owned devices. This article describes the methods and features you can use to enroll personal, company-owned, and VM devices in Intune. 
+ Microsoft Intune supports enrollment on personal and company-owned Macs. This article describes the methods and features you can use to enroll personal devices, company-owned devices, and virtual machines (VM).  
  
 ## Enable enrollment in Microsoft Intune  
 
@@ -111,11 +109,11 @@ By default, Intune lets macOS devices enroll. To block macOS devices from enroll
 ## Enroll virtual macOS machines for testing
 
 > [!NOTE]
-> Intune supports macOS virtual machines for testing purposes only. Don't use macOS virtual machines as official devices for employees or students.  
+> Intune supports virtual macOS machines for testing purposes only. Don't use virtual machines (VMs) as official devices for employees or students.  
 
-Intune supports virtual machines running:
+Intune supports VMs running: 
 
-* Parallels Desktop
+* Parallels Desktop  
 * VMware Fusion  
 * Apple Silicon  
 
@@ -141,7 +139,7 @@ Enter any string of alphanumeric characters for the serial number. For hardware 
 VMware Fusion is only supported on Intel Macs. See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
 
 ### Apple Silicon 
-No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
+No changes are required for VMs running on Apple Silicon hardware. Parallels Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
 
 ## User-approved enrollment
 
