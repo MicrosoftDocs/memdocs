@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/26/2024
+ms.date: 05/27/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -28,11 +28,7 @@ appliesto:
 
 ### Software requirements
 
-Windows Autopilot device preparation depends on specific features available in Windows client, Microsoft Entra ID, and MDM services, such as Microsoft Intune. To use Windows Autopilot device preparation and access these features, some software requirements must be met.
-
-> [!NOTE]
->
-> For a list of OEMs that currently support Windows Autopilot device preparation, see the Participant device manufacturers section at [Windows Autopilot device preparation](https://www.microsoft.com/microsoft-365/windows/windows-autopilot).
+Windows Autopilot device preparation depends on specific features available in Windows client, Microsoft Entra ID, and a mobile device management (MDM) service such as Microsoft Intune. To use Windows Autopilot device preparation and access these features, some software requirements must be met.
 
 #### Windows 11
 
@@ -63,11 +59,15 @@ Additional configuration might be required to grant access to required services 
 
 > [!NOTE]
 >
-> Smart card and certificate based authentication isn't supported during OOBE. For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> Smart card and certificate based authentication isn't supported during the out-of-box experience (OOBE). For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+
+#### Service requirements
+
+Windows Autopilot device preparation relies on several different type of services to function properly. In order for these services to function properly, certain network configurations might need to be performed. These services and their required network configurations are as follows:
 
 #### Windows Autopilot device preparation deployment service
 
-After a network connection is in place, each Windows device will contact the Windows Autopilot device preparation Deployment Service. The following URLs are used:
+After a network connection is in place, each Windows device will contact the Windows Autopilot device preparation deployment service. The following URLs are used:
 
 - `https://ztd.dds.microsoft.com`
 - `https://cs.dds.microsoft.com`
@@ -79,7 +79,7 @@ Windows Autopilot device preparation requires Windows Activation services. For m
 
 #### Microsoft Entra ID
 
-Microsoft Entra ID validates user credentials, and the device can also be joined to Microsoft Entra ID. For more information, see [Office 365 IP Address and URL Web service](/microsoft-365/enterprise/microsoft-365-ip-web-service).
+Microsoft Entra ID validates user credentials. Additionally, the device is joined to Microsoft Entra ID during Windows Autopilot device preparation. For more information, see [Office 365 IP Address and URL Web service](/microsoft-365/enterprise/microsoft-365-ip-web-service).
 
 #### Microsoft Intune
 
@@ -96,9 +96,9 @@ For more information, see [Collect diagnostics from a Windows device](/mem/intun
 
 #### Windows Update
 
-During the OOBE process and after the Windows OS configuration, the Windows Update service retrieves needed updates. If there are problems connecting to Windows Update, see [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting).
+During the out-of-box experience (OOBE) process and after the Windows OS configuration, the Windows Update service retrieves needed updates. If there are problems connecting to Windows Update, see [Windows Update issues troubleshooting](/troubleshoot/windows-client/installing-updates-features-roles/windows-update-issues-troubleshooting).
 
-If Windows Update is inaccessible, the Autopilot process still continues but critical updates aren't available.
+If Windows Update is inaccessible, the Windows Autopilot device preparation process still continues but critical updates aren't available.
 
 #### Delivery Optimization
 
@@ -117,11 +117,11 @@ When a Windows device starts up, it talks to a network time server to ensure tha
 
 #### Domain Name Services (DNS)
 
-To resolve DNS names for all services, the device communicates with a DNS server, typically provided via DHCP. This DNS server must be able to resolve internet names.
+To resolve internet names for all services, the device communicates with a DNS server, typically provided via DHCP. This DNS server must be able to resolve internet names.
 
 #### Diagnostics data
 
-Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-enterprise-diagnostic-data).
+Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-diagnostic-data-using-group-policy-and-mdm).
 
 If the device can't send diagnostic data, the Windows Autopilot device preparation process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
 
@@ -137,15 +137,15 @@ This service is used to enable Windows to receive notifications from apps and se
 
 If the WNS services aren't available, the Windows Autopilot device preparation process still continues without notifications.
 
-#### Microsoft Store, Microsoft Store for Business & Education
+#### Microsoft Store
 
-Apps in the Microsoft Store can be pushed to the device by triggering them via Intune (MDM). App updates and additional apps might also be needed when the user first logs in. For more information, see [Prerequisites for Microsoft Store for Business and Education](/microsoft-store/prerequisites-microsoft-store-for-business). (It also includes Microsoft Entra ID and Windows Notification Services).
+Apps in the Microsoft Store can be pushed to the device by triggering them via Intune or other MDM service. App updates and additional apps might also be needed when the user first logs in. For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-intune-integration-with-the-microsoft-store-on-windows/ba-p/3585077) and [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286).
 
 If the Microsoft Store isn't accessible, the Autopilot process still continues without Microsoft Store apps.
 
 #### Microsoft 365
 
-As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise might be required. For more information, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). This article includes all Office services, DNS names, IP addresses. It also includes Microsoft Entra ID and other services that might overlap with the previously listed services listed.
+As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise might be required. For a list that includes all Office services, DNS names, IP addresses, including Microsoft Entra ID and other services that might overlap with the previously listed services, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 #### Certificate revocation lists (CRLs)
 
@@ -159,9 +159,9 @@ Deploying proxy settings for Windows Autopilot device preparation should be conf
 
 ### Licensing requirements
 
-Windows Autopilot device preparation depends on specific capabilities available in Windows client and Microsoft Entra ID. It also requires an MDM service such as Microsoft Intune. These capabilities can be obtained through various editions and subscription programs:
+Windows Autopilot device preparation depends on specific capabilities available in Windows client and Microsoft Entra ID. It also requires a mobile device management (MDM) service such as Microsoft Intune. These capabilities can be obtained through various editions and subscription programs.
 
-To provide needed Microsoft Entra ID (automatic MDM enrollment and company branding features) and MDM functionality, one of the following subscriptions is required:
+To provide needed Microsoft Entra ID and MDM functionality, including automatic MDM enrollment and company branding features, one of the following subscriptions is required:
 
 - [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline)
@@ -173,12 +173,30 @@ To provide needed Microsoft Entra ID (automatic MDM enrollment and company brand
 
 > [!NOTE]
 >
-> Even when using Microsoft 365 subscriptions, you still need to [assign Intune licenses to the users](/intune/fundamentals/licenses-assign).
+> Even when using Microsoft 365 subscriptions, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licenses-assign).
 
 Additionally, the following are also recommended (but not required):
 
-- [Microsoft 365 Apps for enterprise](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0), which can be deployed easily via Intune (or other MDM services).
-- [Windows Subscription Activation](/windows/deployment/windows-10-enterprise-subscription-activation), to automatically step up devices from Windows Pro to Windows Enterprise edition.
+- [Microsoft 365 Apps for enterprise](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-apps-for-enterprise-product) - Microsoft 365 Apps for enterprise can be deployed easily via Intune or other MDM service.
+- [Windows Subscription Activation](/windows/deployment/windows-subscription-activation) - automatically step up devices from Windows Pro to Windows Enterprise edition.
+
+## [:::image type="icon" source="images/icons/configuration-18.svg"::: **Configuration**](#tab/configuration)
+
+### Configuration requirements
+
+Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Autopilot scenarios.
+
+- **Configure Microsoft Entra automatic enrollment**. For Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/entra-join-automatic-enrollment.md) and [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment) for details. If using a different mobile device management (MDM) service, contact the vendor for the specific URLs or configuration needed for those services.
+
+- **The first user that signs in needs to have Microsoft Entra join permissions**. For more information, see [Allow users to join devices to Microsoft Entra ID](tutorial/user-driven/entra-join-allow-users-to-join.md).
+
+The following requirements are recommended, but are optional and not required:
+
+- **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
+
+- **Configure Microsoft Entra custom branding**. To display an organization-specific sign-on page, configure Microsoft Entra ID with the images and text that need to be displayed. For more information, see [Quickstart: Add company branding to your sign-in page in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding). Key elements for Windows Autopilot include the **square logo**, **sign-in page text**, and Microsoft Entra tenant name. The tenant name is configured separately in the Microsoft Entra tenant properties.
+
+There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications).
 
 ---
 
