@@ -164,5 +164,5 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
 ## Next steps
 
 - [Use custom compliance settings](../protect/compliance-use-custom-settings.md)  
-- [Create a discover script for custom compliance settings](../protect/compliance-custom-script.md)  
+- [Create a discovery script for custom compliance settings](../protect/compliance-custom-script.md)  
 - [Create a compliance policy](../protect/create-compliance-policy.md)
