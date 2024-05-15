@@ -40,7 +40,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
 ## Prerequisites
 
-- **Linux Ubuntu Desktop**, **RedHat Enterprise Linux 8**, or **Redhat Enterprise Linux 9**: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+- **Linux Ubuntu Desktop**, **RedHat Enterprise Linux 8**, or **RedHat Enterprise Linux 9**: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 - **Linux devices are enrolled in Intune**. For more information on Linux enrollment, go to [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md).  
 
 ## Import the script
