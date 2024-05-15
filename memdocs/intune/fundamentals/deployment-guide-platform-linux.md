@@ -74,7 +74,13 @@ You can enforce device compliance policies based on Linux distribution type, ver
 
 ## Step 4: Enroll devices  
 
-Enrollment is supported on Linux desktops running Ubuntu LTS, version 22.04 or 20.04. Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registered with Microsoft Entra ID and evaluated for compliance. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
+Enrollment is supported on Linux desktops running:
+
+* Ubuntu LTS, version 22.04 or 20.04. 
+* RedHat Enterprise Linux 8  
+* RedHat Enterprise Linux 9 
+
+Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registered with Microsoft Entra ID and evaluated for compliance. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
 
 As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#step-1-prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
 

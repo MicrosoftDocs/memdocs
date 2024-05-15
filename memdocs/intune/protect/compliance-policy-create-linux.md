@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/15/2023
+ms.date: 05/15/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,7 +42,9 @@ To learn more about compliance policies, and what they do, see [get started with
 
 This feature applies to:
 
-- Linux
+* Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
+* RedHat Enterprise Linux 8  
+* RedHat Enterprise Linux 9    
 
 ## Linux settings categories
 

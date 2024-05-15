@@ -50,6 +50,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 | --- | --- |
 | You use Ubuntu Desktop (20.04 or 22.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
+| You use Redhat Enterprise 8 or 9. |✅ |
 | Devices are owned by the organization or school. | ✅ |
 | Devices are personal or BYOD. | ✅  |
 | You have new or existing devices. | ✅ |
