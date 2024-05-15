@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/2024
+ms.date: 05/13/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: heenamac
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- magic-ai-copilot
 ---
 
 # Common questions, answers, and scenarios with policies and profiles in Microsoft Intune
@@ -86,6 +87,10 @@ The settings in the policy or profile are applied at every check-in. A [Windows 
 ## Conflicts
 
 Conflicts can happen when different policies update the same setting to different values. For example, you have two policies that update the copy/paste setting to different values. The conflict is handled differently depending on the type of policy.
+
+If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../copilot/copilot-intune-overview.md#policy-and-setting-management).
+
+You can also use Microsoft Copilot in Intune to get more information about your policies and the settings configured in your policies.
 
 ### App protection policies that conflict
 
@@ -167,7 +172,7 @@ For more information on dynamic groups, go to:
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
-## Next steps
+## Related articles
 
 - [Troubleshoot policies and profiles](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune).
 - Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).

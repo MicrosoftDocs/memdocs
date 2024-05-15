@@ -2417,6 +2417,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "memdocs/intune/fundamentals/introduction-intune-education.md",
+      "redirect_url": "/mem/intune/industry/education/introduction-intune-education",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "windows-365/enterprise/troubleshoot-citrix-hdx-plus.md",
       "redirect_url": "/windows-365/enterprise/troubleshoot-partner-connector",
       "redirect_document_id": false
