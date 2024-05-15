@@ -24,7 +24,7 @@ ms.reviewer: Karawang
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: 'intune-azure, graph-explorer'
 ms.collection:
 - tier1
 - M365-identity-device-management
