@@ -7,7 +7,7 @@ ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
-no-loc: [Microsoft, Windows, Autopatch, Autopilot]
+no-loc: [Microsoft, Windows, Autopatch, Autopilot, Edge]
 ---
 
 # Common Education configuration overview
