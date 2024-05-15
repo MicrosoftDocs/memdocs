@@ -62,7 +62,7 @@ The device is userless in stage 1 and stage 2. It becomes user affiliated and re
 
 If you're not using a third party vendor to provision devices, you can continue in the admin stage until it's time to distribute devices to the end user. End users complete the last stage by signing into devices with their work or school account. Devices are ready to use upon sign-in.  
 
-<screenshot> 
+[screenshot]() 
 
 In the first stage, an Intune admin completes the following steps:  
 
@@ -97,7 +97,7 @@ The *default* token enables the standard enrollment flow, with two stages of pre
 
 You complete a portion of the pre-provisioning steps before you distribute the devices. Then end users complete the remaining steps when they sign in with their work or school account. With this token, end users complete most of the pre-provisioning steps.  
 
-<screenshot> 
+[screenshot]() 
 
 In the first stage, an Intune admin completes the following steps:  
 
