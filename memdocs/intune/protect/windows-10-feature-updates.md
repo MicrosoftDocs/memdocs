@@ -166,15 +166,15 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    a. **Name**, **Description**, and **Feature update to deploy**: Specify a name, a description (optional), and for **Feature update to deploy**, select the specific version of Windows with the feature set you want deployed on your devices. Only versions of Windows that remain in support are available to select.
   
-   b. **Required/Optional updates**: These options are only available for the target version Windows 11, and not Windows 10.
+   b. **Required/Optional updates**: These options are only available when the target version is Windows 11.
 
-    - When the option **Make available to users as a required update** is selected, the admin decides when and what update to enforce onto the users' devices.
-    - When the admin selects the option **Make available to users as a optional update**, then the selected updates are made available to users as an optional  update. The admin approves the updates and sets the schedule for when you're going to get the updates.
+    - When the default option **Make available to users as a required update** is selected, the device will automatically install the update based on device settings.
+    - When the admin selects the option **Make available to users as a optional update**, then the selected updates are made available to users as an optional  update. The rollout settings still control when the update is available to the device but then the user must choose to install the update before it is installed on the device.
 
     When the admin switches from **Optional** to **Required**, the following behavior is observed:  
 
    - Updates aren't reinstalled for people who went ahead and opted to install the update back when it was an **Optional** update.
-   - If a device has not started on an update, the next time on scanning the device the update is offered as a **Required** update.
+   - If a device has not started on an update, the next time the device checks for updates the update is treated and automatically installed as a **Required** update.
 
     When the admin switches from **Required** to **Optional**, the following behavior is observed:
 
@@ -183,7 +183,8 @@ For more information about WPJ limitations for Intune Windows Update policies, s
    - Switching only impacts devices that haven't started the update yet or were early enough in the update process so they could be changed to an **Optional** update.
 
     **What the user sees on their device**  
-    When the admin makes the update available as an **Optional** update, the user is notified through their end user communication channels that updates are available to them. When the user navigates to the **Windows setting** page, the update notification is available and they can choose to install the updates when they've got free time or when they they're willing to take the update.
+    When the admin makes the update available as an **Optional** update, the user must navigate to the **Windows update settings** page to see and choose to install the update. It is recommended to communicate to end users through your communication channels that an optional update is available to them.  
+    When the user navigates to the **Windows update settings** page, they can see and choose to install the update when they're willing to take the update.
     Users have to click **Download** to install the update. Otherwise it doesn't get installed until the admin makes it a **Required** update.
     It's the same optional update experience that users are familiar with in their personal PCs
 
