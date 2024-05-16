@@ -122,7 +122,7 @@ In the second, and final stage, an end user completes the following steps:
 
 For detailed steps, see:  
 
-- [Set up enrollment for Android Enterprise fully managed devices](/android-fully-managed-enroll.md)  
+- [Set up enrollment for Android Enterprise fully managed devices](android-fully-managed-enroll.md)  
 - 
 - [Set up enrollment for corporate-owned work profile devices](android-corporate-owned-work-profile-enroll.md)      
 
