@@ -39,7 +39,7 @@ items:
             - name: Step 7 - Add Windows corporate identifier to device (optional)
               href: device-preparation/tutorial/user-driven/entra-join-corporate-identifier.md
 
-  - name: Troubleshooting
+  - name: Troubleshooting FAQ
     href: device-preparation/troubleshooting-faq.yml
 
 - name: Windows Autopilot

@@ -47,6 +47,8 @@ sections:
 
           - Verify that the user signing into the device during OOBE is a member of the user group specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a user group](tutorial/user-driven/entra-join-user-group.md).
 
+          - Verify that a device group has been selected in the Windows Autopilot device preparation policy. A Windows Autopilot device preparation policy can be created without selecting a device group. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+
       - question: |
           Why are some of the applications or scripts selected in the Windows Autopilot device preparation policy not getting installed? When looking at the details of the Windows Autopilot device preparation deployment report, I am showing the applications or scripts as skipped. Why were they skipped?
         answer: |
