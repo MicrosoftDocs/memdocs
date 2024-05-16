@@ -166,7 +166,7 @@ With settings catalog, we can streamline the end users experience for allowing t
 
 #### [:::image type="icon" source="../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
 
-Use the following Graph call to automatically create the settings catalog policy in your tenant without assignments or scope tags.
+[!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
 
 This will create a policy in your tenant with the name **_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control**.
 
