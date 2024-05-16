@@ -30,12 +30,14 @@ sections:
       - question: |
           When running a Windows Autopilot device preparation deployment on a device, why isn't the device being added to the device group specified in the Windows Autopilot device preparation policy?
         answer: |
-          Verify that **Intune Provisioning Client** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+          - Verify that **Intune Provisioning Client** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+
+          - Verify that the correct device group is specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
       - question: |
           When attempting to run a Windows Autopilot device preparation deployment on a device, the Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE). Why doesn't the Windows Autopilot device preparation deployment ever launch?
         answer: |
-          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md#software-requirements), including that the minimum required update is installed before starting the device for the first time.
+          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md#software-requirements), including that the minimum required update is installed before starting the device for the first time:
 
             - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
 
@@ -43,11 +45,9 @@ sections:
 
           - Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. An indication that the device is registered as a Windows Autopilot device or that a Windows Autopilot profile has been assigned to the device is that the Enrollment Status Page (ESP) is displayed during OOBE. Windows Autopilot device preparation doesn't use the ESP. If a devices needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device)
 
-          - Verify that the correct device group is specified in the Windows Autopilot device preparation policy. For more information, see (tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy).
-
-          - Verify that the user signing into the device during OOBE is a member of the user group specified in the Windows Autopilot device preparation policy.
+          - Verify that the user signing into the device during OOBE is a member of the user group specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a user group](tutorial/user-driven/entra-join-user-group.md).
 
       - question: |
           Why are some of the applications or scripts selected in the Windows Autopilot device preparation policy not getting installed? When looking at the details of the Windows Autopilot device preparation deployment report, I am showing the applications or scripts as skipped. Why were they skipped?
         answer: |
-          Verify that the applications or scripts are assigned to the device group specified in the Windows Autopilot device preparation policy.
+          Verify that the applications or scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).

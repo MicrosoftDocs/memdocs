@@ -131,7 +131,7 @@ In the **Configuration settings** page:
 
 4. Expand the **Scripts** section by selecting it:
 
-    The **Apps** section allows selection of up to 10 PowerShell scripts to install during the deployment. The scripts specified here should be the critical scripts that should run on the device before the end-user can start using the device.
+    The **Scripts** section allows selection of up to 10 PowerShell scripts to install during the deployment. The scripts specified here should be the critical scripts that should run on the device before the end-user can start using the device.
 
     > [!IMPORTANT]
     >
