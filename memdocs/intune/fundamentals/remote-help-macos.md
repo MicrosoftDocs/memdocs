@@ -30,7 +30,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
-- interactive
+- graph-interactive
 ---
  
 # Remote Help on macOS with Microsoft Intune
