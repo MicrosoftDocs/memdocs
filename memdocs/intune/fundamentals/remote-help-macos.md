@@ -24,12 +24,13 @@ ms.reviewer: Karawang
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: 'intune-azure, graph-explorer'
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
 - highseo
+- interactive
 ---
  
 # Remote Help on macOS with Microsoft Intune
