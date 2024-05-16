@@ -32,8 +32,13 @@ Windows Autopilot device preparation depends on specific features available in W
 
 #### Windows 11
 
-- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
-- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
+- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
+- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
+
+> [!IMPORTANT]
+>
+> - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
+> - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available at the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/ServiceCenter/Default.aspx).
 
 The following editions are supported:
 
@@ -180,7 +185,7 @@ Additionally, the following are also recommended (but not required):
 - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-apps-for-enterprise-product) - Microsoft 365 Apps for enterprise can be deployed easily via Intune or other MDM service.
 - [Windows Subscription Activation](/windows/deployment/windows-subscription-activation) - automatically step up devices from Windows Pro to Windows Enterprise edition.
 
-## [:::image type="icon" source="images/icons/configuration-18.svg"::: **Configuration**](#tab/configuration)
+## [:::image type="icon" source="../images/icons/configuration-18.svg"::: **Configuration**](#tab/configuration)
 
 ### Configuration requirements
 
@@ -190,7 +195,7 @@ Before Windows Autopilot device preparation can be used, some configuration task
 
 - **The first user that signs in needs to have Microsoft Entra join permissions**. For more information, see [Allow users to join devices to Microsoft Entra ID](tutorial/user-driven/entra-join-allow-users-to-join.md).
 
-The following requirements are recommended, but are optional and not required:
+The following configurations are optional but recommended. They aren't required:
 
 - **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
 

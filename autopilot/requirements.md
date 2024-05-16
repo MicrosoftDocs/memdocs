@@ -237,7 +237,7 @@ Before Windows Autopilot can be used, some configuration tasks are required to s
 
 - **The first user that signs in needs to have Microsoft Entra join permissions for some deployment scenarios**. For details, see [Allow users to join devices to Microsoft Entra ID](tutorial/user-driven/azure-ad-join-allow-users-to-join.md). The exception to this requirement is Windows Autopilot self-deployment mode since this method works in a userless context.
 
-The following requirements are recommended, but are optional and not required:
+The following configurations are optional but recommended. They aren't required:
 
 - **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
 

@@ -24,7 +24,7 @@ summary: |
   This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
 
 sections:
-  - name: Windows Autopilot device preparation
+  - name: Windows Autopilot device preparation FAQ
     questions:
       - question: |
           Who does Windows Autopilot device preparation benefit?
