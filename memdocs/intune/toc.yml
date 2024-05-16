@@ -1484,7 +1484,7 @@ items:
           displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: Set up enrollment notifications
+          displayName: intune; enrollment; terms and conditions; policy 
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
@@ -1535,7 +1535,8 @@ items:
           - name: Prerequisite - Connect Intune to Android Enterprise 
             href: ./enrollment/connect-intune-android-enterprise.md
           - name: Device staging overview          
-            href: ./enrollment/device-staging-overview   
+            href: ./enrollment/device-staging-overview.md
+            displayName: COBO; staged enrollment 
           - name: Set up work profile management
             items: 
             - name: Overview  
