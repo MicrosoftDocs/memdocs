@@ -236,7 +236,7 @@ You can view the **Noncompliant devices** report using the following steps:
 
 ### Windows hardware attestation report (Organizational)  
 
-View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for all MDM-enrolled Windows devices. 
+View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for all MDM-enrolled Windows devices. For more information about how to monitor device compliance through reporting, see [Monitor device compliance](../protect/compliance-policy-monitor.md).  
 
 You can view the Windows hardware attestation report using the following steps:  
 
