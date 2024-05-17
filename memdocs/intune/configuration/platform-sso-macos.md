@@ -183,10 +183,10 @@ For details about the payload settings for the Extensible Single Sign-on extensi
 
     | Name | Configuration |
     |---|---|
-    | **Authentication Method (Deprecated)** (macOS 13 only)| Password or UserSecureEnclave</br></br>For macOS 14, use the **Platform SSO** > **Authentication Method** setting.|
+    | **Authentication Method (Deprecated)** </br>(macOS 13 only)| Password or UserSecureEnclave</br></br>For macOS 14, use the **Platform SSO** > **Authentication Method** setting.|
     | **Extension Identifier** | `com.microsoft.CompanyPortalMac.ssoextension`|
-    | **Platform SSO** > **Authentication Method** (macOS 14+) | Password, UserSecureEnclave or SmartCard</br></br> For macOS 13, use the **Authentication Method (Deprecated)** setting.|
-    | **Platform SSO** > **Use Shared Device Keys** (macOS 14+) | **Enabled** </br></br>Users upgrading from macOS 13.x to 14.x will be prompted to register again.|
+    | **Platform SSO** > **Authentication Method** </br>(macOS 14+) | Password, UserSecureEnclave or SmartCard</br></br> For macOS 13, use the **Authentication Method (Deprecated)** setting.|
+    | **Platform SSO** > **Use Shared Device Keys** </br>(macOS 14+) | **Enabled** </br></br>Users upgrading from macOS 13.x to 14.x will be prompted to register again.|
     | **Registration token** | `{{DEVICEREGISTRATION}}`|
     | **Screen Locked Behavior**|**Do Not Handle**|
     | **Team Identifier** | `UBF8T346G9` |
