@@ -183,15 +183,15 @@ For details about the payload settings for the Extensible Single Sign-on extensi
 
     | Name | Configuration |
     |---|---|
-    | **Authentication Method (Deprecated)** (macOS 13 only)</br></br>For macOS 14, use the **Platform SSO** > **Authentication Method** setting.| Password or UserSecureEnclave|
-    | Extension Identifier | `com.microsoft.CompanyPortalMac.ssoextension`|
-    | **Platform SSO** > **Authentication Method** (macOS 14+)</br></br> For macOS 13, use the **Authentication Method (Deprecated)** setting. | Password, UserSecureEnclave or SmartCard|
-    | **Platform SSO** > **Use Shared Device Keys** (macOS 14+) </br></br>Users upgrading from macOS 13.x to 14.x will be prompted to register again.| **Enabled** |
-    | Registration token | `{{DEVICEREGISTRATION}}`|
-    | Screen Locked Behavior|**Do Not Handle**|
-    | Team Identifier | `UBF8T346G9` |
-    | Type | Redirect |
-    | URLs | `https://login.microsoftonline.com` <br/> `https://login.microsoft.com` <br/> `https://sts.windows.net` <br/> `https://login.partner.microsoftonline.cn` <br/> `https://login.chinacloudapi.cn` <br/> `https://login.microsoftonline.us` <br/> `https://login-us.microsoftonline.com` |
+    | **Authentication Method (Deprecated)** (macOS 13 only)| Password or UserSecureEnclave</br></br>For macOS 14, use the **Platform SSO** > **Authentication Method** setting.|
+    | **Extension Identifier** | `com.microsoft.CompanyPortalMac.ssoextension`|
+    | **Platform SSO** > **Authentication Method** (macOS 14+) | Password, UserSecureEnclave or SmartCard</br></br> For macOS 13, use the **Authentication Method (Deprecated)** setting.|
+    | **Platform SSO** > **Use Shared Device Keys** (macOS 14+) | **Enabled** </br></br>Users upgrading from macOS 13.x to 14.x will be prompted to register again.|
+    | **Registration token** | `{{DEVICEREGISTRATION}}`|
+    | **Screen Locked Behavior**|**Do Not Handle**|
+    | **Team Identifier** | `UBF8T346G9` |
+    | **Type** | Redirect |
+    | **URLs** | `https://login.microsoftonline.com` <br/> `https://login.microsoft.com` <br/> `https://sts.windows.net` <br/> `https://login.partner.microsoftonline.cn` <br/> `https://login.chinacloudapi.cn` <br/> `https://login.microsoftonline.us` <br/> `https://login-us.microsoftonline.com` |
 
 9. Select **Next**.
 10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
