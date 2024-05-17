@@ -157,7 +157,7 @@ guard let authorityURL = URL(string: kAuthority) else {
         self.applicationContext = try MSALPublicClientApplication(configuration: msalConfiguration)
 
 ```
-To fetch the ObjectId for the accountId parameter of the MAM SDK compliance remediation APIs you need to do the following:
+To fetch the Entra object ID for the accountId parameter of the MAM SDK compliance remediation APIs you need to do the following:
 - First get the homeAccountId from userInfo[MSALHomeAccountIdKey] within MSALError object sent back by MSAL when it reports ERROR_SERVER_PROTECTION_POLICY_REQUIRED to the app.
 - This homeAccountId will be in the format ObjectId.TenantId. Extract the ObjectId value by spliting the string on the '.' and then use that value for the accountId parameter in remediation API remediateComplianceForAccountId.
 
