@@ -234,14 +234,11 @@ You can view the **Noncompliant devices** report using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Noncompliant devices**.
 
-### Windows hardware attestation report (Operational)
-
-> [!NOTE]
-> This report is also known as the **Windows device health attestation status** report.
+### Windows hardware attestation report (Operational) 
 
 View the status of hardware-attested compliance settings assigned to Windows devices. This report shows the status for devices assigned at least one hardware-attested setting. For more information about this report and related compliance status views, see [Monitor device compliance](../protect/compliance-policy-monitor.md).
 
-You can view the **Windows Health Attestation** report using the following steps: 
+You can view the Windows device health attestation report using the following steps:  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Reports** > **Device Compliance**.
