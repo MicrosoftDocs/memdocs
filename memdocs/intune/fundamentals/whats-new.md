@@ -100,7 +100,7 @@ Applies to:
 
 #### Monitor device delete actions<!-- 25255093 -->
 
-You can now monitor and track device delete actions in the **Device Action** report of Intune. You can determine when a device delete action has been triggered, who initiated it, and the status of the action. Status for a device delete action is either completed, pending, or failed. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes. You can find the report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor** > **Device actions**. 
+You can now monitor and track device delete actions in the **Device Action** report of Intune. You can determine when a device delete action has been triggered, who initiated it, and the status of the action. Status for a device delete action is either completed, pending, or failed. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes. You can find the report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor** > **Device actions**.
 
 For more information about reports, see [Intune Reports](..\fundamentals\reports.md).
 
@@ -185,7 +185,7 @@ For more information, see [Configure the Microsoft Managed Home Screen app for A
 
 IPv4 and IPv6 connectivity details are now both available from the **Device Information** page of the Managed Home Screen app. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\remote-actions\collect-diagnostics.md).
 
-#### Updates to Managed Home Screen sign-in support<!-- 24990268 -->
+#### Updates to Managed Home Screen sign-in support<!-- 25597636 -->
 
 Managed Home Screen now supports domainless sign-in. Admins can configure a domain name, which will be automatically appended to usernames upon sign-in. Also, Managed Home Screen supports a custom login hint text to be displayed to users during the sign-in process.
 
