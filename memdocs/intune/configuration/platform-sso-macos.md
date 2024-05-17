@@ -34,7 +34,7 @@ ms.collection:
 
 On your macOS devices, you can configure Platform SSO to enable single sign-on (SSO) using passwordless authentication, Microsoft Entra ID user accounts, or smart cards. Platform SSO is an enhancement to the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) and the [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md). Platform SSO can sign users into their managed Mac devices using their Microsoft Entra ID credentials and Touch ID.
 
-The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID includes two SSO features - **Platform SSO** and the **SSO app extension**. This article focuses on configuring [Platform SSO with Entra ID](https://learn.microsoft.com/en-us/entra/identity/devices/macos-psso) for macOS devices which is in preview.
+The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID includes two SSO features - **Platform SSO** and the **SSO app extension**. This article focuses on configuring [Platform SSO with Entra ID](/entra/identity/devices/macos-psso) for macOS devices which is in preview.
 
 Some benefits of Platform SSO include:
 
@@ -180,6 +180,7 @@ For details about the payload settings for the Extensible Single Sign-on extensi
     > There are more optional Platform SSO settings you can configure in the policy. For a list, go to [More Platform SSO settings you can configure](#more-platform-sso-settings-you-can-configure) (in this article).
 
 8. Configure the following required settings:
+
     | Name | Configuration |
     |---|---|
     | **Authentication Method (Deprecated)** (macOS 13 only)</br></br>For macOS 14, use the **Platform SSO** > **Authentication Method** setting.| Password or UserSecureEnclave|
