@@ -410,7 +410,7 @@ Version: 5.1.1214.0
 
 - Changed the primary endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com.
   > [!NOTE]
-  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall.
+  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall after 5/30/2024.
 - Resolved various bugs including an issue with Conditional Access. If a tenant had a **Terms of Use** policy enabled for Office 365, Remote Help wouldn't know how to respond and would instead present an authentication error message to the user.
 - Enabled a shortcut to open context menus with the keyboard shortcut 'Alt + Space'
 
