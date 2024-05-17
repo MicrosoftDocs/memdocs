@@ -244,6 +244,8 @@ For **existing devices** already enrolled in Intune, assign the Platform SSO pol
 
 When the device receives the policy, there's a **Registration required** notification that shows in the Notification Center.
 
+:::image type="content" border="false" source="./media/platform-sso-macos/platform-sso-macos-registration-required.png" alt-text="Screenshot that shows the registration prompt users.":::
+
 - End users select this notification, sign in to the Microsoft Entra ID plug-in with their organization account, and complete multifactor authentication (MFA) if required.
   > [!NOTE]
   > MFA is a feature of Microsoft Entra. Make sure MFA is enabled in your tenant. For more information, including any other app requirements, go to [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
