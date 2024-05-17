@@ -313,10 +313,10 @@ Before the user is signed out, the app should call the following method on the  
  *  until the Intune APP AAD token is acquired, then return.  This method must be called before  
  *  the user is removed from the application (so that required AAD tokens are not purged
  *  before this method is called).
- *  @param identity The ObjectId of the account to be removed.
+ *  @param accountId The object ID of the account to be removed.
  *  @param doWipe  If YES, a selective wipe if the account is un-enrolled
  */
-(void)deRegisterAndUnenrollAccountId:(NSString *)identity withWipe:(BOOL)doWipe;
+(void)deRegisterAndUnenrollAccountId:(NSString *)accountId withWipe:(BOOL)doWipe;
 ```
 
 This method must be called before the user account's Microsoft Entra tokens are deleted. The SDK needs the user account's Microsoft Entra token(s) to make specific requests to the Intune MAM service on behalf of the user.
@@ -364,7 +364,7 @@ The notifications are presented via delegate methods in `IntuneMAMEnrollmentDele
 
 These delegate methods return an `IntuneMAMEnrollmentStatus` object that has the following information:
 
-* The accountId (ObjectId) of the account associated with the request
+* The accountId (Object ID) of the account associated with the request
 * The identity (UPN) of the account associated with the request
 * A status code that indicates the result of the request
 * An error string with a description of the status code
