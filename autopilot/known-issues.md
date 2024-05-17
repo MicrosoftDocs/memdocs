@@ -29,9 +29,9 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-### Required apps are not shown on the Enrollment Status Page (ESP) after an Autopilot Reset
+### Required apps aren't shown on the Enrollment Status Page (ESP) after an Autopilot Reset
 
-When an Autopilot Reset happens, the required apps are not installed on the ESP before the user reaches the desktop. The apps are not tracked on the ESP, but they will be installed when the user signs in to the desktop.  
+When an Autopilot Reset happens, the required apps aren't installed on the ESP before the user reaches the desktop. The apps aren't tracked on the ESP, but they'll be installed when the user signs in to the desktop.
 
 ### Enrolled date for Autopilot device is incorrect
 
