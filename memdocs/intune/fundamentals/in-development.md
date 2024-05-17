@@ -114,10 +114,6 @@ We're updating RBAC for enrollment platform restrictions. Enrollment platform re
 
 ## Device management
 
-### New version of Windows hardware attestation report<!-- 15425680 -->
-
-We're introducing a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows 10/11. The Windows hardware attestation report will be built on a new reporting infrastructure, and updated to reflect new settings added to Microsoft Azure Attestation. The report will be available in the admin center under **Reports** > **Device Compliance** > **Reports**. The Windows health attestation report that exists today under **Devices** > **Monitor** will be retired.
-
 ### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
 
 End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website, which allows end users see their recovery keys as well.

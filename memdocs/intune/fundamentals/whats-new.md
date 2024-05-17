@@ -98,6 +98,19 @@ Applies to:
 
 ### Device management
 
+#### New version of Windows hardware attestation report<!-- 15425680 -->
+
+We've released a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows 10/11. The Windows hardware attestation report is built on a new reporting infrastructure, and reports on new settings added to Microsoft Azure Attestation. The report is available in the admin center under **Reports** > **Device Compliance** > **Reports**.
+
+For more information, see [Intune reports](reports.md#windows-hardware-attestation-report-organizational).
+
+The Windows health attestation report previously available under **Devices** > **Monitor** has been retired.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
 #### Monitor device delete actions<!-- 25255093 -->
 
 You can now monitor and track device delete actions in the **Device Action** report of Intune. You can determine when a device delete action has been triggered, who initiated it, and the status of the action. Status for a device delete action is either completed, pending, or failed. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes. You can find the report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor** > **Device actions**.
