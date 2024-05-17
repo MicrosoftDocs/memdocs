@@ -49,3 +49,11 @@ Any applications installed or scripts that run during a Windows Autopilot device
 In order for applications to install and the scripts run successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create a device group](entra-join-device-group.md).
 
 To assign the desired applications and scripts to the device group created for Windows Autopilot device preparation:
+
+
+## Next step: Create Windows Autopilot device preparation policy
+
+> [!div class="nextstepaction"]
+> [Step 6: Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
+
+## More information

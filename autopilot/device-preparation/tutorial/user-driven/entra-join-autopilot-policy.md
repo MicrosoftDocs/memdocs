@@ -153,4 +153,13 @@ In the **Configuration settings** page:
 >
 > Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile will take precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment will run instead of the Windows Autopilot device preparation deployment. If a devices needs to be removed as a Windows Autopilot device, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
 
+## Next step: Add Windows corporate identifier to device (optional)
+
+> [!div class="nextstepaction"]
+> [Step 7: Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+
+> [!NOTE]
+>
+> Adding a [corporate identifier](../../overview.md#corporate-identifiers-for-windows) to the device is an optional step. If corporate identifiers aren't being used, then the next step is to deploy the device.
+
 ## More information

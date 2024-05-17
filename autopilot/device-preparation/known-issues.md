@@ -23,3 +23,13 @@ appliesto:
 This article describes known issues that can often be resolved with configuration changes, through cumulative updates, or might be resolved automatically in a future release.
 
 ## Known issues
+
+### Initial release of Windows Autopilot device preparation
+
+The initial release of Windows Autopilot device preparation has the following known issues and limitations:
+
+- Dependency and supersedence relationships are marked in reports as **Dependent**.
+- Application uninstall intent is marked in reports as **Installed** if completed successfully.
+- Managed Installer policy during the out-of-box experience (OOBE) isn't supported due to it might leading to incorrect reporting.
+- Custom compliance isn't supported during Windows Autopilot device preparation deployments.
+- The device health script isn't supported during Windows Autopilot device preparation deployments.
