@@ -49,7 +49,12 @@ sections:
 
           - Verify that a device group has been selected in the Windows Autopilot device preparation policy. A Windows Autopilot device preparation policy can be created without selecting a device group. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
+          - If using corporate identifiers in Intune, make sure that a corporate identifiers has been added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+
       - question: |
-          Why are some of the applications or scripts selected in the Windows Autopilot device preparation policy not getting installed? When looking at the details of the Windows Autopilot device preparation deployment report, I am showing the applications or scripts as skipped. Why were they skipped?
+          Why are some of the applications or scripts selected in the Windows Autopilot device preparation policy not getting installed?
         answer: |
-          Verify that the applications or scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+          - If in the details of the Windows Autopilot device preparation deployment report, the applications or scripts are showing **Skipped**, verify that the applications or scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+
+          - Verify that the application or script is configured to install in the **System** context. Since the applications are installed and the scripts ran during OOBE when no user is signed in, they must be configured to install in the **System** context.
+

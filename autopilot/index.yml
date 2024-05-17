@@ -7,8 +7,8 @@ metadata:
   description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
   ms.service: windows-client
   ms.subservice: itpro-deploy
-  ms.topic: landing-page 
-  ms.collection: 
+  ms.topic: landing-page
+  ms.collection:
     - tier1
     - highpri
     - essentials-navigation
@@ -16,7 +16,7 @@ metadata:
   ms.author: frankroj
   manager: aaroncz
   ms.reviewer: jubaptis
-  ms.date: 11/30/2023
+  ms.date: 05/27/2024
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
@@ -36,7 +36,7 @@ landingContent:
       - text: Enrollment Status Page
         url: enrollment-status.md
       - text: Requirements
-        url:  software-requirements.md
+        url:  requirements.md
       - text: What's new
         url:  windows-autopilot-whats-new.md
 

@@ -26,34 +26,44 @@ summary: |
 sections:
   - name: Windows Autopilot device preparation FAQ
     questions:
+
       - question: |
           Who does Windows Autopilot device preparation benefit?
         answer: |
           Windows Autopilot device preparation benefits customers that are using Windows Autopilot today by providing an updated and more streamlined profile deployment experience. It also benefits new customers onboarding Windows Autopilot device preparation by reducing the complexity of setting up the deployment when compared to Windows Autopilot.
+
+          Windows Autopilot device preparation also adds supports for [Government Community Cloud High (GCCH) and Department of Defense (DoD)](/mem/intune/fundamentals/intune-govt-service-description) environments.
+
       - question: |
           What about the other Windows Autopilot scenarios like pre-provisioning and self-deploying mode?
         answer: |
           Windows Autopilot scenarios like pre-provisioning and self-deploying mode will be supported in the future, but aren't part of the initial release of Windows Autopilot device preparation.
+
       - question: |
           Why is there a limit on the number of applications that can be deployed/scripts that can be run in the Windows Autopilot device preparation policy?
         answer: |
           The number of applications that can be applied/scripts that can run during the out-of-box experience (OOBE) is limited to increase stability and achieve a higher success rate. Almost 90% of all Windows Autopilot deployments are deployed with 10 or fewer apps. This limit is intended to improve the overall end user experience so that users can become more productive quickly. We understand that there are outliers and organizations that want to target more during setup. However, for the user-driven approach, we want to leverage the desktop experience for non-essential applications.
+
       - question: |
           How do users know when the setup is complete?
         answer: |
           Many end users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to the help desk, a completion page is added in OOBE. The completion page can be configured to either require the user to manually select to continue or to set the page to auto continue. This message lets the user know that OOBE setup is complete but there might be additional installations occurring.
+
       - question: |
           Can the new profile be used by non-Microsoft mobile device management (MDM) providers?
         answer: |
           Non-Microsoft MDM providers will be supported but aren't part of the initial release of Windows Autopilot device preparation.
+
       - question: |
           Do existing Windows Autopilot profiles need to be migrated to Windows Autopilot device Preparation?
         answer: |
           There's no need to migrate from existing Windows Autopilot profiles to Windows Autopilot device preparation policies. Both environments will exist in parallel for a while as we work to improve the experience in Windows Autopilot device preparation and add more functionality.
+
       - question: |
           Why isn't the focus on issues with Windows Autopilot and make the Windows Autopilot experience better?
         answer: |
           Expanding to meet additional customer needs is challenging to do with the existing architecture without disrupting the existing experience and causing delays and interruptions to deployments. Disrupting the existing experience and causing delays and interruptions to deployments is a non-starter for us and so for a period, there needs to be two Autopilot experiences in parallel.
+
       - question: |
           Does this mean that Windows Autopilot isn't being invested in any longer?
         answer: |

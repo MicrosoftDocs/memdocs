@@ -16,6 +16,7 @@ items:
     href: device-preparation/troubleshooting-faq.yml
   - name: Known issues
     href: device-preparation/known-issues.md
+
   - name: Tutorial
     items:
       - name: Windows Autopilot device preparation scenarios
