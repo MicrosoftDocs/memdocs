@@ -43,7 +43,7 @@ Some benefits of Platform SSO include:
 - The sign in experience is similar to signing into a Windows device with a work or school account, like users do with Windows Hello for Business.
 - Helps minimize the number of times users need to enter their Microsoft Entra ID credentials.
 - Helps reduce the number of passwords users need to remember.
-- Get the benefits of Microsoft Entra Join, which allows any organization user to sign into the device.
+- Get the benefits of Microsoft Entra join, which allows any organization user to sign into the device.
 - Included with all [Microsoft Intune licensing plans](../fundamentals/licenses.md).
 
 When Mac devices join a Microsoft Entra ID tenant, the devices get a workplace join (WPJ) certificate that is hardware-bound and only accessible by the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin). To access resources protected using Conditional Access, apps and web browsers need this WPJ certificate. With Platform SSO configured, the SSO app extension acts as the broker for Microsoft Entra ID authentication and Conditional Access.
@@ -76,6 +76,17 @@ Use the information in this step to learn the differences between the authentica
 
 > [!TIP]
 >Microsoft recommends using **Secure Enclave** as the authentication method when configuring Platform SSO.
+
+| Feature | Secure Enclave | Smart Card | Password |
+|---|---|---|---|
+|**Passwordless (phishing resistant)**|✅|✅|❌|
+|**TouchID supported for unlock**|✅|✅|✅|
+|**Can be used as passkey**|✅|❌|❌|
+|**MFA mandatory for setup** </br></br> NOTE: MFA is always recommended|✅|✅|❌|
+|**Local Mac password synced with Entra ID**|❌|❌|✅|
+|**Optionally allow new users to log in with Entra credentials (macOS 14.x +)**|✅|✅|✅|
+|**Supported on macOS 13.x +**|✅|❌|✅|
+|**Supported on macOS 14.x +**|✅|✅|✅|
 
 ### Secure Enclave
 
@@ -235,7 +246,7 @@ When the device receives the policy, there's a **Registration required** notific
 - End users select this notification, sign in to the Microsoft Entra ID plug-in with their organization account, and complete multifactor authentication (MFA) if required.
   > [!NOTE]
   > MFA is a feature of Microsoft Entra. Make sure MFA is enabled in your tenant. For more information, including any other app requirements, go to [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
-- When they successfully authenticate, the device is Microsoft Entra-Joined to the organization and the workplace join (WPJ) certificate is bound to the device.
+- When they successfully authenticate, the device is Microsoft Entra-joined to the organization and the workplace join (WPJ) certificate is bound to the device.
 
 For more information about the different end-user experiences for device registration, go to [Join a Mac device with Microsoft Entra ID](/entra/identity/devices/device-join-microsoft-entra-company-portal).
 
