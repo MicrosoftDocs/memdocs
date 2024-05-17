@@ -48,6 +48,10 @@ As an Intune administrator, use these compliance settings to help protect your o
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Windows 10 and later**.
 
 ## Device Health
+Intune uses a Microsoft Attestation Service to provide a reporting service used to ensure a Windows device boots to trusted state.  Windows 10 devices across Intune commercial, US Government GCC High and DoD services use the Device Health Attestation (DHA) service.  Windows 11 devices in the Intune commercial service will use the Microsoft Azure Attestation (MAA) service.  
+Learn more about DHA and MAA here:
+- [Device Health Attestation](/windows-server/security/device-health-attestation).
+- [Microsoft Azure Attestation](/azure/attestation/overview).
 
 ### Windows Health Attestation Service evaluation rules
 
@@ -77,6 +81,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 More resources:
 
 - For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).
+- For MAA, ensure there are no firewall rules blocking outbound HTTPS/443 traffic, and that SSL traffic inspection is not in place for your Intune tenants geo-region, see [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints?tabs=north-america#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).
 - [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## Device Properties
