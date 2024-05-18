@@ -1,4 +1,6 @@
 items:
+- name: Windows Autopilot deployment
+  href: index.yml
 - name: Windows Autopilot device preparation
   expanded: true
   items:
@@ -44,8 +46,6 @@ items:
 - name: Windows Autopilot
   expanded: true
   items:
-  - name: Windows Autopilot deployment
-    href: index.yml
   - name: What's new
     href: windows-autopilot-whats-new.md
   - name: Requirements
