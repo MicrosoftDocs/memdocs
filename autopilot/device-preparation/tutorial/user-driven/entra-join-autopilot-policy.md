@@ -87,7 +87,7 @@ In the **Configuration settings** page:
 
    1. **Minutes allowed before showing installation error** - enter the number of minutes allowed before failing a deployment.
 
-      The value entered is for the whole deployment and not for an individual application install or script. The acceptable value is an integer between 15 and 720.
+      The value entered is for the whole deployment and not for an individual application install or PowerShell script. The acceptable value is an integer between 15 and 720.
 
    2. **Custom error message** - enter a custom message to display to the end-user if the deployment fails.
 
@@ -101,7 +101,7 @@ In the **Configuration settings** page:
 
 2. Expand the **Apps** section by selecting it:
 
-   The **Apps** section allows selection of up to 10 managed applications reference with the deployment. The apps specified here should be the critical apps that should be installed on the device before the end-user can start using the device.
+   The **Apps** section allows selection of up to 10 managed applications reference with the deployment. The applications specified here should be the critical applications that should be installed on the device before the end-user can start using the device.
 
    > [!IMPORTANT]
    >
@@ -131,23 +131,23 @@ In the **Configuration settings** page:
 
 4. Expand the **Scripts** section by selecting it:
 
-    The **Scripts** section allows selection of up to 10 PowerShell scripts to install during the deployment. The scripts specified here should be the critical scripts that should run on the device before the end-user can start using the device.
+    The **Scripts** section allows selection of up to 10 PowerShell scripts to install during the deployment. The PowerShell scripts specified here should be the critical PowerShell scripts that should run on the device before the end-user can start using the device.
 
     > [!IMPORTANT]
     >
-    > The PowerShell scripts selected in this setting should be assigned to the device security group previously specified in the **Device group** page. The PowerShell script should also be configured to run in the **System** context since the scripts runs during OOBE when no user is signed in. The script can be set to run in the **System** context by setting the option **Run this script using the logged on credentials** to **No** in the properties of the script.
+    > The PowerShell scripts selected in this setting should be assigned to the device security group previously specified in the **Device group** page. The PowerShell script should also be configured to run in the **System** context since the PowerShell scripts runs during OOBE when no user is signed in. The PowerShell script can be set to run in the **System** context by setting the option **Run this script using the logged on credentials** to **No** in the properties of the PowerShell script.
 
    1. Under **Allowed Scripts**, select **Add**. The **Select Scripts** pane opens.
 
    2. In the **Select Scripts** pane:
 
-      1. Scroll through the list of scripts or use the **Search** box to search for desired scripts.
+      1. Scroll through the list of PowerShell scripts or use the **Search** box to search for desired PowerShell scripts.
 
-      2. Once a desired script is found, select the **Add** button next to the script. The script is added to the list under **Selected Scripts**.
+      2. Once a desired PowerShell script is found, select the **Add** button next to the PowerShell script. The PowerShell script is added to the list under **Selected Scripts**.
 
-      3. Once all of the desired scripts are selected, select the **Save** button.
+      3. Once all of the desired PowerShell scripts are selected, select the **Save** button.
 
-    All of the selected scripts should display under **Allowed Scripts**.
+    All of the selected PowerShell scripts should display under **Allowed Scripts**.
 
 > [!IMPORTANT]
 >

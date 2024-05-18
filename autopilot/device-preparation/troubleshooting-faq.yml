@@ -52,9 +52,9 @@ sections:
           - If using corporate identifiers in Intune, make sure that a corporate identifiers has been added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
       - question: |
-          Why are some of the applications or scripts selected in the Windows Autopilot device preparation policy not getting installed?
+          Why are some of the applications or PowerShell scripts selected in the Windows Autopilot device preparation policy not getting installed?
         answer: |
-          - If in the details of the Windows Autopilot device preparation deployment report, the applications or scripts are showing **Skipped**, verify that the applications or scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+          - If in the details of the Windows Autopilot device preparation deployment report, the applications or PowerShell scripts are showing **Skipped**, verify that the applications or PowerShell scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
-          - Verify that the application or script is configured to install in the **System** context. Since the applications are installed and the scripts ran during OOBE when no user is signed in, they must be configured to install in the **System** context.
+          - Verify that the application or PowerShell script is configured to install in the **System** context. Since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in, they must be configured to install in the **System** context.
 

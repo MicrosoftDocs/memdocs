@@ -107,12 +107,12 @@ If Windows Update is inaccessible, the Windows Autopilot device preparation proc
 
 #### Delivery Optimization
 
-Windows Autopilot device preparation contacts the [Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the internet.
+Windows Autopilot device preparation contacts the [Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) service when downloading the applications and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the internet.
 
 - Windows Updates.
-- Microsoft Store apps and app updates.
+- Microsoft Store applications and application updates.
 - Office Updates.
-- Intune Win32 Apps.
+- Intune Win32 Applications.
 
 If the Delivery Optimization Service is inaccessible, the Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
 
@@ -138,19 +138,19 @@ Windows must be able to tell that the device can access the internet. For more i
 
 #### Windows Notification Services (WNS)
 
-This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store).
+This service is used to enable Windows to receive notifications from applications and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store).
 
 If the WNS services aren't available, the Windows Autopilot device preparation process still continues without notifications.
 
 #### Microsoft Store
 
-Apps in the Microsoft Store can be pushed to the device by triggering them via Intune or other MDM service. App updates and additional apps might also be needed when the user first logs in. For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-intune-integration-with-the-microsoft-store-on-windows/ba-p/3585077) and [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286).
+Applications in the Microsoft Store can be pushed to the device by triggering them via Intune or other MDM service. App updates and additional applications might also be needed when the user first logs in. For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-intune-integration-with-the-microsoft-store-on-windows/ba-p/3585077) and [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286).
 
-If the Microsoft Store isn't accessible, the Autopilot process still continues without Microsoft Store apps.
+If the Microsoft Store isn't accessible, the Autopilot process still continues without Microsoft Store applications.
 
 #### Microsoft 365
 
-As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise might be required. For a list that includes all Office services, DNS names, IP addresses, including Microsoft Entra ID and other services that might overlap with the previously listed services, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+As part of the Intune device configuration, installation of Microsoft 365 Applications for enterprise might be required. For a list that includes all Office services, DNS names, IP addresses, including Microsoft Entra ID and other services that might overlap with the previously listed services, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 #### Certificate revocation lists (CRLs)
 
@@ -182,7 +182,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 Additionally, the following are also recommended (but not required):
 
-- [Microsoft 365 Apps for enterprise](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-apps-for-enterprise-product) - Microsoft 365 Apps for enterprise can be deployed easily via Intune or other MDM service.
+- [Microsoft 365 Apps for enterprise](https://www.microsoft.com/microsoft-365/enterprise/microsoft-365-apps-for-enterprise-product) - Microsoft 365 Applications for enterprise can be deployed easily via Intune or other MDM service.
 - [Windows Subscription Activation](/windows/deployment/windows-subscription-activation) - automatically step up devices from Windows Pro to Windows Enterprise edition.
 
 ## [:::image type="icon" source="../images/icons/configuration-18.svg"::: **Configuration**](#tab/configuration)

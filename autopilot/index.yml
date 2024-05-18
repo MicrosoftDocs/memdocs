@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Windows Autopilot and Windows Autopilot device preparation documentation
-summary: Windows Autopilot adn Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
+summary: Windows Autopilot and Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
 metadata:
   title: Windows Autopilot and Windows Autopilot device preparation documentation
   description: Windows Autopilot and Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
@@ -55,7 +55,7 @@ landingContent:
   # Card (optional)
   - title: Tutorials
     linkLists:
-    - linkListType: overview
+    - linkListType: tutorial
       links:
       - text: Windows Autopilot scenarios
         url:  tutorial/autopilot-scenarios.md

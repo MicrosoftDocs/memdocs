@@ -42,7 +42,7 @@ sections:
       - question: |
           Why is there a limit on the number of applications that can be deployed/scripts that can be run in the Windows Autopilot device preparation policy?
         answer: |
-          The number of applications that can be applied/scripts that can run during the out-of-box experience (OOBE) is limited to increase stability and achieve a higher success rate. Almost 90% of all Windows Autopilot deployments are deployed with 10 or fewer apps. This limit is intended to improve the overall end user experience so that users can become more productive quickly. We understand that there are outliers and organizations that want to target more during setup. However, for the user-driven approach, we want to leverage the desktop experience for non-essential applications.
+          The number of applications that can be applied/scripts that can run during the out-of-box experience (OOBE) is limited to increase stability and achieve a higher success rate. Almost 90% of all Windows Autopilot deployments are deployed with 10 or fewer applications. This limit is intended to improve the overall end user experience so that users can become more productive quickly. We understand that there are outliers and organizations that want to target more during setup. However, for the user-driven approach, we want to leverage the desktop experience for non-essential applications.
 
       - question: |
           How do users know when the setup is complete?
