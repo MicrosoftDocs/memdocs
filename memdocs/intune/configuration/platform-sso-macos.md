@@ -84,9 +84,9 @@ Use the information in this step to learn the differences between the authentica
 |**Can be used as passkey**|✅|❌|❌|
 |**MFA mandatory for setup** </br></br> NOTE: MFA is always recommended|✅|✅|❌|
 |**Local Mac password synced with Entra ID**|❌|❌|✅|
-|**Optionally allow new users to log in with Entra credentials (macOS 14.x +)**|✅|✅|✅|
 |**Supported on macOS 13.x +**|✅|❌|✅|
 |**Supported on macOS 14.x +**|✅|✅|✅|
+|**Optionally allow new users to log in with Entra ID credentials (macOS 14.x +)**|✅|✅|✅|
 
 ### Secure Enclave
 
@@ -208,8 +208,6 @@ For details about the payload settings for the Extensible Single Sign-on extensi
 
 The next time the device checks for configuration updates, the settings you configured are applied.
 
----
-
 ## Step 3 - Deploy the Company Portal app for macOS
 
 The Company Portal app for macOS deploys and installs the Microsoft Enterprise SSO plug-in. This plug-in enables Platform SSO.
@@ -251,9 +249,10 @@ When the device receives the policy, there's a **Registration required** notific
   > MFA is a feature of Microsoft Entra. Make sure MFA is enabled in your tenant. For more information, including any other app requirements, go to [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
 - When they successfully authenticate, the device is Microsoft Entra-joined to the organization and the workplace join (WPJ) certificate is bound to the device.
 
-For more information about the different end-user experiences for device registration, go to [Join a Mac device with Microsoft Entra ID](/entra/identity/devices/device-join-microsoft-entra-company-portal).
+These articles demonstrate the user experience depending on the enrollment method:
 
-For information on the end user out of box experience (OOBE), go to [Join a Mac device with Microsoft Entra ID during the OOBE with macOS Platform SSO](/entra/identity/devices/device-join-macos-platform-single-sign-on).
+- [Join a Mac device with Microsoft Entra ID](/entra/identity/devices/device-join-microsoft-entra-company-portal).
+- [Join a Mac device with Microsoft Entra ID during the OOBE with macOS Platform SSO](/entra/identity/devices/device-join-macos-platform-single-sign-on).
 
 ## Step 6 - Confirm the settings on the device
 
