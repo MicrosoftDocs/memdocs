@@ -56,8 +56,6 @@ Retrieve your personal recovery key on the Company Portal website.
 3. Select **Show recovery key**.  
 4. Your recovery key appears. For security reasons, the key disappears after five minutes. To see the key again, select **Show recovery key**.  
 
-    ![Screenshot of Company Portal website, showing recovery key.](./media/1907-recovery-cpweb-intune.PNG)  
-
 If a key isn't found, but your device is properly encrypted, contact your IT support person for help. Check the Company Portal website for your organization's helpdesk details.   
 
 ## IT pro support
