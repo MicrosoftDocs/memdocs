@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 05/21/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -53,8 +53,8 @@ Retrieve your personal recovery key on the Company Portal website.
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com).   
 2. Go to **Devices**.  
 2. Select the PC you're locked out of.  
-3. Select **Get recovery key**.  
-4. Your recovery key appears. For security reasons, the key disappears after five minutes. To see the key again, select **Get recovery key**.  
+3. Select **Show recovery key**.  
+4. Your recovery key appears. For security reasons, the key disappears after five minutes. To see the key again, select **Show recovery key**.  
 
     ![Screenshot of Company Portal website, showing recovery key.](./media/1907-recovery-cpweb-intune.PNG)  
 
