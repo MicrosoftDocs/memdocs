@@ -1,5 +1,5 @@
 items:
-- name: Windows Autopilot deployment
+- name: Windows Autopilot device preparation & Windows Autopilot deployment
   href: index.yml
 - name: Windows Autopilot device preparation
   expanded: true
