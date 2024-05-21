@@ -93,8 +93,7 @@ The data columns shown in the tables are:
 ### Intune core service
 
 >[!NOTE]
-> If the firewall that you are using allows you to create firewall rules using a domain name, then use the *.manage.microsoft.com domain. However, if the firewall provider that you are using, does not allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
-> The subnets listed here are provisioned for different Intune scale units across all the cloud regions and clients can be failed over to any other scale units during disaster recovery or to address capacity issues.
+> If the firewall that you are using allows you to create firewall rules using a domain name, then use the *.manage.microsoft.com and manage.microsoft.com domain. However, if the firewall provider that you are using, does not allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
 
 ID |Desc |Category |ER |Addresses |Ports
 -- |---------------------------------------------------------------- |---------------------|--- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------|
