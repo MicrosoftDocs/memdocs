@@ -30,6 +30,10 @@ The initial release of Windows Autopilot device preparation has the following kn
 
 - Dependency and supersedence relationships are marked in reports as **Dependent**.
 - Application uninstall intent is marked in reports as **Installed** if completed successfully.
-- Managed Installer policy during the out-of-box experience (OOBE) isn't supported due to it might leading to incorrect reporting.
+- Managed Installer policy during the out-of-box experience (OOBE) isn't supported due to the possibility of incorrect reporting.
 - Custom compliance isn't supported during Windows Autopilot device preparation deployments.
 - The device health script isn't supported during Windows Autopilot device preparation deployments.
+
+### Device is stuck at 100% during the out-of-box experience (OOBE)
+
+If during Windows Autopilot device preparation deployment a device gets stuck at 100% during the out-of-box experience (OOBE), the end-user needs to manually restart the device for the deployment to continue. This issue is a known issue and a fix is being worked on.

@@ -30,7 +30,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 - Reducing the infrastructure required to maintain the devices.
 - Maximizing ease of use for all types of end users.
 - Improved troubleshooting.
-- Real-time detailed deployment reporting.
+- Near real-time detailed deployment reporting.
 
 > [!NOTE]
 >

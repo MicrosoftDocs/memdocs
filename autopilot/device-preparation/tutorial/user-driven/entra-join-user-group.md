@@ -39,18 +39,18 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 >
 > The user group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a user group specifically for use with Windows Autopilot device preparation instead of reusing existing user groups used in other Autopilot scenarios.
 
-## Create a device group
+## Create a user group
 
-Device groups are a collection of devices organized into a Microsoft Entra group. Device groups can be either dynamic or assigned:
+User groups are a collection of users organized into a Microsoft Entra group. User groups can be either dynamic or assigned:
 
-- **Dynamic groups** - Devices are automatically added to the group based on rules.
-- **Assigned groups** - Devices are manually added to the group and are static.
+- **Dynamic groups** - Users are automatically added to the group based on rules.
+- **Assigned groups** - Users are manually added to the group and are static.
 
-Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is the device group where devices are added automatically during the Windows Autopilot device preparation deployment. The device group specified in the Windows Autopilot device preparation policy needs to be an assigned group of type security.
+Windows Autopilot device preparation uses a user group as part of the Windows Autopilot device preparation policy. The user group specified in the Windows Autopilot device preparation policy are the users that will receive the Windows Autopilot device preparation deployment. The user group specified in the Windows Autopilot device preparation policy needs to be an assigned group of type security.
 
-To create a dynamic device group for use with Windows Autopilot device preparation, follow these steps:
+To create an assigned user security group for use with Windows Autopilot device preparation, follow these steps:
 
-[!INCLUDE [How to create a device group in Intune](../../../includes/create-assigned-device-group.md)]
+[!INCLUDE [How to create a user group in Intune](../../../includes/create-assigned-user-group.md)]
 
 ## Next step: Assign applications and PowerShell scripts to device group
 
