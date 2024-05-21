@@ -72,14 +72,9 @@ There are two sets of images available to choose from across the different versi
   - Microsoft Teams (Teams).
   - Microsoft Edge settings like sleeping tabs, [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin), startup boost, and first time optimizations based on Microsoft Entra ID and synchronization. For more information, see [Configure Microsoft Edge policy settings with Microsoft Intune](/deployedge/configure-edge-with-intune).
   - Microsoft Outlook first-time configuration settings (auto log on based on Microsoft Entra profile, support for other profiles).
-- **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
-  - Services optimized for virtualization.
-  - UWP packages removed.
-  - Task scheduler actions disabled.
+- **Images with no preinstalled applications**: A plain image without any preinstalled applications (look for images without the **M365 Apps** in the name).
 
 Both types of images are harmonized in GPOs. Any differences are due to preinstalled apps.
-
-If you need a plain image without preinstalled applications, use images without the appendix **M365 Apps**.
 
 ### Gallery image update cycle
 
