@@ -106,7 +106,7 @@ You can prevent end users within your organization from accessing BitLocker reco
 
 For more information, see:
 
-- [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities.md#configure-device-settings)
+- [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
 - [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)  
 - [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
 
