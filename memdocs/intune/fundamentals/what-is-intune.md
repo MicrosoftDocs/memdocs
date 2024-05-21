@@ -120,9 +120,11 @@ For more information, go to [Intune Suite add-on features](intune-add-ons.md).
 
 ✅ **Use Microsoft Copilot in Intune for AI-generated analysis**
 
-Copilot in Intune is available in the Intune admin center. It can help you manage your policies and settings within your policies. With Copilot, you can learn more about individual settings, get recommended values, and get a summary of an existing policy. You can also get device details and troubleshoot a device.
+Copilot in Intune is available and has capabilities that are powered by Copilot for Security.
 
-Fo more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+Copilot can summarize existing policies, give you more setting information, including recommended values and potential conflicts. You can also get device details and troubleshoot a device.
+
+For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 ## Integrates with other Microsoft services and apps
 
