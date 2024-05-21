@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/12/2023
+ms.date: 05/20/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -40,10 +40,10 @@ App protection policy (APP) delivery depends on the license state and Intune ser
 
 |    User State    |    App Protection behavior     |    Retry Interval  (see note)    |    Why does this happen?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-|    Tenant Not   Onboarded    |    Wait for   next retry interval.  App Protection isn't active for the user.    |    24   hours    |    Occurs   when you have not setup your tenant for Intune.    |
-|    User Not   Licensed     |    Wait for next   retry interval.  App Protection isn't active   for the user.     |    12 hours - However, on Android devices this interval requires Intune APP SDK version 5.6.0 or later. Otherwise for Android devices, the interval is 24 hours.   |    Occurs when you   haven't licensed the user for Intune.    |
-|    User Not   Assigned App Protection Policies    |    Wait for   next retry interval.  App Protection isn't active for the user.    |    12 hours        |    Occurs when you   haven't assigned APP settings to the user.    |
-|    User Assigned App Protection Policies but app isn't defined in the App Protection Policies   |    Wait for   next retry interval.  App Protection isn't active for the user.    |    12 hours        |    Occurs when you   haven't added the app to APP.    |
+|    Tenant Not   Onboarded    |    Wait for   next retry interval. App Protection isn't active for the user.    |    24   hours    |    Occurs   when you have not setup your tenant for Intune.    |
+|    User Not   Licensed     |    Wait for next   retry interval. App Protection isn't active   for the user.     |    12 hours - However, on Android devices this interval requires Intune APP SDK version 5.6.0 or later. Otherwise for Android devices, the interval is 24 hours.   |    Occurs when you   haven't licensed the user for Intune.    |
+|    User Not   Assigned App Protection Policies    |    Wait for   next retry interval. App Protection isn't active for the user.    |    12 hours        |    Occurs when you   haven't assigned APP settings to the user.    |
+|    User Assigned App Protection Policies but app isn't defined in the App Protection Policies   |    Wait for   next retry interval. App Protection isn't active for the user.    |    12 hours        |    Occurs when you   haven't added the app to APP.    |
 |    User   Successfully Registered for Intune MAM    |    App   Protection is applied per policy settings.    Updates occur based on retry interval    |    Intune   Service defined based on user load.    Typically 30 mins.     |    Occurs when   the user has successfully registered with the Intune service for APP   configuration.    |
 
 > [!NOTE]
@@ -54,7 +54,7 @@ App protection policy (APP) delivery depends on the license state and Intune ser
 
 ## Handling network connectivity issues
 
-When user registration fails due to network connectivity issues an accelerated retry interval is used. The Intune APP SDK will retry at increasingly longer intervals until the interval reaches 60 minutes or a successful connection is made.  The Intune APP SDK will then continue to retry at 60 minute intervals until a successful connection is made. Then, the Intune APP SDK will return to the standard retry interval based on the user state.
+When user registration fails due to network connectivity issues an accelerated retry interval is used. The Intune APP SDK retries at increasingly longer intervals until the interval reaches 60 minutes or a successful connection is made. The Intune APP SDK will then continue to retry at 60-minute intervals until a successful connection is made. Then, the Intune APP SDK returns to the standard retry interval based on the user state.
 
 ## Next steps
 
