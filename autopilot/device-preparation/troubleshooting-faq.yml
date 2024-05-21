@@ -30,7 +30,7 @@ sections:
       - question: |
           When running a Windows Autopilot device preparation deployment on a device, why isn't the device being added to the device group specified in the Windows Autopilot device preparation policy?
         answer: |
-          - Verify that **Intune Provisioning Client** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+          - Verify that **Intune Confidential Client** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
 
           - Verify that the correct device group is specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
