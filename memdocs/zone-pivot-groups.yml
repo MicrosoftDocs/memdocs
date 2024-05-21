@@ -37,6 +37,8 @@ groups:
   title: ATP baseline versions
   prompt: Choose a version
   pivots:
+    - id: mde-v24h1
+      title: Version 24H1
     - id: atp-december-2020
       title: December 2020
     - id: atp-sept-2020
