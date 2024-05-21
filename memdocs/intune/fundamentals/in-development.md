@@ -112,13 +112,7 @@ We're updating RBAC for enrollment platform restrictions. Enrollment platform re
 
 <!-- *********************************************** -->
 
-## Device management
-
-### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
-
-End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website, which allows end users see their recovery keys as well.
-
-Access to BitLocker recovery keys by end-users can be prevented when not allowed within your organization by using the Microsoft Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**. For more information about how to prevent access to BitLocker recovery keys, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
+<!-- ## Device management -->
 
 <!-- *********************************************** -->
 

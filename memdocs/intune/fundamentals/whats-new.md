@@ -98,6 +98,18 @@ Applies to:
 
 ### Device management
 
+#### End user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
+
+End users can now view the BitLocker Recovery Key for enrolled Windows devices from the Company Portal website. This capability can reduce helpdesk calls in the event the end user gets locked out of their corporate machines. End users can access the recovery key for an enrolled device by signing into the Company Portal website and selecting **Show recovery key**. This experience is similar to the MyAccount website, which also allows end users to see recovery keys.
+
+You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**.
+
+For more information, see:
+
+- [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities.md#configure-device-settings)
+- [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)  
+- [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
+
 #### New version of Windows hardware attestation report<!-- 15425680 -->
 
 We've released a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows 10/11. The Windows hardware attestation report is built on a new reporting infrastructure, and reports on new settings added to Microsoft Azure Attestation. The report is available in the admin center under **Reports** > **Device Compliance** > **Reports**.
@@ -119,9 +131,9 @@ For more information about reports, see [Intune Reports](..\fundamentals\reports
 
 #### Optional Feature updates<!--12769586 -->
 
-Feature updates can now be made available to end users as **Optional** updates, with the introduction of **Optional** Feature updates. End users will see the update in the **Windows Update** settings page in the same way that it is shown for consumer devices.
+Feature updates can now be made available to end users as **Optional** updates, with the introduction of **Optional** Feature updates. End users will see the update in the **Windows Update** settings page in the same way that it's shown for consumer devices.
 
-End users can easily opt-in to try out the next Feature update and provide feedback. When it is time to roll out the feature as  a **Required** update, then  admins can change the setting on the policy, and update the rollout settings so that the update is deployed as a **Required** update to devices that do not yet have it installed.
+End users can easily opt-in to try out the next Feature update and provide feedback. When it's time to roll out the feature as  a **Required** update, then  admins can change the setting on the policy, and update the rollout settings so that the update is deployed as a **Required** update to devices that do not yet have it installed.
 
 For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
 
@@ -134,7 +146,7 @@ Applies to:
 
 #### Updated security baseline for Microsoft Defender for Endpoint<!-- 26504935 -->
 
-You can now deploy the Intune security baseline for **Microsoft Defender for Endpoint**.  The new baseline, **version 24H1**, uses the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
+You can now deploy the Intune security baseline for **Microsoft Defender for Endpoint**. The new baseline, **version 24H1**, uses the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
 
 Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
 
@@ -144,6 +156,17 @@ Applies to:
 
 - Windows 10
 - Windows 11
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 27575008, 27575336 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Fellow.app by Fellow Insights Inc
+- Unique Moments by Unique AG
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of May 6, 2024
 
@@ -172,7 +195,7 @@ Applies to:
 
 You can now customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) have been updated to support expanding and collapsing each subsection of the menu. In addition, you can set admin center pages as favorites. This portal capability will gradually roll out over the next week.
 
-By default, menu sections are expanded. You can choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section retains the expanded or collapsed state that you choose.  Additionally, selecting the star icon next to a page on the left navigation adds the page to a **Favorites** section near the top of the menu. 
+By default, menu sections are expanded. You can choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section retains the expanded or collapsed state that you choose. Additionally, selecting the star icon next to a page on the left navigation adds the page to a **Favorites** section near the top of the menu.
 
 For related information, see [Change the Portal settings](../fundamentals/tutorial-walkthrough-endpoint-manager.md#change-the-portal-settings).
 
@@ -766,7 +789,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Update to Intune Management Extension on Windows<!-- 26472055 -->
 
-To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or higher with the Intune Management Extension on Windows clients. If a Windows client continues to use an earlier version of the .NET Framework, the Intune Management Extension continues to function. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, which is included in Win10 1809 (RS5) and newer. Multiple versions of the .NET Framework can coexist on a device.
+To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or higher with the Intune Management Extension on Windows clients. If a Windows client continues to use an earlier version of the .NET Framework, the Intune Management Extension continues to function. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, which is included in Windows 10 1809 (RS5) and newer. Multiple versions of the .NET Framework can coexist on a device.
 
 Applies to:
 
@@ -942,7 +965,7 @@ If you want to try the new experience before your tenant is updated, go to **Dev
 
 #### Bulk approval of drivers<!-- 14723288  -->
 
-Bulk actions are now available for Windows Driver update policies.  With bulk actions, multiple driver updates can be approved, paused, or declined at the same time, saving time and effort.  
+Bulk actions are now available for Windows Driver update policies. With bulk actions, multiple driver updates can be approved, paused, or declined at the same time, saving time and effort.  
 
 When you bulk approve drivers, the date for when the drivers become available to applicable devices can also be set, enabling drivers to be installed together.
 

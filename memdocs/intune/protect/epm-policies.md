@@ -308,7 +308,7 @@ If a device receives two rules targeting the same application, both rules are co
 - Rules deployed to a user take precedence over rules deployed to a device.
 - Rules with a hash defined are always deemed the most *specific* rule.
 - If more than one rule applies (with no hash defined), the rule with the most defined attributes wins (most *specific*).
-- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved (once available), and then Automatic.
+- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved, and then Automatic.
 
 > [!NOTE]
 > If a rule does not exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* will be used.
