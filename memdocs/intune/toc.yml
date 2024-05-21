@@ -662,12 +662,12 @@ items:
               href: ./protect/advanced-threat-protection-manage-android.md
             - name: Monitor Defender for Endpoint
               href: ./protect/advanced-threat-protection-monitor.md
+          - name: Microsoft Defender for Endpoint Security settings management
+            items:
             - name: Microsoft Defender for Endpoint Security settings management
-              items:
-              - name: Microsoft Defender for Endpoint Security settings management
-                href: ./protect/mde-security-integration.md
-              - name: Manage endpoint security policies in Microsoft Defender
-                href: /defender-endpoint/manage-security-policies.md
+              href: ./protect/mde-security-integration.md
+            - name: Manage endpoint security policies in Microsoft Defender
+              href: /defender-endpoint/manage-security-policies
           - name: Firewall rule migration
             href: ./protect/endpoint-security-firewall-rule-tool.md  
           - name: Tenant attach
