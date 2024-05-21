@@ -239,7 +239,7 @@ Apps which already use MSAL should call the `registerAndEnrollAccountId` method 
 /*
  *  This method will add the account to the list of registered accounts.
  *  An enrollment request will immediately be started.
- *  @param The AccountId of the account to be registered with the SDK
+ *  @param The Entra object ID of the account to be registered with the SDK
  */
 
 (void)registerAndEnrollAccountId:(NSString *_Nonnull)accountId;
