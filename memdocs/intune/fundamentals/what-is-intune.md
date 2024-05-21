@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 05/21/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,6 +87,8 @@ For more information, go to [Manage apps using Microsoft Intune](manage-apps.md)
 
 You can create policies for apps, security, device configuration, compliance, conditional access, and more. When the policies are ready, you can deploy these policies to your user groups and device groups. To receive these policies, the devices only need internet access.
 
+For more information, go to [Assign policies in Microsoft Intune](../configuration/device-profile-assign.md).
+
 ✅ **Use the self-service features**
 
 Employees and students can use the Company Portal app and website to reset a PIN/password, install apps, join groups, and more. You can customize the Company Portal to help reduce support calls.
@@ -115,6 +117,12 @@ For more information, go to [Intune Suite add-on features](intune-add-ons.md).
 
 > [!TIP]
 > Step through a training module to learn how you can [benefit from modern endpoint management](/training/modules/benefits-microsoft-endpoint-manager?azure-portal=true) with Microsoft Intune.
+
+✅ **Use Microsoft Copilot in Intune for AI-generated analysis**
+
+Copilot in Intune is available in the Intune admin center. It can help you manage your policies and settings within your policies. With Copilot, you can learn more about individual settings, get recommended values, and get a summary of an existing policy. You can also get device details and troubleshoot a device.
+
+Fo more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 ## Integrates with other Microsoft services and apps
 
