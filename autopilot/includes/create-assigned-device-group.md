@@ -37,13 +37,13 @@ Headings are driven by article context. -->
 
     1. In the **Add owners** screen that opens:
 
-       1. Scroll through the list of objects and select **Intune Confidential Client** with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c**. Alternatively, use the **Search** bar to search for and select **Intune Confidential Client**.
+       1. Scroll through the list of objects and select **Intune Autopilot ConfidentialClient** with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c**. Alternatively, use the **Search** bar to search for and select **Intune Autopilot ConfidentialClient**.
 
            > [!NOTE]
            >
-           > If the **Intune Confidential Client** object with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Confidential Client object](#adding-the-intune-confidential-client-object).
+           > If the **Intune Autopilot ConfidentialClient** object with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Autopilot ConfidentialClient object](#adding-the-intune-autopilot-confidentialclient-object).
 
-       1. Once **Intune Confidential Client** is selected as the owner, select the **Select** button.
+       1. Once **Intune Autopilot ConfidentialClient** is selected as the owner, select the **Select** button.
 
 
 
@@ -53,9 +53,9 @@ Headings are driven by article context. -->
     >
     > Don't manually add any devices to the device group created in this step by selecting the **No members selected** link under **Members**. Devices will be automatically added to this device group during the Windows Autopilot device preparation deployment.
 
-### Adding the Intune Confidential Client object
+### Adding the Intune Autopilot ConfidentialClient object
 
-If the **Intune Confidential Client** object with AppId **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available when selecting the owner of the device group, then follow these steps to add the object:
+If the **Intune Autopilot ConfidentialClient** object with AppId **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available when selecting the owner of the device group, then follow these steps to add the object:
 
 1. On a device that where Microsoft Intune or Microsoft Entra ID is normally administered, open a **Windows PowerShell** command prompt.
 
@@ -67,7 +67,7 @@ If the **Intune Confidential Client** object with AppId **f1346770-5b25-470b-88b
         install-module azuread
         ```
 
-    If prompted to do so, agree to install **NuGet** and to install **azuread** module from **PSGallery**.
+    If prompted to do so, agree to install **NuGet** and the **azuread** module from **PSGallery**.
 
    1. Once the **azuread** module is installed, connect to Microsoft Entra ID by entering the following command:
 
@@ -77,7 +77,7 @@ If the **Intune Confidential Client** object with AppId **f1346770-5b25-470b-88b
 
    1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add objects.
 
-   1. Once authenticated to Microsoft Entra ID, add the **Intune Confidential Client** object by entering the following command:
+   1. Once authenticated to Microsoft Entra ID, add the **Intune Autopilot ConfidentialClient** object by entering the following command:
 
         ```powershell
         New-AzureADServicePrincipal -AppId f1346770-5b25-470b-88bd-d5744ab7952c
