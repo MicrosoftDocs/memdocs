@@ -55,6 +55,7 @@ All currently supported versions of Configuration Manager current branch support
 - **Enterprise 2015 LTSB** <!--10/14/2025-->
 - **Enterprise 2016 LTSB** <!--10/13/2026-->
 - **Enterprise LTSC 2019** <!--01/09/2029-->
+- **Enterprise LTSC 2021** <!--01/12/2027-->
 
 For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows 10 release information](/windows/release-health/release-information).
 
