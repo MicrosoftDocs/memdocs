@@ -91,7 +91,7 @@ IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class expo
 
 Intune lets IT admins specify which accounts can be logged into by the user. Apps can query the Intune App SDK for the specified list of allowed accounts and then ensure only allowed accounts are signed into the device.
 
-To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified. MSAL/OneAuth enabled applications should use the `allowedAccountIds` property on the `IntuneMAMEnrollmentManager` instance to query ObjectId.
+To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified. MSAL/OneAuth enabled applications should use the `allowedAccountIds` property on the `IntuneMAMEnrollmentManager` instance to query Entra object ID.
 
 Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
 
