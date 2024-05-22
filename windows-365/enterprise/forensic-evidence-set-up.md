@@ -31,7 +31,7 @@ ms.collection:
 
 # Set up Microsoft Purview forensic evidence for Windows 365
 
-
+[Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence) lets you capture visual activity across devices, including Windows 365 Cloud PCs. This can help you understand and mitigate potential risks like unauthorized data exfiltration of sensitive data.
 
 ## Requirements
 
@@ -72,8 +72,8 @@ To deploy the configuration package, first set up the service-to-service connect
 
 3. Return to the **Microsoft Defender for Endpoint** and set the following options:
 
-  - **Allow Microsoft for Endpoint to enforce Endpoint Security Configurations**: *On*
-  - **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint**: *On*
+    - **Allow Microsoft for Endpoint to enforce Endpoint Security Configurations**: *On*
+    - **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint**: *On*
 
 4. Select **Save**.
 
@@ -81,8 +81,8 @@ To deploy the configuration package, first set up the service-to-service connect
 
 6. Select the following options:
 
-  - **Platform**: *Windows 10, Windows 11, and Windows Server*
-  - **Profile type**: *Endpoint detection and response*
+    - **Platform**: *Windows 10, Windows 11, and Windows Server*
+    - **Profile type**: *Endpoint detection and response*
 
 7. Select **Create**.
 
@@ -110,8 +110,8 @@ Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a l
 
 2. Check the following columns:
 
-  - **Configuration status**: Shows if the device is configured correctly.
-  - **Policy sync status**: Shows if the device updated to the latest policy version. Devices must be on to update to the latest policy.
+    - **Configuration status**: Shows if the device is configured correctly.
+    - **Policy sync status**: Shows if the device updated to the latest policy version. Devices must be on to update to the latest policy.
 
 <!-- ########################## -->
 ## Next steps
