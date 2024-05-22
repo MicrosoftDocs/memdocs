@@ -10,7 +10,6 @@ items:
     - name: Intune user help
       tocHref: /mem/intune/user-help/
       topicHref: /mem/intune/user-help/
-      
     - name: Microsoft Defender for Endpoint settings management
       tocHref: /defender-endpoint/ 
       topicHref: /Microsoft Defender for Endpoint settings management 
