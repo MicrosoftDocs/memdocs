@@ -60,7 +60,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 2. Select which **Deployment method** to use to deploy the configuration package:
 
     - [Intune: Use Mobile Device management tools or Microsoft Intune.](#deploy-the-configuration-package-using-intune)
-    - [Local script: Use a local script.](#use-a-local-script-to-deploy-configuration package)
+    - [Local script: Use a local script.](#use-a-local-script-to-deploy-configuration-package)
 
 ### Deploy the configuration package using Intune
 
