@@ -40,11 +40,11 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 - Gallery image type
     - Windows 11 Enterprise + Microsoft 365 Apps 23H2
 - Licensing
-  - Microsoft 365 E5, or
-  - Windows 365 Enterprise 2 vCPU, 4 GB, 64 GB
- - Join type and network
-  - Microsoft Entra join for Azure network connection
-  - Microsoft Entra hybrid join for Microsoft hosted network
+    - Microsoft 365 E5, or
+    - Windows 365 Enterprise 2 vCPU, 4 GB, 64 GB
+- Join type and network
+    - Microsoft Entra join for Azure network connection
+    - Microsoft Entra hybrid join for Microsoft hosted network
 - Animalware client version 4.18.2110 or later
 - Microsoft 365 Apps version 16.0.14701.0 or later
 - The device must be assigned to a primary user
@@ -59,12 +59,10 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 
 2. Select which **Deployment method** to use to deploy the configuration package:
 
-  - Intune: Use Mobile Device management tools or Microsoft Intune.
-  - Local script: Use a local script
+    - [Intune: Use Mobile Device management tools or Microsoft Intune.](#deploy-the-configuration-package-using-intune)
+    - [Local script: Use a local script.](#use-a-local-script-to-deploy-configuration package)
 
 ### Deploy the configuration package using Intune
-
-To deploy the configuration package, first set up the service-to-service connection between Intune and Microsoft Defender for Endpoint.
 
 1. Sign in to the Intune admin center Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Microsoft Defender for Endpoint** > **Open the Microsoft Defender Security Center**.
 
@@ -100,7 +98,7 @@ After you create the policy, a user must sign in to their device before the poli
 
 To view a list of onboarded devices, go to the newly created device configuration profile's page. To view this list, you need an Intune role that provides read permissions for the **Microsoft Defender Advanced Threat Protection**.
 
-### Use local script to deploy configuration package
+### Use a local script to deploy configuration package
 
 Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a local script](/purview/device-onboarding-script).
 
