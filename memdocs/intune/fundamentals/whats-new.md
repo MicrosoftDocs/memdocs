@@ -96,6 +96,17 @@ Applies to:
 
 - macOS
 
+### Device enrollment
+
+#### Stage Android device enrollment to reduce end-user steps<!-- 15503468 -->
+
+To reduce the enrollment time for end users, Microsoft Intune supports device staging for Android Enterprise devices. With *device staging*, you can stage an enrollment profile and complete all related enrollment steps for workers receiving these devices:
+
+- Corporate-owned fully managed devices
+- Corporate-owned devices with a work profile
+
+When frontline workers receive the devices, all they have to do is connect to Wi-Fi and sign in to their work account. A new *device staging token* is required to enable this feature. For more information, see [Device staging overview](../enrollment/device-staging-overview.md).
+
 ### Device management
 
 #### End user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
@@ -107,7 +118,7 @@ You can prevent end users within your organization from accessing BitLocker reco
 For more information, see:
 
 - [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
-- [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)  
+- [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)
 - [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
 
 #### New version of Windows hardware attestation report<!-- 15425680 -->
