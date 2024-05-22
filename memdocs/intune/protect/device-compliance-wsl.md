@@ -53,7 +53,7 @@ These resources are required create your custom compliance script.
 
 - [JSON for validation](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDetectionRule.json): Use the example JSON to define WSL detection rules.  
 
-## Step 1: Install Intune plugin for WSL  
+## Step 1: Install Intune plugin for WSL   
 
 Use the Intune plugin for WSL resource to install the Microsoft Intune plugin for WSL on the target machine.   
 
