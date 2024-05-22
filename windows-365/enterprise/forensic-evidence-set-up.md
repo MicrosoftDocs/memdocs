@@ -31,7 +31,7 @@ ms.collection:
 
 # Set up Microsoft Purview forensic evidence for Windows 365
 
-[Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence) lets you capture visual activity across devices, including Windows 365 Cloud PCs. This can help you understand and mitigate potential risks like unauthorized data exfiltration of sensitive data.
+[Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence) lets you capture visual activity across devices, including Windows 365 Cloud PCs. Forensic evidence can help you understand and mitigate potential risks like unauthorized data exfiltration of sensitive data.
 
 ## Requirements
 
