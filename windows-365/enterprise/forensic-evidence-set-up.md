@@ -2,7 +2,7 @@
 # required metadata
 title: Set up forensic evidence in Windows 365
 titleSuffix:
-description: Learn how set up Microsoft Purview forensic evidence in Widnows 365.
+description: Learn how set up Microsoft Purview forensic evidence in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -57,7 +57,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 
 1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com). Choose **Settings** > **Device onboarding** > **Devices** > **Onboarding**.
 
-2. Select which **Deployment method** to use deploy the configuration package:
+2. Select which **Deployment method** to use to deploy the configuration package:
 
   - Intune: Use Mobile Device management tools or Microsoft Intune.
   - Local script: Use a local script
@@ -73,7 +73,7 @@ To deploy the configuration package, first set up the service-to-service connect
 3. Return to the **Microsoft Defender for Endpoint** and set the following options:
 
   - **Allow Microsoft for Endpoint to enforce Endpoint Security Configurations**: *On*
-  - **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endoint**: *On*
+  - **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint**: *On*
 
 4. Select **Save**.
 
@@ -82,7 +82,7 @@ To deploy the configuration package, first set up the service-to-service connect
 6. Select the following options:
 
   - **Platform**: *Windows 10, Windows 11, and Windows Server*
-  - **Profile type**: *Endpoint detection adn response*
+  - **Profile type**: *Endpoint detection and response*
 
 7. Select **Create**.
 
@@ -90,13 +90,13 @@ To deploy the configuration package, first set up the service-to-service connect
 
 9. On the **Configuration settings** page, for **Microsoft Defender for Endpoint client configuration package type**, select *Auto from connector* > **Next**.
 
-10. On the **Scope tags** page, which are optional, select **Next**.
+10. On the **Scope tags** page, select **Next**.
 
 11. On the **Assignments** page, select the group that includes the primary user of the Cloud PC > **Next**.
 
 12. On the **Review and create** page, when you're done, select **Create**.
 
-After you've created the policy, a user must sign in to their device before the policy is applied and the device is onboarded to Microsoft Defender for Endpoint.
+After you create the policy, a user must sign in to their device before the policy is applied and the device is onboarded to Microsoft Defender for Endpoint.
 
 To view a list of onboarded devices, go to the newly created device configuration profile's page. To view this list, you need an Intune role that provides read permissions for the **Microsoft Defender Advanced Threat Protection**.
 
@@ -111,7 +111,7 @@ Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a l
 2. Check the following columns:
 
   - **Configuration status**: Shows if the device is configured correctly.
-  - **Policy sync status**: Shows if the device has updated to the latest policy version. Devices must be on to update to the latest policy.
+  - **Policy sync status**: Shows if the device updated to the latest policy version. Devices must be on to update to the latest policy.
 
 <!-- ########################## -->
 ## Next steps
