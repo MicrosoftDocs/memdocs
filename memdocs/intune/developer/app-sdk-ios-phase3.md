@@ -239,7 +239,7 @@ Apps which already use MSAL should call the `registerAndEnrollAccountId` method 
 /*
  *  This method will add the account to the list of registered accounts.
  *  An enrollment request will immediately be started.
- *  @param The Entra object ID of the account to be registered with the SDK
+ *  @param accountId The Entra object ID of the account to be registered with the SDK
  */
 
 (void)registerAndEnrollAccountId:(NSString *_Nonnull)accountId;
@@ -273,7 +273,7 @@ By calling this method, the SDK will prompt the user for credentials if no exist
 If the enrollment fails, the app should consider calling this API again at a future time, depending on the details of the failure. The app can receive [notifications](#status-result-and-debug-notifications), via a delegate, about the results of any enrollment requests.
 
 After this API has been invoked, the app can continue functioning as normal. If the enrollment succeeds, the SDK will notify the user that an app restart is required.
-Once the app is managed, the ObjectId value needs to be queried using `enrolledAccountId` in the `IntuneMAMEnrollmentManager`. Use this for all the MAM SDK APIs that the app uses for this enrolled account.
+Once the app is managed, the Entra object ID value needs to be queried using `enrolledAccountId` in the `IntuneMAMEnrollmentManager`. Use this for all the MAM SDK APIs that the app uses for this enrolled account.
 
 Example:
 
