@@ -141,7 +141,7 @@ To enable the Intune App SDK, follow these steps:
    BOOL __block canOpen = NO;
    if([policy isURLAllowed:urlForKnownManagedApp isKnownManagedAppScheme:YES])
    {
-       [[IntuneMAMPolicyManager instance] setCurrentThreadIdentity:"" forScope:^{
+       [[IntuneMAMPolicyManager instance] setCurrentThreadAccountId:"" forScope:^{
        canOpen = [[UIApplication sharedApplication] canOpenURL:urlForKnownManagedApp];
        }];
    }
@@ -165,14 +165,14 @@ The app should have both "Strip Swift Symbols"(STRIP_SWIFT_SYMBOLS) and "Enable 
 ### Integrating a Non-Replicated File Provider extension
 Your app is using a Non-Replicated File Provider if it implements the NSFileProviderExtension protocol. All file providers created before iOS 16.0 are non-replicated.
 
-In - startProvidingItemAtURL:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forIdentity API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+In - startProvidingItemAtURL:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forAccountId: API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
 
 In - importDocumentAtURL:toParentItemIdentifier:completionHandler: check whether the file is encrypted using isFileEncrytped: API in IntuneMAMFileProtectionManager. If it's then decrypt it using decryptFile:toCopyPath: API of IntuneMAMFileProtectionManager. In multi-identity apps, also check against the canReceiveSharedFile: API in the destination owner's IntuneMAMPolicy to see if the owner can receive the file.
 
 ### Integrating a Replicated File Provider extension
 Your app is using a Replicated File Provider if it implements the NSFileProviderReplicatedExtension protocol (added in iOS 16.0).
 
-In - fetchContentsForItemWithIdentifier:version:request:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forIdentity API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
+In - fetchContentsForItemWithIdentifier:version:request:completionHandler: check if you should encrypt files using [[IntuneMAMPolicy instance]shouldFileProviderEncryptFiles]]. Use encryptFile:forAccountId: API in IntuneMAMFileProtectionManager for actual file encryption. Also, share out a copy of the file when encryption is required since you wouldn’t want to store an encrypted copy of the file in your cloud storage.
 
 In - createItemBasedOnTemplate:fields:contents:options:request:completionHandler: check whether the file is encrypted using isFileEncrypted: API in IntuneMAMFileProtectionManager. If it's then decrypt it using decryptFile:toCopyPath: API of IntuneMAMFileProtectionManager. In multi-identity apps, also check against the canReceiveSharedFile: API in the destination owner's IntuneMAMPolicy to see if the owner can receive the file.
 
@@ -233,24 +233,25 @@ To receive Intune app protection policy, apps must initiate an enrollment reques
 > [!NOTE]
 > Azure AD Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
-Apps which already use ADAL or MSAL should call the `registerAndEnrollAccount` method on the `IntuneMAMEnrollmentManager` instance after the user has been successfully authenticated:
+Apps which already use MSAL should call the `registerAndEnrollAccountId` method on the `IntuneMAMEnrollmentManager` instance after the user has been successfully authenticated:
 
 ```objc
 /*
  *  This method will add the account to the list of registered accounts.
  *  An enrollment request will immediately be started.
- *  @param identity The UPN of the account to be registered with the SDK
+ *  @param accountId The Entra object ID of the account to be registered with the SDK
  */
 
-(void)registerAndEnrollAccount:(NSString *)identity;
+(void)registerAndEnrollAccountId:(NSString *_Nonnull)accountId;
 ```
+On successful sign in MSAL sends back the result in MSALResult object. Use tenantProfile.identifier within MSALResult as the accountId parameter for the above API. 
 
-By calling the `registerAndEnrollAccount` method, the SDK will register the user account and attempt to enroll the app on behalf of this account. If the enrollment fails for any reason, the SDK will automatically retry the enrollment 24 hours later. For debugging purposes, the app can receive [notifications](#status-result-and-debug-notifications), via a delegate, about the results of any enrollment requests.
+By calling the `registerAndEnrollAccountId` method, the SDK will register the user account and attempt to enroll the app on behalf of this account. If the enrollment fails for any reason, the SDK will automatically retry the enrollment 24 hours later. For debugging purposes, the app can receive [notifications](#status-result-and-debug-notifications), via a delegate, about the results of any enrollment requests.
 
 After this API has been invoked, the app can continue to function as normal. If the enrollment succeeds, the SDK will notify the user that an app restart is required. At that time, the user can immediately restart the app.
 
 ```objc
-[[IntuneMAMEnrollmentManager instance] registerAndEnrollAccount:@"user@foo.com"];
+[[IntuneMAMEnrollmentManager instance] registerAndEnrollAccountId:@"3ec2c00f-b125-4519-acf0-302ac3761822"];
 ```
 
 ### Apps that don't use ADAL or MSAL
@@ -272,6 +273,7 @@ By calling this method, the SDK will prompt the user for credentials if no exist
 If the enrollment fails, the app should consider calling this API again at a future time, depending on the details of the failure. The app can receive [notifications](#status-result-and-debug-notifications), via a delegate, about the results of any enrollment requests.
 
 After this API has been invoked, the app can continue functioning as normal. If the enrollment succeeds, the SDK will notify the user that an app restart is required.
+Once the app is managed, the Entra object ID value needs to be queried using `enrolledAccountId` in the `IntuneMAMEnrollmentManager`. Use this for all the MAM SDK APIs that the app uses for this enrolled account.
 
 Example:
 
@@ -311,10 +313,10 @@ Before the user is signed out, the app should call the following method on the  
  *  until the Intune APP AAD token is acquired, then return.  This method must be called before  
  *  the user is removed from the application (so that required AAD tokens are not purged
  *  before this method is called).
- *  @param identity The UPN of the account to be removed.
- *  @param doWipe   If YES, a selective wipe if the account is un-enrolled
+ *  @param accountId The object ID of the account to be removed.
+ *  @param doWipe  If YES, a selective wipe if the account is un-enrolled
  */
-(void)deRegisterAndUnenrollAccount:(NSString *)identity withWipe:(BOOL)doWipe;
+(void)deRegisterAndUnenrollAccountId:(NSString *)accountId withWipe:(BOOL)doWipe;
 ```
 
 This method must be called before the user account's Microsoft Entra tokens are deleted. The SDK needs the user account's Microsoft Entra token(s) to make specific requests to the Intune MAM service on behalf of the user.
@@ -324,7 +326,7 @@ If the app will delete the user's corporate data on its own, the `doWipe` flag c
 Example:
 
 ```objc
-[[IntuneMAMEnrollmentManager instance] deRegisterAndUnenrollAccount:@"user@foo.com" withWipe:YES];
+[[IntuneMAMEnrollmentManager instance] deRegisterAndUnenrollAccountId:@"3ec2c00f-b125-4519-acf0-302ac3761822" withWipe:YES];
 ```
 
 ## Status, result, and debug notifications
@@ -362,7 +364,8 @@ The notifications are presented via delegate methods in `IntuneMAMEnrollmentDele
 
 These delegate methods return an `IntuneMAMEnrollmentStatus` object that has the following information:
 
-* The identity of the account associated with the request
+* The accountId (Object ID) of the account associated with the request
+* The identity (UPN) of the account associated with the request
 * A status code that indicates the result of the request
 * An error string with a description of the status code
 * An `NSError` object. This object is defined in `IntuneMAMEnrollmentStatus.h`, along with the specific status codes that can be returned.
@@ -374,19 +377,19 @@ The following are example implementations of the delegate methods:
 ```objc
 - (void)enrollmentRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
 {
-    NSLog(@"enrollment result for identity %@ with status code %ld", status.identity, (unsigned long)status.statusCode);
+    NSLog(@"enrollment result for identity %@ with status code %ld", status.accountId, (unsigned long)status.statusCode);
     NSLog(@"Debug Message: %@", status.errorString);
 }
 
 - (void)policyRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
 {
-    NSLog(@"policy check-in result for identity %@ with status code %ld", status.identity, (unsigned long)status.statusCode);
+    NSLog(@"policy check-in result for identity %@ with status code %ld", status.accountId, (unsigned long)status.statusCode);
     NSLog(@"Debug Message: %@", status.errorString);
 }
 
 - (void)unenrollRequestWithStatus:(IntuneMAMEnrollmentStatus*)status
 {
-    NSLog(@"un-enroll result for identity %@ with status code %ld", status.identity, (unsigned long)status.statusCode);
+    NSLog(@"un-enroll result for identity %@ with status code %ld", status.accountId, (unsigned long)status.statusCode);
     NSLog(@"Debug Message: %@", status.errorString);
 }
 ```
