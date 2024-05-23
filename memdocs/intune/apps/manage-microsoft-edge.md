@@ -358,23 +358,32 @@ Organizations can modify their network stack preference by configuring the follo
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
 
-#### Set a proxy .pac file URL
+### Set a proxy .pac file URL
 
-Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for Android.
+Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for iOS and Android
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl |Specify a valid URL to a proxy .pac file.  <br>For example: `https://internal.site/example.pac` |
 
-#### PAC failed-open support 
+### PAC failed-open support 
 
-By default, Microsoft Edge for Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
+By default, Microsoft Edge for iOS and Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
 
-#### Proxy for users to sign in to Edge in Android.
+### Configure network replays
+
+Edge for iOS now supports network relays on iOS 17 and above. These are a special type of proxy that can be used for remote access and privacy solutions. They support secure and transparent tunneling of traffic, serving as a modern alternative to VPNs when accessing internal resources.
+Organizations can configure relay proxy URLs to route traffic based on matched and excluded domains.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.ProxyRelayUrl |Specify a valid URL to a relay configuration json file.  <br>For example: `https://internal.site/relay_config.json` |
+
+### Proxy for users to sign in to Edge in Android.
 
 A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android. 
 
@@ -384,7 +393,7 @@ Organizations can specify dedicated proxy via MDM policy for users to sign in to
 |:---------|:---------|
 |EdgeOneAuthProxy |  The corresponding value is a string <br> **Example** `http://MyProxy.com:8080` |
 
-#### iOS Website data store
+### iOS Website data store
 
 The website data store in Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there is only one persistent website data store in Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts cannot utilize it. Consequently, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
 
@@ -395,7 +404,7 @@ The website data store in Edge for iOS is essential for managing cookies, disk a
 > [!NOTE]
 > With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
 
-#### Microsoft Defender SmartScreen
+### Microsoft Defender SmartScreen
 
 Microsoft Defender SmartScreen is a feature that helps users avoid malicious sites and downloads. It is enabled by default. Organizations can disable this setting.
 
@@ -403,7 +412,7 @@ Microsoft Defender SmartScreen is a feature that helps users avoid malicious sit
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScreen is enabled. <br>**false**  Microsoft Defender SmartScreen is disabled.|
 
-#### Certificate verification
+### Certificate verification
 
 By default, Microsoft Edge for Android verifies server certificates using the built-in certificate verifier and the Microsoft Root Store as the source of public trust. Organizations can switch to system certificate verifier and system root certificates.
 
@@ -461,7 +470,7 @@ Organizations can configure a search provider for users. To configure a search p
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`|
 
-#### Open external apps
+### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
 
 |Key |Value |
@@ -471,7 +480,7 @@ When a web page requests to open an external app, users will see a pop-up asking
 > [!NOTE]
 > As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99.
 
-#### Copilot
+### Copilot
 
 > [!NOTE]
 > Copilot is also known as Bing Chat Enterprise.
