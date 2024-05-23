@@ -12,7 +12,7 @@ items:
       topicHref: /mem/intune/user-help/
     - name: Endpoint settings management
       tocHref: /defender-endpoint/ 
-      topicHref: /defender/defender-endpoint/
+      topicHref: /defender-endpoint/
       
   - name: Configuration Manager
     tocHref: /mem/configmgr/
