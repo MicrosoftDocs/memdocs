@@ -28,7 +28,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Introducing Centralized Search  - Desired Workspace Selection](includes/2405/27927529.md)]
 [!INCLUDE [BitLocker support in Arm devices](includes/2405/27825049.md)]
 [!INCLUDE [Configuration Manager now support SQL Extended Protection for Authentication](includes/2405/28106757.md)]
-[!INCLUDE [Performance Enhancement of policy processing and collection evaluation](includes/2405/24334765.md)]
+[!INCLUDE [Performance Enhancement of policy processing and collection evaluation](includes/2405/227679763.md)]
 
 <!--## General known issues-->
 
