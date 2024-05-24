@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/27/2024
+ms.date: 05/31/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -199,10 +199,6 @@ The following configurations are optional but recommended. They aren't required:
 
 - **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
 
-- **Configure Microsoft Entra custom branding**. To display an organization-specific sign-on page, configure Microsoft Entra ID with the images and text that need to be displayed. For more information, see [Quickstart: Add company branding to your sign-in page in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding). Key elements for Windows Autopilot include the **square logo**, **sign-in page text**, and Microsoft Entra tenant name. The tenant name is configured separately in the Microsoft Entra tenant properties.
-
 There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications).
 
 ---
-
-## Related content

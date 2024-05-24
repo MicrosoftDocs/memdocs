@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/27/2024
+ms.date: 05/31/2024
 ms.topic: article
 ms.collection:
   - M365-modern-desktop
@@ -45,7 +45,7 @@ To access Windows Autopilot device preparation reports and monitor deployments i
       1. **Device name** - the name given to the device during the deployment. Selecting this item goes to the device details in Intune.
       2. **Deployment status** - displays the current status of the deployment on the device including if the deployment was a **Success** or **Failed**.
       3. **Device ID** - the device ID of the device in Intune.
-      4. **AAD Device Id** - the device ID of the device In Microsoft Entra ID.
+      4. **Microsoft Entra device ID** - the device ID of the device In Microsoft Entra ID.
       5. **Serial number** - the hardware serial number of the device.
       6. **Deployment policy** - the deployment policy that the device received and ran.
       7. **Policy Version**

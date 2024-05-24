@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/27/2024
+ms.date: 05/31/2024
 ms.topic: article
 ms.collection:
   - M365-modern-desktop
@@ -41,7 +41,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 - Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 
-- Microsoft Entra ID - Only Microsoft Entra join is supported.
+- Microsoft Entra ID - only Microsoft Entra join is supported.
 
 - Device shouldn't be registered or added as a Windows Autopilot device - If the device is registered or added as Windows Autopilot device, the Windows Autopilot profile takes precedence over the Windows Autopilot device preparation policy. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
 
@@ -52,7 +52,7 @@ For additional detailed requirements, see [Windows Autopilot device preparation 
 When new Windows devices are initially deployed, Windows Autopilot device preparation uses the OEM-optimized version of Windows client. The OEM-optimized version of Windows client is preinstalled on the device, so custom images and drivers don't need to be maintained for every device model. Instead of re-imaging the device, with Windows Autopilot device preparation, the existing Windows installation can be transformed into a "business-ready" state that can:
 
 - Deliver Windows Autopilot device preparation configuration during user authentication in the out-of-box experience (OOBE).
-- Automatically add devices to the security group and receive selected applications and Powershell scripts assigned to the group.
+- Automatically add devices to the security group and receive selected applications and PowerShell scripts assigned to the group.
 
 ## Windows Autopilot device preparation improvements
 
@@ -66,7 +66,7 @@ Windows Autopilot device preparation is an improved profile experience that inco
 New features in Windows Autopilot device preparation include:
 
 - **Utilizing enrollment time grouping in Intune** - Device is added to a security group at enrollment time and configuration is delivered immediately. This feature provides a faster and more reliable setup.  For more information, see [Enrollment Time Grouping](#enrollment-time-grouping).
-- **Out of the box granular reporting** - Out of the box reporting and monitoring with near real-time status of deployments, including applications and PowerShell scripts details and deployment time. This feature provides improved troubleshooting. For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
+- **Out of the box granular reporting** - This feature provides improved troubleshooting. Out of the box reporting and monitoring with near real-time status of deployments, including applications and PowerShell scripts status and deployment time. For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 - **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
 
 ## Key features and capabilities
@@ -82,13 +82,13 @@ Windows Autopilot device preparation capabilities include:
 
 - User-driven deployment flow.
 - Standard user access requirement.
-- Application and PowerShell script selection during OOBE.
-- Simplified and clear OOBE user experience.
+- Select application and PowerShell script to be delivered during OOBE.
+- Simplified and clear OOBE user experience with percentage progress indicator.
 - Detailed deployment report for better admin troubleshooting.
 
 ## Improved experiences
 
-## Admin experience
+### Admin experience
 
 Windows Autopilot device preparation simplifies admin configuration by having a single profile to provision all policies in one location, including deployment and OOBE settings.
 
@@ -102,15 +102,13 @@ Windows Autopilot device preparation also improves the user experience in the fo
 - When issues arise, logs can be exported with ease.
 - The end-user gets to the desktop faster.
 
-## Troubleshooting and Reporting
+### Troubleshooting and Reporting
 
-Windows Autopilot device preparation offers near real-time status updates on deployments. Windows Autopilot device preparation reporting includes detailed application and PowerShell script information and deployment time, allowing for improved troubleshooting and reporting.
-
-Deployment report captures status of each deployment:
+Windows Autopilot device preparation offers near real-time status updates on deployments. Windows Autopilot device preparation monitoring includes application and PowerShell script status information, allowing for improved troubleshooting and reporting. Deployment monitoring includes the following features:
 
 - Easily track which devices went through Autopilot.
-- Track status and deployment phase in near real-time.
-- More details for each deployment:
+- Track status and deployment phase for each device in near real-time.
+- Each device has the following details in the monitoring report:
   - Device details.
   - Profile name and version.
   - Deployment status details.
@@ -122,7 +120,7 @@ Deployment report captures status of each deployment:
 The key to Windows Autopilot device preparation is Enrollment Time Grouping. It consists of the following phases:
 
 - **Configure applications and policies to a security group** - User authenticates and the Windows Autopilot device preparation configuration is delivered.
-- **Select applications and PowerShell scripts to get installed during OOBE** - Selected applications and PowerShell scripts assigned to the group are installed. The device joins the security group.
+- **Select applications and PowerShell scripts to get installed during OOBE** - Selected applications and PowerShell scripts assigned to the device security group are installed. The device also joins the device security group.
 - **Intune pre-calculates applications and policies** - User gets to the desktop. Remaining configuration is applied.
 
 ## Corporate identifiers for Windows

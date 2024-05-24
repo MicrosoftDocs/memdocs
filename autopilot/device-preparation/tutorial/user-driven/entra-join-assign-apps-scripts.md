@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/27/2024
+ms.date: 05/31/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -86,7 +86,7 @@ To assign the desired applications to the device group created for Windows Autop
 
 8. Repeat the steps for any additional applications that need to be installed during the Windows Autopilot device preparation deployment, up to the limit of ten applications.
 
-### Powershell scripts
+### PowerShell scripts
 
 To assign the desired PowerShell scripts to the device group created for Windows Autopilot device preparation:
 

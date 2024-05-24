@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 05/27/2024
+  ms.date: 05/31/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -30,7 +30,7 @@ sections:
       - question: |
           When running a Windows Autopilot device preparation deployment on a device, why isn't the device being added to the device group specified in the Windows Autopilot device preparation policy?
         answer: |
-          - Verify that **Intune Autopilot ConfidentialClient** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+          - Verify that **Intune Provisioning Client** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
 
           - Verify that the correct device group is specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
@@ -73,4 +73,4 @@ sections:
 
           Why won't it let the device group be added to the Windows Autopilot device preparation policy?
         answer: |
-          - This error usually occurs if **Intune Autopilot ConfidentialClient** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. To fix the issue, add **Intune Autopilot ConfidentialClient** as the owner of the device group being specified in the Windows Autopilot device preparation policy.
+          - This error usually occurs if **Intune Provisioning Client** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. To fix the issue, add **Intune Provisioning Client** as the owner of the device group being specified in the Windows Autopilot device preparation policy.
