@@ -114,28 +114,25 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - European Union
   - North Europe
   - West Europe
+  - Italy North
+  - Poland Central
+  - Sweden Central
 - France
   - France Central
 - Germany
   - Germany West Central
 - India
   - Central India
-- Italy
-  - Italy North 
 - Japan
   - Japan East
 - Norway
   - Norway East
-- Poland
-  - Poland Central
 - South Africa
   - South Africa North
 - South America
   - Brazil South (Restricted)
 - South Korea
   - Korea Central
-- Sweden
-  - Sweden Central
 - Switzerland
   - Switzerland North
 - UAE
