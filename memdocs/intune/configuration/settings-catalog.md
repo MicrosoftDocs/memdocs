@@ -7,7 +7,7 @@ keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2024
+ms.date: 05/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-zone_pivot_groups: create-policy
+- magic-ai-copilot
 ---
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
@@ -57,6 +57,16 @@ This feature applies to:
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
 
   Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../protect/managed-software-updates-ios-macos.md), passcode restrictions, and more.
+
+  You can also use the settings catalog to configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, go to:
+
+  - [Built-in macOS features replacing plist files](settings-catalog-common-features.md#built-in-macos-features-replacing-plist-files)
+  - [Add a property list file to macOS devices using Microsoft Intune](preference-file-settings-macos.md).
+
+  You can continue using the [preference file](/deployedge/configure-microsoft-edge-on-mac) to:
+  
+  - Configure earlier versions of Microsoft Edge.
+  - Configure Microsoft Edge browser settings that aren't in the settings catalog.
 
 - **Windows 10/11**
 

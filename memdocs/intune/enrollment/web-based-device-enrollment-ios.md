@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/14/2024
+ms.date: 05/15/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -90,9 +90,10 @@ Alternatively, you can provide employees and students with a URL that opens the 
 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 
-1. Open Safari and sign in to the Company Portal website with your work or school account using one of the following links:
-   *  https://portal.manage.microsoft.com/conditionalaccess/enrollment  
-   *  https://portal.manage.microsoft.com/enrollment/webenrollment/ios  
+>[!IMPORTANT]
+> Safari browser is the only supported browser for this type of enrollment, and is needed to download the management profile and complete enrollment. If a user's default browser is anything other than Safari, they will need to copy the enrollment link and paste it into a Safari browser to initiate enrollment. After they complete enrollment, users can return to their preferred browser.  
+
+1. Open Safari and go to [https://portal.manage.microsoft.com/conditionalaccess/enrollment](https://portal.manage.microsoft.com/conditionalaccess/enrollment). Sign in with your work or school account.   
 2. When prompted to, download the management profile. Wait in Safari while Company Portal downloads the management profile.  
 3. Go to your device settings app to view and install the management profile.  
 4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **Profile** > **Management Profile** > **Single Sign On Extension**. Authenticator should be listed as the SSO extension.  

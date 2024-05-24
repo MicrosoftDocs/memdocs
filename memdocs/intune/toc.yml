@@ -192,7 +192,6 @@ items:
 
   - name: How-to guides
     items:
-
     - name: Set up Intune subscription
       items:
       - name: Sign in to Intune
@@ -466,7 +465,9 @@ items:
               - name: PowerShell scripts
                 href: ./apps/intune-management-extension.md
               - name: macOS shell scripts
-                href: ./apps/macos-shell-scripts.md        
+                href: ./apps/macos-shell-scripts.md
+              - name: Get the app bundle ID
+                href: ./apps/get-app-bundle-id-intune-admin-center.md      
             - name: Assign apps
               items:
               - name: Assign apps to groups
@@ -794,6 +795,11 @@ items:
               items:
               - name: Check Point Harmony and Intune integration
                 href: ./protect/checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Set up CrowdStrike
+              href: ./protect/crowdstrike-falcon-defense-connector.md
+              items:
+              - name: CrowdStrike Falcon and Intune integration
+                href: ./protect/crowdstrike-falcon-mtd-connector-integration.md
             - name: Set up Jamf
               href: ./protect/jamf-mtd-connector.md
               items:
@@ -1028,7 +1034,7 @@ items:
           - name: Windows 10 MDM baseline settings
             href: ./protect/security-baseline-settings-mdm-all.md
           - name: Microsoft Defender for Endpoint baseline settings 
-            href: ./protect/security-baseline-settings-defender-atp.md
+            href: ./protect/security-baseline-settings-defender.md
           - name: Microsoft 365 Apps for Enterprise baseline settings (Office) 
             href: ./protect/security-baseline-v2-office-settings.md
           - name: Microsoft Edge baseline settings (version 112 and higher)
@@ -1173,17 +1179,22 @@ items:
           - name: Device features
             href: ./configuration/device-features-configure.md
             displayName: airprint, home screen, lock screen, sso, single sign-on, ios, ipados, macos
-          - name: Use Enterprise SSO plug-in
+          - name: Single sign-on (SSO)
             items:
-            - name: SSO plug-in overview
+            - name: SSO overview & options
               displayName: single sign-on, ios, ipados, macos
               href: ./configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md
-            - name: iOS/iPadOS SSO plug-in
+            - name: iOS/iPadOS Enterprise SSO plug-in
               displayName: single sign-on, ios, ipados
               href: ./configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md
-            - name: macOS SSO plug-in
-              displayName: single sign-on, macos
-              href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
+            - name: macOS SSO
+              items:
+              - name: Platform SSO
+                displayName: single sign-on, macos
+                href: ./configuration/platform-sso-macos.md
+              - name: Enterprise SSO app extension plug-in
+                displayName: single sign-on, macos
+                href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
 
         - name: Extensions on macOS
           href: ./configuration/kernel-extensions-overview-macos.md
@@ -1473,7 +1484,7 @@ items:
           displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: Set up enrollment notifications
+          displayName: intune; enrollment; terms and conditions; policy 
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
@@ -1523,6 +1534,9 @@ items:
           items:
           - name: Prerequisite - Connect Intune to Android Enterprise 
             href: ./enrollment/connect-intune-android-enterprise.md
+          - name: Device staging overview          
+            href: ./enrollment/device-staging-overview.md
+            displayName: COBO; staged enrollment 
           - name: Set up work profile management
             items: 
             - name: Overview  
@@ -1750,9 +1764,85 @@ items:
       items:
       - name: What is Intune for Education
         displayName: edu
-        href: ./fundamentals/introduction-intune-education.md
+        href: ./industry/education/introduction-intune-education.md
+      - name: "Tutorial: How to deploy and manage devices in a school"
+        items:
+        - name: Introduction
+          href: ./industry/education/tutorial-school-deployment/introduction.md
+        - name: 1. Plan your deployment
+          items:
+          - name: Enrollment methods
+            href: ./industry/education/tutorial-school-deployment/plan-enrollment.md
+          - name: Grouping and targeting
+            href: ./industry/education/tutorial-school-deployment/plan-grouping.md
+        - name: 2. Prepare your tenant
+          items:
+          - name: Set up Microsoft Entra ID
+            href: ./industry/education/tutorial-school-deployment/set-up-microsoft-entra-id.md
+          - name: Set up Microsoft Intune
+            href: ./industry/education/tutorial-school-deployment/set-up-microsoft-intune.md
+        - name: 3. Configure settings and applications
+          items:
+          - name: Overview
+            href: ./industry/education/tutorial-school-deployment/configure-devices-overview.md
+          - name: Configure policies
+            href: ./industry/education/tutorial-school-deployment/configure-device-settings.md
+          - name: Configure applications
+            href: ./industry/education/tutorial-school-deployment/configure-device-apps.md        
+        - name: 4. Deploy devices
+          items: 
+          - name: Overview
+            href: ./industry/education/tutorial-school-deployment/enroll-overview.md
+          - name: Windows
+            items:
+            - name: Enroll devices via Microsoft Entra join
+              href: ./industry/education/tutorial-school-deployment/enroll-entra-join.md
+            - name: Enroll devices with provisioning packages
+              href: ./industry/education/tutorial-school-deployment/enroll-package.md
+            - name: Enroll devices with Windows Autopilot
+              href: ./industry/education/tutorial-school-deployment/enroll-autopilot.md
+          - name: iOS
+            items:
+            - name: Enroll with Company Portal
+              href: ./industry/education/tutorial-school-deployment/enroll-ios-company-portal.md
+            - name: Enroll devices with Automated Device Enrollment
+              href: ./industry/education/tutorial-school-deployment/enroll-ios-ade.md
+            - name: Bulk enrollment with Apple Configurator
+              href: ./industry/education/tutorial-school-deployment/enroll-ios-apple-configurator.md
+        - name: 5. Manage devices
+          items: 
+          - name: Overview
+            href: ./industry/education/tutorial-school-deployment/manage-overview.md
+          - name: Management functionalities for Surface devices
+            href: ./industry/education/tutorial-school-deployment/manage-surface-devices.md       
+          - name: Reset and wipe devices
+            href: ./industry/education/tutorial-school-deployment/reset-wipe.md
+        - name: 6. Troubleshoot and get help
+          href: ./industry/education/tutorial-school-deployment/troubleshoot-overview.md
+        - name: 7. Common Education configuration
+          items: 
+          - name: Overview
+            href: ./industry/education/tutorial-school-deployment/common-config-overview.md
+          - name: Intune policies for Windows in Education
+            items:
+            - name: Device restrictions
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md
+            - name: Windows Update
+              href: ./industry/education/tutorial-school-deployment/common-config-windows-update.md
+            - name: Microsoft Edge
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md
+            - name: Delivery Optimization
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
+            - name: Windows privacy
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy.md
+            - name: Start menu customization
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
+            - name: OneDrive Known Folder Move
+              href: ./industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md
+
       - name: Intune for Education docs
         href: /intune-education/
+
     - name: Government
       items:
       - name: Intune US Government service description
@@ -2126,9 +2216,11 @@ items:
       - name: Remote Help on Windows
         href: ./fundamentals/remote-help-windows.md
       - name: Remote Help on macOS
-        href: ./fundamentals/remote-help-macos.md  
+        href: ./fundamentals/remote-help-macos.md
+      - name: Remote Help Web App
+        href: ./fundamentals/remote-help-webapp.md    
       - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md
+        href: ./fundamentals/remote-help-android.md  
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md   
     - name: Remediations

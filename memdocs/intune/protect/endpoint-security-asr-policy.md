@@ -48,6 +48,7 @@ Applies to:
 
 - Windows 10
 - Windows 11
+- Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
 ## Prerequisites for Attack surface reduction profiles
 
