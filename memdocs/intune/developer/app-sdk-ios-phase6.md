@@ -67,7 +67,7 @@ Intune → App: Delegate remediation notification	|After Intune has retrieved an
 Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
 
 ```objc
-(void) identity:(NSString*) identity hasComplianceStatus:(IntuneMAMComplianceStatus) status withErrorString:(NSString*) error;
+(void) accountId:(NSString*_Nonnull) accountId hasComplianceStatus:(IntuneMAMComplianceStatus) status withErrorMessage:(NSString*_Nonnull) errMsg andErrorTitle:(NSString*_Nonnull) errTitle
 {
     switch(status)
     {
@@ -83,8 +83,8 @@ Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
         case IntuneMAMComplianceUserCancelled:
         case IntuneMAMComplianceServiceFailure:
         {
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:identity
-            message:error
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:errTitle
+            message:errMsg
             preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
             handler:^(UIAlertAction * action) {exit(0);}];
@@ -96,7 +96,7 @@ Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
         }
         case IntuneMAMComplianceInteractionRequired:
         {
-            [[IntuneMAMComplianceManager instance] remediateComplianceForIdentity:identity silent:NO];
+            [[IntuneMAMComplianceManager instance] remediateComplianceForAccountId:accountId silent:NO];
             break;
         }
     }
@@ -104,7 +104,7 @@ Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
 ```
 
 ```swift
-func identity(_ identity: String, hasComplianceStatus status: IntuneMAMComplianceStatus, withErrorMessage errMsg: String, andErrorTitle errTitle: String) {
+func accountId(_ accountId: String, hasComplianceStatus status: IntuneMAMComplianceStatus, withErrorMessage errMsg: String, andErrorTitle errTitle: String) {
         switch status {
         case .compliant:
            //Handle successful compliance
@@ -117,7 +117,7 @@ func identity(_ identity: String, hasComplianceStatus status: IntuneMAMComplianc
                 self.present(alert, animated: true, completion: nil) 
             }
         case .interactionRequired:
-            IntuneMAMComplianceManager.instance().remediateCompliance(forIdentity: identity, silent: false)
+            IntuneMAMComplianceManager.instance().remediateCompliance(forAccountId: accountId, silent: false)
    }
 ```
 
@@ -157,6 +157,9 @@ guard let authorityURL = URL(string: kAuthority) else {
         self.applicationContext = try MSALPublicClientApplication(configuration: msalConfiguration)
 
 ```
+To fetch the Entra object ID for the accountId parameter of the MAM SDK compliance remediation APIs you need to do the following:
+- First get the homeAccountId from userInfo[MSALHomeAccountIdKey] within MSALError object sent back by MSAL when it reports ERROR_SERVER_PROTECTION_POLICY_REQUIRED to the app.
+- This homeAccountId will be in the format ObjectId.TenantId. Extract the ObjectId value by spliting the string on the '.' and then use that value for the accountId parameter in remediation API remediateComplianceForAccountId.
 
 ### Exit criteria
 

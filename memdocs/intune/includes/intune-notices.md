@@ -37,7 +37,7 @@ Starting **June 1, 2024**, we're making updates to improve the Intune mobile app
 > [!IMPORTANT]
 > If you don't update to the latest versions, users will be blocked from launching your app.
 >
-> Ahead of this change, for Microsoft apps that need to be updated, when a user opens the app, they'll receive a warning message to update the app.
+> Ahead of this change, for Microsoft apps that need to be updated, when a user opens the app, they'll receive a blocking message to update the app.
 
 Note that the way Android updates, once one Microsoft application with the updated SDK is on the device and the Company Portal is updated to the latest version, Android apps will update. So, this message is focused on iOS SDK/app wrapper updates. We recommend always updating your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly.  
 
