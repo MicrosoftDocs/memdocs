@@ -58,3 +58,19 @@ sections:
 
           - Verify that the application or PowerShell script is configured to install in the **System** context. Since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in, they must be configured to install in the **System** context.
 
+      - question: |
+          When trying to create a Windows Autopilot device preparation policy, the following error is displayed when trying to save the policy:
+
+          **Save security groups**
+
+          **Unable to save security group for <policy_name>. You do not have permission to save these assignments**
+
+          When editing the Windows Autopilot device preparation policy, **Device group** in the policy shows **0 group assigned**. If the device group is attempted to be added via the **Edit** option, the following error is displayed when trying to save the policy:
+
+          **Failed to update security group device preparation setting**
+
+          **Updating security group for device preparation setting <policy_name> failed. Something went wrong.**
+
+          Why won't it let the device group be added to the Windows Autopilot device preparation policy?
+        answer: |
+          - This error usually occurs if **Intune Autopilot ConfidentialClient** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. To fix the issue, add **Intune Autopilot ConfidentialClient** as the owner of the device group being specified in the Windows Autopilot device preparation policy.
