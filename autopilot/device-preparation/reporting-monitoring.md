@@ -47,7 +47,7 @@ To access Windows Autopilot device preparation reports and monitor deployments i
       3. **Device ID** - the device ID of the device in Intune.
       4. **Microsoft Entra device ID** - the device ID of the device In Microsoft Entra ID.
       5. **Serial number** - the hardware serial number of the device.
-      6. **Deployment policy** - the deployment policy that the device received and ran.
+      6. **Deployment policy** - the device preparation policy the device received.
       7. **Policy Version**
       8. **OS version** - the version of Windows installed on the device during the deployment.
 

@@ -28,14 +28,14 @@ sections:
     questions:
 
       - question: |
-          When running a Windows Autopilot device preparation deployment on a device, why isn't the device being added to the device group specified in the Windows Autopilot device preparation policy?
+          Device isn't being added to the device group specified in the Windows Autopilot device preparation policy.
         answer: |
           - Verify that **Intune Provisioning Client** is set as the owner for the device group specified in the Windows Autopilot device preparation policy. For more information, [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
 
           - Verify that the correct device group is specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
       - question: |
-          When attempting to run a Windows Autopilot device preparation deployment on a device, the Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE). Why doesn't the Windows Autopilot device preparation deployment ever launch?
+          Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |
           - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md#software-requirements), including that the minimum required update is installed before starting the device for the first time:
 
@@ -52,25 +52,14 @@ sections:
           - If using corporate identifiers in Intune, make sure that a corporate identifiers has been added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
       - question: |
-          Why are some of the applications or PowerShell scripts selected in the Windows Autopilot device preparation policy not getting installed?
+          Applications or PowerShell scripts aren't getting installed.
         answer: |
           - If in the details of the Windows Autopilot device preparation deployment report, the applications or PowerShell scripts are showing **Skipped**, verify that the applications or PowerShell scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
           - Verify that the application or PowerShell script is configured to install in the **System** context. Since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in, they must be configured to install in the **System** context.
 
       - question: |
-          When trying to create a Windows Autopilot device preparation policy, the following error is displayed when trying to save the policy:
+          Device security group isn't saving in Windows Autopilot device preparation policy.
 
-          **Save security groups**
-
-          **Unable to save security group for <policy_name>. You do not have permission to save these assignments**
-
-          When editing the Windows Autopilot device preparation policy, **Device group** in the policy shows **0 group assigned**. If the device group is attempted to be added via the **Edit** option, the following error is displayed when trying to save the policy:
-
-          **Failed to update security group device preparation setting**
-
-          **Updating security group for device preparation setting <policy_name> failed. Something went wrong.**
-
-          Why won't it let the device group be added to the Windows Autopilot device preparation policy?
         answer: |
-          - This error usually occurs if **Intune Provisioning Client** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. To fix the issue, add **Intune Provisioning Client** as the owner of the device group being specified in the Windows Autopilot device preparation policy.
+          - This usually occurs if **Intune Provisioning Client** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. When the issue occurs, the error message **Unable to save security group for <policy_name>. You do not have permission to save these assignments**, **There was a problem with the device security group. Check that the group meets the requirements.**, or ****Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.** is displayed. Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 group assigned**. To fix the issue, add **Intune Provisioning Client** as the owner of the device security group being specified in the Windows Autopilot device preparation policy.
