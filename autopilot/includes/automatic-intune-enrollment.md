@@ -32,11 +32,11 @@ Headings are driven by article context. -->
 
    - If **All** is selected, all users can automatically enroll their devices in Intune.
 
-   - If **Some** is selected, only users specified in the group(s) next to **Groups** can automatically enroll their devices in Intune. To add groups:
+   - If **Some** is selected, only users specified in the groups next to **Groups** can automatically enroll their devices in Intune. To add groups:
 
       1. Select the link next to **Groups**.
-      1. In the **Select groups** window that opens, select the desired group(s) to add.
-      1. Once all of the desired group(s) have been selected, select **Select** to close the **Select groups** window.
+      1. In the **Select groups** window that opens, select the desired groups to add.
+      1. Once all of the desired groups are selected, select **Select** to close the **Select groups** window.
 
         > [!NOTE]
         >

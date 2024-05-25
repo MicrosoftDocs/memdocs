@@ -44,7 +44,7 @@ Headings are driven by article context. -->
 
        1. Scroll through the list of objects and select owners for the user group. Alternatively, use the **Search** bar to search for and select owners of the group.
 
-       1. Once all of the desired owners have been selected, select the **Select** button.
+       1. Once all of the desired owners are selected, select the **Select** button.
 
     1. For **Dynamic device members** (available once **Dynamic Device** is selected for **Membership type**), select **Add dynamic query**. Selecting **Add dynamic query** opens the **Dynamic membership rules** screen:
 

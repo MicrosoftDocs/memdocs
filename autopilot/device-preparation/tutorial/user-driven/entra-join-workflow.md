@@ -38,8 +38,8 @@ Windows Autopilot device preparation user-driven deployments can perform the fol
 
 - Joins the device to Microsoft Entra ID.
 - Enrolls the device in Intune.
-- Installs up to 10 critical applications.
-- Runs up to 10 critical PowerShell scripts.
+- Installs up to 10 essential applications.
+- Runs up to 10 essential PowerShell scripts.
 
 Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
 

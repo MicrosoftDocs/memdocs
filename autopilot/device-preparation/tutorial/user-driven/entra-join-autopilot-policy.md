@@ -71,7 +71,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For the purpose of this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
 12. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create a device group](entra-join-device-group.md). Once the correct user group is selected, select the **Next** button.
 
@@ -101,11 +101,11 @@ In the **Configuration settings** page:
 
 2. Expand the **Apps** section by selecting it:
 
-   The **Apps** section allows selection of up to 10 managed applications reference with the deployment. The applications specified here should be the critical applications that should be installed on the device before the end-user can start using the device.
+   The **Apps** section allows selection of up to 10 managed applications reference with the deployment. The applications specified here should be the essential applications that should be installed on the device before the end-user can start using the device.
 
    > [!IMPORTANT]
    >
-   > The applications selected in this setting should be assigned to the device security group previously specified in the **Device group** page. If applicable, the applications should also be configured to install in the **System** context since it is installed during OOBE when no user is signed in.
+   > The applications selected in this setting should be assigned to the device security group previously specified in the **Device group** page. If applicable, the applications should also be configured to install in the **System** context since it's installed during OOBE when no user is signed in.
 
    1. Under **Allowed Applications**, select **Add**. The **Select Apps** pane opens.
 
@@ -131,11 +131,11 @@ In the **Configuration settings** page:
 
 4. Expand the **Scripts** section by selecting it:
 
-    The **Scripts** section allows selection of up to 10 PowerShell scripts to install during the deployment. The PowerShell scripts specified here should be the critical PowerShell scripts that should run on the device before the end-user can start using the device.
+    The **Scripts** section allows selection of up to 10 PowerShell scripts to install during the deployment. The PowerShell scripts specified here should be the essential PowerShell scripts that should run on the device before the end-user can start using the device.
 
     > [!IMPORTANT]
     >
-    > The PowerShell scripts selected in this setting should be assigned to the device security group previously specified in the **Device group** page. The PowerShell script should also be configured to run in the **System** context since the PowerShell scripts runs during OOBE when no user is signed in. The PowerShell script can be set to run in the **System** context by setting the option **Run this script using the logged on credentials** to **No** in the properties of the PowerShell script.
+    > The PowerShell scripts selected in this setting should be assigned to the device security group previously specified in the **Device group** page. The PowerShell script should also be configured to run in the **System** context since the PowerShell scripts run during OOBE when no user is signed in. The PowerShell script can be set to run in the **System** context by setting the option **Run this script using the logged on credentials** to **No** in the properties of the PowerShell script.
 
    1. Under **Allowed Scripts**, select **Add**. The **Select Scripts** pane opens.
 
@@ -151,7 +151,7 @@ In the **Configuration settings** page:
 
 > [!IMPORTANT]
 >
-> Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile will take precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment will run instead of the Windows Autopilot device preparation deployment. If a devices needs to be removed as a Windows Autopilot device, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
+> Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile takes precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment runs instead of the Windows Autopilot device preparation deployment. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
 
 ## Next step: Add Windows corporate identifier to device (optional)
 

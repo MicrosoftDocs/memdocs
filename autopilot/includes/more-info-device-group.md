@@ -21,7 +21,7 @@ device-preparation/tutorial/user-driven/entra-join-user-group.md
 
 Headings are driven by article context. -->
 
-For more information on creating groups in Intune, see the following article(s):
+For more information on creating groups in Intune, see the following articles:
 
 - [Create device groups](/mem/autopilot/enrollment-autopilot).
 - [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).

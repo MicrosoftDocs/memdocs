@@ -65,7 +65,7 @@ Windows Autopilot device preparation is an improved profile experience that inco
 
 New features in Windows Autopilot device preparation include:
 
-- **Utilizing enrollment time grouping in Intune** - Device is added to a security group at enrollment time and configuration is delivered immediately. This feature provides a faster and more reliable setup.  For more information, see [Enrollment Time Grouping](#enrollment-time-grouping).
+- **Utilizing enrollment time grouping in Intune** - Device is added to a security group at enrollment time and configuration is delivered immediately. This feature provides a faster and more reliable setup. For more information, see [Enrollment Time Grouping](#enrollment-time-grouping).
 - **Out of the box granular reporting** - This feature provides improved troubleshooting. Out of the box reporting and monitoring with near real-time status of deployments, including applications and PowerShell scripts status and deployment time. For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 - **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
 

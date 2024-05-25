@@ -51,13 +51,13 @@ Headings are driven by article context. -->
 
     > [!IMPORTANT]
     >
-    > Don't manually add any devices to the device group created in this step by selecting the **No members selected** link under **Members**. Devices will be automatically added to this device group during the Windows Autopilot device preparation deployment.
+    > Don't manually add any devices to the device group created in this step by selecting the **No members selected** link under **Members**. Devices are automatically added to this device group during the Windows Autopilot device preparation deployment.
 
 ### Adding the Intune Provisioning Client object
 
 If the **Intune Provisioning Client** object with AppId **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available when selecting the owner of the device group, then follow these steps to add the object:
 
-1. On a device that where Microsoft Intune or Microsoft Entra ID is normally administered, open a **Windows PowerShell** command prompt.
+1. On a device where Microsoft Intune or Microsoft Entra ID is normally administered, open a **Windows PowerShell** command prompt.
 
 1. In the **Windows PowerShell** command prompt window:
 

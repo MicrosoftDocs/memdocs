@@ -39,9 +39,9 @@ Headings are driven by article context. -->
 
          1. In the **Add members** window that opens:
 
-            1. select the desired user(s) and/or group(s) to add.
+            1. Select the desired users and/or groups to add.
 
-            1. Once all of the desired users(s) and group(s) have been selected, select **Select** to close the **Add members** window.
+            1. Once all of the desired users and groups are selected, select **Select** to close the **Add members** window.
 
          1. Select **OK**.
 

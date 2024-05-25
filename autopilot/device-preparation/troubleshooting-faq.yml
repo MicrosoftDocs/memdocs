@@ -37,29 +37,42 @@ sections:
       - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |
-          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md#software-requirements), including that the minimum required update is installed before starting the device for the first time:
+          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md#software-requirements). This requirement includes that the minimum required update is installed before starting the device for the first time:
 
             - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
 
             - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available at the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/ServiceCenter/Default.aspx).
 
-          - Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. An indication that the device is registered as a Windows Autopilot device or that a Windows Autopilot profile has been assigned to the device is that the Enrollment Status Page (ESP) is displayed during OOBE. Windows Autopilot device preparation doesn't use the ESP. If a devices needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device)
+          - Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. If the Enrollment Status Page (ESP) is displayed during OOBE, it's an indication that the device is:
+
+            - Registered as a Windows Autopilot device.
+            - A Windows Autopilot profile is assigned to the device.
+
+            Windows Autopilot device preparation doesn't use the ESP. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
 
           - Verify that the user signing into the device during OOBE is a member of the user group specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a user group](tutorial/user-driven/entra-join-user-group.md).
 
-          - Verify that a device group has been selected in the Windows Autopilot device preparation policy. A Windows Autopilot device preparation policy can be created without selecting a device group. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+          - Verify that a device group is selected in the Windows Autopilot device preparation policy. A Windows Autopilot device preparation policy can be created without selecting a device group. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
-          - If using corporate identifiers in Intune, make sure that a corporate identifiers has been added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+          - If using corporate identifiers in Intune, make sure that a corporate identifier is added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
       - question: |
           Applications or PowerShell scripts aren't getting installed.
         answer: |
-          - If in the details of the Windows Autopilot device preparation deployment report, the applications or PowerShell scripts are showing **Skipped**, verify that the applications or PowerShell scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
+          - If the applications or PowerShell scripts are showing **Skipped** in the details of the Windows Autopilot device preparation deployment report, verify that the applications or PowerShell scripts are assigned to the device group specified in the Windows Autopilot device preparation policy. For more information, see [Windows Autopilot device preparation policy configuration settings](tutorial/user-driven/entra-join-autopilot-policy.md#configuration-settings) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
-          - Verify that the application or PowerShell script is configured to install in the **System** context. Since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in, they must be configured to install in the **System** context.
+          - Verify that the application or PowerShell script is configured to install in the **System** context. During OOBE, applications are installed and PowerShell scripts run when no user is signed in. For this reason, they must be configured to install in the **System** context.
 
       - question: |
           Device security group isn't saving in Windows Autopilot device preparation policy.
 
         answer: |
-          - This usually occurs if **Intune Provisioning Client** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. When the issue occurs, the error message **Unable to save security group for <policy_name>. You do not have permission to save these assignments**, **There was a problem with the device security group. Check that the group meets the requirements.**, or ****Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.** is displayed. Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 group assigned**. To fix the issue, add **Intune Provisioning Client** as the owner of the device security group being specified in the Windows Autopilot device preparation policy.
+          This issue usually occurs if **Intune Provisioning Client** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. When the issue occurs, one of the following error messages might display when saving the Windows Autopilot device preparation policy:
+
+          - **Unable to save security group for <policy_name>. You don't have permission to save these assignments.**
+          - **There was a problem with the device security group. Check that the group meets the requirements.**
+          - ****Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.**
+
+          Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 group assigned**.
+
+          To fix the issue, add **Intune Provisioning Client** as the owner of the device security group specified in the Windows Autopilot device preparation policy.

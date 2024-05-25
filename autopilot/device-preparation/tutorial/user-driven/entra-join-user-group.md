@@ -46,9 +46,9 @@ User groups are a collection of users organized into a Microsoft Entra group. Us
 - **Dynamic groups** - Users are automatically added to the group based on rules.
 - **Assigned groups** - Users are manually added to the group and are static.
 
-Windows Autopilot device preparation uses a user group as part of the Windows Autopilot device preparation policy. The user group specified in the Windows Autopilot device preparation policy are the users that will receive the Windows Autopilot device preparation deployment. The user group specified in the Windows Autopilot device preparation policy needs to be an assigned group of type security.
+Windows Autopilot device preparation uses a user group as part of the Windows Autopilot device preparation policy. The user group specified in the Windows Autopilot device preparation policy are the users that will receive the Windows Autopilot device preparation deployment. The user group specified in the Windows Autopilot device preparation policy needs to be a security group but can be either an assigned or dynamic group.
 
-To create an assigned user security group for use with Windows Autopilot device preparation, follow these steps:
+To create a user security group for use with Windows Autopilot device preparation, follow these steps:
 
 [!INCLUDE [How to create a user group in Intune](../../../includes/create-assigned-user-group.md)]
 
