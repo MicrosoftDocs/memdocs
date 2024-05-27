@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -57,13 +57,13 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 
   For more specific information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration)
 
-- Admin accounts need the following roles/licenses:
+- Accounts need the following roles/licenses:
 
   - **Printer Administrator** or **Global Administrator** roles: Needed to add printers.
 
     For more information on these roles, go to [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
-  - **Intune Administrator** or **Global Administrator** roles: Needed to create and assign Intune policies.
+  - **Policy and Profile Manager** role: Needed to create and assign Intune policies.
 
     For more information on these roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
