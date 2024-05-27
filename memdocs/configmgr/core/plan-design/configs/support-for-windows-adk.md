@@ -38,7 +38,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 | Windows ADK version            | ConfigMgr 2211| ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403  |
 |--------------------------------|----------------|----------------|----------------|----------------|
-| **ADK for Windows 11, Version 23H2 (May 2024)** <br>(10.1.26100.1)| ❌ | ✅ | ✅ | ✅ |
+| **ADK for Windows 11, May 2024** <br>(10.1.26100.1)| ❌ | ✅ | ✅ | ✅ |
 | **ADK for Windows 11, version 22H2**<br>(10.1.22621.1)| ✅ | ✅ | ✅ | ✅ |
 | **ADK for Windows 11, version 21H1**<br>(10.1.22000) | ✅ | ✅ | ✅ | ✅ |
 | **ADK for Windows Server 2022**<br>(10.1.20348)  | ✅ | ✅ | ✅ | ✅ |
