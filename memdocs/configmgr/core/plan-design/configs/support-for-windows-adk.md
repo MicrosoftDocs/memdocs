@@ -2,7 +2,7 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 05/09/2024
+ms.date: 05/27/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
@@ -27,11 +27,10 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
     > [!IMPORTANT]
     >
     > - Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
-    > - **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) or newer is required to deploy Windows 10/11 ARM64 operating systems. However, **ADK 10.1.25398.1 (updated September 2023)** (10.1.25398.1) Windows PE boot images have some known issues and need to be updated with the latest cumulative update to work with Configuration Manager. For more information, see [Support notes](#support-notes).
-
+    
     > [!NOTE]
     >
-    > **ADK 10.1.25398.1 (updated September 2023)** isn't currently supported for use with Configuration Manager due to [known issues](#support-notes) unless the Windows PE boot images are updated with the latest cumulative update (LCU). Previous supported ADK versions can be found at [Other ADK downloads](/windows-hardware/get-started/adk-install#other-adk-downloads). For more information, see [Support notes](#support-notes).
+    > Previous supported ADK versions can be found at [Other ADK downloads](/windows-hardware/get-started/adk-install#other-adk-downloads). For more information, see [Support notes](#support-notes).
 
 ## Windows ADK versions
 
@@ -39,7 +38,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 | Windows ADK version            | ConfigMgr 2211| ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403  |
 |--------------------------------|----------------|----------------|----------------|----------------|
-| **ADK 10.1.25398.1 (updated September 2023)** <br>(10.1.25398.1)| ❌ | ❌ | ❌ | Only with LCU |
+| **ADK for Windows 11, Version 23H2 (May 2024)** <br>(10.1.26100.1)| ❌ | ✅ | ✅ | ✅ |
 | **ADK for Windows 11, version 22H2**<br>(10.1.22621.1)| ✅ | ✅ | ✅ | ✅ |
 | **ADK for Windows 11, version 21H1**<br>(10.1.22000) | ✅ | ✅ | ✅ | ✅ |
 | **ADK for Windows Server 2022**<br>(10.1.20348)  | ✅ | ✅ | ✅ | ✅ |
