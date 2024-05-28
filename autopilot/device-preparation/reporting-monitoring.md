@@ -40,17 +40,17 @@ To access Windows Autopilot device preparation reports and monitor deployments i
 
 6. The **Device deployment details** pane opens. The **Device deployment details** pane contains three sections:
 
-   1. **Device** - Contains information regarding the device, including:
+   1. **Device** - contains information regarding the device, including:
 
       1. **Device name** - the name given to the device during the deployment. Selecting this item goes to the device details in Intune.
-      2. **Deployment status** - displays the current status of the deployment on the device including if the deployment was a **Success** or **Failed**.
+      2. **Deployment status** - displays the current status of the deployment on the device. During deployment, the status will show **In progress**. Once deployment is complete, it will show the final outcome of the deployment as either **Success** or **Failed**.
       3. **Device ID** - the device ID of the device in Intune.
       4. **Microsoft Entra device ID** - the device ID of the device in Microsoft Entra ID.
       5. **Serial number** - the hardware serial number of the device.
-      6. **Deployment policy** - the device preparation policy the device received.
-      7. **Policy Version**
+      6. **Deployment policy** - the Windows Autopilot device preparation policy the device received.
+      7. **Policy Version** - the version of the Windows Autopilot device preparation policy the device received. Each time a change is made and saved to the Windows Autopilot device preparation policy, the version number is incremented by one.
       8. **OS version** - the version of Windows installed on the device during the deployment.
 
-   2. **Apps**
+   2. **Apps** - contains information regarding the applications being installed during the Windows Autopilot device preparation including the list of applications being installed. Statuses include **Installed**, **In progress**, **Skipped**, and **Failed**.
 
-   3. **Scripts**
+   3. **Scripts** - contains information regarding the PowerShell scripts being run during the Windows Autopilot device preparation including the list of scripts being run. Statuses include **Installed**, **In progress**, **Skipped**, and **Failed**.

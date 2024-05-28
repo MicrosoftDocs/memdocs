@@ -18,3 +18,7 @@ appliesto:
 ---
 
 # Windows Autopilot device preparation: What's new
+
+## Initial release of Windows Autopilot device preparation
+
+Windows Autopilot device preparation is generally available. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).

@@ -201,4 +201,11 @@ The following configurations are optional but recommended. They aren't required:
 
 There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications).
 
+<!--
+RBAC permissions:
+For configuring and managing the Device preparation policies: Permissions under Device configuration
+For enrollment time grouping configuration: Enrollment programs  > Enrollment time device membership assignment
+For accessing the report: Organization > Read
+-->
+
 ---
