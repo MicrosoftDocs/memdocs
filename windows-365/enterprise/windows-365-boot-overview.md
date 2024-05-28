@@ -79,7 +79,7 @@ Support for Windows 365 Boot authentication modes when users sign in to their Cl
 
 | Authentication mode | Dedicated mode supported | Shared mode supported |
 | --- | --- |
-| Username/pssword | Yes | Yes |
+| Username/password | Yes | Yes |
 | Windows Hello for Business | Yes | No |
 | FIDO key | No | Yes |
 | Convenience pin | No | No |
