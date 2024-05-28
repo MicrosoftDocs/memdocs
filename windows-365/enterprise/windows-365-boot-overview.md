@@ -78,7 +78,7 @@ Windows 365 Boot doesn't automatically set these policies to fully restrict end 
 Support for Windows 365 Boot authentication modes when users sign in to their Cloud CPs is shown of the following table:
 
 | Authentication mode | Dedicated mode supported | Shared mode supported |
-| --- | --- |
+| :---: | :---: | :---: |
 | Username/password | Yes | Yes |
 | Windows Hello for Business | Yes | No |
 | FIDO key | No | Yes |
