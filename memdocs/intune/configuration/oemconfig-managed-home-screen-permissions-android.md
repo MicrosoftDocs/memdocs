@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/15/2024
+ms.date: 05/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,9 +31,9 @@ ms.collection:
 
 # Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune
 
-The Managed Home Screen (MHS) is an Intune feature that allows you to configure the home screen on the device. It's designed to only show the apps that your users access and the device settings that admins need to manage.
+The Managed Home Screen (MHS) is an Intune app that allows you to configure the home screen on the device. It only shows the apps that your users access and the device settings that admins need to manage.
 
-The MHS is typically used for kiosk devices, including frontline worker (FLW) devices. It replaces the default launcher on your Android Enterprise dedicated devices. For more information on the MHS, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+The MHS is used for kiosk devices, including frontline worker (FLW) devices. It replaces the default launcher on your Android Enterprise dedicated devices. To learn more about the MHS app, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 Typically, when you configure the MHS on a device, end users need to manually accept the permissions that MHS needs. These permissions allow the MHS to access device features and settings.
 
@@ -41,7 +41,10 @@ Instead of relying on end users to accept the permissions, you can use an [OEMCo
 
 This feature applies to:
 
-- Android Enterprise
+- Android Enterprise devices enrolled as [dedicated devices](../enrollment/android-kiosk-enroll.md)
+
+Supported OEMs include:
+
 - Samsung
 - Zebra
 
@@ -61,14 +64,14 @@ The following table lists the permissions that you can configure for the MHS app
 | Permission  | Samsung | Zebra | Legacy Zebra |
 |---|---|---|---|
 | **Overlay Permission** includes: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
-| **Notification Permission** includes:<br/><br/>- Notification badge| ✅ | ✅ | ❌ |
-| **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ?? |
-| **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ?? |
+| **Notification Permission** includes:<br/><br/>- Notification badge| ✅ | ✅ | ✅ |
+| **Alarms & Reminders** permission includes: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic re-launch   | ✅ | ❌ | ❌ |
+| **Write Settings** permission includes: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ❌ | ❌ |
 
 ## Before you begin
 
 - This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
-- Devices must be MDM enrolled in Intune. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
+- Devices must be MDM enrolled in Intune as dedicated devices. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 - To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Step 1 - Get the app from the Managed Google Play Store
@@ -118,15 +121,7 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
-3. Optional. Install [Remote Help](../fundamentals/remote-help-android.md) on the device.
-
-    When you use Legacy Zebra OEMConfig, OEMConfig profiles are applied as one-off actions, not persistent policy states.
-
-    So, if you use Remote Help, then deploy the Remote Help app on the device first, and then assign the OEMConfig configuration policy. If you uninstall and reinstall the Remote Help app on the device, after the Remote Help app is reinstalled, then re-apply this OEMConfig policy. You can create a new OEMConfig profile and assign it to the device, or edit the previously created OEMConfig profile.
-
-    ??Why install Remote Help? Does the uninstall/reinstall apply to any other apps or policies? Or, does it only apply to Remote Help??
-
-4. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
+3. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
 
@@ -138,7 +133,7 @@ The next step is to create an OEMConfig profile that configures the permissions 
 
 # [Samsung](#tab/samsung-policy)
 
-Using the schema settings in the **Knox Service Plugin** app, this profile grants the following permissions:
+When you use the schema settings in the **Knox Service Plugin** app, this profile grants the following permissions:
 
 - **Overlay Permission**
 - **Notification Permission**
@@ -296,9 +291,10 @@ The next time the device checks for configuration updates, the settings you conf
 
 # [Legacy Zebra OEMConfig](#tab/zebra-legacy-policy)
 
-Using the schema settings in the **Legacy Zebra OEMConfig** app, this profile grants the following permissions:
+When you use the schema settings in the **Legacy Zebra OEMConfig** app, this profile grants the following permissions:
 
-- ??Which permissions does this profile grant??
+- **Overlay Permission**
+- **Notification Permission**
 
 **Create the policy**:
 
