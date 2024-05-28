@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2024
+ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -219,8 +219,7 @@ For more information about these reports, see [Device compliance reports](../fun
 In addition to reports from the *Compliance status* tab and from the *Reports* node of the admin center, the following older compliance reports are available:  
 
 - Noncompliant devices
-- Policy noncompliance
-- Windows health attestation report  
+- Policy noncompliance  
 
 Go to **Devices** > **Monitor** to access these reports. For faster viewing, sort the **Category** column, and then look for reports with the **Compliance** tag.  
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 05/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,114 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of May 20, 2024 (Service release 2405)
+
+### Device configuration
+
+#### New settings available in the macOS settings catalog<!-- 26970197 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the macOS Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
+
+**Microsoft AutoUpdate (MAU)**:
+
+- Microsoft Teams (work or school)
+- Microsoft Teams classic
+
+**Microsoft Defender > Features**:
+
+- Use Data Loss Prevention
+- Use System Extensions
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+
+- macOS
+
+### Device enrollment
+
+#### Stage Android device enrollment to reduce end-user steps<!-- 15503468 -->
+
+To reduce the enrollment time for end users, Microsoft Intune supports device staging for Android Enterprise devices. With *device staging*, you can stage an enrollment profile and complete all related enrollment steps for workers receiving these devices:
+
+- Corporate-owned fully managed devices
+- Corporate-owned devices with a work profile
+
+When frontline workers receive the devices, all they have to do is connect to Wi-Fi and sign in to their work account. A new *device staging token* is required to enable this feature. For more information, see [Device staging overview](../enrollment/device-staging-overview.md).
+
+### Device management
+
+#### End user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
+
+End users can now view the BitLocker Recovery Key for enrolled Windows devices from the Company Portal website. This capability can reduce helpdesk calls in the event the end user gets locked out of their corporate machines. End users can access the recovery key for an enrolled device by signing into the Company Portal website and selecting **Show recovery key**. This experience is similar to the MyAccount website, which also allows end users to see recovery keys.
+
+You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**.
+
+For more information, see:
+
+- [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
+- [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)
+- [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
+
+#### New version of Windows hardware attestation report<!-- 15425680 -->
+
+We've released a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows 10/11. The Windows hardware attestation report is built on a new reporting infrastructure, and reports on new settings added to Microsoft Azure Attestation. The report is available in the admin center under **Reports** > **Device Compliance** > **Reports**.
+
+For more information, see [Intune reports](reports.md#windows-hardware-attestation-report-organizational).
+
+The Windows health attestation report previously available under **Devices** > **Monitor** has been retired.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### Monitor device delete actions<!-- 25255093 -->
+
+You can now monitor and track device delete actions in the **Device Action** report of Intune. You can determine when a device delete action has been triggered, who initiated it, and the status of the action. Status for a device delete action is either completed, pending, or failed. This device information is valuable to help maintain compliance, ensure security, and streamline your audit processes. You can find the report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor** > **Device actions**.
+
+For more information about reports, see [Intune Reports](..\fundamentals\reports.md).
+
+#### Optional Feature updates<!--12769586 -->
+
+Feature updates can now be made available to end users as **Optional** updates, with the introduction of **Optional** Feature updates. End users will see the update in the **Windows Update** settings page in the same way that it's shown for consumer devices.
+
+End users can easily opt-in to try out the next Feature update and provide feedback. When it's time to roll out the feature as  a **Required** update, then  admins can change the setting on the policy, and update the rollout settings so that the update is deployed as a **Required** update to devices that do not yet have it installed.
+
+For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+### Device security
+
+#### Updated security baseline for Microsoft Defender for Endpoint<!-- 26504935 -->
+
+You can now deploy the Intune security baseline for **Microsoft Defender for Endpoint**. The new baseline, **version 24H1**, uses the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
+
+Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
+
+As with all baselines, the default baseline represents the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 27575008, 27575336 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Fellow.app by Fellow Insights Inc
+- Unique Moments by Unique AG
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of May 6, 2024
 
@@ -77,13 +185,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### Intune and the macOS Company Portal app support Platform SSO (public preview)<!-- 24325427 -->
 
-On Apple devices, you can use Microsoft Intune and the Microsoft Enterprise SSO plug-in to configure single sign-on (SSO) on for apps and websites that support Microsoft Entra authentication, including Microsoft 365.
+On Apple devices, you can use Microsoft Intune and the Microsoft Enterprise SSO plug-in to configure single sign-on (SSO) for apps and websites that support Microsoft Entra authentication, including Microsoft 365.
 
 On macOS devices, Platform SSO is available in public preview. Platform SSO expands the SSO app extension by allowing you to configure different authentication methods, simplify the sign-in process for users, and reduce the number of passwords they need to remember.
 
 Platform SSO is included in the Company Portal app version 5.2404.0 and newer.
 
-For more information on Platform SSO and to get started, go to:
+For more information on Platform SSO and to get started, see:
 
 - [Configure Platform SSO for macOS devices in Microsoft Intune](../configuration/platform-sso-macos.md)
 - [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
@@ -96,15 +204,18 @@ Applies to:
 
 #### Customize your Intune admin center experience<!-- 24155584 -->
 
-You can now customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) have been updated to support expanding and collapsing each subsection of the menu. In addition, you can set admin center pages as favorites. This portal capability will gradually roll out over the next week. 
+You can now customize your Intune admin center experience by using collapsible navigation and favorites. The left navigation menus in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) have been updated to support expanding and collapsing each subsection of the menu. In addition, you can set admin center pages as favorites. This portal capability will gradually roll out over the next week.
 
-By default, menu sections are expanded. You can choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section retains the expanded or collapsed state that you choose.  Additionally, selecting the star icon next to a page on the left navigation adds the page to a **Favorites** section near the top of the menu. For related information, see [Change the Portal settings](../fundamentals/tutorial-walkthrough-endpoint-manager.md#change-the-portal-settings).
+By default, menu sections are expanded. You can choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section retains the expanded or collapsed state that you choose. Additionally, selecting the star icon next to a page on the left navigation adds the page to a **Favorites** section near the top of the menu.
+
+For related information, see [Change the Portal settings](../fundamentals/tutorial-walkthrough-endpoint-manager.md#change-the-portal-settings).
 
 ## Week of April 29, 2024
 
 ### App management
 
-#### Updates to the Managed Home Screen experience<!-- 24990268 --> 
+#### Updates to the Managed Home Screen experience<!-- 24990268 -->
+
 We recently released and improved the Managed Home Screen experience, which is now Generally Available. The app has been redesigned to improve the core workflows throughout the application. The updated design offers a more usable and supportable experience.
 
 With the release, we stop investing in previous Managed Home Screen workflows. New features and fixes for Managed Home Screen are only added to the new experience. During August 2024, the new experience will automatically be enabled for all devices.
@@ -112,23 +223,33 @@ With the release, we stop investing in previous Managed Home Screen workflows. N
 For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
 
 #### Require end users to enter PIN to resume activity on Managed Home Screen<!-- 9322838 -->
-In Intune, you can require end users to enter their session PIN to resume activity on Managed Home Screen after the device has been inactive for a specified period of time. Set the **Minimum inactive time before session PIN is required** setting to the number of seconds the device is inactive before the end user must input their session PIN. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+In Intune, you can require end users to enter their session PIN to resume activity on Managed Home Screen after the device has been inactive for a specified period of time. Set the **Minimum inactive time before session PIN is required** setting to the number of seconds the device is inactive before the end user must input their session PIN.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 #### Device IPv4 and IPv6 details available from Managed Home Screen<!-- 25994445 -->
+
 IPv4 and IPv6 connectivity details are now both available from the **Device Information** page of the Managed Home Screen app. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\remote-actions\collect-diagnostics.md).
 
-#### Updates to Managed Home Screen sign-in support<!-- 24990268 -->
+#### Updates to Managed Home Screen sign-in support<!-- 25597636 -->
+
 Managed Home Screen now supports domainless sign-in. Admins can configure a domain name, which will be automatically appended to usernames upon sign-in. Also, Managed Home Screen supports a custom login hint text to be displayed to users during the sign-in process.
 
 For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md) and [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
 
 #### Allow end users to control Android Enterprise device auto-rotation<!-- 9322838 -->
+
 In Intune, you can now expose a setting in the Managed Home Screen app that allows the end user to turn on and off the device's auto-rotation. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 #### Allow end users to adjust Android Enterprise device screen brightness<!-- 9322834 -->
-In Intune, you can expose settings in the Managed Home Screen app to adjust screen brightness for Android Enterprise devices. You can choose to expose a setting in the app to allow end users to access a brightness slider to adjust the device screen brightness. Also, you can expose a setting to allow end users to toggle adaptive brightness. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+In Intune, you can expose settings in the Managed Home Screen app to adjust screen brightness for Android Enterprise devices. You can choose to expose a setting in the app to allow end users to access a brightness slider to adjust the device screen brightness. Also, you can expose a setting to allow end users to toggle adaptive brightness.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 #### Migrated to .NET MAUI from Xamarin<!-- 27143739 -->
+
 Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) documentation.
 
 Xamarin support ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. For Intune support on Android and iOS platforms, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)and [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
@@ -214,6 +335,11 @@ You can drill down further in the report for each quality update that aggregates
 Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
 
 For more information on Windows update distribution reports, see [Windows Update reports on Intune](../protect/windows-update-reports.md#windows-update-distribution-report).
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 #### Intune support of Microsoft 365 remote application diagnostics<!-- 17409991 -->
 
@@ -674,7 +800,12 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Update to Intune Management Extension on Windows<!-- 26472055 -->
 
-To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or higher with the Intune Management Extension on Windows clients. If a Windows client continues to use an earlier version of the .NET Framework, the Intune Management Extension continues to function. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, which is included in Win10 1809 (RS5) and newer. Multiple versions of the .NET Framework can coexist on a device.
+To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or higher with the Intune Management Extension on Windows clients. If a Windows client continues to use an earlier version of the .NET Framework, the Intune Management Extension continues to function. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, which is included in Windows 10 1809 (RS5) and newer. Multiple versions of the .NET Framework can coexist on a device.
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 ### Device configuration
 
@@ -845,7 +976,7 @@ If you want to try the new experience before your tenant is updated, go to **Dev
 
 #### Bulk approval of drivers<!-- 14723288  -->
 
-Bulk actions are now available for Windows Driver update policies.  With bulk actions, multiple driver updates can be approved, paused, or declined at the same time, saving time and effort.  
+Bulk actions are now available for Windows Driver update policies. With bulk actions, multiple driver updates can be approved, paused, or declined at the same time, saving time and effort.  
 
 When you bulk approve drivers, the date for when the drivers become available to applicable devices can also be set, enabling drivers to be installed together.
 
