@@ -70,8 +70,10 @@ sections:
           This issue usually occurs if **Intune Provisioning Client** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. When the issue occurs, one of the following error messages might display when saving the Windows Autopilot device preparation policy:
 
           - **Unable to save security group for <policy_name>. You don't have permission to save these assignments.**
+
           - **There was a problem with the device security group. Check that the group meets the requirements.**
-          - **Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.**
+
+          - **`Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.`**
 
           Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 group assigned**.
 

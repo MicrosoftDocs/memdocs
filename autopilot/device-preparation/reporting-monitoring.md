@@ -36,20 +36,28 @@ To access Windows Autopilot device preparation reports and monitor deployments i
 
 4. In the **Devices | Monitor** screen, in the list of reports under **Report name**, select **Windows Autopilot device preparation deployments**.
 
-5. The **Device enrollment - Autopilot deployments** screen opens. In the **Device enrollment - Autopilot deployments** screen, deployments of individual devices is shown. Select an individual device under **Device name** opens
+5. The **Device enrollment - Autopilot deployments** screen opens. In the **Device enrollment - Autopilot deployments** screen, deployments of individual devices is shown. Each device has the following information:
 
-6. The **Device deployment details** pane opens. The **Device deployment details** pane contains three sections:
+    - **Device name** - the name given to the device during the deployment. Selecting this item goes to the deployment details for the device.
+    - **Enrollment date** - the date and time that the device enrolled.
+    - **Deployment status** - displays the current status of the deployment on the device. During deployment, the status will show **In progress**. Once deployment is complete, it will show the final outcome of the deployment as either **Success** or **Failed**.
+    - **Phase** - shows the last reported phase that the deployment is at.
+    - **Serial number** - the hardware serial number of the device.
+    - **Deployment time** - the amount of time that the deployment took to complete. If the deployment hasn't yet completed, it will show **In progress**.
+    - **UPN** - the user that signed into the device during OOBE and that the Windows Autopilot device preparation profiles was assigned to.
+
+6. Select an individual device under **Device name**. The **Device deployment details** pane opens. The **Device deployment details** pane contains three sections:
 
    1. **Device** - contains information regarding the device, including:
 
-      1. **Device name** - the name given to the device during the deployment. Selecting this item goes to the device details in Intune.
-      2. **Deployment status** - displays the current status of the deployment on the device. During deployment, the status will show **In progress**. Once deployment is complete, it will show the final outcome of the deployment as either **Success** or **Failed**.
-      3. **Device ID** - the device ID of the device in Intune.
-      4. **Microsoft Entra device ID** - the device ID of the device in Microsoft Entra ID.
-      5. **Serial number** - the hardware serial number of the device.
-      6. **Deployment policy** - the Windows Autopilot device preparation policy the device received.
-      7. **Policy Version** - the version of the Windows Autopilot device preparation policy the device received. Each time a change is made and saved to the Windows Autopilot device preparation policy, the version number is incremented by one.
-      8. **OS version** - the version of Windows installed on the device during the deployment.
+      - **Device name** - the name given to the device during the deployment. Selecting this item goes to the device details in Intune.
+      - **Deployment status** - displays the current status of the deployment on the device. During deployment, the status will show **In progress**. Once deployment is complete, it will show the final outcome of the deployment as either **Success** or **Failed**.
+      - **Device ID** - the device ID of the device in Intune.
+      - **Microsoft Entra device ID** - the device ID of the device in Microsoft Entra ID.
+      - **Serial number** - the hardware serial number of the device.
+      - **Deployment policy** - the Windows Autopilot device preparation policy the device received.
+      - **Policy Version** - the version of the Windows Autopilot device preparation policy the device received. Each time a change is made and saved to the Windows Autopilot device preparation policy, the version number is incremented by one.
+      - **OS version** - the version of Windows installed on the device during the deployment.
 
    2. **Apps** - contains information regarding the applications being installed during the Windows Autopilot device preparation including the list of applications being installed. Statuses include **Installed**, **In progress**, **Skipped**, and **Failed**.
 

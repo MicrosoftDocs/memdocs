@@ -86,8 +86,8 @@ The key features of Windows Autopilot device preparation include:
 
 Windows Autopilot device preparation capabilities include:
 
-- User-driven deployment flow.
-- Standard user access requirement.
+- Set up user-driven deployment flow.
+- Making sure users are standard non-administrator users by default.
 - Select application and PowerShell script to be delivered during OOBE.
 - Simplified and clear OOBE user experience with percentage progress indicator.
 - Deployment report for better troubleshooting.
@@ -130,6 +130,12 @@ Enrollment time grouping consists of the following phases:
 - **Configure applications and policies to a security group** - User authenticates and the Windows Autopilot device preparation configuration is delivered.
 - **Select applications and PowerShell scripts to get installed during OOBE** - Selected applications and PowerShell scripts assigned to the device security group are installed. The device also joins the device security group.
 - **Intune pre-calculates applications and policies** - User gets to the desktop. Remaining configuration is applied.
+
+For Windows Autopilot device preparation:
+
+- The device group is defined in the Windows Autopilot device preparation profile.
+- Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
+- For policies, Windows Autopilot device preparation syncs any polices assigned to the device group, but the policies aren't necessarily applied during the Windows Autopilot device preparation deployment. The may be applied after the Windows Autopilot device preparation deployment is complete.
 
 ### Corporate identifiers for Windows
 
