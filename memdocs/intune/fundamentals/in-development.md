@@ -74,7 +74,7 @@ For information about using EPM, see [Endpoint Privilege Management](../protect/
 
 ### New actions for policies, profiles, and apps<!-- 15283153 -->
 
-You will be able to remove, reinstall, and re-apply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You'll be able to apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
+You'll be able to remove, reinstall, and reapply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You'll be able to apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
 
 ### The Intune App SDK and Intune App Wrapping Tool are moving to a different GitHub repo<!-- 27264674 -->
 
@@ -146,7 +146,7 @@ Enrollment time grouping is a new, faster way to group devices during enrollment
 
 ### Define corporate device identifiers for Windows<!-- 25873757 -->
 
-Microsoft Intune will support corporate device identifiers for Windows devices. You will be able to upload a CSV file with model, manufacturer, and serial number to identify corporate machines ahead of enrolling. When a device that matches the model, manufacturer, and serial number criteria enrolls, it will be marked as corporate and managed appropriately.
+Microsoft Intune will support corporate device identifiers for Windows devices. You'll be able to upload a CSV file with model, manufacturer, and serial number to identify corporate machines ahead of enrolling. When a device that matches the model, manufacturer, and serial number criteria enrolls, it will be marked as corporate and managed appropriately.
 
 ### Intune adding support for Red Hat Enterprise Linux<!-- 25160548 -->
 
@@ -165,7 +165,7 @@ If you prefer, you can continue to target iOS/iPadOS devices using the Apple Use
 
 #### RBAC changes coming to enrollment platform restrictions <!-- 25036419 -->
 
-We're updating RBAC for enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to create and edit enrollment platform restrictions.
+We're updating role-based access control (RBAC) for enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to create and edit enrollment platform restrictions.
 
 <!-- *********************************************** -->
 
@@ -187,7 +187,7 @@ We're working on an update to the Intune security baseline for **Windows 365 Clo
 
 Use of [Intune security baselines](../protect/security-baselines.md) can help you maintain best-practice configurations for your Windows devices and can help you rapidly deploy configurations to your Windows devices that meet the security recommendations of the applicable security teams at Microsoft.
 
-As with all baselines, the default baseline will represent the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
+As with all baselines, the default baseline represents the recommended configurations for each setting, which you can modify to meet the requirements of your organization.
 
 Applies to:
 
@@ -217,13 +217,13 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ### Granular RBAC controls for endpoint security<!-- 5475572 -->
 
-We’re working to add new Intune role-based access control (RBAC) permissions for each endpoint security workload to allow for additional granularity. The *Security baselines* permission previously included all security policies and soon, it will only include security workloads that do not have their own permission.
+We’re working to add new Intune role-based access control (RBAC) permissions for each endpoint security workload to allow for additional granularity. The *Security baselines* permission previously included all security policies and soon, it will only include security workloads that don't have their own permission.
 
 Today, you can use the [built-in role](../fundamentals/role-based-access-control.md#built-in-roles) *Endpoint Security Manager* to manage policies and features within the Endpoint security node or, you can limit admin actions by using the [custom role](../fundamentals/create-custom-role.md) with the *Security baselines* permission.
 
-As the new permissions become available, they’ll be automatically assigned to any custom roles that use the Security baseline permission. This auto-assignment to existing configurations ensures your admins will continue to have the same permissions they have today, with no need for you to reconfigure your custom RBAC roles.
+As the new permissions become available, they’ll be automatically assigned to any custom roles that use the Security baseline permission. This automatic assignment to existing configurations ensures your admins will continue to have the same permissions they have today, with no need for you to reconfigure your custom RBAC roles.
 
-For example, if an admin has been assigned a custom role with ‘Security baselines/Read’ permission, that role will be auto-assigned the new permissions, like *Attack surface reduction/Read*. The *Security baselines/Read* would still be applicable for viewing Security baselines, Firewall, Antivirus, and other security policies that do not their own granular permission.
+For example, if an admin is assigned a custom role with ‘Security baselines/Read’ permission, that role will be auto-assigned the new permissions, like *Attack surface reduction/Read*. The *Security baselines/Read* would still be applicable for viewing Security baselines, Firewall, Antivirus, and other security policies that don't have their own granular permission.
 
 For more information about current RBAC permissions and built-in roles, see:
 
