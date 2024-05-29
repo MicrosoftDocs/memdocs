@@ -609,7 +609,9 @@ items:
             - name: JSON for custom settings
               href: ./protect/compliance-custom-json.md    
             - name: PowerShell script for custom settings
-              href: ./protect/compliance-custom-script.md    
+              href: ./protect/compliance-custom-script.md 
+            - name: Windows Subsystem for Linux 
+              href: ./protect/compliance-wsl.md   
           - name: Actions for noncompliance
             href: ./protect/actions-for-noncompliance.md
           - name: Monitor device compliance
