@@ -16,7 +16,7 @@ autopilot-motherboard-replacement.md
 
 Headings are driven by article context. -->
 
-Whenever a device permanently leaves an organization, the device should always be deregistered from Autopilot. For example, the device leaves the organization for repair or because the device is at the end of its life cycle,
+Whenever a device permanently leaves an organization, the device should always be deregistered from Autopilot. For example, the device leaves the organization for repair or because the device is at the end of its life cycle.
 
 Below we describe the steps an admin would go through to deregister a device from Intune and Autopilot.
 

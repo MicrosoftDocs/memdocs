@@ -206,6 +206,7 @@ RBAC permissions:
 For configuring and managing the Device preparation policies: Permissions under Device configuration
 For enrollment time grouping configuration: Enrollment programs  > Enrollment time device membership assignment
 For accessing the report: Organization > Read
+https://learn.microsoft.com/en-us/mem/intune/fundamentals/role-based-access-control
 -->
 
 ---

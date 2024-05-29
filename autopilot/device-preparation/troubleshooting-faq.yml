@@ -43,12 +43,12 @@ sections:
 
             - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available at the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/ServiceCenter/Default.aspx).
 
-          - Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. If the Enrollment Status Page (ESP) is displayed during OOBE, it's an indication that the device is:
+          - Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP). Since Windows Autopilot device preparation doesn't use the ESP, the ESP shouldn't display during a Windows Autopilot device preparation deployment. If the ESP is being displayed during the deployment, verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. If the ESP is displayed during OOBE, it's an indication that the device might be:
 
             - Registered as a Windows Autopilot device.
             - A Windows Autopilot profile is assigned to the device.
 
-            Windows Autopilot device preparation doesn't use the ESP. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
+            If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
 
           - Verify that the user signing into the device during OOBE is a member of the user group specified in the Windows Autopilot device preparation policy. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a user group](tutorial/user-driven/entra-join-user-group.md).
 
@@ -69,9 +69,9 @@ sections:
         answer: |
           This issue usually occurs if **Intune Provisioning Client** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. When the issue occurs, one of the following error messages might display when saving the Windows Autopilot device preparation policy:
 
-          - **Unable to save security group for <policy_name>. You don't have permission to save these assignments.**
+          - **`Unable to save security group for <policy_name>. You don't have permission to save these assignments.`**
 
-          - `There was a problem with the device security group. Check that the group meets the requirements.`
+          - **`There was a problem with the device security group. Check that the group meets the requirements.`**
 
           - **`Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.`**
 

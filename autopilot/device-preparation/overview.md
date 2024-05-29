@@ -135,7 +135,7 @@ For Windows Autopilot device preparation:
 
 - The device group is defined in the Windows Autopilot device preparation profile.
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
-- For policies, Windows Autopilot device preparation syncs any polices assigned to the device group, but the policies aren't necessarily applied during the Windows Autopilot device preparation deployment. The may be applied after the Windows Autopilot device preparation deployment is complete.
+- For policies, Windows Autopilot device preparation syncs any polices assigned to the device group, but the policies aren't tracked if they are applied during the Windows Autopilot device preparation deployment. The policies might not be applied during the Windows Autopilot device preparation deployment and instead might be applied after the Windows Autopilot device preparation deployment is complete.
 
 ### Corporate identifiers for Windows
 
