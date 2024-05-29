@@ -86,9 +86,9 @@ You can add one static Microsoft Entra security group per enrollment profile. As
 
 1. In the Microsoft Intune admin center, go to **Devices** >**Enrollment**.  
 1. Select **Windows Autopilot device preparation policies** and create a new profile.  
-1. When you get to the **Device group** step, select the Microsoft Entra security group you want to use for grouping. 
-1. Select **Next** to complete the remaining steps in the profile.  
-1. Then save the profile.   
+1. When you get to the **Device group** step, select the Microsoft Entra security group you created in [Step 1: Create Microsoft Entra security group](#step-1-create-microsoft-entra-security-group).  
+1. Select **Next** and complete the remaining steps in the profile.  
+1. Save the profile.   
 
 After you save the profile, you can return to it at any time to edit group settings. If you remove a device from the group, Microsoft Intune reevaluates policy configurations and forces the device to check in to obtain new configurations.   
 
