@@ -231,8 +231,6 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 - The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal. Select **Devices** > **All Devices**.
 - The **All Devices** pane in the Intune in the Azure portal. Select **Devices** > **All Devices**.
 
-After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
-
 A device object is precreated in Microsoft Entra ID once a device is registered in Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
 ## BYO VPNs
