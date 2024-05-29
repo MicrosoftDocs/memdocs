@@ -81,7 +81,7 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
     - **Organizational unit**: (Optional.) An organizational unit (OU) is a container within an Active Directory domain, which can hold users, groups, and computers. Make sure that this OU is enabled to sync with Microsoft Entra Connect. Provisioning fails if this OU isn't syncing.
     - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU.
     - **AD domain password**: The password for the user.
-    - **Confirm AD domain password**: The password for the user.
+    - **Confirm AD domain password**: The password for the user..
 
     Cloud PCs that use the defined ANC are joined to the domain and OU specified. Make sure that the domain selected is the desired domain for the computers to join
 
