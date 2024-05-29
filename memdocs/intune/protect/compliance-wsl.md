@@ -45,11 +45,11 @@ This article describes how to set up device compliance checks for WSL.
 
 ## Resources 
 
-These resources are required create your custom compliance script.  
+These resources are required to create your custom compliance script.  
 
 - [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installation package file for the Intune WSL plug-in.    
 
-- [Custom compliance script](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDistroVersionCompliance.ps1): The example Powershell script calculates compliance against WSL distros based on Distro and Distro Version.  
+- [Custom compliance script](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDistroVersionCompliance.ps1): The example PowerShell script calculates compliance against WSL distros based on Distro and Distro Version.  
 
 - [JSON for validation](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDetectionRule.json): Use the example JSON to define WSL detection rules.  
 
@@ -65,7 +65,7 @@ Create an app policy for the Intune WSL plug-in. The Intune WSL plug-in is consi
 
 2. Enter app information:  
    - **Select file**: Select this option to upload the installation package file for the Intune WSL plug-in.  
-  - **Name**: Enter **Intune WSL Plugin**. 
+  - **Name**: Enter **Intune WSL Plugin**.  
   - **Description**: Enter a description for the app. This setting is optional but recommended. 
   - **Publisher**: Enter **Microsoft Intune**.  
 
@@ -80,7 +80,7 @@ Create an app policy for the Intune WSL plug-in. The Intune WSL plug-in is consi
 ## Step 3: Set up custom script  
 In a command line, complete the following steps:  
 
-1. In lines 23 through 28 of the custom compliance script, modify the following properties to match your organization's requirements:   
+1. Modify the following properties in lines 23-28 of the custom compliance script to match your organization's requirements:   
 
   - Distros    
 
@@ -96,7 +96,7 @@ In a command line, complete the following steps:
     
     - **Language** - Example: `en-us`  
     - **Title** - Example: `WSL distros not in compliance with company policy` 
-    - **Descriptioon** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
+    - **Description** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
 
 
 
@@ -147,9 +147,9 @@ Create a new device compliance policy for devices running Windows 10 and later.
 
 ## Remediation  
 
-A quick way to get a device back to a compliant state is to unregister the non-compliant distro on the device. Use the following command to unregister a distro.   
+A quick way to get a device back to a compliant state is to unregister the noncompliant distro on the device. Use the following command to unregister a distro:     
 
-```powershell  
+```PowerShell  
 
 wsl --unregister [DISTRONAME] 
 
@@ -162,7 +162,7 @@ wsl --unregister [DISTRONAME]
 
 Restart the WSL service. In an elevated PowerShell window, run the following commands: 
  
-```powershell  
+```PowerShell  
  sc.exe stop wslservice 
 
  wsl.exe echo “test” 
