@@ -44,20 +44,22 @@ If you don't configure enrollment time grouping, Microsoft Intune groups devices
 
 This article provides an overview of enrollment time grouping, how to configure it, and feature limitations.  
 
-## Prerequisites   
-
-Enrollment time grouping is supported on devices provisioned via Windows Autopilot device preparation policies. You must have administrator access to Microsoft Entra ID and the Microsoft Intune admin center.   
+## Role based access control (RBAC)  
 
 To add Microsoft Entra groups to an enrollment profile, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center. For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control.md#custom-roles).  
 
 To add Intune FPA as a security group owner, which is a required step for enrollment time grouping, you must meet one of the following prerequisites:  
 
- - Be a Microsoft Entra Group Administrator, or another role with the *microsoft.directory/groups/owners/update* permission.  
+ - Must be a Microsoft Entra Group Administrator, or another role with the *microsoft.directory/groups/owners/update* permission.  
+ - Must be an existing owner of the Microsoft Entra security group. 
 
- - Be an existing owner of the Microsoft Entra security group. 
+## Prerequisites   
 
-## Step 1: Create security groups  
-Create a Microsoft Entra group for use in enrollment profiles. You don't need to add devices or users to this group right now.  
+Enrollment time grouping is supported on devices provisioned via Windows Autopilot device preparation policies. You must be able to access Microsoft Entra ID and the Microsoft Intune admin center.   
+
+## Step 1: Create Microsoft Entra security group   
+
+Create a Microsoft Entra security group for use in enrollment profiles. You don't need to add devices or users to this group right now.  
 
 1. Sign in to the Microsoft Intune admin center. 
 1. Go to **Groups** and select **New Group**.  
@@ -74,7 +76,7 @@ Create a Microsoft Entra group for use in enrollment profiles. You don't need to
     ```
 1. Select **Create** to complete group setup.  
 
-After you configure enrollment time grouping, you can add and remove devices in this group. Any IT Admin with the appropriate security group permissions can edit the security group. 
+After you configure enrollment time grouping in the enrollment profile, you can come back to this security group as neeed to add and remove devices. Any Intune administrator with the appropriate security group permissions can edit the security group. 
  
 ## Step 2: Configure enrollment time grouping in enrollment profile 
 
@@ -92,7 +94,7 @@ After you save the profile, you can return to it at any time to edit group setti
 
 ## Step 3: Enroll devices  
 
-When targeted devices enroll in Intune, they become members of the selected security group. After an admin or end user completes the initial device setup, they land on the home screen of the device. At this point, all targeted apps and policies should already be on the device or in the process of being installed.  
+When devices assigned the enrollment profile enroll, they become members of the Microsoft Entra security group and start receiving apps and policies. After the admin or end user completes the initial device setup, they land on the home screen of the device. At this point, all targeted apps and policies should already be on the device or in the process of being installed.  
 
 ## Known issues and limitations  
 
