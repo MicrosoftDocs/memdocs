@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2024
+ms.date: 05/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,11 +49,14 @@ We are working to resolve a few scenarios that prevent Windows 10 devices from a
 
 ### Organization that disable User Account Control (UAC) may experience issues with Endpoint Privilege Management
 
-Endpoint Privilege Management does not support UAC being explicitly disabled. Windows policy controls for UAC Prompt Behavior exist to control the behavior of UAC prompts. If organizations take additional steps to disable UAC outside of the existing policy controls, like disabling Windows services, they may experience issues with Endpoint Privilege Management.
+Endpoint Privilege Management does not support UAC being explicitly disabled. Windows policy controls for UAC Prompt Behavior exist to control the behavior of UAC. If organizations take additional steps to disable UAC outside of the existing policy controls, like disabling Windows services, they may experience issues with Endpoint Privilege Management.
 
 ### Organizations use Application Control for Business might experience issues running Endpoint Privilege Management
 
-Application Control for Business policies that do not account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function.
+Application Control for Business policies that do not account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
+
+> [!Note]
+> EPM is not included in default policies for Application Control and may require creating custom policies.
 
 ### Organizations restricting users who can log on interactively might see issues with Endpoint Privilege Management
 
