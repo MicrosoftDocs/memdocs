@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/24/2024
+ms.date: 05/29/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,6 +56,19 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of May 27, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### New Windows 365 Cloud PC images available in the gallery<!--48537480-->
+
+New Cloud PC gallery images for Windows 10 and Windows 11 are now available. These improved images have harmonized optimizations for Windows 365 apps and better policy management:
+
+- Win 10 Enterprise Cloud PC: 21H2, 22H2,
+- Win 11 Enterprise Cloud PC: 21H2, 22H2, 23H2
+
+<!-- ########################## -->
 ## Week of May 20, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -85,7 +98,7 @@ The **Cloud PCs that aren't available report** has moved out of preview and into
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
 
-#### Intune scope tags<!--48907552-->
+#### Intune scope tags (preview)<!--48907552-->
 
 Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
 

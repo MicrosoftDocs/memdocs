@@ -72,6 +72,19 @@ For information about using EPM, see [Endpoint Privilege Management](../protect/
 
 ## App management
 
+### US GCC and GCC High support for Managed Home Screen<!-- 25827679 -->
+
+The Managed Home Screen (MHS) will soon support sign-in for the US Government Community (GCC), US Government Community (GCC) High, and U.S. Department of Defense (DoD) environments.
+
+For more information, see:
+
+- [Configure the Managed Home Screen](../apps/app-configuration-managed-home-screen-app.md)
+- [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
+
+Applies to:
+
+- Android Enterprise
+
 ### New actions for policies, profiles, and apps<!-- 15283153 -->
 
 You'll be able to remove, reinstall, and reapply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You'll be able to apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
