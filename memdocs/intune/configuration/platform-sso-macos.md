@@ -211,7 +211,7 @@ For details about the payload settings for the Extensible Single Sign-on extensi
 
     Select **Next**.
 
-11. In **Assignments**, select the users or user groups that will receive your profile. Platform SSO policies are user-based policies. Don't assign the platform SSO policy to devices.
+11. In **Assignments**, select the user or device groups that will receive your profile.
 
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
