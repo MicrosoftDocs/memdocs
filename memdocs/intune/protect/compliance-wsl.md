@@ -43,9 +43,9 @@ This article describes how to set up device compliance checks for WSL.
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
 
-## Resources 
+## Requirements   
 
-These resources are required to create your custom compliance script.  
+These resources are required to create your custom compliance script:   
 
 - [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installation package file for the Intune WSL plug-in.    
 
@@ -65,9 +65,9 @@ Create an app policy for the Intune WSL plug-in. The Intune WSL plug-in is consi
 
 2. Enter app information:  
    - **Select file**: Select this option to upload the installation package file for the Intune WSL plug-in.  
-  - **Name**: Enter **Intune WSL Plugin**.  
-  - **Description**: Enter a description for the app. This setting is optional but recommended. 
-  - **Publisher**: Enter **Microsoft Intune**.  
+   - **Name**: Enter **Intune WSL Plugin**.  
+   - **Description**: Enter a description for the app. This setting is optional but recommended. 
+   - **Publisher**: Enter **Microsoft Intune**.  
 
 3. Select **Next** to go to **Assignments**.  
 
@@ -98,8 +98,6 @@ In a command line, complete the following steps:
     - **Title** - Example: `WSL distros not in compliance with company policy` 
     - **Description** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
 
-
-
 ## Step 4: Deploy custom compliance policy  
  Deploy the custom compliance policy to targeted devices.  
 
@@ -116,7 +114,6 @@ In a command line, complete the following steps:
  1. Copy and paste your custom compliance script into **Detection Script**. 
  
  1. Leave all other settings as is.  
-
 
 ## Step 5: Create device compliance policy  
 Create a new device compliance policy for devices running Windows 10 and later. 
@@ -137,9 +134,9 @@ Create a new device compliance policy for devices running Windows 10 and later.
 
 1. Expand **Custom Compliance**: 
   
-  1. Select the custom compliance script file as the discovery script.    
+   1. Select the custom compliance script file as the discovery script.    
   
-  1. Upload your JSON validation file. 
+   1. Upload your JSON validation file. 
 
 1. Leave all other settings as is. Select **Next**. 
 
@@ -153,9 +150,7 @@ A quick way to get a device back to a compliant state is to unregister the nonco
 
 wsl --unregister [DISTRONAME] 
 
-```
-
-
+```  
 ## Troubleshooting  
 
 **Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_MOD_NOT_FOUND**
