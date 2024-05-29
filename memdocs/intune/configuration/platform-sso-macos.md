@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2024
+ms.date: 05/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -211,7 +211,7 @@ For details about the payload settings for the Extensible Single Sign-on extensi
 
     Select **Next**.
 
-11. In **Assignments**, select the user or device groups that will receive your profile.
+11. In **Assignments**, select the user or device groups that receive your profile. For devices with user affinity, assign to users or user groups. For devices with multiple users that are enrolled without user affinity, assign to devices or device groups.
 
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
