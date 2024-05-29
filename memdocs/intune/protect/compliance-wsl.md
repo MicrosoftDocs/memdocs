@@ -169,12 +169,4 @@ Restart the WSL service. In an elevated PowerShell window, run the following com
 
 ```   
 
-   
-
-
-
-For WSL troubleshooting help, see [Windows Subsystem for Linux](/windows/wsl/troubleshooting.md).  
-
-## Next steps
-
-[Monitor your policies](compliance-policy-monitor.md).
+For WSL troubleshooting help, see [Windows Subsystem for Linux](/windows/wsl/troubleshooting).  
