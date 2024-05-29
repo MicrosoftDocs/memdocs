@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Overview of enrollment time grouping   
+title: Set up enrollment time grouping    
 titleSuffix: Microsoft Intune 
-description: Overview of the enrollment time grouping feature in Microsoft Intune. 
+description: Overview and setup of the enrollment time grouping feature in Microsoft Intune. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2024
+ms.date: 05/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 
 # optional metadata
 
@@ -30,157 +29,81 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
-- ContentEnagagementFY23
 ---
 
-# Set up enrollment time grouping       
+# Enrollment time grouping in Microsoft Intune        
 
 **Applies to**
 * Windows 10
 * Windows 11  
 
-Set up enrollment time grouping to speed up grouping and provisioning during Microsoft Intune device enrollment. The standard Microsoft Intune grouping method you're used to groups devices into Microsoft Entra security groups after enrollment, and then subsequently delivers apps and policies. Intune can only determine the apps and policies a device needs after the device is grouped, so devices grouped this way often aren't ready for immediate use.  
+Set up enrollment time grouping to speed up grouping and provisioning during Microsoft Intune device enrollment. With enrollment time grouping, you can preconfigure groups so that devices are assigned to a Microsoft Entra security group during enrollment, rather than after. This lets Intune deliver the appropriate apps and policies to users and devices sooner, reducing post-enrollment latency and wait time. Additionally, you can re-categorize devices in static Microsoft Entra groups, without the need to re-enroll them.   
 
-With the enrollment time grouping method, you can preconfigure groups so that devices are assigned to Microsoft Entra security groups during enrollment. Intune can then deliver the appropriate apps and policies to users and devices, reducing the post-enrollment latency experienced with standard grouping.    
+If you don't configure enrollment time grouping, Microsoft Intune groups devices into Microsoft Entra security groups after enrollment. Then it delivers apps and policies. Intune can only determine the apps and policies a device needs after the device is grouped, so devices grouped this way often aren't ready for immediate use. It can take up to 8 hours post enrollment for devices to receive all apps and policies. 
 
-Benefits of enrollment time grouping include: 
+This article provides an overview of enrollment time grouping, how to configure it, and feature limitations. 
 
-- More flexibility for admins as they can easily and quickly re-categorize devices because these are static Entra groups, without the need to re-enroll 
-- Devices being un-usable or not fully secure for 6-8 hours post enrollment while policies/apps come down 
+## Prerequisites   
 
-This article provides an overview of the available enrollment restrictions, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
+Enrollment time grouping is supported on devices provisioned via Windows Autopilot device preparation policies. 
 
-## Microsoft Intune admin center 
-With these changes, there will be a new “Group settings” tab within each enrollment policy configuration where the admin can add a single static Entra ID group. At this time, only one static Entra group can be chosen, and the group can be edited at any time.  
+To add Entra ID groups to a Microsoft Intune enrollment policy in, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center. For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control.md#custom-roles). 
 
+To add Intune FPA as a security group owner, which is a required step for enrollment time grouping, you must meet one of the following prerequisites:  
 
-## Options    
+ - Be a Microsoft Entra Group Administrator or another role that's assigned the *microsoft.directory/groups/owners/update* permission.  
 
-### Standard enrollment
-1. Device waits for enrollment to complete before being assigned to a group. Intune must discover the inventory properties based on the Entra Id dynamic device security groups populated. 
-2. During enrollment, Intune delivers policies and apps targeted to user groups and the *all devices* group.  
-3. After the dynamic device group population, Intune delivers device-based policies, configurations, and app.  
+ - Be an existing owner of the Entra security group. 
 
-There is a latency associated with each of these steps so devices aren't ready to use right away.  
+## Step 1: Create security groups  
+Create a Microsoft Entra group for use in enrollment profiles. You do not need to add devices or users to the group right now. T 
 
-### Enrollment time grouping  
+1. Sign in to the Microsoft Intune admin center. 
+1. Go to **Groups** and select **New Group**.  
+1. For group type, select **Security**.  
+1. For membership type, select **Assigned**.  
+1. Select owners. 
+1. Search for **Intune**. Then add **Intune Provisioning Client**. If the option isn't available, run the following PowerShell command:  
 
+    ```powershell  
 
+    install-module azuread Connect-AzureAD` 
+    New-AzureADServicePrincipal -AppId f1346770-5b25-470b-88bd-d5744ab7952c 
 
+    ```
+1. Select **Create** to complete group setup.  
 
-## Available restrictions  
-You can configure the following restrictions in the admin center: 
+The security group can be modified by any IT Admin with the appropriate security group permissions. Even after you configure enrollment time grouping, you can add and remove devices in this group.  
+ 
+## Step 2: Configure enrollment time grouping in enrollment profile 
 
-* Device limit 
-* Device platform  
-* OS version  
-* Device manufacturer
-* Device ownership (personally owned devices)    
+The enrollment time grouping feature only applies to new device enrollments. It doesn't affect or apply to devices that are already enrolled. 
 
-### Device limit 
-Put a limit on the number of devices a person can enroll. You can set the device limit from 1 to 15.  
+You can add one static security group per enrollment profile. Make sure scope groups and group tags are assigned to the appropriate roles so that they can see and choose the right Entra group. As an Intune admin, you can only add Entra groups that are authorized in the scope group for your Intune role. 
 
-This configuration is in the admin center under **Enrollment device limit restrictions**. 
+1. In the Microsoft Intune admin center, go to **Devices** >**Enrollment**.  
+1. Select **Windows Autopilot device preparation policies** and create a new profile.  
+1. When you get to the **Device group** step, select the Entra security group you want to use for grouping. 
+1. Select **Next** to complete the remaining steps in the profile.  
+1. Then save the profile.   
 
-### Device platform  
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
-Block devices running on a specific device platform. You can apply this restriction to devices running: 
+After you save the profile, you can return to it at any time to edit group settings. If you remove a device from the group, the policy configurations will be re-evaluated and the device will be forced to check-in to obtain new configurations. 
 
-   * Android device administrator
-   * Android Enterprise work profile
-   * iOS/iPadOS
-   * macOS
-   * Windows 10/11  
+## Step 3: Enroll devices  
 
-In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.   
+When targeted devices enroll in Intune, they become members of the selected security group. After an admin or end user completes the initial device setup, they land on the home screen of the device. At this point, all targeted apps and policies should already be on the device or in the process of being installed.  
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+## Known issues and limitations  
 
-### OS version 
-This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems: 
+Reporting for enrollment time grouping isn't currently available.  
 
-   * Android device administrator\*
-   * Android Enterprise work profile\*  
-   * iOS/iPadOS\*
-   * Windows  
+## Troubleshooting 
 
-\* Version restrictions are supported on these operating systems for devices enrolled via Intune Company Portal only.    
+If unexpected behavior occurs, contact Microsoft Support with the following information: 
 
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
+- Device serial number.   
+- Company Portal app logs, if applicable, with log ID.  
+- Approximate time stamp of the event and time zone where it happened. 
+- Screenshots from the Microsoft Intune admin center or device.    
+- Detailed explanation of the behavior on the device.   
 
-### Device manufacturer  
-This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Enrollment device platform restrictions**.    
-
-### Personally owned devices  
-This restriction helps prevent device users from accidentally enrolling their personal devices, and applies to devices running:  
-
-* Android
-* iOS/iPad OS
-* macOS
-* Windows 10/11 
-
-This restriction is in the admin center under **Enrollment device platform restrictions**.  
-
-#### Blocking personal Android devices  
-By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same. 
-
-If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).  
-
-
-#### Blocking personal iOS/iPadOS devices  
-By default, Intune classifies iOS/iPadOS devices as personally owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- [Registered with a serial number or IMEI](corporate-identifiers-add.md).
-- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
-
-> [!NOTE]
-> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
-
-#### Blocking personal Macs  
-By default, Intune classifies macOS devices as personally owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:
-- [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled via Apple Automated Device Enrollment (ADE).  
-
-#### Blocking personal Windows devices  
-If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
-
-The following enrollment methods are authorized for corporate enrollment:  
-- The device enrolls through [Windows Autopilot](/autopilot/enrollment-autopilot).
-- The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
-- The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
-- The enrolling user is using a [device enrollment manager account](device-enrollment-manager-enroll.md).
-
-> [!NOTE]
-> Since a co-managed device enrolls in the Microsoft Intune service based on its Microsoft Entra device token, and not a user token, only the default Intune enrollment restriction will apply to it.
-
-Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling (unless registered with Autopilot) because these methods don't offer the Intune administrator per-device control:  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with Microsoft Entra join or hybrid Entra join via [Windows Autopilot for existing devices](/autopilot/existing-devices).  
-
-Intune also blocks personal devices using these enrollment methods:  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
-- [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
-- [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md).  
-- Enrollment via a Microsoft 365 app, which occurs when users select the **Allow my organization to manage my device** option during app sign-in. 
-
-> [!IMPORTANT] 
-> Devices joined by Workplace Join could be blocked from enrolling if they were ever previously Microsoft Entra joined to the tenant. To avoid being blocked, deregister and remove the device's associated object in Microsoft Entra ID before attempting to join the device by Workplace Join.  
-
-## Limitations  
-
-* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), Azure Virtual desktop, or userless Apple Automated device enrollment (ADE without user device affinity), Intune enforces the default policy.  
-
-* Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
-
-  * Co-managed enrollments  
-  * Group Policy (GPO) enrollments  
-  * Microsoft Entra joined enrollments, including bulk enrollments  
-  * Windows Autopilot enrollments  
-  * Device enrollment manager enrollments
-
-  Instead, you can configure a hard limit for these enrollment types in Microsoft Entra ID. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).  
-
-## Next steps  
-Select the type of enrollment restriction you want to apply and create the profile:   
- * [Create device platform enrollment restrictions](create-device-platform-restrictions.md)    
- * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
