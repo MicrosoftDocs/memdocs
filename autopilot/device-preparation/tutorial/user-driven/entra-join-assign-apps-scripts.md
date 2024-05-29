@@ -64,6 +64,10 @@ To assign the desired applications to the device group created for Windows Autop
 
 4. In the **Windows | Windows apps** screen, scroll through the list of applications and then select the desired application that will be installed during the Windows Autopilot device preparation deployment. Alternatively, use the **Search by name or publisher** box to search for the application, and then select it.
 
+    > [!TIP]
+    >
+    > Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
+
 5. Once the application is selected, a new screen opens showing the application. Under **Manage**, select **Properties**.
 
 6. In the **Properties** screen, next to **Assignments**, select **Edit**.

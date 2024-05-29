@@ -96,7 +96,8 @@ Windows Autopilot device preparation capabilities include:
 
 ### Admin experience
 
-Windows Autopilot device preparation simplifies admin configuration by having a single profile to provision all policies in one location, including deployment and OOBE settings.
+- Windows Autopilot device preparation simplifies admin configuration by having a single profile to provision all policies in one location, including deployment and OOBE settings.
+- Line-of-business (LOB) and Win32 application scan be deployed in the same deployment.
 
 ### User experience
 
@@ -136,6 +137,8 @@ For Windows Autopilot device preparation:
 - The device group is defined in the Windows Autopilot device preparation profile.
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
 - For policies, Windows Autopilot device preparation syncs any polices assigned to the device group, but the policies aren't tracked if they are applied during the Windows Autopilot device preparation deployment. The policies might not be applied during the Windows Autopilot device preparation deployment and instead might be applied after the Windows Autopilot device preparation deployment is complete.
+
+For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune/enrollment/enrollment-time-grouping).
 
 ### Corporate identifiers for Windows
 

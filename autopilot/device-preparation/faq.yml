@@ -68,3 +68,8 @@ sections:
           Does this mean that Windows Autopilot isn't being invested in any longer?
         answer: |
           Not at all! Work on Windows Autopilot is being continued in parallel with developing Windows Autopilot device preparation. The first release of Windows Autopilot device preparation doesn't have all the scenarios of Windows Autopilot, specifically pre-provisioning and self-deploying modes, so we're still investing in those areas. Additionally, in the future, we plan to add any high value features from Windows Autopilot device preparation to Windows Autopilot to improve the experience for all customers.
+
+      - question: |
+          Does Windows Autopilot device preparation support deploying both Win32 and line-of-business (LOB) applications in the same deployment?
+        answer: |
+          Yes. Both Win32 and LOB applications can be selected in a single Windows Auto device preparation profile.
