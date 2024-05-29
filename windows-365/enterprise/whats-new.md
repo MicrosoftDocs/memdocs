@@ -85,7 +85,7 @@ The **Cloud PCs that aren't available report** has moved out of preview and into
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
 
-#### Intune scope tags<!--48907552-->
+#### Intune scope tags (preview)<!--48907552-->
 
 Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
 
