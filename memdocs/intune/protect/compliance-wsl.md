@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Evaluate WSL instance attributes to Windows host device compliance state 
+title: Device compliance for Windows Subsystem for Linux  
 description: Evaluate WSL attributes on a host device for compliance. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 5/22/2024
+ms.date: 5/29/2024 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.collection:
 - compliance
 ---
 
-# Evaluate WSL instance attributes to Windows host device compliance state  
+# Evaluate device compliance for Windows Subsystem for Linux   
 
 **Applies to**: 
 - Windows 10   
@@ -47,24 +47,24 @@ This article describes how to set up device compliance checks for WSL.
 
 These resources are required create your custom compliance script.  
 
-- [Intune plugin for WSL](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installer for the Intune plugin.    
+- [Intune WSL plug-in](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/IntuneWSLPluginInstaller/IntuneWSLPluginInstaller.msi): Use the example Powershell script to get the installation package file for the Intune WSL plug-in.    
 
 - [Custom compliance script](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDistroVersionCompliance.ps1): The example Powershell script calculates compliance against WSL distros based on Distro and Distro Version.  
 
 - [JSON for validation](https://github.com/microsoft/shell-intune-samples/blob/master/Linux/WSL/WSL%20Management%20Example/WSLDetectionRule.json): Use the example JSON to define WSL detection rules.  
 
-## Step 1: Install Intune plugin for WSL   
+## Step 1: Install Intune WSL plug-in    
 
-Use the Intune plugin for WSL resource to install the Microsoft Intune plugin for WSL on the target machine.   
+Use the Intune WSL plug-in resource to install the Intune WSL plug-in on the target machine.   
 
 ## Step 2: Add policy for line-of-business app 
 
-Create an app policy for the Intune plugin installer. The plugin installer is considered a Windows line-of-business app. 
+Create an app policy for the Intune WSL plug-in. The Intune WSL plug-in is considered a Windows line-of-business app. 
 
 1. In the Microsoft Intune admin center, go to **Apps** > **Windows**.  
 
 2. Enter app information:  
-   - **Select file**: Select this option to upload the package file for the Intune plugin installer.  
+   - **Select file**: Select this option to upload the installation package file for the Intune WSL plug-in.  
   - **Name**: Enter **Intune WSL Plugin**. 
   - **Description**: Enter a description for the app. This setting is optional but recommended. 
   - **Publisher**: Enter **Microsoft Intune**.  
@@ -137,7 +137,7 @@ Create a new device compliance policy for devices running Windows 10 and later.
 
 1. Expand **Custom Compliance**: 
   
-  1. Select the custom compliance script file as the discovery script,   
+  1. Select the custom compliance script file as the discovery script.    
   
   1. Upload your JSON validation file. 
 
@@ -149,19 +149,29 @@ Create a new device compliance policy for devices running Windows 10 and later.
 
 A quick way to get a device back to a compliant state is to unregister the non-compliant distro on the device. Use the following command to unregister a distro.   
 
+```powershell  
 
-`wsl --unregister [DISTRONAME]` 
+wsl --unregister [DISTRONAME] 
+
+```
 
 
 ## Troubleshooting  
 
-* **Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_MOD_NOT_FOUND** 	 
+**Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_MOD_NOT_FOUND**
 
-   * Restart the WSL service. In an elevated PowerShell window, run these commands: 
+Restart the WSL service. In an elevated PowerShell window, run the following commands: 
  
-     `sc.exe stop wslservice` 
+```powershell  
+ sc.exe stop wslservice 
 
-     `wsl.exe echo “test”` 
+ wsl.exe echo “test” 
+
+```   
+
+   
+
+
 
 For WSL troubleshooting help, see [Windows Subsystem for Linux](/windows/wsl/troubleshooting.md).  
 
