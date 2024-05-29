@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/24/2024
+ms.date: 05/29/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,19 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of May 27, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### New Windows 365 Cloud PC images available in the gallery<!--48537480-->
+
+New Cloud PC gallery images for Windows 10 and Windows 11 are now available. These improved images have harmonized optimizations for Windows 365 apps and better policy management:
+
+- Win 10 Enterprise Cloud PC: 21H2, 22H2,
+- Win 11 Enterprise Cloud PC: 21H2, 22H2, 23H2
 
 <!-- ########################## -->
 ## Week of May 20, 2024
