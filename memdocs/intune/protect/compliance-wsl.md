@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Device compliance for Windows Subsystem for Linux  
+title: Compliance for Windows Subsystem for Linux  
 description: Evaluate WSL attributes on a host device for compliance. 
 keywords:
 author: lenewsad
@@ -30,7 +30,7 @@ ms.collection:
 - compliance
 ---
 
-# Evaluate device compliance for Windows Subsystem for Linux   
+# Evaluate compliance for Windows Subsystem for Linux   
 
 **Applies to**: 
 - Windows 10   
@@ -82,21 +82,21 @@ In a command line, complete the following steps:
 
 1. Modify the following properties in lines 23-28 of the custom compliance script to match your organization's requirements:   
 
-  - Distros    
+   - Distros    
 
-  - Minimum/maximum version    
+   - Minimum/maximum version    
 
-  - Number of days since last check-in a device can remain compliant  
+   - Number of days since last check-in a device can remain compliant  
   
 1.  In the JSON for validation resource, modify the following fields with your organization's custom values: 
 
-  - **MoreInfoUrl** - Enter the URL where device users can go to learn more about how to meet compliance requirements.  
+   - **MoreInfoUrl** - Enter the URL where device users can go to learn more about how to meet compliance requirements.  
  
-  - **RemediationStrings**:  Enter helpful information for the device user about the compliance requirement for WSL. 
+   - **RemediationStrings**:  Enter helpful information for the device user about the compliance requirement for WSL. 
     
-    - **Language** - Example: `en-us`  
-    - **Title** - Example: `WSL distros not in compliance with company policy` 
-    - **Description** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
+     - **Language** - Example: `en-us`  
+     - **Title** - Example: `WSL distros not in compliance with company policy` 
+     - **Description** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
 
 
 
