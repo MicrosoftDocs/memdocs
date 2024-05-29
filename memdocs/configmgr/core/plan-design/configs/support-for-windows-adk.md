@@ -27,7 +27,7 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
     > [!IMPORTANT]
     >
     > - Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
-    > - **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) or newer is required to deploy Windows ARM64 operating systems.
+    > - **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) or newer is required to deploy Windows ARM64 operating systems on Configuration Manager 2403 or newer.
 
 ## Windows ADK versions
 
@@ -61,8 +61,6 @@ The following table lists the versions of the Windows ADK that you can use with 
 - For information on applying the [BlackLotus UEFI bootkit vulnerability](https://prod.support.services.microsoft.com/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d) security updates to boot images from the ADKs before the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1), see [Customize Windows PE boot images](/windows/deployment/customize-boot-image). Boot images from the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) and newer already have the BlackLotus UEFI bootkit vulnerability security update applied to them. For this reason, it's recommended to use boot images from the **ADK 10.1.26100.1 (May 2024)** (10.1.26100.1) or newer.
 
 - Windows Server builds have the same Windows ADK requirement as the associated Windows client version. For example, Windows Server 2016 is the same build version as Windows 10 LTSB 2016.
-
-- If you're deploying both Windows 11 and Windows Server 2022, use the Windows ADK for Windows 11, which is the latest version. If you're deploying Windows Server 2022 and not Windows 11, you can use either Windows ADK for Windows Server 2022 or Windows 11.
 
 <!--12440724-->
 [!INCLUDE [windows11-adk-x86](includes/windows11-adk-x86.md)]
