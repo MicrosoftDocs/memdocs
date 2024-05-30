@@ -168,6 +168,10 @@ In the **Configuration settings** page:
 >
 > Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile takes precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment runs instead of the Windows Autopilot device preparation deployment. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
 
+## Policy priority
+
+If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
+
 ## Next step: Add Windows corporate identifier to device (optional)
 
 > [!div class="nextstepaction"]

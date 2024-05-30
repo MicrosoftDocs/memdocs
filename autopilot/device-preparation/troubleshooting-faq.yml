@@ -82,3 +82,9 @@ sections:
           Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 group assigned**.
 
           To fix the issue, add **Intune Provisioning Client** as the owner of the device security group specified in the Windows Autopilot device preparation policy.
+
+      - question: |
+          Multiple Windows Autopilot device preparation policies exist and the device is getting the wrong policy.
+
+        answer: |
+          If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
