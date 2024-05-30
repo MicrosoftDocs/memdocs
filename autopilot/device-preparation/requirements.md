@@ -201,12 +201,16 @@ The following configurations are optional but recommended. They aren't required:
 
 There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications).
 
-<!--
-RBAC permissions:
-For configuring and managing the Device preparation policies: Permissions under Device configuration
-For enrollment time grouping configuration: Enrollment programs  > Enrollment time device membership assignment
-For accessing the report: Organization > Read
-https://learn.microsoft.com/en-us/mem/intune/fundamentals/role-based-access-control
--->
+## [:::image type="icon" source="../images/icons/configuration-18.svg"::: **RBAC Permissions**](#tab/rbac)
+
+### Required RBAC permissions
+
+The following RBAC permissions are required for Windows Autopilot device preparation:
+
+- For configuring and managing the Device preparation policies: Permissions under Device configuration
+- For enrollment time grouping configuration: Enrollment programs  > Enrollment time device membership assignment
+- For accessing the report: Organization > Read
+
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control)
 
 ---
