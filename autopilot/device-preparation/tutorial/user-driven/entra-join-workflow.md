@@ -59,7 +59,7 @@ During the out of box experience (OOBE), a user authenticates with their corpora
 
 1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If a PowerShell script fails, then the deployment fails at this point.
 
-1. The deployment checks if Win32 and WinGet (Microsoft Store) applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and WinGet (Microsoft Store) applications selected in the policy, then they're installed. If a Win32 or WinGet (Microsoft Store) application fails to install, then the deployment fails at this point.
+1. The deployment checks if Win32 and Microsoft Store applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and Microsoft Store applications selected in the policy, then they're installed. If a Win32 or Microsoft Store application fails to install, then the deployment fails at this point.
 
 1. If all steps succeed, the **Required setup complete** page is displayed for the user.
 

@@ -31,7 +31,7 @@ appliesto:
 | Join types supported | <ul><li>Microsoft Entra join</li></ul> | <ul><li>Microsoft Entra join</li><li>Microsoft Entra hybrid join</li></ul> |
 |Device registration required? | No | Yes |
 | What do admins need to configure? | <ul><li>Windows Autopilot device preparation policy</li><li>Device security group with **Intune Provisioning Client** as owner</li></ul> | <ul><li>Windows Autopilot deployment profile</li><li>Enrollment Status Page (ESP)</li></ul> |
-| What configurations can be delivered during provisioning? | <ul><li>Device-based only during the out of box experience (OOBE)</li><li>Up to 10 essential applications (line-of-business (LOB), Win32, WinGet (Microsoft Store), Microsoft 365)</li><li>Up to 10 essential PowerShell scripts</li></ul> | <ul><li>Device-based during device ESP</li><li>User-based during user ESP</li><li>Any number of applications</li></ul> |
+| What configurations can be delivered during provisioning? | <ul><li>Device-based only during the out of box experience (OOBE)</li><li>Up to 10 essential applications (line-of-business (LOB), Win32, Microsoft Store, Microsoft 365)</li><li>Up to 10 essential PowerShell scripts</li></ul> | <ul><li>Device-based during device ESP</li><li>User-based during user ESP</li><li>Any number of applications</li></ul> |
 | Reporting & troubleshooting | Windows Autopilot deployment report:<ul><li> Only shows Windows Autopilot registered devices.</li><li>Not real-time.</li></ul> | Windows Autopilot device preparation deployment report:<ul><li>Shows all Windows Autopilot device preparation deployments.<li>More data available</li><li>More accurate.</li><li>Near real-time.</li></ul> |
 | Supports LOB and Win32 applications in same deployment? | Yes | No |
 | Supported versions of Windows | <ul><li>Windows 11, version 23H2 with KB5035942 or later.</li><li> Windows 11, version 22H2 with or later./li></ul> | <ul><li>All [currently supported](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions) versions of Windows 11 General Availability Channel.</li><li>All [currently supported](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions) versions of Windows 10 General Availability Channel.</li></ul> |
@@ -46,26 +46,30 @@ In general, the following are some of the major factors when considering between
 | --- | --- | --- |
 | Government Community Cloud High (GCCH) and<br>Department of Defense (DoD) environments | ✅ | ❌ |
 | Deploy Win32 and LOB applications in the same deployment | ✅ | ❌ |
-| Support for [corporate identifiers for Windows](overview.md#corporate-identifiers-for-windows) | ✅ | ❌ |
-| Support for user-driven scenario | ✅ | ✅ |
-| Support for pre-provisioned scenario | ❌ | ✅ |
-| Support for self-deploying scenario | ❌ | ✅ |
-| Support for existing devices scenario | ❌ | ✅ |
-| Support for Microsoft Entra join | ✅ | ✅ |
-| Support for Microsoft Entra hybrid join | ❌ | ✅ |
-| Support for Windows 11 | ✅ | ✅ |
-| Support for Windows 10 | ❌ | ✅ |
+| [Corporate identifiers for Windows](overview.md#corporate-identifiers-for-windows) support | ✅ | ❌ |
+| User-driven scenario | ✅ | ✅ |
+| Pre-provisioned scenario | ❌ | ✅ |
+| Self-deploying scenario | ❌ | ✅ |
+| Existing devices scenario | ❌ | ✅ |
+| Autopilot reset support | ❌ | ✅ |
+| Microsoft Entra join | ✅ | ✅ |
+| Microsoft Entra hybrid join | ❌ | ✅ |
+| Windows 11 | ✅ | ✅ |
+| Windows 10 | ❌ | ✅ |
 | Simpler deployment configuration and experience | ✅ | ❌ |
 | Extensive customization of deployment and OOBE experience | ❌ | ✅ |
 | No requirement to pre-stage devices | ✅ | ❌ |
 | Install more than 10 applications during OOBE | ❌ | ✅ |
 | Run more than 10 PowerShell scripts during OOBE | ❌ | ✅ |
 | Near real-time monitoring | ✅ | ❌ |
-| Support for HoloLense | ❌ | ✅ |
-| Support for Teams Meeting Room | ❌ | ✅ |
+| HoloLense support | ❌ | ✅ |
+| Teams Meeting Room support | ❌ | ✅ |
+| Managed Installer policy support | ❌ | ✅ |
+| Custom compliance support | ❌ | ✅ |
+| Device health script support | ❌ | ✅ |
 
-> [!TIP]
->
-> Windows Autopilot device preparation and Windows autopilot can be run simultaneous and side by side. However, any one device in an environment can only run one of the two solutions. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. If a Windows Autopilot registered device needs to go through a Windows Autopilot device preparation deployment, it must first be removed as a Windows Autopilot device. For more information, see [Deregister a device](../registration-overview.md#deregister-a-device).
+## Using Windows Autopilot device preparation and Windows Autopilot concurrently
+
+Windows Autopilot device preparation and Windows autopilot can be used concurrently and side by side. However, any one device in an environment can only run one of the two solutions. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. If a Windows Autopilot registered device needs to go through a Windows Autopilot device preparation deployment, it must first be removed as a Windows Autopilot device. For more information, see [Deregister a device](../registration-overview.md#deregister-a-device).
 
 ## Related content
