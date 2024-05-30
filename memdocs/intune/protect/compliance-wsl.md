@@ -38,7 +38,7 @@ ms.collection:
 
 Create a Microsoft Intune policy that checks the compliance of devices running Windows Subsystem for Linux (WSL). Microsoft Intune incorporates the WSL compliance results into the overall compliance state of the host device so that you can see the whole health of the device.
 
-This article describes how to set up device compliance checks for WSL.  
+This article describes how to set up compliance checks for WSL.  
 
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
@@ -90,13 +90,13 @@ In a command line, complete the following steps:
   
 1.  In the JSON for validation resource, modify the following fields with your organization's custom values: 
 
-   - **MoreInfoUrl** - Enter the URL where device users can go to learn more about how to meet compliance requirements.  
+    - **MoreInfoUrl** - Enter the URL where device users can go to learn more about how to meet compliance requirements.  
  
-   - **RemediationStrings**:  Enter helpful information for the device user about the compliance requirement for WSL. 
+    - **RemediationStrings**:  Enter helpful information for the device user about the compliance requirement for WSL. 
     
-     - **Language** - Example: `en-us`  
-     - **Title** - Example: `WSL distros not in compliance with company policy` 
-     - **Description** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
+      - **Language** - Example: `en-us`  
+      - **Title** - Example: `WSL distros not in compliance with company policy` 
+      - **Description** - Example: `Make sure only allowed distros and versions are registered in WSL.` 
 
 ## Step 4: Deploy custom compliance policy  
  Deploy the custom compliance policy to targeted devices.  
