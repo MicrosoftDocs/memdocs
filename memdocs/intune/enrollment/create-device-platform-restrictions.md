@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 05/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -125,8 +125,10 @@ Enrollment restrictions support fewer filter properties than other group-targete
 
 The following filter properties are always available to use with enrollment policies:    
 
-**Windows** 
+**Windows**  
 
+* Manufacturer - For Windowns 11 version 22H2 and later 
+* Model - For Windowns 11 version 22H2 and later 
 * OS version 
 * Operating System SKU 
 * Ownership
