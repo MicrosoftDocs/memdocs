@@ -33,24 +33,25 @@ ms.collection:
 
 # Enrollment time grouping in Microsoft Intune        
 
-**Applies to**  
+**Applies to Windows 11**  
 
-* Windows 11  
+Set up enrollment time grouping to speed up app and policy provisioning during device enrollment. With enrollment time grouping, you can configure Microsoft Entra security group in the enrollment profile so that devices are added to the group during enrollment, rather than after. You can then assign required apps and policy configuration to the group. This preknowledge of the security group that the device will become member of after enrollment enables Intune to deliver the configurations to the device quickly on enrollment, reducing post-enrollment latency and improving time to productivity.  
 
-Set up enrollment time grouping to speed up app and policy provisioning during device enrollment. With enrollment time grouping, you can configure Microsoft Entra security group in the enrollment profile so that devices are added to the group during enrollment, rather than after. You can then assign required apps and policy configuration to the group. This pre-knowledge of the security group that the device will become member-of, after enrollment, enables Intune to deliver the configurations to the device quickly on enrollment, reducing post-enrollment latency and improving time to productivity.  
-
-If you don't configure enrollment time grouping, the enrolled devices are grouped based on the inventory properties and group tag ids and based on the group membership, Microsoft Intune delivers apps and policies. Intune can only determine the apps and policies a device needs after the device is grouped, so devices grouped this way often aren't ready for immediate use. It can take up to 8 hours post enrollment for devices to receive all apps and policies.
+If you don't configure enrollment time grouping, enrolled devices are grouped based on inventory properties and group tag IDs. Then Microsoft Intune delivers apps and policies based on the group membership. Microsoft Intune can only determine the apps and policies a device needs after the device is grouped, so devices grouped this way often aren't ready for immediate use. It can take up to 8 hours post enrollment for devices to receive all apps and policies.
 
 This article provides an overview of enrollment time grouping, how to configure it, and feature limitations.  
 
 ## Prerequisites
 
-1. Enrollment time grouping is supported on devices provisioned via Windows Autopilot device preparation policies. You must have permissions to create and modify Autopilot device preperation policies.
-1. To configure Microsoft Entra groups to an enrollment profile, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center. For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control.md#custom-roles).
-1. To add Intune first party app as a security group owner, which is a required step for enrollment time grouping, you must meet one of the following prerequisites:  
- - Must be a Microsoft Entra Group Administrator, or another role with the *microsoft.directory/groups/owners/update* permission.  
- - Must be an existing owner of the Microsoft Entra security group. 
-1. The designated group should be configured as scope group for the admin to use it in enrollment time grouping configuration.
+* Enrollment time grouping is supported on devices provisioned via [Windows Autopilot device preparation policies(). You must have permissions to create and modify Autopilot device preparation policies.
+  
+* To configure Microsoft Entra groups in an enrollment profile, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center. For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control.md#custom-roles).
+  
+* To add Intune first party app as a security group owner, which is a required step for enrollment time grouping, you must meet one of the following prerequisites:  
+  * Must be a Microsoft Entra Group Administrator, or another role with the *microsoft.directory/groups/owners/update* permission.
+  * Must be an existing owner of the Microsoft Entra security group.
+    
+* The designated group should be configured as scope group for the admin to use it in enrollment time grouping configuration.
 
 ## Step 1: Create Microsoft Entra security group
 
