@@ -31,7 +31,7 @@ ms.collection:
 
 # Set up Microsoft Purview forensic evidence for Windows 365
 
-[Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence) helps you get better insights into potentially risky security-related user activities. With customizable event triggers and built-in user privacy protection controls, forensic evidence enables customizable visual activity capturing across devices to help your organization better mitigate, understand, and respond to potential data risks like unauthorized data exfiltration of sensitive data.
+[Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence) helps you get better insights into potentially risky security-related user activities. With customizable event triggers and built-in user privacy protection controls, forensic evidence lets you customize visual activity capturing across devices. Forensic evidence helps your organization better mitigate, understand, and respond to potential data risks like unauthorized data exfiltration of sensitive data.
 
 You set the right policies for your organization, like:
 
