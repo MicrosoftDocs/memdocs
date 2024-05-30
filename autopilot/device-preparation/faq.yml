@@ -73,3 +73,23 @@ sections:
           Does Windows Autopilot device preparation support deploying both Win32 and line-of-business (LOB) applications in the same deployment?
         answer: |
           Yes. Both Win32 and LOB applications can be selected in a single Windows Auto device preparation profile.
+
+      - question: |
+          What scenarios does Windows Autopilot device preparation support?
+        answer: |
+          Currently Windows Autopilot device preparation only supports the user-driven scenario.
+
+      - question: |
+          Does Windows Autopilot device preparation support Microsoft Entra hybrid join?
+        answer: |
+          No. Windows Autopilot device preparation only supports Microsoft Entra join.
+
+      - question: |
+          What type of applications does Windows Autopilot device preparation suppor?
+        answer: |
+          The following types of applications are supported for use with Windows Autopilot device preparation:
+
+          - [Line-of-business](/mem/intune/apps/lob-apps-windows).
+          - [Win32](/mem/intune/apps/apps-win32-prepare).
+          - [WinGet (Microsoft Store)](/mem/intune/apps/store-apps-microsoft).
+          - [Microsoft 365](/mem/intune/apps/apps-add-office365).

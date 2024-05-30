@@ -119,6 +119,17 @@ In the **Configuration settings** page:
 
     All of the selected applications should display under **Allowed Applications**.
 
+    > [!NOTE]
+    >
+    > The following types of applications are supported for use with Windows Autopilot device preparation:
+    >
+    > - [Line-of-business](/mem/intune/apps/lob-apps-windows).
+    > - [Win32](/mem/intune/apps/apps-win32-prepare).
+    > - [WinGet (Microsoft Store)](/mem/intune/apps/store-apps-microsoft).
+    > - [Microsoft 365](/mem/intune/apps/apps-add-office365).
+    >
+    > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
+
 3. Expand the **Deployment settings** section by selecting it:
 
    1. **Deployment mode** - select **Single user** in the drop-down menu.

@@ -50,9 +50,18 @@ In order for applications to install and for PowerShell scripts to run successfu
 
 > [!NOTE]
 >
-> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add them to Intune if they aren't already created, see [Add apps to Microsoft Intune](/mem/intune/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
+> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/mem/intune/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
 
 ### Applications
+
+The following types of applications are supported for use with Windows Autopilot device preparation:
+
+- [Line-of-business](/mem/intune/apps/lob-apps-windows).
+- [Win32](/mem/intune/apps/apps-win32-prepare).
+- [WinGet (Microsoft Store)](/mem/intune/apps/store-apps-microsoft).
+- [Microsoft 365](/mem/intune/apps/apps-add-office365).
+
+In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
 To assign the desired applications to the device group created for Windows Autopilot device preparation:
 
@@ -63,10 +72,6 @@ To assign the desired applications to the device group created for Windows Autop
 3. In the **Apps | Overview** screen, under **By platform**, select **Windows**.
 
 4. In the **Windows | Windows apps** screen, scroll through the list of applications and then select the desired application that will be installed during the Windows Autopilot device preparation deployment. Alternatively, use the **Search by name or publisher** box to search for the application, and then select it.
-
-    > [!TIP]
-    >
-    > Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
 5. Once the application is selected, a new screen opens showing the application. Under **Manage**, select **Properties**.
 

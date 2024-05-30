@@ -26,6 +26,14 @@ landingContent:
 # Start card title with a verb
 
   # Card (optional)
+  - title: Windows Autopilot solutions
+    linkLists:
+    - linkListType: get-started
+      links:
+      - text: Compare Windows Autopilot device preparation and Windows Autopilot
+        url:  device-preparation/compare.md
+
+  # Card (optional)
   - title: Understand Windows Autopilot device preparation
     linkLists:
     - linkListType: overview

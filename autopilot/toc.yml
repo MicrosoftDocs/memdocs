@@ -1,6 +1,9 @@
 items:
 - name: Windows Autopilot deployment
   href: index.yml
+- name: Compare Windows Autopilot solutions
+  href: device-preparation/compare.md
+
 - name: Windows Autopilot device preparation
   expanded: true
   items:
@@ -10,8 +13,6 @@ items:
     href: device-preparation/overview.md
   - name: Requirements
     href: device-preparation/requirements.md
-  - name: Compare Windows Autopilot device preparation and Windows Autopilot
-    href: device-preparation/compare.md
   - name: Reporting and Monitoring
     href: device-preparation/reporting-monitoring.md
   - name: Policy configuration options
