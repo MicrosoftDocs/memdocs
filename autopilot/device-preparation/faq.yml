@@ -83,7 +83,7 @@ sections:
       - question: |
           Is Windows Autopilot device preparation available on Windows 10 devices?
         answer: |
-          Currently, device preparation profiles are only available on:
+          Currently, Windows Autopilot device preparation is only available on:
 
           - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
           - Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
