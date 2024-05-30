@@ -67,7 +67,7 @@ sections:
         answer: |
           Only device-based configurations are delivered during OOBE. For this reason:
           - Assign security policy to devices.
-          - Ensure all selected applications in the Windows Autopilot device preparation policy are set to install in the **System** context
+          - Ensure all selected applications in the Windows Autopilot device preparation policy are set to install in the **System** context.
           - Ensure all selected applications in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
 
       - question: |
