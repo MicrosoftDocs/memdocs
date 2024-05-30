@@ -110,7 +110,7 @@ Remove all periods, if applicable, from the serial number before you add it to t
 
 After you add Windows corporate identifiers, Intune marks devices that match all three identifiers as corporate-owned, and marks all other enrolling devices in your tenant as personal. This means that anything you exclude from the Windows corporate identifiers is marked personal. To change the ownership type after enrollment, you have to manually adjust it in the admin center.  
 
-| Windows enrollment types | Has corporate identifiers | Doesn't have corporate identifiers | 
+| Windows enrollment types | With corporate identifiers | Without corporate identifiers | 
 |---|---|---|
 | Windows Autopilot| Corporate | Corporate |  
 | Group policy (GPO) or co-management with automatic enrollment and Configuration Manager| Corporate | Corporate | 
