@@ -47,23 +47,25 @@ Once the Windows Autopilot device preparation user-driven deployment is complete
 
 During the out of box experience (OOBE), a user authenticates with their corporate credentials. If there's a Windows Autopilot device preparation policy assigned to the user signing in, then that policy is delivered to the device. It then determines the configuration that needs to be applied to the device based on the settings configured in the policy. After that, device setup continues in the following order:
 
+1. The device enrolls into Microsoft Entra ID and Intune.
+
 1. The Intune management extension installs.
 
-2. If the user account is configured as a standard user, the setting is enforced.
+1. If the user account is configured as a standard user, the setting is enforced.
 
-3. The deployment syncs with the mobile device management (MDM) service such as Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment.
+1. The deployment syncs with the mobile device management (MDM) service such as Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment.
 
-4. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If a LOB or Microsoft 365 application fails to install, then the deployment fails at this point.
+1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If a LOB or Microsoft 365 application fails to install, then the deployment fails at this point.
 
-5. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If a PowerShell script fails, then the deployment fails at this point.
+1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If a PowerShell script fails, then the deployment fails at this point.
 
-6. The deployment checks if Win32 and WinGet (Microsoft Store) applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and WinGet (Microsoft Store) applications selected in the policy, then they're installed. If a Win32 or WinGet (Microsoft Store) application fails to install, then the deployment fails at this point.
+1. The deployment checks if Win32 and WinGet (Microsoft Store) applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and WinGet (Microsoft Store) applications selected in the policy, then they're installed. If a Win32 or WinGet (Microsoft Store) application fails to install, then the deployment fails at this point.
 
-7. If all steps succeed, the **Required setup complete** page is displayed for the user.
+1. If all steps succeed, the **Required setup complete** page is displayed for the user.
 
-8. Once the **Required setup complete** page is dismissed, the user is automatically signed in and the Desktop is displayed.
+1. Once the **Required setup complete** page is dismissed, the user is automatically signed in and the Desktop is displayed.
 
-9. At this point, another sync is triggered and all other configurations is delivered to the device. Additional configurations might include:
+1. At this point, another sync is triggered and all other configurations is delivered to the device. Additional configurations might include:
 
     - Applications and PowerShell scripts that were assigned to the device group specified in the Windows Autopilot device preparation policy but weren't explicitly selected in the policy.
     - Any additional MDM policy.

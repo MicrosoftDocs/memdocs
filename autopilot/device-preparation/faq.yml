@@ -85,11 +85,16 @@ sections:
           No. Windows Autopilot device preparation only supports Microsoft Entra join.
 
       - question: |
-          What type of applications does Windows Autopilot device preparation suppor?
+          What type of applications does Windows Autopilot device preparation support?
         answer: |
           The following types of applications are supported for use with Windows Autopilot device preparation:
 
-          - [Line-of-business](/mem/intune/apps/lob-apps-windows).
+          - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
           - [Win32](/mem/intune/apps/apps-win32-prepare).
           - [WinGet (Microsoft Store)](/mem/intune/apps/store-apps-microsoft).
           - [Microsoft 365](/mem/intune/apps/apps-add-office365).
+
+      - question: |
+          Do devices need to be pre-staged with Windows Autopilot device preparation?
+        answer: |
+          No. Windows Autopilot device preparation policies are deployed to a user group and not a device group. Once a user in that user group signs into the device during OOBE, the Windows Autopilot device preparation deployment begins. During the deployment, the device is then automatically added to the device group specified in the Windows Autopilot device preparation policy.

@@ -42,7 +42,7 @@ Which version of Windows Autopilot to use is dependant on many factors and varia
 
 In general, the following are some of the major factors when considering between Windows Autopilot device preparation or Windows Autopilot:
 
-| Requirement | **Windows Autopilot<br>device preparation** | **Windows Autopilot** |
+| Requirement | **Windows Autopilot<br>device preparation** | **Windows<br>Autopilot** |
 | --- | --- | --- |
 | Government Community Cloud High (GCCH) and<br>Department of Defense (DoD) environments | ✅ | ❌ |
 | Deploy Win32 and LOB applications in the same deployment | ✅ | ❌ |

@@ -123,7 +123,7 @@ In the **Configuration settings** page:
     >
     > The following types of applications are supported for use with Windows Autopilot device preparation:
     >
-    > - [Line-of-business](/mem/intune/apps/lob-apps-windows).
+    > - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
     > - [Win32](/mem/intune/apps/apps-win32-prepare).
     > - [WinGet (Microsoft Store)](/mem/intune/apps/store-apps-microsoft).
     > - [Microsoft 365](/mem/intune/apps/apps-add-office365).
