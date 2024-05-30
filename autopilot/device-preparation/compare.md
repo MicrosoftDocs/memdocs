@@ -36,7 +36,7 @@ appliesto:
 | Supports LOB and Win32 applications in same deployment? | Yes | No |
 | Supported versions of Windows | <ul><li>Windows 11, version 23H2 with KB5035942 or later.</li><li> Windows 11, version 22H2 with or later./li></ul> | <ul><li>All [currently supported](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions) versions of Windows 11 General Availability Channel.</li><li>All [currently supported](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions) versions of Windows 10 General Availability Channel.</li></ul> |
 
-## Which Windows Autopilot to use
+## Which Windows Autopilot solution to use
 
 Which version of Windows Autopilot to use is dependent on many factors and variables, with each environment having different needs. Windows Autopilot device preparation in its initial offering isn't as feature rich as Windows Autopilot, but it does have some advantages and features not available in Windows Autopilot.
 
