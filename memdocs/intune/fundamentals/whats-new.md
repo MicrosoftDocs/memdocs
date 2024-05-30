@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/23/2024
+ms.date: 05/30/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,32 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of May 27, 2024
+
+### Microsoft Intune Suite
+
+#### New primary endpoint for Remote Help
+
+To improve the experience for [Remote Help](../fundamentals/remote-help.md) on Windows, Web, and macOS devices, we have updated the primary endpoint for Remote Help:
+
+- Old primary endpoint: `https://remoteassistance.support.services.microsoft.com`
+- New primary endpoint: `https://remotehelp.microsoft.com`
+
+If you use Remote Help and have firewall rules that block the new primary endpoint, admins and users might experience connectivity issues or disruptions when using Remove Help.
+
+To support the new primary endpoint on Windows devices, upgrade Remote Help to version 5.1.124.0. Web and macOS devices don’t require an updated version of Remote Help to make use of the new primary endpoint.
+
+Applies to:
+
+- macOS 11, 12, 13 and 14
+- Windows 10/11
+- Windows 11 on ARM64 devices
+- Windows 10 on ARM64 devices
+- Windows 365
+
+For information on the newest version of Remote Help, see the *March 13, 2024* entry for [What’s New for Remote Help](../fundamentals/remote-help-windows.md#march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
+
 ## Week of May 20, 2024 (Service release 2405)
 
 ### Device configuration
