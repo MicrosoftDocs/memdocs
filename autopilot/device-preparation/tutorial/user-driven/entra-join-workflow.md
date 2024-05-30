@@ -47,11 +47,11 @@ Once the Windows Autopilot device preparation user-driven deployment is complete
 
 During the out of box experience (OOBE), a user authenticates with their corporate credentials. If there's a Windows Autopilot device preparation policy assigned to the user signing in, then that policy is delivered to the device. It then determines the configuration that needs to be applied to the device based on the settings configured in the policy. After that, device setup continues in the following order:
 
-1. The device enrolls into Microsoft Entra ID and Intune.
+1. The device joins Microsoft Entra ID and enrolls in Intune.
 
 1. The Intune management extension installs.
 
-1. If the user account is configured as a standard user, the setting is enforced.
+1. When the device is joined to Microsoft Entra ID during the first step, the user is automatically added to the local **Administrators** group on the device. If the user account is configured as a standard user, the setting is enforced by removing the user out of the **Administrators** group.
 
 1. The deployment syncs with the mobile device management (MDM) service such as Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment.
 
