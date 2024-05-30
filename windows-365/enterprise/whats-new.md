@@ -63,7 +63,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 ### New Windows 365 Cloud PC images available in the gallery<!--48537480-->
 
-New Cloud PC gallery images for Windows 10 and Windows 11 are now available. These improved images have harmonized optimizations for Windows 365 apps and better policy management:
+New Cloud PC gallery images for Windows 10 and Windows 11 are now available. These improved images have harmonized optimizations with Windows 365 apps images for better policy management:
 
 - Win 10 Enterprise Cloud PC: 21H2, 22H2,
 - Win 11 Enterprise Cloud PC: 21H2, 22H2, 23H2
