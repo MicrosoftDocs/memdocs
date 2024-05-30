@@ -197,7 +197,7 @@ To let scoped administrators view which scope tags are assigned to them and the 
 - Cloud PC reader/administrator
 - A custom role with similar permissions.
 
-### Calling bulk actions from the Graph API and scope tags during the public preview
+### Graph API bulk actions and scope tags during the public preview
 
 For the duration of the scope tags public preview, the following bulk actions don't honor scope tags when called directly from the Graph API:
 
