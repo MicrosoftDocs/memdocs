@@ -35,8 +35,8 @@ ms.collection:
 
 You set the right policies for your organization, like:
 
-- What risky events are the highest priority for capturing forensic evidence
-- What data is most sensitive,
+- What risky events are the highest priority for capturing forensic evidence.
+- What data is most sensitive.
 - Whether users are notified when forensic capturing is activated.
 
 Forensic evidence capturing is off by default and policy creation requires dual authorization.
