@@ -25,7 +25,7 @@ The purpose of this tutorial is a step by step guide for all the configuration s
 
 Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Microsoft Entra ID.
 
-## Windows Autopilot user-driven Microsoft Entra join overview
+## Windows Autopilot device preparation user-driven Microsoft Entra join overview
 
 Windows Autopilot device preparation user-driven Microsoft Entra join is a solution that automates the configuration of Windows on a new device without the need for IT intervention. Normally the device is delivered directly from an OEM or reseller to the end-user  Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
@@ -43,7 +43,7 @@ Windows Autopilot device preparation user-driven deployments can perform the fol
 
 Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
 
-## Windows Autopilot user-driven Microsoft Entra join process
+## Windows Autopilot device preparation user-driven Microsoft Entra join process
 
 During the out of box experience (OOBE), a user authenticates with their corporate credentials. If there's a Windows Autopilot device preparation policy assigned to the user signing in, then that policy is delivered to the device. It then determines the configuration that needs to be applied to the device based on the settings configured in the policy. After that, device setup continues in the following order:
 
@@ -67,6 +67,7 @@ During the out of box experience (OOBE), a user authenticates with their corpora
 
     - Applications and PowerShell scripts that were assigned to the device group specified in the Windows Autopilot device preparation policy but weren't explicitly selected in the policy.
     - Any additional MDM policy.
+    - User-based configurations.
 
 ## Workflow
 
