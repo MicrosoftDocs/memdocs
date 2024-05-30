@@ -56,6 +56,10 @@ sections:
 
           - If using corporate identifiers in Intune, make sure that a corporate identifier is added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
+          - Verify that Windows automatic Intune enrollment has been configured.
+
+          - Verify that users are allowed to join device to Microsoft Entra ID.
+
       - question: |
           Applications or PowerShell scripts aren't getting installed.
         answer: |

@@ -87,7 +87,7 @@ The key features of Windows Autopilot device preparation include:
 Windows Autopilot device preparation capabilities include:
 
 - Set up user-driven deployment flow.
-- Making sure users are standard non-administrator users by default.
+- By default, making sure users are standard non-administrator users.
 - Select application and PowerShell script to be delivered during OOBE.
 - Simplified and clear OOBE user experience with percentage progress indicator.
 - Deployment report for better troubleshooting.
@@ -97,7 +97,7 @@ Windows Autopilot device preparation capabilities include:
 ### Admin experience
 
 - Windows Autopilot device preparation simplifies admin configuration by having a single profile to provision all policies in one location, including deployment and OOBE settings.
-- Line-of-business (LOB) and Win32 application scan be deployed in the same deployment.
+- Line-of-business (LOB) and Win32 applications can be deployed in the same deployment.
 
 ### User experience
 

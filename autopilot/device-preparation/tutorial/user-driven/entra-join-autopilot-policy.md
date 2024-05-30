@@ -140,6 +140,10 @@ In the **Configuration settings** page:
 
    4. **User account type** - select either **Standard User** or **Administrator** as desired by toggling the switch.
 
+    > [!IMPORTANT]
+    >
+    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the Desktop.
+
 4. Expand the **Scripts** section by selecting it:
 
     The **Scripts** section allows selection of up to 10 PowerShell scripts to install during the deployment. The PowerShell scripts specified here should be the essential PowerShell scripts that should run on the device before the end-user can start using the device.
