@@ -191,7 +191,7 @@ We're updating role-based access control (RBAC) for enrollment platform restrict
 
 <!-- *********************************************** -->
 
-<!-- ## Device management -->
+<!-- ## Device management  -->
 
 <!-- *********************************************** -->
 
@@ -251,6 +251,27 @@ For more information about current RBAC permissions and built-in roles, see:
 
 - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+
+<!-- *********************************************** -->
+
+## Monitor and troubleshoot
+
+### View BitLocker recovery key in Company Portal apps for iOS and macOS<!-- 26615990  -->
+
+End users will be able to view the BitLocker recovery key for an enrolled Windows device in the Company Portal app for iOS and Company Portal app for macOS. This capability will reduce helpdesk calls in the event the end user gets locked out of their corporate machines. End users can access the recovery key for an enrolled device by signing into the Company Portal app and selecting **Get recovery key**. This will be a similar experience to the recovery process on the Company Portal website, which also allows end users to see recovery keys.
+
+You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the **Restrict non-admin users from recovering the BitLocker key(s) for their owned device** setting in Microsoft Entra ID.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about how to enable or block access to BitLocker recovery keys, see:
+
+- [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
+- [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
+
 
 <!-- *********************************************** -->
 
