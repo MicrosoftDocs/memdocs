@@ -37,6 +37,8 @@ ms.collection:
 
 To set up Microsoft Purview forensic evidence, your environment must meet the following requirements:
 
+### Device configuration requirements
+
 - Gallery image type
     - Windows 11 Enterprise + Microsoft 365 Apps 23H2
 - Licensing
@@ -47,11 +49,19 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
     - Microsoft Entra hybrid join for Microsoft hosted network
 - Animalware client version 4.18.2110 or later
 - Microsoft 365 Apps version 16.0.14701.0 or later
-- The device must be assigned to a primary user
-- Account must have at least one of these roles
-    - Global admin
-    - Security admin
-    - Compliance admin
+- The device must be assigned to a [primary user](/mem/intune/remote-actions/find-primary-user)
+
+### Role requirements
+
+- Account must have at least one of these roles:
+    - Microsoft Entra ID Global Administrator role
+    - Microsoft Entra ID Compliance Administrator role
+    - Microsoft Purview Organization Management role group
+    - Microsoft Purview Compliance Administrator role group
+    - Insider Risk Management role group
+    - Insider Risk Management Admins role group
+
+For more information about insider risk management roles, see [Enable permissions for insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal#step-1-required-enable-permissions-for-insider-risk-management).
 
 ## Turn on device onboarding
 
@@ -64,7 +74,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 
 ### Deploy the configuration package using Intune
 
-1. Sign in to the Intune admin center Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Microsoft Defender for Endpoint** > **Open the Microsoft Defender Security Center**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Microsoft Defender for Endpoint** > **Open the Microsoft Defender Security Center**.
 
 2. Set **Microsoft Intune connection** to *On* and then **Save preferences**.
 
@@ -96,13 +106,11 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 
 After you create the policy, a user must sign in to their device before the policy is applied and the device is onboarded to Microsoft Defender for Endpoint.
 
-To view a list of onboarded devices, go to the newly created device configuration profile's page. To view this list, you need an Intune role that provides read permissions for the **Microsoft Defender Advanced Threat Protection**.
-
 ### Use a local script to deploy configuration package
 
-Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a local script](/purview/device-onboarding-script).
+Follow the instructions in  [Onboard Windows 10 and Windows 11 devices using a local script](/purview/device-onboarding-script). This can be helpful when testing a subset of Cloud PCs before proceeding to onboard all your Cloud PCs.
 
-## View configuration status
+## View onboarding devices list
 
 1. Open the [Microsoft Purview compliance portal](https://compliance.microsoft.com) > **Settings** > **Device onboarding** > **Devices**.
 
