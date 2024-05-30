@@ -26,7 +26,7 @@ appliesto:
 
 | Feature | **Windows Autopilot<br>device preparation** | **Windows Autopilot** |
 | --- | --- | --- |
-| Features | <ul><li>Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments.</li><li>Faster, more consistent provisioning experience.</li><li>Near real-time monitoring and troubleshooting info.</li></ul> | <ul><li>Support for multiple device types (Hololens, Teams Meeting Room)</li><li>Many customization options for the provisioning experience.</li></ul> |
+| Features | <ul><li>Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments.</li><li>Faster, more consistent provisioning experience.</li><li>Near real-time monitoring and troubleshooting info.</li></ul> | <ul><li>Support for multiple device types (HoloLens, Teams Meeting Room)</li><li>Many customization options for the provisioning experience.</li></ul> |
 | Supported modes | <ul><li>User-driven</li></ul> | <ul><li>User-driven</li><li>Pre-provisioned</li><li>Self-deploying</li><li>Existing devices</li></ul>|
 | Join types supported | <ul><li>Microsoft Entra join</li></ul> | <ul><li>Microsoft Entra join</li><li>Microsoft Entra hybrid join</li></ul> |
 |Device registration required? | No | Yes |
@@ -38,7 +38,7 @@ appliesto:
 
 ## Which Windows Autopilot to use
 
-Which version of Windows Autopilot to use is dependant on many factors and variables, with each environment having different needs. Windows Autopilot device preparation in its initial offering isn't as feature rich as Windows Autopilot, but it does have some advantages and features not available in Windows Autopilot.
+Which version of Windows Autopilot to use is dependent on many factors and variables, with each environment having different needs. Windows Autopilot device preparation in its initial offering isn't as feature rich as Windows Autopilot, but it does have some advantages and features not available in Windows Autopilot.
 
 In general, the following are some of the major factors when considering between Windows Autopilot device preparation or Windows Autopilot:
 
@@ -61,6 +61,8 @@ In general, the following are some of the major factors when considering between
 | Install more than 10 applications during OOBE | ❌ | ✅ |
 | Run more than 10 PowerShell scripts during OOBE | ❌ | ✅ |
 | Near real-time monitoring | ✅ | ❌ |
+| Support for HoloLense | ❌ | ✅ |
+| Support for Teams Meeting Room | ❌ | ✅ |
 
 > [!TIP]
 >
