@@ -82,12 +82,18 @@ The following table shows the identifiers supported for each platform. When a de
 | Platform | IMEI number | Serial number | Serial number, model, manufacturer |  
 |---|---|---|---|
 | Windows| Not supported | Not supported | ✔️| 
-| iOS/iPadOS | ✔️ <br></br> Supported in some cases. See [You should know](#you-should-know) for more information.| ✔️ <br></br> We recommend using a serial number for iOS/iPadOS identification.  |Not supported|
+| iOS/iPadOS | ✔️ <br></br> Supported in some cases. See [You should know](#you-should-know) for more information.| ✔️ <br></br> We recommend using a serial number for iOS/iPadOS identification when possible.  |Not supported|
 | macOS | Not supported | ✔️ |Not supported |
 | Android device administrator | ✔️ <br></br> Supported with Android 9 and earlier. Android 10 | ✔️ <br></br> Supported with Android 9 and earlier. |Not supported |
 | Android Enterprise, personally owned work profile  | ✔️ <br></br> Supported with Android 11 and earlier. | ✔️ <br></br> Supported with Android 11 and earlier. |Not supported |  
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->  
+
+### You should know  
+
+* Android and iOS/iPadOS devices can have multiple IMEI numbers. Intune only reads one IMEI number per enrolled device. If you import an IMEI number but it is not the IMEI inventoried by Intune, Intune marks the device as personal. If you import multiple IMEI numbers for a device, numbers that haven't been inventoried show *uknown* for enrollment status. 
+
+* Android serial numbers are not guaranteed to be unique or present. Check with your device supplier to find out if the serial number is a reliable device ID. Serial numbers reported by the device to Intune might not match the ID that's shown on the device in Android settings or Android device information. Verify the type of serial number reported by the device manufacturer.  
 
 ## Step 1: Create CSV file  
 Create a comma-separated value (CSV) list of corporate identifiers and save it as a CSV file. You can add up to 5,000 rows or 5 MB of data per file, whichever comes first. Don't add headers.
