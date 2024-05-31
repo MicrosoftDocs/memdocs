@@ -37,7 +37,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 > [!NOTE]
 >
-> If users have already been set up to allow joining of devices to Microsoft Entra ID from another Autopilot scenario, skip this step and move on to [Step 3: Create a device group](entra-join-device-group.md).
+> If users are already allowed to join devices to Microsoft Entra ID, skip this step and move on to [Step 3: Create a device group](entra-join-device-group.md).
 
 ## Allow users to join devices to Microsoft Entra ID
 

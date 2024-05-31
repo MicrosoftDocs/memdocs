@@ -68,7 +68,7 @@ Headings are driven by article context. -->
 
 > [!NOTE]
 >
-> The above steps are creating a dynamic group in Microsoft Entra which is used by Intune and Autopilot. Although the groups can be accessed in the Intune portal, they are Microsoft Entra groups.
+> The above steps are creating a dynamic group in Microsoft Entra that is used by Intune and Windows Autopilot solutions. Although the groups can be accessed in the Intune portal, they're Microsoft Entra groups.
 
 > [!TIP]
 >

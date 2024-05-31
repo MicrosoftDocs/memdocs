@@ -42,13 +42,13 @@ Headings are driven by article context. -->
 
        1. Scroll through the list of objects and select owners for the user group. Alternatively, use the **Search** bar to search for and select owners of the group.
 
-       2. Once all of the desired owners are selected, select the **Select** button.
+       1. Once all of the desired owners are selected, select the **Select** button.
 
     1. For assigned user groups:
 
        1. For **Members**, select the **No members selected** link.
 
-       2. In the **Add members** screen that opens:
+       1. In the **Add members** screen that opens:
 
           1. Scroll through the list of objects and select members that the Windows Autopilot device preparation profiles should be deployed to. Alternatively, use the **Search** bar to search for and select members for the group. Make sure to only select users or groups that only contain users.
 
@@ -58,7 +58,7 @@ Headings are driven by article context. -->
 
        1. For **Dynamic user members**, select the **Add dynamic query** link.
 
-       2. In the **Dynamic membership rules** screen that opens, create a rule that encompasses the users that should be members of the user group. For more information on creating rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
+       1. In the **Dynamic membership rules** screen that opens, create a rule that encompasses the users that should be members of the user group. For more information on creating rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
 
         > [!NOTE]
         >

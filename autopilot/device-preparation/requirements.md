@@ -201,7 +201,7 @@ The following configurations are optional but recommended. They aren't required:
 
 There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications).
 
-## [:::image type="icon" source="../images/icons/configuration-18.svg"::: **RBAC Permissions**](#tab/rbac)
+## [:::image type="icon" source="../images/icons/permissions-18.svg"::: **RBAC Permissions**](#tab/rbac)
 
 ### Required RBAC permissions
 
@@ -236,13 +236,13 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
    1. In the **Basics** page:
 
-      1. In the text box next to **Name**, enter a name for the custom role, such as **Windows Autopilot device preparation administrator**.
+      1. **Name** - enter a name for the custom role, such as **Windows Autopilot device preparation administrator**.
 
-      1. In the text box next to **Description**, enter a description for the custom role.
+      1. **Description** - enter a description for the custom role.
 
    1. Select the **Next** button.
 
-   1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find and expand each of the following settings. Once the setting is expanded, change the permissions to the following:
+   1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings. Once the setting is located, expand it, and then change to the following permissions:
 
       - **Device configurations**
 
@@ -266,17 +266,17 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
         All other permissions can be left at the default of **No**.
 
-   1. Once all permissions are set correctly, select the **Next** button.
+   3. Once all permissions are set correctly, select the **Next** button.
 
-   1. In the **Scope tags** page, select the **Next** button.
+   4. In the **Scope tags** page, select the **Next** button.
 
         > [!NOTE]
         >
         > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-   1. In the **Review + create** page, verify that all permissions are correct, and then select the **Create** button.
+   5. In the **Review + create** page, verify that all permissions are correct, and then select the **Create** button.
 
-1. The new custom Windows Autopilot device preparation role can now be assigned to users.
+2. The new custom Windows Autopilot device preparation role can now be assigned to users.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 

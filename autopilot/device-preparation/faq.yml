@@ -68,12 +68,13 @@ sections:
           Only device-based configurations are delivered during OOBE. For this reason:
           - Assign security policy to devices.
           - Ensure all selected applications in the Windows Autopilot device preparation policy are set to install in the **System** context.
-          - Ensure all selected applications and PowerShell scripts in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
+          - Ensure all selected applications in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
+          - Ensure all selected PowerShell scripts in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
 
       - question: |
           How do users know when the required setup is complete?
         answer: |
-          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. Administrators can configure the page to require a user to manually select **Continue** or set the page to auto-continue. This message lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy may still be occurring in the background.
+          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. Administrators can configure the page to require a user to manually select **Continue** or set the page to auto-continue. This message lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy might still be occurring in the background.
 
       - question: |
           Can Windows Autopilot Device preparation be used by non-Microsoft mobile device management (MDM) providers?
@@ -121,9 +122,9 @@ sections:
       - question: |
           Which Windows Autopilot device preparation policy receives priority if multiple policies are deployed to a user?
         answer: |
-          If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
+          If multiple Windows Autopilot device preparation policies are deployed to a user, the policy with the highest priority gets priority. Policy priorities are displayed at the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
       - question: |
           What makes Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot?
         answer: |
-          The key to making Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot is [Enrollment Time Grouping](overview.md#enrollment-time-grouping). With Enrollment Time Grouping, the device is added to a predetermined assigned device security group as selected in the Windows Autopilot device preparation policy. Since the device group is assigned instead of dynamic as used in Windows Autopilot, anything assigned to the device group is processed faster and more efficiently. The assigned group eliminates the need to perform  queries that are required with dynamic groups.
+          The key to making Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot is [Enrollment Time Grouping](overview.md#enrollment-time-grouping). With Enrollment Time Grouping, devices are automatically added to an assigned device group specified in the Windows Autopilot device preparation policy. Since the device group is assigned instead of dynamic as used in Windows Autopilot, anything assigned to the device group is processed faster and more efficiently. The assigned group eliminates the need to perform  queries that are required with dynamic groups.

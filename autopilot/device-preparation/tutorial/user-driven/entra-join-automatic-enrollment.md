@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 > [!NOTE]
 >
-> If automatic Intune enrollment is already set up from another Autopilot scenario, skip this step and move on to [Step 2: Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md).
+> If automatic Intune enrollment is already set up, skip this step and move on to [Step 2: Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md).
 
 ## Set up Windows automatic Intune enrollment
 

@@ -117,7 +117,7 @@ Windows Autopilot device preparation offers near real-time status updates on dep
 
 ### Enrollment Time Grouping
 
-The key to Windows Autopilot device preparation is Enrollment Time Grouping. With Enrollment Time Grouping, when a user authenticates into a device, the device is added to a pre-defined device security group during enrollment. Applications, scripts, and policies assigned to the device group are then deployed to the device. This allows the applications, scripts, and policies assigned to deploy quicker and more efficiently versus when using a dynamic device group.
+The key to Windows Autopilot device preparation is Enrollment Time Grouping. With Enrollment Time Grouping, when a user authenticates into a device, the device is added to a pre-defined device security group during enrollment. Applications, scripts, and policies assigned to the device group are then deployed to the device. Direct assignment of devices to the device group allows the applications, scripts, and policies assigned to the device group to deploy quicker and more efficiently versus when using a dynamic device group.
 
 Enrollment time grouping consists of the following phases:
 
@@ -128,7 +128,7 @@ For Windows Autopilot device preparation:
 
 - The device group is selected in the Windows Autopilot device preparation profile.
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
-- For policies, Windows Autopilot device preparation syncs any policies assigned to the device group. However, Windows Autopilot device preparation doesn't track if the policies are actually applied during the deployment. The policies might not be applied during the deployment and instead might be applied after the deployment is complete.
+- For policies, Windows Autopilot device preparation syncs any policies assigned to the device group. However, Windows Autopilot device preparation doesn't track if the policies are applied during the deployment. The policies might be applied either during the deployment or after the deployment is complete.
 
 For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune/enrollment/enrollment-time-grouping).
 

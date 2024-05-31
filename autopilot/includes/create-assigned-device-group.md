@@ -37,13 +37,13 @@ Headings are driven by article context. -->
 
     1. In the **Add owners** screen that opens:
 
-       1. Scroll through the list of objects and select **Intune Provisioning Client** with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c**. Alternatively, use the **Search** bar to search for and select **Intune Provisioning Client**.
+       1. Scroll through the list of objects and select the service principle **Intune Provisioning Client** with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c**. Alternatively, use the **Search** bar to search for and select **Intune Provisioning Client**.
 
            > [!NOTE]
            >
-           > - In some tenants, the object might have the name of **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the object is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct object.
+           > - In some tenants, the service principle might have the name of **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the service principle is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principle.
            >
-           > - If the **Intune Provisioning Client**/**Intune Autopilot ConfidentialClient** object with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client object](#adding-the-intune-provisioning-client-object).
+           > - If the **Intune Provisioning Client**/**Intune Autopilot ConfidentialClient** service principle with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client service principle](#adding-the-intune-provisioning-client-service-principle).
 
        1. Once **Intune Provisioning Client** is selected as the owner, select the **Select** button.
 
@@ -53,9 +53,9 @@ Headings are driven by article context. -->
     >
     > Don't manually add any devices to the device group created in this step by selecting the **No members selected** link under **Members**. Devices are automatically added to this device group during the Windows Autopilot device preparation deployment.
 
-### Adding the Intune Provisioning Client object
+### Adding the Intune Provisioning Client service principle
 
-If the **Intune Provisioning Client** object with AppId **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available when selecting the owner of the device group, then follow these steps to add the object:
+If the **Intune Provisioning Client** service principle with AppId **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available when selecting the owner of the device group, then follow these steps to add the service principle:
 
 1. On a device where Microsoft Intune or Microsoft Entra ID is normally administered, open a **Windows PowerShell** command prompt.
 
@@ -75,9 +75,9 @@ If the **Intune Provisioning Client** object with AppId **f1346770-5b25-470b-88b
         Connect-AzureAD
         ```
 
-   1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add objects.
+   1. If not already authenticated to Microsoft Entra ID, the **Sign in to your account** window appears. Enter the credentials of a Microsoft Entra ID administrator that has permissions to add service principles.
 
-   1. Once authenticated to Microsoft Entra ID, add the **Intune Provisioning Client** object by entering the following command:
+   1. Once authenticated to Microsoft Entra ID, add the **Intune Provisioning Client** service principle by entering the following command:
 
         ```powershell
         New-AzureADServicePrincipal -AppId f1346770-5b25-470b-88bd-d5744ab7952c

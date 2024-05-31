@@ -43,7 +43,3 @@ Headings are driven by article context. -->
         > The group(s) selected must be a Microsoft Entra group that contains user objects.
 
 1. In the **Configure** screen, if any changes were made, select **Save**.
-
-> [!TIP]
->
-> For Configuration Manager Admins, this process is similar to the Configuration Manager client automatically registering with a site so that the device can be managed.
