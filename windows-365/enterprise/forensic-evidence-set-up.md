@@ -55,7 +55,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 - Join type and network
     - Microsoft Entra join for Azure network connection
     - Microsoft Entra hybrid join for Microsoft hosted network
-- Animalware client version 4.18.2110 or later
+- Antimalware client version 4.18.2110 or later
 - Microsoft 365 Apps version 16.0.14701.0 or later
 - The device must be assigned to a [primary user](/mem/intune/remote-actions/find-primary-user)
 
