@@ -369,7 +369,7 @@ When you cloud attach, you can remotely manage your client endpoints, co-manage 
 
 For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../intune/fundamentals/tutorial-walkthrough-endpoint-manager.md).
 
-### ✅ Phase 4: Create an Microsoft Entra joined proof of concept
+### ✅ Phase 4: Create a Microsoft Entra joined proof of concept
 
 This critical phase can start at any time. It helps identify potential issues, unknown issues, and validates overall functionality and resolutions to those issues. As with all POCs, the goal is to prove and validate functionality in an actual enterprise environment instead of a lab environment.
 
