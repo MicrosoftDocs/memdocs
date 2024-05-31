@@ -61,7 +61,7 @@ In general, the following are some of the major factors when considering between
 | Install more than 10 applications during OOBE | ❌ | ✅ |
 | Run more than 10 PowerShell scripts during OOBE | ❌ | ✅ |
 | Near real-time monitoring | ✅ | ❌ |
-| Block user from accessing Desktop until<br>user based configuration have applied | ❌ | ✅ |
+| Block user from accessing Desktop until<br>user based configurations are applied | ❌ | ✅ |
 | HoloLens support | ❌ | ✅ |
 | Teams Meeting Room support | ❌ | ✅ |
 

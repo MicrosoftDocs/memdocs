@@ -72,18 +72,16 @@ sections:
         answer: |
           This issue usually occurs if **Intune Provisioning Client** with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't the owner of the device group specified in the Windows Autopilot device preparation policy. When the issue occurs, one of the following error messages might display when saving the Windows Autopilot device preparation policy:
 
-          - **`Unable to save security group for <policy_name>. You don't have permission to save these assignments.`**
-
-          - **`There was a problem with the device security group. Check that the group meets the requirements.`**
+          - **`There was a problem with the device security group for <policy_name>. Check the group meets the requirements.`**
 
           - **`Failed to update security group device preparation setting: Updating security group for device preparation setting <policy_name> failed. Something went wrong.`**
 
-          Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 group assigned**.
+          Additionally, **Device group** in the Windows Autopilot device preparation policy shows **0 groups assigned**.
 
           To fix the issue, add **Intune Provisioning Client** with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner of the device security group specified in the Windows Autopilot device preparation policy. For more information, see [Create a device group](autopilot/device-preparation)/tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
 
       - question: |
-          Unable to find **Intune Provisioning Client** with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** when trying to set the owner of the Windows Autopilot device preparation policy device group.
+          Unable to find Intune Provisioning Client with AppID of f1346770-5b25-470b-88bd-d5744ab7952c when trying to set the owner of the Windows Autopilot device preparation policy device group.
         answer: |
           - In some tenants, the object might have the name of **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the object is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct object.
 
@@ -94,13 +92,4 @@ sections:
         answer: |
           If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
-      - question: |
-          Multiple Windows Autopilot device preparation policies exist and the device is getting the wrong policy.
-        answer: |
-          If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
-
-      - question: |
-          Multiple Windows Autopilot device preparation policies exist and the device is getting the wrong policy.
-        answer: |
-          If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
