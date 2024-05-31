@@ -266,17 +266,17 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
         All other permissions can be left at the default of **No**.
 
-   3. Once all permissions are set correctly, select the **Next** button.
+   1. Once all permissions are set correctly, select the **Next** button.
 
-   4. In the **Scope tags** page, select the **Next** button.
+   1. In the **Scope tags** page, select the **Next** button.
 
         > [!NOTE]
         >
         > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-   5. In the **Review + create** page, verify that all permissions are correct, and then select the **Create** button.
+   1. In the **Review + create** page, verify that all permissions are correct, and then select the **Create** button.
 
-2. The new custom Windows Autopilot device preparation role can now be assigned to users.
+1. The new custom Windows Autopilot device preparation role can now be assigned to users who administer Windows Autopilot device preparation.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 

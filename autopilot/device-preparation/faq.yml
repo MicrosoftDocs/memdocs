@@ -128,3 +128,19 @@ sections:
           What makes Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot?
         answer: |
           The key to making Windows Autopilot device preparation deployments faster and more efficient than Windows Autopilot is [Enrollment Time Grouping](overview.md#enrollment-time-grouping). With Enrollment Time Grouping, devices are automatically added to an assigned device group specified in the Windows Autopilot device preparation policy. Since the device group is assigned instead of dynamic as used in Windows Autopilot, anything assigned to the device group is processed faster and more efficiently. The assigned group eliminates the need to perform  queries that are required with dynamic groups.
+
+      - question: |
+          How does a user know that a Windows Autopilot device preparation deployment is running on their device?
+        answer: |
+          During a Windows Autopilot device preparation deployment, a window with a round progress bar displays on the device:
+
+          :::image type="content" source="../images/device-preparation/apdp-status.png" alt-text="Status screen for Windows Autopilot device preparation deployment.":::
+
+          Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP) like Windows Autopilot. If the ESP displays during the deployment, then the device isn't running a Windows Autopilot device preparation deployment. Instead, the device might be:
+
+            - A Windows Autopilot registered device.
+            - A Windows Autopilot profile is assigned to the device.
+
+            Verify that the device isn't registered as a Windows Autopilot device and that a Windows Autopilot profile isn't assigned to the device. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies.
+
+            If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
