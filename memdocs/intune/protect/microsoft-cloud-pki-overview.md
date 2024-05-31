@@ -181,3 +181,5 @@ For the latest changes and additions, see [What's new in Microsoft Intune](../fu
 * The following CA actions are currently unavailable in the admin center, but we're actively working to provide them.
   * Delete or disable a CA from your Intune tenant.  
       Until these actions become available, we recommend making an Intune support request to delete a CA.
+* When using the **View all certificates** button for an Issuing CA, there is a limit of viewing only the first 1000 issued certificates. We're actively working address this limitation.
+  * As a workaround you can view all issued certficates in the Intune management console.  From the **Devices** node, go to **Monitor**, and then select **Certificates**. 
