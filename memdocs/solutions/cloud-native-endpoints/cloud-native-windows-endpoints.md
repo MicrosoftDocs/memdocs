@@ -45,7 +45,7 @@ This feature applies to:
 > [!TIP]
 > If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). In Intune, you can configure Windows in cloud configuration using a [Guided Scenario](../../intune/fundamentals/guided-scenarios-overview.md).
 >
-> The follow table describes the key difference between this guide and *Windows in cloud configuration*:
+> The following table describes the key difference between this guide and *Windows in cloud configuration*:
 >
 > ---
 > | Solution | Objective |
@@ -87,7 +87,7 @@ If your wireless network requires certificates, you can start with an Ethernet c
 
 ### Step 2 - Enrollment and Licensing
 
-Before you can join Microsoft Entra and enroll in Intune, there are a few things you need to check. You could create a new Microsoft Entra group, such as the name **Intune MDM Users**. Then, add specific test user accounts and target each of the following configurations at that group to limit who can enroll devices while you set up your configuration. To create an Microsoft Entra group, go to [Manage Microsoft Entra groups and group membership](/entra/fundamentals/how-to-manage-groups).
+Before you can join Microsoft Entra and enroll in Intune, there are a few things you need to check. You could create a new Microsoft Entra group, such as the name **Intune MDM Users**. Then, add specific test user accounts and target each of the following configurations at that group to limit who can enroll devices while you set up your configuration. To create a Microsoft Entra group, go to [Manage Microsoft Entra groups and group membership](/entra/fundamentals/how-to-manage-groups).
 
 - **Enrollment restrictions**  
 Enrollment restrictions allow you to control what types of devices can enroll into management with Intune. For this guide to be successful, make sure *Windows (MDM)* enrollment is allowed, which is the default configuration.
@@ -602,7 +602,7 @@ Following are some settings available in the settings catalog that might be rele
 
 - **Control which tenants the Teams desktop client can sign in to**
 
-  When this policy is configured on a device, users can only sign in with accounts homed in an Microsoft Entra tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining an Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
+  When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining a Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
   
   - Administrative Templates \ Microsoft Teams
     - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
@@ -724,7 +724,7 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 
 - [Co-management for Windows devices](../../configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
-- Configure an Intune [device compliance policy](../../intune/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on an Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
+- Configure an Intune [device compliance policy](../../intune/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
 - Add [Store Apps](../../intune/apps/windows-store-for-business.md)
 - Add [Win32 apps](../../intune/apps/apps-win32-app-management.md)
 - [Use certificates for authentication in Intune](../../intune/protect/certificates-configure.md)
