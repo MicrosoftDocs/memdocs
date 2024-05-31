@@ -41,11 +41,11 @@ Headings are driven by article context. -->
 
            > [!NOTE]
            >
-           > If the **Intune Provisioning Client** object with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client object](#adding-the-intune-provisioning-client-object).
+           > - In some tenants, the object might have the name of **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the object is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct object.
+           >
+           > - If the **Intune Provisioning Client**/**Intune Autopilot ConfidentialClient** object with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client object](#adding-the-intune-provisioning-client-object).
 
        1. Once **Intune Provisioning Client** is selected as the owner, select the **Select** button.
-
-
 
     1. Select the **Create** button to finish creating the assigned device group.
 

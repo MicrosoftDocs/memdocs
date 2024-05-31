@@ -68,12 +68,12 @@ sections:
           Only device-based configurations are delivered during OOBE. For this reason:
           - Assign security policy to devices.
           - Ensure all selected applications in the Windows Autopilot device preparation policy are set to install in the **System** context.
-          - Ensure all selected applications in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
+          - Ensure all selected applications and PowerShell scripts in the Windows Autopilot device preparation policy are targeted to the device security group specified in the Windows Autopilot device preparation policy.
 
       - question: |
           How do users know when the required setup is complete?
         answer: |
-          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. Administrators can configure the page to require a user to manually select **Continue** or set the page to auto-continue. This message lets the user know that OOBE setup is complete but there might be additional installations happening that they can monitor in the Intune Company Portal.
+          Many users aren't sure when the provisioning process is complete. To help mitigate confusion and calls to support, we added a completion page in OOBE. Administrators can configure the page to require a user to manually select **Continue** or set the page to auto-continue. This message lets the user know that OOBE setup is complete. However, additional installations that were assigned to the device group but not specified in the Windows Autopilot device preparation policy may still be occurring in the background.
 
       - question: |
           Can Windows Autopilot Device preparation be used by non-Microsoft mobile device management (MDM) providers?
@@ -91,7 +91,7 @@ sections:
       - question: |
           Do existing Windows Autopilot profiles need to be migrated to Windows Autopilot device preparation?
         answer: |
-          There's no need to migrate from existing Windows Autopilot profiles to Windows Autopilot device preparation policies. We expect both environments to exist in parallel for a while as we work to improve the experience and add more functionality.
+          There's no need to migrate from existing Windows Autopilot profiles to Windows Autopilot device preparation policies. We expect both solutions to exist in parallel for a while as we work to improve the experience and add more functionality.
 
       - question: |
           Does this mean that Windows Autopilot isn't being invested in any longer?

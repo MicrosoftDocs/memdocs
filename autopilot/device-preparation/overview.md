@@ -134,9 +134,9 @@ Enrollment time grouping consists of the following phases:
 
 For Windows Autopilot device preparation:
 
-- The device group is defined in the Windows Autopilot device preparation profile.
+- The device group is selected in the Windows Autopilot device preparation profile.
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
-- For policies, Windows Autopilot device preparation syncs any polices assigned to the device group, but the policies aren't tracked if they are applied during the Windows Autopilot device preparation deployment. The policies might not be applied during the Windows Autopilot device preparation deployment and instead might be applied after the Windows Autopilot device preparation deployment is complete.
+- For policies, Windows Autopilot device preparation syncs any policies assigned to the device group. However, Windows Autopilot device preparation doesn't track if the policies are actually applied during the deployment. The policies might not be applied during the deployment and instead might be applied after the deployment is complete.
 
 For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune/enrollment/enrollment-time-grouping).
 
