@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/29/2024
+ms.date: 05/31/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -61,12 +61,20 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-### New Windows 365 Cloud PC images available in the gallery<!--48537480-->
+#### New Windows 365 Cloud PC images available in the gallery<!--48537480-->
 
 New Cloud PC gallery images for Windows 10 and Windows 11 are now available. These improved images have harmonized optimizations with Windows 365 apps images for better policy management:
 
 - Win 10 Enterprise Cloud PC: 21H2, 22H2,
 - Win 11 Enterprise Cloud PC: 21H2, 22H2, 23H2
+
+#### Manage redirections for Cloud PCs on Android devices<!--49090100-->
+
+You can now  use the Intune admin center to manage redirections for Android users who access their Cloud PCs using Microsoft Remote Desktop.
+
+#### Manage redirections for Cloud PCs on iOS/iPadOS devices<!--49090121-->
+
+You can now use the Intune admin center to manage redirections for iOS/iPadOS users who access their Cloud PCs using Microsoft Remote Desktop and Windows App.
 
 <!-- ########################## -->
 ## Week of May 20, 2024
