@@ -48,7 +48,7 @@ For cloud-native Windows endpoints to access on-premises resources and services 
 
 - Client apps **must use Windows integrated authentication (WIA)**. For more specific information, go to [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
 
-- **Configure Microsoft Entra Connect**. Microsoft Entra Connect synchronizes user accounts from the on-premises AD to Microsoft Entra. For more specific information, go to [Microsoft Entra Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis).
+- **Configure Microsoft Entra Connect**. Microsoft Entra Connect synchronizes user accounts from the on-premises AD to Microsoft Entra. For more specific information, go to [Microsoft Entra Connect sync: Understand and customize synchronization](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
 
   In Microsoft Entra Connect, you may have to adjust your domain-based filtering to confirm that the required domains data is synchronized to Microsoft Entra.
 
@@ -66,7 +66,7 @@ The following list is a common set of on-premises resources that users can acces
 
 - A printer resource on a domain-member server: Users can print to their local or nearest printer.
 - A web server on a domain-member server that uses Windows Integrated security: Users can access any Win32 or web-based application.
-- Want to manage your on-premises AD domain from an Microsoft Entra joined endpoint: Install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520):
+- Want to manage your on-premises AD domain from a Microsoft Entra joined endpoint: Install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520):
 
   - Use the Active Directory Users and Computers (ADUC) snap-in to administer all AD objects. You must manually enter the domain that you want to connect to.
   - Use the DHCP snap-in to administer an AD-joined DHCP server. You might need to enter the DHCP server name or address.
@@ -76,9 +76,9 @@ The following list is a common set of on-premises resources that users can acces
 
 ## Authentication and access to on-premises resources
 
-The following steps describe how an Microsoft Entra joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
+The following steps describe how a Microsoft Entra joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
 
-The following steps are an overview. For more specific information, including detailed swimlane graphics that describe the full process, go to [Primary Refresh Token (PRT) and Microsoft Entra](/azure/active-directory/devices/concept-primary-refresh-token).
+The following steps are an overview. For more specific information, including detailed swimlane graphics that describe the full process, go to [Primary Refresh Token (PRT) and Microsoft Entra](/entra/identity/devices/concept-primary-refresh-token).
 
 1. When users sign in, their credentials are sent to the Cloud Authentication Provider (CloudAP) and the Web Account Manager (WAM).
 
@@ -113,7 +113,7 @@ The following steps are an overview. For more specific information, including de
 
 7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically use SSO when a user tries to access the apps. WIA includes standard user authentication to an on-premises AD domain using NTLM or Kerberos when accessing on-premises services or resources.
 
-    For more information, go to [How SSO to on-premises resources works on Microsoft Entra joined devices](/azure/active-directory/devices/azuread-join-sso).
+    For more information, go to [How SSO to on-premises resources works on Microsoft Entra joined devices](/entra/identity/devices/device-sso-to-on-premises-resources).
 
     It's important to emphasize the value of Windows Integrated Authentication. Native cloud endpoints simply "work" with any application configured for WIA.
 
@@ -130,9 +130,9 @@ The following steps are an overview. For more specific information, including de
 
 ## Helpful online resources
 
-- [Primary Refresh Token (PRT) and Microsoft Entra](/azure/active-directory/devices/concept-primary-refresh-token)
-- [How SSO to on-premises resources works on Microsoft Entra joined devices](/azure/active-directory/devices/azuread-join-sso)
+- [Primary Refresh Token (PRT) and Microsoft Entra](/entra/identity/devices/concept-primary-refresh-token)
+- [How SSO to on-premises resources works on Microsoft Entra joined devices](/entra/identity/devices/device-sso-to-on-premises-resources)
 - [How Windows Hello for Business works - Authentication - Windows security](/windows/security/identity-protection/hello-for-business/hello-how-it-works-authentication)
 - [Integrated Windows Authentication](/aspnet/web-api/overview/security/integrated-windows-authentication)
-- [Microsoft Entra Kerberos authentication (Preview)](/azure/active-directory/authentication/how-to-authentication-kerberos)
-- [Microsoft Entra Authentication documentation](/azure/active-directory/authentication/)
+- [Microsoft Entra Kerberos authentication](/azure/active-directory/authentication/how-to-authentication-kerberos)
+- [Microsoft Entra Authentication overview](/entra/identity/authentication/overview-authentication)
