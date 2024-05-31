@@ -15,8 +15,6 @@ items:
     href: device-preparation/requirements.md
   - name: Reporting and Monitoring
     href: device-preparation/reporting-monitoring.md
-  - name: Policy configuration options
-    href: device-preparation/policy-configuration-options.md
   - name: FAQ
     href: device-preparation/faq.yml
   - name: Troubleshooting FAQ

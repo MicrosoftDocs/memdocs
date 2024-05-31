@@ -264,7 +264,7 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
          - **Read**: Yes
 
-         All other permissions can be left at the default of **No**
+         All other permissions can be left at the default of **No**.
 
       1. Select the **Next** button.
 
