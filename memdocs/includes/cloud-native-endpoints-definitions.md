@@ -12,7 +12,7 @@ ms.collection: M365-identity-device-management
 
 <!-- This include file is used in the cloud native endpoint guides in /memdocs. -->
 
-When reading about cloud native endpoints, you'll see the following terms:
+When reading about cloud native endpoints, you see the following terms:
 
 - **Endpoint**: An endpoint is a device, like a mobile phone, tablet, laptop, or desktop computer. "Endpoints" and "devices" are used interchangeably.
 - **Managed endpoints**: Endpoints that receive policies from the organization using an MDM solution or Group Policy Objects. These devices are typically organization owned, but can also be BYOD or personally owned devices.
