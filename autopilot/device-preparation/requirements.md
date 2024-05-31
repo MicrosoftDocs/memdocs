@@ -205,7 +205,7 @@ There are no additional hardware requirements to use Autopilot, beyond the requi
 
 ### Required RBAC permissions
 
-The following role-based access control (RBAC) permissions are required in an Intune role for a user to administer Windows Autopilot device preparation:
+The following role-based access control (RBAC) permissions are required in a role in Intune for a user to administer Windows Autopilot device preparation:
 
 - **Device configurations**
   - Read
@@ -244,9 +244,7 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
    1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings:
 
-      1. Expand **Device configurations**.
-
-      1. Under **Device configurations**, change the following permissions to **Yes** from their default value of **No**:
+      1. Expand **Device configurations** and then change the following permissions to **Yes** from their default value of **No**:
 
          - **Read**: Yes
          - **Delete**: Yes
@@ -256,21 +254,17 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
             **View Reports** can be left at the default of **No**.
 
-      1. Expand **Enrollment programs**.
-
-      1. Under **Enrollment programs**, change the following permission to **Yes** from their default value of **No**:
+      1. Expand **Enrollment programs** and then change the following permission to **Yes** from their default value of **No**:
 
          - **Enrollment time device membership assignment**: Yes
 
-            All other permissions can be left at the default of **No**.
+         All other permissions can be left at the default of **No**.
 
-      1. Expand **Organization**.
-
-      1. Under **Organization**, change the following permission to **Yes** from their default value of **No**:
+      1. Expand **Organization** and then change the following permission to **Yes** from their default value of **No**:
 
          - **Read**: Yes
 
-            All other permissions can be left at the default of **No**
+         All other permissions can be left at the default of **No**
 
       1. Select the **Next** button.
 
