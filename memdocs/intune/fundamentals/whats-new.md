@@ -96,6 +96,21 @@ Applies to:
 
 For information on the newest version of Remote Help, see the *March 13, 2024* entry for [What’s New for Remote Help](../fundamentals/remote-help-windows.md#march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
 
+### Device management
+
+### Evaluate compliance of Windows Subsystem for Linux (public preview)<!-- 24557103 -->
+
+Now in a public preview, Microsoft Intune supports compliance checks for instances of Windows Subsystem for Linux (WSL) running on a Windows host device.
+
+With this preview you can create a custom compliance script that evaluates the required distribution and version of WSL. WSL compliance results are included in the overall compliance state of the host device.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For information about this capability, see [Evaluate compliance of Windows Subsystem for Linux (public preview)](../protect/compliance-wsl.md).
+
 ## Week of May 20, 2024 (Service release 2405)
 
 ### Device configuration
