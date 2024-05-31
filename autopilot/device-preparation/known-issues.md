@@ -46,4 +46,9 @@ In some tenants, when trying to set the owner of the device group used in the Wi
 
 There's a compatibility problem between the Windows Autopilot device preparation policy **User account type** setting and the Microsoft Entra ID **Local administrator settings**. Specifically, when the Windows Autopilot device preparation policy **User account type** setting is set to **Standard user** and the Microsoft Entra ID setting **Registering user is added as local administrator on the device during Microsoft Entra join (Preview)** under **Local administrator settings** is set to either **Selected** or **None**, provisioning gets skipped during a Windows Autopilot device preparation deployment. This settings conflict leads to a scenario where users could reach the Desktop without having the expected applications installed. The Microsoft Entra ID **Local administrator settings** can be found by signing into the [Azure portal](https://portal.azure.com/) and navigating to **Microsoft Entra ID** > **Manage | Devices** > **Manage | Devices settings**.
 
-To work around the issue until a fix is available, if the Microsoft Entra ID **Local administrator settings** is set to either **Selected** or **None**, then the Windows Autopilot device preparation policy **User account type** setting needs to be set to **Administrator**. Alternatively, the Microsoft Entra ID **Local administrator settings** can be changed to **All** and the Windows Autopilot device preparation policy **User account type** setting can be left at **Standard user**.
+To work around the issue until a fix is available:
+
+- If the Microsoft Entra ID **Local administrator settings** is set to either **Selected** or **None**, then the Windows Autopilot device preparation policy **User account type** setting needs to be set to **Administrator**.
+- The Microsoft Entra ID **Local administrator settings** can be changed to **All** and the Windows Autopilot device preparation policy **User account type** setting can be left at **Standard user**.
+
+In both cases, the end result is that the user is a standard user.

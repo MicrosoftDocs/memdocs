@@ -134,7 +134,7 @@ In the **Configuration settings** page:
 
    1. **Deployment mode** - select **Single user** in the drop-down menu.
 
-   2. **Deployment type** - select **User driven** in the drop-down menu.
+   2. **Deployment type** - select **User-driven** in the drop-down menu.
 
    3. **Join type** - select **Microsoft Entra joined** in the drop-down menu.
 

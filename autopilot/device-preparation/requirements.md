@@ -205,12 +205,85 @@ There are no additional hardware requirements to use Autopilot, beyond the requi
 
 ### Required RBAC permissions
 
-The following RBAC permissions are required for Windows Autopilot device preparation:
+The following role-based access control (RBAC) permissions are required in an Intune role for a user to administer Windows Autopilot device preparation:
 
-- For configuring and managing the Device preparation policies: Permissions under Device configuration
-- For enrollment time grouping configuration: Enrollment programs  > Enrollment time device membership assignment
-- For accessing the report: Organization > Read
+- **Device configurations**
+  - Read
+  - Delete
+  - Assign
+  - Create
+  - Update
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control)
+- **Enrollment programs**
+  - Enrollment time device membership assignment
+
+- **Organization**
+  - Read
+
+To create a custom role with these permissions for use with Windows Autopilot device preparation:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Tenant administration** in the left hand pane.
+
+1. In the **Tenant admin | Tenant status** screen, select **Roles**.
+
+1. In the **Endpoint Manager roles | All roles** screen, make sure **All roles** is selected under **Manage**.
+
+1. Select the **+ Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
+
+1. In the **Add Custom Role** screen:
+
+   1. In the **Basics** page:
+
+      1. In the text box next to **Name**, enter a name for the custom role, such as **Windows Autopilot device preparation administrator**.
+
+      1. In the text box next to **Description**, enter a description for the custom role.
+
+      1. Select the **Next** button.
+
+   1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings:
+
+      1. Expand **Device configurations**.
+
+      1. Under **Device configurations**, change the following permissions to **Yes** from their default value of **No**:
+
+         - **Read**: Yes
+         - **Delete**: Yes
+         - **Assign**: Yes
+         - **Create**: Yes
+         - **Update**: Yes
+
+            **View Reports** can be left at the default of **No**.
+
+      1. Expand **Enrollment programs**.
+
+      1. Under **Enrollment programs**, change the following permission to **Yes** from their default value of **No**:
+
+         - **Enrollment time device membership assignment**: Yes
+
+            All other permissions can be left at the default of **No**.
+
+      1. Expand **Organization**.
+
+      1. Under **Organization**, change the following permission to **Yes** from their default value of **No**:
+
+         - **Read**: Yes
+
+            All other permissions can be left at the default of **No**
+
+      1. Select the **Next** button.
+
+   1. In the **Scope tags** page, select **Next**.
+
+        > [!NOTE]
+        >
+        > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+
+   1. In the **Review + create** page, verify that all permissions are correct, and then select the **Create** button.
+
+1. The new custom Windows Autopilot device preparation role can now be assigned to users.
+
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
 ---
