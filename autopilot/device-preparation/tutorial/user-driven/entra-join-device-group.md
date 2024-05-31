@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -59,4 +59,4 @@ To create an assigned security device group for use with Windows Autopilot devic
 
 ## More information
 
-[!INCLUDE [More information device group](../../../includes/more-info-device-group.md)]
+[!INCLUDE [More information device group](../../../includes/more-info-groups.md)]

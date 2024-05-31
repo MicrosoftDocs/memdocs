@@ -52,4 +52,4 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 ## More information
 
-[!INCLUDE [More information device group](../../includes/more-info-device-group.md)]
+[!INCLUDE [More information device group](../../includes/more-info-groups.md)]

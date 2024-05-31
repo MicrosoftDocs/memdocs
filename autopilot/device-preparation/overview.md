@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.topic: article
 ms.collection:
   - M365-modern-desktop
@@ -75,14 +75,7 @@ New features in Windows Autopilot device preparation include:
 
 - **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
 
-## Key features and capabilities
-
-The key features of Windows Autopilot device preparation include:
-
-- [Enrollment time grouping](#enrollment-time-grouping).
-- Faster and more reliable setup.
-- Granular reporting.
-- Improved troubleshooting.
+## Capabilities
 
 Windows Autopilot device preparation capabilities include:
 
@@ -130,7 +123,6 @@ Enrollment time grouping consists of the following phases:
 
 - **Configure applications and policies to a security group** - User authenticates and the Windows Autopilot device preparation configuration is delivered.
 - **Select applications and PowerShell scripts to get installed during OOBE** - Selected applications and PowerShell scripts assigned to the device security group are installed. The device also joins the device security group.
-- **Intune pre-calculates applications and policies** - User gets to the desktop. Remaining configuration is applied.
 
 For Windows Autopilot device preparation:
 

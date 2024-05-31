@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.localizationpriority: medium
 ---
 
@@ -26,3 +26,4 @@ For more information on creating groups in Intune, see the following articles:
 - [Create device groups](/mem/autopilot/enrollment-autopilot).
 - [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).
 - [Manage Microsoft Entra groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups).
+- [Dynamic membership rules for groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership.)

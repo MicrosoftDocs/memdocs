@@ -53,4 +53,4 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## More information
 
-[!INCLUDE [More information device group](../../includes/more-info-device-group.md)]
+[!INCLUDE [More information device group](../../includes/more-info-groups.md)]
