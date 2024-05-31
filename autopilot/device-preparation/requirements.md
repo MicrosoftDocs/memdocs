@@ -240,11 +240,11 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
       1. In the text box next to **Description**, enter a description for the custom role.
 
-      1. Select the **Next** button.
+   1. Select the **Next** button.
 
-   1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings:
+   1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find and expand each of the following settings. Once the setting is expanded, change the permissions to the following:
 
-      1. Expand **Device configurations** and then change the following permissions to **Yes** from their default value of **No**:
+      - **Device configurations**
 
          - **Read**: Yes
          - **Delete**: Yes
@@ -252,23 +252,23 @@ To create a custom role with these permissions for use with Windows Autopilot de
          - **Create**: Yes
          - **Update**: Yes
 
-            **View Reports** can be left at the default of **No**.
+        **View Reports** can be left at the default of **No**.
 
-      1. Expand **Enrollment programs** and then change the following permission to **Yes** from their default value of **No**:
+      - **Enrollment programs**
 
          - **Enrollment time device membership assignment**: Yes
 
-         All other permissions can be left at the default of **No**.
+        All other permissions can be left at the default of **No**.
 
-      1. Expand **Organization** and then change the following permission to **Yes** from their default value of **No**:
+      - **Organization**
 
          - **Read**: Yes
 
-         All other permissions can be left at the default of **No**.
+        All other permissions can be left at the default of **No**.
 
-      1. Select the **Next** button.
+   1. Once all permissions are set correctly, select the **Next** button.
 
-   1. In the **Scope tags** page, select **Next**.
+   1. In the **Scope tags** page, select the **Next** button.
 
         > [!NOTE]
         >
