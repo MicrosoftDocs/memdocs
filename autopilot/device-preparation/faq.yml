@@ -132,7 +132,7 @@ sections:
       - question: |
           How does a user know that a Windows Autopilot device preparation deployment is running on their device?
         answer: |
-          During a Windows Autopilot device preparation deployment, a window with a round progress bar displays on the device:
+          During a Windows Autopilot device preparation deployment, a **Setting up for work or school** window with a round progress bar displays on the device:
 
           :::image type="content" source="../images/device-preparation/apdp-status.png" alt-text="Status screen for Windows Autopilot device preparation deployment.":::
 
