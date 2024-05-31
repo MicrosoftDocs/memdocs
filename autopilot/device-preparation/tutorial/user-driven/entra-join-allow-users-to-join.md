@@ -50,6 +50,6 @@ In order for Windows Autopilot device preparation to work, users need to be allo
 > [!div class="nextstepaction"]
 > [Step 3: Create a device group](entra-join-device-group.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information automatic enrollment](../../../includes/more-info-allow-users-to-join.md)]

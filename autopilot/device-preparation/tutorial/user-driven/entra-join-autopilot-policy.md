@@ -180,5 +180,3 @@ If multiple Windows Autopilot device preparation polices are deployed to a user,
 > [!NOTE]
 >
 > Adding a [corporate identifier](../../overview.md#corporate-identifiers-for-windows) to the device is an optional step. If corporate identifiers aren't being used, then the next step is to deploy the device.
-
-## More information

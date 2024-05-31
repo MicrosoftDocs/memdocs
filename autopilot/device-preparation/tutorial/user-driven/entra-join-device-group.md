@@ -57,6 +57,6 @@ To create an assigned security device group for use with Windows Autopilot devic
 > [!div class="nextstepaction"]
 > [Step 4: Create a user group](entra-join-user-group.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information device group](../../../includes/more-info-groups.md)]

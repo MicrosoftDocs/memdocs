@@ -136,7 +136,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 > [!div class="nextstepaction"]
 > [Step 6: Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
 
-## More information
+## Related content
 
 - [Add apps to Microsoft Intune](/mem/intune/apps/apps-add).
 - [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).

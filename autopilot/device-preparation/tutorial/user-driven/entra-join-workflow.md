@@ -93,5 +93,3 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!div class="nextstepaction"]
 > [Step 1: Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
-
-## Related content

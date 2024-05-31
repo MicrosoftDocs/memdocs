@@ -68,5 +68,3 @@ In general, the following are some of the major factors when considering between
 ## Using Windows Autopilot device preparation and Windows Autopilot concurrently
 
 Windows Autopilot device preparation and Windows autopilot can be used concurrently and side by side within an organization. However, any one device in an environment can only run one of the two solutions. Windows Autopilot profiles take precedence over Windows Autopilot device preparation policies. If a Windows Autopilot registered device needs to go through a Windows Autopilot device preparation deployment, it must first be removed as a Windows Autopilot device. For more information, see [Deregister a device](../registration-overview.md#deregister-a-device).
-
-## Related content

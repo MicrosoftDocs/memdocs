@@ -57,6 +57,6 @@ To create a user security group for use with Windows Autopilot device preparatio
 > [!div class="nextstepaction"]
 > [Step 5: Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information device group](../../../includes/more-info-groups.md)]
