@@ -448,7 +448,7 @@ No. This release focuses on setting apps installed from Intune, using the Intune
 
 If setting Configuration Manager as the Managed Installer is desired, you can allow that behavior from within Configuration Manager. If you already have Configuration Manager set as the Managed Installer, the expected behavior is that the new Intune Management Extension AppLocker policy merges with the existing Configuration Manager policy.
 
-### What considerations should I have for Entra Hybrid Join (HAADJ) devices within my organization and want to use Managed Installer?
+### What considerations should I have for Entra Hybrid Join (HAADJ) devices within my organization that want to use Managed Installer?
 
 Entra hybrid join devices require connectivity to an on-prem Domain Controller (DC) to apply Group Policies including the Managed Installer policy (through AppLocker). Without DC connectivity, especially during Autopilot provisioning, Managed Installer policy will not successfully apply. Consider:
 
