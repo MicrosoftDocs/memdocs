@@ -66,7 +66,7 @@ The following list is a common set of on-premises resources that users can acces
 
 - A printer resource on a domain-member server: Users can print to their local or nearest printer.
 - A web server on a domain-member server that uses Windows Integrated security: Users can access any Win32 or web-based application.
-- Want to manage your on-premises AD domain from an Microsoft Entra joined endpoint: Install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520):
+- Want to manage your on-premises AD domain from a Microsoft Entra joined endpoint: Install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520):
 
   - Use the Active Directory Users and Computers (ADUC) snap-in to administer all AD objects. You must manually enter the domain that you want to connect to.
   - Use the DHCP snap-in to administer an AD-joined DHCP server. You might need to enter the DHCP server name or address.
@@ -76,7 +76,7 @@ The following list is a common set of on-premises resources that users can acces
 
 ## Authentication and access to on-premises resources
 
-The following steps describe how an Microsoft Entra joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
+The following steps describe how a Microsoft Entra joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
 
 The following steps are an overview. For more specific information, including detailed swimlane graphics that describe the full process, go to [Primary Refresh Token (PRT) and Microsoft Entra](/entra/identity/devices/concept-primary-refresh-token).
 
