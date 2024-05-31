@@ -102,7 +102,7 @@ If you choose to provision Microsoft Entra hybrid joined Cloud PCs, then the fol
 
 ### [Windows 365 Enterprise and Frontline](#tab/ent)
 
-Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
+Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. When selecting a region Microsoft strongly recommends using the **Automatic** option. This automation decreases the chance of provisioning failure, by increasing the possible regions that the CloudPCs will be installed into. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
 
 - Asia
   - East Asia
