@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/31/2024
+ms.date: 06/03/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,6 +54,16 @@ For more information about public preview items, see [Public preview in Windows 
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of June 3, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Government Community Cloud
+
+#### New Windows 365 Frontline offers for GCC<!--50390472-->
+
+New Windows 365 Frontline offers are now available for Government Community Cloud (GCC) customers using the Azure Commercial cloud.
 
 <!-- ########################## -->
 ## Week of May 27, 2024

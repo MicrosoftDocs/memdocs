@@ -1489,6 +1489,9 @@ items:
           displayName: intune; enrollment; terms and conditions; policy 
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
+        - name: Set up enrollment time grouping  
+          href: ./enrollment/enrollment-time-grouping.md
+          displayName: enrollment time grouping; security groups; Entra 
         - name: Configure device enrollment restrictions
           items:  
           - name: Overview  
