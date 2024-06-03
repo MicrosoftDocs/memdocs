@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/08/2024
+ms.date: 05/31/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,6 +56,37 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
+## Week of May 27, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New Windows 365 Cloud PC images available in the gallery<!--48537480-->
+
+New Cloud PC gallery images for Windows 10 and Windows 11 are now available. These improved images have harmonized optimizations with Windows 365 apps images for better policy management:
+
+- Win 10 Enterprise Cloud PC: 21H2, 22H2,
+- Win 11 Enterprise Cloud PC: 21H2, 22H2, 23H2
+
+#### Manage redirections for Cloud PCs on Android devices<!--49090100-->
+
+You can now  use the Intune admin center to manage redirections for Android users who access their Cloud PCs using Microsoft Remote Desktop.
+
+#### Manage redirections for Cloud PCs on iOS/iPadOS devices<!--49090121-->
+
+You can now use the Intune admin center to manage redirections for iOS/iPadOS users who access their Cloud PCs using Microsoft Remote Desktop and Windows App.
+
+<!-- ########################## -->
+## Week of May 20, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 Cloud PC gallery images now pre-install new Microsoft Teams<!--49222964-->
+
+Gallery images for Windows 365 Cloud PCs now come with the new Microsoft Teams pre-installed (not Teams (Classic)). This applies to Windows Enterprise 11 23H2 and 22H2. For more information, see [Gallery images](device-images.md#gallery-images).
+
+<!-- ########################## -->
 ## Week of May 6, 2024 (Service release 2404)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -75,7 +106,7 @@ The **Cloud PCs that aren't available report** has moved out of preview and into
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
 
-#### Intune scope tags<!--48907552-->
+#### Intune scope tags (preview)<!--48907552-->
 
 Windows 365 now supports [Intune scope tags](/mem/intune/fundamentals/scope-tags). For more information, see [Scope tags](role-based-access.md#scope-tags).
 

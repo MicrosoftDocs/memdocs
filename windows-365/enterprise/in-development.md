@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/10/2024
+ms.date: 05/24/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -59,20 +59,12 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-### Manage redirections for Cloud PCs on Android devices<!--49090100-->
-
-In a future update, you'll be able use the Intune admin center to manage redirections for Android users who access their Cloud PCs using Microsoft Remote Desktop.
-
 <!-- ***********************************************-->
 ## Device provisioning
 
 ### New Cloud PC images aligned with Microsoft 365 apps images<!--48537480-->
 
 In a future update, new Cloud PC optimized images aligned with the Microsoft 365 apps images will be available in the gallery.
-
-### Windows 365 Cloud PC gallery images to pre-install new Microsoft Teams<!--49222964-->
-
-In a future update, gallery images for Windows 365 Cloud PCs won't pre-install Microsoft Teams (classic). Instead, these images will install the new Microsoft Teams. All new devices created from these gallery images will have the new Teams pre-installed. For more information, see [Gallery images](device-images.md#gallery-images).
 
 <!--***********************************************-->
 <!-- ## End user experience -->
