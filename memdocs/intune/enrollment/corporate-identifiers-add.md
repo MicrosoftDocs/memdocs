@@ -90,7 +90,7 @@ The following table shows the identifiers supported for each platform. When a de
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->  
 
 ## Step 1: Create CSV file  
-Create a comma-separated value (CSV) list of corporate identifiers and save it as a CSV file. You can add up to 5,000 rows or 5 MB of data per file, whichever comes first. Don't add headers. 
+Create a list of corporate identifiers and save it as a CSV file. You can add up to 5,000 rows or 5 MB of data per file, whichever comes first. Don't add headers. 
 
 >[!IMPORTANT]
 > Remember, only add one type of corporate identifier per CSV file. 
@@ -143,7 +143,7 @@ Remove all periods, if applicable, from the serial number before you add it to t
 
 Android and iOS/iPadOS devices can have multiple IMEI numbers. Intune reads and records one IMEI per enrolled device. If you import an IMEI that's different from the one already in Intune, Intune will mark the device as personal. If you import multiple IMEI numbers for the same device, the identifiers that haven't been inventoried appear with an *unknown* enrollment status. 
 
-Android serial numbers are not guaranteed to be unique or present. Check with your device supplier to find out if the serial number is a reliable device ID. Serial numbers reported by the device to Intune might not match the ID that's shown on the device in Android settings or Android device information. Verify the type of serial number reported by the device manufacturer.  
+Android serial numbers are not guaranteed to be unique or present. Check with your device supplier to find out if the serial number is a reliable device ID. Serial numbers reported by the device to Intune might not match the ID shown on the device in Android settings or Android device information. Verify the type of serial number reported by the device manufacturer.  
 
 ## Step 2: Add corporate identifiers in admin center  
 
@@ -153,7 +153,7 @@ You can upload a CSV file of corporate identifiers, or manually enter the corpor
 
 *Applies to Android, iOS/iPadOS, and Windows*    
 
-Upload the CSV file you created in [Step 1:Create CSV file](#step-1-create-csv-file) to add corporate identifiers.   
+Upload the CSV file you created in [Step 1: Create CSV file](#step-1-create-csv-file) to add corporate identifiers.   
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Devices** > **Enrollment**.     
