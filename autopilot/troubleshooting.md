@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/30/2023
+ms.date: 06/04/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -21,11 +21,11 @@ appliesto:
 
 # Troubleshooting overview
 
-Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. When troubleshooting an issue, it's helpful to understand:
+Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues might arise. When troubleshooting an issue, it's helpful to understand:
 
-- The Windows Autopilot [process flow](#windows-autopilot-flow)
-- How Windows Autopilot [device profiles](#profile-download) are downloaded
-- [Key activities](#key-troubleshooting-activities) to perform during troubleshooting
+- The Windows Autopilot [process flow](#windows-autopilot-flow).
+- How Windows Autopilot [device profiles](#profile-download) are downloaded.
+- [Key activities](#key-troubleshooting-activities) to perform during troubleshooting.
 
 ## Windows Autopilot diagnostics page
 
@@ -41,7 +41,7 @@ Once the diagnostic page is enabled, you can select the **View Diagnostics butto
 
 > [!NOTE]
 >
-> By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
+> By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 > [!NOTE]
 >
@@ -59,7 +59,7 @@ Whether you're performing user-driven or self-deploying device deployments, the 
 
 1. Microsoft Entra join occurs. For user-driven deployments, the device is joined to Microsoft Entra ID using the specified user credentials. For self-deploying scenarios, the device is joined without specifying any user credentials.
 
-1. Automatic MDM enrollment occurs. As part of the Microsoft Entra join process, the device enrolls in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
+1. Automatic mobile device management (MDM) enrollment occurs. As part of the Microsoft Entra join process, the device enrolls in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
 
 1. Settings are applied. If the [enrollment status page](enrollment-status.md) is configured, most settings are applied while the enrollment status page is displayed. If not configured or available, settings will be applied after the user is signed in.
 
@@ -87,8 +87,8 @@ When an Internet-connected Windows device boots up, it attempts to connect to th
 
 Key activities to perform when troubleshooting are:
 
-- Review configuration: Has Microsoft Entra ID and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
-- Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
+- Review configuration: Has Microsoft Entra ID and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](requirements.md?tabs=configuration)?
+- Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](requirements.md?tabs=networking)?
 - Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](troubleshoot-aad-join.md)?
 - MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
@@ -98,13 +98,13 @@ Key activities to perform when troubleshooting are:
 
 See the following articles for help with troubleshooting specific issues:
 
-- [Troubleshoot device enrollment](troubleshoot-device-enrollment.md)
-- [Troubleshoot OOBE issues](troubleshoot-oobe.md)
-- [Troubleshoot Microsoft Entra join issues](troubleshoot-aad-join.md)
-- [Policy conflicts](policy-conflicts.md)
-- [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
-- [Known issues](known-issues.md)
+- [Troubleshoot device enrollment](troubleshoot-device-enrollment.md).
+- [Troubleshoot OOBE issues](troubleshoot-oobe.md).
+- [Troubleshoot Microsoft Entra join issues](troubleshoot-aad-join.md).
+- [Policy conflicts](policy-conflicts.md).
+- [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+- [Known issues](known-issues.md).
 
-## Related articles
+## Related content
 
-[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
+- [Collect MDM logs](/windows/client-management/mdm-collect-logs).

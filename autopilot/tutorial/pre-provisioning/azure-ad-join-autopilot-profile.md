@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -38,7 +38,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## Create and assign a pre-provisioned Microsoft Entra join Autopilot profile
 
-The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
 When an admin creates an Autopilot profile for the pre-provisioned scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 

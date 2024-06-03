@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile
 
-The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
 The difference between a Microsoft Entra join and a Microsoft Entra hybrid join is that the Microsoft Entra hybrid join scenario joins both an on-premises domain and Microsoft Entra ID during Autopilot. The pre-provisioned Microsoft Entra join scenario only joins Microsoft Entra ID during Autopilot.
 

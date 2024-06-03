@@ -9,7 +9,7 @@ ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 02/01/2024
-ms.collection: 
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
@@ -146,7 +146,7 @@ Windows Autopilot requires that devices be Microsoft Entra joined. If you have a
 
 - If you use Intune, create and assign a Domain Join profile. A Domain Join configuration profile includes on-premises Active Directory domain information.
 
-- The device needs to access the internet. For more information, see the [networking requirements](networking-requirements.md).
+- The device needs to access the internet. For more information, see the [networking requirements](requirements.md?tabs=networking).
 
 - Install the Intune Connector for Active Directory.
 

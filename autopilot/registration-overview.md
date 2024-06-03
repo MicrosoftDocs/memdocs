@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/19/2024
+ms.date: 06/04/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -48,7 +48,7 @@ When you register an Autopilot device, it automatically creates a Microsoft Entr
 > - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
 > - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune)
 >
-> These options are intended for users to join personally-owned devices to their organization's network.
+> These options are intended for users to join personally owned devices to their organization's network.
 
 Once a device is registered in Autopilot if a profile isn't assigned, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
 
@@ -92,12 +92,12 @@ Devices that are registered with the Windows Autopilot service are displayed in 
 > Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
 >
 > - The Autopilot registration process is successful.
-> - A [licensed](licensing-requirements.md) user has signed in on the device.
+> - A [licensed](requirements.md?tabs=licensing) user has signed in on the device.
 
 ## Deregister a device
 
 [!INCLUDE [Deregister an Autopilot device](includes/deregister-autopilot-device.md)]
 
-## Related articles
+## Related content
 
-[Register devices manually](add-devices.md)
+- [Register devices manually](add-devices.md).

@@ -11,7 +11,7 @@ ms.topic: how-to
 ms.service: windows-client
 ms.subservice: itpro-deploy
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
   - M365-identity-device-management
   - highpri
   - tier1
@@ -38,14 +38,14 @@ You can use Intune and Windows Autopilot to set up Microsoft Entra hybrid joined
 The device to be enrolled must follow these requirements:
 
 - Use Windows 11 or Windows 10 version 1809 or later.
-- Have access to the internet [following Windows Autopilot network requirements](./networking-requirements.md).
+- Have access to the internet [following Windows Autopilot network requirements](./requirements.md?tabs=networking).
 - Have access to an Active Directory domain controller.
 - Successfully ping the domain controller of the domain you're trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Microsoft Entra ID supports in OOBE.
 
-Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (AD FS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.  
+Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (AD FS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.
 
 ### Intune connector server prerequisites
 

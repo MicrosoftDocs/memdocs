@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2023
+ms.date: 06/04/2024
 ms.topic: article
 ms.collection:
   - M365-modern-desktop
@@ -57,11 +57,11 @@ Once deployed, you can manage Windows devices with:
 - Microsoft Intune.
 - Windows Update for Business.
 - Microsoft Configuration Manager.
-- Other similar tools from 3rd parties.
+- Other similar tools from non-Microsoft parties.
 
 ## Requirements
 
-A [supported version](/windows/release-information/) of Windows 11 or Windows 10 semi-annual channel is required to use Windows Autopilot. For more information, see [Windows Autopilot software](software-requirements.md), [networking](networking-requirements.md), [configuration](configuration-requirements.md), and [licensing](licensing-requirements.md) requirements.
+A [supported version](/windows/release-information/) of Windows semi-annual channel is required to use Windows Autopilot. For more information, see [Windows Autopilot software](requirements.md?tabs=software), [networking](requirements.md?tabs=networking), [configuration](requirements.md?tabs=configuration), and [licensing](requirements.md?tabs=licensing) requirements.
 
 ## Summary
 
@@ -73,9 +73,9 @@ Traditionally, IT pros spend significant time building and customizing images th
 Windows Autopilot enables you to:
 
 - Automatically join devices to Microsoft Entra ID or Active Directory (via Microsoft Entra hybrid join). For more information about the differences between these two join options, see [Introduction to device management in Microsoft Entra ID](/azure/active-directory/device-management-introduction).
-- Auto-enroll devices into MDM services, such as Microsoft Intune ([*Requires a Microsoft Entra ID P1 or P2 subscription for configuration*](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)).
+- Auto-enroll devices into mobile device management (MDM) services, such as Microsoft Intune ([*Requires a Microsoft Entra ID P1 or P2 subscription for configuration*](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)).
 - Create and auto-assign devices to configuration groups based on a device's profile.
-- Customize OOBE content specific to the organization.
+- Customize the out-of-box experience (OOBE) content specific to the organization.
 
 Existing device can also be quickly prepared for a new user with [Windows Autopilot Reset](windows-autopilot-reset.md). The Reset capability is also useful in break/fix scenarios to quickly bring a device back to a business-ready state.
 
@@ -83,8 +83,7 @@ Existing device can also be quickly prepared for a new user with [Windows Autopi
 
 For a tutorial with detailed instructions on configuring Windows Autopilot, see [Windows Autopilot scenarios](tutorial/autopilot-scenarios.md).
 
-## Related articles
+## Related content
 
-[Enroll Windows devices in Intune by using Windows Autopilot](/intune/enrollment-autopilot)
-
-[Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md)
+- [Enroll Windows devices in Intune by using Windows Autopilot](/intune/enrollment-autopilot).
+- [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).

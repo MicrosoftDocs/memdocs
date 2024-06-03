@@ -9,18 +9,18 @@ ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 11/30/2023
-ms.collection: 
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
 ms.topic: conceptual
-ms.custom: 
+ms.custom:
   - CI 116757
   - CSSTroubleshooting
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
-  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a> 
+  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
 
@@ -70,4 +70,4 @@ Windows 10 LTSC/LTSB editions aren't supported.
 
 ## Next steps
 
-[Windows Autopilot networking requirements](networking-requirements.md)
+[Windows Autopilot networking requirements](requirements.md?tabs=networking)

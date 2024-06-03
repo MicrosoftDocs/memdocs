@@ -33,7 +33,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Create and assign self-deploying Autopilot profile
 
-The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
 > [!TIP]
 >
