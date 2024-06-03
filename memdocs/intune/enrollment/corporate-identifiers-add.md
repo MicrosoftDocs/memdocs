@@ -84,7 +84,7 @@ The following table shows the identifiers supported for each platform. When a de
 | Windows| Not supported | Not supported | ✔️| 
 | iOS/iPadOS | ✔️ <br></br> Supported in some cases. For more information, see [Add Android, iOS corporate identifiers](#add-android-ios-corporate-identifiers). | ✔️ <br></br> We recommend using a serial number for iOS/iPadOS identification when possible.  |Not supported|
 | macOS | Not supported | ✔️ |Not supported |
-| Android device administrator | ✔️ <br></br> Supported with Android 9 and earlier. Android 10 | ✔️ <br></br> Supported with Android 9 and earlier. |Not supported |
+| Android device administrator | ✔️ <br></br> Supported with Android 9 and earlier. | ✔️ <br></br> Supported with Android 9 and earlier. |Not supported |
 | Android Enterprise, personally owned work profile  | ✔️ <br></br> Supported with Android 11 and earlier. | ✔️ <br></br> Supported with Android 11 and earlier. |Not supported |  
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->  
