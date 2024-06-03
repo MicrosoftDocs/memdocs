@@ -2433,22 +2433,22 @@
     },
     {
       "source_path": "autopilot/software-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=software",
+      "redirect_url": "/autopilot/requirements?tabs=software",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/networking-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=networking",
+      "redirect_url": "/autopilot/requirements?tabs=networking",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/licensing-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=licensing",
+      "redirect_url": "/autopilot/requirements?tabs=licensing",
       "redirect_document_id": false
     },
     {
       "source_path": "autopilot/configuration-requirements.md",
-      "redirect_url": "/autopilot/requirements&tabs=configuration",
+      "redirect_url": "/autopilot/requirements?tabs=configuration",
       "redirect_document_id": false
     }
   ]
