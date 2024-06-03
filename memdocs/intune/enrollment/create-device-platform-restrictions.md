@@ -127,8 +127,8 @@ The following filter properties are always available to use with enrollment poli
 
 **Windows**  
 
-* Manufacturer - For Windowns 11 version 22H2 and later 
-* Model - For Windowns 11 version 22H2 and later 
+* Manufacturer - For Windows 11, version 22H2 and later 
+* Model - For Windows 11, version 22H2 and later 
 * OS version 
 * Operating System SKU 
 * Ownership

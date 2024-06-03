@@ -7,7 +7,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2024
+ms.date: 01/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -38,12 +38,11 @@ ms.collection:
 
 Ensure that corporate devices are marked as *corporate-owned* as soon as they enroll by adding their corporate identifiers ahead of time in the Microsoft Intune admin center. Corporate devices unlock more device management capabilities than personal devices. For example, Microsoft Intune can collect more information about corporate-owned devices for you, such as full phone number and app inventory. 
 
-You can upload a file of corporate identifiers in the admin center or enter each identifier separately. It isn't necessary to add corporate identifiers for all deployments. During enrollment, Intune automatically assigns corporate-owned status to devices that join to Microsoft Entra via:  
+You can upload a file of corporate identifiers in the admin center or enter each identifier separately.  [Windows Autopilot device preparation](/autopilot/device-preparation/overview)    It isn't necessary to add corporate identifiers for all deployments. During enrollment, Intune automatically assigns corporate-owned status to devices that join to Microsoft Entra via:  
 
 - [Device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)   
 - An Apple device enrollment program such as [Apple School Manager](apple-school-manager-set-up-ios.md), Apple Business Manager, or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)  
-- [Windows Autopilot](/autopilot/windows-autopilot)   
-- [Windows Autopilot device preparation](/autopilot/device-preparation/overview)      
+- [Windows Autopilot](/autopilot/windows-autopilot)    
 - Co-management with Microsoft Intune and group policy (GPO) 
 - Azure Virtual Desktop  
 - Automatic MDM enrollment via provisioning package  
