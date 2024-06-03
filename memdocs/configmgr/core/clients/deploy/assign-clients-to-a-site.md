@@ -47,7 +47,7 @@ You can manually assign client computers to a site by using the following two me
 
 ## Automatic site assignment
 
-Automatic site assignment typically happens during client deployment. To manually start automatic site assignment, select **Find Site** on the **Advanced** tab of the **Configuration Manager** control panel. The Configuration Manager client compares its network location with the boundaries for the hierarchy. When the network location of the client falls within a boundary group you enabled for site assignment, or the hierarchy is configured for a fallback site, the client is automatically assigned to that site. This behavior lets clients easily assign to a site and you don't have to specify a site code.
+Automatic site assignment typically happens during client deployment. To manually start automatic site assignment, select **Find Site** on the **Site** tab of the **Configuration Manager** control panel. The Configuration Manager client compares its network location with the boundaries for the hierarchy. When the network location of the client falls within a boundary group you enabled for site assignment, or the hierarchy is configured for a fallback site, the client is automatically assigned to that site. This behavior lets clients easily assign to a site and you don't have to specify a site code.
 
 > [!NOTE]
 > If a client computer has multiple network adapters and multiple IP addresses, the IP address used to evaluate client site assignment is assigned randomly.
