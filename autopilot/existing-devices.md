@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/10/2024
+ms.date: 06/03/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -194,13 +194,13 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Create Package and Program Wizard, enter the following details for the package:
 
-    - _Name_: **Autopilot for existing devices config**
+    - *Name*: **Autopilot for existing devices config**
     - Select **This package contains source files**
-    - _Source folder_: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
+    - *Source folder*: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
 
     For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
-1. For the program, select the _Program Type_: **Don't create a program**
+1. For the program, select the *Program Type*: **Don't create a program**
 
 1. Complete the wizard.
 
@@ -216,9 +216,9 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Create Device Collection Wizard, enter the following **General** details:
 
-    - _Name_: **Autopilot for existing devices collection**
-    - _Comment_: Add an optional comment to further describe the collection
-    - _Limiting collection_: **All Systems** or if desired, an alternate collection.
+    - *Name*: **Autopilot for existing devices collection**
+    - *Comment*: Add an optional comment to further describe the collection
+    - *Limiting collection*: **All Systems** or if desired, an alternate collection.
 
 1. On the **Membership Rules** page, select **Add Rule**. Specify either a direct or query-based collection rule to add the target Windows devices to the new collection.
 
@@ -267,8 +267,6 @@ For more information, see [How to create collections in Configuration Manager](/
     > [!IMPORTANT]
     >
     > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
-    >
-    > Sysprep runs with the `/Generalize` parameter, which on currently supported version of Windows deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
 
 1. On the **Install Configuration manager** page, add any necessary installation properties for the environment.
 
@@ -288,13 +286,13 @@ If the task sequence is viewed, it's similar to the default task sequence to app
 
 - **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
 
-- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).
+- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
 
 For more information on editing the task sequence, see [Use the task sequence editor](/mem/configmgr/osd/understand/task-sequence-editor) and [Task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps).
 
 > [!NOTE]
 >
-> The **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
+> The **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Modify the task sequence to account for Sysprep command line configuration](/tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work).
 
 To make sure the user's data is backed up before the Windows upgrade, use OneDrive for work or school [known folder move](/onedrive/redirect-known-folders).
 
@@ -320,17 +318,17 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
     - **General**
 
-      - _Task Sequence_: **Autopilot for existing devices**
+      - *Task Sequence*: **Autopilot for existing devices**
 
-      - _Collection_: **Autopilot for existing devices collection**
+      - *Collection*: **Autopilot for existing devices collection**
 
     - **Deployment Settings**
 
-      - _Action_: **Install**.
+      - *Action*: **Install**.
 
-      - _Purpose_: **Available**.
+      - *Purpose*: **Available**.
 
-      - _Make available to the following_: **Only Configuration Manager Clients**.
+      - *Make available to the following*: **Only Configuration Manager Clients**.
 
         > [!NOTE]
         >
@@ -346,7 +344,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
     - **Distribution Points**
 
-      - _Deployment options_: **Download content locally when needed by the running task sequence**
+      - *Deployment options*: **Download content locally when needed by the running task sequence**
 
 1. Complete the wizard.
 
@@ -396,6 +394,6 @@ For a detailed tutorial on configuring Windows Autopilot for existing devices, s
 
 [Step by step tutorial for Windows Autopilot deployment for existing devices in Intune and Configuration Manager](tutorial/existing-devices/existing-devices-workflow.md)
 
-## Related articles
+## Related content
 
 - [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/new-windows-autopilot-capabilities-and-expanded-partner-support/ba-p/260430).
