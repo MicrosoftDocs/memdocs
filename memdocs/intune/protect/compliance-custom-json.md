@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/15/2024
-ms.topic: concept
+ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
