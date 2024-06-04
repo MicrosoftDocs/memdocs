@@ -20,6 +20,16 @@ appliesto:
 
 # Windows Autopilot: What's new
 
+## Windows Autopilot support for Microsoft Teams Rooms
+
+Windows Autopilot streamlines provisioning for laptops. Now Windows Autopilot adds the same support for **Microsoft Teams Rooms**! With this combination, Teams Rooms devices can now be deployed and provisioned without needing physical access to the device. Policies and apps are configured and the Teams Rooms console automatically signed in without needing to enter credentials.
+
+For more information on supported scenarios and setup, see [Autopilot and Autologin for Teams Rooms on Windows](/microsoftteams/rooms/autopilot-autologin).
+
+## Devices are no longer re-enrolled after a motherboard change
+
+When a device previously changed its motherboard and the OS remained intact, Autopilot attempted to re-enroll the device to Intune. This re-enrollment no longer occurs if a motherboard swap occurs on a device due to a change in Windows Autopilot. If a motherboard is changed on a device, the new motherboard needs to be re-registered so that Windows Autopilot continues to work upon a reset.
+
 ## Windows Autopilot self-deploying mode is now generally available <!-- INADO-26780755  -->
 
 Windows Autopilot self-deploying mode is now generally available and out of preview. Windows Autopilot self-deploying mode enables you to deploy Windows devices with little to no user interaction. Once the device connects to network, the device provisioning process starts automatically: the device joins Microsoft Entra ID, enrolls in Intune, and syncs all device-based configurations targeted to the device. Self-deploying mode ensures that the user can't access desktop until all device-based configuration is applied. The Enrollment Status Page (ESP) is displayed during OOBE so users can track the status of the deployment. For more information, see:
