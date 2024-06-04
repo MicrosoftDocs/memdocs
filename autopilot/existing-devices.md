@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 06/05/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -292,7 +292,7 @@ For more information on editing the task sequence, see [Use the task sequence ed
 
 > [!NOTE]
 >
-> The **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Modify the task sequence to account for Sysprep command line configuration](/tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work).
+> The **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Modify the task sequence to account for Sysprep command line configuration](tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work).
 
 To make sure the user's data is backed up before the Windows upgrade, use OneDrive for work or school [known folder move](/onedrive/redirect-known-folders).
 

@@ -197,7 +197,7 @@ The services responsible for determining the list of apps that should be blockin
 
 ### That username looks like it belongs to another organization. Try signing in again or start over with a different account
 
-Confirm that all of the information is correct at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`. For more information, see [Troubleshoot OOBE issues](troubleshoot-oobe.md#windows-10-version-1709-and-above).
+Confirm that all of the information is correct at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`. For more information, see [Troubleshoot OOBE issues](troubleshoot-oobe.md#registry).
 
 <a name='windows-autopilot-user-driven-hybrid-azure-ad-deployments-dont-grant-users-administrator-rights-even-when-specified-in-the-windows-autopilot-profile'></a>
 
@@ -230,7 +230,7 @@ To fix this issue:
     > C:\Windows\System32\sysprep\sysprep.exe /oobe /reboot
     > ```
 
-For more information, see [Modify the task sequence to account for Sysprep command line configuration](/tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
+For more information, see [Modify the task sequence to account for Sysprep command line configuration](tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
 
 ### PushButtonReset (PBR) is taking machines to recovery mode with secure boot enabled: BSOD 0xC000000F
 
@@ -240,11 +240,11 @@ The **Enable with UEFI Lock** setting enabled in the Intune Security Baseline ca
 
 For more information on this scenario, see [Windows Autopilot self-deploying mode](self-deploying.md).
 
-| Error code | Description |
+| **Error code** | **Description** |
 | ---------- | ----------- |
-| 0x800705B4 | This general error indicates a timeout. A common cause of this error in self-deploying mode is that the device isn't TPM 2.0 capable. For example, it's a virtual machine. Devices that aren't TPM 2.0 capable can't be used with self-deploying mode. |
-| 0x801c03ea | This error indicates that TPM attestation failed, causing a failure to join Microsoft Entra ID with a device token.
-| 0xc1036501 | The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Microsoft Entra ID. For more information, see the blog post [Inside Windows Autopilot self-deploying mode](https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/). |
+| **0x800705B4** | This general error indicates a timeout. A common cause of this error in self-deploying mode is that the device isn't TPM 2.0 capable. For example, it's a virtual machine. Devices that aren't TPM 2.0 capable can't be used with self-deploying mode. |
+| **0x801c03ea** | This error indicates that TPM attestation failed, causing a failure to join Microsoft Entra ID with a device token.
+| **0xc1036501** | The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Microsoft Entra ID. For more information, see the blog post [Inside Windows Autopilot self-deploying mode](https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/). |
 
 ### Pre-provisioning gives an error screen and the **Microsoft-Windows-User Device Registration/Admin** event log displays **HResult error code 0x801C03F3**
 

@@ -1750,7 +1750,7 @@ The [Windows Autopilot for existing devices](/autopilot/existing-devices) task s
 > C:\Windows\System32\sysprep\sysprep.exe /oobe /reboot
 > ```
 >
-> For more information, see [Modify the task sequence to account for Sysprep command line configuration](/autopilot/tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Windows Autopilot for existing devices doesn't work](/autopilot/known-issues#windows-autopilot-for-existing-devices-doesnt-work).
+> For more information, see [Modify the task sequence to account for Sysprep command line configuration](/autopilot/tutorial/existing-devices/create-autopilot-task-sequence#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Windows Autopilot for existing devices doesn't work](/autopilot/known-issues#windows-autopilot-for-existing-devices-doesnt-work).
 
 ## <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker
 

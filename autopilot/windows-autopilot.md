@@ -8,15 +8,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-<<<<<<< HEAD
 ms.date: 06/05/2024
 ms.topic: article
 ms.collection:
-=======
-ms.date: 09/13/2023
-ms.topic: overview
-ms.collection:
->>>>>>> 90208059fa4498780d8b23d69e1128d0074aa86d
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
