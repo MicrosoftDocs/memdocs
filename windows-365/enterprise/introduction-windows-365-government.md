@@ -55,8 +55,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Citrix HDX Plus for Windows 365
 - Multimedia redirection for improved video playback
 - Microsoft Dev Box
-- Windows 365 Frontline
-- Admin feedback
+- Windows 365 Frontline- Admin feedback
 - System alerts and email notifications
 - GPU Cloud PCs
 - Audit logs support in Azure Log Analytics
