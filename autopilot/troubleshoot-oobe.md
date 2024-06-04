@@ -42,18 +42,18 @@ Windows Autopilot logs entries into the event log. The log entries can be used t
 
 | **Event ID** | **Type** | **Message** |**Description** |
 |----------|------|-------------|-------------|
-| **100** | Warning | `Autopilot policy [name] not found.` | This error is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
-| **101** | Info | `AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value].` | This message shows Autopilot retrieving and processing numeric OOBE settings. |
-| **103** | Info | `AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].` | This message shows Autopilot retrieving and processing OOBE setting strings such as the Microsoft Entra tenant name. |
-| **109** | Info | `AutopilotGetOobeSettingsOverride succeeded: OOBE setting [setting name]; state = [state].` | This message shows Autopilot retrieving and processing state-related OOBE settings. |
-| **111** | Info | `AutopilotRetrieveSettings succeeded.` | This message means that the settings stored in the Autopilot profile that control the OOBE behavior were retrieved successfully. |
-| **153** | Info | `AutopilotManager reported the state changed from [original state] to [new state].` | Usually, this message should say `ProfileState_Unknown` to `ProfileState_Available`. This case indicates that a profile was available and downloaded for the device. So, the device is ready to deploy using Autopilot. |
-| **160** | Info | `AutopilotRetrieveSettings beginning acquisition.` | This message shows that Autopilot is getting ready to download the needed Autopilot profile settings. |
-| **161** | Info | `AutopilotManager retrieve settings succeeded.` | The Autopilot profile was successfully downloaded. |
-| **163** | Info | `AutopilotManager determined download isn't required and the device is already provisioned. Clean or reset the device to change this.` | This message indicates that an Autopilot profile is resident on the device; it typically would only be removed by the **Sysprep /Generalize** process. |
-| **164** | Info | `AutopilotManager determined Internet is available to attempt policy download.` | |
-| **171** | Error | `AutopilotManager failed to set TPM identity confirmed. HRESULT=[error code].` | This message indicates an issue performing TPM attestation, needed to complete the self-deploying mode process. |
-| **172** | Error | `AutopilotManager failed to set Autopilot profile as available. HRESULT=[error code].` | This error is typically related to event ID 171. |
+| **100** | Warning | **Autopilot policy [name] not found.** | This error is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
+| **101** | Info | **AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value].** | This message shows Autopilot retrieving and processing numeric OOBE settings. |
+| **103** | Info | **AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].** | This message shows Autopilot retrieving and processing OOBE setting strings such as the Microsoft Entra tenant name. |
+| **109** | Info | **AutopilotGetOobeSettingsOverride succeeded: OOBE setting [setting name]; state = [state].** | This message shows Autopilot retrieving and processing state-related OOBE settings. |
+| **111** | Info | **AutopilotRetrieveSettings succeeded.** | This message means that the settings stored in the Autopilot profile that control the OOBE behavior were retrieved successfully. |
+| **153** | Info | **AutopilotManager reported the state changed from [original state] to [new state].** | Usually, this message says **ProfileState_Unknown to ProfileState_Available**. This case indicates that a profile was available and downloaded for the device and that the device is ready to deploy using Autopilot. |
+| **160** | Info | **AutopilotRetrieveSettings beginning acquisition.** | This message shows that Autopilot is getting ready to download the needed Autopilot profile settings. |
+| **161** | Info | **AutopilotManager retrieve settings succeeded.** | The Autopilot profile was successfully downloaded. |
+| **163** | Info | **AutopilotManager determined download isn't required and the device is already provisioned. Clean or reset the device to change this.** | This message indicates that an Autopilot profile is resident on the device; it typically would only be removed by the **Sysprep /Generalize** process. |
+| **164** | Info | **AutopilotManager determined Internet is available to attempt policy download.** | |
+| **171** | Error | **AutopilotManager failed to set TPM identity confirmed. HRESULT=[error code].** | This message indicates an issue performing TPM attestation, needed to complete the self-deploying mode process. |
+| **172** | Error | **AutopilotManager failed to set Autopilot profile as available. HRESULT=[error code].** | This error is typically related to event ID 171. |
 
 ## Registry
 
