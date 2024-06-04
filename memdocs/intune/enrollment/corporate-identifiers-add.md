@@ -248,7 +248,7 @@ For details about International Mobile Equipment Identifiers, see [3GGPP TS 23.0
 You can use the following script to get the device details required for Windows corporate identifiers: 
 
  ```powershell
- Get-CimInstance -ClassName Win32_ComputerSystem | ForEach-Object  {$_.Manufacturer, $_.Model, (Get-CimInstance -ClassName Win32_BIOS).SerialNumber -join ','}
+ Get-CimInstance -ClassName Win32_ComputerSystem | ForEach-Object {$_.Manufacturer, $_.Model, (Get-CimInstance -ClassName Win32_BIOS).SerialNumber -join ','}
  ```  
  For more information about locating a serial number, see [Find Surface serial number](https://support.microsoft.com/surface/find-the-serial-number-on-your-microsoft-or-surface-device-6c0abc0c-2b45-247d-f959-70e504e55fa5). 
 
