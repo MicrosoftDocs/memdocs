@@ -26,12 +26,12 @@ appliesto:
 
 | Feature | **Windows Autopilot<br>device preparation** | **Windows Autopilot** |
 | --- | --- | --- |
-| Features | <ul><li>Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments.</li><li>Faster, more consistent provisioning experience.</li><li>Near real-time monitoring and troubleshooting info.</li></ul> | <ul><li>Support for multiple device types (HoloLens, Teams Meeting Room).</li><li>Many customization options for the provisioning experience.</li></ul> |
+| Features | <ul><li>Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments.</li><li>Faster, more consistent provisioning experience.</li><li>Near real-time monitoring and troubleshooting info.</li></ul> | <ul><li>Support for multiple device types ([HoloLens](/hololens/hololens2-autopilot), [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin)).</li><li>Many customization options for the provisioning experience.</li></ul> |
 | Supported modes | <ul><li>[User-driven](tutorial/user-driven/entra-join-workflow.md).</li></ul> | <ul><li>[User-driven](../tutorial/user-driven/azure-ad-join-workflow.md).</li><li>[Pre-provisioned](../tutorial/pre-provisioning/azure-ad-join-workflow.md).</li><li>[Self-deploying](../tutorial/self-deploying/self-deploying-workflow.md).</li><li>[Existing devices](../tutorial/existing-devices/existing-devices-workflow.md).</li></ul>|
 | Join types supported | <ul><li>Microsoft Entra join.</li></ul> | <ul><li>Microsoft Entra join.</li><li>Microsoft Entra hybrid join.</li></ul> |
 |Device registration required? | No. | Yes. |
 | What do admins need to configure? | <ul><li>Windows Autopilot device preparation policy.</li><li>Device security group with **Intune Provisioning Client** as owner.</li></ul> | <ul><li>Windows Autopilot deployment profile.</li><li>Enrollment Status Page (ESP).</li></ul> |
-| What configurations can be delivered during provisioning? | <ul><li>Device-based only during the out of box experience (OOBE).</li><li>Up to 10 essential applications (line-of-business (LOB), Win32, Microsoft Store, Microsoft 365).</li><li>Up to 10 essential PowerShell scripts.</li></ul> | <ul><li>Device-based during device ESP.</li><li>User-based during user ESP.</li><li>Any number of applications.</li></ul> |
+| What configurations can be delivered during provisioning? | <ul><li>Device-based only during the out-of-box experience (OOBE).</li><li>Up to 10 essential applications (line-of-business (LOB), Win32, Microsoft Store, Microsoft 365).</li><li>Up to 10 essential PowerShell scripts.</li></ul> | <ul><li>Device-based during device ESP.</li><li>User-based during user ESP.</li><li>Any number of applications.</li></ul> |
 | Reporting & troubleshooting |  Windows Autopilot device preparation deployment report:<ul><li>Shows all Windows Autopilot device preparation deployments.</li><li>More data available.</li><li>Near real-time.</li></ul> | Windows Autopilot deployment report:<ul><li>Only shows Windows Autopilot registered devices.</li><li>Not real-time.</li></ul> |
 | Supports LOB and Win32 applications in same deployment? | Yes. | No. |
 | Supported versions of Windows | <ul><li>Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.</li><li> Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.</li></ul> | <ul><li>All [currently supported](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions) versions of Windows 11 General Availability Channel.</li><li>All [currently supported](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions) versions of Windows 10 General Availability Channel.</li></ul> |
@@ -61,9 +61,9 @@ In general, the following are some of the major factors when considering between
 | Install more than 10 applications during OOBE | ❌ | ✅ |
 | Run more than 10 PowerShell scripts during OOBE | ❌ | ✅ |
 | Near real-time monitoring | ✅ | ❌ |
-| Block user from accessing Desktop until<br>user based configurations are applied | ❌ | ✅ |
-| HoloLens support | ❌ | ✅ |
-| Teams Meeting Room support | ❌ | ✅ |
+| Block user from accessing desktop until<br>user based configurations are applied | ❌ | ✅ |
+| [HoloLens](/hololens/hololens2-autopilot) support | ❌ | ✅ |
+| [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin) support | ❌ | ✅ |
 
 ## Using Windows Autopilot device preparation and Windows Autopilot concurrently
 
