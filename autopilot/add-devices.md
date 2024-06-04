@@ -8,9 +8,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 10/31/2023
+ms.date: 06/05/2024
 ms.topic: how-to
-ms.collection: 
+ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
@@ -19,28 +19,28 @@ ms.collection:
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
-  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a> 
+  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
 # Manually register devices with Windows Autopilot
 
 You can perform Windows Autopilot device registration within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-values (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. For this reason, this process is primarily for testing and evaluation scenarios.
 
-You can manually register up to 500 devices per CSV file through the portal. Before proceeding with additional devices, check that the previous CSV file batch has been successfully registered. If you're transferring devices hashes from one tenant to another tenant, see [Support tip: How to transfer Windows Autopilot devices between tenants](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-transfer-windows-autopilot-devices-between/ba-p/3920555) for additional guidance.
+You can manually register up to 500 devices per CSV file through the portal. Before proceeding with additional devices, check that the previous CSV file batch is successfully registered. If you're transferring devices hashes from one tenant to another tenant, see [Support tip: How to transfer Windows Autopilot devices between tenants](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-transfer-windows-autopilot-devices-between/ba-p/3920555) for additional guidance.
 
 Device owners can only register their devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
 
 This article provides step-by-step guidance for manual registration. For more information about registration, see:
 
-- [Windows Autopilot registration overview](registration-overview.md)
-- [Manual registration overview](manual-registration.md)
-- [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot)
+- [Windows Autopilot registration overview](registration-overview.md).
+- [Manual registration overview](manual-registration.md).
+- [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot#2-register-devices-in-windows-autopilot).
 
 ## Prerequisites
 
-- [Intune subscription](/mem/intune/fundamentals/licenses)
-- [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
-- [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium)
+- [Intune subscription](/mem/intune/fundamentals/licenses).
+- [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+- [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium).
 
 ## Required permissions
 
@@ -54,13 +54,13 @@ Device enrollment requires *Intune Administrator* or *Policy and Profile Manager
 
 The following methods are available to harvest a hardware hash from existing devices:
 
-1. Using [Microsoft Configuration Manager](#configuration-manager)
+- Using [Microsoft Configuration Manager](#configuration-manager).
 
-1. Using [Windows PowerShell](#powershell)
+- Using [Windows PowerShell](#powershell).
 
-1. During OOBE by using the [Diagnostics Page](#diagnostics-page-hash-export) (Windows 11 only)
+- During the out-of-box experience (OOBE) by using the [Diagnostics Page](#diagnostics-page-hash-export) (Windows 11 only).
 
-1. From the Desktop using [Settings > Accounts](#desktop-hash-export)
+- From the desktop using [Settings > Accounts](#desktop-hash-export).
 
 For a description of each method, select the link for the method.
 
@@ -70,7 +70,7 @@ For a description of each method, select the link for the method.
 >
 > `HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserOOBE`
 >
-> To ensure that OOBE hasn't been restarted too many times, you can change this value to `1`.
+> To ensure that OOBE hasn't restarted too many times, you can change this value to `1`.
 
 ### Configuration Manager
 
@@ -116,7 +116,7 @@ To install the script directly and capture the hardware hash from the local comp
 
    > [!NOTE]
    >
-   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules may require approval of additional permissions in Microsoft Entra ID when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules might require approval of additional permissions in Microsoft Entra ID when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 1. You're prompted to sign in. An account with the Intune Administrator role is sufficient, and the device hash is uploaded automatically.
 
@@ -128,13 +128,18 @@ To install the script directly and capture the hardware hash from the local comp
 
 > [!NOTE]
 >
-> Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain sensitive information that only device owners should maintain, we recommend registering devices through Microsoft Intune via a 4K hardware hash only for testing or other limited scenarios. In most cases, you should instead use the Microsoft Partner Center for Autopilot device registration.
+> Microsoft recommends registering devices through Microsoft Intune via a 4K hardware hash only for testing or other limited scenarios for the following reasons:
+>
+> - Availability of free and inexpensive accounts in Intune that lack robust vetting.
+> - 4K hardware hashes contain sensitive information that only device owners should maintain.
+>
+> In most cases, use instead the Microsoft Partner Center for Autopilot device registration.
 
 For more information about running the `Get-WindowsAutopilotInfo.ps1` script, see the script's help by using `Get-Help Get-WindowsAutopilotInfo`.
 
 ### Diagnostics page hash export
 
-To export a hardware hash using the [Windows Autopilot Diagnostics Page](windows-autopilot-whats-new.md#windows-autopilot-diagnostics-page), the device must be running Windows 11.
+To export a hardware hash using the [Windows Autopilot Diagnostics Page](whats-new.md#windows-autopilot-diagnostics-page), the device must be running Windows 11.
 
 Windows Autopilot Diagnostics are available in OOBE.
 
@@ -142,7 +147,7 @@ During OOBE, press **Ctrl-Shift-D** to bring up the Diagnostics Page. From this 
 
 ### Desktop hash export
 
-1. From the Windows 10 or Windows 11 Start menu, right click and select **Settings** > **Accounts** > **Access work or school**.
+1. From the Windows Start menu, right click and select **Settings** > **Accounts** > **Access work or school**.
 
 1. Export log files. The logs include a CSV file with the hardware hash.
 
@@ -151,17 +156,17 @@ During OOBE, press **Ctrl-Shift-D** to bring up the Diagnostics Page. From this 
 
 Log files are exported to the Users\Public\Documents\MDMDiagnostics directory.
 
-For more information, see [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
+For more information, see [Collect MDM logs](/windows/client-management/mdm-collect-logs).
 
 ## Ensure that the CSV file meets requirements
 
 Device information in the CSV file where you capture hardware hashes should include:
 
-- Serial number
-- Windows product ID
-- Hardware hash
-- Optional group tag
-- Optional assigned user
+- Serial number.
+- Windows product ID.
+- Hardware hash.
+- Optional group tag.
+- Optional assigned user.
 
 You can have up to 500 rows in the file's list of devices. The header and line format must look like this:
 
@@ -185,7 +190,7 @@ During upload of a CSV file, the only validation that Microsoft performs on the 
 
 ## Add devices
 
-Now that you've captured hardware hashes in a CSV file, you can add Windows Autopilot devices by importing the file. To import the file by using Intune:
+Once the hardware hashes are captured in a CSV file, Windows Autopilot devices can be added by importing the file. To import the file by using Intune:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
@@ -205,7 +210,7 @@ Now that you've captured hardware hashes in a CSV file, you can add Windows Auto
 
 ## Edit Autopilot device attributes
 
-After you've uploaded an Autopilot device, you can edit certain attributes of the device:
+After an Autopilot device is uploaded, certain attributes of the device can be edited:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
 
@@ -213,9 +218,9 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 
 1. On the pane on the right of the screen, you can edit:
 
-   - Device name
-   - Group tag
-   - Username (if you've assigned a user)
+   - Device name.
+   - Group tag.
+   - Username (if a user is assigned).
 
 1. Select **Save**.
 
