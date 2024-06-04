@@ -55,4 +55,4 @@ In both cases, the end result is that the user is a standard user.
 
 ### Corporate identifiers isn't working in initial release of Windows Autopilot device preparation
 
-Corporate identifiers isn't working in the initial release of Windows Autopilot device preparation. The issue is being investigated.
+Corporate identifiers isn't working in the initial release of Windows Autopilot device preparation. For this reason, if the personal device restriction is enabled and personal devices aren't allowed, enrollment always fails. Since enrollment always fails, Windows Autopilot device preparation doesn't work when the personal device restriction is enabled. The issue is being investigated. Microsoft recommends that customers that have personal device restrictions enabled wait for the issue to be resolved before trying to use Windows Autopilot device preparation.
