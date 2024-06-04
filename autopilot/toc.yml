@@ -50,7 +50,7 @@ items:
   expanded: true
   items:
   - name: What's new
-    href: windows-autopilot-whats-new.md
+    href: whats-new.md
   - name: Requirements
     href: requirements.md
 

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 03/21/2024
+ms.date: 06/04/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -19,6 +19,16 @@ appliesto:
 ---
 
 # Windows Autopilot: What's new
+
+## Windows Autopilot support for Microsoft Teams Rooms
+
+Windows Autopilot streamlines provisioning for laptops. Now Windows Autopilot adds the same support for **Microsoft Teams Rooms**! With this combination, Teams Rooms devices can now be deployed and provisioned without needing physical access to the device. Policies and apps are configured and the Teams Rooms console automatically signed in without needing to enter credentials.
+
+For more information on supported scenarios and setup, see [Autopilot and Autologin for Teams Rooms on Windows](/microsoftteams/rooms/autopilot-autologin).
+
+## Devices are no longer re-enrolled after a motherboard change
+
+When a device previously changed its motherboard and the OS remained intact, Autopilot attempted to re-enroll the device to Intune. This re-enrollment no longer occurs if a motherboard swap occurs on a device due to a change in Windows Autopilot. If a motherboard is changed on a device, the new motherboard needs to be re-registered so that Windows Autopilot continues to work upon a reset.
 
 ## Windows Autopilot self-deploying mode is now generally available <!-- INADO-26780755  -->
 

@@ -2450,6 +2450,11 @@
       "source_path": "autopilot/configuration-requirements.md",
       "redirect_url": "/autopilot/requirements?tabs=configuration",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot-whats-new.md",
+      "redirect_url": "/autopilot/whats-new",
+      "redirect_document_id": false
     }
   ]
 }
