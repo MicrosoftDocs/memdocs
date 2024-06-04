@@ -609,11 +609,11 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com: /*`
 
 ### Control the behavior of the Site Blocked popup
-When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites, depending on the AllowTransitionOnBlock and OpenInPrivateIfBlocked policy configurations. You can choose preferences between InPrivate and personal account.
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in and InPrivate is disabled. <br>**2**: Automatically switch to personal account if personal account is signed in and InPrivate is simultaneously enabled.<br>**3**:Automatically switch to InPrivate if personal account is signed in and InPrivate is simultaneously enabled. |
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.<br>**2**:Automatically switch to InPrivate if InPrivate is not disabled. |
 
 > [!NOTE]
 > If the specified condition is not met (e.g., if you set the policy value to 1 but InPrivate is enabled), the behavior will default to 0.
