@@ -43,7 +43,7 @@ To access Windows Autopilot device preparation reports and monitor deployments i
     - **Deployment status** - displays the current status of the deployment on the device. During deployment, the status shows **In progress**. Once deployment is complete, it shows the final outcome of the deployment as either **Success** or **Failed**.
     - **Phase** - shows the last reported phase that the deployment is at.
     - **Serial number** - the hardware serial number of the device.
-    - **Deployment time** - the amount of time that the deployment took during the out of box experience (OOBE) to complete. If the deployment isn't complete, it shows **In progress**.
+    - **Deployment time** - the amount of time that the deployment took during the out-of-box experience (OOBE) to complete. If the deployment isn't complete, it shows **In progress**.
     - **UPN** - the user that signed into the device during OOBE and that the Windows Autopilot device preparation policy was assigned to.
 
 1. Select an individual device under **Device name**. The **Device deployment details** pane opens. The **Device deployment details** pane contains three sections:
