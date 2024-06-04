@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: What is Windows 365 Enterprise?
+title: What is Windows 365 Enterprise? 
 titleSuffix:
 description: What is Windows 365 Enterprise?
 keywords:
