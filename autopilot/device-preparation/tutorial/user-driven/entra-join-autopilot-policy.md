@@ -93,7 +93,7 @@ In the **Configuration settings** page:
 
    1. **Allow users to skip setup after multiple attempts** - select either **Yes** or **No** as desired by toggling the switch.
 
-      Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the Desktop.
+      Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the desktop.
 
    1. **Show link to diagnostics** - select either **Yes** or **No** as desired by toggling the switch.
 
@@ -142,7 +142,7 @@ In the **Configuration settings** page:
 
     > [!IMPORTANT]
     >
-    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the Desktop.
+    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
 
 1. Expand the **Scripts** section by selecting it:
 
