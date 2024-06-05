@@ -49,6 +49,16 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
+## Week of June 5, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on is now generally available<!--50103753-->
+
+Windows 365 Business now supports single sign-on. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md). 
+
+<!-- ########################## -->
 ## Week of March 26, 2024
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -77,16 +87,6 @@ Windows 365 Business now supports single sign-on for new and existing Cloud PCs.
 The new Microsoft Teams app has moved out of preview and into general availability. It's been optimized for faster performance and more efficient resource use on Cloud PCs. For more information, see [Upgrade to new Teams for Virtualized Desktop Infrastructure]( /microsoftteams/new-teams-vdi-requirements-deploy).
 
 The new Microsoft Teams app is not yet available in the Windows 365 gallery images.
-
-<!-- ########################## -->
-## Week of June 5, 2023
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device security
-
-#### Single sign-on is now generally available<!--50103753-->
-
-Windows 365 Business now supports single sign-on. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md). 
 
 <!-- ########################## -->
 ## Week of November 13, 2023
