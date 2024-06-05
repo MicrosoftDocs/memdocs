@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/03/2024
+ms.date: 06/05/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -56,7 +56,14 @@ For more information about public preview items, see [Public preview in Windows 
 -->
 
 <!-- ########################## -->
-## Week of June 3, 2024
+## Week of June 3, 2024 (Service release 2405)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+### Windows 365 support for Microsoft Purview forensic evidence <!--50309017-->
+
+Windows 365 now supports [Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence). For more information, see [Set up forensic evidence](forensic-evidence-set-up.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Government Community Cloud
