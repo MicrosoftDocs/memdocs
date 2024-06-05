@@ -65,6 +65,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Microsoft Purview Customer Lockbox
 - Windows App
 - Cloud PC Reports
+- Microsoft Purview forensic evidence
 
 ## Next steps
 
