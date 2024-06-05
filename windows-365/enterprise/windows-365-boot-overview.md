@@ -75,7 +75,7 @@ Windows 365 Boot doesn't automatically set these policies to fully restrict end 
 
 ## User sign-in authentication modes
 
-Support for Windows 365 Boot authentication modes when users sign in to their Cloud CPs is shown of the following table:
+Support for Windows 365 Boot authentication modes when users sign in to their Cloud PCs is shown of the following table:
 
 | Authentication mode | Dedicated mode supported | Shared mode supported |
 | :---: | :---: | :---: |
