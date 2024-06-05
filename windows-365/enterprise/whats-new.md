@@ -61,7 +61,7 @@ For more information about public preview items, see [Public preview in Windows 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-### Windows 365 support for Microsoft Purview forensic evidence <!--50309017-->
+#### Windows 365 support for Microsoft Purview forensic evidence <!--50309017-->
 
 Windows 365 now supports [Microsoft Purview forensic evidence](/purview/insider-risk-management-forensic-evidence). For more information, see [Set up forensic evidence](forensic-evidence-set-up.md).
 
