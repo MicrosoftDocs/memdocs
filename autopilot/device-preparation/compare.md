@@ -64,7 +64,7 @@ In general, the following are some of the major factors when considering between
 | Block user from accessing desktop until<br>user based configurations are applied | ❌ | ✅ |
 | [HoloLens](/hololens/hololens2-autopilot) support | ❌ | ✅ |
 | [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin) support | ❌ | ✅ |
-| [Device Firmware Configuration Interface (DFCI) Management](../dfci-management.md) support | ❌ | ✅ |
+| [Device Firmware Configuration<br>Interface (DFCI) Management [support](../dfci-management.md) | ❌ | ✅ |
 
 ## Using Windows Autopilot device preparation and Windows Autopilot concurrently
 
