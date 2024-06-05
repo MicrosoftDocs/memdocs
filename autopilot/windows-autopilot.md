@@ -26,7 +26,7 @@ appliesto:
 
 Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. Windows Autopilot can be used to deploy Windows PCs or HoloLens 2 devices. For more information about deploying HoloLens 2 with Autopilot, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
-You can also use Windows Autopilot to reset, repurpose, and recover devices. This solution enables an IT department to achieve these goals with little to no infrastructure to manage, with a process that's easy and simple.
+Windows Autopilot can also be used to reset, repurpose, and recover devices. This solution enables an IT department to achieve these goals with little to no infrastructure to manage, with a process that's easy and simple.
 
 Windows Autopilot simplifies the Windows device lifecycle, for both IT and end users, from initial deployment to end of life. Using cloud-based services, Windows Autopilot:
 
@@ -44,7 +44,7 @@ See the following video:
 
 ## Process overview
 
-When new Windows devices are initially deployed, Windows Autopilot uses the OEM-optimized version of Windows client. This version is preinstalled on the device, so you don't have to maintain custom images and drivers for every device model. Instead of re-imaging the device, your existing Windows installation can be transformed into a "business-ready" state that can:
+When new Windows devices are initially deployed, Windows Autopilot uses the OEM-optimized version of Windows client. This version is preinstalled on the device, so custom images and drivers for every device model don't have to be maintained. Instead of re-imaging the device, the existing Windows installation can be transformed into a "business-ready" state that can:
 
 - Apply settings and policies.
 - Install apps.
@@ -52,7 +52,7 @@ When new Windows devices are initially deployed, Windows Autopilot uses the OEM-
 
 :::image type="content" source="images/image1.png" alt-text="Process overview.":::
 
-Once deployed, you can manage Windows devices with:
+Once deployed, Windows devices can be managed with:
 
 - Microsoft Intune.
 - Windows Update for Business.
@@ -70,12 +70,12 @@ Traditionally, IT pros spend significant time building and customizing images th
 - From the user's perspective, it only takes a few simple operations to make their device ready to use.
 - From the IT pro's perspective, the only interaction required from the end user is to connect to a network and to verify their credentials. Everything beyond that is automated.
 
-Windows Autopilot enables you to:
+Windows Autopilot enables the following functionality:
 
-- Automatically join devices to Microsoft Entra ID or Active Directory (via Microsoft Entra hybrid join). For more information about the differences between these two join options, see [Introduction to device management in Microsoft Entra ID](/azure/active-directory/device-management-introduction).
-- Auto-enroll devices into mobile device management (MDM) services, such as Microsoft Intune ([*Requires a Microsoft Entra ID P1 or P2 subscription for configuration*](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)).
-- Create and auto-assign devices to configuration groups based on a device's profile.
-- Customize the out-of-box experience (OOBE) content specific to the organization.
+- Automatic joining of devices to Microsoft Entra ID or Active Directory (via Microsoft Entra hybrid join). For more information about the differences between these two join options, see [Introduction to device management in Microsoft Entra ID](/azure/active-directory/device-management-introduction).
+- Auto-enrollment of devices into mobile device management (MDM) services, such as Microsoft Intune ([*Requires a Microsoft Entra ID P1 or P2 subscription for configuration*](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)).
+- Creation and auto-assignment of devices to configuration groups based on a device's profile.
+- Customization of the out-of-box experience (OOBE) content specific to the organization.
 
 Existing device can also be quickly prepared for a new user with [Windows Autopilot Reset](windows-autopilot-reset.md). The Reset capability is also useful in break/fix scenarios to quickly bring a device back to a business-ready state.
 

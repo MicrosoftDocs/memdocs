@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 12/14/2023
+  ms.date: 06/05/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -45,17 +45,17 @@ sections:
           Before an OEM or Channel Partner can register a device for Autopilot for a customer, the customer must first give them consent. The consent process begins with the OEM or Channel Partner sending a link to the customer that directs the customer to a consent page in MSfB. For more information, see [Registration](registration-auth.md).
 
       - question: |
-          Do any restrictions apply if a business customer who has registered devices in MSfB wants to later manage those devices through a Cloud Solution Provider (CSP) using the Partner Center?
+          Do any restrictions apply if a business customer who registers devices in MSfB wants to later manage those devices through a Cloud Solution Provider (CSP) using the Partner Center?
         answer: |
           The business customer must delete the devices in MSfB before the CSP can upload and manage them in the Partner Center.
 
       - question: |
           Does Windows Autopilot support removing the option to enable a local administrator account?
         answer: |
-          No. Windows Autopilot doesn't support removing the local admin account. However, it does support restricting the user performing Microsoft Entra domain join in OOBE to a standard account (versus an administrator account by default).
+          No. Windows Autopilot doesn't support removing the local admin account. However, it does support restricting the user performing Microsoft Entra domain join during the out-of-box experience (OOBE) to a standard account versus an administrator account by default.
 
       - question: |
-          How can I test the Windows Autopilot CSV file in the Partner Center?
+          How can I test the Windows Autopilot comma-separated value (CSV) file in the Partner Center?
         answer: |
           Only CSP partners have access to the Partner Center portal. If you're a CSP, you can create a sales agent user account that has access to devices for testing the file. This test can be done today in the Partner Center.
 
@@ -64,7 +64,7 @@ sections:
       - question: |
           Is it required to become a CSP to participate in Windows Autopilot?
         answer: |
-          This requirement doesn't apply to top volume OEMs because they can use the OEM Direct API. All others who choose to use MPC to register devices must become CSPs to access MPC.
+          This requirement doesn't apply to top volume OEMs because they can use the OEM Direct API. All others who choose to use the Microsoft Partnet Center (MPC) to register devices must become CSPs to access MPC.
 
       - question: |
           Do the different CSP levels have all the same capabilities when it comes to Windows Autopilot?
@@ -104,7 +104,7 @@ sections:
       - question: |
           What version of the OA3 tool meets Windows Autopilot deployment requirements?
         answer: |
-           Windows Autopilot can work with any version of the OA3 tool. We recommend using a supported version of Windows to generate the 4K hardware hash.
+           Windows Autopilot can work with any version of the OA3 tool. We recommend using a supported version of Windows to generate the 4K hardware hash (4K HH).
 
       - question: |
           When placing an order, do customers need to be state whether they want it with or without Windows Autopilot options?
@@ -114,7 +114,7 @@ sections:
       - question: |
           Does the OEM need to manage or collect any custom imaging files from customers? Do they need to upload any images to Microsoft?
         answer: |
-          No. OEMs just send the CBRs as usual to Microsoft. No images are sent to Microsoft to enable Windows Autopilot. Windows Autopilot only customizes OOBE and allows policy configurations.
+          No. OEMs just send the Computer Build Report (CBR) as usual to Microsoft. No images are sent to Microsoft to enable Windows Autopilot. Windows Autopilot only customizes OOBE and allows policy configurations.
 
       - question: |
           Are there any customer issues with upgrading to a currently supported version of Windows?
@@ -271,12 +271,12 @@ sections:
       - question: |
           If I make changes to an existing Autopilot profile, do the changes take effect on devices that have that profile assigned to them and are already deployed?
         answer: |
-          No. Windows Autopilot profiles aren't resident on the device. They're downloaded during OOBE, the settings defined at the time are applied. Then the profile is discarded on the device. If the device is reimaged or reset, the new profile settings will take effect the next time the device goes through OOBE.
+          No. Windows Autopilot profiles aren't resident on the device. They're downloaded during OOBE and settings are defined at the time are applied. The profile is then discarded on the device. If the device is reimaged or reset, the new profile settings will take effect the next time the device goes through OOBE.
 
       - question: |
           What's the experience if a device isn't registered or if I don't configure Windows Autopilot before an end user attempts to self-deploy?
         answer: |
-          If the device isn't registered, it doesn't receive the Windows Autopilot experience, and the end user goes through normal OOBE. The Windows Autopilot configurations won't be applied until the user runs through OOBE again, after registration. If a device is started before an MDM profile is created, the device goes through standard OOBE experience. You then have to manually enroll that device into the MDM. The next time the device is reset, it will go through the Windows Autopilot OOBE experience.
+          If the device isn't registered, it doesn't receive the Windows Autopilot experience, and the end user goes through normal OOBE. The Windows Autopilot configurations won't be applied until the user runs through OOBE again, after registration. If a device is started before an mobile device management (MDM) profile is created, the device goes through standard OOBE experience. You then have to manually enroll that device into the MDM. The next time the device is reset, it will go through the Windows Autopilot OOBE experience.
 
       - question: |
           Why didn't I receive a customized sign-in screen during Autopilot?
@@ -373,7 +373,7 @@ sections:
       - question: |
           Which manufacturers are enabled for pre-population of username and automatic re-enrollment of pre-provisioning devices?
         answer: |
-          Current manufacturers enabled for this change are Dell, Dynabook, HP, Lenovo and Microsoft Surface. We're working to add other manufacturers and will update this list once they're onboarded. For more information, see [Return of key functionality for Windows Autopilot sign-in and deployment](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
+          Current manufacturers enabled for this change are Dell, Dynabook, HP, Lenovo, and Microsoft Surface. We're working to add other manufacturers and will update this list once they're onboarded. For more information, see [Return of key functionality for Windows Autopilot sign-in and deployment](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
 
       - question: |
           If I wipe the machine and restart, do I still receive the Windows Autopilot experience?
@@ -388,7 +388,7 @@ sections:
       - question: |
           Is Windows Autopilot supported on other SKUs, for example, Surface Hub, HoloLens, or Windows Mobile?
         answer: |
-          For Surface Hub, Windows Mobile, and other SKUs, Windows Autopilot isn't supported. HoloLens 1 also doesn't support Windows Autopilot. With Windows Holographic version 2004, HoloLens 2 supports Windows Autopilot self-deploying mode with Microsoft Intune. Third-party MDM providers aren't supported.
+          For Surface Hub, Windows Mobile, and other SKUs, Windows Autopilot isn't supported. HoloLens 1 also doesn't support Windows Autopilot. With Windows Holographic version 2004, HoloLens 2 supports Windows Autopilot self-deploying mode with Microsoft Intune. Non-Microsoft MDM providers aren't supported.
 
           For more information on HoloLens 2, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
@@ -410,7 +410,7 @@ sections:
       - question: |
           Where is Windows Autopilot data stored?
         answer: |
-          Windows Autopilot data is stored within the European Union (EU). It's not stored in a sovereign cloud, even when the Microsoft Entra tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
+          Windows Autopilot data is stored within the European Union (EU). It isn't stored in a sovereign cloud, even when the Microsoft Entra tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
 
       - question: |
           Why is Windows Autopilot data stored in the US and not in a sovereign cloud?
@@ -467,7 +467,7 @@ sections:
       - question: |
           Why don't applications install after the ESP is finished on an Intune managed device when using autologon with Windows Autopilot self-deploing mode?
         answer: |
-          When autologon with Windows Autopilot self-deploying mode is used, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including the KioskUser0 local account, and a device token isn't issued until user ESP is processed. When using autologon, in order for applications to install after the ESP finishes, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device). For more information, see the following articles:
+          When autologon with Windows Autopilot self-deploying mode is used, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including KioskUser0, and a device token isn't issued until user ESP is processed. When using autologon, in order for applications to install after the ESP finishes, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device). For more information, see the following articles:
           - [How can I disable the user ESP portion of the Enrollment Status Page (ESP) if an ESP has been configured on the device?](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
           - [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune).
 
@@ -475,24 +475,3 @@ sections:
           When Windows Autopilot for pre-provisioned deployment is used, the device shows as compliant in Microsoft Entra ID after completing the Technician flow. However, after starting the User flow, the device changes to noncompliant in Microsoft Entra ID. Why did it change from compliant to noncompliant in Microsoft Entra ID?
         answer: |
           Device compliance in Microsoft Entra ID is reset during the User flow. Once the User flow completes, compliance is reevaluated and updated. This behavior is expected.
-
-  - name: Glossary
-    questions:
-      - question: |
-          Glossary
-        answer: |
-          | Term | Meaning |
-          | --- | --- |
-          | CSV | Comma-separated value format, which is a file type that's similar to an Excel spreadsheet |
-          | MPC | Microsoft Partner Center |
-          | MDM | Mobile Device Management |
-          | OEM | Original Equipment Manufacturer |
-          | CSP | Cloud Solution Provider |
-          | MSfB | Microsoft Store for Business |
-          | Azure AD | Azure Active Directory |
-          | 4K HH | 4K hardware hash |
-          | CBR | Computer Build Report |
-          | EC | Enterprise Commerce |
-          | DDS | Device Directory Service |
-          | OOBE | Out of Box Experience |
-          | UUID | Universally Unique Identifier |

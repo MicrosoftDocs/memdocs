@@ -59,18 +59,18 @@ Windows Autopilot logs entries into the event log. The log entries can be used t
 
 Autopilot profile settings received from the Autopilot deployment service are stored in the device's registry. This information can be found at **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Available registry entries include:
 
-| Value | Description |
+| **Value** | **Description** |
 |-------|-------------|
-| AadTenantId | The GUID of the Microsoft Entra tenant the user signed into. The user receives an error if this entry doesn't match the tenant that was used to register the device. |
-| CloudAssignedTenantDomain | The Microsoft Entra tenant the device is registered with, for example, `contosomn.onmicrosoft.com`. If the device isn't registered with Autopilot, this value is blank. |
-| CloudAssignedTenantId | The GUID of the Microsoft Entra tenant the device registered with. The GUID corresponds to the tenant domain from the CloudAssignedTenantDomain registry value. If the device isn't registered with Autopilot, this value is blank.|
-| IsAutopilotDisabled | If set to 1, this registry value indicates that the device isn't registered with Autopilot. This state could also indicate that the Autopilot profile couldn't be downloaded because of network connectivity or firewall issues, or network timeouts. |
-| TenantMatched | This entry is set to 1 if the user's tenant ID matches the tenant ID that the device was registered with. If this registry value is 0, the user would be shown an error and forced to start over. |
-| CloudAssignedOobeConfig | A bitmap that shows which Autopilot settings were configured. Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16 |
+| **AadTenantId** | The GUID of the Microsoft Entra tenant the user signed into. The user receives an error if this entry doesn't match the tenant that was used to register the device. |
+| **CloudAssignedTenantDomain** | The Microsoft Entra tenant the device is registered with, for example, `contosomn.onmicrosoft.com`. If the device isn't registered with Autopilot, this value is blank. |
+| **CloudAssignedTenantId** | The GUID of the Microsoft Entra tenant the device registered with. The GUID corresponds to the tenant domain from the CloudAssignedTenantDomain registry value. If the device isn't registered with Autopilot, this value is blank.|
+| **IsAutopilotDisabled** | If set to 1, this registry value indicates that the device isn't registered with Autopilot. This state could also indicate that the Autopilot profile couldn't be downloaded because of network connectivity or firewall issues, or network timeouts. |
+| **TenantMatched** | This entry is set to 1 if the user's tenant ID matches the tenant ID that the device was registered with. If this registry value is 0, the user would be shown an error and forced to start over. |
+| **CloudAssignedOobeConfig** | A bitmap that shows which Autopilot settings were configured. Values include: **SkipCortanaOptIn** = 1, **OobeUserNotLocalAdmin** = 2, **SkipExpressSettings** = 4, **SkipOemRegistration** = 8, **SkipEula** = 16 |
 
 ## ETW trace options
 
-You can use ETW tracing to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [the advanced troubleshooting blog](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
+ETW tracing can be used to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [the advanced troubleshooting blog](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
 ## Related content
 

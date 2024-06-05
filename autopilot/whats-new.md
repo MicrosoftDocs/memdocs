@@ -32,7 +32,7 @@ When a device previously changed its motherboard and the OS remained intact, Aut
 
 ## Windows Autopilot self-deploying mode is now generally available <!-- INADO-26780755  -->
 
-Windows Autopilot self-deploying mode is now generally available and out of preview. Windows Autopilot self-deploying mode enables you to deploy Windows devices with little to no user interaction. Once the device connects to network, the device provisioning process starts automatically: the device joins Microsoft Entra ID, enrolls in Intune, and syncs all device-based configurations targeted to the device. Self-deploying mode ensures that the user can't access desktop until all device-based configuration is applied. The Enrollment Status Page (ESP) is displayed during OOBE so users can track the status of the deployment. For more information, see:
+Windows Autopilot self-deploying mode is now generally available and out of preview. Windows Autopilot self-deploying mode enables deployment of Windows devices with little to no user interaction. Once the device connects to network, the device provisioning process starts automatically: the device joins Microsoft Entra ID, enrolls in Intune, and syncs all device-based configurations targeted to the device. Self-deploying mode ensures that the user can't access desktop until all device-based configuration is applied. The Enrollment Status Page (ESP) is displayed during OOBE so users can track the status of the deployment. For more information, see:
 
 - [Windows Autopilot self-deploying mode](self-deploying.md).
 - [Step by step tutorial for Windows Autopilot self-deploying mode in Intune](tutorial/self-deploying/self-deploying-workflow.md).
@@ -69,7 +69,7 @@ Starting in 2310, we're making an update to the self-deployment and pre-provisio
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-1. Select the device that you want to unblock and the select the **Unblock device** button at the top of the page.
+2. Select the device to unblock and the select the **Unblock device** button at the top of the page.
 
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
@@ -86,11 +86,12 @@ Self-service BitLocker access can continue to work the same if the IT admin perf
 
 If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties. The primary user on the device then updates to the new user upon the next check-in.
 
-### What you need to do to prepare?
+### What need to be done to prepare?
 
-To ensure a smooth transition, notify your help desk of this change. Additionally, update your documentation to one of the following options:
+To ensure a smooth transition, notify the organization's help desk of this change. Additionally, update documentation to one of the following options:
 
 1. Temporarily note the BitLocker recovery key before restoring as documented in the [BitLocker recovery guide](/windows/security/operating-system-security/data-protection/bitlocker/bitlocker-recovery-guide-plan).
+
 1. To unlock BitLocker self-service access, contact the help desk or IT Admin.
 
 ### Update: Temporary change
@@ -99,7 +100,7 @@ When devices that utilize Windows Autopilot are reused, and there's a new device
 
 ## Win32 app configurable installation time impacts the Enrollment Status Page
 
-Staring in Intune 2308, Win32 apps allow you to configure an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes to timeouts that you make to your Win32 apps also needs an increase in the ESP timeout to reflect those changes.
+Staring in Intune 2308, Win32 apps allow configuration of an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes made to timeouts for Win32 apps also needs an increase in the ESP timeout to reflect those changes.
 
 ## Autopilot profile resiliency
 
@@ -110,7 +111,7 @@ Downloading the Windows Autopilot policy just got more resilient! A new update i
 
 ## One step removal of Windows Autopilot registration
 
-Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that you can now remove the Autopilot registration of a device without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
+Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that the Autopilot registration of a device can now be removed without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -122,7 +123,7 @@ Starting in 2307, Windows Autopilot is making it easier to manage devices by add
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-1. Select the device you wish to remove and then select **Delete** in the toolbar at the top.
+2. Select the device that needs deletion and then select **Delete** in the toolbar at the top.
 
 ## Device rename occurs during technician phase for pre-provisioning
 
@@ -130,7 +131,7 @@ Starting in 2303, a new functional change forces the device rename to occur duri
 
 ## Install required apps during pre-provisioning
 
-A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. To help you achieve installing as many applications as possible during pre-provisioning, an option has been implemented to attempt the installation of all the required apps assigned to a device during technician phase. If there's app install failure, ESP continues except for the apps specified in the ESP profile. To enable this function, edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting only appears if you have blocking apps selected. For more information, see [Update to Windows Autopilot pre-provisioning process for app installs](https://techcommunity.microsoft.com/t5/intune-customer-success/update-to-windows-autopilot-pre-provisioning-process-for-app/ba-p/3752516).
+A new toggle is available in the Enrollment Status Page (ESP) profile that allows selection to attempt to install required applications during pre-provisioning technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. To help achieve installing as many applications as possible during pre-provisioning, an option has been implemented to attempt the installation of all the required apps assigned to a device during technician phase. If there's app install failure, ESP continues except for the apps specified in the ESP profile. To enable this function, edit the Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting only appears if blocking apps are selected. For more information, see [Update to Windows Autopilot pre-provisioning process for app installs](https://techcommunity.microsoft.com/t5/intune-customer-success/update-to-windows-autopilot-pre-provisioning-process-for-app/ba-p/3752516).
 
 ## New Microsoft Store apps now supported with the Enrollment Status Page
 
@@ -158,11 +159,11 @@ With Intune 2208, we're updating the Autopilot infrastructure to ensure that the
 
 ## Update Intune Connector for Active Directory for Microsoft Entra hybrid joined devices <!-- 2209 -->
 
-Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If you're not already using .NET 4.7.2 or later, the Intune Connector might not work for Autopilot hybrid Microsoft Entra deployments resulting in failures. When you install a new Intune Connector, don't use the connector installation package that was previously downloaded. Before you install a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Intune admin center. If you're not using the latest version, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector doesn't work.
+Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If .NET 4.7.2 or later isn't used, the Intune Connector might not work for Autopilot hybrid Microsoft Entra deployments resulting in failures. When a new Intune Connector is installed, don't use the connector installation package that was previously downloaded. Before installing a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Intune admin center. If the latest version isn't used, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector doesn't work.
 
 ## Enroll to co-management from Windows Autopilot <!-- 11300628 -->
 
-With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+With the Intune 2205 release, device enrollment in Intune can be configured to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
 If the device is targeted with an [Autopilot enrollment status page (ESP) policy](/mem/intune/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Autopilot ESP then continues.
 
@@ -200,9 +201,9 @@ For more information, see [Windows Autopilot MFA changes to enrollment flow](htt
 
 ## Windows Autopilot diagnostics page
 
-When you deploy Windows 11 with Autopilot, you can enable users to view detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available, which provides a user-friendly view to troubleshoot Windows Autopilot failures.
+When Windows 11 is deployed with Autopilot, users can be enabled to view detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available, which provides a user-friendly view to troubleshoot Windows Autopilot failures.
 
-The following example shows details for **Deployment info**, which includes **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. You can also **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+The following example shows details for **Deployment info**, which includes **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The **Export logs** button can also be used for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 

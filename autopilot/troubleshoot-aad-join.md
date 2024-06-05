@@ -32,7 +32,7 @@ Errors can also happen if the user exceeds the [number of devices](/mem/intune/e
 
 ## Deleted objects
 
-A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Microsoft Entra ID for group membership and targeting (including the profile). Deleting it might lead to join errors. If this object is deleted, you can fix the issue by deleting and reimporting this autopilot hash so it can recreate the associated object.
+A Microsoft Entra device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Microsoft Entra ID for group membership and targeting (including the profile). Deleting it might lead to join errors. If this object is deleted, the issue can be fixed by deleting and reimporting this autopilot hash so it can recreate the associated object.
 
 ## Error code 801C0003
 
