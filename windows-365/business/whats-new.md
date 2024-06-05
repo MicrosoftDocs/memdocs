@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/28/2024
+ms.date: 06/05/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -47,6 +47,16 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of June 5, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Single sign-on is now generally available<!--50103753-->
+
+Windows 365 Business now supports single sign-on. For more information, see [Configure single sign-on for Windows 365 Business](configure-single-sign-on.md). 
 
 <!-- ########################## -->
 ## Week of March 26, 2024
