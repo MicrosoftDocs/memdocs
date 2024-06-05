@@ -280,19 +280,19 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra hybrid joined**.
 
-1. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support).
+2. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
 
-1. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+3. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 
-1. Select **Next**.
+4. Select **Next**.
 
-1. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
+5. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
 
-1. Select **Next**.
+6. Select **Next**.
 
-1. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
+7. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
 
-1. Select **Next** > **Create**.
+8. Select **Next** > **Create**.
 
 > [!NOTE]
 >

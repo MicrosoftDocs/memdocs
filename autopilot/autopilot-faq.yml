@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 06/05/2024
+  ms.date: 06/06/2024
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -23,8 +23,6 @@ summary: |
   - Windows 10
 
   This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
-
-  A [glossary](#glossary) of abbreviations used in this article is provided at the end.
 
 sections:
   - name: Microsoft Partner Center

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/04/2024
+ms.date: 06/06/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -67,7 +67,6 @@ If these updates are installed on a device, Kiosk device profiles that have auto
 - Windows 11 21H2: [KB5025224](https://support.microsoft.com/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc) or later.
 - Windows 10: [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or later.
 
-
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
 TPM attestation for AMD platforms with ASP firmware TPM might fail with error code 0x80070490 on Windows 10 and Windows 11 systems. This issue is resolved on later versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
@@ -104,7 +103,7 @@ If there isn't an issue with the recovery environment, enter administrator crede
 
 1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn't supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
 
-2. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
+1. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
 
     - Conditional Access policy 1: Block all apps except those apps on an exclusion list.
     - Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
@@ -113,17 +112,15 @@ If there isn't an issue with the recovery environment, enter administrator crede
 
     If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), by default Microsoft Intune Enrollment is excluded, so that the device can register with Microsoft Entra ID and enroll with Intune and avoid a circular dependency.
 
-3. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
+1. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
 
     The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or Microsoft Entra hybrid joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
-4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices. This grace period is needed because until the device is rebooted, the status of BitLocker and Secure Boot aren't captured. Since the status isn't't captured, it can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
+1. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices. This grace period is needed because until the device is rebooted, the status of BitLocker and Secure Boot aren't captured. Since the status isn't't captured, it can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
 ### Device goes through Autopilot deployment without an assigned profile
 
 When a device is registered in Autopilot and no profile is assigned, the default Autopilot profile is taken. This behavior is by design. It makes sure that all devices registered with Autopilot go through the Autopilot experience. If the device shouldn't go through an Autopilot deployment, remove the Autopilot registration.
-
-<a name='white-screen-during-hybrid-azure-ad-joined-deployment'></a>
 
 ### White screen during Microsoft Entra hybrid joined deployment
 
@@ -153,8 +150,6 @@ Some devices might fail TPM attestation on Windows 11 during the pre-provisionin
 
 - Windows 11: [KB5013943](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755).
 - Windows 10: [KB5013942](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504).
-
-<a name='duplicate-device-objects-with-hybrid-azure-ad-deployments'></a>
 
 ### Duplicate device objects with hybrid Microsoft Entra deployments
 
@@ -198,8 +193,6 @@ The services responsible for determining the list of apps that should be blockin
 ### That username looks like it belongs to another organization. Try signing in again or start over with a different account
 
 Confirm that all of the information is correct at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`. For more information, see [Troubleshoot OOBE issues](troubleshoot-oobe.md#registry).
-
-<a name='windows-autopilot-user-driven-hybrid-azure-ad-deployments-dont-grant-users-administrator-rights-even-when-specified-in-the-windows-autopilot-profile'></a>
 
 ### Windows Autopilot user-driven hybrid Microsoft Entra deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile
 

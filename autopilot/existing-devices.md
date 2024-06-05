@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/05/2024
+ms.date: 06/06/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -370,7 +370,7 @@ The task sequence runs and does the following actions:
 
 > [!NOTE]
 >
-> If devices need to be joined to Active Directory as part of a Microsoft Entra hybrid join scenario, don't do so through the task sequence and the **Apply Network Settings** Task. Instead, create a **Domain Join** device configuration profile. Since there's no Microsoft Entra device object for the computer to do group-based targeting, target the profile to **All Devices**. For more information, see [User-driven mode for Microsoft Entra hybrid join](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+> If devices need to be joined to Active Directory as part of a Microsoft Entra hybrid join scenario, don't do so through the task sequence and the **Apply Network Settings** Task. Instead, create a **Domain Join** device configuration profile. Since there's no Microsoft Entra device object for the computer to do group-based targeting, target the profile to **All Devices**. For more information, see [User-driven mode for Microsoft Entra hybrid join](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join).
 
 ## Register the device for Windows Autopilot
 

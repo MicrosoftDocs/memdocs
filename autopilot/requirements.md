@@ -184,7 +184,7 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 >
 > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
-The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join).
 
 ##### Autopilot self-deploying mode and Autopilot pre-provisioning
 

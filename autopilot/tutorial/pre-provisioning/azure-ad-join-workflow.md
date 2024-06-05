@@ -7,9 +7,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/30/2023
+ms.date: 06/06/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -28,9 +28,13 @@ Before beginning, refer to the [How to: Plan your Microsoft Entra join implement
 
 > [!NOTE]
 >
-> Since Windows Autopilot for pre-provisioned deployment Microsoft Entra join builds on top of [Windows Autopilot user-driven Microsoft Entra join](../user-driven/azure-ad-join-workflow.md), it's strongly recommended that the Windows Autopilot user-driven Microsoft Entra join scenario is set up, tested, and working first before attempting to use the Windows Autopilot for pre-provisioned deployment Microsoft Entra join scenario. If the Windows Autopilot user-driven Microsoft Entra join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra join scenario won't work either.
-
-<a name='windows-autopilot-for-pre-provisioned-deployment-azure-ad-join-overview'></a>
+ The Windows Autopilot for pre-provisioned deployment Microsoft Entra join builds on top of [Windows Autopilot user-driven Microsoft Entra join](../user-driven/azure-ad-join-workflow.md). For this reason, before attempting to use the Windows Autopilot for pre-provisioned deployment Microsoft Entra join scenario, it's recommended that the Windows Autopilot user-driven Microsoft Entra join scenario is first:
+>
+> - Set up and configured.
+> - Tested.
+> - Working.
+>
+> If the Windows Autopilot user-driven Microsoft Entra join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra join scenario won't work either.
 
 ## Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview
 
@@ -71,13 +75,14 @@ The main difference between Windows Autopilot user-driven deployment and Windows
 
 The deployment is split up between the Technician flow and User flow phases so that the deployment is faster when the end-user receives the device. The deployment is faster when the end-user receives the device because the IT department, OEM, or reseller has completed the first portion of the deployment during the Technician flow.
 
-Windows Autopilot for pre-provisioned deployment may have one disadvantage over Windows Autopilot user-driven deployment. If the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department to complete the Technician flow. The organization's IT department then needs to run the Technician flow once they receive the device followed by delivering the device to the end-user. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
+Windows Autopilot for pre-provisioned deployment might have one disadvantage over Windows Autopilot user-driven deployment. If the OEM or reseller is unable to perform the Technician flow, then the device might need to first go to the organization's IT department to complete the Technician flow. The organization's IT department then needs to run the Technician flow once they receive the device followed by delivering the device to the end-user. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
 
 ## Workflow
 
 The following steps are needed to configure and then perform a Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune:
 
 > [!div class="checklist"]
+>
 > - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 > - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
 > - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
@@ -90,7 +95,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!NOTE]
 >
-> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
+> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step might make more sense in a production environment.
 
 ## Walkthrough
 
@@ -99,7 +104,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 ## More information
 
-For more information on Windows Autopilot for pre-provisioned deployment Microsoft Entra join, see the following article(s):
+For more information on Windows Autopilot for pre-provisioned deployment Microsoft Entra join, see the following articles:
 
-- [Windows Autopilot for pre-provisioned deployment](/mem/autopilot/pre-provision)
-- [User-driven mode for Microsoft Entra join](/mem/autopilot/user-driven#user-driven-mode-for-azure-ad-join)
+- [Windows Autopilot for pre-provisioned deployment](/mem/autopilot/pre-provision).
+- [User-driven mode for Microsoft Entra join](/mem/autopilot/user-driven#user-driven-mode-for-microsoft-entra-join).

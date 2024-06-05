@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/05/2024
+ms.date: 06/06/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -49,7 +49,7 @@ The DFCI management lifecycle includes the following processes:
 
 See the following figure:
 
-   :::image type="content" source="images/dfci.png" alt-text="Device Firmware Configuration Interface (DFCI) Management workflow":::
+:::image type="content" source="images/dfci.png" alt-text="Device Firmware Configuration Interface (DFCI) Management workflow":::
 
 ## Requirements
 
@@ -73,11 +73,11 @@ There are four basic steps in managing DFCI profile with Windows Autopilot:
 
 See [Create the profiles](/intune/configuration/device-firmware-configuration-interface-windows#create-the-profiles) and [Assign the profiles, and reboot](/intune/configuration/device-firmware-configuration-interface-windows#assign-the-profiles-and-reboot) for details.
 
-You can also [change existing DFCI settings](/intune/configuration/device-firmware-configuration-interface-windows#update-existing-dfci-settings) on devices that are in use. In the existing DFCI profile, change the settings and save the changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
+The existing [DFCI settings](/intune/configuration/device-firmware-configuration-interface-windows#update-existing-dfci-settings) can also be changed on devices that are in use. In the existing DFCI profile, change the settings and save the changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
 
-To identify whether a device is DFCI ready, following Intune Graph API call can be used:
+To identify whether a device is DFCI ready, the following Intune Graph API call can be used:
 
-> `managedDevice/deviceFirmwareConfigurationInterfaceManaged`
+`managedDevice/deviceFirmwareConfigurationInterfaceManaged`
 
 For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph ](/graph/api/resources/intune-graph-overview).
 
