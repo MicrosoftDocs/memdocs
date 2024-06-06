@@ -288,7 +288,7 @@ The following articles have been updated:
 * [Decide how to prepare apps for mobile application management with Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 * [Prepare iOS apps for mobile application management with the Intune App Wrapping Tool](../developer/app-wrapper-prepare-ios.md)
 * [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started.md)
-* [Intune App SDK for iOS developer guide](../developer/app-sdk-ios.md)
+* [Intune App SDK for iOS developer guide](../developer/app-sdk-ios-phase1.md)
 
 The following articles are new additions to the docs library:
 
