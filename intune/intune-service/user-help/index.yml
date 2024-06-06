@@ -126,7 +126,7 @@ landingContent:
       - text: Install mobile threat defense app 
         url: set-up-mobile-threat-defense.md 
       - text: Turn off USB debugging (Android)
-        url: you-need-to-turn-off-usb-debugging-android.md
+        url: update-device-settings-android.md
       - text: Turn on Windows Defender (Windows 10/11)
         url: turn-on-defender-windows.md
     - linkListType: concept
