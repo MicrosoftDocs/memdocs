@@ -41,16 +41,7 @@ Registration can also be performed within your organization by collecting the ha
 
 When you register an Autopilot device, it automatically creates a Microsoft Entra object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
 
-> [!IMPORTANT]
->
-> The following device shouldn't be registered as a Windows Autopilot device:
->
-> - [Microsoft Entra registered](/entra/identity/devices/concept-device-registration) devices, also known as "workplace joined" devices. For more information, see [Device appears as Microsoft Entra registered instead of Microsoft Entra joined](troubleshoot-device-enrollment.md#device-appears-as-microsoft-entra-registered-instead-of-microsoft-entra-joined).
-> - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune) devices.
->
-> These options are intended for users to join personally-owned devices to their organization's network. Windows Autopilot registered devices are registered as corporate owned devices.
->
-> If a device is already one of these two type of devices and it needs to be registered as a Windows Autopilot corporate device, it needs to first be removed from Microsoft Intune and Microsoft Entra ID before it's registered as a Windows Autopilot device. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
+[!INCLUDE [Registered device warning](includes/registered-vs-joined.md)]
 
 If a profile isn't assigned to an Autopilot device, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
 
