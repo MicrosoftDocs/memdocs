@@ -97,7 +97,7 @@ Before you can configure Conditional Access, verify the following configurations
 
   7. When you're done, select **OK** > **Create** to save your changes.
 
-  8. After you create the email profile, [assign it to groups](/intune-service/device-profile-assign).
+  8. After you create the email profile, [assign it to groups](../configuration/device-profile-assign.md).
 
   9. Set up [device-based conditional access](/intune-service/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
