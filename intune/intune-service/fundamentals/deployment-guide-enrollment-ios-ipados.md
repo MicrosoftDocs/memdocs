@@ -352,7 +352,7 @@ These iOS/iPadOS devices are personal or BYOD (bring your own device) devices th
 
 When you create the enrollment profile, you're asked to choose **User enrollment with Company Portal**, **Device enrollment with Company Portal**, **Account driven user enrollment**, or **Determine based on user choice**.
 
-For the specific enrollment steps, and its prerequisites, go to [Set up iOS/iPadOS user enrollment](../enrollment/ios-user-enrollment.md) and [Set up iOS/iPadOS device enrollment](../enrollment/ios-device-enrollment.md).  
+For the specific enrollment steps, and its prerequisites, go to [Set up iOS/iPadOS user enrollment](../enrollment/apple-user-enrollment-with-company-portal.md) and [Set up iOS/iPadOS device enrollment](../enrollment/apple-user-enrollment-with-company-portal.md).  
 
 ---
 | Feature | Use this enrollment option when |
@@ -371,7 +371,7 @@ For the specific enrollment steps, and its prerequisites, go to [Set up iOS/iPad
 
 ### User and Device enrollment administrator tasks
 
-This task list provides an overview. For more specific information, go to [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
+This task list provides an overview. For more specific information, go to [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md).
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
@@ -389,7 +389,7 @@ This task list provides an overview. For more specific information, go to [Set u
 
   - **User enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, like password, per-app VPN, Wi-Fi, and Siri. If you use User enrollment, and to help secure apps and their data, then we recommend also using app protection policies.
 
-    For the complete list of what you can and can't do, go to [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, go to [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
+    For the complete list of what you can and can't do, go to [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md). For the specific user enrollment steps, go to [Set up iOS/iPadOS User Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md).
 
     > [!NOTE]
     > BYOD can become organization-owned devices. To make these devices corporate, go to [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md).

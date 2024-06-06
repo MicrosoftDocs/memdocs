@@ -3671,7 +3671,7 @@ Applies to:
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 #### iOS/iPadOS settings catalog supports declarative device management (DDM)<!-- 15016105 -->
-On iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), the settings catalog automatically uses Apple's declarative device management (DDM) when configuring settings.
+On iOS/iPadOS 15+ devices enrolled using [User Enrollment](apple-user-enrollment-with-company-portal.md), the settings catalog automatically uses Apple's declarative device management (DDM) when configuring settings.
 - No action is required to use DDM. The feature is built into the settings catalog.
 - There's no impact to existing policies in the settings catalog.
 - iOS/iPadOS devices that aren't enabled for DDM continue to use Apple's standard MDM protocol.
