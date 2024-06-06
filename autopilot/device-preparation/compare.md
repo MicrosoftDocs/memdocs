@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 06/05/2024
 ms.topic: article
 ms.collection:
   - M365-modern-desktop
@@ -64,6 +64,7 @@ In general, the following are some of the major factors when considering between
 | Block user from accessing desktop until<br>user based configurations are applied | ❌ | ✅ |
 | [HoloLens](/hololens/hololens2-autopilot) support | ❌ | ✅ |
 | [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin) support | ❌ | ✅ |
+| Device Firmware Configuration Interface<br>([DFCI](../dfci-management.md)) Management support | ❌ | ✅ |
 
 ## Using Windows Autopilot device preparation and Windows Autopilot concurrently
 
