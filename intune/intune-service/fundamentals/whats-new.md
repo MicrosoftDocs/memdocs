@@ -1461,7 +1461,7 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 For more information, see:
 
 - [New Microsoft Intune Devices experience - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-devices-experience/ba-p/3777342)
-- [Try new Devices experience - Microsoft Learn](microsoft-intune-admin-center-devices.md)
+- [Try new Devices experience - Microsoft Learn](public-preview.md)
 
 ### Device security
 

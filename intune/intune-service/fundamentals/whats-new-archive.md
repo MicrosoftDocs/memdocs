@@ -1524,7 +1524,7 @@ Applies to:
 #### Renaming Proactive remediation to Remediations and moving to a new location<!-- 16526263  -->  
 Proactive remediations are now Remediations and are available from **Devices** > **Remediations**. You can still find Remediations in both the new location and the existing **Reports** > **Endpoint Analytics** location until the next Intune service update.
 
-Remediations are currently not available in the new [Devices experience preview](../fundamentals/microsoft-intune-admin-center-devices.md).
+Remediations are currently not available in the new [Devices experience preview](../fundamentals/public-preview.md).
 
 Applies to:
 
@@ -2127,7 +2127,7 @@ The Devices area in the admin center now has a more consistent UI, with more cap
 * Monitoring and reports are within the management workflows, giving you easy access to key metrics and reports without having to leave the workflow.
 * A consistent way across list views to search, sort, and filter data.
 
-For more information about the updated UI, see [Try new Devices experience in Microsoft Intune](microsoft-intune-admin-center-devices.md).
+For more information about the updated UI, see [Try new Devices experience in Microsoft Intune](public-preview.md).
 
 ### Device security
 
