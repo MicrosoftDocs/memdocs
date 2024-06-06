@@ -53,7 +53,7 @@ For most organizations, using an OEM or partner to register devices as Autopilot
 >
 > - The following device shouldn't be registered as a Windows Autopilot device:
 >
->   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register) devices, also known as "workplace joined." For more information, see [Device appears as Microsoft Entra registered instead of Microsoft Entra joined](registration-overview.md#device-appears-as-microsoft-entra-registered-instead-of-microsoft-entra-joined)
+>   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register) devices, also known as "workplace joined." For more information, see [Device appears as Microsoft Entra registered instead of Microsoft Entra joined](../../troubleshoot-device-enrollment.md#device-appears-as-microsoft-entra-registered-instead-of-microsoft-entra-joined).
 >   - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune) devices.
 >
 >   These options are intended for users to join personally-owned devices to their organization's network. On the other hand, Windows Autopilot registered devices are considered corporate owned devices.
