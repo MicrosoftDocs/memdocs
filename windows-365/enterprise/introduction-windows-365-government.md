@@ -45,7 +45,7 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 
 ## Features not yet supported Windows 365 Government
 
-The following features aren't yet supported for Windows 365 GCC or GCCH.
+The following features aren't yet supported for Windows 365 GCC or GCCH. 
 
 - Unified dashboard
 - Windows 365 Security baseline
@@ -55,9 +55,8 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Citrix HDX Plus for Windows 365
 - Multimedia redirection for improved video playback
 - Microsoft Dev Box
-- Windows 365 Frontline
-- Admin feedback
 - System alerts and email notifications
+- Admin feedback
 - GPU Cloud PCs
 - Audit logs support in Azure Log Analytics
 - [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
@@ -65,6 +64,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Microsoft Purview Customer Lockbox
 - Windows App
 - Cloud PC Reports
+- Microsoft Purview forensic evidence
 
 ## Next steps
 
