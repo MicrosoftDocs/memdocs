@@ -299,7 +299,7 @@ When a dependent app isn't installed, the user will commonly see one of the foll
 - One or more dependent app requirements aren't met.
 - One or more dependent apps are pending a device reboot.
 
-If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).
+If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune-service/troubleshoot-app-install#win32-app-installation-troubleshooting).
 
 Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global reevaluation schedule. Dependencies aren't applicable for uninstalling a Win32 app. However, if it's set as a dependent app, the Company Portal won't show the uninstall button for the app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
 

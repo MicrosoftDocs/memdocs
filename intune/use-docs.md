@@ -56,7 +56,7 @@ Use the following search tips to help you find the information that you need:
 
     :::image type="content" source="media/docs-search-field.png" alt-text="Docs search field in header.":::
 
-  - **Filter by title** above the left table of contents. To search the current table of contents, enter terms in this field. This field only matches terms that appear in the article titles for the current node. For example, **Configuration Manager Core Infrastructure** (`learn.microsoft.com/mem/configmgr/core`) or **Intune Apps** (`https://learn.microsoft.com/mem/intune/apps/`). The last item in the search results gives you the option to search for the terms in the entire content library.
+  - **Filter by title** above the left table of contents. To search the current table of contents, enter terms in this field. This field only matches terms that appear in the article titles for the current node. For example, **Configuration Manager Core Infrastructure** (`learn.microsoft.com/mem/configmgr/core`) or **Intune Apps** (`https://learn.microsoft.com/mem/intune-service/apps/`). The last item in the search results gives you the option to search for the terms in the entire content library.
 
     :::image type="content" source="media/docs-filter-toc.gif" alt-text="Animation of using the table of contents filter.":::
 

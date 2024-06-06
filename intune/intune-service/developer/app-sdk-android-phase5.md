@@ -791,31 +791,31 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [Register for notifications from the SDK]:app-sdk-android-phase7.md#register-for-notifications-from-the-sdk
 
 <!-- Links to other Intune docs -->
-[Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune/apps/apps-selective-wipe
+[Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune-service/apps/apps-selective-wipe
 
 <!-- Class links -->
-[AppIdentitySwitchResultCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html
-[IdentitySwitchOption]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/IdentitySwitchOption.html
-[MAMActivity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
-[MAMActivityIdentityRequirementListener]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html
-[MAMAsyncTask]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMAsyncTask.html
-[MAMContentProvider]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/content/MAMContentProvider.html
-[MAMDataProtectionManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
-[MAMFileProtectionManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
-[MAMIdentityExecutors]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html
-[MAMIdentityRequirementListener]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html
-[MAMIdentitySwitchResult]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html
-[MAMNotificationType]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
-[MAMPolicyManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
-[MAMSetUIIdentityCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html
+[AppIdentitySwitchResultCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/app/AppIdentitySwitchResultCallback.html
+[IdentitySwitchOption]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/app/IdentitySwitchOption.html
+[MAMActivity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/app/MAMActivity.html
+[MAMActivityIdentityRequirementListener]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/app/MAMActivityIdentityRequirementListener.html
+[MAMAsyncTask]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMAsyncTask.html
+[MAMContentProvider]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/content/MAMContentProvider.html
+[MAMDataProtectionManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMDataProtectionManager.html
+[MAMFileProtectionManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMFileProtectionManager.html
+[MAMIdentityExecutors]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMIdentityExecutors.html
+[MAMIdentityRequirementListener]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/app/MAMIdentityRequirementListener.html
+[MAMIdentitySwitchResult]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/MAMIdentitySwitchResult.html
+[MAMNotificationType]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/notification/MAMNotificationType.html
+[MAMPolicyManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMPolicyManager.html
+[MAMSetUIIdentityCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMSetUIIdentityCallback.html
 
 <!-- Method links -->
-[getIsIdentityManaged]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityManaged(java.lang.String)
-[protect]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protect(android.os.ParcelFileDescriptor,%20java.lang.String)
-[onMAMIdentitySwitchRequired]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchReason,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)
-[registerAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
-[setUIPolicyIdentity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context,%20java.lang.String,%20com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
-[switchMAMIdentity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html#switchMAMIdentity(java.lang.String,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
+[getIsIdentityManaged]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMPolicyManager.html#getIsIdentityManaged(java.lang.String)
+[protect]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMFileProtectionManager.html#protect(android.os.ParcelFileDescriptor,%20java.lang.String)
+[onMAMIdentitySwitchRequired]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchReason,%20com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)
+[registerAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
+[setUIPolicyIdentity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context,%20java.lang.String,%20com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
+[switchMAMIdentity]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/app/MAMActivity.html#switchMAMIdentity(java.lang.String,%20java.util.EnumSet%3Ccom.microsoft.intune.mam.client.app.IdentitySwitchOption%3E)
 
 <!-- Other Microsoft links -->
 [Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431

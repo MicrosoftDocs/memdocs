@@ -98,7 +98,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 **Devices must**:
 
-- Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM.
+- Be [enrolled in Intune](/mem/intune-service/fundamentals/deployment-guide-enrollment) MDM.
 
 - Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
 

@@ -40,7 +40,7 @@ The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Run CMPivot** permission on the **Collection** in Configuration Manager
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 
 ## Launch CMPivot

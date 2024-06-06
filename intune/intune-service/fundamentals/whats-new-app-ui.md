@@ -642,12 +642,12 @@ The Managed Browser is receiving updated icons for both the Android and iOS vers
 
 Before    
  > [!div class="mx-imgBorder"]
- > ![Screenshot of the previous version of the Managed Browser app icon.](/intune/media/cp_manbro_before_042017.png)  
+ > ![Screenshot of the previous version of the Managed Browser app icon.](/intune-service/media/cp_manbro_before_042017.png)  
 
 
 After  
  > [!div class="mx-imgBorder"]
- > ![Screenshot of the new version of the Managed Browser app icon.](/intune/media/cp_manbro_before_042017.png)  
+ > ![Screenshot of the new version of the Managed Browser app icon.](/intune-service/media/cp_manbro_before_042017.png)  
 
 
 The Company Portal is also receiving updated icons for the Android, iOS, and Windows versions of the app to improve consistency with other apps in EM+S. These icons will be gradually released across platforms from April to late May.
@@ -658,11 +658,11 @@ An update to the Android Company Portal app shows a sign-in progress indicator w
 
 **Before**  
  > [!div class="mx-imgBorder"]
- > ![The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it.](/intune/media/cp_android_connecting_042017.png)  
+ > ![The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it.](/intune-service/media/cp_android_connecting_042017.png)  
 
  **After**  
  > [!div class="mx-imgBorder"]
- > ![The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it.](/intune/media/cp_android_connecting_042017.png)   
+ > ![The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it.](/intune-service/media/cp_android_connecting_042017.png)   
 
 ### Improved app install status for the Windows 10 Company Portal app <!--676495-->
 The Windows 10 Company Portal app now provides an install progress bar on the app details page. This is supported for modern apps on devices running the Windows 10 Anniversary Update and up.
@@ -689,7 +689,7 @@ Beginning in March, the Company Portal app for Android will follow [material des
 * __Navigation__: All Apps shows a tabbed view of __Featured__, __All__ and __Categories__ for easier navigation. __Contact IT__ has been streamlined for improved readability.  
 
  > [!div class="mx-imgBorder"]
- > ![Screenshot of Company Portal app for Android showing an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information.](/intune/media/cp_android_contactit_after.png)  
+ > ![Screenshot of Company Portal app for Android showing an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information.](/intune-service/media/cp_android_contactit_after.png)  
 
 ## January 2017
 

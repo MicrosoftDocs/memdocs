@@ -73,7 +73,7 @@ Endpoint Privilege Management supports the following operating systems:
 > [!IMPORTANT]
 >
 > - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
-> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Getting started with Endpoint Privilege Management
 

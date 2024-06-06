@@ -387,7 +387,7 @@ Then, when a previously unmanaged Windows 10 or later device enrolls with Intune
 > [!NOTE]
 > If you're planning to deploy the Configuration Manager client to devices going through Autopilot, we recommend that you target users for the assignment of the Configuration Manager client instead of devices.
 >
-> This action will avoid a conflict between [installing line-of-business apps and Win32 apps during Autopilot](../../intune/apps/lob-apps-windows.md).
+> This action will avoid a conflict between [installing line-of-business apps and Win32 apps during Autopilot](../../intune-service/apps/lob-apps-windows.md).
 
 ### Create an Intune app to install the Configuration Manager client
 

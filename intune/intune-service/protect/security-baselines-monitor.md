@@ -249,4 +249,4 @@ On Windows 10/11 devices, there's a built-in MDM diagnostic information report. 
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
 - [Monitor device profiles](../configuration/device-profile-monitor.md) 
 - [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune-service/troubleshoot-policies-in-microsoft-intune)

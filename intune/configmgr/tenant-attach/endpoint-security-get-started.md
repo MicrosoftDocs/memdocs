@@ -32,7 +32,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender for Endpoint.
 
-[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune/protect/includes/make-configmgr-collection-available-edr.md)]
+[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune-service/protect/includes/make-configmgr-collection-available-edr.md)]
 
 ## Next steps
 

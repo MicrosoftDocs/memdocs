@@ -697,7 +697,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 
 <!-- Microsoft Learn documentation -->
 [Microsoft Privacy Policy]:https://go.microsoft.com/fwlink/?Linkid=857875
-[How to validate your app protection policy setup in Microsoft Intune]:/mem/intune/apps/app-protection-policies-validate
+[How to validate your app protection policy setup in Microsoft Intune]:/mem/intune-service/apps/app-protection-policies-validate
 
 <!-- Sovereign Cloud -->
 [sovereign cloud aware]:/azure/active-directory/develop/authentication-national-cloud
@@ -706,21 +706,21 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 <!-- Class links -->
 [`IAccount`]:https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAccount.java
 [`IAuthenticationResult`]:https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAuthenticationResult.java
-[MAMEnrollmentManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html
-[MAMEnrollmentManager.Result]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
-[MAMLogHandlerWrapper]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/log/MAMLogHandlerWrapper.html
-[MAMServiceAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html
-<!-- [MAMServiceAuthenticationCallbackExtended]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html -->
-[MAMStrictViolationHandler]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictViolationHandler.html
-[MAMStrictCheck]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictCheck.html
+[MAMEnrollmentManager]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.html
+[MAMEnrollmentManager.Result]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.Result.html
+[MAMLogHandlerWrapper]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/log/MAMLogHandlerWrapper.html
+[MAMServiceAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMServiceAuthenticationCallback.html
+<!-- [MAMServiceAuthenticationCallbackExtended]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMServiceAuthenticationCallbackExtended.html -->
+[MAMStrictViolationHandler]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/strict/MAMStrictViolationHandler.html
+[MAMStrictCheck]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/client/strict/MAMStrictCheck.html
 
 <!-- Method links -->
-[acquireToken]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
-[getRegisteredAccountStatus]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String)
-[registerAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
-[registerAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAuthenticationCallback(com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback)
-[unregisterAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String)
-[updateToken]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#updateToken(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
+[acquireToken]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
+[getRegisteredAccountStatus]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String)
+[registerAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
+[registerAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.html#registerAuthenticationCallback(com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback)
+[unregisterAccountForMAM]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String)
+[updateToken]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune-service/mam/policy/MAMEnrollmentManager.html#updateToken(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
 
 <!-- Other Microsoft links -->
 [Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431

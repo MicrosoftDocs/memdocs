@@ -309,4 +309,4 @@ enrolled via the *Add work and school account* option. The ESP waits for Microso
 
 ## Troubleshooting  
 
-For help with errors or messages related to the ESP, including how to disable an already-enabled ESP, see [Troubleshoot the Windows Enrollment Status page](/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting).  
+For help with errors or messages related to the ESP, including how to disable an already-enabled ESP, see [Troubleshoot the Windows Enrollment Status page](/troubleshoot/mem/intune-service/understand-troubleshoot-esp#troubleshooting).  

@@ -251,4 +251,4 @@ For information about the most recent baseline versions and settings from Micros
 
 - [Learn about security baselines](../protect/security-baselines.md)
 - [Avoid conflicts](../protect/security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune-service/troubleshoot-policies-in-microsoft-intune)

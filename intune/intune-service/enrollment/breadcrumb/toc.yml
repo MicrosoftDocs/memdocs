@@ -4,9 +4,9 @@ items:
   topicHref: /mem/index
   items:
   - name: Intune service
-    tocHref: /mem/intune/
-    topicHref: /mem/intune/
+    tocHref: /mem/intune-service/
+    topicHref: /mem/intune-service/
     items:
     - name: Enrollment
-      tocHref: /mem/intune/enrollment/
-      topicHref: /troubleshoot/mem/intune/
+      tocHref: /mem/intune-service/enrollment/
+      topicHref: /troubleshoot/mem/intune-service/

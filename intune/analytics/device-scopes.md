@@ -14,7 +14,7 @@ ms.localizationpriority: high
 # Device scopes in Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
 
 Custom device scopes use Scope tags to slice Endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
 
@@ -31,7 +31,7 @@ Custom device scopes are supported on the following Endpoint analytics reports:
 ## Permissions  
 
 Custom device scopes use Intune Scope tags, hence other permissions are required for some actions.
-To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
+To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune-service/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
 
 - Endpoint Security Manager
 

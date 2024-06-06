@@ -146,7 +146,7 @@ Regardless of the policy method, managing the same setting on the same device th
 
 The information at the following links can help you identify and resolve conflicts:
 
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune-service/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 ## Next steps

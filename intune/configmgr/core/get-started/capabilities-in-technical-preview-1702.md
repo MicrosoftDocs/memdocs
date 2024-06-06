@@ -233,7 +233,7 @@ For more information about certificates in Configuration Manager, see [Introduct
 
 ## New compliance settings for iOS devices
 
-We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](../../../intune/configuration/device-restrictions-ios.md).
+We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](../../../intune-service/configuration/device-restrictions-ios.md).
 
 - **Sync data from managed apps to iCloud**
 - **Handoff to continue activities on other device**

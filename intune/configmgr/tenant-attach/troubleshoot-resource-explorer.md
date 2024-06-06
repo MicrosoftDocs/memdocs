@@ -26,7 +26,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 <!--7980141-->
 **Error message:** You don’t have access to view this information. Make sure a proper user role is assigned from Intune.
 
-**Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
+**Possible cause:** The user account needs an [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 ### <a name="bkmk_noinfo"></a> Unable to get resource information
 
 **Error message 1:** Unable to get resource information. Make sure Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.

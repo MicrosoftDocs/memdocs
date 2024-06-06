@@ -66,7 +66,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
     - If any device doesn't have a user, then the email profile might not deploy. You limit the profile, and could miss some devices.
     - If the device has a primary user, then deploying to device groups should work.
 
-    For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune).
+    For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune-service/troubleshoot-email-profiles-in-microsoft-intune).
 
 ## Step 1 - Deploy your email app
 

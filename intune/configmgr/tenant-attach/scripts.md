@@ -42,7 +42,7 @@ The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Read Resource** permission for the device's **Collection** in Configuration Manager.
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 - To use scripts, you must be a member of the appropriate Configuration Manager security role. For more information, see [Security scopes for run scripts](../apps/deploy-use/create-deploy-scripts.md#bkmk_ScriptRoles).
 - To run scripts, the account must have **Run Script** permissions for **Collections**.
 

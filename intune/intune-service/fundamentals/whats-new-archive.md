@@ -279,7 +279,7 @@ The following device compliance reports are out of public preview and are now ge
 
 With this move to general availability, the older versions of both reports have been retired from the Intune admin center and are no longer available.
 
-For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
+For more information about these changes, see the Intune Support Team blog at [https://aka.ms/intune-service/device_compl_report](https://aka.ms/intune-service/device_compl_report).
 
 ### Tenant administration
 
@@ -854,7 +854,7 @@ Compliance report improvements include:
 - The updated status reports support sorting by columns, the use of filters, and search. Combined, these enhancements enable you to pivot the report to display specific subsets of details you want to view at that time. With these enhancements, we have removed the *User status* report as it has become redundant. Now, while viewing the default *Device status* report you can focus the report to display the same information that was available from *User status* by sorting on the *User Principal Name* column, or searching for a specific username in the search box.
 - When viewing status reports, the count of devices that Intune displays now remains consistent between different report views as you drill in for deeper insights or details.
 
-For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
+For more information about these changes, see the Intune Support Team blog at [https://aka.ms/intune-service/device_compl_report](https://aka.ms/intune-service/device_compl_report).
 
 ## Week of August 14, 2023
 
@@ -2450,7 +2450,7 @@ Applies to:
 
 In Remote Help, you can now use a laser pointer when you're providing assistance on Windows.
 
-For more information on Remote Help, go to [Remote Help](/mem/intune/fundamentals/remote-help).
+For more information on Remote Help, go to [Remote Help](/mem/intune-service/fundamentals/remote-help).
 
 Applies to:
 
@@ -2682,7 +2682,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Scripts
 
 #### Preview PowerShell script package content in Endpoint Analytics<!-- 12930245 -->  
-Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [PowerShell scripts for Proactive remediations](../../intune/fundamentals/powershell-scripts-remediation.md).
+Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [PowerShell scripts for Proactive remediations](../../intune-service/fundamentals/powershell-scripts-remediation.md).
 
 ## Week of January 16, 2023
 
@@ -2690,7 +2690,7 @@ Admins can now see a preview of a PowerShell script's content for proactive reme
 
 #### Win32 app supersedence GA<!-- 9318154 -->  
 
-The feature set for Win32 app supersedence GA is available. It adds support for apps with supersedence during ESP, and also allows supersedence & dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://aka.ms/Intune/Win32-Supersedence). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+The feature set for Win32 app supersedence GA is available. It adds support for apps with supersedence during ESP, and also allows supersedence & dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://aka.ms/intune-service/Win32-Supersedence). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
 
 ## Week of January 9, 2023
 
@@ -2731,7 +2731,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Remote Help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
 In the Remote Help app, admins can disable chat functionality from the new tenant level setting. Turning on the disable chat feature removes the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
-For more information, see [Configure Remote Help for your tenant](/mem/intune/fundamentals/remote-help#configure-remote-help-for-your-tenant).
+For more information, see [Configure Remote Help for your tenant](/mem/intune-service/fundamentals/remote-help#configure-remote-help-for-your-tenant).
 
 **Applies to**: Windows 10/11
 
@@ -2866,7 +2866,7 @@ On Android Enterprise 11 and older personally owned devices with a work profile,
 - **Devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
 - **Devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
 
-Google is deprecating the **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+Google is deprecating the **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/intune-service/Android13).
 
 The new **Password complexity** setting has the following options:
 
@@ -3356,7 +3356,7 @@ In Remote Help, a link has been added to the non-compliance warning notification
 
 For more information, go to:
 
-- [Microsoft Intune Remote Help](/mem/intune/fundamentals/remote-help)
+- [Microsoft Intune Remote Help](/mem/intune-service/fundamentals/remote-help)
 
 - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
@@ -3563,7 +3563,7 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 With Remote Help 4.0.1.13, fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune and Microsoft Intune](/mem/intune/fundamentals/remote-help)
+For more information, go to [Use Remote Help with Intune and Microsoft Intune](/mem/intune-service/fundamentals/remote-help)
 
 ## Week of August 29, 2022
 
@@ -3865,7 +3865,7 @@ Applies to:
 #### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
 With Remote Help 4.0.1.12, various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
+For more information, see [Use Remote Help with Intune](/mem/intune-service/fundamentals/remote-help)
 
 ### Device enrollment
 

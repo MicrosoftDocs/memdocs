@@ -118,7 +118,7 @@ To enable automatic app updates for Company Portal, go to your app token setting
     - Apple Business Manager and Apple School Manager sync about 3,000 devices over to Intune per minute. We recommend that you hold off manually syncing from the admin center again until enough time has passed for all of the devices to finish syncing (total number of devices/3,000 devices per minute).  
 
 ### Troubleshoot enrollment   
-If you experience sync problems during the enrollment process, you can look for solutions at [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages). 
+If you experience sync problems during the enrollment process, you can look for solutions at [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune-service/troubleshoot-ios-enrollment-errors#error-messages). 
 
 ## Get an Apple automated device enrollment token
 

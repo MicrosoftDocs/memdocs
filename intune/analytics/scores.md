@@ -90,4 +90,4 @@ Use the **Add filter** option on tables to display items that match your criteri
 
 ## Next steps
 
-- Use [Remediations](../intune/fundamentals/remediations.md) to gather more data and take action on devices
+- Use [Remediations](../intune-service/fundamentals/remediations.md) to gather more data and take action on devices

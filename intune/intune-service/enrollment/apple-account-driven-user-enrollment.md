@@ -149,7 +149,7 @@ To get around this issue, the device user must uninstall the Microsoft Authentic
 ## Next steps  
 * For an overview of supported Apple User Enrollment features and management actions in Microsoft Intune, see [Overview of Apple User Enrollment in Microsoft Intune](ios-user-enrollment-supported-actions.md).  
 * For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.  
-* For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).  
+* For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune-service/device-enrollment/troubleshoot-ios-enrollment-errors).  
 * For supported settings in Intune device configurations profiles, see:   
 
    * [iOS and iPadOS device restrictions](../configuration/device-restrictions-ios.md)

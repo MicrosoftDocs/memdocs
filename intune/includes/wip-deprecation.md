@@ -16,4 +16,4 @@ ms.date: 10/02/2023
 >
 > For more information, see [End of support guidance for Windows Information Protection](https://aka.ms/Intune-WIP-support).
 >
-> For information about Intune MAM on Windows, see [MAM for Windows](../intune/fundamentals/whats-new-archive.md#mam-for-windows-general-availability) and [App protection policy settings for Windows](../intune/apps/app-protection-policy-settings-windows.md).
+> For information about Intune MAM on Windows, see [MAM for Windows](../intune-service/fundamentals/whats-new-archive.md#mam-for-windows-general-availability) and [App protection policy settings for Windows](../intune-service/apps/app-protection-policy-settings-windows.md).

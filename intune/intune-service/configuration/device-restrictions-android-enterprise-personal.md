@@ -188,7 +188,7 @@ These password settings apply to the work profile password on personally owned d
 
 > [!IMPORTANT]
 > 
-> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/intune-service/Android13).
   > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
 
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
@@ -260,7 +260,7 @@ These password settings apply to the device password on personally owned devices
 
 > [!IMPORTANT]
 > 
-> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/intune-service/Android13).
   > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
 
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:

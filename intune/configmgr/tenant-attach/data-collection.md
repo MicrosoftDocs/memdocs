@@ -24,7 +24,7 @@ When you attach your Configuration Manager site with a Microsoft Intune tenant, 
 Tenant attach makes the Microsoft Intune admin center your console in the cloud. The architecture allows the Configuration Manager site to synchronize data about the device and the user to your Intune tenant. You can then query and present data from your on-premises environment in the cloud console in real time without active synchronization. It can fetch large volatile data from your on-premises site. Tenant attach uses a mixture of these methods to provide efficient up-to-date information in the cloud console.
 
 > [!IMPORTANT]
-> The Microsoft data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for.
+> The Microsoft data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune-service/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for.
 >
 > We don't sell any data collected by our service to any third parties for any reason.
 >
@@ -147,7 +147,7 @@ For more general information on the data that Configuration Manager collects, se
 
 For more information about related privacy aspects, see the following articles:
 
-- [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement)
+- [Microsoft Intune Privacy Statement](/legal/intune-service/microsoft-intune-privacy-statement)
 - [Windows 10 and privacy compliance](/windows/privacy/windows-10-and-privacy-compliance)
 - [Licensing terms and documentation](https://www.microsoft.com/licensing/terms)  
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  

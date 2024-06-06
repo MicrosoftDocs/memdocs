@@ -232,7 +232,7 @@ There are other Windows enrollment options in Intune to help improve or simplify
 ## Report and troubleshoot  
 Track [incomplete and abandoned user enrollments](../enrollment/enrollment-report-company-portal-abandon.md). This Microsoft Intune report tells you where in the Company Portal users failed to complete the enrollment process.  
 
-For troubleshooting docs, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune).    
+For troubleshooting docs, see [Troubleshoot device enrollment](/troubleshoot/mem/intune-service/troubleshoot-device-enrollment-in-intune).    
 
 ## Resources 
 Additional enrollment guides are available throughout the Microsoft Intune documentation. These guides include visual comparisons, how-to steps, tips, and enrollment best practices for each supported platform.   

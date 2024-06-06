@@ -14,7 +14,7 @@ ms.localizationpriority: high
 # Enhanced device timeline in Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
 
 The enhanced device timeline allows you to see a history of events that have occurred on a specific device. When you're viewing a specific device in Endpoint analytics, the enhanced device timeline is viewable on the **Device timeline** tab.
 

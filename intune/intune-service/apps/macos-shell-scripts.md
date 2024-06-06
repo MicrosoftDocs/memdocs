@@ -210,7 +210,7 @@ Once a custom attribute profile runs, it returns one of the following statuses:
 There could be several reasons:
 
 - The agent might need to check in to receive new or updated scripts. This check-in process occurs every 8 hours and is different from the MDM check-in. Make sure that the device is awake and connected to a network for a successful agent check-in and wait for the agent to check in. You can also request the end user to open Company Portal on the Mac, select the device and click **Check settings**.
-- The agent may not be installed. Check that the agent is installed at `/Library/Intune/Microsoft Intune Agent.app` on the macOS device.
+- The agent may not be installed. Check that the agent is installed at `/Library/intune-service/Microsoft Intune Agent.app` on the macOS device.
 - The agent may not be in a healthy state. The agent will attempt to recover for 24 hours, remove itself and reinstall if shell scripts are still assigned.
 
 ### How frequently is script run status reported?

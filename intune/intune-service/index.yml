@@ -80,22 +80,22 @@ productDirectory:
     - title: How-to guides
       imageSrc: ./media/icons/tasks.svg
       summary: Guides to help you perform common tasks in Intune
-      url: /mem/intune/index#how-to-guides
+      url: /mem/intune-service/index#how-to-guides
     # Card
     - title: Platform and industry guides
       imageSrc: ./media/icons/tasks.svg
       summary: Guides that consolidate information specific to a platform or industry.
-      url: /mem/intune/index#platform-and-industry-guides
+      url: /mem/intune-service/index#platform-and-industry-guides
     # Card
     - title: Related services
       imageSrc: ./media/icons/cloud-services.svg
       summary: Resource to find information about related services, such as Microsoft 365.
-      url: /mem/intune/index#related-services
+      url: /mem/intune-service/index#related-services
     # Card
     - title: Intune community resources
       imageSrc: ./media/icons/community.svg
       summary: Resources to help you connect with the Intune community.
-      url: /mem/intune/index#intune-community-resources
+      url: /mem/intune-service/index#intune-community-resources
 
 conceptualContent:
   sections:
@@ -314,18 +314,18 @@ conceptualContent:
 
     - title: Troubleshoot
       links:
-        - url: /troubleshoot/mem/intune/device-enrollment/troubleshoot-device-enrollment-in-intune
+        - url: /troubleshoot/mem/intune-service/device-enrollment/troubleshoot-device-enrollment-in-intune
           itemType: concept
           text: Troubleshoot device enrollment     
-        - url: /troubleshoot/mem/intune/app-management/troubleshoot-app-install
+        - url: /troubleshoot/mem/intune-service/app-management/troubleshoot-app-install
           itemType: concept
           text: Troubleshoot app installation issues
-        - url: /troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune
+        - url: /troubleshoot/mem/intune-service/device-configuration/troubleshoot-policies-in-microsoft-intune
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
       footerLink:
         text: Browse all troubleshooting articles
-        url: /troubleshoot/mem/intune/welcome-intune/
+        url: /troubleshoot/mem/intune-service/welcome-intune/
 
   - title: Platform and industry guides
     items:

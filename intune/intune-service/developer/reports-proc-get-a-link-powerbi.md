@@ -53,16 +53,16 @@ The following steps show you how to download the Power BI file and how to use th
 
 ## Install Power BI
 
-Install the latest version of [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). For more information, see [Power BI Desktop](https://powerbi.microsoft.com/desktop).
+Install the latest version of [Power BI Desktop](https://aka.ms/intune-service/datawarehouseapi/installpowerbi). For more information, see [Power BI Desktop](https://powerbi.microsoft.com/desktop).
 
 ## Load the data and reports using the Power BI Intune Compliance Data Warehouse App
 
-The Power BI [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app contains information for your tenant and a set of prebuilt reports based on the Data Warehouse data model.
+The Power BI [Intune Compliance (Data Warehouse)](https://aka.ms/intune-service/datawarehouseapi/getpowerbiapp) app contains information for your tenant and a set of prebuilt reports based on the Data Warehouse data model.
 
 > [!NOTE]
 > The Power BI Intune Compliance Data Warehouse app is not supported for Azure Government cloud environments.
 
-1. Navigate to the **AppSource** page of the [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app to begin the installation process.
+1. Navigate to the **AppSource** page of the [Intune Compliance (Data Warehouse)](https://aka.ms/intune-service/datawarehouseapi/getpowerbiapp) app to begin the installation process.
 2. Click the **Get It Now** button, and then click **Continue**.
 3. When prompted to install the Power BI app, click **Install**.
 4. After the installation completes, click on the **Intune Compliance (Data Warehouse)** app tile.

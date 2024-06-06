@@ -33,13 +33,13 @@ Here's a collection of resources to help you troubleshoot Windows devices manage
 ::: zone pivot="ios"
 Here's a collection of resources to help you troubleshoot iOS devices managed by Intune:
 
-- [iOS or iPadOS devices aren't checking in with the Intune service](/troubleshoot/mem/intune/device-enrollment/ios-devices-inactive)
-- [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors)
-- [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment)
-- [Troubleshooting profile installation failed error on iOS or iPadOS devices](/troubleshoot/mem/intune/device-enrollment/profile-installation-failed)
-- [Intune enrollment process doesn't start on Apple Automated Device Enrollment devices](/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment)
-- [ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'](/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error)
-- [You can't access company resources on an Intune-enrolled ADE device](/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep)
+- [iOS or iPadOS devices aren't checking in with the Intune service](/troubleshoot/mem/intune-service/device-enrollment/ios-devices-inactive)
+- [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune-service/device-enrollment/troubleshoot-ios-enrollment-errors)
+- [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/mem/intune-service/device-enrollment/device-stuck-in-enrollment)
+- [Troubleshooting profile installation failed error on iOS or iPadOS devices](/troubleshoot/mem/intune-service/device-enrollment/profile-installation-failed)
+- [Intune enrollment process doesn't start on Apple Automated Device Enrollment devices](/troubleshoot/mem/intune-service/device-enrollment/apple-dep-device-fails-auto-enrollment)
+- [ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'](/troubleshoot/mem/intune-service/device-enrollment/dep-enrollment-xpc-type-error)
+- [You can't access company resources on an Intune-enrolled ADE device](/troubleshoot/mem/intune-service/device-protection/cannot-access-company-resources-on-dep)
 ::: zone-end
 
 ## How to contact Microsoft Support
@@ -71,12 +71,12 @@ ________________________________________________________
 
 <!-- Reference links in article -->
 [MEM-1]: /mem/get-support
-[MEM-2]: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
-[MEM-3]: /troubleshoot/mem/intune/troubleshoot-device-actions
-[MEM-4]: /troubleshoot/mem/intune/troubleshoot-bitlocker-admin-center
-[MEM-5]: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
-[MEM-6]: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#troubleshoot-windows-wi-fi-profiles
-[MEM-7]: /troubleshoot/mem/intune/troubleshoot-win32-app-install
-[MEM-8]: /troubleshoot/mem/intune/troubleshoot-csp-custom-settings
+[MEM-2]: /troubleshoot/mem/intune-service/troubleshoot-device-enrollment-in-intune
+[MEM-3]: /troubleshoot/mem/intune-service/troubleshoot-device-actions
+[MEM-4]: /troubleshoot/mem/intune-service/troubleshoot-bitlocker-admin-center
+[MEM-5]: /troubleshoot/mem/intune-service/troubleshoot-policies-in-microsoft-intune
+[MEM-6]: /troubleshoot/mem/intune-service/troubleshoot-wi-fi-profiles#troubleshoot-windows-wi-fi-profiles
+[MEM-7]: /troubleshoot/mem/intune-service/troubleshoot-win32-app-install
+[MEM-8]: /troubleshoot/mem/intune-service/troubleshoot-csp-custom-settings
 [MEM-9]: /mem/autopilot/troubleshooting
-[MEM-10]: /mem/intune/remote-actions/collect-diagnostics
+[MEM-10]: /mem/intune-service/remote-actions/collect-diagnostics

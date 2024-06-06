@@ -183,7 +183,7 @@ For information about support for using reusable groups for Endpoint Privilege M
 
 The device settings you can manage through reusable settings groups are applied by Intune the same as settings that are directly configured in a profile. If conflicts or overlaps are introduced by settings from your reusable groups, you can use the same troubleshooting process to identify and resolve those conflicts.
 
-For more information, review guidance that might be specific to the profile types you use. For general guidance, see [Troubleshoot policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune), and [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md).
+For more information, review guidance that might be specific to the profile types you use. For general guidance, see [Troubleshoot policies and profiles in Microsoft Intune](/troubleshoot/mem/intune-service/troubleshoot-policies-in-microsoft-intune), and [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md).
 
 ## Next steps
 

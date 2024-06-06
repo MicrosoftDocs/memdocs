@@ -35,7 +35,7 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 - **Automatic Intune enrollment with Windows Autopilot.** Windows Autopilot is a collection of cloud services to configure the out-of-box experience, enabling light-touch or zero-touch deployment scenarios. You can optionally use [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision) to enroll Windows Autopilot-registered devices with required apps and settings so that they're nearly ready for school use when students receive them. Students just have to connect to Wi-Fi and complete the remaining setup steps.
 
 > [!TIP]
-> For details about bring your own device (BYOD) or enrollment with co-management, see [Enrollment guide: Enroll Windows client devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-windows).
+> For details about bring your own device (BYOD) or enrollment with co-management, see [Enrollment guide: Enroll Windows client devices in Microsoft Intune](/mem/intune-service/fundamentals/deployment-guide-enrollment-windows).
 
 ### Provisioning package overview
 
@@ -48,7 +48,7 @@ You can use *Windows Configuration Designer* or the *Set up School PCs app* to c
 
 - [What is Set up School PCs?](/education/windows/use-set-up-school-pcs-app)
 - [Windows Configuration Designer](/windows/configuration/provisioning-packages/provisioning-install-icd)
-- [Bulk enrollment for Windows devices](/mem/intune/enrollment/windows-bulk-enroll)  
+- [Bulk enrollment for Windows devices](/mem/intune-service/enrollment/windows-bulk-enroll)  
 
 After you create the provisioning package (PPKG) you can copy it to one or more USB drives, insert them into devices and power them on to start the provisioning process.
 
@@ -94,7 +94,7 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 - **Enroll with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when devices aren't registered in Apple School Manager (for example - donated devices) or IT doesn't have physical access to the devices.
 
 > [!TIP]
-> For a more in depth guide about enrollment and choosing the right option, see [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados)
+> For a more in depth guide about enrollment and choosing the right option, see [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](/mem/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados)
 
 ::: zone-end
 
@@ -114,8 +114,8 @@ The following table provides more information about the features supported by ea
 |An OEM can enroll devices on your behalf.| ❌ | ✔️ <br/><br/>The OEM provider must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can [pre-provision devices](/autopilot/pre-provision).|
 |Microsoft Partner or Cloud Service Provider (CSP) partner can enroll devices on your behalf.| ✔️ | ✔️ <br/><br/> Partners must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can pre-provision devices.|
 |Set up a shared device. | ✔️  | ✔️ <br/><br/> We recommend using [Windows Autopilot self-deploying mode](/autopilot/self-deploying) for shared device scenarios. To set up devices for individual users, use [Windows Autopilot user-driven mode](/autopilot/user-driven).  |
-|Set up a device for a single user.|✔️ <br/><br/> A [primary user](/mem/intune/remote-actions/find-primary-user#what-is-the-primary-user) isn't assigned.|✔️ <br/><br/> Supported with [Windows Autopilot user-driven mode](/autopilot/user-driven). To set up shared devices, use [Windows Autopilot self-deploying mode](/autopilot/self-deploying).|
-|Add apps. | ✔️ <br/><br/> You can add Win32 apps to the provisioning package to reduce deployment time and network load during deployment. Silent installation is required for Win32 apps. | ✔️ <br/><br/> Works well with all [app types](/mem/intune/apps/apps-add). Silent installation is required for Win32 apps. To further reduce deployment time and network load during deployment, you can pre-provision devices. |
+|Set up a device for a single user.|✔️ <br/><br/> A [primary user](/mem/intune-service/remote-actions/find-primary-user#what-is-the-primary-user) isn't assigned.|✔️ <br/><br/> Supported with [Windows Autopilot user-driven mode](/autopilot/user-driven). To set up shared devices, use [Windows Autopilot self-deploying mode](/autopilot/self-deploying).|
+|Add apps. | ✔️ <br/><br/> You can add Win32 apps to the provisioning package to reduce deployment time and network load during deployment. Silent installation is required for Win32 apps. | ✔️ <br/><br/> Works well with all [app types](/mem/intune-service/apps/apps-add). Silent installation is required for Win32 apps. To further reduce deployment time and network load during deployment, you can pre-provision devices. |
 |Devices are ready for sign-in and use on first day of class.| ✔️ | ❌ <br/><br/> Students must connect the device to Wi-Fi and complete the remaining setup steps. To further reduce end-user provisioning time, you can pre-provision devices. |
 
 ::: zone-end

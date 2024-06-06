@@ -238,7 +238,7 @@ With MAM, you can:
 
 For more information, go to:
 
-- [Device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
+- [Device enrollment in Intune?](/mem/intune-service/fundamentals/deployment-guide-enrollment)
 - [App protection policies overview](../apps/app-protection-policy.md)
 
 ## Protect data on any device
@@ -341,4 +341,4 @@ Specifically:
 - [Manage identities using Microsoft Intune](manage-identities.md)
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
-- [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune/welcome-intune)
+- [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune-service/welcome-intune)

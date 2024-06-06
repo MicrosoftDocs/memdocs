@@ -173,4 +173,4 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [Differences between ADAL and MSAL]:/azure/active-directory/develop/msal-overview#differences-between-adal-and-msal
 
 <!-- Microsoft Learn documentation -->
-[give your app access to the Intune Mobile App Management service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-mobile-app-management-service
+[give your app access to the Intune Mobile App Management service]:/mem/intune-service/developer/app-sdk-get-started#give-your-app-access-to-the-intune-mobile-app-management-service

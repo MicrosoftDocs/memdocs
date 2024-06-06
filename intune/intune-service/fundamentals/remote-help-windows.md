@@ -476,7 +476,7 @@ Version: 4.0.1.13 - Changes in this release:
 
 Fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune.](/mem/intune/fundamentals/remote-help)
+For more information, go to [Use Remote Help with Intune.](/mem/intune-service/fundamentals/remote-help)
 
 ### July 26, 2022
 

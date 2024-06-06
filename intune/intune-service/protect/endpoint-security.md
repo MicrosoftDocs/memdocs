@@ -272,7 +272,7 @@ One way to avoid conflicts is to not use different baselines, instances of the s
 
 If conflicts happen, you can use Intune's built-in tools to identify and resolve the source of those conflicts. For more information, see:
 
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune-service/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
 ## Next steps
