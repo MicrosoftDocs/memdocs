@@ -314,7 +314,7 @@ In Microsoft Defender for Endpoint portal, as a security administrator:
 
    > [!TIP]
    >
-   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](/intune/intune-service/fundamentals/role-based-access-control).
+   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
 
 ### Configure Intune
 

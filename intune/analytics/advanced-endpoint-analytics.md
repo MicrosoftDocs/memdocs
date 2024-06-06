@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # What is Microsoft Intune Advanced Analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](/intune/intune-service/fundamentals/intune-add-ons).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
 
 Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
 
@@ -44,7 +44,7 @@ Intune Advanced Analytics features build on top of the existing base Endpoint an
 
 In addition to [license requirements](enroll-intune.md#licensing-prerequisites) for Endpoint analytics, an add-on license is required to use features in Intune Advanced Analytics.
 
-The Advanced Analytics features are included under [Microsoft Intune Suite](/intune/intune-service/fundamentals/intune-add-ons) and requires an extra cost to the licensing options that include Microsoft Intune. The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune. Global and billing administrators can use the centralized experience (Intune add-ons) in the Intune admin center to easily access trial licenses (up to 250 users for 90 days) and licenses to purchase.
+The Advanced Analytics features are included under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune. The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune. Global and billing administrators can use the centralized experience (Intune add-ons) in the Intune admin center to easily access trial licenses (up to 250 users for 90 days) and licenses to purchase.
 
 ## Mixed licensing scenarios
 

@@ -33,7 +33,7 @@ Intune supports the deployment several application types including desktop apps 
 Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](/intune/intune-service/apps/apps-win32-prepare) and hosted by Microsoft.
 
 > [!IMPORTANT]
-> Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](/intune/intune-service/fundamentals/intune-add-ons).
+> Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../../fundamentals/intune-add-ons.md).
 
 For more information, see [Enterprise Application Management](/intune/intune-service/apps/apps-enterprise-app-management).
 
