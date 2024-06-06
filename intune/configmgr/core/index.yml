@@ -26,7 +26,7 @@ landingContent:
           - text: What is Configuration Manager?
             url: understand/introduction.md
           - text: Microsoft Configuration Manager FAQ
-            url: understand/microsoft-endpoint-manager-faq.yml
+            url: understand/configuration-manager-faq.yml
           - text: What's new
             url: plan-design/changes/whats-new-incremental-versions.md
           - text: Technical preview
