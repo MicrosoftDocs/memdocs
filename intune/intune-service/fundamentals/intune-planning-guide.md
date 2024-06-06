@@ -304,7 +304,7 @@ There are options available for the different platforms, including Android (AOSP
 
 FLW devices are organization-owned, enrolled into device management, and can be used by one user (user assigned) or many users (shared devices). These devices are critical to frontline workers to do their job, and are often used in a limited-use mode. For example, a device is used to scan items, or a tablet is used to check in patients at a hospital.
 
-For more information, go to [Frontline worker device management in Microsoft Intune](frontline-worker-overview.md).
+For more information, go to [Frontline worker device management in Microsoft Intune](../../solutions/frontline-worker/frontline-worker-overview.md).
 
 ## Step 3 - Determine costs and licensing
 
@@ -613,4 +613,4 @@ The community-based [Intune forum](https://social.technet.microsoft.com/Forums/h
 
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
 - [Get started with your Microsoft Intune deployment](get-started-with-intune.md)
-- [Frontline worker device management in Microsoft Intune](frontline-worker-overview.md)
+- [Frontline worker device management in Microsoft Intune](../../solutions/frontline-worker/frontline-worker-overview.md)
