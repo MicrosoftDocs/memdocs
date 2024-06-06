@@ -42,6 +42,7 @@ Both marketplace and custom images must meet the following requirements:
 - Generation 2 images.
     > [!Note]
     > We recently made the change to **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
+- The image should have never been Active Directory, Entra ID joined, Intune enrolled or enrolled for co-management. Please see this article for more details: [Sysprep will not run correctly on a device that has been MDM enrolled](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm) 
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
