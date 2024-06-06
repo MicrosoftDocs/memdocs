@@ -46,7 +46,7 @@ To manage devices and install apps, your users can install the Company Portal ap
 
 ## Configure settings to show offline apps
 
-1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account. Ensure that you sign into the Microsoft Store for Business using the same tenant account you use to sign into Intune. Your Microsoft Store for Business account must be associated with Intune. For more information, see [Associate your Microsoft Store for Business account with Intune](../apps/windows-store-for-business.md#associate-your-microsoft-store-for-business-account-with-intune).  
+1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account. Ensure that you sign into the Microsoft Store for Business using the same tenant account you use to sign into Intune. Your Microsoft Store for Business account must be associated with Intune. For more information, see [Associate your Microsoft Store for Business account with Intune](../apps/store-apps-microsoft.md#associate-your-microsoft-store-for-business-account-with-intune).  
 2. Select the **Manage** tab near the top of the window.
 3. In the left pane, select **Settings**.
 4. Select the **Shop** tab. Then,under **Shopping experience**, set **Show offline apps** to **On**.  

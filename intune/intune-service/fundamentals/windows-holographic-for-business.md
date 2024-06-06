@@ -82,7 +82,7 @@ Microsoft Intune can deploy Universal Windows Apps (UWP) to Microsoft HoloLens d
   > [!NOTE]
   > Intune allows a maximum package size to 8 GB. This package size is only available for the LOB apps uploaded to Intune.
 
-- To deploy apps using the Microsoft Store for Business, go to [How to manage apps you purchased from the Microsoft Store for Business with Microsoft Intune](../apps/windows-store-for-business.md).
+- To deploy apps using the Microsoft Store for Business, go to [How to manage apps you purchased from the Microsoft Store for Business with Microsoft Intune](../apps/store-apps-microsoft.md).
 - To learn about app management with Microsoft Intune, go to [What is app management in Microsoft Intune](../apps/app-management.md).
 - To learn more about developing apps for Microsoft HoloLens, go to [Mixed reality apps for Microsoft HoloLens](https://www.microsoft.com/hololens/apps).
 
