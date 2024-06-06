@@ -133,6 +133,8 @@ When a device is reimaged to an older OS version after a hardware change on a de
 - [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
 - [Deregister a device](registration-overview.md#deregister-a-device).
 
+<!-- MAXADO-8911669 -->
+
 ## Device appears as Microsoft Entra registered instead of Microsoft Entra joined
 
 When checking the **Join type** of a device that has been joined to Microsoft Entra ID, it shows **Microsoft Entra registered** instead of **Microsoft Entra joined**.
@@ -143,7 +145,7 @@ This issue occurs if the device was previously registered in Microsoft Entra ID,
 
 ### Resolution for device appearing as Microsoft Entra registered instead of Microsoft Entra joined
 
-Before registering devices as Windows Autopilot devices, make sure that any existing Microsoft Intune, Microsoft Entra ID, and Windows Autopilot device objects are deleted. After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
+Before registering an existing Microsoft Entra ID registered devices as Windows Autopilot devices, make sure that any existing Microsoft Intune, Microsoft Entra ID, and Windows Autopilot device objects are deleted. After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
 
 ## Intune enrollment issues
 
