@@ -1276,7 +1276,7 @@ Learn more about [Endpoint analytics](/intune/analytics/).
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->  
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature can help effortlessly transition between full control and view-only modes, granting flexibility and convenience.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help.md).
+For more information on Remote Help, see [Remote Help](./remote-help.md).
 
 Applies to:
 
@@ -1442,7 +1442,7 @@ The global quiet time settings allow you to create policies to schedule quiet ti
 #### Introducing enhanced chat in Remote Help<!-- 10602997 -->  
 Introducing enhanced chat with Remote Help. With the new and enhanced chat you can maintain a continuous thread of all messages. This chat provides support for special characters and other languages including Chinese and Arabic.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help.md).
+For more information on Remote Help, see [Remote Help](./remote-help.md).
 
 Applies to:
 
@@ -1451,7 +1451,7 @@ Applies to:
 #### Remote Help administrators can reference audit log sessions<!-- 9052185  -->  
 For Remote Help, in addition to existing session reports, administrators can now reference audit logs sessions created in Intune. This feature enables administrators to reference past events for troubleshooting and analyzing log activities.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help.md).
+For more information on Remote Help, see [Remote Help](./remote-help.md).
 
 Applies to:
 

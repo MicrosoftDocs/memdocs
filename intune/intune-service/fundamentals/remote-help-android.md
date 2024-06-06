@@ -67,7 +67,7 @@ The Remote Help app supports the following capabilities on Android:
 
 ## Prerequisites for Remote Help on Android
 
-For general prerequisites, go to [Prerequisites for Remote Help](remote-help.md#prerequisites)
+For general prerequisites, go to [Prerequisites for Remote Help](./remote-help.md#prerequisites)
 
 - Set up Managed Google Play for your tenant. For more information, go to [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md)
 

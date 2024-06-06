@@ -74,7 +74,7 @@ For more information, see [Intune Advanced Analytics](../../analytics/advanced-e
 
 ### Microsoft Intune Remote Help
 
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../fundamentals/remote-help.md).
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](./remote-help.md).
 
 ### Microsoft Tunnel for Mobile Application Management
 
@@ -171,5 +171,5 @@ Learn more about:
 - [Intune Advanced Analytics](../../analytics/overview.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Remote Help](..\fundamentals\remote-help.md)
+- [Remote Help](./remote-help.md)
 - [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)

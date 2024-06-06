@@ -74,7 +74,7 @@ The following features are available and supported in Microsoft GCC High and/or 
 | Standard MDM features | ✅ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✅ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the government environment can be used. When you sign in to a GCC-H tenant, you see the connectors enabled for those specific vendors. |
 | Platform support | ✅ <br/><br/> You can use the same operating systems - Android, AOSP, iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
-| Remote Help | ✅ <br/><br/> Remote Help is supported in GCC on Android and Windows devices. It's not supported in GCC High or DoD.<br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](../fundamentals/remote-help.md). |
+| Remote Help | ✅ <br/><br/> Remote Help is supported in GCC on Android and Windows devices. It's not supported in GCC High or DoD.<br/><br/> For more information on this feature, go to [Remote Help in Microsoft Intune](./remote-help.md). |
 
 ### In the planning phase
 

@@ -259,7 +259,7 @@ conceptualContent:
         - url: ./fundamentals/intune-add-ons.md
           itemType: how-to-guide
           text: Use Intune Suite add-on capabilities
-        - url: ./remote-actions/remote-help.md
+        - url: ./fundamentals/remote-help.md
           itemType: how-to-guide
           text: Remote help
         - url: ./protect/microsoft-tunnel-mam.md
