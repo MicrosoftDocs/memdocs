@@ -16,8 +16,8 @@
     },
     {
       "docset_name": "memdocs",
-      "build_source_folder": "memdocs",
-      "build_output_subfolder": "memdocs",
+      "build_source_folder": "intune",
+      "build_output_subfolder": "intune",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
