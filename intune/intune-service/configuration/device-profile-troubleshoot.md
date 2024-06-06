@@ -174,5 +174,5 @@ For more information on dynamic groups, go to:
 
 ## Related articles
 
-- [Troubleshoot policies and profiles](/troubleshoot/intune/intune-service/troubleshoot-policies-in-microsoft-intune).
+- [Troubleshoot policies and profiles](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune).
 - Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).

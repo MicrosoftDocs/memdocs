@@ -348,4 +348,4 @@ Platforms:
 
 - [Use SCEP for certificates](certificates-scep-configure.md)
 - [Issue PKCS certificates from a Symantec PKI manager web service](certificates-digicert-configure.md).
-- [Troubleshoot PKCS certificate profiles](/troubleshoot/intune/intune-service/troubleshoot-pkcs-certificate-profiles)
+- [Troubleshoot PKCS certificate profiles](/troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles)

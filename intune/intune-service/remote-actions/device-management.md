@@ -125,4 +125,4 @@ You can also:
 ## Resources
 
 - [Bulk device actions](bulk-device-actions.md)
-- [Troubleshoot device actions](/troubleshoot/intune/intune-service/device-management/troubleshoot-device-actions)
+- [Troubleshoot device actions](/troubleshoot/mem/intune/device-management/troubleshoot-device-actions)

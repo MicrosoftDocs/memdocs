@@ -33,13 +33,13 @@ Here's a collection of resources to help you troubleshoot Windows devices manage
 ::: zone pivot="ios"
 Here's a collection of resources to help you troubleshoot iOS devices managed by Intune:
 
-- [iOS or iPadOS devices aren't checking in with the Intune service](/troubleshoot/intune/intune-service/device-enrollment/ios-devices-inactive)
-- [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/intune/intune-service/device-enrollment/troubleshoot-ios-enrollment-errors)
-- [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/intune/intune-service/device-enrollment/device-stuck-in-enrollment)
-- [Troubleshooting profile installation failed error on iOS or iPadOS devices](/troubleshoot/intune/intune-service/device-enrollment/profile-installation-failed)
-- [Intune enrollment process doesn't start on Apple Automated Device Enrollment devices](/troubleshoot/intune/intune-service/device-enrollment/apple-dep-device-fails-auto-enrollment)
-- [ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'](/troubleshoot/intune/intune-service/device-enrollment/dep-enrollment-xpc-type-error)
-- [You can't access company resources on an Intune-enrolled ADE device](/troubleshoot/intune/intune-service/device-protection/cannot-access-company-resources-on-dep)
+- [iOS or iPadOS devices aren't checking in with the Intune service](/troubleshoot/mem/intune/device-enrollment/ios-devices-inactive)
+- [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors)
+- [iOS or iPadOS device is stuck on an enrollment screen](/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment)
+- [Troubleshooting profile installation failed error on iOS or iPadOS devices](/troubleshoot/mem/intune/device-enrollment/profile-installation-failed)
+- [Intune enrollment process doesn't start on Apple Automated Device Enrollment devices](/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment)
+- [ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'](/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error)
+- [You can't access company resources on an Intune-enrolled ADE device](/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep)
 ::: zone-end
 
 ## How to contact Microsoft Support

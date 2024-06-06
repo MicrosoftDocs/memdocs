@@ -368,4 +368,4 @@ Create SCEP, PKCS, or PKCS imported certificate profiles for each platform you w
 - [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)  
 - [Configure and manage PKCS certificates with Intune](certificates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
-- [Troubleshoot issues for the Microsoft Intune Connector ](/troubleshoot/intune/intune-service/troubleshoot-certificate-connector-events)
+- [Troubleshoot issues for the Microsoft Intune Connector ](/troubleshoot/mem/intune/troubleshoot-certificate-connector-events)

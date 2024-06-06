@@ -175,7 +175,7 @@ For information about each enrollment method and how to choose one that's right 
 |[Set up shared iPad devices](../enrollment/device-enrollment-shared-ipad.md)|Configure devices so that they can be used by more than one person (the type of setup you'd see in a library or educational environment).| 
 |[Backup and restore devices](../enrollment/backup-restore-ios.md)|Back up and restore a device to prepare it for enrollment or migration in Intune, such as during Automated Device Enrollment setup.   |
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
-|[Troubleshoot enrollment problems](/troubleshoot/intune/intune-service/troubleshoot-ios-enrollment-errors)|Troubleshoot and find resolutions to problems that occur during enrollment. |
+|[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 
 ## Run remote actions  

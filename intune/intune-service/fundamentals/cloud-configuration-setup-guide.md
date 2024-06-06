@@ -583,7 +583,7 @@ You can monitor the installation status of your deployed apps:
 2. Select an app you deployed, like the Microsoft 365 App Suite.
 3. Select **Device install status** or **User install status**. The app installation details are shown.
 
-For information on troubleshooting app issues on individual devices, go to [Troubleshooting Intune app installation issues](/troubleshoot/intune/intune-service/app-management/troubleshoot-app-install).
+For information on troubleshooting app issues on individual devices, go to [Troubleshooting Intune app installation issues](/troubleshoot/mem/intune/app-management/troubleshoot-app-install).
 
 ### Security baseline
 

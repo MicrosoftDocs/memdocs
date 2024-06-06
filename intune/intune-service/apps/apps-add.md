@@ -254,7 +254,7 @@ Once you have removed assignments for an app and revoked any app licenses for an
 
 ## App installation errors
 
-For details about Intune app installation errors, see [App installation errors](/troubleshoot/intune/intune-service/troubleshoot-app-install).
+For details about Intune app installation errors, see [App installation errors](/troubleshoot/mem/intune/troubleshoot-app-install).
 
 ## Next steps
 

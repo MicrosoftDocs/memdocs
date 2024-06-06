@@ -214,6 +214,6 @@ Windows BitLocker:
 ## Next steps
 
 - [Manage BitLocker policy](../protect/encrypt-devices.md)
-- [Troubleshooting BitLocker policy](/troubleshoot/intune/intune-service/troubleshoot-bitlocker-policies)
+- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Manage FileVault policy](encrypt-devices-filevault.md)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

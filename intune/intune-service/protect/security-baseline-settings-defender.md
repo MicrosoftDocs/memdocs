@@ -1669,5 +1669,5 @@ For more information, see [PassportForWork CSP](/windows/client-management/mdm/p
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/intune/intune-service/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 

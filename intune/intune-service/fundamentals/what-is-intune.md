@@ -341,4 +341,4 @@ Specifically:
 - [Manage identities using Microsoft Intune](manage-identities.md)
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
-- [Troubleshoot Microsoft Intune](/troubleshoot/intune/intune-service/welcome-intune)
+- [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune/welcome-intune)

@@ -25,7 +25,7 @@ ms.collection:
 
 # Troubleshoot Win32 app issues
 
-When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a number of methods. This article provides troubleshooting details and information to help you solve Win32 app problems. For more information, see [Win32 app installation troubleshooting](/troubleshoot/intune/intune-service/troubleshoot-app-install#win32-app-installation-troubleshooting) resources.
+When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a number of methods. This article provides troubleshooting details and information to help you solve Win32 app problems. For more information, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting) resources.
 
 > [!NOTE]
 > This app management capability supports both 32-bit and 64-bit operating system architectures for Windows applications.
@@ -37,7 +37,7 @@ When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a n
 
 ## App troubleshooting details
 
-You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) provides these and other details on the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](/troubleshoot/intune/intune-service/troubleshoot-app-install#app-troubleshooting-details).
+You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) provides these and other details on the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](/troubleshoot/mem/intune/troubleshoot-app-install#app-troubleshooting-details).
 
 ## Troubleshooting app issues by using logs
 
@@ -45,7 +45,7 @@ Viewing the details of logs can help you determine the cause of the issues that 
 
 ### Logs displayed in Intune
 
-When an installation issue occurs with a Win32 app, you can choose the **Collect logs** option in the **Installation details** pane for the app in Intune. For more details, see [Win32 app installation troubleshooting](/troubleshoot/intune/intune-service/troubleshoot-app-install#win32-app-installation-troubleshooting).
+When an installation issue occurs with a Win32 app, you can choose the **Collect logs** option in the **Installation details** pane for the app in Intune. For more details, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).
 
 ### Logs displayed through CMTrace
 
@@ -110,8 +110,8 @@ In the preceding PowerShell command, replace `<path to binary file>` with your f
 - Check the OS version: Windows 10 1607 and later.
 - Check the Windows 10 SKU. Windows 10 S, or Windows versions running with S-mode enabled, doesn't support MSI installation.
 
-For more information about troubleshooting Win32 apps, see [Win32 app installation troubleshooting](/troubleshoot/intune/intune-service/troubleshoot-app-install#win32-app-installation-troubleshooting). For information about app types on ARM64 devices, see [App types supported on ARM64 devices](/troubleshoot/intune/intune-service/troubleshoot-app-install#app-types-supported-on-arm64-devices).
+For more information about troubleshooting Win32 apps, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting). For information about app types on ARM64 devices, see [App types supported on ARM64 devices](/troubleshoot/mem/intune/troubleshoot-app-install#app-types-supported-on-arm64-devices).
 
 ## Next steps
 
-- [Troubleshoot app installation issues](/troubleshoot/intune/intune-service/troubleshoot-app-install)
+- [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install)

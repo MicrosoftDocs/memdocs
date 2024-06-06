@@ -1434,4 +1434,4 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 - [Learn about security baselines](../protect/security-baselines.md)
 - [Avoid conflicts](../protect/security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/intune/intune-service/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

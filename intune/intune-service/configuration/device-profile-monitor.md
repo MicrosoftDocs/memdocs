@@ -202,4 +202,4 @@ With your DFCI profile settings, you might see the following states:
 ## Related content
 
 - [Common questions, issues, and resolutions with device configuration policies](device-profile-troubleshoot.md)
-- [Troubleshoot device configuration policies in Intune](/troubleshoot/intune/intune-service/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot device configuration policies in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

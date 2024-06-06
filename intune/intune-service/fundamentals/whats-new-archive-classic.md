@@ -262,7 +262,7 @@ New app protection reports have been added for both enrolled devices and devices
 Intune now fully supports and manages Android 7.1.1.
 
 #### Resolve issue where iOS devices are inactive, or the admin console cannot communicate with them <!--unknown-->
-When users' devices lose contact with Intune, you can give them new troubleshooting steps to help them regain access to company resources. See [Devices are inactive, or the admin console can't communicate with them](/troubleshoot/intune/intune-service/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
+When users' devices lose contact with Intune, you can give them new troubleshooting steps to help them regain access to company resources. See [Devices are inactive, or the admin console can't communicate with them](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
 
 ### Notices
 

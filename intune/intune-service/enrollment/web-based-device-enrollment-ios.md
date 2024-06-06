@@ -111,7 +111,7 @@ For end user help and how-to guides, see [Microsoft Intune user help docs](/intu
 For more details about Apple Device Enrollment features and functionality, see [Device Enrollment and MDM]( https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple support website.  
 
 ### Troubleshooting  
-For information about how to troubleshoot device enrollment issues in Microsoft Intune, see [Troubleshoot device enrollment](/troubleshoot/intune/intune-service/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
+For information about how to troubleshoot device enrollment issues in Microsoft Intune, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
 
  
 

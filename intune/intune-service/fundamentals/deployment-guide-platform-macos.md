@@ -62,7 +62,7 @@ Configure the enrollment methods and experience for company-owned and personal m
 |[Add a device enrollment manager](../enrollment/device-enrollment-manager-enroll.md)| People designated as device enrollment managers (DEM) can enroll up to 1,000 corporate-owned mobile devices at a time. DEM accounts are useful in organizations that enroll and prepare devices before handing them out to users. | 
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| You can assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
 |[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
-|[Troubleshoot enrollment problems](/troubleshoot/intune/intune-service/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
+|[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 ## Create compliance rules  
 

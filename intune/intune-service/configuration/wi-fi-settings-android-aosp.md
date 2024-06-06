@@ -175,4 +175,4 @@ The profile is created, but might not be doing anything. Be sure to [assign this
 
 You can also create Wi-Fi profiles for [Android Enterprise](wi-fi-settings-android-enterprise.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10/11](wi-fi-settings-windows.md).
 
-[Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/intune/intune-service/troubleshoot-wi-fi-profiles#common-issues).
+[Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
