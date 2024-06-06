@@ -49,7 +49,7 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
-## Week of June 5, 2023
+## Week of June 3, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
