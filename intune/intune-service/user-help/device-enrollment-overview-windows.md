@@ -51,7 +51,7 @@ After you enroll a device for work or school using Intune Company Portal:
 - You can reset your phone to factory settings if it's lost or stolen.  
 
 ### What happens on Windows PCs after enrollment   
-In addition to everything under [What happens on all devices after enrollment](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md#what-happens-on-all-devices-after-enrollment), after you enroll a Windows device in Intune:   
+In addition to everything under [What happens on all devices after enrollment](device-enrollment-overview-windows.md#what-happens-on-all-devices-after-enrollment), after you enroll a Windows device in Intune:   
 
 - Software installs on the device that enables your organization to manage the device. Your support person can automatically update this software.  
 
