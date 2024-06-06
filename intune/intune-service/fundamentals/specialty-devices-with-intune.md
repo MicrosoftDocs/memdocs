@@ -49,4 +49,4 @@ For specialty devices that run in Microsoft Entra shared device Mode (SDM), orga
 
 Learn about enrolling devices into Microsoft Intune here:
 
-- [Enroll devices into Microsoft Intune](/mem/intune-service/fundamentals/deployment-guide-enrollment)
+- [Enroll devices into Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment)

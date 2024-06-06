@@ -279,7 +279,7 @@ For more information, see [Task sequence variables](../../../osd/understand/task
 <!--1358146-->
 Create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
 
-For more information, see [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
+For more information, see [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/intune/configmgr/sum/toc.json&bc=/intune/configmgr/sum/breadcrumb/toc.json).
 
 
 ### Improvement to maintenance windows for software updates

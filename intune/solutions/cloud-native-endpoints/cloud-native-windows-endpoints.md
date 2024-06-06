@@ -455,7 +455,7 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**.
 
-    For more information, go to [Create a LAPS policy in Intune](/mem/intune-service/protect/windows-laps-policy#create-a-laps-policy).
+    For more information, go to [Create a LAPS policy in Intune](/intune/intune-service/protect/windows-laps-policy#create-a-laps-policy).
 
 ### Security Baselines
 
@@ -709,7 +709,7 @@ Now that you've configured your cloud-native Windows endpoint and provisioned it
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
 
-If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](/mem/intune-service/fundamentals/deployment-guide-enroll).
+If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](/intune/intune-service/fundamentals/deployment-guide-enroll).
 
 ## Follow the cloud-native endpoints guidance
 

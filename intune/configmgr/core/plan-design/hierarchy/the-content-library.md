@@ -127,7 +127,7 @@ The following tips may help you troubleshoot issues with the content library:
 
 - As a last option, redistribute the content. This action should resolve most issues.
 
-For more in-depth information, see [Understand and troubleshoot content distribution](/troubleshoot/mem/configmgr/content-distribution-introduction).
+For more in-depth information, see [Understand and troubleshoot content distribution](/troubleshoot/intune/configmgr/content-distribution-introduction).
 
 ## Next steps
 

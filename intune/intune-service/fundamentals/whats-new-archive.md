@@ -1271,7 +1271,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->  
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about [Endpoint analytics](/mem/analytics/).
+Learn more about [Endpoint analytics](/intune/analytics/).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->  
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature can help effortlessly transition between full control and view-only modes, granting flexibility and convenience.
@@ -2450,7 +2450,7 @@ Applies to:
 
 In Remote Help, you can now use a laser pointer when you're providing assistance on Windows.
 
-For more information on Remote Help, go to [Remote Help](/mem/intune-service/fundamentals/remote-help).
+For more information on Remote Help, go to [Remote Help](/intune/intune-service/fundamentals/remote-help).
 
 Applies to:
 
@@ -2731,7 +2731,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Remote Help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
 In the Remote Help app, admins can disable chat functionality from the new tenant level setting. Turning on the disable chat feature removes the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
-For more information, see [Configure Remote Help for your tenant](/mem/intune-service/fundamentals/remote-help#configure-remote-help-for-your-tenant).
+For more information, see [Configure Remote Help for your tenant](/intune/intune-service/fundamentals/remote-help#configure-remote-help-for-your-tenant).
 
 **Applies to**: Windows 10/11
 
@@ -3356,7 +3356,7 @@ In Remote Help, a link has been added to the non-compliance warning notification
 
 For more information, go to:
 
-- [Microsoft Intune Remote Help](/mem/intune-service/fundamentals/remote-help)
+- [Microsoft Intune Remote Help](/intune/intune-service/fundamentals/remote-help)
 
 - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
@@ -3563,7 +3563,7 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 With Remote Help 4.0.1.13, fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune and Microsoft Intune](/mem/intune-service/fundamentals/remote-help)
+For more information, go to [Use Remote Help with Intune and Microsoft Intune](/intune/intune-service/fundamentals/remote-help)
 
 ## Week of August 29, 2022
 
@@ -3865,7 +3865,7 @@ Applies to:
 #### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
 With Remote Help 4.0.1.12, various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use Remote Help with Intune](/mem/intune-service/fundamentals/remote-help)
+For more information, see [Use Remote Help with Intune](/intune/intune-service/fundamentals/remote-help)
 
 ### Device enrollment
 

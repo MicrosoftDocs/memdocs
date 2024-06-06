@@ -47,6 +47,6 @@ items:
     - name: UDI Reference
       href: udi-reference.md
     - name: Troubleshooting reference
-      href: /troubleshoot/mem/configmgr/troubleshooting-reference
+      href: /troubleshoot/intune/configmgr/troubleshooting-reference
     - name: UDI developers guide
       href: user-driven-installation-developers-guide.md

@@ -11,16 +11,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Security
-          tocHref: /mem/configmgr/core/
-          topicHref: /mem/configmgr/security/index
+          tocHref: /intune/configmgr/core/
+          topicHref: /intune/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -31,16 +31,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Security
-          tocHref: /mem/configmgr/osd/
-          topicHref: /mem/configmgr/security/index
+          tocHref: /intune/configmgr/osd/
+          topicHref: /intune/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -51,16 +51,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Security
-          tocHref: /mem/configmgr/apps/
-          topicHref: /mem/configmgr/security/index
+          tocHref: /intune/configmgr/apps/
+          topicHref: /intune/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -71,16 +71,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Security
-          tocHref: /mem/configmgr/compliance/
-          topicHref: /mem/configmgr/security/index
+          tocHref: /intune/configmgr/compliance/
+          topicHref: /intune/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -91,16 +91,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Security
-          tocHref: /mem/configmgr/protect/
-          topicHref: /mem/configmgr/security/index
+          tocHref: /intune/configmgr/protect/
+          topicHref: /intune/configmgr/security/index
 
 - name: Docs
   tocHref: /
@@ -111,13 +111,13 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Security
-          tocHref: /mem/configmgr/sum/
-          topicHref: /mem/configmgr/security/index
+          tocHref: /intune/configmgr/sum/
+          topicHref: /intune/configmgr/security/index

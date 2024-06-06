@@ -277,9 +277,9 @@ Create a phased deployment for an application. Phased deployments allow you to o
 
 For more information, see the following articles:  
 
-- [Create a phased deployment](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Create a phased deployment](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)  
 
-- [Manage and monitor phased deployments](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Manage and monitor phased deployments](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### Provision Windows app packages for all users on a device

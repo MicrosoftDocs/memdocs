@@ -118,7 +118,7 @@ The results show the error code and a description of the error. The description 
 
 :::image type="content" source="./media/copilot-devices/analyze-error-example.png" alt-text="Screenshot that shows the Analyze an error code feature in Copilot after you select any device in Microsoft Intune and Intune admin center.":::
 
-For a list of common errors in Intune, go to [Common error codes and descriptions in Microsoft Intune](/troubleshoot/mem/intune-service/general/troubleshoot-company-resource-access-problems).
+For a list of common errors in Intune, go to [Common error codes and descriptions in Microsoft Intune](/troubleshoot/intune/intune-service/general/troubleshoot-company-resource-access-problems).
 
 ## Related articles
 

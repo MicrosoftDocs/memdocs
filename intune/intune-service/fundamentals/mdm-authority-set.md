@@ -169,4 +169,4 @@ To confirm that your MDM authority is set to Intune, use the following steps:
 
 ## Next steps
 
-With the MDM authority set, you can start [enrolling devices](/mem/intune-service/fundamentals/deployment-guide-enrollment).
+With the MDM authority set, you can start [enrolling devices](/intune/intune-service/fundamentals/deployment-guide-enrollment).

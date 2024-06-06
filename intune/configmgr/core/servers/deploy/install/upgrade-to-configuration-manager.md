@@ -64,7 +64,7 @@ Review these steps before you upgrade to Configuration Manager.
 
 #### Review your System Center 2012 Configuration Manager environment
 
-Resolve issues as detailed in the following Microsoft Support article: [Configuration Manager clients reinstall every five hours because of a recurring retry task and may cause an inadvertent client upgrade](/troubleshoot/mem/configmgr/configmgr-clients-reinstall-every-five-hours).
+Resolve issues as detailed in the following Microsoft Support article: [Configuration Manager clients reinstall every five hours because of a recurring retry task and may cause an inadvertent client upgrade](/troubleshoot/intune/configmgr/configmgr-clients-reinstall-every-five-hours).
 
 #### Make sure your environment meets the supported configurations
 

@@ -33,7 +33,7 @@ In some situations, consider another feature as a better solution:
     >
     > On-prem MDM-enrolled devices don't support simulated deployments, user experience, or scheduling settings.
 
-- _Phased deployments_ allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria. For more information, see [Create a phased deployment](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json).<!--1358147-->
+- _Phased deployments_ allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups. For example, deploy the application to a pilot collection, and then automatically continue the rollout based on success criteria. For more information, see [Create a phased deployment](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json).<!--1358147-->
 
 ## <a name="bkmk_deploy"></a> Start the deployment wizard
 
@@ -183,8 +183,8 @@ On the **Alerts** page, configure how Configuration Manager generates alerts for
 
 - [Monitor applications](monitor-applications-from-the-console.md)
 - [Disable and delete application deployments](disable-delete-deployments.md)
-- [Troubleshoot application deployments](/troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
-- [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Troubleshoot application deployments](/troubleshoot/intune/configmgr/troubleshoot-application-deployment?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
+- [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
 - [Management tasks for applications](management-tasks-applications.md)
 - [Software Center user guide](../../core/understand/software-center.md)
 

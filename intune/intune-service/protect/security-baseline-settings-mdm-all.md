@@ -3190,4 +3190,4 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune-service/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/intune/intune-service/troubleshoot-policies-in-microsoft-intune)

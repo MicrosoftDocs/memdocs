@@ -108,4 +108,4 @@ Renewal is complete when your Apple MDM push certificate status appears active i
 
 ## Next steps  
 
-For more information about enrollment options, see [Choose how to enroll iOS/iPadOS devices](/mem/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados).
+For more information about enrollment options, see [Choose how to enroll iOS/iPadOS devices](/intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados).

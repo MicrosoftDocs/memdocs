@@ -111,6 +111,6 @@ To configure the default application deployment summarization interval:
 
 ## Next steps
 
-[Monitor phased deployments](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+[Monitor phased deployments](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
 
 [Monitor app usage with software metering](monitor-app-usage-with-software-metering.md)

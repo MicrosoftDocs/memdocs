@@ -452,7 +452,7 @@ If setting Configuration Manager as the Managed Installer is desired, you can al
 
 Entra hybrid join devices require connectivity to an on-prem Domain Controller (DC) to apply Group Policies including the Managed Installer policy (through AppLocker). Without DC connectivity, especially during Autopilot provisioning, Managed Installer policy will not successfully apply. Consider:
 
-1. Use Autopilot with Entra join instead. See our recommendation for [which Entra join option](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization) to choose for more information.
+1. Use Autopilot with Entra join instead. See our recommendation for [which Entra join option](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization) to choose for more information.
 
 2. For Entra hybrid join, choose one or both of the following:
 o	Use device provisioning methods that provide DC connectivity at the time of app install as Autopilot may not work here.

@@ -61,4 +61,4 @@ For help and support documentation for IT pros and Intune administrators, see:
 
 * [Microsoft Learn](/): Home to the technical documentation where you can explore all guides and articles by product.  
 * [Microsoft Intune product family documentation](../../index.yml): Official product documentation for Microsoft Intune product family, which includes Microsoft Intune, Microsoft Configuration Manager, and Windows Autopilot.  
-* [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune-service/troubleshoot-device-enrollment-in-intune): Help and support docs for troubleshooting device enrollment issues in Microsoft Intune.  
+* [Troubleshooting device enrollment in Intune](/troubleshoot/intune/intune-service/troubleshoot-device-enrollment-in-intune): Help and support docs for troubleshooting device enrollment issues in Microsoft Intune.  

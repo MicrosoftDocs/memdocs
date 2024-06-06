@@ -56,7 +56,7 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 - Microsoft Intune is a cloud native solution that helps manage identities, devices, and apps. If your goal is to become cloud native, then you can learn more at the following articles:
 
-  - [Learn about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview)
+  - [Learn about cloud-native endpoints](/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview)
   - [What is Intune?](what-is-intune.md)
 
 - Your Intune deployment might be different from a previous MDM deployment. Intune uses identity-driven access control. It doesn't require a network proxy to access organization data from devices outside your network.

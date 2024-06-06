@@ -90,7 +90,7 @@ Starting in version 2203, clients prefer to scan against a cloud management gate
 
 Use the following high-level guidance to set your clients to prefer a cloud-based software update point:
 
-1. Ensure your [cloud management gateway](../../../clients/manage/cmg/set-up-checklist.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) is configured and functional
+1. Ensure your [cloud management gateway](../../../clients/manage/cmg/set-up-checklist.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) is configured and functional
 1. Verify that your [software update points](../../../../sum/get-started/install-a-software-update-point.md) are functional and synchronized.
 1. Enable the [**Allow Configuration Manager cloud management gateway traffic**](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) option for any SUP you want to use with CMG.
 1. [Configure the boundary group](../../deploy/configure/boundary-group-procedures.md#configure-a-boundary-group) for this behavior by enabling the **Prefer cloud based sources over on-premises sources** option and adding the CGM SUP server to the **Site system servers** list.

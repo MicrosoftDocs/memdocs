@@ -48,7 +48,7 @@ This article lists these settings, and describes what each setting does. For mor
 Create an [iOS/iPadOS device features configuration profile](device-features-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, go to [iOS/iPadOS enrollment](/mem/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, go to [iOS/iPadOS enrollment](/intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados).
 
 ## AirPrint
 

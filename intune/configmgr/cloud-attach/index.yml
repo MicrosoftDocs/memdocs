@@ -36,11 +36,11 @@ landingContent:
       - linkListType: concept
         links:
           - text: Endpoint analytics
-            url: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+            url: ../../analytics/scores.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Co-management
-            url: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+            url: ../comanage/overview.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Tenant attach
-            url: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+            url: ../tenant-attach/device-sync-actions.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
 
 
  # Card
@@ -49,9 +49,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Run scripts on uploaded devices
-            url: ../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+            url: ../tenant-attach/scripts.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Display the work from anywhere report
-            url: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+            url: ../tenant-attach/device-sync-actions.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Monitor co-management
-            url: ../comanage/how-to-monitor.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json            
+            url: ../comanage/how-to-monitor.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json            
          

@@ -211,7 +211,7 @@ Use the following steps to view client details for a specific device:
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-08.png" alt-text="Client details in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-08.png":::
 
-5. Select **Collections** to list the client's [collections](/mem/configmgr/core/clients/manage/collections/introduction-to-collections).
+5. Select **Collections** to list the client's [collections](/intune/configmgr/core/clients/manage/collections/introduction-to-collections).
 
    Collections help you organize resources into manageable units.
 
@@ -230,7 +230,7 @@ Use the following steps to view a list of devices that belong to a user:
 
    The **Devices** table lists the Configuration Manager devices associated with the user.
 
-For more information about viewing client details and tenant attach, see [Tenant attach: ConfigMgr client details in the admin center](/mem/configmgr/tenant-attach/client-details).
+For more information about viewing client details and tenant attach, see [Tenant attach: ConfigMgr client details in the admin center](/intune/configmgr/tenant-attach/client-details).
 
 ## View on-premises device data
 
@@ -261,7 +261,7 @@ Resource explorer can display a historical view of the device inventory in the M
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-07.png" alt-text="Close resource explorer with the x icon in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-07.png":::
 
-For more information about viewing device data for tenant attach devices, see [Tenant attach: Resource explorer in the admin center](/mem/configmgr/tenant-attach/resource-explorer).
+For more information about viewing device data for tenant attach devices, see [Tenant attach: Resource explorer in the admin center](/intune/configmgr/tenant-attach/resource-explorer).
 
 ## View on-premises app management
 
@@ -280,7 +280,7 @@ Use the following steps to install an application to an on-premises device:
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-11.png" alt-text="Screenshot of application installation from Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-11.png":::
 
-For more information about applications and tenant attach, see [Tenant attach: Install an application from the admin center](/mem/configmgr/tenant-attach/applications).
+For more information about applications and tenant attach, see [Tenant attach: Install an application from the admin center](/intune/configmgr/tenant-attach/applications).
 
 ## View on-premises scripts
 
@@ -298,7 +298,7 @@ You can run PowerShell scripts from the cloud against an individual Configuratio
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-12.png" alt-text="Screenshot of the scripts list from Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-12.png":::
 
-For more information about running scripts on tenant attached devices, see [Tenant attach: Run Scripts from the admin center](/mem/configmgr/tenant-attach/scripts).
+For more information about running scripts on tenant attached devices, see [Tenant attach: Run Scripts from the admin center](/intune/configmgr/tenant-attach/scripts).
 
 ## View on-premises device event timeline
 
@@ -307,7 +307,7 @@ When Configuration Manager synchronizes a device to Microsoft Intune through ten
 Once a day Configuration Manager sends the on-premises device events to the Microsoft Intune admin center. Only events collected after the client receives the **Enable Endpoint analytics data collection** policy are visible in the admin center. You can generate test events easily by installing an application or an update from Configuration Manager, or restart the device. Events are kept for 30 days.
 
 > [!NOTE]
-> As a [prerequisite](/mem/configmgr/tenant-attach/timeline#prerequisites) to view the timeline from the Microsoft Intune admin center, you must set **Enable Endpoint analytics data collection** to **Yes** in Configuration Manager. For more information about implementing the device timeline, see [Tenant attach: Device timeline in the admin center](/mem/configmgr/tenant-attach/timeline).
+> As a [prerequisite](/intune/configmgr/tenant-attach/timeline#prerequisites) to view the timeline from the Microsoft Intune admin center, you must set **Enable Endpoint analytics data collection** to **Yes** in Configuration Manager. For more information about implementing the device timeline, see [Tenant attach: Device timeline in the admin center](/intune/configmgr/tenant-attach/timeline).
 
 To view the device event timeline:
 
@@ -325,7 +325,7 @@ To view the device event timeline:
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-10.png" alt-text="Timeline of events for a device" Lightbox="./media/tenant-attach-intune/tenant-attach-10.png":::
 
-For more information about viewing device events for tenant attached devices, see [Tenant attach: Device timeline in the admin center](/mem/configmgr/tenant-attach/timeline).
+For more information about viewing device events for tenant attached devices, see [Tenant attach: Device timeline in the admin center](/intune/configmgr/tenant-attach/timeline).
 
 ## Next steps
 

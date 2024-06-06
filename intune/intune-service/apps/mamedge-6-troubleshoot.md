@@ -55,7 +55,7 @@ The following list provides common issues and potential solutions:
 
 Successful app protection policy deployment relies on proper configuration of settings and other dependencies. Always verify that you have met the prerequisites for deploying app protection policies.
 
-If you continue to experience issues, it may be helpful to contact [Microsoft Support](/mem/get-support) for further assistance.
+If you continue to experience issues, it may be helpful to contact [Microsoft Support](/intune/get-support) for further assistance.
 
 ## FAQ
 

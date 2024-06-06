@@ -11,16 +11,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/intune-service/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/intune-service/
+        topicHref: /intune/configmgr/index
         items:
         - name: Tenant attach
-          tocHref: /mem/intune-service/protect/
-          topicHref: /mem/configmgr/tenant-attach/index
+          tocHref: /intune/intune-service/protect/
+          topicHref: /intune/configmgr/tenant-attach/index
 
 - name: Docs
   tocHref: /
@@ -31,13 +31,13 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Tenant attach
-          tocHref: /mem/configmgr/cloud-attach/
-          topicHref: /mem/configmgr/tenant-attach/index
+          tocHref: /intune/configmgr/cloud-attach/
+          topicHref: /intune/configmgr/tenant-attach/index

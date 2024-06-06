@@ -24,7 +24,7 @@ highlightedContent:
       url: ./intune-service/fundamentals/whats-new.md
     - title: Intune Blog and Community
       itemType: overview
-      url: /mem/index#intune-blog-and-community
+      url: /intune/index#intune-blog-and-community
     - title: Microsoft Intune Suite add-ons
       itemType: overview
       url: ./intune-service/fundamentals/intune-add-ons.md
@@ -97,7 +97,7 @@ productDirectory:
     - title: Deploy devices with Windows Autopilot
       imageSrc: ./media/index/windows-autopilot.svg
       links:
-        - url: /mem/autopilot/windows-autopilot
+        - url: /intune/autopilot/windows-autopilot
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
           text: View the interactive demo        

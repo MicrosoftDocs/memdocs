@@ -787,7 +787,7 @@ items:
     - name: Surface device dashboard
       href: clients/manage/surface-device-dashboard.md
     - name: Sync data to Azure Monitor
-      href: /azure/azure-monitor/logs/collect-sccm?toc=/mem/configmgr/core/toc.json&bc=/mem/configmgr/core/breadcrumb/toc.json
+      href: /azure/azure-monitor/logs/collect-sccm?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
   - name: Manage clients
     items:
     - name: How to manage clients

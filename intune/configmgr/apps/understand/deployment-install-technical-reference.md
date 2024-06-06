@@ -62,6 +62,6 @@ Finally, after enforcement is complete, CI Agent receives the task complete noti
 
 ## Next Steps
 
-- [Troubleshoot application deployments](/troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Troubleshoot application deployments](/troubleshoot/intune/configmgr/troubleshoot-application-deployment?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
 
-- [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Common error codes for app installation](../../tenant-attach/app-install-error-reference.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)

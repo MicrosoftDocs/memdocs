@@ -87,7 +87,7 @@ You can schedule messages to arrive at different times on a device by selecting 
 ### Where can I share an idea for organizational messages or suggest an improvement?  
 In the Microsoft Intune admin center, select the **Feedback** icon that's next to your account name at the top of the page. Rate your experience and then describe your experience or idea. If you're okay with getting a response from Microsoft, select **Microsoft can email you about your feedback.**  
 
-For other support options, see [How to get support in Microsoft Intune admin center](/mem/get-support).  
+For other support options, see [How to get support in Microsoft Intune admin center](/intune/get-support).  
 
 ## Next steps  
 Complete the [prerequisites for organizational messages](organizational-messages-prerequisites.md) to enable the feature in your tenant.     

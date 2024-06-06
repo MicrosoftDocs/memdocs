@@ -117,4 +117,4 @@ Wi-Fi profiles support the following device platforms:
 
 The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status.](device-profile-monitor.md).
 
-[Troubleshoot Wi-Fi profiles in Intune](/troubleshoot/mem/intune-service/troubleshoot-wi-fi-profiles).
+[Troubleshoot Wi-Fi profiles in Intune](/troubleshoot/intune/intune-service/troubleshoot-wi-fi-profiles).

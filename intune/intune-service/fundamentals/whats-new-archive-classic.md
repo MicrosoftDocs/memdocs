@@ -262,7 +262,7 @@ New app protection reports have been added for both enrolled devices and devices
 Intune now fully supports and manages Android 7.1.1.
 
 #### Resolve issue where iOS devices are inactive, or the admin console cannot communicate with them <!--unknown-->
-When users' devices lose contact with Intune, you can give them new troubleshooting steps to help them regain access to company resources. See [Devices are inactive, or the admin console can't communicate with them](/troubleshoot/mem/intune-service/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
+When users' devices lose contact with Intune, you can give them new troubleshooting steps to help them regain access to company resources. See [Devices are inactive, or the admin console can't communicate with them](/troubleshoot/intune/intune-service/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
 
 ### Notices
 
@@ -318,7 +318,7 @@ Intune is adding new enrollment restrictions that control which mobile device pl
 * Restricting mobile device enrollment doesn't restrict PC client enrollment.
 * For iOS only, there's one other option to block the enrollment of personally owned devices.
 
-Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate owned, as explained in [this article](/mem/intune-service/fundamentals/deployment-guide-enrollment).
+Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate owned, as explained in [this article](/intune/intune-service/fundamentals/deployment-guide-enrollment).
 
 ### Notices
 

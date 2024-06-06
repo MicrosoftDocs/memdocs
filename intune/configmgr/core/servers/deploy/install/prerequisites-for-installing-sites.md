@@ -132,7 +132,7 @@ To successfully replicate data between a CAS and a primary site, Configuration M
 
 After you expand the site, you need to reconfigure the following Azure services with Configuration Manager:
 
-- [Log Analytics](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context)
+- [Log Analytics](/azure/azure-monitor/platform/collect-sccm?context=/intune/configmgr/core/context/core-context)
 - [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 - [Tenant attach](../../../../tenant-attach/device-sync-actions.md)
 

@@ -185,7 +185,7 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 * **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but isn't listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting **Custom Apps**. 
 
-* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune-service/troubleshoot-app-install). 
+* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/intune/intune-service/troubleshoot-app-install). 
 
 ### Give your app access to the Intune Mobile App Management service
 

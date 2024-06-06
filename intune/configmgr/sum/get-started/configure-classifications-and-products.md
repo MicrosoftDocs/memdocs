@@ -164,7 +164,7 @@ For more information on how to deploy upgrades, see [Manage Windows as a service
 
 ### Keeping Insider devices up-to date
 
-Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows Insider Pre-Release** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](../deploy-use/automatically-deploy-software-updates.md) or [phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
+Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows Insider Pre-Release** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](../deploy-use/automatically-deploy-software-updates.md) or [phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/intune/configmgr/sum/toc.json&bc=/intune/configmgr/sum/breadcrumb/toc.json).
 
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 

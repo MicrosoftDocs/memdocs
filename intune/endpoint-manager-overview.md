@@ -102,7 +102,7 @@ The admin center also plugs-in other key device management services, including:
 - [**Azure AD Privileged Identity Management** to monitor access to important resources](/azure/active-directory/privileged-identity-management/pim-configure)
 - [**Microsoft Tunnel** VPN gateway solution that runs on Linux](./intune-service/protect/microsoft-tunnel-overview.md)
 - [**Mobile threat defense** partners](./intune-service/protect/mobile-threat-defense.md)
-- [**Remote Help** for remote assistance](/mem/intune-service/fundamentals/remote-help)
+- [**Remote Help** for remote assistance](/intune/intune-service/fundamentals/remote-help)
 - [**TeamViewer** for remote administration](./intune-service/remote-actions/teamviewer-support.md)
 - [**Windows 365** for your Windows virtual machines](/windows-365/overview)
 - [**Windows Autopatch** to automate updates](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)

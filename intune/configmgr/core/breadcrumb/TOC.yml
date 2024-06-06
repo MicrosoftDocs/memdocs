@@ -12,12 +12,12 @@ items:
     items:
     - name: Microsoft Endpoint Manager
       tocHref: /Azure/
-      topicHref: /mem/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
         tocHref: /azure/azure-monitor/
-        topicHref: /mem/configmgr/index
+        topicHref: /intune/configmgr/index
         items:
         - name: Core infrastructure
           tocHref: /azure/azure-monitor/logs/
-          topicHref: /mem/configmgr/core/index
+          topicHref: /intune/configmgr/core/index

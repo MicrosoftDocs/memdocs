@@ -6,13 +6,13 @@ items:
   - name: Prerequisites for tenant attach
     href: prerequisites.md
   - name: Enable cloud attach, versions 2111 and later
-    href: ../cloud-attach/enable.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
+    href: ../cloud-attach/enable.md?toc=/intune/configmgr/tenant-attach/toc.json&bc=/intune/configmgr/tenant-attach/breadcrumb/toc.json  
   - name: Enable tenant attach
     href: device-sync-actions.md
   - name: Endpoint Security
     href: endpoint-security-get-started.md
   - name: Use Intune RBAC for tenant attach
-    href: ../cloud-attach/use-intune-rbac.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json   
+    href: ../cloud-attach/use-intune-rbac.md?toc=/intune/configmgr/tenant-attach/toc.json&bc=/intune/configmgr/tenant-attach/breadcrumb/toc.json   
   - name: Client details
     href: client-details.md
   - name: Install applications
@@ -52,15 +52,15 @@ items:
   - name: Tenant attach data collection
     href: data-collection.md
   - name: Microsoft Defender Antivirus policy settings
-    href: ../../intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+    href: ../../intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/intune/configmgr/tenant-attach/toc.json&bc=/intune/configmgr/tenant-attach/breadcrumb/toc.json
   - name: Windows Security experience Antivirus policy settings
-    href: ../../intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+    href: ../../intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/intune/configmgr/tenant-attach/toc.json&bc=/intune/configmgr/tenant-attach/breadcrumb/toc.json
   - name: Firewall policy settings
-    href: ../../intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
+    href: ../../intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/intune/configmgr/tenant-attach/toc.json&bc=/intune/configmgr/tenant-attach/breadcrumb/toc.json  
   - name: Endpoint Detection and Response policy settings
-    href: ../../intune-service/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+    href: ../../intune-service/protect/endpoint-security-edr-profile-settings.md?toc=/intune/configmgr/tenant-attach/toc.json&bc=/intune/configmgr/tenant-attach/breadcrumb/toc.json
   - name: Attack surface reduction policy settings
-    href: ../../intune-service/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
+    href: ../../intune-service/protect/endpoint-security-asr-profile-settings.md?toc=/intune/configmgr/tenant-attach/toc.json&bc=/intune/configmgr/tenant-attach/breadcrumb/toc.json  
 - name: Troubleshoot
   items:
   - name: Tenant attach and device actions

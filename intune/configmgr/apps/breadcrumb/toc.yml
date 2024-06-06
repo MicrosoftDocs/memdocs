@@ -11,16 +11,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Application management
-          tocHref: /mem/configmgr/osd/
-          topicHref: /mem/configmgr/apps/index
+          tocHref: /intune/configmgr/osd/
+          topicHref: /intune/configmgr/apps/index
 
 - name: Docs
   tocHref: /
@@ -31,16 +31,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Application management
-          tocHref: /mem/configmgr/tenant-attach/
-          topicHref: /mem/configmgr/apps/index
+          tocHref: /intune/configmgr/tenant-attach/
+          topicHref: /intune/configmgr/apps/index
 
 - name: Docs
   tocHref: /
@@ -52,12 +52,12 @@ items:
     items:
     - name: Microsoft Endpoint Manager
       tocHref: /troubleshoot/
-      topicHref: /mem/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /troubleshoot/mem/
-        topicHref: /mem/configmgr/index
+        tocHref: /troubleshoot/intune/
+        topicHref: /intune/configmgr/index
         items:
         - name: Application management
-          tocHref: /troubleshoot/mem/configmgr/
-          topicHref: /mem/configmgr/apps/index
+          tocHref: /troubleshoot/intune/configmgr/
+          topicHref: /intune/configmgr/apps/index

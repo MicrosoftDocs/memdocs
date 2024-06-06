@@ -20,8 +20,8 @@ This article describes how to manage and monitor phased deployments. Management 
 
 First, you need to create a phased deployment:
 
-- [Application](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
-- [Software update](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
+- [Application](create-phased-deployment-for-task-sequence.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)  
+- [Software update](create-phased-deployment-for-task-sequence.md?toc=/intune/configmgr/sum/toc.json&bc=/intune/configmgr/sum/breadcrumb/toc.json)  
 - [Task sequence](create-phased-deployment-for-task-sequence.md)  
 
 ## <a name="bkmk_move"></a> Move to the next phase

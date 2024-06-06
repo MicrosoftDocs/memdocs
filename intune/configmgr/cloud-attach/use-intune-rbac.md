@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 <!--8126836, 6415648, 8348644, IN14996522, 13058986-->
 *Applies to: Configuration Manager (current branch)*
 
-Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with the [Help Desk Operator role](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. [Intune role-based access control](../../intune-service/fundamentals/create-custom-role.md) manages the permissions to all cloud-attached device pages in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), such as [device timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json).  
+Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with the [Help Desk Operator role](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. [Intune role-based access control](../../intune-service/fundamentals/create-custom-role.md) manages the permissions to all cloud-attached device pages in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), such as [device timeline](../tenant-attach/timeline.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json), [CMPivot](../tenant-attach/cmpivot-start.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json), and [scripts](../tenant-attach/scripts.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json).  
 
 > [!IMPORTANT]
 > Currently, any enforcement of Intune role-based access control for displaying and taking actions on tenant-attached devices from the Microsoft Intune admin center is optional. We recommend all admins with cloud-connected Configuration Manager environments begin [verifying the role-based access control permissions from Intune](#bkmk_verify-intune-rbac).
@@ -33,7 +33,7 @@ The three high-level steps to configure Intune as the role-based access control 
 ## Prerequisites
 
 - Configuration Manager version 2207 or later
-- [Tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
+- [Tenant attached devices](../tenant-attach/client-details.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json)
 
 ## Limitations
 
@@ -115,5 +115,5 @@ The **Use Intune RBAC** setting applies to all of the Configuration Manager hier
 
 ## Next steps
 
-- Review the [timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for a cloud-attached device
-- Run a [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) query on a cloud attached device
+- Review the [timeline](../tenant-attach/timeline.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) for a cloud-attached device
+- Run a [CMPivot](../tenant-attach/cmpivot-start.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) query on a cloud attached device

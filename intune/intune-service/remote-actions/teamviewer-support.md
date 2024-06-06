@@ -104,6 +104,6 @@ When you start a remote session, users see a notification flag on the Company Po
 
 ## Next steps
 
-[Use Remote Help with Intune](/mem/intune-service/fundamentals/remote-help)
+[Use Remote Help with Intune](/intune/intune-service/fundamentals/remote-help)
 
 [See device details in Intune](device-inventory.md)

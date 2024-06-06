@@ -22,7 +22,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 - Run PowerShell [scripts](scripts.md)
 - Install [applications](applications.md)
-- Query devices with [CMPivot](../tenant-attach/cmpivot-samples-attached.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
+- Query devices with [CMPivot](../tenant-attach/cmpivot-samples-attached.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json)
 - Display a [timeline](timeline.md) of events from the device
 
 ## Prerequisites

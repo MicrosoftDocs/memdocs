@@ -29,4 +29,4 @@ The specific URLs required by the service connection point vary by Configuration
 - [External notifications](../internet-endpoints.md#external-notifications)
 
 > [!TIP]  
-> The service connection point uses the Microsoft Intune service when it connects to `go.microsoft.com` or `manage.microsoft.com`. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [Service connection point doesn't download updates](/troubleshoot/mem/configmgr/service-connection-point-not-download-updates).
+> The service connection point uses the Microsoft Intune service when it connects to `go.microsoft.com` or `manage.microsoft.com`. There's a known issue in which the Intune connector experiences connectivity issues if the Baltimore CyberTrust Root Certificate isn't installed, is expired, or is corrupted on the service connection point. For more information, see [Service connection point doesn't download updates](/troubleshoot/intune/configmgr/service-connection-point-not-download-updates).

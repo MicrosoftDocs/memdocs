@@ -214,7 +214,7 @@ The Configuration Manager client handler for BitLocker is co-management aware. I
 For more information about managing BitLocker with Intune, see the following articles:
 
 - [Use device encryption with Intune](../../../../intune-service/protect/encrypt-devices.md)
-- [Troubleshoot BitLocker policies in Microsoft Intune](/troubleshoot/mem/intune-service/troubleshoot-bitlocker-policies)
+- [Troubleshoot BitLocker policies in Microsoft Intune](/troubleshoot/intune/intune-service/troubleshoot-bitlocker-policies)
 
 ## Next steps
 

@@ -105,7 +105,7 @@ When you create a restriction, it's added to the list just above the default. Yo
 3. Hover over the policy in the **Priority** column,and then select and drag the priority to the desired position in the list.   
 
 ## Device user experience   
-BYOD users who reach their device limit receive a message during enrollment explaining the restriction. To continue enrolling, the device user must unenroll an existing device. Alternatively, as the admin you can increase the device limit in the admin center. For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](/troubleshoot/mem/intune-service/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
+BYOD users who reach their device limit receive a message during enrollment explaining the restriction. To continue enrolling, the device user must unenroll an existing device. Alternatively, as the admin you can increase the device limit in the admin center. For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](/troubleshoot/intune/intune-service/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
 
 ![Example image of device limit notification which reads, "Couldn't add your device. You have added the maximum number of devices allowed by your IT support. You must remove a device before you can add a new one.](./media/enrollment-restrictions-set/enrollment-restrictions-ios-set-limit-notification.png)  
 

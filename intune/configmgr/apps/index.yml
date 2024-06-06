@@ -66,6 +66,6 @@ landingContent:
           - text: Troubleshoot app deployments
             url: understand/app-deployment-technical-reference.md
           - text: Common error codes for app installation
-            url: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
+            url: ../tenant-attach/app-install-error-reference.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
           - text: Packages and programs
             url: deploy-use/packages-and-programs.md

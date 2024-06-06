@@ -113,4 +113,4 @@ The following tables describe the user actions that cause incomplete enrollments
 
 ## Next steps
 
-After checking on your incomplete enrollment rates, review your [options for improving enrollment](/mem/intune-service/enrollment/device-enrollment).  
+After checking on your incomplete enrollment rates, review your [options for improving enrollment](/intune/intune-service/enrollment/device-enrollment).  

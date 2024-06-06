@@ -115,7 +115,7 @@ Another way to find the token is:
 
 2. Select **View enrollment token**.  
 
-The token appears as an eight-digit string and a QR code. Use this token to enroll based on the enrollment mechanisms described in the [Android Enterprise corporate-owned device enrollment document](/mem/intune-service/enrollment/android-dedicated-devices-fully-managed-enroll). 
+The token appears as an eight-digit string and a QR code. Use this token to enroll based on the enrollment mechanisms described in the [Android Enterprise corporate-owned device enrollment document](/intune/intune-service/enrollment/android-dedicated-devices-fully-managed-enroll). 
 
 ### Revoke or Export tokens
 

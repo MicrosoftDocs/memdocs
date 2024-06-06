@@ -184,6 +184,6 @@ After you create a phased deployment, open its properties to make changes:
 
 Manage and monitor phased deployments:
 
-- [Application](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
-- [Software update](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
+- [Application](manage-monitor-phased-deployments.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json)
+- [Software update](manage-monitor-phased-deployments.md?toc=/intune/configmgr/sum/toc.json&bc=/intune/configmgr/sum/breadcrumb/toc.json)  
 - [Task sequence](manage-monitor-phased-deployments.md)  
