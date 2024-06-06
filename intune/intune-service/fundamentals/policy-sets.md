@@ -142,4 +142,4 @@ Policy sets, new to 1910, have the following known issues.
 
 ## Next steps
 
-- [Enroll devices in Microsoft Intune](../enrollment/index.yml)
+- [Enroll devices in Microsoft Intune](../index.yml)

@@ -346,7 +346,7 @@ conceptualContent:
 
     - title: Education
       links:
-        - url: ./fundamentals/introduction-intune-education.md
+        - url: ./industry/education/introduction-intune-education.md
           itemType: how-to-guide
           text: What is Intune for Education?
         - url: /intune-education/
