@@ -141,7 +141,7 @@ When checking the **Join type** of a device that has been joined to Microsoft En
 
 ### Cause of device appearing as Microsoft Entra registered instead of Microsoft Entra joined
 
-This issue occurs if the device was previously registered in Microsoft Entra ID, for example via a Workplace join, before it was joined to Microsoft Entra ID. If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before it's joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
+This issue occurs if the device was previously registered in Microsoft Entra ID, for example via a [Workplace join](/entra/identity/devices/concept-device-registration), before it was joined to Microsoft Entra ID. If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before it's joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
 
 ### Resolution for device appearing as Microsoft Entra registered instead of Microsoft Entra joined
 
