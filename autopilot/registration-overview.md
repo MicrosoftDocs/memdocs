@@ -41,16 +41,18 @@ Registration can also be performed within your organization by collecting the ha
 
 When you register an Autopilot device, it automatically creates a Microsoft Entra object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> Don't register to Autopilot the following types of devices:
+> The following device shouldn't be registered as a Windows Autopilot device:
 >
-> - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
-> - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune)
+> - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register) devices, also known as "workplace joined." For more information, see [Device appears as Microsoft Entra registered instead of Microsoft Entra joined](registration-overview.md#device-appears-as-microsoft-entra-registered-instead-of-microsoft-entra-joined)
+> - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune) devices.
 >
-> These options are intended for users to join personally-owned devices to their organization's network.
+> These options are intended for users to join personally-owned devices to their organization's network. On the other hand, Windows Autopilot registered devices are considered corporate owned devices.
+>
+> If a device is already one of these two type of devices and it needs to be registered as a Windows Autopilot corporate device, it needs to first be removed from Microsoft Intune and Microsoft Entra ID before it's registered as a Windows Autopilot device. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 
-Once a device is registered in Autopilot if a profile isn't assigned, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
+If a profile isn't assigned to an Autopilot device, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
 
 ## Terms
 

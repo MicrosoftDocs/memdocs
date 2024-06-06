@@ -35,7 +35,7 @@ There are several methods to register a device as an Autopilot device in Intune:
   - [PowerShell script](/mem/autopilot/add-devices#powershell)
   - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
   - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
-  
+
   These methods of obtaining the hardware hash of a device are well documented. The corresponding documentation can be viewed by selecting the appropriate link from the above list.
 
 - Automatically registering device via:
@@ -49,7 +49,16 @@ For most organizations, using an OEM or partner to register devices as Autopilot
 
 > [!IMPORTANT]
 >
-> Assuming that a device isn't currently enrolled Intune, remember that registering a device in Autopilot doesn't make it an Intune enrolled device. That device doesn't enroll into Intune until Autopilot runs on the device for the first time.
+> - Assuming that a device isn't currently enrolled Intune, remember that registering a device in Autopilot doesn't make it an Intune enrolled device. That device doesn't enroll into Intune until Autopilot runs on the device for the first time.
+>
+> - The following device shouldn't be registered as a Windows Autopilot device:
+>
+>   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register) devices, also known as "workplace joined." For more information, see [Device appears as Microsoft Entra registered instead of Microsoft Entra joined](registration-overview.md#device-appears-as-microsoft-entra-registered-instead-of-microsoft-entra-joined)
+>   - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune) devices.
+>
+>   These options are intended for users to join personally-owned devices to their organization's network. On the other hand, Windows Autopilot registered devices are considered corporate owned devices.
+>
+>   If a device is already one of these two type of devices and it needs to be registered as a Windows Autopilot corporate device, it needs to first be removed from Microsoft Intune and Microsoft Entra ID before it's registered as a Windows Autopilot device. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 
 ## Importing the hardware hash CSV file for devices into Intune
 
