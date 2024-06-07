@@ -57,13 +57,13 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
   - Microsoft 365 F5 Compliance
   - Microsoft 365 F5 Sec+Comp
 - Join type and network
-  - Microsoft Entra join with Microsoft hosted network
-  - Microsoft Entra join with Azure network connection
+  - Microsoft Entra joined with Microsoft hosted network and Azure network connections
+  - Microsoft Entra hybrid joined with Azure network connection
 - [Microsoft Defender Antivirus in Windows](/defender-endpoint/microsoft-defender-antivirus-windows) version 4.18.2110 or later
 - Microsoft 365 Apps version 16.0.14701.0 or later
 - The device must be assigned to a [primary user](/mem/intune/remote-actions/find-primary-user)
 - Cloud PC size
-  - 8vCPU or better (for more information, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md))
+  - For optimal performance, 8vCPU or better (for more information, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md))
 
 ### Role requirements
 
