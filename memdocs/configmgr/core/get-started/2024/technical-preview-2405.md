@@ -45,7 +45,7 @@ If you update a technical preview site from version 2401 to a later version, the
 
 **Mitigation:** To work around this issue, manually update the console. After you update the site from version 2401 to a later version, run **ConsoleSetup.exe**.
 
-For more information, see [Install the Configuration Manager console](../../../../servers/deploy/install/install-consoles.md).
+For more information, see [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md)
 
 
 ## Next steps
