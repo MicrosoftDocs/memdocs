@@ -58,6 +58,8 @@ Users with the following permissions can review logs:
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Read** permissions
 
+For more information about administrator permissions, see [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
+
 ## Reporting tiles
 
 The **Home**, **Dashboard**, and **Apps Overview** panes provide updated tiles to show the number of app installation failures for the tenant. You can use the following export **ReportName** parameters to retrieve the related data:
