@@ -147,4 +147,4 @@ If Autopilot Reset fails immediately with the error **Ran into trouble. Please s
 ## Related content
 
 - [Windows Autopilot - known issues](known-issues.md).
-- [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+- [Collect MDM logs](/windows/client-management/mdm-collect-logs).

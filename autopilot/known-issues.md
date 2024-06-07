@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/06/2024
+ms.date: 06/10/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,7 +41,7 @@ The **Enrolled date** in the **Devices | All devices** and **Windows | Windows d
 
     `devices?$filter=physicalIds/any(p: startswith(p, '[ZTDID]'))&$select=id,deviceId,displayName,physicalIds,createdDateTime`
 
-    For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph ](/graph/api/resources/intune-graph-overview).
+    For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview).
 
 1. Use the Windows Autopilot deployment report for recently deployed devices.
 
@@ -265,11 +265,7 @@ The client is likely unable to access all the required Azure AD/MSA-related URLs
 
 Using PPKGs in combination with Windows Autopilot isn't recommended.
 
-## Next steps
+## Related content
 
-[Windows Autopilot - resolved issues](resolved-issues.md)
-
-[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
-
-[Troubleshooting Windows Autopilot](troubleshooting.md)
-
+- [Collect MDM logs](/windows/client-management/mdm-collect-logs).
+- [Troubleshooting Windows Autopilot](troubleshooting.md).

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/23/2024
+ms.date: 06/10/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -53,7 +53,7 @@ The following best practices ensure that devices can easily be provisioned as pa
 
   - Per OEM Policy, Windows features, including built-in apps, shouldn't be disabled or removed.
 
-## Next steps
+## Related content
 
 - [Windows Autopilot customer consent](registration-auth.md).
 - [Motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/06/2024
+ms.date: 06/10/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -267,6 +267,6 @@ Completely removing a device from a tenant requires the device records in Intune
 
 1. **ZtdDeviceDuplicated**: This error occurs when there are duplicate hardware hashes in the CSV file. Only one of the duplicates is processed, and the others result in this error. If this error occurs, look for the other duplicates of the same device to see what the actual result was. If a duplicate that was successfully processed is found, the duplicate row from the CSV file can be removed.
 
-## Next steps
+## Related content
 
 - [Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.
