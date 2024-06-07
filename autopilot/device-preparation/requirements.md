@@ -26,7 +26,7 @@ appliesto:
 
 ## Select the appropriate tab to see the relevant requirements:
 
-| [Software](requirements.md?tabs=software) | [Networking](requirements.md?tabs=networking) | [Licensing](requirements.md?tabs=licensing#select-the-appropriate-tab-to-see-the-relevant-requirements) | [Configuration](requirements.md?tabs=configuration) | [RBAC Permissions](requirements.md?tabs=rbac) |
+| [Software](requirements.md?tabs=software) | [Networking](requirements.md?tabs=networking#select-the-appropriate-tab-to-see-the-relevant-requirements) | [Licensing](requirements.md?tabs=licensing#select-the-appropriate-tab-to-see-the-relevant-requirements) | [Configuration](requirements.md?tabs=configuration#select-the-appropriate-tab-to-see-the-relevant-requirements) | [RBAC Permissions](requirements.md?tabs=rbac#select-the-appropriate-tab-to-see-the-relevant-requirements) |
 
 ## [:::image type="icon" source="../images/icons/software-18.svg"::: **Software**](#tab/software)
 
