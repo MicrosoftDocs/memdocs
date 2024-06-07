@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/05/2024
+ms.date: 06/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,7 +50,7 @@ This article includes more information on the configuration file and Win32 app, 
 
 ## Prerequisites
 
-- To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure the Intune policies, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 - This feature supports organization-owned devices that are MDM enrolled in Intune. Personal devices and devices not enrolled in Intune aren't supported.
 
@@ -157,10 +157,14 @@ This option gets the BIOS passwords, one device at a time.
 
 1. Create a custom Intune RBAC role with the **Read Bios Password** permission:
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Roles** > **Create a new role**.
-    2. **Name** your role and select **Next**.
-    3. In **Permissions**, expand **Managed devices** > Set **Read Bios Password** to **Yes**.
-    4. Select **Next** > **Next** > **Create**.
+    1. At a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a member of the **Intune Role Administrator** built-in Intune role.
+
+        For more information on the built-in roles, go to [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+
+    1. Select **Tenant administration** > **Roles** > **Create a new role**.
+    1. **Name** your role and select **Next**.
+    1. In **Permissions**, expand **Managed devices** > Set **Read Bios Password** to **Yes**.
+    1. Select **Next** > **Next** > **Create**.
 
 2. Sign in to your Graph tool with this custom RBAC role, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
 
@@ -170,13 +174,13 @@ This option gets the BIOS passwords, one device at a time.
 
 This option gets a list of all the BIOS passwords of all devices.
 
-1. You need the **Intune Service Administrator** role or **Global Administrator** role in Microsoft Entra ID.
+1. At a minimum, you need the **Intune Administrator** role in Microsoft Entra ID.
 
-2. Sign in to your Graph tool with one of these roles, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
+2. Sign in to your Graph tool with this role, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
 
     - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordInfo`
 
-For more information on RBAC roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+For more information on the built-in roles, go to [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 ## Remove BIOS configuration password
 
