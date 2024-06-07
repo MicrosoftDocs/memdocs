@@ -30,7 +30,15 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Configuration Manager now support SQL Extended Protection for Authentication](includes/2405/28106757.md)]
 [!INCLUDE [Performance Enhancement of policy processing and collection evaluation](includes/2405/27679763.md)]
 
-<!--## General known issues-->
+## Known issues
+
+### Unable to import or connect to Powershell Configuration Manager module via console
+
+Customers while importing Configuration manager pwershell module will not be able to import and will get the following error message: 
+`PS C:\Build\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1
+Import-Module : The module manifest 'C:\Build\AdminConsole\bin\ConfigurationManager.psd1' could not be
+processed because it is not a valid Windows PowerShell restricted language file. Remove the elements that are not permitted by the
+restricted language`
 
 
 ## Next steps
