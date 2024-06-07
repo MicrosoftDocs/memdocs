@@ -8,11 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-<<<<<<< HEAD
 ms.date: 06/10/2024
-=======
-ms.date: 06/07/2024
->>>>>>> 329a6356500a732e30fa1665503484fc471023d9
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -53,12 +49,12 @@ If a profile isn't assigned to an Autopilot device, it receives the default Auto
 
 The following terms are used to refer to various steps in the registration process:
 
-| Term | Definition |
+| **Term** | **Definition** |
 | --- | --- |
-| device registration | Device registration happens when a device's hardware hash is associated with the Windows Autopilot service. This process can be automated for new enterprise devices manufactured by OEMs that are Windows Autopilot partners. |
-| add devices | Adding a device is the process of registering a device with the Windows Autopilot service (if it isn't already registered) **and associating it to a tenant ID**. |
-| import devices | Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information in order to manually add devices. The device information includes information such the model and serial number. |
-| enroll devices | Enrolling a device is the process of adding devices to Intune. |
+| **Device registration** | Device registration happens when a device's hardware hash is associated with the Windows Autopilot service. This process can be automated for new enterprise devices manufactured by OEMs that are Windows Autopilot partners. |
+| **Add devices** | Adding a device is the process of registering a device with the Windows Autopilot service (if it isn't already registered) **and associating it to a tenant ID**. |
+| **Import devices** | Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information in order to manually add devices. The device information includes information such the model and serial number. |
+| **Enroll devices** | Enrolling a device is the process of adding devices to Intune. |
 
 ## Device identification
 
