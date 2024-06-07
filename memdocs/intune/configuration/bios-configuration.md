@@ -50,7 +50,10 @@ This article includes more information on the configuration file and Win32 app, 
 
 ## Prerequisites
 
-- To configure the Intune policies, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure the Intune policies, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to:
+
+  - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+  - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
 
 - This feature supports organization-owned devices that are MDM enrolled in Intune. Personal devices and devices not enrolled in Intune aren't supported.
 

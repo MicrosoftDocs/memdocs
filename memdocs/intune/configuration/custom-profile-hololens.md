@@ -54,7 +54,7 @@ Use the steps in this article as a template to allow or deny specific apps from 
 - Be familiar with Windows PowerShell. For information on the execution policy options, go to [Windows PowerShell about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 - To configure the Intune policy, at a minimum, sign into the Intune admin center as a member of the **Policy and Profile Manager** built-in Intune role.
 
-  For information on the Intune built-in roles, go to:
+  For information on the Intune built-in roles, and what they can do, go to:
 
   - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
   - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
