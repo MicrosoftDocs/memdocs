@@ -24,9 +24,15 @@ appliesto:
 
 # Windows Autopilot device preparation requirements
 
-## Select the appropriate tab to see the relevant requirements:
+The list of requirements for Windows Autopilot device preparation is organized into five different categories:
 
-| [Software](requirements.md?tabs=software) | [Networking](requirements.md?tabs=networking#select-the-appropriate-tab-to-see-the-relevant-requirements) | [Licensing](requirements.md?tabs=licensing#select-the-appropriate-tab-to-see-the-relevant-requirements) | [Configuration](requirements.md?tabs=configuration#select-the-appropriate-tab-to-see-the-relevant-requirements) | [RBAC Permissions](requirements.md?tabs=rbac#select-the-appropriate-tab-to-see-the-relevant-requirements) |
+- **Software** - OS requiremnts.
+- **Networking** - networking requiremnts.
+- **Licensing** - licensing requirements.
+- **Configuration** - configurations required in Microsoft Entra ID and Microsoft Intune.
+- **RBAC Permissions** - RBAC permissions required for a Windows Autopilot device preparation administrator.
+
+Select the appropriate tab to see the relevant requirements:
 
 ## [:::image type="icon" source="../images/icons/software-18.svg"::: **Software**](#tab/software)
 
