@@ -17,7 +17,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the technical preview for Configuration Manager, version 2405. Install this version to update and add new features to your technical preview site.When you install a new technical preview site, this release is also available as a baseline version.
+This article introduces the features that are available in the technical preview for Configuration Manager, version 2405. Install this version to update and add new features to your technical preview site. When you install a new technical preview site, this release is also available as a baseline version.
 
 Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
@@ -32,7 +32,7 @@ The following sections describe the new features to try out in this version:
 
 ### Unable to import or connect to Powershell Configuration Manager module via console
 
-While importing or connecting to Configuration manager Powershell module via CM console users will get the following error message:
+While importing or connecting to Configuration manager Powershell module via CM console users get the following error message :
 `PS C:\Build\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1
 Import-Module : The module manifest 'C:\Build\AdminConsole\bin\ConfigurationManager.psd1' could not be
 processed because it is not a valid Windows PowerShell restricted language file. Remove the elements that are not permitted by the
