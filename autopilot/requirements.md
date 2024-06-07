@@ -26,6 +26,15 @@ appliesto:
 
 # Windows Autopilot requirements
 
+The list of requirements for Windows Autopilot device preparation is organized into five different categories:
+
+- **Software** - OS requirements.
+- **Networking** - networking requirements.
+- **Licensing** - licensing requirements.
+- **Configuration** - configurations required in Microsoft Entra ID and Microsoft Intune.
+
+Select the appropriate tab to see the relevant requirements:
+
 ## [:::image type="icon" source="images/icons/software-18.svg"::: **Software**](#tab/software)
 
 ### Software requirements

@@ -134,7 +134,7 @@ sections:
         answer: |
           During a Windows Autopilot device preparation deployment, a **Setting up for work or school** window with a round progress bar displays on the device:
 
-          :::image type="content" source="../images/device-preparation/apdp-status.png" alt-text="Status screen for Windows Autopilot device preparation deployment.":::
+          :::image type="content" source="../images/device-preparation/apdp-status.png" alt-text="Screenshot that shows the Status screen for Windows Autopilot device preparation deployment.":::
 
           Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP) like Windows Autopilot. If the ESP displays during the deployment, then the device isn't running a Windows Autopilot device preparation deployment. Instead, the device might be:
 
