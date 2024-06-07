@@ -43,7 +43,7 @@ restricted language`
 
 If you update a technical preview site from version 2401 to a later version, the Configuration Manager console fails to update. This problem is because of a known issue in the extension installer.
 
-**Mitigation:** To work around this issue, manually update the console. After you update the site from version 2401 to a later version, run **ConsoleSetup.exe**.
+**Mitigation:** To work around this issue, after you update the site from version 2401 to a later version, manually uninstall the previous console and run **ConsoleSetup.exe**.
 
 For more information, see [Install the Configuration Manager console](../../servers/deploy/install/install-consoles.md)
 
