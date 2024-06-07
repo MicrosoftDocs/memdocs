@@ -55,8 +55,10 @@ The reporting framework provides a consistent and more comprehensive reporting e
 Users with the following permissions can review logs:
 
 - Global Administrator
-- Intune Service Administrator
+- Intune Administrator
 - Administrators assigned to an Intune role with **Read** permissions
+
+For more information about administrator permissions, see [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
 
 ## Reporting tiles
 
