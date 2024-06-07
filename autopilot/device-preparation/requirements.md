@@ -26,8 +26,8 @@ appliesto:
 
 The list of requirements for Windows Autopilot device preparation is organized into five different categories:
 
-- **Software** - OS requiremnts.
-- **Networking** - networking requiremnts.
+- **Software** - OS requirements.
+- **Networking** - networking requirements.
 - **Licensing** - licensing requirements.
 - **Configuration** - configurations required in Microsoft Entra ID and Microsoft Intune.
 - **RBAC Permissions** - RBAC permissions required for a Windows Autopilot device preparation administrator.
