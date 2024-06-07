@@ -92,7 +92,7 @@ Create a list of corporate identifiers and save it as a CSV file. You can add up
 >[!IMPORTANT]
 > Remember, only add one type of corporate identifier per CSV file. 
 
-To add corporate identifiers Android and iOS/iPadOS platforms, list one IMEI or serial number per line as shown in the following example.      
+To add corporate identifiers for Android and iOS/iPadOS platforms, list one IMEI or serial number per line as shown in the following example.      
 
 ```
 01234567890123,device details  
