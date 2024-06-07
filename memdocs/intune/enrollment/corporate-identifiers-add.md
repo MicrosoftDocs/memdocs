@@ -79,7 +79,7 @@ The following table shows the identifiers supported for each platform. When a de
 | Platform | IMEI number | Serial number |   
 |---|---|---|
 | Windows| Not supported | Not supported | 
-| iOS/iPadOS | ✔️ <br></br> Supported in some cases. For more information, see [Add Android, iOS corporate identifiers](#add-android-ios-corporate-identifiers). | ✔️ <br></br> We recommend using a serial number for iOS/iPadOS identification when possible.  |
+| iOS/iPadOS | ✔️ <br></br> Supported in some cases. For more information, see [Step 1: Create CSV file](#step-1-create-csv-file). | ✔️ <br></br> We recommend using a serial number for iOS/iPadOS identification when possible.  |
 | macOS | Not supported | ✔️ |
 | Android device administrator | ✔️ <br></br> Supported with Android 9 and earlier. | ✔️ <br></br> Supported with Android 9 and earlier. |
 | Android Enterprise, personally owned work profile  | ✔️ <br></br> Supported with Android 11 and earlier. | ✔️ <br></br> Supported with Android 11 and earlier. |
