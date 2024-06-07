@@ -32,11 +32,20 @@ The following sections describe the new features to try out in this version:
 
 ### Unable to import or connect to Powershell Configuration Manager module via console
 
-Customers while importing Configuration manager Poweshell module won't be able to import the module and will get the following error message:
+While importing or connecting to Configuration manager Powershell module via CM console users will get the following error message:
 `PS C:\Build\AdminConsole\bin> Import-Module .\ConfigurationManager.psd1
 Import-Module : The module manifest 'C:\Build\AdminConsole\bin\ConfigurationManager.psd1' could not be
 processed because it is not a valid Windows PowerShell restricted language file. Remove the elements that are not permitted by the
 restricted language`
+
+
+### Configuration Manager console won't automatically update
+
+If you update a technical preview site from version 2401 to a later version, the Configuration Manager console fails to update. This problem is because of a known issue in the extension installer.
+
+**Mitigation:** To work around this issue, manually update the console. After you update the site from version 2401 to a later version, run **ConsoleSetup.exe**.
+
+For more information, see [Install the Configuration Manager console](../../../../servers/deploy/install/install-consoles.md).
 
 
 ## Next steps
