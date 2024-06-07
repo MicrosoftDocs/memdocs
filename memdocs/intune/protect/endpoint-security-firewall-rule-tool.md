@@ -26,7 +26,7 @@ ms.collection:
 - M365-identity-device-management
 - ContentEnagagementFY24 
 
-ms.reviewer: laarrizz
+ms.reviewer: 
 ---
 
 # Endpoint security firewall rule migration tool overview
