@@ -63,7 +63,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 - Microsoft 365 Apps version 16.0.14701.0 or later
 - The device must be assigned to a [primary user](/mem/intune/remote-actions/find-primary-user)
 - Cloud PC size
-  - 8vCPU or better (for more infomration, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md))
+  - 8vCPU or better (for more information, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md))
 
 ### Role requirements
 
