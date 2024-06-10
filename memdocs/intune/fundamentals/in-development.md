@@ -158,10 +158,6 @@ Applies to:
 
 ## Device enrollment
 
-### New enrollment time grouping for devices <!-- 16902437 -->
-
-Enrollment time grouping is a new, faster way to group devices during enrollment. When configured, Intune adds devices to the appropriate groups without requiring inventory discovery and dynamic membership evaluations. To set up enrollment time grouping, you must configure a static Microsoft Entra security group in each enrollment profile. After a device enrolls, Intune will add it to the static security group.
-
 ### Define corporate device identifiers for Windows<!-- 25873757 -->
 
 Microsoft Intune will support corporate device identifiers for Windows devices. You'll be able to upload a CSV file with model, manufacturer, and serial number to identify corporate machines ahead of enrolling. When a device that matches the model, manufacturer, and serial number criteria enrolls, it will be marked as corporate and managed appropriately.
