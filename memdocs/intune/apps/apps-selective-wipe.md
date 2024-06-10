@@ -53,8 +53,10 @@ Windows Information Protection (WIP) policies can be deployed without requiring 
 ## Create a device based wipe request
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>
+2. Select **Apps** > **App selective wipe** > **Create wipe request**.
+
    The **Create wipe request** pane is displayed.
+
 3. Click **Select user**, choose the user whose app data you want to wipe, and click **Select** at the bottom of the **Select user** pane.
 
     ![Screenshot of the 'Select user' pane](./media/apps-selective-wipe/apps-selective-wipe-01.png)
@@ -86,7 +88,7 @@ To get more details, follow these steps:
 
 1. On the **Apps** > **App selective wipe** pane, you can see the list of your requests grouped by users. Because the system creates a wipe request for each protected app running on the device, you might see multiple requests for a user. The status indicates whether a wipe request is **pending**, **failed**, or **successful**.
 
-    ![Screenshot of the wipe request status in the App selective wipe pane](./media/apps-selective-wipe/wipe-request-status-1.png)
+   :::image type="content" alt-text="Screenshot of the wipe request status in the App selective wipe pane." source="./media/apps-selective-wipe/wipe-request-status-1.png":::
 
 Additionally, you're able to see the device name, and its device type, which can be helpful when reading the reports.
 
@@ -101,7 +103,7 @@ Wipes with pending status are displayed until you manually delete them. To manua
 
 2. From the list, right-click on the wipe request you want to delete, then choose **Delete wipe request**.
 
-    ![Screenshot of the wipe request list in the App selective wipe pane](./media/apps-selective-wipe/delete-wipe-request.png)
+   :::image type="content" alt-text="Screenshot of the wipe request list in the App selective wipe pane" source="./media/apps-selective-wipe/delete-wipe-request.png":::
 
 3. You're prompted to confirm the deletion, choose **Yes** or **No**, then click **OK**.
 
