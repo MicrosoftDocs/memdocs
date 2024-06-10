@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2024
+ms.date: 06/12/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -161,6 +161,10 @@ Up to 5000 Cloud PCs can be resized at a time.
 8. On the **Review + create** page, select **Create**. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 9. Remove the users from the original source Microsoft Entra group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
 10. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
+
+## Resize after upgrading licenses purchased through a Microsoft Customer Agreement
+
+If you have a Microsoft Customer Agreement (MCA), you can upgrade your license as explained in [Upgrade or change to a different Microsoft 365 for business plan](/microsoft-365/commerce/subscriptions/upgrade-to-different-plan). After upgrading, you can resize Cloud PCs.
 
 ## Resizing details
 
