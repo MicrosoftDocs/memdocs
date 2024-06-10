@@ -52,6 +52,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 - Gallery image type
   - Windows 11 Enterprise + Microsoft 365 Apps 23H2 or later
 - Licensing options
+  - Microsoft 365 E5
   - Microsoft 365 E5 (no Teams)
   - Microsoft 365 E5 Compliance
   - Microsoft 365 F5 Compliance
