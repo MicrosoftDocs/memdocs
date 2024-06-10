@@ -2457,8 +2457,13 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "autopilot/resolved-issues.md.md",
+      "source_path": "autopilot/resolved-issues.md",
       "redirect_url": "/autopilot/known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "autopilot/windows-autopilot.md",
+      "redirect_url": "/autopilot/overview",
       "redirect_document_id": false
     }
   ]

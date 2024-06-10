@@ -57,23 +57,23 @@ The steps of the user-driven process are as follows:
 
 1. After the device connects to a network, the device downloads a Windows Autopilot profile. The profile defines the settings used for the device. For example, define the prompts suppressed during OOBE.
 
-2. Windows checks for critical OOBE updates. If updates are available, they're automatically installed. If necessary, the device restarts.
+1. Windows checks for critical OOBE updates. If updates are available, they're automatically installed. If necessary, the device restarts.
 
-3. The user is prompted for Microsoft Entra credentials. This customized user experience shows the Microsoft Entra tenant name, logo, and sign-in text.
+1. The user is prompted for Microsoft Entra credentials. This customized user experience shows the Microsoft Entra tenant name, logo, and sign-in text.
 
-4. The device joins Microsoft Entra ID or Active Directory, depending on the Windows Autopilot profile settings.
+1. The device joins Microsoft Entra ID or Active Directory, depending on the Windows Autopilot profile settings.
 
-5. The device enrolls to Intune or another configured MDM service. Depending on the organizational needs, this enrollment occurs either:
+1. The device enrolls to Intune or another configured MDM service. Depending on the organizational needs, this enrollment occurs either:
 
     - During the Microsoft Entra join process, using MDM auto-enrollment.
 
     - Before the Active Directory-join process.
 
-6. If configured, it displays the [enrollment status page](enrollment-status.md) (ESP).
+1. If configured, it displays the [enrollment status page](enrollment-status.md) (ESP).
 
-7. After the device configuration tasks complete, the user is signed into Windows using the credentials they previously provided. If the device restarts during the device ESP process, the user must reenter their credentials. These details don't persist after restart.
+1. After the device configuration tasks complete, the user is signed into Windows using the credentials they previously provided. If the device restarts during the device ESP process, the user must reenter their credentials. These details don't persist after restart.
 
-8. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
+1. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
 
 If any issues are found during this process, see [Windows Autopilot troubleshooting](troubleshooting.md).
 

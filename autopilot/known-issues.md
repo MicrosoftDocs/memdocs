@@ -69,7 +69,7 @@ If these updates are installed on a device, Kiosk device profiles that have auto
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
-TPM attestation for AMD platforms with ASP firmware TPM might fail with error code 0x80070490 on Windows 10 and Windows 11 systems. This issue is resolved on later versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
+TPM attestation for AMD platforms with ASP firmware TPM might fail with error code 0x80070490 on Windows systems. This issue is resolved on later versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
 
 ### TPM attestation failure with error code 0x81039001
 

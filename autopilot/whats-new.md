@@ -149,7 +149,7 @@ For more information on supported scenarios, see [Temporary Access Pass](windows
 
 ## Autopilot automatic device diagnostics collection <!--1895390-->
 
-Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and with Windows 11. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics might include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
+Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Autopilot process on currently supported versions of Windows. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics might include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
 
 For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
@@ -209,9 +209,9 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 To enable the diagnostics page, go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
-The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
+The diagnostics page is currently supported for commercial OOBE when using Windows Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
-## Next steps
+## Related content
 
-- [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
-- [What's new in Windows client](/windows/whats-new/)
+- [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new).
+- [What's new in Windows client](/windows/whats-new/).

@@ -53,15 +53,15 @@ Whether performing user-driven or self-deploying device deployments, the trouble
 
 1. A network connection is established. The connection can be a wireless (Wi-fi) or wired (Ethernet) connection.
 
-2. The Windows Autopilot profile is downloaded. When a wired connection is used, or a wireless connection is established, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
+1. The Windows Autopilot profile is downloaded. When a wired connection is used, or a wireless connection is established, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
 
-3. User authentication occurs. During a user-driven deployment, the user enters their Microsoft Entra credentials, which is then validated.
+1. User authentication occurs. During a user-driven deployment, the user enters their Microsoft Entra credentials, which is then validated.
 
-4. Microsoft Entra join occurs. For user-driven deployments, the device is joined to Microsoft Entra ID using the specified user credentials. For self-deploying scenarios, the device is joined without specifying any user credentials.
+1. Microsoft Entra join occurs. For user-driven deployments, the device is joined to Microsoft Entra ID using the specified user credentials. For self-deploying scenarios, the device is joined without specifying any user credentials.
 
-5. Automatic mobile device management (MDM) enrollment occurs. As part of the Microsoft Entra join process, the device enrolls in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
+1. Automatic mobile device management (MDM) enrollment occurs. As part of the Microsoft Entra join process, the device enrolls in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
 
-6. Settings are applied. If the [enrollment status page](enrollment-status.md) is configured, most settings are applied while the enrollment status page is displayed. If not configured or available, settings will be applied after the user is signed in.
+1. Settings are applied. If the [enrollment status page](enrollment-status.md) is configured, most settings are applied while the enrollment status page is displayed. If not configured or available, settings will be applied after the user is signed in.
 
 ## Profile download
 

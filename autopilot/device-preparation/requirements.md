@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/07/2024
+ms.date: 06/10/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -209,7 +209,11 @@ The following configurations are optional but recommended. They aren't required:
 
 - **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
 
-There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications).
+There are no additional hardware requirements to use Autopilot, beyond the hardware requirements to run Windows. For more information, see:
+
+- [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
+- [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
+- [Windows 11 requirements](/windows/whats-new/windows-11-requirements).
 
 ## [:::image type="icon" source="../images/icons/permissions-18.svg"::: **RBAC Permissions**](#tab/rbac)
 

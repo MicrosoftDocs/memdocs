@@ -264,8 +264,11 @@ For a walkthrough for some of these and related steps, see this video:
 
 > [!VIDEO https://www.youtube.com/embed/KYVptkpsOqs]
 
-There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications) or [Windows 10](https://www.microsoft.com/windows/windows-10-specifications).
+There are no additional hardware requirements to use Autopilot, beyond the hardware requirements to run Windows. For more information, see:
+
+- [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
+- [How to Find Windows 10 Computer Specifications & Systems Requirements](https://www.microsoft.com/windows/windows-10-specifications).
+- [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
+- [Windows 11 requirements](/windows/whats-new/windows-11-requirements).
 
 ---
-
-## Related content

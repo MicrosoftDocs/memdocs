@@ -44,7 +44,7 @@ Each of these steps is described in the following sections.
 
 Before the device arrives at the repair facility, the entity that registered the device must deregister it.
 
-- If the **IT Admin** registered the device, they likely did so via Intune, Microsoft 365 admin center, or a legacy portal such as Microsoft Store for Business (MSfB). If so, they should deregister the device from Intune or Microsoft 365 admin center because devices registered in Intune don't show up in Microsoft Partner Center (MPC).
+- If the **IT Admin** registered the device, they likely did so via Intune, [Microsoft 365 admin center](https://admin.microsoft.com/), or a legacy portal such as Microsoft Store for Business (MSfB). If so, they should deregister the device from Intune or the [Microsoft 365 admin center](https://admin.microsoft.com/) because devices registered in Intune don't show up in Microsoft Partner Center (MPC).
 
 - If the **OEM or CSP partner** registered the device, they likely did so via the Microsoft Partner Center (MPC). In that case, they should deregister the device from MPC, which also removes it from the customer IT Admin's Intune account.
 

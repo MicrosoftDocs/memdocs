@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/03/2024
+ms.date: 06/10/2024
 ms.localizationpriority: medium
 ---
 
@@ -81,9 +81,9 @@ The above steps deregister the device from Autopilot, unenroll the device from I
 
 ### Deregister from Autopilot using Microsoft 365 admin center
 
-The device can be deregistered from Autopilot in Microsoft 365 admin center if using Microsoft 365 admin center instead of Intune. To deregister an Autopilot device from the Microsoft 365 admin center:
+The device can be deregistered from Autopilot in [Microsoft 365 admin center](https://admin.microsoft.com/) if using the Microsoft 365 admin center instead of Intune. To deregister an Autopilot device from the Microsoft 365 admin center:
 
-1. Sign into to the [Microsoft 365 admin center](https://admin.microsoft.com/)
+1. Sign into to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. Navigate to **Devices** > **Autopilot**.
 1. Select the device to be deregistered and then select **Delete device**.
 
@@ -108,4 +108,4 @@ An OEM or CSP with integrated OEM Direct APIs can also deregister a device with 
 
 > [!NOTE]
 >
-> If an admin registered a device via another portal other than the Microsoft Partner Center (MPC) such as Intune or Microsoft 365 admin center, the device doesn't show up in Microsoft Partner Center (MPC). For a partner to register a device in the Microsoft Partner Center (MPC), the devices first needs to be deregistered using the steps outlined in the [Deregister a device](#deregister-a-device) section.
+> If an admin registered a device via another portal other than the Microsoft Partner Center (MPC) such as Intune or the [Microsoft 365 admin center](https://admin.microsoft.com/), the device doesn't show up in Microsoft Partner Center (MPC). For a partner to register a device in the Microsoft Partner Center (MPC), the devices first needs to be deregistered using the steps outlined in the [Deregister a device](#deregister-a-device) section.
