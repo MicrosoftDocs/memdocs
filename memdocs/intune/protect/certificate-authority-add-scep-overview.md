@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/26/2024
+ms.date: 06/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -161,6 +161,10 @@ If you're a third-party CA interested in integrating your product with Intune, r
 
 - [Intune SCEP API GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Intune SCEP API guidance for third party CAs](scep-libraries-apis.md)
+
+## Security and privacy information  
+
+User variables such as *UserName*, *OnPrem_Distinguished_Name*, and *OnPremisesSamAccountName* are supported in SCEP profile certificate templates. When you create or update a profile that contains user variables, Microsoft Intune resolves the values, and then sends the resolved values to targeted devices. Those devices then reach out to their CA and ask for a certificate with the resolved values. 
 
 ## See also
 
