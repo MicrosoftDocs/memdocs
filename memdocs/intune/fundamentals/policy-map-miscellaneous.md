@@ -105,13 +105,13 @@ To see these settings in the Microsoft Purview compliance portal, sign in to the
 
 Up to three compliance policies and up to six configuration profiles (three for restrictions and three for email):
 
-- **Devices** > **Windows** > **Compliance policies** > policy name_O365_W > **Properties** >  **Basics Edit** > **Name**
+- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Basics Edit** > **Name**
 - **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Basics Edit** > **Name**
 - **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Basics Edit** > **Name**
-- **Devices** > **Windows** > **Configuration profiles** > policy name_O365_W > **Properties** >  **Basics Edit** > **Name**
+- **Devices** > **Windows** > **Configuration** > policy name_O365_W > **Properties** >  **Basics Edit** > **Name**
 - **Devices** > **iOS/iPadOS** > **Configuration profiles**> policy name_O365_i > **Properties** > **Basics Edit** > **Name**
 - **Devices** > **Android** > **Configuration profiles** > policy name_O365_A > **Properties** > **Basics Edit** > **Name**
-- **Devices** > **Windows** > **Configuration profiles** > policy name_O365_W_Email > **Properties** >  **Basics Edit** > **Name**
+- **Devices** > **Windows** > **Configuration** > policy name_O365_W_Email > **Properties** >  **Basics Edit** > **Name**
 - **Devices** > **iOS/iPadOS** > **Configuration profiles**> policy name_O365_i_Email > **Properties** > **Basics Edit** > **Name**
 - **Devices** > **Android** > **Configuration profiles** > policy name_O365_A_Email > **Properties** > **Basics Edit** > **Name**
 
@@ -119,13 +119,13 @@ Up to three compliance policies and up to six configuration profiles (three for 
 
 Up to three compliance policies and up to six configuration profiles (three for restrictions and three for email):
 
-- **Devices** > **Windows** > **Compliance policies** > policy name_O365_W > **Properties** >  **Basics Edit** > **Description**
+- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Basics Edit** > **Description**
 - **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Basics Edit** > **Description**
 - **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Basics Edit** > **Description**
-- **Devices** > **Windows** > **Configuration profiles** > policy name_O365_W > **Properties** >  **Basics Edit** > **Description**
+- **Devices** > **Windows** > **Configuration** > policy name_O365_W > **Properties** >  **Basics Edit** > **Description**
 - **Devices** > **iOS/iPadOS** > **Configuration profiles**> policy name_O365_i > **Properties** > **Basics Edit** > **Description**
 - **Devices** > **Android** > **Configuration profiles** > policy name_O365_A > **Properties** > **Basics Edit** > **Description**
-- **Devices** > **Windows** > **Configuration profiles** > policy name_O365_W_Email > **Properties** >  **Basics Edit** > **Description**
+- **Devices** > **Windows** > **Configuration** > policy name_O365_W_Email > **Properties** >  **Basics Edit** > **Description**
 - **Devices** > **iOS/iPadOS** > **Configuration profiles**> policy name_O365_i_Email > **Properties** > **Basics Edit** > **Description**
 - **Devices** > **Android** > **Configuration profiles** > policy name_O365_A_Email > **Properties** > **Basics Edit** > **Description**
 
