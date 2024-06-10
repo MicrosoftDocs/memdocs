@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -37,7 +37,7 @@ On Windows 11, the Autopilot diagnostic page can be opened to view additional de
 
 3. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
 
-Once the diagnostic page is enabled, select the **View Diagnostics button** or use the keyboard shortcut **Ctrl**+**Shift**+**D** to access any diagnostic information. The Autopilot diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
+Once the diagnostic page is enabled, select the **View Diagnostics button** or enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kbd> to access any diagnostic information. The Autopilot diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
 
 > [!NOTE]
 >

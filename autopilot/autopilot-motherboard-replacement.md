@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -182,7 +182,7 @@ When a repaired device is reregistering through MPC, the uploaded csv file must 
 
 When including the 4K HH in the csv file, the PKID or Tuple don't also need to be included. Those columns might be left blank, as shown in the following example:
 
-![Screenshot of a CSV file in Excel with a hash value in the Hardware Hash column.](images/hh.png)
+:::image type="content" source="images/hh.png" alt-text="Screenshot of a CSV file in Excel with a hash value in the Hardware Hash column.":::
 
 ## Reset the device
 
@@ -256,7 +256,7 @@ This section covers the most common repair scenarios, and their impact on Autopi
 > - In most test scenarios, the repaired and reregistered device needed to go through OOBE again for Autopilot to be enabled.
 > - Motherboard replacement scenarios often result in lost data. Repair centers or customers should be reminded to back up data before repair.
 > - When a repair facility can't write device info into the BIOS of the repaired device, new processes need to be created to successfully enable Autopilot.
-> - Repaired device should have the Product Key (DPK) preinjected in the BIOS before capturing the new 4K HH (device ID).
+> - Repaired device should have the Product Key (DPK) pre-injected in the BIOS before capturing the new 4K HH (device ID).
 
 For the **Supported** column in the following table:
 

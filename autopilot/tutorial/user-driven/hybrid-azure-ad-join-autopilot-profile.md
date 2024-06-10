@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -128,4 +128,4 @@ The VPN solution would need to be installed and configured via Intune during the
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]
 - [User-driven mode for Microsoft Entra hybrid join with VPN support](/mem/autopilot/user-driven#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
-- [BYO VPNs](/mem/autopilot/windows-autopilot-hybrid#byo-vpns).
+- [VPNs](/mem/autopilot/windows-autopilot-hybrid#vpns).

@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: itpro-deploy
@@ -141,8 +141,11 @@ Before beginning the installation, make sure that all of the [Intune connector s
 1. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems singing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends to turn off Internet Explorer Enhanced Security Configuration.  To turn off Internet Explorer Enhanced Security Configuration:
 
    1. On the server where the Intune Connector is being installed, open **Server Manager**.
+
    1. In the left pane of Server Manager, select **Local Server**.
+
    1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
+
    1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
@@ -183,7 +186,9 @@ If there is a web proxy in the networking environment, ensure that the Intune Co
 1. In the **Group** pane, choose the following options:
 
     1. For **Group type**, select **Security**.
+
     1. Enter a **Group name** and **Group description**.
+
     1. Select a **Membership type**.
 
 1. If **Dynamic Devices** is selected for the membership type, in the **Group** pane, select **Dynamic device members**.
@@ -192,15 +197,15 @@ If there is a web proxy in the networking environment, ensure that the Intune Co
 
     - To create a group that includes all Autopilot devices, enter:
 
-      > `(device.devicePhysicalIDs -any _ -startsWith "[ZTDId]")`
+      `(device.devicePhysicalIDs -any _ -startsWith "[ZTDId]")`
 
     - Intune's Group Tag field maps to the OrderID attribute on Microsoft Entra devices. To create a group that includes all of Autopilot devices with a specific Group Tag (OrderID), enter:
 
-      > `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+      `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
 
     - To create a group that includes all Autopilot devices with a specific Purchase Order ID, enter:
 
-      > `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
+      `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
 
 1. Select **Save** > **Create**.
 
@@ -241,11 +246,9 @@ After the Autopilot devices are *enrolled*, they're displayed in four places:
 
 A device object is pre-created in Microsoft Entra ID once a device is registered in Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
-## BYO VPNs
+## VPNs
 
 The following VPN clients are tested and validated:
-
-### VPN clients
 
 - In-box Windows VPN client
 - Cisco AnyConnect (Win32 client)
@@ -256,13 +259,15 @@ The following VPN clients are tested and validated:
 - SonicWall (Win32 client)
 - FortiClient VPN (Win32 client)
 
+When using VPNs, select **Yes** for the **Skip AD connectivity check** option in the Windows Autopilot deployment profile. Always-On VPNs shouldn't require this option since it connects automatically.
+
 > [!NOTE]
 >
-> This list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot or regarding any issues with using a VPN solution with Autopilot.
+> This list of VPN clients isn't a comprehensive list of all VPN clients that work with Windows Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Windows Autopilot or regarding any issues with using a VPN solution with Windows Autopilot.
 
-### Not supported VPN clients
+### Unsupported VPN clients
 
-The following VPN solutions are known not to work with Autopilot and therefore aren't supported for use with Autopilot:
+The following VPN solutions are **known** not to work with Windows Autopilot and therefore aren't supported for use with Windows Autopilot:
 
 - UWP-based VPN plug-ins
 - Anything that requires a user cert
@@ -270,7 +275,7 @@ The following VPN solutions are known not to work with Autopilot and therefore a
 
 > [!NOTE]
 >
-> When using BYO VPNs, select **Yes** for the **Skip AD connectivity check** option in the Windows Autopilot deployment profile. Always-On VPNs shouldn't require this option since it connects automatically.
+> Omission of a specific VPN client from this list doesn't automatically mean it's supported or that it works with Windows Autopilot. This list only lists the VPN clients that are **known** not to work with Windows Autopilot.
 
 ## Create and assign an Autopilot deployment profile
 
@@ -278,29 +283,29 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 
-1. On the **Basics** page, type a **Name** and optional **Description**.
+2. On the **Basics** page, enter a **Name** and optional **Description**.
 
-1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
+3. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
 
-1. Select **Next**.
+4. Select **Next**.
 
-1. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
+5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 
-1. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra hybrid joined**.
+6. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra hybrid joined**.
 
-1. If deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
+7. If deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
 
-1. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 
-1. Select **Next**.
+9. Select **Next**.
 
 1. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
 
-1. Select **Next**.
+2. Select **Next**.
 
-1. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
+3. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
 
-1. Select **Next** > **Create**.
+4. Select **Next** > **Create**.
 
 > [!NOTE]
 >

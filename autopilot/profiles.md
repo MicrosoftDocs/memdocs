@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -39,7 +39,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
-1. On the **Basics** page, type a **Name** and optional **Description**.
+1. On the **Basics** page, enter a **Name** and optional **Description**.
 
     :::image type="content" source="images/create-profile-basics.png" alt-text="Screenshot of Basics page.":::
 

@@ -5,7 +5,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.topic: how-to
 ms.localizationpriority: high
 ms.service: windows-client
@@ -105,7 +105,7 @@ Prerequisites:
 
 1. Choose a Microsoft Entra ID user licensed to use Intune and choose **Select**.
 
-1. In the **User Friendly Name** box, type a friendly name or just accept the default.
+1. In the **User Friendly Name** box, enter a friendly name or just accept the default.
 
 1. Choose **Save**.
 

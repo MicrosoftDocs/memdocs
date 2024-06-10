@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -237,7 +237,7 @@ For more information on this scenario, see [Windows Autopilot self-deploying mod
 | ---------- | ----------- |
 | **0x800705B4** | This general error indicates a timeout. A common cause of this error in self-deploying mode is that the device isn't TPM 2.0 capable. For example, it's a virtual machine. Devices that aren't TPM 2.0 capable can't be used with self-deploying mode. |
 | **0x801c03ea** | This error indicates that TPM attestation failed, causing a failure to join Microsoft Entra ID with a device token.
-| **0xc1036501** | The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Microsoft Entra ID. For more information, see the blog post [Inside Windows Autopilot self-deploying mode](https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/). |
+| **0xc1036501** | The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Microsoft Entra ID. |
 
 ### Pre-provisioning gives an error screen and the **Microsoft-Windows-User Device Registration/Admin** event log displays **HResult error code 0x801C03F3**
 

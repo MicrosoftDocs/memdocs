@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/10/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -350,7 +350,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
 ## Complete the deployment process
 
-1. On the target Windows device, go to the **Start** menu, type `Software Center`, and open it.
+1. On the target Windows device, go to the **Start** menu, enter `Software Center`, and open it.
 
 1. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**.
 
