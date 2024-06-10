@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2024
+ms.date: 06/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -133,6 +133,11 @@ You can configure what experience you want related to uninstalling the previous 
 ### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
 
 If the app content hasn't synced after several hours, delete the app and try again.
+
+### Is there an Intune report available to view details about the Enterprise App Catalog apps for a specific devices?
+
+Yes, the Managed Apps report provides a report of apps on a specific device that are currently installed, not installed, or available for install. For the device, the report provides details about the application, version, resolved intent, and installation status. For more information about this report, see [Managed Apps report](../fundamentals/reports.md#managed-apps-report-operational).
+
 
 ## Apps available in the Enterprise App Catalog
 
