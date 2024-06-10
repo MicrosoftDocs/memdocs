@@ -85,7 +85,7 @@ For Android devices, this setting is only supported on Samsung Knox devices in B
 
 Three configuration profiles:
 
-- **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Screen capture (mobile only)**
+- **Devices** > **Windows** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Screen capture (mobile only)**
 - **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Block screenshots and screen recording**
 - **Devices** > **Android** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Screen capture (Samsung KNOX only)**
 
@@ -107,7 +107,7 @@ For Windows 10 devices, the most restrictive value prevents sending security-rel
 
 Three configuration profiles:
 
-- **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **Reporting and Telemetry** > **Share usage data**
+- **Devices** > **Windows** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **Reporting and Telemetry** > **Share usage data**
 
   | Block sending diagnostic data from device value | Share usage data value |
   | --- | --- |
@@ -125,7 +125,7 @@ For iOS, this setting is only supported on supervised iOS devices.
 
 Three configuration profiles:
 
-- **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **App store** > **App store (mobile only)**
+- **Devices** > **Windows** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **App store** > **App store (mobile only)**
 - **Devices** > **iOS/iPadOS** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **App store, Doc Viewing, Gaming** > **Block App store**
 - **Devices** > **Android** > **Configuration profiles** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Google Play Store** > **Google Play store (Samsung Knox only)**
 
@@ -147,7 +147,7 @@ For Android devices, this setting is only supported on Samsung Knox devices in B
 
 Two configuration profiles:
 
-- **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Removable storage**
+- **Devices** > **Windows** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Removable storage**
 - **Devices** > **Android** > **Configuration profiles** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cloud and Storage** > **Removable storage (Samsung Knox only)**
 
 ## Block Bluetooth connection
@@ -158,7 +158,7 @@ For Android devices, this setting is only supported on Samsung Knox devices in B
 
 Two configuration profiles:
 
-- **Devices** > **Windows** > **Configuration profiles** > profile name > **Properties** > **Configuration settings Edit** > > **Cellular and connectivity** > **Bluetooth**
+- **Devices** > **Windows** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > > **Cellular and connectivity** > **Bluetooth**
 - **Devices** > **Android** > **Configuration profiles** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cellular and connectivity** > **Bluetooth (Samsung Knox only)**
 
 ## Related article
