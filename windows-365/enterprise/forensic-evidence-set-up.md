@@ -43,20 +43,27 @@ Forensic evidence capturing is off by default and policy creation requires dual 
 
 ## Requirements
 
+If the following requirements aren't met, you might run into Microsoft Purview client issues and the quality of forensic captures might not be reliabel.
+
 To set up Microsoft Purview forensic evidence, your environment must meet the following requirements:
 
 ### Device configuration requirements
 
 - Gallery image type
-    - Windows 11 Enterprise + Microsoft 365 Apps 23H2
-- Licensing
-    - Microsoft 365 E5, or
-    - Windows 365 Enterprise 2 vCPU, 4 GB, 64 GB
+  - Windows 11 Enterprise + Microsoft 365 Apps 23H2 or later
+- Licensing options
+  - Microsoft 365 E5 (no Teams)
+  - Microsoft 365 E5 Compliance
+  - Microsoft 365 F5 Compliance
+  - Microsoft 365 F5 Sec+Comp
 - Join type and network
-    - Microsoft Entra join for Azure network connection
-- Antimalware client version 4.18.2110 or later
+  - Microsoft Entra joined with Microsoft hosted network and Azure network connections
+  - Microsoft Entra hybrid joined with Azure network connection
+- [Microsoft Defender Antivirus in Windows](/defender-endpoint/microsoft-defender-antivirus-windows) version 4.18.2110 or later
 - Microsoft 365 Apps version 16.0.14701.0 or later
 - The device must be assigned to a [primary user](/mem/intune/remote-actions/find-primary-user)
+- Cloud PC size
+  - For optimal performance, 8vCPU or better (for more information, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md))
 
 ### Role requirements
 
