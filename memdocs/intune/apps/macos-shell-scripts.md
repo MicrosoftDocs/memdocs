@@ -59,7 +59,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 ## Create and assign a shell script policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **macOS** > **Scripts** > **Add**.
+2. Select **Devices** > **By platform** > **macOS** > **Manage devices** > **Scripts** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the shell script.
    - **Description**: Enter a description for the shell script. This setting is optional, but recommended.
@@ -148,7 +148,7 @@ You can create custom attribute profiles which enable you to collect custom prop
 ### Create and assign a custom attribute for macOS devices
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **macOS** > **Custom attributes for macOS** > **Add**.
+2. Select **Devices** > **By platform** > **macOS** > **Organize devices** > **Custom attributes for macOS** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the script.
    - **Description**: Enter a description for the script. This setting is optional, but recommended.
