@@ -39,7 +39,7 @@ Device enrollment supports an app based enrollment experience and web based enro
 * **Device enrollment with Company Portal**  
 * **Web based device enrollment**   
 
-Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** and select **Enrollment types**.  
+Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **iOS/iPadOS** > **Enrollment** and select **Enrollment types**.  
 
 > [!TIP]
 > We recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. 
