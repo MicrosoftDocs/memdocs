@@ -544,7 +544,7 @@ There are some Microsoft Edge app settings that can be configured for a better u
 To configure these recommended settings, use Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select to **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+2. Select **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Select **Windows 10 and later** for platform and **Templates** for profile type.
 4. Select **Administrative Templates** and select **Create**.
 5. Enter a name for the profile and select **Next**.
