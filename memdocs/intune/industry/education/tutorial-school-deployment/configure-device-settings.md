@@ -100,7 +100,7 @@ With Express Configuration, you can get Intune for Education up and running in j
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
 
 - Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
   - For general settings, select [**Settings Catalog**](/mem/intune/configuration/settings-catalog).
@@ -136,7 +136,7 @@ For more information, see [Windows device settings in Intune for Education][INT-
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
 
 - Sign in to the Microsoft Intune admin center.
-- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**:
   - For general settings, select **Settings Catalog**.
@@ -292,7 +292,7 @@ In Intune, you can configure iOS security settings using Settings Catalog.
 To create a settings catalog device configuration profile in Microsoft Intune, you need to follow these steps:
 
 - Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- Go to **Devices** > **Configuration profiles** > **+ Create profile**.
+- Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**.
 - Select **Settings Catalog**.

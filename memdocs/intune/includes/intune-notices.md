@@ -307,7 +307,7 @@ If you're managing Windows 8.1 devices those devices should be upgraded to a sup
 
 ### How can you prepare?
 
-Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows** > **Windows devices**, and filter by OS.
+Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **By platform** > **Windows** > **Windows devices**, and filter by OS.
 
 **Additional information**
 - [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md)
