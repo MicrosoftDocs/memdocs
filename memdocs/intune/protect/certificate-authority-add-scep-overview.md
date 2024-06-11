@@ -163,8 +163,9 @@ If you're a third-party CA interested in integrating your product with Intune, r
 - [Intune SCEP API guidance for third party CAs](scep-libraries-apis.md)
 
 ## Security and privacy information  
+Intune collects user information and makes it available to the third-party certificate authority (CA) receiving the certificate signing request. 
 
-User variables such as *UserName*, *OnPrem_Distinguished_Name*, and *OnPremisesSamAccountName* are supported in SCEP profile certificate templates. When you create or update a profile that contains user variables, Microsoft Intune resolves the values, and then sends the resolved values to targeted devices. Those devices then reach out to their CA and ask for a certificate with the resolved values. 
+When you create or update a SCEP profile that contains user variables, such as *UserName*, *OnPrem_Distinguished_Name*, and *OnPremisesSamAccountName*, Microsoft Intune resolves the values, and then sends the resolved values to targeted devices. Targeted devices then reach out to the third-party CA to ask for a certificate with the resolved values. 
 
 ## See also
 
