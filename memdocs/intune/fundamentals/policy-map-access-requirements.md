@@ -69,7 +69,7 @@ All Access Requirements are deployed in an Intune compliance policy. The groups 
 
 Three compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
 - **Devices** > **iOS/iPadOS** > **Compliance** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
 - **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Require a password to unlock mobile devices**
 
@@ -81,7 +81,7 @@ For Android devices, this setting and multiple other Office settings are covered
 
 Three compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Simple passwords**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Simple passwords**
 - **Devices** > **iOS/iPadOS** > **Compliance** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Simple passwords**
 - **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type**.
 
@@ -96,7 +96,7 @@ For Android devices, this setting and multiple other Office settings are covered
 
 Three compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Required password type**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Required password type**
 - **Devices** > **iOS/iPadOS** > **Compliance** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type**
 - **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type**.
 
@@ -109,7 +109,7 @@ Three compliance policies:
 
 Four compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Password complexity**.
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Password complexity**.
 
   | Office value | Intune value |
   | --- | --- |
@@ -149,7 +149,7 @@ Four compliance policies:
 
 Three compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Minimum password length**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Minimum password length**
 - **Devices** > **iOS/iPadOS** > **Compliance** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Minimum password length**
 - **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type** and **Minimum password length**.
 
@@ -166,7 +166,7 @@ Although this setting is listed under **Access requirements** in Basic Mobility 
 
 Three configuration profiles:
 
-- **Devices** > **Windows** > **Configuration** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **Password** > **Number of sign-in failures before wiping device**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **Password** > **Number of sign-in failures before wiping device**
 - **Devices** > **iOS/iPadOS** > **Configuration** > policy name_O365_i > **Properties** >  **Compliance settings Edit** > **Password** > **Number of sign-in failures before wiping device**
 - **Devices** > **Android** > **Configuration** > policy name_O365_A > **Properties** >  **Compliance settings Edit** > **Password** > **Number of sign-in failures before wiping device**
 
@@ -176,7 +176,7 @@ The Windows, iOS/iPadOS, and Android compliance policies don't offer the same gr
 
 Three compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Maximum minutes of inactivity before password is required**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Maximum minutes of inactivity before password is required**
 
   | Office value | Intune value |
   | --- | --- |
@@ -212,7 +212,7 @@ Three compliance policies:
 
 Three compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Password expiration (days)**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Password expiration (days)**
 - **Devices** > **iOS/iPadOS** > **Compliance** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Password expiration (days)**
 - **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Number of days until password expires**.
 
@@ -222,7 +222,7 @@ Three compliance policies:
 
 Three compliance policies:
 
-- **Devices** > **Windows** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Number of previous passwords to prevent reuse**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Compliance settings Edit** > **System Security** > **Number of previous passwords to prevent reuse**
 - **Devices** > **iOS/iPadOS** > **Compliance** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Number of previous passwords to prevent reuse**
 - **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Number of previous passwords to prevent reuse** and **Required password type**
 
@@ -269,7 +269,7 @@ Intune requires more settings be configured when deploying email that weren't av
 
 Three configuration profiles and one compliance policy:
 
-- **Devices** > **Windows** > **Configuration** > policy name_O365_W_Email > **Properties** > **Configuration settings Edit**
+- **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > policy name_O365_W_Email > **Properties** > **Configuration settings Edit**
 
   | Setting | Value |
   | --- | --- |
