@@ -1577,7 +1577,7 @@ For more information about configuring Settings Catalog profiles in Intune, see 
 #### Wipe device action and new obliteration behavior setting available for macOS<!-- 16647226 -->  
 You can now use the **Wipe** device action instead of Erase for macOS devices. You can also configure the **Obliteration Behavior** setting as part of the **Wipe** action.
 
-This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
+This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **By platform** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
 
 For more information on the Obliteration Behavior setting, go to Apple's Platform Deployment site [Erase Apple devices - Apple Support](https://support.apple.com/guide/deployment/erase-devices-dep0a819891e/web).
 
@@ -1787,7 +1787,7 @@ Applies to:
 - macOS
 
 #### Disable Activation Lock device action for supervised macOS devices<!-- 16813146  -->  
-You can now use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action is available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
+You can now use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action is available in **Devices** > **By platform** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
 
 More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support](https://support.apple.com/en-us/HT201365).
 
@@ -2047,7 +2047,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Add custom Bash scripts to configure Linux devices<!-- 12508999  -->  
-In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **Linux** > **Configuration Scripts**).
+In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **Linux** > **Scripts**).
 
 When you create this script policy, you can set the context that the script runs in (user or root), how frequently the script runs, and how many times execution should retry.
 
@@ -2060,7 +2060,7 @@ Applies to:
 ### Device enrollment
 
 #### Support for the await final configuration setting for iOS/iPadOS Automated device enrollment (public preview)<!-- 13156553  -->  
-Now in public preview, Intune supports a new setting called **Await final configuration** in eligible new and existing iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant. It prevents device users from accessing restricted content or changing settings on the device until most Intune device configuration policies are installed. You can configure the setting in an existing automated device enrollment profile, or in a new profile (**Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > **Create profile**). For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Now in public preview, Intune supports a new setting called **Await final configuration** in eligible new and existing iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant. It prevents device users from accessing restricted content or changing settings on the device until most Intune device configuration policies are installed. You can configure the setting in an existing automated device enrollment profile, or in a new profile (**Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** > **Enrollment program tokens** > **Create profile**). For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 #### New setting gives Intune admins control over device-to-category mapping<!-- 15029839 -->  
 Control visibility of the device category prompt in Intune Company Portal. You can now hide the prompt from end users and leave the device-to-category mapping up to Intune admins. The new setting is available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**. For more information, see [Device categories](../apps/company-portal-app.md#device-categories).
@@ -3627,7 +3627,7 @@ Applies to:
 - Windows 10/11
 
 #### View contents of macOS shell scripts and custom attributes<!-- 14757037 -->
-You can view the contents of macOS shell scripts and custom attributes after you upload the scripts to Intune. You can view Shell scripts and custom attributes in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **macOS**. For more information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
+You can view the contents of macOS shell scripts and custom attributes after you upload the scripts to Intune. You can view Shell scripts and custom attributes in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **By platform** > **macOS**. For more information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
 
 #### Reset passcode remote action available for Android (AOSP) Corporate devices<!-- 10247332 -->
 You can use Reset passcode remote action from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) for Android Open Source Project (AOSP) Corporate devices.

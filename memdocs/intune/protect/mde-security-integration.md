@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/06/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ When you manage devices through security settings management:
 
   To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
 
-- Devices get their assigned policies based on their Entra ID device object. A device that isn’t already registered in Microsoft Entra is joined as part of this solution.
+- Devices get their assigned policies based on their Microsoft Entra ID device object. A device that isn’t already registered in Microsoft Entra is joined as part of this solution.
 
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft Defender portal.
 
@@ -67,7 +67,17 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 - For devices that aren't fully Microsoft Entra registered, a synthetic device identity is created in Microsoft Entra ID that allows the device to retrieve policies. Fully registered devices use their current registration.
 - Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
 
-Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
+### Government cloud support
+
+The Defender for Endpoint security settings management scenario is supported in the following tenants:
+
+- US Government Community (GCC) High
+- Department of Defense (DoD)
+
+For more information, see:
+
+- [Intune US Government service description](../fundamentals/intune-govt-service-description.md)
+- [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov)
 
 ### Connectivity requirements
 
@@ -515,7 +525,7 @@ Security settings management doesn't work for a device that has PowerShell *Lang
 
 ### Managing security through MDE if you were previously using a 3rd party security tool
 
-If you previously had a third-party security tool on the machine and are now managing it with MDE, you may see some impact on MDE’s capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of MDE on your machine.
+If you previously had a third-party security tool on the machine and are now managing it with MDE, you might see some impact on MDE’s capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of MDE on your machine.
 
 ## Next steps
 

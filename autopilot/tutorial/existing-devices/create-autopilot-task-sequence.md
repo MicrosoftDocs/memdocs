@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -43,7 +43,7 @@ Once the packages containing the Autopilot profile JSON files have been created 
 - Installs a fresh copy of Windows on the device.
 - Copies the Autopilot profile JSON file to the device.
 
-Copying of the Autopilot profile JSON file is done in WinPE when the newly installed Windows OS is offline. When the task sequence completes, the device boots into the newly installed Windows OS for the first time and runs the out of box experience (OOBE). The OOBE process then processes the Autopilot profile JSON file, which initiates the Autopilot deployment.
+Copying of the Autopilot profile JSON file is done in WinPE when the newly installed Windows OS is offline. When the task sequence completes, the device boots into the newly installed Windows OS for the first time and runs the out-of-box experience (OOBE). The OOBE process then processes the Autopilot profile JSON file, which initiates the Autopilot deployment.
 
 > [!NOTE]
 >
@@ -76,7 +76,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
    1. In the **Install the Windows operating system** page:
 
       1. Next to **Image package:**, select the **Browse** button. In the **Select an Operating System Image** window that appears, under **Operating system images:**, locate and select the desired Windows operating system image, and then select the **OK** button.
-  
+
       1. Next to **Image index:**, select the desired Windows version. For example, **Enterprise**.
 
       1. Make sure the option **Partition and format the target computer before installing the operating system** is selected and enabled.
@@ -88,7 +88,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
           > Although BitLocker encryption could technically be enabled via the task sequence, it may result in undesired outcomes. For example, BitLocker recovery keys being saved to Configuration Manager BitLocker Management or on-premises Active Directory instead of Intune or Microsoft Entra ID. Additionally, if certain BitLocker settings specified in the task sequence, such as BitLocker encryption method and strength, doesn't match the BitLocker policy settings in Intune, then this mis-match could cause the device to show as non-compliant. Resolving issues like this could mean having to decrypt and then re-encrypt the drive to resolve. Therefore it's recommended not to enable BitLocker as part of the task sequence and instead enable BitLocker as part of Intune policies deployed during Autopilot.
 
       1. Leave **Product key** blank. The Autopilot for existing devices task sequence runs the [Windows System Preparation Tool (Sysprep)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview) at the end of the task sequence. Sysprep clears any product key that is specified.
-  
+
       1. Leave the option of **Randomly generate the local administrator password and disable the account on all support platforms (recommended)** selected. Alternatively, the option of **Enable the account and specify the local administrator password** can be selected and a password specified. However, the password specified will only be useful after the **Setup Windows and ConfigMgr** task and if the task sequence fails and doesn't complete successfully. If the task sequence completes successfully, the password is cleared at the end of the task sequence by Sysprep.
 
       1. Once all options have been configured in the **Install the Windows operating system** page, select the **Next >** button.
@@ -112,7 +112,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       > [!TIP]
       >
-      > Instead of installing applications during the task sequence, Microsoft recommends that you install all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.  
+      > Instead of installing applications during the task sequence, Microsoft recommends that you install all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
 
    1. On the **Prepare System for Windows Autopilot** page, select the package that includes the Autopilot JSON file created in the step [Create and distribute package for JSON file in Configuration Manager](create-json-package.md). Once the package with the Autopilot JSON file has been selected, select the **Next >** button.
 
@@ -185,10 +185,10 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
 > [!div class="nextstepaction"]
 > [Step 6: Create collection in Configuration Manager](create-collection.md)
 
-## More information
+## Related content
 
-For more information on creating an Autopilot task sequence in Configuration Manager, see the following article(s):
+For more information on creating an Autopilot task sequence in Configuration Manager, see the following articles:
 
-- [Create a task sequence](/mem/autopilot/existing-devices#create-a-task-sequence)
-- [Windows System Preparation Tool (Sysprep)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
-- [Windows Autopilot for existing devices doesn't work](/mem/autopilot/known-issues#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909)
+- [Create a task sequence](/mem/autopilot/existing-devices#create-a-task-sequence).
+- [Windows System Preparation Tool (Sysprep)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
+- [Windows Autopilot for existing devices doesn't work](../../known-issues.md#windows-autopilot-for-existing-devices-doesnt-work).

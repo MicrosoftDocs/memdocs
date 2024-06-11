@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/25/2024
+ms.date: 06/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -184,9 +184,6 @@ The following table lists the Managed Home Screen available configuration keys, 
 |     Count down time on auto sign-out dialog    |     integer    |     60    |     The amount of time, in seconds, to give   notice to user before signing them out of Managed Home Screen.  This setting can only be used if **Enable   auto sign-out** and **Enable sign in** have been set to True.      |     ✔️          |
 |     Privacy statement title    |     string    |          |     Optionally display your organization's   custom privacy statement on Managed Home Screen, next to Microsoft's privacy   statement. Use this setting to name the link containing your organization's   privacy statement, which is specified in **Privacy statement link**.    |     ❌          |
 |     Privacy statement link    |     string    |          |     Optionally display your organization's   custom privacy statement on Managed Home Screen, next to Microsoft's privacy   statement. If you set a link but don't set **Privacy statement title**, the   title will read "Custom privacy statement".    |     ❌          |
-
-> [!NOTE]
-> Managed Home Screen with Sign In enabled is not supported on GCC, GCC High or DoD Tenants.
 
 > [!NOTE]
 > Managed Home Screen uses the exact alarm permission to do the following actions:
