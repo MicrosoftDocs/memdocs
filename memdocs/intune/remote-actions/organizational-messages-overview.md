@@ -6,12 +6,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 04/02/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium     
-ms.technology:
 ms.assetid: 
 # optional metadata
 

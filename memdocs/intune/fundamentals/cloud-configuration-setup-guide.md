@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -111,7 +110,7 @@ If you already use Windows Autopilot, then skip this step, and go to [Step 3 - D
 Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, go to [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Windows enrollment** > **Automatic Enrollment**.
+2. Select **Devices** > **Windows** > **Enrollment** > **Automatic Enrollment**.
 3. Under **MDM user scope**, select one of the following:
 
     - Select **All** to apply the cloud configuration to all Windows devices that users in your organization use. In most cloud config scenarios, **All** is selected.
@@ -154,7 +153,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 2. **Create and assign a Windows Autopilot deployment profile in Intune**.
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Devices** > **Windows** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Deployment profiles**.
+    2. Select **Devices** > **Windows** > **Enrollment** > **Windows Autopilot Deployment Program** > **Deployment profiles**.
     3. Select **Create profile** > **Windows PC**. Enter a name for the profile.
     4. For the **Convert all targeted devices to Autopilot** setting, select **Yes**. Select **Next**.
 
@@ -181,7 +180,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 3. **Create and assign an Enrollment Status Page in Intune**.
   
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Devices** > **Windows** > **Windows enrollment** > **General** > **Enrollment Status Page**.
+    2. Select **Devices** > **Windows** > **Enrollment** > **General** > **Enrollment Status Page**.
     3. Select **Create** and enter a name for the **Enrollment Status Page**.
     4. In the **Settings** tab, enter the following values, and then select **Next**:
 
@@ -249,7 +248,7 @@ With **Known Folder Move**, users data (files and folders) is saved to OneDrive.
 To configure **Known Folder Move**, use an ADMX template in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **Windows** > **Configuration** > **Create** > **New policy**.
 3. Select **Windows 10 and later** for platform and select **Templates** for profile type.
 4. Select **Administrative Templates** and select **Create**.
 5. Enter a name for the profile and select **Next**.
@@ -306,7 +305,7 @@ Using Intune, on Windows 10/11 Enterprise and Education devices, you can block e
 To prevent these outside apps, use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **Windows** > **Configuration** > **Create** > **New policy**.
 3. Select **Windows 10 and later** for platform and select **Settings catalog** for profile type. Select **Create**.
 4. In **Basics**, enter a name for your profile.
 5. In **Configuration settings**, select **Add settings**. Then:
@@ -509,7 +508,7 @@ Configure devices to automatically use your tenant's domain name for user sign-i
 Add the tenant domain name in Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **Windows** > **Configuration** > **Create** > **New policy**.
 3. For platform, select **Windows 10 and later**.
 4. For Profile type, select **Templates** > **Device restrictions** > **Create**.
 5. Enter a name for the profile and select **Next**.
@@ -545,7 +544,7 @@ There are some Microsoft Edge app settings that can be configured for a better u
 To configure these recommended settings, use Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select to **Devices** > **Windows** > **Configuration profiles** > **Create** > **New policy**.
+2. Select to **Devices** > **Windows** > **Configuration** > **Create** > **New policy**.
 3. Select **Windows 10 and later** for platform and **Templates** for profile type.
 4. Select **Administrative Templates** and select **Create**.
 5. Enter a name for the profile and select **Next**.

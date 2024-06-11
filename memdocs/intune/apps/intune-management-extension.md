@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 
 # optional metadata
@@ -89,7 +88,7 @@ The Intune management extension has the following prerequisites. Once they're me
   
   - Microsoft Entra hybrid joined: Devices joined to Microsoft Entra ID, and also joined to on-premises Active Directory (AD). See [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
   
-- Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.
+  - Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.
 
 - Devices enrolled in Intune, including:
 
@@ -116,7 +115,7 @@ The Intune management extension has the following prerequisites. Once they're me
 ## Create a script policy and assign it
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Scripts** > **Add** > **Windows 10 and later**.
+2. Select **Devices** > **Scripts and remediations** > **Platform scripts** > **Add** > **Windows 10 and later**.
 
     ![Screenshot that shows creating a new script for a Windows 10 device.](./media/intune-management-extension/create-script-windows.png)
 
@@ -150,7 +149,7 @@ The Intune management extension has the following prerequisites. Once they're me
 
         > [!NOTE]
         > PowerShell scripts in Intune can be targeted to Microsoft Entra device security groups or Microsoft Entra user security groups.
-        > However, when targeting workplace joined (WPJ) devices, only Microsoft Entra device security groups can be used (user targeting will be ignored). For more information, see [Win32 app support for Workplace join (WPJ) devices](../fundamentals/whats-new-archive.md#win32-app-support-for-workplace-join-wpj-devices-).
+        > However, when targeting workplace joined (WPJ) devices, only Microsoft Entra device security groups can be used (user targeting will be ignored).
 
     2. Select **Next**.
 

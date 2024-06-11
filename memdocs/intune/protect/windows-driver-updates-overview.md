@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/08/2023
+ms.date: 05/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,7 +99,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 > [!NOTE]  
 > **Unsupported versions and editions**:  
-> *Windows 10/11 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+> *Windows 10/11 Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don’t support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
 
 **Devices must**:
 
@@ -284,7 +284,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
       > [!NOTE]
       > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
 
-   4. Enable [data collection](windows-update-reports.md#enable-data-collection) in Intune for devices that you wish to deploy drivers and firmware to.
+   4. Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy drivers and firmware to.
 
    5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](windows-update-reports.md).
 

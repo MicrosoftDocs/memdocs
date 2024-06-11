@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 05/28/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -40,6 +39,8 @@ Windows 365 Boot lets admins configure Windows 11 physical devices so that users
 When a user turns on their physical device and signs in, Windows 365 Boot signs them in directly to their Cloud PC, not their physical device. If single sign-on is turned on for their Cloud PC, they don't have to sign in again to their Cloud PC. This expedited sign in process reduces the time it takes the user to access their Cloud PC.
 
 Windows 365 Boot supports both dedicated and shared PC scenarios.
+
+Windows 365 Boot shared mode supports FIDO authentication. For more information, see [How-to: Password-less FIDO2 Security Key Sign-in to Windows 10 HAADJ Devices](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-password-less-fido2-security-key-sign-in-to-windows-10/ba-p/1434583).
 
 ## Shared PC scenario
 
@@ -74,7 +75,14 @@ Windows 365 Boot doesn't automatically set these policies to fully restrict end 
 
 ## User sign-in authentication modes
 
-Windows 365 Boot supports username/password-based authentication for user sign in to their Cloud PC. Windows Hello for Business, convenience PIN, and FIDO key authentication modes aren't supported.
+Support for Windows 365 Boot authentication modes when users sign in to their Cloud PCs is shown of the following table:
+
+| Authentication mode | Dedicated mode supported | Shared mode supported |
+| :---: | :---: | :---: |
+| Username/password | Yes | Yes |
+| Windows Hello for Business | Yes | No |
+| FIDO key | No | Yes |
+| Convenience pin | No | No |
 
 ## Multiple Cloud PCs
 

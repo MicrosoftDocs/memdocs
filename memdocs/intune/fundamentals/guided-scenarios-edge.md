@@ -6,12 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 
 ms.reviewer: dagerrit
 ms.suite: ems
@@ -25,15 +24,15 @@ ms.collection:
 
 # Guided scenario - Deploy Microsoft Edge for Mobile
 
-By following this [guided scenario](guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app will allow your users to seamlessly browse content using their corporate devices.
+By following this [guided scenario](guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app allows your users to seamlessly browse content using their corporate devices.
 
-Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange and manage work content. Users of iOS/iPadOS and Android devices who sign in with their corporate Microsoft Entra accounts in the Microsoft Edge application will find their browser pre-loaded with workplace **Favorites** and website filters you define.
+Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange and manage work content. Users of iOS/iPadOS and Android devices who sign in with their corporate Microsoft Entra accounts in the Microsoft Edge application will find their browser preloaded with workplace **Favorites** and website filters you define.
 
 > [!NOTE]
 > If you have blocked users from enrolling either iOS/iPadOS or Android devices, this scenario will not enable enrollment, and the users will need to install Edge for themselves.
 The following Microsoft Edge enterprise features that are enabled by Intune policies include:
 
-- **Dual-Identity** - Users can add both a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is similar to the architecture and experience in Microsoft 365 and Outlook. Intune admins will be able to set the desired policies for a protected browsing experience within the work account.
+- **Dual-Identity** - Users can add both a work account, as well as a personal account, for browsing. There's complete separation between the two identities, which is similar to the architecture and experience in Microsoft 365 and Outlook. Intune admins will be able to set the desired policies for a protected browsing experience within the work account.
 - **Intune app protection policy integration** - Admins can now target app protection policies to Microsoft Edge, including the control of cut, copy, and paste, preventing screen captures, and ensuring that user-selected links open only in other managed apps.
 - **Azure Application Proxy integration** - Admins can control access to SaaS apps and web apps, helping ensure browser-based apps only run in the secure Microsoft Edge browser, whether end users connect from the corporate network or connect from the Internet.
 - **Managed Favorites and Home Page shortcuts** - For ease of access, admins can set URLs to appear under favorites when end users are in their corporate context. Admins can set a homepage shortcut, which will show as the primary shortcut when the corporate user opens a new page or a new tab in Microsoft Edge.
@@ -49,7 +48,7 @@ The following Microsoft Edge enterprise features that are enabled by Intune poli
 
 ## Step 1 - Introduction
 
-By following the **Deploy Microsoft Edge for Mobile** guided scenario, you will set up a basic deployment of Microsoft Edge for a selected group of iOS/iPadOS and Android users. This deployment will implement **Dual-Identity** and **Managed Favorites and Home Page shortcuts**. In addition, devices enrolled by the selected users will automatically have the Microsoft Edge app installed by Intune. This automatic installation will occur on all user-driven enrollment types, which include:
+By following the **Deploy Microsoft Edge for Mobile** guided scenario, you'll set up a basic deployment of Microsoft Edge for a selected group of iOS/iPadOS and Android users. This deployment will implement **Dual-Identity** and **Managed Favorites and Home Page shortcuts**. In addition, devices enrolled by the selected users will automatically have the Microsoft Edge app installed by Intune. This automatic installation will occur on all user-driven enrollment types, which include:
 
 - iOS/iPadOS enrollment through the Company Portal app
 - iOS/iPadOS user-affinity enrollment through Apple Business Manager
@@ -80,7 +79,7 @@ In this step, you can choose the user groups that you want to include to have Mi
 
 ## Step 5 - Review + create
 
-The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Create** to complete the guided scenario. 
+The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices select **Create** to complete the guided scenario. 
 
 > [!NOTE]
 > Edge may take up to 12 hours to receive configuration. For more information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).

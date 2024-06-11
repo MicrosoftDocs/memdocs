@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/19/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
  
 #ROBOTS:
@@ -69,17 +67,7 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 - For devices that aren't fully Microsoft Entra registered, a synthetic device identity is created in Microsoft Entra ID that allows the device to retrieve policies. Fully registered devices use their current registration.
 - Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
 
-### Government cloud support
-
-The Defender for Endpoint security settings management scenario is supported in the following tenants:
-
-- US Government Community (GCC) High
-- Department of Defense (DoD)
-
-For more information, see:
-
-- [Intune US Government service description](../fundamentals/intune-govt-service-description.md)
-- [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov)
+Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 
 ### Connectivity requirements
 
@@ -358,7 +346,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices. Devices that onboard to Microsoft Defender for Endpoint but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These devices can receive policies for security settings management.
+2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices. 
 
    Devices that onboard to Microsoft Defender for Endpoint and have registered but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
 
@@ -520,6 +508,8 @@ Because a Microsoft Entra ID trust is required, domain controllers aren't curren
 Security settings management doesn't support Server core installations due to Server core platform limitations.
 
 ### PowerShell restrict mode
+
+Powershell needs to be enabled.
 
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 

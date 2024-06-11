@@ -13,7 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
 
 # optional metadata

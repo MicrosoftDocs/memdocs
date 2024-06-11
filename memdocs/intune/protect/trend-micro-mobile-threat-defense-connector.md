@@ -1,10 +1,9 @@
 ---
 # required metadata
 
-title: Trend Micro Mobile Security as a Service connector with Intune
+title: Trend Micro Mobile Security and Microsoft Intune
 titleSuffix: Intune on Azure
-description: Set up the Trend Micro Mobile Threat Defense connector with Intune.
-keywords:
+description: How to set up Trend Micro Mobile Threat Defense with with Microsoft Intune to control mobile device access to your corporate resources
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -13,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata

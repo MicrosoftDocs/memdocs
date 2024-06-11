@@ -7,12 +7,11 @@ keywords:
 author: erikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 03/11/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -45,6 +44,7 @@ When working with features in public preview, these features:
 - Are fully supported by Microsoft.
 - May only be available in selected geographic regions or cloud environments. For example, the feature may not exist for Windows 365 Business Cloud PCs.
 - Individual features in preview may have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
+- Aren't supported for Windows 365 Government.
 
 ## Next steps
 

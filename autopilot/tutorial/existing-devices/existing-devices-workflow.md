@@ -7,9 +7,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2023
+ms.date: 04/10/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -26,9 +26,14 @@ The purpose of this tutorial is a step by step guide for all the configuration s
 
 ## Windows Autopilot deployment for existing devices overview
 
-The main use case scenario for Windows Autopilot is to automate the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. However, sometimes existing devices in an environment need to be repurposed, fixed, or updated to a later version of Windows by reinstalling Windows on the device. Reinstalling of Windows is usually performed via a reimage of the device, which is outside the capabilities of Windows Autopilot. Windows Autopilot also isn't able to perform a fresh install of Windows if the version of Windows is different than the one that is currently installed on the device. There may also be other conditions that prevent Windows Autopilot from performing a fresh install of Windows on the device. For example, corruption of the current Windows install or a hard drive failure.
+The main use case scenario for Windows Autopilot is to automate the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. However, sometimes existing devices in an environment need to be repurposed, fixed, or updated to a later version of Windows by reinstalling Windows on the device. Reinstalling of Windows is usually performed via a reimage of the device, which is outside the capabilities of Windows Autopilot. Windows Autopilot also isn't able to perform a fresh install of Windows if the version of Windows is different than the one that is currently installed on the device. There might also be other conditions that prevent Windows Autopilot from performing a fresh install of Windows on the device. For example, corruption of the current Windows install or a hard drive failure.
 
-For scenarios where Windows needs to be reinstalled or updated to a later version of Windows using a fresh installation of Windows, Windows Autopilot can utilize Microsoft Configuration Manager task sequences. Microsoft Configuration Manager task sequences can reimage a device and perform a fresh installation of Windows. The Configuration Manager task sequence can also pre-install a Windows Autopilot profile on the device via a JSON file. Once the Configuration Manager task sequence is done, the device can then automatically run the Windows Autopilot deployment defined in the Windows Autopilot profile JSON file. When the Windows Autopilot profile JSON file is pre-installed on the device, the Windows Autopilot deployment can run on the device without having to first perform the following actions:
+Windows Autopilot can utilize Microsoft Configuration Manager task sequences tor scenarios where Windows needs to be:
+
+- Reinstalled to a later version of Windows using a fresh installation of Windows.
+- Updated to a later version of Windows using a fresh installation of Windows.
+
+Microsoft Configuration Manager task sequences can reimage a device and perform a fresh installation of Windows. The Configuration Manager task sequence can also pre-install a Windows Autopilot profile on the device via a JSON file. Once the Configuration Manager task sequence is done, the device can then automatically run the Windows Autopilot deployment defined in the Windows Autopilot profile JSON file. When the Windows Autopilot profile JSON file is pre-installed on the device, the Windows Autopilot deployment can run on the device without having to first perform the following actions:
 
 - Import the device into Intune as an Autopilot device.
 - Assign an Autopilot profile to the device.
@@ -71,6 +76,12 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 > - Step 10: [Register device for Windows Autopilot](register-device.md)
 
+<!-- INADO-27343099 -->
+
+> [!IMPORTANT]
+>
+> If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
+
 ## Walkthrough
 
 > [!div class="nextstepaction"]
@@ -78,7 +89,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 ## More information
 
-For more information on Windows Autopilot deployment for existing devices, see the following article(s):
+For more information on Windows Autopilot deployment for existing devices, see the following articles:
 
 - [Windows Autopilot deployment for existing devices](/mem/autopilot/existing-devices)
 - [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)

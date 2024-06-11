@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: What is Windows 365 Enterprise?
+title: What is Windows 365 Enterprise? 
 titleSuffix:
 description: What is Windows 365 Enterprise?
 keywords:
@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata

@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2023
+ms.date: 05/22/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: naramkri
+ms.reviewer: evas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -57,7 +56,12 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the [provisioning policy creation flow](create-provisioning-policy.md). Each image helps admins with pre-set audit policies already enabled, like account policies, logon/logoff, object access, and policy change.
+
+They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with:
+
+- Optimizations for improved user experience.
+- The latest security updates so that end users have a secure and seamless experience.
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
@@ -66,12 +70,11 @@ There are two sets of images available to choose from across the different versi
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
-  - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Microsoft Entra ID and synchronization.
+  - Microsoft Edge settings like sleeping tabs, [forced browser sign-in](/deployedge/microsoft-edge-policies#browsersignin), startup boost, and first time optimizations based on Microsoft Entra ID and synchronization. For more information, see [Configure Microsoft Edge policy settings with Microsoft Intune](/deployedge/configure-edge-with-intune).
   - Microsoft Outlook first-time configuration settings (auto log on based on Microsoft Entra profile, support for other profiles).
-- **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
-  - Services optimized for virtualization.
-  - UWP packages removed.
-  - Task scheduler actions disabled.
+- **Images with no preinstalled applications**: A plain image without any preinstalled applications (look for images without the **M365 Apps** in the name).
+
+Both types of images are harmonized in GPOs. Any differences are due to preinstalled apps.
 
 ### Gallery image update cycle
 

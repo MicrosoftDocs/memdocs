@@ -41,7 +41,7 @@ Third-party partners support one or more of the following platforms:
 
 By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Microsoft Entra ID and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through a Microsoft Entra user group.
 
-To enable use data from device compliance partners, complete the following tasks:
+To enable user data from device compliance partners, complete the following tasks:
 
 1. **Configure Intune to work with the device compliance partner**, and then configure groups of users whose devices are managed by that compliance partner.
 
@@ -49,21 +49,23 @@ To enable use data from device compliance partners, complete the following tasks
 
 3. **Enroll your devices to your device compliance partner**.
 
-With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices with a state of non-compliant have that status added to their device record in Microsoft Entra ID.
-
-The compliance state stored in Microsoft Entra ID is evaluated by conditional access policies, the same as compliance state data for devices managed by Intune. By default, Intune is a registered compliance partner for iOS and Android. When you add more partners, you can set the priority order to ensure the correct partner manages device to fit your business needs.
+With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices in a noncompliant state have a *not compliant* status added to their device record in Microsoft Entra ID. 
 
 ## Supported device compliance partners
 
 The following compliance partners are supported as generally available:
 
+- 42Gears SureMDM
+- 7P
 - Addigy
 - BlackBerry UEM
 - Citrix Workspace device compliance
 - IBM MaaS360
-- JAMF Pro
+- Jamf Pro
 - MobileIron Device Compliance Cloud
 - MobileIron Device Compliance On-prem
+- Mosyle Fuse
+- Mosyle Onek12
 - SOTI MobiControl
 - VMware Workspace ONE UEM (formerly AirWatch)
 
@@ -133,6 +135,7 @@ Your configuration now appears on the Partner compliance management page.
 
 To enable a device compliance partner to work with Intune, you must complete configurations specific to that partner. For information on this task, see the documentation for the applicable partner:
 
+- [42Gears SureMDM](https://docs.42gears.com/suremdm/docs/SureMDM/ConditionalAccessintheSureMDMCon.html)
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
 
@@ -151,7 +154,7 @@ Sign in to the Azure portal and go to **Microsoft Entra ID** > **Devices** > [**
 Use the documentation from your third-party partner to create compliance policies for devices.
 
 - [Addigy](https://support.addigy.com/hc/en-us/articles/12346305032211)
-- [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_9/compatibility-matrix/imm1460398825659/ioz1460399956336)
+- [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_10/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Microsoft Entra Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
 - [MobileIron Device Compliance Cloud](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)

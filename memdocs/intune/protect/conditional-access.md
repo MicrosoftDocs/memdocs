@@ -8,12 +8,11 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby    
-ms.date: 09/25/2023
+ms.date: 04/25/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 
 # optional metadata
@@ -72,6 +71,9 @@ Conditional Access works with Intune device configuration and compliance policie
   Intune and Microsoft Entra ID work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
 
   Learn more about [app-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
+
+## Known limitations  
+The compliant network location condition is only supported for devices enrolled in mobile device management (MDM). If you configure a Conditional Access policy using the compliant network location condition, users with devices that aren't yet MDM-enrolled might be affected. Users on these devices might fail the Conditional Access policy check, and be blocked. Ensure that you exclude the affected users or devices when using the compliant network location condition.  
 
 ## Next steps
 

@@ -147,6 +147,9 @@ Managed software updates have precedence over other policies that configure soft
 
 9. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
 
+  > [!IMPORTANT]
+  > Assignment filters are not supported for DDM-based policies.
+
 10. Select **Next**.
    
 11. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.

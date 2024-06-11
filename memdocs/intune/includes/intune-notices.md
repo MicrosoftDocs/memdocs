@@ -4,12 +4,95 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 02/15/2024
+ms.date: 03/13/2024
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for Change: Update to Intune endpoint for Remote Help 
+
+Starting on May 30, 2024, or soon after, to improve the experience for Remote Help on Windows, Web, and macOS, we're updating the primary network endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com. 
+
+#### How does this affect you or your users?
+
+If you're using Remote Help and you have firewall rules that don't permit the new endpoint https://remotehelp.microsoft.com, admins and users may experience connectivity issues or disruptions with Remote Help.  
+
+Additionally, the Remote Help app on Windows will need to be updated to the newest version. No action is needed for the Remote Help app for macOS and the Remote Help Web app.
+
+#### How can you prepare?
+
+Update your firewall rules to include the new Remote Help endpoint: https://remotehelp.microsoft.com. For Remote Help on Windows, users will need to update to the [newest version (5.1.124.0)](../fundamentals/remote-help-windows.md#march-13-2024). Most users have opted in for automatic updates and will be updated automatically without any action from the user. To learn more, review [Install and update Remote Help for Windows](../fundamentals/remote-help-windows.md#install-and-update-remote-help).
+
+#### Additional information: 
+
+- [Remote Help on Windows with Microsoft Intune](../fundamentals/remote-help-windows.md)
+- [Network endpoints for Microsoft Intune | Microsoft Learn](../fundamentals/intune-endpoints.md#remote-help)
+
+### Update to the latest Company Portal for Android, Intune App SDK for iOS, and Intune App Wrapper for iOS
+
+Starting **June 1, 2024**, we're making updates to improve the Intune mobile application management (MAM) service. This update will require iOS wrapped apps, iOS SDK integrated apps, and the Company Portal for Android to be updated to the latest versions to ensure applications stay secure and run smoothly. 
+
+> [!IMPORTANT]
+> If you don't update to the latest versions, users will be blocked from launching your app.
+>
+> Ahead of this change, for Microsoft apps that need to be updated, when a user opens the app, they'll receive a blocking message to update the app.
+
+Note that the way Android updates, once one Microsoft application with the updated SDK is on the device and the Company Portal is updated to the latest version, Android apps will update. So, this message is focused on iOS SDK/app wrapper updates. We recommend always updating your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly.  
+
+#### How does this affect you or your users?
+If your users haven't updated to the latest Microsoft or third-party app protection supported apps, they'll be blocked from launching their apps. If you have iOS line-of-business (LOB) applications that are using the Intune wrapper or Intune SDK, you must be on Wrapper/SDK version 17.7.0 or later to avoid your users being blocked.
+
+#### How can you prepare?
+Plan to make the changes below before **June 1, 2024**:
+
+* Any of your iOS line-of-business (LOB) apps using older versions of the Intune SDK or wrapper must be updated to v17.7.0 or later.
+  * For apps using the Intune iOS SDK, use [Release 19.2.0 · msintuneappsdk/ms-intune-app-sdk-ios (github.com)](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/releases/tag/19.2.0)
+  * For apps using the Intune iOS wrapper, use [Release 19.2.0 · msintuneappsdk/intune-app-wrapping-tool-ios (github.com)](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios/releases/tag/19.2.0)
+* For tenants with policies targeted to iOS apps: 
+  * Notify your users that they need to upgrade to the latest version of the Microsoft apps. You can find the latest version of the apps in the [App store](https://www.apple.com/app-store/). For example, you can find the latest version of Microsoft Teams [here](https://apps.apple.com/app/microsoft-teams/id1113153706) and Microsoft Outlook [here](https://apps.apple.com/app/microsoft-outlook/id951937596).
+  * Additionally, you have the option to enable the following [conditional launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) settings:  
+    * The **Min OS version** setting to warn users using iOS 15 or older so that they can download the latest apps. 
+    * The **Min SDK version** setting to block users if the app is using Intune SDK for iOS older than 17.7.0. 
+    * The **Min app version** setting to warn users on older Microsoft apps. Note that this setting must be in a policy targeted to only the targeted app. 
+* For tenants with policies targeted to Android apps: 
+  * Notify your users that they need to upgrade to the latest version (v5.0.6198.0) of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app.
+  * Additionally, you have the option to enable the following [conditional launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) device condition setting:  
+    * The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6198.0.
+
+### Plan for Change: Ending support for Intune App SDK Xamarin Bindings in May 2024<!--27143739-->
+With the [end of support for Xamarin Bindings](https://dotnet.microsoft.com/platform/support/policy/xamarin), Intune will end support for Xamarin apps and the Intune App SDK Xamarin Bindings beginning on **May 1, 2024**.
+
+#### How does this affect you or your users?
+
+If you you have iOS and/or Android apps built with Xamarin and are using the Intune App SDK Xamarin Bindings to enable app protection policies, upgrade your apps to .NET MAUI.  
+
+#### How can you prepare?
+
+Upgrade your Xamarin based apps to .NET MAUI. Review the following documentation for more information on Xamarin support and upgrading your apps: 
+
+- [Xamarin Support Policy | .NET](https://dotnet.microsoft.com/platform/support/policy/xamarin)
+- [Upgrade from Xamarin to .NET | Microsoft Lear](/dotnet/maui/migration/?view=net-maui-8.0)
+- [Microsoft Intune App SDK for .NET MAUI – Android | NuGet Gallery](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)
+- [Microsoft Intune App SDK for .NET MAUI – iOS | NuGet Gallery](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS)
+
+### Plan for Change: Update your PowerShell scripts with a Microsoft Entra ID registered app ID<!--26960016-->
+
+Last year we announced a [new Microsoft Intune GitHub repository](https://aka.ms/Intune/Scripts-blog) based on the Microsoft Graph SDK-based PowerShell module. The legacy Microsoft Intune PowerShell sample scripts GitHub repository is now read-only. Additionally, in **May 2024**, due to updated authentication methods in the Graph SDK-based PowerShell module, the global Microsoft Intune PowerShell application (client) ID based authentication method will be removed.
+
+#### How does this affect you or your users?
+
+If you're using the Intune PowerShell application ID (d1ddf0e4-d672-4dae-b554-9d5bdfd93547), you'll need to update your scripts with a Microsoft Entra ID registered application ID to prevent your scripts from breaking.
+
+#### How can you prepare?
+
+Update your PowerShell scripts by:
+
+1. Creating a new app registration in the Microsoft Entra admin center. For detailed instructions, read: [Quickstart: Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
+2. Update scripts containing the Intune application ID (d1ddf0e4-d672-4dae-b554-9d5bdfd93547) with the new application ID created in step 1.
+
+For detailed step-by-step instructions visit [powershell-intune-samples/Updating App Registration (github.com)](https://github.com/microsoftgraph/powershell-intune-samples/blob/master/Updating%20App%20Registration).
 
 ### Intune moving to support Android 10 and later for user-based management methods in October 2024<!--14755802-->
 
@@ -49,7 +132,7 @@ For more information, review: [Manage operating system versions with Microsoft I
 
 ### Plan for Change: Web based device enrollment will become default method for iOS/iPadOS device enrollment
 
-Today, when creating iOS/iPadOS enrollment profiles, “Device enrollment with Company Portal” is shown as the default method. Expected with Intune’s April (2404) service release, the default method will change to “Web based device enrollment” during profile creation. Additionally for *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
+Today, when creating iOS/iPadOS enrollment profiles, “Device enrollment with Company Portal” is shown as the default method. In an upcoming service release, the default method will change to “Web based device enrollment” during profile creation. Additionally for *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
  
 > [!NOTE]
 > For web enrollment, you will need to deploy the single sign-on (SSO) extension policy to enable just in time (JIT) registration, for more information review: [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).

@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 95191d64-9895-4f2e-8c5b-f0e85be086d8
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid: 95191d64-9895-4f2e-8c5b-f0e85be086d8
 #ROBOTS:
 #audience:
 
-ms.reviewer: daviales
+ms.reviewer: chnatar, daviales
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

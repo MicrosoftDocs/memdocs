@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 03/07/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -98,13 +97,16 @@ This feature applies to:
 
   - Sign in with a Domain Administrator account.
 
-  - Install the **RSAT: Group Policy Management Tools**:
+  - Add the **RSAT: Group Policy Management Tools**:
+  
+    1. Open the **Settings** app > **System** > **Optional features** > **Add feature**.
 
-    1. Open the **Settings** app > **Apps** > **Optional features** > **Add feature**.
-    2. Select **RSAT: Group Policy Management Tools** > **Install**.
-
-        Wait while Windows installs the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
-
+        If you use a version older than Windows 10 22H2, go to **Settings** > **Apps** > **Apps & features** > **Optional features** > **Add feature**.
+        
+    1. Select **RSAT: Group Policy Management Tools** > **Add**.
+    
+        Wait while Windows adds the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
+       
         :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app.":::
 
   - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Intune admin center.
@@ -266,8 +268,8 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 1. On the **Admin computer**, open the **Group Policy Management** app.
 
-    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you install on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps to install it.
-
+    This app gets installed with **RSAT: Group Policy Management Tools**, which is an optional feature you add on Windows. [Prerequisites](#prerequisites) (in this article) lists the steps to install it.
+   
 2. Expand **Domains** > select your domain. For example, select `contoso.net`.
 3. Right-click the **OfficeandEdge** policy > **Edit**. The Group Policy Management Editor app opens.
 

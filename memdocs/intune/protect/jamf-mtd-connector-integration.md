@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:  
 
 # optional metadata
@@ -105,7 +104,7 @@ Intune-based deployments are facilitated using Jamf Activation Profiles defined 
 
 After creating an Activation Profile in Jamf, you assign it to users and devices in Intune. While an Activation Profile is universal across device platforms and management strategies, the following steps define how to configure Intune based upon these differences.
 
-The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links).
+The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles](https://learn.jamf.com/en-US/bundle/jamf-security-documentation/page/Activation_Profiles.html) in the Jamf Security Documentation.
 
 > [!NOTE]
 >
@@ -122,7 +121,7 @@ For iOS and Android devices that you manage with Intune, Jamf can deploy over-th
 
 In this section, you download **required** iOS device configuration files and then deliver them over-the-air via MDM to your Intune managed devices.
 
-1. In Jamf Security Cloud portal, navigate to the Activation Profile you want to deploy (Devices > Activations), then select the **Deployment Strategies tab > Managed Devices > Microsoft Intune**.
+1. In Jamf Security Cloud portal, navigate to the Activation Profile you want to deploy (Devices > Activations), then select the **Deployment Strategies** tab > **Managed Devices** > **Microsoft Intune**.
 
 2. Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
 
@@ -158,14 +157,14 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 
 1. In the Jamf Security Cloud portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications use during enrollment in Devices > Activations.
 
-2. Select the **Deployment Strategies tab then Unmanaged Devices**, and then scroll to the **Azure Device Provisioning** section.
+2. Select the **Identity-based provisioning** tab, and then scroll to the Microsoft section.
 
-3. Enter your **Microsoft Entra tenant ID** into the appropriate text field. If you don't have your tenant ID on hand, select the **Get my Tenant ID** link to open Microsoft Entra ID in a new tab where you can easily copy this value to your clipboard.
+3. Select toggle for the *Activation profile* you want to use, which opens the *Add auto-provisioning to activation profile* window.
 
-4. (Optional) Specify **Group ID(s)** to limit user activations to specific groups.
+4. Choose to confirm the current selection of the **Everyone (any group)** option, or select **Specific groups** and then add **group IDs** to limit user activations to only those groups.
 
-   - If one or more **Group IDs** are defined, a user activating MAM must be a member of at least one of the specified groups to activate using this Activation Profile.
-   - You can set up multiple Activation Profiles for the same Azure Tenant ID, with each using a different Group ID. Use of different Group IDs allows you to enroll devices into Jamf based upon Azure group membership, enabling differentiated capabilities by group at activation time.
+   - If one or more **group IDs** are defined, a user activating MAM must be a member of at least one of the specified groups to activate using this Activation Profile.
+   - You can set up multiple Activation Profiles for the same Azure Tenant ID, with each using a different group ID. Use of different group IDs allows you to enroll devices into Jamf based upon Azure group membership, enabling differentiated capabilities by group at activation time.
    - You can configure a single "default" Activation Profile that doesn't specify any Group IDs. This group serves as a catch-all for all activations in which the authenticated user isn't a member of a group with an association to another Activation Profile.
 
 5. Select **Save** in the upper-right corner of the page.

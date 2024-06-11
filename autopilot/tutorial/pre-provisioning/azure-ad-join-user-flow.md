@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/26/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -61,6 +61,10 @@ Once the technician flow step of the pre-provisioning process completes successf
 [!INCLUDE [Tips AADJ screens](../includes/tips-aadj-screens.md)]
 
 [!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]
+
+[!INCLUDE [Tips wait to run User flow](../includes/tips-pre-provision-wait-user-flow.md)]
+
+[!INCLUDE [Tips compliance resets during User flow](../includes/tips-pre-provision-compliance-user-flow.md)]
 
 ## More information
 
