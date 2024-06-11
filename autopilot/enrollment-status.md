@@ -35,7 +35,7 @@ An administrator can deploy ESP profiles to a licensed Intune user and configure
 
 For more information, see [Set up the Enrollment Status Page](/intune/windows-enrollment-status).
 
-:::image type="content" source="images/enrollment-status-page.png" alt-text="Enrollment Status Page":::
+:::image type="content" source="images/enrollment-status-page.png" alt-text="Screenshot that shows Enrollment Status Page":::
 
 ## Related content
 
