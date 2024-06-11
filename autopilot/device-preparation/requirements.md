@@ -30,7 +30,7 @@ The list of requirements for Windows Autopilot device preparation is organized i
 - **Networking** - networking requirements.
 - **Licensing** - licensing requirements.
 - **Configuration** - configurations required in Microsoft Entra ID and Microsoft Intune.
-- **RBAC Permissions** - RBAC permissions required for a Windows Autopilot device preparation administrator.
+- **RBAC** - RBAC permissions required for a Windows Autopilot device preparation administrator.
 
 Select the appropriate tab to see the relevant requirements:
 
@@ -215,7 +215,7 @@ There are no additional hardware requirements to use Autopilot, beyond the hardw
 - [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
 - [Windows 11 requirements](/windows/whats-new/windows-11-requirements).
 
-## [:::image type="icon" source="../images/icons/permissions-18.svg"::: **RBAC Permissions**](#tab/rbac)
+## [:::image type="icon" source="../images/icons/permissions-18.svg"::: **RBAC**](#tab/rbac)
 
 ### Required RBAC permissions
 
