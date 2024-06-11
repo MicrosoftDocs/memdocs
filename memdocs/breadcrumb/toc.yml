@@ -13,7 +13,7 @@ items:
 
     - name: Microsoft Defender for Endpoint settings management
       tocHref: /defender-endpoint/ 
-      topicHref: /Microsoft Defender for Endpoint settings management 
+      topicHref: /defender-endpoint/ 
 
   - name: Configuration Manager
     tocHref: /mem/configmgr/
