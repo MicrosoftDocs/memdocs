@@ -50,7 +50,12 @@ You can also read:
 >
 > Some features roll out over several weeks and might not be available to all customers in the first week.
 >
-> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's new](/autopilot/windows-autopilot-whats-new).
+> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md).
+>
+> For new information about Windows Autopilot solutions, see:
+> 
+> - [Windows Autopilot device preparation: What's new](/autopilot/device-prpeparation/whats-new).
+> - [Windows Autopilot: What's new](/autopilot/whats-new).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
