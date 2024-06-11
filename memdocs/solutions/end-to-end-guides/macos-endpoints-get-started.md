@@ -209,7 +209,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   There are two options for configuring SSO for Mac:
     1. [Enterprise SSO plug-in](/mem/intune/configuration/use-enterprise-sso-plug-in-macos-with-intune). The Microsoft Enterprise SSO plug-in for Apple devices provides single sign-on (SSO) for Microsoft Entra accounts on macOS across all applications that support Apple's enterprise single sign-on feature.
-    1. [Platform SSO](/mem/intune/configuration/platform-sso-macos). This capability is available in preview and is builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+    1. [Platform SSO](/mem/intune/configuration/platform-sso-macos). This capability is available in preview and builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
     
   #### [Enterprise SSO plug-in](#tab/esso)
   
@@ -236,7 +236,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
   
   #### [Platform SSO (preview)](#tab/psso)
 
-  Microsoft has released support for [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website) with Microsoft Entra to public preview. For more information on setting up Platform SSO, see [Configure Platform SSO for macOS devices in Microsoft Intune](/mem/intune/configuration/platform-sso-macos).
+  Microsoft has released support for [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website) with Microsoft Entra to public preview. For more information on setting up Platform SSO, see [Configure Platform SSO for macOS devices in Microsoft Intune](/mem/intune/configuration/platform-sso-macos#step-2---create-the-platform-sso-policy-in-intune).
   
   ---
 
