@@ -54,7 +54,7 @@ You can also read:
 >
 > For new information about Windows Autopilot solutions, see:
 > 
-> - [Windows Autopilot device preparation: What's new](/autopilot/device-prpeparation/whats-new).
+> - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new).
 > - [Windows Autopilot: What's new](/autopilot/whats-new).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
