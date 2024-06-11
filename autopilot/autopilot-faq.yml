@@ -386,9 +386,11 @@ sections:
           Yes. If the device is running a supported version of Windows, you can harvest device fingerprints for registration. There are no plans to backport the functionality to earlier releases. There's no way to harvest them on devices running unsupported versions of Windows.
 
       - question: |
-          Is Windows Autopilot supported on other SKUs, for example, Surface Hub, HoloLens, or Windows Mobile?
+          Is Windows Autopilot supported on other SKUs, for example, Surface Hub or HoloLens?
         answer: |
-          For Surface Hub, Windows Mobile, and other SKUs, Windows Autopilot isn't supported. HoloLens 1 also doesn't support Windows Autopilot. With Windows Holographic version 2004, HoloLens 2 supports Windows Autopilot self-deploying mode with Microsoft Intune. Non-Microsoft MDM providers aren't supported.
+          - Surface Hub and other SKUs not covered in [Software requirements](requirements.md?tabs=software) aren't supported with Windows Autopilot.
+          - HoloLens 1 doesn't support Windows Autopilot.
+          - HoloLens 2 supports Windows Autopilot self-deploying mode with Microsoft Intune and a currently supported version of Windows Holographic. Non-Microsoft MDM providers aren't supported.
 
           For more information on HoloLens 2, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 

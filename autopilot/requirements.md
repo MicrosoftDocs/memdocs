@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/07/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -73,7 +73,7 @@ Windows 10 LTSC/LTSB editions aren't supported.
 
 #### HoloLens
 
-- Windows Autopilot for HoloLens 2 requires Windows Holographic, version 2004 or later. For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+- Windows Autopilot for HoloLens 2 requires a currently supported version of Windows Holographic. For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 > [!NOTE]
 >

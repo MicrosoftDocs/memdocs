@@ -123,7 +123,7 @@ Starting in 2307, Windows Autopilot is making it easier to manage devices by add
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-2. Select the device that needs deletion and then select **Delete** in the toolbar at the top.
+1. Select the device that needs deletion and then select **Delete** in the toolbar at the top.
 
 ## Device rename occurs during technician phase for pre-provisioning
 
