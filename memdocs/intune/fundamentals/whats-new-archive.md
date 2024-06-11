@@ -2047,7 +2047,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Add custom Bash scripts to configure Linux devices<!-- 12508999  -->  
-In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **Linux** > **Configuration Scripts**).
+In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **Linux** > **Scripts**).
 
 When you create this script policy, you can set the context that the script runs in (user or root), how frequently the script runs, and how many times execution should retry.
 
@@ -2060,7 +2060,7 @@ Applies to:
 ### Device enrollment
 
 #### Support for the await final configuration setting for iOS/iPadOS Automated device enrollment (public preview)<!-- 13156553  -->  
-Now in public preview, Intune supports a new setting called **Await final configuration** in eligible new and existing iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant. It prevents device users from accessing restricted content or changing settings on the device until most Intune device configuration policies are installed. You can configure the setting in an existing automated device enrollment profile, or in a new profile (**Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > **Create profile**). For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Now in public preview, Intune supports a new setting called **Await final configuration** in eligible new and existing iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant. It prevents device users from accessing restricted content or changing settings on the device until most Intune device configuration policies are installed. You can configure the setting in an existing automated device enrollment profile, or in a new profile (**Devices** > **iOS/iPadOS** > **Enrollment** > **Enrollment program tokens** > **Create profile**). For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 #### New setting gives Intune admins control over device-to-category mapping<!-- 15029839 -->  
 Control visibility of the device category prompt in Intune Company Portal. You can now hide the prompt from end users and leave the device-to-category mapping up to Intune admins. The new setting is available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**. For more information, see [Device categories](../apps/company-portal-app.md#device-categories).

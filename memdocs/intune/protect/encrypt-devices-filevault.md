@@ -148,7 +148,7 @@ Select **Next**.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **macOS** > **Configuration profiles** > **Create** > **New policy**.
+2. Select **Devices** > **macOS** > **Configuration** > **Create** > **New policy**.
 
 3. On the **Create a profile** page, select **Settings catalog** for the **Profile type**.
 
