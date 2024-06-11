@@ -234,7 +234,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md).
   
-  #### [Platform SSO (preview)](#tab/esso)
+  #### [Platform SSO (preview)](#tab/psso)
 
   Microsoft has released support for [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website) with Microsoft Entra to public preview. For more information on setting up Platform SSO, see [Configure Platform SSO for macOS devices in Microsoft Intune](/mem/intune/configuration/platform-sso-macos).
   
