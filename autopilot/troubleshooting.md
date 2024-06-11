@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/30/2023
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -21,27 +21,27 @@ appliesto:
 
 # Troubleshooting overview
 
-Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. When troubleshooting an issue, it's helpful to understand:
+Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues might arise. When troubleshooting an issue, it's helpful to understand:
 
-- The Windows Autopilot [process flow](#windows-autopilot-flow)
-- How Windows Autopilot [device profiles](#profile-download) are downloaded
-- [Key activities](#key-troubleshooting-activities) to perform during troubleshooting
+- The Windows Autopilot [process flow](#windows-autopilot-flow).
+- How Windows Autopilot [device profiles](#profile-download) are downloaded.
+- [Key activities](#key-troubleshooting-activities) to perform during troubleshooting.
 
 ## Windows Autopilot diagnostics page
 
-On Windows 11, you can open the Autopilot diagnostic page to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the Autopilot diagnostics page:
+On Windows 11, the Autopilot diagnostic page can be opened to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the Autopilot diagnostics page:
 
 1. Go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) where the Autopilot diagnostics page needs to be enabled.
 
-1. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
+2. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
 
-1. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
+3. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
 
-Once the diagnostic page is enabled, you can select the **View Diagnostics button** or use the keyboard shortcut **Ctrl**+**Shift**+**D** to access any diagnostic information. The Autopilot diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
+Once the diagnostic page is enabled, select the **View Diagnostics button** or enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kbd> to access any diagnostic information. The Autopilot diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
 
 > [!NOTE]
 >
-> By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
+> By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 > [!NOTE]
 >
@@ -49,17 +49,17 @@ Once the diagnostic page is enabled, you can select the **View Diagnostics butto
 
 ## Windows Autopilot flow
 
-Whether you're performing user-driven or self-deploying device deployments, the troubleshooting process is about the same. It's useful to understand the flow for a specific device:
+Whether performing user-driven or self-deploying device deployments, the troubleshooting process is about the same. It's useful to understand the flow for a specific device:
 
 1. A network connection is established. The connection can be a wireless (Wi-fi) or wired (Ethernet) connection.
 
-1. The Windows Autopilot profile is downloaded. When you use a wired connection, or manually establish a wireless connection, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
+1. The Windows Autopilot profile is downloaded. When a wired connection is used, or a wireless connection is established, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
 
 1. User authentication occurs. During a user-driven deployment, the user enters their Microsoft Entra credentials, which is then validated.
 
 1. Microsoft Entra join occurs. For user-driven deployments, the device is joined to Microsoft Entra ID using the specified user credentials. For self-deploying scenarios, the device is joined without specifying any user credentials.
 
-1. Automatic MDM enrollment occurs. As part of the Microsoft Entra join process, the device enrolls in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
+1. Automatic mobile device management (MDM) enrollment occurs. As part of the Microsoft Entra join process, the device enrolls in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
 
 1. Settings are applied. If the [enrollment status page](enrollment-status.md) is configured, most settings are applied while the enrollment status page is displayed. If not configured or available, settings will be applied after the user is signed in.
 
@@ -69,17 +69,17 @@ When an Internet-connected Windows device boots up, it attempts to connect to th
 
 > [!NOTE]
 >
-> At this stage, it's important that an Autopilot profile exists in the tenant so that a blank profile isn't cached locally on the device. If necessary, you can retrieve a new Autopilot profile by rebooting the device.
+> At this stage, it's important that an Autopilot profile exists in the tenant so that a blank profile isn't cached locally on the device. If necessary, a new Autopilot profile can be retrieved by rebooting the device.
 >
-> If you need to reboot a computer during OOBE to retrieve a new Autopilot profile:
+> If a computer needs to be rebooted during OOBE to retrieve a new Autopilot profile:
 >
-> 1. Press Shift-F10 on the keyboard to open a command prompt window.
+> 1. Select Shift-F10 to open a command prompt window.
 >
-> 1. In the command prompt window, enter one of the following two options:
+> 1. In the command prompt window, enter one of the following two commands:
 >
->    1. Enter `shutdown.exe /r /t 0` to **restart** immediately.
+>    - `shutdown.exe /r /t 0` to **restart** immediately.
 >
->    1. Enter `shutdown.exe /s /t 0` to **shut down** immediately.
+>    - `shutdown.exe /s /t 0` to **shut down** immediately.
 >
 > For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
@@ -87,8 +87,8 @@ When an Internet-connected Windows device boots up, it attempts to connect to th
 
 Key activities to perform when troubleshooting are:
 
-- Review configuration: Has Microsoft Entra ID and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
-- Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
+- Review configuration: Has Microsoft Entra ID and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](requirements.md?tabs=configuration)?
+- Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](requirements.md?tabs=networking)?
 - Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
 - Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](troubleshoot-aad-join.md)?
 - MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
@@ -98,13 +98,13 @@ Key activities to perform when troubleshooting are:
 
 See the following articles for help with troubleshooting specific issues:
 
-- [Troubleshoot device enrollment](troubleshoot-device-enrollment.md)
-- [Troubleshoot OOBE issues](troubleshoot-oobe.md)
-- [Troubleshoot Microsoft Entra join issues](troubleshoot-aad-join.md)
-- [Policy conflicts](policy-conflicts.md)
-- [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
-- [Known issues](known-issues.md)
+- [Troubleshoot device enrollment](troubleshoot-device-enrollment.md).
+- [Troubleshoot OOBE issues](troubleshoot-oobe.md).
+- [Troubleshoot Microsoft Entra join issues](troubleshoot-aad-join.md).
+- [Policy conflicts](policy-conflicts.md).
+- [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+- [Known issues](known-issues.md).
 
-## Related articles
+## Related content
 
-[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
+- [Collect MDM logs](/windows/client-management/mdm-collect-logs).
