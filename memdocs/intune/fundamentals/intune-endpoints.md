@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/02/2024
+ms.date: 06/11/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -408,7 +408,7 @@ For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
   > [!IMPORTANT]
-  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > SSL Inspection is not supported on endpoints required for Microsoft Defender for Endpoint.
 
 ## Microsoft Intune Endpoint Privilege Management
 
@@ -420,7 +420,7 @@ For communication between clients and the cloud service:
 - \*.events.data.microsoft.com - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
 
   > [!IMPORTANT]
-  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > SSL Inspection is not supported on endpoints required for Endpoint Privilege Management.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
 
