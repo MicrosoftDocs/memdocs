@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 
 # optional metadata
@@ -137,8 +136,8 @@ The following sequence of events describes an example of what a successful authe
 
 6. The SSO extension establishes single sign-on in all other targeted apps and all Microsoft apps.  
 7. The device is registered with Microsoft Entra ID and compliant. You can view the status of the device in the admin center and Microsoft Entra ID. The device user can view the status in Intune Company Portal and use Company Portal for compliance, app inventory, device syncs, and log sharing.    
-8. The device user opens Teams and is automatically signed in. The end user opens Word, PowerPoint, and Excel, and is automatically signed in.  
-
+8. The device user opens Teams and is automatically signed in.
+   
 ## Option 4: Setup Assistant (legacy)
 
 Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This option installs standard preconfigured settings when the device enrolls in Intune. Use this option for authentication when: 

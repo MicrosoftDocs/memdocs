@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 02/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:  
 
 # optional metadata
@@ -44,6 +43,8 @@ Use one of the following policy types to configure FileVault on your managed dev
 
   View the [FileVault settings that are available in endpoint protection profiles for device configuration policy](../protect/endpoint-protection-macos.md#filevault).
 
+- **[Settings catalog profile for macOS FileVault](#create-settings-catalog-policy-for-filevault)**. FileVault can be configured through the Intune [settings catalog](../configuration/settings-catalog.md), which includes some settings that aren't available in the *endpoint security* and *endpoint protection* templates.
+
 To manage BitLocker for Windows 10/11, see [Manage BitLocker policy](../protect/encrypt-devices.md).
 
 > [!TIP]
@@ -51,7 +52,7 @@ To manage BitLocker for Windows 10/11, see [Manage BitLocker policy](../protect/
 
 After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow. After the key is escrowed, the disk encryption can start.
 
-In addition to using Intune policy to encrypt a device with FileVault, you can deploy policy to a managed device to enable Intune to [assume management of FileVault when the device was encrypted by the user](#assume-management-of-filevault-on-previously-encrypted-devices). This scenario requires the device to receive FileVault policy from Intune, followed by the user uploading their personal recovery key to Intune.
+In addition to using Intune policy to encrypt a device with FileVault, you can deploy policy to a managed device to enable Intune to [assume management of FileVault when the device is encrypted by the user](#assume-management-of-filevault-on-previously-encrypted-devices). This scenario requires the device to receive FileVault policy from Intune, followed by the user uploading their personal recovery key to Intune.
 
 User-approved device enrollment is required for FileVault to work on a device. The user must manually approve of the management profile from system preferences for enrollment to be considered user-approved.
 
@@ -72,10 +73,9 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-
 2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 
-3. On the **Create a profile** page, set the following options, and then click **Create**:
+3. On the **Create a profile** page, set the following options, and then select **Create**:
    - **Platform**: macOS
    - **Profile type**: Templates
    - **Template name**: Endpoint protection
@@ -90,7 +90,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
 5. On the **Configuration settings** page, select **FileVault** to expand the available settings:
 
-   :::image type="content" source="./media/encrypt-devices-filevault/filevault-settings.png" alt-text="FileVault settings."::: 
+   :::image type="content" source="./media/encrypt-devices-filevault/filevault-settings.png" alt-text="FileVault settings.":::
 
 6. Configure the following settings:
   
@@ -108,7 +108,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
    Select **Next** to continue.
 
-8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see Assign user and device profiles.
+8. On the **Assignments** page, select groups to receive this profile. For more information on assigning profiles, see Assign user and device profiles.
 Select **Next**.
 
 9. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
@@ -119,12 +119,12 @@ Select **Next**.
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
-3. On the **Basics** page, enter the following properties, and then choose **Next**.
-   - **Platform**: macOS
-   - **Profile**: FileVault
+1. On the **Basics** page, enter the following properties, and then choose **Next**.
+- **Platform**: macOS
+- **Profile**: FileVault
 
    ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
+  
 4. On the **Configuration settings** page:
    1. Set *Enable FileVault* to **Yes**.
    2. For *Recovery key type*, only **Personal Recovery Key** is supported.
@@ -140,10 +140,65 @@ Select **Next**.
 
    Select **Next** to continue.
 
-7. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see Assign user and device profiles.
-Select **Next**.
+7. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see Assign user and device profiles. Select **Next**.
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+## Create settings catalog policy for FileVault
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **macOS** > **Configuration profiles** > **Create** > **New policy**.
+
+3. On the **Create a profile** page, select **Settings catalog** for the **Profile type**.
+
+4. On the **Basics** page, enter the following properties:
+
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name might include the profile type and platform.
+
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
+5. On the **Configuration settings** page, select **+ Add settings** to open the settings picker. The FileVault settings are located under the *Full Disk Encryption* category:
+
+   :::image type="content" source="./media/encrypt-devices-filevault/filevault-settings-picker.png" alt-text="Image of the FileVault options in the Full Disk Encryption category of the Settings picker.":::
+
+   To enable FileVault, select and configure the following settings from the *Full Disk Encryption* category:
+
+   - FileVault > **Enable** - Set to **On**
+   - FileVault Recovery Key Escrow > **Location** - Specify a description of the location where the recovery key is escrowed. This text is inserted into the message the user sees when enabling FileVault.
+
+   > [!TIP]
+   >
+   > When configuring encryption for devices that run macOS 14 or later, you can use the macOS Setup Assistant to enforce FileVault encryption before a user arrives at the home screen. See [Enable FileVault through the Setup Assistant](#enable-filevault-through-the-setup-assistant) later in this article.
+
+6. Configure additional [FileVault settings](https://support.apple.com/en-md/guide/deployment/dep32bf53500/web) *(opens Apple’s website)* to meet your business needs, and then select **Next**.
+
+7. If applicable, on the **Scope (Tags)** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile. Select **Next** to continue.
+
+8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see Assign user and device profiles. Select **Next**.
+
+9. On the **Review + create** page, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+### Enable FileVault through the Setup Assistant
+
+For devices that run macOS 14 and later, your settings catalog policy can also enforce FileVault encryption through the macOS Setup Assistant, before a user arrives at the home screen. This goal requires additional configurations:
+
+- The **Await final configuration** feature for the device must be set to **Yes**. This configuration prevents end users from accessing restricted content or changing settings until applicable Intune device configuration policies apply. For information on this configuration, see [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune/enrollment/device-enrollment-program-enroll-macos.md).
+
+- Create a filter using the *EnrollmentProfileName* attribute that will be assigned to the settings catalog policy. This ensures that the FileVault policy will be assigned when the device first enrolls with Intune. For more information on configuring filters, see [Create filters in Microsoft Intune](../fundamentals/filters.md). 
+
+- When *Await final Configuration* set to *Yes* for a device, you can then add the following Full Disk Encryption setting for FileVault in your settings catalog profile
+
+- FileVault > **Force Enable in Setup Assistant** – Set to **Enabled**.
+  
+   The following image shows the settings catalog profile configured with the core settings to enable FileVault and use the Setup Assistant to enforce encryption. In this example, the Location setting uses the simple name of our domain, *Contoso*:
+
+    
+  
+  > [!IMPORTANT]
+  > The **Defer** setting must be configured to **Enabled** to successfully enable FileVault in Setup Assistant for devices running macOS 14.4. 
+  
+  :::image type="content" source="./media/encrypt-devices-filevault/filevault-setup-assistant-configuration.png" alt-text="Screenshot of the settings needed to enable File Vault in Setup Assistant.":::
 
 ## Manage FileVault
 
@@ -151,8 +206,9 @@ To view information about devices that receive FileVault policy, see [Monitor di
 
 When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the device user.
 
- > [!NOTE]
- > A device that reports error code -2016341107 / 0x87d1138d generally means the end user has not accepted the FileVault prompt to begin encryption. 
+> [!NOTE]
+>
+> A device that reports error code -2016341107 / 0x87d1138d generally means the end user has not accepted the FileVault prompt to begin encryption.
 
 For managed devices, Intune can escrow a copy of the personal recovery key. Escrow of keys enables Intune administrators to rotate keys to help protect devices, and users to recover a lost or rotated personal recovery key.
 
@@ -166,7 +222,7 @@ After Intune escrows the personal recovery key:
 
 ### Assume management of FileVault on previously encrypted devices
 
-Intune can’t manage FileVault disk encryption on a macOS device that was encrypted by a device user, unless you apply FileVault policy through Intune. There are two methods you can use that enable Intune to take-over management of FileVault in this scenario:
+Intune can’t manage FileVault disk encryption on a macOS device that is encrypted by a device user unless you apply FileVault policy through Intune. There are two methods you can use that enable Intune to take-over management of FileVault in this scenario:
 
 - [Upload a personal recovery key to Intune](#upload-a-personal-recovery-key) – Use this method when the user knows their personal recovery key.
 - [The user generates a new recovery key on the device](#generate-a-new-recovery-key-on-the-device) – Use this method if the personal recovery key isn’t known by the user.
@@ -241,7 +297,7 @@ To enable Intune to manage FileVault on a previously encrypted device, the user 
 
 3. After Intune assumes management of the encryption, a user can [retrieve their new personal recovery key from a supported location](#retrieve-a-personal-recovery-key).
 
-For additional information, see [end-user content for upload of the personal recovery key](../user-help/store-recovery-key.md).
+For more information, see [end-user content for upload of the personal recovery key](../user-help/store-recovery-key.md).
 
 ### Retrieve a personal recovery key
 
@@ -254,9 +310,9 @@ For a macOS device that has its FileVault encryption managed by Intune, end user
 
 Administrators can view personal recovery keys for encrypted macOS devices that are marked as a *corporate* device. They can’t view the recovery key for a personal device.
 
-The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, Android Company Portal app, the Android Intune app, or the Company Portal website, the user can see the **FileVault** recovery key needed to access their Mac devices.
+The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. When a device user uses the iOS Company Portal app, Android Company Portal app, the Android Intune app, or the Company Portal website, the user can see the **FileVault** recovery key needed to access their Mac devices.
 
-Device users can select **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. The browser will show the Web Company Portal and display the recovery key.
+Device users can select **Devices** > *the encrypted and enrolled macOS device* > **Get recovery key**. The browser shows the Web Company Portal and displays the recovery key.
 
 ### Rotate recovery keys
 

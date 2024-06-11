@@ -3,12 +3,12 @@
 
 title: Configure app protection policies for Windows 10/11
 titleSuffix: Microsoft Intune
-description: This topic describes how to configure app protection policies (APP) for Windows 10/11 devices.
+description: This article describes how to configure app protection policies (APP) for Windows 10/11 devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -45,23 +45,23 @@ Enable Windows Information Protection (WIP) for Windows 10/11 by setting the WIP
 2. Select **All services** and choose **M365 Microsoft Entra ID** to switch dashboards.
 3. Select **Microsoft Entra ID**.
 4. Choose **Mobility (MDM and WIP)** in the **Manage** group.
-5. Click **Microsoft Intune**.
+5. Select **Microsoft Intune**.
 6. Configure the settings in the  **Restore default WIP URLs** group on the **Configure** pane.
 
    **WIP user scope**  
-   Use WIP auto-enrollment to manage enterprise data on your employees' Windows devices. WIP auto-enrollment will be configured for bring your own device scenarios.<ul><li>**None**<br>Select if no users can be enrolled in WIP.</li><li>**Some**<br>Select Microsoft Entra groups that contain users who will be enrolled in WIP.</li><li>**All**<br>Select if all users can be enrolled in WIP.</li></ul>
+   Use WIP autoenrollment to manage enterprise data on your employees' Windows devices. WIP autoenrollment will be configured for your own device scenarios.<ul><li>**None**<br>Select if no users can be enrolled in WIP.</li><li>**Some**<br>Select Microsoft Entra groups that contain users who will be enrolled in WIP.</li><li>**All**<br>Select if all users can be enrolled in WIP.</li></ul>
 
    **WIP terms of use URL**  
-   The WIP terms of use URL is not supported for Microsoft Intune. This input box must be left blank for protection policies to apply.
+   The WIP terms of use URL isn't supported for Microsoft Intune. This input box must be left blank for protection policies to apply.
 
    **WIP discovery URL**  
    The URL of the enrollment endpoint of the WIP service. The enrollment endpoint is used to enroll devices for management with the WIP service.
 
    **WIP compliance URL**  
-   The WIP compliance URL is not supported for Microsoft Intune. This input box must be left blank for protection policies to apply. 
+   The WIP compliance URL isn't supported for Microsoft Intune. This input box must be left blank for protection policies to apply. 
 
-7. Click **Save**.
+7. Select **Save**.
 
 ## Next steps
 
-[Create a WIP policy](windows-information-protection-policy-create.md)
+[Create a WIP policy.](windows-information-protection-policy-create.md)

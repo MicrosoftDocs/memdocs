@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 06/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 
 # optional metadata
@@ -30,6 +29,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_SpecificApp
 ---
 
 # How to configure the Intune Company Portal apps, Company Portal website, and Intune app
@@ -43,7 +43,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you will help to provide a familiar and helpful experience for your end users. To do this, sign in as a Global administrator or an Intune service administrator. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization** where you can either edit the default policy or create up to 10 user group targeted policies. Note that targeting policies to device groups is not supported. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
+By customizing the end-user experience, you will help to provide a familiar and helpful experience for your end users. To do this, sign in as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization** where you can either edit the default policy or create up to 10 user group targeted policies. Note that targeting policies to device groups is not supported. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 

@@ -2,17 +2,16 @@
 # required metadata
 title: Remotely manage Windows 365 devices
 titleSuffix:
-description: Learn how to remotely manage Windows 365 devices
+description: Learn how to remotely manage Windows 365 devices.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 03/27/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -36,18 +35,27 @@ You can remotely manage Cloud PCs in Intune just like any other managed device. 
 
 Cloud PCs support the following remote management actions:
 
-- Restart
-- Power On
-- Power Off
-- Sync
-- Rename
-- Quick Scan
-- Full Scan
-- Update Windows Defender
-- [Reprovisioning](provisioning.md#reprovisioning) (this remote action is specific to Cloud PC devices)
-- [Resize](resize-cloud-pc.md) (this remote action is specific to Cloud PC devices)
-- [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics)
-- [Place Cloud PC Under Review](place-cloud-pc-under-review.md)
+| Remote action | Bulk action support? |
+| --- | :---: |
+| [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics) | Yes |
+| Create Cloud PC manual restore point | Yes |
+| Full Scan | No |
+| [Place Cloud PC Under Review](place-cloud-pc-under-review.md) | Yes |
+| Power Off (Windows 365 Frontline) (preview) | Yes |
+| Power On (Windows 365 Frontline) (preview) | Yes |
+| Quick Scan | No |
+| [Remove Cloud PCs from review](place-cloud-pc-under-review.md) | Yes |
+| Rename | No |
+| [Reprovisioning](provisioning.md#reprovisioning) | Yes |
+| [Resize](resize-cloud-pc.md) | Yes |
+| Restart | Yes |
+| [Restore](restore-overview.md) | Yes|
+| Share Cloud PC restore point to storage | Yes |
+| Sync | Yes |
+| [Troubleshoot](health-checks-connectivity.md) | Yes |
+| Update Windows Defender | No |
+
+You can run remote actions for up to 5,000 Cloud PCs at a time. For more information about bulk actions, see [Use bulk device actions](/mem/intune/remote-actions/bulk-device-actions).
 
 ## Windows 365 Frontline Cloud PCs
 
@@ -60,11 +68,11 @@ You can remotely power on and off a Frontline Cloud PC. When you power on a Fron
 - Any user currently signed in is signed off.
 - Unsaved data on the Cloud PC is lost.
 
-You can also power on and power off Frontline Cloud PCs in bulk to help with: 
+You can also power on and power off Frontline Cloud PCs in bulk to help with:
 
 - Run an update.
 - Apply an application across all Cloud PCs.
-- Make sure Cloud PCs are on for an incoming shift
+- Make sure Cloud PCs are on for an incoming shift.
 - Manage concurrency limits.
 
 Within the Intune portal, you can get to the bulk actions tab by going to **Devices**> **All devices** > **Bulk device actions**.  

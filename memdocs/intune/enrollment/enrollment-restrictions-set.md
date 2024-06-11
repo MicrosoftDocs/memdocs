@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/24/2023
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 
 # optional metadata
@@ -124,7 +123,7 @@ By default, Intune classifies iOS/iPadOS devices as personally owned. To be clas
 #### Blocking personal Macs  
 By default, Intune classifies macOS devices as personally owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:
 - [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled via Apple Automated Device Enrollment.  
+- Enrolled via Apple Automated Device Enrollment (ADE).  
 
 #### Blocking personal Windows devices  
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
@@ -139,9 +138,10 @@ The following enrollment methods are authorized for corporate enrollment:
 > Since a co-managed device enrolls in the Microsoft Intune service based on its Microsoft Entra device token, and not a user token, only the default Intune enrollment restriction will apply to it.
 
 Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling (unless registered with Autopilot) because these methods don't offer the Intune administrator per-device control:  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).
- 
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).  
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).  
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with Microsoft Entra join or hybrid Entra join via [Windows Autopilot for existing devices](/autopilot/existing-devices).  
+
 Intune also blocks personal devices using these enrollment methods:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
 - [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
@@ -153,7 +153,7 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Limitations  
 
-* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), or Azure Virtual desktop, Intune enforces the default policy.  
+* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), Azure Virtual desktop, or userless Apple Automated device enrollment (ADE without user device affinity), Intune enforces the default policy.  
 
 * Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
 

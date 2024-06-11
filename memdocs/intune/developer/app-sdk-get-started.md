@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 
 # optional metadata
@@ -26,7 +25,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune, has-adal-ref
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -101,7 +100,7 @@ You'll need one of the following developer guides to help you integrate the Intu
 
 * **[Intune App SDK for iOS Developer Guide](app-sdk-ios-phase1.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
 
-* **[Intune App SDK for Android Developer Guide](/mem/intune/developer/app-sdk-android-phase1)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
+* **[Intune App SDK for Android Developer Guide](../developer/app-sdk-android-phase1.md)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
 
 * **[Intune App SDK Xamarin Bindings guide](app-sdk-xamarin.md)**: This document will help you build iOS and Android apps using Xamarin for Intune app protection policies.
 

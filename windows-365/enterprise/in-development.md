@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/05/2024
+ms.date: 05/24/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -29,7 +29,7 @@ ms.collection:
 
 To help in your readiness and planning, this page lists Windows 365 updates and features that are in development but not yet released. In addition to the information on this page:
 
-- If we anticipate that you need to take action before a change, we'll publish a complementary post in Office message center.
+- If we anticipate that you need to take action before a change, we publish a complementary post in Office message center.
 - When a feature enters production, the feature description moves from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
 - Similar features might be announced at different times for Windows 365 Business.
@@ -59,12 +59,12 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-### Offline Windows 365 Frontline Cloud PCs update sync<!--48663450-->
-
-In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for seven days will be automatically turned on and synced with Windows Update for Business Policies.
-
 <!-- ***********************************************-->
-<!--## Device provisioning-->
+## Device provisioning
+
+### New Cloud PC images aligned with Microsoft 365 apps images<!--48537480-->
+
+In a future update, new Cloud PC optimized images aligned with the Microsoft 365 apps images will be available in the gallery.
 
 <!--***********************************************-->
 <!-- ## End user experience -->
@@ -72,13 +72,13 @@ In a future update, Windows 365 Frontline Cloud PCs that haven’t been used for
 <!-- ***********************************************-->
 ## Miscellaneous
 
-### Windows 365 Switch support for Windows 365 Frontline<!--46816178-->
+### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
 
-In a future update, Windows 365 Switch will support Windows 365 Frontline Cloud PCs.
+In a future update, customers that have Modern Microsoft Cloud Agreements will be able to upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
 
-### Intune admin center user interface change<!--48653379-->
+### New Windows 365 Frontline offers for GCC<!--50308895-->
 
-The current **Devices** navigation list will change from **Provisioning** >  **Windows 365** to **Device onboarding** > **Cloud PC creation**.
+In a future update, new Windows 365 Frontline offers will be available for Government Community Cloud (GCC) customers using the Azure Commercial cloud.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -86,18 +86,6 @@ The current **Devices** navigation list will change from **Provisioning** >  **W
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
-
-### New alert rule: Cloud PCs that aren't available<!--47321010-->
-
-A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
-
-### Device action data kept for 90 days<!--48439987-->
-
-On the **Overview** page for individual Cloud PCs, the **Actions** will show actions performed within the last 90 days.
-
-### Alerts for Windows 365 Frontline maximum concurrent Cloud PCs<!--45903013-->
-
-A new alert will be implemented to notify admins when the maximum concurrent Cloud PCs are active for Windows 365 Frontline subscriptions.
 
 <!-- ***********************************************-->
 ## Provisioning
@@ -113,12 +101,15 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 
 In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
 
-### New 15-minute Sign-in frequency option<!--48439987-->
+### New settings for Windows 365 security baselines<!--49685126-->
 
-When single sign-on is turned on, selecting the **Conditional access** > **Session** > **Sign-in frequency** > **Every time** option will provide a 15-minute re-authentication period.
+New configuration settings will be introduced for the Windows 365 security baseline.
 
 <!-- ***********************************************
 ## Windows 365 app-->
+
+<!-- ***********************************************-->
+<!--## Windows 365 Frontline-->
 
 
 ## Next steps

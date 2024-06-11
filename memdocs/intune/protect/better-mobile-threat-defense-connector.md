@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Set up the Better Mobile Threat Defense connector with Intune | Microsoft Docs
-description: Set up the Better Mobile Threat Defense connector with microsoft Intune.
+title: Better Mobile Threat Defense with Intune
+description: How to set up the Better Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata

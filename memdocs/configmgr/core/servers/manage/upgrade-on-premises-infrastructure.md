@@ -2,12 +2,12 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 10/17/2023
+ms.date: 04/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-author: banreet
-ms.author: banreetkaur
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -44,17 +44,11 @@ Configuration Manager supports the in-place upgrade of the server OS that hosts 
 
   - Windows Server 2012 to Windows Server 2016
 
-  - Windows Server 2012 to Windows Server 2012 R2
-
-  - Windows Server 2008 R2 to Windows Server 2012 R2
-
 To upgrade a server, use the upgrade procedures provided by the OS you're upgrading to. See the following articles:
 
 - [Windows Server Upgrade Center](/windows-server/upgrade/upgrade-overview)
 
 - [Upgrade and conversion options for Windows Server 2016](/windows-server/get-started/supported-upgrade-paths)
-
-- [Upgrade Options for Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))
 
 ### Upgrade to Windows Server 2016, 2019, or 2022
 
@@ -132,47 +126,6 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
 
 If this value is missing after you upgrade Windows on the server, manually add it. Otherwise site system roles can have issues uploading files to the site server inboxes.
-
-### Upgrade to Windows Server 2012 R2
-
-When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Windows Server 2012 R2, the following conditions apply:
-
-#### Before upgrade to Server 2012 R2
-
-- On Windows Server 2012: Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
-
-- On Windows Server 2008 R2: Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. For more information, see [Windows Server Update Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).
-
-- If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
-
-  - On the sending site, review **sender.log**.
-  - On the receiving site, review **despooler log**.
-
-#### After upgrade to Server 2012 R2
-
-- The upgrade process disables the Windows Deployment Services. Make sure this service is started and running for the following site system roles:
-
-  - Site server
-
-  - Management point
-
-- Make sure the **Windows Process Activation** and **WWW/W3svc** services are enabled and set for automatic start. The upgrade process disables these services, so make sure they're running for the following site system roles:
-
-  - Site server
-
-  - Management point
-
-- Make sure each server that hosts a site system role continues to meet all [prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
-
-  After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.
-
-### Unsupported upgrade scenarios
-
-The following Windows Server upgrade scenarios are commonly asked about, but not supported by Configuration Manager:
-
-- Windows Server 2008 to Windows Server 2012 or later
-
-- Windows Server 2008 R2 to Windows Server 2012
 
 ## Upgrade the OS of clients
 

@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/08/2024
+ms.date: 02/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -53,7 +51,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
 - There are some limits:
 
-  - A maximum of 10 ADMX files can be uploaded. Each file must be 1 MB or smaller.
+  - A maximum of 20 ADMX files can be uploaded. Each file must be 1 MB or smaller.
   - For each ADMX file, only one ADML file can be uploaded.
   - Each ADMX file supports one language.
 

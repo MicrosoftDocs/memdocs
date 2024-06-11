@@ -97,7 +97,7 @@ Remediations requires users of the devices to have one of the following licenses
 
 ## Deploy built-in script packages
 
-There are built-in script packages you can use to get started with Remediations. The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours by default. The following built-in script packages just need to be assigned:
+There are built-in script packages you can use to get started with Remediations. The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The following built-in script packages just need to be assigned:
 
 - **Update stale Group Policies** – Stale Group Policies can lead to helpdesk tickets related to connectivity and internal resource access.
 - **Restart Office Click-to-run service** – When the Click-to-run service is stopped, Office apps fail to start leading to helpdesk calls.
@@ -166,7 +166,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Users must be Global Admins, Intune Admins, or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
-- Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns) during the remote action.
+- Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 
 - The [Intune Management Extension](../apps/intune-management-extension.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
 

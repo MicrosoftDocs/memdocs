@@ -44,6 +44,10 @@ items:
     items:
     - name: Check device compliance
       href: check-compliance-on-your-device-android.md
+    - name: Encrypt your device
+      href: encrypt-your-device-android.md
+    - name: Move to new device management setup
+      href: move-to-new-device-management-setup.md
     - name: Reset used, lost, stolen device
       href: reset-device-company-portal-android.md
     - name: Sync device 
@@ -52,12 +56,16 @@ items:
       href: turn-off-battery-optimization-android.md      
     - name: Turn on verbose logging
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
-    - name: Turn off Microsoft data collection
-      href: turn-off-microsoft-usage-data-collection-android.md
+    - name: Turn off Microsoft data collection 
+      href: turn-off-microsoft-usage-data-collection-android.md 
+    - name: Update Android device settings         
+      href: update-device-settings-android.md   
   - name: Microsoft Intune app for Android  
     items: 
     - name: Check compliance status      
       href: check-compliance-microsoft-intune-app-android.md  
+    - name: Configure logging settings   
+      href: microsoft-intune-app-verbose-logging.md  
   - name: Microsoft Intune app for AOSP 
     items:
     - name: Check device compliance 
@@ -68,36 +76,6 @@ items:
       href: intune-app-logs-aosp.md 
     - name: Turn off Microsoft data collection 
       href: turn-off-microsoft-usage-data-collection-aosp.md 
-  - name: Update device settings
-    items:
-    - name: Move to new device management setup
-      href: move-to-new-device-management-setup.md
-    - name: Allow Wi-Fi control
-      href: allow-wi-fi-control-android.md
-    - name: Encrypt your device
-      href: encrypt-your-device-android.md
-    - name: Fix encryption problems
-      href: your-device-appears-encrypted-but-cp-says-otherwise-android.md  
-    - name: Set lock time
-      href: set-the-amount-of-time-before-your-device-is-locked-android.md
-    - name: Install VPN
-      href: install-your-companys-virtual-private-network-VPN-android.md
-    - name: Update device software
-      href: you-need-to-update-your-android-device.md
-    - name: Unsupported version
-      href: your-android-version-isnt-yet-supported.md
-    - name: Device rooted and can't connect
-      href: your-device-is-rooted-and-you-cant-connect-android.md
-    - name: Missing a required certificate
-      href: your-device-is-missing-an-IT-required-certificate-android.md
-    - name: Turn off USB debugging
-      href: you-need-to-turn-off-usb-debugging-android.md
-    - name: Turn on security threat scans
-      href: you-need-to-turn-on-scanning-for-security-threats-android.md
-    - name: Install latest security patch
-      href: you-need-to-update-your-device-OS-security-patch-android.md
-    - name: Common Samsung Knox messages
-      href: samsung-knox-errors-android.md
   - name: Get Android apps
     items:
     - name: Where to find work or school apps for Android
@@ -122,6 +100,10 @@ items:
     items:
     - name: Report a problem 
       href: send-logs-to-your-it-admin-by-email-android.md  
+    - name: Troubleshoot enrollment for Samsung Knox 
+      href: samsung-knox-errors-android.md  
+    - name: Troubleshoot encryption problems  
+      href: your-device-appears-encrypted-but-cp-says-otherwise-android.md  
 - name: iOS/iPadOS device management
   items:
   - name: Enrollment
@@ -148,24 +130,16 @@ items:
       href: effects-of-device-reset-company-portal-ios.md
     - name: Turn off Microsoft usage data collection
       href: turn-off-microsoft-usage-data-collection-ios.md
-    - name: Remove device from Intune
+    - name: Remove a device  
       href: unenroll-your-device-from-intune-ios.md
-    - name: Compliance and setting requirements        
-      href: how-do-i-find-the-serial-number-on-my-device-ios.md
+    - name: Update iOS device settings         
+      href: how-do-i-find-the-serial-number-on-my-device-ios.md  
   - name: Get iOS/iPadOS apps
     items:
     - name: Where to find work or school apps for iOS/iPadOS
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
       href: use-microsoft-tunnel-iOS.md 
-  - name: Update device settings
-    items:
-    - name: An existing company email account was found
-      href: existing-company-email-account-found.md
-    - name: Update iOS/iPadOS version
-      href: you-need-to-update-your-ios-device.md
-    - name: iOS/iPadOS version isn't supported 
-      href: your-ios-version-isnt-yet-supported.md
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work 
@@ -207,21 +181,15 @@ items:
     - name: Sync macOS device
       href: sync-your-device-manually-macos.md
     - name: Manage Company Portal preferences
-      href: intune-company-portal-preferences-macos.md
-  - name: Update device settings
-    items:
-    - name: My version of macOS isn't yet supported
-      href: your-macos-version-isnt-yet-supported.md
-    - name: Update operating system version 
-      href: you-need-to-update-your-macos-device.md
-    - name: Device assigned to someone else
-      href: unable-to-get-macOS-device-managed.md 
-    - name: Help for JAMF-managed devices in Intune
-      href: device-little-different-jamf.md
+      href: intune-company-portal-preferences-macos.md  
+    - name: Update macOS device settings         
+      href: update-device-settings-mac.md  
   - name: Get help
     items:
     - name: Report a problem  
-      href: send-errors-macos.md
+      href: send-errors-macos.md  
+    - name: Help for JAMF-managed devices in Intune
+      href: device-little-different-jamf.md  
 - name: Windows device management
   items:
   - name: Enrollment
@@ -285,10 +253,12 @@ items:
     href: check-status-company-portal-website.md 
   - name: Manage apps
     href: manage-apps-cpweb.md
-  - name: Store recovery key
+  - name: Store recovery key for Mac
     href: store-recovery-key.md
-  - name: Get recovery key
+  - name: Get recovery key for Mac
     href: get-recovery-key-cpweb.md
+  - name: Get recovery key for Windows 
+    href: get-recovery-key-windows.md  
   - name: Remote lock device
     href: remote-lock-your-device-cpwebsite.md
   - name: Rename device

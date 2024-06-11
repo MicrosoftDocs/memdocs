@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 
 # optional metadata

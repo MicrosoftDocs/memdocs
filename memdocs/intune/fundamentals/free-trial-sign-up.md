@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 05/13/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -85,7 +85,11 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 
    :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-06.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Sign in" border="true":::
 
-8. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
+8. In order to verify your identity, you must add a payment method. Your card is only used for verification purposes and won't be charged until you buy something.
+
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-06a.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Add payment method" border="true":::
+
+9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
    :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-07.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Confirmation details" border="true":::
 
@@ -139,15 +143,19 @@ As mentioned above, if your organization has its own custom domain that you want
 
 1. Go to [Microsoft 365 admin center](https://admin.microsoft.com) and sign in using your administrator account.
 
-2. In the navigation pane, choose **Setup** > **Domains** > **Add domain**.
+2. In the navigation pane, choose **Setup**.
 
-3. Type your custom domain name. Then, select **Next**.
+3. On the page in the **Sign-in and security** section,  select **Get your custom domain set up**.
+
+4. Select **Get started** to set up your custom domain.
+
+5. Type your domain name. Then, select **Use this domain**.
 
    ![Screenshot of Microsoft 365 admin center - Add domain](./media/free-trial-sign-up/domain-custom-add.png)
 
-4. Verify that you are the owner of the domain that you entered in the previous step.
+6. Verify that you are the owner of the domain that you entered in the previous step.
 
-    Selecting **send code via email** will send an email to the registered contact of your domain. After you receive the email, copy the code and enter it in the field labeled **Type your verification code here**. If the verification code matches, the domain will be added to your tenant. The email displayed may not look familiar. Some registrars hide the real email address. Also, the email address may be different than what was provided when the domain was registered.
+   Select the method that you will use to verify your domain.
 
    ![Screenshot of Microsoft 365 admin center - Verify domain](./media/free-trial-sign-up/domain-custom-verify.png)
 

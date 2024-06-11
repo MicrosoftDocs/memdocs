@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 09/18/2023
+ms.date: 04/24/2024
 ms.localizationpriority: high
 ---
 
@@ -12,12 +12,12 @@ ms.localizationpriority: high
 
 - Apple iOS 15.0 and later
 - Apple iPadOS 15.0 and later
-- macOS 11.0 and later
+- macOS 12.0 and later
 
 > [!NOTE]
-> Intune requires iOS 14.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
+> Intune requires iOS 15.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
 >
-> For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 14.x or later.  
+> For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 15.x or later.  
 
 In the context of userless iOS/iPadOS devices, there's a difference between *supported* OS versions and *allowed* OS versions. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://techcommunity.microsoft.com/t5/intune-customer-success/support-statement-for-supported-versus-allowed-ios-ipados/ba-p/3484657).  
 

@@ -60,7 +60,7 @@ First, you need to make note of the **Microsoft Entra tenant name** and **tenant
 
     - **Name**: A friendly name for the app. For example, `CMG-ServerApp`.
     - **Supported account types**: Leave this setting as the default option, **Accounts in this organizational directory only**.
-    - **Redirect URI**: Leave this optional value blank.
+    - **Redirect URI**: Select: **Public client/native (mobile &desktop)** and type **http://localhost** as URI
 
 1. Select **Register** to create the app.
 
@@ -92,7 +92,7 @@ First, you need to make note of the **Microsoft Entra tenant name** and **tenant
 
 1. In the menu of the app properties, select **Expose an API**.
 
-    1. For the Application ID URI, select **Set**. Specify a URI that's unique for the tenant. You'll use this value later as the _App ID URI_. Use one of the following recommended formats:<!-- 10617402 -->
+    1. For the Application ID URI, select **Add**. Specify a URI that's unique for the tenant. You'll use this value later as the _App ID URI_. Use one of the following recommended formats:<!-- 10617402 -->
 
        - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
        - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`

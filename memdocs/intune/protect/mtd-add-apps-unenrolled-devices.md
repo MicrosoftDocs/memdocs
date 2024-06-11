@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -46,11 +45,11 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (CylancePROTECT for Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
+> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
 > - Lookout for Work (Android, iOS/iPadOS)
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Trellix Mobile Security (Android, iOS/iPadOS)
-> - Wandera (Android, iOS/iPadOS)
 > - Zimperium (Android, iOS/iPadOS)
 >
 > For unenrolled devices, you **do not need an iOS app configuration policy** that sets up the Mobile Threat Defense for iOS app you use with Intune. This is a key difference compared to Intune enrolled devices.
@@ -97,6 +96,14 @@ However, should you wish to make the app available to end users via the Intune C
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Harmony Mobile Protect - App Store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) when completing the **Configure app information** section.
 
+### Making Jamf available to end users
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Jamf Trust - Play Store URL](https://play.google.com/store/apps/details?id=com.wandera.android) when completing the **Configure app information** section.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Jamf Trust - App Store URL](https://apps.apple.com/us/app/jamf-trust/id1608041266) when completing the **Configure app information** section.
+
 ### Making Lookout for Work available to end users
 
 - **Android**  
@@ -126,14 +133,6 @@ However, should you wish to make the app available to end users via the Intune C
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Trellix Mobile Security - Play Store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision&hl=en_CA&gl=US) when completing the **Configure app information** section.
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Trellix Mobile Security - App Store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) when completing the **Configure app information** section.
-
-### Making Wandera available to end users
-
-- **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.wandera.android) when completing the **Configure app information** section.
-
-- **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile - App Store URL](https://itunes.apple.com/app/wandera/id605469330) when completing the **Configure app information** section.
 
 ### Making Zimperium available to end users
 

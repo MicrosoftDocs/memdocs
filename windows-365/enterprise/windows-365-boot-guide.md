@@ -12,7 +12,6 @@ ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -45,7 +44,7 @@ For more information about guided scenarios in general, see [Intune guided scena
 
 ## Prerequisites
 
-- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.2361 or later.
+- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.3227 or later.
 - You must have the Intune Service Administrator role.
 
 Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).
@@ -83,7 +82,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 3. **Boot device mode**: Select one of the following options:
 
    - **Shared PC mode**: For physical devices shared by multiple users
-   - **Dedicated mode** ([preview](../public-preview.md)): For a physical device used by one specific user.
+   - **Dedicated mode**: For a physical device used by one specific user.
 
 4. Select **Next: Endpoint updates**.
 
@@ -103,7 +102,7 @@ Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopa
 2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
 3. (Optional) Select the **Security baseline profile** to use for Windows 365 Boot physical devices.
 4. (Optional) Select a value for the **Set the maximum connection timeout value** for Windows 365 Boot. The operating system waits for a connection until the selected timeout value has been reached. For more information, see [SetMaxConnectionTimeout policy CSP](/windows/client-management/mdm/policy-csp-clouddesktop#setmaxconnectiontimeout).
-5. (Optional) (This feature is in [public preview](../public-preview.md).) If you want to customize the branding shown at the top of the sign-in screen, provide any or all of the following information:
+5. (Optional) If you want to customize the branding shown at the top of the sign-in screen, provide any or all of the following information:
     - **Company name**
     - **Company logo URL**
     - **Lock screen image URL**

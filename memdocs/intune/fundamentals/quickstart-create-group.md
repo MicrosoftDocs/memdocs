@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/30/2023
+ms.date: 06/07/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 723f4b4e-3090-4811-84ff-6af652abea5a
 
 # optional metadata
@@ -49,7 +48,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 
 ## Sign in to the Microsoft Intune admin center
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a group
 

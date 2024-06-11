@@ -107,8 +107,8 @@ As an Intune administrator, use these compliance settings to help protect your o
   > [!NOTE]
   > On the legacy Android platform, this feature is a compliance setting. Intune can only check whether this setting is enabled at the device level.
 
-- **Play Integrity Verdict**  
-  Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+- **Play integrity verdict**  
+  Enter the level of Google's [Play Integrity](https://developer.android.com/google/play/integrity) that must be met. Your options:
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
@@ -178,6 +178,8 @@ As an Intune administrator, use these compliance settings to help protect your o
 - **Restricted apps**  
   Enter the **App name** and **App bundle ID** for apps that should be restricted, and then select **Add**. A device with at least one restricted app installed is marked as non-compliant.
 
+  To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
 ### Password
 
 The available settings for passwords vary by the version of Android on the device.
@@ -211,11 +213,11 @@ The available settings for passwords vary by the version of Android on the devic
     - Pattern
     - Numeric PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
   - **Medium** - The password satisfies one of the following conditions:
-    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Numeric PIN doesn't have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
     - Alphabetic, with a minimum length of 4.
     - Alphanumeric, with a minimum length of 4.
   - **High** - The password satisfies one of the following conditions:
-    - Numeric PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Numeric PIN doesn't have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 

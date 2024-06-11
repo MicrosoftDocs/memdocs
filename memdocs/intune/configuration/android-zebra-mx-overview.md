@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2023
+ms.date: 04/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -85,7 +84,7 @@ The following steps provide an overview. For specific details, go to Zebra's doc
 Continue to publish the profile, and consume it with the StageNow app on the device. The Company Portal app is installed and opened on the device.
 
 > [!TIP]
-> For more information on StageNow, and what it does, go to [StageNow Android device staging](https://www.zebra.com/us/en/products/software/mobile-computers/mobile-app-utilities/stagenow.html) (opens Zebra's web site).
+> To learn more about StageNow, go to [StageNow Android device staging](https://www.zebra.com/us/en/software/mobile-computer-software/stagenow.html) (opens Zebra's web site).
 
 ## Step 2 - Confirm the Company Portal app has device administrator role
 

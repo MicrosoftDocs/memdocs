@@ -8,8 +8,8 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 01/18/2024
-ms.collection: 
+ms.date: 06/11/2024
+ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
@@ -18,18 +18,18 @@ ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
-  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>  
+  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
 ---
 
 # Configure Autopilot profiles
 
-After the [device group](enrollment-autopilot.md) is created, a Windows Autopilot deployment profile can be applied to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for end users.
+After the [device group](enrollment-autopilot.md) is created, a Windows Autopilot deployment profile can be applied to each device in the group. Deployment profiles determine the deployment mode, and customize the out-of-box experience (OOBE) for end users.
 
 Autopilot profiles can be created via:
 
-1. [Microsoft Admin Center](https://admin.microsoft.com/)
-1. [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-1. [Intune graph](/graph/api/resources/intune-graph-overview)
+1. [Microsoft 365 admin center](https://admin.microsoft.com/).
+1. [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. [Intune graph](/graph/api/resources/intune-graph-overview).
 
 For Intune managed devices, pre-provisioning, self-deploying, and co-management profiles can only be created and assigned in Intune.
 
@@ -39,7 +39,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
-1. On the **Basics** page, type a **Name** and optional **Description**.
+1. On the **Basics** page, enter a **Name** and optional **Description**.
 
     :::image type="content" source="images/create-profile-basics.png" alt-text="Screenshot of Basics page.":::
 
@@ -47,7 +47,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
     > [!NOTE]
     >
-    > Using the setting **Convert all targeted devices to Autopilot** doesn't automatically convert existing Microsoft Entra hybrid device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+    > Using the setting **Convert all targeted devices to Autopilot** doesn't automatically convert existing Microsoft Entra hybrid device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Autopilot service.
 
 1. Select **Next**.
 
@@ -55,7 +55,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 
     - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
-    - **Self-deploying (preview)**: Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When self-deploying mode is used, only compliance policies targeting the device are applied.
+    - **Self-deploying**: Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When self-deploying mode is used, only compliance policies targeting the device are applied.
 
     :::image type="content" source="images/create-profile-out-of-box.png" alt-text="Screenshot of OOBE page.":::
 
@@ -94,16 +94,12 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
         > Language and keyboard settings requires ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection.
 
     - **Apply device name template** (requires Microsoft Entra join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. Only a prefix can be provided for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).
-  
+
 1. Select **Next**.
 
 1. On the **Assignments** page, choose **Selected groups** for **Assign to**.
 
     :::image type="content" source="images/create-profile-assignments.png" alt-text="Screenshot of Assignments page.":::
-
-    > [!NOTE]
-    >
-    > When the assignment **All Devices** is used, exclusions aren't supported. Attempting to exclude groups while targeting to all devices can cause assignment problems and can require uploading device hashes again.
 
 1. Choose **Select groups to include**, and choose the groups to include in this profile.
 
@@ -184,7 +180,7 @@ The following articles are tutorials on configuring and assigning a Windows Auto
 - [Pre-provision Microsoft Entra hybrid join: Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile](tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md).
 - [Self-deploying mode: Create and assign self-deploying Autopilot profile](tutorial/self-deploying/self-deploying-autopilot-profile.md).
 
-## Related articles
+## Related content
 
 - [Profile download](troubleshooting.md#profile-download).
 - [Registering devices](add-devices.md).

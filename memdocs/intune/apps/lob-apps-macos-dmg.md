@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -31,11 +30,13 @@ ms.collection:
 - M365-identity-device-management
 - macOS
 - highpri
+- FocusArea_Apps_LOB
+- FocusArea_Apps_MacOS
 ---
 
 # Add a macOS DMG app to Microsoft Intune
 
-Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple’s website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
+Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple's website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
 
 > [!NOTE]
 > The DMG file must contain one or more files with .app extensions. DMG files containing other types of installer files will not be installed.
@@ -112,16 +113,16 @@ You can use detection rules to choose how an app installation is detected on a m
 > [!NOTE]
 >
 > - The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file. 
-> - Mac Terminal can be used to lookup and confirm the included app details of an installed app.
->   For example, to look up the bundle ID and build number of Company Portal, run the following:
+> - Mac Terminal can be used to lookup and confirm the included app details of an installed app. For example, to look up the bundle ID and build number of Company Portal, run the following:
 >
->   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier```
+>   `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`
 >
 >   Then, run the following:
 >
->   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString```
+>   `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString`
 >
 > - Alternatively, the `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of a mounted DMG file on a Mac.
+> - For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../apps/get-app-bundle-id-intune-admin-center.md).
 
 ## Step 4 – Select scope tags (optional)
 
