@@ -49,7 +49,7 @@ The DFCI management lifecycle includes the following processes:
 
 See the following figure:
 
-:::image type="content" source="images/dfci.png" alt-text="Device Firmware Configuration Interface (DFCI) Management workflow":::
+:::image type="content" source="images/dfci.png" alt-text="Screenshot that shows Device Firmware Configuration Interface (DFCI) Management workflow":::
 
 ## Requirements
 
