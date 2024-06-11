@@ -30,7 +30,7 @@ Ideally, the OEM, reseller, or distributor from which the device was purchased p
 
 The following diagram shows how manual registration and OEM registration might be used to deploy both new and existing devices with Windows Autopilot.
 
-:::image type="content" source="images/image2.png" alt-text="Windows Autopilot device registration process.":::
+:::image type="content" source="images/image2.png" alt-text="Screenshot that shows Windows Autopilot device registration process.":::
 
 For a list of participant device manufacturers and device resellers, see [Autopilot device manufacturers and resellers](https://www.microsoft.com/microsoft-365/windows/windows-autopilot).
 
