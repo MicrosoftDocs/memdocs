@@ -131,7 +131,7 @@ Managed software updates have precedence over other policies that configure soft
 
       If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 
-    - **Target Date Time (UTC)**: Select or enter the date and enter the time that specifies when to force the installation of the software update.
+    - **Target Date Time (UTC)**: Select or manually enter the date and the time that specifies when to force the installation of the software update.
 
       The **Target Date Time (UTC)** setting schedules the update using the UTC timezone. For example, an Admin located in Eastern US configures an update to install at 2PM UTC. Due to time conversion, the deadline for the update is actually for 7PM EST.
 
@@ -143,7 +143,7 @@ Managed software updates have precedence over other policies that configure soft
       >
       > To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
 
-    - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
+    - **Target OS Version**: Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
 8. Select **Next**.
 
