@@ -162,10 +162,6 @@ Up to 5000 Cloud PCs can be resized at a time.
 9. Remove the users from the original source Microsoft Entra group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
 10. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
-## Resize after upgrading licenses purchased through a Microsoft Customer Agreement
-
-If you have a Microsoft Customer Agreement (MCA), you can upgrade your license as explained in [Upgrade or change to a different Microsoft 365 for business plan](/microsoft-365/commerce/subscriptions/upgrade-to-different-plan). After upgrading, you can resize Cloud PCs.
-
 ## Resizing details
 
 The **Resize pending license** state has a duration of 48 hours. If the original license is removed but the new license isn't assigned within 48 hours, the device goes into a [grace period](device-management-overview.md).
@@ -197,6 +193,10 @@ For example, let's say that you used a Step-up purchase to convert licenses from
 When a Step-up conversion takes place, the stepped-up licenses show up in your inventory equaling the number of old licenses you chose to convert. If you Step-up 10 licenses of Windows 365 Enterprise 2vCPU/4GB/128 GB to 4vCPU/16 GB/128 GB, you end up with 10 more licenses of 4vCPU/16 GB/128 GB and 10 fewer licenses of 2vCPU/4GB/128 GB. These changes appear on the **Your Products** page in the Microsoft admin center.
 
 You have 90 days to migrate your users to the new 4vCPU/16 GB/128 GB licenses before they lose access to the Cloud PC provisioned with the original license. For more information about license life cycle states, see [What happens to my data and access when my subscription ends?](../subscription-ends.md)
+
+## Resize after upgrading licenses purchased through a Microsoft Customer Agreement
+
+If you have a Microsoft Customer Agreement (MCA), you can upgrade your license as explained in [Upgrade or change to a different Microsoft 365 for business plan](/microsoft-365/commerce/subscriptions/upgrade-to-different-plan). After upgrading, you can resize Cloud PCs as explained in this article.
 
 ## Resize a Cloud PC flow diagram
 
