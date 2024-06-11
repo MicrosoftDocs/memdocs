@@ -11,7 +11,7 @@ ms.subservice: co-management
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # How to prepare internet-based devices for co-management
@@ -46,7 +46,7 @@ For more information, see [Manually register devices with Windows Autopilot](/au
 ### Autopilot for existing devices
 <!--1358333-->
 
-_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows 8.1 device for [Windows Autopilot user-driven mode](/autopilot/user-driven) using a single, native Configuration Manager task sequence.
+_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows devices for [Windows Autopilot user-driven mode](/autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
 For more information, see [Windows Autopilot for existing devices](/autopilot/existing-devices).
 

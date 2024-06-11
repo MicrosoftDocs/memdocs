@@ -119,8 +119,6 @@ items:
           href: policy-conflicts.md
         - name: Known issues
           href: known-issues.md
-        - name: Resolved issues
-          href: resolved-issues.md
 
   - name: Tutorial
     items:
