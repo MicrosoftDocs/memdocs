@@ -169,6 +169,8 @@ items:
         href: watermarking.md
       - name: Restrict Office 365 access to Cloud PCs 
         href: restrict-office-365-cloud-pcs.md
+      - name: Set up forensic evidence 
+        href: forensic-evidence-set-up.md
     - name: Identity and access management
       items:
       - name: Set conditional access policies

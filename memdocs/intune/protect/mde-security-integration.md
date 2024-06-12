@@ -346,7 +346,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices. Devices that onboard to Microsoft Defender for Endpoint but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These devices can receive policies for security settings management.
+2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices. 
 
    Devices that onboard to Microsoft Defender for Endpoint and have registered but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
 
