@@ -2047,7 +2047,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Add custom Bash scripts to configure Linux devices<!-- 12508999  -->  
-In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **Linux** > **Scripts**).
+In Intune, you can add existing Bash scripts to configure Linux devices (**Devices** > **By platform** > **Linux** > **Scripts**).
 
 When you create this script policy, you can set the context that the script runs in (user or root), how frequently the script runs, and how many times execution should retry.
 

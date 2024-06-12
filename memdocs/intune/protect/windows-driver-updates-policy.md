@@ -55,7 +55,7 @@ Use the following procedure as a guide to create policies to manage driver updat
 >
 > By default, both settings use a configuration that will *allow* Windows driver updates.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Driver updates for Windows 10 and later (preview)**, and select **Create profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Driver updates** tab, and select **Create profile**.
 
    :::image type="content" source="./media/windows-driver-updates-policy/view-update-list-1.png" alt-text="A screen capture of the admin center that shows the path to create a profile for Windows Driver Updates." lightbox="./media/windows-driver-updates-policy/view-update-list-1.png":::
 
@@ -266,7 +266,7 @@ Bulk driver updates allow the user to approve, pause, or decline multiple driver
 
 #### How to use bulk driver updates
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Windows 10 and later updates** > **Driver updates** tab, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Driver updates** tab, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
 2. In the Driver Updates page, select **Bulk actions**.  
 
     :::image type="content" source="./media/windows-driver-updates-policy/bulk-actions.png" alt-text="A screen capture that shows the bulk actions button." lightbox="./media/windows-driver-updates-policy/bulk-actions.png":::
