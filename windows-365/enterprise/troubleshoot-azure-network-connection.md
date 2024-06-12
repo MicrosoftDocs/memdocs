@@ -75,6 +75,8 @@ If this check fails, make sure that you:
 
 During provisioning attempts, it’s important to consider any CanNotDelete locks that may be applied at the resource group level or above. If these locks are present, the network interfaces created in the process aren't automatically deleted. In they aren't automatically deleted, you must manually remove the vNICs before you can retry.
 
+During provisioning attempts, it’s important to consider any existing locks at the resource group level or above. If these locks are present, the network interfaces created in the process won't be automatically deleted. In the event this occurs, you must manually remove the vNICs before you can retry.
+
 ## Azure tenant readiness
 
 When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we’re unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
