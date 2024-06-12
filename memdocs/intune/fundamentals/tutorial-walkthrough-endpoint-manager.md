@@ -115,7 +115,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../protect/conditional-access.md)
 
-6. From the navigation pane, select **Devices** > **Configuration** to display details about device profiles in Intune.
+6. From the navigation pane, select **Devices** > **Manage devices** > **Configuration** to display details about device profiles in Intune.
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Configuration profiles." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png":::
 
