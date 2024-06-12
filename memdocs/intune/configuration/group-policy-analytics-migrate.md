@@ -121,7 +121,7 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
 
 9. In **Review + deploy**, review your settings.
 
-    When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Configuration** list.
+    When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Manage devices** > **Configuration** list.
 
 The next time any device within your assigned groups checks for configuration updates, the settings you configured are applied.
 
