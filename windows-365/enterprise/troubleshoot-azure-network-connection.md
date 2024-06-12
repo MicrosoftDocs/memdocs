@@ -62,16 +62,18 @@ If provisioning fails, make sure that:
 
 ## Azure subnet IP address range usage
 
-As part of the ANC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC, provisioning creates a virtual NIC and consume an IP address from the subnet.  
+As part of the ANC setup, you're required to provide a subnet to which the Cloud CP will connect. For each Cloud PC, provisioning creates a virtual NIC and consumes an IP address from this subnet.
 
-Make sure that there's sufficient IP Address allocation available for the volume of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.  
+Make sure that there's sufficient IP Address allocation available for the numlber of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.  
 
 If this check fails, make sure that:
 
 - You check the subnet in Azure Virtual Network. It should have enough address space available.  
 - There are enough address to handle three provisioning retries, each of which may hold onto the network addresses used for a few hours.  
-- You clean out any unused vNICs and IP addresses. It’s best to use a dedicated subnet for Cloud PCs only to make sure that no other services are eating allocation.  
-- You expand the subnet to make more addresses are available.
+- You remove any unused vNICs. It’s best to use a dedicated subnet for Cloud PCs to make sure that no other services are consuming allocation of IP addresses.  
+- You expand the subnet to make more addresses are available. This can't be completed if there devices connected.
+
+During provisioning attempts, it’s important to consider any CanNotDelete locks that may be applied at the resource group level or above. If these locks are present, the network interfaces created in the process won't be automatically deleted. In the event this occurs, you must manually remove the vNICs before you can retry.
 
 ## Azure tenant readiness
 
