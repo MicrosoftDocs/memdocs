@@ -89,7 +89,7 @@ The *Collect diagnostics* remote action is supported for:
 To use the *Collect diagnostics* action:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows** > select a supported device.
+2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. On the device’s **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device’s **Overview** page.
 4. To see the status of the action, select **Device diagnostics monitor**.
 5. After the  action completes, select **Download** in the row for the action > **Yes**.
@@ -103,7 +103,7 @@ To use the *Collect diagnostics* action:
 To view the diagnostics collected after an Autopilot failure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows**.
+2. Navigate to **Devices** > **By platform** > **Windows**.
 3. Select a device.
 4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.

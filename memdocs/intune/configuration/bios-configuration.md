@@ -95,7 +95,7 @@ For information on these features, go to:
 This policy is where you add the configuration file you created.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create** > **New policy**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
@@ -136,7 +136,7 @@ The next time each device checks in, the policy applies.
 
 In the Intune admin center, after you create a policy, you can monitor its status, and see any errors.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Policies**.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
 2. Select the policy you want to monitor. The **Device status** report shows the status of the policy, and shows any error details for troubleshooting.
 
 For more information, go to:
@@ -212,7 +212,7 @@ The following table compares these options.
 | **Blocks access to BIOS menu** | Yes, via BIOS passwords | Yes, via certificates |
 | **Configuration during Windows Autopilot** | In the Enrollment Status Page (ESP) settings, select the OEM Win32 app. | Intune automatically enrolls the device in DFCI mgmt. |
 | **Reporting** | Reports if the configuration file applied. | Granular report for each setting you configure. |
-| **Intune policy type** | **Devices** > **Configuration** > **Templates** > **BIOS configuration and other settings** | **Devices** > **Configuration** > **Templates** > **Device Firmware Configuration Interface** |
+| **Intune policy type** | **Devices** > **Manage devices** > **Configuration** > **Templates** > **BIOS configuration and other settings** | **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device Firmware Configuration Interface** |
 
 For information on DFCI, go to:
 
