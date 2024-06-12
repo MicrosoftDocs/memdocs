@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -115,7 +115,7 @@ Endpoint Privilege Management doesn’t manage elevation requests by users that 
 
 ### What files can be elevated to administrator?
 
-Endpoint Privilege Management supports executable files. Microsoft is currently working on extending support for other file types (MSI, etc.) and providing an easy method to elevate common operating system tasks.
+Endpoint Privilege Management supports executable files including those with the `.msi` extension and `.ps1` PowerShell scripts.
 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 
