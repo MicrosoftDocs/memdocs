@@ -235,7 +235,7 @@ In the Intune admin center, you created new security groups, and added existing 
 
 In this section, we create an administrative template in Intune, look at some settings in **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
-1. In the Intune admin center, select **Devices** > **Configuration** > **Create**.
+1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.

@@ -133,7 +133,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 ## Create a profile using your imported files
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.

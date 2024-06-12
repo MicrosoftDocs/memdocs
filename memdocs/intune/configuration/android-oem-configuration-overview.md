@@ -131,7 +131,7 @@ You get the OEMConfig app from the Managed Google Play Store, add the app to Int
 After the app is added to Intune, you create an OEMConfig profile to configure the features defined in the app.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.

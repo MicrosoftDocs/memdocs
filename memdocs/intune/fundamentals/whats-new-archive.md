@@ -2312,7 +2312,7 @@ When you assign an app or policy, you can filter the assignment using different 
 After you create a filter, there's a new **Associated Assignments tab**. This tab shows all the policy assignments, the groups that receive the filter assignments, and if the filter is using **Exclude** or **Include**:
 
 1. Sign in to the Microsoft Intune admin center.
-2. Go to **Devices** > **Filters** > Select an existing filter > **Associated Assignments tab**.
+2. Go to **Devices** > **Organize devices** > **Filters** > Select an existing filter > **Associated Assignments tab**.
  
 For more information on filters, go to:
 
@@ -4141,7 +4141,7 @@ Applies to:
 - macOS
 
 #### New search feature in Preview devices when creating a filter<!-- 14921046 -->
-In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create filters, and then use these filters when assigning apps and policies (**Devices** > **Filters** > **Create**).
+In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create filters, and then use these filters when assigning apps and policies (**Devices** > **Organize devices** > **Filters** > **Create**).
 
 When you create a filter, you can select **Preview devices** to see a list of enrolled devices that match your filter criteria. In **Preview devices**, you can also search through the list using the device name, OS version, device model, device manufacturer, user principal name of the primary user, and device ID.
 
