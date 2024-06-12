@@ -107,13 +107,13 @@ Up to three compliance policies and up to six configuration profiles (three for 
 
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Basics Edit** > **Name**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Compliance** > policy name_O365_i > **Properties** > **Basics Edit** > **Name**
-- **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Basics Edit** > **Name**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Compliance** > policy name_O365_A > **Properties** > **Basics Edit** > **Name**
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > policy name_O365_W > **Properties** >  **Basics Edit** > **Name**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Configuration**> policy name_O365_i > **Properties** > **Basics Edit** > **Name**
-- **Devices** > **Android** > **Configuration** > policy name_O365_A > **Properties** > **Basics Edit** > **Name**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > policy name_O365_A > **Properties** > **Basics Edit** > **Name**
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > policy name_O365_W_Email > **Properties** >  **Basics Edit** > **Name**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Configuration**> policy name_O365_i_Email > **Properties** > **Basics Edit** > **Name**
-- **Devices** > **Android** > **Configuration** > policy name_O365_A_Email > **Properties** > **Basics Edit** > **Name**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > policy name_O365_A_Email > **Properties** > **Basics Edit** > **Name**
 
 ### Description
 
@@ -121,13 +121,13 @@ Up to three compliance policies and up to six configuration profiles (three for 
 
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance** > policy name_O365_W > **Properties** >  **Basics Edit** > **Description**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Compliance** > policy name_O365_i > **Properties** > **Basics Edit** > **Description**
-- **Devices** > **Android** > **Compliance** > policy name_O365_A > **Properties** > **Basics Edit** > **Description**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Compliance** > policy name_O365_A > **Properties** > **Basics Edit** > **Description**
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > policy name_O365_W > **Properties** >  **Basics Edit** > **Description**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Configuration**> policy name_O365_i > **Properties** > **Basics Edit** > **Description**
-- **Devices** > **Android** > **Configuration** > policy name_O365_A > **Properties** > **Basics Edit** > **Description**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > policy name_O365_A > **Properties** > **Basics Edit** > **Description**
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > policy name_O365_W_Email > **Properties** >  **Basics Edit** > **Description**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Configuration**> policy name_O365_i_Email > **Properties** > **Basics Edit** > **Description**
-- **Devices** > **Android** > **Configuration** > policy name_O365_A_Email > **Properties** > **Basics Edit** > **Description**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > policy name_O365_A_Email > **Properties** > **Basics Edit** > **Description**
 
 ## Related article
 
