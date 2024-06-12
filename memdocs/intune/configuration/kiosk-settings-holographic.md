@@ -94,7 +94,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       For more information on these options, go to [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10** for platform > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
+      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device restrictions profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10** for platform > **Templates** > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
 
     - **Add Kiosk browser**: Not supported on Windows Holographic for Business.
 
