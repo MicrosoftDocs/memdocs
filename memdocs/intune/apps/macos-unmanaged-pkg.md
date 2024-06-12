@@ -128,7 +128,7 @@ You can use detection rules to choose how an app installation is detected on a m
 
 > [!TIP]
 >
-> - The `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of an installed app on a Mac.
+> The `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of an installed app on a Mac.
 > 
 > Alternatively, Mac Terminal can be used to look up and confirm the included app details of an installed app at a known location.
 > 
