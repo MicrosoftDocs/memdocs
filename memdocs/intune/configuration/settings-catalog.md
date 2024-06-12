@@ -88,7 +88,7 @@ For information on some features you can configure using the settings catalog, g
 You can create the policy using the settings catalog profile type.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.

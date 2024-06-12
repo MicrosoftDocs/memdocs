@@ -275,7 +275,7 @@ After the app is deployed and installed:
 After the email app is assigned to the device, this next step creates the device configuration policy that configures the email connection. If your email app uses an app configuration policy to configure the app, then skip this step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select the platform of your devices. Your options:  
