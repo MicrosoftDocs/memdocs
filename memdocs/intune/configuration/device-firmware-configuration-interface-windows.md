@@ -177,7 +177,7 @@ After wiping the device, move the device to the group assigned the new DFCI and 
 
 When you're ready to retire the device and release it from management, update the DFCI profile to the UEFI (BIOS) settings you want at the exit state. Typically, you want all settings enabled. For example:
 
-1. In the Intune admin center, open your DFCI profile (**Devices** > **Configuration**).
+1. In the Intune admin center, open your DFCI profile (**Devices** > **Manage devices** > **Configuration**).
 2. Change the **Allow local user to change UEFI (BIOS) settings** to **Only not configured settings**.
 3. Set all other settings to **Not configured**.
 4. Save your settings.

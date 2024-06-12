@@ -239,7 +239,7 @@ In this section, we create an administrative template in Intune, look at some se
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Administrative Templates**.
+    - **Profile type**: Select **Templates** > **Administrative Templates**.
 
 3. Select **Create**.
 4. In **Basics**, enter the following properties:
@@ -380,12 +380,12 @@ In the Intune admin center, you created an administrative template device config
 
 In this section, you create a OneDrive admin template in Intune to control some settings. These specific settings are chosen because they're commonly used by organizations.
 
-1. Create another profile (**Devices** > **Configuration** > **Create**).
+1. Create another profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**).
 
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Administrative templates**.
+    - **Profile type**: Select **Templates** > **Administrative templates**.
 
 3. Select **Create**.
 4. In **Basics**, enter the following properties:
@@ -505,7 +505,7 @@ This section uses the following resources. We install these resources in this se
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
     ```
 
-    When these cmdlets succeed, the profile is created. To confirm, go to the Intune admin center > **Devices** > **Configuration**. Your **Test Configuration** profile should be listed.
+    When these cmdlets succeed, the profile is created. To confirm, go to the Intune admin center > **Devices** > **Manage devices** > **Configuration**. Your **Test Configuration** profile should be listed.
 
 10. Get all the SettingDefinitions. Enter:
 
@@ -535,7 +535,7 @@ This section uses the following resources. We install these resources in this se
 
 ### See your policy
 
-1. In the Intune admin center > **Devices** > **Configuration** > **Refresh**.
+1. In the Intune admin center > **Devices** > **Manage devices** > **Configuration** > **Refresh**.
 2. Select your **Test Configuration** profile > **Settings**.
 3. In the drop-down list, select **All products**.
 
