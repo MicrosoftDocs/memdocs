@@ -54,7 +54,7 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 - Licensing options
   - Microsoft 365 E5
   - Microsoft 365 E5 Compliance
-  - Microsoft 365 F5 Insider Risk Management
+  - Microsoft 365 E5 Insider Risk Management
 - Join type and network
   - [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) with Microsoft hosted network and Azure network connections
   - [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join) with Azure network connection
