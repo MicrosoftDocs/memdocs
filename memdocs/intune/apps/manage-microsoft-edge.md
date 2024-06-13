@@ -609,14 +609,11 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com: /*`
 
 ### Control the behavior of the Site Blocked popup
-When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites，depending on the AllowTransitionOnBlock and OpenInPrivateIfBlocked policy configurations. You can choose preferences between InPrivate and personal account.
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account  when it is signed in.<br>**2**: Automatically switch to personal account if it is signed in and InPrivate is simultaneously enabled.<br>**3**:Automatically switch to InPrivate if it is signed in and InPrivate is simultaneously enabled. |
-
-> [!NOTE]
-> AutoTransitionModeOnBlock policy is currently only avaiable to Edge for iOS.
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.<br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
 
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
