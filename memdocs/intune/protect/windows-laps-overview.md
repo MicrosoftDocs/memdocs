@@ -166,11 +166,11 @@ When a device is deleted in Microsoft Entra, the LAPS credential that was tied t
 
 ### What roles are needed to recover LAPS passwords?
 
-The following [built-in Microsoft Entra roles](../entra/identity/role-based-access-control/permissions-reference.md) have permission to recover LAPS passwords: *Cloud Device Administrator*, and *Intune Service Administrator*.
+The following [built-in Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference) have permission to recover LAPS passwords: *Cloud Device Administrator*, and *Intune Service Administrator*.
 
 ### What roles are needed to read LAPS metadata?
 
-The following [built-in Microsoft Entra roles](../entra/identity/role-based-access-control/permissions-reference.md) roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation:
+The following [built-in Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference) roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation:
 
 - *Security Reader*
 

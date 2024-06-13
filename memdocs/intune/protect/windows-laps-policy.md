@@ -129,7 +129,7 @@ To view account and password details, an account must have one of the following 
 
 Use the following methods to grant accounts these permissions:
 
-- Assign the following [built-in Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference.md):
+- Assign the following [built-in Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference):
   - *Cloud Device Administrator*
 
 Create and assign a custom role in Microsoft Entra ID that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
