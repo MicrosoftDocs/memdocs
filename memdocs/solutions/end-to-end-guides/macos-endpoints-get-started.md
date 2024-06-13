@@ -234,11 +234,12 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md).
 
-  # [Platform SSO (preview)](#tab/psso)
+  # [Platform SSO](#tab/psso)
 
   Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
 
-  For more information on Platform SSO, including a step-by-step guide, go to [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune/configuration/platform-sso-macos.md). For information about Platform SSO on Apple's website, go to [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website).
+  - For more information on Platform SSO, including a step-by-step guide, go to [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune/configuration/platform-sso-macos.md).
+  - For information about Platform SSO on Apple's website, go to [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website).
 
   ---
 
