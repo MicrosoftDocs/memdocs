@@ -98,6 +98,7 @@ When working with scope tags, remember these details:
   The following Intune objects are exceptions to this rule and don't currently support scope tags:
   - Corp Device Identifiers
   - Autopilot Devices
+  - Devices synchronized with Cloud Attach
   - Device compliance locations
   - Jamf devices
 - Volume Purchase Program (VPP) apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
