@@ -309,7 +309,7 @@ To find your tenant location (or Azure Scale Unit (ASU), sign in to the [Microso
 
 ## Microsoft Store
 
-Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – need access to these endpoints.
+Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – need access to these endpoints on tcp ports 80 and 443 through your firewall.
 
 **Microsoft Store API (AppInstallManager):**
 
