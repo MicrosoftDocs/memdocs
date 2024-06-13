@@ -155,7 +155,7 @@ Follow up on imported devices to ensure that they enroll in Intune. After you ad
 
 * **Enrolled**: The device completed enrollment.  
 * **Not contacted**: The device hasn't made contact with the Microsoft Intune service. 
-* **Not applicable**: 
+* **Not applicable** 
 * **Failed**: The device did not complete enrollment.  
 
 ## Delete corporate identifiers
