@@ -45,7 +45,10 @@ As part of the connection process, the Windows 365 service is granted the follow
 
 To create an ANC, you must meet these requirements:
 
-- Have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+- Have one of the following roles:
+    - [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator).
+    - [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference).
+    - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator). Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 - Have an Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (hybrid Microsoft Entra join ANCs only).
 - Have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 - If you want to create an ANC with a network or resource group that was never used in any pervious ANC creation, then you must have the Subscription owner or user administrator role.

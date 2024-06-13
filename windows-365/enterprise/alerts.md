@@ -44,9 +44,12 @@ To see alerts, your account must meet the following requirements:
 
 - Windows 365 Enterprise
 - One of the following roles:
-  - Global administrator
   - Intune administrator
   - Windows 365 administrator
+  - Global administrator
+  
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## View alerts
 

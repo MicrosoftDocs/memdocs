@@ -99,7 +99,10 @@ To manually trigger a full health check, sign in to the [Microsoft Intune admin 
 
 The ANC wizard requires access to Azure and, optionally, on-premises domain resources. The following permissions are required for the ANC:
 
-- [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+- One of hte following roles:
+  - [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator)
+  - [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference)
+  - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator). Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (Microsoft Entra hybrid join ANCs only).
 
 To create or edit an ANC, you must at least have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
