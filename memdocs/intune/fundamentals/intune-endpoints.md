@@ -137,6 +137,10 @@ In this section, the following tables list the Intune dependencies and the ports
 - [Apple dependencies](#apple-dependencies)
 - [Android AOSP dependencies](#android-aosp-dependencies)
 
+### Organizational messages
+
+170 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR>`contentauthassetscdn-prod.azureedge.net`<BR>`contentauthassetscdn-prodeur.azureedge.net`<BR>`contentauthrafcontentcdn-prod.azureedge.net`<BR>`contentauthrafcontentcdn-prodeur.azureedge.net`<BR> | **TCP:** 443|
+
 #### Windows Push Notification Services (WNS) dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
@@ -164,6 +168,13 @@ For Delivery Optimization metadata:
 
 - \*.dl.delivery.mp.microsoft.com
 - \*.emdl.ws.microsoft.com
+
+### Windows update for Business deployment service
+
+ID |Desc |Category |ER |Addresses |Ports|Notes|
+-- |-- |-----|--- | --------------| --------------------------------|------------|
+181 | Need to add| Default<BR>Required | False |`devicelistenerprod.microsoft.com`<BR>`devicelistenerprod.eudb.microsoft.com`<BR>`login.windows.net`<BR>`payloadprod*.blob.core.windows.net`<BR> | **TCP:** 443|
+187 | need to add | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
 
 #### Apple dependencies
 
