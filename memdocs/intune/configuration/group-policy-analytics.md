@@ -167,7 +167,7 @@ Even though Group Policy analytics can parse the CSPs, there are some things you
 
 ## Group Policy migration readiness report
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics**:
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Device management** > **Group policy analytics**:
 
     :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
 

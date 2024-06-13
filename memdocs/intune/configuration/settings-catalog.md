@@ -226,13 +226,13 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 1. Go to **Devices** > **Manage devices** > **Configuration**.
 
-2. To export an existing policy, select the profile > select the ellipsis context menu (`…`) > **Export JSON**:
+2. To export an existing policy, select the Windows settings catalog policy > select the ellipsis context menu (`…`) > **Export JSON**:
 
     :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to export a settings catalog policy as JSON in Microsoft Intune and Intune admin center.":::
 
 3. To import a previously exported settings catalog policy, select **Create** > **Import policy**:
 
-    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/import-settings-catalog-policy.png":::
 
     Select the JSON file you exported and name your new policy. **Save** your changes.
 
