@@ -49,19 +49,19 @@ To use the *Collect diagnostics* action:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*.
-3. On the **Summary** page, select **App Protection** >  **Checked-in**
-4. Find the application to collect diagnostics on and click the **"..."** option and select **Collect diagnostics**
-5. When prompted, select **Yes**
+3. On the **Summary** page, select **App Protection** >  **Checked-in**.
+4. Find the application to collect diagnostics on and use the **"..."** option to select **Collect diagnostics**.
+5. When prompted, select **Yes**.
 
 To check status of the *Collect diagnostics* action:
 
-1. On the "App Protection" summary, click **refresh**
-2. Find the application you want status for and click the hyperlink in the Diagnostic Status column
+1. On the "App Protection" summary, select **refresh**.
+2. Find the application you want the status for and select the hyperlink in the Diagnostic Status column.
 
 To download diagnostics:
 
-1. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*
-2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics
+1. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*.
+2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics.
 
 > [!IMPORTANT]
 > For Android devices, if the Company Portal isn't signed in by the user, logs will not be available for download in the Intune portal. 
