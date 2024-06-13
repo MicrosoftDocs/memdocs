@@ -105,7 +105,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 8. Configure the settings:
 
-    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer will automatically install.
+    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer automatically installs.
     - **Cloud Device ID**: Enter the printer ID. This ID is created when the printer is registered in Microsoft Entra ID using the Universal Print service. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared ID**: Enter the Shared ID of the printer. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared Name**: Enter the Shared Name of the printer. To get the name, use the [Universal Print portal](/universal-print/portal/navigate-up).
@@ -138,25 +138,25 @@ This policy includes your printer information. When you assign the policy, the p
 
 After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](device-profile-monitor.md).
 
-For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
+For information on the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
 
 ### Common issues
 
 - When you deploy the printer policy, you might get a `Error 0x8007007f (ERROR_PROC_NOT_FOUND)` message.
 
-  The `ERROR_PROC_NOT_FOUND` is a very common error, and is usually associated with the `DelayLoaded` DLLs missing or missing APIs.
+  The `ERROR_PROC_NOT_FOUND` is a common error, and is typically associated with the `DelayLoaded` DLLs missing or missing APIs.
 
   To resolve this error, make sure your Windows OS client version is supported. The supported versions are listed at the top of this article.
 
-- If a printer is removed from the Universal Print service, unshared, or if permissions are removed, then the Intune policy will fail to install the printer.
+- If a printer is removed from the Universal Print service, unshared, or if permissions are removed, then the Intune policy fails to install the printer.
 
-- Make sure the printer is discoverable on the device. If users can't discover or install the printer manually, then the Intune policy will also fail to install the printer.
+- Make sure the printer is discoverable on the device. If users can't discover or install the printer manually, then the Intune policy also fails to install the printer.
 
 - Make sure the **SharedID** and **PrinterID** are entered correctly in the Intune policy.
 
   In some cases, the PrinterID and SharedID are reversed, which prevents the printer from being discovered. For more information on these settings, go to [Create the policy](#create-the-policy) (in this article).
 
-- The Application event log may shows errors related to Universal Print.
+- The Application event log can show errors related to Universal Print.
 
 ### Enable tracing
 
