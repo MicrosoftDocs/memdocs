@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/23/2024
+ms.date: 06/11/2024
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -29,7 +29,7 @@ When devices are purchased from an OEM, the OEM can automatically register the d
 
 > [!NOTE]
 >
-> While the hardware hashes, also known as hardware IDs, are generated as part of the OEM device manufacturing process, the hardware hashes aren't generally provided directly to customers or CSP partners. Instead, the OEM should register devices on the customer's behalf. In cases where CSP partners register devices, OEMs might provide PKID information to those partners to support the device registration process.
+> While the hardware hashes, also known as hardware IDs, are generated as part of the OEM device manufacturing process, the hardware hashes aren't normally provided directly to customers or Cloud Solution Partners (CSPs). Instead, the OEM should register devices on the customer's behalf. In cases where CSPs register devices, OEMs might provide PKID information to those partners to support the device registration process.
 
 OEMs must follow [device guidelines](autopilot-device-guidelines.md) for Windows Autopilot devices.
 

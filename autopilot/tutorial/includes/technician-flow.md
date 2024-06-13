@@ -67,6 +67,6 @@ To start the technician flow, select a device that is part of the device group c
 
       - In Windows 10, select **View diagnostics**.
 
-      - In Windows 11, press the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> keys and then select **Export Logs**.
+      - In Windows 11, enter the keystroke <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd> and then select **Export Logs**.
 
       If the issue can be easily fixed, for example resolving network connectivity, then select the **Retry** button to retry provisioning the device. Otherwise if the issue can't be immediately fixed or can't be fixed without a reset, then select the **Reset** button so that the process starts over again.
