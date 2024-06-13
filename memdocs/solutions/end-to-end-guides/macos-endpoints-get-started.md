@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/29/2024
+ms.date: 06/13/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
@@ -121,7 +121,7 @@ Specifically:
 
 - To manage macOS devices, Apple requires the Intune tenant be configured with an MDM push certificate. If you currently manage iOS/iPadOS devices in this same tenant, then this step is done.
 
-- Use a Managed Apple ID with the Apple Business Manager (or Apple School Manager) instance.
+- Make sure you use a Managed Apple ID with the Apple Business Manager (or Apple School Manager) instance.
 
   **Don't use a personal Apple ID**. Management of the Apple Push Notification Service certificate is critical over the life of your device management solution. Access with a personal Apple ID can become unavailable, as staff does change over time.
 
@@ -207,15 +207,15 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
 - **Part 1** - Use the [Microsoft Enterprise SSO plug-in](/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos?pivots=macos) to provide single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
 
-  There are two options for configuring SSO for Mac:
-    1. [Enterprise SSO plug-in](/mem/intune/configuration/use-enterprise-sso-plug-in-macos-with-intune). The Microsoft Enterprise SSO plug-in for Apple devices provides single sign-on (SSO) for Microsoft Entra accounts on macOS across all applications that support Apple's enterprise single sign-on feature.
-    1. [Platform SSO](/mem/intune/configuration/platform-sso-macos). This capability is available in preview and builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+  There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) and [Platform SSO](../../intune/configuration/platform-sso-macos.md).
     
-  #### [Enterprise SSO plug-in](#tab/esso)
+  # [Enterprise SSO plug-in](#tab/esso)
   
+  The Microsoft Enterprise SSO plug-in for Apple devices provides single sign-on (SSO) for Microsoft Entra accounts on macOS across all applications that support Apple's enterprise single sign-on feature.
+
   To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
 
-  - **Devices > Configuration > Create > Settings catalog > Authentication > Extensible Single Sign On (SSO)**: Add and configure the following settings:
+  - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Authentication > Extensible Single Sign On (SSO)**: Add and configure the following settings:
 
     | Name | Configuration |
     |---|---|
@@ -233,11 +233,17 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
     | disable_explicit_app_prompt | Integer | 1 |
 
   For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../intune/configuration/use-enterprise-sso-plug-in-macos-with-intune.md).
-  
-  #### [Platform SSO (preview)](#tab/psso)
 
-  Microsoft has released support for [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website) with Microsoft Entra to public preview. For more information on setting up Platform SSO, see [Configure Platform SSO for macOS devices in Microsoft Intune](/mem/intune/configuration/platform-sso-macos#step-2---create-the-platform-sso-policy-in-intune).
-  
+  # [Platform SSO](#tab/psso)
+
+  Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+
+  For more information, go to:
+
+  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune/configuration/platform-sso-macos.md)
+
+  - [Platform SSO on Apple's web site](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website)
+
   ---
 
 - **Part 2** - Use the [Intune settings catalog](../../intune/configuration/settings-catalog.md) to configure the following settings that reduce sign-in prompts, including Microsoft AutoUpdate (MAU) and Microsoft Office.
