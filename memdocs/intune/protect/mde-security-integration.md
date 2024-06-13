@@ -320,7 +320,7 @@ In Microsoft Defender for Endpoint portal, as a security administrator:
 
 ### Configure Intune
 
-In the Microsoft Intune admin center, your account need permissions equal to Endpoint Security Manager built-in Role based access control (RBAC) role.
+In the Microsoft Intune admin center, your account needs permissions equal to Endpoint Security Manager built-in Role based access control (RBAC) role.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -483,7 +483,10 @@ Once a device is removed from either location, that change propagates to the oth
 
 ### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
 
-Most initial provisioning flows are typically completed by an Administrator of both services (such as a Global Administrator). There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, individuals who are delegated the *Endpoint Security Manager* role might not have the necessary permissions to enable this feature.
+While initial provisioning flows can be completed by an Administrator with permissions in both services, the following roles are sufficient to complete configurations in each separate service:
+
+- For Microsoft Defender, use the Security Administrator role.
+- For Microsoft Intune, use the Endpoint Security Manager role.
 
 ### Microsoft Entra joined devices
 
