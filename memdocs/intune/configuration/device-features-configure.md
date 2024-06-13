@@ -58,7 +58,7 @@ This article describes the different features you can configure, and shows you h
         - **iOS/iPadOS**
         - **macOS**
 
-    - **Profile type**: Select **Device features**. Or, select **Templates** > **Device features**.
+    - **Profile type**: Select **Templates** > **Device features**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
