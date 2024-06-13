@@ -174,7 +174,7 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 2. When the device prompts you to, scan the token's QR code.     
 
 > [!TIP]
-> To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**. Select your enrollment profile, and then select **Tokens**. 
+> To access the token in Intune, select **Devices** > **By platform** > **Android** > **Device onboarding** > **Enrollment** > **Corporate-owned, userless devices**. Select your enrollment profile, and then select **Tokens**. 
 
 3. Follow the on-screen prompts to finish enrolling and registering the device. During setup, Intune automatically installs and opens the apps that are needed for enrollment. Those apps include:  
 
