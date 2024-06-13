@@ -87,7 +87,7 @@ To deploy eSIM to your devices using Intune, you need the following prerequisite
 
   After the mobile operator knows the EIDs of the PCs, the mobile operator sets up eSIM profiles for each PC on its download server (SM-DP+).
 
-- **eSIM Download Server (SM-DP+ or SM-DS) fully qualified domain name (FQDN)** provided by your mobile operator.
+- **eSIM Download Server (SM-DP+ or SM-DS) fully qualified domain name (FQDN)** provided by your mobile operator
 
   You need the fully qualified domain name (FQDN) of the mobile operator's download server (SM-DP+), like `smdp.example.com`. You enter this FQDN in the Intune policy. When each PC contacts the download server (SM-DP+), the download server (SM-DP+) authenticates the PC's EID and provides it with the eSIM profile that's specific to that device.
 
