@@ -59,7 +59,7 @@ School Data Sync (SDS) imports and synchronizes SIS data to create classes in Mi
 For more information, see [Overview of School Data Sync][SDS-1].
 
 > [!TIP]
-> To learn more and practice with School Data Sync, follow the [Microsoft School Data Sync demo](https://learn.microsoft.com/SchoolDataSync/), which provides detailed steps to access, configure, and deploy School Data Sync in your Microsoft 365 Education tenant.
+> To learn more and practice with School Data Sync, follow the [Microsoft School Data Sync demo](/SchoolDataSync/), which provides detailed steps to access, configure, and deploy School Data Sync in your Microsoft 365 Education tenant.
 
 > [!NOTE]
 > You can perform a test deployment by cloning or downloading sample SDS CSV school data from the [O365-EDU-Tools GitHub site](https://github.com/OfficeDev/O365-EDU-Tools).
