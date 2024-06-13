@@ -216,7 +216,7 @@ For more information about the Tenant attach scenario, see [Enable tenant attach
 
 If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
-To enable tenant attach when co-management isn’t enabled, you’ll need to sign-in to the *AzurePublicCloud* for your environment. Before proceeding, review [Permissions and roles](../../configmgr/comanage/overview.md#permissions-and-roles) in the Configuration Manager documentation for co-management to ensure you have an account available that can complete the procedure.
+To enable tenant attach when co-management isn’t enabled, you’ll need to sign-in to the *AzurePublicCloud* for your environment. Before proceeding, review [Permissions and roles](../../configmgr/comanage/overview.md#permissions-and-roles) in the Configuration Manager documentation to ensure you have an account available that can complete the procedure.
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 2. In the ribbon, select **Configure co-management** to open the wizard.
