@@ -33,7 +33,7 @@ ms.collection:
 
 # Add device enrollment managers  
 
-A device enrollment manager (DEM) is a non-administrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare many devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15.  
+A device enrollment manager (DEM) is a nonadministrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare many devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard nonadmin account can only enroll 15.  
 > [!IMPORTANT]
 > The Intune device limit does not apply to the following enrollment methods without the need of a DEM account:
 > - Co-management with Configuration Manager
@@ -106,7 +106,7 @@ DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses
 <a name='azure-ad'></a>  
 
 ### Microsoft Entra ID  
-Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
+Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account prevents you from reaching the 1,000 device limit that the DEM account can enroll.  
 
 ### Certificates  
 You must use device-level certificates to manage Wi-Fi and email connections.  
