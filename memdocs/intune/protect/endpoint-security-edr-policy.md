@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2024
+ms.date: 06/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -216,15 +216,17 @@ For more information about the Tenant attach scenario, see [Enable tenant attach
 
 If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
+To enable tenant attach when co-management isn’t enabled, you’ll need to sign-in to the *AzurePublicCloud* for your environment. Before proceeding, review [Permissions and roles](../configmgr/comanage/overview.md#permissions-and-roles) in the Configuration Manager documentation for co-management to ensure you have an account available that can complete the procedure.
+
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 2. In the ribbon, select **Configure co-management** to open the wizard.
 3. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
-   1. Select **Sign In**. Use your *Global Administrator* account to sign in.
+   1. Select **Sign In** and specify an account that has sufficient permissions to to your *AzurePublicCloud* environment.
 
 The following are supported for devices you manage with Intune:
 
 - Platform: **Windows 10, Windows 11, and Windows Server** - Intune deploys the policy to devices in your Microsoft Entra groups.
-  - Profile: **Endpoint detection and response**
+- Profile: **Endpoint detection and response**
 
 ## Use a preconfigured EDR policy
 
