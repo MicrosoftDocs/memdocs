@@ -76,18 +76,26 @@ In some tenants, when trying to set the owner of the device group used in the Wi
 
 There's a compatibility problem between the Windows Autopilot device preparation policy **User account type** setting and the Microsoft Entra ID **Local administrator settings**. Specifically, when the Windows Autopilot device preparation policy **User account type** setting is set to **Standard user** and the Microsoft Entra ID setting **Registering user is added as local administrator on the device during Microsoft Entra join (Preview)** under **Local administrator settings** is set to either **Selected** or **None**, provisioning gets skipped during a Windows Autopilot device preparation deployment. This settings conflict leads to a scenario where users could reach the desktop without having the expected applications installed. The Microsoft Entra ID **Local administrator settings** can be found by signing into the [Azure portal](https://portal.azure.com/) and navigating to **Microsoft Entra ID** > **Manage | Devices** > **Manage | Devices settings**.
 
-Use one of the following two workarounds until a fix is available:
+Until the issue is fixed, for users to be standard non-administrators on their device, make sure that the settings are set to one of the following three setting combinations:
 
-- If the Microsoft Entra ID **Local administrator settings** is set to either **Selected** or **None**, then the Windows Autopilot device preparation policy **User account type** setting needs to be set to **Administrator**.
-- The Microsoft Entra ID **Local administrator settings** can be changed to **All** and the Windows Autopilot device preparation policy **User account type** setting can be left at **Standard user**.
+- The Microsoft Entra ID **Local administrator settings** is set to **None**.
+- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-In both cases, the end result is that the user is a standard user.
+- The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the standard non-administrator users aren't selected.
+- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
-> [!NOTE]
->
-> - If a user is included in the **Selected** option of the Microsoft Entra ID **Local administrator settings** setting and the Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**, the user will be a local administrator on the device.
->
-> - If the intention is for all users to be an administrator on their device, set the Microsoft Entra ID **Local administrator settings** to **All** and the Windows Autopilot device preparation policy **User account type** setting to **Administrator**.
+- The Microsoft Entra ID **Local administrator settings** is set to **All**.
+- The Windows Autopilot device preparation policy **User account type** is set to **Standard user**.
+
+In all three cases, the end result is that the user is a standard non-administrative user on the device.
+
+If the intention is for the user to be a local administrator user on the device, make sure that the settings are set to one of the following two setting combinations:
+
+- The Microsoft Entra ID **Local administrator settings** is set to **All**.
+- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
+
+- The Microsoft Entra ID **Local administrator settings** is set to **Selected** and the administrator users are selected.
+- The Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**.
 
 ### Corporate identifiers isn't working in initial release of Windows Autopilot device preparation
 
