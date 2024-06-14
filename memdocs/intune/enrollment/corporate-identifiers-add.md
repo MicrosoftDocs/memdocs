@@ -34,7 +34,7 @@ ms.collection:
 **Applies to**: 
 - Android
 - iOS/iPadOS
-- Windows 11  
+- Windows 11 version H22 and later (KB5035942)
 
 Ensure that corporate devices are marked as *corporate-owned* as soon as they enroll by adding their corporate identifiers ahead of time in the Microsoft Intune admin center. Corporate devices unlock more device management capabilities than personal devices. For example, Microsoft Intune can collect more information about corporate-owned devices for you, such as full phone number and app inventory. 
 
@@ -57,7 +57,7 @@ You can upload a file of corporate identifiers in the admin center or enter each
    - [Corporate-owned userless devices](./android-aosp-corporate-owned-userless-enroll.md)  
    - [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch)  
 
-Microsoft Intune marks devices that register with Microsoft Entra as personal.    
+Microsoft Intune marks devices that register with Microsoft Entra as personal.   
 
 ## Role based access control  
 You must be an Intune administrator or global administrator to add corporate identifiers, or a custom Intune role assigned corporate device identifier permissions. Permissions include:     
@@ -81,7 +81,7 @@ The following table shows the identifiers supported for each platform. When a de
 
 | Platform | IMEI number | Serial number | Serial number, model, manufacturer |  
 |---|---|---|---|
-| Windows| Not supported | Not supported | ✔️| 
+| Windows 11 | Not supported | Not supported | ✔️ <br></br> Supported with Windows 11, version 22H2 and later with [KB5035942 (OS Builds 22621.3374 and 22631.3374)](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df). | 
 | iOS/iPadOS | ✔️ <br></br> Supported in some cases. For more information, see [Add Android, iOS corporate identifiers](#add-android-ios-corporate-identifiers). | ✔️ <br></br> We recommend using a serial number for iOS/iPadOS identification when possible.  |Not supported|
 | macOS | Not supported | ✔️ |Not supported |
 | Android device administrator | ✔️ <br></br> Supported with Android 9 and earlier. | ✔️ <br></br> Supported with Android 9 and earlier. |Not supported |
