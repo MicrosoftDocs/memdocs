@@ -34,7 +34,7 @@ ms.collection:
 **Applies to**: 
 - Android
 - iOS/iPadOS
-- Windows 11 version H22 and later (KB5035942)
+- Windows 11  
 
 Ensure that corporate devices are marked as *corporate-owned* as soon as they enroll by adding their corporate identifiers ahead of time in the Microsoft Intune admin center. Corporate devices unlock more device management capabilities than personal devices. For example, Microsoft Intune can collect more information about corporate-owned devices for you, such as full phone number and app inventory. 
 
