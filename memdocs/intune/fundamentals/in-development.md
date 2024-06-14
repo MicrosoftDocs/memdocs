@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/30/2024
+ms.date: 06/14/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,19 +72,6 @@ For information about using EPM, see [Endpoint Privilege Management](../protect/
 
 ## App management
 
-### US GCC and GCC High support for Managed Home Screen<!-- 25827679 -->
-
-The Managed Home Screen (MHS) will soon support sign-in for the US Government Community (GCC), US Government Community (GCC) High, and U.S. Department of Defense (DoD) environments.
-
-For more information, see:
-
-- [Configure the Managed Home Screen](../apps/app-configuration-managed-home-screen-app.md)
-- [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
-
-Applies to:
-
-- Android Enterprise
-
 ### New actions for policies, profiles, and apps<!-- 15283153 -->
 
 You'll be able to remove, reinstall, and reapply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You'll be able to apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
@@ -105,32 +92,6 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device configuration
-
-### Version picker available for configuring managed Apple DDM software updates using the settings catalog<!-- 27565292 -->
-
-Using the [Intune settings catalog](../configuration/settings-catalog.md), you can configure Apple's declarative device management (DDM) feature to manage software updates on iOS/iPadOS and macOS devices.
-
-When you configure a managed software update policy using the settings catalog, you'll be able to:
-
-- Select a target OS version from a list of updates made available by Apple.
-- Manually enter the target OS version, if needed.
-
-For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
-### Intune admin center UI updates at Devices > By platform<!-- 25104008 -->
-
-In the Intune admin center, you can select **Devices** > **By platform**, and view the policy options for the platform you select. These platform-specific pages are being updated and will include tabs for navigation.
-
-### New settings available in the Apple settings catalog <!--27175914 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There will be new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 #### iOS/iPadOS
 
@@ -181,10 +142,6 @@ Applies to:
 
 - iOS/iPadOS 15 and later
 
-#### RBAC changes coming to enrollment platform restrictions <!-- 25036419 -->
-
-We're updating role-based access control (RBAC) for enrollment platform restrictions. Enrollment platform restrictions will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to create and edit enrollment platform restrictions.
-
 <!-- *********************************************** -->
 
 <!-- ## Device management  -->
@@ -192,12 +149,6 @@ We're updating role-based access control (RBAC) for enrollment platform restrict
 <!-- *********************************************** -->
 
 ## Device security
-
-### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
-
-Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you've onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
-
-For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
 
 ### Updated security baseline for Windows 365 Cloud PC<!-- 26504698 -->
 
