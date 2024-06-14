@@ -2,7 +2,7 @@
 title: Windows in-place upgrade
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to upgrade Windows to a later version.
-ms.date: 10/01/2021
+ms.date: 06/14/2024
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: conceptual
@@ -58,7 +58,7 @@ Devices must run one of the following OS versions to target an OS upgrade task s
 For more information, see [Windows client upgrade paths](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
 > [!NOTE]
-> OS deployment isn't supported for Windows on ARM64 devices, except for a feature update task sequence. Starting in version 2103, you can deploy a task sequence with a feature update to an ARM64 device.
+> Starting in version 2403 OS deployment is supported for Windows on ARM64 devices. Starting in version 2103, you can deploy a task sequence with a feature update to an ARM64 device.
 
 #### Windows Server
 
