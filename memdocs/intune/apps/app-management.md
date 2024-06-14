@@ -35,11 +35,12 @@ ms.collection:
 
 # What is Microsoft Intune app management?
 
-Microsoft Intune is a cloud-based service that protects your organization's data by using mobile device management (MDM) and mobile application management (MAM). You can use Intune protect your organization's data at the app level (MAM) on both company devices and users' personal devices, such as smartphones, tablets, and laptops. Intune provide data protection for apps have been enhanced to support Intune and deployed using Intune, as well as data protection for devices that have been enrolled in Intune.
+Microsoft Intune is a cloud-based service that protects your organization's data by using mobile device management (MDM) and mobile application management (MAM). You can use Intune to protect your organization's data at the app level (MAM) on both company devices and users' personal devices, such as smartphones, tablets, and laptops. Intune provides data protection for apps that have been enhanced to support Intune and deployed using Intune, as well as data protection for devices that have been enrolled in Intune.
 
 The benefits of app management in Microsoft Intune include:
 - **Data protection**: Intune helps protect organization (corporate) data by controlling how apps are used and ensuring that sensitive information isn't leaked or shared inappropriately.
-- **Wide range of app support**: Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. In addition, Intune support several platforms, such as iOS/iPadOS and Android. This app support allows organizations to manage a diverse set of applications using Intune.
+- **Wide range of app support**: Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. In addition, Intune supports several platforms, such as iOS/iPadOS and Android. This app support allows organizations to manage a diverse set of applications using Intune.
+
 - **Access control**: Intune enables organizations to manage access to organization resources, enforce compliance policies, and protect sensitive data.
 - **App configuration and updates**: Intune allows organizations to manage app settings and updates, ensuring that employees are using the latest and most secure versions of their apps.
 - **App management on personal devices**: You can specifically use MAM to assign, protect, and manage apps on devices that aren't enrolled with Intune.
@@ -88,17 +89,17 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
 <sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
-<sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Play.
+<sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Google Play.
 
 ## Get started
 
 You can find most app-related information in the **Apps** workload, which you can access by doing the following:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Apps**.
+1. Select **Apps**.
 
     ![The Apps workload pane](./media/app-management/apps-workload.png)
-
+   
 The apps workload provides links to access common app information and functionality. 
 
 The top of the App workload navigation menu provides commonly used app details:

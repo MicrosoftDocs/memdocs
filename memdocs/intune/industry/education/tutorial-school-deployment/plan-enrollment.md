@@ -106,7 +106,7 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 
 The following table provides more information about the features supported by each Windows provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.  
 
-| Configuation need | Provisioning package | Windows Autopilot  |
+| Configuration need | Provisioning package | Windows Autopilot  |
 |---------|---------|---------|
 |Apply custom OS images.| ✔️ | ✔️ <br/><br/> Devices must remain in OOBE mode after you apply the images.|
 |Bulk enroll devices.| ✔️ | ✔️ |

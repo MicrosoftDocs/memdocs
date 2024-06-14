@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 05/31/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -434,7 +434,7 @@ It can be helpful to explore [Advanced Hunting, which is a feature in Microsoft 
 
 ### What do I do with the old Application Control policy from my Attack surface reduction policy
 
-You may have noticed instances of the Application Control policy in the Intune UI under **Endpoint Security** > **Attach Surface Reduction** or under **Devices** > **Configuration**. These will be deprecated in a future release.
+You may have noticed instances of the Application Control policy in the Intune UI under **Endpoint Security** > **Attach Surface Reduction** or under **Devices** > **Manage devices** > **Configuration**. These will be deprecated in a future release.
 
 ### What if I have multiple base or supplemental policies on the same device?
 
@@ -447,6 +447,16 @@ On a related note, there is no longer a limitation of 32 policies active on the 
 No. This release focuses on setting apps installed from Intune, using the Intune Management Extension, as the Managed Installer. It can't set Configuration Manager as the Managed Installer.
 
 If setting Configuration Manager as the Managed Installer is desired, you can allow that behavior from within Configuration Manager. If you already have Configuration Manager set as the Managed Installer, the expected behavior is that the new Intune Management Extension AppLocker policy merges with the existing Configuration Manager policy.
+
+### What considerations should I have for Entra Hybrid Join (HAADJ) devices within my organization that want to use Managed Installer?
+
+Entra hybrid join devices require connectivity to an on-prem Domain Controller (DC) to apply Group Policies including the Managed Installer policy (through AppLocker). Without DC connectivity, especially during Autopilot provisioning, Managed Installer policy will not successfully apply. Consider:
+
+1. Use Autopilot with Entra join instead. See our recommendation for [which Entra join option](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization) to choose for more information.
+
+2. For Entra hybrid join, choose one or both of the following:
+o	Use device provisioning methods that provide DC connectivity at the time of app install as Autopilot may not work here.
+o	Deploy apps after the Autopilot provisioning is complete, so that DC connectivity is established at the time of app install and Managed Installer policy can be applied.
 
 ## Next Steps
 

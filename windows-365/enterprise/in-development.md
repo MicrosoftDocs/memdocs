@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/10/2024
+ms.date: 06/12/2024
 ms.topic: conceptual
 ms.service: windows-365
 
@@ -57,22 +57,20 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 ### Support for symmetric NAT with RDP Shortpath<!--43602619-->
 
-In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission. For more information, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-### Manage redirections for Cloud PCs on Android devices<!--49090100-->
+### Chroma subsampling default change to 4:2:0<!--50308895-->
 
-In a future update, you'll be able use the Intune admin center to manage redirections for Android users who access their Cloud PCs using Microsoft Remote Desktop.
+To reduce monitor support issues, the Windows 365 service will default the chroma subsampling at 4:2:0 (instead of the previous 4:4:4).
 
 <!-- ***********************************************-->
-## Device provisioning
+## Device security
 
-### New Cloud PC images aligned with Microsoft 365 apps images<!--48537480-->
+### Windows 365 Government support for Customer Lockbox<!--48802385-->
 
-In a future update, new Cloud PC optimized images aligned with the Microsoft 365 apps images will be available in the gallery.
+Windows 365 Government will support Microsoft Purview Customer Lockbox.
 
-### Windows 365 Cloud PC gallery images to pre-install new Microsoft Teams<!--49222964-->
-
-In a future update, gallery images for Windows 365 Cloud PCs won't pre-install Microsoft Teams (classic). Instead, these images will install the new Microsoft Teams. All new devices created from these gallery images will have the new Teams pre-installed. For more information, see [Gallery images](device-images.md#gallery-images).
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
 
 <!--***********************************************-->
 <!-- ## End user experience -->
@@ -84,16 +82,22 @@ In a future update, gallery images for Windows 365 Cloud PCs won't pre-install M
 
 In a future update, customers that have Modern Microsoft Cloud Agreements will be able to upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
 
-### New Windows 365 Frontline offers for GCC<!--50308895-->
-
-In a future update, new Windows 365 Frontline offers will be available for Government Community Cloud (GCC) customers using the Azure Commercial cloud.
-
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### Windows 365 Government support for Cloud PC utilization report<!--49200860-->
+
+Windows 365 Government will support the Cloud PC utilization report.
+
+For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+### Update to Cloud PC action status report<!--49451077-->
+
+The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
 
 <!-- ***********************************************-->
 ## Provisioning
@@ -104,10 +108,6 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 
 <!-- ***********************************************-->
 ## Security
-
-### FQDN requirement changes<!--46731885-->
-
-In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
 
 ### New settings for Windows 365 security baselines<!--49685126-->
 
