@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/14/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -231,6 +231,12 @@ The following role-based access control (RBAC) permissions are required in a rol
 - **Enrollment programs**
   - Enrollment time device membership assignment
 
+- **Managed apps**
+  - Read
+
+- **Mobile apps**
+  - Read
+
 - **Organization**
   - Read
 
@@ -238,25 +244,25 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Tenant administration** in the left hand pane.
+2. In the **Home** screen, select **Tenant administration** in the left hand pane.
 
-1. In the **Tenant admin | Tenant status** screen, select **Roles**.
+3. In the **Tenant admin | Tenant status** screen, select **Roles**.
 
-1. In the **Endpoint Manager roles | All roles** screen, make sure **All roles** is selected under **Manage**.
+4. In the **Endpoint Manager roles | All roles** screen, make sure **All roles** is selected under **Manage**.
 
-1. Select the **+ Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
+5. Select the **+ Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
 
-1. In the **Add Custom Role** screen:
+6. In the **Add Custom Role** screen:
 
    1. In the **Basics** page:
 
       1. **Name** - enter a name for the custom role, such as **Windows Autopilot device preparation administrator**.
 
-      1. **Description** - enter a description for the custom role.
+      2. **Description** - enter a description for the custom role.
 
-   1. Select the **Next** button.
+   2. Select the **Next** button.
 
-   1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings. Once the setting is located, expand it, and then change to the following permissions:
+   3. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings. Once the setting is located, expand it, and then change to the following permissions:
 
       - **Device configurations**
 
@@ -274,11 +280,25 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
         All other permissions can be left at the default of **No**.
 
+      - **Managed apps**
+
+         - **Read**: Yes
+
+        All other permissions can be left at the default of **No**.
+
+      - **Mobile apps**
+
+         - **Read**: Yes
+
+        All other permissions can be left at the default of **No**.
+
       - **Organization**
 
          - **Read**: Yes
 
         All other permissions can be left at the default of **No**.
+
+
 
    1. Once all permissions are set correctly, select the **Next** button.
 
