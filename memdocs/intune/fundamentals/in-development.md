@@ -91,29 +91,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-#### iOS/iPadOS
-
-**Restrictions**:
-
-- Allow Web Distribution App Installation
-
-**System Configuration > Font**:
-
-- Font
-- Name
-
-#### macOS
-
-**Privacy > Privacy Preferences Policy Control**:
-
-- Bluetooth Always
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
+<!-- ## Device configuration -->
 
 <!-- *********************************************** -->
 
@@ -218,7 +196,6 @@ For more information about how to enable or block access to BitLocker recovery k
 
 - [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
 - [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
-
 
 <!-- *********************************************** -->
 
