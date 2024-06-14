@@ -112,7 +112,7 @@ Android serial numbers aren't guaranteed to be unique or present. Check with you
 
 ### Add Windows corporate identifiers  
 
-Microsoft Intune supports corporate identifiers for devices Windows 11, version 22H2 and later. For each device, list the manufacturer, model, and serial number as shown in the following example.   
+To add corporate identifiers for corporate devices running Windows 11, list the manufacturer, model, and serial number for each device as shown in the following example.  
 
 ```
 Microsoft,surface 5,01234567890123   
