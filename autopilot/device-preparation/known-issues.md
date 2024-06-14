@@ -48,11 +48,11 @@ The issue is being investigated. As a workaround, add the following additional r
 - **Device configurations**
   - Assign
 
-For more information, see [Required RBAC permissions](requirements.md?tabs=rbac).
+For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
 > [!NOTE]
 >
-> The [Required RBAC permissions](requirements.md?tabs=rbac) article doesn't list the **Device configurations** - **Assign** permission. The requirement of this permission is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
+> The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. The requirement of this permission is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
 
 ### Initial release of Windows Autopilot device preparation
 
