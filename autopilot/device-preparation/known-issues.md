@@ -83,6 +83,10 @@ Use one of the following two workarounds until a fix is available:
 
 In both cases, the end result is that the user is a standard user.
 
+> [!NOTE]
+>
+> If the intention is for the user to be an administrator, set the Microsoft Entra ID **Local administrator settings** to **All** and the Windows Autopilot device preparation policy **User account type** setting to **Administrator**.
+
 ### Corporate identifiers isn't working in initial release of Windows Autopilot device preparation
 
 Corporate identifiers isn't working in the initial release of Windows Autopilot device preparation. If the personal device restriction is enabled and personal devices aren't allowed, enrollment always fails during the Windows Autopilot device preparation deployment. For this reason, Windows Autopilot device preparation doesn't work when the personal device restriction is enabled. The issue is being investigated. Microsoft recommends that customers that have personal device restrictions enabled wait for the issue to be resolved before trying to use Windows Autopilot device preparation.
