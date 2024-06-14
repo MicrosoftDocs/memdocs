@@ -51,14 +51,14 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Configuration** > **Create**:
+2. Go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**:
 
     :::image type="content" source="./media/quickstart-email-profile/ios-create-profile.png" alt-text="Create a new device configuration profile in Microsoft Intune using the Intune admin center.":::
 
 3. Enter the following properties:
 
    - **Platform**: Select **iOS/iPadOS**.
-   - **Profile type**: Select **Email**.
+   - **Profile type**: Select **Temmplates** > **Email**.
   
 4. Select **Create**.
 
@@ -67,7 +67,7 @@ For more information on the different roles in Intune, go to [Role-based access 
    - **Name**: Enter a descriptive name for the new profile. For this example, enter **iOS require work email**.
    - **Description**: Enter **Require iOS/iPadOS devices to use work email**.
 
-   :::image type="content" source="./media/quickstart-email-profile/ios-email-profile-name.png" alt-text="Create an email device configuration profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center. Enter the profile name and description.":::
+   :::image type="content" source="./media/quickstart-email-profile/ios-email-profile-name.png" alt-text="Create an email device configuration profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center.":::
 
 6. Select **Next**.
 
@@ -91,7 +91,7 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 If you don't use this profile for other tutorials or testing, then you can delete it:
 
-1. In the Intune admin center, select **Devices** > **Configuration**.
+1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration**.
 2. Select the **iOS/iPadOS require work email** profile you created, and then select **Delete**.
 
 ## Next steps

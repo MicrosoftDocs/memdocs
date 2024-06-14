@@ -112,7 +112,7 @@ After you have created a noncompliance policy, you can set an action to take pla
 
 The following steps will create an action for noncompliance for Windows 10 devices:
 
-1. In the Intune admin center, select **Devices** > **Windows** > **Compliance**.  
+1. In the Intune admin center, select **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance**.  
 2. Select your Windows 10 compliance policy from the list.
 3. Select **Properties**.  
 4. Next to the **Action for noncompliance** section, choose **Edit**.
