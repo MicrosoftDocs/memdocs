@@ -35,6 +35,7 @@ When you run the tool, it connects to the Configuration Manager cloud service, u
     > If upgrading from an out of support version of Configuration Manager prior to 2107, the tool requires the Visual C++ 2013 redistributalbe packate (12.0.40660.0), which is available from the same [link](/cpp/windows/latest-supported-vc-redist).
 
   - This tool requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
+  - Starting in version 2309, this tool requires installation of the ODBC Driver 18 for SQL Server (x64). To download this component, see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
 - The account you use to run the tool needs the following permissions:
 
