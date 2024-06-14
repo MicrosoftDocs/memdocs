@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/07/2023
+ms.date: 06/14/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -193,9 +193,18 @@ Manages security and compliance features such as security baselines, device comp
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| Enrollment programs | Read device |
-| Enrollment programs | Read profile |
-| Filters | Read |
+| App Control for Business | Assign |
+| App Control for Business | Create |
+| App Control for Business | Delete |
+| App Control for Business | Read |
+| App Control for Business | Update |
+| App Control for Business | View Reports |
+| Attack surface reduction | Assign |
+| Attack surface reduction | Create |
+| Attack surface reduction | Delete |
+| Attack surface reduction | Read |
+| Attack surface reduction | Update |
+| Attack surface reduction | View Reports |
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | View client details |
@@ -220,12 +229,22 @@ Manages security and compliance features such as security baselines, device comp
 | Endpoint Analytics | Read |
 | Endpoint protection reports | Read |
 | Enrollment programs | Read token |
+| Endpoint detection and response | Assign |
+| Endpoint detection and response | Create |
+| Endpoint detection and response | Delete |
+| Endpoint detection and response | Read |
+| Endpoint detection and response | Update |
+| Endpoint detection and response | View Reports |
 | Endpoint Privilege Management Policy Authoring | Assign |
 | Endpoint Privilege Management Policy Authoring | Create |
 | Endpoint Privilege Management Policy Authoring | Delete |
 | Endpoint Privilege Management Policy Authoring | Read |
 | Endpoint Privilege Management Policy Authoring | Update |
 | Endpoint Privilege Management Policy Authoring | View Reports |
+| Enrollment programs | Read device |
+| Enrollment programs | Read profile |
+| Filters | Read |
+| Intune data warehouse | Read |
 | Managed apps | Read |
 | Managed devices | Delete |
 | Managed devices | Read |
@@ -252,7 +271,6 @@ Manages security and compliance features such as security baselines, device comp
 | Remote tasks | Shut down |
 | Remote tasks | Sync devices. |
 | Remote tasks | Windows defender |
-| Intune data warehouse | Read |
 | Roles | Read |
 | Security baselines | Assign |
 | Security baselines | Create |
@@ -289,9 +307,8 @@ Read Only Operators view user, device, enrollment, configuration and application
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| Enrollment programs | Read device |
-| Enrollment programs | Read profile |
-| Filters | Read |
+| App Control for Business | Read|
+| Attack surface reduction | Read|
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | View applications |
@@ -310,10 +327,14 @@ Read Only Operators view user, device, enrollment, configuration and application
 | Device configurations | View Reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
-| Endpoint protection reports | Read |
-| Enrollment programs | Read token |
+| Endpoint detection and response | Read |
 | Endpoint Privilege Management Policy Authoring | Read |
 | Endpoint Privilege Management Policy Authoring | View Reports |
+| Endpoint protection reports | Read |
+| Enrollment programs | Read device |
+| Enrollment programs | Read profile |
+| Enrollment programs | Read token |
+| Filters | Read |
 | Managed apps | Read |
 | Managed devices | Read |
 | Managed devices | View reports |
@@ -360,18 +381,6 @@ School Administrators can manage apps and settings for their groups. They can ta
 
 | Permission | Action |
 | ---------- | ------ |
-| Enrollment programs | Delete device |
-| Enrollment programs | Read device |
-| Enrollment programs | Sync device |
-| Enrollment programs | Assign profile |
-| Enrollment programs | Create profile |
-| Enrollment programs | Delete profile |
-| Enrollment programs | Read profile |
-| Enrollment programs | Update profile |
-| Filters | Create |
-| Filters | Delete |
-| Filters | Read |
-| Filters | Update |
 | Audit data | Read |
 | Certificate Connector | Modify |
 | Certificate Connector | Read |
@@ -403,6 +412,18 @@ School Administrators can manage apps and settings for their groups. They can ta
 | Endpoint Analytics | Delete |
 | Endpoint Analytics | Read |
 | Endpoint Analytics | Update |
+| Enrollment programs | Assign profile |
+| Enrollment programs | Create profile |
+| Enrollment programs | Delete device |
+| Enrollment programs | Delete profile |
+| Enrollment programs | Read device |
+| Enrollment programs | Read profile |
+| Enrollment programs | Sync device |
+| Enrollment programs | Update profile |
+| Filters | Create |
+| Filters | Delete |
+| Filters | Read |
+| Filters | Update |
 | Enrollment programs | Create token |
 | Enrollment programs | Delete token |
 | Enrollment programs | Read token |
@@ -477,19 +498,6 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 | Android for work | Read |
 | Android for work | Update app sync |
 | Android for work | Update onboarding |
-| Enrollment programs | Create device |
-| Enrollment programs | Delete device |
-| Enrollment programs | Read device |
-| Enrollment programs | Sync device |
-| Enrollment programs | Assign profile |
-| Enrollment programs | Create profile |
-| Enrollment programs | Delete profile |
-| Enrollment programs | Read profile |
-| Enrollment programs | Update profile |
-| Filters | Create |
-| Filters | Delete |
-| Filters | Read |
-| Filters | Update |
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | View applications |
@@ -516,10 +524,23 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 | Device configurations | Read |
 | Device configurations | Update |
 | Device configurations | View Reports |
+| Enrollment programs | Assign profile |
+| Enrollment programs | Create device |
 | Enrollment programs | Create token |
+| Enrollment programs | Create profile |
+| Enrollment programs | Delete device |
+| Enrollment programs | Delete profile |
 | Enrollment programs | Delete token |
+| Enrollment programs | Read device |
 | Enrollment programs | Read token |
+| Enrollment programs | Read profile |
+| Enrollment programs | Sync device |
 | Enrollment programs | Update token |
+| Enrollment programs | Update profile 
+| Filters | Create |
+| Filters | Delete |
+| Filters | Read |
+| Filters | Update |
 | Managed apps | Assign |
 | Managed apps | Create |
 | Managed apps | Delete |
@@ -550,9 +571,8 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| Enrollment programs | Read device |
-| Enrollment programs | Read profile |
-| Filters | Read |
+| App Control for Business | Read|
+| Attack surface reduction | Read|
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | Take application actions |
@@ -575,8 +595,12 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | Device configurations | View Reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
+| Endpoint detection and response | Read |
 | Endpoint protection reports | Read |
+| Enrollment programs | Read device |
+| Enrollment programs | Read profile |
 | Enrollment programs | Read token |
+| Filters | Read |
 | Managed apps | Assign |
 | Managed apps | Read |
 | Managed apps | Wipe |
