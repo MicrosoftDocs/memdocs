@@ -85,7 +85,9 @@ In both cases, the end result is that the user is a standard user.
 
 > [!NOTE]
 >
-> If the intention is for the user to be an administrator, set the Microsoft Entra ID **Local administrator settings** to **All** and the Windows Autopilot device preparation policy **User account type** setting to **Administrator**.
+> - If a user is included in the **Selected** option of the Microsoft Entra ID **Local administrator settings** setting and the Windows Autopilot device preparation policy **User account type** setting is set to **Administrator**, the user will be a local administrator on the device.
+>
+> - If the intention is for all users to be an administrator on their device, set the Microsoft Entra ID **Local administrator settings** to **All** and the Windows Autopilot device preparation policy **User account type** setting to **Administrator**.
 
 ### Corporate identifiers isn't working in initial release of Windows Autopilot device preparation
 
