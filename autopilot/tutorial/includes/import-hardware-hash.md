@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/14/2023
+ms.date: 06/13/2024
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,7 @@ Headings are driven by article context. -->
 
 Several of the methods in the previous section on obtaining the hardware hash when manually registering devices as Autopilot devices produces a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
 
-After the CSV file has been created, it can be imported into Intune via the following steps:
+After the CSV file is created, it can be imported into Intune via the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -26,9 +26,9 @@ After the CSV file has been created, it can be imported into Intune via the foll
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows enrollment** screen, select **Windows enrollment**
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**
 
-1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+1. Under **Windows Autopilot**, select **Devices**. **Devices** is located under **Windows Autopilot** and not under **Windows Autopilot device preparation**.
 
 1. In the **Windows Autopilot devices** screen that opens, select **Import**.
 

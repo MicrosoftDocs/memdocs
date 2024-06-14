@@ -34,7 +34,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 
 > [!NOTE]
 >
-> This article is for **Windows Autopilot device preparation**. For **Windows Autopilot**, see [Overview of Windows Autopilot](../windows-autopilot.md).
+> This article is for **Windows Autopilot device preparation**. For **Windows Autopilot**, see [Overview of Windows Autopilot](../overview.md).
 
 ## Requirements
 

@@ -51,7 +51,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: Overview of Windows Autopilot
-        url:  windows-autopilot.md
+        url:  overview.md
       - text: Requirements
         url:  requirements.md
       - text: Device registration overview

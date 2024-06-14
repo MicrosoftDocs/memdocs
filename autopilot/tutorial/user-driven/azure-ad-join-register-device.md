@@ -7,9 +7,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 06/13/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -21,10 +21,14 @@ appliesto:
 # User-driven Microsoft Entra join: Register devices as Autopilot devices
 
 Autopilot user-driven Microsoft Entra join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
+
 > [!div class="checklist"]
+>
 > - **Step 3: Register devices as Autopilot devices**
+
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
 - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
 - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
@@ -35,7 +39,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 > [!NOTE]
 >
-> If you have already registered devices as Autopilot devices from another Autopilot scenario, you can skip this step and move on to [Step 4: Create a device group](azure-ad-join-device-group.md). However, if you're deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
+> If devices are already registered as Autopilot devices, skip this step and move on to [Step 4: Create a device group](azure-ad-join-device-group.md). However, if deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
 
 ## Register devices as Autopilot devices
 

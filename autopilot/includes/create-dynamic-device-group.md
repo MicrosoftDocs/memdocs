@@ -36,7 +36,7 @@ Headings are driven by article context. -->
 
     1. For **Microsoft Entra roles can be assigned to the group**, select **No**.
 
-    1. For **Membership type**, select **Dynamic Device**.
+    1. For **Membership type**, select **Dynamic Device**. This changes the option **Members** to **Dynamic device members**.
 
     1. For **Owners**, select the **No owners selected** link.
 
@@ -46,7 +46,9 @@ Headings are driven by article context. -->
 
        1. Once all of the desired owners are selected, select the **Select** button.
 
-    1. For **Dynamic device members** (available once **Dynamic Device** is selected for **Membership type**), select **Add dynamic query**. Selecting **Add dynamic query** opens the **Dynamic membership rules** screen:
+    1. For **Dynamic device members**, select **Add dynamic query**. The **Dynamic membership rules** screen opens.
+
+    1. In the **Dynamic membership rules** screen:
 
         1. Make sure that **Configure Rules** is selected at the top.
 

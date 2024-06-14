@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -20,7 +20,7 @@ appliesto:
 
 # Step by step tutorial for Windows Autopilot user-driven Microsoft Entra join in Intune
 
-This step by step tutorial guides you through using Intune to perform a Windows Autopilot user-driven scenario when the devices are strictly Microsoft Entra joined.
+This step by step tutorial guides through using Intune to perform a Windows Autopilot user-driven scenario when the devices are strictly Microsoft Entra joined.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot user-driven Microsoft Entra join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 

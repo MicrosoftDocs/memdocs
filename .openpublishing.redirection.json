@@ -2465,11 +2465,6 @@
       "source_path": "autopilot/windows-autopilot.md",
       "redirect_url": "/autopilot/overview",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "autopilot/software-requirements-old.md",
-      "redirect_url": "/autopilot/requirements?tabs=software",
-      "redirect_document_id": false
     }
   ]
 }
