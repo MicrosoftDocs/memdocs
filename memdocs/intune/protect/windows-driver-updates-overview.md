@@ -275,7 +275,7 @@ You can continue to use Configuration Manager for updates other than Drivers, or
 
 The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](/mem/configmgr/comanage/workloads#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
 
-> [NOTE]
+> [!NOTE]
 > The following procedure only works and is supported for managed Windows 11 devices. For Windows 10 devices, we recommend moving the Windows Update workload in the Configuration Manager co-management settings to Intune. Alternatively, configure the Windows Update workload to the Pilot setting and specify a collection containing the in-scope Windows 10 managed devices.
 
    1. Leave the [Windows Update](/mem/configmgr/comanage/workloads#windows-update-policies) workload set to Configuration Manager.
