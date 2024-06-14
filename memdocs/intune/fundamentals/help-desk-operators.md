@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/21/2023
+ms.date: 06/14/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,9 +35,9 @@ The troubleshooting pane lets help desk operators and Intune administrators view
 
 The **Troubleshooting + support** pane provides three options:
 
-- [Guided scenarios](../fundamentals/guided-scenarios-overview.md) to provide a customized series of steps centered around one end-to-end use-case.
+- [Guided scenarios](../fundamentals/guided-scenarios-overview.md) to provide a customized series of steps centered around one end-to-end use-case. For more information, see [Guided scenarios](../fundamentals/guided-scenarios-overview.md).
 - **Troubleshooting** to help determine any issues with **Assignments**, **App protection status**, and **Enrollment failures**.
-- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune.
+- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune. For more information, see [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json).
 
 Details about the issue and suggested remediation steps can help administrators and help desk operators troubleshoot problems. Certain enrollment issues aren't captured and some errors might not have remediation suggestions.
 
@@ -46,7 +46,7 @@ Details about the issue and suggested remediation steps can help administrators 
 
 When a user contacts support with a technical issue with Intune, the help desk operator enters and finds the user's name. Additionally, the help desk operator can filter by device if the user has multiple managed devices.
 
-The **Troubleshooting** pane provides the following tabs to quickly narrow the troubleshooting focus:
+The **Troubleshooting** pane provides the following tabs for a selected user and allows you to quickly narrow the troubleshooting focus:
 
 - **Summary** - Provides specific counts of issues related to policy, compliance, app protection, applications, devices, roles, and scopes.
 - **Devices** - Provides details for devices, such as OS, OS Version, Intune compliance, and last check-in.
