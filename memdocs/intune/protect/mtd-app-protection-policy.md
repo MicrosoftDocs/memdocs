@@ -40,7 +40,7 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
-> - Jamf (Android, iOS/iPadOS) *(formerly Wandera)*
+> - Jamf (Android, iOS/iPadOS)
 > - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - Trellix Mobile Security (Android, iOS/iPadOS)
