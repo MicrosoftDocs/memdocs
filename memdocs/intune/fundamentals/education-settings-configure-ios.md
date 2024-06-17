@@ -84,7 +84,7 @@ You can import information into SDS by using one of the following methods:
 ### Configure general settings
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Configuration** > **Create**.
+2. Go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform:** Select **iOS/iPadOS**.

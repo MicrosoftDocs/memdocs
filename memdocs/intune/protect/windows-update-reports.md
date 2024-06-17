@@ -69,7 +69,7 @@ To support reporting, you must configure the following data collection settings:
 
 ## Reports for Update rings for Windows 10 and later policy
 
-Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Windows** > **Update rings for Windows 10 and later** > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
 
 :::image type="content" source="./media/windows-10-update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./media/windows-10-update-rings/default-policy-view.png":::
 

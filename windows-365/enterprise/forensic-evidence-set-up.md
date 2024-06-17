@@ -52,13 +52,12 @@ To set up Microsoft Purview forensic evidence, your environment must meet the fo
 - Gallery image type
   - Windows 11 Enterprise + Microsoft 365 Apps 23H2 or later
 - Licensing options
-  - Microsoft 365 E5 (no Teams)
+  - Microsoft 365 E5
   - Microsoft 365 E5 Compliance
-  - Microsoft 365 F5 Compliance
-  - Microsoft 365 F5 Sec+Comp
+  - Microsoft 365 E5 Insider Risk Management
 - Join type and network
-  - Microsoft Entra joined with Microsoft hosted network and Azure network connections
-  - Microsoft Entra hybrid joined with Azure network connection
+  - [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) with Microsoft hosted network and Azure network connections
+  - [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join) with Azure network connection
 - [Microsoft Defender Antivirus in Windows](/defender-endpoint/microsoft-defender-antivirus-windows) version 4.18.2110 or later
 - Microsoft 365 Apps version 16.0.14701.0 or later
 - The device must be assigned to a [primary user](/mem/intune/remote-actions/find-primary-user)
