@@ -141,8 +141,8 @@ The following filter properties are always available to use with enrollment poli
 
 **Windows**  
 
-* Manufacturer - For Windows 11, version 22H2 and later 
-* Model - For Windows 11, version 22H2 and later 
+* Manufacturer - For Windows 11, version 22H2 and later with [KB5035942 (OS Builds 22621.3374 and 22631.3374)](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df).  
+* Model - For Windows 11, version 22H2 and later with [KB5035942 (OS Builds 22621.3374 and 22631.3374)](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df).    
 * OS version 
 * Operating system SKU 
 * Ownership
