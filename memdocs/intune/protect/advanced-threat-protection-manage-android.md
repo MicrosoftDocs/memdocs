@@ -51,7 +51,7 @@ To configure web protection on devices, use the following procedures to create a
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 
 3. Enter these settings:
 

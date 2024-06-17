@@ -208,7 +208,7 @@ It is important to keep iOS devices up to date with the latest security updates.
 - **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](/mem/intune/protect/software-updates-ios).
 - **Option 3** (not recommended) - End users manually install the updates.
 
-At **Devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
+At **Devices** > **Manage devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
 
 - **Defer software updates**: Yes/No
 - **Delay default visibility of software updates**: 0-90
