@@ -320,40 +320,6 @@ Use the `Disconnect-MgGraph` command to sign out.
 Disconnect-MgGraph
 ```
 
-### Remote Help to work on non-compliant and unenrolled devices through Conditional Access
-
-When setting a Conditional Access policy for apps Office 365 and Office 365 SharePoint Online with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, the tenant can use Remote Help by completing the steps shown here. The Conditional Access policy created blocks some scope that Remote Help uses to access resources when the device is non-compliant. 
-
-Currently, Remote Help needs access to the Remote Assistance app, Microsoft Intune app, Windows Azure Active Directory app, and the Microsoft Command Device Graph Service. To use Remote Help, you must allow the following resources, or the app will block the user as it is unable to support the feature set it is designed for. 
-
-1. In your Conditional Access policy,
-  - exclude the Remote Assistance app by browsing to it. Remote Assistance allows connections to be made through the Remote Help app. 
-  - exclude Microsoft Intune. Microsoft Intune is needed to perform RBAC checks to determine if the helper has permissions to assist the sharer. 
-  - exclude the Windows Azure Active Directory and Microsoft Command Device Graph Service apps. Windows Azure Active Directory grants Remote Help the ability to read organizational data like users, groups, management chain to support showing the user profile information as part of the information shown to the helper and sharer such as profile picture, name, title, etc. Microsoft Command Device Graph Service is needed to support the ability to confirm Intune enrollment and check compliance.
-
-If these apps don't appear by default in the app selection area of the Conditional Access policy, see this section for instructions on configuration.
-
-The following table shows you the App ID of the 2 apps needed:
-
-|Display Name| App ID|
-|:-----------------------------------|:----------------------------:|
-|00000002-0000-0000-c000-000000000000|Windows Azure Active Directory|
-|62060984-07ca-4b01-802e-d9c0e90718d8|Microsoft Command Device Graph Service|
-
-If these applications are not found in the tenant, then the admin must create the Service Principal for these applications using the following commands in Powershell.
-
-[PowerShell Gallery | AzureADPreview 2.0.2.149](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)
-
-```powershell
-> Install-Module -Name AzureADPreview
-> Connect-AzureAD
-> New-AzureADServicePrincipal -AppId <app-id>
-> New-AzureADServicePrincipal -AppId 00000002-0000-0000-c000-000000000000
-> New-AzureADServicePrincipal -AppId 62060984-07ca-4b01-802e-d9c0e90718d8
-```
-After these Service Principals are created, these applications need to be excluded, which can be done by creating an attribute-value and using the app filters described in the documentation [here.](/entra/identity/conditional-access/concept-filter-for-applications) 
-You can learn more about these scopes [here.](/graph/permissions-reference)
-
 
 ## Languages Supported
 

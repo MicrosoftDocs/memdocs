@@ -37,7 +37,7 @@ sections:
       - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |
-          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md#software-requirements). This requirement includes that the minimum required update is installed before starting the device for the first time:
+          - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md?tabs=software). This requirement includes that the minimum required update is installed before starting the device for the first time:
 
             - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
 
