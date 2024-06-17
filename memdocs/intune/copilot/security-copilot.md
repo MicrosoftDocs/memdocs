@@ -68,9 +68,8 @@ In Microsoft Defender, you can use this information, including the device type, 
 
 - When an admin submits a prompt, Copilot can only access the data that the admin has permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) assigned to them.
 
-  If you want your admins to access all your Intune data in Copilot for Security, then use one of the following roles in Microsoft Entra ID:
+  If you want your admins to access all your Intune data in Copilot for Security, then use the following role in Microsoft Entra ID:
 
-  - Global Administrator
   - Intune Service Administrator (also known as Intune Administrator)
 
   For more information on roles and authentication, go to:
