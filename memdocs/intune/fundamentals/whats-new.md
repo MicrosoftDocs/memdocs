@@ -78,6 +78,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of June 17, 2024 (Service release 2406)
 
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Management support for MSI and PowerShell file types<!-- 25230336  -->
+
+Endpoint Privilege Management (EPM) *elevation rules* now support the elevation of Windows Installer and PowerShell files in addition to executable files that were previously supported. The new file extensions that EPM supports include:
+
+- .msi
+- .ps1
+
+For information about using EPM, see [Endpoint Privilege Management](../protect/epm-overview.md).
+
 ### App management
 
 #### US GCC and GCC High support for Managed Home Screen<!-- 25827679 -->

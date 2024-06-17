@@ -59,16 +59,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## Microsoft Intune Suite
-
-### Endpoint Privilege Management support for MSI and PowerShell file types<!--25230336 -->
-
-Endpoint Privilege Management (EPM) *elevation rules* will soon support the elevation of Windows Installer and PowerShell files in addition to executable files that are already supported. The new file extensions that EPM will support include:
-
-- .msi
-- .ps1
-
-For information about using EPM, see [Endpoint Privilege Management](../protect/epm-overview.md).
+<!-- ## Microsoft Intune Suite -->
 
 ## App management
 
@@ -160,22 +151,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Role-based access control
-
-### Granular RBAC controls for endpoint security<!-- 5475572 -->
-
-We’re working to add new Intune role-based access control (RBAC) permissions for each endpoint security workload to allow for additional granularity. The *Security baselines* permission previously included all security policies and soon, it will only include security workloads that don't have their own permission.
-
-Today, you can use the [built-in role](../fundamentals/role-based-access-control.md#built-in-roles) *Endpoint Security Manager* to manage policies and features within the Endpoint security node or, you can limit admin actions by using the [custom role](../fundamentals/create-custom-role.md) with the *Security baselines* permission.
-
-As the new permissions become available, they’ll be automatically assigned to any custom roles that use the Security baseline permission. This automatic assignment to existing configurations ensures your admins will continue to have the same permissions they have today, with no need for you to reconfigure your custom RBAC roles.
-
-For example, if an admin is assigned a custom role with ‘Security baselines/Read’ permission, that role will be auto-assigned the new permissions, like *Attack surface reduction/Read*. The *Security baselines/Read* would still be applicable for viewing Security baselines, Firewall, Antivirus, and other security policies that don't have their own granular permission.
-
-For more information about current RBAC permissions and built-in roles, see:
-
-- [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-- [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+<!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 
