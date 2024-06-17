@@ -87,7 +87,7 @@ Three configuration profiles:
 
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Screen capture (mobile only)**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Block screenshots and screen recording**
-- **Devices** > **Android** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Screen capture (Samsung KNOX only)**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Screen capture (Samsung KNOX only)**
 
 ## Block video conferences on device
 
@@ -115,7 +115,7 @@ Three configuration profiles:
   | Not selected |  Not configured |
 
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Block sending diagnostic and usage data to Apple**
-- **Devices** > **Android** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Diagnostic data (Samsung Knox only)**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Diagnostic data (Samsung Knox only)**
 
 ## Block access to application store
 
@@ -127,7 +127,7 @@ Three configuration profiles:
 
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **App store** > **App store (mobile only)**
 - **Devices** > **By platform** > **iOS/iPadOS** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **App store, Doc Viewing, Gaming** > **Block App store**
-- **Devices** > **Android** > **Configuration** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Google Play Store** > **Google Play store (Samsung Knox only)**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Google Play Store** > **Google Play store (Samsung Knox only)**
 
 ## Require password when accessing application store
 
@@ -148,7 +148,7 @@ For Android devices, this setting is only supported on Samsung Knox devices in B
 Two configuration profiles:
 
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > **General** > **Removable storage**
-- **Devices** > **Android** > **Configuration** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cloud and Storage** > **Removable storage (Samsung Knox only)**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cloud and Storage** > **Removable storage (Samsung Knox only)**
 
 ## Block Bluetooth connection
 
@@ -159,7 +159,7 @@ For Android devices, this setting is only supported on Samsung Knox devices in B
 Two configuration profiles:
 
 - **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > profile name > **Properties** > **Configuration settings Edit** > > **Cellular and connectivity** > **Bluetooth**
-- **Devices** > **Android** > **Configuration** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cellular and connectivity** > **Bluetooth (Samsung Knox only)**
+- **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > choose a profile with type **Device administrator** > **Properties** > **Configuration settings Edit** > **Cellular and connectivity** > **Bluetooth (Samsung Knox only)**
 
 ## Related article
 
