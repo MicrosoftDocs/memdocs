@@ -34,7 +34,7 @@ ms.collection:
 
 # Access your Microsoft Intune data in Copilot for Security
 
-Copilot for Security is a cloud-based AI platform that provides a natural language Copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Copilot for Security?](/security-copilot/microsoft-security-copilot)
+Copilot for Security is a cloud-based AI platform that provides a natural language Copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Copilot for Security?](/security-copilot/microsoft-security-copilot).
 
 **Copilot for Security integrates with your Microsoft Intune data**.
 
@@ -56,11 +56,11 @@ For example, there's a user or device that is showing signs of malicious intent.
 
 In Copilot for Security, you can use the Intune capabilities to get more information, like:
 
-- Ask about a specific device, get all the properties about that device, including the device name, device ID, and device manufacturer
-- Determine when the device is enrolled in Intune
+- Ask about a specific device, get all the properties about that device, including the device name, device ID, and device manufacturer.
+- Determine when the device is enrolled in Intune.
 - Find the primary user of a device
-- Determine the type of device, like a laptop or mobile phone
-- Check the compliance status, especially if a device is noncompliant, and why it's noncompliant
+- Determine the type of device, like a laptop or mobile phone.
+- Check the compliance status, especially if a device is noncompliant, and why it's noncompliant.
 
 In Microsoft Defender, you can use this information, including the device type, to determine your next steps. For example, you might take different actions based on the type of device (laptop vs. mobile phone vs. tablet). Copilot for Security can also give you a link to the device in Microsoft Defender, so you can run any Defender actions.
 
