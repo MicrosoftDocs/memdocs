@@ -44,7 +44,7 @@ In Intune, you can bulk activate eSIM codes using the following options:
 
   In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
 
-- **Option 2 - Use an eSIM download server with the Settings Catalog** (recommended)
+- **Option 2 - Use an eSIM download server with the Settings Catalog**
 
   For more information on this option, go to [Configure eSIM download server using Microsoft Intune](esim-device-configuration-download-server.md).
 
