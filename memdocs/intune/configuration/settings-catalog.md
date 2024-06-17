@@ -138,7 +138,7 @@ You can create the policy using the settings catalog profile type.
     > - When a setting allows multiple values, it's recommended to add each value separately.
     >
     >   For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
-    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center":::
+    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center.":::
     >
     >   You can add multiple values in a single field, but you may experience a character limit.
 
