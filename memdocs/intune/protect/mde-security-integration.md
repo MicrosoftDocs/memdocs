@@ -118,6 +118,10 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
 - Windows Server 2022 (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
 
+> [!NOTE]
+>
+> 32bit versions of Windows are not supported.
+
 Security settings management doesn't work on and isn't supported with the following devices:
 
 - Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
@@ -308,7 +312,9 @@ In Microsoft Defender for Endpoint portal, as a security administrator:
    >
    > Use the proper device tags to test and validate your rollout on a small number of devices.
    >
-   > When deploying to the *All devices* group, any device that falls into the scope configured will automatically be enrolled. While most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment.
+   > When deploying to the *All devices* group, any device that falls into the scope configured will automatically be enrolled.
+   >
+   > While most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment.
 
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
