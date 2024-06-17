@@ -124,7 +124,7 @@ Learn how to protect access to company resource based on device, network, and ap
 - [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md)
 - [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md)
-- [Jamf Mobile Threat Defense](jamf-mtd-connector.md) *(formerly Wandera)*
+- [Jamf Mobile Threat Defense](jamf-mtd-connector.md)
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
