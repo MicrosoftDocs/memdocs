@@ -39,7 +39,7 @@ This feature applies to:
 
 In Intune, you can bulk activate eSIM codes using the following options:
 
-- **Option 1 - Use an eSIM download server with the Settings Catalog (recommended)** (this article).
+- **Option 1 - Use an eSIM download server with the Settings Catalog** (this article).
 
 - **Option 2 - Import activation codes using a CSV file**.
 
