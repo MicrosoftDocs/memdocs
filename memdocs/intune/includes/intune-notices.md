@@ -37,7 +37,7 @@ Starting **June 1, 2024**, we're making updates to improve the Intune mobile app
 > [!IMPORTANT]
 > If you don't update to the latest versions, users will be blocked from launching your app.
 >
-> Ahead of this change, for Microsoft apps that need to be updated, when a user opens the app, they'll receive a warning message to update the app.
+> Ahead of this change, for Microsoft apps that need to be updated, when a user opens the app, they'll receive a blocking message to update the app.
 
 Note that the way Android updates, once one Microsoft application with the updated SDK is on the device and the Company Portal is updated to the latest version, Android apps will update. So, this message is focused on iOS SDK/app wrapper updates. We recommend always updating your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly.  
 
@@ -307,7 +307,7 @@ If you're managing Windows 8.1 devices those devices should be upgraded to a sup
 
 ### How can you prepare?
 
-Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows** > **Windows devices**, and filter by OS.
+Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **By platform** > **Windows** > **Windows devices**, and filter by OS.
 
 **Additional information**
 - [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md)

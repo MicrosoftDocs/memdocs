@@ -140,17 +140,17 @@ After you test the file, the next step is to deploy the profile to devices using
 In Intune, create a device configuration profile:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android device administrator**.
-    - **Profile type**: Select **MX profile (Zebra only)**.
+    - **Profile type**: Select **MX policy (Zebra only)**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the new profile.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    - **Name**: Enter a descriptive name for the new policy.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
 7. In **Configuration settings** > **Choose a valid Zebra MX XML file**, add the XML profile file [you exported from StageNow](#step-4---create-a-device-management-profile-in-stagenow) (in this article).

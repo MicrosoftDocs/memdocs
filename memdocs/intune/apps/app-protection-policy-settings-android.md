@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/30/2024
+ms.date: 06/14/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -100,6 +100,7 @@ There are some exempt apps and platform services that Intune app protection poli
   |com.android.settings |Android system settings |
   |com.azure.authenticator |Azure Authenticator app, which is required for successful authentication in many scenarios. |
   |com.microsoft.windowsintune.companyportal |Intune Company Portal|
+  |com.android.providers.contacts |Native contacts app |  
 
 ### Conditional exemptions
   These apps and services are only allowed for data transfer to and from Intune-managed apps under certain conditions.
