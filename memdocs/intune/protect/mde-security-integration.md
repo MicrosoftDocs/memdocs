@@ -151,6 +151,10 @@ To use security settings management, you need:
 
   For current information about options, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide&preserve-view=true).
 
+### Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to administrators who will manage Intune endpoint security policies from within the Intune admin center, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+
 ## Architecture
 
 The following diagram is a conceptual representation of the Microsoft Defender for Endpoint security configuration management solution.
