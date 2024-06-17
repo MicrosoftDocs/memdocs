@@ -5,7 +5,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/18/2024
 ms.topic: how-to
 ms.localizationpriority: high
 ms.service: windows-client
@@ -101,7 +101,7 @@ Prerequisites:
 >
 > Assigning a user to a specific Autopilot device doesn't work if using Active Directory Federation Services (ADFS).
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices** > choose the device > **Assign user**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment**. Under **Windows Autopilot**, select **Devices**, select a device, and then select **Assign user**.
 
 1. Choose a Microsoft Entra ID user licensed to use Intune and choose **Select**.
 

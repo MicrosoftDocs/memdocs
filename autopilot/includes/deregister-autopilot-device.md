@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/11/2024
+ms.date: 06/18/2024
 ms.localizationpriority: medium
 ---
 
@@ -52,7 +52,7 @@ Once the device is deleted from Intune, it can then be deregistered from Autopil
 
 1. In the **Windows | Windows enrollment** screen, select **Windows enrollment**
 
-1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+1. Under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen that opens, under **Serial number**, find the device that needs to be deregistered by its serial number as determined in the [Delete from Intune](#delete-from-intune) section. If necessary, use the **Search by serial number** box.
 

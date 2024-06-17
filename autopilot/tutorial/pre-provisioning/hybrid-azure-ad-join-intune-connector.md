@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -65,7 +65,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot Deployment Program**, select **Intune Connector for Active Directory**.
+1. Under **Windows Autopilot**, select **Intune Connector for Active Directory**.
 
 1. In the **Intune Connector for Active Directory** page, select **Add**.
 

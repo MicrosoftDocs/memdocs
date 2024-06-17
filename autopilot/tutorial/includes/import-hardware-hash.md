@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/17/2024
+ms.date: 06/18/2024
 ms.localizationpriority: medium
 ---
 
@@ -28,7 +28,7 @@ After the CSV file is created, it can be imported into Intune via the following 
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**
 
-1. Under **Windows Autopilot**, select **Devices**. **Devices** is located under **Windows Autopilot** and not under **Windows Autopilot device preparation**.
+1. Under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen that opens, select **Import**.
 

@@ -7,9 +7,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/14/2023
+ms.date: 06/18/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -24,9 +24,13 @@ appliesto:
 # User-driven Microsoft Entra hybrid join: Install the Intune Connector
 
 Autopilot user-driven Microsoft Entra hybrid join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
+
 > [!div class="checklist"]
+>
 > - **Step 2: Install the Intune Connector**
+
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
@@ -40,13 +44,15 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 > [!NOTE]
 >
-> If you have already set up the Intune Connector as part of the [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join](../pre-provisioning/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
+> If the Intune Connector is already installed and configured, skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
 
 ## Install the Intune Connector
 
+### Turn off Internet Explorer Enhanced Security Configuration
+
 1. Sign into the server where the Intune Connector is being installed with an account that has local administrator rights.
 
-1. Turn off Internet Explorer Enhanced Security Configuration on the server. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. To turn off Internet Explorer Enhanced Security Configuration:
+1. Turn off **Internet Explorer Enhanced Security Configuration** on the server. By default Windows Server has **Internet Explorer Enhanced Security Configuration** turned on. To turn off **Internet Explorer Enhanced Security Configuration**:
 
    1. On the server where the Intune Connector is being installed, open **Server Manager**.
 
@@ -56,7 +62,9 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
    1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) on the server where the Intune Connector is being installed.
+### Download the Intune Connector
+
+1. On the server where the Intune Connector is being installed, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -64,11 +72,13 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot Deployment Program**, select **Intune Connector for Active Directory**.
+1. Under **Windows Autopilot**, select **Intune Connector for Active Directory**.
 
 1. In the **Intune Connector for Active Directory** page, select **Add**.
 
-1. In the **Add connector** window that opens, select **Download the on-premises Intune Connector for Active Directory** under step 2 of **Configuring the Intune connector for Active Directory**. This download should download a file called **ODJConnectorBootstrapper.exe**.
+1. In the **Add connector** window that opens, select **Download the on-premises Intune Connector for Active Directory** under step 2 of **Configuring the Intune connector for Active Directory**. The link downloads a file called **ODJConnectorBootstrapper.exe**.
+
+### Install the Intune Connector on the server
 
 1. Open the **ODJConnectorBootstrapper.exe** file that downloaded to launch the Intune Connector install.
 
@@ -88,7 +98,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
    1. Under the **Enrollment** tab, select **Sign In**.
 
-   1. Under the **Sign In** tab, sign in with the Global administrator or with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process may take a few minutes to complete.
+   1. Under the **Sign In** tab, sign in with the Global administrator or with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process might take a few minutes to complete.
 
    1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window. The **Enrollment** tab shows **Intune connector for Active Directory is enrolled** and the **Sign In** button is greyed out.
 
@@ -101,6 +111,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 > [!NOTE]
 >
 > - The account used to enroll the Intune connector is only a temporary requirement at the time of installation. The account isn't used going forward after the server is enrolled.
+>
 > - It can take several minutes for the newly enrolled server to appear in the **Intune Connector for Active Directory** page of the Microsoft Intune admin center. The enrolled server only appears if it can successfully communicate with the Intune service.
 
 After the Intune Connector is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, the **Admin** and **Operational** logs are found.
@@ -110,8 +121,8 @@ After the Intune Connector is installed, it will start logging in the **Event Vi
 > [!div class="nextstepaction"]
 > [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 
-## More information
+## Related content
 
-For more information on the Intune connector, see the following article(s):
+For more information on the Intune connector, see the following article:
 
 - [Install the Intune Connector](/mem/autopilot/windows-autopilot-hybrid#install-the-intune-connector)
