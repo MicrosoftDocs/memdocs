@@ -198,13 +198,13 @@ Manages security and compliance features such as security baselines, device comp
 | App Control for Business | Delete |
 | App Control for Business | Read |
 | App Control for Business | Update |
-| App Control for Business | View Reports |
+| App Control for Business | View reports |
 | Attack surface reduction | Assign |
 | Attack surface reduction | Create |
 | Attack surface reduction | Delete |
 | Attack surface reduction | Read |
 | Attack surface reduction | Update |
-| Attack surface reduction | View Reports |
+| Attack surface reduction | View reports |
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | View client details |
@@ -224,7 +224,7 @@ Manages security and compliance features such as security baselines, device comp
 | Device compliance policies | Update |
 | Device compliance policies | View reports |
 | Device configurations | Read |
-| Device configurations | View Reports |
+| Device configurations | View reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
 | Endpoint protection reports | Read |
@@ -234,13 +234,13 @@ Manages security and compliance features such as security baselines, device comp
 | Endpoint detection and response | Delete |
 | Endpoint detection and response | Read |
 | Endpoint detection and response | Update |
-| Endpoint detection and response | View Reports |
+| Endpoint detection and response | View reports |
 | Endpoint Privilege Management Policy Authoring | Assign |
 | Endpoint Privilege Management Policy Authoring | Create |
 | Endpoint Privilege Management Policy Authoring | Delete |
 | Endpoint Privilege Management Policy Authoring | Read |
 | Endpoint Privilege Management Policy Authoring | Update |
-| Endpoint Privilege Management Policy Authoring | View Reports |
+| Endpoint Privilege Management Policy Authoring | View reports |
 | Enrollment programs | Read device |
 | Enrollment programs | Read profile |
 | Filters | Read |
@@ -277,6 +277,7 @@ Manages security and compliance features such as security baselines, device comp
 | Security baselines | Delete |
 | Security baselines | Read |
 | Security baselines | Update |
+| Security baselines | View reports |
 | Security tasks | Read |
 | Security tasks | Update |
 | Telecom expenses | Read |
@@ -295,7 +296,7 @@ Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) polic
 | Endpoint Privilege Management Policy Authoring | Delete |
 | Endpoint Privilege Management Policy Authoring | Read |
 | Endpoint Privilege Management Policy Authoring | Update |
-| Endpoint Privilege Management Policy Authoring | View Reports |
+| Endpoint Privilege Management Policy Authoring | View reports |
 | Organization | Read |
 
 
@@ -324,12 +325,12 @@ Read Only Operators view user, device, enrollment, configuration and application
 | Device compliance policies | Read |
 | Device compliance policies | View reports |
 | Device configurations | Read |
-| Device configurations | View Reports |
+| Device configurations | View reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
 | Endpoint detection and response | Read |
 | Endpoint Privilege Management Policy Authoring | Read |
-| Endpoint Privilege Management Policy Authoring | View Reports |
+| Endpoint Privilege Management Policy Authoring | View reports |
 | Endpoint protection reports | Read |
 | Enrollment programs | Read device |
 | Enrollment programs | Read profile |
@@ -347,7 +348,7 @@ Read Only Operators view user, device, enrollment, configuration and application
 | Partner Device Management | Read |
 | Policy Sets | Read |
 | Quiet Time policies | Read |
-| Quiet Time policies | View Reports |
+| Quiet Time policies | View reports |
 | Remote assistance connectors | Read |
 | Remote assistance connectors | View reports |
 | Remote tasks | Get filevault key. |
@@ -523,7 +524,7 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 | Device configurations | Delete |
 | Device configurations | Read |
 | Device configurations | Update |
-| Device configurations | View Reports |
+| Device configurations | View reports |
 | Enrollment programs | Assign profile |
 | Enrollment programs | Create device |
 | Enrollment programs | Create token |
@@ -560,7 +561,7 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 | Quiet Time policies | Delete |
 | Quiet Time policies | Read |
 | Quiet Time policies | Update |
-| Quiet Time policies | View Reports |
+| Quiet Time policies | View reports |
 
 
 ## Help Desk Operator
@@ -592,7 +593,7 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | Device compliance policies | Read |
 | Device compliance policies | View reports |
 | Device configurations | Read |
-| Device configurations | View Reports |
+| Device configurations | View reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
 | Endpoint detection and response | Read |
@@ -663,7 +664,7 @@ Organizational Messages Readers can view Endpoint Privilege Management (EPM) pol
 | Permission | Action |
 | ---------- | ------ |
 | Endpoint Privilege Management Policy Authoring | Read |
-| Endpoint Privilege Management Policy Authoring | View Reports |
+| Endpoint Privilege Management Policy Authoring | View reports |
 | Organization | Read |
 
 
