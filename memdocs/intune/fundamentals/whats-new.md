@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2024
+ms.date: 06/18/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -191,6 +191,35 @@ The following protected apps are now available for Microsoft Intune:
 - VPSX Print for Intune by Levi, Ray & Shoup, Inc.
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md)
+
+### Role-based access control
+
+#### New granular RBAC controls for Intune endpoint security<!-- 5475572 -->
+
+We’ve begun to replace the role-based access control (RBAC) rights to endpoint security policies that are granted by the *Security baselines* permission with a series of more granular permissions for specific endpoint security tasks. This change can help you assign the specific rights your Intune admins require to do specific jobs instead of relying on either the [built-in](../fundamentals/role-based-access-control.md#built-in-roles) *Endpoint Security Manager* role or a [custom role](../fundamentals/create-custom-role.md) that includes the *Security baseline* permission. Prior to this change, the *Security baseline* permission grants rights across all endpoint security policies.
+
+The following new RBAC permissions are available for endpoint security workloads:
+
+- App Control for Business
+- Attack surface reduction
+- Endpoint detection and response
+
+Each new permission supports the following rights for the related policy:
+
+- Assign
+- Create
+- Delete
+- Read
+- Update
+- View Reports
+
+Each time we add a new granular permission for an endpoint security policy to Intune, those same rights are removed from the *Security baselines* permission. If you use custom roles with the *Security baselines* permission, the new RBAC permission is assigned automatically to your custom roles with the same rights that were granted through the *Security baseline* permission. This auto-assignment ensures your admins continue to have the same permissions they have today.  
+
+For more information about current RBAC permissions and built-in roles, see:
+
+- [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+- [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+- [Assign role-based access controls for endpoint security policy](../protect/endpoint-security-policy.md#rbac-roles-and-permissions-to-manage-endpoint-security-workloads) in *Manage device security with endpoint security policies in Microsoft Intune*.
 
 ## Week of June 3, 2024
 
