@@ -80,11 +80,11 @@ For more information, see:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require code integrity, which detects if an unsigned driver or system file is being loaded into the kernel. It also detects if a system file is changed by malicious software or run by a user account with administrator privileges.
 
-More resources:
+For more information, see:  
 
-- For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).
-- For MAA, ensure there are no firewall rules blocking outbound HTTPS/443 traffic, and that SSL traffic inspection is not in place for your Intune tenants geo-region, see [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints?tabs=north-america#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).
-- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).  
+- For the Microsoft Azure Attestation service, ensure there are no firewall rules blocking outbound HTTPS/443 traffic, and that SSL traffic inspection is not in place for your Intune tenant's geo-region. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md?tabs=north-america#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).  
+- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).  
 
 ## Device Properties
 
