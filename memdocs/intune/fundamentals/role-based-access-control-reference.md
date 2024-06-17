@@ -184,7 +184,6 @@ Application Managers manage mobile and managed applications, can read device inf
 | Policy Sets | Update |
 | Windows Enterprise Certificate | Read |
 
-
 ## Endpoint Security Manager
 
 Manages security and compliance features such as security baselines, device compliance, conditional access, and Microsoft Defender ATP.
@@ -284,7 +283,6 @@ Manages security and compliance features such as security baselines, device comp
 | Terms and conditions | Read |
 | Windows Enterprise Certificate | Read |
 
-
 ## Endpoint Privilege Manager
 
 Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) policies in the Intune console.
@@ -298,7 +296,6 @@ Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) polic
 | Endpoint Privilege Management Policy Authoring | Update |
 | Endpoint Privilege Management Policy Authoring | View reports |
 | Organization | Read |
-
 
 ## Read Only Operator
 
