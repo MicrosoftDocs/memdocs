@@ -48,7 +48,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Windows 10 and later**.
 
 ## Device health
-To ensure devices boot to a trusted state, Intune utilizes Microsoft device attestations services.  Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service. Devices in the Intune commercial service running Windows 11 use the Microsoft Azure Attestation (MAA) service. 
+To ensure devices boot to a trusted state, Intune utilizes Microsoft device attestation services.  Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service. Devices in the Intune commercial service running Windows 11 use the Microsoft Azure Attestation (MAA) service. 
 
 For more information, see:  
 
