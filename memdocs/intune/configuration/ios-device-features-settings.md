@@ -113,6 +113,8 @@ This feature applies to:
 
 - When you use the Home Screen grid settings to add pages, or add pages and apps to the dock, then the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
 
+- iOS/iPadOS web clips that are required to open in a managed browser will not work with home screen layout policies.
+
 ### Home screen
 
 Use this feature to add apps. And, see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps, line-of business apps, and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md).
