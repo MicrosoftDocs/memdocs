@@ -68,7 +68,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After you review them, you can migrate the settings to a Settings Catalog policy.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
 
     :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png" alt-text="Screenshot that shows how to select the Migrate checkbox next to your imported GPO in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png":::
@@ -121,7 +121,7 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
 
 9. In **Review + deploy**, review your settings.
 
-    When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Configuration** list.
+    When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Manage devices** > **Configuration** list.
 
 The next time any device within your assigned groups checks for configuration updates, the settings you configured are applied.
 

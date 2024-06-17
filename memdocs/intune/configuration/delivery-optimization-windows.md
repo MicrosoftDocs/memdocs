@@ -42,7 +42,7 @@ Applies to:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > **Create** > **New Policy**.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**.
 
 3. Enter the following properties:
 
