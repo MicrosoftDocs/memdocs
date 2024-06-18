@@ -99,6 +99,10 @@ Applies to:
 
 - Android Enterprise
 
+#### Updates to the Managed Apps report<!-- 26711898 -->
+
+The Managed Apps report now provides details about Enterprise App Catalog apps for a specific device. For more information about this report, see [Managed Apps report](../fundamentals/reports.md#managed-apps-report-operational).
+
 ### Device configuration
 
 #### New settings available in the Apple settings catalog <!--27175914 -->
