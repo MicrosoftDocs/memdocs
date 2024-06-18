@@ -119,8 +119,9 @@ The VPN solution would need to be installed and configured via Intune during the
 > [!div class="nextstepaction"]
 > [Step 8: Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]
-- [User-driven mode for Microsoft Entra hybrid join with VPN support](/mem/autopilot/user-driven#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
-- [VPNs](/mem/autopilot/windows-autopilot-hybrid#vpns).
+- [User-driven mode for Microsoft Entra hybrid join with VPN support](../../user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
+- [VPNs](../../windows-autopilot-hybrid.md#vpns).
+

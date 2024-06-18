@@ -79,4 +79,4 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 For more information on Windows Autopilot user-driven Microsoft Entra join, see the following article:
 
-- [User-driven mode for Microsoft Entra join](/mem/autopilot/user-driven#user-driven-mode-for-microsoft-entra-join).
+- [User-driven mode for Microsoft Entra join](../../user-driven.md#user-driven-mode-for-microsoft-entra-join).

@@ -16,6 +16,6 @@ pre-provisioning/hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-For more information on the technician flow of a Windows Autopilot for pre-provisioned deployment, see the following article(s):
+For more information on the technician flow of a Windows Autopilot for pre-provisioned deployment, see the following articles:
 
-- [Technician flow](/mem/autopilot/pre-provision#technician-flow)
+- [Technician flow](/autopilot/pre-provision#technician-flow).

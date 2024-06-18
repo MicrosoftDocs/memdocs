@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/26/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -53,8 +53,8 @@ If you don't plan to assign a user to the device, then skip to **[Step 10: Deplo
 > [!div class="nextstepaction"]
 > [Step 10: Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
-## More information
+## Related content
 
-For more information on domain join profiles, see the following article(s):
+For more information on domain join profiles, see the following article:
 
-- [Create and assign a Domain Join profile](/mem/autopilot/windows-autopilot-hybrid#create-and-assign-a-domain-join-profile)
+- [Create and assign a Domain Join profile](../../windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).

@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -82,9 +82,9 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 > [!div class="nextstepaction"]
 > [Step 7: Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
 
-## More information
+## Related content
 
 For more information on creating a collection in Configuration Manager, see the following article(s):
 
-- [Deploy the Autopilot task sequence](/mem/autopilot/existing-devices#deploy-the-autopilot-task-sequence)
-- [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections)
+- [Deploy the Autopilot task sequence](../../existing-devices.md#deploy-the-autopilot-task-sequence).
+- [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).

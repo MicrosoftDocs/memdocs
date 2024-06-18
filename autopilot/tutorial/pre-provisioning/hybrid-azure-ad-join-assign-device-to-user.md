@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -49,8 +49,8 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 > [!div class="nextstepaction"]
 > [Step 10: Technician flow](hybrid-azure-ad-join-technician-flow.md)
 
-## More information
+## Related content
 
-For more information on assigning a user to an Autopilot device, see the following article(s):
+For more information on assigning a user to an Autopilot device, see the following article:
 
-- [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)
+- [Assign a user to a specific Autopilot device](../../enrollment-autopilot.md#assign-a-user-to-a-specific-autopilot-device).

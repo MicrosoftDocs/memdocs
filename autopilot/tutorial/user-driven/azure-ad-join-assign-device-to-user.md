@@ -54,4 +54,4 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 For more information on assigning a user to an Autopilot device, see the following article:
 
-- [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device).
+- [Assign a user to a specific Autopilot device](../../enrollment-autopilot.md#assign-a-user-to-a-specific-autopilot-device).

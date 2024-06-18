@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -72,8 +72,8 @@ Once the Autopilot for existing devices has been created, modified as needed, an
 > [!div class="nextstepaction"]
 > [Step 10: Register device for Windows Autopilot](register-device.md)
 
-## More information
+## Related content
 
-For more information on running the Autopilot task sequence on the device, see the following article(s):
+For more information on running the Autopilot task sequence on the device, see the following article:
 
-- [Complete the deployment process](/mem/autopilot/existing-devices#complete-the-deployment-process)
+- [Complete the deployment process](../../existing-devices.md#complete-the-deployment-process).

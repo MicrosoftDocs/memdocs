@@ -87,4 +87,4 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 For more information on Windows Autopilot user-driven Microsoft Entra hybrid join, see the following article:
 
-- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/mem/autopilot/windows-autopilot-hybrid).
+- [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../windows-autopilot-hybrid.md).

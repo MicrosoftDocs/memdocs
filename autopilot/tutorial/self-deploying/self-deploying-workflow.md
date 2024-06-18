@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/26/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -68,8 +68,8 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > [!div class="nextstepaction"]
 > [Step 1: Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
 
-## More information
+## Related content
 
-For more information on Windows Autopilot self-deploying mode, see the following article(s):
+For more information on Windows Autopilot self-deploying mode, see the following article:
 
-- [Windows Autopilot self-deploying mode](/mem/autopilot/self-deploying)
+- [Windows Autopilot self-deploying mode](../../self-deploying.md).

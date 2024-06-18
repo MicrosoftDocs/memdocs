@@ -189,6 +189,6 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
 
 For more information on creating an Autopilot task sequence in Configuration Manager, see the following articles:
 
-- [Create a task sequence](/mem/autopilot/existing-devices#create-a-task-sequence).
+- [Create a task sequence](../../existing-devices.md#create-a-task-sequence).
 - [Windows System Preparation Tool (Sysprep)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
 - [Windows Autopilot for existing devices doesn't work](../../known-issues.md#windows-autopilot-for-existing-devices-doesnt-work).

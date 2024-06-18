@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -122,10 +122,10 @@ Once the package containing the Autopilot profile JSON file is created, the pack
 > [!div class="nextstepaction"]
 > [Step 5: Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 
-## More information
+## Related content
 
-For more information on creating and distributing the JSON package in Configuration Manager, see the following article(s):
+For more information on creating and distributing the JSON package in Configuration Manager, see the following articles:
 
-- [Create a package containing the JSON file](/mem/autopilot/existing-devices#create-a-package-containing-the-json-file)
+- [Create a package containing the JSON file](../../existing-devices.md#create-a-package-containing-the-json-file).
 - [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
-- [Distribute content to distribution points](/mem/autopilot/existing-devices#distribute-content-to-distribution-points)
+- [Distribute content to distribution points](../../existing-devices.md#distribute-content-to-distribution-points).

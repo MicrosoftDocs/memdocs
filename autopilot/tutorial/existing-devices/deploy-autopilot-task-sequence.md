@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -121,9 +121,9 @@ If you rather use an unmodified out of box Autopilot task sequence created by th
 > [!div class="nextstepaction"]
 > [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 
-## More information
+## Related content
 
-For more information on deploying the Autopilot task sequence, see the following article(s):
+For more information on deploying the Autopilot task sequence, see the following articles:
 
-- [Deploy the Autopilot task sequence](/mem/autopilot/existing-devices#deploy-the-autopilot-task-sequence)
-- [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence)
+- [Deploy the Autopilot task sequence](../../existing-devices.md#deploy-the-autopilot-task-sequence).
+- [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).

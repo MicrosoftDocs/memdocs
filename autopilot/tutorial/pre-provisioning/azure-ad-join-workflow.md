@@ -102,9 +102,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > [!div class="nextstepaction"]
 > [Step 1: Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 
-## More information
+## Related content
 
 For more information on Windows Autopilot for pre-provisioned deployment Microsoft Entra join, see the following articles:
 
-- [Windows Autopilot for pre-provisioned deployment](/mem/autopilot/pre-provision).
-- [User-driven mode for Microsoft Entra join](/mem/autopilot/user-driven#user-driven-mode-for-microsoft-entra-join).
+- [Windows Autopilot for pre-provisioned deployment](../../pre-provision.md).
+- [User-driven mode for Microsoft Entra join](../../user-driven.md#user-driven-mode-for-microsoft-entra-join).

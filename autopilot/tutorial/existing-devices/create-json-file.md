@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 08/10/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -76,9 +76,9 @@ To export the Autopilot profiles as JSON files, follow these steps:
 > [!div class="nextstepaction"]
 > [Step 4: Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
 
-## More information
+## Related content
 
-For more information on creating the JSON file, see the following article(s):
+For more information on creating the JSON file, see the following articles:
 
-- [Create the JSON file](/mem/autopilot/existing-devices#create-the-json-file)
-- [Get Autopilot profiles for existing devices](/mem/autopilot/existing-devices#get-autopilot-profiles-for-existing-devices)
+- [Create the JSON file](../../existing-devices.md#create-the-json-file).
+- [Get Autopilot profiles for existing devices](../../existing-devices.md#get-autopilot-profiles-for-existing-devices).

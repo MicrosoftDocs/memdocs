@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/26/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -48,8 +48,8 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 > [!div class="nextstepaction"]
 > [Step 10: Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
-## More information
+## Related content
 
-For more information on assigning a user to an Autopilot device, see the following article(s):
+For more information on assigning a user to an Autopilot device, see the following article:
 
-- [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)
+- [Assign a user to a specific Autopilot device](../../enrollment-autopilot.md#assign-a-user-to-a-specific-autopilot-device).

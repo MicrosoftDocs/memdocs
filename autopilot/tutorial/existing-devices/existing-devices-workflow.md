@@ -87,9 +87,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > [!div class="nextstepaction"]
 > [Step 1: Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 
-## More information
+## Related content
 
 For more information on Windows Autopilot deployment for existing devices, see the following articles:
 
-- [Windows Autopilot deployment for existing devices](/mem/autopilot/existing-devices)
-- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)
+- [Windows Autopilot deployment for existing devices](../../existing-devices.md).
+- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430).

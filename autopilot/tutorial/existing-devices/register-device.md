@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -44,9 +44,9 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
 1. [Manually register devices with Windows Autopilot](../../add-devices.md): Manually registering a device includes manually registering devices into Intune as an Autopilot device via the hardware hash. The hardware hash of a device can be collected via one of the following methods:
 
    - [Configuration Manager](/mem/configmgr/comanage/how-to-prepare-Win10#windows-autopilot)
-   - [PowerShell script](/mem/autopilot/add-devices#powershell)
-   - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
-   - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
+   - [PowerShell script](../../add-devices.md#powershell)
+   - [Diagnostics page hash export](../../add-devices.md#diagnostics-page-hash-export)
+   - [Desktop hash export](../../add-devices.md#desktop-hash-export)
 
 1. In an Autopilot profile that is deployed to a device group that the device is a member of, make sure the option **Convert all targeted devices to Autopilot** is set to **Yes**. For more information on creating and assigning Autopilot profiles, see one of the following articles on creating and assigning an Autopilot profile for each of the different Autopilot scenarios:
 
@@ -70,10 +70,10 @@ For Autopilot scenarios that utilize Microsoft Entra hybrid join and run after t
 
 In both of the above scenarios, there's no device that can be added to a device group before the Autopilot deployment begins. Since there's no device group that contains the device, there's no device group that the domain join profile can be assigned to before the Autopilot deployment begins. Assigning the domain join profile to **All devices** resolves this problem and ensures that the device can pick up the domain join profile before it's either a Microsoft Entra device or Autopilot device.
 
-## More information
+## Related content
 
-For more information on registering the device for Windows Autopilot, see the following article(s):
+For more information on registering the device for Windows Autopilot, see the following articles:
 
-- [Register the device for Windows Autopilot](/mem/autopilot/existing-devices#register-the-device-for-windows-autopilot)
-- [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices)
-- [Create an Autopilot deployment profile](/mem/autopilot/profiles#create-an-autopilot-deployment-profile)
+- [Register the device for Windows Autopilot](../../existing-devices.md#register-the-device-for-windows-autopilot).
+- [Manually register devices with Windows Autopilot](../../add-devices.md).
+- [Create an Autopilot deployment profile](../../profiles.md#create-an-autopilot-deployment-profile).

@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 08/10/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -107,8 +107,8 @@ Once the required modules are installed, the following steps can be taken to ver
 > [!div class="nextstepaction"]
 > [Step 3: Create JSON file for Autopilot profile(s)](create-json-file.md)
 
-## More information
+## Related content
 
-For more information on installing the required modules to obtain Autopilot profiles from Intune, see the following article(s):
+For more information on installing the required modules to obtain Autopilot profiles from Intune, see the following articles:
 
-- [Install required modules](/mem/autopilot/existing-devices#install-required-modules)
+- [Install required modules](../../existing-devices.md#install-required-modules).
