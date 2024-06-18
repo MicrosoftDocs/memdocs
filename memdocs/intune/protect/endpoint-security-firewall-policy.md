@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2024
+ms.date: 06/17/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,6 +53,10 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 > - Windows 10 21H2
 >
 > On devices that run an earlier version of Windows, the CSP processes firewall rules in an Atomic block of rules, one rule (or setting) at a time. The intent is to apply all the rules in that Atomic block, or none of them. However, if the CSP encounters an issue with applying any rule from the block, the CSP stops applying subsequent rules but doesn't roll back a rule from that block that has already been applied successfully. This behavior can result in a partial deployment of firewall rules on a device.
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune firewall policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Firewall profiles
 
