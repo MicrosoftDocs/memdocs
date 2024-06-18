@@ -21,7 +21,7 @@ appliesto:
 
 ## Additional RBAC permissions for Managed apps and Mobile apps
 
-Additional RBAC permissions for **Managed apps** and **Mobile apps** has been added for the Windows Autopilot device preparation administrator role. For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
+Additional RBAC permissions for **Managed apps** and **Mobile apps** have been added for the Windows Autopilot device preparation administrator role. For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
 ## Initial release of Windows Autopilot device preparation
 
