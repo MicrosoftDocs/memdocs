@@ -121,7 +121,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 9. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the notification to specific IT groups. Then select **Next**.  
 10. In **Assignments**, select the users or groups receiving the notification.
 > [!NOTE]
-    Group exclusion isn't supported for enrollment notification.     
+    The assignment *exclude* feature isn't available for enrollment notifications.  
 11. Select **Next**. 
 12. In **Review + create**, review the notification details, and then select **Create**.  
 
