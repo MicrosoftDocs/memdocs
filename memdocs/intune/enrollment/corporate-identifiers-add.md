@@ -40,7 +40,6 @@ It isn't necessary to add corporate identifiers for all deployments. During enro
 - [Device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)   
 - An Apple device enrollment program such as [Apple School Manager](apple-school-manager-set-up-ios.md), Apple Business Manager, or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)  
 - [Windows Autopilot](/autopilot/windows-autopilot)   
-- [Windows Autopilot device preparation](/autopilot/device-preparation/overview)  
 - Co-management with Microsoft Intune and group policy (GPO)  
 - Azure Virtual Desktop  
 - Automatic mobile device management (MDM) enrollment via provisioning package  
