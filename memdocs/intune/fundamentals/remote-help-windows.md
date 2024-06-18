@@ -360,35 +360,32 @@ Remote Help is supported in the following languages:
 - Turkish
 - Ukrainian
 
-## Troubleshoot Remote Help on Windows for Edge WebView2
+## Troubleshooting Remote Help on Windows for Edge WebView2
+
 You might see an error code in a dialog box if you're having trouble installing and running Remote Help. The error might be related to Microsoft Edge WebView 2, which is required to use Remote Help. Here are some error codes you might see along with a short description of the problem.
+
 |Error Code |General Problem |
 |-----------| ----------------|
-|1001|Remote Help failed to initialize one of its internal components|
+|1001|Remote Help failed to initialize one of its internal components.|
 |1002|Remote Help failed to load WebView2.|
 |1003|Remote Help failed to install WebView2.|
 
-1. Make sure Microsoft Edge is installed properly and up to date.
+### Solutions
 
-   Remote Help uses the Microsoft Edge browser control. If your device has Microsoft Edge installed, then it’s likely that Remote Help will run properly. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/en-us/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
-   After installing or updating Microsoft Edge, try opening Remote Help again.
-   If Remote Help doesn't run or you get an error message that Microsoft Edge WebView2 isn't installed, go to the next step.
+1. Ensure that Microsoft Edge is installed properly and is up to date.
+Remote Help uses the Microsoft Edge browser control. If your device has Microsoft Edge installed, then it’s likely that Remote Help will run properly. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
+After installing or updating Microsoft Edge, try opening Remote Help again. If Remote Help doesn't run or you get an error message that Microsoft Edge WebView2 isn't installed, go to the next step.
 
 2.  Install Microsoft Edge WebView 2
-
-    Microsoft Edge WebView2 is required to use Remote Help. If you get an error message that WebView2 isn't installed when you try to open Remote Help, [download and install Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/consumer/?form=MA13LH) from the Microsoft website. After you've downloaded WebView2, try opening Remote Help again.
+Microsoft Edge WebView2 is required to use Remote Help. If you get an error message that WebView2 isn't installed when you try to open Remote Help, then [download and install Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/consumer/?form=MA13LH) from the Microsoft website. After you've downloaded WebView2, try opening Remote Help again.
 
 > [!NOTE]
 > WebView2 should already be installed if your device is running Windows 11 or has Microsoft Edge.
-
-
-
 
 ## Known Issues
 For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
 After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
 For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
-
 
 ## What's New for Remote Help
 
