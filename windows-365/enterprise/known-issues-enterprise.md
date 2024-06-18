@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 5/08/2024
+ms.date: 6/05/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -225,6 +225,23 @@ Scope tags applied to custom images can't be edited or directly added by top-lev
 When scoped admins create custom images, those custom images are tagged with the same scope tags that are associated with the scoped admin.  
 
 For example, if an admin scoped with the scope tag “Scope Tag A” creates a custom image, the created custom image is automatically tagged with “Scope Tag A”.  
+
+## WebRTC Redirector Service missing from latest Windows 365 Cloud PC gallery images
+
+The May 21, 2024 updates for Cloud PC gallery images are missing the WebRTC Redirector Service. Without this component, Teams media redirection does not work.
+
+This applies to the following gallery images:
+
+- Windows 11 23H2 with Microsoft 365 apps
+- Windows 11 22H2 with Microsoft 365 apps
+
+**Troubleshooting steps**
+
+For newly provisioned Cloud PCs, verify WebRTC is available. If it’s not, you can use either of the following options:
+
+- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/intune/apps/apps-add-office365).
+
+- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps: [install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
 
 ## Next steps
 

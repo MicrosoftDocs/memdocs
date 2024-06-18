@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -42,7 +42,9 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## Create a device group
 
-[!INCLUDE [How to create a device group in Intune](../includes/create-device-group.md)]
+[!INCLUDE [Device group description](../includes/device-group-description.md)]
+
+[!INCLUDE [How to create a device group in Intune](../../includes/create-dynamic-device-group.md)]
 
 ## Next step: Configure and assign the Enrollment Status Page (ESP)
 
@@ -51,4 +53,4 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## More information
 
-[!INCLUDE [More information device group](../includes/more-info-device-group.md)]
+[!INCLUDE [More information device group](../../includes/more-info-groups.md)]

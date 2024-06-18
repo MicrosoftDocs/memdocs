@@ -42,6 +42,7 @@ Both marketplace and custom images must meet the following requirements:
 - Generation 2 images.
     > [!Note]
     > We recently made the change to **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
+- The image must never have been Active Directory, Microsoft Entra ID joined, Intune-enrolled, or enrolled for co-management. For more information, see [Sysprep will not run correctly on a device that has been MDM enrolled](/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm).
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
@@ -93,7 +94,7 @@ Newly provisioned Cloud PCs are automatically created with the latest images. Fo
 
 If none of the default gallery images meet your requirements, you can upload up to 20 of your own custom device images.
 
-For more information on creating such a custom image, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource). For best performance, you should also make sure to optimize your image for a virtual desktop role. For more information on this optimization, see [Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role](/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004).
+For more information on creating such a custom image, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource).
 
 A custom image can be created using [any of the images mentioned previously as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with one of those images and then install more applications and make more configuration changes.
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/23/2024
+ms.date: 06/11/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -50,7 +50,12 @@ You can also read:
 >
 > Some features roll out over several weeks and might not be available to all customers in the first week.
 >
-> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's new](/autopilot/windows-autopilot-whats-new).
+> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md).
+>
+> For new information about Windows Autopilot solutions, see:
+> 
+> - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new).
+> - [Windows Autopilot: What's new](/autopilot/whats-new).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
@@ -70,6 +75,56 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of June 3, 2024 
+
+### Device enrollment  
+
+#### New enrollment time grouping feature for devices <!-- 16902437 -->  
+Enrollment time grouping is a new, faster way to group devices during enrollment. When it's configured, Intune adds devices to the appropriate group without requiring inventory discovery and dynamic membership evaluations. To set up enrollment time grouping, you must configure a static Microsoft Entra security group in each enrollment profile. After a device enrolls, Intune adds it to the static security group and delivers assigned apps and policies. 
+
+This feature is available for Windows 11 devices enrolling via Windows Autopilot device preparation. For more information, see [Enrollment time grouping in Microsoft Intune](../enrollment/enrollment-time-grouping.md).  
+
+## Week of May 27, 2024
+
+### Microsoft Intune Suite
+
+#### New primary endpoint for Remote Help
+
+To improve the experience for [Remote Help](../fundamentals/remote-help.md) on Windows, Web, and macOS devices, we have updated the primary endpoint for Remote Help:
+
+- Old primary endpoint: `https://remoteassistance.support.services.microsoft.com`
+- New primary endpoint: `https://remotehelp.microsoft.com`
+
+If you use Remote Help and have firewall rules that block the new primary endpoint, admins and users might experience connectivity issues or disruptions when using Remove Help.
+
+To support the new primary endpoint on Windows devices, upgrade Remote Help to version 5.1.124.0. Web and macOS devices don’t require an updated version of Remote Help to make use of the new primary endpoint.
+
+Applies to:
+
+- macOS 11, 12, 13 and 14
+- Windows 10/11
+- Windows 11 on ARM64 devices
+- Windows 10 on ARM64 devices
+- Windows 365
+
+For information on the newest version of Remote Help, see the *March 13, 2024* entry for [What’s New for Remote Help](../fundamentals/remote-help-windows.md#march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
+
+### Device management
+
+### Evaluate compliance of Windows Subsystem for Linux (public preview)<!-- 24557103 -->
+
+Now in a public preview, Microsoft Intune supports compliance checks for instances of Windows Subsystem for Linux (WSL) running on a Windows host device.
+
+With this preview you can create a custom compliance script that evaluates the required distribution and version of WSL. WSL compliance results are included in the overall compliance state of the host device.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+For information about this capability, see [Evaluate compliance of Windows Subsystem for Linux (public preview)](../protect/compliance-wsl.md).
+
 ## Week of May 20, 2024 (Service release 2405)
 
 ### Device configuration

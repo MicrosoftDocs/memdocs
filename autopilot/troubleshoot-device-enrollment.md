@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/23/2024
+ms.date: 06/07/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -18,7 +18,6 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
-
 
 # Troubleshoot Autopilot device import and enrollment
 
@@ -133,6 +132,20 @@ When a device is reimaged to an older OS version after a hardware change on a de
 - [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
 - [Deregister a device](registration-overview.md#deregister-a-device).
 
+<!-- MAXADO-8911669 -->
+
+## Device appears as Microsoft Entra registered instead of Microsoft Entra joined
+
+When checking the **Join type** of a device that has been joined to Microsoft Entra ID, it shows **Microsoft Entra registered** instead of **Microsoft Entra joined**.
+
+### Cause of device appearing as Microsoft Entra registered instead of Microsoft Entra joined
+
+This issue occurs if the device was previously registered in Microsoft Entra ID, for example via a [Workplace join](/entra/identity/devices/concept-device-registration), before it was joined to Microsoft Entra ID. If the Microsoft Entra ID registered device isn't deleted from Microsoft Entra ID before it's joined to Microsoft Entra ID, then the previous trust type is retained in the record. Joining an existing Microsoft Entra registered device to Microsoft Entra ID results in the Windows Autopilot device showing as **Microsoft Entra registered** instead of **Microsoft Entra joined**.
+
+### Resolution for device appearing as Microsoft Entra registered instead of Microsoft Entra joined
+
+Before registering an existing Microsoft Entra ID registered devices as Windows Autopilot devices, make sure that any existing Microsoft Intune, Microsoft Entra ID, and Windows Autopilot device objects are deleted. After all device objects are deleted, re-register the device as a Windows Autopilot device and then re-enroll the device. For more information on properly deleting all of the device objects, see [Deregister a device](registration-overview.md#deregister-a-device).
+
 ## Intune enrollment issues
 
 See [Troubleshooting Windows device enrollment errors in Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors) for assistance with Intune enrollment issues. Common issues can include:
@@ -147,4 +160,4 @@ If Autopilot Reset fails immediately with the error **Ran into trouble. Please s
 ## Related content
 
 - [Windows Autopilot - known issues](known-issues.md).
-- [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+- [Collect MDM logs](/windows/client-management/mdm-collect-logs).
