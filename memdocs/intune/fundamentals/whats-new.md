@@ -80,7 +80,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Microsoft Intune Suite
 
-#### Endpoint Privilege Management support for MSI and PowerShell file types<!-- 25230336  -->
+#### Endpoint Privilege Management support for MSI and PowerShell file types<!-- 25230336 -->
 
 Endpoint Privilege Management (EPM) *elevation rules* now support the elevation of Windows Installer and PowerShell files in addition to executable files that were previously supported. The new file extensions that EPM supports include:
 
@@ -88,6 +88,15 @@ Endpoint Privilege Management (EPM) *elevation rules* now support the elevation 
 - .ps1
 
 For information about using EPM, see [Endpoint Privilege Management](../protect/epm-overview.md).
+
+#### View CA key type in Microsoft Cloud PKI properties<!-- 27032276 -->
+
+A new Microsoft Cloud PKI property called *CA keys* is available in the admin center and shows the type of certification authority keys used for signing and encryption. The property will display one of the following values:
+
+- HSM: Indicates the use of a hardware security module-backed key.
+- SW: Indicates the use of a software-backed key.
+
+Certification authorities created with a licensed Intune Suite or Cloud PKI standalone add-on use HSM signing and encryption keys. Certification authorities created during a trial period use software-backed signing and encryption keys. For more information about Microsoft Cloud PKI, see [Overview of Microsoft Cloud PKI for Microsoft Intune](../protect/microsoft-cloud-pki-overview.md).
 
 ### App management
 
@@ -207,6 +216,22 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md)
 
+### Monitor and troubleshoot
+
+#### View BitLocker recovery key in Company Portal apps for iOS and macOS<!-- 26615990 -->
+
+End users can view the BitLocker recovery key for an enrolled Windows device and the FileVault recovery key for an enrolled Mac in the Company Portal app for iOS and Company Portal app for macOS. This capability will reduce helpdesk calls in the event the end user gets locked out of their corporate machines. End users can access the recovery key for an enrolled device by signing into the Company Portal app and selecting **Get recovery key**. This experience is similar to the recovery process on the Company Portal website, which also allows end users to see recovery keys.
+
+You can prevent end users within your organization from accessing BitLocker recovery keys by configuring the **Restrict non-admin users from recovering the BitLocker keys for their owned device** setting in Microsoft Entra ID.
+
+For more information, see:
+
+- [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
+- [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)
+- [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md)
+- [Get recovery key for Mac](../user-help/get-recovery-key-cpweb.md)
+- [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
+
 ### Role-based access control
 
 #### New granular RBAC controls for Intune endpoint security<!-- 5475572 -->
@@ -228,7 +253,7 @@ Each new permission supports the following rights for the related policy:
 - Update
 - View Reports
 
-Each time we add a new granular permission for an endpoint security policy to Intune, those same rights are removed from the *Security baselines* permission. If you use custom roles with the *Security baselines* permission, the new RBAC permission is assigned automatically to your custom roles with the same rights that were granted through the *Security baseline* permission. This auto-assignment ensures your admins continue to have the same permissions they have today.  
+Each time we add a new granular permission for an endpoint security policy to Intune, those same rights are removed from the *Security baselines* permission. If you use custom roles with the *Security baselines* permission, the new RBAC permission is assigned automatically to your custom roles with the same rights that were granted through the *Security baseline* permission. This auto-assignment ensures your admins continue to have the same permissions they have today.
 
 For more information about current RBAC permissions and built-in roles, see:
 
