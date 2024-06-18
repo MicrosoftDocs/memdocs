@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2024
+ms.date: 06/17/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,8 +52,6 @@ Applies to:
 
 ## Prerequisites for Attack surface reduction profiles
 
-**General**:
-
 - Devices must run Windows 10 or Windows 11
 - Defender antivirus must be the primary antivirus on the device
 
@@ -68,6 +66,10 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
 - **Set up tenant attach for Configuration Manager devices** - To support deploying attack surface reduction policy to devices managed by Configuration Manager, configure tenant attach. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
   To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+
+## Role-based access controls (RBAC)
+
+For guidance on assigning the right level of permissions and rights to manage Intune attack surface reduction policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Attack surface reduction profiles
 

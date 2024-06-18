@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -73,7 +73,7 @@ Windows 10 LTSC/LTSB editions aren't supported.
 
 #### HoloLens
 
-- Windows Autopilot for HoloLens 2 requires Windows Holographic, version 2004 or later. For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+- Windows Autopilot for HoloLens 2 requires a currently supported version of Windows Holographic. For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 > [!NOTE]
 >
@@ -193,7 +193,7 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 >
 > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
-The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join).
 
 ##### Autopilot self-deploying mode and Autopilot pre-provisioning
 
@@ -264,8 +264,11 @@ For a walkthrough for some of these and related steps, see this video:
 
 > [!VIDEO https://www.youtube.com/embed/KYVptkpsOqs]
 
-There are no additional hardware requirements to use Autopilot, beyond the requirements to run [Windows 11](https://www.microsoft.com/windows/windows-11-specifications) or [Windows 10](https://www.microsoft.com/windows/windows-10-specifications).
+There are no additional hardware requirements to use Autopilot, beyond the hardware requirements to run Windows. For more information, see:
+
+- [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
+- [How to Find Windows 10 Computer Specifications & Systems Requirements](https://www.microsoft.com/windows/windows-10-specifications).
+- [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
+- [Windows 11 requirements](/windows/whats-new/windows-11-requirements).
 
 ---
-
-## Related content
