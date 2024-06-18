@@ -38,7 +38,7 @@ ms.collection:
  - iOS/iPadOS 
  - macOS   
 
- Access the Bitlocker recovery key for a work or school device on the Intune Company Portal website or in the Intune Company Portal app. If you forget the sign-in password and get locked out of an Intune-enrolled PC, you can unlock it with a stored recovery key. This article describes how to retrieve the key from Company Portal.  
+ Access the BitLocker recovery key for a work or school device on the Intune Company Portal website or in the Intune Company Portal app. If you forget the sign-in password and get locked out of an Intune-enrolled PC, you can unlock it with a stored recovery key. This article describes how to retrieve the key from Company Portal.  
 
  >[!NOTE]
  > A BitLocker key is a 48-character long password divided into eight groups of 6 characters separated by dashes. Example: *123456-789012-345678-901234-567890-123456-789012-345678*  
@@ -80,4 +80,4 @@ Retrieve a personal BitLocker recovery key in the Company Portal app. The recove
 
 ## IT pro support  
 
-If you're an IT support person and want to configure and manage BitLocker encryption, see [Manage BitLocker policy for Windows devices with Microsoft Intune](../protect/encrypt-devices.md).  
+If you're an IT support person and want to configure and manage  encryption, see [Manage  policy for Windows devices with Microsoft Intune](../protect/encrypt-devices.md).  
