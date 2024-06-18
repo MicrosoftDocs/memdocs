@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/10/2024
+ms.date: 06/20/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -67,6 +67,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Microsoft Purview forensic evidence
 - Windows 365 Switch
 - Windows 365 Frontline (avialable for GCC, not available for GCCH)
+- Microsoft Purview Customer Key
 
 ## Next steps
 
