@@ -40,7 +40,7 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
     > [!NOTE]
     >
-    > The OU that computers join during the Windows Autopilot deployment is specified later during the [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md) step.
+    > The OU that computers join during the Windows Autopilot deployment is specified later during the **Configure and assign domain join profile** step.
 
 1. Right-click on the OU and select **Delegate Control**.
 
@@ -56,7 +56,7 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
 1. In the **Object Types** window, select the **Computers** check box, and then select **OK**. The other items in this window can be left at their default.
 
-1. In the **Select Users, Computers, or Groups** window, under the **Enter the object names to select** box, enter the name of the computer where the Intune connector was installed during the [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md) step.
+1. In the **Select Users, Computers, or Groups** window, under the **Enter the object names to select** box, enter the name of the computer where the Intune connector was installed during the **Install the Intune Connector** step.
 
 1. Select **Check Names** to validate the entry. Once the entry is validated, select **OK**.
 
