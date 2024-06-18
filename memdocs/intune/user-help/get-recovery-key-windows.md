@@ -49,7 +49,7 @@ ms.collection:
 - Registered work or school account   
 - Permission to view BitLocker recovery key  
 - Supported devices  
-- Supported Company Portal app 
+- Supported version of Company Portal app 
 
 You can obtain the recovery key for a work or school device that's encrypted by your organization. Recovery keys aren't available for devices you personally encrypt. 
 
@@ -74,9 +74,7 @@ Retrieve a personal BitLocker recovery key in the Company Portal app. The recove
     - Company Portal for macOS  
 
 2. Go to **Devices**, and then select your Windows device.  
-3. Select **Get recovery key**. The Company Portal website opens in Safari and shows the key.  
-
-    ![Screenshot of Company Portal app for iOS, showing recovery key](./media/get-recovery-key-cpweb-02.png)  
+3. On the device details page, select **Get recovery key**. The Company Portal website opens in Safari and shows the key.  
 
   After 5 minutes of inactivity, Company Portal returns you to the Windows device details page in the web portal. You can view the key again from there.  
 
