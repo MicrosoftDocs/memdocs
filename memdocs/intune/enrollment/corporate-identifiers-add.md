@@ -31,14 +31,11 @@ ms.collection:
 
 # Identify devices as corporate-owned  
 
-**Applies to**: 
-- Android
-- iOS/iPadOS
-- Windows 11  
+*Applies to Android, iOS/iPadOS, Windows 11*    
 
-Ensure that corporate devices are marked as *corporate-owned* as soon as they enroll by adding their corporate identifiers ahead of time in the Microsoft Intune admin center. Corporate devices unlock more device management capabilities than personal devices. For example, Microsoft Intune can collect more information about corporate-owned devices for you, such as full phone number and app inventory. 
+Ensure that corporate devices are marked as *corporate-owned* as soon as they enroll by adding their corporate identifiers ahead of time in the Microsoft Intune admin center. The benefit of managing corporate devices is that they enable more device management capabilities than personal devices. For example, Microsoft Intune can collect full phone number and app inventory from a corporate device, but can only collect partial phone number and app inventory for personal devices. To add corporate identifiers to Microsoft Intune, you can upload a file of corporate identifiers in the admin center or enter each identifier separately. 
 
-You can upload a file of corporate identifiers in the admin center or enter each identifier separately. It isn't necessary to add corporate identifiers for all deployments. During enrollment, Intune automatically assigns corporate-owned status to devices that join to Microsoft Entra via:  
+It isn't necessary to add corporate identifiers for all deployments. During enrollment, Intune automatically assigns corporate-owned status to devices that join to Microsoft Entra via:  
 
 - [Device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)   
 - An Apple device enrollment program such as [Apple School Manager](apple-school-manager-set-up-ios.md), Apple Business Manager, or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)  
@@ -59,7 +56,7 @@ You can upload a file of corporate identifiers in the admin center or enter each
 
 Microsoft Intune marks devices that register with Microsoft Entra as personal.   
 
-## Role based access control  
+## Role-based access control  
 You must be an Intune administrator or global administrator to add corporate identifiers, or a custom Intune role assigned corporate device identifier permissions. Permissions include:     
 
 * Update  
@@ -206,10 +203,10 @@ Follow up on imported devices to ensure that they enroll in Intune. After you ad
 
 ## Delete corporate identifiers
 
-2. In the admin center, go to **Devices** > **Enrollment**.     
-2. Select the **Corporate device identifiers** tab.  
-3. Select the device identifiers you want to delete, and choose **Delete**.
-4. Confirm the deletion.  
+1. In the admin center, go to **Devices** > **Enrollment**.     
+1. Select the **Corporate device identifiers** tab.  
+1. Select the device identifiers you want to delete, and choose **Delete**.
+1. Confirm the deletion.  
 
 Deleting a corporate identifier for an enrolled device does not change the device's ownership. 
 
@@ -218,9 +215,9 @@ Deleting a corporate identifier for an enrolled device does not change the devic
 To edit a device's identification after enrollment, change its ownership setting in the admin center. An ownership property appears for each device record in Microsoft Intune.  
 
 1. Go to **Devices** > **All devices**.      
-2. Select a device.  
-3. Choose **Properties**.  
-4. For **Device ownership**,  select **Personal** or **Corporate**.  
+1. Select a device.  
+1. Choose **Properties**.  
+1. For **Device ownership**,  select **Personal** or **Corporate**.  
 
    :::image type="content" source="./media/corporate-identifiers-add/device-properties.png" alt-text="Screenshot of the Managed device properties showing Device category and Device ownership options.":::
 
