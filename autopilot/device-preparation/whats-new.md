@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/03/2024
+ms.date: 06/18/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -18,6 +18,10 @@ appliesto:
 ---
 
 # Windows Autopilot device preparation: What's new
+
+## Additional RBAC permissions for Managed apps and Mobile apps
+
+Additional RBAC permissions for **Managed apps** and **Mobile apps** have been added for the Windows Autopilot device preparation administrator role. For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
 ## Initial release of Windows Autopilot device preparation
 
