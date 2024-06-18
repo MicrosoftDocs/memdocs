@@ -96,7 +96,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. In the **Windows | Windows enrollments** screen, under **Windows Autopilot**, select **Enrollment Status Page**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Enrollment Status Page**.
 
 1. In the **Enrollment Status Page** screen that opens, select **Create**.
 

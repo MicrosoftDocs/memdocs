@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 04/24/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -33,7 +33,7 @@ Autopilot user-driven Microsoft Entra join steps:
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow).
 
 ## Windows Autopilot for existing devices task sequence process
 

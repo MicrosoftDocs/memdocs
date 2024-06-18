@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/18/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -61,7 +61,7 @@ To create a user-driven Microsoft Entra hybrid join Autopilot profile, follow th
 
       - For **Join to Microsoft Entra ID as**, select **Microsoft Entra hybrid joined**. After this option is selected, several the options underneath this option will change.
 
-      - For **Skip AD connectivity check**, select **No**. This section of the tutorial assumes that the device undergoing Autopilot is an on-premises internal client and that has direct connectivity to the on-premises domain and domain controllers. For off-premise/Internet scenarios where VPN connectivity is required, see [Off-premises/Internet scenarios and VPN connectivity](#off-premisesinternet-scenarios-and-vpn-connectivity).
+      - For **Skip AD connectivity check**, select **No**. This section of the tutorial assumes that the device undergoing Windows Autopilot is an on-premises internal client that has direct connectivity to the on-premises domain and domain controllers. For off-premise/Internet scenarios where VPN connectivity is required, see [Off-premises/Internet scenarios and VPN connectivity](#off-premisesinternet-scenarios-and-vpn-connectivity).
 
       - For **Microsoft Software License Terms**, select **Hide** to skip the EULA page.
 
@@ -69,7 +69,7 @@ To create a user-driven Microsoft Entra hybrid join Autopilot profile, follow th
 
       - For **Hide change account options**, select **Hide**.
 
-      - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user is added to the local Admin group.
+      - For **User account type**, select either **Administrator** or **Standard** user depending on the desired account type for the user. If **Administrator** is chosen, the user is added to the local Administrator group on the device.
 
       - For **Allow pre-provisioned deployment**, select **No**.
 
@@ -85,11 +85,11 @@ To create a user-driven Microsoft Entra hybrid join Autopilot profile, follow th
 
       > [!NOTE]
       >
-      > The above settings are selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions might require that **Privacy settings** always be shown.
+      > The above settings are selected to minimize user interaction during device setup. However, some of the options that are set as hidden can instead be shown as desired. For example, some regions might require that **Privacy settings** always be shown.
 
       > [!NOTE]
       >
-      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Autopilot deployment. When there's no network connectivity at the start of the deployment, the Autopilot profile, where the settings to hide these screens is defined, hasn't downloaded yet. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
+      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Windows Autopilot deployment. When there's no network connectivity at the start of the deployment, the Windows Autopilot profile, where the settings to hide these screens is defined, hasn't downloaded yet. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
 
 [!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 
@@ -110,7 +110,7 @@ In addition to changing the **Skip AD connectivity check** setting to **Yes** in
   - Lets the user manually establish a VPN connection from the Windows sign-in screen.
   - Automatically establishes a VPN connection as needed.
 
-The VPN solution would need to be installed and configured via Intune during the Autopilot process. Configuration would need to include deploying any required device certificates if needed by the VPN solution. Once the VPN solution is installed and configured on the device, the VPN connection can be established, either automatically or manually by the user, at which point the domain join can occur. For more information and support on VPN solutions during Autopilot, consult the respective VPN vendor.
+The VPN solution would need to be installed and configured via Intune during the Autopilot process. Configuration would need to include deploying any required device certificates if needed by the VPN solution. Once the VPN solution is installed and configured on the device, the VPN connection can be established, either automatically or manually by the user, at which point the domain join can occur. For more information and support on VPN solutions during Windows Autopilot, consult the respective VPN vendor.
 
 > [!NOTE]
 >

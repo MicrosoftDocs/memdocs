@@ -37,11 +37,13 @@ For Intune managed devices, pre-provisioning, self-deploying, and co-management 
 
 Autopilot deployment profiles are used to configure the Autopilot devices. Up to 350 profiles can be created per tenant.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** | **Windows** > **Windows enrollment**.
 
-1. On the **Basics** page, enter a **Name** and optional **Description**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**
 
-    :::image type="content" source="images/create-profile-basics.png" alt-text="Screenshot of Basics page.":::
+1. In the **Windows Autopilot deployment profiles** screen, select the **Create Profile** drop down menu and then select either **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+
+1. In the **Create profile** screen, on the **Basics** page, enter a **Name** and optional **Description**.
 
 1. If all devices in the assigned groups should automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. The device must instead be [removed directly](add-devices.md#delete-autopilot-devices).
 
@@ -119,7 +121,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
 >
 > Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra ID groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
 >
-> Before deploying a device, ensure that this process is complete. To ensure the process is complete, select **Devices** > **Windows** > **Windows enrollment**. Under **Windows Autopilot**, select **Devices**. The profile status changes from **Unassigned** to **Assigning** and finally to **Assigned**. Once the device is showing **Assigned**, open the properties of the device by selecting it, and then ensuring that **Date assigned** is populated. If **Date assigned** isn't yet populated, wait until it populates before deploying the device.
+> Before deploying a device, ensure that this process is complete. To ensure the process is complete, select **Devices** > **Windows** > **Windows enrollment**. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**. The profile status changes from **Unassigned** to **Assigning** and finally to **Assigned**. Once the device is showing **Assigned**, open the properties of the device by selecting it, and then ensuring that **Date assigned** is populated. If **Date assigned** isn't yet populated, wait until it populates before deploying the device.
 
 ## Edit an Autopilot deployment profile
 
@@ -158,7 +160,7 @@ If a group is assigned to multiple Autopilot profiles, the device would receive 
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot**, select **Deployment Profiles**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**.
 
 1. In the **Windows Autopilot deployment profiles** screen, under **Name**, select the Autopilot profile name where the create date needs to be viewed.
 

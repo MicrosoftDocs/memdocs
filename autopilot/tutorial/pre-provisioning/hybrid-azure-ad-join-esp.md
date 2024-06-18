@@ -38,7 +38,7 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow).
 
 > [!NOTE]
 >

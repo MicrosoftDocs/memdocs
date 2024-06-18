@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/26/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -29,7 +29,7 @@ Autopilot self-deploying mode steps:
 - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
 - Step 6: [Deploy the device](self-deploying-deploy-device.md)
 
-For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow)
+For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow).
 
 > [!NOTE]
 >

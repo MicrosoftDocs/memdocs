@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: itpro-deploy
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/03/2024
+ms.date: 06/18/2024
 ms.localizationpriority: medium
 ---
 
@@ -36,7 +36,7 @@ Headings are driven by article context. -->
 
     1. For **Microsoft Entra roles can be assigned to the group**, select **No**.
 
-    1. For **Membership type**, select **Dynamic Device**. This changes the option **Members** to **Dynamic device members**.
+    1. For **Membership type**, select **Dynamic Device**. Setting the **Membership type** option to **Dynamic Device** changes the option **Members** to **Dynamic device members**.
 
     1. For **Owners**, select the **No owners selected** link.
 
@@ -54,13 +54,21 @@ Headings are driven by article context. -->
 
         1. Select **Add expression**. Rules and expressions can be added that defines what devices are added to the device group.
 
-            Rules can be entered in the rule builder via the drop-down boxes or the rule syntax can be directly entered via the **Edit** option in the **Rule syntax** section.
+            Rules can be entered in the rule builder via the drop-down boxes. Alternatively, the rule syntax can be entered directly via the **Edit** option in the **Rule syntax** section.
 
-            The most common type of dynamic device group when using Autopilot is a device group that contains all Autopilot devices. A dynamic device group that contains all Autopilot devices has the following syntax:
+            The most common type of dynamic device group when using Windows Autopilot is a device group that contains all Windows Autopilot devices. A dynamic device group that contains all Windows Autopilot devices has the following syntax:
 
             `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`
 
-            This rule can be entered in by selecting the **Edit** option in the **Rule syntax** section and then pasting in the rule in the **Edit rule syntax** screen under **Rule syntax**. Once the rule is pasted in, select **OK**.
+            To enter in this rule:
+
+            1. Select the **Edit** option in the **Rule syntax** section.
+
+            1. Paste in the following rule in the **Edit rule syntax** screen under **Rule syntax**:
+
+                `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`
+
+            1. Once the rule is pasted in, select **OK**.
 
         1. Once the desired rule is entered, select **Save** on the toolbar to close the **Dynamic membership rules** window.
 

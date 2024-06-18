@@ -28,17 +28,17 @@ After the CSV file is created, it can be imported into Intune via the following 
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**
 
-1. Under **Windows Autopilot**, select **Devices**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. In the **Windows Autopilot devices** screen that opens, select **Import**.
 
-   1. In the **Add Windows Autopilot devices** window that opens:
+   1. In the **Add Autopilot devices** window that opens:
 
       1. Under **Specify the path to the list you want to import.**, select the blue file folder.
 
       1. Browse to the CSV file obtained using one of the above methods to obtain the hardware hash of a device.
 
-      1. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import** to close the **Add Windows Autopilot devices** window. Importing can take several minutes.
+      1. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import**. Selecting **Import** closes the **Add Autopilot devices** window. Importing can take several minutes.
 
    1. After the import is complete, select **Sync**.
 

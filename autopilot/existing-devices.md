@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/18/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -60,13 +60,9 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
-    :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
-
-1. Go to **Microsoft Entra ID > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
-
-    :::image type="content" source="images/mdm-config.png" alt-text="Configure MDM enrollment in Azure.":::
+1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
 ## Install required modules
 

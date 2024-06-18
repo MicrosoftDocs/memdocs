@@ -29,7 +29,7 @@ Headings are driven by article context. -->
       >
       > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** prevents devices in those device groups from receiving the Autopilot profile.
 
-    1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. These device groups are normally the device groups created in the previous **Create device group** step. Once done, select **Select**.
+    1. In the **Select groups to include** window that opens, select the groups that the Windows Autopilot profile should be assigned to. These device groups are normally the device groups created in the previous **Create device group** step. Once done, select **Select**.
 
     1. Under **Included groups** > **Groups**, ensure the correct groups are selected, and then select **Next**.
 

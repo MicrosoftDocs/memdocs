@@ -32,7 +32,7 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra join steps:
 > [!div class="checklist"]
 > - **Step 9: User flow**
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
 
 ## User flow
 

@@ -27,9 +27,9 @@ Headings are driven by article context. -->
 
 4. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-5. Under **Windows Autopilot**, select **Deployment Profiles**.
+5. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**.
 
-6. In the **Windows Autopilot deployment profiles** screen, select **Create Profile** > **Windows PC**.
+6. In the **Windows Autopilot deployment profiles** screen, select the **Create Profile** drop down menu and then select **Windows PC**.
 
 7. The **Create profile** screen opens. In the **Basics** page:
 

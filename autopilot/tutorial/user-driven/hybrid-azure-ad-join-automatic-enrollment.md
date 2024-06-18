@@ -35,7 +35,7 @@ Autopilot user-driven Microsoft Entra hybrid join steps:
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 - Step 10: [Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join workflow, see [Windows Autopilot user-driven Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join workflow, see [Windows Autopilot user-driven Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow).
 
 > [!NOTE]
 >

@@ -35,7 +35,7 @@ Autopilot user-driven Microsoft Entra join steps:
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
-For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
 
 ## Create and assign user-driven Microsoft Entra join Autopilot profile
 

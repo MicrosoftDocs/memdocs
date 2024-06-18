@@ -40,7 +40,7 @@ Headings are driven by article context. -->
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot**, select **Intune Connector for Active Directory**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Intune Connector for Active Directory**.
 
 1. In the **Intune Connector for Active Directory** page, select **Add**.
 
