@@ -77,7 +77,7 @@ To manage Intune endpoint security policies, you must use an account that includ
 
 > [!IMPORTANT]
 >
-> The granular permission of *Antivirus* for endpoint security policies might be visible in some Tenants but has not yet released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, it's availability will be announced in the [What's new in Microsoft Intune](../fundamentals/whats-new.md) article.
+> The granular permission of *Antivirus* for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, it's availability will be announced in the [What's new in Microsoft Intune](../fundamentals/whats-new.md) article.
 
 ### RBAC roles and permissions to manage endpoint security workloads
 
