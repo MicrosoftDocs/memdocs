@@ -75,6 +75,10 @@ To manage Intune endpoint security policies, you must use an account that includ
 >
 > Each time a new granular permission for an endpoint security workload is added to Intune, those same rights are removed from the *Security baselines* permission. If you use custom roles with the *Security baselines* permission, the new RBAC permission is assigned automatically to your custom roles with the same rights that were granted through the *Security baseline* permission. This auto-assignment ensures your admins continue to have the same permissions they have today.
 
+> [!IMPORTANT]
+>
+> The granular permission of *Antivirus* for endpoint security policies might be visible in some Tenants but has not yet released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, it's availability will be announced in the [What's new in Microsoft Intune](../fundamentals/whats-new.md) article.
+
 ### RBAC roles and permissions to manage endpoint security workloads
 
 When you assign RBAC permission for managing aspects of endpoint security, we recommend assigning administrators the minimum permissions required to accomplish specific tasks. Each of the RBAC permissions that manage endpoint security includes the following rights, which can be individually granted or withheld when creating a [custom RBAC role](../fundamentals/create-custom-role.md):
