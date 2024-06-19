@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/18/2024
+ms.date: 05/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -44,23 +44,9 @@ Create a device platform enrollment restriction policy to restrict devices from 
 * Manufacturer
 * Ownership (personally owned)
 
-You can create a new device platform restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies.  
+ You can create a new device platform restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
 
 This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.  
-
-## Role-based access control  
-
-Global Administrator and Intune Service Administrator roles are permitted to:  
-
-- Create device platform restrictions  
-
-- Edit device platform restrictions  
-
-- Delete device platform restrictions  
-
-- Reprioritize device platform restrictions   
-
-All other built-in Intune roles have read-only access to device platform restrictions. You can apply scope tags to a device platform restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).   
 
 ## Default policy 
 Microsoft Intune provides one default policy for device platform restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
@@ -68,7 +54,7 @@ Microsoft Intune provides one default policy for device platform restrictions th
 ## Best practice - Android platform restrictions
      
 Since Intune supports two Android platforms, it's important to understand how OS version restrictions work when you use them with device platform restrictions:   
-  * If you allow both platforms for the same group, and then refine it for specific and nonoverlapping versions, Intune looks at the version to determine the Android enrollment flow devices go through.   
+  * If you allow both platforms for the same group, and then refine it for specific and non-overlapping versions, devices are sent through the Android enrollment flow that's picked for their version.   
   * If you allow both platforms, but block the same versions, devices running blocked versions can't enroll. Users on these devices are sent through the Android device administrator enrollment flow before they're blocked and prompted to sign out. 
 
 
@@ -131,20 +117,20 @@ For more information about creating filters, see [Create a filter](../fundamenta
 
 ### Supported filter properties  
 
-Enrollment restrictions support fewer filter properties than other group-targeted policies. This is because devices aren't yet enrolled, so Intune doesn't have the device info to support all properties. The limited selection of properties become available when you:  
+Enrollment restrictions support fewer filter properties than other group-targeted policies. This is because devices aren't yet enrolled, so Intune doesn't have the device info to support all properties. You'll see the limited selection of properties when you:  
 
-* Configure a device platform restriction policy for Apple and Windows devices.  
-* Configure an enrollment status page (ESP) policy for Windows.  
-* Edit a filter that's in-use in an enrollment restriction or ESP profile.  
+* Configure a device platform restriction policy for Apple and Windows devices. 
+* Configure an enrollment status page (ESP) policy for Windows. 
+* Edit a filter that's in-use in an enrollment restriction or ESP profile. 
 
 The following filter properties are always available to use with enrollment policies:    
 
 **Windows**  
 
-* Manufacturer - For Windows 11, version 22H2 and later with [KB5035942 (OS Builds 22621.3374 and 22631.3374)](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df).  
-* Model - For Windows 11, version 22H2 and later with [KB5035942 (OS Builds 22621.3374 and 22631.3374)](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df).    
+* Manufacturer - For Windows 11, version 22H2 and later 
+* Model - For Windows 11, version 22H2 and later 
 * OS version 
-* Operating system SKU 
+* Operating System SKU 
 * Ownership
 * Enrollment profile name  
 
