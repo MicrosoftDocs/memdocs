@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 > [!NOTE]
 >
-> If the computer account limit to the proper Organizational Unit (OU) is already increased, skip this step and move on to [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md).
+> If the computer account limit for the proper Organizational Unit (OU) is already increased, skip this step and move on to [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md).
 
 ## Increase the computer account limit in the Organizational Unit (OU)
 

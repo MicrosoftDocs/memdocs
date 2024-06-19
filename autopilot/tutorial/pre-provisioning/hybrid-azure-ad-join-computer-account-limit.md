@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -21,10 +21,14 @@ appliesto:
 # Pre-provision Microsoft Entra hybrid join: Increase the computer account limit in the Organizational Unit (OU)
 
 Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+
 > [!div class="checklist"]
+>
 > - **Step 3: Increase the computer account limit in the Organizational Unit (OU)**
+
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
@@ -38,7 +42,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If you have already increased the computer account limit to the proper Organizational Unit (OU) as part of the [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md).
+> If the computer account limit for the proper Organizational Unit (OU) is already increased, skip this step and move on to [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md).
 
 ## Increase the computer account limit in the Organizational Unit (OU)
 

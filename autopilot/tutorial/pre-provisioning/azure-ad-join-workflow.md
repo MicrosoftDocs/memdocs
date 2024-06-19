@@ -28,7 +28,7 @@ Before beginning, refer to the [How to: Plan your Microsoft Entra join implement
 
 > [!NOTE]
 >
-> Before attempting the Windows Autopilot pre-provisioned Microsoft Entra join scenario, Microsoft recommends that the [Windows Autopilot user-driven Microsoft Entra join](../user-driven/azure-ad-join-workflow.md)  scenario is first configured, tested, and working. The Windows Autopilot for pre-provisioned deployment Microsoft Entra join builds on top of Windows Autopilot user-driven Microsoft Entra join scenario. If the Windows Autopilot user-driven Microsoft Entra join isn't working, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra join scenario won't work either.
+> Before attempting the Windows Autopilot pre-provisioned Microsoft Entra join scenario, Microsoft recommends that the [Windows Autopilot user-driven Microsoft Entra join](../user-driven/azure-ad-join-workflow.md) scenario is first configured, tested, and working. The Windows Autopilot for pre-provisioned deployment Microsoft Entra join builds on top of Windows Autopilot user-driven Microsoft Entra join scenario. If the Windows Autopilot user-driven Microsoft Entra join scenario isn't working, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra join scenario won't work either.
 
 ## Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview
 

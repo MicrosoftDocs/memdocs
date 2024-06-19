@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -24,9 +24,13 @@ appliesto:
 # Pre-provision Microsoft Entra hybrid join: Install the Intune Connector
 
 Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
+
 > [!div class="checklist"]
+>
 > - **Step 2: Install the Intune Connector**
+
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
@@ -41,7 +45,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If you have already set up the Intune Connector as part of the [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)].
+> If the Intune Connector is already installed and configured, skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
 
 ## Install the Intune Connector
 
