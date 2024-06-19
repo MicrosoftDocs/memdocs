@@ -261,6 +261,10 @@ For more information about current RBAC permissions and built-in roles, see:
 - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
 - [Assign role-based access controls for endpoint security policy](../protect/endpoint-security-policy.md#rbac-roles-and-permissions-to-manage-endpoint-security-workloads) in *Manage device security with endpoint security policies in Microsoft Intune*.
 
+> [!IMPORTANT]
+>
+> With this release, the granular permission of **Antivirus** for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the *Antivirus* permission are ignored by Intune. When *Antivirus* becomes available to use as a granular permission, it's availability will be announced in this [What's new in Microsoft Intune](../fundamentals/whats-new.md) article.
+
 ## Week of June 3, 2024
 
 ### Device enrollment
