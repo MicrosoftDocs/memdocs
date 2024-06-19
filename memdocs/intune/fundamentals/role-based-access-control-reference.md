@@ -192,18 +192,18 @@ Manages security and compliance features such as security baselines, device comp
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| App Control for Business | Assign |
-| App Control for Business | Create |
-| App Control for Business | Delete |
-| App Control for Business | Read |
-| App Control for Business | Update |
-| App Control for Business | View reports |
-| Attack surface reduction | Assign |
-| Attack surface reduction | Create |
-| Attack surface reduction | Delete |
-| Attack surface reduction | Read |
-| Attack surface reduction | Update |
-| Attack surface reduction | View reports |
+| App Control for Business | Assign - *(Added with the 2406 service release)* |
+| App Control for Business | Create - *(Added with the 2406 service release)* |
+| App Control for Business | Delete - *(Added with the 2406 service release)* |
+| App Control for Business | Read - *(Added with the 2406 service release)* |
+| App Control for Business | Update - *(Added with the 2406 service release)* |
+| App Control for Business | View reports - *(Added with the 2406 service release)* |
+| Attack surface reduction | Assign - *(Added with the 2406 service release)* |
+| Attack surface reduction | Create - *(Added with the 2406 service release)* |
+| Attack surface reduction | Delete - *(Added with the 2406 service release)* |
+| Attack surface reduction | Read - *(Added with the 2406 service release)* |
+| Attack surface reduction | Update - *(Added with the 2406 service release)* |
+| Attack surface reduction | View reports - *(Added with the 2406 service release)* |
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | View client details |
@@ -228,12 +228,12 @@ Manages security and compliance features such as security baselines, device comp
 | Endpoint Analytics | Read |
 | Endpoint protection reports | Read |
 | Enrollment programs | Read token |
-| Endpoint detection and response | Assign |
-| Endpoint detection and response | Create |
-| Endpoint detection and response | Delete |
-| Endpoint detection and response | Read |
-| Endpoint detection and response | Update |
-| Endpoint detection and response | View reports |
+| Endpoint detection and response | Assign - *(Added with the 2406 service release)*|
+| Endpoint detection and response | Create - *(Added with the 2406 service release)*|
+| Endpoint detection and response | Delete - *(Added with the 2406 service release)*|
+| Endpoint detection and response | Read - *(Added with the 2406 service release)*|
+| Endpoint detection and response | Update - *(Added with the 2406 service release)*|
+| Endpoint detection and response | View reports - *(Added with the 2406 service release)*|
 | Endpoint Privilege Management Policy Authoring | Assign |
 | Endpoint Privilege Management Policy Authoring | Create |
 | Endpoint Privilege Management Policy Authoring | Delete |
@@ -305,8 +305,8 @@ Read Only Operators view user, device, enrollment, configuration and application
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| App Control for Business | Read|
-| Attack surface reduction | Read|
+| App Control for Business | Read - *(Added with the 2406 service release)*|
+| Attack surface reduction | Read - *(Added with the 2406 service release)*|
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | View applications |
@@ -325,7 +325,7 @@ Read Only Operators view user, device, enrollment, configuration and application
 | Device configurations | View reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
-| Endpoint detection and response | Read |
+| Endpoint detection and response | Read - *(Added with the 2406 service release)* |
 | Endpoint Privilege Management Policy Authoring | Read |
 | Endpoint Privilege Management Policy Authoring | View reports |
 | Endpoint protection reports | Read |
@@ -560,7 +560,6 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 | Quiet Time policies | Update |
 | Quiet Time policies | View reports |
 
-
 ## Help Desk Operator
 
 Help Desk Operators perform remote tasks on users and devices and can assign applications or policies to users or devices.
@@ -569,8 +568,8 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| App Control for Business | Read|
-| Attack surface reduction | Read|
+| App Control for Business | Read - *(Added with the 2406 service release)* |
+| Attack surface reduction | Read - *(Added with the 2406 service release)* |
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | Take application actions |
@@ -593,7 +592,7 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | Device configurations | View reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
-| Endpoint detection and response | Read |
+| Endpoint detection and response | Read - *(Added with the 2406 service release)* |
 | Endpoint protection reports | Read |
 | Enrollment programs | Read device |
 | Enrollment programs | Read profile |

@@ -102,6 +102,10 @@ The following permissions include rights to endpoint security workloads:
 
 - **Security baselines** - Grants rights to manage all endpoint security workloads that don't have a dedicated workflow.
 
+> [!IMPORTANT]
+>
+> The granular permission of *Antivirus* for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, it's availability will be announced in the [What's new in Microsoft Intune](../fundamentals/whats-new.md) article.
+
 #### Use built-in RBAC roles
 
 The following Intune built-in RBAC roles can also be assigned to admins to provide rights to manage some or all tasks for endpoint security workloads and reports.
