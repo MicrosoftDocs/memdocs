@@ -305,8 +305,8 @@ Read Only Operators view user, device, enrollment, configuration and application
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| App Control for Business | Read|
-| Attack surface reduction | Read|
+| App Control for Business | Read - *(Added with the 2406 service release)*|
+| Attack surface reduction | Read - *(Added with the 2406 service release)*|
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | View applications |
@@ -325,7 +325,7 @@ Read Only Operators view user, device, enrollment, configuration and application
 | Device configurations | View reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
-| Endpoint detection and response | Read |
+| Endpoint detection and response | Read - *(Added with the 2406 service release)* |
 | Endpoint Privilege Management Policy Authoring | Read |
 | Endpoint Privilege Management Policy Authoring | View reports |
 | Endpoint protection reports | Read |
@@ -560,7 +560,6 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 | Quiet Time policies | Update |
 | Quiet Time policies | View reports |
 
-
 ## Help Desk Operator
 
 Help Desk Operators perform remote tasks on users and devices and can assign applications or policies to users or devices.
@@ -569,8 +568,8 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | ---------- | ------ |
 | Android FOTA | Read |
 | Android for work | Read |
-| App Control for Business | Read|
-| Attack surface reduction | Read|
+| App Control for Business | Read - *(Added with the 2406 service release)* |
+| Attack surface reduction | Read - *(Added with the 2406 service release)* |
 | Audit data | Read |
 | Certificate Connector | Read |
 | Cloud attached devices | Take application actions |
@@ -593,7 +592,7 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | Device configurations | View reports |
 | Device enrollment managers | Read |
 | Endpoint Analytics | Read |
-| Endpoint detection and response | Read |
+| Endpoint detection and response | Read - *(Added with the 2406 service release)* |
 | Endpoint protection reports | Read |
 | Enrollment programs | Read device |
 | Enrollment programs | Read profile |
