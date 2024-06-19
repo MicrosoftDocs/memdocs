@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/18/2024
+ms.date: 06/19/2024
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: itpro-deploy
