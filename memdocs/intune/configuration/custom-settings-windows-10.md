@@ -86,9 +86,9 @@ Also, Intune doesn't support all the settings listed in [CSP reference](/windows
 > [!NOTE]
 > For settings that were created by using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
 >
-> - Create, Read, and Update permissions in a Microsoft Intune role-based access control (RBAC) role.
-> - Intune Service Administrator.
-> - Global Administrator Microsoft Entra role.
+> - Create, Read, and Update permissions in a Microsoft Intune role-based access control (RBAC) role
+> - Intune Service Administrator
+> - Global Administrator Microsoft Entra role
 >
 > For more information, go to [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
