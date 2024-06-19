@@ -70,8 +70,8 @@ sections:
           For the purposes of Windows Autopilot, there are three different types of CSPs, each with different levels of authority and access:
 
           1. **Direct CSP**: Gets direct authorization from the customer to register devices
-          2. **Indirect CSP provider**: Gets implicit permission to register devices through the relationship their CSP reseller partner has with the customer. Indirect CSP providers register devices through the Microsoft Partner Center.
-          3. **Indirect CSP reseller**: Gets direct authorization from the customer to register devices. At the same time, their indirect CSP provider partner also gets authorization, which means that either the indirect provider or the indirect reseller can register devices for the customer. However, the indirect CSP reseller must register devices through the Partner Center user interface by manually uploading the CSV file. The indirect CSP provider can register devices using the Partner Center APIs.
+          1. **Indirect CSP provider**: Gets implicit permission to register devices through the relationship their CSP reseller partner has with the customer. Indirect CSP providers register devices through the Microsoft Partner Center.
+          1. **Indirect CSP reseller**: Gets direct authorization from the customer to register devices. At the same time, their indirect CSP provider partner also gets authorization, which means that either the indirect provider or the indirect reseller can register devices for the customer. However, the indirect CSP reseller must register devices through the Partner Center user interface by manually uploading the CSV file. The indirect CSP provider can register devices using the Partner Center APIs.
 
       - question: |
           Is there such a thing as a single, worldwide CSP account?

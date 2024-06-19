@@ -47,43 +47,43 @@ To create a package containing the JSON file in Configuration Manager, follow th
 
 1. Copy the folder(s) containing the JSON file(s) created in the [Create JSON file for Autopilot profile(s)](create-json-file.md) step to a new empty folder in the organization's UNC network path. The UNC network path should be the path that contains package sources for Configuration Manager packages.
 
-2. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
+1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
 
-3. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Application Management**.
+1. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Application Management**.
 
-4. Select **Packages** and then on the ribbon, select **Create Package**. Alternatively, right-click **Packages** and select **Create Package**.
+1. Select **Packages** and then on the ribbon, select **Create Package**. Alternatively, right-click **Packages** and select **Create Package**.
 
-5. The **Create Package and Program Wizard** window appears:
+1. The **Create Package and Program Wizard** window appears:
 
    1. In the **Specify information about this package** page, enter the following details for the package:
 
       1. Next to **Name**, enter an identifiable name for the Autopilot scenario that the JSON file is for.
 
-      2. Next to **Description**, enter a description for the Autopilot scenario that the JSON file is for.
+      1. Next to **Description**, enter a description for the Autopilot scenario that the JSON file is for.
 
-      3. Select the checkbox **This package contains source files**, and then select **Browse** next to **Source folder:**.
+      1. Select the checkbox **This package contains source files**, and then select **Browse** next to **Source folder:**.
 
-      4. The **Set Source Folder** window appears. In the **Set Source Folder** window:
+      1. The **Set Source Folder** window appears. In the **Set Source Folder** window:
 
          1. Select **Browse** and navigate to the folder containing the individual **`AutopilotConfigurationFile.json`** JSON file from the UNC path in Step 1.
 
-         2. Once in the folder containing the **`AutopilotConfigurationFile.json`** JSON file, select **Select Folder**.
+         1. Once in the folder containing the **`AutopilotConfigurationFile.json`** JSON file, select **Select Folder**.
 
-         3. Confirm the path under **Source folder** is correct, and then select **OK**.
+         1. Confirm the path under **Source folder** is correct, and then select **OK**.
 
             > [!IMPORTANT]
             >
             > If multiple Autopilot profiles were copied to a UNC network path, make sure to select the folder that contains the individual  **`AutopilotConfigurationFile.json`** JSON file and not the parent folder that contains all of the different Autopilot profiles. Each Autopilot JSON file requires an individual package in Configuration Manager.
 
-   2. Select the **Next >** button.
+   1. Select the **Next >** button.
 
-   3. In the **Choose the program type that you want to create** page, select the **Do not create a program** option and then select the **Next >** button.
+   1. In the **Choose the program type that you want to create** page, select the **Do not create a program** option and then select the **Next >** button.
 
-   4. In the **Confirm the settings** page, verify all settings are correct and then select the **Next >** button.
+   1. In the **Confirm the settings** page, verify all settings are correct and then select the **Next >** button.
 
-   5. When the **Create Package and Program Wizard** completes with **The task "Create Package and Program Wizard" completed successfully** message, select the **Close** button.
+   1. When the **Create Package and Program Wizard** completes with **The task "Create Package and Program Wizard" completed successfully** message, select the **Close** button.
 
-6. If there are multiple Autopilot JSON files, repeat the above steps for any additional supported Autopilot profile JSON files that were exported as part of the [Create JSON file for Autopilot profile(s)](create-json-file.md) step. Make sure that each package has a unique identifiable name.
+1. If there are multiple Autopilot JSON files, repeat the above steps for any additional supported Autopilot profile JSON files that were exported as part of the [Create JSON file for Autopilot profile(s)](create-json-file.md) step. Make sure that each package has a unique identifiable name.
 
 ## Distribute package(s) for JSON file(s) in Configuration Manager
 

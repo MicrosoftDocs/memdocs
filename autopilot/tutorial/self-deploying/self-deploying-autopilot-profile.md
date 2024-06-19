@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -91,6 +91,6 @@ To create a self-deploying mode Autopilot profile, follow these steps:
 > [!div class="nextstepaction"]
 > [Step 6: Deploy the device](self-deploying-deploy-device.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

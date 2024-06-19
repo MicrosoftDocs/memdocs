@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -21,11 +21,15 @@ appliesto:
 # Self-deploying mode: Configure and assign the Enrollment Status Page (ESP)
 
 Autopilot self-deploying mode steps:
+
 - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
 - Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)
 - Step 3: [Create a device group](self-deploying-device-group.md)
+
 > [!div class="checklist"]
+>
 > **Step 4: Configure and assign Autopilot Enrollment Status Page (ESP)**
+
 - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
 - Step 6: [Deploy the device](self-deploying-deploy-device.md)
 
@@ -33,7 +37,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 > [!NOTE]
 >
-> If you have already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the self-deploying mode scenario, you can skip this step and move on to [Step 5: Create and assign Autopilot profile](self-deploying-autopilot-profile.md).
+> If an ESP is already configured, assigned, and uses the same settings for the Windows Autopilot self-deploying mode scenario, skip this step and move on to [Step 5: Create and assign Autopilot profile](self-deploying-autopilot-profile.md).
 
 ## The Enrollment Status Page (ESP)
 
@@ -44,6 +48,6 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 > [!div class="nextstepaction"]
 > [Step 5: Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information ESP](../includes/more-info-esp.md)]

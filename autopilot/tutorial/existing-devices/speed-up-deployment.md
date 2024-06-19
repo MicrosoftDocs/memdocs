@@ -46,20 +46,20 @@ After Windows Setup is done, the task sequence resumes and deletes the existing 
 An overview of the Windows Autopilot for existing devices task sequence process is as follows:
 
 1. Task sequence starts in Windows PE.
-2. Task sequence formats and partitions the disk.
-3. Task sequence applies the Windows OS and creates the `unattend.xml` file.
-4. Task sequence injects the Autopilot profile JSON file.
-5. Task sequence boots into Windows for the first time.
-6. Windows setup runs for the first time and processes the `unattend.xml` file. Windows Autopilot profile JSON file is ignored.
-7. Task sequence resumes in the newly installed Windows OS.
-8. Task sequence deletes the unattend.xml file.
-9. Task sequence installs the Configuration Manager client.
-10. Task sequence runs additional tasks (**Install Application**, **Install Software Updates**, **Install Package**, **Enable BitLocker**, etc.)
-11. Task sequence uninstalls the Configuration Manager client.
-12. Task sequence Syspreps the device.
-13. Task sequence completes and device reboots.
-14. Windows setup runs for the second time and processes the Autopilot profile JSON file since there's no `unattend.xml` file.
-15. Autopilot deployment starts.
+1. Task sequence formats and partitions the disk.
+1. Task sequence applies the Windows OS and creates the `unattend.xml` file.
+1. Task sequence injects the Autopilot profile JSON file.
+1. Task sequence boots into Windows for the first time.
+1. Windows setup runs for the first time and processes the `unattend.xml` file. Windows Autopilot profile JSON file is ignored.
+1. Task sequence resumes in the newly installed Windows OS.
+1. Task sequence deletes the unattend.xml file.
+1. Task sequence installs the Configuration Manager client.
+1. Task sequence runs additional tasks (**Install Application**, **Install Software Updates**, **Install Package**, **Enable BitLocker**, etc.)
+1. Task sequence uninstalls the Configuration Manager client.
+1. Task sequence Syspreps the device.
+1. Task sequence completes and device reboots.
+1. Windows setup runs for the second time and processes the Autopilot profile JSON file since there's no `unattend.xml` file.
+1. Autopilot deployment starts.
 
 ## Additional tasks running during a Windows Autopilot for existing devices task sequence
 
@@ -173,19 +173,19 @@ If the default behavior of restarting the device when the task sequence complete
 
 1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
 
-2. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Operating Systems**.
+1. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Operating Systems**.
 
-3. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence modified in the [Speed up the deployment process](#speed-up-the-deployment-process) section.
+1. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence modified in the [Speed up the deployment process](#speed-up-the-deployment-process) section.
 
-4. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Edit**. Alternatively, right-click on the Autopilot for existing devices task sequence and select **Edit**.
+1. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Edit**. Alternatively, right-click on the Autopilot for existing devices task sequence and select **Edit**.
 
-5. In the **Task Sequence Editor** window that opens:
+1. In the **Task Sequence Editor** window that opens:
 
    1. Select the last task in the task sequence.
 
-   2. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. A **Run Command Line** task is added as the last task in the task sequence.
+   1. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. A **Run Command Line** task is added as the last task in the task sequence.
 
-   3. Select the **Run Command Line** task and then configure with the following settings:
+   1. Select the **Run Command Line** task and then configure with the following settings:
 
       - **Name**: Shutdown
 
@@ -194,9 +194,9 @@ If the default behavior of restarting the device when the task sequence complete
          ```cmd
          wpeutil.exe shutdown
 
-   4. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
+   1. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
 
-6. If there are multiple Windows Autopilot for existing devices task sequences, then repeat the above steps for each task sequence.
+1. If there are multiple Windows Autopilot for existing devices task sequences, then repeat the above steps for each task sequence.
 
 ## Next step: Run Autopilot task sequence on device
 

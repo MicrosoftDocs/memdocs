@@ -244,25 +244,25 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. In the **Home** screen, select **Tenant administration** in the left hand pane.
+1. In the **Home** screen, select **Tenant administration** in the left hand pane.
 
-3. In the **Tenant admin | Tenant status** screen, select **Roles**.
+1. In the **Tenant admin | Tenant status** screen, select **Roles**.
 
-4. In the **Endpoint Manager roles | All roles** screen, make sure **All roles** is selected under **Manage**.
+1. In the **Endpoint Manager roles | All roles** screen, make sure **All roles** is selected under **Manage**.
 
-5. Select the **+ Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
+1. Select the **+ Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
 
-6. In the **Add Custom Role** screen:
+1. In the **Add Custom Role** screen:
 
    1. In the **Basics** page:
 
       1. **Name** - enter a name for the custom role, such as **Windows Autopilot device preparation administrator**.
 
-      2. **Description** - enter a description for the custom role.
+      1. **Description** - enter a description for the custom role.
 
-   2. Select the **Next** button.
+   1. Select the **Next** button.
 
-   3. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings. Once the setting is located, expand it, and then change to the following permissions:
+   1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings. Once the setting is located, expand it, and then change to the following permissions:
 
       - **Device configurations**
 

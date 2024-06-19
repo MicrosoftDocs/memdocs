@@ -49,7 +49,7 @@ Windows Autopilot user-driven deployments consist of two phases:
 - Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
 - User ESP phase: Applications and policies assigned to the user are applied.
 
-Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
+Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the desktop.
 
 ## Workflow
 

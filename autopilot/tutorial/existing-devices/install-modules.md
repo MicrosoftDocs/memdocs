@@ -55,9 +55,9 @@ To install the necessary modules to download the Autopilot profile(s) as a JSON 
 
 1. Sign into the Configuration Manager site server or other device that can access Intune.
 
-2. On the device, open a PowerShell window as an administrator by right clicking on the Start menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
+1. On the device, open a PowerShell window as an administrator by right clicking on the Start menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
 
-3. Copy the following commands by selecting **Copy** at the top right corner of the below **PowerShell** code block:
+1. Copy the following commands by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
@@ -72,7 +72,7 @@ To install the necessary modules to download the Autopilot profile(s) as a JSON 
     Import-Module Microsoft.Graph.Identity.DirectoryManagement
     ```
 
-4. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. You may need to select **Enter** a second time to run the last command in the code block. Once all the commands have run successfully, the required modules are installed.
+1. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. You may need to select **Enter** a second time to run the last command in the code block. Once all the commands have run successfully, the required modules are installed.
 
 ### Verify that Autopilot profile(s) from Intune can be viewed
 

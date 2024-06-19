@@ -53,7 +53,7 @@ Windows Autopilot for pre-provisioned deployment consists of two phases:
 - Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
 - User ESP phase: Applications and policies assigned to the user are applied.
 
-Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
+Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use and they're immediately sent to the desktop.
 
 ## Differences between Windows Autopilot user-driven deployment and Windows Autopilot for pre-provisioned deployment
 

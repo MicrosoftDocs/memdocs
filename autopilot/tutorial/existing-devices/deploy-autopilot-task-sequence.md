@@ -91,9 +91,9 @@ Once the Autopilot for existing devices task sequence and the collection with de
          - When booting from a PXE enabled distribution point.
          - When booting from task sequence bootable media.
 
-      2. If the deployment is required, next to **Assignment schedule:**, select the **New** button. In the **Assignment Schedule** window that appears, configure the settings as needed. The settings selected here determine when the task sequence runs automatically without end-user intervention. Once complete. Once complete, select the **OK** button.
+      1. If the deployment is required, next to **Assignment schedule:**, select the **New** button. In the **Assignment Schedule** window that appears, configure the settings as needed. The settings selected here determine when the task sequence runs automatically without end-user intervention. Once complete. Once complete, select the **OK** button.
 
-      3. Select the **Next >** button.
+      1. Select the **Next >** button.
 
    1. In the **User Experience**/**Specify the user experience for the installation of this software** page, select the options as desired, and then select the **Next >** button.
 
