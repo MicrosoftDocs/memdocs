@@ -7,9 +7,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 12/07/2023
+ms.date: 06/03/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
   - essentials-get-started
@@ -30,6 +30,10 @@ Due to different environments, different configurations, and different needs, Wi
 | **Windows Autopilot self-deploying mode** | Kiosk device or device for multiple users | Deployment is completely automated |
 | **Windows Autopilot for existing devices** | Prepare device where Windows OS needs to be reinstalled for a Windows Autopilot deployment | Utilizes Microsoft Configuration Manager to install a fresh Windows OS on an existing device before running a Windows Autopilot deployment |
 | **Windows Autopilot Reset** | Resets an existing device back to the factory default installation of Windows | Utilizes the existing installation of Windows on a device to rebuild Windows and restore it back to the factory installation of Windows |
+
+> [!NOTE]
+>
+> This tutorial is for **Windows Autopilot**. For the **Windows Autopilot device preparation** tutorial, see [Windows Autopilot device preparation scenarios](../device-preparation/tutorial/scenarios.md).
 
 ## Scenario capabilities
 
@@ -64,8 +68,6 @@ The following table describes the pros and cons of each Windows Autopilot scenar
 | **Self-deploying** | • Requires no interaction from user or admin/OEM/reseller. | • Can't assign a user to the device. <br> • User ESP doesn't run during the Autopilot deployment since no user is assigned. <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM). <br> • Doesn't support Microsoft Entra hybrid join devices. |
 | **Existing devices** | • Can use custom images. <br> • Can use ConfigMgr task sequences. <br> • Can reinstall a fresh copy of Windows in cases of severe corruption in Windows installation. <br> • Good scenario to upgrade a device from domain joined or Microsoft Entra hybrid join to Microsoft Entra join. | • Requires Microsoft Configuration Manager. <br> • Not an actual Autopilot deployment so doesn't work on its own - only works alongside one a supported Autopilot scenario. <br> •  Takes longer since device has to undergo both task sequence and Autopilot deployment. <br> • JSON file only supports user-driven Autopilot scenarios. <br> • Pre-provisioning and self-deploying Autopilot scenarios are only supported when the device is already an Autopilot device and there's an Autopilot profile assigned to the device. |
 | **Reset** | • Easily allows resetting an existing broken or repurposed device to a business ready state. | • Doesn't work if there's severe corruption in Windows installation. <br> • Doesn't support Microsoft Entra hybrid join devices. |
-
-<a name='azure-ad-join-and-hybrid-azure-ad-join-vs-autopilot-scenarios'></a>
 
 ## Microsoft Entra join and Microsoft Entra hybrid join vs. Autopilot scenarios
 

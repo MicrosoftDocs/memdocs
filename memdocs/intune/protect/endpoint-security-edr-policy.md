@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 06/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,7 +25,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-ms.reviewer: mattcall
+ms.reviewer: laarrizz
 
 ---
 
@@ -97,7 +97,7 @@ The Summary tab includes the following areas:
   Selecting a policy from the list opens a deeper view of that policy where you can review its configuration and choose to edit its details and configuration. If the policy was preconfigured, the settings you can edit are limited.
 
 **EDR Onboarding Status tab**:  
-This tab displays a high-level summary of devices that have or haven’t onboarded to Microsoft Defender for Endpoint, and supports drilling into individual devices. This includes devices managed by Intune and devices that are managed through the tenant attach scenario and Configuration Manager.
+This tab displays a high-level summary of devices that have or haven’t onboarded to Microsoft Defender for Endpoint, and supports drilling into individual devices. This summary includes devices managed by Intune and devices that are managed through the tenant attach scenario and Configuration Manager.
 
 This tab also includes the option to create and deploy a preconfigured onboarding policy for Windows devices.
 
@@ -209,26 +209,30 @@ With Tenant attach, you specify collections of devices from your Configuration M
 
 For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
-#### Enable tenant attach when co-management hasn't been enabled
+#### Enable tenant attach when co-management isn't enabled
 
 > [!TIP]
 > You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don't need to enable co-management.
 
 If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
+To enable tenant attach when co-management isn’t enabled, you’ll need to sign-in to the *AzurePublicCloud* for your environment. Before proceeding, review [Permissions and roles](../../configmgr/comanage/overview.md#permissions-and-roles) in the Configuration Manager documentation to ensure you have an account available that can complete the procedure.
+
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 2. In the ribbon, select **Configure co-management** to open the wizard.
 3. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
-   1. Select **Sign In**. Use your *Global Administrator* account to sign in.
+   1. Select **Sign In** and specify an account that has sufficient permissions to to your *AzurePublicCloud* environment.
 
 The following are supported for devices you manage with Intune:
 
 - Platform: **Windows 10, Windows 11, and Windows Server** - Intune deploys the policy to devices in your Microsoft Entra groups.
-  - Profile: **Endpoint detection and response**
+- Profile: **Endpoint detection and response**
 
 ## Use a preconfigured EDR policy
 
-On the EDR Onboarding Status page of Intune’s Endpoint detection and response policy, you can select the **Deploy preconfigured policy** option to have Intune create and deploy a preconfigured policy to install Microsoft Defender for Endpoint on applicable devices.
+Intune supports use of a preconfigured EDR policy for Windows devices managed by Intune, and by Configuration Manager through the tenant attach scenario.
+
+On the *EDR Onboarding Status* page of Intune’s Endpoint detection and response policy, select the **Deploy preconfigured policy** option to have Intune create and deploy a preconfigured policy to install Microsoft Defender for Endpoint on applicable devices.
 
 This option is found near the top of the page, above the Windows Devices onboarded to Defender for Endpoint report:
 
@@ -236,7 +240,7 @@ This option is found near the top of the page, above the Windows Devices onboard
 
 Before you can select this option, you must successfully configure the **Defender for Endpoint Connector**, which establishes a service-to-service connection between Intune and Microsoft Defender for Endpoint. The policy uses the connector to get a Microsoft Defender for Endpoint onboarding blob for use to onboard devices. For information about configuring this connector, see [Connect Microsoft Defender for Endpoint to Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) in the *Configure Defender for Endpoint* article.
 
-If you use the tenant attach scenario to support devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Intune admin center. See Configure tenant attach to support endpoint protection policies.
+If you use the tenant attach scenario to support devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Intune admin center. See [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
 ### Create the preconfigured EDR policy
 

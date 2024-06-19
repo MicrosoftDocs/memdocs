@@ -7,9 +7,9 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 06/03/2024
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
 - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -37,9 +37,9 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Set up Windows automatic Intune enrollment
 
-[!INCLUDE [Set up Windows automatic enrollment](../includes/automatic-intune-enrollment.md)]
+In order for Windows Autopilot to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the Azure portal:
 
-<a name='next-step-allow-users-to-join-devices-to-azure-ad'></a>
+[!INCLUDE [Set up Windows automatic enrollment](../../includes/automatic-intune-enrollment.md)]
 
 ## Next step: Allow users to join devices to Microsoft Entra ID
 
@@ -48,4 +48,4 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## More information
 
-[!INCLUDE [More information automatic enrollment](../includes/more-info-automatic-enrollment.md)]
+[!INCLUDE [More information automatic enrollment](../../includes/more-info-automatic-enrollment.md)]

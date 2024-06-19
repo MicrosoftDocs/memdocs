@@ -9,7 +9,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/26/2023
 ms.topic: tutorial
-ms.collection: 
+ms.collection:
   - tier1
   - highpri
 ms.subservice: itpro-deploy
@@ -64,13 +64,13 @@ To start the Autopilot deployment process on the device, select a device that is
 
 7. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
-   1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign-on.
+   1. Enter the keystroke <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> to initiate Windows sign-on.
 
-   1. Enter the on-premises domain credentials for the end-user.
+   2. Enter the on-premises domain credentials for the end-user.
 
       If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Microsoft Entra end-user credentials to attempt to sign into the device at this step.
 
-   1. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
+   3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
 8. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
 
@@ -78,11 +78,11 @@ To start the Autopilot deployment process on the device, select a device that is
 
       If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that **Microsoft Entra end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
-   1. Once the credentials are entered, select the **Next** button.
+   2. Once the credentials are entered, select the **Next** button.
 
-   1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
+   3. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 
-   1. The **You're all set!** screen appears. Select **Done**.
+   4. The **You're all set!** screen appears. Select **Done**.
 
       > [!NOTE]
       >
