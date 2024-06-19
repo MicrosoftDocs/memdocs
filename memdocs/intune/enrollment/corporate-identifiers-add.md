@@ -57,7 +57,7 @@ It isn't necessary to add corporate identifiers for all deployments. During enro
 Microsoft Intune marks devices that register with Microsoft Entra as personal.   
 
 ## Role-based access control  
-You must be an Intune administrator or Global administrator to add corporate identifiers, or a custom Intune role assigned corporate device identifier permissions. Permissions include:     
+You must be an Intune administrator or global administrator to add corporate identifiers, or a custom Intune role assigned corporate device identifier permissions. Permissions include:     
 
 * Update  
 * Read  
@@ -108,9 +108,6 @@ Android and iOS/iPadOS devices can have multiple IMEI numbers. Intune reads and 
 Android serial numbers aren't guaranteed to be unique or present. Check with your device supplier to find out if the serial number is a reliable device ID. Serial numbers reported by the device to Intune might not match the ID shown on the device in Android settings or Android device information. Verify the type of serial number reported by the device manufacturer.  
 
 ### Add Windows corporate identifiers  
-
->[!IMPORTANT]
-> Corporate identifiers are not supported for devices running Windows 10. If you're enrolling Windows 10 devices, do not use the corporate identifier feature. 
 
 To add corporate identifiers for corporate devices running Windows 11, list the manufacturer, model, and serial number for each device as shown in the following example.  
 
