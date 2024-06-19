@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -105,6 +105,6 @@ If a user isn't being assigned to the device, then skip to **[Step 8: Technician
 > [!div class="nextstepaction"]
 > [Step 8: Technician flow](azure-ad-join-technician-flow.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

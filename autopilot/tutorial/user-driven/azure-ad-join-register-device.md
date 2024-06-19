@@ -39,7 +39,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 > [!NOTE]
 >
-> If devices are already registered as Autopilot devices, skip this step and move on to [Step 4: Create a device group](azure-ad-join-device-group.md). However, if deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
+> If devices are already registered as Autopilot devices, skip this step and move on to [Step 4: Create a device group](azure-ad-join-device-group.md).
 
 ## Register devices as Autopilot devices
 
