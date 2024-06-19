@@ -86,7 +86,7 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
       >
       > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** results in those devices being excluded and they don't receive the Autopilot profile.
 
-   1. In the **Select groups to include** window that opens, select the groups that the configuration profile should be assigned to. The device groups selected here are normally the same device groups created when implementing the different [Autopilot scenarios](../autopilot-scenarios.md).
+   1. In the **Select groups to include** window that opens, select the groups that the configuration profile should be assigned to and then select **Select**. The device groups selected here are normally the same device groups created when implementing the different [Autopilot scenarios](../autopilot-scenarios.md).
 
    1. Under **Included groups** > **Groups**, ensure the correct groups are selected, and then select **Next**.
 
