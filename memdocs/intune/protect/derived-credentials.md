@@ -304,7 +304,7 @@ You can specify **Derived credential** for the following profile types and purpo
 Use derived credentials for certificate-based authentication to web sites and applications. To deliver a derived credential for app authentication:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+2. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 3. Use the following settings:
 
    **For iOS and iPadOS**:
