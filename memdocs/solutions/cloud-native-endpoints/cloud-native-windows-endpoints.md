@@ -81,7 +81,7 @@ Before you build your first cloud-native Windows endpoint, there are some key re
 
 ### Step 1 - Network requirements
 
-Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](/autopilot/requirements?tabs=networking).
+Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](/autopilot/requirements?tabs=networking#networking-requirements).
 
 If your wireless network requires certificates, you can start with an Ethernet connection during testing while you determine the best approach for wireless connections for device provisioning.
 

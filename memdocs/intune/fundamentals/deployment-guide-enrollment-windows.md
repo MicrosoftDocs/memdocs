@@ -205,7 +205,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 
 ### Windows Autopilot administrator tasks
 
-- Be sure your devices are running a currently supported version of Windows. For a complete list, go to [software requirements](/autopilot/requirements?tabs=software).
+- Be sure your devices are running a currently supported version of Windows. For a complete list, go to [software requirements](/autopilot/requirements?tabs=software#software-requirements).
 
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Microsoft Entra ID. For more specific information, go to [Windows Autopilot registration overview](/autopilot/registration-overview) and [Manual registration overview](/autopilot/manual-registration).
 
