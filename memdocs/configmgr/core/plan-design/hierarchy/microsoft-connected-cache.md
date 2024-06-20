@@ -26,11 +26,6 @@ This cache server acts as an on-demand transparent cache for content downloaded 
 
 This cache is separate from Configuration Manager's distribution point content. If you choose the same drive as the distribution point role, it stores content separately.
 
-> [!NOTE]
-> The Connected Cache server is an application installed on Windows Server. Starting in Configuration Manager version 2111, the Connected Cache is generally available for production use.<!-- 10735017 -->
->
-> The version of Connected Cache that's available with Configuration Manager version 2107 and earlier is still considered in development.
-
 ## Supported scenarios
 
 Connected Cache supports the following three primary scenarios:
@@ -106,7 +101,7 @@ You need one of the following license subscriptions for each device that gets co
 
 Connected Cache in Configuration Manager requires an _on-premises_ distribution point, with the following configurations:
 
-- Running Windows Server 2012 or later.
+- Running a [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
 
 - Microsoft .NET Framework version 4.7.2 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
 
@@ -239,7 +234,7 @@ For Delivery Optimization peer-to-peer:
 - Enable **Allow peer downloads in this boundary group** option for the Boundary Group that contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-group-options.md).
 
  > [!TIP]
-  > You do not need to set the options that enable Delivery Optimization peer-to-peer in order to use Microsoft Connected Cache.
+> You do not need to set the options that enable Delivery Optimization peer-to-peer in order to use Microsoft Connected Cache.
    
 #### Intune
 
