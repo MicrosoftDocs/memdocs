@@ -25,7 +25,7 @@ Starting in Configuration Manager version 2002, you can use a tool to import Mic
 
 ## Prerequisites
 
-- An internet connected WSUS server running a minimum of Windows Server 2016.
+- An internet connected WSUS server running a [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
 
 - The WSUS server needs connectivity to these internet endpoints:
    - `officecdn.microsoft.com`
