@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2024
+ms.date: 05/31/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -81,7 +81,7 @@ The following devices are supported when enrolled with Intune:
   - AVD devices are supported to use App Control for Business policies
 
 - **Co-managed devices**:
-  - To support [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
+  - To support Application Control for Business Policies on [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
 
 ### Windows Defender App Control for Business
 
@@ -174,6 +174,8 @@ For more information, see [Allow apps installed by a managed installer](/windows
 > This can cause unexpected problems such as applications failing to start, and failing to boot or logon into Windows.
 > To avoid this issue, we recommend removing any RuleCollection defined as **NotConfigured** with an empty rule set from your existing AppLocker policy if it is currently in place.
 
+- Managed Installer can enable stopped or disabled App-Locker Policies (on targeted PCs) enforced from GPO.
+  
 ### Remove the Intune Management Extension as a managed installer
 
 Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
@@ -445,6 +447,16 @@ On a related note, there is no longer a limitation of 32 policies active on the 
 No. This release focuses on setting apps installed from Intune, using the Intune Management Extension, as the Managed Installer. It can't set Configuration Manager as the Managed Installer.
 
 If setting Configuration Manager as the Managed Installer is desired, you can allow that behavior from within Configuration Manager. If you already have Configuration Manager set as the Managed Installer, the expected behavior is that the new Intune Management Extension AppLocker policy merges with the existing Configuration Manager policy.
+
+### What considerations should I have for Entra Hybrid Join (HAADJ) devices within my organization that want to use Managed Installer?
+
+Entra hybrid join devices require connectivity to an on-prem Domain Controller (DC) to apply Group Policies including the Managed Installer policy (through AppLocker). Without DC connectivity, especially during Autopilot provisioning, Managed Installer policy will not successfully apply. Consider:
+
+1. Use Autopilot with Entra join instead. See our recommendation for [which Entra join option](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization) to choose for more information.
+
+2. For Entra hybrid join, choose one or both of the following:
+o	Use device provisioning methods that provide DC connectivity at the time of app install as Autopilot may not work here.
+o	Deploy apps after the Autopilot provisioning is complete, so that DC connectivity is established at the time of app install and Managed Installer policy can be applied.
 
 ## Next Steps
 

@@ -91,7 +91,7 @@ IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class expo
 
 Intune lets IT admins specify which accounts can be logged into by the user. Apps can query the Intune App SDK for the specified list of allowed accounts and then ensure only allowed accounts are signed into the device.
 
-To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified. MSAL/OneAuth enabled applications should use the `allowedAccountIds` property on the `IntuneMAMEnrollmentManager` instance to query OID.
+To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified. MSAL/OneAuth enabled applications should use the `allowedAccountIds` property on the `IntuneMAMEnrollmentManager` instance to query Entra object ID.
 
 Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
 
@@ -108,7 +108,7 @@ Apps can react to changes in this policy by observing the `IntuneMAMDataProtecti
 
 ## Implement save-as and open-from controls
 
-Intune lets IT admins select which storage locations a managed app can save data to or open data from. Apps can query the Intune MAM SDK for allowed save-to storage locations by using the `isSaveToAllowedForLocation:withAccount:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the SDK for allowed open-from storage locations by using the `isOpenFromAllowedForLocation:withAccount:` API, also defined in `IntuneMAMPolicy.h`.
+Intune lets IT admins select which storage locations a managed app can save data to or open data from. Apps can query the Intune MAM SDK for allowed save-to storage locations by using the `isSaveToAllowedForLocation:withAccountId:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the SDK for allowed open-from storage locations by using the `isOpenFromAllowedForLocation:withAccountId:` API, also defined in `IntuneMAMPolicy.h`.
 
 Additionally, apps can verify that incoming data from a share extension is allowed by querying the `canReceiveSharedItemProvider:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the `canReceiveSharedFile:` API to verify incoming files from an openURL call, also defined in `IntuneMAMPolicy.h`
 
@@ -119,12 +119,12 @@ Additionally, apps can verify that incoming data from a share extension is allow
 
 ### Handling save-to scenarios
 
-Before moving data to a new cloud-storage or local location, an app must check with the `isSaveToAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being edited and saved in-place doesn't need to be checked with this API.
+Before moving data to a new cloud-storage or local location, an app must check with the `isSaveToAllowedForLocation:withAccountId:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being edited and saved in-place doesn't need to be checked with this API.
 
 > [!NOTE] 
-> The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccount:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
+> The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForAccountId:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForAccountId:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccountId:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
 
-The `isSaveToAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMSaveLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
+The `isSaveToAllowedForLocation:withAccountId:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMSaveLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
 
 #### Supported save locations
 
@@ -145,12 +145,12 @@ If the destination location isn't listed, either `IntuneMAMSaveLocationAccountDo
 
 ### Handling open-from scenarios
 
-Before importing data from a new cloud-storage or local location, an app must check with the `isOpenFromAllowedForLocation:withAccount:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being opened in-place doesn't need to be checked with this API.
+Before importing data from a new cloud-storage or local location, an app must check with the `isOpenFromAllowedForLocation:withAccountId:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being opened in-place doesn't need to be checked with this API.
 
 > [!NOTE] 
-> The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForIdentity:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForIdentity:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccount:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
+> The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForAccountId:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForAccountId:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccountId:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
 
-The `isOpenFromAllowedForLocation:withAccount:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMOpenLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
+The `isOpenFromAllowedForLocation:withAccountId:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMOpenLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
 
 #### Supported open locations
 
@@ -172,13 +172,13 @@ If the destination location isn't listed, either `IntuneMAMOpenLocationAccountDo
 
 ##### Handling incoming NSItemProviders and Files
 
-For handling NSItemProviders received from a share extension, the `IntuneMAMPolicy`'s `canReceiveSharedItemProvider:` method can be used instead of `isOpenFromAllowedForLocation:withAccount:`. The `canReceiveSharedItemProvider:` method takes an NSItemProvider and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account. The item must be loaded prior to calling this method. For example, by calling `loadItemForTypeIdentifier:options:completionHandler`. This method can also be called from the completion handler passed to the NSItemProvider load call.
+For handling NSItemProviders received from a share extension, the `IntuneMAMPolicy`'s `canReceiveSharedItemProvider:` method can be used instead of `isOpenFromAllowedForLocation:withAccountId:`. The `canReceiveSharedItemProvider:` method takes an NSItemProvider and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account. The item must be loaded prior to calling this method. For example, by calling `loadItemForTypeIdentifier:options:completionHandler`. This method can also be called from the completion handler passed to the NSItemProvider load call.
 
-For handling incoming files, the `IntuneMAMPolicy`'s `canReceiveSharedFile:` method can be used instead of `isOpenFromAllowedForLocation:withAccount:`. The `canReceiveSharedFile:` method takes a NSString path and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account.
+For handling incoming files, the `IntuneMAMPolicy`'s `canReceiveSharedFile:` method can be used instead of `isOpenFromAllowedForLocation:withAccountId:`. The `canReceiveSharedFile:` method takes a NSString path and returns whether it's allowed by the IT admin to be opened into the `IntuneMAMPolicy` object's account.
 
 ### Sharing blocked alert
 
-A UI helper function can be used when either the `isSaveToAllowedForLocation:withAccount:` or `isOpenFromAllowedForLocation:withAccount:` API is called and found to block the save/open action. If the app wants to notify the user  that the action was blocked, it can call the `showSharingBlockedMessage` API defined in `IntuneMAMUIHelper.h` to present an alert view with a generic message.
+A UI helper function can be used when either the `isSaveToAllowedForLocation:withAccountId:` or `isOpenFromAllowedForLocation:withAccountId:` API is called and found to block the save/open action. If the app wants to notify the user  that the action was blocked, it can call the `showSharingBlockedMessage` API defined in `IntuneMAMUIHelper.h` to present an alert view with a generic message.
 
 ## Share Data via UIActivityViewController
 
@@ -288,7 +288,7 @@ Intune administrators can target and deploy configuration data via the [Microsof
 
 * Include `IntuneMAMAppConfigManager.h` in your app's source file.
 
-* Call `[[IntuneMAMAppConfigManager instance] appConfigForIdentity:]` to get the App Config Object.
+* Call `[[IntuneMAMAppConfigManager instance] appConfigForAccountId:]` to get the App Config Object.
 
 * Call the appropriate selector on `IntuneMAMAppConfig` object. For example, if your application's key is a string, you'd want to use `stringValueForKey` or `allStringsForKey`. See `IntuneMAMAppConfig.h` for a detailed description on return values and error conditions.
 
