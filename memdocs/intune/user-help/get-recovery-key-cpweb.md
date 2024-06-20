@@ -29,9 +29,9 @@ ms.collection:
 - tier2
 ---
 
-# Get a recovery key for a macOS device    
+# Get recovery key for enrolled Mac 
 
-Get a recovery key for your locked Mac. If you forget the password on the Mac you use for work or school and are locked out, you can sign in to the Company Portal on another device to retrieve your key. 
+Get the recovery key for your locked Mac. If you forget the password on the Mac you use for work or school and are locked out, you can sign in to the Company Portal on another device to retrieve your key. 
 
 ## Get recovery key from Company Portal website
 
@@ -61,4 +61,4 @@ Retrieve your personal recovery key (FileVault key) using the Company Portal app
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage FileVault encryption, see [Use device encryption with Intune](../protect/encrypt-devices.md).  
+If you're an IT support person and want to configure and manage FileVault encryption, see [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md#manage-filevault).  

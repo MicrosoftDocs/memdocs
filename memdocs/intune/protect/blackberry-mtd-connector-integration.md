@@ -71,7 +71,7 @@ For more information about consent and Microsoft Entra applications, see [Introd
 ## Set up BlackBerry Protect Mobile MTD connector
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.
-2. Go to ***Tenant administration**.
+2. Go to **Tenant administration**.
 3. Select **Connectors and tokens**.
 4. Under **Cross platform**, select **Mobile Threat Defense**.
 5. Select **Add**.

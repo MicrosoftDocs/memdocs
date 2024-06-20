@@ -134,6 +134,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
+> [!NOTE]
+> Users that reinstall the Outlook Mobile app following a **Retire** device action may need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries.  Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
+
 #### Android device administrator
 
 

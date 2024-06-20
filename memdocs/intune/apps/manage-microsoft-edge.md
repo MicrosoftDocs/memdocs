@@ -358,23 +358,49 @@ Organizations can modify their network stack preference by configuring the follo
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
 
-#### Set a proxy .pac file URL
+### Set a proxy .pac file URL
 
-Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for Android.
+Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for iOS and Android
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl |Specify a valid URL to a proxy .pac file.  <br>For example: `https://internal.site/example.pac` |
 
-#### PAC failed-open support 
+### PAC failed-open support 
 
-By default, Microsoft Edge for Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
+By default, Microsoft Edge for iOS and Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
 
-#### Proxy for users to sign in to Edge in Android.
+### Configure network relays
+
+Edge for iOS now supports network relays on iOS 17. These are a special type of proxy that can be used for remote access and privacy solutions. They support secure and transparent tunneling of traffic, serving as a modern alternative to VPNs when accessing internal resources. For more information about network relays, see [Use network relays on Apple devices](https://support.apple.com/guide/deployment/use-network-relays-dep91a6e427d/web).
+
+Organizations can configure relay proxy URLs to route traffic based on matched and excluded domains. 
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.ProxyRelayUrl |Specify a valid URL to a relay configuration json file.  <br>For example: `https://yourserver/relay_config.json` |
+
+A json file example for network relays <br>
+{ <br>
+ "default": [{ <br>
+            "proxy_type": "http", <br>
+            "host_name": "170.200.50.300", <br>
+            "port": "3128",  <br>
+            "failover_allowed":0, <br>
+            "match_domains": [ <br>
+                "domain1.com", <br>
+                "domain2.com" ], <br>
+            "excluded_domains": [ <br>
+                "domain3.com", <br>
+                "domain4.com" ] <br>
+        } ] <br>
+} <br>
+
+### Proxy for users to sign in to Edge in Android
 
 A Proxy Auto-Configuration (PAC) is typically configured in the VPN profile. However, due to platform limitation, the PAC cannot be recognized by Android WebView, which is used during Edge sign-in process. Users may not be able to sign in to Edge in Android. 
 
@@ -384,7 +410,7 @@ Organizations can specify dedicated proxy via MDM policy for users to sign in to
 |:---------|:---------|
 |EdgeOneAuthProxy |  The corresponding value is a string <br> **Example** `http://MyProxy.com:8080` |
 
-#### iOS Website data store
+### iOS Website data store
 
 The website data store in Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there is only one persistent website data store in Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts cannot utilize it. Consequently, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
 
@@ -395,7 +421,7 @@ The website data store in Edge for iOS is essential for managing cookies, disk a
 > [!NOTE]
 > With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
 
-#### Microsoft Defender SmartScreen
+### Microsoft Defender SmartScreen
 
 Microsoft Defender SmartScreen is a feature that helps users avoid malicious sites and downloads. It is enabled by default. Organizations can disable this setting.
 
@@ -403,7 +429,7 @@ Microsoft Defender SmartScreen is a feature that helps users avoid malicious sit
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScreen is enabled. <br>**false**  Microsoft Defender SmartScreen is disabled.|
 
-#### Certificate verification
+### Certificate verification
 
 By default, Microsoft Edge for Android verifies server certificates using the built-in certificate verifier and the Microsoft Root Store as the source of public trust. Organizations can switch to system certificate verifier and system root certificates.
 
@@ -435,12 +461,16 @@ If this policy is not configured, the value from the **DefaultPopupsSetting** po
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
 
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
+
 ### Block pop-up on specific sites
 If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://[*.]contoso.com`|
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 ### Default search provider
 By default, Edge uses the default search provider to perform a search when users enter non-URL texts in the address bar. Users can change the search provider list. Organizations can manage the search provider behavior.
@@ -457,7 +487,7 @@ Organizations can configure a search provider for users. To configure a search p
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`|
 
-#### Open external apps
+### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
 
 |Key |Value |
@@ -467,14 +497,14 @@ When a web page requests to open an external app, users will see a pop-up asking
 > [!NOTE]
 > As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99.
 
-#### Copilot
+### Copilot
 
 > [!NOTE]
-> Copilot is also known as Bing Chat Enterprise.
+> Copilot is also known as Bing Chat Enterprise. Only Copilot eligible users can use Copilot. For more information, see [Frequently asked questions about Copilot](/copilot/faq)
 
 Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by clicking on Copilot button in bottom bar. 
 
-There are three settings in **Settings**->**General**->**Copilot** for Copilot.
+There are three settings in **Settings**->**General**->**Copilot**.
 
 - **Show Copilot** – Control whether to show Bing button on bottom bar
 - **Allow access to any web page or PDF** – Control whether to allow Copilot to access page content or PDF
@@ -484,8 +514,8 @@ You can manage the settings for Copilot.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Bing button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Bing button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Copilot can access to page content. **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings are on by default and can be turned off by users <br>**false** Copilot cannot access to page content.  **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Copilot button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Copilot button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) **Allow access to any web page or PDF** and **Quick access on text selection** can be turned on by users <br>**false** **Allow access to any web page or PDF** and **Quick access on text selection** will be disabled and cannot be turned on by users|
 
 ## Data protection app configuration scenarios
 
@@ -579,21 +609,11 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com: /*`
 
 ### Control the behavior of the Site Blocked popup
-When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites，depending on the AllowTransitionOnBlock and OpenInPrivateIfBlocked policy configurations. You can choose preferences between InPrivate and personal account.
+When attempting to access blocked websites, users will be prompted to use either switch to InPrivate or personal account to open the blocked websites. You can choose preferences between InPrivate and personal account.
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account  when it is signed in.<br>**2**: Automatically switch to personal account if it is signed in and InPrivate is simultaneously enabled.<br>**3**:Automatically switch to InPrivate if it is signed in and InPrivate is simultaneously enabled. |
-
-> [!NOTE]
-> AutoTransitionModeOnBlock policy is currently only avaiable to Edge for iOS.
-
-### Control the behavior of opening unmanaged URLs
-This policy is to control the behavior of opening Intune unmanaged URL.
-
-|Key |Value |
-|:--|:----|
-|com.microsoft.intune.mam.managedbrowser.ProfileAutoSwitch |**0**: (Default) URLs will be  opened in normal tabs with work accounts. <br> <br> **1**: Microsoft Edge adheres to Intune’s protection policy; the behavior is determined by the **Receive data from other apps** configuration within the Intune protection policy.<br><br>When the value is **All apps**, setting the value to **1** will fall back to behavior for policy value 0. When the value is **None** or **Policy managed apps**, and the personal account is signed-in, URLs will be opened in normal tabs with personal profile. If the personal account isn't signed-in, URLs will be opened in InPrivate. If InPrivate is disabled, the URLs will not be opened.<br><br>**2**: (Android only) Microsoft Edge will check URLAllowlist or URLBlocklist. The allowed URLs will be opened in normal tabs with work accounts. The blocked URLs may be opened in InPrivate or normal tabs with personal accounts, however the functionality depends on how openInPrivateIfBlocked is configured. |
+|com.microsoft.intune.mam.managedbrowser.AutoTransitionModeOnBlock |**0**: (Default) Always show the popup window for user to choose.<br>**1**: Automatically switch to personal account when personal account is signed in.<br>**2**:Automatically switch to InPrivate if InPrivate switch is allowed by com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked=true. |
 
 ### Manage websites to allow upload files
 There may be scenarios where users are only allowed to view websites, without the ability to upload files. Organizations have the option to designate which websites can receive file uploads.
@@ -609,6 +629,8 @@ The example to block all websites, including internal websites, from uploading f
 An example to allow specific websites to upload files
 - com.microsoft.intune.mam.managedbrowser.FileUploadAllowedForUrls=`https://[*.]contoso.com/|[*.]sharepoint.com/`
 - com.microsoft.intune.mam.managedbrowser.FileUploadBlockedForUrls=`*`
+
+For more information about the URLs format, see [Enterprise policy URL pattern format](/deployedge/edge-learnmore-ent-policy-url-patterns).
 
 > [!NOTE]
 > For Edge on iOS, the paste action will be blocked in addition to uploads. Users will not see the paste option in the action menu.
