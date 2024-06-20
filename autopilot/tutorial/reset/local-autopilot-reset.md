@@ -76,7 +76,7 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
       1. Next to **Autopilot Reset**, select **Allow**.
 
-      1. Select the **Next** button.
+      1. select **Next**.
 
 1. In the **Assignments** page:
 

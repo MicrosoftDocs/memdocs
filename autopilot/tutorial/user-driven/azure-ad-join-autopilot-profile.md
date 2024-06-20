@@ -108,6 +108,6 @@ If a user isn't being assigned to the device, then skip to **[Step 8: Deploy the
 > [!div class="nextstepaction"]
 > [Step 8: Deploy the device](azure-ad-join-deploy-device.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

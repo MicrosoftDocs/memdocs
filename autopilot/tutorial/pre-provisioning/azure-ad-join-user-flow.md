@@ -69,6 +69,6 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 [!INCLUDE [Tips compliance resets during User flow](../includes/tips-pre-provision-compliance-user-flow.md)]
 
-## More information
+## Related content
 
 [!INCLUDE [More information user flow](../includes/more-info-user-flow.md)]

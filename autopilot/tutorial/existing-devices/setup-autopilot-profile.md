@@ -59,6 +59,6 @@ Once a valid Windows Autopilot profile has been created and confirmed working on
 > [!div class="nextstepaction"]
 > [Step 2: Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

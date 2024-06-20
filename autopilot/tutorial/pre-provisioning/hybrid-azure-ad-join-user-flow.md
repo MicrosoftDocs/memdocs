@@ -74,7 +74,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
       If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that **Microsoft Entra end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
-   1. Once the credentials are entered, select the **Next** button.
+   1. Once the credentials are entered, select **Next**.
 
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 

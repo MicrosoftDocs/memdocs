@@ -51,6 +51,6 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 > [!div class="nextstepaction"]
 > [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information ESP](../includes/more-info-esp.md)]

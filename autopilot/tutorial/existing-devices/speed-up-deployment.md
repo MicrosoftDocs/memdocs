@@ -203,7 +203,7 @@ If the default behavior of restarting the device when the task sequence complete
 > [!div class="nextstepaction"]
 > [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 
-## More information
+## Related content
 
 For more information on speeding up the deployment process, see the following article(s):
 

@@ -250,7 +250,7 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
 1. In the **Endpoint Manager roles | All roles** screen, make sure **All roles** is selected under **Manage**.
 
-1. Select the **+ Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
+1. Select the **Create** drop down menu and then select **Intune role**. The **Add Custom Role** screen opens.
 
 1. In the **Add Custom Role** screen:
 
@@ -260,7 +260,7 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
       1. **Description** - enter a description for the custom role.
 
-   1. Select the **Next** button.
+   1. Select **Next**.
 
    1. In the **Permissions** page, under **Select a category below to configure settings.**, scroll through the list to find the following settings. Once the setting is located, expand it, and then change to the following permissions:
 
@@ -298,17 +298,15 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
         All other permissions can be left at the default of **No**.
 
+   1. Once all permissions are set correctly, select **Next**.
 
-
-   1. Once all permissions are set correctly, select the **Next** button.
-
-   1. In the **Scope tags** page, select the **Next** button.
+   1. In the **Scope tags** page, select **Next**.
 
         > [!NOTE]
         >
         > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-   1. In the **Review + create** page, verify that all permissions are correct, and then select the **Create** button.
+   1. In the **Review + create** page, verify that all permissions are correct, and then select **Create**.
 
 1. The new custom Windows Autopilot device preparation role can now be assigned to users who administer Windows Autopilot device preparation.
 

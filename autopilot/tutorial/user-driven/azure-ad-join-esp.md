@@ -50,6 +50,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 > [!div class="nextstepaction"]
 > [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information ESP](../includes/more-info-esp.md)]

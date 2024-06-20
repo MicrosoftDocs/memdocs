@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/19/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -85,17 +85,34 @@ These steps should force the device to obtain the latest Intune policy. The Auto
 
 ### Locally force a device to start the remote Windows Autopilot Reset
 
-To force the device to obtain the latest Intune policy locally on the device, follow these steps:
+To force the device to obtain the latest Intune policy locally on the device, sign into the device where the remote Autopilot Reset was initiated. Once signed into the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
 
-1. Sign into the device where the remote Autopilot Reset was initiated.
+> [!div class="nextstepaction"]
+> [Access work or school](ms-settings:workplace)
 
-1. Right-click on the Start Menu and select **Settings**.
+Or
+
+1. Right-click on the **Start** menu and select **Run**.
+
+1. In the **Run** window, next to **Open:**, enter:
+
+   ```console
+   ms-settings:workplace
+   ```
+
+   and then select **OK**.
+
+Or
+
+1. Right-click on the **Start** menu and select **Settings**.
 
 1. In **Settings**, select **Accounts** in the left hand pane.
 
 1. In the **Accounts** page, select **Access work or school**.
 
-1. In the **Accounts > Access work or school** page, select **Connected by \<user@domain\>** to expand the section.
+Once the **Access work or school** pane is open in the **Settings** app, follow these steps:
+
+1. In the **Accounts > Access work or school** pane, select **Connected by \<user@domain\>** to expand the section.
 
 1. In the expanded section, next to **Managed by \<organization\>**, select the **Info** button.
 

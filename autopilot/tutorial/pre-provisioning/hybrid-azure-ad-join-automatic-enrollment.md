@@ -54,6 +54,6 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 > [!div class="nextstepaction"]
 > [Step 2: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information automatic enrollment](../../includes/more-info-automatic-enrollment.md)]

@@ -47,7 +47,7 @@ To export the Autopilot profiles as JSON files, follow these steps:
 
 1. Sign into the Configuration Manager site server or other device where the required modules were installed in the [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md) step.
 
-1. On the device, open a PowerShell window as an administrator by right clicking on the Start menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
+1. On the device, open a PowerShell window as an administrator by right-clicking on the **Start** menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
 
 1. Copy the following commands by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 

@@ -55,7 +55,7 @@ To install the necessary modules to download the Autopilot profile(s) as a JSON 
 
 1. Sign into the Configuration Manager site server or other device that can access Intune.
 
-1. On the device, open a PowerShell window as an administrator by right clicking on the Start menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
+1. On the device, open a PowerShell window as an administrator by right-clicking on the **Start** menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
 
 1. Copy the following commands by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 

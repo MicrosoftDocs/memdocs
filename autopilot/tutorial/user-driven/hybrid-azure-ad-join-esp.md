@@ -52,6 +52,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 > [!div class="nextstepaction"]
 > [Step 7: Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information ESP](../includes/more-info-esp.md)]

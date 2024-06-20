@@ -50,6 +50,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 > [!div class="nextstepaction"]
 > [Step 4: Create a device group](azure-ad-join-device-group.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information register Autopilot device](../includes/more-info-register-device.md)]

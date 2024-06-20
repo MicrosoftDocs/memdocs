@@ -44,7 +44,7 @@ Headings are driven by article context. -->
 
        1. Scroll through the list of objects and select owners for the user group. Alternatively, use the **Search** bar to search for and select owners of the group.
 
-       1. Once all of the desired owners are selected, select the **Select** button.
+       1. Once all of the desired owners are selected, select **Select**.
 
     1. For **Dynamic device members**, select **Add dynamic query**. The **Dynamic membership rules** screen opens.
 
@@ -74,7 +74,7 @@ Headings are driven by article context. -->
 
             For more information on creating rules for dynamic groups, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership).
 
-    1. Select the **Create** button to finish creating the dynamic device group.
+    1. Select **Create** to finish creating the dynamic device group.
 
 > [!NOTE]
 >

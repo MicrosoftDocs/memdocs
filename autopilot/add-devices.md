@@ -167,12 +167,35 @@ During OOBE, enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kb
 
 ### Desktop hash export
 
-1. Right click on the Start menu and select **Settings** > **Accounts** > **Access work or school**.
+Sign into the device where the hardware hash needs to be exported. Once signed into the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
 
-1. Export log files:
+> [!div class="nextstepaction"]
+> [Access work or school](ms-settings:workplace)
 
-   - Windows 11: In the **Export your management log files** tile, select **Export**.
-   - Windows 10: Select the **Export your management log files** link.
+Or
+
+1. Right-click on the **Start** menu and select **Run**.
+
+1. In the **Run** window, next to **Open:**, enter:
+
+   ```console
+   ms-settings:workplace
+   ```
+
+   and then select **OK**.
+
+Or
+
+1. Right-click on the **Start** menu and select **Settings**.
+
+1. In **Settings**, select **Accounts** in the left hand pane.
+
+1. In the **Accounts** page, select **Access work or school**.
+
+Once the **Access work or school** pane is open in the **Settings** app, export the log files:
+
+- Windows 11: In the **Export your management log files** section, select the **Export** button.
+- Windows 10: Select the **Export your management log files** link.
 
 The logs include a CSV file with the hardware hash. Log files are exported to the `C:\Users\Public\Documents\MDMDiagnostics` directory.
 

@@ -54,6 +54,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 > [!div class="nextstepaction"]
 > [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information device group](../../includes/more-info-groups.md)]

@@ -52,6 +52,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 > [!div class="nextstepaction"]
 > [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md)
 
-## More information
+## Related content
 
 [!INCLUDE [More information register Autopilot device](../includes/more-info-register-device.md)]

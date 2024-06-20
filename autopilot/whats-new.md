@@ -69,7 +69,7 @@ Starting in 2310, we're making an update to the self-deployment and pre-provisio
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
-1. Select the device to unblock and the select the **Unblock device** button at the top of the page.
+1. Select the device to unblock and the select the **Unblock device** option in the toolbar at the top of the page.
 
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
