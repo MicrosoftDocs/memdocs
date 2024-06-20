@@ -23,6 +23,8 @@ landingContent:
         links:
           - text: KB 26186448 Summary of changes in 2403
             url: 2403/26186448.md
+          - text: KB 28290310 CMG update for 2403
+            url: 2403/28290310.md
   - title: Configuration Manager 2309
     linkLists:
       - linkListType: overview
