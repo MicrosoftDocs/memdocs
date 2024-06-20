@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -67,9 +67,9 @@ Starting in 2310, we're making an update to the self-deployment and pre-provisio
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
-2. Select the device to unblock and the select the **Unblock device** button at the top of the page.
+1. Select the device to unblock and the select the **Unblock device** option in the toolbar at the top of the page.
 
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
@@ -121,7 +121,7 @@ Starting in 2307, Windows Autopilot is making it easier to manage devices by add
 
 1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
 
 1. Select the device that needs deletion and then select **Delete** in the toolbar at the top.
 

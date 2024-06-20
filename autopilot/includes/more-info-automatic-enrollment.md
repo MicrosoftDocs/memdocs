@@ -23,4 +23,4 @@ Headings are driven by article context. -->
 For more information on Windows automatic MDM/Intune enrollment, see the following articles:
 
 - [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
-- [Set up Windows automatic enrollment](/mem/autopilot/windows-autopilot-hybrid#set-up-windows-automatic-mdm-enrollment).
+- [Set up Windows automatic enrollment](/autopilot/windows-autopilot-hybrid#set-up-windows-automatic-mdm-enrollment).

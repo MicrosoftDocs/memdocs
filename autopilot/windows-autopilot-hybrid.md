@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 06/11/2024
+ms.date: 06/19/2024
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: itpro-deploy
@@ -81,7 +81,9 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 ## Set up Windows automatic MDM enrollment
 
-1. Sign in to the [Azure portal](https://portal.azure.com/). In the left pane, select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Microsoft Entra ID**.
+
+1. In the left hand pane, select **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune**.
 
 1. Make sure users who deploy Microsoft Entra joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
@@ -183,7 +185,7 @@ If there is a web proxy in the networking environment, ensure that the Intune Co
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 
-1. In the **Group** pane, choose the following options:
+1. In the **Group** pane, select the following options:
 
     1. For **Group type**, select **Security**.
 
@@ -281,31 +283,35 @@ The following VPN solutions are **known** not to work with Windows Autopilot and
 
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** | **Windows** > **Windows enrollment**
 
-2. On the **Basics** page, enter a **Name** and optional **Description**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Deployment Profiles**
 
-3. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
+1. In the **Windows Autopilot deployment profiles** screen, select the **Create Profile** drop down menu and then select **Windows PC**.
 
-4. Select **Next**.
+1. In the **Create profile** screen, on the **Basics** page, enter a **Name** and optional **Description**.
 
-5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
+1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
 
-6. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra hybrid joined**.
+1. Select **Next**.
 
-7. If deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
+1. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 
-8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+1. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra hybrid joined**.
 
-9. Select **Next**.
+1. If deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
+
+1. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+
+1. Select **Next**.
 
 1. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
 
-2. Select **Next**.
+1. Select **Next**.
 
-3. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
+1. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
 
-4. Select **Next** > **Create**.
+1. Select **Next** > **Create**.
 
 > [!NOTE]
 >
@@ -325,13 +331,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 ## Create and assign a Domain Join profile
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices | Configuration** > **Policies** >**Create** > **New Policy**.
 
-1. Enter the following properties:
+1. In the **create a profile** window that opens, enter the following properties:
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile.
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Templates**, choose the template name **Domain Join**, and select **Create**.
+    - **Profile type**: Select **Templates**, select the template name **Domain Join**, and select **Create**.
 
 1. Enter the **Name** and **Description** and select **Next**.
 
@@ -357,7 +363,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-1. [Assign a device profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](/mem/autopilot/windows-autopilot-hybrid#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+1. [Assign a device profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 >
