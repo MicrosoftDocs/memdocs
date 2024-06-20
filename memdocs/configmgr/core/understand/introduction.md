@@ -2,7 +2,7 @@
 title: What is Configuration Manager?
 titleSuffix: Configuration Manager
 description: Learn the basics of Microsoft Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 06/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.custom: intro-overview
