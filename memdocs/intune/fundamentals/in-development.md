@@ -119,6 +119,12 @@ Applies to:
 
 ## Device security
 
+### Defender for Endpoint security settings support in government cloud environments<!-- 24191406 -->
+
+Customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments will soon be able to use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](/intune/protect/mde-security-integration).
+
+For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](/intune/fundamentals/intune-govt-service-description).
+
 ### Updated security baseline for Windows 365 Cloud PC<!-- 26504698 -->
 
 We're working on an update to the Intune security baseline for **Windows 365 Cloud PC**. The new baseline version uses the unified settings platform seen in the Settings Catalog, which features an improved user interface and reporting experience, consistency and accuracy improvements with setting tattooing, and the new ability to support assignment filters for profiles.
