@@ -39,7 +39,7 @@ ms.collection:
 4. Set the values under **Point-in-time restore service** per your requirements. These values also apply to cross region disaster recovery.
 5. Select **Cross region disaster recovery configuration (Optional)** and then:
 
-    - For **Enable cross region disaster recovery**, select *Yes*. 
+    - For **Enable cross region disaster recovery**, select *Yes*.
     - For **Network type**, select an option:
       - **Microsoft-hosted network**: Select the **Geography** and **Region** where your Cloud PC backups are created for cross region disaster recovery.
       - **Azure network connection** (ANC): Your selected ANC determines where the Cloud PC backups are created for cross region disaster recovery. You must configure your ANC for your backup region to support the restored Cloud PCs.
