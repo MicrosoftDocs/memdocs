@@ -3,14 +3,14 @@ title: Enable or Disable a Windows Driver
 titleSuffix: Configuration Manager
 description: Enable or disable a Windows driver in the operating system deployment driver catalog by setting the IsEnabled property of the SMS_Driver Server WMI Class object.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c13462bf-4652-46c4-9f26-818951bb7fe0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

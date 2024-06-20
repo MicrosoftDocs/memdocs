@@ -13,14 +13,21 @@ ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
-Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager and managed devices in Intune.  
+Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager.  
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: maholdaa 
+ms.custom: intune
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
----
+---  
 
 # Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business Manager  
 Use Apple Business Manager with Microsoft Intune to simplify and automate device enrollment for iOS/iPadOS devices procured through Apple Business Manager. *Automated device enrollment*, which we'll set up in this tutorial, enables secure automatic enrollment the first time the user turns on the device by deploying the enrollment profile to the device over-the-air.  
@@ -65,7 +72,7 @@ While you're in Apple Business Manager, assign devices to your new MDM server (*
 ## Step 3: Upload MDM server token     
 Return to the Microsoft Intune admin center to upload the MDM server token to Intune. After you upload the token, Microsoft Intune can sync and enroll iOS/iPadOS devices assigned to *TestMDMServer*.   
 
-1. In **Apple ID**, enter the Apple ID you used to create the token.  
+1. For **Apple ID**, enter the Apple ID you used to create the token.  
 2. Under **Apple token**, upload the server token you saved earlier. The file must be in P7M format.     
 3. Select **Next**.  
 4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md). 
@@ -116,8 +123,9 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or ADE portal.
 
 1. In the admin center, choose your token from the list.  
-2. Choose **Devices** > choose devices in the list > **Assign profile**.  
-3. Under **Assign profile**, choose a profile for the devices > **Assign**.  
+2. Select **Devices** and choose the devices you want to assign.
+3. Select **Assign profile**.  
+4. Under **Assign profile**, choose a profile for the devices > **Assign**.  
 
 > [!NOTE]
 > Ensure that **Device Type Restrictions** under **Enrollment Restrictions** does not have the default **All Users** policy set to block the iOS/iPadOS platform. This setting will cause automated enrollment to fail and your device will show as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which will permit corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled via a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.

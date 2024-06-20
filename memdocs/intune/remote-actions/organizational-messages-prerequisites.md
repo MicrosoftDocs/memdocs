@@ -6,12 +6,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/07/2022
+ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 # optional metadata
 
@@ -29,10 +28,7 @@ ms.collection:
 
 # Organizational messages prerequisites   
 
-*Applies to Windows 11*  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+*Applies to Windows 11*   
 
 This article describes the tenant, message, and configuration requirements for organizational messages. Employees will not receive messages until you complete all prerequisites.  
 ## Version requirements  
@@ -43,20 +39,20 @@ The organizational message feature is included with the following licenses:
 
 * Microsoft 365 E3  
 * Microsoft 365 E5  
-* Enterprise Mobility + Security E3 and Windows 10/11 Enterprise E3    
-* Enterprise Mobility + Security E5 and Windows 10/11 Enterprise E5  
+* Windows 10/11 Enterprise E3 with Microsoft Intune Plan 1    
+* Windows 10/11 Enterprise E5 with Microsoft Intune Plan 1 
 
 For more information about license options, see [Microsoft Intune licensing](../fundamentals/licenses.md).  
 
 ## Role-based access control requirements  
 To create organizational messages in Microsoft Intune, you must be assigned one of these roles: 
 
-* Azure AD Global administrator  
+* Microsoft Entra Global Administrator  
 * Intune administrator  
 * Organizational messages manager (Microsoft Intune role)  
-* Organizational messages writer (Azure AD role)  
+* Organizational messages writer (Microsoft Entra role)  
 
-For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
+You can also create a custom role for people managing organization messages by using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
 
 ## Logo requirements  
 Logos must meet these requirements:  
@@ -67,9 +63,6 @@ Logos must meet these requirements:
     * Taskbar messages: 64 x 64 pixels  
     * Notification area messages: 48 x 48 pixels
     * Get Started app messages: 50 pixels long x 50 - 100 pixels wide  
-
-## URL requirements  
-The domain for your custom destination URLs must be added to your list of verified Azure AD custom domain names. For more information, see [Add your custom domain - Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain#add-your-custom-domain-name-to-azure-ad).  
 
 ## Policy requirements  
 There are certain experience and Windows Spotlight policies in Microsoft Intune that block the delivery of organizational messages. This section describes how to adjust all settings so that delivery is always allowed and works as intended. 
@@ -90,7 +83,7 @@ Enable the delivery of organizational messages in all new and existing policies 
 > If you use the Windows 10/11 MDM security baseline, you will need to change the **Windows Spotlight** policy to **Not configured**. The Windows Spotlight policy controls organizational messages and messages coming from Microsoft. To continue blocking messages from Microsoft as defined in the Windows 10/11 MDM security baseline, [configure the Microsoft messaging policy](organizational-messages-prerequisites.md#microsoft-messaging-policy).
 
 #### Template profiles    
-Go to **Devices** > **Windows** > **Configuration profiles**, and in a new or existing template profile select **Device restrictions** > **Windows Spotlight**.    
+Go to **Devices** > **Windows** > **Configuration profiles**, and in a new or existing template profile, select **Device restrictions** > **Windows Spotlight**.    
 
 * To allow taskbar messages:   
   * **Windows Spotlight**: Select **Not configured**.    
@@ -127,12 +120,14 @@ The configuration service provider (CSP) policies available for Windows 11 inclu
 If you currently block messages that come from Microsoft, you can continue to do so while also allowing organizational messages to come through.  
 
 1.  Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Tenant administration** > **Organizational messages (preview)**.    
+2. Go to **Tenant administration** > **Organizational messages**.    
 2. In the **Overview** tab, go to step 2 under **Before you create a message**.      
 3. **Decide whether to block messages directly from Microsoft, while allowing admin messages to display**: Switch the toggle to **Allow** to allow both Microsoft messages and organizational messages. Switch the toggle to **Block** to block Microsoft messages and allow organizational messages.   
 
-## Attention: New Azure AD tenants        
-If you recently created your Azure AD tenant, the organizational messages feature won't be available to use right away. It will become available 36 to 64 hours after you create the tenant.   
+<a name='attention-new-azure-ad-tenants'></a>
+
+## Attention: New Microsoft Entra tenants        
+If you recently created your Microsoft Entra tenant, the organizational messages feature won't be available to use right away. It will become available 36 to 64 hours after you create the tenant.   
 
 ## Next steps 
 Now that prerequisites are complete, you can [create organizational messages](organizational-messages-create.md) in Microsoft Intune.    

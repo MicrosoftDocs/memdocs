@@ -3,14 +3,14 @@ description: Learn how to use SMS_SIIB_SysResRole to represent a system role ass
 title: SMS_SIIB_SysResRole Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 15511027-14d3-48a9-b3f7-5a2e2fafd298
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

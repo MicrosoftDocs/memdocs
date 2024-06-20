@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
 
 # optional metadata
@@ -25,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -51,7 +50,7 @@ You may be confused by the use of the term *entity* and *table*. The data model 
 
 ## Install Power BI Desktop
 
-Install the latest version of Power BI Desktop. You can download Power BI Desktop from: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Install the latest version of Power BI Desktop. You can download Power BI Desktop from [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop).
 
 ## Connect to the OData feed for the Intune Data Warehouse for your tenant
 
@@ -67,16 +66,16 @@ Install the latest version of Power BI Desktop. You can download Power BI Deskto
 6. Paste the custom feed URL, that you copied from the earlier step, into the URL box in the **OData feed** window.
 7. Select **Basic**.
 
-    ![OData feed for the Intune Data Warehouse for your tenant](./media/reports-proc-create-with-odata/reports-create-01-odatafeed.png)
+    ![OData feed for the Intune Data Warehouse for your tenant.](./media/reports-proc-create-with-odata/reports-create-01-odatafeed.png)
 
 8. Select **OK**.
 9. Select **Organization account**, and then sign in with your Intune credentials.
 
-    ![Organizational account credentials](./media/reports-proc-create-with-odata/reports-create-02-org-account.png)
+    ![Organizational account credentials.](./media/reports-proc-create-with-odata/reports-create-02-org-account.png)
 
 10. Select **Connect**. The Navigator will open and show you the list of tables in the Intune Data Warehouse.
 
-    ![Screenshot of the Navigator - The list of Data Warehouse tables](./media/reports-proc-create-with-odata/reports-create-02-loadentities.png)
+    ![Screenshot of the Navigator - The list of Data Warehouse tables.](./media/reports-proc-create-with-odata/reports-create-02-loadentities.png)
 
 11. Select the **devices** and the **ownerTypes** tables.  Select **Load**. Power BI loads data to the model.
 
@@ -84,7 +83,7 @@ Install the latest version of Power BI Desktop. You can download Power BI Deskto
 
 You can import multiple tables to analyze not just the data in a single table but related data across tables. Power BI has a feature called **autodetect** that attempts to find and create relationships for you. The tables in the Data Warehouse have been built to work with the autodetect feature in Power BI. However, even if Power BI doesn't automatically find the relationships, you can still manage the relationships.
 
-![Manage relationships of related data across tables](./media/reports-proc-create-with-odata/reports-create-03-managerelationships.png)
+:::image type="content" alt-text="Manage relationships of related data across tables." source="./media/reports-proc-create-with-odata/reports-create-03-managerelationships.png":::
 
 1. Select **Manage Relationships**.
 2. Select **Autodetect...** if Power BI has not already detected the relationships.
@@ -95,7 +94,7 @@ The relationship is displayed in a From column to a To column. In this example, 
 
 A treemap chart shows hierarchical data as boxes within boxes. Each branch of the hierarchy is a box contains smaller boxes showing subbranches. You can use Power BI desktop to create a treemap of your Intune tenant data that shows relative amounts of device manufacturer types.
 
-![Power BI treemap visualizations](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
+![Power BI treemap visualizations.](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. In the **Visualizations** pane, find and select **Treemap**. The **Treemap** chart will be added to the report canvas.
 2. In the **Fields** pane, find the `devices` table.
@@ -105,20 +104,20 @@ A treemap chart shows hierarchical data as boxes within boxes. Each branch of th
 
 You now have a visual that shows the distribution of manufacturers of devices within your organization.
 
-![Treemap with data - The distribution of manufacturers of devices](./media/reports-proc-create-with-odata/reports-create-06-treemapwdata.png)
+![Treemap with data - The distribution of manufacturers of devices.](./media/reports-proc-create-with-odata/reports-create-06-treemapwdata.png)
 
 ## Add a filter
 
 You can add a filter to your treemap so that you can answer additional questions using your app.
 
-1. To add a filter, select the report canvas, and then select the **Slicer icon** (![Treemap with data model and supported relationships](./media/reports-proc-create-with-odata/reports-create-slicer.png)) under **Visualizations**. The empty **Slicer** visualization will appear on the canvas.
+1. To add a filter, select the report canvas, and then select the **Slicer icon** (![Treemap with data model and supported relationships.](./media/reports-proc-create-with-odata/reports-create-slicer.png)) under **Visualizations**. The empty **Slicer** visualization will appear on the canvas.
 2. In the **Fields** pane, find the `ownerTypes` table.
 3. Expand the `ownerTypes` table and select the `ownerTypeName` data field.
 4. Drag the `onwerTypeName` data field from the `ownerTypes` table to the **Filters** pane and drop it on under the **Filters on this page** section in the box labeled **Add data fields here**.  
 
    Under the `OwnerTypes` table, there's a data field called `OwnerTypeKey`that contains a data as to whether a device is company-owned or personal. Since you would like to show friendly names in this filter, look for the `ownerTypes` table and drag the **ownerTypeName** to the Slicer. This example shows how the data model supports relationships between tables.
 
-![Treemap with filter - Supports relationships between tables](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
+   :::image type="content" alt-text="Treemap with filter - Supports relationships between tables." source="./media/reports-proc-create-with-odata/reports-create-08_ownertype.png":::
 
 You now have an interactive filter that can be used to toggle between company owned and personally owned devices. Use this filter to see how the distribution changes.
 

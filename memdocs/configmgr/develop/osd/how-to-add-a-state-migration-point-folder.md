@@ -3,14 +3,14 @@ title: Add a State Migration Point Folder
 titleSuffix: Configuration Manager
 description: Add an operating system deployment state migration point folder by adding the folder description to the Directories embedded property list.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 95b399e5-47fd-4519-a30e-c220ebdb5c95
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

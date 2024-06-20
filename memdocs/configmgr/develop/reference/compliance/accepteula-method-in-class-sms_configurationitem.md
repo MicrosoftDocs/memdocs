@@ -3,14 +3,14 @@ description: Learn how to accept or decline the Microsoft Software License Terms
 title: AcceptEULA Method in Class SMS_ConfigurationItem
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 28f37dfd-92bb-4ea7-8670-630b43d19a59
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

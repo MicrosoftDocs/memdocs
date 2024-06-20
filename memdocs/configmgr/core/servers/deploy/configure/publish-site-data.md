@@ -3,8 +3,8 @@ title: Publish site data
 titleSuffix: Configuration Manager
 description: Learn how to publish Configuration Manager sites to Active Directory Domain Services.
 ms.date: 02/7/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

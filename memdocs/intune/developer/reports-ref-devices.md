@@ -2,17 +2,16 @@
 # required metadata
 title: Devices - Intune Data Warehouse
 titleSuffix: Microsoft Intune
-description: Reference topic for the Devices category of entity collections in the Intune Data Warehouse API.
+description: Reference article for the Devices category of entity collections in the Intune Data Warehouse API.
 keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 
 # optional metadata
@@ -25,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -37,7 +36,7 @@ The **devices** category contains entities for mobile devices that track informa
 - Device enrollment and registration status
 - Device ownership
 - Device management state
-- Device membership to Azure AD status
+- Device membership to Microsoft Entra status
 - Enrollment status
 - Historic information about the device
 - Inventory of apps on the device
@@ -119,17 +118,17 @@ The **EnrollmentFailureCategory** entity indicates why a device enrollment faile
 
 | enrollmentFailureCategoryName   | Description                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Not Applicable                  | The enrollment failure category is not applicable.                                                            |
-| Not Available                   | The enrollment failure category is not available.                                                             |
+| Not Applicable                  | The enrollment failure category isn't applicable.                                                            |
+| Not Available                   | The enrollment failure category isn't available.                                                             |
 | Unknown                         | Unknown error.                                                                                                |
 | Authentication                  | Authentication failed.                                                                                        |
 | Authorization                   | Call was authenticated, but not authorized to enroll.                                                         |
 | AccountValidation               | Failed to validate the account for enrollment. (Account blocked, enrollment not enabled)                      |
-| UserValidation                  | User could not be validated. (User does not exist, missing license)                                           |
-| DeviceNotSupported              | Device is not supported for mobile device management.                                                         |
+| UserValidation                  | User couldn't be validated. (User doesn't exist, missing license)                                           |
+| DeviceNotSupported              | Device isn't supported for mobile device management.                                                         |
 | InMaintenance                   | Account is in maintenance.                                                                                    |
-| BadRequest                      | Client sent a request that is not understood/supported by the service.                                        |
-| FeatureNotSupported             | Feature(s) used by this enrollment are not supported for this account.                                        |
+| BadRequest                      | Client sent a request that isn't understood/supported by the service.                                        |
+| FeatureNotSupported             | Feature(s) used by this enrollment aren't supported for this account.                                        |
 | EnrollmentRestrictionsEnforced  | Enrollment restrictions configured by admin blocked this enrollment.                                          |
 | ClientDisconnected              | Client timed out or enrollment was aborted by end user.                                                        |
 | UserAbandonment                 | Enrollment was abandoned by end user. (End user started onboarding but failed to complete it in timely manner)  |
@@ -146,23 +145,23 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 
 | enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Not Applicable                   | The enrollment failure reason is not applicable.                                                                                                                                                       |
-| Not Available                    | The enrollment failure reason is not available.                                                                                                                                                        |
+| Not Applicable                   | The enrollment failure reason isn't applicable.                                                                                                                                                       |
+| Not Available                    | The enrollment failure reason isn't available.                                                                                                                                                        |
 | Unknown                          | Unknown Error.                                                                                                                                                                                         |
-| UserNotLicensed                  | The user was not found in Intune or does not have a valid license.                                                                                                                                     |
-| UserUnknown                      | User is not known to Intune.                                                                                                                                                                           |
+| UserNotLicensed                  | The user wasn't found in Intune or doesn't have a valid license.                                                                                                                                     |
+| UserUnknown                      | User isn't known to Intune.                                                                                                                                                                           |
 | BulkAlreadyEnrolledDevice        | Only one user can enroll a device. This device was previously enrolled by another user.                                                                                                                |
-| EnrollmentOnboardingIssue        | Intune mobile device management (MDM) authority is not configured yet.                                                                                                                                 |
+| EnrollmentOnboardingIssue        | Intune mobile device management (MDM) authority isn't configured yet.                                                                                                                                 |
 | AppleChallengeIssue              | The iOS management profile installation was delayed or failed.                                                                                                                                         |
 | AppleOnboardingIssue             | An Apple MDM push certificate is required to enroll into Intune.                                                                                                                                       |
 | DeviceCap                        | The user attempted to enroll more devices than maximum allowed.                                                                                                                                        |
 | AuthenticationRequirementNotMet  | Intune enrollment service failed to authorize this request.                                                                                                                                            |
-| UnsupportedDeviceType            | This device does not meet minimum requirements for Intune enrollment.                                                                                                                                  |
+| UnsupportedDeviceType            | This device doesn't meet minimum requirements for Intune enrollment.                                                                                                                                  |
 | EnrollmentCriteriaNotMet         | This device failed to enroll due to a configured enrollment restriction rule.                                                                                                                          |
 | BulkDeviceNotPreregistered       | This device's international mobile equipment identifier (IMEI) or serial number wasn't found.  Without this identifier, devices are recognized as personal-owned devices which are currently blocked.  |
-| FeatureNotSupported              | The user was attempting to access a feature that is not yet released for all customers or is not compatible with your Intune configuration.                                                            |
+| FeatureNotSupported              | The user was attempting to access a feature that isn't yet released for all customers or isn't compatible with your Intune configuration.                                                            |
 | UserAbandonment                  | Enrollment was abandoned by end user. (End user started onboarding but failed to complete it in timely manner)                                                                                           |
-| APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
+| APNSCertificateExpired           | Apple devices can't be managed with an expired Apple MDM push certificate.                                                                                                                            |
 ## ownerTypes
 
 The **ownerType** entity indicates whether a device is corporate, personally owned, or unknown.
@@ -191,12 +190,12 @@ The **managementStates** entity provides details on the state of the device. Det
 | managementStateID  | Name | Description |
 |---------|------------|--------|
 | 0 |Managed | Managed with no pending remote actions. |
-| 1 |RetirePending | There is a retire command pending for the device. |
+| 1 |RetirePending | There's a retire command pending for the device. |
 | 2 |RetireFailed | The retire command failed on the device. |
-| 3 |WipePending | There is a wipe command pending for the device. |
+| 3 |WipePending | There's a wipe command pending for the device. |
 | 4 |WipeFailed | The wipe command failed on the device. |
 | 5 |Unhealthy | Unhealthy state. |
-| 6 |DeletePending | There is a delete command pending for the device. |
+| 6 |DeletePending | There's a delete command pending for the device. |
 | 7 |RetireIssued | A retire command has been issued to the device. |
 | 8 |WipeIssued | A wipe command has been issued. |
 | 9 |WipeCanceled | Wipe command has been canceled. |
@@ -234,7 +233,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Unique   identifier of the device in the data warehouse - surrogate key.                                                                                                               |
 | deviceId                   | Unique   identifier of the device.                                                                                                                                                     |
-| deviceName                 | Name   of the device on platforms that allow naming a device. On other platforms,   Intune creates a name from other properties. This attribute cannot be   available for all devices. |
+| deviceName                 | Name   of the device on platforms that allow naming a device. On other platforms,   Intune creates a name from other properties. This attribute can't be   available for all devices. |
 | deviceTypeKey              | Key   of the device type attribute for this device.                                                                                                                                    |
 | deviceRegistrationState    | Key   of the client registration state attribute for this device.                                                                                                                      |
 | ownerTypeKey               | Key   of the owner type attribute for this device: corporate, personal, or unknown.                                                                                                    |
@@ -243,7 +242,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 | managementAgentKey         | Key of the management agent   associated with this device.                                                                                                                             |
 | managementStateKey         | Key of the management state   associated with this device, indicating latest state of a remote action or if   it was jailbroken/rooted.                                                |
 | azureADDeviceId            | The   Azure deviceID for this device.                                                                                                                                                  |
-| azureADRegistered          | Whether the device is Azure Active   Directory registered.                                                                                                                             |
+| azureADRegistered          | Whether the device is Microsoft Entra registered.                                                                                                                             |
 | deviceCategoryKey          | Key of the category associated   with this device.                                                                                                                                     |
 | deviceEnrollmentType       | Key of the enrollment type   associated with this device, indicating method of enrollment.                                                                                             |
 | complianceStateKey         | Key of the Compliance state   associated with this device.                                                                                                                             |
@@ -271,12 +270,12 @@ The **devices** entity lists all enrolled devices under management and their cor
 | windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
-| office365Version           | The version of Microsoft 365 that is installed on the device. `Office365Version` is only collected when the Intune management extension agent is installed on a Windows machine. The admin must also create and assign a PowerShell or Win32 App for the agent to be installed. For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md) and [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).<p>**NOTE**:<br>There is a known issue with the Intune Data Warehouse **devices** table. The `office365Version` property for the device record may be null. This property is currently under maintenance and may be subject to deprecation. Therefore, you should consider not using this property value for reporting purposes.                                                                                                                               |
+| office365Version           | The version of Microsoft 365 that is installed on the device. `Office365Version` is only collected when the Intune management extension agent is installed on a Windows machine. The admin must also create and assign a PowerShell or Win32 App for the agent to be installed. For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md) and [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).<p>**NOTE**:<br>There's a known issue with the Intune Data Warehouse **devices** table. The `office365Version` property for the device record may be null. This property is currently under maintenance and may be subject to deprecation. Therefore, you should consider not using this property value for reporting purposes.                                                                                                                               |
 | SubnetAddressV4Wifi           | The subnet address for IPV4 Wifi connection.                                                                                                                             |
 | IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
 > [!NOTE]
-> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#managed-device-properties).
 
 ## devicePropertyHistories
 
@@ -286,11 +285,11 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Reference to date table indicating the day.                                                                                                                                          |
 | deviceKey                  | Unique identifier of the device in the data warehouse -  surrogate key. This is a reference to the Device table that contains the   Intune device ID.                               |
-| deviceName                 | Name of the device on platforms that allow naming a   device. On other platforms, Intune creates a name from other properties. This   attribute cannot be available for all devices. |
+| deviceName                 | Name of the device on platforms that allow naming a   device. On other platforms, Intune creates a name from other properties. This   attribute can't be available for all devices. |
 | deviceRegistrationStateKey | Key of the device registration state attribute for this   device.                                                                                                                    |
 | ownerTypeKey               | Key of the owner type attribute for this device:   corporate, personal, or unknown.                                                                                                  |
 | managementStateKey         | Key of the management state associated with this device,   indicating latest state of a remote action or if it was jailbroken/rooted.                                                |
-| azureADRegistered          | Whether the device is Azure Active Directory registered.                                                                                                                             |
+| azureADRegistered          | Whether the device is Microsoft Entra registered.                                                                                                                             |
 | complianceStateKey         | A key to ComplianceState.                                                                                                                                                            |
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | jailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |

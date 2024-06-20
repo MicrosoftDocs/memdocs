@@ -7,12 +7,11 @@ keywords:
 author: erikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/18/2022
+ms.date: 03/11/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -32,7 +31,7 @@ ms.collection:
 
 # Public preview in Windows 365
 
-Windows 365 releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test and use these features in production environments and scenarios, and provide feedback.
+Windows 365 releases some features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test and use these features in production environments and scenarios, and provide feedback.
 
 Preview features have a **(preview)** tag in the admin user interface (Microsoft Intune admin center,  Microsoft 365 admin center, and windows365.microsoft.com).
 
@@ -45,6 +44,7 @@ When working with features in public preview, these features:
 - Are fully supported by Microsoft.
 - May only be available in selected geographic regions or cloud environments. For example, the feature may not exist for Windows 365 Business Cloud PCs.
 - Individual features in preview may have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
+- Aren't supported for Windows 365 Government.
 
 ## Next steps
 

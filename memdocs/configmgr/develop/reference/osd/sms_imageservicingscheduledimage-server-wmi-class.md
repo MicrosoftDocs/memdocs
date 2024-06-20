@@ -3,14 +3,14 @@ title: SMS_ImageServicingScheduledImage Class
 titleSuffix: Configuration Manager
 description: The SMS_ImageServicingScheduledImage WMI class represents all schedules for offline servicing image.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 280d959d-ac8b-4ec6-912d-0af7caa6e840
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

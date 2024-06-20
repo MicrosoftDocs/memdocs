@@ -3,14 +3,14 @@ description: Learn how to use the Configuration Manager with the CreateIdentity 
 title: "IPxeAuthClass::ReadIdentity"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 35cbac5e-9acf-45fb-a4a4-392196df8776
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

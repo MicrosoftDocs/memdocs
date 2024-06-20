@@ -3,14 +3,14 @@ title: Add a Condition to an OS Deployment Task Sequence Step
 titleSuffix: Configuration Manager
 description: How to Add a Condition to an Operating System Deployment Task Sequence Step
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 153b47c9-14fc-4b09-a2d7-99e0de5b6759
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

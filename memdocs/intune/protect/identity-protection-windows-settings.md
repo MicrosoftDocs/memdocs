@@ -4,16 +4,14 @@
 title: Windows Hello for Business settings in Microsoft Intune
 description: View details for Windows Hello for Business settings you configure in an Intune identity protection profile for device groups in Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/20/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -26,6 +24,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- identity-protection
 ms.reviewer: mattcall
 
 ---

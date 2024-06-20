@@ -3,8 +3,8 @@ title: Diagnostic and usage data for 1806
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 1806.
 ms.date: 05/13/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur
@@ -38,7 +38,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - ***[Updated]*** Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, and configuration of distributed views
 
-- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Azure Active Directory Services
+- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Microsoft Entra services
 
 - Basic Endpoint Protection information about antimalware client versions
 
@@ -85,7 +85,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Whether network discovery is enabled or disabled
 
-- Count of clients joined to Azure Active Directory
+- Count of clients joined to Microsoft Entra ID
 
 - Count of phased deployments created by type
 
@@ -236,11 +236,11 @@ For Configuration Manager version 1806, this level includes the following data:
 
 ### Cloud services  
 
-- Azure Active Directory discovery statistics
+- Microsoft Entra discovery statistics
 
 - Configuration and usage statistics of Cloud Management Gateway: counts of regions and environments, and authentication/authorization statistics
 
-- Count of Azure Active Directory applications and services connected to Configuration Manager
+- Count of Microsoft Entra applications and services connected to Configuration Manager
 
 - Count of collections synced to Azure Log Analytics
 

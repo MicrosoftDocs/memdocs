@@ -3,14 +3,14 @@ title: Disable a PXE Service Point Role
 description: You disable the PXE Service Point role, in Configuration Manager, by getting an instance of a specific distribution point and setting the IsPXE value to 0.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 06e69335-82f8-471f-9d42-b3e157c3fd35
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

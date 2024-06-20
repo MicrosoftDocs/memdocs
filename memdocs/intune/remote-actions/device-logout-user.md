@@ -13,7 +13,6 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 702bc46c-1a6f-4689-bd53-3b778a447baa
 
 # optional metadata
@@ -27,13 +26,11 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
 # Logout the current user on Intune-managed iOS/iPadOS devices
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 The **Logout current user** action logs out the current user on a shared iPad device. 
 

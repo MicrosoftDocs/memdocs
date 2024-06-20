@@ -3,14 +3,14 @@ description: The SMS_TaskSequence_PartitionSettings WMI class is an SMS Provider
 title: SMS_TaskSequence_PartitionSettings Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0eb0d627-d1c6-4cee-a426-7753dd2f5d74
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

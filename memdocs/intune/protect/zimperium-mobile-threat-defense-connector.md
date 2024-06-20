@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Zimperium MTD connector with Intune
+title: Zimperium MTD connector with Microsoft Intune
 titleSuffix: Intune on Azure
-description: Learn about integrating Intune with Zimperium Mobile Threat Defense to control mobile device access to your corporate resources.
+description: How to set up Zimperium Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
 
 # optional metadata
@@ -45,13 +44,10 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 
 ## Prerequisites
 
-- Azure Active Directory Premium
-
-- Microsoft Intune subscription
-
+- Microsoft Entra ID P1
+- Microsoft Intune Plan 1 subscription
 - Zimperium Mobile Threat Defense subscription
-
-  - For more information, see [Zimperium website](https://www.zimperium.com/zips-mobile-ips).
+  - For more information, see [Zimperium website](https://www.zimperium.com/zips-mobile-ips)
 
 ## How do Intune and Zimperium help protect your company resources?
 
@@ -76,9 +72,7 @@ See below a few scenarios when integrating Zimperium with Intune:
 When malicious apps such as malware are detected on devices, you can block devices until the threat is resolved:
 
 - Connecting to corporate e-mail
-
 - Syncing corporate files with the OneDrive for Work app
-
 - Accessing company apps
 
 *Block when malicious apps are detected:*

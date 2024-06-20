@@ -1,21 +1,21 @@
 ---
 title: SetBusinessHours Method
-description: Learn how the SetBusinessHours Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets the values for business hours.
+description: Learn how the SetBusinessHours Windows Management Instrumentation (WMI) class method in Configuration Manager that sets the values for business hours.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c93b11dc-e63e-4620-8ae1-83f4bea0969a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SetBusinessHours Method in Class CCM_ClientUXSettings
-The `SetBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets the values for business hours.    
+The `SetBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that sets the values for business hours.    
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

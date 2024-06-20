@@ -3,14 +3,14 @@ title: Start Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the Start Windows Management Instrumentation class method starts the migration job.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1f6682fd-3a51-4b5b-a72b-9e5eac591f03
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

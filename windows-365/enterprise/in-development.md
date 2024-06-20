@@ -2,17 +2,14 @@
 # required metadata
 
 title: In development - Windows 365 Enterprise
-titleSuffix: 
 description: Windows 365 Enterprise features in development
 keywords:
-author: ErikjeMS 
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/09/2023
-ms.topic: reference
+ms.date: 06/12/2024
+ms.topic: conceptual
 ms.service: windows-365
-ms.subservice: 
-ms.assetid: 
 
 # optional metadata
 
@@ -22,7 +19,7 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18, references_regions
+ms.custom: references_regions
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -32,10 +29,10 @@ ms.collection:
 
 To help in your readiness and planning, this page lists Windows 365 updates and features that are in development but not yet released. In addition to the information on this page:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
-- When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
+- If we anticipate that you need to take action before a change, we publish a complementary post in Office message center.
+- When a feature enters production, the feature description moves from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
-- Similar features may be announced at different times for Windows 365 Business.
+- Similar features might be announced at different times for Windows 365 Business.
 
 > [!NOTE]
 > This page reflects our current expectations about Windows 365 capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
@@ -56,20 +53,34 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## Device provisioning
+## Device management
 
-### Add more Azure Network Connections to a provisioning policy<!--42906565-->
+### Support for symmetric NAT with RDP Shortpath<!--43602619-->
 
-A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case of capacity constraints in a region.
+In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission. For more information, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-### Cloud PC custom name template<!--42947813-->
+### Chroma subsampling default change to 4:2:0<!--50308895-->
 
-You’ll be able to create a template to automatically create unique names for new Cloud PCs.
+To reduce monitor support issues, the Windows 365 service will default the chroma subsampling at 4:2:0 (instead of the previous 4:4:4).
+
+<!-- ***********************************************-->
+## Device security
+
+### Windows 365 Government support for Customer Lockbox<!--48802385-->
+
+Windows 365 Government will support Microsoft Purview Customer Lockbox.
+
+For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
 
 <!--***********************************************-->
-<!--
-## End user experience
--->
+<!-- ## End user experience -->
+
+<!-- ***********************************************-->
+## Miscellaneous
+
+### Upgrade Windows 365 licenses in Microsoft admin center<!--45415383-->
+
+In a future update, customers that have Modern Microsoft Cloud Agreements will be able to upgrade their existing Windows 365 licenses in the Microsoft Admin Center.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -78,11 +89,36 @@ You’ll be able to create a template to automatically create unique names for n
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
-<!-- ***********************************************-->
-<!-- ## Provisioning -->
+### Windows 365 Government support for Cloud PC utilization report<!--49200860-->
+
+Windows 365 Government will support the Cloud PC utilization report.
+
+For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+### Update to Cloud PC action status report<!--49451077-->
+
+The Cloud PC action status report will show batches of devices in which actions have been triggered. Customers will be able to see the batch current progress.
 
 <!-- ***********************************************-->
-<!--## Role-based access control-->
+## Provisioning
+
+### New health check: UDP TURN (preview)<!--44505391-->
+
+A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
+
+<!-- ***********************************************-->
+## Security
+
+### New settings for Windows 365 security baselines<!--49685126-->
+
+New configuration settings will be introduced for the Windows 365 security baseline.
+
+<!-- ***********************************************
+## Windows 365 app-->
+
+<!-- ***********************************************-->
+<!--## Windows 365 Frontline-->
+
 
 ## Next steps
 

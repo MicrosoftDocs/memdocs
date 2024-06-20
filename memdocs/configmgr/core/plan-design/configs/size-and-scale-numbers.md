@@ -3,8 +3,8 @@ title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -91,7 +91,7 @@ For more information, see CMG [Performance and scale](../../clients/manage/cmg/p
 - Each primary site supports up to 15 management points.  
 
     > [!TIP]  
-    > Don't install management points on servers that are across a slow link from the primary site server or the site database server.  
+    > Don't install management points on servers that are across a slow link from the primary site server or the site database server. If the management point is not in the same data center (also referred to as a fast link), you can experience latency on state and status messages. If you have a requirement for a remote management point, consider using a secondary site instead. This will avoid backlog issues for state and status messages.
 
 - Each secondary site supports a single management point that must be installed on the secondary site server.  
 

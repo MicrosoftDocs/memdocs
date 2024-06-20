@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 12/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -21,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrisbal
+ms.reviewer: esalter
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,6 +28,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - Android
+- FocusArea_Apps_Add
 ---
 
 # Configure Google Chrome for Android devices using Intune 
@@ -48,9 +48,9 @@ You can use an Intune app configuration policy to configure Google Chrome for An
 
     ![Search and approve Google Chrome](./media/apps-configure-chrome-android/search.png)
 
-4. Assign Google Chrome to a group as a required app type. Google Chrome will be deployed automatically when the device is enrolled into Intune.
+4. Assign Google Chrome to a group as a required app type. Google Chrome is deployed automatically when the device is enrolled into Intune.
 
-For additional details about adding a Managed Google Play app to Intune, see [Managed Google Play store apps](apps-add-android-for-work.md#managed-google-play-store-apps).
+For more information about adding a Managed Google Play app to Intune, see [Managed Google Play store apps](apps-add-android-for-work.md#managed-google-play-store-apps).
 
 ## Add app configuration for managed AE devices
 
@@ -63,11 +63,11 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
     ![Add Google Chrome Configuration policy](./media/apps-configure-chrome-android/add-policy.png)
 
-3. Click **Associated app** to display the **Associated app** pane. Find and select **Google Chrome**. This list contains [Managed Google Play apps that you've approved and synchronized with Intune](apps-add-android-for-work.md).
+3. Select **Associated app** to display the **Associated app** pane. Find and select **Google Chrome**. This list contains [Managed Google Play apps that you've approved and synchronized with Intune](apps-add-android-for-work.md).
 
     ![Select Google Chrome under Associated app](./media/apps-configure-chrome-android/associated-app.png)
 
-4. Click **Configuration settings**, select **Use configuration designer**, and then click **Add** to select the configuration keys.
+4. Select **Configuration settings**, select **Use configuration designer**, and then select **Add** to select the configuration keys.
 
     ![Add Use configuration designer](./media/apps-configure-chrome-android/configuration.png)
 
@@ -77,13 +77,13 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
     - **Managed Bookmarks**: `[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
     - **Incognito mode availability**: `Incognito mode disabled`
 
-    Once the configuration settings are added using the configuration designer, they will be listed in a table. 
+    Once the configuration settings are added using the configuration designer, they'll be listed in a table. 
 
     ![Common settings](./media/apps-configure-chrome-android/common-settings.png)
 
-    The above settings create bookmarks and block access to all URLs except `baidu.com`, `yahoo.com`, `chromium.org`, and `chrome://`.
+    The above settings create bookmarks and block access to all URLs except `baidu.com`, `youtube.com`, `chromium.org`, and `chrome://`.
 
-5. Click **OK** and **Add** to add your configuration policy to Intune.
+5. Select **OK** and **Add** to add your configuration policy to Intune.
 6. Assign this configuration policy to a user group. For more information, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
 ## Verify the device settings
@@ -92,7 +92,7 @@ Once the Android device is enrolled with Android Enterprise, the managed Google 
 
    <img alt="Managed Google Chrome with the portfolio icon" src="./media/apps-configure-chrome-android/chrome-icon.png" width="350">
 
-Launch Google Chrome and you will find the settings applied.
+Launch Google Chrome and you'll find the settings applied.
 
    Bookmarks:<br>
    <img alt="View bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">

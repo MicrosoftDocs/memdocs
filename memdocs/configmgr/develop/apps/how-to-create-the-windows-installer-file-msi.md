@@ -1,21 +1,21 @@
 ---
 title: How to Create the Windows Installer File
-description: After the Deployment Type Extension file (*.cmdtx) is created, you are expected to generate a Windows Installer file (\*.msi) which contains the \*.cmdtx file and the UX files.
+description: After the Deployment Type Extension file (*.cmdtx) is created, you're expected to generate a Windows Installer file (\*.msi) which contains the \*.cmdtx file and the UX files.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: cd6cf0d2-ff17-4d58-a7d5-244c88307b17
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create the Windows Installer File (*.msi)
-After the Deployment Type Extension file (*.cmdtx) is created, you are expected to generate a Windows Installer file (\*.msi) which contains the \*.cmdtx file and the UX files. The Windows Installer needs to copy the files into the correct locations and register the custom extension with the site server.  
+After the Deployment Type Extension file (*.cmdtx) is created, you're expected to generate a Windows Installer file (\*.msi) which contains the \*.cmdtx file and the UX files. The Windows Installer needs to copy the files into the correct locations and register the custom extension with the site server.  
 
  The basic contents of the Windows Installer file are shown below:  
 
@@ -23,9 +23,9 @@ After the Deployment Type Extension file (*.cmdtx) is created, you are expected 
 
 ### To Create the Windows Installer File (*.msi)  
 
-1.  Generate a Windows Installer file which contains the *.cmdtx file, and UX files. The Windows Installer file will be responsible for installing the UX files in the correct locations, using the standards defined by the Admin Console team. Basically, this will involve including the following files:  
+1.  Generate a Windows Installer file which contains the *.cmdtx file, and UX files. The Windows Installer file is responsible for installing the UX files in the correct locations, using the standards defined by the Admin Console team. Basically, this will involve including the following files:  
 
-    1.  UX Assembly, e.g. AdminUI.DeploymentType.\<*AssemblySuffix*>.dll  
+    1.  UX Assembly, for example, AdminUI.DeploymentType.\<*AssemblySuffix*>.dll  
 
          This file is required and contains the UX implementation, which is then bound to the Configuration Manager console using the below XML files.  
 
@@ -49,7 +49,7 @@ After the Deployment Type Extension file (*.cmdtx) is created, you are expected 
 
          The Installer should copy this file to sms\AdminConsole\XmlStorage\Forms.  
 
-2.  The Windows Installer file should contain code to invoke the DeploymentTypeExtender.Extend method, which is located in the Microsoft.ConfigurationManagement.ApplicationManagement namespace. This will then register the extension files for a given site server computer. For an administrator console computer, this will initialize the cache for that user. The Extend method call requires the *.cmdtx file created earlier.  
+2.  The Windows Installer file should contain code to invoke the DeploymentTypeExtender.Extend method, which is located in the Microsoft.ConfigurationManagement.ApplicationManagement namespace. This will then register the extension files for a given site server computer. For an administrator console computer, this initializes the cache for that user. The Extend method call requires the *.cmdtx file created earlier.  
 
     1.  Make a standard WqlConnectionManager connection to the site server.  
 

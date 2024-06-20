@@ -3,14 +3,14 @@ title: Remove a Step from an OS Deployment Group
 titleSuffix: Configuration Manager
 description: Deletes a step from an operating system deployment task sequence group by deleting the step from the group's list of task sequence steps.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 1c143409-2ecd-44ae-9517-f37c15e0acc3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -44,6 +43,9 @@ This feature applies to:
 
 This article shows you how to create a Universal Print policy in Microsoft Intune. To learn more about Universal Print and onboarding, go to [What is Universal Print](/universal-print/fundamentals/universal-print-whatis) and [Set up Universal Print](/universal-print/fundamentals/universal-print-getting-started).
 
+> [!TIP]
+> The __PrintProvisioning__ tool and the __printers.csv__ file process is deprecated. Be sure to use the steps in this article to install universal printers.
+
 ## Before you begin
 
 - To use this feature, you need the following subscriptions:
@@ -51,20 +53,17 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
   - **Universal Print**: For more specific information, go to [License Universal Print](/universal-print/fundamentals/universal-print-license).
   - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../fundamentals/licenses.md).
 
-- Every printer must be registered in the Universal Print service (UP), which uses Azure AD. To create the Intune policy, you need the device ID, printer shared ID, and printer shared name.
+- Every printer must be registered in the Universal Print service (UP), which uses Microsoft Entra ID. For more information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration).
 
-  For more specific information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration)
+- To create the Intune policy, you need the following printer information. Get this information from the Printer Administrator in your organization.  
 
-- Admin accounts need the following roles/licenses:
+  - Device ID
+  - Printer shared ID
+  - Printer shared name
 
-  - **Printer Administrator** or **Global Administrator** roles: Needed to add printers.
+- Accounts need the following roles/licenses:
 
-    For more information on these roles, go to [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
-
-  - **Intune Administrator** or **Global Administrator** roles: Needed to create and assign Intune policies.
-
-    For more information on these roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-
+  - **Policy and Profile Manager** role: Needed to create and assign Intune policies. For information on this role, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
   - An assigned Universal Print license.
 
 - End user accounts need the following permissions/licenses:
@@ -72,7 +71,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
   - An assigned Universal Print license
   - Have access rights to the printer service and the Universal Print service
 
-  If the profile is assigned to an Azure AD user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
+  If the profile is assigned to a Microsoft Entra user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
 
 - These settings use the [UniversalPrint CSP](/windows/client-management/mdm/universalprint-csp).
 
@@ -81,11 +80,11 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 This policy includes your printer information. When you assign the policy, the printers are automatically installed. Then, on their devices, users select a printer that you added.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Settings catalog**.
+    - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -103,8 +102,8 @@ This policy includes your printer information. When you assign the policy, the p
 
 8. Configure the settings:
 
-    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer will automatically install. Select **Uninstall** to uninstall a printer.
-    - **Cloud Device ID**: Enter the printer ID. This ID is created when the printer is registered in Azure AD using the Universal Print service. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
+    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer will automatically install.
+    - **Cloud Device ID**: Enter the printer ID. This ID is created when the printer is registered in Microsoft Entra ID using the Universal Print service. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared ID**: Enter the Shared ID of the printer. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared Name**: Enter the Shared Name of the printer. To get the name, use the [Universal Print portal](/universal-print/portal/navigate-up).
 
@@ -120,7 +119,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 11. In **Assignments**, select the users that will receive your profile.
 
-    These user accounts need access rights to the printer and the Universal Print service. If the profile is assigned to an Azure AD user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
+    These user accounts need access rights to the printer and the Universal Print service. If the profile is assigned to a Microsoft Entra user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
 
     If users don't have permissions, then the following message is shown:
 
@@ -138,11 +137,33 @@ This policy includes your printer information. When you assign the policy, the p
 
 After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](device-profile-monitor.md).
 
-If a printer is removed from the Universal Print service, unshared, or if permissions are removed, then the profile will fail.
-
 For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
 
-## Learn more
+### Common issues
+
+- When you deploy the printer policy, you might get a `Error 0x8007007f (ERROR_PROC_NOT_FOUND)` message.
+
+  The `ERROR_PROC_NOT_FOUND` is a very common error, and is usually associated with the `DelayLoaded` DLLs missing or missing APIs.
+
+  To resolve this error, make sure your Windows OS client version is supported. The supported versions are listed at the top of this article.
+
+- If a printer is removed from the Universal Print service, unshared, or if permissions are removed, then the Intune policy will fail to install the printer.
+
+- Make sure the printer is discoverable on the device. If users can't discover or install the printer manually, then the Intune policy will also fail to install the printer.
+
+- Make sure the **SharedID** and **PrinterID** are entered correctly in the Intune policy.
+
+  In some cases, the PrinterID and SharedID are reversed, which prevents the printer from being discovered. For more information on these settings, go to [Create the policy](#create-the-policy) (in this article).
+
+- The Application event log may shows errors related to Universal Print.
+
+### Enable tracing
+
+If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation of the universal printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.  
+
+For more information and specific steps, go to [Universal Print troubleshooting guide - Use PrintCollect, Fiddler, and UPPrinterInstaller](/universal-print/fundamentals/universal-print-troubleshooting-support-howto#use-printcollect-fiddler-and-upprinterinstaller).
+
+## Related articles
 
 - [What is Universal Print](/universal-print/fundamentals/universal-print-whatis)
 - [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)

@@ -3,8 +3,8 @@ title: Asset Intelligence Prerequisites
 titleSuffix: Configuration Manager
 description: Get the prerequisites for Asset Intelligence in Configuration Manager.
 ms.date: 02/22/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

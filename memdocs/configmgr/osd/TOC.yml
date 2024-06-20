@@ -18,7 +18,7 @@ items:
     - name: Upgrade Windows to the latest version
       href: deploy-use/upgrade-windows-to-the-latest-version.md
     - name: Windows Autopilot for existing devices
-      href: ../../autopilot/existing-devices.md
+      href: /autopilot/existing-devices
     - name: Refresh an existing computer with a new version of Windows
       href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
     - name: Install a new version of Windows on a new computer (bare metal)

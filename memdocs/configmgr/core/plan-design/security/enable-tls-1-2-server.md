@@ -3,8 +3,8 @@ title: Enable TLS 1.2 on servers
 titleSuffix: Configuration Manager
 description: Information about how to enable Transport Layer Security (TLS) 1.2 for Configuration Manager site servers and remote site systems.
 ms.date: 05/04/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
@@ -78,13 +78,16 @@ For a detailed, step-by-step tutorial, see [Consistently upgrade your server TLS
 
 ## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
 
+TLS 1.2 is supported by default for WSUS on all [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
+
 To support TLS 1.2 in earlier versions of WSUS, install the following update on the WSUS server:
 
 - For WSUS server that's running Windows Server 2012, install [update 4022721](https://support.microsoft.com/topic/june-27-2017-kb4022721-preview-of-monthly-rollup-16a4b074-5202-c1c3-2c8a-34c1edd452f8) or a later rollup update.
 
 - For WSUS server that's running Windows Server 2012 R2, install [update 4022720](https://support.microsoft.com/topic/june-27-2017-kb4022720-preview-of-monthly-rollup-b98970bb-6f11-46c3-8681-a6b85d5d8eb4) or a later rollup update.
 
-Starting in Windows Server 2016, TLS 1.2 is supported by default for WSUS. TLS 1.2 updates are only needed on Windows Server 2012 and Windows Server 2012 R2 WSUS servers.
+> [!NOTE]
+> On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 entered the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see **[Extended Security Updates and Configuration Manager](/mem/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)**.
 
 ## Next steps
 

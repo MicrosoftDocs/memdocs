@@ -3,14 +3,14 @@ title: SMS_CategoryInstanceBase Class
 description: Learn how to use the SMS_CategoryInstanceBase class which is an SMS Provider server class.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9981a2ee-d1aa-46c0-8043-ebfaa8c82cd7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

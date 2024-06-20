@@ -3,14 +3,14 @@ title: SMS_TaskSequence_ApplyDataImageAction Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a task sequence action to apply an existing data image to a target computer.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e790f092-2a4d-44ab-89a2-3ffb9102f7fb
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -7,8 +7,8 @@ ms.author: baladell
 manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
@@ -163,6 +163,10 @@ For more information, see [Integration with Windows Update for Business](../depl
 ### <a name="bkmk_content"></a> Plan software update content
 
 Clients need to download the content files for software updates in order to install them. Configuration Manager provides several technologies to support management and delivery of this content. Or configure software update deployments to allow or require clients to get content directly from the Microsoft Update cloud service.
+
+> [!NOTE]  
+> Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). UUP on-premises interoperates with WSUS and Microsoft Configuration Manager. UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. 
+On-premises update management with Unified Update Platform (UUP) requires an additional 10 GB of space per Windows version and processor architecture for each version. For more information, see the [UUP considerations](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#uup-considerations) section.
 
 #### Download and distribute content
 
@@ -428,6 +432,8 @@ When there's a pending restart for a Configuration Manager software update, the 
 ## <a name="bkmk_ssu"></a> Evaluate software updates after a servicing stack update
 <!--4639943-->
 Starting in version 2002, Configuration Manager detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first. Installation of SSUs first isn't available for Windows Server operating systems when using Configuration Manager version 2002. <!--7813007-->This functionality was added in Configuration Manager version 2006 for Windows Server operating systems.
+
+If you have non-Windows updates like Office or third-party updates on the same deadline and they require a restart after installation, cumulative updates might not install right after the SSU because the computer required a restart before doing a full scan again. This can be achieved by selecting the **If any update in this deployment requires a system restart, run update deployment evaluation cycle after restart** checkbox in deployment settings.</mark>
 
 ## Next steps
 

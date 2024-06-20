@@ -2,17 +2,15 @@
 # required metadata
 
 title: Enroll Android device with Intune Company Portal | Microsoft Docs
-description: Describes how to enroll an Android device in Intune with the Company Portal app. 
+description: Describes how to set up an Android device for work or school with the Company Portal app. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 11/21/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 searchScope:
  - User help
@@ -27,7 +25,7 @@ ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection:
-- tier2
+- tier1
 ---
 
 # Enroll your device with Company Portal  
@@ -35,12 +33,11 @@ Enroll your personal or corporate-owned Android device with Intune Company Porta
 
 Company Portal supports devices running Android 8.0 and later, including devices secured by Samsung KNOX Standard 2.4 and later. To learn how to update your Android device, see [Check & update your Android version](https://support.google.com/android/answer/7680439).  
   
-</br>
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o]
 
 > [!NOTE]
 > Samsung Knox is a type of security that certain Samsung devices use for additional 
-> protection outside of what native Android provides. To check if you have a Samsung Knox device,> go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
+> protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
 
 ## Install Company Portal app  
 Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
@@ -56,7 +53,7 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 ## Enroll device  
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
 
-1. Open the Company Portal app and sign in with your work or school account.  
+1. Open the Company Portal app and sign in with your work or school account. If prompted to, review notification permissions for Company Portal. You can adjust notification permissions anytime in the Settings app.  
 
 2. If you're prompted to accept your organization's terms and conditions, tap **ACCEPT ALL**.  
 
@@ -108,10 +105,7 @@ During enrollment, you might be asked to choose a category that best describes h
 
 ## Next steps  
 
-Before you try to install a school or work app, go to **Settings** > **Security**, and turn on **Unknown sources**. If you don't turn on this option, you'll see the following message when you try to install an app: "Install blocked. For security reasons, your device is set to block installations of apps obtained from unknown sources." You can tap **Settings** on the message to go directly to **Unknown sources**.  
-
-> [!Note]
-> If your organization is using telecom expense management software, you will have an additional few steps to complete before your device is fully enrolled. Find out more [here](enroll-your-device-with-telecom-expense-management-android.md).
+Before you try to install a school or work app, modify device settings to allow app installations from unknown sources. If you don't make this change on your device, apps installations will be blocked. Go to **Settings** > **Security and privacy** > **Install unknown apps**.  
 
 If you get an error while you try to enroll your device in Intune, you can [email your company support](send-logs-to-your-it-admin-by-email-android.md).  
 

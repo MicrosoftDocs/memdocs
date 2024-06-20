@@ -1,21 +1,21 @@
 ---
 title: UpdateAutoUpgradeConfigs Method
 titleSuffix: Configuration Manager
-description: The UpdateAutoUpgradeConfigs Windows Management Instrumentation class method, in Configuration Manager, updates configurations for auto-upgrade settings.
+description: The UpdateAutoUpgradeConfigs Windows Management Instrumentation class method, in Configuration Manager, updates configurations for autoupgrade settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4214f7a0-03e3-4e3a-bb31-5b958e45c5d0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # UpdateAutoUpgradeConfigs Method in Class SMS_Site
-The `UpdateAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates configurations for auto-upgrade settings.  
+The `UpdateAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates configurations for autoupgrade settings.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -78,7 +78,7 @@ SInt32 UpdateAutoUpgradeConfigs(
 
  Qualifiers: [in]  
 
- `true` if auto-upgrade package distributed to pre-stage distribution point is allowed.  
+ `true` if autoupgrade package distributed to pre-stage distribution point is allowed.  
 
  `AllowFallbackToContentSource`  
  Data type: `Boolean`  
@@ -105,21 +105,21 @@ SInt32 UpdateAutoUpgradeConfigs(
 
  Qualifiers: [in]  
 
- Indicates whether auto-upgrade should be skipped on servers.  
+ Indicates whether autoupgrade should be skipped on servers.  
 
  `OverrideServiceWindow`  
  Data type: `Boolean`  
 
  Qualifiers: [in]  
 
- Indicates whether the upgrade on the client will occur in service window.  
+ Indicates whether the upgrade on the client occurs in service window.  
 
  `IgnoreNonPersistableVM`  
  Data type: `Boolean`  
 
  Qualifiers: [in]  
 
- Indicates whether auto-upgrade should be skipped on non-persistent virtual machines.  
+ Indicates whether autoupgrade should be skipped on non-persistent virtual machines.  
 
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

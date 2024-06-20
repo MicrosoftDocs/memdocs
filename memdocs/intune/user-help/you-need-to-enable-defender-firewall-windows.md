@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 11/30/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 1ed8456c-ef70-429f-9c65-081bb2dfa6ac
 searchScope:
  - User help
@@ -37,8 +35,8 @@ Windows Defender Firewall helps prevent hackers and malicious software from gain
 To turn on Windows Defender Firewall:
 
 1. Go to **Start** and open **Control Panel**.
-2. Select **System and Security** > **Windows Defender Firewall**.
-3. Choose **Turn Windows Firewall on or off**. 
-4. Select **Turn on Windows Firewall** for domain, private, and public network settings.    
+2. Select **System and Security** > **Windows Defender Firewall**.  
+3. Choose **Turn Windows Defender Firewall on or off**. 
+4. Select **Turn on Windows Defender Firewall** for domain, private, and public network settings.    
 
 Still need help? Contact your IT support person. Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.

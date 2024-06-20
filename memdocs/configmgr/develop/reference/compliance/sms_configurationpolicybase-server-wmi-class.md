@@ -3,14 +3,14 @@ title: SMS_ConfigurationPolicyBase Class
 titleSuffix: Configuration Manager
 description: The SMS_ConfigurationPolicyBase WMI class represents the base class for configuration policy.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7a8c1139-a0cc-4b5a-9173-9b849068cf16
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

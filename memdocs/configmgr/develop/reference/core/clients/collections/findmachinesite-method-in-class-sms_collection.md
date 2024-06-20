@@ -3,14 +3,14 @@ title: FindMachineSite Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the FindMachineSite Windows Management Instrumentation class method gets site code information for a specific resource.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 19cf942a-a1e8-44de-b280-a66effd481d5
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

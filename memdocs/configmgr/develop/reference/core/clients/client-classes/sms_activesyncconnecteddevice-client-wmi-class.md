@@ -3,14 +3,14 @@ description: Learn how to represent a device connected to the ActiveSyn service 
 title: SMS_ActiveSyncConnectedDevice Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 01eb8a22-12dc-47ae-b6b4-2acde24e6e6a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

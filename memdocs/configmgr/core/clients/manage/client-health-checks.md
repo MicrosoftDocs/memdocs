@@ -3,8 +3,8 @@ title: Client health checks
 titleSuffix: Configuration Manager
 description: The checks that the Configuration Manager client runs regularly to keep healthy.
 ms.date: 04/01/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: reference
 author: sheetg09
 ms.author: sheetg
@@ -35,6 +35,10 @@ If the client isn't correctly installed, start by troubleshooting client install
 Verify that the [client prerequisites](../deploy/prerequisites-for-deploying-clients-to-windows-computers.md) are installed. It reads the file ccmsetup.xml in the client installation folder to discover the prerequisites. By default: `C:\Windows\ccmsetup\ccmsetup.xml`
 
 Most client prerequisites are available by default in Windows, or installed automatically by the Configuration Manager client. To remediate problems with prerequisites, you can try to install them manually, or reinstall the client.
+
+### Verify that there is sufficient disk space
+
+Verify that there is greater that 1% disk space remaining on C drive.
 
 ### Verify the client service
 

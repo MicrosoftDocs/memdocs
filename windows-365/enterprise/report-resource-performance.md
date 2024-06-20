@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/16/2022
+ms.date: 09/13/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -72,7 +71,7 @@ You can review the CPU spike time and RAM spike time scores and percentages by f
 
 ## Device performance tab
 
-You can review the CPU spike time and RAM spike time scores and percentages by for each Cloud PC device in your organization.
+You can review the CPU spike time and RAM spike time scores and percentages for each Cloud PC device in your organization.
 
 ![Screenshot of using the device performance tab](./media/report-resource-performance/device-performance-tab.png)
 

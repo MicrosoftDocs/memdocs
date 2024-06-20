@@ -3,14 +3,14 @@ title: Add New Properties to an Existing Resource Type
 titleSuffix: Configuration Manager
 description: Learn how to add a property to the resource class when the Data Discovery Manager detects that your data discovery record contains a property that doesn't exist.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 55c3b4fc-7f44-4c5f-8bc5-a97bc0c4bab6
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

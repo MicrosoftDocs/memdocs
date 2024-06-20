@@ -3,14 +3,14 @@ description: Learn how to use Configuration Manager AddChangeNotification Window
 title: AddChangeNotification method in class SMS_DeviceSettingPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ce743e27-8472-4763-95f6-81ed1af526c3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -29,7 +29,7 @@ SInt32 AddChangeNotification();
  None.  
 
 ## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+ An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure.  
 
  For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 

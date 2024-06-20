@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Intune endpoint security disk encryption policy settings | Microsoft Docs
-description: Endpoint security disk encryption policy settings for BitLocker and FileVault in Microsoft Intune 
+title: Intune endpoint security disk encryption policy settings
+description: View the list of settings that are available in Microsoft Intune endpoint security disk encryption policy settings for BitLocker and FileVault.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2020
+ms.date: 05/13/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -37,7 +35,8 @@ View the settings you can configure in profiles for *Disk Encryption* policy in 
 Applies to:
 
 - macOS
-- Windows 10/11
+- Windows 10
+- Windows 11
 
 Supported platforms and profiles:
 
@@ -51,10 +50,11 @@ Supported platforms and profiles:
 ### Encryption
 
 **Enable FileVault**  
+
 - **Not configured** (*default*)
 - **Yes** - Enable Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later. FileVault is enabled when the user signs off of the device.
 
-  When set to *Yes*, you can configure additional settings for FileVault.
+  When set to *Yes*, you can configure more settings for FileVault.
 
   - **Recovery key type**
     *Personal key* recovery keys are created for devices. Configure the following settings for the personal key:
@@ -86,6 +86,14 @@ Supported platforms and profiles:
 
 ## BitLocker
 
+> [!NOTE]
+>
+> This article details the settings you can find in BitLocker profiles created before June 19, 2023, for the Windows 10 and later platform for endpoint security Disk encryption policy. On June 19, 2023, the Windows 10 and later profile was updated to use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
+>
+> The following settings details for Windows profiles apply to those deprecated profiles.
+
 ### BitLocker – Base Settings
 
 - **Enable full disk encryption for OS and fixed data drives**  
@@ -93,7 +101,7 @@ Supported platforms and profiles:
 
   If the drive was encrypted before this policy applied, no extra action is taken. If the encryption method and options match that of this policy, configuration should return success. If an in-place BitLocker configuration option doesn't match this policy, configuration will likely return an error.
   
-  To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption. However, on Azure AD Join and Microsoft Account (MSA) registration/login automatic encryption can apply enabling BitLocker at XTS-AES 128-bit encryption.
+  To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption. However, on Microsoft Entra join and Microsoft Account (MSA) registration/login automatic encryption can apply enabling BitLocker at XTS-AES 128-bit encryption.
 
   - **Not configured** (*default*) - No BitLocker enforcement takes place.
   - **Yes** - Enforce use of BitLocker.
@@ -125,7 +133,7 @@ Supported platforms and profiles:
   - **Allow standard users to enable encryption during Autopilot**  
     CSP: [BitLocker - AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp)
     - **Not configured** (*default*) – The setting is left as client default, which is to require local admin access to enable BitLocker.
-    - **Yes** - During Azure Active Directory Join (AADJ) silent enable scenarios, users don't need to be local administrators to enable BitLocker.
+    - **Yes** - During Microsoft Entra join silent enable scenarios, users don't need to be local administrators to enable BitLocker.
 
     For non-silent enablement and Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
 
@@ -135,8 +143,8 @@ Supported platforms and profiles:
   Add Work Account (AWA, formally Workplace Joined) devices aren't supported for key rotation.
   - **Not configured** (*default*) – The client won’t rotate BitLocker recovery keys.
   - **Disabled**
-  - **Azure AD-joined devices**
-  - **Azure AD and Hybrid-joined devices**
+  - **Microsoft Entra joined devices**
+  - **Microsoft Entra hybrid joined devices**
 
 ### BitLocker - Fixed Drive Settings
 
@@ -148,7 +156,7 @@ Supported platforms and profiles:
 
     Control how BitLocker-protected fixed data-drives are recovered in the absence of the required startup key information.
 
-    - **Not configured** (*default*) - The default recovery options are supported including the data recovery agent (DRA). The end user can specify recovery options and recovery information isn't backed up to Azure Active Directory.
+    - **Not configured** (*default*) - The default recovery options are supported including the data recovery agent (DRA). The end user can specify recovery options and recovery information isn't backed up to Microsoft Entra.
     - **Configure** – Enable access to configure various drive recovery techniques.
 
     When set to *Configure* the following settings are available:
@@ -159,12 +167,12 @@ Supported platforms and profiles:
       - **Allowed**
 
     - **Configure BitLocker recovery package**
-      - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes) in Active Directory.
+      - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes in Active Directory.
       - **Password only** - The recovery key packages might not be accessible when needed.
 
-    - **Require device to back up recovery information to Azure Ad**
-      - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Azure AD fails. This can result in no recovery information being stored externally.
-      - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Azure Active Directory.
+    - **Require device to back up recovery information to Microsoft Entra**
+      - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Microsoft Entra ID fails. This can result in no recovery information being stored externally.
+      - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Microsoft Entra.
 
     - **User creation of recovery password**  
       - **Blocked** (*default*)
@@ -177,7 +185,7 @@ Supported platforms and profiles:
 
     - **Enable BitLocker after recovery information to store**
       - **Not configured** (*default*)  
-      - **Yes**
+      - **Yes** - By setting this to *Yes*, BitLocker recovery information will be saved to Active Directory Domain Services.
 
     - **Block the use of certificate-based data recovery agent (DRA)**
       - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
@@ -296,9 +304,9 @@ Supported platforms and profiles:
         - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes) in Active Directory.
         - **Password only** - The recovery key packages might not be accessible when needed.
 
-      - **Require device to back up recovery information to Azure Ad**
-        - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Azure AD fails. This can result in no recovery information being stored externally.
-        - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Azure Active Directory.
+      - **Require device to back up recovery information to Microsoft Entra**
+        - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Microsoft Entra ID fails. This can result in no recovery information being stored externally.
+        - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Microsoft Entra.
 
       - **User creation of recovery password**  
         - **Blocked** (*default*)
@@ -311,7 +319,7 @@ Supported platforms and profiles:
 
       - **Enable BitLocker after recovery information to store**
         - **Not configured** (*default*)  
-        - **Yes**
+        - **Yes** - By setting this to *Yes*, BitLocker recovery information will be saved to Active Directory Domain Services.
 
       - **Block the use of certificate-based data recovery agent (DRA)**
         - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
@@ -364,11 +372,11 @@ Supported platforms and profiles:
     - **Not configured** (*default*) - Data can be written to non-encrypted removable drives.
     - **Yes** - Windows doesn’t allow data to be written to removable drives that aren't BitLocker protected. If an inserted removable drive isn't encrypted, the user must complete the BitLocker setup wizard before write access is granted to drive.
 
-    - **Block write access to removable data-drives not protected by BitLocker**  
-      CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
+  - **Block write access to devices configured in another organization**  
+    CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
-      - **Not configured** (*default*) - Any BitLocker encrypted drive can be used.
-      - **Yes** - Block access to removable drives unless they were encrypted on a computer owned by your organization.
+    - **Not configured** (*default*) - Any BitLocker encrypted drive can be used.
+    - **Yes** - Block write access to removable drives unless they were encrypted on a computer owned by your organization.
 
 ## Next steps
 

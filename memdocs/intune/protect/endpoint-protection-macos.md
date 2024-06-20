@@ -4,16 +4,14 @@
 title: Configure endpoint protection on macOS devices with Microsoft Intune | Microsoft Docs
 description: Use Intune to configure macOS devices use the built-in firewall to allow or block specific apps or to use stealth mode, to use Gatekeeper to determine where apps install, and to use FileVault disk encryption.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/15/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -27,6 +25,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- endpoint-protection
 ---
 
 # macOS endpoint protection settings in Intune
@@ -117,12 +116,26 @@ Use the firewall to control connections per-application, rather than per-port. U
 
   **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
 
-  - **Add apps by bundle ID**: Enter the *bundle ID* of the app. On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app.
+
+    To get the app bundle ID:
+
+    - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
   - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
   **Apps blocked**: Configure a list of apps that have incoming connections blocked.
 
-  - **Add apps by bundle ID**: Enter the *bundle ID* of the app. On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app.
+
+    To get the app bundle ID:
+
+    - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+
   - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - **Enable stealth mode**
@@ -145,7 +158,7 @@ Use the firewall to control connections per-application, rather than per-port. U
 
 - **Do not allow user to override Gatekeeper**
 
-  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.
+  Prevents users from overriding the Gatekeeper setting, and prevents users from Control-clicking to install an app. When enabled, users can't Control-click any app to install it.
 
   - **Not configured** (*default*) - Users can Control-click to install apps.
   - **Yes** - Prevents users from using Control-click to install apps.

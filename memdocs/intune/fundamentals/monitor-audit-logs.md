@@ -4,15 +4,14 @@
 title: Audit changes and events in Microsoft Intune
 description: Learn how to review audit logs that record Microsoft Intune activities.
 keywords: 
-ms.author: dougeby
-author: dougeby
+ms.author: mandia
+author: MandiOhlinger
 manager: dougeby
-ms.date: 01/14/2022
+ms.date: 10/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 
 # optional metadata
@@ -34,14 +33,10 @@ ms.collection:
 
 Audit logs include a record of activities that generate a change in Microsoft Intune. Create, update (edit), delete, assign, and remote actions all create audit events that administrators can review for most Intune workloads. By default, auditing is enabled for all customers. It can't be disabled.
 
-> [!NOTE]
-> Audit events started recording on the December 2017 feature release. Prior events aren't available.
-
 ## Who can access the data?
 
 Users with the following permissions can review audit logs:
 
-- Global Administrator
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Audit data** - **Read** permissions
 

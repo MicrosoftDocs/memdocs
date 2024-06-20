@@ -3,8 +3,8 @@ title: CMTrace
 titleSuffix: Configuration Manager
 description: Learn about how to use the CMTrace tool to view log files for Configuration Manager.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: banreet
 ms.author: banreetkaur
@@ -42,7 +42,7 @@ Configuration Manager automatically installs CMTrace in the following locations:
 
 If you have a copy of CMTrace in another location, consider removing it and using a copy in one of the default paths. If it's in a custom location that meets your business requirements, then make sure you have a process to keep it up to date. If your custom location might be of benefit to other customers, file [product feedback](../understand/product-feedback.md).
 
-A script is available in the Community Hub to help you locate and update versions of CMTrace to the latest version: [CMTraceUpdate](https://communityhub.microsoft.com/item/14750). For more information, see [Direct links to Community hub items](../servers/manage/community-hub.md#bkmk_deeplink).
+For more information, see [Direct links to Community hub items](../servers/manage/community-hub.md#bkmk_deeplink).
 
 ## Usage
 

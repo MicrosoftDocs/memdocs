@@ -3,14 +3,14 @@ title: SMS_CollectionMember_a Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_CollectionMember_a association WMI class is an SMS Provider server class that relates an SMS_Collection Server WMI Class object with SMS_Resource Server WMI Class objects that represent the member resources of the collection.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a443f6b9-5dcf-4eb5-9083-4d78799ebc7b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

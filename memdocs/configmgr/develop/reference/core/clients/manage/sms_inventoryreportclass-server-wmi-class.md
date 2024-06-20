@@ -3,14 +3,14 @@ title: SMS_InventoryReportClass Class
 titleSuffix: Configuration Manager
 description: The SMS_InventoryReportClass WMI class is an SMS Provider server class embedded in SMS_InventoryReport that represents the classes that are enabled to be collected in this inventory report.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c49d5284-56e0-46ae-9c3d-e29d677dcffc
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -32,7 +32,7 @@ Class SMS_InventoryReportClass :
 ```  
 
 ## Methods  
- The `SMS_InventoryReportClass` class does not define any methods.  
+ The `SMS_InventoryReportClass` class doesn't define any methods.  
 
 ## Properties  
  `Filter`  
@@ -60,7 +60,7 @@ Class SMS_InventoryReportClass :
 
  Qualifiers: [key]  
 
- The class id that uniquely identifies this class.  
+ The class ID that uniquely identifies this class.  
 
  `Timeout`  
  Data type: `UInt32`  

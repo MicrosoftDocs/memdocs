@@ -33,9 +33,9 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/mem/breadcrumb/toc.json",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/memdocs",
-      "brand": "Microsoft Endpoint Manager",
+      "uhfHeaderId": "MSDocsHeader-Intune",
+      "feedback_system": "Standard",
+            "brand": "Microsoft Endpoint Manager",
       "searchScope": ["Intune"],     
       "contributors_to_exclude": [
         "PRMerger9",
@@ -78,27 +78,25 @@
         "rmca14",
         "garycentric",
         "jborsecnik",
-        "AngelaMotherofDragons",
-        "v-dihans",
         "dstrome",
-        "tiburd",
-        "traya1",
-        "claydetels19"
+        "shdyas",
+        "claydetels19",
+        "beccarobins",
+        "Stacyrch140",
+        "American-Dipper"
       ]          
     },
     "fileMetadata": {
       "feedback_product_url": {
         "configmgr/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
         "configmgr/**/*.yml": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
-        "intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
-        "autopilot/**/*.*": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
+        "intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
       }, 
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
-        "analytics/**/*.md": ["Analytics"],
-        "autopilot/**/*.*": ["Autopilot"]
+        "analytics/**/*.md": ["Analytics"]
       },
       "featureFlags": {
         "*.md" : [

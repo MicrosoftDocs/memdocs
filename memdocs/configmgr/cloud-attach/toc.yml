@@ -97,8 +97,6 @@ items:
       href: ../../analytics/enroll-configmgr.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Use Endpoint analytics
     items:
-    - name: Proactive remediations
-      href: ../../analytics/proactive-remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Startup performance
       href: ../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Restart frequency
@@ -113,8 +111,6 @@ items:
       href: ../../analytics/settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Reference for Endpoint analytics
     items:
-    - name: PowerShell scripts
-      href: ../../analytics/powershell-scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Data collection
       href: ../../analytics/data-collection.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Troubleshoot
@@ -179,7 +175,7 @@ items:
       href: ../core/clients/manage/cmg/set-up-checklist.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: 1. Server authentication certificate
       href: ../core/clients/manage/cmg/server-auth-cert.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-    - name: 2. Configure Azure Active Directory
+    - name: 2. Configure Microsoft Entra ID
       href: ../core/clients/manage/cmg/configure-azure-ad.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: 3. Configure client authentication
       href: ../core/clients/manage/cmg/configure-authentication.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
@@ -195,7 +191,7 @@ items:
       href: ../core/clients/manage/cmg/modify-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Reference for CMG
     items:
-    - name: Manually register Azure AD apps for CMG
+    - name: Manually register Microsoft Entra apps for CMG
       href: ../core/clients/manage/cmg/manually-register-azure-ad-apps.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Security and privacy for CMG
       href: ../core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json

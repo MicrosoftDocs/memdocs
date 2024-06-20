@@ -3,14 +3,14 @@ title: Handle Synchronous Errors by Using WMI
 titleSuffix: Configuration Manager
 description: Handle synchronous errors by using the SWbemLastError object when an error occurs.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: d11bbdc3-f47e-4088-bed8-7e38d119e278
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

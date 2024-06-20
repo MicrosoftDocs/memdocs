@@ -3,8 +3,8 @@ title: Common tasks for configuration baselines
 titleSuffix: Configuration Manager
 description: Learn about how to create and deploy Configuration Manager configuration baselines.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

@@ -3,14 +3,14 @@ description: The SMS_ClientAdvertisementStatus WMI class is an SMS Provider serv
 title: SMS_ClientAdvertisementStatus Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7cf70230-481e-4ab5-9f5b-30975b58b761
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

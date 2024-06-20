@@ -3,8 +3,8 @@ title: Ready for Windows
 titleSuffix: Configuration Manager
 description: About the retirement of the Ready for Windows website
 ms.date: 04/21/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -116,6 +116,6 @@ Evaluate the performance of your solutions with health and metrics reports throu
 
 ### How can I develop compatible assets for Windows 10 and Microsoft 365 Apps for enterprise?
 
-Make sure your desktop applications are compatible now, and stay compatible with Windows 10 in the future. For more information, see [Application compatibility for developers](https://developer.microsoft.com/windows/desktop/app-compatibility).
+Make sure your desktop applications are compatible now, and stay compatible with Windows 10 in the future. For more information, see [Application compatibility for developers](/windows/apps/get-started/windows-developer-faq).
 
 If you develop solutions for Microsoft 365 Apps for enterprise, see [Development best practices for COM, VSTO, and VBA add-ins in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

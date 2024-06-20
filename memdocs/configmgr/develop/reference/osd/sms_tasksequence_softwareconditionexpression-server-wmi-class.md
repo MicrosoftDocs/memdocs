@@ -3,14 +3,14 @@ title: SMS_TaskSequence_SoftwareConditionExpression Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a condition expression to verify if a specified product is installed on the destination computer.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c7881ad7-e3c8-4c67-ae69-2f8615343f5f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

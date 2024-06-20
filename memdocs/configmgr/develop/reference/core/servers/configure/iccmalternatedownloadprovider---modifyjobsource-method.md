@@ -3,14 +3,14 @@ description: Learn how to instruct the provider to modify the source location fo
 title: "ICcmAlternateDownloadProvider: ModifyJobSource"
 titleSuffix: Configuration Manager
 ms.date: 07/25/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 13498951-c8f6-437b-91c3-d37acce33d49
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -51,7 +51,7 @@ HRESULT ModifyJobSource(
  The new job flags. This can be ignored by alternate providers.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

@@ -2,14 +2,14 @@
 title: Configuration Manager Console Views
 description: Configuration Manager console views are displayed in the results pane of the Configuration Manager console.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: cf102999-d4b1-46c9-a7cb-2af86423f140
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

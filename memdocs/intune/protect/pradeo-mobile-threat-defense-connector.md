@@ -1,19 +1,18 @@
 ---
 # required metadata
 
-title: Pradeo Mobile Threat Defense connector with Intune
+title: Pradeo Mobile Threat Defense connector and Microsoft Intune
 titleSuffix: Intune on Azure
-description: Learn how to integrate Intune with Pradeo Mobile Threat Defense connector to control mobile device access to your corporate resources.
+description: How to set up the Pradeo Mobile Threat Protection with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 
 # optional metadata
@@ -43,18 +42,14 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 ## Supported platforms
 
 - **Android 5.1 and later**
-
 - **iOS 12.1 and later**
 
 ## Prerequisites
 
-- Azure Active Directory Premium
-
-- Microsoft Intune subscription
-
+- Microsoft Entra ID P1
+- Microsoft Intune Plan 1 subscription
 - Pradeo Security for Mobile Threat Defense subscription
-
-  - For more information, see the [Pradeo website](https://www.pradeo.com/en-US/mobile-threat-protection).
+  - For more information, see the [Pradeo website](https://pradeo.com/en/solutions/mobile-device-security/mobile-threat-defense/).
 
 ## How do Intune and Pradeo help protect your company resources?
 
@@ -71,9 +66,7 @@ Here are some common scenarios.
 When malicious apps such as malware are detected on devices, you can block devices from the following actions until the threat is resolved:
 
 - Connecting to corporate e-mail
-
 - Syncing corporate files with the OneDrive for Work app
-
 - Accessing company apps
 
 *Block when malicious apps are detected:*

@@ -3,8 +3,8 @@ title: Monitor and manage clients
 titleSuffix: Configuration Manager
 description: Learn how to monitor and manage clients in Configuration Manager.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

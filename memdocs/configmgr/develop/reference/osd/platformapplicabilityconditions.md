@@ -3,14 +3,14 @@ title: PlatformApplicabilityConditions
 titleSuffix: Configuration Manager
 description: PlatformApplicabilityConditions contains a list of supported platforms for an operating system deployment driver in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 464d766e-b407-4374-bf63-f3cc167e8f4c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,8 +3,8 @@ title: Create updates
 titleSuffix: Configuration Manager
 description: Create and bundle software updates with System Center Updates Publisher
 ms.date: 04/29/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -26,10 +26,10 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
 2. On the **Package** page, use the following information to help you configure the update:
 
-   -   Choose **Browse** to locate the software update package you will use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher requires access to the file to create a file hash. The hash and file name are then used in the update metadata for the update that you are creating.
+   -   Choose **Browse** to locate the software update package you'll use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher requires access to the file to create a file hash. The hash and file name are then used in the update metadata for the update that you're creating.
    
 
-   -   Specify the source location of the content for this update. Normally this is the location where the update binary will be downloaded from during publishing to a WSUS server.  If the **Use a local source to publish software update content** option is selected, then the path is not required.
+   -   Specify the source location of the content for this update. Normally this is the location where the update binary will be downloaded from during publishing to a WSUS server.  If the **Use a local source to publish software update content** option is selected, then the path isn't required.
 
        Later, when the update is published to a WSUS server, Updates Publisher downloads the binaries for the update from the indicated source location.  If no path is provided then Update Publisher will search the [local source publishing path](updates-publisher-options.md#advanced) for the update binary.
 
@@ -37,13 +37,13 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    -   Specify **Success return codes**, and **Success pending reboot codes** for the update. Separate multiple return codes by using a comma. You can use return codes to determine when update install was successful, and when reboots were required.
 
-       -   Windows installer files and patches (.MSI and .MSP files) automatically set these values, and they cannot be modified.
+       -   Windows installer files and patches (.MSI and .MSP files) automatically set these values, and they can't be modified.
 
        -   For .EXE updates, the default codes defined by the .EXE file are used if no return codes are specified.
 
    -   Specify any command-line arguments that are required to install the software update.
 
-       -   Windows installer files and patches (.MSI and .MSP files) automatically set these values. For these file types the arguments must be specified as **\[name\]=\[value\]**. In addition, all options that start with a **/** (like **/qn**) are not supported for .MSI or .MSP software updates.
+       -   Windows installer files and patches (.MSI and .MSP files) automatically set these values. For these file types the arguments must be specified as **\[name\]=\[value\]**. In addition, all options that start with a **/** (like **/qn**) aren't supported for .MSI or .MSP software updates.
 
        -   For .EXE updates, all arguments are valid.
 
@@ -64,7 +64,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    - **Update**: An update to an application or file that is currently installed.
 
-   - **Critical**: A broadly released update for a specific problem that addresses a critical bug that is not related to security.
+   - **Critical**: A broadly released update for a specific problem that addresses a critical bug that isn't related to security.
 
    - **Feature Pack**: New product features that are distributed outside of a product release and are typically included in the next full product release.
 
@@ -78,7 +78,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    - **Driver**: An update for driver software.
 
-   **Vendor:** Specify a vendor for the update. You can use the dropdown list to use values from updates that are in the repository. When you specify a vendor, the wizard creates a folder with that vendor name under **All Software Updates** in the **Updates Workspace** if that folder does not already exist. The following are Windows Server Update Services (WSUS) reserved names that cannot be entered for updates you create:
+   **Vendor:** Specify a vendor for the update. You can use the dropdown list to use values from updates that are in the repository. When you specify a vendor, the wizard creates a folder with that vendor name under **All Software Updates** in the **Updates Workspace** if that folder doesn't already exist. The following are Windows Server Update Services (WSUS) reserved names that can't be entered for updates you create:
    - Microsoft Corporation
    - Microsoft
    - Update
@@ -97,7 +97,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
    - Bundle
    - Bundle Update
 
-   **Product**: Specify the type of product that the update is for. You can use the dropdown list to use values from updates that are in the repository. The same list of WSUS reserved names that cannot be used for **Vendor**, cannot be used for **Product**.
+   **Product**: Specify the type of product that the update is for. You can use the dropdown list to use values from updates that are in the repository. The same list of WSUS reserved names that can't be used for **Vendor**, can't be used for **Product**.
 
    **More info URL**: Specify the URL where you can find more information about this update. You must use lowercase letters for **https** or **http** when you enter this URL.
 
@@ -118,7 +118,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
        -   **Minor –** Use this to indicate the update requires minimal installation procedures.
        -   **Requires exclusive handling –** Use this to indicate the update must be installed by itself, exclusive from any other updates.   <br /><br />
 
-   -   **Restart Behavior:** Use this to provide information about the updates restart behavior. This setting does not affect the actual behavior of the update install.
+   -   **Restart Behavior:** Use this to provide information about the updates restart behavior. This setting doesn't affect the actual behavior of the update install.
 
        -   **Never reboots**: The computer never performs a system restart after installing the software update.
        -   **Always requires reboot**: The computer always performs a system restart after installing the software update.
@@ -159,11 +159,11 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
        After you create a rule, you can use the other icons to modify the rule, and if there are multiple rules, to define relationships between those rules.
 
-   When you are done creating and adding rules, click **OK** in the **Create Rule Set** dialog box to save that set. You can then create a **New** rule and add that to the set as well.
+   When you're done creating and adding rules, click **OK** in the **Create Rule Set** dialog box to save that set. You can then create a **New** rule and add that to the set as well.
 
    When you have multiple rules or rule sets to add to an update, you can use the logical operators in the **Rule Editor** to determine conditions between the rules, and in which order they process.
 
-8. On the **Installed** page use the **Rule Editor to** define a set of rules that determine whether a device has already installed the update you are configuring. (This page is similar to the **Applicability** page, that proceeds this page.)
+8. On the Installed page, use the **Rule Editor to** define a set of rules that determine whether a device has already installed the update you're configuring. (This page is similar to the **Applicability** page, that proceeds this page.)
 
    This page of the wizard supports configuring rules with the same options and criteria as the **Applicability** page.
 
@@ -174,11 +174,11 @@ Because this wizard uses the same workflow as the [Create Update wizard](#use-th
 
 1.  To start the wizard, in the console go to **Updates Workspace**, and then select **Bundle** from the **Home** tab of the ribbon.
 
-2.  Unlike the Create Update wizard, there is no Package page when creating a bundle.
+2.  Unlike the Create Update wizard, there's no Package page when creating a bundle.
 
 3.  On the **Information** page, specify details about the update bundle that are included when the update is published, or exported.
 
-4.  On the **Optional Info** page, you can configure details that provide additional information about the update bundle. The available options are the same as for creating an update. However, options for Impact and Restart Behavior are not available as they do not apply to bundles.
+4.  On the **Optional Info** page, you can configure details that provide additional information about the update bundle. The available options are the same as for creating an update. However, options for Impact and Restart Behavior aren't available as they don't apply to bundles.
 
 5.  On the **Prerequisite** page, specify the prerequisites that must be installed on a computer before this bundle can install. These rules are the same as seen for individual updates.
 

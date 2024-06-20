@@ -3,8 +3,8 @@ title: Status and alert views
 titleSuffix: Configuration Manager
 description: Information about Configuration Manager component behavior and data flow.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: 40851148-f8ff-4959-b884-164fec0563e7
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

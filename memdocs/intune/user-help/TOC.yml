@@ -12,7 +12,7 @@ items:
     href: sign-in-to-the-company-portal.md
   - name: Update Intune Company Portal 
     href: install-a-new-version-of-the-company-portal-app.md
-  - name: Device password requirements
+  - name: Add device password, PIN, or passcode    
     href: password-does-not-meet-it-administrator-requirements.md
   - name: Install mobile threat defense app
     href: set-up-mobile-threat-defense.md
@@ -44,6 +44,10 @@ items:
     items:
     - name: Check device compliance
       href: check-compliance-on-your-device-android.md
+    - name: Encrypt your device
+      href: encrypt-your-device-android.md
+    - name: Move to new device management setup
+      href: move-to-new-device-management-setup.md
     - name: Reset used, lost, stolen device
       href: reset-device-company-portal-android.md
     - name: Sync device 
@@ -52,12 +56,16 @@ items:
       href: turn-off-battery-optimization-android.md      
     - name: Turn on verbose logging
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
-    - name: Turn off Microsoft data collection
-      href: turn-off-microsoft-usage-data-collection-android.md
+    - name: Turn off Microsoft data collection 
+      href: turn-off-microsoft-usage-data-collection-android.md 
+    - name: Update Android device settings         
+      href: update-device-settings-android.md   
   - name: Microsoft Intune app for Android  
     items: 
     - name: Check compliance status      
       href: check-compliance-microsoft-intune-app-android.md  
+    - name: Configure logging settings   
+      href: microsoft-intune-app-verbose-logging.md  
   - name: Microsoft Intune app for AOSP 
     items:
     - name: Check device compliance 
@@ -68,38 +76,6 @@ items:
       href: intune-app-logs-aosp.md 
     - name: Turn off Microsoft data collection 
       href: turn-off-microsoft-usage-data-collection-aosp.md 
-  - name: Update device settings
-    items:
-    - name: Move to new device management setup
-      href: move-to-new-device-management-setup.md
-    - name: Allow Wi-Fi control
-      href: allow-wi-fi-control-android.md
-    - name: Encrypt your device
-      href: encrypt-your-device-android.md
-    - name: Fix encryption problems
-      href: your-device-appears-encrypted-but-cp-says-otherwise-android.md
-    - name: Set your PIN or password
-      href: set-your-pin-or-password-android.md
-    - name: Set lock time
-      href: set-the-amount-of-time-before-your-device-is-locked-android.md
-    - name: Install VPN
-      href: install-your-companys-virtual-private-network-VPN-android.md
-    - name: Update device software
-      href: you-need-to-update-your-android-device.md
-    - name: Unsupported version
-      href: your-android-version-isnt-yet-supported.md
-    - name: Device rooted and can't connect
-      href: your-device-is-rooted-and-you-cant-connect-android.md
-    - name: Missing a required certificate
-      href: your-device-is-missing-an-IT-required-certificate-android.md
-    - name: Turn off USB debugging
-      href: you-need-to-turn-off-usb-debugging-android.md
-    - name: Turn on security threat scans
-      href: you-need-to-turn-on-scanning-for-security-threats-android.md
-    - name: Install latest security patch
-      href: you-need-to-update-your-device-OS-security-patch-android.md
-    - name: Common Samsung Knox messages
-      href: samsung-knox-errors-android.md
   - name: Get Android apps
     items:
     - name: Where to find work or school apps for Android
@@ -110,8 +86,6 @@ items:
       href: use-microsoft-tunnel-android.md
     - name: Installing Company Portal app in China 
       href: install-company-portal-android-china.md
-    - name: Set up Datalert app for Android   
-      href: enroll-your-device-with-telecom-expense-management-android.md 
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work
@@ -126,6 +100,10 @@ items:
     items:
     - name: Report a problem 
       href: send-logs-to-your-it-admin-by-email-android.md  
+    - name: Troubleshoot enrollment for Samsung Knox 
+      href: samsung-knox-errors-android.md  
+    - name: Troubleshoot encryption problems  
+      href: your-device-appears-encrypted-but-cp-says-otherwise-android.md  
 - name: iOS/iPadOS device management
   items:
   - name: Enrollment
@@ -144,40 +122,24 @@ items:
         href: enroll-ios-device-disa-purebred.md
   - name: Company Portal app for iOS/iPadOS
     items:
+    - name: Migrate account to new iPhone
+      href: set-up-migrate-iphone-for-work.md
     - name: Manually sync iOS/iPadOS device
       href: sync-your-device-manually-ios.md
     - name: Reset iOS/iPadOS device
       href: effects-of-device-reset-company-portal-ios.md
     - name: Turn off Microsoft usage data collection
       href: turn-off-microsoft-usage-data-collection-ios.md
-    - name: Remove device from Intune
+    - name: Remove a device  
       href: unenroll-your-device-from-intune-ios.md
+    - name: Update iOS device settings         
+      href: how-do-i-find-the-serial-number-on-my-device-ios.md  
   - name: Get iOS/iPadOS apps
     items:
     - name: Where to find work or school apps for iOS/iPadOS
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
       href: use-microsoft-tunnel-iOS.md 
-    - name: Set up Datalert app for iOS   
-      href: enroll-your-device-with-telecom-expense-management-ios.md
-  - name: Update device settings
-    items:
-    - name: Set or change your passcode
-      href: set-or-change-your-passcode-ios.md
-    - name: Reconnect a compromised iOS device
-      href: how-to-reconnect-a-compromised-ios-device.md
-    - name: An existing company email account was found
-      href: existing-company-email-account-found.md
-    - name: Device limit has been reached
-      href: device-limit-wpj-ios.md
-    - name: Identify your device
-      href: you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md
-    - name: Locate your serial number
-      href: how-do-i-find-the-serial-number-on-my-device-ios.md
-    - name: Update iOS/iPadOS version
-      href: you-need-to-update-your-ios-device.md
-    - name: iOS/iPadOS version isn't supported 
-      href: your-ios-version-isnt-yet-supported.md
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work 
@@ -219,38 +181,24 @@ items:
     - name: Sync macOS device
       href: sync-your-device-manually-macos.md
     - name: Manage Company Portal preferences
-      href: intune-company-portal-preferences-macos.md
-  - name: Update device settings
-    items:
-    - name: My version of macOS isn't yet supported
-      href: your-macos-version-isnt-yet-supported.md
-    - name: Update operating system version 
-      href: you-need-to-update-your-macos-device.md
-    - name: Device assigned to someone else
-      href: unable-to-get-macOS-device-managed.md
-    - name: Locate your serial number
-      href: how-do-i-find-the-serial-number-on-my-device-macos.md
-    - name: Identify your device
-      href: you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md
-    - name: Device limit has been reached
-      href: device-limit-wpj-macos.md
-    - name: Help for JAMF-managed devices in Intune
-      href: device-little-different-jamf.md
+      href: intune-company-portal-preferences-macos.md  
+    - name: Update macOS device settings         
+      href: update-device-settings-mac.md  
   - name: Get help
     items:
     - name: Report a problem  
-      href: send-errors-macos.md
+      href: send-errors-macos.md  
+    - name: Help for JAMF-managed devices in Intune
+      href: device-little-different-jamf.md  
 - name: Windows device management
   items:
   - name: Enrollment
     items:
-    - name: About Windows device enrollment
-      href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md
+    - name: Device enrollment overview  
+      href: device-enrollment-overview-windows.md  
     - name: Enroll Windows 10/11 device  
       href: enroll-windows-10-device.md
-    - name: Enroll Windows 8.1 or Windows RT 8.1 device
-      href: enroll-your-w81-or-rt81-windows.md
-    - name: Unenroll Windows device
+    - name: Unenroll device
       href: unenroll-your-device-from-intune-windows.md
   - name: Update device settings
     items:
@@ -276,7 +224,7 @@ items:
     items:
     - name: Install apps from Company Portal
       href: install-apps-cpapp-windows.md
-    - name: Sync your device manually
+    - name: Sync device 
       href: sync-your-device-manually-windows.md
     - name: Check device access
       href: check-device-access-windows-cpapp.md
@@ -305,10 +253,12 @@ items:
     href: check-status-company-portal-website.md 
   - name: Manage apps
     href: manage-apps-cpweb.md
-  - name: Store recovery key
+  - name: Store recovery key for Mac
     href: store-recovery-key.md
-  - name: Get recovery key
+  - name: Get recovery key for Mac
     href: get-recovery-key-cpweb.md
+  - name: Get recovery key for Windows 
+    href: get-recovery-key-windows.md  
   - name: Remote lock device
     href: remote-lock-your-device-cpwebsite.md
   - name: Rename device
@@ -319,3 +269,7 @@ items:
     href: reset-your-passcode-cpwebsite.md
   - name: Reset used, lost, stolen device
     href: reset-device-company-portal-website.md
+- name: Reference   
+  items:
+  - name: Company Portal device password messages  
+    href: intune-company-portal-password-message-reference.md 

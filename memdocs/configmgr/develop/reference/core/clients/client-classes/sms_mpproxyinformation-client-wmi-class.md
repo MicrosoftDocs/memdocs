@@ -3,14 +3,14 @@ title: SMS_MPProxyInformation Class
 titleSuffix: Configuration Manager
 description: A client Windows Management Instrumentation class that represents information about a proxy management point.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e327907b-13c8-4025-b066-e10dbf299f78
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

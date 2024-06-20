@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 01/17/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -33,6 +32,10 @@ ms.collection:
 # End-user hardware requirements to access a Cloud PC
 
 To access their Cloud PC, an end-user's hardware must meet certain requirements. These requirements vary depending on which Microsoft Remote Desktop client the end-user installs.
+
+## Windows App
+
+For more information about the requirements of running and using Windows App, see [Get started with Windows App](/windows-app/get-started-connect-devices-desktops-apps).
 
 ## Windows 365 app
 
@@ -92,7 +95,7 @@ You can access Windows 365 Cloud PCs from your Linux OS devices by using:
   - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
   - [IGEL](https://www.igel.com/igel-solution-family/)
 
-  Third-party Linux client solutions can't be managed by using Microsoft Endpoint Manager. The partner provides a separate management tool for Linux devices.
+  Third-party Linux client solutions can't be managed by using Microsoft Intune. The partner provides a separate management tool for Linux devices.
 
 <!-- ########################## -->
 ## Next steps

@@ -3,14 +3,14 @@ description: Learn how to represent On-premises Mobile Device Management (MDM) b
 title: SMS_MDMBulkEnrollmentProfiles Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 57c1746d-4ee1-41db-b7a8-33dad15e2b96
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

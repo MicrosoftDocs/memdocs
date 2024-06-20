@@ -3,14 +3,14 @@ title: GetClientVersion Method in
 titleSuffix: Configuration Manager
 description: The GetClientVersion Windows Management Instrumentation (WMI) class method returns the client version.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7a5f103c-2967-45fa-9228-d73e1a6391ee
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

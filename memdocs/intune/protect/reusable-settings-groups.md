@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2023
+ms.date: 04/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -39,10 +37,10 @@ Intune supports *reusable settings groups* that you can add to configuration pol
 
 When you edit the settings in a reusable group, the changes you make automatically apply to each profile that includes the group. When you save your changes to the reusable settings group, Intune updates the profiles with those new configurations and deploys the updated profile to devices based on the profile’s assignments.
 
-The following profiles support reusable groups.
+The following profiles support reusable groups:
 
-- [Device control](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) (Attack Surface Reduction policy)
-- [Microsoft Defender Firewall Rules](../protect/endpoint-security-firewall-policy.md#firewall-profiles) (Firewall policy)
+- [**Device control**](#add-reusable-groups-to-a-device-control-profile), available through endpoint security [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) policy.
+- [**Windows Firewall Rules**](#add-reusable-groups-to-a-windows-firewall-rule-profile), available through endpoint security [Firewall](../protect/endpoint-security-firewall-policy.md#firewall-profiles) policy.
 
 ## Overview of reusable settings groups
 
@@ -50,7 +48,7 @@ Each reusable settings group is a single object that can include multiple settin
 
 To manage groups of reusable settings, in the Microsoft Intune admin center you use the *Reusable settings* tab that’s associated with the policy and profiles you want to use a group with. On the tab, you can create a group, edit the settings in a group, and view the count of policies that inherit settings from each group. Each reusable settings group is used with only its related profile type.
 
-For example, the following image shows the Reusable settings tab you would use to manage reusable groups for the Microsoft Defender Firewall Rules profile:
+For example, the following image shows the Reusable settings tab you would use to manage reusable groups for the Windows Firewall Firewall Rules profile:
 
 :::image type="content" source="./media/reusable-settings-groups/reusable-setting-tab.png" alt-text="Screenshot that shows the Reusable settings tab for Firewall policies in the Microsoft Intune admin center.":::
 
@@ -58,21 +56,31 @@ After creating reusable groups, you use an option in a profiles *Configuration s
 
 ## Prerequisites
 
-The following are prerequisites to use reusable settings groups:
+The following profiles support use of reusable settings groups:
 
-- **Device control**:
-  - **Platforms**: Windows 10 and later
+**Endpoint security policy**
 
-- **Microsoft Defender Firewall rules**:  
-  - **Platforms**: Windows 10, Windows 11, and Windows Server
-  - **Windows versions**: Devices must run Windows 10 20H2 or later, or Windows 11.
+- **Firewall** > **Windows Firewall rules**:  
+  - Platforms: Windows 10, Windows 11, and Windows Server
+  - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11
+
+- **Attack surface reduction** > **Device control**:
+  - Platforms: Windows 10, Windows 11, and Windows Server
+
+**Endpoint Privilege Management**
+
+- Windows elevation rules policy
+
+> [!NOTE]
+>
+> Reusable settings groups are not currently supported for use with [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
 ## Create a reusable group
 
 Each reusable settings group includes a subset of settings from the full profile you’re creating the group for. Use the following links to view the settings you can configure in a settings group for each profile:
 
-- [Device Control](../protect/endpoint-security-asr-policy.md#add-reusable-settings-groups-to-profiles-for-device-control)
-- [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules)
+- [Device Control](../protect/endpoint-security-asr-policy.md#reusable-settings-groups-for-device-control-profiles)
+- [Windows Firewall rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules)
 
 **To create a reusable settings group**:
 
@@ -89,7 +97,7 @@ Each reusable settings group includes a subset of settings from the full profile
    There's a limit of 100 instances per group. Use the information text in the admin center for each setting in the reusable settings group as guidance. Follow the *Learn more* link for a setting to view details about the setting from that settings content source.
 
    > [!TIP]  
-   > Carefully *Name* each reusable group you create to ensure you can identify it later. This is important because each reusable group that you create, for any policy type, is visible when adding reusable groups to a policy, even if the group contains settings that would not normally apply to the policy you’re configuring. For example, if you have a reusable group created for Microsoft Defender Firewall rules, that group will be visible and can be selected when adding reusable groups to Device Control policies.
+   > Carefully *Name* each reusable group you create to ensure you can identify it later. This is important because each reusable group that you create, for any policy type, is visible when adding reusable groups to a policy, even if the group contains settings that would not normally apply to the policy you’re configuring. For example, if you have a reusable group created for Windows Firewall rules, that group will be visible and can be selected when adding reusable groups to Device Control policies.
 
 5. On the *Review + Add* page, select **Add** to save your reusable settings group.
 
@@ -103,7 +111,7 @@ When you edit the configuration of a reusable group, each profile that uses that
 
 3. On the *Basics* page you can rename the group, and on the *Configuration settings* page you can reconfigure settings. On the last page, select **Save** to save your configuration and update the profiles that use the settings group.
 
-## Add reusable groups to a Microsoft Defender Firewall rule profile
+## Add reusable groups to a Windows firewall rule profile
 
 Add reusable settings groups to profiles while editing or creating the profile. On the profiles Configuration settings page, use an option that supports adding one or more previously created groups.
 
@@ -119,7 +127,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
    :::image type="content" source="./media/reusable-settings-groups/add-reusable-group-to-profile.png" alt-text="Screenshot of the Configuration settings workflow for configuring a reusable group.":::
 
-5. Select one or more of the available groups to add them to this rule, and then save your selections. 
+5. Select one or more of the available groups to add them to this rule, and then save your selections.
 
    :::image type="content" source="./media/reusable-settings-groups/select-groups.png" alt-text="Screenshot that shows the Select Reusable settings pane.":::
 
@@ -166,6 +174,10 @@ The following shows a configuration with only one group selected for Excluded ID
 6. After adding reusable groups to a profile, complete the policy configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile’s assignments. A maximum of 100 reusable groups can be added per profile.
 
 If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control | Microsoft Docs](/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
+
+## Use reusable groups for Endpoint Privilege Manager
+
+For information about support for using reusable groups for Endpoint Privilege Manager, see [Policies for Endpoint Privilege Manager](../protect/epm-policies.md)
 
 ## About policy conflicts
 

@@ -3,14 +3,14 @@ description: Learn how to use SMS_PDFPkgToPDFProgram class to relate a SMS PDF P
 title: SMS_PDFPkgToPDFProgram_a Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d60b8239-d255-4f93-a856-bb327067fb4f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

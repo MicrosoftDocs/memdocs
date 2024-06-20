@@ -3,8 +3,8 @@ title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
 ms.date: 08/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: baladelli
 ms.author: baladell
@@ -132,16 +132,18 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 
-- Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
+- Enable [Microsoft Entra user Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-- Manually configure settings in Azure AD:
+- Manually configure settings in Microsoft Entra ID:
 
-    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.
+    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Microsoft Entra ID**, and select **App registrations**.
 
-    1. Select the application that you created for Configuration Manager **Cloud Management** integration.
+    1. Select the **Client** application created for Configuration Manager **Cloud Management** integration.
 
     1. In the **Manage** menu, select **Authentication**.
 
+        1. Add a new **Single-page application** type if not already present.
+          
         1. In the **Redirect URIs** section, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`
 
         1. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.
@@ -153,20 +155,15 @@ With these additional optional prerequisites, recipients can approve or deny the
 
         1. Then select **Save**.
 
-    1. For Configuration Manager version 2107 and earlier, in the **Manage** menu, select **Manifest**.
-
-        1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.
-
-        1. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`
-
-        1. Select **Save**.
+    > [!NOTE]
+    > If on an existing Client Registration Application the Redirect URI needs to be updated, it will need to be created as SPA and older Redirect URI being removed.
 
 ### Configure email approval
 
 1. In the Configuration Manager console, [deploy an application](deploy-applications.md) as available to a user collection. On the **Deployment Settings** page, enable it for approval. Then enter one or more email addresses to receive notification. Separate email addresses with a semi-colon (`;`).
 
      > [!NOTE]
-     > Anyone in your Azure AD organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.
+     > Anyone in your Microsoft Entra organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.
 
 1. As a user, request the application in Software Center.
 

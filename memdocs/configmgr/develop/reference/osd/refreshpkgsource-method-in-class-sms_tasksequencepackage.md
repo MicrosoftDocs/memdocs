@@ -1,21 +1,21 @@
 ---
 title: RefreshPkgSource Method in SMS_TaskSequencePackage
 titleSuffix: Configuration Manager
-description: The RefreshPkgSource class method refreshes the package source at all distribution points when the package properties have not changed.
+description: The RefreshPkgSource class method refreshes the package source at all distribution points when the package properties haven't changed.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 24d3514f-b1b7-4ac3-b1ac-17548aa3f273
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # RefreshPkgSource Method in Class SMS_TaskSequencePackage
-The `RefreshPkgSource` class method, in Configuration Manager, refreshes the package source at all distribution points when the package properties have not changed.  
+The `RefreshPkgSource` class method, in Configuration Manager, refreshes the package source at all distribution points when the package properties haven't changed.  
 
 > [!CAUTION]
 >  This method supports the Configuration Manager infrastructure and renders your task sequence inoperable if it is called.  
@@ -32,7 +32,7 @@ SInt32 RefreshPkgSource();
  None.  
 
 ## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+ An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure.  
 
  For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 

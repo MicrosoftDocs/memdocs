@@ -3,19 +3,19 @@ description: Learn how to import computer information using ImportMachineEntry c
 title: ImportMachineEntry Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 89d8d59f-79b1-4be7-85a8-43e741528a8e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # ImportMachineEntry Method in Class SMS_Site
-The `ImportMachineEntry` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that imports computer information.  
+The `ImportMachineEntry` Windows Management Instrumentation (WMI) class method in Configuration Manager that imports computer information.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -102,14 +102,14 @@ uint32 ImportMachineEntry
 
  Qualifiers: [id("10"), in, optional]  
 
- The collection identifier for the collection which the computer is added to. The default value is empty.  
+ The collection identifier for the collection that the computer is added to. The default value is empty.  
 
  `WTGUniqueKey`  
  Data type: `String`  
 
  Qualifiers: [id("11"), in, optional]  
 
- For a Windows To Go deployment, this is the USB unique key that will be used to identify the client, instead of the SMBIOS and MAC address.  
+ For a Windows To Go deployment, this is the USB unique key that is used to identify the client, instead of the SMBIOS and MAC address.  
 
  `MachineExists`  
  Data type: `Boolean`  

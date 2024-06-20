@@ -9,12 +9,11 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 11/21/2023
 ms.topic: conceptual
-ms.service: mem
+ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 # optional metadata
  
@@ -37,15 +36,17 @@ Managing devices is a significant part of any endpoint management strategy and s
 
 Enter Microsoft Intune. Intune is a cloud-based service that can control devices through policy, including security policies. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
 
+:::image type="content" source="./media/manage-devices/manage-devices-with-intune.png" alt-text="Diagram that shows organization owned and personal devices in the Microsoft Intune admin center and using compliance policies and Conditional Access for resource access." lightbox="./media/manage-devices/manage-devices-with-intune.png":::
+
 The goal of any organization that's managing devices is to secure devices and the data they access. This task includes organization owned devices and personally owned devices that access your organization resources.
 
-From a service perspective, Intune uses Azure Active Directory (AD) for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
+From a service perspective, Intune uses Microsoft Entra ID for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your devices.
 
 ## Manage organization owned and personal devices
 
-Many organizations allow personally owned devices to access organization resources, including email, attend meetings, and so on. There are different options available and these options depend on how strict your organization is.
+Many organizations allow personally owned devices to access organization resources, including email, meetings, and so on. There are different options available and these options depend on how strict your organization is.
 
 You can require personal devices be enrolled in your organization's device management services. On these personal devices, your admins can deploy policies, set rules, configure device features, and more. Or, you can use app protection policies that focus on protecting app data, such as Outlook, Teams, and Sharepoint. You can also use a combination of device enrollment and app protection policies.
 
@@ -60,7 +61,7 @@ For more information and guidance, go to:
 
 You can manage new devices and existing devices. Intune supports Android, iOS/iPadOS, Linux, macOS, and Windows devices.
 
-There are some things you should know. For example, if existing devices are managed by another MDM provider, they may need to be factory reset. If the devices are using an older OS version, they may not be supported.
+There are some things you should know. For example, if existing devices are managed by another MDM provider, then they might need to be factory reset. If the devices are using an older OS version, they might not be supported.
 
 If your organization is investing in new devices, then it's recommended to start with a cloud approach using Intune.
 
@@ -81,9 +82,9 @@ For more specific information by platform, go to:
 
 Device compliance is a significant part of managing devices. Your organization will want to set password/PIN rules and check for security features on these devices. You'll want to know which devices don't meet your rules. This task is where compliance comes in.
 
-You can create compliance policies that block simple passwords, require a firewall, set the minimum OS version, and more. You can use these policies and built-in reporting to see non-compliant devices and see the non-compliant settings on these devices. This information gives you an idea of the overall health of the devices accessing your organization resources.
+You can create compliance policies that block simple passwords, require a firewall, set the minimum OS version, and more. You can use these policies and built-in reporting to see noncompliant devices and see the noncompliant settings on these devices. This information gives you an idea of the overall health of the devices accessing your organization resources.
 
-Conditional access is a feature of Azure AD. With conditional access, you can enforce compliance. For example, if a device doesn't meet your compliance rules, then you can block access to organization resources, including Outlook, SharePoint, Teams, and more. Conditional access helps your organization secure your data and protect your devices.
+Conditional Access is a feature of Microsoft Entra ID. With Conditional Access, you can enforce compliance. For example, if a device doesn't meet your compliance rules, then you can block access to organization resources, including Outlook, SharePoint, Teams, and more. Conditional Access helps your organization secure your data and protect your devices.
 
 For more information, go to:
 
@@ -95,18 +96,19 @@ For more information, go to:
 
 All devices have features that you can control and manage using policies. For example, you can block the built-in camera, allow Bluetooth pairing, manage the power button, and more.
 
-For many organizations, it's common to create device groups. Device groups are Azure AD groups that only include devices. They don't include user identities.
+For many organizations, it's common to create device groups. Device groups are Microsoft Entra groups that only include devices. They don't include user identities.
 
 When you have device groups, you create policies that focus on the device experience or task, like running a single app or scanning bar codes. You can also create policies that include settings that you want to always be on the device, regardless of who's using the device.
 
-You can group devices by OS platform, by function, by location, and anything else you prefer.
+You can group devices by OS platform, by function, by location, and other features you prefer.
 
-Device groups can also include devices that are shared with many users or aren't associated with a specific user. These dedicated or kiosk devices are typically used by front line workers and can also be managed by Intune.
+Device groups can also include devices that are shared with many users or aren't associated with a specific user. These dedicated or kiosk devices are typically used by frontline workers (FLW) and can also be managed by Intune.
 
 When the groups are ready, you can assign your policies to these device groups.
 
 For more information, go to:
 
+- [FLW device management in Intune](../../solutions/frontline-worker/frontline-worker-overview.md)
 - [Get started with Microsoft 365 for frontline workers](/microsoft-365/frontline/flw-overview)
 - [Windows device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md)
 - [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../configuration/shared-user-device-settings.md)
@@ -123,9 +125,9 @@ In Intune, some common security tasks include:
 
   For more specific information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
 
-- **Use Security Baselines** on your Windows devices. Security baselines are pre-configured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
+- **Use security baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
-  If you're not sure where to start, then look at Security Baselines and the built-in guided scenarios.
+  If you're not sure where to start, then look at security baseline and the built-in guided scenarios.
 
   For more specific information, go to:
 

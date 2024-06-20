@@ -3,19 +3,19 @@ description: Learn how to use the GetAutoInstallRequiredSoftwaretoNonBusinessHou
 title: GetAutoInstallRequiredSoftwaretoNonBusinessHours Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ce5440c9-2d58-4793-b727-51b6ea030e29
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # GetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings
-The `GetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the value for `AutomaticallyInstallSoftware`.   
+The `GetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the value for `AutomaticallyInstallSoftware`.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -34,7 +34,7 @@ uint32 GetAutoInstallRequiredSoftwaretoNonBusinessHours
 
  Qualifiers: [id("0"), out]  
 
- `true` if required software should be automatically installed during non-business hours.    
+ `true` if necessary software should be automatically installed during nonbusiness hours.    
 
 ## Remarks  
 

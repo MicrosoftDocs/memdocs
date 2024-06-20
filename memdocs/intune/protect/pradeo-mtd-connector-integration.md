@@ -3,17 +3,16 @@
 
 title: Set up the Pradeo integration with Intune
 titleSuffix: Intune on Azure
-description: "Pradeo connector integration with Intune"
+description: How to set up the Pradeo Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 
 # optional metadata
@@ -43,20 +42,14 @@ Complete the following steps to integrate the Pradeo Mobile Threat Defense solut
 > [!NOTE]
 > The following steps are to be completed in the [Pradeo Security console](https://pradeo-security.com/).
 
-Before starting the process of integrating Pradeo with Intune, make sure you have the following:
+The process of integrating Pradeo with Intune requires the following subscriptions and account permissions:
 
-- Microsoft Intune subscription
-
-- Azure Active Directory admin credentials to grant the following permissions:
-
+- Microsoft Intune Plan 1 subscription
+- Microsoft Entra credentials to grant the following permissions:
   - Sign in and read user profile
-
   - Access the directory as the signed-in user
-
   - Read directory data
-
   - Send device information to Intune
-
 - Admin credentials to access Pradeo Security console.
 
 ### Pradeo app authorization
@@ -64,12 +57,9 @@ Before starting the process of integrating Pradeo with Intune, make sure you hav
 The Pradeo app authorization process follows:
 
 - Allow the Pradeo service to communicate information related to device health state back to Intune.
-
-- Pradeo syncs with Azure AD Enrollment Group membership to populate its device's database.
-
-- Allow Pradeo admin console to use Azure AD Single Sign On (SSO).
-
-- Allow the Pradeo app to sign in using Azure AD SSO.
+- Pradeo syncs with Microsoft Entra Enrollment Group membership to populate its device's database.
+- Allow Pradeo admin console to use Microsoft Entra single sign-on (SSO).
+- Allow the Pradeo app to sign in using Microsoft Entra SSO.
 
 ## To set up Pradeo integration
 
@@ -79,19 +69,19 @@ The Pradeo app authorization process follows:
 
 3. Choose the **Intune logo**.
 
-4. In the **EMM (Enterprise mobility management - Intune** window, under **Step 1**, choose the **Pradeo Connector** button. 
+4. In the **EMM (Enterprise mobility management) - Intune** window, under **Step 1**, choose the **Pradeo Connector** button.
 
-    ![Screenshot of the Pradeo EMM Intune window](./media/pradeo-mtd-connector-integration/pradeo_setup.png)
+   ![Screenshot of the Pradeo EMM Intune window](./media/pradeo-mtd-connector-integration/pradeo_setup.png)
 
 5. In the Microsoft Intune connection window, enter your Intune credentials.
 
-5. The Pradeo web page reopens. Under **Step 2**, choose the **Pradeo Device Health** button.
+6. The Pradeo web page reopens. Under **Step 2**, choose the **Pradeo Device Health** button.
 
-7. In the Pradeo-Intune Connector window, select **Accept**. 
+7. In the Pradeo-Intune Connector window, select **Accept**.
 
 8. In the Pradeo device API connector window, select **Accept**.
 
-9. The Pradeo web page reopens. Under **Step 3**, choose the **Connect to Microsoft** button. 
+9. The Pradeo web page reopens. Under **Step 3**, choose the **Connect to Microsoft** button.
 
 10. In the Microsoft Intune authentication window, enter your Intune credentials.
 

@@ -1,13 +1,15 @@
 ### YamlMime:Hub 
 title: Microsoft Configuration Manager documentation
-summary: "Official product documentation for Configuration Manager, co-management, and Desktop Analytics"
+summary: "Official product documentation for Configuration Manager"
 metadata:
    ms.topic: hub-page
-   ms.prod: configuration-manager
-   ms.technology: configmgr-core
+   ms.subservice: core-infra
+   ms.service: configuration-manager
    ms.localizationpriority: high
-   ms.date: 11/10/2021
-   ms.collection: highpri
+   ms.date: 06/10/2024
+   ms.collection: 
+    - highpri
+    - essentials-navigation
    ms.custom: intro-overview
 
 highlightedContent: 
@@ -35,6 +37,9 @@ conceptualContent:
   items:
     - title: Cloud-attached management
       links:
+        - text: Overview of cloud attach
+          url: ./cloud-attach/overview.md
+          itemType: overview
         - text: Microsoft Intune tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
@@ -44,7 +49,7 @@ conceptualContent:
         - text: Overview of cloud management gateway (CMG)
           url: ./core/clients/manage/cmg/overview.md
           itemType: overview
-        - text: Plan for Azure AD
+        - text: Plan for Microsoft Entra ID
           url: ./core/plan-design/security/plan-for-security.md#azure-active-directory
           itemType: architecture
     - title: Co-management
@@ -69,23 +74,6 @@ conceptualContent:
         - text: Run PowerShell scripts
           url: ./apps/deploy-use/create-deploy-scripts.md
           itemType: how-to-guide
-    - title: Desktop Analytics
-      links:
-        - text: Overview
-          url: ./desktop-analytics/overview.md
-          itemType: overview
-        - text: Deploy Windows 10 to pilot
-          url: ./desktop-analytics/tutorial-windows10.md
-          itemType: tutorial
-        - text: Set up Desktop Analytics
-          url: ./desktop-analytics/set-up.md
-          itemType: how-to-guide
-        - text: Microsoft 365 dashboard
-          url: ./sum/deploy-use/office-365-dashboard.md
-          itemType: learn
-      footerLink:
-        text: See more
-        url: ./desktop-analytics/index.yml
     - title: Infrastructure simplification
       links:
         - text: Site server high availability
@@ -200,7 +188,7 @@ additionalContent:
         url: https://twitter.com/hashtag/configmgr
       - title: Configuration Manager forums
         summary: Ask technical questions in the product forums
-        url: /answers/products/enterprise-mobility-security
+        url: /answers/tags/417/configuration-manager
       - title: Configuration Manager troubleshooting
         summary: Support articles to help you diagnose and fix issues
         url: /troubleshoot/mem/configmgr/welcome-configuration-manager

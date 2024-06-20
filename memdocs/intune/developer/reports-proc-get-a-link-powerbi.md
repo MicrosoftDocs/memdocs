@@ -7,12 +7,11 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 
 # optional metadata
@@ -25,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -83,7 +82,7 @@ Alternatively, you can install the app from the Microsoft Intune admin center:
 
 ## Load the data in Power BI using the OData link
 
-With a client authenticated to Azure AD, the OData URL connects to the RESTful endpoint in the Data Warehouse API that exposes the data model to your reporting client. Follow these instructions to use Power BI Desktop to connect and create your own reports. You are not limited to Power BI Desktop, but can use your favorite analytic tool with the OData URL provided the client supports OAUTH2.0 authentication and the OData v4.0 standard.
+With a client authenticated to Microsoft Entra ID, the OData URL connects to the RESTful endpoint in the Data Warehouse API that exposes the data model to your reporting client. Follow these instructions to use Power BI Desktop to connect and create your own reports. You are not limited to Power BI Desktop, but can use your favorite analytic tool with the OData URL provided the client supports OAUTH2.0 authentication and the OData v4.0 standard.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Intune Data warehouse** > **Data warehouse**.
@@ -94,7 +93,7 @@ With a client authenticated to Azure AD, the OData URL connects to the RESTful e
 6. Choose **Basic**.
 7. Type or paste the **OData URL** into the URL box.
 8. Select **OK**.
-9. If you have not authenticated to Azure AD for your tenant from the Power BI desktop client, type your credentials. To gain access to your data, you must authorize with Azure Active Directory (Azure AD) using OAuth 2.0.  
+9. If you have not authenticated to Microsoft Entra ID for your tenant from the Power BI desktop client, type your credentials. To gain access to your data, you must authorize with Microsoft Entra ID using OAuth 2.0.  
     1. Select **Organizational account**.  
     2. Type your username and password.  
     3. Select **Sign In.**  

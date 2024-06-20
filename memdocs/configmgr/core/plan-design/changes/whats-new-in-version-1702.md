@@ -3,8 +3,8 @@ title: New version 1702
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1702 of Configuration Manager.
 ms.date: 05/02/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 1702 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It is also available as a baseline version you can use when installing a new deployment.
+Update 1702 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It's also available as a baseline version you can use when installing a new deployment.
 
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
@@ -31,7 +31,7 @@ Update 1702 for Configuration Manager current branch is available as an in-conso
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
 ## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
+Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
 Version 1702 drops support for the following products:
 - **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](deprecated/removed-and-deprecated-server.md#sql-server) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
@@ -47,13 +47,13 @@ Version 1702 drops support for the following products:
 ### Improvements for in-console search
 The following are improvements to using search in the Configuration Manager console:
 - **Object Path:**  
-  Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object that is returned.   
+  Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching subnodes, the *Object Path* column in the results pane will show you the path to each object that is returned.   
 
 - **Preservation of search text:**  
-  When you enter text into the search text box, and then switch between searching a sub-node and the current node, the text that you typed will now persist and remain available for a new search without having to reenter it.
+  When you enter text into the search text box, and then switch between searching a subnode and the current node, the text that you typed will now persist and remain available for a new search without having to reenter it.
 
 - **Preservation of your decision to search sub-nodes:**  
-  The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
+  The option that you choose for searching the *current node* or *all subnodes* now persists when you change the node you're working in. This new behavior means that you don't need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
 
 
 ### Send feedback from the Configuration Manager console
@@ -74,18 +74,18 @@ You can find the **Feedback** option:
 The following are changes for Updates and Servicing:
 
 - **Node location**   
-  After installing version 1702, the **Updates and Servicing** node appears as a top-level node under **Administration**. It is no longer a child node below **Cloud Services**.
+  After installing version 1702, the **Updates and Servicing** node appears as a top-level node under **Administration**. It's no longer a child node below **Cloud Services**.
 
 - **New update states**  
   When you view available updates in the console, there are two new states:  
   - **Available for install** - This is an update that has been downloaded and ready to install.
-  - **Ready for download**  - This update is available, but has not been downloaded. You can choose to download this update, but it has been superseded by a more recent update.
+  - **Ready for download**  - This update is available, but hasn't been downloaded. You can choose to download this update, but it has been superseded by a more recent update.
 
 
 - **Simpler update choices**  
   The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
 
-  You can choose to download and install the other available updates, even when they are not the most current version. If you download an older update, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
+  You can choose to download and install the other available updates, even when they aren't the most current version. If you download an older update, you'll receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
 - **Improved cleanup of older updates**   
   We added an automatic clean-up function that deletes the unneeded downloads from the 'EasySetupPayload' folder on your site server. Because this is introduced with version 1702, cleanup begins to work after installing a subsequent update like an update rollup or future update version.  
@@ -142,9 +142,9 @@ For more information, see [Manage apps from the Windows Store for Business](../.
 
 In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
 
-If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
+If the application was deployed as **Available**, and an end user tries to install an application, they'll be prompted to close any running executables you specified before they can proceed with the installation.
 
-If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached.
+If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they'll see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached.
 
 ### App management improvements for hybrid MDM
 
@@ -174,15 +174,15 @@ This release includes the following improvements to Software Center warning mess
 - In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.
 - In the properties for the task sequence, you can configure Software Center properties, which include make a restart required, the download size of the task sequence, and the estimated run time.
 - The default high-impact deployment message for in-place upgrades now states that
-your apps, data, and settings are automatically migrated. Previously, the default message for any operating system installation indicated that all apps, data, and settings would be lost, which was not true for an in-place upgrade.
+your apps, data, and settings are automatically migrated. Previously, the default message for any operating system installation indicated that all apps, data, and settings would be lost, which wasn't true for an in-place upgrade.
 
 For more information, see [Set a task sequence as high-impact](../../../osd/deploy-use/high-impact-task-sequence-settings.md#set-a-task-sequence-as-high-impact).
 
 ### Return to previous page when a task sequence fails
-You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
+You can now return to a previous page when you run a task sequence and there's a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
 
 - When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
-- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn't distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
+- When you run a task sequence, but dependent content packages aren't yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn't distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
 
 ### Pre-cache content for available deployments and task sequences
 Beginning in version 1702, for available deployments of task sequences, you can choose to use pre-cache content. Pre-cache content gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive. For details, see [Configure pre-cache content](../../../osd/deploy-use/configure-precache-content.md).
@@ -213,7 +213,7 @@ The Windows 10 ADK is now tracked by build version to ensure a more supported ex
 Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
 
 ### Default boot images are regenerated after upgrading Configuration Manager to a new version
-Beginning in this release, when you upgrade the Windows ADK version and then use updates and servicing to install the latest version of Configuration Manager, Configuration Manager regenerates the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, customizations, etc. Custom boot images are not modified. For details, see [Manage boot images](../../../osd/get-started/manage-boot-images.md#default-boot-images).
+Beginning in this release, when you upgrade the Windows ADK version and then use updates and servicing to install the latest version of Configuration Manager, Configuration Manager regenerates the default boot images. This includes the new Window PE version from the updated Windows ADK, the new version of the Configuration Manager client, drivers, customizations, etc. Custom boot images aren't modified. For details, see [Manage boot images](../../../osd/get-started/manage-boot-images.md#default-boot-images).
 
 ## Software updates
 
@@ -266,7 +266,7 @@ Starting with 1702, Hybrid mobile device management with Microsoft Intune now su
 
 ### Deploy volume-purchased iOS apps to device collections
 
-You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
+You can now deploy licensed apps to devices and users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
 | Configuration Manager version | App supports device licensing? | Deployment collection type | Claimed license |
 | ----------------------------- | ------------------------------ | -------------------------- | --------------- |
@@ -293,7 +293,7 @@ You can now sync custom line of business apps from the Windows Store for Busines
 
 ### Conditional access device compliance policy improvements
 
-A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a non-compliant list of apps. The non-compliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the non-compliant list. This setting only applies to iOS and Android devices.
+A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a noncompliant list of apps. The noncompliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the noncompliant list. This setting only applies to iOS and Android devices.
 
 Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
 
@@ -306,7 +306,7 @@ Beginning in version 1702, you have new ways to monitor the compliance status wi
 ## Protect devices
 
 ### Detect outdated antimalware client versions
-Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients are not outdated. For more information, see [Alert for outdated malware client](../../../protect/deploy-use/endpoint-configure-alerts.md#alert-for-outdated-malware-client).
+Beginning with version 1702, you can configure an alert to ensure Endpoint Protection clients aren't outdated. For more information, see [Alert for outdated malware client](../../../protect/deploy-use/endpoint-configure-alerts.md#alert-for-outdated-malware-client).
 
 ### Device health attestation updates
 Device health attestation service for on-premises clients can now be configured and managed from the management point. For more information, see [Health Attestation](../../servers/manage/health-attestation.md).
@@ -317,4 +317,4 @@ If you intend to store certificate profiles in the Windows Hello for Business ke
 For more information, see [Windows Hello for Business settings](../../../protect/deploy-use/windows-hello-for-business-settings.md).
 
 ### New Windows Hello for Business notification for end users
-A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
+A new Windows 10 notification informs end users that they must take more actions to complete Windows Hello for Business setup (for example, setting up a PIN).

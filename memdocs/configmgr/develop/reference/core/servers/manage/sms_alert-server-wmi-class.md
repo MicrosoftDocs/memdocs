@@ -3,14 +3,14 @@ title: SMS_Alert Class
 description: The SMS_Alert class is an SMS Provider server class that represents general alerts, which exclude client status alerts and System Center Endpoint Protection alerts.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bbf073bd-7b90-4ada-b962-e3f905a86ccf
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -153,7 +153,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: none  
 
- When disabled the condition is not evaluated.  
+ When disabled the condition isn't evaluated.  
 
  `FeatureArea`  
  Data type: `UInt32`  
@@ -224,7 +224,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: [read]  
 
- Whether this alert is ignored by the current user.  
+ Whether the current user ignores this alert.  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -244,7 +244,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: none  
 
- Whether this alert is monitored by Operations Manager.  
+ Whether the Operations Manager monitors this alert.  
 
  `Name`  
  Data type: `String`  
@@ -337,7 +337,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: none  
 
- Evaluation will not start until the specified time.  
+ Evaluation isn't starting until the specified time.  
 
  `SourceSiteCode`  
  Data type: `String`  

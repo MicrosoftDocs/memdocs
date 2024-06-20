@@ -3,14 +3,14 @@ title: Create a Deployment Template
 titleSuffix: Configuration Manager
 description: Create a software updates deployment template in Configuration Manager by creating an instance of the SMS_Template class and populating the properties.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 552c2251-8c97-4596-bcc0-71558ce8c532
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

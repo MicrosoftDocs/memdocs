@@ -3,8 +3,8 @@ title: Microsoft Store apps
 titleSuffix: Configuration Manager
 description: Manage and deploy apps from the Microsoft Store for Business and Education with Configuration Manager.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: baladelli
 ms.author: baladell
@@ -17,7 +17,7 @@ ms.reviewer: mstewart,aaroncz
 # Manage apps from the Microsoft Store for Business and Education with Configuration Manager
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 10884039 --> For more information, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423) and [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/bc-p/3592470)
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 10884039 --> For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/bc-p/3592470).
 
 The [Microsoft Store for Business and Education](/microsoft-store/) is where you find and acquire Windows apps for your organization. When you connect the store to Configuration Manager, you then synchronize the list of apps you've acquired. View these apps in the Configuration Manager console, and deploy them like you deploy any other app.
 
@@ -25,7 +25,7 @@ The [Microsoft Store for Business and Education](/microsoft-store/) is where you
 
 The Microsoft Store for Business and Education supports two types of app:
 
-- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Devices running Windows 10 or later should be Azure Active Directory (Azure AD)-joined or hybrid Azure AD-joined. They can also be [Azure AD-registered](/azure/active-directory/devices/concept-azure-ad-register).<!-- MEMDocs#1587 -->
+- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Devices running Windows 10 or later should be Microsoft Entra joined or Microsoft Entra hybrid joined. They can also be [Microsoft Entra registered](/entra/identity/devices/concept-device-registration). <!-- MEMDocs#1587-->
 
 - **Offline**: This type lets you cache apps and licenses to deploy directly within your on-premises network. Devices don't need to connect to the store or have a connection to the internet.
 
@@ -60,7 +60,7 @@ Before deploying Microsoft Store for Business and Education apps to devices that
 
 - For full functionality, devices need to be running a supported version of Windows 10 or later.
 
-- Register or join devices to the same Azure AD tenant where you registered the Microsoft Store for Business and Education as a management tool.
+- Register or join devices to the same Microsoft Entra tenant where you registered the Microsoft Store for Business and Education as a management tool.
 
 - When the local Administrator account signs in on the device, it can't access Microsoft Store for Business and Education apps.
 
@@ -70,7 +70,7 @@ Before deploying Microsoft Store for Business and Education apps to devices that
 
 When you synchronize the list of Microsoft Store for Business and Education apps that your organization acquired, you see these apps in the Configuration Manager console.
 
-Connect your Configuration Manager site to Azure AD and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md). Create a connection to the **Microsoft Store for Business** service.
+Connect your Configuration Manager site to Microsoft Entra ID and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md). Create a connection to the **Microsoft Store for Business** service.
 
 Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 

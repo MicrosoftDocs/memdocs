@@ -8,12 +8,11 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2022
+ms.date: 05/31/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: 
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -43,7 +42,7 @@ Create a device platform enrollment restriction policy to restrict devices from 
 * Device platform
 * OS version
 * Manufacturer
-* Ownership (personally-owned)
+* Ownership (personally owned)
 
  You can create a new device platform restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
 
@@ -52,49 +51,54 @@ This article describes the device platform restrictions supported in Microsoft I
 ## Default policy 
 Microsoft Intune provides one default policy for device platform restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 
-## Best practice - Android platform restrictions          
-Since Intune supports two Android platforms, it's important to understand how OS version restrictions work when used together with device platform restrictions:   
+## Best practice - Android platform restrictions
+     
+Since Intune supports two Android platforms, it's important to understand how OS version restrictions work when you use them with device platform restrictions:   
   * If you allow both platforms for the same group, and then refine it for specific and non-overlapping versions, devices are sent through the Android enrollment flow that's picked for their version.   
   * If you allow both platforms, but block the same versions, devices running blocked versions can't enroll. Users on these devices are sent through the Android device administrator enrollment flow before they're blocked and prompted to sign out. 
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Create a device platform restriction   
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Go to **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.  
-3. Select the tab along the top of the page that corresponds with the platform you're configuring. Your options:  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Go to **Devices** > **Enrollment**. 
+1. Select **Device platform restriction**.  
+1. Select the tab along the top of the page that corresponds with the platform you're configuring. Your options:  
 
-    * **Android restrictions**
-    * **Windows restrictions**
-    * **MacOS restrictions**
+    * **Android restrictions**  
+    * **Windows restrictions**  
+    * **macOS restrictions**  
     * **iOS restrictions**  
 
-4. Select **Create restriction**.  
-5. On the **Basics** page, give the restriction a name and optional description. 
-6. Select **Next**.  
-7. On the **Platform settings** page, configure the restrictions for your selected platform. Your options:       
+1. Select **Create restriction**.  
+1. On the **Basics** page, give the restriction a name and optional description. 
+1. Select **Next**.  
+1. On the **Platform settings** page, configure the restrictions for your selected platform. Your options:       
     - **Platform** (Android): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.       
     - **MDM** (Windows, macOS, and iOS/iPadOS): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.   
     - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer** (Android): Enter a comma-separated list of the manufacturers that you want to block. 
     - **Allow min/max range** (Android, Windows, iOS/iPadOS): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:  
-        - Windows supports major.minor.build.rev for Windows 10 and Windows 11.    
+        - Windows supports major.minor.build.rev for Windows 10 and Windows 11. Intune doesn't receive the revision number during enrollment so enter **0** for revision number. 
         - Android device administrator and Android Enterprise work profile support major.minor.rev.build.  
         - iOS/iPadOS supports major.minor.rev.  
 
              > [!TIP]
-             > The min/max range isn't applicable to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. Although Intune doesn't block ADE enrollments that use Company Portal to authenticate, not meeting OS requirements impacts registration because devices can't create the Azure AD device record used to evaluate Conditional Access policies. You can tell that this is the case if a device user receives an error message that says "Couldn't map device record with a user" after they sign in to Company Portal.        
+             > The min/max range isn't applicable to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. Although Intune doesn't block ADE enrollments that use Company Portal to authenticate, not meeting OS requirements impacts registration because devices can't create the Microsoft Entra device record used to evaluate Conditional Access policies. You can tell that this is the case if a device user receives an error message that says "Couldn't map device record with a user" after they sign in to Company Portal.        
 
-8. Select **Next**. 
-9. Optionally, add scope tags to the restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
+1. Select **Next**. 
+1. Optionally, add scope tags to the restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
 
       > [!NOTE]
       >  If you apply scope tags to a restriction, only Intune users within scope can view and manage the policy. Only people in scope can view and reorder a restriction, or change its priority level. They can also see the relative priority of the restriction, even if they can't see all restrictions.  
 
-10. Select **Next**. 
-11. On the **Assignments** page, select **Add groups** and then use the search box to find and select groups. To assign the restriction to all device users, select **Add all users**. If you don't assign a restriction to at least one group, the restriction won't take effect.  
-12. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Apply assignment filters](create-device-platform-restrictions.md#apply-assignment-filters) (in this article).  
-13. Select **Next**. 
-14. Review your policy, and then select **Create** to create it. 
+1. Select **Next**. 
+1. On the **Assignments** page, select **Add groups** and then use the search box to find and select groups. To assign the restriction to all device users, select **Add all users**. If you don't assign a restriction to at least one group, the restriction won't take effect.  
+1. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Apply assignment filters](create-device-platform-restrictions.md#apply-assignment-filters) (in this article).  
+1. Select **Next**. 
+1. Review your policy, and then select **Create** to create it. 
 
 You can view the new restriction policy and access its properties in the **Enrollment device platform restrictions** > **Device type restrictions** table. Select and drag the restriction to reposition it in the table and change its priority.   
 
@@ -121,11 +125,14 @@ Enrollment restrictions support fewer filter properties than other group-targete
 
 The following filter properties are always available to use with enrollment policies:    
 
-**Windows** 
+**Windows**  
 
+* Manufacturer - For Windows 11, version 22H2 and later 
+* Model - For Windows 11, version 22H2 and later 
 * OS version 
 * Operating System SKU 
-* Enrollment profile name
+* Ownership
+* Enrollment profile name  
 
 **iOS/iPadOS and macOS**  
 * Manufacturer 
@@ -134,16 +141,16 @@ The following filter properties are always available to use with enrollment poli
 * Ownership 
 * Enrollment profile name 
 
-For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters can't be used with Android enrollment restrictions.  
+For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#managed-device-properties). Filters can't be used with Android enrollment restrictions.  
 
 ## Edit enrollment restrictions  
 
-Edits are applied to new enrollments and do not affect devices that are already enrolled.  
+Edits are applied to new enrollments and don't affect devices that are already enrolled.  
 
-1. Go to **Enrollment device platform restrictions**.  
-2. In the **Device type restrictions** table, select the name of the policy you want to change.
+1. Return to **Devices** > **Enrollment**.  
+2. Select **Device platform restrictions**.  
+2. In the **Device type restrictions** table, select the name of the policy you want to change.  
 3. Select **Properties**.  
 4. Select **Edit**.   
-5. Make your changes and select **Review + save**. 
+5. Make your changes and select **Review + save**.  
 6. Review your changes and select **Save**.  
-

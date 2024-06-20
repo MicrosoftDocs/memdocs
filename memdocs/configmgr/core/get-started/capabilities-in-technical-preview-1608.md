@@ -3,8 +3,8 @@ title: Capabilities in Technical Preview 1608
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1608.
 ms.date: 01/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 manager: apoorvseth
@@ -27,7 +27,7 @@ This article introduces the features that are available in the Technical Preview
 
 
 ##  Improvements to the Prepare ConfigMgr Client for Capture task sequence step  
-The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time.  
+The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time.  
 
 
 ## Improvements to Software Center
@@ -46,10 +46,10 @@ After you have defined parent to child relationships, you can filter your view t
    1. For the Search bar, choose to **Add Criteria**
    2. Select **Parent Software** and then change the criteria value to **is empty**, and then click **Search**.
 
-The display now shows only the parent software items, or software that has no defined relationships. Software that is only a child of another title does not display.
+The display now shows only the parent software items, or software that has no defined relationships. Software that is only a child of another title doesn't display.
 
 ## Remote control keyboard translation
-In the past, Configuration Manager transmitted the key position from the viewer's location to the sharer's location. This was problematic for keyboard configurations that differed from viewer to sharer. For example, a viewer with an English keyboard would type an "A", but the sharer's French keyboard would provide a "Q". We are changing the default behavior so that the character itself is transmitted from the viewer's keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
+In the past, Configuration Manager transmitted the key position from the viewer's location to the sharer's location. This was problematic for keyboard configurations that differed from viewer to sharer. For example, a viewer with an English keyboard would type an "A", but the sharer's French keyboard would provide a "Q". We're changing the default behavior so that the character itself is transmitted from the viewer's keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
 
 This behavior can be turned off by the viewer if they prefer to type according to the sharer's keyboard arrangement. To change the behavior, in **Configuration Manager Remote Control**, choose **Action**,and choose **Enable keyboard translation** to transmit key position.
 

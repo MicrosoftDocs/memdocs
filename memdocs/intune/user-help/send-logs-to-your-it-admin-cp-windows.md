@@ -9,10 +9,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 11/04/2020
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: bd428c14-7d75-42de-9322-b57323a01f06
 searchScope:
  - User help
@@ -42,10 +40,10 @@ Report a problem or error that occurs in the Intune Company Portal app for Windo
 Complete the following steps to report a problem you're experiencing in-app or during device enrollment. 
 
 1. Open the **Company Portal** app.
-2. Select **Help & support** > **Get help**.  
+2. Select **Help & support** > **Upload logs & contact support**.  
    
    > [!Note]	  
-   > After you click **Get help**, the Company Portal automatically sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
+   > After you click **Upload logs & contact support**, the Company Portal will send your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
 
 3. When prompted to choose a program, select the Mail app or another preferred email app.   
    

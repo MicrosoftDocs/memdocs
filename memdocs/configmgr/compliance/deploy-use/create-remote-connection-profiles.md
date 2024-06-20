@@ -3,8 +3,8 @@ title: Create remote connection profiles
 titleSuffix: Configuration Manager
 description: Use Configuration Manager remote connection profiles to enable your users to remotely connect to work computers.
 ms.date: 01/06/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 ms.author: banreetkaur
 author: banreet

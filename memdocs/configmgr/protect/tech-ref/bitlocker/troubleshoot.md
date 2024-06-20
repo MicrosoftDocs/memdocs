@@ -3,8 +3,8 @@ title: Troubleshoot BitLocker
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot problems with BitLocker management in Configuration Manager
 ms.date: 11/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: troubleshooting
 author: BalaDelli
 ms.author: baladell

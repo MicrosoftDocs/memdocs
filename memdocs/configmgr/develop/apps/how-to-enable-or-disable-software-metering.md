@@ -3,14 +3,14 @@ title: Enable or Disable Software Metering
 titleSuffix: Configuration Manager
 description: Enable or disable the Software Metering Client Agent by modifying the site control file settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 8e706653-7627-4cd9-853d-3690be0d567b
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

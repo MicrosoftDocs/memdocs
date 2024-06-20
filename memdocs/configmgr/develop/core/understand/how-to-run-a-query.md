@@ -3,14 +3,14 @@ title: Run a Query
 titleSuffix: Configuration Manager
 description: Run an SMS_Query based query by getting the query instance and then by running WQL query in the SMS_Query object Expression property.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c714a1cf-86af-4de2-9160-af360a484895
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

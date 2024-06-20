@@ -3,14 +3,14 @@ title: Unlock Method in SMS_BootImagePackage
 titleSuffix: Configuration Manager
 description: The Unlock WMI class method sets the source site to the current site, unlocking the boot image package.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 52d55b22-d3b7-43f2-8f85-f56719a3894a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

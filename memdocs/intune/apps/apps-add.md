@@ -6,15 +6,14 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/22/2022
+ms.date: 05/01/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
@@ -22,6 +21,8 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- FocusArea_Apps_Add
+- AI-Assisted
 ---
 
 # Add apps to Microsoft Intune
@@ -30,7 +31,22 @@ ms.collection:
 
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
-The users of apps and devices at your company (your company's workforce) might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your company, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the apps and capabilities that your workforce needs, and who needs them. The information in this article helps you get started.
+Intune apps refer to the applications that are managed by Microsoft Intune. These apps can be deployed, configured, protected, and updated to access your organization’s resources. Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. Intune also supports several platforms, such as iOS/iPadOS and Android. 
+
+Managing Microsoft Intune apps offers several benefits for your organization, including the following:
+- Data protection for your managed apps
+- Broad app support
+- Access control to your managed apps
+- App configuration for your managed apps
+- App updates for your managed apps
+
+Examples of when you should add, configure, protect, and deploy managed apps using Intune include the following:
+- Your organization needs to configure the app with specific settings for your organization.
+- Your organization must protect sensitive data used within a managed app.
+- Your organization must protect access to a managed app.
+- Your organization must monitor your managed apps to ensure data is protected and apps are updated as needed.
+
+The users of apps and devices at your organization might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your organization, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the capabilities and apps that your workforce needs, and who needs them. The information in this article helps you get started.
 
 ## App types in Microsoft Intune
 
@@ -40,7 +56,7 @@ Intune supports a wide range of app types. The available options differ for each
 |---|---|---|
 | Apps from the store (store apps) | Intune installs the app on the device.  | App updates are automatic. |
 | Apps written in-house or as a custom app (line-of-business) | Intune installs the app on the device (you supply the installation file). | You must update the app. |
-| Apps that are built-in (built-in apps) | Intune installs the app on the device.  | App updates are automatic. |
+| Apps that are built in (built-in apps) | Intune installs the app on the device.  | App updates are automatic. |
 | Apps on the web (web link) | Intune creates a shortcut to the web app on the device home screen. | App updates are automatic. |
 | Apps from other Microsoft services  | Intune creates a shortcut to the app in the Company Portal. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). | App updates are automatic. |
 
@@ -66,15 +82,18 @@ The following table lists the specific app types and how you can add them in the
 | [Built-in Android app](../apps/apps-add-built-in.md)  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | [Web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [iOS/iPadOS web clip](../apps/web-app.md)  | Web app  | Select **iOS/iPadOS web clip** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the iOS/iPadOS platform.  |
+| [macOS web clip](../apps/web-app.md) | Web app  | Select **macOS web clip** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the macOS platform.  |
 | [Windows web link](../apps/web-app.md) | Web app  | Select **Windows web link** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the Windows platform.  |
 | [Cross platform web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [Android Enterprise system apps](../apps/apps-ae-system.md)  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | [Windows app (Win32)](../apps/apps-win32-add.md)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
+| [Enterprise App Catalog app (Win32)](../apps/apps-add-enterprise-app.md)  | LOB app  | Select **Enterprise App Catalog app (Win32)** as the **app type**, select the app from the **Enterprise App Catalog**, and then set the app information, installation commands, requirements, and detection rules.  |
 | [macOS LOB apps](../apps/lob-apps-macos.md) | LOB app  | Select **Line-of-business app** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
 | [macOS apps (DMG)](../apps/lob-apps-macos-dmg.md) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
+| [macOS apps (PKG)](../apps/macos-unmanaged-pkg.md) | LOB app  | Select **macOS app (PKG)** as the app type, select the **App package** file, and then select an installation file with the extension *.pkg*. This app type is used to add an unmanaged macOS PKG app to Intune.  |
 | [Microsoft Defender for Endpoint (macOS)](../apps/apps-advanced-threat-protection-macos.md) | Store app (Microsoft Defender ATP) | Select **macOS** under **Microsoft Defender for Endpoint** as the app type and then continue by setting up the app in Intune.  |
 
-<sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
+<sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps).
 
 You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Select app type** pane is displayed and allows you to select the **App type**.
 
@@ -83,7 +102,7 @@ You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **
 
 ## Assess app requirements
 
-As an IT Admin, you determine not only which apps your group must use, but you also determine the capabilities needed for each group and subgroup. For each app, you determine the platforms needed, the groups of users that need the app, the configuration policies to apply for those groups, and the protection policies to apply. For example, for enrollment types including Android personally-owned work profile, you may want to deploy a web browsing app to make sure users will have a way to open links.
+As an IT Admin, you determine not only which apps your group must use, but you also determine the capabilities needed for each group and subgroup. For each app, you determine the platforms needed, the groups of users that need the app, the configuration policies to apply for those groups, and the protection policies to apply. For example, for enrollment types including Android personally owned work profile, you may want to deploy a web browsing app to make sure users will have a way to open links.
 
 Additionally, you must determine whether to focus on Mobile Device Management (MDM) or only on Mobile Application Management (MAM).
 
@@ -99,7 +118,7 @@ Using Intune to manage apps with MAM without managing the device is useful when:
 - You want to provide a one-time pop-up message to let users know that MAM protections are in place, rather than continual device-level notification.
 - You want to comply with policies that require less management capability on personal devices. For instance, you want to manage the corporate data for the apps, rather than manage the corporate data for the entire device.
 
-For more information, [Compare MDM and MAM](../fundamentals/byod-technology-decisions.md).
+For more information, go to [Planning guide: Personal devices vs. Organization-owned devices](../fundamentals/intune-planning-guide.md#personal-devices-vs-organization-owned-devices).
 
 ### Determine who will use the app
 
@@ -107,7 +126,7 @@ As you're determining which apps your workforce needs, consider the various grou
 
 First, you must determine which group should have access to the app, based on the sensitivity of the data the app contains. You might need to include or exclude certain types of roles within your organization. For example, only certain LOB apps might be required for your sales group, whereas people focused on engineering, finance, HR, or legal might not need to use the LOB apps. In addition, your sales group might need additional data protection and access to internal corporate services on their mobile devices. You must determine how this group will connect to resources using the app. Will the data that the app accesses live in the cloud or on-premises? Also, how will the users connect to resources by using the app?
 
-Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../protect/certificates-configure.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Azure Active Directory Application Proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
+Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../protect/certificates-configure.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Microsoft Entra application proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
 
 Use the [Intune deployment planning, design and implementation guide](../fundamentals/intune-planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
@@ -118,7 +137,7 @@ You can choose from the following app types:
 - **Apps from the store**: Apps that have been uploaded to either the Microsoft store, the iOS/iPadOS store, or the Android store are store apps. The provider of a store app maintains and provides updates to the app. You select the app in the store list and add it by using Intune as an available app for your users.
 - **Apps written in-house or as a custom app (line-of-business)**: Apps that are created in-house or as a custom app are line-of-business (LOB) apps. The functionality of this type of app has been created for one of the Intune supported platforms, such as Windows, iOS/iPadOS, macOS, or Android. Your organization creates and provides you with updates as a separate file. You provide updates of the app to users by adding and deploying the updates using Intune.
 - **Apps on the web**: Web apps are client-server applications. The server provides the web app, which includes the UI, content, and functionality. Additionally, modern web hosting platforms commonly offer security, load balancing, and other benefits. This type of app is separately maintained on the web. You use Intune to point to this app type. You also assign which groups of users can access the app.
-- **Apps from other Microsoft services**: Apps that have been sourced from either Azure AD or Office Online. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). You can hide or show Azure AD Enterprise and Office Online applications to end-users in the Company Portal. From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. Select to **Hide** or **Show** either **Azure AD Enterprise applications** or **Office Online applications** in the Company Portal for each end-user. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options).
+- **Apps from other Microsoft services**: Apps that have been sourced from either Microsoft Entra ID or Office Online. **Microsoft Entra Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). You can hide or show Microsoft Entra Enterprise and Office Online applications to end-users in the Company Portal. From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. Select to **Hide** or **Show** either **Microsoft Entra Enterprise applications** or **Office Online applications** in the Company Portal for each end-user. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options).
 
 As you're determining which apps your organization needs, consider how the apps integrate with cloud services, what data the apps access, whether the apps are available to BYOD users, and whether the apps require internet access.
 
@@ -151,6 +170,9 @@ Before you begin to add and assign apps, consider the following points:
 
 - When you add and assign an app from a store, your users must have an account with that store to be able to install the app.
 - Some apps or items that you assign might depend on built-in iOS/iPadOS apps. For example, if you assign a book in the iOS/iPadOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
+- There are limits to the number of apps you can add to Intune.
+  - For trial Intune tenants, you can create 500 apps per tenant.
+  - For licensed Intune tenants, you can create 10,000 apps per tenant. Certain apps, including [iOS/iPadOS volume-purchased apps](../apps/vpp-apps-ios.md) and [Managed Google Play apps](../apps/apps-add-android-for-work.md), don't count towards this limit. 
 
 > [!IMPORTANT]
 > If you change the name of the app through Intune after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
@@ -162,23 +184,22 @@ All apps that you create by using the software installer installation type (for 
 Requirements for cloud storage space are as follows:
 
 - All app installation files must be in the same folder.
-- The maximum file size for any file that you upload is 8 GB.
-
-  > [!NOTE]
-  > Windows Line-of-business (LOB) apps, including Win32, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSI X, and Windows Universal MSI X bundle, have a maximum size limit of 8 GB per app. All other LOB apps, including iOS/iPadOS LOB apps, have a maximum size limit of 2 GB per app.
+- The maximum file size for Windows Line-of-business (LOB) apps, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSIX, and Windows Universal MSIX bundle, have a maximum size limit of 8 GB per app.
+- Win32 apps have a maximum size limit of 30GB per app.
+- iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
 
 ## Create and edit categories for apps
 
 App categories can be used to help you sort apps to make them easier for users to find in the company portal. You can assign one or more categories to an app, for example, *Developer apps* or *Communication apps*.
 
-When you add an app to Intune, you are given the option to select the category you want. Use the platform-specific topics to add an app and assign categories. To create and edit your own categories, use the following procedure:
+When you add an app to Intune, you're given the option to select the category you want. Use the platform-specific articles to add an app and assign categories. To create and edit your own categories, use the following procedure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App categories**.  
     The **App categories** pane displays a list of current categories.
 3. Do either of the following:
     - To add a category, in the **Create category** pane, select **Add**, and then enter a name for the category.  
-    Names can be entered in one language only, and they are not translated by Intune.
+    Names can be entered in one language only, and they aren't translated by Intune.
     - To edit a category, select the ellipsis (**...**) next to the category, and then select **Pin to dashboard** or **Delete**.
 4. Select **Create**.
 
@@ -196,7 +217,7 @@ Intune will automatically reinstall, update, or remove a required app within 24 
 Intune will automatically reinstall, update, or remove a required app based on the following conditions:
 
 - If an end user uninstalls an app that you have required to be installed on the end user's device, Intune will automatically reinstall the app when this schedule elapses.
-- If a required app install fails or somehow the app is not present on the device, Intune evaluates compliance and reinstalls the app when this schedule elapses.  
+- If a required app install fails or somehow the app isn't present on the device, Intune evaluates compliance and reinstalls the app when this schedule elapses.  
 - An admin targets an app as available to a user group and an end user installs the app from the company portal on the device. Later, the admin updates the app from v1 to v2. Intune will update the app when this schedule elapses, provided that any previous version of the app is still present on the device.
 - If the admin deploys uninstall intent and the app is present on the device and failed to uninstall, Intune evaluates compliance and uninstalls the app when this schedule elapses.
 
@@ -224,6 +245,13 @@ When you need to uninstall an app from user's devices, use the following steps.
 > [!IMPORTANT]
 > To uninstall the app successfully, make sure to remove the members or group assignment for install before assigning them to be uninstalled. If a group is assigned to both install an app and uninstall an app, the app will remain and not be removed.
 
+> [!NOTE]
+> End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal.
+
+## Delete an app from Intune
+
+Once you have removed assignments for an app and revoked any app licenses for an app associated with a token, you can delete the app from Intune. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
+
 ## App installation errors
 
 For details about Intune app installation errors, see [App installation errors](/troubleshoot/mem/intune/troubleshoot-app-install).
@@ -248,3 +276,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)
 - [Win32 apps](apps-win32-app-management.md)
+- [Enterprise App Catalog app (Win32)](apps-add-enterprise-app.md)

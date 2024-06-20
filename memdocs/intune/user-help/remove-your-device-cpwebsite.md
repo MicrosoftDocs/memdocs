@@ -1,18 +1,16 @@
 ---
 # required metadata
 
-title: Remove your device from the Company Portal | Microsoft Docs
-description: Remove a device from the Company Portal
+title: Remove device from Company Portal website | Microsoft Docs
+description: Sign into the Intune Company Portal website to unregister a personal device from work or school. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 11/29/2023
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: e240419a-a836-4be3-8fd9-39a4ec890226
 searchScope:
  - User help
@@ -22,14 +20,14 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: jieyan
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection:
-- tier2
+- tier1
 ---
-# Remove your device from the Company Portal  
+# Remove device on Intune Company Portal website  
 
 *Applies to*:     
 * *Android*   
@@ -37,12 +35,11 @@ ms.collection:
 * *macOS*  
 * *Windows 10/11*  
 
-Remotely unenroll and remove personal devices from Microsoft Intune using the Company Portal website. Once you remove a device, it is unenrolled from Intune and deleted from the Company Portal website and apps. The device may lose access to protected work data, such as files, apps, and email.  
+Use the Company Portal website to remotely unenroll and unregister a personal device from work or school. Once you remove a device, your organization no longer manages the device and it is removed from the Company Portal app and website. You might lose access to protected work data, such as files, apps, and email, on the device after you unenroll. 
 
-1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account. 
-2. Select the menu > **Devices**.   
-2. Select the device you want to remove.  
-3. Select **Remove**. If the remove option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then choose **Remove**.  
+1. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account. You can sign in on any device.   
+2. Go to **Devices** and select the device you want to remove.  
+3. Choose **Remove**. If the remove option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. 
 4. A message appears to warn you that you are about to remove your device. Select **Remove** to confirm.  
 
 Need additional help? Contact your support person. For contact details, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Helpdesk**.  

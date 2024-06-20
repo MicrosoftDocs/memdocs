@@ -2,12 +2,12 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 01/10/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 05/01/2024
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: Baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -66,47 +66,43 @@ For more information, see the following articles:
 
 ### Supported server OS versions
 
-- **Windows Server 2022**: IoT, Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
+- **Windows Server 2022**: IoT, Standard, Datacenter (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
 
-- **Windows Server 2019**: IoT, Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2019**: IoT, Standard, Datacenter 
 
-- **Windows Server 2016**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2016**: Standard, Datacenter 
 
 - **Windows Storage Server 2016**: Workgroup, Standard, IoT
 
-- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Storage Server 2012 R2** (x64)
+- **Windows Storage Server 2012 R2** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Storage Server 2012** (x64)
+- **Windows Storage Server 2012** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### Server Core
 
-The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 3](#bkmk_note3)</sup>
+The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 2](#bkmk_note2)</sup>
 
 Windows Server semi-annual channel versions are Server Core installations, such as Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 11 or Windows 10 semi-annual channel version. For more information, see [Support for Windows 11](support-for-windows-11.md) or [Support for Windows 10](support-for-windows-10.md).
 
-- **Windows Server 2022** (x64) <sup>[Note 2](#bkmk_note2)</sup> (_starting in version 2107_)<!-- 10200029 -->
+- **Windows Server 2022** (x64) <sup>[Note 1](#bkmk_note1)</sup> (_starting in version 2107_)<!-- 10200029 -->
 
-- **Windows Server 2019** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2019** (x64) <sup>[Note 1](#bkmk_note1)</sup>
 
-- **Windows Server 2016** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2016** (x64) <sup>[Note 1](#bkmk_note1)</sup>
 
-- **Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2012 R2** (x64) <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2012** (x64) <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### <a name="bkmk_note1"></a> Note 1
 
-Configuration Manager tests and supports Windows Server Datacenter editions, but isn't officially certified for Windows Server. Configuration Manager hotfix support isn't offered for issues that are specific to Windows Server Datacenter Edition. For more information on the Windows Server certification program, see [Windows Server Catalog](https://www.windowsservercatalog.com/).
-
-#### <a name="bkmk_note2"></a> Note 2
-
 To support [client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).
 
-#### <a name="bkmk_note3"></a> Note 3
+#### <a name="bkmk_note2"></a> Note 2
 
 The Software Center app isn't supported on any version of Windows Server Core.<!--SCCMDocs issue 683-->
 
@@ -136,11 +132,6 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 - **Windows 10 IoT Enterprise** (x86, x64) <sup> [Note 4](#bkmk_note4)</sup>
 
-- **Windows Embedded 8.1 Industry** (x86, x64)
-
-- **Windows Embedded 8 Standard** (x86, x64)
-
-
 #### <a name="bkmk_note4"></a> Note 4: Windows IoT Enterprise
 
 This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot/iot-enterprise/getting_started).<!--SCCMDocs issue 560-->
@@ -149,7 +140,7 @@ This version includes the long-term servicing channel (LTSC). For more informati
 
 The [Extended Security Updates (ESU)](/lifecycle/faq/extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product's End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy a supported version of Windows to devices running Windows 7.
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program for Windows Server 2012 and 2012 R2 only. No further support is offered for computers running Windows 7 or Windows Server 2008/ 2008 R2, including customers with an additional further year of ESU support as noted in [KB4522133](https://support.microsoft.com/en-us/topic/kb4522133-procedure-to-continue-receiving-security-updates-after-extended-support-ended-on-january-10-2023-48c59204-fe67-3f42-84fc-c3c3145ff28e)
 
 Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 

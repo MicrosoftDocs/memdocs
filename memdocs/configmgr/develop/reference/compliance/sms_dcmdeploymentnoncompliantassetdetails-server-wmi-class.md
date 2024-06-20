@@ -3,14 +3,14 @@ description: Learn how to use the SMS_DCMDeploymentNonCompliantAssetDetails clas
 title: SMS_DCMDeploymentNonCompliantAssetDetails Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: da079cfb-c148-4b38-9173-307843dc0b90
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -56,7 +56,7 @@ Class SMS_DCMDeploymentNonCompliantAssetDetails : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DCMDeploymentNonCompliantAssetDetails` class does not define any methods.  
+ The `SMS_DCMDeploymentNonCompliantAssetDetails` class doesn't define any methods.  
 
 ## Properties  
  `AssetID`  

@@ -3,19 +3,19 @@ title: SMS_Client_Reg_MultiString_List Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a list of client registry multi-string items from the site control file.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ff5fa70d-5bea-469d-bc84-a940d6558733
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Client_Reg_MultiString_List Server WMI Class
-The `SMS_Client_Reg_MultiString_List` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a list of client registry multi-string items from the site control file.  
+The `SMS_Client_Reg_MultiString_List` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a list of client registry multi-string items from the site control file.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -32,7 +32,7 @@ Class SMS_Client_Reg_MultiString_List
 ```  
 
 ## Methods  
- The `SMS_Client_Reg_MultiString_List` class does not define any methods.  
+ The `SMS_Client_Reg_MultiString_List` class doesn't define any methods.  
 
 ## Properties  
  `ItemType`  
@@ -81,7 +81,7 @@ Class SMS_Client_Reg_MultiString_List
 
   For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
-  This class behaves the same as [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md). It is used to represent data that is stored in the system registry with the `REG_MULTI_SZ` data type.  
+  This class behaves the same as [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md). It's used to represent data that is stored in the system registry with the `REG_MULTI_SZ` data type.  
 
 ## Requirements  
 

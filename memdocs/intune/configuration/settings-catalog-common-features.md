@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Common tasks and features you can configure using settings catalog in Microsoft Intune
-description: Use the settings catalog in Microsoft Intune to configure common features. For example, you can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browser, and use built in settings instead of plist files for macOS devices.
+title: Common tasks and features in the settings catalog
+description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 05/29/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +23,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier2
+- tier1
 - M365-identity-device-management
 ---
 
@@ -75,6 +73,19 @@ For more information, go to [Create a Universal Print policy in Microsoft Intune
 
 Previously, to configure Universal Print settings, you used the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
 
+## Use Apple's DDM to manage software updates
+
+<!-- ms.reviewer: beflamm -->
+
+This feature applies to:
+
+- iOS/iPadOS
+- macOS
+
+You can use the settings catalog to configure Apple's declarative device management (DDM) to manage software updates. With DDM, the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
+
+For more information, go to [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+
 ## Built-in macOS features replacing plist files
 
 <!-- ms.reviewer: beflamm -->
@@ -105,7 +116,7 @@ On macOS, you can use property list (plist) files to configure features and sett
 
 Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
-## Learn more
+## Related content
 
 - [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)
 - [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)

@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/01/2024
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -30,7 +29,7 @@ ms.collection:
 
 # Manage RDP device redirections for Cloud PCs
 
-Remote Desktop Protocol (RDP) can be used to create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. For security reasons, you might want to override the default and block these redirections.
+Remote Desktop Protocol (RDP) can be used to create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. Update these redirections according to your organization's policies.
 
 To understand which redirections are supported based on which platform is used to access the Cloud PC, see [Compare the clients: redirections](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare).
 
@@ -51,12 +50,12 @@ The following redirections can be managed by using the appropriate setting:
 | Smartcards | Do not allow smart card device redirection |
 | USB drives| Do not allow supported Plug and Play device redirection |
 
-
+Some settings may not be immediately available in the Settings Catalog.
 
 There are two ways to manage these redirections:
 
-- Settings Catalog: Use a device configuration policy in Microsoft Endpoint Manager. Supports both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
-- Group Policy Object (GPO): Use GPOs in Windows Server Active Directory. Supports hybrid Azure AD join Cloud PCs only.
+- Settings Catalog: Use a device configuration policy in Microsoft Intune. Supports both Microsoft Entra join and Microsoft Entra hybrid join Cloud PCs.
+- Group Policy Object (GPO): Use GPOs in Windows Server Active Directory. Supports Microsoft Entra hybrid join Cloud PCs only.
 
 Follow the appropriate guidance to manage RDP device redirections.
 
@@ -66,7 +65,7 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 
-2. Select the **Windows 10 and later** platform, the **Settings catalog (preview)** profile type, then **Create**.
+2. Select the **Windows 10 and later** platform, the **Settings catalog** profile type, then **Create**.
 
 3. On the **Basics** page, enter a **Name** and **Description** (optional) for the new policy.
 
@@ -77,9 +76,9 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 5. After you've selected all the redirection settings that you want to manage, close the **Settings picker** view, configure the settings on the **Configuration settings** page, then select **Next**.
 
-6. On the **Assignments** page, select the users or groups that will receive the redirection policy, then select **Next**.
+6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-7. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
+7. On the **Assignments** page, select the users or groups that will receive the redirection policy, then select **Next**.
 
 8. On the *Review + create** page, select **Create**.
 

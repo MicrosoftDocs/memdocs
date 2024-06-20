@@ -3,14 +3,14 @@ title: RaiseRawStatusMsg Method
 titleSuffix: Configuration Manager
 description: The RaiseRawStatusMsg Windows Management Instrumentation (WMI) class method creates a status message from an external message DLL.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 87fbeea2-3874-4b8e-a8f5-7bf829b0390f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

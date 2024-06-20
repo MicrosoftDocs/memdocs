@@ -3,14 +3,14 @@ title: CCM_Policy_Policy Class
 titleSuffix: Configuration Manager
 description: A client Windows Management Instrumentation class that defines a policy object for a client policy.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ba718ec2-df70-426d-a6df-997a8e98483d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -36,7 +36,7 @@ Class CCM_Policy_Policy : CCM_Policy_Config
 ```  
 
 ## Methods  
- The `CCM_Policy_Policy` class does not define any methods.  
+ The `CCM_Policy_Policy` class doesn't define any methods.  
 
 ## Properties  
  `DownloadSource`  
@@ -104,15 +104,15 @@ Class CCM_Policy_Policy : CCM_Policy_Config
 
 | Value | Description |
 | ----- | ----------- |
-|NULL|The policy object is inactive and has not been downloaded. This is the default value.|  
+|NULL|The policy object is inactive and hasn't been downloaded. This is the default value.|  
 |DownloadPending|The evaluator has determined that the policy object needs to be applied and should be downloaded. This is a temporary state used during the evaluation process.|  
 |DownloadStarted|The policy object has been requested from the management point and is in the process of being downloaded.|  
-|DownloadComplete|The policy object has finished downloading from the management point but has not been compiled into WMI yet.|  
+|DownloadComplete|The policy object has finished downloading from the management point but hasn't been compiled into WMI yet.|  
 |Inactive|The policy object is downloaded and compiled, but has no active assignments.|  
-|Applied|The policy object is currently active, but pending re-valuation. This is a temporary state used during the evaluation process. If the evaluation determines that the policy object should no longer be active, its actions must be revoked.|  
+|Applied|The policy object is currently active, but pending revaluation. This is a temporary state used during the evaluation process. If the evaluation determines that the policy object should no longer be active, its actions must be revoked.|  
 |ApplyPending|The policy object is currently inactive, but now has active assignments and actions that should be applied. This is a temporary state used during the evaluation process.|  
 |Active|The policy object is currently active and has been applied.|  
-|NotApplicable|The policy object is not applicable. <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
+|NotApplicable|The policy object isn't applicable. <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 
  `PolicyVersion`  
  Data type: `String`  

@@ -1,18 +1,17 @@
 ---
 # required metadata
 title: Reference for Policy entities
-titleSuffix: Microsoft Intune 
+titleSuffix: Microsoft Intune
 description: Reference topic for the Policy category of entity collections in the Intune Data Warehouse API.
 keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 12/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 #ROBOTS:
@@ -22,9 +21,8 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -110,12 +108,12 @@ The following table summarizes the assignment status of compliance policies to d
 |Property     |Description  |Example  |
 |---------|---------|---------|
 |dateKey  |Date key when the summary was created for the compliance policy.|20161204 |
-|unknown  |Number of devices that are offline or failed to communicate with Intune or Azure AD for other reasons. |5|
+|unknown  |Number of devices that are offline or failed to communicate with Intune or Microsoft Entra ID for other reasons. |5|
 |notApplicable      |Number of devices where device compliance policies targeted by the admin are not applicable.|201 |
 |compliant      |Number of devices that successfully applied one or more device compliance policies targeted by the admin. |4083 |
 |inGracePeriod      |Number of devices that are not compliant but that are in the grace-period defined by the admin. |57|
 |nonCompliant      |Number of devices that failed to apply one or more device compliance policies targeted by the admin or where the user hasn't complied with the policies targeted by the admin.|43 |
-|error      |Number of devices that failed to communicate with Intune or Azure AD, and returned an error message. |3|
+|error      |Number of devices that failed to communicate with Intune or Microsoft Entra ID, and returned an error message. |3|
 
 ### compliancePolicyStatusDevicePerPolicyActivities 
 
@@ -128,12 +126,12 @@ The following table summarizes the assignment status of compliance policies to d
 |dateKey  |Date key when the summary was created for the compliance policy.|20161219|
 |policyKey     |Key for the compliance policy for which the summary was created. |10178 |
 |policyPlatformKey      |Key for the platform type of the compliance policy for which the summary was created.|5|
-|unknown     |Number of devices that are offline or failed to communicate with Intune or Azure AD for other reasons.|13|
+|unknown     |Number of devices that are offline or failed to communicate with Intune or Microsoft Entra ID for other reasons.|13|
 |notApplicable     |Number of devices where device compliance policies targeted by the admin are not applicable.|3|
 |compliant      |Number of devices that successfully applied one or more device compliance policies targeted by the admin. |45|
 |inGracePeriod      |Number of devices that are not compliant but that are in the grace-period defined by the admin. |3|
 |nonCompliant      |Number of devices that failed to apply one or more device compliance policies targeted by the admin or where the user hasn't complied with the policies targeted by the admin.|7|
-|error      |Number of devices that failed to communicate with Intune or Azure AD, and returned an error message. |3|
+|error      |Number of devices that failed to communicate with Intune or Microsoft Entra ID, and returned an error message. |3|
 
 ### policyPlatformTypes
 
@@ -171,4 +169,3 @@ The following table lists the number of users in the succeeded, pending, failed,
 | succeeded |                         Number of unique Devices in success state.                          |         12          |
 | policyKey |                 policyKey, can be joined with policy to get the policyName.                 | Windows 10 baseline |
 |   error   |                          Number of unique Devices in error state.                           |         10          |
-

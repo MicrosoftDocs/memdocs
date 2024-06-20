@@ -8,12 +8,11 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 03/19/2024
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:
 
 # optional metadata
@@ -35,28 +34,46 @@ ms.collection:
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to **configuration profiles**.
 
-Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
+When you configure device features using configuration profile, you can help your end users be productive on their devices faster.
 
-As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Intune has many templates that include groups of settings that are specific to a feature, such as certificates, VPN, email, and more.
+You can create profiles for different devices and different platforms, including Android, iOS/iPadOS, macOS, and Windows. There are some configuration settings that are unique to each platform. It's also common to have many device profiles for each platform, ranging from antivirus settings to custom settings.
 
-Some profile examples include:
+When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups. 
 
-- On Windows 10/11 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
-- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
+As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
+
 - Allow or prevent access to bluetooth on the device.
 - Create a WiFi or VPN profile that gives different devices access to your corporate network.
 - Manage software updates, including when they're installed.
 - Run an Android device as dedicated kiosk device that can run one app, or run many apps.
+- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
+
+> [!TIP]
+> If you manage on-premises devices using Microsoft Configuration Manager, then you can use co-management to cloud attach your on-premises devices. With co-management, you manage Windows client devices with Configuration Manager and Microsoft Intune.
+>
+> You can create the device profiles and policies you need in Intune based on policies you currently have in Configuration Manager. For more information about co-management, go [Understand co-management using Microsoft Configuration Manager](../../configmgr/comanage/overview.md). For related information, see [Prepare Intune for co-management](../../configmgr/core/get-started/capabilities-in-technical-preview-1709.md#prepare-intune-for-co-management).
+
+## Use templates or the settings catalog
+
+In Intune, for most platforms, when you create a device configuration profile, you have two policy types: **Templates** or the **[Settings Catalog](settings-catalog.md)**.
+
+The settings catalog lists all the settings you can configure, and all in one place. Templates include a logical grouping of settings that configure a feature or concept, like email, kiosk devices, and device firmware.
+
+Intune has many templates that include groups of settings that focus on different parts of device management, including accessing resources (VPN, Wi-Fi), security (antivirus, firewall, certificates), and Group Policy Objects (ADMX administrative templates).
+
+You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../fundamentals/protection-configuration-levels.md).
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
 ## Administrative templates and Group policy
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office apps. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
 
-[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs, and shows which policy settings are supported, deprecated, and more.
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
 
 This feature supports:
 
@@ -65,7 +82,9 @@ This feature supports:
 
 ## Certificates
 
-[Certificates](../protect/certificates-configure.md) configure trusted, SCEP, and PKCS certificates that are assigned to devices. These certificates authenticate WiFi, VPN, and email profiles.
+You use [certificates in Intune](../protect/certificates-configure.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
+
+Certificates are also used for signing and encrypting email using S/MIME. Common types of certificates used in Intune include trusted root certificates, Simple Certificate Enrollment Protocol (SCEP) certificates, and Public Key Cryptography Standards (PKCS) certificates.
 
 This feature supports:
 
@@ -104,7 +123,9 @@ This feature supports:
 
 ## Derived credential
 
-[Derived credentials](../protect/derived-credentials.md) are certificates on smart cards that can authenticate, sign, and encrypt. In Intune, you can create profiles with these credentials to use in apps, email profiles, connecting to VPN, S/MIME, and Wi-Fi.
+If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../protect/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing & encryption.
+
+Intune [supports several derived credential issuers](../protect/derived-credentials.md#supported-issuers). Each platform also has their own set of settings.
 
 This feature supports:
 
@@ -120,18 +141,22 @@ This feature supports:
 - iOS/iPadOS
 - macOS
 
-## Device firmware configuration interface
+## BIOS configuration and DFCI
+
+With [BIOS configuration](bios-configuration.md), administrators can password-protect access to the BIOS and create a configuration file using an OEM tool with the BIOS settings they want. Then, they add this configuration file to the Intune policy.
 
 [Device firmware configuration interface](device-firmware-configuration-interface-windows.md) (DFCI) allows administrators to enable or disable UEFI (BIOS) settings using Intune. Use these settings to enhance security at the firmware-level, which is typically more resilient to malicious attacks.
 
 This feature supports:
 
-- Windows 11 on supported firmware
-- Windows 10 1809 and newer on supported firmware
+- Windows 11
+- Windows 10
 
 ## Device restrictions
 
-[Device restrictions](device-restrictions-configure.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS/iPadOS device users from using the device camera. 
+[Device restrictions](device-restrictions-configure.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS/iPadOS device users from using the device camera.
+
+There are also settings that manage access to app stores, restrict users from viewing corporate documents in unmanaged apps, require a password to unlock the device, or require devices to use only specific Wi-Fi networks.
 
 This feature supports:
 
@@ -146,7 +171,7 @@ This feature supports:
 
 ## Domain join
 
-[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to hybrid Azure AD joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
+[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to Microsoft Entra hybrid joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
 
 This feature supports:
 
@@ -192,7 +217,7 @@ This feature supports:
 - Windows 11
 - Windows 10
 
-## eSIM cellular - Public preview
+## eSIM cellular
 
 [eSIM cellular profiles](esim-device-configuration.md) lets administrators configure cellular data plans on your managed devices for internet and data access. After getting activation codes from your mobile operator, use Intune to import these activation codes, and then assign to your eSIM capable devices.
 
@@ -249,7 +274,7 @@ This feature supports:
 
 ## Network boundary
 
-[Network boundary](network-boundary-windows.md) creates a list of sites that are trusted by your organization. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
+[Network boundary](network-boundary-windows.md) creates a list of sites that your organization trusts. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
 
 This feature supports:
 
@@ -258,20 +283,13 @@ This feature supports:
 
 ## OEMConfig
 
-On Android Enterprise devices, [OEMConfig](android-oem-configuration-overview.md) is a standard. It allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, and allows Intune administrators to configure the settings in the schema.
+On Android Enterprise devices, [OEMConfig](android-oem-configuration-overview.md) is a standard. It allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way.
+
+With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, and allows Intune administrators to configure the settings in the schema.
 
 This feature supports:
 
 - Android Enterprise (OEMConfig)
-
-## PowerShell scripts
-
-[PowerShell scripts](../apps/intune-management-extension.md) use the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
-
-This feature supports:
-
-- Windows 11
-- Windows 10
 
 ## Preference file
 
@@ -286,11 +304,11 @@ This feature supports:
 
 ## Settings catalog
 
-The [settings catalog](settings-catalog.md) lists the settings you can configure. It's not template, or a logical grouping of settings.
+The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
 
 On Windows, there are thousands of settings available, including many settings not found in the templates. When you want a complete list of all the settings, use the settings catalog to create your policy. If you want to use a logical grouping of settings, then continue to use the templates.
 
-On macOS, you can configure Microsoft Edge version 77 and newer using the settings catalog. In your policy, you configure individual settings. It doesn't require a preference file.
+[Tasks you can complete using the Intune settings catalog](settings-catalog-common-features.md) is a good resource.
 
 This feature supports:
 
@@ -310,6 +328,21 @@ This feature supports:
 - Windows 11
 - Windows 10
 - Windows Holographic for Business
+
+## Shell scripts
+
+On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a custom device configuration profile, and deploying the policy to your devices. With Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
+
+On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md), and then deploy these scripts to your macOS devices.
+
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+
+This feature supports:
+
+- Linux
+- macOS
+- Windows 11
+- Windows 10
 
 ## Update policies
 
@@ -354,7 +387,7 @@ This feature supports:
 
 ## Windows health monitoring
 
-[Windows health monitoring](windows-health-monitoring.md) lets your data event be collected, and then analyzed by Endpoint Analytics. You can use this data to get insights on your Windows devices, including software updates and startup performance.
+[Windows health monitoring](windows-health-monitoring.md) lets Endpoint Analytics collect and analyze your event data. You can use this data to get insights on your Windows devices, including software updates and startup performance.
 
 This feature supports:
 
@@ -383,7 +416,9 @@ This feature supports:
 
 ## Manage and troubleshoot
 
-[Manage your profiles](device-profile-monitor.md) to check the status of devices, and the profiles assigned. Also help resolve conflicts by seeing the settings that cause a conflict, and the profiles that include these settings. [Common issues and resolutions](device-profile-troubleshoot.md) helps administrators work with profiles. It describes what happens when deleting a profile, what causes notifications to be sent to devices, and more.
+[Manage your profiles](device-profile-monitor.md) to check the status of devices, and the profiles assigned. Also help resolve conflicts by seeing the settings that cause a conflict, and the profiles that include these settings.
+
+[Common questions and behaviors with policies and profiles](device-profile-troubleshoot.md) helps administrators work with profiles. It describes what happens when deleting a profile, what causes notifications to be sent to devices, and more.
 
 ## Next steps
 

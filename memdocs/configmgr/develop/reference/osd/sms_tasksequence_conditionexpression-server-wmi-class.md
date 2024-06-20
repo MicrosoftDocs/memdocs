@@ -3,14 +3,14 @@ title: SMS_TaskSequence_ConditionExpression Class
 titleSuffix: Configuration Manager
 description: The SMS_TaskSequence_ConditionExpression WMI class is an SMS Provider server class that is the abstract base class for all condition expressions.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 91221db4-0420-4e3a-ac58-7d016ae4467f
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

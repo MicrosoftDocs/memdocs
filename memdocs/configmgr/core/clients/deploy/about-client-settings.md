@@ -2,12 +2,12 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 02/16/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.date: 03/28/2024
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: reference
-author: sheetg09
-ms.author: sheetg
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -83,7 +83,10 @@ Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Confi
 
 - **Port for content download from peer** (default TCP 8003): Configuration Manager automatically configures Windows Firewall rules to allow this traffic. If you use a different firewall, you must manually configure rules to allow this traffic.  
 
-    For more information, see [Ports used for connections](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).  
+    For more information, see [Ports used for connections](../../plan-design/hierarchy/ports.md#BKMK_PortsClient-ClientWakeUp).
+
+> [!NOTE]  
+> We configure the port to download content from peer as (default TCP 8003) which binds to self-signed cert even in an environment where PKI certificate is enabled.
 
 ### Minimum duration before cached content can be removed (minutes)
 
@@ -125,7 +128,7 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
+- The cloud management gateway successfully authenticates the user by using Microsoft Entra ID. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -149,9 +152,11 @@ If you require user policy in this scenario, and accept any potential performanc
 
 Set this option to **Yes** for clients to obtain content from a content-enabled CMG. This setting doesn't require the device to be internet-based.
 
-### Automatically register new Windows 10 or later domain joined devices with Azure Active Directory
+<a name='automatically-register-new-windows-10-or-later-domain-joined-devices-with-azure-active-directory'></a>
 
-When you configure Azure Active Directory (Azure AD) to support hybrid join, Configuration Manager configures Windows 10 or later devices for this functionality. For more information, see [How to configure hybrid Azure AD joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+### Automatically register new Windows 10 or later domain joined devices with Microsoft Entra ID
+
+When you configure Microsoft Entra ID to support hybrid join, Configuration Manager configures Windows 10 or later devices for this functionality. For more information, see [How to configure Microsoft Entra hybrid joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### Enable clients to use a cloud management gateway
 
@@ -501,6 +506,13 @@ Then, configure the following additional settings as needed:
 
 - **IPv6 prefixes if required for DirectAccess or other intervening network devices. Use a comma to specify multiple entries**: Enter the necessary IPv6 prefixes for wake-up proxy to function on your network.
 
+### Reduce network packets for Modern Standby devices 
+
+Windows 10 and later operating systems support a low power mode known as **Modern Standby**, and includes wake on lan enabled by default. Some Modern Standby-capable devices may constantly send DHCP and DNS registration packets when in low power state and the legacy method of enabling wake on lan is used by Configuration Manager.
+
+  Choose **No** to continue to use the legacy wake on lan settings (may cause DHCP/DNS registration packets on some Modern Standby devices)
+  
+  Choose **Yes** to allow Configuration Manager to detect if a device is Modern Standby capable and default to using Modern Standby wake on lan implementation.
 
 
 ## Remote tools  
@@ -865,13 +877,18 @@ Use this setting to specify the period of time for the previous setting. You can
 
 Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
 
-- Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
-
 - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
 - When this option is set, delta download is used for all Windows update installation files, not just express installation files.
 
   When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587-->
+
+> [!NOTE]
+>For Operating System that can support delta download (Win 10 Version 10.0.16299 or up), delta download endpoint will always get turned on regardless of the Client Agent Settings, and the port number will be honored even if Delta downloads not enabled.
+> 
+>If Delta Download disabled, only UUP update will do delta download, all other updates, regardless of if express or not, will all do full file download.
+> 
+>If Delta Download enabled, all updates will go with delta download code path regardless of if express or not, unless the only DP available is cloud DP.
 
 ### Port that clients use to receive requests for delta content
 
@@ -966,6 +983,15 @@ Use this setting to configure [Dynamic Update for Windows](https://techcommunity
 - **Yes** - Enables Dynamic Update.
 - **No** - Disables Dynamic Update.
 
+### <a name="bkmk_fserv"></a>Enable features introduced via servicing are off by default.
+
+<!--16834520-->
+To learn more about the settings: “Enable features introduced via servicing are off by default”, please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
+
+- **Not Configured** - The default value, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
+  - Enable features introduced via servicing are off by default on all supported versions of Windows 11 22621.1344 or later.
+- **Yes** - Enables Feature Update, then all features available in the latest monthly quality update installed will be on.
+- **No** - Disables Feature Update, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
 
 ## State Messaging
 

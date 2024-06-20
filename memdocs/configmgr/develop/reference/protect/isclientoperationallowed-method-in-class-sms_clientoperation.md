@@ -3,19 +3,19 @@ title: IsClientOperationAllowed Method
 titleSuffix: Configuration Manager
 description: checks whether a user has permission to execute an operation.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ec0c0fe9-f5ab-4ab4-8ce1-5bb3592c60c4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # IsClientOperationAllowed Method in Class SMS_ClientOperation
-The `IsClientOperationAllowed` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether a user has permission to execute an operation.   
+The `IsClientOperationAllowed` Windows Management Instrumentation (WMI) class method in Configuration Manager that checks whether a user has permission to execute an operation.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

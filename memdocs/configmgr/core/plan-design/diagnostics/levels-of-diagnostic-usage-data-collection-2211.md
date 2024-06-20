@@ -3,8 +3,8 @@ title: Diagnostic and usage data for 2211
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2211.
 ms.date: 12/05/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: gowdhamankarthikeyan
 ms.author: gokarthi
@@ -23,7 +23,7 @@ The following sections provide additional detail about data collected at each le
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
 > [!IMPORTANT]
-> Configuration Manager doesn't collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
+> Configuration Manager doesn't collect IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
 
 ## Level 1 - Basic
 
@@ -45,7 +45,7 @@ For Configuration Manager version 2211, this level includes the following data:
 
 - Count of Windows 10 and later devices by branch, build, and unique Active Directory forest
 
-- Count of clients joined to Azure Active Directory (Azure AD)
+- Count of clients joined to Microsoft Entra ID
 
 - Count of extended interoperability clients
 
@@ -55,9 +55,9 @@ For Configuration Manager version 2211, this level includes the following data:
 
 - Use of the bulk registration token
 
-- Count of clients by identity source and registration method. For example, Active Directory, Azure AD, or PKI client authentication certificate.
+- Count of clients by identity source and registration method. For example, Active Directory, Microsoft Entra ID, or PKI client authentication certificate.
 
-- Count of clients by OS type and version that are joined to Azure AD or hybrid-joined
+- Count of clients by OS type and version that are joined to Microsoft Entra ID or hybrid-joined
 
 - Count of clients by OS and system processor type
 
@@ -73,7 +73,7 @@ For Configuration Manager version 2211, this level includes the following data:
 
 - Count of clients piloting or using each co-management workload
 
-- Count of Azure AD applications and services connected to Configuration Manager
+- Count of Microsoft Entra applications and services connected to Configuration Manager
 
 - Cloud attach and detach actions
 
@@ -139,7 +139,7 @@ For Configuration Manager version 2211, this level includes the following data:
 
 - Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, time zone, and health status
 
-- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Azure Active Directory Services
+- Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Microsoft Entra services
 
 - Basic site system server information: site system roles used, internet and SSL status, OS, processors, physical or virtual machine, and usage of site server high availability
 
@@ -159,7 +159,7 @@ For Configuration Manager version 2211, this level includes the following data:
 
 - Count of crashes for Configuration Manager site server processes, and Watson signature ID, if available
 
-- Hash of key site attributes (site ID, SQL Server broker ID, and site exchange key)
+- ***[Updated]*** Hash of key site attributes (site ID, site codes, sites names, SQL Server broker ID, and site exchange key)
 
 - Status and health of the administration service
 
@@ -339,7 +339,7 @@ For Configuration Manager version 2211, this level includes the following data:
 
 ### Cloud services (Level 2)
 
-- Azure AD discovery statistics
+- Microsoft Entra discovery statistics
 
 - Count of collections synced to Azure Log Analytics
 
@@ -383,7 +383,7 @@ For Configuration Manager version 2211, this level includes the following data:
 
 - Collections without a deployment
 
-- Count of collections synchronized to Azure AD, including type and size
+- Count of collections synchronized to Microsoft Entra ID, including type and size
  
 - Statistics for collection member counts and collection rule counts
  

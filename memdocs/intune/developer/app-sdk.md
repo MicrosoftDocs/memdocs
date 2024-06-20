@@ -6,12 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
-ms.topic: overview
+ms.date: 12/04/2023
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 
 ms.reviewer: jamiesil
@@ -19,7 +18,7 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -48,10 +47,10 @@ IT administrators can remotely wipe corporate data from an Intune-managed app. T
 IT administrators can force web links in the app to be opened with the [Microsoft Edge app](../apps/manage-microsoft-edge.md). This functionality ensures that links that appear in a corporate environment are kept within the domain of Intune-managed apps.
 
 ### Enforce a PIN policy
-IT administrators can require the end-user to enter a PIN before accessing corporate data in the app. This ensures that the person using the app is the same person who initially signed in with their work or school account. When end users configure their PIN, the Intune App SDK uses Azure Active Directory to verify the credentials of end-users against the enrolled Intune account.
+IT administrators can require the end-user to enter a PIN before accessing corporate data in the app. This ensures that the person using the app is the same person who initially signed in with their work or school account. When end users configure their PIN, the Intune App SDK uses Microsoft Entra ID to verify the credentials of end-users against the enrolled Intune account.
 
 ### Require users to sign in with a work or school account for app access
-IT administrators can require users to sign in with their work or school account to access the app. The Intune App SDK uses Azure Active Directory to provide a single sign-on experience, where the credentials, once entered, are reused for subsequent logins. We also support authentication of identity management solutions federated with Azure Active Directory.
+IT administrators can require users to sign in with their work or school account to access the app. The Intune App SDK uses Microsoft Entra ID to provide a single sign-on experience, where the credentials, once entered, are reused for subsequent logins. We also support authentication of identity management solutions federated with Microsoft Entra ID.
 
 ### Check device health and compliance
 IT administrators can a check the health of the device and its compliance with Intune policies before end-users access the app. On iOS/iPadOS, this policy checks if the device has been jailbroken. On Android, this policy checks if the device has been rooted.
@@ -71,11 +70,6 @@ The multi-identity feature helps solve the data protection problem that organiza
 Many users with personal devices want to access corporate data without enrolling their personal device with a Mobile Device Management (MDM) provider. Since MDM enrollment requires global control of the device, users are often hesitant to give control of their personal device over to their company.
 
 App protection without device enrollment allows the Microsoft Intune service to deploy app protection policy to an app directly, without relying on a device management channel to deploy the policy.
-
-### On-demand application VPN connections with Citrix mVPN 
-You can manage devices and apps with a combination of Citrix XenMobile MDX and Microsoft Intune. This combination means that you can manage apps with Intune app protection policy while using Citrix's mVPN technology. The integration with Citrix is available for the Intune App SDK for iOS and Android, and with the Intune App Wrapping Tool for iOS (with the -citrix flag).
- 
-To learn more about Citrix MDX, see [About the MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [Citrix MDX app wrapper for iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html), and the [Citrix MDX app wrapper for Android](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).
 
 ## Next steps
 

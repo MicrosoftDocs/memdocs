@@ -3,8 +3,8 @@ title: Refresh an existing computer's OS
 titleSuffix: Configuration Manager
 description: You can use several methods in Configuration Manager to partition and format an existing computer and install a new OS on the computer.
 ms.date: 08/27/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

@@ -2,14 +2,14 @@
 title: Configuration Manager Result Sets
 description: Result sets of a query contain one or more instances that match the specified criteria of the SELECT statement in Configuration Manager. The result instances are either Generic class instances or instances of the class specified in the FROM clause.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: e27f8d92-e7b1-4bde-a75c-8c88f1275829
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ description: Learn how to validate a new location for a driver update using Vali
 title: ValidateNewPackageSource method in class SMS_DriverPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 31ec804c-7dfa-41f5-9bac-2b2368cee254
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

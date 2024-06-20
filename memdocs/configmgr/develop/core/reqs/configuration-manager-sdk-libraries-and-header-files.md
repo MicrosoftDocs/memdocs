@@ -3,13 +3,13 @@ title: SDK libraries
 titleSuffix: Configuration Manager
 description: Use Configuration Manager libraries when you write unmanaged applications.
 ms.date: 11/18/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 11/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -31,11 +29,11 @@ ms.collection:
 
 # Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates
 
-In Intune, you can use [Windows client templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Microsoft 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
+In Intune, you can use [Windows ADMX templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Microsoft 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
 
 In this scenario, you create an administrative template in Intune that updates Microsoft 365 on your devices.
 
-For more information on administrative templates, see [Windows client templates to configure group policy settings](administrative-templates-windows.md).
+For more information on administrative templates, go to [Windows ADMX templates to configure group policy settings](administrative-templates-windows.md).
 
 Applies to:
 
@@ -47,7 +45,7 @@ Applies to:
 
 Be sure to [enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can do this using group policy, or the Intune Office 2016 ADMX template:
 
-:::image type="content" source="./media/administrative-templates-update-office/admx-enable-automatic-updates.png" alt-text="In Microsoft Intune and Intune admin center, create an administrative ADMX template to Enable Automatic Updates for Office.":::
+:::image type="content" source="./media/administrative-templates-update-office/admx-enable-automatic-updates.png" alt-text="Screenshot that shows enabling Office automatic updates using an administrative template in Microsoft Intune.":::
 
 ## Set the Update Channel in the Intune administrative template
 
@@ -61,7 +59,7 @@ Be sure to [enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure
 2. Be sure to [assign the policy](device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy:
 
     - [Sync the policy in Intune](../remote-actions/device-sync.md)
-    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
+    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app-windows-10-or-later)  
 
 ## Check the Intune registry keys
 
@@ -105,7 +103,7 @@ At this point, the Intune policy is successfully applied to the device.
 
 3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they're set to.
 
-    Looking at the following example, you see `UpdateChannel` is set to `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, which is **monthly**:
+    Looking at the following example, you see `UpdateChannel` is set to `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, which is the **Current Channel** (monthly):
 
     :::image type="content" source="./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png" alt-text="Administrative template Office UpdateChannel registry key example":::
 

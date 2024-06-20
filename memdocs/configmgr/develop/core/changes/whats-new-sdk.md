@@ -3,13 +3,13 @@ title: SDK what's new
 titleSuffix: Configuration Manager
 description: Learn about the latest additions or changes to the Configuration Manager software development kit (SDK).
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

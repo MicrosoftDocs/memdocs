@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 03/04/2024
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: 
 searchScope:
  - User help
@@ -31,7 +29,9 @@ ms.collection:
 ---
 
 
-# Configure logging settings for AOSP
+# Configure logging settings for AOSP  
+
+**Applies to Microsoft Intune app for AOSP**    
 
 Logging enables the Microsoft Intune app to record actions that take place in the app. If you ever experience a problem in the app, and then report it, your support team will review the app logs. Verbose logging, which is the highest level of logging, is most helpful in these cases because it provides the most details about what happened in the app. 
 

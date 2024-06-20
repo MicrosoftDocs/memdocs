@@ -8,13 +8,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2022
+ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 # optional metadata
 
 #ROBOTS:
@@ -36,12 +34,19 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
+This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, and more.
+
+This feature applies to:
+
+- macOS
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
 
 > [!NOTE]
 > The user interface may not match the enrollment types in this article. The information in this article is correct. The user interface is being updated in an upcoming release.
+
+> [!TIP]
+> These settings use Apple's restriction settings. For more information on these settings, see [Apple's mobile device management settings site](https://support.apple.com/guide/deployment/restrictions-for-mac-depba790e53/1/web/1.0) (opens Apple's web site).
 
 ## Before you begin
 
@@ -169,7 +174,12 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
   - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.
 
      This feature applies to:  
-    - macOS 11.0 and newer  
+    - macOS 11.0 and newer
+  
+  - **Allow activation lock**: **Yes**, enables Activation Lock on supervised macOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+     This feature applies to:  
+    - macOS 10.15 or later  
 
 ### Settings apply to: Automated device enrollment  
 
@@ -276,6 +286,9 @@ This feature applies to:
 - Some settings apply to macOS 10.15 and newer.
 - These settings only apply on devices that have the privacy preferences profile installed before being upgraded.
 
+> [!NOTE]
+> When you allow apps using a policy, these apps aren't shown in System settings (Privacy + Security) on the device. Only apps manually allowed by end users are shown.
+ 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
@@ -289,7 +302,10 @@ This feature applies to:
 
   - **Identifier**: Enter the app bundle ID, or the installation file path of the process or executable. For example, enter `com.contoso.appname`.
 
-    To get the app bundle ID, open the Terminal app, and run the `codesign` command. This command identifies the code signature. So you can get the bundle ID and the code signature simultaneously.
+    To get the app bundle ID:
+
+    - Open the Terminal app, and run the `codesign` command. This command identifies the code signature. So you can get the bundle ID and the code signature simultaneously.
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
   - **Code requirement**: Enter the code signature for the application or process.
 
@@ -371,21 +387,21 @@ This feature applies to:
 
   - **Desktop folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Desktop folder.
+    - **Allow**: Allows the app to access files in the user's Desktop folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
 
   - **Documents folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Documents folder.
+    - **Allow**: Allows the app to access files in the user's Documents folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
 
   - **Downloads folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Downloads folder.
+    - **Allow**: Allows the app to access files in the user's Downloads folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
@@ -430,16 +446,26 @@ This feature applies to:
 
 ### Settings apply to: All enrollment types
 
-- **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
+The restricted apps settings don't prevent users from installing and opening specific apps. Instead, devices with restricted apps installed populate the **Devices with restricted apps** report in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Monitor**).
 
+- **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, users might have access to apps you assign, and built-in apps.
   - **Approved apps**: List the apps that users are allowed to install. Users must not install other apps. If users install apps that aren't allowed, then it's reported in Intune. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list.
+
+    If an app is installed that isn't on the approved apps list, then the restricted apps setting reports an error.
+
   - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune.
 
-- **Apps list**: **Add** apps to your list:
-  - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+    If an app is installed that's on the prohibited apps list, then the restricted apps setting reports an error.
 
-    To find the bundle ID of a macOS app, you can open the Terminal app, and use AppleScript (`osascript -e 'id of app "AppName"'`).
+- **Apps list**: **Add** apps to your list:
+  - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps.
+
+    To get the bundle ID:
+
+    - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+    - Open the Terminal app, and use AppleScript (`osascript -e 'id of app "AppName"'`).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
     To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL. You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 

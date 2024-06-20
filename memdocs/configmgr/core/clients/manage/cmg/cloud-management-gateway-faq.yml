@@ -3,13 +3,13 @@ metadata:
   title: CMG FAQ
   titleSuffix: Configuration Manager
   description: Use this article to answer frequently asked questions about the cloud management gateway (CMG).
-  author: banreet
-  ms.author: banreetkaur
+  author: baladelli  
+  ms.author: baladell
   manager: apoorvseth
-  ms.date: 04/08/2022
+  ms.date: 20/04/2024
   ms.topic: faq
-  ms.prod: configuration-manager
-  ms.technology: configmgr-client
+  ms.subservice: client-mgt
+  ms.service: configuration-manager
   ms.collection: highpri
 
 title: Frequently asked questions about the CMG
@@ -45,9 +45,14 @@ sections:
       - question: |
           Do I need to maintain or secure the Azure virtual machines?
         answer: |
-          No. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the VMs. You don't need to monitor these VMs. The Azure VMs for CMG aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The CMG is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
+          No. The CMG is a software as a service (SaaS) solution that extends your Configuration Manager environment into the cloud. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure PaaS secures and updates the VMs. You don't need to monitor these VMs. The Azure VMs for CMG aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). For more security specific information on the underlying PaaS solution that the CMG is built on, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
 
           Since the CMG acts as a proxy for client communication, it doesn't process, keep, or store any client data. The communication path over the internet always uses HTTPS. For greater security, configure the management point for HTTPS. Also configure the site option for clients to encrypt inventory and status messages. For more information, see [Plan for security: Signing and encryption](../../../plan-design/security/plan-for-security.md#signing-and-encryption).
+
+      - question: |
+          Do I need to update the Virtual machine if the image is deprecated?
+        answer: |
+          No. The CMG VM's are deployed using template and IIS are configured, this will be broken if you manually update the VM's. Product group will fix the issue through update or the current branch releases. 
           
       - question: |
           How can I ensure service continuity during service updates?
@@ -60,14 +65,14 @@ sections:
           If you already deployed [internet-based client management](../plan-internet-based-client-management.md) (IBCM), you can also deploy the CMG. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
           
       - question: |
-          Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?
+          Do the user accounts have to be in the same Microsoft Entra tenant as the tenant associated with the subscription that hosts the CMG cloud service?
         answer: |
           <!--SCCMDocs-pr issue #2873-->
           No, you can deploy CMG into any subscription that can host Azure cloud services.
           
           To clarify terms:
           
-          - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+          - The Microsoft Entra _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
           - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
           
           > [!TIP]
@@ -75,13 +80,13 @@ sections:
 
           This question is common in the following scenarios:  
           
-          - When you have distinct test and production Active Directory and Azure AD environments, but one single, centralized Azure hosting subscription.
+          - When you have distinct test and production Active Directory and Microsoft Entra environments, but one single, centralized Azure hosting subscription.
           
           - Your use of Azure has grown organically across different teams.
           
-          When you're using a Resource Manager deployment, onboard the Azure AD tenant associated with the subscription. This connection allows Configuration Manager to authenticate to Azure to create, deploy, and manage the CMG.  
+          When you're using a Resource Manager deployment, onboard the Microsoft Entra tenant associated with the subscription. This connection allows Configuration Manager to authenticate to Azure to create, deploy, and manage the CMG.  
           
-          If you're using Azure AD authentication for the users and devices managed over the CMG, onboard that Azure AD tenant. For more information on Azure services for cloud management, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md). When you onboard each Azure AD tenant, a single CMG can provide Azure AD authentication for multiple tenants, regardless of the hosting location.
+          If you're using Microsoft Entra authentication for the users and devices managed over the CMG, onboard that Microsoft Entra tenant. For more information on Azure services for cloud management, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md). When you onboard each Microsoft Entra tenant, a single CMG can provide Microsoft Entra authentication for multiple tenants, regardless of the hosting location.
           
           ### Example 1: One tenant with multiple subscriptions
 
@@ -89,7 +94,7 @@ sections:
 
           ### Example 2: Multiple tenants
 
-          In other words, your environment has more than one Azure AD. If you need to support user and device identities in both tenants, you need to attach the site to each tenant. This process requires an administrative account from each tenant to create the app registrations in that tenant. One site can then host CMG services in multiple tenants. You can create a CMG in any available subscription in either tenant. Devices that are joined or hybrid joined to either Azure AD could use a CMG.
+          In other words, your environment has more than one Microsoft Entra ID. If you need to support user and device identities in both tenants, you need to attach the site to each tenant. This process requires an administrative account from each tenant to create the app registrations in that tenant. One site can then host CMG services in multiple tenants. You can create a CMG in any available subscription in either tenant. Devices that are joined or hybrid joined to either Microsoft Entra ID could use a CMG.
           
           If the user and device identities are in one tenant, but the CMG's subscription is in another tenant, you need to attach the site to both tenants. Technically, the client app isn't needed for the second tenant that only has the CMG service. The client app only provides user and device authentication for clients that use the CMG service.<!-- SCCMDocs#1902 -->
           
@@ -110,16 +115,16 @@ sections:
           If you use Enhanced HTTP, you don't need to configure this setting. Clients continue to use HTTP when communicating directly to the CMG-enabled management point. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
           
       - question: |
-          What are the differences with client authentication between Azure AD and certificates?
+          What are the differences with client authentication between Microsoft Entra ID and certificates?
         answer: |
           <!-- MEMDocs#277 -->
-          You can use Azure AD or a client authentication certificate for devices to authenticate to the CMG service. You can also use Configuration Manager site-issued tokens for authentication.
+          You can use Microsoft Entra ID or a client authentication certificate for devices to authenticate to the CMG service. You can also use Configuration Manager site-issued tokens for authentication.
           
           If you manage traditional Windows clients with Active Directory domain-joined identity, they need PKI certificates to secure the communication channel. These clients can include any supported version of Windows. You can use all CMG-supported features, but software distribution is limited to devices only. Install the Configuration Manager client before the device roams onto the internet, or use token authentication.
           
-          You can also manage Windows 10 or later clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
+          You can also manage Windows 10 or later clients with modern identity, either hybrid or pure cloud domain-joined with Microsoft Entra ID. Clients use Microsoft Entra ID to authenticate rather than PKI certificates. Using Microsoft Entra ID is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
           
-          Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network.
+          Microsoft recommends joining devices to Microsoft Entra ID. Internet-based devices can use Microsoft Entra ID to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network.
           
           For more information, see [Configure client authentication](configure-authentication.md).
 
@@ -145,4 +150,4 @@ sections:
         answer: |
           No. You may have seen the following blog post and are wondering how it applies to Configuration Manager: [Update your applications to use Microsoft Authentication Library and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). This post is referring to any developed code that uses these authentication libraries. Configuration Manager has been using the Microsoft Graph API and Microsoft Authentication Library (MSAL) in some places for several years. All other components are updated in Configuration Manager version 2107 with the [update rollup](../../../../hotfix/2107/11121541.md). If you stay current with Configuration Manager versions, there's nothing else you need to do.
 
-          Some people confuse the information in this blog post with the application registrations in Azure AD that Configuration Manager uses for various cloud-attached services. These app registrations are cloud-based service principals that don't directly use these authentication libraries. If an Azure global administrator manually created the Configuration Manager app registrations in Azure AD, they can double-check that those registrations have permissions for the **Microsoft Graph** API. They don't need permissions for the _Azure AD Graph_ API. For more information, see [Manually register Azure AD apps](manually-register-azure-ad-apps.md).<!--10488538-->
+          Some people confuse the information in this blog post with the application registrations in Microsoft Entra ID that Configuration Manager uses for various cloud-attached services. These app registrations are cloud-based service principals that don't directly use these authentication libraries. If an Azure global administrator manually created the Configuration Manager app registrations in Microsoft Entra ID, they can double-check that those registrations have permissions for the **Microsoft Graph** API. They don't need permissions for the _Azure AD Graph_ API. For more information, see [Manually register Microsoft Entra apps](manually-register-azure-ad-apps.md).<!--10488538-->

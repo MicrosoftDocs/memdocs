@@ -3,14 +3,14 @@ title: SMS_DPStatusDetails Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_DPStatusDetails WMI class is an SMS Provider server class that represents distribution point status details.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a40a11e4-80b8-40d3-b64b-576b4c6ff6e5
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

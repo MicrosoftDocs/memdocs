@@ -3,8 +3,8 @@ title: Visualize content distribution status
 titleSuffix: Configuration Manager
 description: Monitor content distribution path and status in a graphical format, to help you more easily understand the status of your content package distribution.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: baladell 

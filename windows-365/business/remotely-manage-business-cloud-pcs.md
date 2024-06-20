@@ -7,12 +7,11 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/06/2023
+ms.date: 03/27/2024
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -36,7 +35,7 @@ You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 36
 
 ## Permissions
 
-To use these remote actions, you must have the appropriate Azure Active Directory (Azure AD) role-based access roles.
+To use these remote actions, you must have the appropriate Microsoft Entra role-based access roles.
 
 | Admin actions | Roles required for windows365.microsoft.com | Roles required for Microsoft 365 admin center |
 | --- | --- | --- |
@@ -87,6 +86,18 @@ The following remote actions are supported on windows365.microsoft.com and the M
 
 For Windows 365 Business users, it’s not possible to upgrade their Windows 10 Cloud PC to Windows 11 and retain their data and settings. Instead, to upgrade them to a Windows 11 Cloud PC, you must use the **Reset** remote action and choose Windows 11. Reset is a destructive action that removes all the user's data and settings from their Cloud PC.
 
+**Resize** ([preview](../public-preview.md)): The Resize remote action, which preserves user and disk data, lets you:
+
+- Upgrade the RAM, CPU, and storage size of a Cloud PC.
+- These operations don't require reprovisioning of the Cloud PC.
+
+You might consider resizing a Cloud PC when a user needs:
+
+- Higher RAM and VCPU cores to run CPU intensive applications.
+- More disk space for file storing.
+
+Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin. Contact your end users and have them save their work and sign out before you begin resizing.
+
 **Restart**: Restart a user’s Cloud PC on their behalf.
 
 ## Grant remote action permissions to another user
@@ -102,7 +113,7 @@ To assign a Windows 365 Administrator role to a user:
 5. Scroll down to the **Devices** section.
 6. Select **Windows 365 Administrator** > **Save changes**.
 
-You can also assign the Windows 365 Administrator role through the Microsoft 365 Admin Center and Azure Active Directory.
+You can also assign the Windows 365 Administrator role through the Microsoft 365 Admin Center and Microsoft Entra ID.
 
 ## Next steps
 

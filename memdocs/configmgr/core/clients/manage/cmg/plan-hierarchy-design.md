@@ -3,8 +3,8 @@ title: CMG hierarchy design
 titleSuffix: Configuration Manager
 description: Design how to use a cloud management gateway (CMG) in your Configuration Manager hierarchy.
 ms.date: 03/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -50,11 +50,11 @@ As clients roam onto the internet, they communicate with the CMG in the West US 
 > [!TIP]
 > You don't need to deploy more than one CMG for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slight latency that can occur with the cloud service, even when geographically distant.
 
-## Test environments
+## Multiple environments
 <!-- SCCMDocs#1225 -->
 Many organizations have separate environments for production, test, development, or quality assurance. When you plan your CMG deployment, consider the following questions:
 
-- How many Azure AD tenants does your organization have?
+- How many Microsoft Entra tenants does your organization have?
   - Is there a separate tenant for testing?
   - Are user and device identities in the same tenant?
 
@@ -63,7 +63,7 @@ Many organizations have separate environments for production, test, development,
 
 Configuration Manager's Azure service for **Cloud management** supports multiple tenants. Multiple Configuration Manager sites can connect to the same tenant. A single site can deploy multiple CMG services into different subscriptions. Multiple sites can deploy CMG services into the same subscription. Configuration Manager provides flexibility depending upon your environment and business requirements.
 
-For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](./cloud-management-gateway-faq.yml#do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service-)
+For more information, see the following FAQ: [Do the user accounts have to be in the same Microsoft Entra tenant as the tenant associated with the subscription that hosts the CMG cloud service?](./cloud-management-gateway-faq.yml#do-the-user-accounts-have-to-be-in-the-same-microsoft-entra-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service-)
 
 ## Boundary groups
 

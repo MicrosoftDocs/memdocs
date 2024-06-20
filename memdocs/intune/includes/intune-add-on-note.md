@@ -9,4 +9,4 @@ ms.author: dougeby
 ms.custom: include file
 ---
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).

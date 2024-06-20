@@ -3,8 +3,8 @@ title: Common issues when enabling TLS 1.2
 titleSuffix: Configuration Manager
 description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
 ms.date: 05/04/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: troubleshooting
 author: Banreet
 ms.author: banreetkaur
@@ -70,7 +70,7 @@ If the Intune onboarding dialog box appears when the console tries to connect to
 
 ## Configuration Manager console displays failure to sign in to Azure
 
-When you try to create applications in Azure Active Directory (Azure AD), if the Azure Services onboarding dialog box immediately fails after you select **Sign in**, [update the .NET Framework](enable-tls-1-2-server.md#bkmk_net), and enable strong cryptography. After you make the changes, remember to restart the computers.
+When you try to create applications in Microsoft Entra ID, if the Azure Services onboarding dialog box immediately fails after you select **Sign in**, [update the .NET Framework](enable-tls-1-2-server.md#bkmk_net), and enable strong cryptography. After you make the changes, remember to restart the computers.
 
 ## Configuration Manager cloud services and TLS 1.2
 

@@ -3,14 +3,14 @@ title: Delete an Object by Using WMI
 titleSuffix: Configuration Manager
 description: To delete a Configuration Manager object, call the SWbemObject object Delete_ method.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: e843aaf1-f278-447d-82b1-642f4286b65d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

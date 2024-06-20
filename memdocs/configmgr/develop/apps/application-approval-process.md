@@ -3,13 +3,13 @@ title: Application approval process
 titleSuffix: Configuration Manager
 description: Learn about the application approval process. See scenarios with code examples and view known issues.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -215,8 +215,8 @@ To approve application requests outside of the internal network, additional sett
 
 1. Enable Allow Configuration Manager cloud management gateway traffic in **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider** > **Properties**.
 1. Configure the [cloud management gateway](../../core/clients/manage/cmg/overview.md).
-1. Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
-1. Configure the following settings for this native app (client app) in Azure AD. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
+1. Enable [Microsoft Entra user Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
+1. Configure the following settings for this native app (client app) in Microsoft Entra ID. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
    - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.
     [![Azure portal showing redirect URI for the registered app](media/client-app-redirect-uri.png)](media/client-app-redirect-uri.png#lightbox)
   
@@ -250,7 +250,7 @@ Let's walk through the end-to-end scenario:
    - Check if the Admin Service is running. On a provider machine, go to **Task Manager** > **Details**. Make sure there's an active process called `sccmprovidergraph.exe`
    - Open the Configuration Manager Console, **Administration** > **Site Configuration** > **Servers and Site Systems Roles** > **SMS Provider**.  Right click on **Properties**. Make sure that `Allow Configuration Manager cloud management gateway traffic.` is checked when email approval feature is intended to use with Cloud Management Gateway; and not checked when the feature is used to approve or deny requests in the internal network.
 1. Links to approve or deny request through Cloud Management Gateway don't work.
-   - Verify that Azure AD User Discovery is enabled.
+   - Verify that Microsoft Entra user Discovery is enabled.
    - Make sure that e-mail address specified during application deployment belongs to your organization.
 1. Email isn't sent when a user requested an application.
    - Verify the email address is correct.

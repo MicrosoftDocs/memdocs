@@ -3,14 +3,14 @@ description: Learn how to synchronize the asset intelligence catalog outside the
 title: "Initiate a Synchronization"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 6b484801-89a1-4707-ac9f-46da72365fdf
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

@@ -3,14 +3,14 @@ description: Learn how to use the RiskyDeploymentStatusMessage method to send a 
 title: RiskyDeploymentStatusMessage Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cf2b7ba4-e61c-4c13-ac69-376f94a7e698
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

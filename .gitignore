@@ -10,6 +10,7 @@ _themes/
 
 # Visual Studio and VS Code files
 .vscode/*
+**/.vscode/**
 
 
 

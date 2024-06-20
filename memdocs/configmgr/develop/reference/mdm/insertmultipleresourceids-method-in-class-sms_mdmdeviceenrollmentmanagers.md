@@ -3,14 +3,14 @@ title: InsertMultipleResourceIds Method
 titleSuffix: Configuration Manager
 description: WMI class method, in Configuration Manager, inserts multiple resource IDs.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b0f727a9-9325-47f3-91e6-2b589033b37d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

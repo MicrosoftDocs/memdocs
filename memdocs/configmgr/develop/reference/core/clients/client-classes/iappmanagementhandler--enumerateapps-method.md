@@ -3,14 +3,14 @@ description: Learn how to run a synchronous discovery operation for the provided
 title: "IAppManagementHandler::EnumerateApps"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0e4b2ecd-ebc1-4a38-af80-e3d198d6a1a7
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -33,7 +33,7 @@ HRESULT EnumerateApps(
 
  Qualifiers: [in]  
 
- The user token. If it is null, the action is for computer. If it is not NULL, the action is for the user.  
+ The user token. If it's null, the action is for computer. If it isn't NULL, the action is for the user.  
 
  `pDetectResult`  
  Data type: `AppDeploymentTypeData`  
@@ -43,7 +43,7 @@ HRESULT EnumerateApps(
  .   
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully.  All other return values indicate failure.  

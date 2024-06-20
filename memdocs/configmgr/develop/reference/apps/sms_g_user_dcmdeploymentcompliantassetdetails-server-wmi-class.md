@@ -3,14 +3,14 @@ title: SMS_G_USER_DCMDeploymentCompliantAssetDetails Class
 description: The SMS_G_USER_DCMDeploymentCompliantAssetDetails Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents compliant asset details for a deployment.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4fcbf856-95b5-4ee8-8f8f-1d3ec0d6252e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -33,7 +33,7 @@ Class SMS_G_USER_DCMDeploymentCompliantAssetDetails : SMS_G_User
 ```  
 
 ## Methods  
- The `SMS_G_USER_DCMDeploymentCompliantAssetDetails` class does not define any methods.  
+ The `SMS_G_USER_DCMDeploymentCompliantAssetDetails` class doesn't define any methods.  
 
 ## Properties  
  `AssignmentID`  
@@ -70,7 +70,7 @@ Class SMS_G_USER_DCMDeploymentCompliantAssetDetails : SMS_G_User
 
  Qualifiers: [not_null, read]  
 
- Unique ID, supplied by Configuration Manager, that identifies a client resource. This ID is not unique across sites.  
+ Unique ID, supplied by Configuration Manager, that identifies a client resource. This ID isn't unique across sites.  
 
  `Rule_ID`  
  Data type: `UInt32`  

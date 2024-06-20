@@ -3,14 +3,14 @@ title: SMS_TaskSequence_ConditionOperator Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents an operator to use when evaluating task sequence condition operands.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9a648643-1b62-4776-a1f4-9699e72ecc2e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

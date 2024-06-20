@@ -3,8 +3,8 @@ title: New in version 1606
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1606 of Configuration Manager.
 ms.date: 12/30/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -101,7 +101,7 @@ On-premises mobile device management (MDM) now supports a new capability in Wind
 
 ### Manage apps from the Windows Store for Business
 
-The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase Windows apps for your organization, either individually or in volume. By connecting the store to Configuration Manager, you can synchronize the list of apps you've purchased with Configuration Manager, view these in the Configuration Manager console, and deploy them like you would any other app.
+The [Windows Store for Business](https://businessstore.microsoft.com/store/private-store) is where you can find and purchase Windows apps for your organization, either individually or in volume. By connecting the store to Configuration Manager, you can synchronize the list of apps you've purchased with Configuration Manager, view these in the Configuration Manager console, and deploy them like you would any other app.
 
 For details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 

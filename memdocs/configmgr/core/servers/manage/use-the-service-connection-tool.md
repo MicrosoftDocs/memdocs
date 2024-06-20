@@ -2,9 +2,9 @@
 title: Service connection tool
 titleSuffix: Configuration Manager
 description: Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information.
-ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 10/17/2023
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 ms.author: gokarthi
 author: gowdhamankarthikeyan
@@ -30,9 +30,12 @@ When you run the tool, it connects to the Configuration Manager cloud service, u
 
 - You run the tool from the service connection point and a computer that can connect to the internet. Each of these computers needs to have a x64-bit OS, and have the following components:
 
-  - Both the **Visual C++ Redistributable** x86 and x64 files. By default, Configuration Manager installs the x64 version on the computer that hosts the service connection point. To download this component, see [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784).
+  - Both the **Visual C++ Redistributable** x86 and x64 files. By default, Configuration Manager installs the x64 version on the computer that hosts the service connection point. This tool requires the Microsoft Visual C++ 2015-2019 redistributable package (14.28.29914.0), or later, on the computer that you are running it from. To download this component, see [Microsoft Visual C++ Redistributable latest supported downloads](/cpp/windows/latest-supported-vc-redist).
+    > [!NOTE]
+    > If upgrading from an out of support version of Configuration Manager prior to 2107, the tool requires the Visual C++ 2013 redistributable package (12.0.40660.0), which is available from the same [link](/cpp/windows/latest-supported-vc-redist).
 
-  - Starting in version 2107, this tool requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this tool requires .NET 4.5.2 or later. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
+  - This tool requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md).
+  - Starting in version 2309, this tool requires installation of the ODBC Driver 18 for SQL Server (x64). To download this component, see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
 - The account you use to run the tool needs the following permissions:
 

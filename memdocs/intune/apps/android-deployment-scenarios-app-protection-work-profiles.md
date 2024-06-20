@@ -8,13 +8,12 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 12/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
-ms.reviewer: chrisbal
+ms.reviewer: esalter
 
 # optional metadata
 
@@ -52,7 +51,7 @@ Intune app protection policies (APP) are data protection policies targeted to us
 
 Individual Android apps are enabled for APP in a few ways:
 
-1. **Natively integrated into Microsoft first-party apps**: Microsoft Office apps for Android, and a selection of other Microsoft apps, come with Intune APP built-in. These Office apps, such as Word, OneDrive, Outlook, and so on, don't need any more customization to apply policies. These apps can be installed by end users directly from Google Play Store.
+1. **Natively integrated into Microsoft first-party apps**: Microsoft 365 (Office) apps for Android, and a selection of other Microsoft apps, come with Intune APP built-in. These Office apps, such as Word, OneDrive, Outlook, and so on, don't need any more customization to apply policies. These apps can be installed by end users directly from Google Play Store.
 
 2. **Integrated into app builds by developers using the Intune SDK**: App developers can integrate the Intune SDK into their source code and recompile their apps to support Intune APP policy features.
 
@@ -97,17 +96,17 @@ You should consider how to use APP and multi-identity when working with Android 
 
 Intune APP and Android Enterprise personally-owned work profiles are complementary technologies that can be used together or separately. Architecturally, both solutions enforce policies at different layers – APP at the individual app layer, and work profile at the profile layer. Deploying apps managed with an APP policy to an app in a work profile is a valid and supported scenario. To use APP, work profiles, or a combination depends on your DLP requirements.
 
-Android Enterprise personally-owned Work profiles and APP complement each other's settings by providing additional coverage if one profile doesn't meet your organization's data protection requirements. For example, work profiles don't natively provide controls to restrict an app from saving to an untrusted cloud storage location. APP includes this feature. You may decide that DLP provided solely by the work profile is sufficient, and choose not to use APP. Or you may require the protections from a combination of the two.
+Android Enterprise personally-owned Work profiles and APP complement each other's settings by providing additional coverage if one profile doesn't meet your organization's data protection requirements. For example, work profiles don't natively provide controls to restrict an app from saving to an untrusted cloud storage location. APP includes this feature. You may decide that DLP provided solely by the work profile is sufficient, and choose not to use APP. Or, you can require the protections from a combination of the two.
 
 ### Suppress APP policy for Android Enterprise personally-owned work profiles
 
 You may need to support individual users who have multiple devices - unenrolled devices with MAM managed applications and managed devices with Android Enterprise personally-owned work profiles.
 
-For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For MAM managed applications, access controls including the PIN-to-launch behavior is enforced by APP. For enrolled devices, the APP PIN may be disabled to avoid requiring both a device PIN and an APP PIN. (APP PIN setting for [Android](../apps/app-protection-policy-settings-android.md#access-requirements). For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don't configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
+For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For MAM managed applications, access controls including the PIN-to-launch behavior are enforced by APP. For enrolled devices, the APP PIN may be disabled to avoid requiring both a device PIN and an APP PIN. (APP PIN setting for [Android](../apps/app-protection-policy-settings-android.md#access-requirements). For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don't configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
 
 ### Control multi-identity behavior in Android Enterprise personally-owned work profiles
 
-Office applications, such as Outlook and OneDrive, have "multi-identity" behavior. Within one instance of the application, the end user can add connections to multiple distinct accounts or cloud storage locations. Within the application, the data retrieved from these locations can be separate or merged. And, the user can context switch between personal identities (user@outlook.com) and organization identities (user@contoso.com).
+Office applications, such as Outlook and OneDrive, have "multi-identity" behavior. Within one instance of the application, the end user can add connections to multiple distinct accounts or cloud storage locations. Within the application, the data retrieved from these locations can be separate or merged. And, the user is able to context switch between personal identities (user@outlook.com) and organization identities (user@contoso.com).
 
 When using Android Enterprise personally-owned work profiles, you may want to disable this multi-identity behavior. When you disable it, badged instances of the app in the work profile can only be configured with an organization identity. Use the Allowed Accounts app configuration setting for supporting Office Android apps.
 
@@ -133,4 +132,4 @@ For example, customers in or have users in China can't use Android device manage
 Using Intune, both MAM and Android Enterprise personally-owned work profiles are available for your Android BYOD program. You can choose to use MAM and/or work profiles depending upon your business and usage requirements. In summary, use Android Enterprise personally-owned work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use MAM if you want to protect org data within applications.
 
 ## Next steps
-[Start using app protection policies](app-protection-policy.md), or [enroll your devices](../enrollment/android-enroll.md).
+[Start using app protection policies](app-protection-policy.md), or [enroll your devices](../fundamentals/deployment-guide-enrollment-android.md).

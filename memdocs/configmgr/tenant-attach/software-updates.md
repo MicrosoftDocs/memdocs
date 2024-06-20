@@ -2,10 +2,10 @@
 title: Software updates in the admin center
 description: Software updates for Configuration Manager devices from the admin center
 ms.date: 06/07/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
-author: Banreet
-ms.author: banreetkaur
+ms.subservice: core-infra
+ms.service: configuration-manager
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.manager: apoorvseth
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -15,6 +15,9 @@ ms.localizationpriority: high
 *Applies to: Configuration Manager (current branch)*
 
 The **Software updates** page in the admin center displays the status of software updates status for devices. You can review updates that have successfully installed, failed, or that are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting.
+
+> [!IMPORTANT]
+> The **Software updates** page shows status of software updates managed by Configuration Manager only. If the device is also co-managed and the Windows Update workload is managed by Intune, then the blade does not show the status of the software updates managed by Intune.
 
 ## Software updates page overview
 
@@ -45,7 +48,7 @@ Selecting an update from the **Software updates** page opens the details pane fo
 
 ### Software updates page options
 
-**Searching:** Searching is enabled for every category except for **Status time**. You can search for a string of words, a single word, or a partial word. For instance, searching for the string `compliant` would display results that contain the string `compliant` which would include `non-compliant`.
+**Searching:** Searching is enabled for every category except for **Status time**. You can search for a string of words, a single word, or a partial word. For instance, searching for the string `compliant` would display results that contain the string `compliant` that would include `non-compliant`.
 
 :::image type="content" source="./media/13035723-software-updates-filter.png" alt-text="This screenshot shows searching a feature on software updates page." lightbox="media/13035723-software-updates-filter.png":::
 
@@ -53,7 +56,7 @@ Selecting an update from the **Software updates** page opens the details pane fo
 
 **Refresh:** You can refresh to display the latest information from the on-premises server at any time.
 
-**Paging & Caching:** Paging is fully implemented with each page having a maximum of 25 software update entries. Each time you select **Next**, the data will be retrieved from the on-premises server. Once the data is retrieved the first time, it's cached for the browser to allow for quick page loading.
+**Paging & Caching:** Paging is fully implemented with each page having a maximum of 25 software update entries. Each time you select **Next**, the data is retrieved from the on-premises server. Once the data is retrieved the first time, it's cached for the browser to allow for quick page loading.
 
 **Filters:** You can filter the available software updates based on their **Status** values, **Classification** values, or both values.
 

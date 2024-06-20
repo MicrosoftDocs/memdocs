@@ -3,14 +3,14 @@ title: RemoveBoundary method in class SMS_BoundaryGroup
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the RemoveBoundary WMI class method removes boundaries from a boundary group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c10773f5-d34b-4c0d-928c-f214319540f6
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -5,15 +5,14 @@ title: Create Exchange Conditional Access policy
 titleSuffix: Microsoft Intune
 description: Configure Conditional Access for Exchange on-premises and legacy Exchange Online Dedicated in Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 11/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 
 # optional metadata
@@ -29,20 +28,19 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- conditional-access
 ---
 
-# Configure Exchange on-premises access for Intune
+# Configure Exchange on-premises access for Intune  
+
+> [!IMPORTANT]
+> Support for the on-premises Intune Exchange connector is ending on February 19, 2024. After this date, the Exchange connector will no longer sync with Intune. If you use the Exchange connector, we recommend taking one of the following actions before February 19, 2024:  
+   >* [Migrate your Exchange mailboxes to Exchange online](/exchange/hybrid-deployment/move-mailboxes)
+   >* [Set up hybrid modern authentication](/microsoft-365/enterprise/hybrid-modern-auth-overview)  
 
 This article shows you how to configure Conditional Access for Exchange on-premises based on device compliance.
 
-If you have an Exchange Online Dedicated environment and need to find out whether it is in the new or the legacy configuration, contact your account manager. To control email access to Exchange on-premises or to your legacy Exchange Online Dedicated environment, configure Conditional Access to Exchange on-premises in Intune.
-
-> [!IMPORTANT]
-> The information in this article applies to customers who are supported to use an Exchange Connector.
->
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
->
-> Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
+If you have an Exchange Online Dedicated environment and need to find out whether it is in the new or the legacy configuration, contact your account manager. To control email access to Exchange on-premises or to your legacy Exchange Online Dedicated environment, configure Conditional Access to Exchange on-premises in Intune.  
 
 ## Before you begin
 
@@ -63,14 +61,14 @@ Before you can configure Conditional Access, verify the following configurations
 
 - When Conditional Access policies are configured and targeted to a user, before a user can connect to their email, the **device** they use must be:
   - Either **enrolled** with Intune or is a domain joined PC.
-  - **Registered in Azure Active Directory**. Additionally, the client Exchange ActiveSync ID must be registered with Azure Active Directory.
+  - **Registered in Microsoft Entra ID**. Additionally, the client Exchange ActiveSync ID must be registered with Microsoft Entra ID.
 
-- Azure AD Device Registration Service (DRS) is activated automatically for Intune and Microsoft 365 customers. Customers who have already deployed the ADFS Device Registration Service don't see registered devices in their on-premises Active Directory. **This does not apply to Windows PCs and devices**.
+- Microsoft Entra Device Registration Service (DRS) is activated automatically for Intune and Microsoft 365 customers. Customers who have already deployed the ADFS Device Registration Service don't see registered devices in their on-premises Active Directory. **This does not apply to Windows PCs and devices**.
 
 - **Compliant** with device compliance policies deployed to that device.
 
 - If the device doesn't meet Conditional Access settings, the user is presented with one of the following messages when they sign in:
-  - If the device isn't enrolled with Intune, or isn't registered in Azure Active Directory, a message displays with instructions about how to install the Company Portal app, enroll the device, and activate email. This process also associates the device's Exchange ActiveSync ID with the device record in Azure Active Directory.
+  - If the device isn't enrolled with Intune, or isn't registered in Microsoft Entra ID, a message displays with instructions about how to install the Company Portal app, enroll the device, and activate email. This process also associates the device's Exchange ActiveSync ID with the device record in Microsoft Entra ID.
   - If the device isn't compliant, a message displays that directs the user to the Intune Company Portal website, or the Company Portal app. From the company portal, they can find information about the problem and how to remediate it.
 
 ### Support for mobile devices
@@ -78,30 +76,33 @@ Before you can configure Conditional Access, verify the following configurations
 - **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
+- **EAS mail clients on Android Enterprise Personally-Owned Work Profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on [Android Enterprise personally owned work profile](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles) devices. For Conditional Access to work with Android Enterprise personally owned work profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app, you can set up device-based Conditional Access.
+
 - **EAS mail clients on Android device administrator** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
-- **EAS mail clients on Android Enterprise Personally-Owned Work Profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on [Android Enterprise personally-owned work profile](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles) devices. For Conditional Access to work with Android Enterprise Personally-Owned Work Profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app, you can set up device-based Conditional Access.
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-#### To set up Conditional Access for Android Enterprise Personally-Owned Work Profile devices
+#### To set up Conditional Access for Android Enterprise personally owned work profile devices
 
   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
-  2. Deploy the Gmail or Nine Work app as **Required**.
+  2. Deploy the Gmail or Nine Work app as **Required**.  
 
-  3. Select **Devices** > **Configuration profiles** > **Create profile**, enter **Name** and **Description** for the profile.
+  3. Go to **Devices** > **Configuration** and choose **Create*. 
+  4. Enter a **Name** and **Description** for the profile.  
 
-  4. Select **Android enterprise** in **Platform**, select **Email** in **Profile type**.
+  5. Select **Android enterprise** in **Platform**, select **Email** in **Profile type**.
 
-  5. Configure the [email profile settings](/intune/configuration/email-settings-android-enterprise#android-enterprise).
+  6. Configure the [email profile settings](/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
-  6. When you're done, select **OK** > **Create** to save your changes.
+  7. When you're done, select **OK** > **Create** to save your changes.
 
-  7. After you create the email profile, [assign it to groups](/intune/device-profile-assign).
+  8. After you create the email profile, [assign it to groups](/intune/device-profile-assign).
 
-  8. Set up [device-based conditional access](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+  9. Set up [device-based conditional access](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
-> Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Microsoft Entra Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### Support for PCs
 
@@ -154,13 +155,13 @@ Before you can use the following procedure to set up Exchange on-premises access
    > [!div class="mx-imgBorder"]
    > ![Example screenshot of the Edit Organization workflow for advanced settings](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
 
-   - For **Unmanaged device access**, set the global default rule for access from devices that are not affected by Conditional Access or other rules:
+   - For **Unmanaged device access**, set the global default rule for access from devices that aren't affected by Conditional Access or other rules:
 
      - **Allow access** - All devices can access Exchange on-premises immediately. Devices that belong to the users in the groups you configured as included in the previous procedure are blocked if they're later evaluated as not compliant with the compliant policies or not enrolled in Intune.
 
      - **Block access** and **Quarantine** – All devices are immediately blocked from accessing Exchange on-premises initially. Devices that belong to users in the groups you configured as included in the previous procedure get access after the device enrolls in Intune and is evaluated as compliant.
 
-       Android devices that *do not* run Samsung Knox standard don't support this setting and are always blocked.
+       This setting is supported on Android devices that run Samsung Knox standard. Other Android devices don't support this setting and are always blocked.  
 
    - For **Device platform exceptions**, select **Add**, and then specify details as needed for your environment.
 

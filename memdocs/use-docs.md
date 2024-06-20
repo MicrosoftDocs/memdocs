@@ -1,21 +1,21 @@
 ---
-title: How to use Microsoft Endpoint Manager documentation
-titleSuffix: Microsoft Endpoint Manager
-description: Learn how to search, provide feedback about, and contribute to Microsoft Endpoint Manager documentation. This documentation also covers Configuration Manager, Intune, and Autopilot.
+title: How to use Microsoft Intune documentation
+titleSuffix: 
+description: Learn how to search, provide feedback about, and contribute to Microsoft Intune product family documentation. This documentation also covers Configuration Manager, Intune, Endpoint analytics, and Autopilot.
 ms.date: 11/11/2021
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.topic: how-to
 ms.localizationpriority: high
-author: aczechowski
-ms.author: aaroncz
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.collection: highpri
 ---
 
-# How to use Microsoft Endpoint Manager documentation
+# How to use Microsoft Intune documentation
 
-This article provides resources and tips for using the Microsoft Endpoint Manager documentation library. It applies to Configuration Manager, Microsoft Intune, and Autopilot, and covers the following areas:
+This article provides resources and tips for using the Microsoft Intune product family documentation library. It applies to Configuration Manager, Microsoft Intune, Endpoint analytics, and Autopilot, and covers the following areas:
 
 - How to search
 - Submitting doc bugs, enhancements, questions, and new ideas
@@ -25,7 +25,7 @@ This article provides resources and tips for using the Microsoft Endpoint Manage
 For general help and support, see:
 
 - [Find help for Configuration Manager](configmgr/core/understand/find-help.md)
-- [Get support in Microsoft Endpoint Manager](get-support.md)
+- [Get support in Microsoft Intune](get-support.md)
 
 > [!TIP]
 > Also visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
@@ -76,7 +76,7 @@ With many modern web browsers, you can create a custom search engine. Use this f
     - **Keyword**: Specify a short term to use in the address bar to activate this search engine. For example, `memdocs`.
     - **URL with `%s` in place of query**: For example,
 
-        ```url
+        ```https
         https://learn.microsoft.com/search/index?search=%s&scope=ConfigMgr
         ```
 
@@ -117,7 +117,7 @@ If you create an issue for something not related to an article, Microsoft will c
 
 - Product feedback for [Configuration Manager](configmgr/core/understand/product-feedback.md) or [Intune](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472)
 - [Product questions](/answers/products/enterprise-mobility-security)
-- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Endpoint Manager](get-support.md)
+- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Intune](get-support.md)
 
 To share feedback on the Microsoft Learn platform itself, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
 
@@ -134,7 +134,7 @@ To receive notifications when content changes in the documentation library, use 
 
         This example results in the following RSS link:
 
-        ```url
+        ```https
         https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%22%2B%22learn+what%27s+new%22&locale=en-us&facet=&%24filter=scopes%2Fany%28t%3A+t+eq+%27Intune%27%29
         ```
 
@@ -159,7 +159,7 @@ To receive notifications when content changes in the documentation library, use 
 
 ## Contribute
 
-The Microsoft Endpoint Manager documentation library, like most Microsoft technical documentation, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see our [contributor guide](/contribute/). The only prerequisite is to create a [GitHub account](https://github.com/join).
+The Microsoft Intune product family documentation library, like most Microsoft technical documentation, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see our [contributor guide](/contribute/). The only prerequisite is to create a [GitHub account](https://github.com/join).
 
 ### Basic steps to contribute
 

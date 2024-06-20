@@ -3,8 +3,8 @@ title: Upgrade clients
 titleSuffix: Configuration Manager
 description: Get information about how to upgrade clients in Configuration Manager.
 ms.date: 07/23/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

@@ -3,8 +3,8 @@ title: Technical Preview 1706
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview version 1706 for Configuration Manager.
 ms.date: 09/15/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -258,7 +258,7 @@ The prerequisites for a connection to Upgrade Readiness are unchanged from those
 **Prerequisites**
 - In order to add the connection, your Configuration Manager environment must first configure a [service connection point](../servers/deploy/configure/about-the-service-connection-point.md) in an [online mode](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
 - Register Configuration Manager as a "Web Application and/or Web API" management tool, and get the [client ID from this registration](/azure/active-directory/develop/quickstart-register-app).
-- Create a client key for the registered management tool in Azure Active Directory.
+- Create a client key for the registered management tool in Microsoft Entra ID.
 - In the Azure portal, provide the registered web app with permission to access OMS.
 
 > [!IMPORTANT]       
@@ -273,8 +273,8 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 
 3. On the **App** page, specify your **Azure environment** (the technical preview supports only the Public Cloud). Then, click **Import** to open the **Import Apps** window.
 
-4. In the **Import Apps** window, specify details for a web app that already exists in your Azure AD.
-    - Provide a friendly name for the Azure AD Tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
+4. In the **Import Apps** window, specify details for a web app that already exists in your Microsoft Entra ID.
+    - Provide a friendly name for the Microsoft Entra tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
     - Click **Verify**, and if successful, click **OK** to continue.
 
 5.  On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
@@ -288,24 +288,24 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 In this release, we've added two new client settings to Configuration Manager. You'll find these in the **Cloud Services** section.  These settings give you the following capabilities:
 
 - Control which Configuration Manager clients can access a configured cloud management gateway.
-- Automatically register Windows 10 domain-joined Configuration Manger clients with Azure Active Directory.
+- Automatically register Windows 10 domain-joined Configuration Manger clients with Microsoft Entra ID.
 
 These new settings help you accomplish the capabilities described in the [Configuration Manager 1705 Technical Preview](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management).
 
 ### Before you start
 
-You must have installed and configured Azure AD Connect between your on-premises Active Directory and your Azure AD tenant.
+You must have installed and configured Microsoft Entra Connect between your on-premises Active Directory and your Microsoft Entra tenant.
 
 If you remove the connection, devices are not un-registered, but no new devices will register.
 
 ### Try it out!
 
 1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](../clients/deploy/configure-client-settings.md).
-   - **Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
+   - **Automatically register new Windows 10 domain joined devices with Microsoft Entra ID** – Set to **Yes** (default), or **No**.
    - **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
 2. Deploy the client settings to the required collection of devices.
 
-To confirm that the device is joined to Azure AD, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Azure AD joined.
+To confirm that the device is joined to Microsoft Entra ID, run the command **dsregcmd.exe /status** in a command prompt window. The **AzureAdjoined** field in the results will show **YES** if the device is Microsoft Entra joined.
 
 ## Create and run PowerShell scripts from the Configuration Manager console
 <!-- 1236459 -->

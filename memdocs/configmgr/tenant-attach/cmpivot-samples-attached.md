@@ -3,8 +3,8 @@ title: Tenant attached CMPivot sample scripts
 titleSuffix: Configuration Manager
 description: Script samples for CMPivot for Microsoft Intune tenant attached devices.
 ms.date: 01/25/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: sample
 author: Banreet
 ms.author: banreetkaur

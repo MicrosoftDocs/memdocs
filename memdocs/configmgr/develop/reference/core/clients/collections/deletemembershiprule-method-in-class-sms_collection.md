@@ -3,14 +3,14 @@ title: DeleteMembershipRule Method
 titleSuffix: Configuration Manager
 description: The DeleteMembershipRule Windows Management Instrumentation class method, in Configuration Manager, deletes a membership rule from the collection.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7efdeb19-a509-454a-af9b-dec12ea9a155
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

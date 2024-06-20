@@ -5,10 +5,10 @@ description: Review Microsoft 365 Apps client information from the Office 365 Cl
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
-ms.date: 03/05/2021
+ms.date: 04/05/2024
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
@@ -20,6 +20,9 @@ ms.collection: tier3
 
 > [!Note]
 > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+
+> [!Note]
+> Starting on April 1, 2025, office 365 client management dashboard add-in support statement will be removed from dashboard
 
 Beginning in Configuration Manager version 1802, you can review Microsoft 365 Apps client information from the Office 365 Client Management dashboard. The Office 365 client management dashboard displays a list of relevant devices when graph sections are selected. <!--1357281 -->
 
@@ -116,16 +119,6 @@ By default, the scanning agent looks at the most recently used (MRU) files list 
 - Macro-enabled Office file formats, such as Excel macro-enabled workbooks (.xlsm) or Word macro-enabled document (.docm)  
 - Older Office formats that don't indicate whether there's macro content. For example, an Excel 97-2003 workbook (.xls).
 
-If you need more detailed information about macro compatibility, deploy the **Readiness Toolkit for Office** to analyze the code within the macro files. It checks if there are any potential compatibility concerns. For example, the file uses a function that changed in a more recent version of Office. After you run the Readiness Toolkit for Office and select the option for **Most recently used Office documents and installed add-ins on this computer**, or use the `-mru` flag in the command line, the results can be picked up by Configuration Manager's hardware inventory agent. This additional data enhances the device readiness calculation. For more information, see [Use the Readiness Toolkit for Office to assess application compatibility for Microsoft 365 Apps](/deployoffice/readiness-toolkit-application-compatibility-microsoft-365-apps).
-
-Note that the Readiness Toolkit does not need to be installed on every target device in order to carry out the scan. You can use the sample command line option below to scan each desired device.  The output flag is required, but the files will not be used to generate the results in the dashboard, so any valid location can be selected.
-
-```cmd
-ReadinessReportCreator.exe -mru -output c:\temp -silent
-```
-
-For more information, see [Getting readiness information for multiple users in an enterprise](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
-
 ## <a name="bkmk_readiness-dash"></a> Microsoft 365 Apps readiness dashboard
 
 *(Introduced in version 1906)*
@@ -172,6 +165,9 @@ Devices that might be at risk for compatibility issues are marked as **Needs rev
 
 ### Add-in information
 
+> [!Note]
+> Starting on April 1, 2025, office 365 client management dashboard add-in support statement will be removed from dashboard
+
  On each device, an inventory of all installed add-ins is collected. The inventory is then compared with the information Microsoft has about the add-in performance on Microsoft 365 Apps. If an add-in is found which is likely to cause issues after upgrading, then all devices with the add-in are flagged for review.
 
 ### Macro information
@@ -181,12 +177,7 @@ Configuration Manager looks at the most recently used files on each device. It c
 - Macro-enabled Office file formats.
 - Older Office formats, which don't indicate if there's macro content.
 
-This report can be used to identify which devices have recently used files which may contain macros. The **Readiness Toolkit for Office** can then be deployed using Configuration Manager to scan any devices where more detailed information is needed, and check if there are any potential compatibility concerns. For example, if the file uses a function that changed in a more recent version of Microsoft 365 Apps.
-
-For more information about how to carry out the scan, see [Detailed macro readiness](#bkmk_ort).
-
-> [!TIP]
-> Macro inventory is populated by default based on the document extensions in the MRU. Macro compatibility and macro status are populated once the **Readiness Toolkit for Office** scan runs on the device.
+This report can be used to identify which devices have recently used files that may contain macros.
 
 ## <a name="bkmk_pilot"></a> Office 365 Pilot and Health dashboard
 <!--4488272, 4488301-->
@@ -248,9 +239,6 @@ This tile summarizes devices that have issues with add-ins, macros, or both.
 - Runtime errors: An error happened while the macro was running. These errors can be dependent on the inputs so may not always occur.
 - Compile errors: The macro didn't compile correctly so it won't attempt to run.
 - Multiple issues: The macro has more than one of the above issues.
-
-> [!NOTE]
-> Macro inventory is populated by data from the Readiness Toolkit for Office and recently used data files. Macro health is populated by health data. Due to the different data sources, it's possible for the macro health status to be **Needs review** when the macro inventory is **Not scanned**. <!--5922845-->
 
 ### Known issues
 

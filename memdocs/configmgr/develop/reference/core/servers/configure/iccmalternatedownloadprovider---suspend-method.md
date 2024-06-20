@@ -3,14 +3,14 @@ title: "ICcmAlternateDownloadProvider : Suspend"
 titleSuffix: Configuration Manager
 description: "The ICcmAlternateDownloadProvider::Suspend method, in Configuration Manager, instructs the provider to suspend a given job."
 ms.date: 07/25/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5d6ef823-08b2-4e17-8e59-6dfc085f5064
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -40,7 +40,7 @@ HRESULT Suspend(
 >  The provider must support Suspend being called on a job that is suspended. In that case, it should simply do nothing and not report an error. An error should be returned if the job is not found or if suspension failed.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

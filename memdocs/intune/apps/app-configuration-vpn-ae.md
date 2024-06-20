@@ -8,12 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 12/12/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -29,6 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - Android
+- FocusArea_Apps_Configure
 ---
 
 # Use a VPN and per-app VPN policy on Android Enterprise devices in Microsoft Intune
@@ -68,7 +68,7 @@ This article shows you how to create a per-app VPN and VPN app configuration pol
 
 - The Configuration designer and JSON data can successfully use certificate-based authentication. If VPN authentication requires client certificates, then create the certificate profiles before you create the VPN policy. The VPN app configuration policies use the values from the certificate profiles.
 
-  Android Enterprise personally-owned work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
+  Android Enterprise personally owned work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Per-app VPN overview
 

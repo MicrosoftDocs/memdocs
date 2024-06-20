@@ -3,13 +3,13 @@ title: How to set up the admin service
 titleSuffix: Configuration Manager
 description: Use the steps in this article to set up the administration service on your SMS Provider
 ms.date: 12/07/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

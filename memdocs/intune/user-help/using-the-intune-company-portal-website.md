@@ -7,12 +7,10 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2022
+ms.date: 05/21/2024
 ms.topic: end-user-help
-ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
-ms.technology:
 ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 searchScope:
  - User help
@@ -22,7 +20,7 @@ searchScope:
 ROBOTS:   
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: aanavath
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -39,9 +37,11 @@ Once you're signed in, you can see your enrolled devices and:
 
 * [View and manage work apps](manage-apps-cpweb.md): Search and filter through available work apps, including required and already-installed apps.   
 
-* [Store recovery key](store-recovery-key.md): Store and rotate the FileVault key for an encrypted macOS device.   
+* [Store recovery key for macOS](store-recovery-key.md): Store and rotate the FileVault key for an encrypted Mac.   
 
-* [Get recovery key](get-recovery-key-cpweb.md): Retrieve the stored FileVault key so that you can get back into your locked macOS device.   
+* [Get recovery key for macOS](get-recovery-key-cpweb.md): Retrieve the stored FileVault key so that you can get back into a locked Mac.     
+
+* [Get recovery key for Windows](get-recovery-key-windows.md): Retrieve the stored BitLocker key so that you can get back into a locked PC. 
 
 * [Remotely lock a device](remote-lock-your-device-cpwebsite.md): Lock a lost or stolen device so no one else can access it.  
 

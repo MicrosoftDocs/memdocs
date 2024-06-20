@@ -3,14 +3,14 @@ title: CCM_ProgramsManager Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the CCM_ProgamsManager WMI class is a public client class that manages a specified software distribution program.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e31c3acb-6d31-43c9-a760-06d59c49e5b3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

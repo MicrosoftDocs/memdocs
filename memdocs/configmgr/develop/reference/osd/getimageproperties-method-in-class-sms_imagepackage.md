@@ -3,14 +3,14 @@ title: GetImageProperties Method in SMS_ImagePackage
 titleSuffix: Configuration Manager
 description: Reads all metadata from the specified .wim source file for an image to an XML string.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5a94ccee-0516-41f0-b947-52d4c8f27d55
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

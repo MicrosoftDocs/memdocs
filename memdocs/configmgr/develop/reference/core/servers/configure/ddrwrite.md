@@ -3,14 +3,14 @@ title: DDRWrite
 titleSuffix: Configuration Manager
 description: The`DDRWrite function, in Configuration Manager, writes the data discovery records (DDRs) to a file.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 818ce2a2-5f8d-44c4-80f8-9683074c2508
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -31,7 +31,7 @@ HRESULT DDRWrite();
 ## Return Values  
  If the function succeeds, the return value is S_OK.  
 
- If the [DDRNew](../../../../../develop/reference/core/servers/configure/ddrnew.md) function has not been called or a file error occurs, the return value is S_FALSE.  
+ If the [DDRNew](../../../../../develop/reference/core/servers/configure/ddrnew.md) function hasn't been called or a file error occurs, the return value is S_FALSE.  
 
 ## Remarks  
  Calling `DDRWrite` completes the DDR and writes the record to a binary file. The DDR must be copied to the Data Discovery Manager (DDM) inbox on the site server at a later time (SMS\Inboxes\Auth\Ddm.box).  

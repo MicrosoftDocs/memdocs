@@ -2,14 +2,14 @@
 description: Learn how to use report action in the configuration manager to display reports in the configuration manager console.
 title: Configuration Manager Report Action
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 47806f0a-362a-4255-bbd5-af38146a8880
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

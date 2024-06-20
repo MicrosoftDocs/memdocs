@@ -1,19 +1,15 @@
 items:
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Microsoft Intune
+  tocHref: /mem/
+  topicHref: /mem/index
   items:
-    - name: Endpoint management
-      tocHref: /mem/
-      topicHref: /mem/
-      items:
-      - name: Intune
-        tocHref: /mem/intune/
-        topicHref: /mem/intune/
-        items:
-        - name: Apps
-          tocHref: /mem/intune/fundamentals/
-          topicHref: /mem/intune/apps/
-        - name: Apps
-          tocHref: /mem/intune/protect/
-          topicHref: /mem/intune/apps/
+  - name: Intune service
+    tocHref: /mem/intune/
+    topicHref: /mem/intune/
+    items:
+    - name: Apps
+      tocHref: /mem/intune/fundamentals/
+      topicHref: /mem/intune/apps/
+    - name: Apps
+      tocHref: /mem/intune/protect/
+      topicHref: /mem/intune/apps/

@@ -1,12 +1,13 @@
 ---
 title: include file
 description: include file
-author: miepping
+author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/10/2023
-ms.author: miepping
+ms.date: 02/27/2024
+ms.author: mandia
 ms.custom: include file
+ms.reviewer: miepping
 ---
 
 <!-- This include file is used in the Apple Enterprise SSO deployment guide docs. -->
@@ -22,5 +23,5 @@ To determine the correct SSO extension type for your scenario, use the following
 ---
 | Microsoft Enterprise SSO plug-in for Apple Devices | Single sign-on app extension with Kerberos |
 | --- | --- |
-| Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type |
-| Supports the following apps: <br/> - Microsoft 365 <br/> - Apps, websites or services integrated with Azure AD | Supports the following apps: <br/> - Apps, websites or services integrated with AD <br/> <br/> |
+| Uses the **Microsoft Entra ID** SSO app extension type | Uses the **Kerberos** SSO app extension type |
+| Supports the following apps: <br/> - Microsoft 365 <br/> - Apps, websites or services integrated with Microsoft Entra ID | Supports the following apps: <br/> - Apps, websites or services integrated with AD <br/> <br/> |

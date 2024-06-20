@@ -4,7 +4,7 @@ description: include file
 author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 09/14/2022
+ms.date: 02/28/2023
 ms.author: mandia
 ms.custom: include file
 ms.collection:
@@ -12,12 +12,12 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-<!-- 9.8.2022 - mandia: New text added so this include file applies to Windows 8.1-->
+<!-- 2.28.2023 - mandia: Modified existing text so it states support is ended.-->
 
 > [!IMPORTANT]
-> On October 22, 2022, Microsoft Intune is ending support for devices running Windows 8.1. After that date, technical assistance and automatic updates on these devices won't be available. For more information, go to [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
+> On October 22, 2022, Microsoft Intune ended support for devices running Windows 8.1. Technical assistance and automatic updates on these devices aren't available.
 >
-> If you currently use Windows 8.1, then we recommend moving to Windows 10/11 devices. Microsoft Intune has built-in security and device features that manage Windows 10/11 client devices. For more information, go to [End of support for Windows 7 and Windows 8.1](https://www.microsoft.com/windows/end-of-support).
+> If you currently use Windows 8.1, then we recommend moving to Windows 10/11 devices. Microsoft Intune has built-in security and device features that manage Windows 10/11 client devices.
 
 <!-- 9.8.2022 - mandia: The following was the original text of this include file. Replaced this text since Win10 Mobile and Windows Phone support ended in 2019.
 

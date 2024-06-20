@@ -3,14 +3,14 @@ title: RemoveMemberships Method
 titleSuffix: Configuration Manager
 description: The RemoveMemberships Windows Management Instrumentation (WMI) class method is a batch operation to remove objects from categories.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c4b9f471-d878-49bb-8244-c5004e974e83
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -35,14 +35,14 @@ SInt32 RemoveMemberships(
 
  Qualifiers: [in]  
 
- The array of object ids.  
+ The array of object IDs.  
 
  `ObjectTypeIDs`  
  Data type: `UInt32` Array  
 
  Qualifiers: [in]  
 
- The array of corresponding object type id.  
+ The array of corresponding object type ID.  
 
  `CategoryIDs`  
  Data type: `String` Array  

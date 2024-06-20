@@ -7,12 +7,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/28/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -20,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: davidra
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,6 +40,7 @@ Microsoft Intune will export reports using the following Microsoft Graph API end
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
+https://graph.microsoft.com/v1.0/deviceManagement/reports/exportJobs
 ```
 
 ## Example devices report request and response
@@ -56,7 +56,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
     "reportName": "Devices", 
     "filter":"(OwnerType eq '1')", 
     "localizationType": "LocalizedValuesAsAdditionalColumn", 
-    "format": "json"
+    "format": "json",
     "select": [ 
         "DeviceName", 
         "managementAgent", 

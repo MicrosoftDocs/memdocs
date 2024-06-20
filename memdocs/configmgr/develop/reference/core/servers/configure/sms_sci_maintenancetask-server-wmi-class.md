@@ -3,14 +3,14 @@ description: Learn how to use the SMS_SCI_MaintenanceTask class to represent a s
 title: SMS_SCI_MaintenanceTask Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fbeffc66-0ae1-4bb8-bc44-5209d5e9287a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

@@ -3,14 +3,14 @@ title: Objects Overview
 titleSuffix: Configuration Manager
 description: The Configuration Manager objects are instances of Configuration Manager-specific WMI classes managed by the SMS Provider.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: f3ddf4dc-2acd-4d59-be88-b2296d9333cd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

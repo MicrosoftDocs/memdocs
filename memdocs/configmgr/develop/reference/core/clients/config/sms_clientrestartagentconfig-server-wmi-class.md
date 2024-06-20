@@ -3,14 +3,14 @@ title: SMS_ClientRestartAgentConfig Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents the settings and properties used by the client restart agent.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: aef07b1f-8fde-4c19-9fbc-b121a2df68e0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

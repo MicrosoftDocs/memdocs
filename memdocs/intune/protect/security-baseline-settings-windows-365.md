@@ -7,12 +7,11 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/13/2022
+ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
 ms.assetid:
 zone_pivot_groups: windows-365-baseline-versions
 
@@ -46,9 +45,9 @@ When a new version of a baseline becomes available, it replaces the previous ver
 To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
 
 <!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
-**Windows 365 Cloud PC security baseline version 2110**
+**Windows 365 Cloud PC security baseline version 2110**:
 
 ## Above Lock
 
@@ -59,7 +58,6 @@ To learn more about using security baselines, see [Use security baselines](secur
 - **Block display of toast notifications**:  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067101)  
-
 
 ## App Runtime
 
@@ -326,7 +324,6 @@ Audit settings configure the events that are generated for the conditions of the
 - **Block Windows Spotlight**  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067037)
-
 
 ## File Explorer
 
@@ -1201,6 +1198,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 - **System boot start driver initialization**  
   Baseline default: *Good unknown and bad critical*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067307)
+
 ## Windows Connection Manager
 
 - **Block connection to non-domain networks**  

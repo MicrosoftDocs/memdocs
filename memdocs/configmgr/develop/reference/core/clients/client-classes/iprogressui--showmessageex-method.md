@@ -3,14 +3,14 @@ title: "IProgressUI::ShowMessageEx"
 titleSuffix: Configuration Manager
 description: "IProgressUI::ShowMessageEx method"
 ms.date: 08/11/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 24a048fc-c8dc-4fc5-a094-4e4e4d0ada64
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

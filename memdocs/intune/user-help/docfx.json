@@ -36,11 +36,19 @@
       "breadcrumb_path": "/intune/bread/toc.json",
       "product_feedback_displaytext": "Intune Feedback",
       "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/Intunedocs",      
+      "feedback_system": "Standard",
+            
       "contributors_to_exclude": [
         "herohua",
-        "fenxu"
+        "fenxu",
+        "beccarobins",
+        "rjagiewich",
+        "shdyas",
+        "claydetels19",
+        "jborsecnik",
+        "garycentric",
+        "dstrome",
+        "American-Dipper"
       ],
       "searchScope": [
         "Intune"

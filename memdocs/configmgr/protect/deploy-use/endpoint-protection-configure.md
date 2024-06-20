@@ -3,8 +3,8 @@ title: Configure Endpoint Protection
 titleSuffix: Configuration Manager
 description: Learn how to set up Configuration Manager to update and distribute malware definitions for Windows Defender.
 ms.date: 03/22/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

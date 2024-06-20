@@ -10,27 +10,9 @@ items:
     - name: Intune user help
       tocHref: /mem/intune/user-help/
       topicHref: /mem/intune/user-help/
-    - name: Apps
-      tocHref: /mem/intune/apps/
-      topicHref: /mem/intune/apps/
-    - name: Fundamentals
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/
-    - name: Enrollment
-      tocHref: /mem/intune/enrollment/
-      topicHref: /mem/intune/enrollment/
-    - name: Remote actions
-      tocHref: /mem/intune/remote-actions/
-      topicHref: /mem/intune/remote-actions/
-    - name: Configuration
-      tocHref: /mem/intune/configuration/
-      topicHref: /mem/intune/configuration/
-    - name: Protect
-      tocHref: /mem/intune/protect/
-      topicHref: /mem/intune/protect/
-    - name: Developer
-      tocHref: /mem/intune/developer/
-      topicHref: /mem/intune/developer/
+    - name: Endpoint settings management
+      tocHref: /defender-endpoint/ 
+      topicHref: /defender-endpoint/
   - name: Configuration Manager
     tocHref: /mem/configmgr/
     topicHref: /mem/configmgr/
@@ -78,8 +60,5 @@ items:
     tocHref: /mem/analytics/
     topicHref: /mem/analytics/
   - name: Autopilot
-    tocHref: /mem/autopilot/
-    topicHref: /mem/autopilot/
-  - name: Solutions
-    tocHref: /mem/#solutions---scenarios
-    topicHref: /mem/#solutions---scenarios
+    tocHref: /autopilot/
+    topicHref: /autopilot/

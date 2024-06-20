@@ -1,16 +1,17 @@
 ### YamlMime:Landing
 title: Endpoint analytics documentation
-summary: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
+summary: "Official product documentation for Endpoint analytics in Microsoft Intune"
  
 metadata:
   title: Endpoint analytics documentation
-  description: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
-  ms.service: mem
+  description: "Official product documentation for Endpoint analytics in Microsoft Intune"
+  ms.service: microsoft-intune
   ms.subservice: fundamentals
   ms.topic: landing-page
   author: smritib17
   ms.author: smbhardwaj
-  ms.date: 09/23/2021
+  manager: dougeby
+  ms.date: 12/06/2023
   ms.localizationpriority: high
   ms.collection: highpri
 
@@ -41,10 +42,6 @@ landingContent:
             url: enroll-intune.md
           - text: Enroll Configuration Manager devices
             url: enroll-configmgr.md
-      - linkListType: tutorial
-        links:
-          - text: Proactive remediations
-            url: proactive-remediations.md
 
   # Card
   - title: Top tasks
@@ -55,3 +52,21 @@ landingContent:
             url: settings.md
           - text: Troubleshoot
             url: troubleshoot.md
+
+  # Card
+  - title: Microsoft Intune Advanced Analytics
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Anomaly detection
+            url: anomaly-detection.md
+          - text: Enhanced device timeline 
+            url: enhanced-device-timeline.md
+          - text: Device Scopes
+            url: device-scopes.md    
+          - text: Device query
+            url: device-query.md
+          - text: Data platform schema
+            url: data-platform-schema.md                         
+          - text: Battery health
+            url: battery-health.md              

@@ -3,8 +3,8 @@ title: Role-based administration fundamentals
 titleSuffix: Configuration Manager
 description: Use role-based administration to control administrative access to Configuration Manager and objects that you manage.
 ms.date: 04/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

@@ -8,12 +8,11 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 03/24/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: 
 
 # optional metadata
@@ -44,7 +43,7 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enroll.md#windows-auto-enrollment-and-device-registration).  
+For more information about Windows 10 auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enrollment-create-cname.md#windows-auto-enrollment-and-device-registration).  
 
 The following tables list the ports and services that the Intune client accesses:
 
@@ -57,8 +56,15 @@ The following tables list the ports and services that the Intune client accesses
 - Azure portal: https:\//portal.azure.cn/
 - Microsoft 365: https:\//portal.partner.microsoftonline.cn/
 - Intune Company Portal: https:\//portal.manage.microsoftonline.cn/
-- Microsoft Intune admin center: https:\//endpoint.microsoftonline.cn/
+- Microsoft Intune admin center: https:\//intune.microsoftonline.cn/
 
+## Network requirements for PowerShell scripts and Win32 apps  
+
+If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
+
+|Azure Scale Unit (ASU) | Storage name | CDN |
+| --- | --- |--- |
+|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
 
 ## Partner service endpoints
 

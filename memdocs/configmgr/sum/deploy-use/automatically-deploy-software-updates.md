@@ -7,8 +7,8 @@ ms.author: baladell
 manager: apoorvseth
 ms.date: 08/12/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
@@ -297,7 +297,7 @@ Folder creations can also be added programmatically using Windows PowerShell cmd
 If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded the following script into [Community hub](../../core/servers/manage/community-hub.md):
 
    > [!TIP]
-   > [Open this script](https://communityhub.microsoft.com/item/19635) directly in Community hub. For more information, see [Direct links to Community hub items](../../core/servers/manage/community-hub.md).
+   > Open this script directly in Community hub. For more information, see [Direct links to Community hub items](../../core/servers/manage/community-hub.md).
 
 ```powershell
 <# Apply-ADRDeploymentPackageSettings #>

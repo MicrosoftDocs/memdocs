@@ -3,8 +3,8 @@ title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
 ms.date: 04/01/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur
@@ -403,6 +403,12 @@ For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md)
 | HTTPS for external notification | --  | 443 |
 
 For more information, see [External notifications](../../servers/manage/external-notifications.md).
+
+### <a name="BKMK_PortsSCP-to-SQL"></a> Service connection point `-->` SQL Server
+
+|Description|UDP|TCP|
+|-----------------|---------|---------|
+|SQL over TCP|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
 
 ### <a name="BKMK_PortsSite-AISP"></a> Site server `<-->` Asset Intelligence synchronization point
 

@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Troubleshooting scripts for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
@@ -36,7 +36,7 @@ Use the following to troubleshoot Scripts in the Microsoft Intune admin center:
 
 ### <a name="bkmk_403"></a> Unable to get Scripts information
 
-**Error message:** Unable to get Scripts information. Make sure Azure AD and AD user discovery are configured and the user account accessing tenant attach features from the Microsoft Intune admin center is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message:** Unable to get Scripts information. Make sure Microsoft Entra ID and AD user discovery are configured and the user account accessing tenant attach features from the Microsoft Intune admin center is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
@@ -49,16 +49,16 @@ Use the following to troubleshoot Scripts in the Microsoft Intune admin center:
 
 1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
 
-    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
-    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
+    - **Microsoft Entra tenant ID**: This value should be a GUID for the Microsoft Entra tenant.
+    - **Microsoft Entra user ID**: This value should be a GUID for this account in Microsoft Entra ID.
     - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
 
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+    If the Microsoft Entra properties are empty, check the configuration of the site's [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 
 ### <a name="bkmk_noinfo"></a> Unable to get device information
 
-**Error message:** Unable to get device information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message:** Unable to get device information. Make sure Microsoft Entra ID and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible cause:** Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
@@ -66,11 +66,11 @@ Use the following to troubleshoot Scripts in the Microsoft Intune admin center:
 
 1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
 
-    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
-    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
+    - **Microsoft Entra tenant ID**: This value should be a GUID for the Microsoft Entra tenant.
+    - **Microsoft Entra user ID**: This value should be a GUID for this account in Microsoft Entra ID.
     - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
 
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+    If the Microsoft Entra properties are empty, check the configuration of the site's [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 
 ### <a name="bkmk_1603"></a> Unexpected error occurred

@@ -3,8 +3,8 @@ title: Capabilities in Technical Preview 1701
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1701.
 ms.date: 01/23/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 manager: apoorvseth
@@ -111,7 +111,7 @@ To do so, you modify a configuration file to point to the Government cloud, and 
 
    **Edits:**
 
-   Change the value for the setting name *FairFaxArmResourceID* to be equal to "<https://management.usgovcloudapi.net/">
+   Change the value for the setting name *FairFaxArmResourceID* to be equal to ```<https://management.usgovcloudapi.net/>```
 
    - **Original:**
      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   

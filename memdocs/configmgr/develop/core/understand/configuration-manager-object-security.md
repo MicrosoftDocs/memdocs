@@ -3,14 +3,14 @@ title: Object Security
 description: The delegate verb in Configuration Manager provides administrators with a way of allowing users to assign to other users the instance permissions to an object in a very limited way.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 9df97bf6-6255-4348-a522-22e50af490b0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -23,7 +23,7 @@ ms.reviewer: mstewart,aaroncz
 
  A common scenario for using the delegate verb is when a user has created and delegated rights for an object type and wants to create an object and allow members of a user group to see it. They create an instance of the object and then delegate read permissions for the instance to the user group.  
 
- The delegate verb is applicable to the follow Configuration Manager classes:  
+ The delegate verb is applicable to the following Configuration Manager classes:  
 
 -   `SMS_Collection`  
 
@@ -42,7 +42,7 @@ ms.reviewer: mstewart,aaroncz
 ## System Resource (SMS_R_System) as a Secured Resource  
  Secured resources are resources (the SMS_R_* classes) that require collection read rights to be viewed. If the user has class-level collection read rights, the user can see all the instances of a secured resource. If the user only has instance-level read rights to certain collections, the user only has rights to see resources that are members of those collections. `SMS_R_User` and `SMS_R_UserGroup` are secured resources in SMS 2.0. In SMS 2003, `SMS_R_System` (the system resource) is also a secured resource.  
 
- Inventory instances (SMS_G_System_*) are secured similarly with the read resource verb. If a user has class-level rights, that user can see inventory data belonging to all resources. If the user does not have class-level rights, the user can see only inventory data for inventory that belongs to resources that are members of collections to which the user has instance-level read resource rights. Conversely, if a user has read resource rights to a collection, a user can see the inventory data for the members of that collection. This has not been affected by the change in security to `SMS_R_System`. Read resource rights cannot be granted to a user without granting read rights. When a user does not have the appropriate class-level collection rights, resource security is enforced through collection limiting.  
+ Inventory instances (SMS_G_System_*) are secured similarly with the read resource verb. If a user has class-level rights, that user can see inventory data belonging to all resources. If the user doesn't have class-level rights, the user can see only inventory data for inventory that belongs to resources that are members of collections to which the user has instance-level read resource rights. Conversely, if a user has read resource rights to a collection, a user can see the inventory data for the members of that collection. This hasn't been affected by the change in security to `SMS_R_System`. Read resource rights can't be granted to a user without granting read rights. When a user doesn't have the appropriate class-level collection rights, resource security is enforced through collection limiting.  
 
 ## Securing File Submissions to a Configuration Manager Server  
  The recommended location for copying data discovery record (DDR) files and Managed Information Format (MIF) files that not related to existing Configuration Manager clients is directly in the site server inboxes. This requires administrator level permissions on the site server to be granted to the application that is  copying these files. These are located as follows:  

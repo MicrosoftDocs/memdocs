@@ -2,12 +2,12 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 12/05/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.date: 03/28/2024
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
-author: sheetg09
-ms.author: sheetg
+author: baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -98,6 +98,12 @@ The SQL Server installation uses a case-insensitive collation, such as **SQL_Lat
 
 When you expand a primary site to a hierarchy, the computer account of the central administration site server has **Administrator** rights on the standalone primary site server.
 
+### Check for a cloud management gateway (CMG) as a cloud service (classic)
+
+*Applies to: Central administration site, primary site*
+
+Starting in version 2403, this error displays if you have a cloud management gateway (CMG) deployed with the classic cloud service. The option to deploy a CMG as a cloud service (classic) is deprecated. All CMG deployments should use a virtual machine scale set. If you have a CMG deployed with the classic cloud service, you can convert it to a virtual machine scale set deployment before upgrade. For more information, see [Convert a CMG to a virtual machine scale set](../../../clients/manage/cmg/modify-cloud-management-gateway.md#convert).
+
 ### Client version on management point computer
 
 *Applies to: Management point*
@@ -165,6 +171,31 @@ A site server or site system role isn't already installed on the server selected
 *Applies to: Central administration site, primary site*
 
 The primary site you plan to expand is a standalone primary site. It has the same version of Configuration Manager, but a different site code than the central administration site to be installed.
+
+### Enable site system roles for HTTPS or Enhanced HTTP
+
+*Applies to: central administration site, primary site*
+
+<!-- 9390933,9572265 -->
+
+Starting in version 2403, if your site is configured to allow HTTP communication without enhanced HTTP, you'll see this error. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP.
+
+This check looks at the following settings:
+
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
+1. Select a site, and then in the ribbon select **Properties**.
+
+1. Switch to the **Communication Security** tab.
+
+    Configure one of the following options:
+
+    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-certificates.md#transition-strategy-for-pki-certificates).
+
+    - **HTTPS or EHTTP** _and_ **Use Configuration Manager-generated certificates for EHTTP site systems**: This combination of settings enables [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
+
+> [!NOTE]
+> If you see this error when updating the central administration site, it may be because of a child primary site.<!-- 9480431 -->
 
 ### Firewall exception for SQL Server
 
@@ -248,6 +279,12 @@ Microsoft .NET Framework 4.0 is installed on the Configuration Manager console c
 
 .NET Framework 4.0 is installed or enabled on the Configuration Manager secondary site server. This version is required by SQL Server Express.
 
+### ODBC driver for SQL Server
+
+*Applies to: new site or when updating an existing one*
+
+Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. 
+
 ### Parent database collation
 
 *Applies to: Primary site, secondary site*
@@ -289,6 +326,26 @@ The NetBIOS name of the computer matches the local hostname in the fully qualifi
 Site database servers and secondary site servers aren't supported on a read-only domain controller (RODC).
 
 For more information, see [Installing SQL Server on a domain controller](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#Install_DC).
+
+### Resource access policies are no longer supported
+
+_Applies to: CAS, primary site_
+ 
+Starting in version 2403, resource access policies workspace is removed and is no longer supported. The co-management resource access workload is defaulted to Intune. 
+
+Remove the certificate registration point site system role and all policies for company resource access features:
+
+- Certificate profiles
+- VPN profiles
+- Wi-Fi profiles
+- Windows Hello for Business settings
+- Email profiles
+- The co-management resource access workload
+
+For more information, see [Frequently asked questions about resource access deprecation](../../../../protect/plan-design/resource-access-deprecation-faq.yml).
+
+For more information on removing the certificate registration point role, see [Remove a site system role](uninstall-sites-and-hierarchies.md#bkmk_role).
+
 
 ### Required SQL Server collation
 
@@ -384,6 +441,12 @@ The site isn't using network load balancing (NLB) with any virtual locations for
 *Applies to: Software update point*
 
 Configuration Manager doesn't support software update points on network (NLB) or hardware load balancers (HLB).
+
+### SQL ODBC driver for SQL Server
+
+*Applies to: Central administration site, primary site, secondary site*
+
+Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one.
 
 ### SQL Server Always On availability groups
 
@@ -576,7 +639,11 @@ The Configuration Manager setup process doesn't block installation of the site s
 
 The Windows Preinstallation Environment (PE) component of the Windows ADK is installed.
 
+### Windows Server 2012/R2 lifecycle
 
+*Applies to: Central administration site, primary site, secondary site*
+
+Starting in version 2403, this error displays if you have site systems running a version of Windows Server that is out of support. The support lifecycle for Windows Server 2012 and Windows Server 2012 R2 ended on October 10, 2023. Plan to upgrade the OS on your site servers. For more information, see the following blog post: [Know your options for SQL Server 2012 and Windows Server 2012 end of support](https://cloudblogs.microsoft.com/sqlserver/2021/07/14/know-your-options-for-sql-server-2012-and-windows-server-2012-end-of-support/). <!--9519162-->
 
 ## Warnings
 
@@ -633,12 +700,6 @@ To resolve this warning, check whether the despooler and scheduler site system c
 *Applies to: Management point*
 
 The Background Intelligent Transfer Service (BITS) is installed and enabled in IIS.
-
-### Check for a cloud management gateway (CMG) as a cloud service (classic)
-
-*Applies to: Central administration site, primary site*
-
-Starting in version 2203, this warning displays if you have a cloud management gateway (CMG) deployed with the classic cloud service. The option to deploy a CMG as a cloud service (classic) is deprecated. All CMG deployments should use a virtual machine scale set. If you have a CMG deployed with the classic cloud service, you can convert it to a virtual machine scale set deployment. For more information, see [Convert a CMG to a virtual machine scale set](../../../clients/manage/cmg/modify-cloud-management-gateway.md#convert).
 
 ### Check for site system roles associated with deprecated or removed features
 
@@ -712,31 +773,6 @@ Desktop Analytics will be retired on November 30, 2022. Check out the new report
 
 <!--14840670-->
 
-
-### Enable site system roles for HTTPS or Enhanced HTTP
-
-*Applies to: central administration site, primary site*
-
-<!-- 9390933,9572265 -->
-
-Starting in version 2103, if your site is configured to allow HTTP communication without enhanced HTTP, you'll see this warning. To improve the security of client communications, in the future Configuration Manager will require HTTPS communication or enhanced HTTP.
-
-This check looks at the following settings:
-
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
-
-1. Select a site, and then in the ribbon select **Properties**.
-
-1. Switch to the **Communication Security** tab.
-
-    Configure one of the following options:
-
-    - **HTTPS only**: This site setting requires that all site systems that use IIS use HTTPS. These site systems need a server authentication certificate, and clients need a client authentication certificate. For more information, see [Plan a transition strategy for PKI certificates](../../../plan-design/security/plan-for-certificates.md#transition-strategy-for-pki-certificates).
-
-    - **HTTPS or HTTP** _and_ **Use Configuration Manager-generated certificates for HTTP site systems**: This combination of settings enables [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
-
-> [!NOTE]
-> If you see this warning when updating the central administration site, it may be because of a child primary site.<!-- 9480431 -->
 
 ### Firewall exception for SQL Server (standalone primary site)
 
@@ -849,22 +885,7 @@ In version 2107, this rule checks if the .NET Framework is at least version 4.6.
 
 Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 
-### Resource access policies are no longer supported
 
-_Applies to: CAS, primary site_
-
-Starting in version 2203, resource access policies are no longer supported. Remove the certificate registration point site system role and all policies for company resource access features:
-
-- Certificate profiles
-- VPN profiles
-- Wi-Fi profiles
-- Windows Hello for Business settings
-- Email profiles
-- The co-management resource access workload
-
-For more information, see [Frequently asked questions about resource access deprecation](../../../../protect/plan-design/resource-access-deprecation-faq.yml).
-
-For more information on removing the certificate registration point role, see [Remove a site system role](uninstall-sites-and-hierarchies.md#bkmk_role).
 
 ### Schema extensions
 
@@ -1019,12 +1040,6 @@ For more information, see [Prepare Active Directory for site publishing](../../.
 WinRM 1.1 is installed on the primary site server or the Configuration Manager console computer to run the out-of-band management console.
 
 WinRM is automatically installed with all versions of Windows currently supported. For more information, see [Installation and configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
-
-### Windows Server 2012/R2 lifecycle
-
-*Applies to: Central administration site, primary site, secondary site*
-
-Starting in version 2203, this warning displays if you have site systems running a version of Windows Server that will soon be out of support. The support lifecycle for Windows Server 2012 and Windows Server 2012 R2 ends on October 10, 2023. Plan to upgrade the OS on your site servers. For more information, see the following blog post: [Know your options for SQL Server 2012 and Windows Server 2012 end of support](https://cloudblogs.microsoft.com/sqlserver/2021/07/14/know-your-options-for-sql-server-2012-and-windows-server-2012-end-of-support/). <!--9519162-->
 
 ### WSUS on site server
 

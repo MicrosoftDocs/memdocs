@@ -3,8 +3,8 @@ title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
@@ -164,7 +164,7 @@ You can message other Configuration Manager administrators from the **Console Co
 
 ### Prerequisites
 
-- For starting a chat with an administrator, the account you want to chat with needs to have been discovered with [Azure AD or AD User Discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+- For starting a chat with an administrator, the account you want to chat with needs to have been discovered with [Microsoft Entra ID or AD User Discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - Microsoft Teams installed on the device from which you run the console.
 note
 - All [prerequisites to view connected consoles](#bkmk_connections-prereq)
@@ -202,16 +202,15 @@ The **Documentation** node has no explicit proxy configuration. It uses any OS-d
 <!--9070525-->
 *(Introduced in version 2203)*
 
-Starting in version 2203, the Configuration Manager console offers a dark theme. Using a console theme can help you easily distinguish a test environment from a production environment or one hierarchy from another. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme.
-
-> [!Note]
-> The console dark theme is a [pre-release](pre-release-features.md) feature. Currently, there are certain locations in the console that may not display the dark theme correctly.  
+Starting in version 2203, the Configuration Manager console offers a dark theme. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme. As of version 2303, the main screen of the console and delete secondary site wizards adhere to the dark theme.  
 
 :::image type="content" source="./media/9070525-console-dark-theme.png" alt-text="Screenshot of the Configuration Manager using the dark theme for the console. The 'Switch console theme' option is displayed in the upper right corner of the image.":::
 
 ### Known issue
 
-When you first switch to a different theme, you may notice the node navigation pane doesn't properly render when you move to a new workspace. To work around this issue, restart the console.
+- Console restart is required on doing the theme switch, as the node navigation pane might not properly render when you move to a new workspace.
+- Currently, there are locations in the console that may not display the dark theme correctly. We are continuosly working to improve the dark theme. 
+
 
 ## Connect via Windows PowerShell
 

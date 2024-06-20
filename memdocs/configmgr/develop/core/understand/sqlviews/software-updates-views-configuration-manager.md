@@ -3,8 +3,8 @@ title: Software updates views
 titleSuffix: Configuration Manager
 description: Information about the software updates metadata, software update groups, and software update bundles.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 
@@ -12,7 +12,7 @@ ms.assetid: 1e6741d2-7737-4446-b65f-e6e330c09458
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ---
 

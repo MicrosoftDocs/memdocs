@@ -3,14 +3,14 @@ title: CheckLockRequest Method
 titleSuffix: Configuration Manager
 description: The CheckLockRequest Windows Management Instrumentation (WMI) class method checks a lock request.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 54032c44-cfa7-48cf-92bb-7f8bc482f822
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

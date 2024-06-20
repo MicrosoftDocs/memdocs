@@ -5,15 +5,14 @@ title: Data Apple sends to Intune
 titleSuffix: Microsoft Intune
 description: List of data that Apple sends to Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid: cf27fdb8-f408-425c-9a7c-146de1534425
 
 
@@ -31,6 +30,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- privacy
 ---
 
 # Data Apple sends to Intune

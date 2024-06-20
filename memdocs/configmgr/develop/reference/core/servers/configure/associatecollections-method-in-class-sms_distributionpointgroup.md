@@ -3,14 +3,14 @@ title: AssociateCollections Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the AssociateCollections WMI class method associates a set of collections to this distribution point group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cffda6d7-5c0c-481a-ba0d-f3900cbfbb5a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

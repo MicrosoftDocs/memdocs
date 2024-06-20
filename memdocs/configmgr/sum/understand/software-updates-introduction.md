@@ -7,8 +7,8 @@ ms.author: baladell
 manager: apoorvseth
 ms.date: 10/30/2017
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3

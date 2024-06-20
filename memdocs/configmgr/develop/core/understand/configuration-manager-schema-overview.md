@@ -3,14 +3,14 @@ title: Schema Overview
 titleSuffix: Configuration Manager
 description: This article discusses the Configuration Manager Schema Overview.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 694d88c3-c257-4ef4-a5e6-f732b49ce2f9
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

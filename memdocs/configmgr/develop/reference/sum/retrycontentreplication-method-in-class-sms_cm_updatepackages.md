@@ -3,14 +3,14 @@ title: RetryContentReplication Method
 titleSuffix: Configuration Manager
 description: The RetryContentReplication Windows Management Instrumentation (WMI) class method triggers DistMgr to copy content from the source to the content library.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fde34edf-3ba7-4a89-9004-05c793aaa7e2
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

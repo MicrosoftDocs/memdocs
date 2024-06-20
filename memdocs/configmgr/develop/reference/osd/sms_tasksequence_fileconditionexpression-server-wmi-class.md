@@ -3,14 +3,14 @@ description: Learn how to use the SMS_TaskSequence_FileConditionExpression class
 title: SMS_TaskSequence_FileConditionExpression Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 50f9834c-2f20-48ca-80a2-676b388abe63
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
